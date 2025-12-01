@@ -130,7 +130,7 @@ last_updated: 2025-11-26
 | `crypt_use_gpgme`                         | Use GPGME crypto backend                                                              |
 | `crypt_use_pka`                           | Use GPGME to use PKA (lookup PGP keys using DNS)                                      |
 | `crypt_verify_sig`                        | Verify PGP or SMIME signatures                                                        |
-| `cursor_overlay`                          | Deprecated                                                                            |
+| `cursor_overlay`                          | **Deprecated**                                                                        |
 
 ## D
 
@@ -161,7 +161,7 @@ last_updated: 2025-11-26
 | `entropy_file`            | File/device containing random data to initialise SSL          |
 | `envelope_from`           | Renamed to: `use_envelope_from`                               |
 | `envelope_from_address`   | Manually set the sender for outgoing messages                 |
-| `escape`                  | Deprecated                                                    |
+| `escape`                  | **Deprecated**                                                |
 | `external_search_command` | External search command                                       |
 
 ## F
@@ -212,10 +212,10 @@ last_updated: 2025-11-26
 | `header`                       | Include the message headers in the reply email (Weed applies)              |
 | `header_cache`                 | Directory/file for the header cache database                               |
 | `header_cache_backend`         | Header cache backend to use                                                |
-| `header_cache_compress`        | Deprecated                                                                 |
+| `header_cache_compress`        | **Deprecated**                                                             |
 | `header_cache_compress_level`  | Level of compression for method                                            |
 | `header_cache_compress_method` | Enable generic hcache database compression                                 |
-| `header_cache_pagesize`        | Deprecated                                                                 |
+| `header_cache_pagesize`        | **Deprecated**                                                             |
 | `header_color_partial`         | Only color the part of the header matching the regex                       |
 | `help`                         | Display a help line with common key bindings                               |
 | `hidden_host`                  | Don't use the hostname, just the domain, when generating the message id    |
@@ -239,7 +239,7 @@ last_updated: 2025-11-26
 | :--------------------------- | :------------------------------------------------------------------------ |
 | `idn_decode`                 | Decode international domain names                                         |
 | `idn_encode`                 | Encode international domain names                                         |
-| `ignore_linear_white_space`  | Deprecated                                                                |
+| `ignore_linear_white_space`  | **Deprecated**                                                            |
 | `ignore_list_reply_to`       | Ignore the 'Reply-To' header when using `<reply>` on a mailing list       |
 | `imap_authenticators`        | List of allowed IMAP authentication methods (colon-separated)             |
 | `imap_check_subscribed`      | When opening a mailbox, ask the server for a list of subscribed folders   |
@@ -328,11 +328,11 @@ last_updated: 2025-11-26
 | `mime_forward_decode`         | Decode the forwarded message before attaching it                                                             |
 | `mime_forward_rest`           | Forward all attachments, even if they can't be decoded                                                       |
 | `mime_fwd`                    | Renamed to: `mime_forward`                                                                                   |
-| `mime_subject`                | Deprecated                                                                                                   |
+| `mime_subject`                | **Deprecated**                                                                                               |
 | `mime_type_query_command`     | External command to determine the MIME type of an attachment                                                 |
 | `mime_type_query_first`       | Run the `$mime_type_query_command` before the mime.types lookup                                              |
-| `mixmaster`                   | Deprecated                                                                                                   |
-| `mix_entry_format`            | Deprecated                                                                                                   |
+| `mixmaster`                   | **Deprecated**                                                                                               |
+| `mix_entry_format`            | **Deprecated**                                                                                               |
 | `move`                        | Move emails from `$spool_file` to `$mbox` when read                                                          |
 | `msg_format`                  | Renamed to: `message_format`                                                                                 |
 
@@ -402,7 +402,7 @@ last_updated: 2025-11-26
 | `pgp_decrypt_command`             | External command to decrypt a PGP message                              |
 | `pgp_default_key`                 | Default key to use for PGP operations                                  |
 | `pgp_encrypt_only_command`        | External command to encrypt, but not sign a message                    |
-| `pgp_encrypt_self`                | Deprecated                                                             |
+| `pgp_encrypt_self`                | **Deprecated**                                                         |
 | `pgp_encrypt_sign_command`        | External command to encrypt and sign a message                         |
 | `pgp_entry_format`                | printf-like format string for the PGP key selection menu               |
 | `pgp_export_command`              | External command to export a public key from the user's keyring        |
@@ -558,7 +558,7 @@ last_updated: 2025-11-26
 | `smime_decrypt_use_default_key`  | Use the default key for decryption                                         |
 | `smime_default_key`              | Default key for SMIME operations                                           |
 | `smime_encrypt_command`          | External command to encrypt a message                                      |
-| `smime_encrypt_self`             | Deprecated                                                                 |
+| `smime_encrypt_self`             | **Deprecated**                                                             |
 | `smime_encrypt_with`             | Algorithm for encryption                                                   |
 | `smime_get_cert_command`         | External command to extract a certificate from a message                   |
 | `smime_get_cert_email_command`   | External command to get a certificate for an email                         |
@@ -652,10 +652,10 @@ last_updated: 2025-11-26
 
 | Config Option        | Description                                   |
 | :------------------- | :-------------------------------------------- |
-| `vfolder_format`     | Deprecated                                    |
+| `vfolder_format`     | **Deprecated**                                |
 | `virtual_spoolfile`  | Renamed to: `virtual_spool_file`              |
 | `virtual_spool_file` | Use the first virtual mailbox as a spool file |
-| `visual`             | Deprecated                                    |
+| `visual`             | **Deprecated**                                |
 
 ## W
 

@@ -37,12 +37,12 @@
 | `mbox-hook`           | On leaving a mailbox, move read messages matching a regex regex        |
 | `message-hook`        | Run a command when viewing a message matching patterns                 |
 | `mime_lookup`         | Map specified MIME types/subtypes to display handlers                  |
-| `mono`                | Deprecated: Use color                                                  |
+| `mono`                | **Deprecated**: Use color                                              |
 | `my_hdr`              | Add a custom header to outgoing messages                               |
 | `named-mailboxes`     | Define a list of labelled mailboxes to watch                           |
 | `nospam`              | Remove a spam detection rule                                           |
 | `open-hook`           | Define command to open a compressed mailbox                            |
-| `pgp-hook`            | Deprecated: Use `crypt-hook`                                           |
+| `pgp-hook`            | **Deprecated**: Use `crypt-hook`                                       |
 | `push`                | Push a string into NeoMutt's input queue (simulate typing)             |
 | `reply-hook`          | Run a command when replying to messages matching a pattern             |
 | `reset`               | Reset a config option to its initial value                             |
@@ -55,7 +55,7 @@
 | `shutdown-hook`       | Run a command before NeoMutt exits                                     |
 | `sidebar_pin`         | Pin a mailbox in the sidebar (keep visible)                            |
 | `sidebar_unpin`       | Unpin a previously pinned mailbox in the sidebar                       |
-| `sidebar_whitelist`   | Deprecated: Use `sidebar_pin`                                          |
+| `sidebar_whitelist`   | **Deprecated**: Use `sidebar_pin`                                      |
 | `source`              | Read and execute commands from a config file                           |
 | `spam`                | Define rules to parse spam detection headers                           |
 | `startup-hook`        | Run a command when NeoMutt starts up                                   |
@@ -82,16 +82,16 @@
 | `unmailboxes`         | Remove mailboxes from the watch list                                   |
 | `unmailto_allow`      | Disallow header-fields in mailto processing                            |
 | `unmime_lookup`       | Remove custom MIME-type handlers                                       |
-| `unmono`              | Deprecated: Use `uncolor`                                              |
+| `unmono`              | **Deprecated**: Use `uncolor`                                          |
 | `unmy_hdr`            | Remove a header previously added with `my_hdr`                         |
 | `unscore`             | Remove scoring rules for matching patterns                             |
 | `unset`               | Reset a config option to false/empty                                   |
 | `unsetenv`            | Unset an environment variable                                          |
-| `unsidebar_whitelist` | Deprecated: Use `sidebar_unpin`                                        |
+| `unsidebar_whitelist` | **Deprecated**: Use `sidebar_unpin`                                    |
 | `unsubjectrx`         | Remove subject-rewriting rules                                         |
 | `unsubscribe`         | Remove address from the list of subscribed mailing lists               |
 | `unsubscribe-from`    | Unsubscribe from an IMAP mailbox                                       |
-| `unvirtual-mailboxes` | Deprecated: Use `unmailboxes`                                          |
+| `unvirtual-mailboxes` | **Deprecated**: Use `unmailboxes`                                      |
 | `version`             | Show NeoMutt version and build information                             |
-| `virtual-mailboxes`   | Deprecated: Use `mailboxes`/`named-mailboxes`                          |
+| `virtual-mailboxes`   | **Deprecated**: Use `mailboxes`/`named-mailboxes`                      |
 
