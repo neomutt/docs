@@ -15,6 +15,7 @@ last_updated: 2025-12-01
 ---
 maxdepth: 1
 ---
+cli.md
 colors.md
 commands.md
 config.md
