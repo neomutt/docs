@@ -37,7 +37,7 @@
 | `mbox-hook`           | On leaving a mailbox, move read messages matching a regex regex        |
 | `message-hook`        | Run a command when viewing a message matching patterns                 |
 | `mime_lookup`         | Map specified MIME types/subtypes to display handlers                  |
-| `mono`                | **Deprecated**: Use color                                              |
+| `mono`                | **Deprecated**: Use `color`                                            |
 | `my_hdr`              | Add a custom header to outgoing messages                               |
 | `named-mailboxes`     | Define a list of labelled mailboxes to watch                           |
 | `nospam`              | Remove a spam detection rule                                           |
