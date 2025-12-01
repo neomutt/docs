@@ -18,5 +18,6 @@ maxdepth: 1
 config.md
 commands.md
 formats.md
+functions.md
 ```
 
