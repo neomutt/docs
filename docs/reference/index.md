@@ -21,5 +21,6 @@ commands.md
 config.md
 formats.md
 functions.md
+patterns.md
 ```
 

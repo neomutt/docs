@@ -7,7 +7,7 @@ diataxis: Reference
 last_updated: 2025-12-01
 ---
 
-# Format String
+# Format Strings
 
 ## alias\_format
 
