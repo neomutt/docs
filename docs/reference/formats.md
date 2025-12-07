@@ -9,7 +9,7 @@ last_updated: 2025-12-01
 
 # Format String
 
-## alias_format
+## alias\_format
 
 | Short   | Long Name      | Description                                                     |
 | :------ | :------------- | :-------------------------------------------------------------- |
@@ -29,7 +29,7 @@ last_updated: 2025-12-01
 | `%n`    |                | **Deprecated:** Use `%i` instead                                  |
 | `%r`    |                | **Deprecated:** Use `%A` instead                                  |
 
-## attach_format
+## attach\_format
 
 | Short   | Long Name          | Description                                                        |
 | :------ | :----------------- | :----------------------------------------------------------------- |
@@ -54,7 +54,7 @@ last_updated: 2025-12-01
 | `%>X`   | `padding-hard`     | Right justify the rest of the string and pad with character `X`    |
 | `%\|X`  | `padding-eol`      | Pad to the end of the line with character `X`                      |
 
-## autocrypt_acct_format
+## autocrypt\_acct\_format
 
 | Short   | Long Name        | Description                                                     |
 | :------ | :--------------- | :-------------------------------------------------------------- |
@@ -67,7 +67,7 @@ last_updated: 2025-12-01
 | `%>X`   | `padding-hard`   | Right justify the rest of the string and pad with character `X` |
 | `%\|X`  | `padding-eol`    | Pad to the end of the line with character `X`                   |
 
-## compose_format
+## compose\_format
 
 | Short   | Long Name      | Description                                                                  | 
 | :------ | :------------- | :--------------------------------------------------------------------------- |
@@ -79,7 +79,7 @@ last_updated: 2025-12-01
 | `%>X`   | `padding-hard` | Right justify the rest of the string and pad with character `X`              |
 | `%\|X`  | `padding-eol`  | Pad to the end of the line with character `X`                                |
 
-## folder_format
+## folder\_format
 
 | Short    | Long Name       | Description                                                              |
 | :------- | :-------------- | :----------------------------------------------------------------------- |
@@ -112,7 +112,7 @@ last_updated: 2025-12-01
 | `%u`    | `user-name`  | User (login) name of recipient |
 | `%v`    | `first-name` | First name of recipient        |
 
-## group_index_format
+## group\_index\_format
 
 | Short   | Long Name      | Description                                                        |
 | :------ | :------------- | :----------------------------------------------------------------- |
@@ -129,7 +129,7 @@ last_updated: 2025-12-01
 | `%>X`   | `padding-hard` | Right justify the rest of the string and pad with character `X`    |
 | `%\|X`  | `padding-eol`  | Pad to the end of the line with character `X`                      |
 
-## history_format
+## history\_format
 
 | Short   | Long Name      | Description                                                     |
 | :------ | :------------- | :-------------------------------------------------------------- |
@@ -139,7 +139,7 @@ last_updated: 2025-12-01
 | `%>X`   | `padding-hard` | Right justify the rest of the string and pad with character `X` |
 | `%\|X`  | `padding-eol`  | Pad to the end of the line with character `X`                   |
 
-## index_format
+## index\_format
 
 | Short     | Long Name             | Description                                                                                     |
 | :-------- | :-------------------- | :---------------------------------------------------------------------------------------------- |
@@ -209,7 +209,7 @@ last_updated: 2025-12-01
 | `%s`    | `server`   | News server name  |
 | `%u`    | `username` | Username          |
 
-## pattern_format
+## pattern\_format
 
 | Short   | Long Name      | Description                                                     | 
 | :------ | :------------- | :-------------------------------------------------------------- |
@@ -220,7 +220,7 @@ last_updated: 2025-12-01
 | `%>X`   | `padding-hard` | Right justify the rest of the string and pad with character `X` |
 | `%\|X`  | `padding-eol`  | Pad to the end of the line with character `X`                   |
 
-## pgp_decode_command
+## pgp\_decode\_command
 
 | Short   | Long Name        | Description                                                      |
 | :------ | :--------------- | :--------------------------------------------------------------- |
@@ -230,7 +230,7 @@ last_updated: 2025-12-01
 | `%r`    | `key-ids`        | One or more key IDs (or fingerprints if available)               |
 | `%s`    | `file-signature` | Expands to the name of a file containing the signature part<br>of a `multipart/signed` attachment when verifying it |
 
-## pgp_entry_format
+## pgp\_entry\_format
 
 | Short    | Long Name           | Description                                                     |
 | :------- | :------------------ | :-------------------------------------------------------------- |
@@ -255,7 +255,7 @@ last_updated: 2025-12-01
 | `%>X`    | `padding-hard`      | Right justify the rest of the string and pad with character `X` |
 | `%\|X`   | `padding-eol`       | Pad to the end of the line with character `X`                   |
 
-## query_format
+## query\_format
 
 | Short   | Long Name      | Description                                                     |
 | :------ | :------------- | :-------------------------------------------------------------- |
@@ -274,7 +274,7 @@ last_updated: 2025-12-01
 | `%e`    |                | **Deprecated:** Use `%C` instead                                  |
 | `%n`    |                | **Deprecated:** Use `%N` instead                                  |
 
-## sidebar_format
+## sidebar\_format
 
 | Short   | Long Name       | Cur  | Description                                                     |
 | :------ | :-------------- | :--- | :-------------------------------------------------------------- |
@@ -299,7 +299,7 @@ last_updated: 2025-12-01
 
 Cur = Only applicable to the current folder
 
-## smime_decrypt_command
+## smime\_decrypt\_command
 
 | Short   | Long Name          | Description                                                          |
 | :------ | :----------------- | :------------------------------------------------------------------- |
@@ -312,7 +312,7 @@ Cur = Only applicable to the current folder
 | `%k`    | `key`              | Key-pair specified with `$smime_default_key`                     |
 | `%s`    | `signature-file`   | Expands to the name of a file containing the signature part<br>of a `multipart/signed` attachment when verifying it |
 
-## status_format
+## status\_format
 
 | Short   | Long Name          | Description                                                        |
 | :------ | :----------------- | :----------------------------------------------------------------- |
