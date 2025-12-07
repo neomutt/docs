@@ -6,7 +6,7 @@
 | `attach_headers`           | MIME attachment test (takes a pattern)             |
 | `body`                     | Pager: highlight body of message (takes a pattern) |
 | `bold`                     | Bold text                                          |
-| `compose_header`           | Header labels, e.g. From:                          |
+| `compose_header`           | Header labels, e.g. `From:`                        |
 | `compose_security_both`    | Mail will be encrypted and signed                  |
 | `compose_security_encrypt` | Mail will be encrypted                             |
 | `compose_security_none`    | Mail will not be encrypted or signed               |
@@ -23,8 +23,8 @@
 | `index_number`             | Index: index number                                |
 | `index_size`               | Index: size field                                  |
 | `index_subject`            | Index: subject field                               |
-| `index_tag`                | Index: tag field (%G)                              |
-| `index_tags`               | Index: tags field (%g, %J)                         |
+| `index_tag`                | Index: tag field (`%G`)                            |
+| `index_tags`               | Index: tags field (`%g`, `%J`)                     |
 | `indicator`                | Selected item in list                              |
 | `italic`                   | Italic text                                        |
 | `markers`                  | Pager: markers, line continuation                  |
@@ -51,7 +51,7 @@
 | `sidebar_indicator`        | Current open mailbox                               |
 | `sidebar_new`              | Mailbox with new mail                              |
 | `sidebar_ordinary`         | Mailbox with no new or flagged messages            |
-| `sidebar_spool_file`       | $spool_file (Spool mailbox)                        |
+| `sidebar_spool_file`       | `$spool_file` (Spool mailbox)                      |
 | `sidebar_unread`           | Mailbox with unread mail                           |
 | `signature`                | Pager: signature lines                             |
 | `status`                   | Status bar (takes a pattern)                       |

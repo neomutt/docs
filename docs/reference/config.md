@@ -17,7 +17,7 @@ last_updated: 2025-11-26
 | `abort_key`                     | String representation of key to abort prompts                               |
 | `abort_noattach`                | Abort sending the email if attachments are missing                          |
 | `abort_noattach_regex`          | Regex to match text indicating attachments are expected                     |
-| `abort_noattach_regexp`         | Renamed to: `abort_noattach_regex`                                          |
+| `abort_noattach_regexp`         | **Renamed to**: `abort_noattach_regex`                                      |
 | `abort_nosubject`               | Abort creating the email if subject is missing                              |
 | `abort_unmodified`              | Abort the sending if the message hasn't been edited                         |
 | `account_command`               | Shell command to retrieve account credentials                               |
@@ -29,22 +29,22 @@ last_updated: 2025-11-26
 | `arrow_cursor`                  | Use an arrow '->' instead of highlighting in the index                      |
 | `arrow_string`                  | Use a custom string for `arrow_cursor`                                      |
 | `ascii_chars`                   | Use plain ASCII characters, when drawing email threads                      |
-| `askbcc`                        | Renamed to: `ask_bcc`                                                       |
-| `askcc`                         | Renamed to: `ask_cc`                                                        |
+| `askbcc`                        | **Renamed to**: `ask_bcc`                                                   |
+| `askcc`                         | **Renamed to**: `ask_cc`                                                    |
 | `ask_bcc`                       | Ask the user for the blind-carbon-copy recipients                           |
 | `ask_cc`                        | Ask the user for the carbon-copy recipients                                 |
 | `ask_followup_to`               | Ask the user for follow-up groups before editing                            |
-| `ask_follow_up`                 | Renamed to: `ask_followup_to`                                               |
+| `ask_follow_up`                 | **Renamed to**: `ask_followup_to`                                           |
 | `ask_x_comment_to`              | Ask the user for the 'X-Comment-To' field before editing                    |
 | `assumed_charset`               | If a message is missing a character set, assume this character set          |
 | `attach_charset`                | When attaching files, use one of these character sets                       |
 | `attach_format`                 | printf-like format string for the attachment menu                           |
-| `attach_keyword`                | Renamed to: `abort_noattach_regex`                                          |
+| `attach_keyword`                | **Renamed to**: `abort_noattach_regex`                                      |
 | `attach_save_dir`               | Default directory where attachments are saved                               |
 | `attach_save_without_prompting` | If true, then don't prompt to save                                          |
 | `attach_sep`                    | Separator to add between saved/printed/piped attachments                    |
 | `attach_split`                  | Save/print/pipe tagged messages individually                                |
-| `attribution`                   | Renamed to: `attribution_intro`                                             |
+| `attribution`                   | **Renamed to**: `attribution_intro`                                         |
 | `attribution_intro`             | Message to start a reply, 'On DATE, PERSON wrote:'                          |
 | `attribution_locale`            | Locale for dates in the `attribution` message                               |
 | `attribution_trailer`           | Suffix message to add after reply text                                      |
@@ -52,7 +52,7 @@ last_updated: 2025-11-26
 | `autocrypt_acct_format`         | Format of the Autocrypt account menu                                        |
 | `autocrypt_dir`                 | Location of Autocrypt files, including the GPG keyring and SQLite database  |
 | `autocrypt_reply`               | Replying to an Autocrypt email automatically enables Autocrypt in the reply |
-| `autoedit`                      | Renamed to: `auto_edit`                                                     |
+| `autoedit`                      | **Renamed to**: `auto_edit`                                                 |
 | `auto_edit`                     | Skip the initial compose menu and edit the email                            |
 | `auto_subscribe`                | Automatically check if the user is subscribed to a mailing list             |
 | `auto_tag`                      | Automatically apply actions to all tagged messages                          |
@@ -91,26 +91,26 @@ last_updated: 2025-11-26
 | `compose_show_preview`                    | Display a preview of the message body in the Compose window                           |
 | `compose_show_user_headers`               | Controls whether or not custom headers are shown in the compose envelope              |
 | `config_charset`                          | Character set that the config files are in                                            |
-| `confirmappend`                           | Renamed to: `confirm_append`                                                          |
-| `confirmcreate`                           | Renamed to: `confirm_create`                                                          |
+| `confirmappend`                           | **Renamed to**: `confirm_append`                                                      |
+| `confirmcreate`                           | **Renamed to**: `confirm_create`                                                      |
 | `confirm_append`                          | Confirm before appending emails to a mailbox                                          |
 | `confirm_create`                          | Confirm before creating a new mailbox                                                 |
 | `confirm_empty_to`                        | Ask for a confirmation before sending an email with an empty To recipients list       |
-| `connect_timeout`                         | Renamed to: `socket_timeout`                                                          |
+| `connect_timeout`                         | **Renamed to**: `socket_timeout`                                                      |
 | `content_type`                            | Default 'Content-Type' for newly composed messages                                    |
 | `copy`                                    | Save outgoing emails to `$record`                                                     |
 | `copy_decode_weed`                        | Controls whether to weed headers when copying or saving emails                        |
 | `count_alternatives`                      | Recurse inside multipart/alternatives while counting attachments                      |
-| `crypt_autoencrypt`                       | Renamed to: `crypt_auto_encrypt`                                                      |
-| `crypt_autopgp`                           | Renamed to: `crypt_auto_pgp`                                                          |
-| `crypt_autosign`                          | Renamed to: `crypt_auto_sign`                                                         |
-| `crypt_autosmime`                         | Renamed to: `crypt_auto_smime`                                                        |
+| `crypt_autoencrypt`                       | **Renamed to**: `crypt_auto_encrypt`                                                  |
+| `crypt_autopgp`                           | **Renamed to**: `crypt_auto_pgp`                                                      |
+| `crypt_autosign`                          | **Renamed to**: `crypt_auto_sign`                                                     |
+| `crypt_autosmime`                         | **Renamed to**: `crypt_auto_smime`                                                    |
 | `crypt_auto_encrypt`                      | Automatically PGP encrypt all outgoing mail                                           |
 | `crypt_auto_pgp`                          | Allow automatic PGP functions                                                         |
 | `crypt_auto_sign`                         | Automatically PGP sign all outgoing mail                                              |
 | `crypt_auto_smime`                        | Allow automatic SMIME functions                                                       |
 | `crypt_chars`                             | User-configurable crypto flags: signed, encrypted etc.                                |
-| `crypt_confirmhook`                       | Renamed to: `crypt_confirm_hook`                                                      |
+| `crypt_confirmhook`                       | **Renamed to**: `crypt_confirm_hook`                                                  |
 | `crypt_confirm_hook`                      | Prompt the user to confirm keys before use                                            |
 | `crypt_encryption_info`                   | Add an informative block with details about the encryption                            |
 | `crypt_opportunistic_encrypt`             | Enable encryption when the recipient's key is available                               |
@@ -120,9 +120,9 @@ last_updated: 2025-11-26
 | `crypt_protected_headers_subject`         | Use this as the subject for encrypted emails                                          |
 | `crypt_protected_headers_weed`            | Controls whether NeoMutt will weed protected header fields                            |
 | `crypt_protected_headers_write`           | Generate protected header (Memory Hole) for signed and encrypted emails               |
-| `crypt_replyencrypt`                      | Renamed to: `crypt_reply_encrypt`                                                     |
-| `crypt_replysign`                         | Renamed to: `crypt_reply_sign`                                                        |
-| `crypt_replysignencrypted`                | Renamed to: `crypt_reply_sign_encrypted`                                              |
+| `crypt_replyencrypt`                      | **Renamed to**: `crypt_reply_encrypt`                                                 |
+| `crypt_replysign`                         | **Renamed to**: `crypt_reply_sign`                                                    |
+| `crypt_replysignencrypted`                | **Renamed to**: `crypt_reply_sign_encrypted`                                          |
 | `crypt_reply_encrypt`                     | Encrypt replies to encrypted messages                                                 |
 | `crypt_reply_sign`                        | Sign replies to signed messages                                                       |
 | `crypt_reply_sign_encrypted`              | Sign replies to encrypted messages                                                    |
@@ -154,12 +154,12 @@ last_updated: 2025-11-26
 | Config Option             | Description                                                   |
 | :------------------------ | :------------------------------------------------------------ |
 | `editor`                  | External command to use as an email editor                    |
-| `edit_hdrs`               | Renamed to: `edit_headers`                                    |
+| `edit_hdrs`               | **Renamed to**: `edit_headers`                                |
 | `edit_headers`            | Let the user edit the email headers whilst editing an email   |
 | `empty_subject`           | Subject to use when replying to an email with none            |
 | `encode_from`             | Encode 'From ' as 'quote-printable' at the beginning of lines |
 | `entropy_file`            | File/device containing random data to initialise SSL          |
-| `envelope_from`           | Renamed to: `use_envelope_from`                               |
+| `envelope_from`           | **Renamed to**: `use_envelope_from`                           |
 | `envelope_from_address`   | Manually set the sender for outgoing messages                 |
 | `escape`                  | **Deprecated**                                                |
 | `external_search_command` | External search command                                       |
@@ -188,10 +188,10 @@ last_updated: 2025-11-26
 | `forward_format`              | printf-like format string to control the subject when forwarding a message |
 | `forward_quote`               | Automatically quote a forwarded message using `$indent_string`             |
 | `forward_references`          | Set the 'In-Reply-To' and 'References' headers when forwarding a message   |
-| `forw_decode`                 | Renamed to: `forward_decode`                                               |
-| `forw_decrypt`                | Renamed to: `forward_decrypt`                                              |
-| `forw_format`                 | Renamed to: `forward_format`                                               |
-| `forw_quote`                  | Renamed to: `forward_quote`                                                |
+| `forw_decode`                 | **Renamed to**: `forward_decode`                                           |
+| `forw_decrypt`                | **Renamed to**: `forward_decrypt`                                          |
+| `forw_format`                 | **Renamed to**: `forward_format`                                           |
+| `forw_quote`                  | **Renamed to**: `forward_quote`                                            |
 | `from`                        | Default 'From' address to use, if isn't otherwise set                      |
 | `from_chars`                  | User-configurable index flags: to address, cc address, etc                 |
 
@@ -208,7 +208,7 @@ last_updated: 2025-11-26
 | Config Option                  | Description                                                                |
 | :----------------------------- | :------------------------------------------------------------------------- |
 | `hdrs`                         | Add custom headers to outgoing mail                                        |
-| `hdr_format`                   | Renamed to: `index_format`                                                 |
+| `hdr_format`                   | **Renamed to**: `index_format`                                             |
 | `header`                       | Include the message headers in the reply email (Weed applies)              |
 | `header_cache`                 | Directory/file for the header cache database                               |
 | `header_cache_backend`         | Header cache backend to use                                                |
@@ -249,7 +249,7 @@ last_updated: 2025-11-26
 | `imap_fetch_chunk_size`      | Download headers in blocks of this size                                   |
 | `imap_headers`               | Additional email headers to download when getting index                   |
 | `imap_idle`                  | Use the IMAP IDLE extension to check for new mail                         |
-| `imap_keepalive`             | Renamed to: `imap_keep_alive`                                             |
+| `imap_keepalive`             | **Renamed to**: `imap_keep_alive`                                         |
 | `imap_keep_alive`            | Time to wait before polling an open IMAP connection                       |
 | `imap_list_subscribed`       | When browsing a mailbox, only display subscribed folders                  |
 | `imap_login`                 | Login name for the IMAP server (defaults to `$imap_user`)                 |
@@ -262,16 +262,16 @@ last_updated: 2025-11-26
 | `imap_qresync`               | Enable the QRESYNC extension                                              |
 | `imap_rfc5161`               | Use the IMAP ENABLE extension to select capabilities                      |
 | `imap_send_id`               | Send ID command when logging in                                           |
-| `imap_servernoise`           | Renamed to: `imap_server_noise`                                           |
+| `imap_servernoise`           | **Renamed to**: `imap_server_noise`                                       |
 | `imap_server_noise`          | Display server warnings as error messages                                 |
 | `imap_user`                  | Username for the IMAP server                                              |
-| `implicit_autoview`          | Renamed to: `implicit_auto_view`                                          |
+| `implicit_autoview`          | **Renamed to**: `implicit_auto_view`                                      |
 | `implicit_auto_view`         | Display MIME attachments inline if a 'copiousoutput' mailcap entry exists |
 | `include`                    | Include a copy of the email that's being replied to                       |
 | `include_encrypted`          | Whether to include encrypted content when replying                        |
-| `include_onlyfirst`          | Renamed to: `include_only_first`                                          |
+| `include_onlyfirst`          | **Renamed to**: `include_only_first`                                      |
 | `include_only_first`         | Only include the first attachment when replying                           |
-| `indent_str`                 | Renamed to: `indent_string`                                               |
+| `indent_str`                 | **Renamed to**: `indent_string`                                           |
 | `indent_string`              | String used to indent 'reply' text                                        |
 | `index_format`               | printf-like format string for the index menu (emails)                     |
 | `inews`                      | External command to post news articles                                    |
@@ -313,12 +313,12 @@ last_updated: 2025-11-26
 | `menu_context`                | Number of lines of overlap when changing pages in the index                                                  |
 | `menu_move_off`               | Allow the last menu item to move off the bottom of the screen                                                |
 | `menu_scroll`                 | Scroll the menu/index by one line, rather than a page                                                        |
-| `message_cachedir`            | Renamed to: `message_cache_dir`                                                                              |
+| `message_cachedir`            | **Renamed to**: `message_cache_dir`                                                                          |
 | `message_cache_clean`         | Clean out obsolete entries from the message cache                                                            |
 | `message_cache_dir`           | Directory for the message cache                                                                              |
 | `message_format`              | printf-like format string for listing attached messages                                                      |
 | `meta_key`                    | Interpret 'ALT-x' as 'ESC-x'                                                                                 |
-| `metoo`                       | Renamed to: `me_too`                                                                                         |
+| `metoo`                       | **Renamed to**: `me_too`                                                                                     |
 | `me_too`                      | Remove the user's address from the list of recipients                                                        |
 | `mh_purge`                    | Really delete files in MH mailboxes                                                                          |
 | `mh_seq_flagged`              | MH sequence for flagged message                                                                              |
@@ -327,14 +327,14 @@ last_updated: 2025-11-26
 | `mime_forward`                | Forward a message as a 'message/RFC822' MIME part                                                            |
 | `mime_forward_decode`         | Decode the forwarded message before attaching it                                                             |
 | `mime_forward_rest`           | Forward all attachments, even if they can't be decoded                                                       |
-| `mime_fwd`                    | Renamed to: `mime_forward`                                                                                   |
+| `mime_fwd`                    | **Renamed to**: `mime_forward`                                                                               |
 | `mime_subject`                | **Deprecated**                                                                                               |
 | `mime_type_query_command`     | External command to determine the MIME type of an attachment                                                 |
 | `mime_type_query_first`       | Run the `$mime_type_query_command` before the mime.types lookup                                              |
 | `mixmaster`                   | **Deprecated**                                                                                               |
 | `mix_entry_format`            | **Deprecated**                                                                                               |
 | `move`                        | Move emails from `$spool_file` to `$mbox` when read                                                          |
-| `msg_format`                  | Renamed to: `message_format`                                                                                 |
+| `msg_format`                  | **Renamed to**: `message_format`                                                                             |
 
 ## N
 
@@ -350,7 +350,7 @@ last_updated: 2025-11-26
 | `nm_config_file`                   | Configuration file for notmuch. Use 'auto' to detect configuration.         |
 | `nm_config_profile`                | Configuration profile for notmuch.                                          |
 | `nm_db_limit`                      | Default limit for Notmuch queries                                           |
-| `nm_default_uri`                   | Renamed to: `nm_default_url`                                                |
+| `nm_default_uri`                   | **Renamed to**: `nm_default_url`                                            |
 | `nm_default_url`                   | Path to the Notmuch database                                                |
 | `nm_exclude_tags`                  | Exclude messages with these tags                                            |
 | `nm_flagged_tag`                   | Tag to use for flagged messages                                             |
@@ -386,17 +386,17 @@ last_updated: 2025-11-26
 | `pager_skip_quoted_context`       | Lines of context to show when skipping quoted text                     |
 | `pager_stop`                      | Don't automatically open the next message when at the end of a message |
 | `pattern_format`                  | printf-like format string for the pattern completion menu              |
-| `pgp_autoencrypt`                 | Renamed to: `crypt_auto_encrypt`                                       |
-| `pgp_autoinline`                  | Renamed to: `pgp_auto_inline`                                          |
-| `pgp_autosign`                    | Renamed to: `crypt_auto_sign`                                          |
+| `pgp_autoencrypt`                 | **Renamed to**: `crypt_auto_encrypt`                                   |
+| `pgp_autoinline`                  | **Renamed to**: `pgp_auto_inline`                                      |
+| `pgp_autosign`                    | **Renamed to**: `crypt_auto_sign`                                      |
 | `pgp_auto_decode`                 | Automatically decrypt PGP messages                                     |
 | `pgp_auto_inline`                 | Use old-style inline PGP messages (not recommended)                    |
-| `pgp_auto_traditional`            | Renamed to: `pgp_reply_inline`                                         |
+| `pgp_auto_traditional`            | **Renamed to**: `pgp_reply_inline`                                     |
 | `pgp_check_exit`                  | Check the exit code of PGP subprocess                                  |
 | `pgp_check_gpg_decrypt_status_fd` | File descriptor used for status info                                   |
-| `pgp_clearsign_command`           | Renamed to: `pgp_clear_sign_command`                                   |
+| `pgp_clearsign_command`           | **Renamed to**: `pgp_clear_sign_command`                               |
 | `pgp_clear_sign_command`          | External command to inline-sign a message                              |
-| `pgp_create_traditional`          | Renamed to: `pgp_auto_inline`                                          |
+| `pgp_create_traditional`          | **Renamed to**: `pgp_auto_inline`                                      |
 | `pgp_decode_command`              | External command to decode a PGP attachment                            |
 | `pgp_decryption_okay`             | Text indicating a successful decryption                                |
 | `pgp_decrypt_command`             | External command to decrypt a PGP message                              |
@@ -406,7 +406,7 @@ last_updated: 2025-11-26
 | `pgp_encrypt_sign_command`        | External command to encrypt and sign a message                         |
 | `pgp_entry_format`                | printf-like format string for the PGP key selection menu               |
 | `pgp_export_command`              | External command to export a public key from the user's keyring        |
-| `pgp_getkeys_command`             | Renamed to: `pgp_get_keys_command`                                     |
+| `pgp_getkeys_command`             | **Renamed to**: `pgp_get_keys_command`                                 |
 | `pgp_get_keys_command`            | External command to download a key for an email address                |
 | `pgp_good_sign`                   | Text indicating a good signature                                       |
 | `pgp_ignore_subkeys`              | Only use the principal PGP key                                         |
@@ -416,31 +416,31 @@ last_updated: 2025-11-26
 | `pgp_list_secring_command`        | External command to list the private keys in a user's keyring          |
 | `pgp_long_ids`                    | Display long PGP key IDs to the user                                   |
 | `pgp_mime_auto`                   | Prompt the user to use MIME if inline PGP fails                        |
-| `pgp_replyencrypt`                | Renamed to: `crypt_reply_encrypt`                                      |
-| `pgp_replyinline`                 | Renamed to: `pgp_reply_inline`                                         |
-| `pgp_replysign`                   | Renamed to: `crypt_reply_sign`                                         |
-| `pgp_replysignencrypted`          | Renamed to: `crypt_reply_sign_encrypted`                               |
+| `pgp_replyencrypt`                | **Renamed to**: `crypt_reply_encrypt`                                  |
+| `pgp_replyinline`                 | **Renamed to**: `pgp_reply_inline`                                     |
+| `pgp_replysign`                   | **Renamed to**: `crypt_reply_sign`                                     |
+| `pgp_replysignencrypted`          | **Renamed to**: `crypt_reply_sign_encrypted`                           |
 | `pgp_reply_inline`                | Reply using old-style inline PGP messages (not recommended)            |
 | `pgp_retainable_sigs`             | Create nested multipart/signed or encrypted messages                   |
 | `pgp_self_encrypt`                | Encrypted messages will also be encrypted to `$pgp_default_key` too    |
-| `pgp_self_encrypt_as`             | Renamed to: `pgp_default_key`                                          |
+| `pgp_self_encrypt_as`             | **Renamed to**: `pgp_default_key`                                      |
 | `pgp_show_unusable`               | Show non-usable keys in the key selection                              |
 | `pgp_sign_as`                     | Use this alternative key for signing messages                          |
 | `pgp_sign_command`                | External command to create a detached PGP signature                    |
-| `pgp_sort_keys`                   | Renamed to: `pgp_key_sort`                                             |
+| `pgp_sort_keys`                   | **Renamed to**: `pgp_key_sort`                                         |
 | `pgp_strict_enc`                  | Encode PGP signed messages with quoted-printable (don't unset)         |
 | `pgp_timeout`                     | Time in seconds to cache a passphrase                                  |
 | `pgp_use_gpg_agent`               | Use a PGP agent for caching passwords                                  |
 | `pgp_verify_command`              | External command to verify PGP signatures                              |
 | `pgp_verify_key_command`          | External command to verify key information                             |
-| `pgp_verify_sig`                  | Renamed to: `crypt_verify_sig`                                         |
+| `pgp_verify_sig`                  | **Renamed to**: `crypt_verify_sig`                                     |
 | `pipe_decode`                     | Decode the message when piping it                                      |
 | `pipe_decode_weed`                | Control whether to weed headers when piping an email                   |
 | `pipe_sep`                        | Separator to add between multiple piped messages                       |
 | `pipe_split`                      | Run the pipe command on each message separately                        |
 | `pop_authenticators`              | List of allowed authentication methods (colon-separated)               |
 | `pop_auth_try_all`                | Try all available authentication methods                               |
-| `pop_checkinterval`               | Renamed to: `pop_check_interval`                                       |
+| `pop_checkinterval`               | **Renamed to**: `pop_check_interval`                                   |
 | `pop_check_interval`              | Interval between checks for new mail                                   |
 | `pop_delete`                      | After downloading POP messages, delete them on the server              |
 | `pop_host`                        | Url of the POP server                                                  |
@@ -453,13 +453,13 @@ last_updated: 2025-11-26
 | `postponed`                       | Folder to store postponed messages                                     |
 | `postpone_encrypt`                | Self-encrypt postponed messages                                        |
 | `postpone_encrypt_as`             | Fallback encryption key for postponed messages                         |
-| `post_indent_str`                 | Renamed to: `post_indent_string`                                       |
-| `post_indent_string`              | Renamed to: `attribution_trailer`                                      |
+| `post_indent_str`                 | **Renamed to**: `post_indent_string`                                   |
+| `post_indent_string`              | **Renamed to**: `attribution_trailer`                                  |
 | `post_moderated`                  | Allow posting to moderated newsgroups                                  |
 | `preconnect`                      | External command to run prior to opening a socket                      |
 | `preferred_languages`             | List of Preferred Languages for multilingual MIME (comma-separated)    |
 | `print`                           | Confirm before printing a message                                      |
-| `print_cmd`                       | Renamed to: `print_command`                                            |
+| `print_cmd`                       | **Renamed to**: `print_command`                                        |
 | `print_command`                   | External command to print a message                                    |
 | `print_decode`                    | Decode message before printing it                                      |
 | `print_decode_weed`               | Control whether to weed headers when printing an email                 |
@@ -474,7 +474,7 @@ last_updated: 2025-11-26
 | `query_format`  | printf-like format string for the query menu (address book) |
 | `quit`          | Prompt before exiting NeoMutt                               |
 | `quote_regex`   | Regex to match quoted text in a reply                       |
-| `quote_regexp`  | Renamed to: `quote_regex`                                   |
+| `quote_regexp`  | **Renamed to**: `quote_regex`                               |
 
 ## R
 
@@ -482,7 +482,7 @@ last_updated: 2025-11-26
 | :-------------------------- | :------------------------------------------------------------------ |
 | `read_inc`                  | Update the progress bar after this many records read (0 to disable) |
 | `read_only`                 | Open folders in read-only mode                                      |
-| `realname`                  | Renamed to: `real_name`                                             |
+| `realname`                  | **Renamed to**: `real_name`                                         |
 | `real_name`                 | Real name of the user                                               |
 | `recall`                    | Recall postponed mesaages when asked to compose a message           |
 | `record`                    | Folder to save 'sent' messages                                      |
@@ -490,7 +490,7 @@ last_updated: 2025-11-26
 | `reflow_text`               | Reformat paragraphs of 'format=flowed' text                         |
 | `reflow_wrap`               | Maximum paragraph width for reformatting 'format=flowed' text       |
 | `reply_regex`               | Regex to match message reply subjects like 're: '                   |
-| `reply_regexp`              | Renamed to: `reply_regex`                                           |
+| `reply_regexp`              | **Renamed to**: `reply_regex`                                       |
 | `reply_self`                | Really reply to yourself, when replying to your own email           |
 | `reply_to`                  | Address to use as a 'Reply-To' header                               |
 | `reply_with_xorig`          | Create 'From' header from 'X-Original-To' header                    |
@@ -499,7 +499,7 @@ last_updated: 2025-11-26
 | `resume_edited_draft_files` | Resume editing previously saved draft files                         |
 | `reverse_alias`             | Display the alias in the index, rather than the message's sender    |
 | `reverse_name`              | Set the 'From' from the address the email was sent to               |
-| `reverse_realname`          | Renamed to: `reverse_real_name`                                     |
+| `reverse_realname`          | **Renamed to**: `reverse_real_name`                                 |
 | `reverse_real_name`         | Set the 'From' from the full 'To' address the email was sent to     |
 | `rfc2047_parameters`        | Decode RFC2047-encoded MIME parameters                              |
 
@@ -536,7 +536,7 @@ last_updated: 2025-11-26
 | `sidebar_on_right`               | Display the sidebar on the right                                           |
 | `sidebar_short_path`             | Abbreviate the paths using the `$folder` variable                          |
 | `sidebar_sort`                   | Method to sort the sidebar                                                 |
-| `sidebar_sort_method`            | Renamed to: `sidebar_sort`                                                 |
+| `sidebar_sort_method`            | **Renamed to**: `sidebar_sort`                                             |
 | `sidebar_visible`                | Show the sidebar                                                           |
 | `sidebar_width`                  | Width of the sidebar                                                       |
 | `signature`                      | File containing a signature to append to all mail                          |
@@ -547,7 +547,7 @@ last_updated: 2025-11-26
 | `size_show_fractions`            | Show size fractions with a single decimal place                            |
 | `size_show_mb`                   | Show sizes in megabytes for sizes greater than 1 megabyte                  |
 | `size_units_on_left`             | Show the units as a prefix to the size                                     |
-| `skip_quoted_offset`             | Renamed to: `pager_skip_quoted_context`                                    |
+| `skip_quoted_offset`             | **Renamed to**: `pager_skip_quoted_context`                                |
 | `sleep_time`                     | Time to pause after certain info messages                                  |
 | `smart_wrap`                     | Wrap text at word boundaries                                               |
 | `smileys`                        | Regex to match smileys to prevent mistakes when quoting text               |
@@ -568,7 +568,7 @@ last_updated: 2025-11-26
 | `smime_keys`                     | File containing user's private certificates                                |
 | `smime_pk7out_command`           | External command to extract a public certificate                           |
 | `smime_self_encrypt`             | Encrypted messages will also be encrypt to `$smime_default_key` too        |
-| `smime_self_encrypt_as`          | Renamed to: `smime_default_key`                                            |
+| `smime_self_encrypt_as`          | **Renamed to**: `smime_default_key`                                        |
 | `smime_sign_as`                  | Use this alternative key for signing messages                              |
 | `smime_sign_command`             | External command to sign a message                                         |
 | `smime_sign_digest_alg`          | Digest algorithm                                                           |
@@ -582,12 +582,12 @@ last_updated: 2025-11-26
 | `smtp_user`                      | Username for the SMTP server                                               |
 | `socket_timeout`                 | Timeout for socket connect/read/write operations (-1 to wait indefinitely) |
 | `sort`                           | Sort method for the index                                                  |
-| `sort_alias`                     | Renamed to: `alias_sort`                                                   |
+| `sort_alias`                     | **Renamed to**: `alias_sort`                                               |
 | `sort_aux`                       | Secondary sort method for the index                                        |
-| `sort_browser`                   | Renamed to: `browser_sort`                                                 |
+| `sort_browser`                   | **Renamed to**: `browser_sort`                                             |
 | `sort_re`                        | Whether `$reply_regex` must be matched when not `$strict_threads`          |
 | `spam_separator`                 | Separator for multiple spam headers                                        |
-| `spoolfile`                      | Renamed to: `spool_file`                                                   |
+| `spoolfile`                      | **Renamed to**: `spool_file`                                               |
 | `spool_file`                     | Inbox                                                                      |
 | `ssl_ca_certificates_file`       | File containing trusted CA certificates                                    |
 | `ssl_ciphers`                    | Ciphers to use when using SSL                                              |
@@ -595,7 +595,7 @@ last_updated: 2025-11-26
 | `ssl_force_tls`                  | Require TLS encryption for all connections                                 |
 | `ssl_min_dh_prime_bits`          | Minimum keysize for Diffie-Hellman key exchange                            |
 | `ssl_starttls`                   | Use STARTTLS on servers advertising the capability                         |
-| `ssl_usesystemcerts`             | Renamed to: `ssl_use_system_certs`                                         |
+| `ssl_usesystemcerts`             | **Renamed to**: `ssl_use_system_certs`                                     |
 | `ssl_use_sslv2`                  | INSECURE: Use SSLv2 for authentication                                     |
 | `ssl_use_sslv3`                  | INSECURE: Use SSLv3 for authentication                                     |
 | `ssl_use_system_certs`           | Use CA certificates in the system-wide store                               |
@@ -622,7 +622,7 @@ last_updated: 2025-11-26
 | `tilde`                     | Display '~' in the pager after the end of the email                |
 | `timeout`                   | Time to wait for user input in menus                               |
 | `time_inc`                  | Frequency of progress bar updates (milliseconds)                   |
-| `tmpdir`                    | Renamed to: `tmp_dir`                                              |
+| `tmpdir`                    | **Renamed to**: `tmp_dir`                                          |
 | `tmp_dir`                   | Directory for temporary files                                      |
 | `toggle_quoted_show_levels` | Number of quote levels to show with toggle-quoted                  |
 | `to_chars`                  | Indicator characters for the 'To' field in the index               |
@@ -640,7 +640,7 @@ last_updated: 2025-11-26
 | `uncollapse_jump`   | When opening a thread, jump to the next unread message |
 | `uncollapse_new`    | Open collapsed threads when new mail arrives           |
 | `user_agent`        | Add a 'User-Agent' header to outgoing mail             |
-| `use_8bitmime`      | Renamed to: `use_8bit_mime`                            |
+| `use_8bitmime`      | **Renamed to**: `use_8bit_mime`                        |
 | `use_8bit_mime`     | Use 8-bit messages and ESMTP to send messages          |
 | `use_domain`        | Qualify local addresses using this domain              |
 | `use_envelope_from` | Set the envelope sender of the message                 |
@@ -653,7 +653,7 @@ last_updated: 2025-11-26
 | Config Option        | Description                                   |
 | :------------------- | :-------------------------------------------- |
 | `vfolder_format`     | **Deprecated**                                |
-| `virtual_spoolfile`  | Renamed to: `virtual_spool_file`              |
+| `virtual_spoolfile`  | **Renamed to**: `virtual_spool_file`          |
 | `virtual_spool_file` | Use the first virtual mailbox as a spool file |
 | `visual`             | **Deprecated**                                |
 
@@ -673,8 +673,8 @@ last_updated: 2025-11-26
 
 | Config Option      | Description                                            |
 |:------------------ |:------------------------------------------------------ |
-| `xterm_icon`       | Renamed to: `ts_icon_format`                           |
-| `xterm_set_titles` | Renamed to: `ts_enabled`                               |
-| `xterm_title`      | Renamed to: `ts_status_format`                         |
+| `xterm_icon`       | **Renamed to**: `ts_icon_format`                       |
+| `xterm_set_titles` | **Renamed to**: `ts_enabled`                           |
+| `xterm_title`      | **Renamed to**: `ts_status_format`                     |
 | `x_comment_to`     | Add 'X-Comment-To' header that contains article author |
 
