@@ -317,6 +317,7 @@ last_updated: 2025-11-26
 | `message_cache_clean`         | Clean out obsolete entries from the message cache                                                            |
 | `message_cache_dir`           | Directory for the message cache                                                                              |
 | `message_format`              | printf-like format string for listing attached messages                                                      |
+| `message_id_format`           | printf-like format string for customising the `Message-Id`                                                   |
 | `meta_key`                    | Interpret 'ALT-x' as 'ESC-x'                                                                                 |
 | `metoo`                       | **Renamed to**: `me_too`                                                                                     |
 | `me_too`                      | Remove the user's address from the list of recipients                                                        |

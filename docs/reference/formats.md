@@ -25,9 +25,9 @@ last_updated: 2025-12-01
 | `%*X`   | `padding-soft` | Soft-fill with character `X` as pad                             |
 | `%>X`   | `padding-hard` | Right justify the rest of the string and pad with character `X` |
 | `%\|X`  | `padding-eol`  | Pad to the end of the line with character `X`                   |
-| `%c`    |                | **Deprecated:** Use `%C` instead                                  |
-| `%n`    |                | **Deprecated:** Use `%i` instead                                  |
-| `%r`    |                | **Deprecated:** Use `%A` instead                                  |
+| `%c`    |                | **Deprecated:** Use `%C` instead                                |
+| `%n`    |                | **Deprecated:** Use `%i` instead                                |
+| `%r`    |                | **Deprecated:** Use `%A` instead                                |
 
 ## attach\_format
 
@@ -36,7 +36,7 @@ last_updated: 2025-12-01
 | `%C`    | `charset`          | Charset                                                            |
 | `%c`    | `charset-convert`  | Requires charset conversion (`n` or `c`)                           |
 | `%D`    | `deleted`          | Deleted flag                                                       |
-| `%d`    | `description`      | Description (if none, falls back to `%F`)                            |
+| `%d`    | `description`      | Description (if none, falls back to `%F`)                          |
 | `%e`    | `mime-encoding`    | MIME content-transfer-encoding                                     |
 | `%F`    | `file-disposition` | Filename in content-disposition header (if none, falls back to `%f`) |
 | `%f`    | `file`             | Filename                                                           |
@@ -198,6 +198,23 @@ last_updated: 2025-12-01
 | `%>X`     | `padding-hard`        | Right justify the rest of the string and pad with character `X`                                 |
 | `%\|X`    | `padding-eol`         | Pad to the end of the line with character `X`                                                   |
 
+## message\_id\_format
+
+| Short   | Long Name   | Description                                                        |
+| :------ | :---------- | :----------------------------------------------------------------- |
+| %c      | `counter`   | Step counter looping from `A` to `Z`                               |
+| %d      | `day`       | Current day of the month (GMT)                                     |
+| %f      | `hostname`  | `$hostname`                                                        |
+| %H      | `hour`      | Current hour using a 24-hour clock (GMT)                           |
+| %m      | `minute`    | Current month number (GMT)                                         |
+| %M      | `month`     | Current minute of the hour (GMT)                                   |
+| %p      | `pid`       | Pid of the running mutt process                                    |
+| %r      | `random_3`  | 3 bytes of pseudo-random data encoded in Base64                    |
+| %S      | `second`    | Current second of the minute (GMT)                                 |
+| %x      | `random_1`  | 1 byte of pseudo-random data hex encoded (example: `1b`)           |
+| %Y      | `year`      | Current year using 4 digits (GMT)                                  |
+| %z      | `random_12` | 4 byte timestamp + 8 bytes of pseudo-random data encoded in Base64 |
+       
 ## newsrc
 
 | Short   | Long Name  | Description       |
