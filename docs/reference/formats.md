@@ -9,7 +9,10 @@ last_updated: 2025-12-01
 
 # Format Strings
 
-## alias\_format
+## Alias Format
+
+**Config Options:**
+- `$alias_format`
 
 | Short     | Long Name             | Description                                                     |
 | :------   | :-------------------- | :-------------------------------------------------------------- |
@@ -22,14 +25,17 @@ last_updated: 2025-12-01
 | `%N`      | `%{name}`             | Real name                                                       |
 | `%t`      | `%{tagged}`           | Alias is tagged (selected)                                      |
 | `%Y`      | `%{tags}`             | User-defined tags (labels)                                      |
-| `%*X`     | `%{padding-soft}`     | Soft-fill with character `X` as pad                             |
-| `%>X`     | `%{padding-hard}`     | Right justify the rest of the string and pad with character `X` |
-| `%\|X`    | `%{padding-eol}`      | Pad to the end of the line with character `X`                   |
+| `%*X`     | `%{padding-soft:X}`   | Soft-fill with character `X` as pad                             |
+| `%>X`     | `%{padding-hard:X}`   | Right justify the rest of the string and pad with character `X` |
+| `%\|X`    | `%{padding-eol:X}`    | Pad to the end of the line with character `X`                   |
 | `%c`      |                       | **Deprecated:** Use `%C` instead                                |
 | `%n`      |                       | **Deprecated:** Use `%i` instead                                |
 | `%r`      |                       | **Deprecated:** Use `%A` instead                                |
 
-## attach\_format
+## Attach Format
+
+**Config Options:**
+- `$attach_format`
 
 | Short     | Long Name             | Description                                                        |
 | :------   | :-------------------- | :----------------------------------------------------------------- |
@@ -50,11 +56,14 @@ last_updated: 2025-12-01
 | `%t`      | `%{tagged}`           | Tagged flag                                                        |
 | `%u`      | `%{unlink}`           | Unlink (=to delete) flag                                           |
 | `%X`      | `%{attach-count}`     | Number of qualifying MIME parts in this part and its children<br>(see the `$attachments` section for possible speed effects) |
-| `%*X`     | `%{padding-soft}`     | Soft-fill with character `X` as pad                                |
-| `%>X`     | `%{padding-hard}`     | Right justify the rest of the string and pad with character `X`    |
-| `%\|X`    | `%{padding-eol}`      | Pad to the end of the line with character `X`                      |
+| `%*X`     | `%{padding-soft:X}`   | Soft-fill with character `X` as pad                                |
+| `%>X`     | `%{padding-hard:X}`   | Right justify the rest of the string and pad with character `X`    |
+| `%\|X`    | `%{padding-eol:X}`    | Pad to the end of the line with character `X`                      |
 
-## autocrypt\_acct\_format
+## Autocrypt Account Format
+
+**Config Options:**
+- `$autocrypt_acct_format`
 
 | Short     | Long Name             | Description                                                     |
 | :------   | :-------------------- | :-------------------------------------------------------------- |
@@ -63,23 +72,30 @@ last_updated: 2025-12-01
 | `%n`      | `%{number}`           | Current entry number                                            |
 | `%p`      | `%{prefer-encrypt}`   | Prefer-encrypt flag                                             |
 | `%s`      | `%{enabled}`          | Status flag (active/inactive)                                   |
-| `%*X`     | `%{padding-soft}`     | Soft-fill with character `X` as pad                             |
-| `%>X`     | `%{padding-hard}`     | Right justify the rest of the string and pad with character `X` |
-| `%\|X`    | `%{padding-eol}`      | Pad to the end of the line with character `X`                   |
+| `%*X`     | `%{padding-soft:X}`   | Soft-fill with character `X` as pad                             |
+| `%>X`     | `%{padding-hard:X}`   | Right justify the rest of the string and pad with character `X` |
+| `%\|X`    | `%{padding-eol:X}`    | Pad to the end of the line with character `X`                   |
 
-## compose\_format
+## Compose Format
 
-| Short     | Long Name             | Description                                                                  | 
+**Config Options:**
+- `$compose_format`
+
+| Short     | Long Name             | Description                                                                  |
 | :------   | :-------------------- | :--------------------------------------------------------------------------- |
 | `%a`      | `%{attach-count}`     | Total number of attachments                                                  |
 | `%h`      | `%{hostname}`         | Local hostname                                                               |
 | `%l`      | `%{attach-size}`      | Approximate size (in bytes) of the current message (see $formatstrings-size) |
 | `%v`      | `%{version}`          | NeoMutt version string                                                       |
-| `%*X`     | `%{padding-soft}`     | Soft-fill with character `X` as pad                                          |
-| `%>X`     | `%{padding-hard}`     | Right justify the rest of the string and pad with character `X`              |
-| `%\|X`    | `%{padding-eol}`      | Pad to the end of the line with character `X`                                |
+| `%*X`     | `%{padding-soft:X}`   | Soft-fill with character `X` as pad                                          |
+| `%>X`     | `%{padding-hard:X}`   | Right justify the rest of the string and pad with character `X`              |
+| `%\|X`    | `%{padding-eol:X}`    | Pad to the end of the line with character `X`                                |
 
-## folder\_format
+## Folder Format
+
+**Config Options:**
+- `$folder_format`
+- `$mailbox_folder_format`
 
 | Short     | Long Name                | Description                                                              |
 | :-------  | :----------------------- | :----------------------------------------------------------------------- |
@@ -100,11 +116,14 @@ last_updated: 2025-12-01
 | `%t`      | `%{tagged}`              | `\*` if the file is tagged, blank otherwise                              |
 | `%u`      | `%{file-owner}`          | Owner name (or numeric uid, if missing)                                  |
 | `%[fmt]`  |                          | Date/time folder was last modified using an `strftime(3)` expression     |
-| `%*X`     | `%{padding-soft}`        | Soft-fill with character `X` as pad                                      |
-| `%>X`     | `%{padding-hard}`        | Right justify the rest of the string and pad with character `X`          |
-| `%\|X`    | `%{padding-eol}`         | Pad to the end of the line with character `X`                            |
+| `%*X`     | `%{padding-soft:X}`      | Soft-fill with character `X` as pad                                      |
+| `%>X`     | `%{padding-hard:X}`      | Right justify the rest of the string and pad with character `X`          |
+| `%\|X`    | `%{padding-eol:X}`       | Pad to the end of the line with character `X`                            |
 
-## greeting
+## Greeting
+
+**Config Options:**
+- `$greeting`
 
 | Short     | Long Name             | Description                    |
 | :------   | :-------------------- | :----------------------------- |
@@ -112,7 +131,10 @@ last_updated: 2025-12-01
 | `%u`      | `%{user-name}`        | User (login) name of recipient |
 | `%v`      | `%{first-name}`       | First name of recipient        |
 
-## group\_index\_format
+## Group Index Format
+
+**Config Options:**
+- `$group_index_format`
 
 | Short     | Long Name             | Description                                                        |
 | :------   | :-------------------- | :----------------------------------------------------------------- |
@@ -125,21 +147,37 @@ last_updated: 2025-12-01
 | `%n`      | `%{new-count}`        | Number of new articles in newsgroup                                |
 | `%p`      | `%{poll}`             | Poll: 1 if Mailbox is checked for new mail                         |
 | `%s`      | `%{unread-count}`     | Number of unread articles in newsgroup                             |
-| `%*X`     | `%{padding-soft}`     | Soft-fill with character `X` as pad                                |
-| `%>X`     | `%{padding-hard}`     | Right justify the rest of the string and pad with character `X`    |
-| `%\|X`    | `%{padding-eol}`      | Pad to the end of the line with character `X`                      |
+| `%*X`     | `%{padding-soft:X}`   | Soft-fill with character `X` as pad                                |
+| `%>X`     | `%{padding-hard:X}`   | Right justify the rest of the string and pad with character `X`    |
+| `%\|X`    | `%{padding-eol:X}`    | Pad to the end of the line with character `X`                      |
 
-## history\_format
+## History Format
+
+**Config Options:**
+- `$history_format`
 
 | Short     | Long Name             | Description                                                     |
 | :------   | :-------------------- | :-------------------------------------------------------------- |
 | `%C`      | `%{number}`           | Line number                                                     |
 | `%s`      | `%{match}`            | History match                                                   |
-| `%*X`     | `%{padding-soft}`     | Soft-fill with character `X` as pad                             |
-| `%>X`     | `%{padding-hard}`     | Right justify the rest of the string and pad with character `X` |
-| `%\|X`    | `%{padding-eol}`      | Pad to the end of the line with character `X`                   |
+| `%*X`     | `%{padding-soft:X}`   | Soft-fill with character `X` as pad                             |
+| `%>X`     | `%{padding-hard:X}`   | Right justify the rest of the string and pad with character `X` |
+| `%\|X`    | `%{padding-eol:X}`    | Pad to the end of the line with character `X`                   |
 
-## index\_format
+## Index Format
+
+**Config Options:**
+- `$index_format`
+- `$message_format`
+- `$pager_format`
+
+**Config Options that don't support padding:**
+- `$attribution_intro`
+- `$attribution_trailer`
+- `$forward_attribution_intro`
+- `$forward_attribution_trailer`
+- `$forward_format`
+- `$indent_string`
 
 | Short     | Long Name                | Description                                                                                     |
 | :-------- | :----------------------- | :---------------------------------------------------------------------------------------------- |
@@ -163,7 +201,7 @@ last_updated: 2025-12-01
 | `%I`      | `%{initials}`            | Initials of author                                                                              |
 | `%i`      | `%{message-id}`          | Message-id of the current message                                                               |
 | `%J`      | `%{thread-tags}`         | Message tags (if present, tree unfolded, and != parent's tags)                                  |
-| `%K`      | `%{list-empty}`          | List to which the letter was sent (if any; otherwise: empty)                                |
+| `%K`      | `%{list-empty}`          | List to which the email was sent (if any; otherwise: empty)                                     |
 | `%L`      | `%{from-list}`           | If an address in the `To:` or `Cc:` header field matches an address<br>defined by the user's `$subscribe` command, this displays. |
 | `%l`      | `%{lines}`               | Number of lines in the unprocessed message (may not work with maildir, mh, and IMAP folders) |
 | `%M`      | `%{thread-hidden-count}` | Number of hidden messages if the thread is collapsed                                            |
@@ -194,11 +232,14 @@ last_updated: 2025-12-01
 | `%{fmt}`  |                          | Date and time of the message is converted to sender's time zone, and `fmt` is expanded by the library function `strftime(3)`;<br>if the first character inside the braces is a bang (`!`), the date is formatted ignoring any locale settings.<br>Note that the sender's time zone might only be available as a numerical offset, so `%Z` behaves like `%z`.<br>`%{fmt}` behaves like `%[fmt]` on systems where `struct tm` doesn't have a `tm_gmtoff` member. |
 | `%[fmt]`  |                          | Date and time of the message is converted to the local time zone, and `fmt` is expanded by the library function `strftime(3)`;<br>if the first character inside the brackets is a bang (`!`), the date is formatted ignoring any locale settings. |
 | `%(fmt)`  |                          | Local date and time when the message was received, and `fmt` is expanded by the library function `strftime(3)`;<br>if the first character inside the parentheses is a bang (`!`), the date is formatted ignoring any locale settings. |
-| `%*X`     | `%{padding-soft}`        | Soft-fill with character `X` as pad                                                             |
-| `%>X`     | `%{padding-hard}`        | Right justify the rest of the string and pad with character `X`                                 |
-| `%\|X`    | `%{padding-eol}`         | Pad to the end of the line with character `X`                                                   |
+| `%*X`     | `%{padding-soft:X}`      | Soft-fill with character `X` as pad                                                             |
+| `%>X`     | `%{padding-hard:X}`      | Right justify the rest of the string and pad with character `X`                                 |
+| `%\|X`    | `%{padding-eol:X}`       | Pad to the end of the line with character `X`                                                   |
 
-## message\_id\_format
+## Message Id Format
+
+**Config Options:**
+- `$message_id_format`
 
 | Short     | Long Name             | Description                                                        |
 | :------   | :-------------------- | :----------------------------------------------------------------- |
@@ -214,8 +255,12 @@ last_updated: 2025-12-01
 | %x        | `%{random_1}`         | 1 byte of pseudo-random data hex encoded (example: `1b`)           |
 | %Y        | `%{year}`             | Current year using 4 digits (GMT)                                  |
 | %z        | `%{random_12}`        | 4 byte timestamp + 8 bytes of pseudo-random data encoded in Base64 |
-       
-## newsrc
+
+## NNTP Format
+
+**Config Options:**
+- `$inews`
+- `$newsrc`
 
 | Short     | Long Name             | Description       |
 | :------   | :-------------------- | :---------------- |
@@ -226,18 +271,36 @@ last_updated: 2025-12-01
 | `%s`      | `%{server}`           | News server name  |
 | `%u`      | `%{username}`         | Username          |
 
-## pattern\_format
+## Pattern Format
 
-| Short     | Long Name             | Description                                                     | 
+**Config Options:**
+- `$pattern_format`
+
+| Short     | Long Name             | Description                                                     |
 | :------   | :-------------------- | :-------------------------------------------------------------- |
 | `%d`      | `%{description}`      | Pattern description                                             |
 | `%e`      | `%{expression}`       | Pattern expression                                              |
 | `%n`      | `%{number}`           | Index number                                                    |
-| `%*X`     | `%{padding-soft}`     | Soft-fill with character `X` as pad                             |
-| `%>X`     | `%{padding-hard}`     | Right justify the rest of the string and pad with character `X` |
-| `%\|X`    | `%{padding-eol}`      | Pad to the end of the line with character `X`                   |
+| `%*X`     | `%{padding-soft:X}`   | Soft-fill with character `X` as pad                             |
+| `%>X`     | `%{padding-hard:X}`   | Right justify the rest of the string and pad with character `X` |
+| `%\|X`    | `%{padding-eol:X}`    | Pad to the end of the line with character `X`                   |
 
-## pgp\_decode\_command
+## PGP Commands
+
+**Config Options:**
+- `$pgp_clear_sign_command`
+- `$pgp_decode_command`
+- `$pgp_decrypt_command`
+- `$pgp_encrypt_only_command`
+- `$pgp_encrypt_sign_command`
+- `$pgp_export_command`
+- `$pgp_get_keys_command`
+- `$pgp_import_command`
+- `$pgp_list_pubring_command`
+- `$pgp_list_secring_command`
+- `$pgp_sign_command`
+- `$pgp_verify_command`
+- `$pgp_verify_key_command`
 
 | Short     | Long Name             | Description                                                      |
 | :------   | :-------------------- | :--------------------------------------------------------------- |
@@ -247,7 +310,10 @@ last_updated: 2025-12-01
 | `%r`      | `%{key-ids}`          | One or more key IDs (or fingerprints if available)               |
 | `%s`      | `%{file-signature}`   | Expands to the name of a file containing the signature part<br>of a `multipart/signed` attachment when verifying it |
 
-## pgp\_entry\_format
+## PGP Entry Format
+
+**Config Options:**
+- `$pgp_entry_format`
 
 | Short     | Long Name                | Description                                                     |
 | :-------  | :----------------------- | :-------------------------------------------------------------- |
@@ -268,11 +334,14 @@ last_updated: 2025-12-01
 | `%K`      | `%{pkey-id}`             | Primary Key id                                                  |
 | `%L`      | `%{pkey-length}`         | Primary Key length                                              |
 | `%[<s>]`  | `%{date}`                | Date of the key where `<s>` is an `strftime(3)` expression  |
-| `%*X`     | `%{padding-soft}`        | Soft-fill with character `X` as pad                             |
-| `%>X`     | `%{padding-hard}`        | Right justify the rest of the string and pad with character `X` |
-| `%\|X`    | `%{padding-eol}`         | Pad to the end of the line with character `X`                   |
+| `%*X`     | `%{padding-soft:X}`      | Soft-fill with character `X` as pad                             |
+| `%>X`     | `%{padding-hard:X}`      | Right justify the rest of the string and pad with character `X` |
+| `%\|X`    | `%{padding-eol:X}`       | Pad to the end of the line with character `X`                   |
 
-## query\_format
+## Query Format
+
+**Config Options:**
+- `$query_format`
 
 | Short     | Long Name             | Description                                                     |
 | :------   | :-------------------- | :-------------------------------------------------------------- |
@@ -283,15 +352,18 @@ last_updated: 2025-12-01
 | `%N`      | `%{name}`             | Real name                                                       |
 | `%t`      | `%{tagged}`           | Alias is tagged (selected)                                      |
 | `%Y`      | `%{tags}`             | User-defined tags (labels)                                      |
-| `%*X`     | `%{padding-soft}`     | Soft-fill with character `X` as pad                             |
-| `%>X`     | `%{padding-hard}`     | Right justify the rest of the string and pad with character `X` |
-| `%\|X`    | `%{padding-eol}`      | Pad to the end of the line with character `X`                   |
+| `%*X`     | `%{padding-soft:X}`   | Soft-fill with character `X` as pad                             |
+| `%>X`     | `%{padding-hard:X}`   | Right justify the rest of the string and pad with character `X` |
+| `%\|X`    | `%{padding-eol:X}`    | Pad to the end of the line with character `X`                   |
 | `%a`      |                       | **Deprecated:** Use `%E` instead                                  |
 | `%c`      |                       | **Deprecated:** Use `%i` instead                                  |
 | `%e`      |                       | **Deprecated:** Use `%C` instead                                  |
 | `%n`      |                       | **Deprecated:** Use `%N` instead                                  |
 
-## sidebar\_format
+## Sidebar Format
+
+**Config Options:**
+- `$sidebar_format`
 
 | Short     | Long Name             | Cur  | Description                                                     |
 | :------   | :-------------------- | :--- | :-------------------------------------------------------------- |
@@ -310,13 +382,25 @@ last_updated: 2025-12-01
 | `%t`      | `%{tagged-count}`     | Cur  | Number of tagged messages in the mailbox                        |
 | `%Z`      | `%{unseen-count}`     |      | Number of new messages in the mailbox (unread, unseen)          |
 | `%!`      | `%{flagged}`          |      | `!` : one flagged message<br>`!!` : two flagged messages<br>`n!` : n flagged messages (for n > 2) |
-| `%*X`     | `%{padding-soft}`     |      | Soft-fill with character `X` as pad                             |
-| `%>X`     | `%{padding-hard}`     |      | Right justify the rest of the string and pad with character `X` |
-| `%\|X`    | `%{padding-eol}`      |      | Pad to the end of the line with character `X`                   |
+| `%*X`     | `%{padding-soft:X}`   |      | Soft-fill with character `X` as pad                             |
+| `%>X`     | `%{padding-hard:X}`   |      | Right justify the rest of the string and pad with character `X` |
+| `%\|X`    | `%{padding-eol:X}`    |      | Pad to the end of the line with character `X`                   |
 
 Cur = Only applicable to the current folder
 
-## smime\_decrypt\_command
+## SMIME Commands
+
+**Config Options:**
+- `$smime_decrypt_command`
+- `$smime_encrypt_command`
+- `$smime_get_cert_command`
+- `$smime_get_cert_email_command`
+- `$smime_get_signer_cert_command`
+- `$smime_import_cert_command`
+- `$smime_pk7out_command`
+- `$smime_sign_command`
+- `$smime_verify_command`
+- `$smime_verify_opaque_command`
 
 | Short     | Long Name             | Description                                                          |
 | :------   | :-------------------- | :------------------------------------------------------------------- |
@@ -329,7 +413,15 @@ Cur = Only applicable to the current folder
 | `%k`      | `%{key}`              | Key-pair specified with `$smime_default_key`                     |
 | `%s`      | `%{signature-file}`   | Expands to the name of a file containing the signature part<br>of a `multipart/signed` attachment when verifying it |
 
-## status\_format
+## Status Format
+
+**Config Options:**
+- `$status_format`
+
+**Config Options that don't support padding:**
+- `$new_mail_command`
+- `$ts_icon_format`
+- `$ts_status_format`
 
 | Short     | Long Name             | Description                                                        |
 | :------   | :-------------------- | :----------------------------------------------------------------- |
@@ -356,7 +448,7 @@ Cur = Only applicable to the current folder
 | `%u`      | `%{unread-count}`     | Number of unread messages in the mailbox (seen or unseen)          |
 | `%v`      | `%{limit-pattern}`    | NeoMutt version string                                             |
 | `%V`      | `%{version}`          | Currently active limit pattern, if any                             |
-| `%*X`     | `%{padding-soft}`     | Soft-fill with character `X` as pad                                |
-| `%>X`     | `%{padding-hard}`     | Right justify the rest of the string and pad with character `X`    |
-| `%\|X`    | `%{padding-eol}`      | Pad to the end of the line with character `X`                      |
+| `%*X`     | `%{padding-soft:X}`   | Soft-fill with character `X` as pad                                |
+| `%>X`     | `%{padding-hard:X}`   | Right justify the rest of the string and pad with character `X`    |
+| `%\|X`    | `%{padding-eol:X}`    | Pad to the end of the line with character `X`                      |
 
