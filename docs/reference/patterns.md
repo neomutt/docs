@@ -5,8 +5,8 @@
 | `~A`             | All messages                                                                                      |
 | `~b EXPR`        | Messages which contain `EXPR` in the message body                                                 |
 | `=b STRING`      | IMAP: Like `~b` but searches for `STRING` on the server                                           |
-| `~B EXPR`        | Messages which contain EXPRin the whole message                                                   |
-| `=B STRING`      | IMAP: LIke `~B` but searches for `STRING` on the server                                           |
+| `~B EXPR`        | Messages which contain `EXPR` in the whole message                                                |
+| `=B STRING`      | IMAP: Like `~B` but searches for `STRING` on the server                                           |
 | `~c EXPR`        | Messages carbon-copied to `EXPR`                                                                  |
 | `%c GROUP`       | Messages carbon-copied to any member of `GROUP`                                                   |
 | `~C EXPR`        | Messages either to: or cc: `EXPR`                                                                 |
@@ -21,7 +21,7 @@
 | `%f GROUP`       | Messages originating from any member of `GROUP`                                                   |
 | `~g`             | Cryptographically signed messages                                                                 |
 | `~G`             | Cryptographically encrypted messages                                                              |
-| `~h EXPR`        | Messages which contain EXPRin the message header                                                  |
+| `~h EXPR`        | Messages which contain `EXPR` in the message header                                               |
 | `=h STRING`      | IMAP: Like `~h` but searches for `STRING` on the server (must be of the form `header: substring`) |
 | `~H EXPR`        | Messages with a spam attribute matching `EXPR`                                                    |
 | `~i EXPR`        | Messages which match `EXPR` in the `Message-ID` field                                             |
@@ -39,8 +39,8 @@
 | `~n [MIN]-[MAX]` | Messages with a score in the range `MIN` to `MAX`                                                 |
 | `~N`             | New messages                                                                                      |
 | `~O`             | Old messages                                                                                      |
-| `~p`             | Messages addressed to you (consults `$from`, `alternates`, and local account/hostname)            |
-| `~P`             | Messages from you (consults `$from`, `alternates`, and local account/hostname)                    |
+| `~p`             | Messages addressed to you (consults `$from`, `alternates` and local account/hostname)             |
+| `~P`             | Messages from you (consults `$from`, `alternates` and local account/hostname)                     |
 | `~Q`             | Messages which have been replied to                                                               |
 | `~r [MIN]-[MAX]` | Messages with `date-received` in a Date range                                                     |
 | `~R`             | Read messages                                                                                     |
