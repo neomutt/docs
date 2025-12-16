@@ -34,7 +34,7 @@
 | `macro`               | Define a keyboard macro                                                |
 | `mailboxes`           | Define a list of mailboxes to watch                                    |
 | `mailto_allow`        | Permit specific header-fields in mailto URL processing                 |
-| `mbox-hook`           | On leaving a mailbox, move read messages matching a regex regex        |
+| `mbox-hook`           | On leaving a mailbox, move read messages matching a regex              |
 | `message-hook`        | Run a command when viewing a message matching patterns                 |
 | `mime_lookup`         | Map specified MIME types/subtypes to display handlers                  |
 | `mono`                | **Deprecated**: Use `color`                                            |
