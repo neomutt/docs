@@ -1,15 +1,5 @@
 # NeoMutt Expando User Guide
 
-## Table of Contents
-
-1. [What are Expandos?](#what-are-expandos)
-2. [How to Use Expandos](#how-to-use-expandos)
-3. [Formatting Expandos](#formatting-expandos)
-4. [Conditional Expandos](#conditional-expandos)
-5. [Quick Reference](#quick-reference)
-
----
-
 ## What are Expandos? 
 
 Expandos are **format strings** used throughout NeoMutt to customize how information is displayed. They work like placeholders that get replaced with actual data when NeoMutt displays content.

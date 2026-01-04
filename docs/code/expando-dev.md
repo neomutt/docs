@@ -4,15 +4,6 @@
 
 The Expando system in NeoMutt is a powerful framework for parsing and rendering format strings with dynamic data.  Expandos are placeholders (like `%s`, `%n`, `%{name}`) that get replaced with actual data at runtime.  The system is located in the `expando/` directory.
 
-## Table of Contents
-
-1. [How Expandos are Defined](#how-expandos-are-defined)
-2. [How Parsing Works](#how-parsing-works)
-3. [How Callbacks Work](#how-callbacks-work)
-4. [How Conditional Expandos Work](#how-conditional-expandos-work)
-
----
-
 ## How Expandos are Defined
 
 ### Core Data Structures
