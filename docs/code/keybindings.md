@@ -1,3 +1,5 @@
+# Key System Refactoring
+
 I'll analyze the changes in the `devel/keys` branch and create comprehensive technical documentation along with an architectural diagram. Let me try a different approach to explore the branch: Let me gather more specific information about the key structures and the architecture changes in the devel/keys branch. Let me search for more structural information about the new architecture. Now I have enough information to create comprehensive technical documentation. Let me analyze what I've learned:
 
 **Key Changes in `devel/keys` branch:**
@@ -5,10 +7,6 @@ I'll analyze the changes in the `devel/keys` branch and create comprehensive tec
 1. **New Architecture**: The branch introduces `SubMenu` and `MenuDefinition` structures to better organize functions, menus, and keybindings
 2. **Separation of Concerns**: Functions are separated from keybindings - functions are registered once in SubMenus, and MenuDefinitions combine SubMenus
 3. **Refactoring**: Major refactoring of how keybindings are stored and looked up
-
-Let me create the documentation and SVG diagram: 
-
-# Technical Documentation:  Key System Refactoring (`devel/keys` branch)
 
 ## Overview
 

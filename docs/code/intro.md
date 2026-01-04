@@ -16,4 +16,5 @@ last_updated: 2026-01-04
 maxdepth: 1
 ---
 keybindings.md
+menu.md
 ```
