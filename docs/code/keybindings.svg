@@ -1,0 +1,169 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 800" style="background: white;">
+  <!-- Title -->
+  <text x="500" y="30" font-size="24" font-weight="bold" text-anchor="middle" fill="#1a1a1a">
+    NeoMutt Key System Architecture (devel/keys)
+  </text>
+  
+  <!-- MenuDefinition Box -->
+  <g id="menu-definition">
+    <rect x="50" y="60" width="300" height="200" fill="#e3f2fd" stroke="#1976d2" stroke-width="3" rx="5"/>
+    <text x="200" y="85" font-size="16" font-weight="bold" text-anchor="middle" fill="#1976d2">
+      struct MenuDefinition
+    </text>
+    <line x1="50" y1="95" x2="350" y2="95" stroke="#1976d2" stroke-width="2"/>
+    
+    <text x="60" y="120" font-size="14" fill="#333">
+      <tspan x="60" dy="0">int id</tspan>
+      <tspan x="60" dy="20">const char *name</tspan>
+      <tspan x="60" dy="20">struct SubMenuPArray submenus</tspan>
+    </text>
+    
+    <text x="60" y="195" font-size="12" fill="#666" font-style="italic">
+      <tspan x="60" dy="0">Example:  MENU_INDEX, "index"</tspan>
+      <tspan x="60" dy="18">Contains multiple SubMenus</tspan>
+    </text>
+  </g>
+  
+  <!-- SubMenu 1 (Generic) -->
+  <g id="submenu-generic">
+    <rect x="50" y="320" width="280" height="180" fill="#fff3e0" stroke="#f57c00" stroke-width="2" rx="5"/>
+    <text x="190" y="345" font-size="16" font-weight="bold" text-anchor="middle" fill="#f57c00">
+      struct SubMenu (Generic)
+    </text>
+    <line x1="50" y1="355" x2="330" y2="355" stroke="#f57c00" stroke-width="2"/>
+    
+    <text x="60" y="380" font-size="14" fill="#333">
+      <tspan x="60" dy="0">const struct MenuFuncOp *functions</tspan>
+      <tspan x="70" dy="22" font-size="12" fill="#666">• "help" → OP_HELP</tspan>
+      <tspan x="70" dy="18" font-size="12" fill="#666">• "exit" → OP_EXIT</tspan>
+      <tspan x="70" dy="18" font-size="12" fill="#666">• "search" → OP_SEARCH</tspan>
+      
+      <tspan x="60" dy="30" font-size="14" fill="#333">struct KeymapList keymaps</tspan>
+      <tspan x="70" dy="22" font-size="12" fill="#666">• "?" → OP_HELP</tspan>
+      <tspan x="70" dy="18" font-size="12" fill="#666">• "q" → OP_EXIT</tspan>
+    </text>
+  </g>
+  
+  <!-- SubMenu 2 (Menu Specific) -->
+  <g id="submenu-specific">
+    <rect x="390" y="320" width="280" height="180" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2" rx="5"/>
+    <text x="530" y="345" font-size="16" font-weight="bold" text-anchor="middle" fill="#7b1fa2">
+      struct SubMenu (Index-specific)
+    </text>
+    <line x1="390" y1="355" x2="670" y2="355" stroke="#7b1fa2" stroke-width="2"/>
+    
+    <text x="400" y="380" font-size="14" fill="#333">
+      <tspan x="400" dy="0">const struct MenuFuncOp *functions</tspan>
+      <tspan x="410" dy="22" font-size="12" fill="#666">• "delete-message" → OP_DELETE</tspan>
+      <tspan x="410" dy="18" font-size="12" fill="#666">• "reply" → OP_REPLY</tspan>
+      <tspan x="410" dy="18" font-size="12" fill="#666">• "forward" → OP_FORWARD</tspan>
+      
+      <tspan x="400" dy="30" font-size="14" fill="#333">struct KeymapList keymaps</tspan>
+      <tspan x="410" dy="22" font-size="12" fill="#666">• "d" → OP_DELETE</tspan>
+      <tspan x="410" dy="18" font-size="12" fill="#666">• "r" → OP_REPLY</tspan>
+    </text>
+  </g>
+  
+  <!-- Keymap Detail -->
+  <g id="keymap-detail">
+    <rect x="720" y="320" width="250" height="180" fill="#e8f5e9" stroke="#388e3c" stroke-width="2" rx="5"/>
+    <text x="845" y="345" font-size="16" font-weight="bold" text-anchor="middle" fill="#388e3c">
+      struct Keymap
+    </text>
+    <line x1="720" y1="355" x2="970" y2="355" stroke="#388e3c" stroke-width="2"/>
+    
+    <text x="730" y="380" font-size="13" fill="#333">
+      <tspan x="730" dy="0">char *macro</tspan>
+      <tspan x="730" dy="20">char *desc</tspan>
+      <tspan x="730" dy="20">short op</tspan>
+      <tspan x="730" dy="20">short eq</tspan>
+      <tspan x="730" dy="20">short len</tspan>
+      <tspan x="730" dy="20">keycode_t *keys</tspan>
+      <tspan x="730" dy="20">STAILQ_ENTRY entries</tspan>
+    </text>
+  </g>
+  
+  <!-- MenuFuncOp Detail -->
+  <g id="menufuncop-detail">
+    <rect x="720" y="60" width="250" height="120" fill="#fce4ec" stroke="#c2185b" stroke-width="2" rx="5"/>
+    <text x="845" y="85" font-size="16" font-weight="bold" text-anchor="middle" fill="#c2185b">
+      struct MenuFuncOp
+    </text>
+    <line x1="720" y1="95" x2="970" y2="95" stroke="#c2185b" stroke-width="2"/>
+    
+    <text x="730" y="120" font-size="13" fill="#333">
+      <tspan x="730" dy="0">const char *name</tspan>
+      <tspan x="730" dy="20">int op</tspan>
+      <tspan x="730" dy="20">bool deprecated</tspan>
+    </text>
+  </g>
+  
+  <!-- Arrows -->
+  <!-- MenuDefinition to SubMenu Generic -->
+  <path d="M 200 260 L 190 320" stroke="#1976d2" stroke-width="2" fill="none" marker-end="url(#arrowblue)"/>
+  <text x="150" y="290" font-size="12" fill="#1976d2">contains</text>
+  
+  <!-- MenuDefinition to SubMenu Specific -->
+  <path d="M 280 260 Q 350 290 490 320" stroke="#1976d2" stroke-width="2" fill="none" marker-end="url(#arrowblue)"/>
+  <text x="360" y="280" font-size="12" fill="#1976d2">contains</text>
+  
+  <!-- SubMenu to Keymap -->
+  <path d="M 330 410 L 720 410" stroke="#f57c00" stroke-width="2" fill="none" marker-end="url(#arroworange)"/>
+  <text x="500" y="400" font-size="12" fill="#f57c00">has list of</text>
+  
+  <!-- SubMenu to MenuFuncOp -->
+  <path d="M 330 350 Q 520 220 720 120" stroke="#f57c00" stroke-width="2" fill="none" marker-end="url(#arroworange)"/>
+  <text x="520" y="240" font-size="12" fill="#f57c00">references</text>
+  
+  <!-- Arrow markers -->
+  <defs>
+    <marker id="arrowblue" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#1976d2"/>
+    </marker>
+    <marker id="arroworange" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#f57c00"/>
+    </marker>
+  </defs>
+  
+  <!-- Global Arrays -->
+  <g id="global-arrays">
+    <rect x="50" y="550" width="900" height="220" fill="#f5f5f5" stroke="#424242" stroke-width="2" rx="5"/>
+    <text x="500" y="575" font-size="16" font-weight="bold" text-anchor="middle" fill="#424242">
+      Global Data Structures
+    </text>
+    <line x1="50" y1="585" x2="950" y2="585" stroke="#424242" stroke-width="1"/>
+    
+    <!-- SubMenus Array -->
+    <rect x="70" y="605" width="400" height="145" fill="white" stroke="#666" stroke-width="1" rx="3"/>
+    <text x="270" y="625" font-size="14" font-weight="bold" text-anchor="middle" fill="#333">
+      struct SubMenuArray SubMenus
+    </text>
+    <text x="80" y="650" font-size="12" fill="#666">
+      <tspan x="80" dy="0">Array of all registered SubMenus: </tspan>
+      <tspan x="90" dy="20">• [0] Generic SubMenu (OpGeneric)</tspan>
+      <tspan x="90" dy="18">• [1] Index SubMenu (OpIndex)</tspan>
+      <tspan x="90" dy="18">• [2] Pager SubMenu (OpPager)</tspan>
+      <tspan x="90" dy="18">• [3] Compose SubMenu (OpCompose)</tspan>
+      <tspan x="90" dy="18">• ...</tspan>
+    </text>
+    
+    <!-- MenuDefs Array -->
+    <rect x="500" y="605" width="430" height="145" fill="white" stroke="#666" stroke-width="1" rx="3"/>
+    <text x="715" y="625" font-size="14" font-weight="bold" text-anchor="middle" fill="#333">
+      struct MenuDefinitionArray MenuDefs
+    </text>
+    <text x="510" y="650" font-size="12" fill="#666">
+      <tspan x="510" dy="0">Array of all menu definitions:</tspan>
+      <tspan x="520" dy="20">• [MENU_INDEX] → "index" + [SubMenus]</tspan>
+      <tspan x="520" dy="18">• [MENU_PAGER] → "pager" + [SubMenus]</tspan>
+      <tspan x="520" dy="18">• [MENU_COMPOSE] → "compose" + [SubMenus]</tspan>
+      <tspan x="520" dy="18">• [MENU_ALIAS] → "alias" + [SubMenus]</tspan>
+      <tspan x="520" dy="18">• ...</tspan>
+    </text>
+  </g>
+  
+  <!-- Legend -->
+  <text x="50" y="790" font-size="11" fill="#666" font-style="italic">
+    This diagram shows how MenuDefinitions combine multiple SubMenus, each containing functions and keybindings.
+  </text>
+</svg>

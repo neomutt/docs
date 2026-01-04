@@ -15,6 +15,7 @@ last_updated: 2025-11-30
 ---
 maxdepth: 2
 ---
+code/intro
 tour/intro
 reference/index
 ```
