@@ -1,19 +1,21 @@
 # Commands Summary
 
-## Part 1: Alias Commands (2 commands)
+## Alias
 
-### 1. CMD_ALIAS - `alias`
+### `alias`
+
+**Command:** `CMD_ALIAS`
 
 **Parse Function:** `parse_alias()` in `alias/commands.c`
 
 **Data Storage:**
 - **Global List:** `struct AliasList Aliases` (defined in `alias/alias.h`)
-- **Structure:** `struct Alias` containing: 
+- **Structure:** `struct Alias` containing:
   - `char *name` - Alias key
   - `struct AddressList addr` - Email addresses
   - `char *comment` - Comment text
   - `struct TagList tags` - Tags parsed from comments
-  
+
 **Owner:** Global alias subsystem
 
 **Additional Storage:**
@@ -22,7 +24,9 @@
 
 **Data Field:** `CMD_NO_DATA` (0)
 
-### 2. CMD_UNALIAS - `unalias`
+### `unalias`
+
+**Command:** `CMD_UNALIAS`
 
 **Parse Function:** `parse_unalias()` in `alias/commands.c`
 
@@ -39,11 +43,13 @@
 
 **Data Field:** `CMD_NO_DATA` (0)
 
-## Part 2: Hook Commands (18 commands)
+## Hook
 
 All hook commands are defined in `hooks/commands.c` and use various parsing functions.
 
-### 3. CMD_ACCOUNT_HOOK - `account-hook`
+### `account-hook`
+
+**Command:** `CMD_ACCOUNT_HOOK`
 
 **Parse Function:** `parse_hook_regex()` in `hooks/parse. c`
 
@@ -53,12 +59,14 @@ All hook commands are defined in `hooks/commands.c` and use various parsing func
   - `int type` - `MUTT_ACCOUNT_HOOK`
   - `struct Regex *regex` - Compiled regex pattern
   - `char *command` - Command to execute
-  
+
 **Owner:** Global hooks subsystem
 
 **Data Field:** `CMD_NO_DATA` (0)
 
-### 4. CMD_CHARSET_HOOK - `charset-hook`
+### `charset-hook`
+
+**Command:** `CMD_CHARSET_HOOK`
 
 **Parse Function:** `parse_hook_charset()` in `hooks/parse.c`
 
@@ -72,7 +80,9 @@ All hook commands are defined in `hooks/commands.c` and use various parsing func
 
 **Data Field:** `CMD_NO_DATA` (0)
 
-### 5. CMD_CRYPT_HOOK - `crypt-hook`
+### `crypt-hook`
+
+**Command:** `CMD_CRYPT_HOOK`
 
 **Parse Function:** `parse_hook_crypt()` in `hooks/parse.c`
 
@@ -86,7 +96,9 @@ All hook commands are defined in `hooks/commands.c` and use various parsing func
 
 **Data Field:** `CMD_NO_DATA` (0)
 
-### 6. CMD_FCC_HOOK - `fcc-hook`
+### `fcc-hook`
+
+**Command:** `CMD_FCC_HOOK`
 
 **Parse Function:** `parse_hook_mailbox()` in `hooks/parse.c`
 
@@ -100,7 +112,9 @@ All hook commands are defined in `hooks/commands.c` and use various parsing func
 
 **Data Field:** `CMD_NO_DATA` (0)
 
-### 7. CMD_FCC_SAVE_HOOK - `fcc-save-hook`
+### `fcc-save-hook`
+
+**Command:** `CMD_FCC_SAVE_HOOK`
 
 **Parse Function:** `parse_hook_mailbox()` in `hooks/parse.c`
 
@@ -112,7 +126,9 @@ All hook commands are defined in `hooks/commands.c` and use various parsing func
 
 **Data Field:** `CMD_NO_DATA` (0)
 
-### 8. CMD_FOLDER_HOOK - `folder-hook`
+### `folder-hook`
+
+**Command:** `CMD_FOLDER_HOOK`
 
 **Parse Function:** `parse_hook_folder()` in `hooks/parse.c`
 
@@ -126,7 +142,9 @@ All hook commands are defined in `hooks/commands.c` and use various parsing func
 
 **Data Field:** `CMD_NO_DATA` (0)
 
-### 9. CMD_ICONV_HOOK - `iconv-hook`
+### `iconv-hook`
+
+**Command:** `CMD_ICONV_HOOK`
 
 **Parse Function:** `parse_hook_charset()` in `hooks/parse.c`
 
@@ -138,7 +156,9 @@ All hook commands are defined in `hooks/commands.c` and use various parsing func
 
 **Data Field:** `CMD_NO_DATA` (0)
 
-### 10. CMD_INDEX_FORMAT_HOOK - `index-format-hook`
+### `index-format-hook`
+
+**Command:** `CMD_INDEX_FORMAT_HOOK`
 
 **Parse Function:** `parse_hook_index()` in `hooks/parse.c`
 
@@ -153,7 +173,9 @@ All hook commands are defined in `hooks/commands.c` and use various parsing func
 
 **Data Field:** `CMD_NO_DATA` (0)
 
-### 11. CMD_MBOX_HOOK - `mbox-hook`
+### `mbox-hook`
+
+**Command:** `CMD_MBOX_HOOK`
 
 **Parse Function:** `parse_hook_mbox()` in `hooks/parse.c`
 
@@ -167,7 +189,9 @@ All hook commands are defined in `hooks/commands.c` and use various parsing func
 
 **Data Field:** `CMD_NO_DATA` (0)
 
-### 12. CMD_MESSAGE_HOOK - `message-hook`
+### `message-hook`
+
+**Command:** `CMD_MESSAGE_HOOK`
 
 **Parse Function:** `parse_hook_pattern()` in `hooks/parse.c`
 
@@ -181,7 +205,9 @@ All hook commands are defined in `hooks/commands.c` and use various parsing func
 
 **Data Field:** `CMD_NO_DATA` (0)
 
-### 13. CMD_REPLY_HOOK - `reply-hook`
+### `reply-hook`
+
+**Command:** `CMD_REPLY_HOOK`
 
 **Parse Function:** `parse_hook_pattern()` in `hooks/parse.c`
 
@@ -193,7 +219,9 @@ All hook commands are defined in `hooks/commands.c` and use various parsing func
 
 **Data Field:** `CMD_NO_DATA` (0)
 
-### 14. CMD_SAVE_HOOK - `save-hook`
+### `save-hook`
+
+**Command:** `CMD_SAVE_HOOK`
 
 **Parse Function:** `parse_hook_mailbox()` in `hooks/parse.c`
 
@@ -205,7 +233,9 @@ All hook commands are defined in `hooks/commands.c` and use various parsing func
 
 **Data Field:** `CMD_NO_DATA` (0)
 
-### 15. CMD_SEND_HOOK - `send-hook`
+### `send-hook`
+
+**Command:** `CMD_SEND_HOOK`
 
 **Parse Function:** `parse_hook_pattern()` in `hooks/parse.c`
 
@@ -217,7 +247,9 @@ All hook commands are defined in `hooks/commands.c` and use various parsing func
 
 **Data Field:** `CMD_NO_DATA` (0)
 
-### 16. CMD_SEND2_HOOK - `send2-hook`
+### `send2-hook`
+
+**Command:** `CMD_SEND2_HOOK`
 
 **Parse Function:** `parse_hook_pattern()` in `hooks/parse.c`
 
@@ -229,7 +261,9 @@ All hook commands are defined in `hooks/commands.c` and use various parsing func
 
 **Data Field:** `CMD_NO_DATA` (0)
 
-### 17. CMD_SHUTDOWN_HOOK - `shutdown-hook`
+### `shutdown-hook`
+
+**Command:** `CMD_SHUTDOWN_HOOK`
 
 **Parse Function:** `parse_hook_global()` in `hooks/parse.c`
 
@@ -243,7 +277,9 @@ All hook commands are defined in `hooks/commands.c` and use various parsing func
 
 **Data Field:** `CMD_NO_DATA` (0)
 
-### 18. CMD_STARTUP_HOOK - `startup-hook`
+### `startup-hook`
+
+**Command:** `CMD_STARTUP_HOOK`
 
 **Parse Function:** `parse_hook_global()` in `hooks/parse.c`
 
@@ -255,7 +291,9 @@ All hook commands are defined in `hooks/commands.c` and use various parsing func
 
 **Data Field:** `CMD_NO_DATA` (0)
 
-### 19. CMD_TIMEOUT_HOOK - `timeout-hook`
+### `timeout-hook`
+
+**Command:** `CMD_TIMEOUT_HOOK`
 
 **Parse Function:** `parse_hook_global()` in `hooks/parse.c`
 
@@ -267,7 +305,9 @@ All hook commands are defined in `hooks/commands.c` and use various parsing func
 
 **Data Field:** `CMD_NO_DATA` (0)
 
-### 20. CMD_UNHOOK - `unhook`
+### `unhook`
+
+**Command:** `CMD_UNHOOK`
 
 **Parse Function:** `parse_unhook()` in `hooks/parse.c`
 
@@ -280,11 +320,13 @@ All hook commands are defined in `hooks/commands.c` and use various parsing func
 
 **Data Field:** `CMD_NO_DATA` (0)
 
-## Part 2: Key Binding Commands (6 commands)
+## Key Binding
 
 All key binding commands are defined in `key/init.c` and registered via `KeyCommands`.
 
-### 21. CMD_BIND - `bind`
+### `bind`
+
+**Command:** `CMD_BIND`
 
 **Parse Function:** `parse_bind()` in `key/commands.c`
 
@@ -308,7 +350,9 @@ All key binding commands are defined in `key/init.c` and registered via `KeyComm
 
 **Notifications:** Sends `NT_BINDING_ADD` or `NT_BINDING_DELETE` via `NeoMutt->notify`
 
-### 22. CMD_UNBIND - `unbind`
+### `unbind`
+
+**Command:** `CMD_UNBIND`
 
 **Parse Function:** `parse_unbind()` in `key/commands.c`
 
@@ -327,7 +371,9 @@ All key binding commands are defined in `key/init.c` and registered via `KeyComm
 
 **Notifications:** Sends `NT_BINDING_DELETE` or `NT_BINDING_DELETE_ALL`
 
-### 23. CMD_MACRO - `macro`
+### `macro`
+
+**Command:** `CMD_MACRO`
 
 **Parse Function:** `parse_macro()` in `key/commands.c`
 
@@ -349,7 +395,9 @@ All key binding commands are defined in `key/init.c` and registered via `KeyComm
 
 **Notifications:** Sends `NT_MACRO_ADD` via `NeoMutt->notify`
 
-### 24. CMD_UNMACRO - `unmacro`
+### `unmacro`
+
+**Command:** `CMD_UNMACRO`
 
 **Parse Function:** `parse_unbind()` in `key/commands.c` (shared with `unbind`)
 
@@ -363,13 +411,15 @@ All key binding commands are defined in `key/init.c` and registered via `KeyComm
 
 **Notifications:** Sends `NT_MACRO_DELETE` or `NT_MACRO_DELETE_ALL`
 
-### 25. CMD_EXEC - `exec`
+### `exec`
+
+**Command:** `CMD_EXEC`
 
 **Parse Function:** `parse_exec()` in `key/commands.c`
 
 **Data Storage:**
 - **No persistent storage** - command executes immediately
-- **Temporary storage:** 
+- **Temporary storage:**
   - Operations parsed into local `ops[]` array
   - Pushed onto `MacroEvents` buffer via `mutt_push_macro_event()`
 
@@ -382,7 +432,9 @@ All key binding commands are defined in `key/init.c` and registered via `KeyComm
 
 **Data Field:** `CMD_NO_DATA` (0)
 
-### 26. CMD_PUSH - `push`
+### `push`
+
+**Command:** `CMD_PUSH`
 
 **Parse Function:** `parse_push()` in `key/commands.c`
 
@@ -401,9 +453,11 @@ All key binding commands are defined in `key/init.c` and registered via `KeyComm
 
 **Data Field:** `CMD_NO_DATA` (0)
 
-## Part 3: Configuration Commands (10 commands)
+## Configuration
 
-### 27. CMD_SET - `set`
+### `set`
+
+**Command:** `CMD_SET`
 
 **Parse Function:** `parse_set()` in `config/set.c`
 
@@ -432,7 +486,9 @@ All key binding commands are defined in `key/init.c` and registered via `KeyComm
 
 **Notifications:** Sends `NT_CONFIG` with variable name
 
-### 28. CMD_UNSET - `unset`
+### `unset`
+
+**Command:** `CMD_UNSET`
 
 **Parse Function:** `parse_set()` in `config/set.c` (shared with `set`)
 
@@ -447,7 +503,9 @@ All key binding commands are defined in `key/init.c` and registered via `KeyComm
 
 **Data Field:** `CMD_NO_DATA` (0)
 
-### 29. CMD_RESET - `reset`
+### `reset`
+
+**Command:** `CMD_RESET`
 
 **Parse Function:** `parse_set()` in `config/set.c` (shared with `set`)
 
@@ -459,13 +517,15 @@ All key binding commands are defined in `key/init.c` and registered via `KeyComm
 
 **Data Field:** `CMD_NO_DATA` (0)
 
-### 30. CMD_TOGGLE - `toggle`
+### `toggle`
+
+**Command:** `CMD_TOGGLE`
 
 **Parse Function:** `parse_set()` in `config/set.c` (shared with `set`)
 
 **Data Storage:**
 - **Modifies:** `NeoMutt->sub->cs` (ConfigSet)
-- **Action:** For bool/quad variables: 
+- **Action:** For bool/quad variables:
   - `MUTT_YES` → `MUTT_NO`
   - `MUTT_NO` → `MUTT_YES`
   - `MUTT_ASKYES` → `MUTT_ASKNO`
@@ -475,7 +535,9 @@ All key binding commands are defined in `key/init.c` and registered via `KeyComm
 
 **Data Field:** `CMD_NO_DATA` (0)
 
-### 31. CMD_SETENV - `setenv`
+### `setenv`
+
+**Command:** `CMD_SETENV`
 
 **Parse Function:** `parse_setenv()` in `commands/setenv.c`
 
@@ -493,7 +555,9 @@ All key binding commands are defined in `key/init.c` and registered via `KeyComm
 
 **Data Field:** `CMD_NO_DATA` (0)
 
-### 32. CMD_UNSETENV - `unsetenv`
+### `unsetenv`
+
+**Command:** `CMD_UNSETENV`
 
 **Parse Function:** `parse_setenv()` in `commands/setenv.c` (shared parser)
 
@@ -505,7 +569,9 @@ All key binding commands are defined in `key/init.c` and registered via `KeyComm
 
 **Data Field:** `CMD_NO_DATA` (0)
 
-### 33. CMD_SOURCE - `source`
+### `source`
+
+**Command:** `CMD_SOURCE`
 
 **Parse Function:** `parse_source()` in `commands/source.c`
 
@@ -523,7 +589,9 @@ All key binding commands are defined in `key/init.c` and registered via `KeyComm
 
 **Data Field:** `CMD_NO_DATA` (0)
 
-### 34. CMD_FINISH - `finish`
+### `finish`
+
+**Command:** `CMD_FINISH`
 
 **Parse Function:** `parse_finish()` in `commands/ifdef.c`
 
@@ -540,7 +608,9 @@ All key binding commands are defined in `key/init.c` and registered via `KeyComm
 
 **Data Field:** `CMD_NO_DATA` (0)
 
-### 35. CMD_IFDEF - `ifdef`
+### `ifdef`
+
+**Command:** `CMD_IFDEF`
 
 **Parse Function:** `parse_ifdef()` in `commands/ifdef.c`
 
@@ -561,7 +631,9 @@ All key binding commands are defined in `key/init.c` and registered via `KeyComm
 
 **Data Field:** `CMD_NO_DATA` (0)
 
-### 36. CMD_IFNDEF - `ifndef`
+### `ifndef`
+
+**Command:** `CMD_IFNDEF`
 
 **Parse Function:** `parse_ifdef()` in `commands/ifdef.c` (shared parser)
 
@@ -577,9 +649,11 @@ All key binding commands are defined in `key/init.c` and registered via `KeyComm
 
 **Data Field:** `CMD_NO_DATA` (0)
 
-## Part 4: List Management Commands (12 commands)
+## List Management
 
-### 37. CMD_ALTERNATES - `alternates`
+### `alternates`
+
+**Command:** `CMD_ALTERNATES`
 
 **Parse Function:** `parse_alternates()` in `commands/alternates.c`
 
@@ -598,7 +672,9 @@ All key binding commands are defined in `key/init.c` and registered via `KeyComm
 
 **Data Field:** `CMD_NO_DATA` (0)
 
-### 38. CMD_UNALTERNATES - `unalternates`
+### `unalternates`
+
+**Command:** `CMD_UNALTERNATES`
 
 **Parse Function:** `parse_unalternates()` in `commands/alternates.c`
 
@@ -610,7 +686,9 @@ All key binding commands are defined in `key/init.c` and registered via `KeyComm
 
 **Data Field:** `CMD_NO_DATA` (0)
 
-### 39. CMD_LISTS - `lists`
+### `lists`
+
+**Command:** `CMD_LISTS`
 
 **Parse Function:** `parse_lists()` in `commands/group.c`
 
@@ -627,7 +705,9 @@ All key binding commands are defined in `key/init.c` and registered via `KeyComm
 
 **Data Field:** `CMD_NO_DATA` (0)
 
-### 40. CMD_UNLISTS - `unlists`
+### `unlists`
+
+**Command:** `CMD_UNLISTS`
 
 **Parse Function:** `parse_unlists()` in `commands/group.c`
 
@@ -639,7 +719,9 @@ All key binding commands are defined in `key/init.c` and registered via `KeyComm
 
 **Data Field:** `CMD_NO_DATA` (0)
 
-### 41. CMD_SUBSCRIBE - `subscribe`
+### `subscribe`
+
+**Command:** `CMD_SUBSCRIBE`
 
 **Parse Function:** `parse_subscribe()` in `commands/group.c`
 
@@ -653,7 +735,9 @@ All key binding commands are defined in `key/init.c` and registered via `KeyComm
 
 **Data Field:** `CMD_NO_DATA` (0)
 
-### 42. CMD_UNSUBSCRIBE - `unsubscribe`
+### `unsubscribe`
+
+**Command:** `CMD_UNSUBSCRIBE`
 
 **Parse Function:** `parse_unsubscribe()` in `commands/group.c`
 
@@ -665,7 +749,9 @@ All key binding commands are defined in `key/init.c` and registered via `KeyComm
 
 **Data Field:** `CMD_NO_DATA` (0)
 
-### 43. CMD_SUBSCRIBE_TO - `subscribe-to`
+### `subscribe-to`
+
+**Command:** `CMD_SUBSCRIBE_TO`
 
 **Parse Function:** `parse_subscribe_to()` in `nntp/commands.c` (NNTP-specific)
 
@@ -683,7 +769,9 @@ All key binding commands are defined in `key/init.c` and registered via `KeyComm
 
 **Note:** NNTP module must be compiled in
 
-### 44. CMD_UNSUBSCRIBE_FROM - `unsubscribe-from`
+### `unsubscribe-from`
+
+**Command:** `CMD_UNSUBSCRIBE_FROM`
 
 **Parse Function:** `parse_unsubscribe_from()` in `nntp/commands.c`
 
@@ -695,7 +783,9 @@ All key binding commands are defined in `key/init.c` and registered via `KeyComm
 
 **Data Field:** `CMD_NO_DATA` (0)
 
-### 45. CMD_IGNORE - `ignore`
+### `ignore`
+
+**Command:** `CMD_IGNORE`
 
 **Parse Function:** `parse_ignore()` in `commands/ignore.c`
 
@@ -713,7 +803,9 @@ All key binding commands are defined in `key/init.c` and registered via `KeyComm
 
 **Data Field:** `CMD_NO_DATA` (0)
 
-### 46. CMD_UNIGNORE - `unignore`
+### `unignore`
+
+**Command:** `CMD_UNIGNORE`
 
 **Parse Function:** `parse_unignore()` in `commands/ignore.c`
 
@@ -725,7 +817,9 @@ All key binding commands are defined in `key/init.c` and registered via `KeyComm
 
 **Data Field:** `CMD_NO_DATA` (0)
 
-### 47. CMD_HDR_ORDER - `hdr_order`
+### `hdr_order`
+
+**Command:** `CMD_HDR_ORDER`
 
 **Parse Function:** `parse_stailq()` in `commands/parse.c`
 
@@ -739,7 +833,9 @@ All key binding commands are defined in `key/init.c` and registered via `KeyComm
 
 **Data Field:** `IP &HeaderOrderList` (pointer to the list)
 
-### 48. CMD_UNHDR_ORDER - `unhdr_order`
+### `unhdr_order`
+
+**Command:** `CMD_UNHDR_ORDER`
 
 **Parse Function:** `parse_unstailq()` in `commands/parse.c`
 
@@ -751,9 +847,11 @@ All key binding commands are defined in `key/init.c` and registered via `KeyComm
 
 **Data Field:** `IP &HeaderOrderList` (pointer to the list)
 
-## Part 5: MIME and Attachment Commands (8 commands)
+## MIME and Attachment
 
-### 49. CMD_ALTERNATIVE_ORDER - `alternative_order`
+### `alternative_order`
+
+**Command:** `CMD_ALTERNATIVE_ORDER`
 
 **Parse Function:** `parse_stailq()` in `commands/parse.c`
 
@@ -768,7 +866,9 @@ All key binding commands are defined in `key/init.c` and registered via `KeyComm
 
 **Data Field:** `IP &AlternativeOrderList`
 
-### 50. CMD_UNALTERNATIVE_ORDER - `unalternative_order`
+### `unalternative_order`
+
+**Command:** `CMD_UNALTERNATIVE_ORDER`
 
 **Parse Function:** `parse_unstailq()` in `commands/parse.c`
 
@@ -780,7 +880,9 @@ All key binding commands are defined in `key/init.c` and registered via `KeyComm
 
 **Data Field:** `IP &AlternativeOrderList`
 
-### 51. CMD_AUTO_VIEW - `auto_view`
+### `auto_view`
+
+**Command:** `CMD_AUTO_VIEW`
 
 **Parse Function:** `parse_stailq()` in `commands/parse.c`
 
@@ -794,7 +896,9 @@ All key binding commands are defined in `key/init.c` and registered via `KeyComm
 
 **Data Field:** `IP &AutoViewList`
 
-### 52. CMD_UNAUTO_VIEW - `unauto_view`
+### `unauto_view`
+
+**Command:** `CMD_UNAUTO_VIEW`
 
 **Parse Function:** `parse_unstailq()` in `commands/parse.c`
 
@@ -806,7 +910,9 @@ All key binding commands are defined in `key/init.c` and registered via `KeyComm
 
 **Data Field:** `IP &AutoViewList`
 
-### 53. CMD_MIME_LOOKUP - `mime_lookup`
+### `mime_lookup`
+
+**Command:** `CMD_MIME_LOOKUP`
 
 **Parse Function:** `parse_stailq()` in `commands/parse.c`
 
@@ -820,7 +926,9 @@ All key binding commands are defined in `key/init.c` and registered via `KeyComm
 
 **Data Field:** `IP &MimeLookupList`
 
-### 54. CMD_UNMIME_LOOKUP - `unmime_lookup`
+### `unmime_lookup`
+
+**Command:** `CMD_UNMIME_LOOKUP`
 
 **Parse Function:** `parse_unstailq()` in `commands/parse.c`
 
@@ -832,7 +940,9 @@ All key binding commands are defined in `key/init.c` and registered via `KeyComm
 
 **Data Field:** `IP &MimeLookupList`
 
-### 55. CMD_ATTACHMENTS - `attachments`
+### `attachments`
+
+**Command:** `CMD_ATTACHMENTS`
 
 **Parse Function:** `parse_attachments()` in `attach/commands.c`
 
@@ -854,7 +964,9 @@ All key binding commands are defined in `key/init.c` and registered via `KeyComm
 
 **Data Field:** `CMD_NO_DATA` (0)
 
-### 56. CMD_UNATTACHMENTS - `unattachments`
+### `unattachments`
+
+**Command:** `CMD_UNATTACHMENTS`
 
 **Parse Function:** `parse_unattachments()` in `attach/commands.c`
 
@@ -866,9 +978,11 @@ All key binding commands are defined in `key/init.c` and registered via `KeyComm
 
 **Data Field:** `CMD_NO_DATA` (0)
 
-## Part 6: Color and Display Commands (4 commands)
+## Color and Display
 
-### 57. CMD_COLOR - `color`
+### `color`
+
+**Command:** `CMD_COLOR`
 
 **Parse Function:** `parse_color()` in `color/parse_color.c`
 
@@ -894,7 +1008,9 @@ All key binding commands are defined in `key/init.c` and registered via `KeyComm
 
 **Notifications:** Sends `NT_COLOR` with color ID
 
-### 58. CMD_UNCOLOR - `uncolor`
+### `uncolor`
+
+**Command:** `CMD_UNCOLOR`
 
 **Parse Function:** `parse_uncolor()` in `color/commands.c`
 
@@ -909,7 +1025,9 @@ All key binding commands are defined in `key/init.c` and registered via `KeyComm
 
 **Notifications:** Sends `NT_COLOR` with color ID
 
-### 59. CMD_MONO - `mono`
+### `mono`
+
+**Command:** `CMD_MONO`
 
 **Parse Function:** `parse_mono()` in `color/commands.c`
 
@@ -924,7 +1042,9 @@ All key binding commands are defined in `key/init.c` and registered via `KeyComm
 
 **Data Field:** `CMD_NO_DATA` (0)
 
-### 60. CMD_UNMONO - `unmono`
+### `unmono`
+
+**Command:** `CMD_UNMONO`
 
 **Parse Function:** `parse_unmono()` in `color/commands.c`
 
@@ -938,9 +1058,11 @@ All key binding commands are defined in `key/init.c` and registered via `KeyComm
 
 **Data Field:** `CMD_NO_DATA` (0)
 
-## Part 7: Scoring and Spam Commands (4 commands)
+## Scoring and Spam
 
-### 61. CMD_SCORE - `score`
+### `score`
+
+**Command:** `CMD_SCORE`
 
 **Parse Function:** `parse_score()` in `commands/score.c`
 
@@ -960,7 +1082,9 @@ All key binding commands are defined in `key/init.c` and registered via `KeyComm
 
 **Data Field:** `CMD_NO_DATA` (0)
 
-### 62. CMD_UNSCORE - `unscore`
+### `unscore`
+
+**Command:** `CMD_UNSCORE`
 
 **Parse Function:** `parse_unscore()` in `commands/score.c`
 
@@ -972,7 +1096,9 @@ All key binding commands are defined in `key/init.c` and registered via `KeyComm
 
 **Data Field:** `CMD_NO_DATA` (0)
 
-### 63. CMD_SPAM - `spam`
+### `spam`
+
+**Command:** `CMD_SPAM`
 
 **Parse Function:** `parse_spam()` in `commands/spam.c`
 
@@ -991,7 +1117,9 @@ All key binding commands are defined in `key/init.c` and registered via `KeyComm
 
 **Data Field:** `CMD_NO_DATA` (0)
 
-### 64. CMD_NOSPAM - `nospam`
+### `nospam`
+
+**Command:** `CMD_NOSPAM`
 
 **Parse Function:** `parse_nospam()` in `commands/spam.c`
 
@@ -1003,9 +1131,11 @@ All key binding commands are defined in `key/init.c` and registered via `KeyComm
 
 **Data Field:** `CMD_NO_DATA` (0)
 
-## Part 8: Group and Address Management (4 commands)
+## Group and Address Management
 
-### 65. CMD_GROUP - `group`
+### `group`
+
+**Command:** `CMD_GROUP`
 
 **Parse Function:** `parse_group()` in `commands/group.c`
 
@@ -1024,7 +1154,9 @@ All key binding commands are defined in `key/init.c` and registered via `KeyComm
 
 **Data Field:** `CMD_NO_DATA` (0)
 
-### 66. CMD_UNGROUP - `ungroup`
+### `ungroup`
+
+**Command:** `CMD_UNGROUP`
 
 **Parse Function:** `parse_group()` in `commands/group.c` (shared parser)
 
@@ -1037,7 +1169,9 @@ All key binding commands are defined in `key/init.c` and registered via `KeyComm
 
 **Data Field:** `CMD_NO_DATA` (0)
 
-### 67. CMD_MY_HDR - `my_hdr`
+### `my_hdr`
+
+**Command:** `CMD_MY_HDR`
 
 **Parse Function:** `parse_my_hdr()` in `commands/my_hdr.c`
 
@@ -1052,7 +1186,9 @@ All key binding commands are defined in `key/init.c` and registered via `KeyComm
 
 **Data Field:** `CMD_NO_DATA` (0)
 
-### 68. CMD_UNMY_HDR - `unmy_hdr`
+### `unmy_hdr`
+
+**Command:** `CMD_UNMY_HDR`
 
 **Parse Function:** `parse_unmy_hdr()` in `commands/my_hdr.c`
 
@@ -1065,9 +1201,11 @@ All key binding commands are defined in `key/init.c` and registered via `KeyComm
 
 **Data Field:** `CMD_NO_DATA` (0)
 
-## Part 9: Mailbox Management Commands (3 commands)
+## Mailbox Management
 
-### 69. CMD_MAILBOXES - `mailboxes`
+### `mailboxes`
+
+**Command:** `CMD_MAILBOXES`
 
 **Parse Function:** `parse_mailboxes()` in `commands/mailboxes.c`
 
@@ -1097,7 +1235,9 @@ All key binding commands are defined in `key/init.c` and registered via `KeyComm
 
 **Notifications:** Sends `NT_MAILBOX_ADD`
 
-### 70. CMD_NAMED_MAILBOXES - `named-mailboxes`
+### `named-mailboxes`
+
+**Command:** `CMD_NAMED_MAILBOXES`
 
 **Parse Function:** `parse_mailboxes()` in `commands/mailboxes.c` (shared)
 
@@ -1113,7 +1253,9 @@ All key binding commands are defined in `key/init.c` and registered via `KeyComm
 
 **Data Field:** `CMD_NO_DATA` (0)
 
-### 71. CMD_UNMAILBOXES - `unmailboxes`
+### `unmailboxes`
+
+**Command:** `CMD_UNMAILBOXES`
 
 **Parse Function:** `parse_unmailboxes()` in `commands/mailboxes.c`
 
@@ -1132,9 +1274,11 @@ All key binding commands are defined in `key/init.c` and registered via `KeyComm
 
 **Notifications:** Sends `NT_MAILBOX_DELETE`
 
-## Part 10: Tag Transform Commands (4 commands)
+## Tag Transform
 
-### 72. CMD_TAG_FORMATS - `tag-formats`
+### `tag-formats`
+
+**Command:** `CMD_TAG_FORMATS`
 
 **Parse Function:** `parse_tag_formats()` in `commands/tags.c`
 
@@ -1154,7 +1298,9 @@ All key binding commands are defined in `key/init.c` and registered via `KeyComm
 
 **Note:** Notmuch support must be compiled in
 
-### 73. CMD_TAG_TRANSFORMS - `tag-transforms`
+### `tag-transforms`
+
+**Command:** `CMD_TAG_TRANSFORMS`
 
 **Parse Function:** `parse_tag_transforms()` in `commands/tags.c`
 
@@ -1172,7 +1318,9 @@ All key binding commands are defined in `key/init.c` and registered via `KeyComm
 
 **Data Field:** `CMD_NO_DATA` (0)
 
-### 74. CMD_SUBJECTRX - `subjectrx`
+### `subjectrx`
+
+**Command:** `CMD_SUBJECTRX`
 
 **Parse Function:** `parse_subjectrx_list()` in `commands/subjectrx.c`
 
@@ -1190,7 +1338,9 @@ All key binding commands are defined in `key/init.c` and registered via `KeyComm
 
 **Data Field:** `CMD_NO_DATA` (0)
 
-### 75. CMD_UNSUBJECTRX - `unsubjectrx`
+### `unsubjectrx`
+
+**Command:** `CMD_UNSUBJECTRX`
 
 **Parse Function:** `parse_unsubjectrx_list()` in `commands/subjectrx.c`
 
@@ -1203,9 +1353,11 @@ All key binding commands are defined in `key/init.c` and registered via `KeyComm
 
 **Data Field:** `CMD_NO_DATA` (0)
 
-## Part 11: Mailto and Sidebar Commands (4 commands)
+## Mailto and Sidebar
 
-### 76. CMD_MAILTO_ALLOW - `mailto_allow`
+### `mailto_allow`
+
+**Command:** `CMD_MAILTO_ALLOW`
 
 **Parse Function:** `parse_stailq()` in `commands/parse.c`
 
@@ -1221,7 +1373,9 @@ All key binding commands are defined in `key/init.c` and registered via `KeyComm
 
 **Data Field:** `IP &MailToAllow`
 
-### 77. CMD_UNMAILTO_ALLOW - `unmailto_allow`
+### `unmailto_allow`
+
+**Command:** `CMD_UNMAILTO_ALLOW`
 
 **Parse Function:** `parse_unstailq()` in `commands/parse.c`
 
@@ -1233,7 +1387,9 @@ All key binding commands are defined in `key/init.c` and registered via `KeyComm
 
 **Data Field:** `IP &MailToAllow`
 
-### 78. CMD_SIDEBAR_PIN - `sidebar_pin`
+### `sidebar_pin`
+
+**Command:** `CMD_SIDEBAR_PIN`
 
 **Parse Function:** `parse_sidebar_pin()` in `sidebar/commands.c`
 
@@ -1250,7 +1406,9 @@ All key binding commands are defined in `key/init.c` and registered via `KeyComm
 
 **Note:** Sidebar support must be compiled in
 
-### 79. CMD_SIDEBAR_UNPIN - `sidebar_unpin`
+### `sidebar_unpin`
+
+**Command:** `CMD_SIDEBAR_UNPIN`
 
 **Parse Function:** `parse_sidebar_unpin()` in `sidebar/commands.c`
 
@@ -1262,9 +1420,11 @@ All key binding commands are defined in `key/init.c` and registered via `KeyComm
 
 **Data Field:** `CMD_NO_DATA` (0)
 
-## Part 12: Utility and Information Commands (7 commands)
+## Utility and Information
 
-### 80. CMD_CD - `cd`
+### `cd`
+
+**Command:** `CMD_CD`
 
 **Parse Function:** `parse_cd()` in `commands/parse. c`
 
@@ -1281,7 +1441,9 @@ All key binding commands are defined in `key/init.c` and registered via `KeyComm
 
 **Data Field:** `CMD_NO_DATA` (0)
 
-### 81. CMD_ECHO - `echo`
+### `echo`
+
+**Command:** `CMD_ECHO`
 
 **Parse Function:** `parse_echo()` in `commands/parse.c`
 
@@ -1297,7 +1459,9 @@ All key binding commands are defined in `key/init.c` and registered via `KeyComm
 
 **Data Field:** `CMD_NO_DATA` (0)
 
-### 82. CMD_VERSION - `version`
+### `version`
+
+**Command:** `CMD_VERSION`
 
 **Parse Function:** `parse_version()` in `commands/parse.c`
 
@@ -1315,7 +1479,9 @@ All key binding commands are defined in `key/init.c` and registered via `KeyComm
 
 **Data Field:** `CMD_NO_DATA` (0)
 
-### 83. CMD_HOOKS - `hooks`
+### `hooks`
+
+**Command:** `CMD_HOOKS`
 
 **Parse Function:** `parse_hooks()` in `hooks/commands.c`
 
@@ -1332,7 +1498,9 @@ All key binding commands are defined in `key/init.c` and registered via `KeyComm
 
 **Data Field:** `CMD_NO_DATA` (0)
 
-### 84. CMD_LUA - `lua`
+### `lua`
+
+**Command:** `CMD_LUA`
 
 **Parse Function:** `parse_lua()` in `lua/commands.c`
 
@@ -1352,7 +1520,9 @@ All key binding commands are defined in `key/init.c` and registered via `KeyComm
 
 **Note:** Lua support must be compiled in (`USE_LUA`)
 
-### 85. CMD_LUA_SOURCE - `lua-source`
+### `lua-source`
+
+**Command:** `CMD_LUA_SOURCE`
 
 **Parse Function:** `parse_lua_source()` in `lua/commands.c`
 
@@ -1372,7 +1542,9 @@ All key binding commands are defined in `key/init.c` and registered via `KeyComm
 
 **Note:** Lua support must be compiled in
 
-### 86. CMD_APPEND_HOOK - `append-hook`
+### `append-hook`
+
+**Command:** `CMD_APPEND_HOOK`
 
 **Parse Function:** `parse_hook_folder()` in `hooks/parse.c`
 
@@ -1386,7 +1558,9 @@ All key binding commands are defined in `key/init.c` and registered via `KeyComm
 
 **Data Field:** `CMD_NO_DATA` (0)
 
-### 87. CMD_CLOSE_HOOK - `close-hook`
+### `close-hook`
+
+**Command:** `CMD_CLOSE_HOOK`
 
 **Parse Function:** `parse_hook_folder()` in `hooks/parse.c`
 
@@ -1400,7 +1574,9 @@ All key binding commands are defined in `key/init.c` and registered via `KeyComm
 
 **Data Field:** `CMD_NO_DATA` (0)
 
-### 88. CMD_OPEN_HOOK - `open-hook`
+### `open-hook`
+
+**Command:** `CMD_OPEN_HOOK`
 
 **Parse Function:** `parse_hook_folder()` in `hooks/parse.c`
 
@@ -1413,12 +1589,6 @@ All key binding commands are defined in `key/init.c` and registered via `KeyComm
 **Purpose:** Execute commands when opening a folder
 
 **Data Field:** `CMD_NO_DATA` (0)
-
-## Part 13: Final Command
-
-### 89. CMD_EXEC - `exec` (already covered in Part 2)
-
-This was already detailed in the Key Binding Commands section (#25).
 
 # **Summary Statistics**
 
@@ -1436,7 +1606,7 @@ This was already detailed in the Key Binding Commands section (#25).
 
 ## Storage Pattern Summary:
 
-1. **Global Lists** (most common): 
+1. **Global Lists** (most common):
    - Singly-linked:  `STAILQ_HEAD`
    - Doubly-linked: `TAILQ_HEAD`
    - Hash tables: `struct HashTable`
