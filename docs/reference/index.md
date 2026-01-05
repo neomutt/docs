@@ -18,6 +18,7 @@ maxdepth: 1
 cli.md
 colors.md
 commands.md
+command-data.md
 config.md
 formats.md
 functions.md
