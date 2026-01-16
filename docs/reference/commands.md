@@ -5,10 +5,10 @@
 | `account-hook`        | Run a command when switching to a matching account                     |
 | `alias`               | Define an alias (name to email address)                                |
 | `alternates`          | Define a list of alternate email addresses for the user                |
-| `alternative_order`   | Set preference order for multipart alternatives                        |
+| `alternative-order`   | Set preference order for multipart alternatives                        |
 | `append-hook`         | Define command to append to a compressed mailbox                       |
 | `attachments`         | Set attachment counting rules                                          |
-| `auto_view`           | Automatically display specified MIME types inline                      |
+| `auto-view`           | Automatically display specified MIME types inline                      |
 | `bind`                | Bind a key to a function                                               |
 | `cd`                  | Change NeoMutt's current working directory                             |
 | `charset-hook`        | Define charset alias for languages                                     |
@@ -22,7 +22,7 @@
 | `finish`              | Stop reading current config file                                       |
 | `folder-hook`         | Run a command upon entering a folder matching regex                    |
 | `group`               | Add addresses to an address group                                      |
-| `hdr_order`           | Define custom order of headers displayed                               |
+| `header-order`        | Define custom order of headers displayed                               |
 | `iconv-hook`          | Define a system-specific alias for a character set                     |
 | `ifdef`               | Conditionally include config commands if symbol defined                |
 | `ifndef`              | Conditionally include if symbol is not defined                         |
@@ -33,12 +33,12 @@
 | `lua-source`          | Execute a Lua script file                                              |
 | `macro`               | Define a keyboard macro                                                |
 | `mailboxes`           | Define a list of mailboxes to watch                                    |
-| `mailto_allow`        | Permit specific header-fields in mailto URL processing                 |
+| `mailto-allow`        | Permit specific header-fields in mailto URL processing                 |
 | `mbox-hook`           | On leaving a mailbox, move read messages matching a regex              |
 | `message-hook`        | Run a command when viewing a message matching patterns                 |
-| `mime_lookup`         | Map specified MIME types/subtypes to display handlers                  |
+| `mime-lookup`         | Map specified MIME types/subtypes to display handlers                  |
 | `mono`                | **Deprecated**: Use `color`                                            |
-| `my_hdr`              | Add a custom header to outgoing messages                               |
+| `my-header`           | Add a custom header to outgoing messages                               |
 | `named-mailboxes`     | Define a list of labelled mailboxes to watch                           |
 | `nospam`              | Remove a spam detection rule                                           |
 | `open-hook`           | Define command to open a compressed mailbox                            |
@@ -53,9 +53,9 @@
 | `set`                 | Set a config variable                                                  |
 | `setenv`              | Set an environment variable                                            |
 | `shutdown-hook`       | Run a command before NeoMutt exits                                     |
-| `sidebar_pin`         | Pin a mailbox in the sidebar (keep visible)                            |
-| `sidebar_unpin`       | Unpin a previously pinned mailbox in the sidebar                       |
-| `sidebar_whitelist`   | **Deprecated**: Use `sidebar_pin`                                      |
+| `sidebar-pin`         | Pin a mailbox in the sidebar (keep visible)                            |
+| `sidebar-unpin`       | Unpin a previously pinned mailbox in the sidebar                       |
+| `sidebar_whitelist`   | **Deprecated**: Use `sidebar-pin`                                      |
 | `source`              | Read and execute commands from a config file                           |
 | `spam`                | Define rules to parse spam detection headers                           |
 | `startup-hook`        | Run a command when NeoMutt starts up                                   |
@@ -68,26 +68,26 @@
 | `toggle`              | Toggle the value of a boolean/quad config option                       |
 | `unalias`             | Remove an alias definition                                             |
 | `unalternates`        | Remove addresses from `alternates` list                                |
-| `unalternative_order` | Remove MIME types from preference order                                |
+| `unalternative-order` | Remove MIME types from preference order                                |
 | `unattachments`       | Remove attachment counting rules                                       |
-| `unauto_view`         | Remove MIME types from `auto_view` list                                |
+| `unauto-view`         | Remove MIME types from `auto-view` list                                |
 | `unbind`              | Remove a key binding                                                   |
 | `uncolor`             | Remove a `color` definition                                            |
 | `ungroup`             | Remove addresses from an address `group`                               |
-| `unhdr_order`         | Remove header from `hdr_order` list                                    |
+| `unheader-order`      | Remove header from `header-order` list                                 |
 | `unhook`              | Remove hooks of a given type                                           |
-| `unignore`            | Remove a header from the `hdr_order` list                              |
+| `unignore`            | Remove a header from the `header-order` list                           |
 | `unlists`             | Remove address from the list of mailing lists                          |
 | `unmacro`             | Remove a keyboard `macro`                                              |
 | `unmailboxes`         | Remove mailboxes from the watch list                                   |
-| `unmailto_allow`      | Disallow header-fields in mailto processing                            |
-| `unmime_lookup`       | Remove custom MIME-type handlers                                       |
+| `unmailto-allow`      | Disallow header-fields in mailto processing                            |
+| `unmime-lookup`       | Remove custom MIME-type handlers                                       |
 | `unmono`              | **Deprecated**: Use `uncolor`                                          |
-| `unmy_hdr`            | Remove a header previously added with `my_hdr`                         |
+| `unmy-header`         | Remove a header previously added with `my-header`                      |
 | `unscore`             | Remove scoring rules for matching patterns                             |
 | `unset`               | Reset a config option to false/empty                                   |
 | `unsetenv`            | Unset an environment variable                                          |
-| `unsidebar_whitelist` | **Deprecated**: Use `sidebar_unpin`                                    |
+| `unsidebar_whitelist` | **Deprecated**: Use `sidebar-unpin`                                    |
 | `unsubjectrx`         | Remove subject-rewriting rules                                         |
 | `unsubscribe`         | Remove address from the list of subscribed mailing lists               |
 | `unsubscribe-from`    | Unsubscribe from an IMAP mailbox                                       |

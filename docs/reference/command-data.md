@@ -817,7 +817,7 @@ All key binding commands are defined in `key/init.c` and registered via `KeyComm
 
 **Data Field:** `CMD_NO_DATA` (0)
 
-### `hdr_order`
+### `header-order`
 
 **Command:** `CMD_HDR_ORDER`
 
@@ -833,7 +833,7 @@ All key binding commands are defined in `key/init.c` and registered via `KeyComm
 
 **Data Field:** `IP &HeaderOrderList` (pointer to the list)
 
-### `unhdr_order`
+### `unheader-order`
 
 **Command:** `CMD_UNHDR_ORDER`
 
@@ -849,7 +849,7 @@ All key binding commands are defined in `key/init.c` and registered via `KeyComm
 
 ## MIME and Attachment
 
-### `alternative_order`
+### `alternative-order`
 
 **Command:** `CMD_ALTERNATIVE_ORDER`
 
@@ -866,7 +866,7 @@ All key binding commands are defined in `key/init.c` and registered via `KeyComm
 
 **Data Field:** `IP &AlternativeOrderList`
 
-### `unalternative_order`
+### `unalternative-order`
 
 **Command:** `CMD_UNALTERNATIVE_ORDER`
 
@@ -880,7 +880,7 @@ All key binding commands are defined in `key/init.c` and registered via `KeyComm
 
 **Data Field:** `IP &AlternativeOrderList`
 
-### `auto_view`
+### `auto-view`
 
 **Command:** `CMD_AUTO_VIEW`
 
@@ -896,7 +896,7 @@ All key binding commands are defined in `key/init.c` and registered via `KeyComm
 
 **Data Field:** `IP &AutoViewList`
 
-### `unauto_view`
+### `unauto-view`
 
 **Command:** `CMD_UNAUTO_VIEW`
 
@@ -910,7 +910,7 @@ All key binding commands are defined in `key/init.c` and registered via `KeyComm
 
 **Data Field:** `IP &AutoViewList`
 
-### `mime_lookup`
+### `mime-lookup`
 
 **Command:** `CMD_MIME_LOOKUP`
 
@@ -926,7 +926,7 @@ All key binding commands are defined in `key/init.c` and registered via `KeyComm
 
 **Data Field:** `IP &MimeLookupList`
 
-### `unmime_lookup`
+### `unmime-lookup`
 
 **Command:** `CMD_UNMIME_LOOKUP`
 
@@ -1169,11 +1169,11 @@ All key binding commands are defined in `key/init.c` and registered via `KeyComm
 
 **Data Field:** `CMD_NO_DATA` (0)
 
-### `my_hdr`
+### `my-header`
 
 **Command:** `CMD_MY_HDR`
 
-**Parse Function:** `parse_my_hdr()` in `commands/my_hdr.c`
+**Parse Function:** `parse_my_hdr()` in `commands/my-header.c`
 
 **Data Storage:**
 - **Global List:** `struct ListHead UserHeader`
@@ -1186,11 +1186,11 @@ All key binding commands are defined in `key/init.c` and registered via `KeyComm
 
 **Data Field:** `CMD_NO_DATA` (0)
 
-### `unmy_hdr`
+### `unmy-header`
 
 **Command:** `CMD_UNMY_HDR`
 
-**Parse Function:** `parse_unmy_hdr()` in `commands/my_hdr.c`
+**Parse Function:** `parse_unmy_hdr()` in `commands/my-header.c`
 
 **Data Storage:**
 - **Removes from:** `struct ListHead UserHeader`
@@ -1355,7 +1355,7 @@ All key binding commands are defined in `key/init.c` and registered via `KeyComm
 
 ## Mailto and Sidebar
 
-### `mailto_allow`
+### `mailto-allow`
 
 **Command:** `CMD_MAILTO_ALLOW`
 
@@ -1373,7 +1373,7 @@ All key binding commands are defined in `key/init.c` and registered via `KeyComm
 
 **Data Field:** `IP &MailToAllow`
 
-### `unmailto_allow`
+### `unmailto-allow`
 
 **Command:** `CMD_UNMAILTO_ALLOW`
 
@@ -1387,7 +1387,7 @@ All key binding commands are defined in `key/init.c` and registered via `KeyComm
 
 **Data Field:** `IP &MailToAllow`
 
-### `sidebar_pin`
+### `sidebar-pin`
 
 **Command:** `CMD_SIDEBAR_PIN`
 
@@ -1406,7 +1406,7 @@ All key binding commands are defined in `key/init.c` and registered via `KeyComm
 
 **Note:** Sidebar support must be compiled in
 
-### `sidebar_unpin`
+### `sidebar-unpin`
 
 **Command:** `CMD_SIDEBAR_UNPIN`
 
@@ -1630,5 +1630,5 @@ All key binding commands are defined in `key/init.c` and registered via `KeyComm
 ## Data Field Values:
 
 - **`CMD_NO_DATA` (0)**: 85 commands
-- **Pointer to list**: 4 commands (alternative_order, hdr_order, mailto_allow, etc.)
+- **Pointer to list**: 4 commands (alternative-order, header-order, mailto-allow, etc.)
 
