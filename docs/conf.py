@@ -32,7 +32,7 @@ templates_path = ['_templates']
 
 html_theme = 'piccolo_theme'
 html_static_path = ["_static"]
-html_css_files = ["custom.css"]
+# html_css_files = ["custom.css"]
 html_logo = "_static/mutt-48x48.png"   # optional
 
 # -- Options for EPUB output
