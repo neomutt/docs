@@ -30,7 +30,7 @@ templates_path = ['_templates']
 
 # -- Options for HTML output
 
-# html_theme = 'piccolo_theme'
+html_theme = 'sphinx_book_theme'
 html_static_path = ["_static"]
 # html_css_files = ["custom.css"]
 html_logo = "_static/mutt-48x48.png"   # optional
@@ -40,8 +40,8 @@ epub_show_urls = 'footnote'
 
 html_context = {
     "display_github": True, # Integrate GitHub
-    "github_user": "flatcap", # Username
-    "github_repo": "test-read", # Repo name
+    "github_user": "neomutt", # Username
+    "github_repo": "neomutt", # Repo name
     "github_version": "main", # Version
     "conf_py_path": "/docs/", # Path in the checkout to the docs root
 }
