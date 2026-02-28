@@ -102,6 +102,7 @@ maxdepth: 1
 
 key-bindings
 macros
+editing
 aliases
 hooks
 format-strings

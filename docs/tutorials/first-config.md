@@ -33,6 +33,59 @@ A few sample neomuttrc files are available in the
 
 ## Location of Initialization Files
 
+## Minimal Configuration
+
+Before diving into the full details of config file syntax and locations, here is a minimal
+`neomuttrc` to get you started. Copy it to `~/.neomuttrc` and adjust the values for your
+account:
+
+```
+# Identity
+set realname = "Your Name"
+set from = "you@example.com"
+
+# IMAP inbox
+set folder    = "imaps://imap.example.com/"
+set spoolfile = "+INBOX"
+set imap_user = "you@example.com"
+# set imap_pass = "secret"   # or leave unset to be prompted
+
+# Common IMAP folders
+set postponed = "+Drafts"
+set record    = "+Sent"
+set trash     = "+Trash"
+
+# SMTP sending
+set smtp_url  = "smtps://you@example.com@smtp.example.com:465/"
+# set smtp_pass = "secret"   # or leave unset to be prompted
+
+# Editor for composing messages
+set editor = "vim"
+
+# Basic behaviour
+set sort         = threads        # thread messages by conversation
+set sort_aux     = reverse-last-date-received
+set mark_old     = no             # don't mark new messages as old on exit
+set mime_forward = ask-yes        # ask whether to forward as attachment
+
+# Headers to hide in the pager
+ignore *
+unignore from: to: cc: date: subject:
+hdr_order from: to: cc: date: subject:
+```
+
+Store passwords in an encrypted file and load them with backticks rather than storing them
+in plain text — for example:
+
+```
+set imap_pass = "`gpg --batch -q --decrypt ~/.neomutt/account.gpg`"
+```
+
+Once NeoMutt starts without errors, continue reading to understand the full configuration
+syntax and all available file locations.
+
+---
+
 When NeoMutt starts up it looks for two configuration files – one "system" file and one "user"
 file.
 

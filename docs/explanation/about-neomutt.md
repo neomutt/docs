@@ -107,3 +107,18 @@ See the GNU General Public License for more details.
 You should have received a copy of the GNU General Public License along with this program;
 if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
 Boston, MA 02110-1301, USA.
+
+## Acknowledgements
+
+The following people have been very helpful to the development of Mutt, on which NeoMutt is
+based:
+
+Kari Hurtta, Vikas Agnihotri, Francois Berjon, Aric Blumer, John Capo, David Champion,
+Brendan Cully, Liviu Daia, Thomas E. Dickey, David DeSimone, Nickolay N. Dudorov,
+Ruslan Ermilov, Edmund Grimley Evans, Michael Finken, Sven Guckes, Lars Hecking,
+Mark Holloman, Andreas Holzmann, Marco d'Itri, Björn Jacke, Byrial Jensen, David Jeske,
+Christophe Kalt, Tommi Komulainen, Felix von Leitner (a.k.a Fefe), Brandon Long,
+Jimmy Mäkelä, Lars Marowsky-Bree, Kevin J. McCarthy, Thomas Mike Michlmayr,
+Andrew W. Nosenko, David O'Brien, Clint Olsen, Park Myeong Seok, Thomas Parmelan,
+Ollivier Robert, Thomas Roessler, Roland Rosenfeld, Rocco Rutte, TAKIZAWA Takashi,
+Allain Thivillon, Gero Treuner, Vsevolod Volkov, Ken Weinert.

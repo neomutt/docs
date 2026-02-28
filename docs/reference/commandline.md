@@ -17,6 +17,52 @@ how-to guides and explanation pages instead.
 
 Running `neomutt` with no arguments will make NeoMutt attempt to read your spool mailbox. However, it is possible to read other mailboxes and to send messages from the command line as well.
 
+## Detecting Available Features
+
+NeoMutt supports several optional features that can be enabled or disabled at compile-time.
+To see which features are compiled into your NeoMutt binary, run:
+
+```
+neomutt -v
+```
+
+This prints the NeoMutt version, compile-time definitions, and the list of optional
+features. Each feature is prefixed with `+` if enabled or `-` if disabled. For example,
+if NeoMutt was compiled with GnuTLS instead of OpenSSL:
+
+```
+-openssl +gnutls
+```
+
+Running `neomutt -vv` shows the full license and copyright information in addition to the
+version output.
+
+Common features you may see in `neomutt -v` output include:
+
+| Feature | Description |
+|---------|-------------|
+| `+gnutls` / `+openssl` | TLS encryption support |
+| `+sasl` | SASL authentication |
+| `+idn` / `+idn2` | Internationalized domain names |
+| `+notmuch` | Notmuch search integration |
+| `+sidebar` | Sidebar mailbox list |
+| `+gpgme` | GnuPG via GPGME |
+| `+lua` | Lua scripting |
+
+### Conditionalizing Config on Features
+
+You can use the `ifdef` and `ifndef` commands in your config file to conditionally apply
+settings based on whether a feature is compiled in:
+
+```
+ifdef sidebar 'set sidebar_visible = yes'
+ifndef notmuch finish
+```
+
+The `finish` command stops reading the current config file, making it easy to guard an
+entire file behind a feature check. See the [ifdef how-to guide](../howto/ifdef.md) for
+full details and examples.
+
 ## Options
 
 | Option | Description |

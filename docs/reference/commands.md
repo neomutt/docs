@@ -38,7 +38,7 @@ The following are the commands understood by NeoMutt.
 | `unauto_view` | *(deprecated)* | Use `unauto-view` instead |
 | `bind` | `bind map[,map ...] key function` | Bind a key to a function in a map |
 | `unbind` | `unbind {* \| map[,map ...]} [key]` | Remove a key binding |
-| `cd` | `cd [directory]` | Change the current working directory |
+| `cd` | `cd [directory]` | Change NeoMutt's working directory; relative paths in subsequent `source`, `change-folder`, etc. are resolved against the new directory. Omitting *directory* resets to `$HOME`. |
 | `charset-hook` | `charset-hook alias charset` | Define a charset alias |
 | `iconv-hook` | `iconv-hook charset local-charset` | Define a charset conversion |
 | `color` | `color object [attribute ...] foreground background` | Set colour for an object |
@@ -97,7 +97,7 @@ The following are the commands understood by NeoMutt.
 | `open-hook` | `open-hook regex "shell-command"` | Define command to open a compressed mailbox |
 | `close-hook` | `close-hook regex "shell-command"` | Define command to close a compressed mailbox |
 | `append-hook` | `append-hook regex "shell-command"` | Define command to append to a compressed mailbox |
-| `push` | `push string` | Push a string of keys onto the input buffer |
+| `push` | `push string` | Push a string of keystrokes onto the **beginning** of the input buffer (contrast with `macro`, which appends to the end). *string* may contain control characters (`\Cx`), key names (`<Return>`), and function names (`<next-page>`). |
 | `reply-hook` | `reply-hook pattern command` | Execute command when replying to a matching message |
 | `send-hook` | `send-hook pattern command` | Execute command when sending a matching message |
 | `send2-hook` | `send2-hook pattern command` | Execute command when changing a message during composition |

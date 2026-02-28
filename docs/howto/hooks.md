@@ -304,6 +304,51 @@ set new_mail_command="terminal-notifier -title '%v' -subtitle 'New Mail' \
 
 ---
 
+## Index Format Hook
+
+### Syntax
+
+```
+index-format-hook name [!]pattern format-string
+```
+
+`index-format-hook` injects format strings dynamically into `$index_format` based on pattern
+matching against the current message. The `name` argument is referenced inside `$index_format`
+as the expando `%@name@`.
+
+Multiple hooks sharing the same `name` are tested in the order they are defined; the first
+matching *pattern* wins. If the pattern is a plain string or regex it is expanded via
+`$default_hook`. Best practice is to end the list with a catch-all `~A` pattern so the
+expando always resolves to something.
+
+### Example: Dynamic date formatting
+
+```
+set index_format="%4C %-6@date@ %-15.15F %Z (%4c) %s"
+
+index-format-hook  date  "~d<1d"    "%[%H:%M]"
+index-format-hook  date  "~d<1m"    "%[%a %d]"
+index-format-hook  date  "~d<1y"    "%[%b %d]"
+index-format-hook  date  "~A"       "%[%m/%y]"
+```
+
+The `~d<1d` pattern matches messages less than one day old, `~d<1m` less than one month, etc.
+The final `~A` (match all) acts as a fallback.
+
+### Example: Flagging messages by sender
+
+```
+set index_format="%4C %@subj_flags@%s"
+
+index-format-hook  subj_flags  "~f boss@example.com"    "** BOSS ** "
+index-format-hook  subj_flags  "~f spouse@example.com"  ":-) "
+```
+
+Without a catch-all `~A` hook, unmatched messages simply produce an empty string for that
+expando.
+
+---
+
 ## Removing Hooks
 
 ### Syntax
@@ -313,3 +358,43 @@ unhook {* | hook-type}
 ```
 
 This command permits you to flush hooks you have previously defined. You can either remove all hooks by giving the `*` character as an argument, or you can remove all hooks of a specific type by saying something like `unhook send-hook`.
+
+---
+
+## Managing Environment Variables (setenv)
+
+NeoMutt lets you control the environment it passes to child processes using the `setenv` and `unsetenv` commands. This is useful for setting variables like `BROWSER`, `EDITOR`, `MAILCAPS`, or any other environment variable that affects helper programs NeoMutt launches.
+
+### Syntax
+
+```
+setenv NAME=value
+unsetenv NAME
+setenv NAME?
+```
+
+The variable name must start with a letter or underscore and contain only letters, digits, and underscores.
+
+### Examples
+
+```
+setenv BROWSER firefox
+setenv ORGANIZATION "The NeoMutt Development Team"
+setenv EDITOR vim
+unsetenv DISPLAY
+```
+
+You can also query the current value of an environment variable by appending `?`:
+
+```
+setenv TERM?
+```
+
+Running `setenv` with no parameters shows a list of all currently set environment variables.
+
+The old whitespace-separated syntax is also supported for backward compatibility:
+
+```
+setenv TERM vt100
+setenv ORGANIZATION "The NeoMutt Development Team"
+```

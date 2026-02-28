@@ -64,3 +64,112 @@ The `unmailboxes` command is used to remove a token from the list of folders whi
 :::{note}
 The folders in the `mailboxes` command are resolved when the command is executed, so if these names contain **shortcut characters** (such as `=` and `!`), any variable definition that affects these characters (like `$folder` and `$spool_file`) should be set before the `mailboxes` command. If none of these shortcuts are used, a local path should be absolute as otherwise NeoMutt tries to find it relative to the directory from where NeoMutt was started which may not always be desired.
 :::
+
+---
+
+## Address Normalization
+
+NeoMutt normalizes all email addresses to their simplest canonical form. If an address contains a display name, the form `Joe User <joe@example.com>` is used; otherwise just the bare address `joe@example.com` (without angle brackets) is used.
+
+This normalization applies to all headers NeoMutt generates, including aliases.
+
+---
+
+## Initial Folder Selection
+
+The folder NeoMutt opens at startup is determined in the following order of precedence (lowest to highest):
+
+1. The user's mailbox in the mailspool as determined at compile-time (may also reside in the home directory).
+2. The `$spool_file` setting overrides the compile-time default.
+3. The `$MAILDIR` environment variable, if set.
+4. The `$MAIL` environment variable, if set.
+5. The mailbox given with the `-f` command-line option (highest priority).
+
+## New Mail Detection
+
+### How Detection Works by Format
+
+NeoMutt detects new mail differently depending on the mailbox format:
+
+**Mbox / Mmdf**
+NeoMutt compares the file's access time against its modification time. A folder is
+considered to have new mail if it was modified more recently than it was last accessed.
+External tools (e.g. `biff`, `frm`) that read the mailbox without resetting its access
+time can prevent detection. Backup tools and filesystems mounted with `noatime` can
+have the same effect.
+
+NeoMutt resets the access time correctly when there is at least one unread, non-deleted,
+non-old message remaining in the folder.
+
+If mtime/atime-based detection is unreliable in your setup, use file-size tracking instead:
+
+```
+set check_mbox_size
+```
+
+Note that `check_mbox_size` won't detect changes that leave the file size unchanged.
+
+**Maildir**
+New mail is assumed if the `new/` subdirectory contains at least one message that is not
+marked deleted (see `$maildir_trash`).
+
+**MH**
+A mailbox has new mail if there is at least one message in the unseen sequence defined by
+`$mh_seq_unseen`.
+
+**IMAP**
+NeoMutt uses recent message counts reported by the server. If `$imap_idle` is set, NeoMutt
+uses the IMAP IDLE extension when the server advertises it, for lower-latency notification.
+
+**POP3**
+NeoMutt does not poll POP3 folders for new mail — it only checks the currently open folder.
+
+### Controlling Notification Scope
+
+Set `$mail_check_recent` (on by default) to be notified only about mail that arrived since
+you last opened the mailbox. Unset it to be notified of all new mail regardless:
+
+```
+unset mail_check_recent
+```
+
+Run a command whenever new mail arrives in the current inbox:
+
+```
+set new_mail_command = "notify-send 'New mail in NeoMutt'"
+```
+
+### Polling Interval
+
+NeoMutt polls monitored mailboxes while idle in the index. The check interval is:
+
+- **Local and IMAP folders** — `$mail_check` (seconds, default 5)
+- **POP folders** — `$pop_check_interval`
+
+Mailboxes added with `-nopoll` are excluded from polling.
+
+To also check all subscribed IMAP folders (not just those in `mailboxes`):
+
+```
+set imap_check_subscribed
+```
+
+### Inotify (Linux)
+
+When NeoMutt is compiled with inotify support, it receives immediate kernel notifications
+for new mail in locally monitored folders — no polling delay. This works for mail delivered
+by a local agent; it does not work for remote delivery over NFS or similar.
+
+Inotify debug output is available at log level 3 (`-d3` on the command line).
+
+### Message Counts in the Sidebar
+
+Enable periodic calculation of unread, flagged, and total message counts:
+
+```
+set mail_check_stats
+set mail_check_stats_interval = 60   # seconds between recalculations
+```
+
+These counts are used by the sidebar. Control their display via `$sidebar_format`.
+IMAP mailboxes support unread and total counts only.

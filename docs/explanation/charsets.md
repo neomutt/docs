@@ -76,3 +76,57 @@ environment variable setup problems, not NeoMutt problems.
 A list of officially assigned and known character sets can be found at
 [IANA](http://www.iana.org/assignments/character-sets), a list of locally supported locales
 can be obtained by running `locale -a`.
+
+## Charset Hooks
+
+NeoMutt provides two commands for dealing with non-standard or system-specific charset
+names that appear in emails or are required by your iconv library.
+
+### `charset-hook` — Aliasing Unknown Charset Names
+
+```
+charset-hook alias charset
+```
+
+The `charset-hook` command defines an alias for a character set. This is useful to
+properly display messages which are tagged with a charset name not known to NeoMutt. For
+example, some mailers send messages labelled with the non-standard name `x-unknown` instead
+of a real IANA charset name. You can map it to a sane default:
+
+```
+charset-hook x-unknown us-ascii
+```
+
+Other common uses include mapping Windows-specific or application-specific names to their
+standard equivalents:
+
+```
+charset-hook cp1252 windows-1252
+charset-hook latin-1 iso-8859-1
+```
+
+### `iconv-hook` — System-Specific iconv Names
+
+```
+iconv-hook charset local-charset
+```
+
+The `iconv-hook` command defines a system-specific name for a character set. This is
+helpful when your system's character conversion library (iconv) insists on using unusual,
+system-specific names for character sets. For example, some platforms name UTF-8 as
+`UTF8` (without the hyphen):
+
+```
+iconv-hook utf-8 UTF8
+```
+
+### When to Use Charset Hooks
+
+- **`charset-hook`**: Use when you receive messages with non-standard or misspelled charset
+  declarations (e.g., `x-unknown`, `cp1252`, or other vendor-specific names). NeoMutt will
+  treat the alias as the real charset when decoding the message.
+
+- **`iconv-hook`**: Use when NeoMutt fails to convert a charset because your iconv library
+  uses a different internal name for it. This is a workaround for platform quirks rather
+  than broken email; it tells NeoMutt which local iconv name to use for a given IANA
+  charset name.

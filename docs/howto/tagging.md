@@ -134,3 +134,23 @@ color index_tags green default
 ### Credits
 
 Mehdi Abaakouk, Richard Russon, Bernard 'Guyzmo' Pratz
+
+---
+
+## Marking Messages
+
+There are times when it is useful to ask NeoMutt to "remember" which message you are currently looking at while you move elsewhere in your mailbox. You can do this with the `<mark-message>` function, which is bound to the `~` key by default.
+
+### Workflow
+
+1. Press `~` to mark the current message and enter an identifier (e.g. `a`).
+2. Navigate freely within your mailbox.
+3. Press `'a` to jump back to the marked message.
+
+Message marking is implemented as a shortcut for defining a macro that returns you to the current message by searching for its Message-ID. You can choose a different prefix key by setting the `$mark_macro_prefix` variable.
+
+### Variables
+
+| Name | Type | Default |
+|---|---|---|
+| `mark_macro_prefix` | string | `'` |
