@@ -1,0 +1,165 @@
+---
+title: How to Use NNTP (Usenet)
+description: Configure NeoMutt to read and post to Usenet newsgroups via NNTP
+keywords: nntp, usenet, newsgroups, newsrc, news server, subscribe, catchup, post, followup
+---
+
+# How to Use NNTP (Usenet)
+
+:::{admonition} Diátaxis: How-To Guide
+:class: note
+
+Write as **directions**. Assume the reader is competent and knows what they want to achieve.
+Be practical and goal-focused. Use numbered steps for procedures. Don't explain why — link
+to explanation pages instead. Keep it focused on the specific task. Start with prerequisites,
+give the steps, show the expected result.
+:::
+
+## Introduction
+
+NeoMutt can read from a news server using NNTP.
+
+The default news server can be obtained from the `$NNTPSERVER` environment variable or from the `/etc/nntpserver` file. Like in other news readers, information about the subscribed newsgroups is saved in the file specified by the `$newsrc` variable. You can open a newsgroup with the function `<change-newsgroup>`.
+
+When browsing the list of newsgroups on the server the function `<subscribe>` can be used to tell NeoMutt the groups of interest to you. This list is stored in the `$newsrc` file, so NeoMutt remembers it across invocations (see also `$save_unsubscribed`). With the `<unsubscribe>` function a group can be deleted from that list. You can also specify the list of interesting groups with the {ref}`mailboxes <mailboxes>` command in your config file.
+
+When checking for new messages, NeoMutt only polls the subscribed newsgroups.
+
+The variable `$news_cache_dir` can be used to point to a directory. NeoMutt will create a hierarchy of subdirectories named like the account and newsgroup the cache is for. The hierarchy is also used to store header cache if NeoMutt was compiled with {ref}`header cache <header-caching>` support.
+
+## Variables
+
+| Name | Type | Default |
+|------|------|---------|
+| `ask_followup_to` | boolean | `no` |
+| `ask_x_comment_to` | boolean | `no` |
+| `catchup_newsgroup` | quad | `ask-yes` |
+| `followup_to_poster` | quad | `ask-yes` |
+| `group_index_format` | string | `%4C %M%N %5s %-45.45f %d` |
+| `inews_command` | string | (empty) |
+| `newsgroups_charset` | string | `utf-8` |
+| `newsrc` | string | `~/.newsrc` |
+| `news_cache_dir` | string | `~/.neomutt` |
+| `news_server` | string | (empty) |
+| `nntp_authenticators` | string | (empty) |
+| `nntp_context` | number | `1000` |
+| `nntp_listgroup` | boolean | `yes` |
+| `nntp_load_description` | boolean | `yes` |
+| `nntp_pass` | string | (empty) |
+| `nntp_poll` | number | `60` |
+| `nntp_user` | string | (empty) |
+| `post_moderated` | quad | `ask-yes` |
+| `save_unsubscribed` | boolean | `no` |
+| `show_new_news` | boolean | `yes` |
+| `show_only_unread` | boolean | `no` |
+| `x_comment_to` | boolean | `no` |
+
+## Functions
+
+NNTP adds the following functions to NeoMutt. By default, none of them are bound to keys.
+
+| Menus | Function | Description |
+|-------|----------|-------------|
+| browser,index | `<catchup>` | mark all articles in newsgroup as read |
+| index,pager | `<change-newsgroup>` | open a different newsgroup |
+| compose | `<edit-followup-to>` | edit the Followup-To field |
+| compose | `<edit-newsgroups>` | edit the newsgroups list |
+| compose | `<edit-x-comment-to>` | edit the X-Comment-To field |
+| attach,index,pager | `<followup-message>` | followup to newsgroup |
+| index,pager | `<post-message>` | post message to newsgroup |
+| browser | `<reload-active>` | load list of all newsgroups from NNTP server |
+| browser | `<subscribe>` | subscribe to current mbox (IMAP/NNTP only) |
+| browser | `<subscribe-pattern>` | subscribe to newsgroups matching a pattern |
+| browser | `<uncatchup>` | mark all articles in newsgroup as unread |
+| browser | `<unsubscribe>` | unsubscribe from current mbox (IMAP/NNTP only) |
+| browser | `<unsubscribe-pattern>` | unsubscribe from newsgroups matching a pattern |
+| index,pager | `<change-newsgroup-readonly>` | open a different newsgroup in read only mode |
+| attach,index,pager | `<forward-to-group>` | forward to newsgroup |
+| index | `<get-children>` | get all children of the current message |
+| index | `<get-parent>` | get parent of the current message |
+| index | `<reconstruct-thread>` | reconstruct thread containing current message |
+| index | `<get-message>` | get message with Message-Id |
+
+## neomuttrc
+
+```
+# Example NeoMutt config file for the nntp feature.
+
+# --------------------------------------------------------------------------
+# VARIABLES – shown with their default values
+# --------------------------------------------------------------------------
+set ask_followup_to = no
+set ask_x_comment_to = no
+set catchup_newsgroup = ask-yes
+set followup_to_poster = ask-yes
+set group_index_format = '%4C %M%N %5s  %-45.45f %d'
+set inews_command = ''
+set newsgroups_charset = utf-8
+set newsrc = '~/.newsrc'
+set news_cache_dir = '~/.neomutt'
+set news_server = ''
+set nntp_authenticators = ''
+set nntp_context = 1000
+set nntp_listgroup = yes
+set nntp_load_description = yes
+set nntp_pass = ''
+set nntp_poll = 60
+set nntp_user = ''
+set post_moderated = ask-yes
+set save_unsubscribed = no
+set show_new_news = yes
+set show_only_unread = no
+set x_comment_to = no
+# --------------------------------------------------------------------------
+# FUNCTIONS – shown with an example mapping
+# --------------------------------------------------------------------------
+# mark all articles in newsgroup as read
+bind browser,index y catchup
+# open a different newsgroup
+bind index,pager i change-newsgroup
+# edit the Followup-To field
+bind compose o edit-followup-to
+# edit the newsgroups list
+bind compose N edit-newsgroups
+# edit the X-Comment-To field
+bind compose x edit-x-comment-to
+# followup to newsgroup
+bind attach,index,pager F followup-message
+# post message to newsgroup
+bind index,pager P post-message
+# load list of all newsgroups from NNTP server
+bind browser g reload-active
+# subscribe to current mbox (IMAP/NNTP only)
+bind browser s subscribe
+# subscribe to newsgroups matching a pattern
+bind browser S subscribe-pattern
+# mark all articles in newsgroup as unread
+bind browser Y uncatchup
+# unsubscribe from current mbox (IMAP/NNTP only)
+bind browser u unsubscribe
+# unsubscribe from newsgroups matching a pattern
+bind browser U unsubscribe-pattern
+# open a different newsgroup in read only mode
+bind index,pager \ei change-newsgroup-readonly
+# forward to newsgroup
+bind attach,index,pager \eF forward-to-group
+# get all children of the current message
+# bind index ??? get-children
+# get parent of the current message
+bind index \eG get-parent
+# reconstruct thread containing current message
+# bind index ??? reconstruct-thread
+# get message with Message-Id
+bind index \CG get-message
+# --------------------------------------------------------------------------
+
+# vim: syntax=neomuttrc
+```
+
+## Known Bugs
+
+None
+
+## Credits
+
+Vsevolod Volkov, Felix von Leitner, Richard Russon
