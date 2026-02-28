@@ -19,7 +19,7 @@ The "sensible browser" is a set of small changes to NeoMutt's mailbox browser wh
 
 The behavior is divided into two use cases: Fixed Order; Variable Order.
 
-### A Fixed Order of Mailboxes
+## A Fixed Order of Mailboxes
 
 This is for users who like their mailboxes in a fixed order, e.g. alphabetical, or unsorted (in the order of the config file).
 
@@ -35,7 +35,7 @@ When you navigate to a parent mailbox ("..") your old mailbox will be highlighte
 
 ".." will always be listed at the top, however the rest of the list is sorted.
 
-### A Variable Order of Mailboxes
+## A Variable Order of Mailboxes
 
 This is for users who like their mailboxes sorted by a characteristic that changes, e.g. count of new mail, or the size of mailbox.
 

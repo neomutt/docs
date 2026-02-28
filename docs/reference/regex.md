@@ -31,7 +31,7 @@ The regular expression can be enclosed/delimited by either `"` or `'` which is u
 
 The fundamental building blocks are the regular expressions that match a single character. Most characters, including all letters and digits, are regular expressions that match themselves. Any metacharacter with special meaning may be quoted by preceding it with a backslash.
 
-### Matching a Literal Dot
+## Matching a Literal Dot
 
 ```
 # no quotes
