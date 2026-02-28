@@ -91,6 +91,16 @@ Finally, you can apply the usual message-related functions (like
 {ref}`<resend-message> <resend-message>`, and the `<reply>` and
 `<forward-message>` functions) to attachments of type `message/rfc822`.
 
+:::{admonition} 📷 Screenshot Needed
+:class: tip
+
+**Subject:** The attachment menu
+
+**Description:** NeoMutt attachment menu (`v` key) showing a multipart message with several attachments listed — a text/plain body, an HTML alternative, an inline image, and a PDF attachment. Each line shows the MIME type, encoding, size, and filename.
+
+**Highlights:** The tree structure for nested multipart containers, the MIME type and size columns, and the attachment numbering that lets users navigate and act on individual parts.
+:::
+
 ### Viewing Attachments
 
 There are four ways of viewing attachments:
@@ -154,6 +164,16 @@ field is the description of the attachment, and can be changed with the
 `<edit-description>` command (default: d). See
 {ref}`$attach_format <attach-format>` for a full list of available expandos to
 format this display to your needs.
+
+:::{admonition} 📷 Screenshot Needed
+:class: tip
+
+**Subject:** The compose menu with attachments
+
+**Description:** NeoMutt compose menu showing the message header fields (To, Cc, Subject, etc.) at the top and the attachment list at the bottom — including a text/plain body marked with "-" (will be deleted after sending) and one or two attached files with their MIME types, encodings, sizes, and filenames.
+
+**Highlights:** The layout of the compose screen — header fields above, attachment list below — and the "-" unlink indicator, MIME type, encoding, and size columns for each attachment.
+:::
 
 ## MIME Type Configuration with `mime.types`
 

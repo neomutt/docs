@@ -69,3 +69,13 @@ messages. In order to take advantage of these, {ref}`$reflow_text <reflow-text>`
   {ref}`$text_flowed <text-flowed>` unset).
 - If {ref}`$reflow_space_quotes <reflow-space-quotes>` is unset, NeoMutt will still add one
   trailing space after all the quotes in the pager (but not when replying).
+
+:::{admonition} 📷 Screenshot Needed
+:class: tip
+
+**Subject:** Flowed vs fixed text in the pager
+
+**Description:** The NeoMutt pager showing a format=flowed message with `$reflow_text` enabled, demonstrating how paragraphs are reflowed and wrapped cleanly to the terminal width. Ideally show a quoted reply with `$reflow_space_quotes` set, displaying the added spaces between quote level markers.
+
+**Highlights:** How reflowed paragraphs wrap cleanly compared to fixed-width text with hard line breaks, and how `$reflow_space_quotes` improves readability by adding spaces after `>` quote markers.
+:::

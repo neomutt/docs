@@ -93,6 +93,16 @@ Reads all matching messages or whole-threads. The default is 'messages' or nm_qu
 
 More variables about tags configuration can be found in {ref}`Custom backend Tags Feature <custom-tags-variables>`.
 
+:::{admonition} 📷 Screenshot Needed
+:class: tip
+
+**Subject:** Notmuch virtual mailbox view
+
+**Description:** The NeoMutt index showing a virtual folder created from a Notmuch query (e.g. `tag:inbox`), with the status bar displaying the Notmuch query URL. Messages from different underlying Maildir folders should be visible together in one unified view.
+
+**Highlights:** How messages from multiple folders are merged into a single virtual view, the Notmuch query shown in the status bar, and the message count reflecting query results rather than a physical folder.
+:::
+
 ## Functions
 
 Notmuch adds the following functions to NeoMutt. By default, none of them are bound to keys.

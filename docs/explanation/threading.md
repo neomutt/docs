@@ -46,6 +46,16 @@ available in the *index* and *pager* modes as shown in the table below.
 
 ### Thread Tree Display
 
+:::{admonition} 📷 Screenshot Needed
+:class: tip
+
+**Subject:** Thread tree visualisation in index
+
+**Description:** The NeoMutt index screen with `set sort=threads` showing a mailbox (ideally a mailing list) with several threaded conversations. The tree should include at least one multi-level thread (3+ depth) with branching replies, a collapsed thread (showing the hidden message count), and a thread with a missing parent (showing the `?` character). The tree-drawing characters (`├─>`, `└─>`, `│`) should be clearly visible.
+
+**Highlights:** The reader should notice the tree structure that visually represents the parent-child reply relationships, how deeper nesting indicates sub-conversations, and the special characters (`?` for missing, `&` for hidden) that indicate thread anomalies.
+:::
+
 In the *index*, the subject of threaded children messages will be prepended with thread
 tree characters. By default, the subject itself will not be duplicated unless
 `$hide_thread_subject` is unset. Special characters will be added to the thread tree as

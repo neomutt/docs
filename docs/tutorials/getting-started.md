@@ -42,6 +42,16 @@ followed by a context sensitive status line and finally the command line. The co
 used to display informational and error messages as well as for prompts and for entering
 interactive commands.
 
+:::{admonition} 📷 Screenshot Needed
+:class: tip
+
+**Subject:** NeoMutt overall UI layout
+
+**Description:** A full terminal window showing NeoMutt's main interface with the context-sensitive help line at the top, the message index in the center, the status line near the bottom, and the command line at the very bottom.
+
+**Highlights:** The four distinct areas of the UI — help line, menu content, status line, and command line — should each be clearly visible and identifiable.
+:::
+
 NeoMutt is configured through variables which, if the user wants to permanently use
 a non-default value, are written to configuration files. NeoMutt supports a rich config file
 syntax to make even complex configuration files readable and commentable.
@@ -80,6 +90,16 @@ other person replies back, you can see the other person's email in a "sub-tree" 
 especially useful for personal email between a group of people or when you've subscribed to
 mailing lists.
 
+:::{admonition} 📷 Screenshot Needed
+:class: tip
+
+**Subject:** The Index screen
+
+**Description:** The NeoMutt Index screen showing a list of emails with message numbers, status flags (N for new, r for replied, ! for flagged), dates, sender names, sizes, and subjects. Include some threaded messages to show the tree hierarchy with reply indentation.
+
+**Highlights:** The columnar layout of the message list — flags, date, sender, size, and subject — plus how threads are visually represented with tree characters.
+:::
+
 ### Pager
 
 The pager is responsible for showing the email content. On the top of the pager you have an
@@ -90,6 +110,16 @@ configuration, which we'll describe below.
 Below the headers, you see the email body which usually contains the message. If the email
 contains any attachments, you will see more information about them below the email body, or,
 if the attachments are text files, you can view them directly in the pager.
+
+:::{admonition} 📷 Screenshot Needed
+:class: tip
+
+**Subject:** The Pager screen
+
+**Description:** The NeoMutt Pager displaying an email message, with header fields (From, To, Subject, Date) at the top, the message body below, and the status line at the bottom showing the current position in the message.
+
+**Highlights:** The separation between email headers and body content, the status line showing progress through the message, and any color highlighting of quoted text or URLs.
+:::
 
 To give the user a good overview, it is possible to configure NeoMutt to show different things
 in the pager with different colors. Virtually everything that can be described with a regular
@@ -107,6 +137,16 @@ Some mail systems can nest mail folders inside other mail folders. The normal op
 commands in NeoMutt will open the mail folder and you can't see the sub-folders. If you
 instead use the `<descend-directory>` function it will go into the directory and not open it
 as a mail directory.
+
+:::{admonition} 📷 Screenshot Needed
+:class: tip
+
+**Subject:** The File Browser screen
+
+**Description:** The NeoMutt File Browser showing a list of mailboxes or directories, with columns for file size, date, and name. Show a mix of directories and mail folders to illustrate navigation.
+
+**Highlights:** How mailboxes and directories are listed, the sorting columns, and the navigation prompt at the bottom for selecting a mailbox to open.
+:::
 
 ### Sidebar
 
@@ -484,12 +524,32 @@ will have the `sidebar_new` color, even if it also contains flagged mails.
 | | `sidebar_spool_file` | Mailbox is the spool_file (receives incoming mail) |
 | Lowest | `sidebar_ordinary` | Mailbox does not match above |
 
+:::{admonition} 📷 Screenshot Needed
+:class: tip
+
+**Subject:** Sidebar with color theme applied
+
+**Description:** The NeoMutt Sidebar panel with the color scheme from the example above applied, showing mailboxes in different colors — green for new mail, cyan for unread, red for flagged, and the dark blue indicator on the currently open mailbox.
+
+**Highlights:** How color-coding makes it easy to spot mailboxes with new, unread, or flagged messages at a glance, and how the indicator and highlight colors differ.
+:::
+
 ### Help
 
 The help screen is meant to offer a quick help to the user. It lists the current
 configuration of key bindings and their associated commands including a short description, and
 currently unbound functions that still need to be associated with a key binding (or
 alternatively, they can be called via the NeoMutt command prompt).
+
+:::{admonition} 📷 Screenshot Needed
+:class: tip
+
+**Subject:** The Help screen
+
+**Description:** The NeoMutt Help screen showing a list of key bindings and their associated functions with short descriptions, as displayed when pressing `?` from the Index.
+
+**Highlights:** The two-column layout of key bindings paired with function names and descriptions, and the section showing unbound functions at the bottom.
+:::
 
 ### Compose Menu
 
@@ -498,6 +558,16 @@ before actually sending a message by mail: who gets the message as what (recipie
 gets what kind of copy). Additionally, users may set security options like deciding whether to
 sign, encrypt or sign and encrypt a message with/for what keys. Also, it's used to attach
 messages, to re-edit any attachment including the message itself.
+
+:::{admonition} 📷 Screenshot Needed
+:class: tip
+
+**Subject:** The Compose Menu screen
+
+**Description:** The NeoMutt Compose Menu showing the split-screen layout with header fields at the top (From, To, Cc, Bcc, Subject, Reply-To, Fcc), security settings (PGP/S/MIME options), and the list of attachments at the bottom.
+
+**Highlights:** The editable header fields, the security option indicators, and how attachments are listed with their MIME types and sizes.
+:::
 
 ### Alias Menu
 
@@ -508,6 +578,16 @@ several addresses by a shorter nickname, the actual alias, so that users don't h
 each single recipient manually. The alias menu is also used to display the result of external
 address queries.
 
+:::{admonition} 📷 Screenshot Needed
+:class: tip
+
+**Subject:** The Alias Menu screen
+
+**Description:** The NeoMutt Alias Menu showing a list of defined aliases with nicknames, real names, and email addresses, as displayed when selecting recipients for a message.
+
+**Highlights:** How aliases group multiple addresses under short nicknames, the search capability for finding contacts, and how selected aliases are highlighted.
+:::
+
 ### Attachment Menu
 
 As will be later discussed in detail, NeoMutt features a good and stable MIME implementation,
@@ -515,6 +595,16 @@ that is, it supports sending and receiving messages of arbitrary MIME types. The
 menu displays a message's structure in detail: what content parts are attached to which parent
 part (which gives a true tree structure), which part is of what type and what size. Single
 parts may saved, deleted or modified to offer great and easy access to message's internals.
+
+:::{admonition} 📷 Screenshot Needed
+:class: tip
+
+**Subject:** The Attachment Menu screen
+
+**Description:** The NeoMutt Attachment Menu displaying a message with multiple attachments in a tree structure, showing parent/child MIME parts with their content types (e.g., text/plain, image/jpeg, application/pdf), sizes, and descriptions.
+
+**Highlights:** The tree structure showing how MIME parts are nested, the content type and size columns, and the menu options for saving or viewing individual attachments.
+:::
 
 ## Moving Around in Menus
 

@@ -21,6 +21,16 @@ configurable, and is well suited to the mail power user with advanced features l
 bindings, keyboard macros, mail threading, regular expression searches and a powerful
 pattern matching language for selecting groups of messages.
 
+:::{admonition} 📷 Screenshot Needed
+:class: tip
+
+**Subject:** NeoMutt index view overview
+
+**Description:** The NeoMutt index screen showing a mailbox with a variety of messages — some read, some unread, some flagged, some threaded — with the status bar and mini-help line visible. A typical mailbox with 20+ messages demonstrating the default layout.
+
+**Highlights:** The reader should notice the key areas of the TUI: the message list (index) with status flags, the status bar at the bottom showing mailbox info, and the mini-help line showing available key bindings.
+:::
+
 ## NeoMutt Home Page
 
 The homepage can be found at [https://neomutt.org](https://neomutt.org).

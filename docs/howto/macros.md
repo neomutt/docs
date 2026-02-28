@@ -46,6 +46,16 @@ Optionally you can specify a descriptive text after *sequence*, which is shown i
 Macro definitions (if any) listed in the help screen(s), are silently truncated at the screen width, and are not wrapped.
 :::
 
+:::{admonition} 📷 Screenshot Needed
+:class: tip
+
+**Subject:** Macros displayed in the help screen
+
+**Description:** The NeoMutt help screen (opened with `?`) showing a section of macro definitions, with the key sequence, the expanded macro body (possibly truncated), and the optional description text.
+
+**Highlights:** How macro descriptions appear alongside key bindings, and how long macro sequences are truncated at the screen edge.
+:::
+
 ## Removing a Key Macro
 
 This command will remove a macro:

@@ -43,6 +43,16 @@ set smime_decrypt_command = "..."
 ...
 ```
 
+:::{admonition} 📷 Screenshot Needed
+:class: tip
+
+**Subject:** Encrypted and signed message indicators
+
+**Description:** The NeoMutt index screen showing several messages with different security states: a PGP-signed message (showing the signature status flag), a PGP-encrypted message, and an unsigned/unencrypted message for contrast. Then the pager view of a signed message showing the signature verification status line (e.g. "Good signature from...").
+
+**Highlights:** The reader should notice the security indicator flags in the index (e.g. "s" for signed, "S" for encrypted) and the signature verification output in the pager, showing how NeoMutt surfaces cryptographic status to the user.
+:::
+
 ## OpenPGP Configuration
 
 The two most important settings are `$pgp_default_key` and `$pgp_sign_as`. To perform

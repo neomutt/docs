@@ -63,3 +63,13 @@ subject-regex '\[servicedesk #([0-9]+)\] ([^.]+)\.([^.]+) - (new|open|pending|up
 subject-regex '\[[^]]*\]:? *' '%L%R'
 ```
 :::
+
+:::{admonition} 📷 Screenshot Needed
+:class: tip
+
+**Subject:** Index with transformed subject lines
+
+**Description:** NeoMutt index view showing messages from a mailing list where `subject-regex` rules have been applied — the `[listname]` prefixes and `[rt #12345]` tags are stripped from subject lines, leaving clean, readable subjects. Ideally a before/after comparison.
+
+**Highlights:** The cleaner subject column after munging — list prefixes and ticket-system tags are gone, making subjects easier to scan in the index.
+:::

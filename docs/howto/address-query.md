@@ -49,6 +49,16 @@ There are two mechanisms for accessing the query function of NeoMutt.
 3. From the query menu, you can select addresses to create aliases, or to mail.
 4. You can tag multiple addresses to mail, start a new query, or have a new query appended to the current responses.
 
+:::{admonition} 📷 Screenshot Needed
+:class: tip
+
+**Subject:** Query results menu
+
+**Description:** The NeoMutt query menu after executing an address query, showing a list of matching contacts with columns for email address, real name, and optional extra information (e.g. organisation). One or more entries should be tagged with `*` to illustrate multi-selection.
+
+**Highlights:** The tabular layout of query results, how to tag entries for selection, and the status bar showing the query string used.
+:::
+
 ### Address Completion at Prompts
 
 1. In any prompt for address entry, use the `<complete-query>` function (default: ^T) to run a query based on the current address you have typed.

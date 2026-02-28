@@ -38,6 +38,16 @@ subscribe-to imaps://mail.example.org/inbox
 
 Instead of the above commands you can also use the `<subscribe>` and `<unsubscribe>` functions of the browser (default keys `s` and `u`) to subscribe to or unsubscribe from a folder while browsing the folders on the IMAP server. The browser can be instructed to only display the folders you are subscribed to with the `<toggle-subscribed>` function. See also the `$imap_list_subscribed` variable.
 
+:::{admonition} 📷 Screenshot Needed
+:class: tip
+
+**Subject:** IMAP folder browser with subscription toggle
+
+**Description:** The NeoMutt folder browser connected to an IMAP server, with `<toggle-subscribed>` active so only subscribed folders are shown. Several folders are listed with the `s`/`u` subscribe/unsubscribe key bindings available in the help bar.
+
+**Highlights:** The subscribed-only filter in effect, and the `s`/`u` key bindings for managing folder subscriptions directly from the browser.
+:::
+
 Because the list of subscribed folders is managed by the IMAP server, NeoMutt can also ask the server for that list. If `$imap_check_subscribed` is set, NeoMutt will do that and add those folders to its mailboxes list just as if you had used the `mailboxes` command on each of them, so that these folders get checked periodically for new mail.
 
 ## Tuning Mail Polling
@@ -64,6 +74,16 @@ As of version 1.2, NeoMutt supports browsing mailboxes on an IMAP server. This i
 - For the case where an entry can contain both messages and subfolders, the selection key (bound to `enter` by default) will choose to descend into the subfolder view. If you wish to view the messages in that folder, you must use `view-file` instead (bound to `space` by default).
 
 - You can create, delete and rename mailboxes with the `<create-mailbox>`, `<delete-mailbox>`, and `<rename-mailbox>` commands (default bindings: `C`, `d` and `r`, respectively). You may also `<subscribe>` and `<unsubscribe>` to mailboxes (normally these are bound to `s` and `u`, respectively).
+
+:::{admonition} 📷 Screenshot Needed
+:class: tip
+
+**Subject:** IMAP folder browser display
+
+**Description:** The NeoMutt IMAP folder browser showing a list of remote mailboxes. Entries display "IMAP" in the permissions column, some with a "+" indicator showing they contain both messages and subfolders. At least one folder name has a trailing hierarchy separator (e.g., `/` or `.`).
+
+**Highlights:** The "IMAP+" indicator for folders containing both messages and subfolders, the hierarchy separator on folder names, and the key bindings for `<create-mailbox>` (C), `<delete-mailbox>` (d), and `<rename-mailbox>` (r) shown in the help bar.
+:::
 
 ## Authentication
 

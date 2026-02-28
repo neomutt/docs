@@ -51,6 +51,16 @@ NeoMutt provides a number of advanced features for handling (possibly many) fold
 
 The `unmailboxes` command is used to remove a token from the list of folders which receive mail. `unmailboxes` can be used on the mailbox path, `$folder`-abbreviated path, or description. Use `unmailboxes *` to remove all tokens.
 
+:::{admonition} 📷 Screenshot Needed
+:class: tip
+
+**Subject:** Mailbox browser with named mailboxes
+
+**Description:** The NeoMutt mailbox browser (opened with `c?` or the `<browser>` function) showing a list of monitored mailboxes configured via `named-mailboxes`, displaying the custom label names (e.g. "My INBOX", "Work Mail") instead of raw folder paths, along with message counts and new mail indicators.
+
+**Highlights:** How `-label` / `named-mailboxes` labels replace raw paths in the browser, the new mail flag column, and the folder size or message count columns.
+:::
+
 :::{note}
 The folders in the `mailboxes` command are resolved when the command is executed, so if these names contain {ref}`shortcut characters <shortcuts>` (such as `=` and `!`), any variable definition that affects these characters (like `$folder` and `$spool_file`) should be set before the `mailboxes` command. If none of these shortcuts are used, a local path should be absolute as otherwise NeoMutt tries to find it relative to the directory from where NeoMutt was started which may not always be desired.
 :::

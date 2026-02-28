@@ -19,6 +19,16 @@ give the steps, show the expected result.
 
 This feature adds a new way of using the {ref}`Limit Command <tuning-search>`. The `<limit-current-thread>` function restricts the view to just the current thread. Setting the limit (the `l` key) to "all" will restore the full email list.
 
+:::{admonition} 📷 Screenshot Needed
+:class: tip
+
+**Subject:** Limited view of a single thread
+
+**Description:** The NeoMutt index after invoking `<limit-current-thread>`, showing only the messages belonging to one thread (with tree-style indentation) while all other messages are hidden. The status bar should indicate that a limit is active.
+
+**Highlights:** How the index shows only the focused thread with its reply structure, the "limited" indicator in the status bar, and the reduced message count compared to the full mailbox.
+:::
+
 ## Functions
 
 Limit-current-thread adds the following function to NeoMutt. By default, it is not bound to a key.

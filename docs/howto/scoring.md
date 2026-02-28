@@ -30,6 +30,16 @@ The `score` command adds *value* to a message's score if *pattern* matches it. *
 
 The `unscore` command removes score entries from the list. You **must** specify the same pattern specified in the `score` command for it to be removed. The pattern `*` is a special token which means to clear the list of all score entries.
 
+:::{admonition} 📷 Screenshot Needed
+:class: tip
+
+**Subject:** Scored messages in the index
+
+**Description:** The NeoMutt index view with several messages that have been assigned different scores via `score` rules — some with high scores (e.g. flagged or colour-highlighted) and some with low or zero scores, showing how scoring affects message display or sort order.
+
+**Highlights:** How scored messages can be visually distinguished using `color index` rules tied to score patterns (e.g. `~n 10-`), and how sort-by-score reorders the message list.
+:::
+
 ## Scoring and Threading
 
 Scoring occurs as the messages are read in, before the mailbox is sorted. Because of this, patterns which depend on threading, such as *~=*, *~$*, and *~()*, will not work by default. A workaround is to push the scoring command in a folder hook. This will cause the mailbox to be rescored after it is opened and input starts being processed:

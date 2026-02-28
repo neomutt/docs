@@ -54,6 +54,16 @@ format strings may not work as expected, you may not be able to enter non-ascii 
 and possibly more. Data is always represented using bytes and so a correct setup is very
 important as to the machine, all character sets "look" the same.
 
+:::{admonition} 📷 Screenshot Needed
+:class: tip
+
+**Subject:** Garbled vs correct charset display
+
+**Description:** A side-by-side comparison (or two sequential screenshots) of the NeoMutt pager showing the same email message: one with a mismatched charset/locale displaying garbled text (mojibake — question marks, octal codes, or wrong glyphs), and one with the correct UTF-8 locale displaying the message properly with international characters (e.g. accented Latin, CJK, or Cyrillic text).
+
+**Highlights:** The reader should notice the dramatic difference a correct charset configuration makes — the garbled version is unreadable while the correct version renders all characters properly, reinforcing why locale setup matters.
+:::
+
 :::{warning}
 A mismatch between what system and library functions think the locale is and what NeoMutt
 was told the locale is may make it behave badly with non-ascii input: it will fail at

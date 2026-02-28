@@ -40,6 +40,16 @@ See the description of `color` for the precise syntax.
 
 The command bar shows only the last message. To show the last 100 messages (this includes all types of messages from debug to error), use the `<show-log-messages>` function.
 
+:::{admonition} 📷 Screenshot Needed
+:class: tip
+
+**Subject:** Log messages display
+
+**Description:** The NeoMutt log messages view (accessed via `<show-log-messages>`) showing a scrollable list of recent log entries with a mix of message types — informational messages, warnings, and errors — each prefixed with a timestamp and severity indicator.
+
+**Highlights:** How errors are displayed in a distinct colour, the chronological ordering of log entries, and the command bar at the bottom showing the most recent message.
+:::
+
 ## Enabling Debug Logging
 
 1. Debug messages are not shown by default. Set the debug log level with the `-d` command line parameter at startup:

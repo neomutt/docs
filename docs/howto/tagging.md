@@ -19,7 +19,17 @@ give the steps, show the expected result.
 
 Sometimes it is desirable to perform an operation on a group of messages all at once rather than one at a time. An example might be to save messages to a mailing list to a separate folder, or to delete all messages with a given subject. To tag all messages matching a pattern, use the `<tag-pattern>` function, which is bound to "shift-T" by default. Patterns are completable in the editor menu. Invoke the `<complete>` function (by default bound to "Tab") after typing `~` to get a selectable list. Or you can select individual messages by hand using the `<tag-message>` function, which is bound to "t" by default. See {ref}`patterns <patterns>` for NeoMutt's pattern matching syntax.
 
-Once you have tagged the desired messages, you can use the "tag-prefix" operator, which is the ";" (semicolon) key by default. When the "tag-prefix" operator is used, the *next* operation will be applied to all tagged messages if that operation can be used in that manner. If the `$auto_tag` variable is set, the next operation applies to the tagged messages automatically, without requiring the "tag-prefix".
+Once you have tagged the desired messages, you can use the "tag-prefix" operator, which is the ";" (semicolon) key by default.
+
+:::{admonition} 📷 Screenshot Needed
+:class: tip
+
+**Subject:** Tagged messages in the index
+
+**Description:** The NeoMutt index view showing several messages that have been tagged (marked with `*` in the tag indicator column) using `<tag-message>` or `<tag-pattern>`, with untagged messages shown without the marker for contrast.
+
+**Highlights:** The `*` tag indicator in the flags column, how tagged messages are visually distinguished from untagged ones, and the status bar showing the count of tagged messages.
+::: When the "tag-prefix" operator is used, the *next* operation will be applied to all tagged messages if that operation can be used in that manner. If the `$auto_tag` variable is set, the next operation applies to the tagged messages automatically, without requiring the "tag-prefix".
 
 In {ref}`macros <macro>` or {ref}`push <push>` commands, you can use the `<tag-prefix-cond>` operator. If there are no tagged messages, NeoMutt will "eat" the rest of the macro to abort its execution. NeoMutt will stop "eating" the macro when it encounters the `<end-cond>` operator; after this operator the rest of the macro will be executed as normal.
 

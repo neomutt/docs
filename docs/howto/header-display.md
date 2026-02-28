@@ -65,6 +65,16 @@ unignore posted-to:
 ```
 :::
 
+:::{admonition} 📷 Screenshot Needed
+:class: tip
+
+**Subject:** Before/after header weeding
+
+**Description:** Two pager views side by side (or stacked): one showing a message with all default headers visible, the other showing the same message after applying `ignore *` and selective `unignore` — only From, Date, Subject, To, Cc, and a few X- headers remain.
+
+**Highlights:** The dramatic reduction in header clutter — the weeded view shows only the essential headers the user chose to keep.
+:::
+
 The above example will show "From:" headers as well as mbox "From\_" lines. To
 hide the latter, instead use `unignore from: date subject to cc` on the second
 line.
@@ -94,6 +104,16 @@ removing the header order effects set by the system-wide startup file.
 ```
 header-order From Date: From: To: Cc: Subject:
 ```
+:::
+
+:::{admonition} 📷 Screenshot Needed
+:class: tip
+
+**Subject:** Custom header display order
+
+**Description:** Pager view of a message where `header-order` has been applied — headers appear in the configured sequence (From\_, Date:, From:, To:, Cc:, Subject:) rather than the order they appear in the raw message.
+
+**Highlights:** The logical reading order of headers — the most important fields (sender, date, subject) appear first, matching the configured `header-order`.
 :::
 
 ## User-Defined Headers

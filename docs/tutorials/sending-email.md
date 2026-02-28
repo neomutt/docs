@@ -76,7 +76,27 @@ you have specified a `$signature`, it will be appended to the message.
 Once you have finished editing the body of your mail message, you are returned to the
 *compose* menu providing the functions shown below to modify, send or postpone the message.
 
+:::{admonition} 📷 Screenshot Needed
+:class: tip
+
+**Subject:** Compose flow — editor with headers
+
+**Description:** A terminal showing NeoMutt's editor view when composing a new message with `$edit_headers` enabled, displaying editable headers (From, To, Cc, Subject) at the top of the editor, followed by a blank line and the message body area with the signature appended.
+
+**Highlights:** How headers appear as editable text at the top of the editor, the blank separator line between headers and body, and the signature placement at the end.
+:::
+
 ## The Compose Menu
+
+:::{admonition} 📷 Screenshot Needed
+:class: tip
+
+**Subject:** The Compose Menu screen
+
+**Description:** The NeoMutt Compose Menu after returning from the editor, showing the split-screen layout: header fields (From, To, Cc, Bcc, Subject, Reply-To, Fcc) in the upper section, security options (PGP/S/MIME off/on), and the attachment list in the lower section showing at least one text/plain attachment (the message body).
+
+**Highlights:** The editable fields in the upper pane, the security status indicators, and the attachment list showing the message body as the first attachment with its MIME type and size.
+:::
 
 ### Compose Menu Keys
 
@@ -196,6 +216,16 @@ In these cases, you are dropped into a menu with a list of keys from which you c
 When you quit this menu, or NeoMutt can't find any matching keys, you are prompted for a user
 ID. You can, as usually, abort this prompt using `^G`. When you do so, NeoMutt will return to
 the compose screen.
+
+:::{admonition} 📷 Screenshot Needed
+:class: tip
+
+**Subject:** PGP key selection menu
+
+**Description:** The NeoMutt PGP key selection menu showing a list of available public keys with columns for key ID, capabilities (encryption/signing), validity flags, creation date, and associated user IDs/email addresses.
+
+**Highlights:** The key capability indicators (e/s for encrypt/sign), the validity column showing trust level, and how multiple keys for the same recipient are listed for selection.
+:::
 
 Once you have successfully finished the key selection, the message will be encrypted using the
 selected public keys when sent out.

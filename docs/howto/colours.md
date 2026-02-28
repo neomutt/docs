@@ -197,6 +197,16 @@ uncolor quoted1
 uncolor quoted2
 ```
 
+:::{admonition} 📷 Screenshot Needed
+:class: tip
+
+**Subject:** Quoted text with per-level colours
+
+**Description:** NeoMutt pager showing a deeply-quoted email reply with three or more levels of quoting — level 1 (`>`) in bright blue, level 2 (`>>`) in bright green, level 3 (`>>>`) in yellow, each visually distinct. The unquoted reply text appears in the default colour.
+
+**Highlights:** The colour gradient across quote levels — how distinct colours make it easy to follow the conversation depth and quickly identify the newest reply text.
+:::
+
 ### Color Lists
 
 Some objects in NeoMutt support *lists* of color rules. Each rule has a pattern and a color. Each is checked in turn and any matching rules are applied cumulatively (overlaid).
@@ -358,6 +368,16 @@ color index_size cyan default
 # vim: syntax=neomuttrc
 ```
 
+:::{admonition} 📷 Screenshot Needed
+:class: tip
+
+**Subject:** Index with per-column colours
+
+**Description:** NeoMutt index view with the index-color configuration applied — message numbers in red, dates in green, author names on a dark grey background (with one author "Ray Charles" highlighted in bright yellow), subject lines showing a bright cyan highlight for subjects matching a pattern, flags in red for flagged messages, and sizes in cyan.
+
+**Highlights:** How different index columns (number, date, author, flags, subject, size) each have their own colour, making the dense index easier to scan — and how pattern-matched colours draw attention to specific messages.
+:::
+
 ### Index Color See Also
 
 - Regular Expressions
@@ -443,6 +463,16 @@ color status brightwhite default 'NeoMutt: ([^ ]+)' 1
 # vim: syntax=neomuttrc
 ```
 
+:::{admonition} 📷 Screenshot Needed
+:class: tip
+
+**Subject:** Status bar with coloured sections
+
+**Description:** NeoMutt status bar showing the status-color feature in action — the overall bar is blue on white, "New:", "Del:", and "Flag:" counters are highlighted in bright red, the mailbox name after "NeoMutt:" is bright white, and the sort order in parentheses is coloured differently when it differs from the default.
+
+**Highlights:** How regex-based and submatch-based status colouring highlights specific parts of the status line — counters, mailbox name, and sort order each get distinct colours within the same bar.
+:::
+
 ### Status Color See Also
 
 - Compile-Time Features
@@ -498,6 +528,16 @@ color   attach_headers     brightmagenta   default    "invalid node with packet 
 
 # vim: syntax=neomuttrc
 ```
+
+:::{admonition} 📷 Screenshot Needed
+:class: tip
+
+**Subject:** Coloured attachment headers
+
+**Description:** NeoMutt pager or attachment view showing attachment headers with the attach-headers-color rules applied — "Autoview" text in bright green, bracket delimiters `[--` and `--]` in bright yellow, MIME type (e.g. "Type: text/html") and size in green, and a GPGME "Good signature from..." line in bright green (or "Bad signature" in bright red).
+
+**Highlights:** How attachment header colouring brings attention to key metadata — MIME type, size, autoview status, and especially GPGME signature verification results (good/bad/problem) at a glance.
+:::
 
 ### Attach Headers Color See Also
 

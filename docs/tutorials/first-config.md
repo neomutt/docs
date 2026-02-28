@@ -21,6 +21,16 @@ preferences. However, this configurability can make it difficult when just getti
 A few sample neomuttrc files are available in the
 [Contrib Repo](https://github.com/neomutt/neomutt-contrib).
 
+:::{admonition} 📷 Screenshot Needed
+:class: tip
+
+**Subject:** NeoMutt with default configuration
+
+**Description:** NeoMutt launched for the first time with no user configuration file — showing the default Index screen with the default `index_format`, no sidebar, default colors, and the help line at the top displaying basic navigation keys.
+
+**Highlights:** The out-of-the-box appearance: sparse default colors, no sidebar panel, default column layout in the index, and the help line showing available key bindings.
+:::
+
 ## Location of Initialization Files
 
 When NeoMutt starts up it looks for two configuration files – one "system" file and one "user"
@@ -108,6 +118,16 @@ option.
 | | System Config | `/etc/neomuttrc` |
 | | Environment | `export EDITOR="/usr/bin/vim"` |
 | Lowest | Built-in | Defaults hard-coded into NeoMutt |
+
+:::{admonition} 📷 Screenshot Needed
+:class: tip
+
+**Subject:** Before and after applying user config
+
+**Description:** A side-by-side or sequential pair of NeoMutt screenshots: (1) NeoMutt with default settings showing the Index, and (2) NeoMutt after applying a simple user neomuttrc that enables the sidebar, changes colors, and customizes `index_format` — demonstrating how configuration transforms the interface.
+
+**Highlights:** The visible differences between default and customized NeoMutt — sidebar appearing, new color scheme, changed index columns — showing the immediate impact of writing a config file.
+:::
 
 ## Syntax of Initialization Files
 

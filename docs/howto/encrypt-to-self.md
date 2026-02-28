@@ -118,6 +118,16 @@ Recipient: RSA key, ID 0000000000000000
 [-- End encryption information --]
 ```
 
+:::{admonition} 📷 Screenshot Needed
+:class: tip
+
+**Subject:** Encryption information block in pager
+
+**Description:** The NeoMutt pager displaying a decrypted email with the encryption information block visible. The block shows "[-- Begin encryption information --]" and "[-- End encryption information --]" markers with recipient key details (e.g., "Recipient: RSA key, ID 00C14A7DBBDD521C") between them.
+
+**Highlights:** The encryption information block integrated into the message display, showing how recipient key IDs appear when viewing an encrypted message with `$crypt_encryption_info` enabled.
+:::
+
 ### Usage
 
 It's enabled by default. The variable to control it is

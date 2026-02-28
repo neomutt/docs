@@ -131,6 +131,16 @@ For example, using `%<[y?%<[d?%[%H:%M]&%[%m/%d]>&%[%y.%m]>` for the date in the 
    3     12:17 Rhys Lee        (   42) The Lord Of The Rings
 ```
 
+:::{admonition} 📷 Screenshot Needed
+:class: tip
+
+**Subject:** Conditional date formatting in the index
+
+**Description:** The NeoMutt index view showing messages with different date formats depending on age: today's messages showing time only (e.g. `12:17`), this month's messages showing day (e.g. `10/02`), and older messages showing year-month (e.g. `14.12`).
+
+**Highlights:** How the same date column automatically adapts its format based on message age, saving space while keeping recent dates precise.
+:::
+
 ### Potential Formatting Scheme
 
 | Email Sent | Format | Example |
@@ -391,6 +401,16 @@ set index_format='%4C %Z %{%b %d} %I (%<l?%4l&%4c>) %s'
 #       3   + Nov 16 JH Voodoo Child    ( 263)
 #       4   + Nov 16 DH Parallel Lines  ( 540)
 ```
+
+:::{admonition} 📷 Screenshot Needed
+:class: tip
+
+**Subject:** Index with initials vs full names
+
+**Description:** Two side-by-side or before/after views of the NeoMutt index: one using `%L` (full author name like "David Bowie") and one using `%I` (initials like "DB"), showing how the initials expando saves horizontal space.
+
+**Highlights:** The space savings from using initials, and how the rest of the index columns shift to accommodate more subject text.
+:::
 
 ---
 

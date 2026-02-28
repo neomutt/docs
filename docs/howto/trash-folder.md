@@ -29,6 +29,16 @@ The `$trash` path can be either a full directory, or be relative to the `$folder
 Emails deleted from the trash folder are gone forever.
 :::
 
+:::{admonition} 📷 Screenshot Needed
+:class: tip
+
+**Subject:** Trash folder in the sidebar
+
+**Description:** The NeoMutt sidebar showing a list of mailboxes including a visible "Trash" folder entry with a message count, alongside other folders like Inbox, Sent, and Drafts. The Trash folder should contain some messages to show it is in use.
+
+**Highlights:** How the Trash folder appears as a regular mailbox in the sidebar, its unread/total message count, and how it fits into the overall mailbox hierarchy.
+:::
+
 ## Variables
 
 | Name | Type | Default |

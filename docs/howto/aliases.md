@@ -80,3 +80,13 @@ To use aliases, you merely use the alias at any place in NeoMutt where NeoMutt p
 In addition, at the various address prompts, you can use the tab character to expand a partial alias to the full alias. If there are multiple matches, NeoMutt will bring up a menu with the matching aliases. In order to be presented with the full list of aliases, you must hit tab without a partial alias, such as at the beginning of the prompt or after a comma denoting multiple addresses.
 
 In the alias menu, you can select as many aliases as you want with the `tag-entry` key (default: &lt;Space&gt; or t), and use the *exit* key (default: q) to return to the address prompt.
+
+:::{admonition} 📷 Screenshot Needed
+:class: tip
+
+**Subject:** Alias selection menu
+
+**Description:** The NeoMutt alias menu displayed after pressing Tab at an address prompt, showing a list of defined aliases with their short names, full email addresses, and comment fields. Several aliases should be tagged (marked with `*`) to illustrate multi-selection.
+
+**Highlights:** How aliases are listed for selection, the tag marker (`*`) on selected entries, and the alias key / address / comment columns.
+:::

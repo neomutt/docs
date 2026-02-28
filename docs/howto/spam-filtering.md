@@ -57,6 +57,16 @@ If the `$spam_separator` variable is unset, then each spam rule match supersedes
 
 ## Spam Tag Usage
 
+:::{admonition} 📷 Screenshot Needed
+:class: tip
+
+**Subject:** Spam-tagged messages in the index
+
+**Description:** The NeoMutt index view with `%H` included in `$index_format`, showing messages with visible spam tags (e.g. `90+/DCC-Fuz2`, `97/PM`) next to messages with no spam tag, demonstrating how external spam filter scores appear inline.
+
+**Highlights:** The spam tag column rendered by `%H`, how different spam filters produce different tag formats, and how untagged (non-spam) messages show a blank in that column.
+:::
+
 The spam tag is what will be displayed in the index when you use `%H` in the `$index_format` variable. It's also the string that the `~H` pattern-matching expression matches against for `<search>` and `<limit>` functions. And it's what sorting by spam attribute will use as a sort key.
 
 ## Sorting by Spam Tag

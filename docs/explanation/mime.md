@@ -72,6 +72,16 @@ still be edited separately and reordered within the group, but must be ungrouped
 `<ungroup-attachment>` (#) binding for more advanced editing before tagging and grouping
 together again as described above.
 
+:::{admonition} 📷 Screenshot Needed
+:class: tip
+
+**Subject:** MIME attachment tree in compose menu
+
+**Description:** The NeoMutt compose screen showing a multipart message with a nested MIME tree structure — e.g. a multipart/mixed containing a multipart/alternative with text/plain and text/html parts, plus a file attachment. The tree indentation and part numbering should be visible.
+
+**Highlights:** The reader should notice how NeoMutt renders the hierarchical MIME structure as an indented tree with type annotations, showing the parent-child relationship between multipart containers and their leaf parts.
+:::
+
 ## MIME Multipart/Related
 
 NeoMutt doesn't include any special support for reading `multipart/related` emails, but it

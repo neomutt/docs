@@ -108,6 +108,16 @@ NeoMutt disables all macros during the first run.
 When enabled, Autocrypt will add a line to the compose menu with two fields:
 `Autocrypt:` and `Recommendation:`.
 
+:::{admonition} 📷 Screenshot Needed
+:class: tip
+
+**Subject:** Compose menu with Autocrypt fields
+
+**Description:** The NeoMutt compose screen with Autocrypt enabled, showing the additional `Autocrypt:` and `Recommendation:` fields alongside the standard header fields (From, To, Cc, Subject, Fcc). The `Autocrypt:` field displays "Off" and the `Recommendation:` field shows a value such as "Available" or "Yes".
+
+**Highlights:** The two Autocrypt-specific fields in the compose header area, showing how they integrate with the standard compose layout and provide at-a-glance encryption status.
+:::
+
 ### The Autocrypt Field
 
 The `Autocrypt:` field shows whether the message will be encrypted by Autocrypt
@@ -154,6 +164,16 @@ change the `Encrypt:` field value:
 If either `(e)ncrypt` or `(c)lear` are chosen, the field will remain in that
 state despite what the `Recommendation:` field shows.
 
+:::{admonition} 📷 Screenshot Needed
+:class: tip
+
+**Subject:** Autocrypt encryption toggle menu
+
+**Description:** The NeoMutt Autocrypt menu popup in the compose screen, triggered by pressing `o`. The menu shows the three options: (e)ncrypt, (c)lear, and (a)utomatic. The compose screen is visible in the background with the Autocrypt fields.
+
+**Highlights:** The three toggle options and how the current selection affects the `Autocrypt:` field value in the compose header.
+:::
+
 ### Interaction with Normal Encryption
 
 Autocrypt encryption defers to normal encryption or signing. *Anything* that
@@ -187,6 +207,16 @@ In this menu, you can:
 
 Deleting an account only removes the account from the database. The GPG key is
 kept, to ensure you still have the ability to read past encrypted emails.
+
+:::{admonition} 📷 Screenshot Needed
+:class: tip
+
+**Subject:** Autocrypt Account Menu
+
+**Description:** The NeoMutt Autocrypt Account Menu accessed via `A` from the index. The menu lists configured Autocrypt accounts with their email addresses, active/inactive status, and prefer-encryption flag.
+
+**Highlights:** The account list with status indicators, and the available key bindings for creating, deleting, toggling active/inactive, and toggling the prefer-encryption flag.
+:::
 
 :::{note}
 The Autocrypt 1.1 "Setup Message" feature is not available yet, but will be

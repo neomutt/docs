@@ -47,6 +47,16 @@ totally unrelated one.
 This will turn the subthread starting from the current message into a whole
 different thread.
 
+:::{admonition} 📷 Screenshot Needed
+:class: tip
+
+**Subject:** Linked and broken threads in the index
+
+**Description:** NeoMutt index view showing a thread that has been repaired with `<link-threads>` — several replies are now correctly nested under a parent message with tree-drawing characters (`|->`, `` `-> ``) connecting them.
+
+**Highlights:** The tree structure showing parent-child relationships between messages, with the thread connector characters visible in the index.
+:::
+
 ## Use Threads Feature
 
 **Since:** NeoMutt 2021-08-01
@@ -178,6 +188,16 @@ set use_threads=threads sort=last-date sort_aux=date
 
 # vim: syntax=neomuttrc
 ```
+
+:::{admonition} 📷 Screenshot Needed
+:class: tip
+
+**Subject:** Flat vs threaded vs reverse threading modes
+
+**Description:** Three NeoMutt index views of the same mailbox: (1) `use_threads=no` showing flat chronological order, (2) `use_threads=yes` showing threaded view with tree characters and roots above children, (3) `use_threads=reverse` showing inverted threads with children above roots.
+
+**Highlights:** The difference in message ordering and the tree-drawing characters (`|->`, `` `-> ``, `,->`) — particularly how the same messages appear in completely different positions depending on the threading mode.
+:::
 
 ### Known Bugs
 

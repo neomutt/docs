@@ -84,6 +84,16 @@ bind map [,map ...] key function
 
 The `<what-key>` function can be used to explore keycode and symbolic names for other keys on your keyboard. Executing this function will display information about each key pressed, until terminated by `^G`.
 
+:::{admonition} 📷 Screenshot Needed
+:class: tip
+
+**Subject:** Help screen showing key bindings
+
+**Description:** The NeoMutt help screen (opened with `?`) displaying the list of key bindings for the index menu, showing the key column, function column, and description column.
+
+**Highlights:** How bindings are organized by menu, with default and custom bindings listed together.
+:::
+
 *key* does not need to be enclosed in quotes unless it contains a space (" ") or semi-colon (";").
 
 *function* specifies which action to take when *key* is pressed. For a complete list of functions, see the reference. Note that the `bind` command expects *function* to be specified without angle brackets.

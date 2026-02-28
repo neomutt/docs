@@ -21,11 +21,31 @@ NeoMutt can read from a news server using NNTP.
 
 The default news server can be obtained from the `$NNTPSERVER` environment variable or from the `/etc/nntpserver` file. Like in other news readers, information about the subscribed newsgroups is saved in the file specified by the `$newsrc` variable. You can open a newsgroup with the function `<change-newsgroup>`.
 
-When browsing the list of newsgroups on the server the function `<subscribe>` can be used to tell NeoMutt the groups of interest to you. This list is stored in the `$newsrc` file, so NeoMutt remembers it across invocations (see also `$save_unsubscribed`). With the `<unsubscribe>` function a group can be deleted from that list. You can also specify the list of interesting groups with the {ref}`mailboxes <mailboxes>` command in your config file.
+When browsing the list of newsgroups on the server the function `<subscribe>` can be used to tell NeoMutt the groups of interest to you.
+
+:::{admonition} 📷 Screenshot Needed
+:class: tip
+
+**Subject:** Newsgroup browser
+
+**Description:** The NeoMutt newsgroup browser showing a list of available NNTP newsgroups from the server, with columns for newsgroup name, number of articles, and description. Some groups should be marked as subscribed.
+
+**Highlights:** The group list layout with subscription status indicators, article counts per group, and the newsgroup description column loaded via `$nntp_load_description`.
+::: This list is stored in the `$newsrc` file, so NeoMutt remembers it across invocations (see also `$save_unsubscribed`). With the `<unsubscribe>` function a group can be deleted from that list. You can also specify the list of interesting groups with the {ref}`mailboxes <mailboxes>` command in your config file.
 
 When checking for new messages, NeoMutt only polls the subscribed newsgroups.
 
 The variable `$news_cache_dir` can be used to point to a directory. NeoMutt will create a hierarchy of subdirectories named like the account and newsgroup the cache is for. The hierarchy is also used to store header cache if NeoMutt was compiled with {ref}`header cache <header-caching>` support.
+
+:::{admonition} 📷 Screenshot Needed
+:class: tip
+
+**Subject:** Newsgroup article list
+
+**Description:** The NeoMutt index view after opening a newsgroup, showing a list of articles/posts with columns for number, flags, date, author, and subject — similar to the email index but for NNTP articles, with threaded display enabled.
+
+**Highlights:** How the article index resembles the email index, threaded article display with tree indicators, and the newsgroup name shown in the status bar.
+:::
 
 ## Variables
 

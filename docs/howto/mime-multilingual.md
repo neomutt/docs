@@ -66,6 +66,16 @@ Attachments can still be edited separately and reordered within the group, but
 must be ungrouped using the `<ungroup-attachment>` (`#`) binding for more
 advanced editing before tagging and grouping together again as described above.
 
+:::{admonition} 📷 Screenshot Needed
+:class: tip
+
+**Subject:** Compose menu with multilingual attachment group
+
+**Description:** NeoMutt compose menu showing a `multipart/multilingual` group after `<group-multilingual>` has been applied — the grouped language parts (e.g. English, French, German) are displayed in a tree structure under a single multipart/multilingual container, each with its Content-Language visible.
+
+**Highlights:** The tree-structured grouping of language alternatives in the compose attachment list, showing how the separate language parts become children of the multilingual container.
+:::
+
 ## MIME Multipart/Related
 
 NeoMutt doesn't include any special support for reading `multipart/related`

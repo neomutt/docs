@@ -34,6 +34,16 @@ personal and list mail in the same mailbox. In the `$index_format` variable, the
 "Cc \<list\>" when it appears in the "Cc" field (otherwise it prints the name of the
 author).
 
+:::{admonition} 📷 Screenshot Needed
+:class: tip
+
+**Subject:** Mailing list display in index
+
+**Description:** The NeoMutt index screen showing a mailbox containing a mix of personal messages and mailing list messages, with `%L` in the `$index_format`. List messages should display "To <list-name>" in the From column, while personal messages show the sender's name. Include messages from at least two different lists and some direct mail for contrast.
+
+**Highlights:** The reader should notice how the `%L` expando replaces the author name with the list name for list mail, making it easy to visually distinguish personal mail from mailing list traffic in the same mailbox.
+:::
+
 Often times the "To" and "Cc" fields in mailing list messages tend to get quite large. Most
 people do not bother to remove the author of the message they reply to from the list,
 resulting in two or more copies being sent to that person. The `<list-reply>` function,

@@ -38,6 +38,16 @@ color progress white red
 # vim: syntax=neomuttrc
 ```
 
+:::{admonition} 📷 Screenshot Needed
+:class: tip
+
+**Subject:** Progress bar during folder indexing
+
+**Description:** NeoMutt displaying the visual progress bar at the bottom of the screen while indexing a large mailbox — the bar is partially filled (e.g. 60%) with white text on a red background, showing the operation description and percentage complete.
+
+**Highlights:** The progress bar filling from left to right across the message bar area, with the colour (white on red) making it clearly visible during a slow operation.
+:::
+
 ## See Also
 
 - [Color command](colours.md)

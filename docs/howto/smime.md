@@ -105,5 +105,15 @@ and NeoMutt will return to the compose screen.
 Once you have successfully finished the key selection, the message will be
 encrypted using the selected public keys when sent out.
 
+:::{admonition} 📷 Screenshot Needed
+:class: tip
+
+**Subject:** S/MIME certificate selection menu
+
+**Description:** The NeoMutt S/MIME key selection menu that appears when sending an encrypted message. The menu lists S/MIME certificates with key IDs, trust information, and associated email addresses.
+
+**Highlights:** The certificate list layout and the prompt for selecting a certificate or entering a user ID manually. Press `^G` to abort and return to the compose screen.
+:::
+
 To ensure you can view encrypted messages you have sent, you may wish to set
 `$smime_self_encrypt` and `$smime_default_key`.

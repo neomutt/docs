@@ -17,6 +17,16 @@ give the steps, show the expected result.
 
 The Sidebar shows a list of all your mailboxes. The list can be turned on and off, it can be themed and the list style can be configured.
 
+:::{admonition} 📷 Screenshot Needed
+:class: tip
+
+**Subject:** Sidebar overview with mailbox list
+
+**Description:** NeoMutt index view with the sidebar visible on the left side, showing a list of mailboxes (Inbox, Sent, Drafts, Trash, and several mstrstrailing list folders). The sidebar shows mailbox names with unread/total message counts. One mailbox is highlighted (the cursor), another is indicated (the currently open mailbox). The divider character separates the sidebar from the index panel on the right.
+
+**Highlights:** The overall layout — sidebar panel on the left with the divider character, the highlight bar on one mailbox, the indicator on the open mailbox, and message counts displayed via `$sidebar_format`.
+:::
+
 If you want a simple introduction with examples see the Sidebar Howto. If you just want to get started, you could use the sample [neomuttrc](#sidebar-neomuttrc) below.
 
 ## Variables
@@ -39,6 +49,16 @@ If you want a simple introduction with examples see the Sidebar Howto. If you ju
 | `sidebar_width` | number | `20` |
 
 For more details, and examples, about the `$sidebar_format`, see the Sidebar Intro.
+
+:::{admonition} 📷 Screenshot Needed
+:class: tip
+
+**Subject:** Sidebar with short paths and folder indentation
+
+**Description:** NeoMutt sidebar showing mailboxes with `sidebar_short_path=yes` and `sidebar_folder_indent=yes` enabled — nested IMAP folders or Maildir subfolders appear with abbreviated names and indentation showing their hierarchy (e.g. "lists" at the top level, then "  neomutt-devel" and "  neomutt-users" indented beneath it).
+
+**Highlights:** The indented folder hierarchy in the sidebar — how `sidebar_short_path` abbreviates long paths and `sidebar_folder_indent` with `sidebar_indent_string` creates a visual tree of nested mailboxes.
+:::
 
 ## Functions
 
@@ -87,6 +107,16 @@ The `sidebar-unpin` command is used to remove a mailbox from the list of always 
 | `sidebar_unread` | default | Mailboxes containing unread mail |
 
 If the `sidebar_indicator` color isn't set, then the default NeoMutt indicator color will be used (the color used in the index panel).
+
+:::{admonition} 📷 Screenshot Needed
+:class: tip
+
+**Subject:** Sidebar colour scheme
+
+**Description:** NeoMutt sidebar with a custom colour theme applied — mailboxes with new mail appear in green (`sidebar_new`), flagged-mail mailboxes in red (`sidebar_flagged`), the currently open mailbox is highlighted with `sidebar_indicator`, the cursor/highlight bar is visible on a different mailbox (`sidebar_highlight`), and the divider line uses a contrasting colour (`sidebar_divider`).
+
+**Highlights:** The distinct colour coding — how different sidebar colour objects (new, flagged, indicator, highlight, ordinary, divider) work together to convey mailbox status at a glance.
+:::
 
 ## Sort
 
@@ -210,6 +240,16 @@ color sidebar_unread color136 default
 
 # vim: syntax=neomuttrc
 ```
+
+:::{admonition} 📷 Screenshot Needed
+:class: tip
+
+**Subject:** Fully configured sidebar
+
+**Description:** NeoMutt with the complete sidebar configuration from the neomuttrc example applied — sidebar visible on the left with custom width, format string showing flagged counts and new/total (`%B%<F? [%F]>%* %<N?%N/>%S`), colour-coded mailboxes, key bindings active, and the divider separating sidebar from the index panel showing a threaded mailbox.
+
+**Highlights:** The complete sidebar experience — formatted mailbox names with conditional flagged counts, new/total message numbers right-aligned, colour-coded status, and the spatial relationship between the sidebar panel, divider, and index panel.
+:::
 
 ## See Also
 

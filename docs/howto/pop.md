@@ -49,6 +49,16 @@ Due to limitations in POP3, this method doesn't allow for some features such as 
 
 Another way to access your POP3 mail is the `<fetch-mail>` function (default: G). It allows you to connect to `$pop_host`, fetch all your new mail and place it in the local `$spool_file`. After this point, NeoMutt runs exactly as if the mail had always been local. The `<fetch-mail>` function will ask whether you want to delete the messages on the remote server, leaving only your local copies.
 
+:::{admonition} 📷 Screenshot Needed
+:class: tip
+
+**Subject:** POP3 fetch-mail prompt
+
+**Description:** The NeoMutt index after pressing `G` to fetch mail from a POP3 server. The prompt at the bottom of the screen asks the user whether to delete messages from the remote server, with newly fetched messages visible in the index.
+
+**Highlights:** The delete confirmation prompt at the bottom of the screen and the newly fetched messages appearing in the message index.
+:::
+
 :::{note}
 If you only need to fetch all messages to a local mailbox, you should consider using a specialized program, such as `fetchmail(1)`, `getmail(1)` or similar.
 :::

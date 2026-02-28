@@ -27,6 +27,16 @@ The next few sections describe the functions provided in each of these modes.
 Common keys used to navigate through and manage messages in the index are shown below. How
 messages are presented in the index menu can be customized using the `$index_format` variable.
 
+:::{admonition} 📷 Screenshot Needed
+:class: tip
+
+**Subject:** The Message Index with email list
+
+**Description:** The NeoMutt Message Index showing a mailbox with several emails, displaying message numbers, status flags (N for new, O for old, ! for flagged, r for replied), dates, sender names, message sizes, and subjects.
+
+**Highlights:** The meaning of the flag column — how different status indicators (new, old, replied, flagged, tagged) appear next to each message in the list.
+:::
+
 | Key | Description |
 |-----|-------------|
 | c | change to a different mailbox |
@@ -96,11 +106,31 @@ customized with the `$to_chars` variable.
 | L | message is sent to a subscribed mailing list |
 | R | message has your address in the Reply-To field |
 
+:::{admonition} 📷 Screenshot Needed
+:class: tip
+
+**Subject:** Index showing status and recipient flags
+
+**Description:** A close-up of the NeoMutt Index flag columns, with messages displaying a variety of status flags (N, O, D, r, !) and recipient flags (+, T, C, F, L) so the reader can see how flags combine in practice.
+
+**Highlights:** How the status flag and recipient flag columns sit side by side, and how different flag combinations help the user quickly identify message state and relevance.
+:::
+
 ## The Pager
 
 By default, NeoMutt uses its built-in pager to display the contents of messages (an external
 pager such as `less(1)` can be configured, see `$pager` variable). The pager is very similar
 to the Unix program `less(1)` though not nearly as featureful.
+
+:::{admonition} 📷 Screenshot Needed
+:class: tip
+
+**Subject:** The Pager displaying an email
+
+**Description:** The NeoMutt Pager showing a message with headers (From, To, Date, Subject) at the top, followed by the email body text. Show quoted text (lines starting with >) in a different color and a URL highlighted in the body.
+
+**Highlights:** The header section at the top, the colored quoted text showing reply depth, and how the pager status line at the bottom indicates the current scroll position.
+:::
 
 ### Most Common Pager Keys
 
@@ -187,6 +217,16 @@ message.
 So-called "threads" provide a hierarchy of messages where replies are linked to their parent
 message(s). This organizational form is extremely useful in mailing lists where different
 parts of the discussion diverge. NeoMutt displays threads as a tree structure.
+
+:::{admonition} 📷 Screenshot Needed
+:class: tip
+
+**Subject:** Threaded message view in the Index
+
+**Description:** The NeoMutt Index sorted by threads, showing a tree structure with parent messages and indented replies using tree-drawing characters (├─, └─, │). Include a thread with multiple levels of replies and at least one collapsed thread showing the hidden message count.
+
+**Highlights:** The visual tree hierarchy connecting replies to parent messages, how subjects are deduplicated in threads, and how a collapsed thread displays its message count.
+:::
 
 In NeoMutt, when a mailbox is sorted by *threads*, there are a few additional functions
 available in the *index* and *pager* modes as shown below.

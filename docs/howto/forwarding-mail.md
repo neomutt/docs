@@ -33,6 +33,16 @@ of attachments, like in the pager, can be controlled by the
 variables, respectively. The desired forwarding format may depend on the content, therefore
 {ref}`$mime_forward <mime-forward>` is a quadoption which, for example, can be set to "ask-no".
 
+:::{admonition} 📷 Screenshot Needed
+:class: tip
+
+**Subject:** Inline forward vs MIME forward in compose
+
+**Description:** Two NeoMutt compose screens contrasting the forwarding methods: (1) inline forward (`$mime_forward`=no) with the original message text included in the body between attribution intro/trailer lines, and (2) MIME forward (`$mime_forward`=yes) with the original message listed as an attached message/rfc822 entry in the attachment list.
+
+**Highlights:** The structural difference between inline forwarding (original text in the message body) and MIME forwarding (original message as an attachment), helping the reader choose the appropriate method.
+:::
+
 ## Default Inline Forwarding
 
 NeoMutt's default ({ref}`$mime_forward <mime-forward>`="no" and
