@@ -158,6 +158,7 @@ The quoted email colours don't use a pattern. The first colour, `quoted`, provid
 | ... | ... |
 | `quoted9` | 9 level deeper quoted text |
 
+(command-syntax)=
 ## Command Syntax
 
 ```
