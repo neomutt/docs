@@ -3,6 +3,21 @@
   max-width: 100% !important;
 }
 
+.bd-page-width {
+  max-width: 100% !important;
+}
+
+.bd-content {
+  max-width: 100% !important;
+}
+
+/* Shrink the right (secondary) sidebar so the article gets more space */
+.bd-sidebar-secondary {
+  max-width: 250px !important;
+  min-width: 0 !important;
+  flex: 0 0 250px !important;
+}
+
 /* Subtle green accent — light mode */
 html[data-theme=light] {
   --pst-color-primary: #3a7a4a;
