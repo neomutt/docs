@@ -53,3 +53,16 @@ div.document table.docutils th {
     vertical-align: top;
 }
 
+/* Terminal selection highlight — simulates a cursor bar in fake NeoMutt screenshots */
+html[data-theme=light] .highlight .hll {
+  background-color: #1d5276;
+  color: #f0f0f0;
+  display: block;
+}
+
+html[data-theme=dark] .highlight .hll {
+  background-color: #2874a6;
+  color: #f0f0f0;
+  display: block;
+}
+
