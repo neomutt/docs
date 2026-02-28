@@ -1,0 +1,2 @@
+[pygments.lexers]
+neomutt = neomutt_lexer:NeoMuttLexer

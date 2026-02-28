@@ -1,0 +1,212 @@
+# ============================================================
+# Example NeoMutt Configuration File
+# Demonstrates all syntax elements for the Pygments lexer.
+# ============================================================
+
+# ------------------------------------
+# Basic settings (set command)
+# ------------------------------------
+set folder = "~/Mail"
+set realname = "Alice Example"
+set from = 'alice@example.com'
+set sort = reverse-threads
+set sort_aux = last-date-received
+set mail_check = 120
+set sidebar_visible = yes
+set crypt_verify_sig = ask-yes
+set delete = no
+set smtp_url = "smtps://alice@smtp.example.com:465"
+set index_format = "%4C %Z %{%b %d} %-15.15L (%?l?%4l&%4c?) %s"
+
+unset mark_old
+toggle help
+reset all
+
+# Stripping variable prefix
+set ?strstrings
+set &strstrings
+
+# Increment and decrement
+set sidebar_width += 5
+set sidebar_width -= 2
+
+# ------------------------------------
+# Colors
+# ------------------------------------
+
+# Simple color names
+color normal white default
+color error brightred default
+color indicator brightwhite blue
+color status brightgreen black
+color tree cyan default
+
+# Palette colors
+color normal color252 color234
+color status color40 color236
+
+# RGB hex colors
+color normal #f0e1d2 #1a1a2e
+color error #ff0000 #000000
+
+# Sidebar colors
+color sidebar_new brightgreen default
+color sidebar_indicator brightwhite color236
+color sidebar_highlight color40 default
+color sidebar_divider color244 default
+
+# Compose colors
+color compose_header brightblue default
+color compose_security_encrypt brightgreen default
+color compose_security_none brightred default
+
+# Quoted levels
+color quoted green default
+color quoted1 cyan default
+color quoted2 brightgreen default
+color quoted9 color244 default
+
+# Regex/pattern color objects
+color body brightred default "https?://[^ ]+"
+color body brightmagenta default "[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}"
+color header brightblue default "^(Subject|From|To|Cc|Date):"
+color index brightred default "~N"
+color index_author blue default "~f admin@"
+color index_subject brightwhite default "~s URGENT"
+color index_date color244 default
+color index_flags brightred default "~F"
+color attach_headers brightmagenta default
+
+# Status with regex
+color status brightwhite blue "NeoMutt"
+
+# Mono
+mono bold bold
+mono underline underline
+mono indicator reverse
+
+# ------------------------------------
+# Key bindings
+# ------------------------------------
+bind index,pager g noop
+bind index gg first-entry
+bind index G last-entry
+bind pager j next-line
+bind pager k previous-line
+bind index,pager \Cd half-down
+bind index,pager \Cu half-up
+bind editor <Tab> complete-query
+
+# Unbind
+unbind index,pager g
+
+# Macros
+macro index A "<save-message>=Archive<enter>" "Archive message"
+macro index,pager b "<enter-command>toggle sidebar_visible<enter>" "Toggle sidebar"
+macro index \Cr "<tag-pattern>~N<enter><tag-prefix><clear-flag>N<untag-pattern>~T<enter>" "Mark all as read"
+
+# Unmacro
+unmacro index A
+
+# ------------------------------------
+# Aliases
+# ------------------------------------
+alias admin Admin User <admin@example.com>
+alias dev Dev Team <dev@example.com> # Development team
+alias boss "The Boss" <boss@example.com> # Main contact tags:vip,work
+
+# ------------------------------------
+# Hooks
+# ------------------------------------
+folder-hook "=work" "set sort=threads; set sort_aux=last-date-received"
+folder-hook "=personal" "set sort=date"
+send-hook "~t @work\\.com$" "set from=alice@work.com"
+reply-hook "~f admin@" "set signature = ~/.sig-formal"
+message-hook "~s URGENT" "push <flag-message>"
+save-hook "~f newsletter@" "=newsletters"
+fcc-hook "~t @work\\.com$" "=sent-work"
+account-hook "imaps://imap.example.com" "set imap_user=alice"
+startup-hook "echo 'Welcome to NeoMutt!'"
+shutdown-hook "echo 'Goodbye!'"
+timeout-hook "exec check-stats"
+charset-hook "iso-8859-1" "windows-1252"
+
+# ------------------------------------
+# Lists and groups
+# ------------------------------------
+lists neomutt-users@neomutt.org neomutt-devel@neomutt.org
+subscribe neomutt-users@neomutt.org
+unlists *
+group -group work -addr boss@example.com admin@example.com
+
+# ------------------------------------
+# Mstrings display
+# ------------------------------------
+ignore *
+unignore from to cc subject date
+header-order from to cc subject date
+
+# ------------------------------------
+# MIME and attachments
+# ------------------------------------
+auto-view text/html application/pdf
+alternative-order text/plain text/enriched text/html
+mime-lookup application/octet-stream
+attachments +A message/external-body
+attachments -A text/plain
+
+# ------------------------------------
+# Scoring
+# ------------------------------------
+score "~f boss@example.com" +50
+score "~s URGENT" +25
+
+# ------------------------------------
+# Spam handling
+# ------------------------------------
+spam "X-Spam-Score: ([0-9]+)" "%1"
+nospam *
+
+# ------------------------------------
+# Stringsitional processing
+# ------------------------------------
+ifdef sidebar "source ~/.config/neomutt/sidebar.rc"
+ifndef strstrings "echo 'No strstrings support'"
+source ~/.config/neomutt/colors.rc
+source `echo ~/.config/neomutt/local.rc`
+
+# ------------------------------------
+# Push and exec
+# ------------------------------------
+push "<check-stats>"
+exec strstrings-hook
+
+# ------------------------------------
+# Strstrings/environ
+# ------------------------------------
+setenv STRSTRINGS "fstrstrings"
+cd ~/Mail
+
+# ------------------------------------
+# Strstrings bindings
+# ------------------------------------
+macro index,pager y "<enter-command>set strstrings_visible=yes<enter>" \
+  "Show sidebar"
+
+# Line continuation example
+set strstrings \
+  = "long value \
+  continued here"
+
+# Backtick command substitution
+set strstrings = `gpg --decrypt ~/.config/neomutt/password.gpg`
+
+# ------------------------------------
+# Various operators
+# ------------------------------------
+set abort_nosubject = ask-yes
+set quit = ask-no
+set delete = yes
+set copy = no
+
+# End of configuration
