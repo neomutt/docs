@@ -29,6 +29,10 @@ html_static_path = ["_static"]
 html_css_files = ["custom.css"]
 html_logo = "_static/mutt-48x48.png"
 
+html_theme_options = {
+    "max_navbar_depth": 2,
+}
+
 # -- Options for EPUB output
 epub_show_urls = 'footnote'
 

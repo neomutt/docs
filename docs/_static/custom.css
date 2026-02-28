@@ -1,5 +1,22 @@
-div.document div.documentwrapper {
-  max-width: 100%;
+/* Wider content panel */
+.bd-article-container {
+  max-width: 100% !important;
+}
+
+/* Subtle green accent — light mode */
+html[data-theme=light] {
+  --pst-color-primary: #3a7a4a;
+  --pst-color-primary-highlight: #2e6239;
+  --pst-color-link: #3a7a4a;
+  --pst-color-link-hover: #2e6239;
+}
+
+/* Subtle green accent — dark mode */
+html[data-theme=dark] {
+  --pst-color-primary: #5aac6a;
+  --pst-color-primary-highlight: #6dc07d;
+  --pst-color-link: #5aac6a;
+  --pst-color-link-hover: #6dc07d;
 }
 
 th {
@@ -7,12 +24,8 @@ th {
   background-color: #e8e8e8;
 }
 
-:root[data-mode=dark] th {
+html[data-theme=dark] th {
   background-color: #383838;
-}
-
-:root[data-mode=darkest] th {
-  background-color: #181818;
 }
 
 div.document table.docutils td {
