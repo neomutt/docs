@@ -68,6 +68,8 @@ detailed in the table below.
 | \* | pseudo thread | see `$strict_threads`; not displayed when `$narrow_tree` is set |
 | = | duplicate thread | see `$duplicate_threads`; not displayed when `$narrow_tree` is set |
 
+NeoMutt uses Unicode box-drawing characters to draw the thread tree (e.g., `├`, `└`, `│`, `─`). If your terminal does not support Unicode, or you prefer plain ASCII, set the `$ascii_chars` boolean variable to `yes`. This switches the tree characters to ASCII equivalents: `+`, `+`, `|`, and `-` respectively.
+
 ### Collapsing Threads
 
 Collapsing a thread displays only the first message in the thread and hides the others.

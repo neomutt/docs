@@ -159,3 +159,21 @@ For example, to remove all "To" and "Cc" header fields, you could use:
 ```
 unmy-header to cc
 ```
+
+## Editing Raw Messages
+
+NeoMutt provides four related functions for accessing the raw RFC 2822 source
+of a message:
+
+| Function | Description |
+|----------|-------------|
+| `<view-raw-message>` | Open the raw message source in the pager (read-only). |
+| `<edit-raw-message>` | Open the raw message in `$editor`; the edited result replaces the original in the mailbox. |
+| `<edit>` | Alias for `<edit-raw-message>` (retained for backwards compatibility). |
+| `<edit-or-view-raw-message>` | Uses `<edit-raw-message>` if the folder is writable, otherwise falls back to `<view-raw-message>`. |
+
+:::{note}
+`<edit-raw-message>` modifies the message in place in the mailbox. Use
+`<view-raw-message>` if you only want to inspect the source without making
+changes.
+:::

@@ -175,6 +175,16 @@ format this display to your needs.
 **Highlights:** The layout of the compose screen — header fields above, attachment list below — and the "-" unlink indicator, MIME type, encoding, and size columns for each attachment.
 :::
 
+:::{note}
+The `<edit-type>` function (default: `^T`) is available in the index, pager,
+compose, and attachment menus. It temporarily changes the MIME content-type of
+an attachment — for example, to correct a bogus charset parameter set by the
+sender's mailer (e.g., changing `text/plain; charset=us-ascii` to
+`text/plain; charset=utf-8`). These changes are **not persistent**: they apply
+only for the current session or send operation and do not modify the stored
+message.
+:::
+
 ## MIME Type Configuration with `mime.types`
 
 To get the most out of MIME, it's important that a MIME part's content type

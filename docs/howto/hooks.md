@@ -61,6 +61,8 @@ send-hook '~t ^user@work\.com$' 'my-header From: John Smith <user@host>'
 
 However, it is not required that you write the pattern to match using the full searching language. You can still specify a simple *regular expression* like the other hooks, in which case NeoMutt will translate your pattern into the full language, using the translation specified by the `$default_hook` variable.
 
+The default value of `$default_hook` is `~f %s | (~b %s & ~A) | (~B %s)`, which means the regex is matched against: the **From** address, OR (**body** AND all messages), OR the **Subject**. You can change `$default_hook` to alter this implicit expansion behaviour.
+
 ## Mailbox Matching in Hooks
 
 Hooks that match against mailboxes (`folder-hook`, `mbox-hook`) apply both regular expression syntax as well as mailbox shortcut expansion on the regex parameter. There is some overlap between these, so special attention should be paid to the first character of the regex.

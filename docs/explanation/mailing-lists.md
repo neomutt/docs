@@ -93,6 +93,14 @@ used a threaded news client, this is the same concept. It makes dealing with lar
 mailing lists easier because you can easily delete uninteresting threads and quickly find
 topics of value.
 
+## Message Labels
+
+NeoMutt supports attaching short labels to messages via the `X-Label:` header. Labels are stored in the message header and travel with the message, making them a lightweight way to categorise mail independently of folders.
+
+The `<edit-label>` function (bound to `y` by default in the index and pager) opens a prompt where you can add, edit, or clear the label on the current message. The function also works on tagged messages, updating the label on all of them at once. While at the prompt, pressing the `<complete>` key (TAB by default) performs completion against all labels currently in use in the folder.
+
+Labels can be used in patterns with `~y label` to match messages whose label contains the given string, and in limit commands (`<limit>`) to narrow the index view. In `$index_format`, the `%y` expando displays the label, and `%Y` displays it only when its first character differs from the previous message's label — useful for visual grouping. The `index_label` colour object (see [colour objects](../reference/colour-names.md)) can be used to highlight label fields in the index.
+
 ## Alternative Addresses
 
 With various functions, NeoMutt will treat messages differently, depending on whether you

@@ -17,6 +17,16 @@ give the steps, show the expected result.
 
 ## Prerequisites
 
+:::{warning}
+NeoMutt does **not** work with the `tty` pinentry program. You must use a GUI or
+curses-based pinentry instead: `pinentry-qt`, `pinentry-gtk-2`, `pinentry-gnome3`,
+`pinentry-fltk`, or `pinentry-curses`. Configure this in `~/.gnupg/gpg-agent.conf`:
+
+```
+pinentry-program /usr/bin/pinentry-curses
+```
+:::
+
 - NeoMutt compiled with GPGME support (recommended) or classic PGP mode
 - GnuPG installed (version 2.1.0 or later recommended for automatic agent support)
 - A PGP key pair generated with `gpg --gen-key`

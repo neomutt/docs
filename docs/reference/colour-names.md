@@ -27,6 +27,27 @@ Colours can be specified in three ways:
 | Palette number | `color12`, `color207` | Use the colour's number in the [256 Xterm colour palette](https://web.archive.org/web/20190712111427/https://jonasjacek.github.io/colors/) |
 | Hexadecimal RGB | `#00FFFF`, `#12af84` | Use `#RRGGBB` notation (requires `$color_directcolor` to be set) |
 
+## Regex-Matched and Pattern-Matched Objects
+
+Some colour objects require a regex or NeoMutt pattern as an additional argument (see [Command Syntax](#command-syntax) below). These objects colour only the parts of the display that match the given expression.
+
+| Object | Match type | Applies to |
+|--------|-----------|------------|
+| `body` | regex | Email body text |
+| `header` | regex | Email header lines |
+| `index` | pattern | Entire index line |
+| `index_author` | pattern | Author fields (`%A %a %F %L %n`) |
+| `index_collapsed` | pattern | Collapsed thread count (`%M`) |
+| `index_date` | pattern | Date field |
+| `index_flags` | pattern | Flags (`%S %Z`) |
+| `index_label` | pattern | Label (`%y %Y`) |
+| `index_number` | pattern | Message number (`%C`) |
+| `index_size` | pattern | Size (`%c %cr %l`) |
+| `index_subject` | pattern | Subject (`%s`) |
+| `index_tag` | pattern | Tag name (`%G`) |
+| `index_tags` | pattern | Transformed tags (`%g %J`) |
+| `status` | regex | Status bar text |
+
 ## Colour Names
 
 The following named colours are available for *foreground* and *background*:
@@ -149,3 +170,21 @@ uncolor object
 uncolor {index | header | body} {* | pattern [...]}
 uncolor status {* | regex [...]}
 ```
+
+## ANSI Escape Sequences
+
+NeoMutt's pager recognises ANSI escape sequences embedded in message text and
+renders them as colour and attribute changes. Sequences use the format
+`ESC[Ps;Ps;...m` (e.g., `\e[1;32m` for bold green, `\e[0m` to reset).
+
+| Code | Effect |
+|------|--------|
+| `0` | Normal (reset all attributes) |
+| `1` | Bold |
+| `3` | Italic |
+| `4` | Underline |
+| `5` | Blink |
+| `7` | Reverse video |
+| `8` | Concealed |
+| `30`–`37` | Foreground colours (black, red, green, yellow, blue, magenta, cyan, white) |
+| `40`–`47` | Background colours (same order) |

@@ -114,7 +114,7 @@ The following are the commands understood by NeoMutt.
 | `sidebar_pin` | *(deprecated)* | Use `sidebar-pin` instead |
 | `sidebar-unpin` | `sidebar-unpin {* \| mailbox ...}` | Unpin a mailbox from the sidebar |
 | `sidebar_unpin` | *(deprecated)* | Use `sidebar-unpin` instead |
-| `source` | `source filename [filename ...]` | Read configuration commands from a file |
+| `source` | `source filename [filename ...]` | Read configuration commands from a file. If *filename* ends with `\|`, it is executed as a shell command (via `/bin/sh -c`) and NeoMutt reads its standard output as config — e.g. `source ~/.local/bin/decrypt-config.sh\|` (documented in the manual as "source filename\|"). When `source` is used inside a hook, relative filenames resolve relative to the config file where the hook was defined. |
 | `spam` | `spam regex [format]` | Define a spam detection pattern |
 | `nospam` | `nospam {* \| regex}` | Remove spam detection patterns |
 | `subject-regex` | `subject-regex regex replacement` | Define a subject display replacement |

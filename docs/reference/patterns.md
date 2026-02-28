@@ -315,3 +315,10 @@ All dates used when searching are relative to the *local* time zone, so unless y
 `=/ "search terms"` invokes server-side search, passing along the search terms provided. Search results are constrained by IMAP to be within the current folder. At present this only supports Gmail's search API IMAP extension. The search language is entirely up to the mail provider and changes at their discretion. Using `~/` will silently fail.
 
 For up-to-date information about searching, see: [Gmail's Support Page](https://support.google.com/mail/answer/7190?hl=en). You will need to (once) use a web-browser to visit Settings/Labels and enable "Show in IMAP" for "All Mail". When searching, visit that folder in NeoMutt to most closely match Gmail search semantics.
+
+The search string is passed directly to the server; NeoMutt does not interpret it. You may use any syntax supported by the mail provider (Gmail or Notmuch).
+
+| Pattern | What it matches |
+|---------|-----------------|
+| `=/ "list:foo.example.org has:attachment is:important"` | Messages on the foo.example.org mailing list, with attachment, marked as important |
+| `=/ "{has:purple-star has:yellow-star} older_than:2m"` | Messages older than two months with either a purple-star or yellow-star label |

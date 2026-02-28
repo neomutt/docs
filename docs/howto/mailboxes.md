@@ -77,13 +77,13 @@ This normalization applies to all headers NeoMutt generates, including aliases.
 
 ## Initial Folder Selection
 
-The folder NeoMutt opens at startup is determined in the following order of precedence (lowest to highest):
+The folder NeoMutt opens at startup is determined in the following order of precedence (highest to lowest):
 
-1. The user's mailbox in the mailspool as determined at compile-time (may also reside in the home directory).
-2. The `$spool_file` setting overrides the compile-time default.
+1. The mailbox given with the `-f` command-line option (highest priority).
+2. The `$MAIL` environment variable, if set.
 3. The `$MAILDIR` environment variable, if set.
-4. The `$MAIL` environment variable, if set.
-5. The mailbox given with the `-f` command-line option (highest priority).
+4. The compile-time mail spool (`/var/spool/mail/$USER` or similar; last fallback).
+5. The `$spool_file` config variable overrides the compile-time default spool location.
 
 ## New Mail Detection
 
