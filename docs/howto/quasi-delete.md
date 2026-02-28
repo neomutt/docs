@@ -20,7 +20,7 @@ give the steps, show the expected result.
 ## Introduction
 
 The "quasi-delete" function marks an email that should be hidden from the index, but NOT
-deleted. The email will disappear from the index when {ref}`<sync-mailbox> <index-map>` is
+deleted. The email will disappear from the index when **\<sync-mailbox\>** is
 called.
 
 On its own, this feature isn't very useful. It forms a useful part of the notmuch plugin.
@@ -55,7 +55,7 @@ bind index,pager Q quasi-delete
 
 ## See Also
 
-- {ref}`notmuch feature <notmuch>`
+- [notmuch feature](notmuch.md)
 
 ## Known Bugs
 

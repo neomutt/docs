@@ -93,12 +93,12 @@ descendant at any depth which would sort last in a flat view; otherwise, the
 overall thread is sorted solely by the thread root. The `last-` prefix is
 ignored when `use_threads=flat`.
 
-Within a single thread, the value of {ref}`$sort_aux <sort-aux>` determines
+Within a single thread, the value of `$sort_aux` determines
 how siblings are sorted. The same prefixes apply as for `$sort`, although it is
 less common to use the `last-` prefix.
 
 The "Use Threads" feature also modifies the existing config variable
-{ref}`$status_format <status-format>`, adding the `%T` expando which shows the
+`$status_format`, adding the `%T` expando which shows the
 current threading method.
 
 ### Use Threads Variable

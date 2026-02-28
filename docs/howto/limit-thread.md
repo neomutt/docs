@@ -17,7 +17,7 @@ give the steps, show the expected result.
 
 ## Introduction
 
-This feature adds a new way of using the {ref}`Limit Command <tuning-search>`. The `<limit-current-thread>` function restricts the view to just the current thread. Setting the limit (the `l` key) to "all" will restore the full email list.
+This feature adds a new way of using the **Limit Command**. The `<limit-current-thread>` function restricts the view to just the current thread. Setting the limit (the `l` key) to "all" will restore the full email list.
 
 :::{admonition} 📷 Screenshot Needed
 :class: tip

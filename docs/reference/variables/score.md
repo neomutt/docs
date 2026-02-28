@@ -15,6 +15,7 @@ Mirror the structure of the software itself. Avoid instruction or explanation â€
 how-to guides and explanation pages instead.
 :::
 
+(score)=
 ## `$score`
 
 - **Type:** boolean
@@ -22,6 +23,7 @@ how-to guides and explanation pages instead.
 
 When this variable is *unset*, scoring is turned off. This can be useful to selectively disable scoring for certain folders when the `$score_threshold_delete` variable and related are used.
 
+(score-threshold-delete)=
 ## `$score_threshold_delete`
 
 - **Type:** number
@@ -29,6 +31,7 @@ When this variable is *unset*, scoring is turned off. This can be useful to sele
 
 Messages which have been assigned a score equal to or lower than the value of this variable are automatically marked for deletion by NeoMutt. Since NeoMutt scores are always greater than or equal to zero, the default setting of this variable will never mark a message for deletion.
 
+(score-threshold-flag)=
 ## `$score_threshold_flag`
 
 - **Type:** number
@@ -36,6 +39,7 @@ Messages which have been assigned a score equal to or lower than the value of th
 
 Messages which have been assigned a score greater than or equal to this variable's value are automatically marked "flagged".
 
+(score-threshold-read)=
 ## `$score_threshold_read`
 
 - **Type:** number

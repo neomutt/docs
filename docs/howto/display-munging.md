@@ -38,7 +38,7 @@ Before 2026-01-13, these commands were called `subjectrx` and `unsubjectrx`.
 `subject-regex` specifies a regular expression which, if detected in a message
 subject, causes the subject to be replaced with the "replacement" value. The
 replacement is subject to substitutions in the same way as for the
-{ref}`spam <spam>` command: `%L` for the text to the left of the match, `%R`
+**spam** command: `%L` for the text to the left of the match, `%R`
 for text to the right of the match, and `%1` for the first subgroup in the
 match (etc). If you simply want to erase the match, set it to `%L%R`. Any
 number of `subject-regex` commands may coexist.

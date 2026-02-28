@@ -88,7 +88,7 @@ quoted in your reply. You can view attachments as text, or view them using the
 mailcap viewer definition (the mailcap mechanism is explained later in detail).
 
 Finally, you can apply the usual message-related functions (like
-{ref}`<resend-message> <resend-message>`, and the `<reply>` and
+**\<resend-message\>**, and the `<reply>` and
 `<forward-message>` functions) to attachments of type `message/rfc822`.
 
 :::{admonition} 📷 Screenshot Needed
@@ -111,14 +111,14 @@ There are four ways of viewing attachments:
 
 - **`<view-attach>` (default keybinding: Enter)** — NeoMutt will display
   internally supported MIME types in the pager. This will respect
-  {ref}`auto-view <auto-view>` settings, to determine whether to use a
+  **auto-view** settings, to determine whether to use a
   `copiousoutput` mailcap entry or just directly display the attachment. Other
   MIME types will use the first matching mailcap entry. If no matching mailcap
   entries are found, the attachment will be displayed in the pager as raw text.
 
 - **`<view-pager>`** — NeoMutt will use the first matching `copiousoutput`
   mailcap entry to display the attachment in the pager (regardless of
-  {ref}`auto-view <auto-view>` settings). If no matching mailcap entries are
+  **auto-view** settings). If no matching mailcap entries are
   found, the attachment will be displayed in the pager as raw text.
 
 - **`<view-text>` (default keybinding: T)** — The attachment will always be
@@ -130,10 +130,10 @@ There are four ways of viewing attachments:
   to disk. The permissions of the saved file will depend on the user's `umask`.
   e.g. `umask 022` will create a file with permissions `rw-r--r--`.
 
-  See also: {ref}`$attach_save_dir <attach-save-dir>`,
-  {ref}`$attach_save_without_prompting <attach-save-without-prompting>`,
-  {ref}`$attach_sep <attach-sep>`,
-  {ref}`$attach_split <attach-split>`
+  See also: `$attach_save_dir`,
+  `$attach_save_without_prompting`,
+  `$attach_sep`,
+  `$attach_split`
 
 ## The Compose Menu
 
@@ -162,7 +162,7 @@ attachment, rounded to kilobytes or megabytes. The next field is the filename,
 which can be changed with the `<rename-file>` command (default: R). The final
 field is the description of the attachment, and can be changed with the
 `<edit-description>` command (default: d). See
-{ref}`$attach_format <attach-format>` for a full list of available expandos to
+`$attach_format` for a full list of available expandos to
 format this display to your needs.
 
 :::{admonition} 📷 Screenshot Needed
@@ -207,7 +207,7 @@ contain most of the MIME types you are likely to use.
 
 If NeoMutt can not determine the MIME type by the extension of the file you
 attach, it will run the command specified in
-{ref}`$mime_type_query_command <mime-type-query-command>`. If that command is
+`$mime_type_query_command`. If that command is
 not specified, NeoMutt will look at the file. If the file is free of binary
 information, NeoMutt will assume that the file is plain text, and mark it as
 `text/plain`. If the file contains binary information, then NeoMutt will mark
@@ -407,7 +407,7 @@ recognizes the following optional fields:
   be considered a handler for a MIME type — all other entries will be ignored.
 
 - **needsterminal** — NeoMutt uses this flag when viewing attachments with
-  {ref}`auto-view <auto-view>`, in order to decide whether it should honor the
+  **auto-view**, in order to decide whether it should honor the
   setting of the {ref}`$wait_key <wait-key>` variable or not. When an
   attachment is viewed using an interactive program, and the corresponding
   mailcap entry has a *needsterminal* flag, NeoMutt will use
@@ -497,7 +497,7 @@ image/gif;      ; print=anytopnm %s | pnmtops | lpr; \
 NeoMutt will skip the `image/*` entry and use the `image/gif` entry with the
 print command.
 
-In addition, you can use this with {ref}`auto-view <auto-view>` to denote two
+In addition, you can use this with **auto-view** to denote two
 commands for viewing an attachment, one to be viewed automatically, the other to
 be viewed interactively from the attachment menu using the `<view-mailcap>`
 function (bound to "m" by default). In addition, you can then use the test
@@ -510,7 +510,7 @@ text/html;      lynx %s; nametemplate=%s.html
 text/html;      lynx -dump %s; nametemplate=%s.html; copiousoutput
 ```
 
-For {ref}`auto-view <auto-view>`, NeoMutt will choose the third entry because
+For **auto-view**, NeoMutt will choose the third entry because
 of the `copiousoutput` tag. For interactive viewing, NeoMutt will run the
 program `RunningX` to determine if it should use the first entry. If the
 program returns non-zero, NeoMutt will use the second entry for interactive
@@ -681,7 +681,7 @@ application/postscript; ps2ascii %s; copiousoutput
 ```
 
 `unauto-view` can be used to remove previous entries from the `auto-view`
-list. This can be used with {ref}`message-hook <message-hook>` to autoview
+list. This can be used with **message-hook** to autoview
 messages based on size, etc. `unauto-view *` will remove all previous entries.
 
 ## MIME Multipart/Alternative
@@ -718,7 +718,7 @@ NeoMutt has some heuristics for determining which attachment of a
    ```
 
 2. Next, NeoMutt will check if any of the types have a defined
-   {ref}`auto-view <auto-view>`, and use that.
+   **auto-view**, and use that.
 
 3. Failing that, NeoMutt will look first for `text/enriched`, followed by
    `text/plain`, and finally `text/html`.

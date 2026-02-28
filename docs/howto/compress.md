@@ -176,11 +176,11 @@ close-hook  '\.gpg$' "gpg --encrypt --recipient YourGpgUserIdOrKeyId < '%t' > '%
 
 ## See Also
 
-- {ref}`Regular Expressions <regex>`
+- [Regular Expressions](../reference/regex.md)
 - `$tmp_dir`
 - `$mbox_type`
 - `$save_empty`
-- {ref}`folder-hook <folder-hook>`
+- **folder-hook**
 
 ## Credits
 

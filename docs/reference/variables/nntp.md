@@ -15,6 +15,7 @@ Mirror the structure of the software itself. Avoid instruction or explanation â€
 how-to guides and explanation pages instead.
 :::
 
+(nntp-authenticators)=
 ## `$nntp_authenticators`
 
 - **Type:** string
@@ -40,6 +41,7 @@ set nntp_authenticators="digest-md5:user"
 the previous methods are unavailable. If a method is available but
 authentication fails, NeoMutt will not connect to the IMAP server.
 
+(nntp-context)=
 ## `$nntp_context`
 
 - **Type:** number (long)
@@ -50,6 +52,7 @@ newsgroup entered.  If active newsgroup have more articles than this
 number, oldest articles will be ignored.  Also controls how many
 articles headers will be saved in cache when you quit newsgroup.
 
+(nntp-listgroup)=
 ## `$nntp_listgroup`
 
 - **Type:** boolean
@@ -58,6 +61,7 @@ articles headers will be saved in cache when you quit newsgroup.
 This variable controls whether or not existence of each article is
 checked when newsgroup is entered.
 
+(nntp-load-description)=
 ## `$nntp_load_description`
 
 - **Type:** boolean
@@ -67,6 +71,7 @@ This variable controls whether or not descriptions for each newsgroup
 must be loaded when newsgroup is added to list (first time list
 loading or new newsgroup adding).
 
+(nntp-pass)=
 ## `$nntp_pass`
 
 - **Type:** string
@@ -74,6 +79,7 @@ loading or new newsgroup adding).
 
 Your password for NNTP account.
 
+(nntp-poll)=
 ## `$nntp_poll`
 
 - **Type:** number
@@ -84,6 +90,7 @@ article will cause recheck for new news.  If set to 0, NeoMutt will
 recheck newsgroup on each operation in index (stepping, read article,
 etc.).
 
+(nntp-user)=
 ## `$nntp_user`
 
 - **Type:** string

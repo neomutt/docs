@@ -15,6 +15,7 @@ Mirror the structure of the software itself. Avoid instruction or explanation â€
 how-to guides and explanation pages instead.
 :::
 
+(smime-ask-cert-label)=
 ## `$smime_ask_cert_label`
 
 - **Type:** boolean
@@ -25,6 +26,7 @@ for a certificate about to be added to the database or not. It is
 *set* by default.
 (S/MIME only)
 
+(smime-ca-location)=
 ## `$smime_ca_location`
 
 - **Type:** path
@@ -34,6 +36,7 @@ This variable contains the name of either a directory, or a file which
 contains trusted certificates for use with OpenSSL.
 (S/MIME only)
 
+(smime-certificates)=
 ## `$smime_certificates`
 
 - **Type:** path
@@ -46,6 +49,7 @@ as the hash-value retrieved from OpenSSL. There is an index file which
 contains mailbox-address keyid pairs, and which can be manually edited. This
 option points to the location of the certificates. (S/MIME only)
 
+(smime-decrypt-command)=
 ## `$smime_decrypt_command`
 
 - **Type:** command
@@ -77,6 +81,7 @@ the `samples/` subdirectory which has been installed on your system
 alongside the documentation.
 (S/MIME only)
 
+(smime-decrypt-use-default-key)=
 ## `$smime_decrypt_use_default_key`
 
 - **Type:** boolean
@@ -87,6 +92,7 @@ decryption. Otherwise, if managing multiple certificate-key-pairs, NeoMutt
 will try to use the mailbox-address to determine the key to use. It will ask
 you to supply a key, if it can't find one. (S/MIME only)
 
+(smime-default-key)=
 ## `$smime_default_key`
 
 - **Type:** string
@@ -106,6 +112,7 @@ It will also be used for signing unless [$smime_sign_as](#smime-sign-as) is set.
 
 (S/MIME only)
 
+(smime-encrypt-command)=
 ## `$smime_encrypt_command`
 
 - **Type:** command
@@ -120,6 +127,7 @@ possible `printf(3)`-like sequences.
 Encrypt the message to [$smime_default_key](#smime-default-key) too.
 (S/MIME only)
 
+(smime-encrypt-with)=
 ## `$smime_encrypt_with`
 
 - **Type:** string
@@ -129,6 +137,7 @@ This sets the algorithm that should be used for encryption. Valid choices are
 "aes128", "aes192", "aes256", "des", "des3", "rc2-40", "rc2-64", "rc2-128".
 (S/MIME only)
 
+(smime-get-cert-command)=
 ## `$smime_get_cert_command`
 
 - **Type:** command
@@ -140,6 +149,7 @@ This is a format string, see the [$smime_decrypt_command](#smime-decrypt-command
 possible `printf(3)`-like sequences.
 (S/MIME only)
 
+(smime-get-cert-email-command)=
 ## `$smime_get_cert_email_command`
 
 - **Type:** command
@@ -153,6 +163,7 @@ This is a format string, see the [$smime_decrypt_command](#smime-decrypt-command
 possible `printf(3)`-like sequences.
 (S/MIME only)
 
+(smime-get-signer-cert-command)=
 ## `$smime_get_signer_cert_command`
 
 - **Type:** command
@@ -166,6 +177,7 @@ This is a format string, see the [$smime_decrypt_command](#smime-decrypt-command
 possible `printf(3)`-like sequences.
 (S/MIME only)
 
+(smime-import-cert-command)=
 ## `$smime_import_cert_command`
 
 - **Type:** command
@@ -178,6 +190,7 @@ possible `printf(3)`-like sequences.  NOTE: %c and %k will default
 to [$smime_sign_as](#smime-sign-as) if set, otherwise [$smime_default_key](#smime-default-key).
 (S/MIME only)
 
+(smime-is-default)=
 ## `$smime_is_default`
 
 - **Type:** boolean
@@ -190,6 +203,7 @@ select the same application that was used to sign/encrypt the original
 message. (Note that this variable can be overridden by unsetting
 [$crypt_auto_smime](#crypt-auto-smime).) (S/MIME only)
 
+(smime-keys)=
 ## `$smime_keys`
 
 - **Type:** path
@@ -202,6 +216,7 @@ both named as the hash-value retrieved from OpenSSL. There is an index file
 which contains mailbox-address keyid pair, and which can be manually edited.
 This option points to the location of the private keys. (S/MIME only)
 
+(smime-pk7out-command)=
 ## `$smime_pk7out_command`
 
 - **Type:** command
@@ -214,6 +229,7 @@ This is a format string, see the [$smime_decrypt_command](#smime-decrypt-command
 possible `printf(3)`-like sequences.
 (S/MIME only)
 
+(smime-self-encrypt)=
 ## `$smime_self_encrypt`
 
 - **Type:** boolean
@@ -223,6 +239,7 @@ When *set*, S/MIME encrypted messages will also be encrypted
 using the certificate in [$smime_default_key](#smime-default-key).
 (S/MIME only)
 
+(smime-sign-as)=
 ## `$smime_sign_as`
 
 - **Type:** string
@@ -232,6 +249,7 @@ If you have a separate key to use for signing, you should set this
 to the signing key. Most people will only need to set [$smime_default_key](#smime-default-key).
 (S/MIME only)
 
+(smime-sign-command)=
 ## `$smime_sign_command`
 
 - **Type:** command
@@ -244,6 +262,7 @@ This is a format string, see the [$smime_decrypt_command](#smime-decrypt-command
 possible `printf(3)`-like sequences.
 (S/MIME only)
 
+(smime-sign-digest-alg)=
 ## `$smime_sign_digest_alg`
 
 - **Type:** string
@@ -253,6 +272,7 @@ This sets the algorithm that should be used for the signature message digest.
 Valid choices are "md5", "sha1", "sha224", "sha256", "sha384", "sha512".
 (S/MIME only)
 
+(smime-timeout)=
 ## `$smime_timeout`
 
 - **Type:** number
@@ -262,6 +282,7 @@ The number of seconds after which a cached passphrase will expire if
 not used.
 (S/MIME only)
 
+(smime-verify-command)=
 ## `$smime_verify_command`
 
 - **Type:** command
@@ -274,6 +295,7 @@ This is a format string, see the [$smime_decrypt_command](#smime-decrypt-command
 possible `printf(3)`-like sequences.
 (S/MIME only)
 
+(smime-verify-opaque-command)=
 ## `$smime_verify_opaque_command`
 
 - **Type:** command

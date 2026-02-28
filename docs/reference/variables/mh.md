@@ -15,6 +15,7 @@ Mirror the structure of the software itself. Avoid instruction or explanation â€
 how-to guides and explanation pages instead.
 :::
 
+(mh-purge)=
 ## `$mh_purge`
 
 - **Type:** boolean
@@ -22,8 +23,9 @@ how-to guides and explanation pages instead.
 
 When *unset*, NeoMutt will mimic mh's behavior and rename deleted messages to `,<old file name>` in mh folders instead of really deleting them. This leaves the message on disk but makes programs reading the folder ignore it. If the variable is *set*, the message files will simply be deleted.
 
-This option is similar to [`$maildir_trash`](maildir.md#maildir_trash) for Maildir folders.
+This option is similar to [`$maildir_trash`](#maildir-trash) for Maildir folders.
 
+(mh-seq-flagged)=
 ## `$mh_seq_flagged`
 
 - **Type:** string
@@ -31,6 +33,7 @@ This option is similar to [`$maildir_trash`](maildir.md#maildir_trash) for Maild
 
 The name of the MH sequence used for flagged messages.
 
+(mh-seq-replied)=
 ## `$mh_seq_replied`
 
 - **Type:** string
@@ -38,6 +41,7 @@ The name of the MH sequence used for flagged messages.
 
 The name of the MH sequence used to tag replied messages.
 
+(mh-seq-unseen)=
 ## `$mh_seq_unseen`
 
 - **Type:** string

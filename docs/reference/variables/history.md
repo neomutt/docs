@@ -15,6 +15,7 @@ Mirror the structure of the software itself. Avoid instruction or explanation â€
 how-to guides and explanation pages instead.
 :::
 
+(history)=
 ## `$history`
 
 - **Type:** number
@@ -24,8 +25,9 @@ This variable controls the size (in number of strings remembered) of the string 
 
 Note that strings (e.g. commands) starting with a space are never recorded in the history. This is for example useful to prevent leaking sensitive information into the history file or for one off tests.
 
-Also note that a string is not added to the history if it exactly matches its immediate predecessor, e.g. executing the same command twice in a row results in only one copy being added to the history. To prevent duplicates over all entries use [`$history_remove_dups`](#history_remove_dups).
+Also note that a string is not added to the history if it exactly matches its immediate predecessor, e.g. executing the same command twice in a row results in only one copy being added to the history. To prevent duplicates over all entries use [`$history_remove_dups`](#history-remove-dups).
 
+(history-file)=
 ## `$history_file`
 
 - **Type:** path
@@ -35,6 +37,7 @@ The file in which NeoMutt will save its history.
 
 Also see `$save_history`.
 
+(history-format)=
 ## `$history_format`
 
 - **Type:** string
@@ -50,9 +53,10 @@ Controls the format of the entries of the history list. This string is similar t
 | `%>X` | `%{padding-hard}` | Right justify the rest of the string and pad with character `X` |
 | `%\|X` | `%{padding-eol}` | Pad to the end of the line with character `X` |
 
+(history-remove-dups)=
 ## `$history_remove_dups`
 
 - **Type:** boolean
 - **Default:** `no`
 
-When *set*, all of the string history will be scanned for duplicates when a new entry is added. Duplicate entries in the [`$history_file`](#history_file) will also be removed when it is periodically compacted.
+When *set*, all of the string history will be scanned for duplicates when a new entry is added. Duplicate entries in the [`$history_file`](#history-file) will also be removed when it is periodically compacted.

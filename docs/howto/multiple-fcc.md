@@ -29,7 +29,7 @@ The "fcc" field of an email can be set in two ways:
 ## See Also
 
 - {ref}`$record <record>`
-- {ref}`fcc-hook <fcc-hook>`
+- **fcc-hook**
 
 ## Known Bugs
 

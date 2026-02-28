@@ -15,6 +15,7 @@ Mirror the structure of the software itself. Avoid instruction or explanation â€
 how-to guides and explanation pages instead.
 :::
 
+(pgp-auto-decode)=
 ## `$pgp_auto_decode`
 
 - **Type:** boolean
@@ -27,6 +28,7 @@ user displays a pgp-traditional message which has not been manually checked
 with the `[<check-traditional-pgp>](#check-traditional-pgp)` function, NeoMutt will automatically
 check the message for traditional pgp.
 
+(pgp-auto-inline)=
 ## `$pgp_auto_inline`
 
 - **Type:** boolean
@@ -49,6 +51,7 @@ Also note that using the old-style PGP message format is **strongly**
 **deprecated**.
 (PGP only)
 
+(pgp-check-exit)=
 ## `$pgp_check_exit`
 
 - **Type:** boolean
@@ -59,6 +62,7 @@ signing or encrypting.  A non-zero exit code means that the
 subprocess failed.
 (PGP only)
 
+(pgp-check-gpg-decrypt-status-fd)=
 ## `$pgp_check_gpg_decrypt_status_fd`
 
 - **Type:** boolean
@@ -75,6 +79,7 @@ If *unset*, NeoMutt will instead match the status fd output
 against [$pgp_decryption_okay](#pgp-decryption-okay).
 (PGP only)
 
+(pgp-clear-sign-command)=
 ## `$pgp_clear_sign_command`
 
 - **Type:** command
@@ -90,6 +95,7 @@ Note that in this case, %r expands to the search string, which is a list of
 one or more quoted values such as email address, name, or keyid.
 (PGP only)
 
+(pgp-decode-command)=
 ## `$pgp_decode_command`
 
 - **Type:** command
@@ -115,6 +121,7 @@ sequences:
 
 (PGP only)
 
+(pgp-decrypt-command)=
 ## `$pgp_decrypt_command`
 
 - **Type:** command
@@ -135,6 +142,7 @@ problems.
 
 See also: [https://github.com/neomutt/neomutt/issues/1014](https://github.com/neomutt/neomutt/issues/1014)
 
+(pgp-decryption-okay)=
 ## `$pgp_decryption_okay`
 
 - **Type:** regular expression
@@ -151,6 +159,7 @@ Note that if [$pgp_check_gpg_decrypt_status_fd](#pgp-check-gpg-decrypt-status-fd
 is ignored.
 (PGP only)
 
+(pgp-default-key)=
 ## `$pgp_default_key`
 
 - **Type:** string
@@ -163,6 +172,7 @@ It will also be used for signing unless [$pgp_sign_as](#pgp-sign-as) is set.
 
 (PGP only)
 
+(pgp-encrypt-only-command)=
 ## `$pgp_encrypt_only_command`
 
 - **Type:** command
@@ -176,6 +186,7 @@ Note that in this case, %r expands to the search string, which is a list of
 one or more quoted values such as email address, name, or keyid.
 (PGP only)
 
+(pgp-encrypt-sign-command)=
 ## `$pgp_encrypt_sign_command`
 
 - **Type:** command
@@ -187,6 +198,7 @@ This is a format string, see the [$pgp_decode_command](#pgp-decode-command) comm
 possible `printf(3)`-like sequences.
 (PGP only)
 
+(pgp-entry-format)=
 ## `$pgp_entry_format`
 
 - **Type:** string
@@ -228,6 +240,7 @@ to.
 
 (Crypto only) or (PGP only when GPGME disabled)
 
+(pgp-export-command)=
 ## `$pgp_export_command`
 
 - **Type:** command
@@ -240,6 +253,7 @@ This is a format string, see the [$pgp_decode_command](#pgp-decode-command) comm
 possible `printf(3)`-like sequences.
 (PGP only)
 
+(pgp-get-keys-command)=
 ## `$pgp_get_keys_command`
 
 - **Type:** command
@@ -252,6 +266,7 @@ this format. Note that in this case, %r expands to the email address, not the
 public key ID (the key ID is unknown, which is why NeoMutt is invoking this
 command). (PGP only)
 
+(pgp-good-sign)=
 ## `$pgp_good_sign`
 
 - **Type:** regular expression
@@ -263,6 +278,7 @@ the text. Use this variable if the exit code from the command is 0
 even for bad signatures.
 (PGP only)
 
+(pgp-ignore-subkeys)=
 ## `$pgp_ignore_subkeys`
 
 - **Type:** boolean
@@ -273,6 +289,7 @@ the principal key will inherit the subkeys' capabilities.  *Unset* this
 if you want to play interesting key selection games.
 (PGP only)
 
+(pgp-import-command)=
 ## `$pgp_import_command`
 
 - **Type:** command
@@ -285,6 +302,7 @@ This is a format string, see the [$pgp_decode_command](#pgp-decode-command) comm
 possible `printf(3)`-like sequences.
 (PGP only)
 
+(pgp-key-sort)=
 ## `$pgp_key_sort`
 
 - **Type:** sort order
@@ -306,6 +324,7 @@ e.g. `set pgp_key_sort = "reverse-date"`
 
 (PGP only)
 
+(pgp-list-pubring-command)=
 ## `$pgp_list_pubring_command`
 
 - **Type:** command
@@ -328,6 +347,7 @@ This is a format string, see the [$pgp_decode_command](#pgp-decode-command) comm
 possible `printf(3)`-like sequences.
 (PGP only)
 
+(pgp-list-secring-command)=
 ## `$pgp_list_secring_command`
 
 - **Type:** command
@@ -350,6 +370,7 @@ This is a format string, see the [$pgp_decode_command](#pgp-decode-command) comm
 possible `printf(3)`-like sequences.
 (PGP only)
 
+(pgp-long-ids)=
 ## `$pgp_long_ids`
 
 - **Type:** boolean
@@ -360,6 +381,7 @@ key IDs. NOTE: Internally, NeoMutt has transitioned to using fingerprints (or
 long key IDs as a fallback). This option now only controls the display of key
 IDs in the key selection menu and a few other places. (PGP only)
 
+(pgp-mime-auto)=
 ## `$pgp_mime_auto`
 
 - **Type:** quadoption
@@ -373,6 +395,7 @@ Also note that using the old-style PGP message format is **strongly**
 **deprecated**.
 (PGP only)
 
+(pgp-reply-inline)=
 ## `$pgp_reply_inline`
 
 - **Type:** boolean
@@ -397,6 +420,7 @@ Also note that using the old-style PGP message format is **strongly**
 **deprecated**.
 (PGP only)
 
+(pgp-retainable-sigs)=
 ## `$pgp_retainable_sigs`
 
 - **Type:** boolean
@@ -410,6 +434,7 @@ lists, where the outer layer (`multipart/encrypted`) can be easily
 removed, while the inner `multipart/signed` part is retained.
 (PGP only)
 
+(pgp-self-encrypt)=
 ## `$pgp_self_encrypt`
 
 - **Type:** boolean
@@ -419,6 +444,7 @@ When *set*, PGP encrypted messages will also be encrypted
 using the key in [$pgp_default_key](#pgp-default-key).
 (PGP only)
 
+(pgp-show-unusable)=
 ## `$pgp_show_unusable`
 
 - **Type:** boolean
@@ -429,6 +455,7 @@ menu.  This includes keys which have been revoked, have expired, or
 have been marked as "disabled" by the user.
 (PGP only)
 
+(pgp-sign-as)=
 ## `$pgp_sign_as`
 
 - **Type:** string
@@ -440,6 +467,7 @@ set this to the signing key.  Most people will only need to set
 to specify your key (e.g. `0x00112233`).
 (PGP only)
 
+(pgp-sign-command)=
 ## `$pgp_sign_command`
 
 - **Type:** command
@@ -452,6 +480,7 @@ This is a format string, see the [$pgp_decode_command](#pgp-decode-command) comm
 possible `printf(3)`-like sequences.
 (PGP only)
 
+(pgp-strict-enc)=
 ## `$pgp_strict_enc`
 
 - **Type:** boolean
@@ -463,6 +492,7 @@ lead to problems with non-verifyable PGP signatures, so only change
 this if you know what you are doing.
 (PGP only)
 
+(pgp-timeout)=
 ## `$pgp_timeout`
 
 - **Type:** number (long)
@@ -472,6 +502,7 @@ The number of seconds after which a cached passphrase will expire if
 not used.
 (PGP only)
 
+(pgp-use-gpg-agent)=
 ## `$pgp_use_gpg_agent`
 
 - **Type:** boolean
@@ -494,6 +525,7 @@ or another encryption program without an agent, you will need to
 *unset* this variable.
 (PGP only)
 
+(pgp-verify-command)=
 ## `$pgp_verify_command`
 
 - **Type:** command
@@ -505,6 +537,7 @@ This is a format string, see the [$pgp_decode_command](#pgp-decode-command) comm
 possible `printf(3)`-like sequences.
 (PGP only)
 
+(pgp-verify-key-command)=
 ## `$pgp_verify_key_command`
 
 - **Type:** command

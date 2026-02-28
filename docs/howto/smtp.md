@@ -25,7 +25,7 @@ Besides supporting traditional mail delivery through a sendmail-compatible progr
    set smtp_url="smtps://user@smtp.example.com"
    ```
 
-   For details on the URL syntax, see {ref}`url-syntax`.
+   For details on the URL syntax, see **URL syntax**.
 
 2. The built-in SMTP support supports encryption (the `smtps` protocol using SSL or TLS) as well as SMTP authentication using SASL.
 

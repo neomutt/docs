@@ -15,6 +15,7 @@ Mirror the structure of the software itself. Avoid instruction or explanation â€
 how-to guides and explanation pages instead.
 :::
 
+(autocrypt)=
 ## `$autocrypt`
 
 - **Type:** boolean
@@ -22,9 +23,10 @@ how-to guides and explanation pages instead.
 
 When *set*, enables autocrypt, which provides
 passive encryption protection with keys exchanged via headers.
-See "[`autocryptdoc`](../index.md#autocryptdoc)" for more details.
+See **Autocrypt** for more details.
 (Autocrypt only)
 
+(autocrypt-acct-format)=
 ## `$autocrypt_acct_format`
 
 - **Type:** string
@@ -53,15 +55,17 @@ The following `printf(3)`-style sequences are understood
 
 (Autocrypt only)
 
+(autocrypt-dir)=
 ## `$autocrypt_dir`
 
 - **Type:** path
 - **Default:** "`~/.mutt/autocrypt`"
 
 This variable sets where autocrypt files are stored, including the GPG
-keyring and SQLite database.  See "[`autocryptdoc`](../index.md#autocryptdoc)" for more details.
+keyring and SQLite database.  See **Autocrypt** for more details.
 (Autocrypt only)
 
+(autocrypt-reply)=
 ## `$autocrypt_reply`
 
 - **Type:** boolean

@@ -15,6 +15,7 @@ Mirror the structure of the software itself. Avoid instruction or explanation â€
 how-to guides and explanation pages instead.
 :::
 
+(smtp-authenticators)=
 ## `$smtp_authenticators`
 
 - **Type:** string list
@@ -38,6 +39,7 @@ set smtp_authenticators="digest-md5:cram-md5"
 ```
 
 
+(smtp-oauth-refresh-command)=
 ## `$smtp_oauth_refresh_command`
 
 - **Type:** command
@@ -46,8 +48,9 @@ set smtp_authenticators="digest-md5:cram-md5"
 The command to run to generate an OAUTH refresh token for
 authorizing your connection to your SMTP server.  This command will be
 run on every connection attempt that uses the OAUTHBEARER or XOAUTH2
-authentication mechanisms.  See "[oauth](#oauth)" for details.
+authentication mechanisms.  See [OAuth](../../howto/oauth.md) for details.
 
+(smtp-pass)=
 ## `$smtp_pass`
 
 - **Type:** string
@@ -61,6 +64,7 @@ See [$smtp_url](#smtp-url) to configure NeoMutt to send mail via SMTP.
 fairly secure machine, because the superuser can read your neomuttrc even
 if you are the only one who can read the file.
 
+(smtp-url)=
 ## `$smtp_url`
 
 - **Type:** string
@@ -81,6 +85,7 @@ variable.
 
 Also see [$write_bcc](#write-bcc).
 
+(smtp-user)=
 ## `$smtp_user`
 
 - **Type:** string

@@ -23,7 +23,7 @@ mbox-hook [-noregex] regex mailbox
 
 This command is used to move read messages from a specified mailbox to a different mailbox automatically when you quit or change folders. *regex* is used to specify the mailbox to treat as a "spool" mailbox and *mailbox* specifies where mail should be saved when read. The *-noregex* switch controls whether *regex* is matched using a simple string comparison or a full regex match.
 
-The regex parameter has {ref}`mailbox shortcut <shortcuts>` expansion performed on the first character. See {ref}`mailbox-hook` for more details.
+The regex parameter has **mailbox shortcut** expansion performed on the first character. See **mailbox-hook** for more details.
 
 Note that execution of mbox-hooks is dependent on the `$move` configuration variable. If set to "no" (the default), mbox-hooks will not be executed.
 
@@ -45,9 +45,9 @@ Use `-nonotify` to disable notifying when new mail arrives. The `-notify` argume
 
 To disable polling, specify `-nopoll` before the mailbox name. The `-poll` argument can be used to re-enable polling for an existing mailbox. If unspecified: a new mailbox will poll by default, while an existing mailbox will be unchanged.
 
-*folder* can either be a local file or directory (Mbox/Mmdf or Maildir/Mh). If NeoMutt was built with POP and/or IMAP support, *folder* can also be a POP/IMAP folder URL. The URL syntax is described in {ref}`URL syntax <url-syntax>`, POP and IMAP are described in {ref}`POP <pop>` and {ref}`IMAP <imap>` respectively.
+*folder* can either be a local file or directory (Mbox/Mmdf or Maildir/Mh). If NeoMutt was built with POP and/or IMAP support, *folder* can also be a POP/IMAP folder URL. The URL syntax is described in **URL syntax**, POP and IMAP are described in [POP](pop.md) and [IMAP](imap.md) respectively.
 
-NeoMutt provides a number of advanced features for handling (possibly many) folders and new mail within them, please refer to {ref}`new mail <new-mail>` for details (including in what situations and how often NeoMutt checks for new mail). Additionally, `$new_mail_command` can be used to run a command when new mail is detected.
+NeoMutt provides a number of advanced features for handling (possibly many) folders and new mail within them, please refer to **new mail** for details (including in what situations and how often NeoMutt checks for new mail). Additionally, `$new_mail_command` can be used to run a command when new mail is detected.
 
 The `unmailboxes` command is used to remove a token from the list of folders which receive mail. `unmailboxes` can be used on the mailbox path, `$folder`-abbreviated path, or description. Use `unmailboxes *` to remove all tokens.
 
@@ -62,5 +62,5 @@ The `unmailboxes` command is used to remove a token from the list of folders whi
 :::
 
 :::{note}
-The folders in the `mailboxes` command are resolved when the command is executed, so if these names contain {ref}`shortcut characters <shortcuts>` (such as `=` and `!`), any variable definition that affects these characters (like `$folder` and `$spool_file`) should be set before the `mailboxes` command. If none of these shortcuts are used, a local path should be absolute as otherwise NeoMutt tries to find it relative to the directory from where NeoMutt was started which may not always be desired.
+The folders in the `mailboxes` command are resolved when the command is executed, so if these names contain **shortcut characters** (such as `=` and `!`), any variable definition that affects these characters (like `$folder` and `$spool_file`) should be set before the `mailboxes` command. If none of these shortcuts are used, a local path should be absolute as otherwise NeoMutt tries to find it relative to the directory from where NeoMutt was started which may not always be desired.
 :::

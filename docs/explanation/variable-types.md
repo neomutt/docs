@@ -114,6 +114,7 @@ this has the same behavior as the `reset` command.
 With the `reset` command there exists the special variable "all", which allows you to reset
 all variables to their system defaults.
 
+(user-defined-variables)=
 ## User-Defined Variables
 
 ### Introduction

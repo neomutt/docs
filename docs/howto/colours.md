@@ -15,6 +15,7 @@ to explanation pages instead. Keep it focused on the specific task. Start with p
 give the steps, show the expected result.
 :::
 
+(using-color-and-mono-video-attributes)=
 ## Using Color and Mono Video Attributes
 
 Usage:
@@ -93,6 +94,7 @@ TERM=xterm-direct neomutt
 
 If that still does not help, you can additionally force NeoMutt to use directcolors by setting `$color_directcolor`. Setting this variable manually is strongly discouraged since it usually leads to wrong colors.
 
+(simple-colors)=
 ### Simple Colors
 
 Most of NeoMutt's colorable objects follow simple rules. They don't use a pattern and any new configuration will overwrite the old colours.
@@ -207,6 +209,7 @@ uncolor quoted2
 **Highlights:** The colour gradient across quote levels — how distinct colours make it easy to follow the conversation depth and quickly identify the newest reply text.
 :::
 
+(color-lists)=
 ### Color Lists
 
 Some objects in NeoMutt support *lists* of color rules. Each rule has a pattern and a color. Each is checked in turn and any matching rules are applied cumulatively (overlaid).
@@ -298,6 +301,7 @@ unmono { <index-object> | header | body } { * | <pattern> ... }
 
 For *object* and *attribute*, see the `color` command.
 
+(index-color-feature)=
 ## Index Color Feature
 
 The "index-color" feature allows you to specify colors for individual parts of the email index. e.g. Subject, Author, Flags.

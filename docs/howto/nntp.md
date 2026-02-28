@@ -35,7 +35,7 @@ When browsing the list of newsgroups on the server the function `<subscribe>` ca
 
 When checking for new messages, NeoMutt only polls the subscribed newsgroups.
 
-The variable `$news_cache_dir` can be used to point to a directory. NeoMutt will create a hierarchy of subdirectories named like the account and newsgroup the cache is for. The hierarchy is also used to store header cache if NeoMutt was compiled with {ref}`header cache <header-caching>` support.
+The variable `$news_cache_dir` can be used to point to a directory. NeoMutt will create a hierarchy of subdirectories named like the account and newsgroup the cache is for. The hierarchy is also used to store header cache if NeoMutt was compiled with [header cache](caching.md) support.
 
 :::{admonition} 📷 Screenshot Needed
 :class: tip

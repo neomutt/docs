@@ -306,7 +306,7 @@ Also see [$fast_reply](#fast-reply).
 When *set*, NeoMutt assumes the presence of a List-Post header
 means the recipient is subscribed to the list.  Unless the mailing list
 is in the "unsubscribe" or "unlist" lists, it will be added
-to the "[subscribe](#subscribe)" list.  Parsing and checking these things slows
+to the "`subscribe`" list.  Parsing and checking these things slows
 header reading down, so this option is disabled by default.
 
 (auto-tag)=
@@ -320,7 +320,7 @@ will be applied to all tagged messages (if there are any).  When
 unset, you must first use the `<tag-prefix>` function (bound to ";"
 by default) to make the next function apply to all tagged messages.
 
-(autocrypt)=
+(general-autocrypt)=
 ## `$autocrypt`
 
 - **Type:** boolean
@@ -328,7 +328,7 @@ by default) to make the next function apply to all tagged messages.
 
 When *set*, enables autocrypt, which provides
 passive encryption protection with keys exchanged via headers.
-See "[autocryptdoc](#autocryptdoc)" for more details.
+See "**Autocrypt**" for more details.
 (Autocrypt only)
 
 (beep)=
@@ -421,7 +421,7 @@ set certificate_file=~/.neomutt/certificates
 - **Default:** no
 
 When this variable is *set*, the `<change-folder>` function
-mailbox suggestion will start at the next folder in your "[mailboxes](#mailboxes)"
+mailbox suggestion will start at the next folder in your "`mailboxes`"
 list, instead of starting at the first folder in the list.
 
 (charset)=
@@ -451,7 +451,7 @@ of access time when checking for new mail in mbox and mmdf folders.
 This variable is *unset* by default and should only be enabled when
 new mail detection for these folder types is unreliable or doesn't work.
 
-Note that enabling this variable should happen before any "[mailboxes](#mailboxes)"
+Note that enabling this variable should happen before any "`mailboxes`"
 directives occur in configuration files regarding mbox or mmdf folders
 because NeoMutt needs to determine the initial new mail status of such a
 mailbox by performing a fast mailbox scan when it is defined.
@@ -583,7 +583,7 @@ Sets the default Content-Type for the body of newly composed messages.
 
 This variable controls whether or not copies of your outgoing messages
 will be saved for later references.  Also see [$record](#record),
-[$save_name](#save-name), [$force_name](#force-name) and "[fcc-hook](#fcc-hook)".
+[$save_name](#save-name), [$force_name](#force-name) and "`fcc-hook`".
 
 (copy-decode-weed)=
 ## `$copy_decode_weed`
@@ -601,7 +601,7 @@ Controls whether NeoMutt will weed headers when invoking the
 - **Default:** no
 
 When *set*, NeoMutt will recurse inside multipart/alternatives while
-performing attachment searching and counting(see [attachments](#attachments)).
+performing attachment searching and counting(see `attachments`).
 
 Traditionally, multipart/alternative parts have simply represented
 different encodings of the main content of the email.  Unfortunately,
@@ -685,15 +685,15 @@ See also: `[$debug_file](#debug-file)`
 This variable controls how some hooks are interpreted if their pattern is a
 plain string or a regex. i.e. they don't contain a pattern, like `~f`
 
-The hooks are: [fcc-hook](#fcc-hook), [fcc-save-hook](#fcc-save-hook), [index-format-hook](#index-format-hook), [message-hook](#message-hook),
-[reply-hook](#reply-hook), [save-hook](#save-hook), [send-hook](#send-hook) and [send2-hook](#send2-hook).
+The hooks are: `fcc-hook`, `fcc-save-hook`, `index-format-hook`, `message-hook`,
+`reply-hook`, `save-hook`, `send-hook` and `send2-hook`.
 
 The hooks are expanded when they are declared, so a hook will be interpreted
 according to the value of this variable at the time the hook is declared.
 
 The default value matches if the message is either from a user matching the
 regular expression given, or if it is from you (if the from address matches
-"[alternates](#alternates)") and is to or cc'ed to a user matching the given regular
+"`alternates`") and is to or cc'ed to a user matching the given regular
 expression.
 
 (delete)=
@@ -812,7 +812,7 @@ the server whether DSN will be used or not.
 - **Type:** boolean
 - **Default:** yes
 
-This variable controls whether NeoMutt, when [$sort](#sort) is set to *threads*,
+This variable controls whether NeoMutt, when `$sort` is set to *threads*,
 threads messages with the same Message-Id together. If it is *set*, it
 will indicate that it thinks they are duplicates of each other with an equals
 sign in the thread tree.
@@ -830,7 +830,7 @@ Although the compose menu may have localized header labels, the
 labels passed to your editor will be standard RFC2822 headers,
 (e.g. To:, Cc:, Subject:).  Headers added in your editor must
 also be RFC2822 headers, or one of the pseudo headers listed in
-"[edit-header](#edit-header)".  NeoMutt will not understand localized header
+"`edit-header`".  NeoMutt will not understand localized header
 labels, just as it would not when parsing an actual email.
 
 **Note** that changes made to the References: and Date: headers are
@@ -1035,7 +1035,7 @@ beginning of a pathname will be expanded to the value of this
 variable.  Note that if you change this variable (from the default)
 value you need to make sure that the assignment occurs *before*
 you use "+" or "=" for any other variables since expansion takes place
-when handling the "[mailboxes](#mailboxes)" command.
+when handling the "`mailboxes`" command.
 
 (folder-format)=
 ## `$folder_format`
@@ -1064,7 +1064,7 @@ its own set of `printf(3)`-like sequences:
 | `%N` | `%{new-mail}` | `N` if mailbox has new mail, ` ` (space) otherwise |
 | `%n` | `%{unread-count}` | Number of unread messages in the mailbox |
 | `%p` | `%{poll}` | Poll: 1 if Mailbox is checked for new mail |
-| `%s` | `%{file-size}` | Size in bytes (see [formatstrings-size](#formatstrings-size)) |
+| `%s` | `%{file-size}` | Size in bytes (see **Size Format**) |
 | `%t` | `%{tagged}` | `*` if the file is tagged, blank otherwise |
 | `%u` | `%{file-owner}` | Owner name (or numeric uid, if missing) |
 | `%[fmt]` |  | Date/time folder was last modified using an `strftime(3)` expression |
@@ -1089,7 +1089,7 @@ For an explanation of "soft-fill", see the [$index_format](#index-format) docume
 Controls whether or not the "Mail-Followup-To:" header field is
 generated when sending mail.  When *set*, NeoMutt will generate this
 field when you are replying to a known mailing list, specified with
-the "[subscribe](#subscribe)" or "[lists](#lists)" commands.
+the "`subscribe`" or "`lists`" commands.
 
 This field has two purposes.  First, preventing you from
 receiving duplicate copies of replies to messages which you send
@@ -1134,7 +1134,7 @@ Also see the [$record](#record) variable.
 - **Default:** (empty)
 
 When *set*, this variable contains a default "from" address.  It
-can be overridden using "[my-header](#my-header)" (including from a "[send-hook](#send-hook)") and
+can be overridden using "`my-header`" (including from a "`send-hook`") and
 [$reverse_name](#reverse-name).  This variable is ignored if [$use_from](#use-from) is *unset*.
 
 If not specified, then it may be read from the environment variable
@@ -1235,12 +1235,12 @@ has its own set of printf()-like sequences:
 - **Type:** boolean
 - **Default:** yes
 
-When *unset*, the header fields normally added by the "[my-header](#my-header)"
+When *unset*, the header fields normally added by the "`my-header`"
 command are not created.  This variable *must* be unset before
 composing a new message or replying in order to take effect.  If *set*,
 the user defined header fields are added to every new message.
 
-(header)=
+(general-header)=
 ## `$header`
 
 - **Type:** boolean
@@ -1331,7 +1331,7 @@ When *set*, NeoMutt will not show the presence of missing messages at the
 top of threads in the thread tree.  Note that when [$hide_missing](#hide-missing) is
 *set*, this option will have no effect.
 
-(history)=
+(general-history)=
 ## `$history`
 
 - **Type:** number
@@ -1417,8 +1417,8 @@ UTF-8 encoded domains. (IDN only)
 - **Default:** no
 
 Affects the behavior of the `<reply>` function when replying to
-messages from mailing lists (as defined by the "[subscribe](#subscribe)" or
-"[lists](#lists)" commands).  When *set*, if the "Reply-To:" field is
+messages from mailing lists (as defined by the "`subscribe`" or
+"`lists`" commands).  When *set*, if the "Reply-To:" field is
 set to the same value as the "To:" field, NeoMutt assumes that the
 "Reply-To:" field was set by the mailing list to automate responses
 to the list, and will ignore this field.  To direct a response to the
@@ -1506,8 +1506,8 @@ following sequences are defined in NeoMutt:
 | `%B` | `%{list-address}` | List to which the email was sent (if any; otherwise: Mailbox name) |
 | `%b` | `%{mailbox-name}` | Filename of the original message folder (think mailbox) |
 | `%C` | `%{number}` | Current message number |
-| `%c` | `%{body-characters}` | Number of characters (bytes) in the body of the message (see [formatstrings-size](#formatstrings-size)) |
-| `%cr` | `%{size}` | Number of characters (bytes) in the raw message, including the header (see [formatstrings-size](#formatstrings-size)) |
+| `%c` | `%{body-characters}` | Number of characters (bytes) in the body of the message (see **Size Format**) |
+| `%cr` | `%{size}` | Number of characters (bytes) in the raw message, including the header (see **Size Format**) |
 | `%D` | `%{date-format-local}` | Date and time of message using [$date_format](#date-format) and local timezone. |
 |  |  | It is recommended to use `%[fmt]` instead, where `fmt` is the value of [$date_format](#date-format). |
 | `%d` | `%{date-format}` | Date and time of message using [$date_format](#date-format) and sender's timezone. |
@@ -1525,7 +1525,7 @@ following sequences are defined in NeoMutt:
 | `%J` | `%{thread-tags}` | Message tags (if present, tree unfolded, and != parent's tags) |
 | `%K` | `%{list-empty}` | List to which the email was sent (if any; otherwise: empty) |
 | `%L` | `%{from-list}` | If an address in the `To:` or `Cc:` header field matches an address |
-|  |  | defined by the user's [$subscribe](#subscribe) command, this displays. |
+|  |  | defined by the user's `$subscribe` command, this displays. |
 | `%l` | `%{lines}` | Number of lines in the unprocessed message (may not work with maildir, mh, and IMAP folders) |
 | `%M` | `%{thread-hidden-count}` | Number of hidden messages if the thread is collapsed |
 | `%m` | `%{message-count}` | Total number of message in the mailbox |
@@ -1544,7 +1544,7 @@ following sequences are defined in NeoMutt:
 | `%u` | `%{username}` | User (login) name of the author |
 | `%v` | `%{first-name}` | First name of the author, or the recipient if the message is from you |
 | `%W` | `%{organization}` | Name of organization of author (`Organization:` field) |
-| `%X` | `%{attachment-count}` | Number of MIME attachments (see the [$attachments](#attachments) section for possible speed effects) |
+| `%X` | `%{attachment-count}` | Number of MIME attachments (see the `$attachments` section for possible speed effects) |
 | `%x` | `%{x-comment-to}` | `%{X-Comment-To:}` field (if present) |
 | `%Y` | `%{thread-x-label}` | `%{X-Label:}` field, if present, and |
 |  |  | 1. not at part of a thread tree |
@@ -1559,7 +1559,7 @@ following sequences are defined in NeoMutt:
 | `%zc` | `%{crypto-flags}` | Message crypto flags |
 | `%zs` | `%{status-flags}` | Message status flags |
 | `%zt` | `%{message-flags}` | Message tag flags |
-| `%@name@` |  | Insert and evaluate format-string from the matching `[index-format-hook](#index-format-hook)` command |
+| `%@name@` |  | Insert and evaluate format-string from the matching ``index-format-hook`` command |
 | `%{fmt}` |  | Date and time of the message is converted to sender's time zone, and `fmt` is expanded by the library function `strftime(3)`; |
 |  |  | if the first character inside the braces is a bang (`!`), the date is formatted ignoring any locale settings. |
 |  |  | Note that the sender's time zone might only be available as a numerical offset, so `%Z` behaves like `%z`. |
@@ -1592,7 +1592,7 @@ necessary, soft-fill will eat text leftwards to make room for
 rightward text.
 
 Note that these expandos are supported in
-"[save-hook](#save-hook)", "[fcc-hook](#fcc-hook)" and "[fcc-save-hook](#fcc-save-hook)", too.
+"`save-hook`", "`fcc-hook`" and "`fcc-save-hook`", too.
 
 (inews-command)=
 ## `$inews_command`
@@ -1634,7 +1634,7 @@ How to invoke ispell (GNU's spell-checking software).
 
 If *set*, read messages marked as flagged will not be moved
 from your spool mailbox to your [$mbox](#mbox) mailbox or to the "mbox"
-specified by a [mbox-hook](#mbox-hook) command.
+specified by a `mbox-hook` command.
 
 Note that [$keep_flagged](#keep-flagged) only has an effect if [$move](#move) is set.
 
@@ -1715,7 +1715,7 @@ This string is identical in formatting to the one used by
 
 This variable specifies a list of colon-separated files to consult when
 attempting to display MIME bodies not directly supported by NeoMutt.  The
-default value is generated during startup: see the "[mailcap](#mailcap)" section of the
+default value is generated during startup: see the "`mailcap`" section of the
 manual.
 
 [$mailcap_path](#mailcap-path) is overridden by the environment variable `$MAILCAPS`.
@@ -1806,7 +1806,7 @@ This can also be set using the `-m` command-line option.
 - **Type:** boolean
 - **Default:** no
 
-If *unset*, NeoMutt will remove your address (see the "[alternates](#alternates)"
+If *unset*, NeoMutt will remove your address (see the "`alternates`"
 command) from the list of recipients when replying to a message.
 
 (menu-context)=
@@ -1883,7 +1883,7 @@ attachments of type `message/rfc822`.  For a full listing of defined
 
 This variable allows you to choose a custom format for the Message-Id when
 sending messages. The value may end in "|" to invoke an external filter.
-See [formatstrings-filters](#formatstrings-filters).
+See **format string filters**.
 
 Please note that the Message-ID value follows a strict syntax, and you are
 responsible for ensuring correctness if you change this from the default.
@@ -1939,7 +1939,7 @@ value of `0xf8`, then this is treated as if the user had pressed Esc then
 
 If this variable is *set*, then NeoMutt will move read messages
 from your spool mailbox to your [$mbox](#mbox) mailbox or to the "mbox"
-specified by a [mbox-hook](#mbox-hook) command.
+specified by a `mbox-hook` command.
 
 See also [$keep_flagged](#keep-flagged).
 
@@ -2026,7 +2026,7 @@ is understood:
 | `%s` | `%{server}` | News server name |
 | `%u` | `%{username}` | Username |
 
-(pager)=
+(general-pager)=
 ## `$pager`
 
 - **Type:** command
@@ -2153,7 +2153,7 @@ Example:
 set preferred_languages="en,fr,de"
 ```
 
-(print)=
+(general-print)=
 ## `$print`
 
 - **Type:** quadoption
@@ -2169,7 +2169,7 @@ accidentally hit "p" often.
 - **Type:** boolean
 - **Default:** yes
 
-If you use an *external* [$pager](#pager), setting this variable will
+If you use an *external* `$pager`, setting this variable will
 cause NeoMutt to prompt you for a command when the pager exits rather
 than returning to the index menu.  If *unset*, NeoMutt will return to the
 index menu when the external pager exits.
@@ -2186,7 +2186,7 @@ with the query string the user types.  NeoMutt will add quotes around the
 string substituted for "%s" automatically according to shell quoting
 rules, so you should avoid adding your own.  If no "%s" is found in
 the string, NeoMutt will append the user's query to the end of the string.
-See "[query](#query)": [https://neomutt.org/guide/advancedusage.html#query](https://neomutt.org/guide/advancedusage.html#query)
+See "`query`": [https://neomutt.org/guide/advancedusage.html#query](https://neomutt.org/guide/advancedusage.html#query)
 
 (query-format)=
 ## `$query_format`
@@ -2269,7 +2269,7 @@ may take some time. When set to 0, only a single message will appear before
 the reading the mailbox.
 
 Also see the [$write_inc](#write-inc), [$net_inc](#net-inc) and [$time_inc](#time-inc) variables and the
-"[tuning](#tuning)" section of the manual for performance considerations.
+"**tuning**" section of the manual for performance considerations.
 
 (read-only)=
 ## `$read_only`
@@ -2314,11 +2314,11 @@ Also see [$postponed](#postponed) variable.
 
 This specifies the file into which your outgoing messages should be
 appended.  (This is meant as the primary method for saving a copy of
-your messages, but another way to do this is using the "[my-header](#my-header)"
+your messages, but another way to do this is using the "`my-header`"
 command to create a "Bcc:" field with your email address in it.)
 
 The value of *[$record](#record)* is overridden by the [$force_name](#force-name) and
-[$save_name](#save-name) variables, and the "[fcc-hook](#fcc-hook)" command.  Also see [$copy](#copy)
+[$save_name](#save-name) variables, and the "`fcc-hook`" command.  Also see [$copy](#copy)
 and [$write_bcc](#write-bcc).
 
 (reflow-space-quotes)=
@@ -2416,7 +2416,7 @@ If *unset* and you are replying to a message sent by you, NeoMutt will
 assume that you want to reply to the recipients of that message rather
 than to yourself.
 
-Also see the "[alternates](#alternates)" command.
+Also see the "`alternates`" command.
 
 (reply-to)=
 ## `$reply_to`
@@ -2524,11 +2524,11 @@ move the messages to another machine, and reply to some the messages
 from there.  If this variable is *set*, the default *From:* line of
 the reply messages is built using the address where you received the
 messages you are replying to **if** that address matches your
-"[alternates](#alternates)".  If the variable is *unset*, or the address that would be
-used doesn't match your "[alternates](#alternates)", the *From:* line will use
+"`alternates`".  If the variable is *unset*, or the address that would be
+used doesn't match your "`alternates`", the *From:* line will use
 your address on the current machine.
 
-Also see the "[alternates](#alternates)" command and [$reverse_real_name](#reverse-real-name).
+Also see the "`alternates`" command and [$reverse_real_name](#reverse-real-name).
 
 (reverse-real-name)=
 ## `$reverse_real_name`
@@ -2606,8 +2606,8 @@ delete MH and Maildir directories.
 This variable controls the size of the history (per category) saved in the
 [$history_file](#history-file) file.
 
-Setting this to a value greater than [$history](#history) is possible.  However, there
-will never be more than [$history](#history) entries to select from even if more are
+Setting this to a value greater than `$history` is possible.  However, there
+will never be more than `$history` entries to select from even if more are
 recorded in the history file.
 
 (save-name)=
@@ -2635,7 +2635,7 @@ Also see the [$force_name](#force-name) variable.
 When *set*, info about unsubscribed newsgroups will be saved into
 "newsrc" file and into cache.
 
-(score)=
+(general-score)=
 ## `$score`
 
 - **Type:** boolean
@@ -2794,7 +2794,7 @@ its standard output.
 
 Specifies how NeoMutt should expand a simple search into a real search
 pattern.  A simple search is one that does not contain any of the "~" pattern
-operators.  See "[patterns](#patterns)" for more information on search patterns.
+operators.  See "[patterns](../patterns.md)" for more information on search patterns.
 
 simple_search applies to several functions, e.g. `<delete-pattern>`,
 `<limit>`, searching in the index, and all of the index colors.
@@ -2811,7 +2811,7 @@ For the default value, "joe" would be expanded to: "~f joe | ~s joe".
 - **Default:** no
 
 If *set*, message sizes will display bytes for values less than
-1 kilobyte.  See [formatstrings-size](#formatstrings-size).
+1 kilobyte.  See **Size Format**.
 
 (size-show-fractions)=
 ## `$size_show_fractions`
@@ -2821,7 +2821,7 @@ If *set*, message sizes will display bytes for values less than
 
 If *set*, message sizes will be displayed with a single decimal value
 for sizes from 0 to 10 kilobytes and 1 to 10 megabytes.
-See [formatstrings-size](#formatstrings-size).
+See **Size Format**.
 
 (size-show-mb)=
 ## `$size_show_mb`
@@ -2830,7 +2830,7 @@ See [formatstrings-size](#formatstrings-size).
 - **Default:** yes
 
 If *set*, message sizes will display megabytes for values greater than
-or equal to 1 megabyte.  See [formatstrings-size](#formatstrings-size).
+or equal to 1 megabyte.  See **Size Format**.
 
 (size-units-on-left)=
 ## `$size_units_on_left`
@@ -2839,7 +2839,7 @@ or equal to 1 megabyte.  See [formatstrings-size](#formatstrings-size).
 - **Default:** no
 
 If *set*, message sizes units will be displayed to the left of the
-number. See [formatstrings-size](#formatstrings-size).
+number. See **Size Format**.
 
 (sleep-time)=
 ## `$sleep_time`
@@ -2884,7 +2884,7 @@ Causes NeoMutt to timeout any socket connect/read/write operation (for IMAP,
 POP or SMTP) after this many seconds.  A negative value causes NeoMutt to
 wait indefinitely.
 
-(sort)=
+(general-sort)=
 ## `$sort`
 
 - **Type:** sort order
@@ -2918,7 +2918,7 @@ thread root.  If both prefixes are in use, "reverse-" must come
 before "last-".  The "last-" prefix has no effect on a flat view.
 
 Any ties in the primary sort are broken by [$sort_aux](#sort-aux).  When
-[$use_threads](#use-threads) is "threads" or "reverse", [$sort](#sort) controls the
+[$use_threads](#use-threads) is "threads" or "reverse", `$sort` controls the
 sorting between threads, and [$sort_aux](#sort-aux) controls the sorting within
 a thread.
 
@@ -2931,7 +2931,7 @@ The preferred way to enable a threaded view is via
 
 Note: When [$use_threads](#use-threads) is "threads", the last thread sorts to the
 bottom; when it is "reversed", the last thread sorts to the top.
-The use of "reverse-" in [$sort](#sort) swaps which end the last thread
+The use of "reverse-" in `$sort` swaps which end the last thread
 will sort to.
 
 See the "Use Threads Feature" section for further explanation and
@@ -2969,7 +2969,7 @@ If not specified, then the environment variables `$MAIL` and
 - **Default:** no
 
 If *set*, threading will only make use of the "In-Reply-To" and
-"References:" fields when you [$sort](#sort) by message threads.  By
+"References:" fields when you `$sort` by message threads.  By
 default, messages with the same subject are grouped together in
 "pseudo threads.". This may not always be desirable, such as in a
 personal mailbox where you might have several unrelated messages with
@@ -3016,7 +3016,7 @@ Note that [$indent_string](#indent-string) is ignored when this option is *set*.
 - **Default:** yes
 
 Affects the `~b`, `~B`, and `~h` search operations
-described in section "[patterns](#patterns)".  If *set*, the headers and
+described in section "[patterns](../patterns.md)".  If *set*, the headers and
 body/attachments of messages to be searched are decoded before searching.
 If *unset*, messages are searched as they appear in the folder.
 
@@ -3066,7 +3066,7 @@ displayed. It suppresses updates less than [$time_inc](#time-inc) milliseconds
 apart. This can improve throughput on systems with slow terminals,
 or when running NeoMutt on a remote system.
 
-Also see the "[tuning](#tuning)" section of the manual for performance considerations.
+Also see the "**tuning**" section of the manual for performance considerations.
 
 (timeout)=
 ## `$timeout`
@@ -3180,7 +3180,7 @@ Note: For this example to work you must be able to log in to the remote
 machine without having to enter a password.
 
 When set, NeoMutt uses the tunnel for all remote connections.
-Please see "[account-hook](#account-hook)" in the manual for how to use different
+Please see "`account-hook`" in the manual for how to use different
 tunnel commands per connection.
 
 (tunnel-is-secure)=
@@ -3268,7 +3268,7 @@ executable pointed to by [$sendmail](#sendmail) doesn't support the `-f` switch.
 
 When *set*, NeoMutt will generate the "From:" header field when
 sending messages.  If *unset*, no "From:" header field will be
-generated unless the user explicitly sets one using the "[my-header](#my-header)"
+generated unless the user explicitly sets one using the "`my-header`"
 command.
 
 (use-ipv6)=
@@ -3293,12 +3293,12 @@ message) or "reverse" (threaded, with subthreads above root
 message). For convenience, the value "yes" is a synonym for
 "threads", and "no" is a synonym for "flat".
 
-If this variable is never set, then `[$sort](#sort)` controls whether
+If this variable is never set, then ``$sort`` controls whether
 threading is used, `[$sort_aux](#sort-aux)` controls both the sorting of
 threads and subthreads, and using `<sort-mailbox>` to select
-threads affects only `[$sort](#sort)`.  Once this variable is set,
-attempting to set `[$sort](#sort)` to a value using "threads" will
-warn, the value of `[$sort](#sort)` controls the sorting between
+threads affects only ``$sort``.  Once this variable is set,
+attempting to set ``$sort`` to a value using "threads" will
+warn, the value of ``$sort`` controls the sorting between
 threads while `[$sort_aux](#sort-aux)` controls sorting within a thread,
 and `<sort-mailbox>` toggles `[$use_threads](#use-threads)`.
 
@@ -3341,7 +3341,7 @@ command has been invoked by these functions: `<shell-escape>`,
 `<pipe-message>`, `<pipe-entry>`, `<print-message>`, and
 `<print-entry>` commands.
 
-It is also used when viewing attachments with "[auto-view](#auto-view)", provided
+It is also used when viewing attachments with "`auto-view`", provided
 that the corresponding mailcap entry has a *needsterminal* flag,
 and the external program is interactive.
 
@@ -3428,7 +3428,7 @@ When writing a mailbox, a message will be printed every
 single message will be displayed before writing a mailbox.
 
 Also see the [$read_inc](#read-inc), [$net_inc](#net-inc) and [$time_inc](#time-inc) variables and the
-"[tuning](#tuning)" section of the manual for performance considerations.
+"**tuning**" section of the manual for performance considerations.
 
 (x-comment-to)=
 ## `$x_comment_to`

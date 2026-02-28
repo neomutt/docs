@@ -73,7 +73,7 @@ bind index D purge-message
 
 ## See Also
 
-- {ref}`folder-hook <folder-hook>`
+- **folder-hook**
 
 ## Known Bugs
 

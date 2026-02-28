@@ -15,6 +15,7 @@ Mirror the structure of the software itself. Avoid instruction or explanation â€
 how-to guides and explanation pages instead.
 :::
 
+(sort)=
 ## `$sort`
 
 - **Type:** sort order
@@ -43,7 +44,7 @@ Specifies how to sort messages in the "index" menu.
 
 You may optionally use the "reverse-" prefix to specify reverse sorting order, or the "last-" prefix to sort threads based on the corresponding attribute of the last descendant rather than the thread root. If both prefixes are in use, "reverse-" must come before "last-". The "last-" prefix has no effect on a flat view.
 
-Any ties in the primary sort are broken by [`$sort_aux`](#sort_aux). When [`$use_threads`](/reference/variables) is "threads" or "reverse", `$sort` controls the sorting between threads, and [`$sort_aux`](#sort_aux) controls the sorting within a thread.
+Any ties in the primary sort are broken by [`$sort_aux`](#sort-aux). When [`$use_threads`](/reference/variables) is "threads" or "reverse", `$sort` controls the sorting between threads, and [`$sort_aux`](#sort-aux) controls the sorting within a thread.
 
 The values of "threads" and "reverse-threads" are legacy options, which cause the value of `$sort_aux` to also control sorting between threads, and they may not be used with the "last-" prefix. The preferred way to enable a threaded view is via `$use_threads`. This variable can also be set via the `<sort-mailbox>` and `<sort-reverse>` functions.
 
@@ -53,14 +54,15 @@ When `$use_threads` is "threads", the last thread sorts to the bottom; when it i
 
 See the "Use Threads Feature" section for further explanation and examples: <https://neomutt.org/feature/use-threads>
 
+(sort-aux)=
 ## `$sort_aux`
 
 - **Type:** sort order
 - **Default:** `date`
 
-This provides a secondary sort for messages in the "index" menu, used when the [`$sort`](#sort) value is equal for two messages.
+This provides a secondary sort for messages in the "index" menu, used when the `$sort` value is equal for two messages.
 
-When sorting by threads, this variable controls how subthreads are sorted within a single thread (for the order between threads, see [`$sort`](#sort)). This can be set to any value that `$sort` can, including with the use of "reverse-" and "last-" prefixes, except for variations using "threads" (in that case, NeoMutt will just use "date"). For instance,
+When sorting by threads, this variable controls how subthreads are sorted within a single thread (for the order between threads, see `$sort`). This can be set to any value that `$sort` can, including with the use of "reverse-" and "last-" prefixes, except for variations using "threads" (in that case, NeoMutt will just use "date"). For instance,
 
 ```
 set sort_aux=last-date-received
@@ -70,6 +72,7 @@ would mean that if a new message is received in a thread, that subthread becomes
 
 See the "Use Threads Feature" section for further explanation and examples: <https://neomutt.org/feature/use-threads>
 
+(sort-re)=
 ## `$sort_re`
 
 - **Type:** boolean

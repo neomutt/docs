@@ -156,6 +156,7 @@ To match any defined alias, use a regular expression that matches any string. Th
 @~f .
 ```
 
+(message-ranges)=
 ## Message Ranges
 
 If a message number range (MNR) contains a comma (`,`), it is a *relative* MNR. That means the numbers denote *offsets* from the highlighted message.
@@ -244,6 +245,7 @@ Example: This pattern will select all messages which do not contain "work" in th
 If a regular expression contains parenthesis, or a vertical bar (`|`), you *must* enclose the expression in double or single quotes since those characters are also used to separate different parts of NeoMutt's pattern language. For example: `~f "user@(home\.org|work\.com)"`
 :::
 
+(searching-by-date)=
 ## Searching by Date
 
 NeoMutt supports two types of dates, *absolute* and *relative*.

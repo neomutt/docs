@@ -15,6 +15,7 @@ Mirror the structure of the software itself. Avoid instruction or explanation â€
 how-to guides and explanation pages instead.
 :::
 
+(attach-charset)=
 ## `$attach_charset`
 
 - **Type:** string list
@@ -23,9 +24,9 @@ how-to guides and explanation pages instead.
 This variable is a colon-separated list of character encoding
 schemes for text file attachments. NeoMutt uses this setting to guess
 which encoding files being attached are encoded in to convert them to
-a proper character set given in [`$send_charset`](../index.md#send_charset).
+a proper character set given in [`$send_charset`](#send-charset).
 
-If *unset*, the value of [`$charset`](../index.md#charset) will be used instead.
+If *unset*, the value of [`$charset`](#charset) will be used instead.
 For example, the following configuration would work for Japanese
 text handling:
 
@@ -36,6 +37,7 @@ set attach_charset="iso-2022-jp:euc-jp:shift_jis:utf-8"
 Note: for Japanese users, "iso-2022-*" must be put at the head
 of the value as shown above if included.
 
+(attach-format)=
 ## `$attach_format`
 
 - **Type:** string
@@ -70,7 +72,7 @@ following `printf(3)`-style sequences are understood:
 
 `%Q`    `%{attach-qualifies}` `Q`, if MIME part qualifies for attachment counting
 
-`%s`    `%{file-size}`        Size (see [`formatstrings-size`](../index.md#formatstrings_size))
+`%s`    `%{file-size}`        Size (see **Size Format**)
 
 `%T`    `%{tree}`             Graphic tree characters
 
@@ -80,7 +82,7 @@ following `printf(3)`-style sequences are understood:
 
 `%X`    `%{attach-count}`     Number of qualifying MIME parts in this part and its children
 
-                                      (see the [`$attachments`](../index.md#attachments) section for possible speed effects)
+                                      (see the [`$attachments`](#attachments) section for possible speed effects)
 
 `%*X`   `%{padding-soft}`     Soft-fill with character `X` as pad
 
@@ -88,8 +90,9 @@ following `printf(3)`-style sequences are understood:
 
 `%|X`   `%{padding-eol}`      Pad to the end of the line with character `X`
 
-For an explanation of "soft-fill", see the [`$index_format`](../index.md#index_format) documentation.
+For an explanation of "soft-fill", see the [`$index_format`](#index-format) documentation.
 
+(attach-save-dir)=
 ## `$attach_save_dir`
 
 - **Type:** path
@@ -97,6 +100,7 @@ For an explanation of "soft-fill", see the [`$index_format`](../index.md#index_f
 
 The directory where attachments are saved.
 
+(attach-save-without-prompting)=
 ## `$attach_save_without_prompting`
 
 - **Type:** boolean
@@ -105,6 +109,7 @@ The directory where attachments are saved.
 This variable, when set to true, will cause attachments to be saved to
 the 'attach_save_dir' location without prompting the user for the filename.
 
+(attach-sep)=
 ## `$attach_sep`
 
 - **Type:** string
@@ -113,6 +118,7 @@ the 'attach_save_dir' location without prompting the user for the filename.
 The separator to add between attachments when operating (saving,
 printing, piping, etc) on a list of tagged attachments.
 
+(attach-split)=
 ## `$attach_split`
 
 - **Type:** boolean
@@ -121,5 +127,5 @@ printing, piping, etc) on a list of tagged attachments.
 If this variable is *unset*, when operating (saving, printing, piping,
 etc) on a list of tagged attachments, NeoMutt will concatenate the
 attachments and will operate on them as a single attachment. The
-[`$attach_sep`](../index.md#attach_sep) separator is added after each attachment. When *set*,
+[`$attach_sep`](#attach-sep) separator is added after each attachment. When *set*,
 NeoMutt will operate on the attachments one by one.

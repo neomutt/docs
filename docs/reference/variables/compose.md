@@ -15,6 +15,7 @@ Mirror the structure of the software itself. Avoid instruction or explanation â€
 how-to guides and explanation pages instead.
 :::
 
+(compose-confirm-detach-first)=
 ## `$compose_confirm_detach_first`
 
 - **Type:** boolean
@@ -29,13 +30,14 @@ Note: NeoMutt only prompts for the first entry.  It doesn't keep track of
 which message is the typed message if the entries are reordered, or if the
 first entry was already deleted.
 
+(compose-format)=
 ## `$compose_format`
 
 - **Type:** string
 - **Default:** "`-- NeoMutt: Compose  [Approx. msg size: %l   Atts: %a]%>-`"
 
 Controls the format of the status line displayed in the "compose"
-menu.  This string is similar to [`$status_format`](../index.md#status_format), but has its own
+menu.  This string is similar to [`$status_format`](#status-format), but has its own
 set of `printf(3)`-like sequences:
 
 *Short* *Long Name*       *Description*
@@ -44,7 +46,7 @@ set of `printf(3)`-like sequences:
 
 `%h`    `%{hostname}`     Local hostname
 
-`%l`    `%{attach-size}`  Approximate size (in bytes) of the current message (see [`formatstrings-size`](../index.md#formatstrings_size))
+`%l`    `%{attach-size}`  Approximate size (in bytes) of the current message (see **Size Format**)
 
 `%v`    `%{version}`      NeoMutt version string
 
@@ -54,9 +56,10 @@ set of `printf(3)`-like sequences:
 
 `%|X`   `%{padding-eol}`  Pad to the end of the line with character `X`
 
-See the text describing the [`$status_format`](../index.md#status_format) option for more
-information on how to set [`$compose_format`](../index.md#compose_format).
+See the text describing the [`$status_format`](#status-format) option for more
+information on how to set [`$compose_format`](#compose-format).
 
+(compose-preview-above-attachments)=
 ## `$compose_preview_above_attachments`
 
 - **Type:** boolean
@@ -65,6 +68,7 @@ information on how to set [`$compose_format`](../index.md#compose_format).
 Show the message preview above the attachments list.
 By default it is shown below it.
 
+(compose-preview-min-rows)=
 ## `$compose_preview_min_rows`
 
 - **Type:** number
@@ -73,6 +77,7 @@ By default it is shown below it.
 This variable specifies the minimum number of rows that have to be
 available for the message preview window to shown.
 
+(compose-show-preview)=
 ## `$compose_show_preview`
 
 - **Type:** boolean
@@ -81,10 +86,11 @@ available for the message preview window to shown.
 When *set*, NeoMutt will display a preview of message in the compose
 view.
 
+(compose-show-user-headers)=
 ## `$compose_show_user_headers`
 
 - **Type:** boolean
 - **Default:** yes
 
-When *set*, NeoMutt will display user-defined headers (set via [`my-header`](../index.md#my_header)
+When *set*, NeoMutt will display user-defined headers (set via `my_header`
 or from editing with edit-headers).

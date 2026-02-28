@@ -15,6 +15,7 @@ Mirror the structure of the software itself. Avoid instruction or explanation â€
 how-to guides and explanation pages instead.
 :::
 
+(header)=
 ## `$header`
 
 - **Type:** boolean
@@ -22,8 +23,9 @@ how-to guides and explanation pages instead.
 
 When *set*, this variable causes NeoMutt to include the header
 of the message you are replying to into the edit buffer.
-The [`$weed`](../index.md#weed) setting applies.
+The [`$weed`](#weed) setting applies.
 
+(header-cache)=
 ## `$header_cache`
 
 - **Type:** path
@@ -37,8 +39,9 @@ all folders.
 By default it is *unset* so no header caching will be used.
 
 Header caching can greatly improve speed when opening POP, IMAP
-MH or Maildir folders, see "[`caching`](../index.md#caching)" in the NeoMutt Guide for details.
+MH or Maildir folders, see **caching** in the NeoMutt Guide for details.
 
+(header-cache-backend)=
 ## `$header_cache_backend`
 
 - **Type:** string
@@ -48,6 +51,7 @@ This variable specifies the header cache backend.  If no backend is
 specified, the first available backend will be used in the following order:
 tokyocabinet, kyotocabinet, qdbm, rocksdb, gdbm, bdb, tdb, lmdb.
 
+(header-cache-compress-level)=
 ## `$header_cache_compress_level`
 
 - **Type:** number
@@ -56,6 +60,7 @@ tokyocabinet, kyotocabinet, qdbm, rocksdb, gdbm, bdb, tdb, lmdb.
 When NeoMutt is compiled with lz4, zstd or zlib, this option can be used
 to setup the compression level.
 
+(header-cache-compress-method)=
 ## `$header_cache_compress_method`
 
 - **Type:** string
@@ -65,6 +70,7 @@ When NeoMutt is compiled with lz4, zstd or zlib, the header cache backend
 can use these compression methods for compressing the cache files.
 This results in much smaller cache file sizes and may even improve speed.
 
+(header-color-partial)=
 ## `$header_color_partial`
 
 - **Type:** boolean
@@ -76,4 +82,4 @@ color is applied to the exact text matched by the regex.  When
 
 One use of this option might be to apply color to just the header labels.
 
-See "[`color`](../index.md#color)" for more details.
+See `color` for more details.

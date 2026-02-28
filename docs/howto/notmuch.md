@@ -91,7 +91,7 @@ Reads all matching messages or whole-threads. The default is 'messages' or nm_qu
 | `nm_record_tags` | string | (empty) | |
 | `nm_unread_tag` | string | `unread` | |
 
-More variables about tags configuration can be found in {ref}`Custom backend Tags Feature <custom-tags-variables>`.
+More variables about tags configuration can be found in **Custom backend Tags Feature**.
 
 :::{admonition} 📷 Screenshot Needed
 :class: tip
@@ -117,11 +117,11 @@ Notmuch adds the following functions to NeoMutt. By default, none of them are bo
 | index | `<vfolder-window-backward>` | generate virtual folder by moving the query's time window backward |
 | index | `<vfolder-window-reset>` | generate virtual folder by moving the query's time window to the present |
 
-More functions about tags can be found in {ref}`Custom backend Tags Feature <custom-tags-functions>`.
+More functions about tags can be found in **Custom backend Tags Feature**.
 
 ## Colors
 
-See {ref}`Custom backend Tags colors <custom-tags-colors>`.
+See **Custom backend Tags colors**.
 
 ## neomuttrc
 
@@ -183,7 +183,7 @@ bind index > vfolder-window-forward
 
 ## See Also
 
-- {ref}`Compile-Time Features <compile-time-features>`
+- **Compile-Time Features**
 
 ## Known Bugs
 

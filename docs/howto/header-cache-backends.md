@@ -35,7 +35,7 @@ This feature adds support for using Kyoto Cabinet, the successor to Tokyo Cabine
 
 ### See Also
 
-- {ref}`Local Caching <caching>`
+- [Local Caching](caching.md)
 - [Kyoto Cabinet](https://dbmx.net/kyotocabinet/)
 
 ### Known Bugs
@@ -60,7 +60,7 @@ It is not recommended to store the lmdb database on a shared drive.
 
 ### See Also
 
-- {ref}`Local Caching <caching>`
+- [Local Caching](caching.md)
 
 ### Known Bugs
 

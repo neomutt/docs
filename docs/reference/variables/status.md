@@ -15,12 +15,13 @@ Mirror the structure of the software itself. Avoid instruction or explanation â€
 how-to guides and explanation pages instead.
 :::
 
+(status-chars)=
 ## `$status_chars`
 
 - **Type:** character string
 - **Default:** `"-*%A"`
 
-Controls the characters used by the "%r" indicator in [`$status_format`](#status_format).
+Controls the characters used by the "%r" indicator in [`$status_format`](#status-format).
 
 | Character | Default | Description |
 |-----------|---------|-------------|
@@ -29,6 +30,7 @@ Controls the characters used by the "%r" indicator in [`$status_format`](#status
 | 3 | `%` | Mailbox is read-only, or will not be written when exiting. (You can toggle whether to write changes to a mailbox with the `<toggle-write>` operation, bound by default to "%") |
 | 4 | `A` | Folder opened in attach-message mode. (Certain operations like composing a new mail, replying, forwarding, etc. are not permitted in this mode) |
 
+(status-format)=
 ## `$status_format`
 
 - **Type:** string
@@ -52,7 +54,7 @@ Controls the format of the status line displayed in the "index" menu. This strin
 | `%o` | `%{old-count}` | Number of old messages in the mailbox (unread, seen) |
 | `%P` | `%{percentage}` | Percentage of the way through the index |
 | `%p` | `%{postponed-count}` | Number of postponed messages |
-| `%r` | `%{read-count}` | Modified/read-only/won't-write/attach-message indicator, according to [`$status_chars`](#status_chars) |
+| `%r` | `%{read-count}` | Modified/read-only/won't-write/attach-message indicator, according to [`$status_chars`](#status-chars) |
 | `%R` | `%{readonly}` | Number of read messages in the mailbox (read, seen) |
 | `%S` | `%{sort-aux}` | Current aux sorting method (`$sort_aux`) |
 | `%s` | `%{sort}` | Current sorting mode (`$sort`) |
@@ -93,6 +95,7 @@ You can force the result of any `printf(3)`-like sequence to be lowercase by pre
 
 If you prefix the sequence character with a colon (":") character, NeoMutt will replace any dots in the expansion by underscores. This might be helpful with IMAP folders that don't like dots in folder names.
 
+(status-on-top)=
 ## `$status_on_top`
 
 - **Type:** boolean

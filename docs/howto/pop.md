@@ -17,13 +17,13 @@ give the steps, show the expected result.
 
 NeoMutt has POP3 support and has the ability to work with mailboxes located on a remote POP3 server and fetch mail for local browsing.
 
-Remote POP3 servers can be accessed using URLs with the `pop` protocol for unencrypted and `pops` for encrypted communication. See {ref}`url-syntax` for details.
+Remote POP3 servers can be accessed using URLs with the `pop` protocol for unencrypted and `pops` for encrypted communication. See **URL syntax** for details.
 
 ## Remote POP3 Mailboxes
 
 Polling for new mail is more expensive over POP3 than locally. For this reason the frequency at which NeoMutt will check for mail remotely can be controlled by the `$pop_check_interval` variable, which defaults to every 60 seconds.
 
-Due to limitations in POP3, this method doesn't allow for some features such as editing messages, changing their flags or even deleting them. However, using {ref}`header caching <header-caching>` and {ref}`body caching <body-caching>`, NeoMutt simulates the new/old/read flags as well as flagged and replied. NeoMutt applies some logic on top of remote messages but cannot change them so that modifications of flags are lost when messages are downloaded from the POP3 server (either by NeoMutt or other tools).
+Due to limitations in POP3, this method doesn't allow for some features such as editing messages, changing their flags or even deleting them. However, using **header caching** and **body caching**, NeoMutt simulates the new/old/read flags as well as flagged and replied. NeoMutt applies some logic on top of remote messages but cannot change them so that modifications of flags are lost when messages are downloaded from the POP3 server (either by NeoMutt or other tools).
 
 1. Set the POP3 password (optionally reuse the SMTP password):
 

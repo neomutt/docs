@@ -15,6 +15,7 @@ Mirror the structure of the software itself. Avoid instruction or explanation â€
 how-to guides and explanation pages instead.
 :::
 
+(pager)=
 ## `$pager`
 
 - **Type:** command
@@ -30,6 +31,7 @@ keystrokes are necessary because you can't call NeoMutt functions
 directly from the pager, and screen resizes cause lines longer than
 the screen width to be badly formatted in the help menu.
 
+(pager-context)=
 ## `$pager_context`
 
 - **Type:** number
@@ -44,6 +46,7 @@ This variable also specifies the amount of context given for search
 results. If positive, this many lines will be given before a match,
 if 0, the match will be top-aligned.
 
+(pager-format)=
 ## `$pager_format`
 
 - **Type:** string
@@ -51,9 +54,10 @@ if 0, the match will be top-aligned.
 
 This variable controls the format of the one-line message "status"
 displayed before each message in either the internal or an external
-pager.  The valid sequences are listed in the [`$index_format`](../index.md#index_format)
+pager.  The valid sequences are listed in the [`$index_format`](#index-format)
 section.
 
+(pager-index-lines)=
 ## `$pager_index_lines`
 
 - **Type:** number
@@ -67,6 +71,7 @@ message.  This is useful, for example, to determine how many messages
 remain to be read in the current thread.  A value of 0 results in no index
 being shown.
 
+(pager-read-delay)=
 ## `$pager_read_delay`
 
 - **Type:** number
@@ -77,8 +82,9 @@ opening a new message in the pager before that message will be
 marked as read.  A value of 0 results in the message being marked
 read unconditionally; for other values, navigating to another
 message or exiting the pager before the timeout will leave the
-message marked unread.  This setting is ignored if [`$pager`](../index.md#pager) is set.
+message marked unread.  This setting is ignored if [`$pager`](#pager) is set.
 
+(pager-skip-quoted-context)=
 ## `$pager_skip_quoted_context`
 
 - **Type:** number
@@ -90,6 +96,7 @@ to a positive number at most that many lines of the previous quote
 are displayed. If the previous quote is shorter the whole quote is
 displayed.
 
+(pager-stop)=
 ## `$pager_stop`
 
 - **Type:** boolean

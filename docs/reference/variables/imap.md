@@ -15,6 +15,7 @@ Mirror the structure of the software itself. Avoid instruction or explanation â€
 how-to guides and explanation pages instead.
 :::
 
+(imap-authenticators)=
 ## `$imap_authenticators`
 
 - **Type:** string list
@@ -40,6 +41,7 @@ set imap_authenticators="gssapi:cram-md5:login"
 the previous methods are unavailable. If a method is available but
 authentication fails, NeoMutt will not connect to the IMAP server.
 
+(imap-check-subscribed)=
 ## `$imap_check_subscribed`
 
 - **Type:** boolean
@@ -48,8 +50,9 @@ authentication fails, NeoMutt will not connect to the IMAP server.
 When *set*, NeoMutt will fetch the set of subscribed folders from
 your server whenever a mailbox is **selected**, and add them to the set
 of mailboxes it polls for new mail just as if you had issued individual
-"[mailboxes](#mailboxes)" commands.
+`mailboxes` commands.
 
+(imap-condstore)=
 ## `$imap_condstore`
 
 - **Type:** boolean
@@ -64,6 +67,7 @@ downloading initial messages.  Unfortunately, Gmail is not one
 those, and displays worse performance when enabled.  Your
 mileage may vary.
 
+(imap-deflate)=
 ## `$imap_deflate`
 
 - **Type:** boolean
@@ -75,6 +79,7 @@ if advertised by the server.
 In general a good compression efficiency can be achieved, which
 speeds up reading large mailboxes also on fairly good connections.
 
+(imap-delim-chars)=
 ## `$imap_delim_chars`
 
 - **Type:** string
@@ -84,6 +89,7 @@ This contains the list of characters that NeoMutt will use as folder
 separators for IMAP paths, when no separator is provided on the IMAP
 connection.
 
+(imap-fetch-chunk-size)=
 ## `$imap_fetch_chunk_size`
 
 - **Type:** number (long)
@@ -96,6 +102,7 @@ disconnect when opening the mailbox, by sending a FETCH per set
 of this many headers, instead of a single FETCH for all new
 headers.
 
+(imap-headers)=
 ## `$imap_headers`
 
 - **Type:** string
@@ -112,6 +119,7 @@ headers for spam detection.
 and not contain the colon, e.g. "X-BOGOSITY X-SPAM-STATUS" for the
 "X-Bogosity:" and "X-Spam-Status:" header fields.
 
+(imap-idle)=
 ## `$imap_idle`
 
 - **Type:** boolean
@@ -123,6 +131,7 @@ to check for new mail in the current mailbox. Some servers
 to NeoMutt's implementation. If your connection seems to freeze
 up periodically, try unsetting this.
 
+(imap-keep-alive)=
 ## `$imap_keep_alive`
 
 - **Type:** number
@@ -136,6 +145,7 @@ a server is allowed to do this, but in practice the RFC does get
 violated every now and then. Reduce this number if you find yourself
 getting disconnected from your IMAP server due to inactivity.
 
+(imap-list-subscribed)=
 ## `$imap_list_subscribed`
 
 - **Type:** boolean
@@ -145,6 +155,7 @@ This variable configures whether IMAP folder browsing will look for
 only subscribed folders or all folders.  This can be toggled in the
 IMAP browser with the `<toggle-subscribed>` function.
 
+(imap-login)=
 ## `$imap_login`
 
 - **Type:** string
@@ -154,6 +165,7 @@ Your login name on the IMAP server.
 
 This variable defaults to the value of [$imap_user](#imap-user).
 
+(imap-oauth-refresh-command)=
 ## `$imap_oauth_refresh_command`
 
 - **Type:** command
@@ -162,8 +174,9 @@ This variable defaults to the value of [$imap_user](#imap-user).
 The command to run to generate an OAUTH refresh token for
 authorizing your connection to your IMAP server.  This command will be
 run on every connection attempt that uses the OAUTHBEARER or XOAUTH2
-authentication mechanisms.  See "[oauth](#oauth)" for details.
+authentication mechanisms.  See [OAuth](../../howto/oauth.md) for details.
 
+(imap-pass)=
 ## `$imap_pass`
 
 - **Type:** string
@@ -177,6 +190,7 @@ function or try to open an IMAP folder.
 fairly secure machine, because the superuser can read your neomuttrc even
 if you are the only one who can read the file.
 
+(imap-passive)=
 ## `$imap_passive`
 
 - **Type:** boolean
@@ -188,6 +202,7 @@ connections.  This is useful if you don't want to be prompted for
 user/password pairs on NeoMutt invocation, or if opening the connection
 is slow.
 
+(imap-peek)=
 ## `$imap_peek`
 
 - **Type:** boolean
@@ -198,6 +213,7 @@ whenever you fetch a message from the server. This is generally a good thing,
 but can make closing an IMAP folder somewhat slower. This option exists to
 appease speed freaks.
 
+(imap-pipeline-depth)=
 ## `$imap_pipeline_depth`
 
 - **Type:** number
@@ -211,6 +227,7 @@ so if you have problems you might want to try setting this variable to 0.
 
 **Note:** Changes to this variable have no effect on open connections.
 
+(imap-poll-timeout)=
 ## `$imap_poll_timeout`
 
 - **Type:** number
@@ -221,6 +238,7 @@ that NeoMutt will wait for a response when polling IMAP connections
 for new mail, before timing out and closing the connection.  Set
 to 0 to disable timing out.
 
+(imap-qresync)=
 ## `$imap_qresync`
 
 - **Type:** boolean
@@ -234,6 +252,7 @@ Note: this feature is currently experimental.  If you experience
 strange behavior, such as duplicate or missing messages please
 file a bug report to let us know.
 
+(imap-rfc5161)=
 ## `$imap_rfc5161`
 
 - **Type:** boolean
@@ -245,6 +264,7 @@ not properly respond to ENABLE commands, which might cause NeoMutt to hang.
 If your connection seems to freeze at login, try unsetting this. See also
 [https://github.com/neomutt/neomutt/issues/1689](https://github.com/neomutt/neomutt/issues/1689)
 
+(imap-send-id)=
 ## `$imap_send_id`
 
 - **Type:** boolean
@@ -254,6 +274,7 @@ When *set*, NeoMutt will send an IMAP ID command (RFC2971) to the
 server when logging in if advertised by the server. This command provides
 information about the IMAP client, such as "NeoMutt" and the current version.
 
+(imap-server-noise)=
 ## `$imap_server_noise`
 
 - **Type:** boolean
@@ -265,6 +286,7 @@ harmless, or generated due to configuration problems on the
 server which are out of the users' hands, you may wish to suppress
 them at some point.
 
+(imap-user)=
 ## `$imap_user`
 
 - **Type:** string

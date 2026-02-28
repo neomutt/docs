@@ -15,6 +15,7 @@ Mirror the structure of the software itself. Avoid instruction or explanation â€
 how-to guides and explanation pages instead.
 :::
 
+(crypt-auto-encrypt)=
 ## `$crypt_auto_encrypt`
 
 - **Type:** boolean
@@ -22,13 +23,14 @@ how-to guides and explanation pages instead.
 
 Setting this variable will cause NeoMutt to always attempt to PGP
 encrypt outgoing messages.  This is probably only useful in
-connection to the "[send-hook](#send-hook)" command.  It can be overridden
+connection to the `send-hook` command.  It can be overridden
 by use of the pgp menu, when encryption is not required or
 signing is requested as well.  If [$smime_is_default](#smime-is-default) is *set*,
 then OpenSSL is used instead to create S/MIME messages and
 settings can be overridden by use of the smime menu instead.
 (Crypto only)
 
+(crypt-auto-pgp)=
 ## `$crypt_auto_pgp`
 
 - **Type:** boolean
@@ -39,6 +41,7 @@ PGP encryption/signing for messages.  See also [$crypt_auto_encrypt](#crypt-auto
 [$crypt_reply_encrypt](#crypt-reply-encrypt),
 [$crypt_auto_sign](#crypt-auto-sign), [$crypt_reply_sign](#crypt-reply-sign) and [$smime_is_default](#smime-is-default).
 
+(crypt-auto-sign)=
 ## `$crypt_auto_sign`
 
 - **Type:** boolean
@@ -52,6 +55,7 @@ then OpenSSL is used instead to create S/MIME messages and settings can
 be overridden by use of the smime menu instead of the pgp menu.
 (Crypto only)
 
+(crypt-auto-smime)=
 ## `$crypt_auto_smime`
 
 - **Type:** boolean
@@ -62,6 +66,7 @@ S/MIME encryption/signing for messages. See also [$crypt_auto_encrypt](#crypt-au
 [$crypt_reply_encrypt](#crypt-reply-encrypt),
 [$crypt_auto_sign](#crypt-auto-sign), [$crypt_reply_sign](#crypt-reply-sign) and [$smime_is_default](#smime-is-default).
 
+(crypt-chars)=
 ## `$crypt_chars`
 
 - **Type:** character string
@@ -79,6 +84,7 @@ Controls the characters used in cryptography flags.
 | 5 | <space> | The mail has no crypto info. |
 
 
+(crypt-confirm-hook)=
 ## `$crypt_confirm_hook`
 
 - **Type:** boolean
@@ -89,6 +95,7 @@ the *crypt-hook* command.  If unset, no such confirmation prompt will
 be presented.  This is generally considered unsafe, especially where
 typos are concerned.
 
+(crypt-encryption-info)=
 ## `$crypt_encryption_info`
 
 - **Type:** boolean
@@ -99,6 +106,7 @@ before an encrypted part,
 with details about the encryption.
 (Crypto only)
 
+(crypt-opportunistic-encrypt)=
 ## `$crypt_opportunistic_encrypt`
 
 - **Type:** boolean
@@ -122,6 +130,7 @@ a message, this option will be disabled for that message.  It can
 be manually re-enabled in the pgp or smime menus.
 (Crypto only)
 
+(crypt-opportunistic-encrypt-strong-keys)=
 ## `$crypt_opportunistic_encrypt_strong_keys`
 
 - **Type:** boolean
@@ -138,6 +147,7 @@ The GPGME backend will use the same filters as with OpenPGP, and depends
 on GPGME's logic for assigning the GPGME_VALIDITY_FULL and
 GPGME_VALIDITY_ULTIMATE validity flag.
 
+(crypt-protected-headers-read)=
 ## `$crypt_protected_headers_read`
 
 - **Type:** boolean
@@ -160,6 +170,7 @@ If you reply to a message before opening it, NeoMutt will end up using
 the dummy Subject header, so be sure to open such a message first.
 (Crypto only)
 
+(crypt-protected-headers-save)=
 ## `$crypt_protected_headers_save`
 
 - **Type:** boolean
@@ -186,6 +197,7 @@ Please make sure you understand the consequences of this before
 you enable this variable.
 (Crypto only)
 
+(crypt-protected-headers-subject)=
 ## `$crypt_protected_headers_subject`
 
 - **Type:** string
@@ -199,6 +211,7 @@ To prevent a subject from being substituted, unset this variable, or set it
 to the empty string.
 (Crypto only)
 
+(crypt-protected-headers-weed)=
 ## `$crypt_protected_headers_weed`
 
 - **Type:** boolean
@@ -207,6 +220,7 @@ to the empty string.
 Controls whether NeoMutt will weed protected header fields.
 (Crypto only)
 
+(crypt-protected-headers-write)=
 ## `$crypt_protected_headers_write`
 
 - **Type:** boolean
@@ -222,6 +236,7 @@ For more information see [https://github.com/autocrypt/protected-headers](https:
 Currently NeoMutt only supports the Subject header.
 (Crypto only)
 
+(crypt-reply-encrypt)=
 ## `$crypt_reply_encrypt`
 
 - **Type:** boolean
@@ -230,6 +245,7 @@ Currently NeoMutt only supports the Subject header.
 If *set*, automatically PGP or OpenSSL encrypt replies to messages which
 are encrypted. (Crypto only)
 
+(crypt-reply-sign)=
 ## `$crypt_reply_sign`
 
 - **Type:** boolean
@@ -242,6 +258,7 @@ signed.
 *and* signed!
 (Crypto only)
 
+(crypt-reply-sign-encrypted)=
 ## `$crypt_reply_sign_encrypted`
 
 - **Type:** boolean
@@ -255,6 +272,7 @@ the problem noted in [$crypt_reply_sign](#crypt-reply-sign), that NeoMutt is not
 to find out whether an encrypted message is also signed.
 (Crypto only)
 
+(crypt-timestamp)=
 ## `$crypt_timestamp`
 
 - **Type:** boolean
@@ -266,6 +284,7 @@ If you are using colors to mark these lines, and rely on these,
 you may *unset* this setting.
 (Crypto only)
 
+(crypt-use-gpgme)=
 ## `$crypt_use_gpgme`
 
 - **Type:** boolean
@@ -279,6 +298,7 @@ this option in .neomuttrc; it won't have any effect when used interactively.
 Note that the GPGME backend does not support creating old-style inline
 (traditional) PGP encrypted or signed messages (see [$pgp_auto_inline](#pgp-auto-inline)).
 
+(crypt-use-pka)=
 ## `$crypt_use_pka`
 
 - **Type:** boolean
@@ -288,6 +308,7 @@ Controls whether NeoMutt uses PKA during signature verification
 (only supported by the GPGME backend).
 See: [http://www.g10code.de/docs/pka-intro.de.pdf](http://www.g10code.de/docs/pka-intro.de.pdf)
 
+(crypt-verify-sig)=
 ## `$crypt_verify_sig`
 
 - **Type:** quadoption

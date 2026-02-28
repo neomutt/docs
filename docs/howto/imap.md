@@ -17,7 +17,7 @@ give the steps, show the expected result.
 
 NeoMutt has IMAP support and has the ability to work with folders located on a remote IMAP server.
 
-You can access the remote inbox by selecting the folder by its URL (see {ref}`url-syntax` for details) using the `imap` or `imaps` protocol. Alternatively, a pine-compatible notation is also supported, i.e. `{[username@]imapserver[:port][/ssl]}path/to/folder`
+You can access the remote inbox by selecting the folder by its URL (see **URL syntax** for details) using the `imap` or `imaps` protocol. Alternatively, a pine-compatible notation is also supported, i.e. `{[username@]imapserver[:port][/ssl]}path/to/folder`
 
 Note that not all servers use `/` as the hierarchy separator. NeoMutt should correctly notice which separator is being used by the server and convert paths accordingly.
 

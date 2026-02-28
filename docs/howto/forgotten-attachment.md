@@ -21,7 +21,7 @@ The "forgotten-attachment" feature provides a new setting for NeoMutt that alert
 the message body contains a certain keyword but there are no attachments added. This is meant
 to ensure that the user does not forget to attach a file after promising to do so in the mail.
 The attachment keyword will not be scanned in text matched by
-{ref}`$quote_regex <quote-regex>`.
+`$quote_regex`.
 
 :::{admonition} 📷 Screenshot Needed
 :class: tip
@@ -72,8 +72,8 @@ set abort_noattach_regex = "\\<attach(|ed|ments?)\\>"
 
 ## See Also
 
-- {ref}`The Attachment Menu <attach-menu>`
-- {ref}`The Attachment Menu key mappings <attachment-map>`
+- **The Attachment Menu**
+- **The Attachment Menu key mappings**
 
 ## Known Bugs
 

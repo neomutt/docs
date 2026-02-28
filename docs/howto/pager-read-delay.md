@@ -35,7 +35,7 @@ message as read.
 ## Variables
 
 The "Pager Read Delay" feature adds one new config variable,
-{ref}`$pager_read_delay <pager-read-delay>`, which is an integer for how many
+`$pager_read_delay`, which is an integer for how many
 seconds the pager must remain on a given message before marking it as read. The
 variable defaults to 0 for the original behavior of marking a message as read
 the moment the pager visits it.
@@ -53,7 +53,7 @@ set pager_read_delay = 5
 
 ## Known Bugs
 
-When {ref}`$pager_index_lines <pager-index-lines>` is non-zero, the "N" status
+When `$pager_index_lines` is non-zero, the "N" status
 indicator from the "%Z" expando of {ref}`$index_format <index-format>` does not
 actively reflect the current new/read status of the message.
 
