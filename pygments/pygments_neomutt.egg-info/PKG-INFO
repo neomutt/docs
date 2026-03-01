@@ -1,8 +1,0 @@
-Metadata-Version: 2.4
-Name: pygments-neomutt
-Version: 1.0.0
-Summary: Pygments lexer for NeoMutt configuration files
-License-Expression: GPL-2.0-or-later
-Requires-Python: >=3.9
-Description-Content-Type: text/markdown
-Requires-Dist: pygments>=2.0
