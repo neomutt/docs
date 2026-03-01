@@ -70,7 +70,7 @@ unset variable [variable ...]
 reset variable [variable ...]
 toggle variable [variable ...]
 set variable ?
-```neomuttrc
+```
 
 This command is used to set (and unset) configuration variables. There are several basic
 types of variables: boolean, number, string, string list and quadoption. *boolean* variables
@@ -101,7 +101,7 @@ variable by suffixing the name of the variable with a question mark:
 
 ```neomuttrc
 set allow_8bit?
-```neomuttrc
+```
 
 The old prefix query syntax (`set ?allow_8bit`) is also still supported.
 
@@ -141,7 +141,7 @@ the `source` command:
 set my_cfgdir = $HOME/neomutt/config
 source $my_cfgdir/hooks $my_cfgdir/macros
 # more source commands...
-```neomuttrc
+```
 
 A custom variable can also be used in macros to backup the current value of another
 variable. In the following example, the value of the `$delete` is changed temporarily while
@@ -154,7 +154,7 @@ macro pager ,x '\
 <enter-command>set delete=yes<enter>\
 ...\
 <enter-command>set delete=$my_delete<enter>'
-```neomuttrc
+```
 
 Since NeoMutt expands such values already when parsing the configuration file(s), the value
 of `$my_delete` in the last example would be the value of `$delete` exactly as it was at
@@ -169,7 +169,7 @@ macro pager <PageDown> "\
 <next-page>\
 <enter-command> set pager_stop=\$my_old_pager_stop<Enter>\
 <enter-command> unset my_old_pager_stop<Enter>"
-```neomuttrc
+```
 
 Note that there is a space between `<enter-command>` and the `set` configuration command,
 preventing NeoMutt from recording the `macro`'s commands into its history.
@@ -191,7 +191,7 @@ set my_sort = "date-received"     # value is string "date-received"
 set sort = "last-$my_sort"        # value is sort last-date-received
 set my_inc = $read_inc            # value is string "10" (default of $read_inc)
 set my_foo = $my_inc              # value is string "10"
-```neomuttrc
+```
 
 These assignments are all valid. If, however, the value of `$my_lines` would have been
 "five" (or something else that cannot be parsed into a number), the assignment to
@@ -206,7 +206,7 @@ set my_pattern = "~A"
 set my_number = "10"
 # same as: score ~A +10
 score $my_pattern +$my_number
-```neomuttrc
+```
 
 What does *not* work is:
 

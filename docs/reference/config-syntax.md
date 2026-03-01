@@ -19,7 +19,7 @@ An initialization file consists of a series of [commands](commands.md). Each lin
 
 ```neomuttrc
 set real_name='John Smith' ; ignore x-
-```neomuttrc
+```
 
 ## Comments
 
@@ -27,7 +27,7 @@ The hash mark, or pound sign (`#`), is used as a "comment" character. You can us
 
 ```neomuttrc
 my-header X-Disclaimer: Why are you listening to me?   # This is a comment
-```neomuttrc
+```
 
 ## Quoting
 
@@ -37,7 +37,7 @@ Single quotes (`'`) and double quotes (`"`) can be used to quote strings which c
 
 ```neomuttrc
 set real_name="John \"anonymous\" Doe"
-```neomuttrc
+```
 
 `\\` means to insert a literal `\` into the line. `\n` and `\r` have their usual C meanings of linefeed and carriage-return, respectively.
 
@@ -49,7 +49,7 @@ A `\` at the end of a line can be used to split commands over multiple lines as 
 set status_format="some very \
 long value split \
 over several lines"
-```neomuttrc
+```
 
 :::{note}
 Using `\` at the end of a line *only* removes the newline character.
@@ -63,13 +63,13 @@ It is also possible to substitute the output of a Unix command in an initializat
 
 ```neomuttrc
 my-header X-Operating-System: `uname -a`
-```neomuttrc
+```
 
 To avoid the output of backticks being parsed, place them inside double quotes. This is useful so that special characters in the output (e.g. `'`, `#`, `$`) are not parsed and interpreted specially by NeoMutt.
 
 ```neomuttrc
 set imap_pass="`gpg --batch -q --decrypt ~/.neomutt/account.gpg`"
-```neomuttrc
+```
 
 ## Variable Expansion
 

@@ -27,7 +27,7 @@ There are some examples of both compressed and encrypted files, later. For now, 
 open-hook   regex "shell-command"
 close-hook  regex "shell-command"
 append-hook regex "shell-command"
-```neomuttrc
+```
 
 The shell-command must contain two placeholders for filenames: `%f` and `%t`. These represent "from" and "to" filenames. These placeholders should be placed inside single-quotes to prevent unintended shell expansions.
 
@@ -52,7 +52,7 @@ The command:
 
 ```neomuttrc
 open-hook regex "shell-command"
-```neomuttrc
+```
 
 If NeoMutt is unable to open a file, it then looks for `open-hook` that matches the filename.
 
@@ -62,7 +62,7 @@ If your compression program doesn't have a well-defined extension, then you can 
 
 ```neomuttrc
 open-hook '\.gz$' "gzip --stdout --decompress '%f' > '%t'"
-```neomuttrc
+```
 
 - NeoMutt finds a file, "example.gz", that it can't read
 - NeoMutt has an `open-hook` whose regex matches the filename: `\.gz$`
@@ -72,7 +72,7 @@ open-hook '\.gz$' "gzip --stdout --decompress '%f' > '%t'"
 
 ```neomuttrc
 close-hook regex "shell-command"
-```neomuttrc
+```
 
 When NeoMutt has finished with a compressed mail folder, it will look for a matching `close-hook` to recompress the file. This hook is optional.
 
@@ -84,7 +84,7 @@ If the folder has not been modified, the `close-hook` will not be called.
 
 ```neomuttrc
 close-hook '\.gz$' "gzip --stdout '%t' > '%f'"
-```neomuttrc
+```
 
 - NeoMutt has finished with a folder, "example.gz", that it opened with `open-hook`
 - The folder has been modified
@@ -99,7 +99,7 @@ The `close-hook` can also include extra options, e.g. compression level: `--best
 
 ```neomuttrc
 append-hook regex "shell-command"
-```neomuttrc
+```
 
 When NeoMutt wants to append an email to a compressed mail folder, it will look for a matching `append-hook`. This hook is optional.
 
@@ -117,7 +117,7 @@ If your command writes to stdout, it is vital that you use `>>` in the "append-h
 
 ```neomuttrc
 append-hook '\.gz$' "gzip --stdout '%t' >> '%f'"
-```neomuttrc
+```
 
 - NeoMutt wants to append an email to a folder, "example.gz", that it opened with `open-hook`
 - NeoMutt has an `append-hook` whose regex matches the filename: `\.gz$`

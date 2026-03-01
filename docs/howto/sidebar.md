@@ -82,7 +82,7 @@ Usage:
 ```neomuttrc
 sidebar-pin <mailbox> [<mailbox> ...]
 sidebar-unpin { * | <mailbox> [<mailbox> ...] }
-```neomuttrc
+```
 
 :::{note}
 Before 2026-01-13, these commands were called `sidebar_pin` and `sidebar_unpin`.

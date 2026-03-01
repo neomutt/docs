@@ -29,7 +29,7 @@ uncolor <object>
 uncolor <pattern-object> { <pattern> | * }
 uncolor <regex-object> { <regex> | * }
 uncolor status { <regex> | * }
-```neomuttrc
+```
 
 If your terminal supports color, you can spice up NeoMutt by creating your own color scheme.
 
@@ -80,7 +80,7 @@ If your terminal supports it, the special keyword *default* can be used as a tra
 # Make error messages white text on a red background
 color error default red
 color error white   default
-```neomuttrc
+```
 
 On startup NeoMutt tries to detect whether the terminal it is running in supports directcolor (aka TrueColor aka 24-bit color). If the terminal does, NeoMutt enables the config variable `$color_directcolor` otherwise it disables it. Furthermore, NeoMutt allows to use the RGB colors syntax with the `color` command to colour elements with 24-bit colors.
 
@@ -90,7 +90,7 @@ If NeoMutt does not detect directcolor color support, but you are sure your term
 
 ```neomuttrc
 TERM=xterm-direct neomutt
-```neomuttrc
+```
 
 If that still does not help, you can additionally force NeoMutt to use directcolors by setting `$color_directcolor`. Setting this variable manually is strongly discouraged since it usually leads to wrong colors.
 
@@ -128,12 +128,12 @@ These are general NeoMutt objects:
 color error white red
 # Make questions bold, underlined, with light blue text (with default background)
 color prompt bold underline cyan default
-```neomuttrc
+```
 
 ```neomuttrc
 uncolor error
 uncolor prompt
-```neomuttrc
+```
 
 These are sidebar objects. See [Sidebar](sidebar.md) for more details.
 
@@ -151,11 +151,11 @@ These are sidebar objects. See [Sidebar](sidebar.md) for more details.
 
 ```neomuttrc
 color sidebar_divider brightblack default
-```neomuttrc
+```
 
 ```neomuttrc
 uncolor sidebar_divider
-```neomuttrc
+```
 
 These are compose objects.
 
@@ -169,11 +169,11 @@ These are compose objects.
 
 ```neomuttrc
 color compose_header bold white default
-```neomuttrc
+```
 
 ```neomuttrc
 uncolor compose_header
-```neomuttrc
+```
 
 The quoted objects refer to quoted lines in an email reply. They are defined using the `$reply_regex` config variable.
 
@@ -191,13 +191,13 @@ The quoted email colours don't use a pattern. The first colour, `quoted` provide
 color quoted brightblue default
 color quoted1 brightgreen default
 color quoted2 yellow default
-```neomuttrc
+```
 
 ```neomuttrc
 uncolor quoted
 uncolor quoted1
 uncolor quoted2
-```neomuttrc
+```
 
 :::{admonition} 📷 Screenshot Needed
 :class: tip
@@ -251,13 +251,13 @@ Color lists can be undone by using the `uncolor` command and the pattern or `*` 
 color index          cyan default "~f @work.com"
 # Extra highlighting for the boss (just the author column)
 color index_author   cyan red     "~f boss@work.com"
-```neomuttrc
+```
 
 ```neomuttrc
 uncolor index          "~f @work.com"
 # Clear all index_author colors
 uncolor index_author   *
-```neomuttrc
+```
 
 ```neomuttrc
 # Add some highlights to the body of an email
@@ -265,14 +265,14 @@ color body    bold red    default "(urgent|important)"
 color body         yellow default "(warning|notice)"
 # Make the label header red
 color header       cyan   default "X-Label"
-```neomuttrc
+```
 
 ```neomuttrc
 uncolor body    "(urgent|important)"
 # Clear all body colors
 uncolor body    *
 uncolor header  "X-Label"
-```neomuttrc
+```
 
 ```neomuttrc
 # Set the default color for the entire status line
@@ -281,12 +281,12 @@ color status blue white
 color status brightred white '(New|Del|Flag):[0-9]+'
 # Highlight the contents of the []s but not the [] themselves
 color status red default '\[([^]]+)\]' 1
-```neomuttrc
+```
 
 ```neomuttrc
 uncolor status '(New|Del|Flag):[0-9]+'
 uncolor status *
-```neomuttrc
+```
 
 ### Mono Color
 
@@ -297,7 +297,7 @@ mono <object> <attribute>
 mono { header | body } <attribute> <regex>
 mono <index-object> <attribute> <pattern>
 unmono { <index-object> | header | body } { * | <pattern> ... }
-```neomuttrc
+```
 
 For *object* and *attribute*, see the `color` command.
 
@@ -312,7 +312,7 @@ Note: The pattern does not have to refer to the object you wish to color. e.g.
 
 ```neomuttrc
 color index_author red default "~sneomutt"
-```neomuttrc
+```
 
 The author appears red when the subject (\~s) contains "neomutt".
 
@@ -324,7 +324,7 @@ The index objects can be themed using the `color` command and an optional patter
 
 ```neomuttrc
 color index-object foreground background [pattern]
-```neomuttrc
+```
 
 | Object | Highlights |
 |--------|------------|
@@ -370,7 +370,7 @@ color index_number red default
 color index_size cyan default
 
 # vim: syntax=neomuttrc
-```neomuttrc
+```
 
 :::{admonition} 📷 Screenshot Needed
 :class: tip
@@ -409,7 +409,7 @@ Unlike normal color commands, `color status` can now take up to 2 extra paramete
 
 ```neomuttrc
 color status <foreground> <background> [<regex> [<num>]]
-```neomuttrc
+```
 
 With zero parameters, NeoMutt will set the default color for the entire status bar.
 
@@ -465,7 +465,7 @@ color status brightwhite default 'NeoMutt: ([^ ]+)' 1
 # Search for 'NeoMutt: ' but only highlight what comes after it
 
 # vim: syntax=neomuttrc
-```neomuttrc
+```
 
 :::{admonition} 📷 Screenshot Needed
 :class: tip
@@ -503,7 +503,7 @@ The `attach_headers` color should be used just like the `body` color.
 
 ```neomuttrc
 color attach_headers foreground background pattern
-```neomuttrc
+```
 
 ### Attach Headers Color neomuttrc
 

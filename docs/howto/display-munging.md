@@ -29,7 +29,7 @@ secondary interest.
 ```neomuttrc
 subject-regex regex replacement
 unsubject-regex { * | regex }
-```neomuttrc
+```
 
 :::{note}
 Before 2026-01-13, these commands were called `subjectrx` and `unsubjectrx`.

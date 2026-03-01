@@ -20,7 +20,7 @@ give the steps, show the expected result.
 ```neomuttrc
 alias [-group name ...] key address [, address ...] [# [comments] [tags:...]]
 unalias {* | key ...}
-```neomuttrc
+```
 
 ## Defining Aliases
 
@@ -42,7 +42,7 @@ alias jim    James Smith <js@example.com>       # Pointy-haired boss
 
 # An alias that references two other aliases
 alias friends alan, briony
-```neomuttrc
+```
 
 Aliases can be given tags (labels) which can be used for searching or limiting. Tags consist of comma-separated strings after a comment of `tags:`. In the Address Book, you can search for a tag with `~Y friends` or limit the view to friends.
 
@@ -53,7 +53,7 @@ To remove an alias or aliases (`*` means all aliases):
 ```neomuttrc
 unalias muttdude
 unalias *
-```neomuttrc
+```
 
 :::{note}
 The alias *key* is matched case insensitively when creating (checking for duplicates), removing, or expanding aliases.

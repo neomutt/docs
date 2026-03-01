@@ -32,7 +32,7 @@ text handling:
 
 ```neomuttrc
 set attach_charset="iso-2022-jp:euc-jp:shift_jis:utf-8"
-```neomuttrc
+```
 
 Note: for Japanese users, "iso-2022-*" must be put at the head
 of the value as shown above if included.

@@ -20,7 +20,7 @@ give the steps, show the expected result.
 ```neomuttrc
 macro map [,map ...] key sequence [description]
 unmacro {* | map [,map ...]} [key]
-```neomuttrc
+```
 
 Macros are a convenient way to automate various actions.
 
@@ -30,7 +30,7 @@ This command allows you to create a macro:
 
 ```neomuttrc
 macro map [,map ...] key sequence [description]
-```neomuttrc
+```
 
 Macros are useful when you would like a single key to perform a series of actions. When you press *key* in menu *map*, NeoMutt will behave as if you had typed *sequence*. So if you have a common sequence of commands you type, you can create a macro to execute those commands with a single key or fewer keys.
 

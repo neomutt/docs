@@ -209,7 +209,7 @@ Seas          1/7|  4      Sep 25  Grace Hall       ( 27)  Capybara
 
 Let's map some functions:
 
-```neomuttrc
+```
 bind index,pager \CP sidebar-prev       # Ctrl-P – Previous Mailbox
 bind index,pager \CN sidebar-next       # Ctrl-N – Next Mailbox
 bind index,pager \CO sidebar-open       # Ctrl-O – Open Highlighted Mailbox
@@ -249,7 +249,7 @@ Seas          1/7|  4 N  + Feb 23  Isla Hussain     (348)  Balearic Sea
                  |
                  |
                  |
-```neomuttrc
+```
 
 #### Features
 
@@ -305,7 +305,7 @@ bind a key to the function `<sidebar-toggle-visible>`.
 ```neomuttrc
 set sidebar_visible                         # Make the Sidebar visible by default
 bind index,pager B sidebar-toggle-visible   # Use 'B' to switch the Sidebar on and off
-```neomuttrc
+```
 
 Next, decide how wide you want the Sidebar to be. 25 characters might be enough for the
 mailbox name and some numbers. Remember, you can hide/show the Sidebar at the press of
@@ -318,7 +318,7 @@ line-drawing character.
 ```neomuttrc
 set sidebar_width = 25                  # Plenty of space
 set sidebar_divider_char = '│'          # Pretty line-drawing character
-```neomuttrc
+```
 
 ##### Sidebar Format String
 
@@ -361,7 +361,7 @@ Which breaks down as:
 
 ```neomuttrc
 set mail_check_stats
-```neomuttrc
+```
 
 ‡ = Only applicable to the current folder
 
@@ -390,7 +390,7 @@ set folder="~/mail"
 mailboxes =fruit/apple          =fruit/banana          =fruit/cherry
 mailboxes =water/sea/sicily     =water/sea/archipelago =water/sea/sibuyan
 mailboxes =water/ocean/atlantic =water/ocean/pacific   =water/ocean/arctic
-```neomuttrc
+```
 
 Shorten the names:
 
@@ -436,7 +436,7 @@ This example works well if you have lots of mailboxes which are arranged in a tr
 
 Add some mailboxes of different depths.
 
-```neomuttrc
+```
 set folder="~/mail"
 mailboxes =fruit
 mailboxes =fruit/apple =fruit/banana =fruit/cherry
@@ -449,7 +449,7 @@ mailboxes =water/ocean/atlantic =water/ocean/pacific =water/ocean/arctic
 
 Shorten the names:
 
-```neomuttrc
+```
 set sidebar_short_path                  # Shorten mailbox names
 set sidebar_delim_chars="/"             # Delete everything up to the last / character
 set sidebar_folder_indent               # Indent folders whose names we've shortened
@@ -472,7 +472,7 @@ The screenshot below shows what the Sidebar would look like before and after sho
 |water/ocean/atlantic                   |    atlantic
 |water/ocean/pacific                    |    pacific
 |water/ocean/arctic                     |    arctic
-```neomuttrc
+```
 
 Sometimes, it will be necessary to add mailboxes, that you don't use, to fill in part of the
 tree. This will trade vertical space for horizontal space (but it looks good).
@@ -490,7 +490,7 @@ number of mails.
 If you want some mailboxes to be always visible, then use the `sidebar-pin` command. It takes
 a list of mailboxes as parameters.
 
-```neomuttrc
+```
 set sidebar_new_mail_only         # Only mailboxes with new/flagged email
 sidebar-pin +fruit +fruit/apple   # Always display these two mailboxes
 ```neomuttrc
@@ -499,7 +499,7 @@ sidebar-pin +fruit +fruit/apple   # Always display these two mailboxes
 
 Here is a sample color scheme:
 
-```neomuttrc
+```
 color sidebar_background default black       # Black background
 color sidebar_indicator  default color17     # Dark blue background
 color sidebar_highlight  white   color238    # Grey background

@@ -31,7 +31,7 @@ several preferred languages, separated by `,`:
 
 ```neomuttrc
 set preferred_languages="fr,en,de"
-```neomuttrc
+```
 
 NeoMutt will try to match these strings against the multilingual header in the
 received emails "by prefix", e.g., `en` will match both `en` and `en_US`.

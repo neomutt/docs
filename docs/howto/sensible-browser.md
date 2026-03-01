@@ -27,7 +27,7 @@ This is for users who like their mailboxes in a fixed order, e.g. alphabetical, 
 # Fixed order
 set browser_sort = "alpha"
 set browser_sort = "unsorted"
-```neomuttrc
+```
 
 When you first start the browser, e.g. `c?` your current mailbox will be highlighted.
 

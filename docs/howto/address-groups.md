@@ -20,7 +20,7 @@ give the steps, show the expected result.
 ```neomuttrc
 group [-group name ...] {-rx regex ... | -addr address ...}
 ungroup [-group name ...] {* | -rx regex ... | -addr address ...}
-```neomuttrc
+```
 
 ## Creating Address Groups
 

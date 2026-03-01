@@ -28,13 +28,13 @@ The IMAP protocol has a subscription feature where the server manages a list of 
 ```neomuttrc
 subscribe-to <imap-folder-uri>
 unsubscribe-from <imap-folder-uri>
-```neomuttrc
+```
 
 *imap-folder-uri* must be an IMAP URI, from which the server and the folder is derived, e.g.
 
 ```neomuttrc
 subscribe-to imaps://mail.example.org/inbox
-```neomuttrc
+```
 
 Instead of the above commands you can also use the `<subscribe>` and `<unsubscribe>` functions of the browser (default keys `s` and `u`) to subscribe to or unsubscribe from a folder while browsing the folders on the IMAP server. The browser can be instructed to only display the folders you are subscribed to with the `<toggle-subscribed>` function. See also the `$imap_list_subscribed` variable.
 

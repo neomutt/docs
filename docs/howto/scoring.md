@@ -20,7 +20,7 @@ give the steps, show the expected result.
 ```neomuttrc
 score pattern value
 unscore {* | pattern ...}
-```neomuttrc
+```
 
 ## Adding Score Rules
 

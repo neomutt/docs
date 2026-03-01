@@ -57,7 +57,7 @@ Notmuch adds the following functions to NeoMutt. By default, none of them are bo
 ```neomuttrc
 tag-transforms tag transformed-string { tag transformed-string ...}
 tag-formats    tag format-string      { tag format-string ...}
-```neomuttrc
+```
 
 ### Colors
 

@@ -72,14 +72,14 @@ set mime_forward = ask-yes        # ask whether to forward as attachment
 ignore *
 unignore from: to: cc: date: subject:
 hdr_order from: to: cc: date: subject:
-```neomuttrc
+```
 
 Store passwords in an encrypted file and load them with backticks rather than storing them
 in plain text — for example:
 
 ```neomuttrc
 set imap_pass = "`gpg --batch -q --decrypt ~/.neomutt/account.gpg`"
-```neomuttrc
+```
 
 Once NeoMutt starts without errors, continue reading to understand the full configuration
 syntax and all available file locations.
@@ -192,7 +192,7 @@ or more commands. When multiple commands are used, they must be separated by a s
 
 ```neomuttrc
 set real_name='John Smith' ; ignore x-
-```neomuttrc
+```
 
 The hash mark, or pound sign ("#"), is used as a "comment" character. You can use it to
 annotate your initialization file. All text after the comment character to the end of the line
@@ -202,7 +202,7 @@ is ignored.
 
 ```neomuttrc
 my-header X-Disclaimer: Why are you listening to me?   # This is a comment
-```neomuttrc
+```
 
 Single quotes ("'") and double quotes (""") can be used to quote strings which contain spaces
 or other special characters. The difference between the two types of quotes is similar to that
@@ -219,7 +219,7 @@ interpreted character.
 
 ```neomuttrc
 set real_name="John \"anonymous\" Doe"
-```neomuttrc
+```
 
 "\\\\" means to insert a literal "\\" into the line. "\\n" and "\\r" have their usual
 C meanings of linefeed and carriage-return, respectively.
@@ -235,7 +235,7 @@ commenting out the first line only.
 set status_format="some very \
 long value split \
 over several lines"
-```neomuttrc
+```
 
 :::{note}
 Using "\\" at the end of a line *only* removes the newline character.
@@ -252,7 +252,7 @@ oriented, only the first line of output from the Unix command will be substitute
 
 ```neomuttrc
 my-header X-Operating-System: `uname -a`
-```neomuttrc
+```
 
 To avoid the output of backticks being parsed, place them inside double quotes. For example,
 the output of the gpg decryption is assigned directly to $imap_pass, so that special
@@ -263,7 +263,7 @@ neomutt.
 
 ```neomuttrc
 set imap_pass="`gpg --batch -q --decrypt ~/.neomutt/account.gpg`"
-```neomuttrc
+```
 
 Both environment variables and NeoMutt variables can be accessed by prepending "$" to the name
 of the variable. For example,

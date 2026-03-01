@@ -83,7 +83,7 @@ If your terminal supports it, the special keyword `default` can be used as a tra
 # Make error messages white text on a red background
 color error default red
 color error white   default
-```neomuttrc
+```
 
 ## Attributes
 

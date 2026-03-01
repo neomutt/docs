@@ -91,13 +91,13 @@ To make history persistent across sessions, set:
 ```neomuttrc
 set history_file = ~/.config/neomutt/history
 set save_history = 100
-```neomuttrc
+```
 
 To remove all duplicate entries (not just consecutive ones):
 
 ```neomuttrc
 set history_remove_dups
-```neomuttrc
+```
 
 Entries starting with a space are silently ignored — useful in macros to avoid polluting
 history with transient values.
@@ -110,7 +110,7 @@ of *under* it):
 
 ```neomuttrc
 bind editor <delete> backspace
-```neomuttrc
+```
 
 ## Using an External Editor
 

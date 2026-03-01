@@ -20,7 +20,7 @@ give the steps, show the expected result.
 ```neomuttrc
 spam regex [format]
 nospam {* | regex}
-```neomuttrc
+```
 
 ## Overview
 
@@ -49,7 +49,7 @@ spam "X-DCC-.*-Metrics:.*(....)=many"         "90+/DCC-%1"
 spam "X-Spam-Status: Yes"                     "90+/SA"
 spam "X-PerlMX-Spam: .*Probability=([0-9]+)%" "%1/PM"
 set spam_separator=", "
-```neomuttrc
+```
 
 If then a message is received that DCC registered with "many" hits under the "Fuz2" checksum, and that PureMessage registered with a 97% probability of being spam, that message's spam tag would read `90+/DCC-Fuz2, 97/PM`. (The four characters before "=many" in a DCC report indicate the checksum used — in this case, "Fuz2".)
 

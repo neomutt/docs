@@ -28,18 +28,18 @@ The recommended way to enable S/MIME is to use GPGME:
 ```neomuttrc
 # Enable GPGME
 set crypt_use_gpgme
-```neomuttrc
+```
 
 If you have complex crypto needs, you can enable "classic mode" by disabling
 GPGME and setting all `smime_command_*` config variables. For example config,
 see `smime.rc` in the [Contrib repository](https://github.com/neomutt/neomutt-contrib/).
 
-```neomuttrc
+```
 # Use manual crypto functions
 unset crypt_use_gpgme
 set smime_decrypt_command = "..."
 ...
-```neomuttrc
+```
 
 ## Configuring Your S/MIME Key
 

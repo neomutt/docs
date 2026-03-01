@@ -43,7 +43,7 @@ Local mail is often arranged in directories: 'dir1/dir2/mailbox'.
 
 ```neomuttrc
 set sidebar_delim_chars='/'
-```neomuttrc
+```
 
 IMAP mailboxes are often named: 'folder1.folder2.mailbox'.
 

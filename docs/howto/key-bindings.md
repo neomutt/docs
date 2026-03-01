@@ -20,7 +20,7 @@ give the steps, show the expected result.
 ```neomuttrc
 bind map [,map ...] key function
 unbind {* | map [,map ...]} [key]
-```neomuttrc
+```
 
 This command allows you to change the default key bindings (operation invoked when pressing a key).
 
@@ -30,7 +30,7 @@ The `bind` command allows you to assign a new effect to a key (e.g. `a`) or a ke
 
 ```neomuttrc
 bind map [,map ...] key function
-```neomuttrc
+```
 
 *map* specifies in which menu the binding belongs. Multiple maps may be specified by separating them with commas (no additional whitespace is allowed). The currently defined maps are:
 
@@ -106,7 +106,7 @@ To remove a binding of a key or key sequence, `unbind` can be used:
 
 ```neomuttrc
 unbind {* | map [,map ...]} [key]
-```neomuttrc
+```
 
 *map* specifies from which menus the key sequence should be removed. Multiple maps may be specified by separating them with commas (no additional whitespace is allowed). If `*` is given, then the key sequence is removed from all menus.
 
@@ -146,7 +146,7 @@ Due to a limitation of NeoMutt, creating key bindings, or macros, will overwrite
 ```neomuttrc
 bind index g  group-reply
 bind index gg first-entry
-```neomuttrc
+```
 
 In this example, the `g` binding will be overwritten and cannot be used. Newer versions of NeoMutt will warn the user about this.
 
@@ -155,7 +155,7 @@ To avoid warnings on startup, first set the shorter binding to `noop` (no operat
 ```neomuttrc
 bind index g  noop
 bind index gg first-entry
-```neomuttrc
+```
 
 The same is also possible using `unbind`:
 

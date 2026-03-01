@@ -120,14 +120,14 @@ For example, if you specify:
 
 ```neomuttrc
 alternates user@example
-```neomuttrc
+```
 
 NeoMutt will consider `some-user@example` as being your address, too which may not be
 desired. As a solution, in such cases addresses should be specified as:
 
 ```neomuttrc
 alternates '^user@example$'
-```neomuttrc
+```
 
 The `-group` flag causes all of the subsequent regular expressions to be added to the named
 group.

@@ -48,14 +48,14 @@ neomutt -v
 
 `finish` is particularly useful when combined with `ifndef`. e.g.
 
-```neomuttrc
+```
 # Sidebar config file
 ifndef sidebar finish
 ```neomuttrc
 
 ## Commands
 
-```neomuttrc
+```
 ifdef  symbol "config-command [args...]"
 ifndef symbol "config-command [args...]"
 finish
@@ -63,7 +63,7 @@ finish
 
 ## Example neomuttrc
 
-```neomuttrc
+```
 # Example NeoMutt config file for the ifdef feature.
 
 # This feature introduces three useful commands which allow you to share
