@@ -31,6 +31,8 @@ html_logo = "_static/mutt-48x48.png"
 
 html_theme_options = {
     "max_navbar_depth": 2,
+    "pygments_light_style": "gruvbox-light",
+    "pygments_dark_style": "gruvbox-dark",
 }
 
 # -- Options for EPUB output

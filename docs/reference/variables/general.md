@@ -144,7 +144,7 @@ message could include a line like
 
 ```
 [-- PGP output follows ...
-```neomuttrc
+```
 
 and give it the same color as your attachment color (see also
 [$crypt_timestamp](#crypt-timestamp)).
@@ -2561,7 +2561,7 @@ to save attachments to files named like:
 ```
 =?iso-8859-1?Q?file=5F=E4=5F991116=2Ezip?=
 =?utf-8?Q?z=C4=99ta.png?=
-```neomuttrc
+```
 
 When this variable is *set* interactively, the change won't be
 active until you change folders.
