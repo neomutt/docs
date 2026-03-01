@@ -25,7 +25,7 @@ The "progress" feature shows a visual progress bar on slow tasks, such as indexi
 
 ## neomuttrc
 
-```bash
+```neomuttrc
 # Example NeoMutt config file for the progress feature.
 
 # The 'progress' feature provides clear visual feedback for

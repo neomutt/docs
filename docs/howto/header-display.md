@@ -34,10 +34,10 @@ line in the pager along with other headers. This line can be manipulated with
 
 **Usage:**
 
-```
+```neomuttrc
 ignore string [string ...]
 unignore { * | string ... }
-```
+```neomuttrc
 
 Messages often have many header fields added by automatic processing systems,
 or which may not seem useful to display on the screen. This command allows you
@@ -56,7 +56,7 @@ string. For example, if you do `ignore x-` it is possible to `unignore x-mailer`
 :::{admonition} Example: Header weeding
 :class: tip
 
-```
+```neomuttrc
 # Sven's draconian header weeding
 ignore *
 unignore from date subject to cc
@@ -103,7 +103,7 @@ removing the header order effects set by the system-wide startup file.
 
 ```
 header-order From Date: From: To: Cc: Subject:
-```
+```neomuttrc
 :::
 
 :::{admonition} 📷 Screenshot Needed
@@ -120,10 +120,10 @@ header-order From Date: From: To: Cc: Subject:
 
 **Usage:**
 
-```
+```neomuttrc
 my-header string
 unmy-header { * | field ... }
-```
+```neomuttrc
 
 :::{note}
 Before 2026-01-13, these commands were called `my_hdr` and `unmy_hdr`.
@@ -137,9 +137,9 @@ For example, if you would like to add an "Organization:" header field to all of
 your outgoing messages, you can put something like the following in your
 `.neomuttrc`:
 
-```
+```neomuttrc
 my-header Organization: A Really Big Company, Anytown, USA
-```
+```neomuttrc
 
 :::{note}
 Space characters are *not* allowed between the keyword and the colon (":").

@@ -42,7 +42,7 @@ The attachment keyword will not be scanned in text matched by
 
 ## neomuttrc
 
-```
+```neomuttrc
 # Example NeoMutt config file for the forgotten-attachment feature.
 
 # The 'forgotten-attachment' feature provides a new setting for NeoMutt that

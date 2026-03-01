@@ -20,7 +20,7 @@ give the steps, show the expected result.
 
 Usage:
 
-```
+```neomuttrc
 color <object> [<attribute> ...] <foreground> <background>
 color <pattern-object> [<attribute> ...] <foreground> <background> <pattern>
 color <regex-object> [<attribute> ...] <foreground> <background> <regex>
@@ -29,7 +29,7 @@ uncolor <object>
 uncolor <pattern-object> { <pattern> | * }
 uncolor <regex-object> { <regex> | * }
 uncolor status { <regex> | * }
-```
+```neomuttrc
 
 If your terminal supports color, you can spice up NeoMutt by creating your own color scheme.
 
@@ -76,11 +76,11 @@ In addition to the colors, objects may have their *attributes* set:
 
 If your terminal supports it, the special keyword *default* can be used as a transparent color. In this case *default* can be used to only set the foreground or background color. The following sets the foreground and background color individually: the first command leaves the foreground untouched while the second one leaves the background untouched:
 
-```bash
+```neomuttrc
 # Make error messages white text on a red background
 color error default red
 color error white   default
-```
+```neomuttrc
 
 On startup NeoMutt tries to detect whether the terminal it is running in supports directcolor (aka TrueColor aka 24-bit color). If the terminal does, NeoMutt enables the config variable `$color_directcolor` otherwise it disables it. Furthermore, NeoMutt allows to use the RGB colors syntax with the `color` command to colour elements with 24-bit colors.
 
@@ -88,9 +88,9 @@ For the detection to work the *TERM* environment variable must be set up properl
 
 If NeoMutt does not detect directcolor color support, but you are sure your terminal supports it, you may try to explicitly set the *TERM* environment variable by starting NeoMutt from the terminal as follows:
 
-```bash
+```neomuttrc
 TERM=xterm-direct neomutt
-```
+```neomuttrc
 
 If that still does not help, you can additionally force NeoMutt to use directcolors by setting `$color_directcolor`. Setting this variable manually is strongly discouraged since it usually leads to wrong colors.
 
@@ -123,17 +123,17 @@ These are general NeoMutt objects:
 | underline | Highlighting underlined patterns in the body of messages |
 | warning | Warning messages |
 
-```bash
+```neomuttrc
 # Make error messages white text on a red background
 color error white red
 # Make questions bold, underlined, with light blue text (with default background)
 color prompt bold underline cyan default
-```
+```neomuttrc
 
-```bash
+```neomuttrc
 uncolor error
 uncolor prompt
-```
+```neomuttrc
 
 These are sidebar objects. See [Sidebar](sidebar.md) for more details.
 
@@ -149,13 +149,13 @@ These are sidebar objects. See [Sidebar](sidebar.md) for more details.
 | sidebar_spool_file | Mailbox that receives incoming mail |
 | sidebar_unread | Mailboxes containing unread mail |
 
-```bash
+```neomuttrc
 color sidebar_divider brightblack default
-```
+```neomuttrc
 
-```bash
+```neomuttrc
 uncolor sidebar_divider
-```
+```neomuttrc
 
 These are compose objects.
 
@@ -167,13 +167,13 @@ These are compose objects.
 | compose_security_both | Mail will be encrypted and signed |
 | compose_security_none | Mail will not be encrypted or signed |
 
-```bash
+```neomuttrc
 color compose_header bold white default
-```
+```neomuttrc
 
-```bash
+```neomuttrc
 uncolor compose_header
-```
+```neomuttrc
 
 The quoted objects refer to quoted lines in an email reply. They are defined using the `$reply_regex` config variable.
 
@@ -187,17 +187,17 @@ The quoted email colours don't use a pattern. The first colour, `quoted` provide
 | ... | ... |
 | quoted9 | 9 level deeper quoted text |
 
-```bash
+```neomuttrc
 color quoted brightblue default
 color quoted1 brightgreen default
 color quoted2 yellow default
-```
+```neomuttrc
 
-```bash
+```neomuttrc
 uncolor quoted
 uncolor quoted1
 uncolor quoted2
-```
+```neomuttrc
 
 :::{admonition} 📷 Screenshot Needed
 :class: tip
@@ -246,58 +246,58 @@ Color lists can be undone by using the `uncolor` command and the pattern or `*` 
 | index_tags | pattern | Transformed message tags: `%g`, `%J` |
 | status | regex | Status bar |
 
-```bash
+```neomuttrc
 # Highlight emails from work (entire line)
 color index          cyan default "~f @work.com"
 # Extra highlighting for the boss (just the author column)
 color index_author   cyan red     "~f boss@work.com"
-```
+```neomuttrc
 
-```bash
+```neomuttrc
 uncolor index          "~f @work.com"
 # Clear all index_author colors
 uncolor index_author   *
-```
+```neomuttrc
 
-```bash
+```neomuttrc
 # Add some highlights to the body of an email
 color body    bold red    default "(urgent|important)"
 color body         yellow default "(warning|notice)"
 # Make the label header red
 color header       cyan   default "X-Label"
-```
+```neomuttrc
 
-```bash
+```neomuttrc
 uncolor body    "(urgent|important)"
 # Clear all body colors
 uncolor body    *
 uncolor header  "X-Label"
-```
+```neomuttrc
 
-```bash
+```neomuttrc
 # Set the default color for the entire status line
 color status blue white
 # Highlight New, Deleted, or Flagged emails
 color status brightred white '(New|Del|Flag):[0-9]+'
 # Highlight the contents of the []s but not the [] themselves
 color status red default '\[([^]]+)\]' 1
-```
+```neomuttrc
 
-```bash
+```neomuttrc
 uncolor status '(New|Del|Flag):[0-9]+'
 uncolor status *
-```
+```neomuttrc
 
 ### Mono Color
 
 If your terminal does not support color, it is still possible change the video attributes through the use of the "mono" command. Usage:
 
-```
+```neomuttrc
 mono <object> <attribute>
 mono { header | body } <attribute> <regex>
 mono <index-object> <attribute> <pattern>
 unmono { <index-object> | header | body } { * | <pattern> ... }
-```
+```neomuttrc
 
 For *object* and *attribute*, see the `color` command.
 
@@ -310,9 +310,9 @@ First choose which part of the index you'd like to color. Then, if needed, pick 
 
 Note: The pattern does not have to refer to the object you wish to color. e.g.
 
-```bash
+```neomuttrc
 color index_author red default "~sneomutt"
-```
+```neomuttrc
 
 The author appears red when the subject (\~s) contains "neomutt".
 
@@ -322,9 +322,9 @@ All the colors default to `default`, i.e. unset.
 
 The index objects can be themed using the `color` command and an optional pattern. A missing pattern is equivalent to a match-all `.*` pattern.
 
-```
+```neomuttrc
 color index-object foreground background [pattern]
-```
+```neomuttrc
 
 | Object | Highlights |
 |--------|------------|
@@ -342,7 +342,7 @@ color index-object foreground background [pattern]
 
 ### Index Color neomuttrc
 
-```bash
+```neomuttrc
 # Example NeoMutt config file for the index-color feature.
 
 # Entire index line
@@ -370,7 +370,7 @@ color index_number red default
 color index_size cyan default
 
 # vim: syntax=neomuttrc
-```
+```neomuttrc
 
 :::{admonition} 📷 Screenshot Needed
 :class: tip
@@ -407,9 +407,9 @@ Unlike normal color commands, `color status` can now take up to 2 extra paramete
 
 ### Status Color Commands
 
-```
+```neomuttrc
 color status <foreground> <background> [<regex> [<num>]]
-```
+```neomuttrc
 
 With zero parameters, NeoMutt will set the default color for the entire status bar.
 
@@ -425,7 +425,7 @@ With two parameters, NeoMutt will only color the num'th sub-match of the regex.
 
 ### Status Color neomuttrc
 
-```bash
+```neomuttrc
 # Example NeoMutt config file for the status-color feature.
 
 # The 'status-color' feature allows you to theme different parts of
@@ -465,7 +465,7 @@ color status brightwhite default 'NeoMutt: ([^ ]+)' 1
 # Search for 'NeoMutt: ' but only highlight what comes after it
 
 # vim: syntax=neomuttrc
-```
+```neomuttrc
 
 :::{admonition} 📷 Screenshot Needed
 :class: tip
@@ -501,13 +501,13 @@ The attach headers color feature allows specifying regexes to color attachment h
 
 The `attach_headers` color should be used just like the `body` color.
 
-```
+```neomuttrc
 color attach_headers foreground background pattern
-```
+```neomuttrc
 
 ### Attach Headers Color neomuttrc
 
-```bash
+```neomuttrc
 # Example NeoMutt config file for the attach-headers-color feature.
 
 # Color if the attachment is autoviewed

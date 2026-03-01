@@ -17,10 +17,10 @@ give the steps, show the expected result.
 
 ## Syntax
 
-```
+```neomuttrc
 group [-group name ...] {-rx regex ... | -addr address ...}
 ungroup [-group name ...] {* | -rx regex ... | -addr address ...}
-```
+```neomuttrc
 
 ## Creating Address Groups
 
@@ -32,7 +32,7 @@ The `group` command is used to directly add either addresses or regular expressi
 
 Address groups can also be created implicitly by the `alias`, `lists`, `subscribe` and `alternates` commands by specifying the optional `-group` option. For example:
 
-```
+```neomuttrc
 alternates -group me address1 address2
 alternates -group me -group work address3
 ```

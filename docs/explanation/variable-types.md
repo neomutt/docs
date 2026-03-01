@@ -61,7 +61,7 @@ user-defined
 
 The following commands are available to manipulate and query variables:
 
-```
+```neomuttrc
 set [no|inv|&]variable [?]
 set variable=value
 set variable+=increment
@@ -70,7 +70,7 @@ unset variable [variable ...]
 reset variable [variable ...]
 toggle variable [variable ...]
 set variable ?
-```
+```neomuttrc
 
 This command is used to set (and unset) configuration variables. There are several basic
 types of variables: boolean, number, string, string list and quadoption. *boolean* variables
@@ -99,9 +99,9 @@ The `unset` command automatically prepends the `no` prefix to all specified vari
 Using the `<enter-command>` function in the *index* menu, you can query the value of a
 variable by suffixing the name of the variable with a question mark:
 
-```
+```neomuttrc
 set allow_8bit?
-```
+```neomuttrc
 
 The old prefix query syntax (`set ?allow_8bit`) is also still supported.
 
@@ -137,24 +137,24 @@ make configuration files more readable.
 The following example defines and uses the variable `my_cfgdir` to abbreviate the calls of
 the `source` command:
 
-```
+```neomuttrc
 set my_cfgdir = $HOME/neomutt/config
 source $my_cfgdir/hooks $my_cfgdir/macros
 # more source commands...
-```
+```neomuttrc
 
 A custom variable can also be used in macros to backup the current value of another
 variable. In the following example, the value of the `$delete` is changed temporarily while
 its original value is saved as `my_delete`. After the macro has executed all commands, the
 original value of `$delete` is restored.
 
-```
+```neomuttrc
 macro pager ,x '\
 <enter-command>set my_delete=$delete<enter>\
 <enter-command>set delete=yes<enter>\
 ...\
 <enter-command>set delete=$my_delete<enter>'
-```
+```neomuttrc
 
 Since NeoMutt expands such values already when parsing the configuration file(s), the value
 of `$my_delete` in the last example would be the value of `$delete` exactly as it was at
@@ -163,13 +163,13 @@ value for `$delete` later in the same or another file, it would have no effect o
 `$my_delete`. However, the expansion can be deferred to runtime, as shown in the next
 example, when escaping the dollar sign.
 
-```
+```neomuttrc
 macro pager <PageDown> "\
 <enter-command> set my_old_pager_stop=\$pager_stop pager_stop<Enter>\
 <next-page>\
 <enter-command> set pager_stop=\$my_old_pager_stop<Enter>\
 <enter-command> unset my_old_pager_stop<Enter>"
-```
+```neomuttrc
 
 Note that there is a space between `<enter-command>` and the `set` configuration command,
 preventing NeoMutt from recording the `macro`'s commands into its history.
@@ -184,14 +184,14 @@ that its content is valid for the target. This also counts for custom variables 
 type string. In case of parsing errors, NeoMutt will print error messages. The example
 below demonstrates type conversions.
 
-```
+```neomuttrc
 set my_lines = "5"                # value is string "5"
 set pager_index_lines = $my_lines # value is integer 5
 set my_sort = "date-received"     # value is string "date-received"
 set sort = "last-$my_sort"        # value is sort last-date-received
 set my_inc = $read_inc            # value is string "10" (default of $read_inc)
 set my_foo = $my_inc              # value is string "10"
-```
+```neomuttrc
 
 These assignments are all valid. If, however, the value of `$my_lines` would have been
 "five" (or something else that cannot be parsed into a number), the assignment to
@@ -201,16 +201,16 @@ Type conversion applies to all configuration commands which take arguments. But 
 that every expanded value of a variable is considered just a single token. A working example
 is:
 
-```
+```neomuttrc
 set my_pattern = "~A"
 set my_number = "10"
 # same as: score ~A +10
 score $my_pattern +$my_number
-```
+```neomuttrc
 
 What does *not* work is:
 
-```
+```neomuttrc
 set my_mx = "+mailbox1 +mailbox2"
 mailboxes $my_mx +mailbox3
 ```

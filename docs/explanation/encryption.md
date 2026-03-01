@@ -23,10 +23,10 @@ via a cron job, for instance.
 The recommended way to enable OpenPGP and S/MIME is to use GPGME. This library is
 integrated into NeoMutt and can perform all the common crypto functions the user will need.
 
-```
+```neomuttrc
 # Enable GPGME
 set crypt_use_gpgme
-```
+```neomuttrc
 
 If you have complex crypto needs, then you can enable the "classic mode" by disabling GPGME
 and setting all `pgp_command_*` and `smime_command_*` config variables.
@@ -34,7 +34,7 @@ and setting all `pgp_command_*` and `smime_command_*` config variables.
 For example config, see: `gpg.rc` and `smime.rc` in the
 [Contrib repository](https://github.com/neomutt/neomutt-contrib/).
 
-```
+```neomuttrc
 # Use manual crypto functions
 unset crypt_use_gpgme
 set pgp_clear_sign_command = "..."
@@ -114,11 +114,11 @@ interactively, simply use the `-C` flag.
 
 ```
 $ neomutt -C -H - < /mail/to/be/sent
-```
+```neomuttrc
 
 ### neomuttrc
 
-```
+```neomuttrc
 # Example NeoMutt config file for the cli-crypto feature.
 
 set pgp_default_key = "1111111111111111111111111111111111111111"

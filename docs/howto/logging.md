@@ -31,7 +31,7 @@ These log messages are shown in the command bar at the bottom of the UI (usually
 
 To adjust the colours used for display:
 
-```
+```neomuttrc
 color error ...
 color message ...
 ```

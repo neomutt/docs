@@ -52,7 +52,7 @@ Also, it can be handy to jump directly to the start of the email body with the
 
 ## neomuttrc
 
-```bash
+```neomuttrc
 # Example NeoMutt config file for the skip-quoted feature.
 
 # The 'S' (skip-quoted) command scrolls the pager past the quoted text (usually

@@ -24,7 +24,7 @@ curses-based pinentry instead: `pinentry-qt`, `pinentry-gtk-2`, `pinentry-gnome3
 
 ```
 pinentry-program /usr/bin/pinentry-curses
-```
+```neomuttrc
 :::
 
 - NeoMutt compiled with GPGME support (recommended) or classic PGP mode
@@ -35,21 +35,21 @@ pinentry-program /usr/bin/pinentry-curses
 
 The recommended way to enable OpenPGP is to use GPGME:
 
-```
+```neomuttrc
 # Enable GPGME
 set crypt_use_gpgme
-```
+```neomuttrc
 
 If you have complex crypto needs, you can enable "classic mode" by disabling
 GPGME and setting all `pgp_command_*` config variables. For example config,
 see `gpg.rc` in the [Contrib repository](https://github.com/neomutt/neomutt-contrib/).
 
-```
+```neomuttrc
 # Use manual crypto functions
 unset crypt_use_gpgme
 set pgp_clear_sign_command = "..."
 ...
-```
+```neomuttrc
 
 ## Configuring Your PGP Key
 
@@ -58,7 +58,7 @@ To perform encryption, you must set the first variable. If you have a separate
 signing key, or only have a signing key, then set the second. Most people will
 only need to set `$pgp_default_key`.
 
-```
+```neomuttrc
 set pgp_default_key = "A4AF18C5582473BD35A1E9CE78BB3D480042198E"
 ```
 

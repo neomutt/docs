@@ -32,7 +32,7 @@ if NeoMutt was compiled with GnuTLS instead of OpenSSL:
 
 ```
 -openssl +gnutls
-```
+```neomuttrc
 
 Running `neomutt -vv` shows the full license and copyright information in addition to the
 version output.
@@ -54,7 +54,7 @@ Common features you may see in `neomutt -v` output include:
 You can use the `ifdef` and `ifndef` commands in your config file to conditionally apply
 settings based on whether a feature is compiled in:
 
-```
+```neomuttrc
 ifdef sidebar 'set sidebar_visible = yes'
 ifndef notmuch finish
 ```

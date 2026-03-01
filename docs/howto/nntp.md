@@ -102,7 +102,7 @@ NNTP adds the following functions to NeoMutt. By default, none of them are bound
 
 ## neomuttrc
 
-```
+```neomuttrc
 # Example NeoMutt config file for the nntp feature.
 
 # --------------------------------------------------------------------------

@@ -32,7 +32,7 @@ least-secure.
 Example:
 
 
-```
+```neomuttrc
 set nntp_authenticators="digest-md5:user"
 ```
 

@@ -32,7 +32,7 @@ in order from most-secure to least-secure.
 Example:
 
 
-```
+```neomuttrc
 set imap_authenticators="gssapi:cram-md5:login"
 ```
 

@@ -34,7 +34,7 @@ There are a number of built in shortcuts which refer to specific mailboxes. Thes
 
 To store a copy of outgoing messages in the folder they were composed in, a `folder-hook` can be used to set `$record`:
 
-```
+```neomuttrc
 folder-hook . 'set record=^'
 ```
 

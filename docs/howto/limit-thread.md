@@ -39,7 +39,7 @@ Limit-current-thread adds the following function to NeoMutt. By default, it is n
 
 ## neomuttrc
 
-```
+```neomuttrc
 # Example NeoMutt config file for the limit-current-thread feature.
 
 # Limit view to current thread

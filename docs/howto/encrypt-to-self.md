@@ -66,7 +66,7 @@ A better option is to encrypt the saved copy to yourself.
 
 ## Example neomuttrc
 
-```
+```neomuttrc
 # Example NeoMutt config file for the encrypt-to-self feature.
 
 # --------------------------------------------------------------------------

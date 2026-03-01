@@ -54,10 +54,10 @@ Notmuch adds the following functions to NeoMutt. By default, none of them are bo
 
 ### Commands
 
-```
+```neomuttrc
 tag-transforms tag transformed-string { tag transformed-string ...}
 tag-formats    tag format-string      { tag format-string ...}
-```
+```neomuttrc
 
 ### Colors
 
@@ -70,7 +70,7 @@ Adds the objects, below, to index-color feature. The objects can take an optiona
 
 ### neomuttrc
 
-```
+```neomuttrc
 # Example NeoMutt config file for the custom tags feature.
 
 # VARIABLES – shown with their default values

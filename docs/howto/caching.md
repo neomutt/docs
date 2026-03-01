@@ -78,7 +78,7 @@ The `header_cache_compress_level` defines the compression level, which should be
 
 ### neomuttrc
 
-```
+```neomuttrc
 # Example NeoMutt config file for the header cache compression feature.
 
 # --------------------------------------------------------------------------

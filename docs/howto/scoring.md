@@ -17,10 +17,10 @@ give the steps, show the expected result.
 
 ## Syntax
 
-```
+```neomuttrc
 score pattern value
 unscore {* | pattern ...}
-```
+```neomuttrc
 
 ## Adding Score Rules
 
@@ -44,6 +44,6 @@ The `unscore` command removes score entries from the list. You **must** specify 
 
 Scoring occurs as the messages are read in, before the mailbox is sorted. Because of this, patterns which depend on threading, such as *~=*, *~$*, and *~()*, will not work by default. A workaround is to push the scoring command in a folder hook. This will cause the mailbox to be rescored after it is opened and input starts being processed:
 
-```
+```neomuttrc
 folder-hook . 'push "<enter-command>score ~= 10<enter>"'
 ```

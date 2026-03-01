@@ -31,7 +31,7 @@ header of the answer.
 
 ## neomuttrc
 
-```
+```neomuttrc
 # Example NeoMutt config file for the reply-with-xorig feature.
 
 # --------------------------------------------------------------------------

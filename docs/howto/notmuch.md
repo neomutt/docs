@@ -36,10 +36,10 @@ The \<path\> is an absolute path to the directory where the notmuch database is 
 
 If the "\<path\>" is not defined then `$nm_default_url` or `$folder` is used, for example:
 
-```
+```neomuttrc
 set nm_default_url = "notmuch:///home/foo/maildir"
 named-mailboxes "My INBOX" "notmuch://?query=tag:inbox"
-```
+```neomuttrc
 
 ### Items
 
@@ -125,7 +125,7 @@ See **Custom backend Tags colors**.
 
 ## neomuttrc
 
-```
+```neomuttrc
 # Example NeoMutt config file for the notmuch feature.
 
 # --------------------------------------------------------------------------

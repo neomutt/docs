@@ -27,7 +27,7 @@ certificates is also automatically accepted. (GnuTLS only)
 
 Example:
 
-```
+```neomuttrc
 set ssl_ca_certificates_file=/etc/ssl/certs/ca-certificates.crt
 ```
 

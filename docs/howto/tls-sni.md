@@ -30,7 +30,7 @@ Two configuration variables control NeoMutt's behavior with `STARTTLS`:
 
 NeoMutt *highly recommends* setting `$ssl_force_tls` unless you need to connect to an unencrypted server. It's possible for an attacker to spoof interactions during the initial connection and hide support for `STARTTLS`. The only way to prevent these attacks is by forcing `STARTTLS` with the `$ssl_force_tls` configuration variable.
 
-```
+```neomuttrc
 set ssl_force_tls = yes
 ```
 

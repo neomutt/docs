@@ -79,11 +79,11 @@ The precise behavior depends on the terminal and its configuration. The boldface
 
 If your terminal supports it, the special keyword `default` can be used as a transparent colour. In this case `default` can be used to only set the foreground or background colour individually:
 
-```
+```neomuttrc
 # Make error messages white text on a red background
 color error default red
 color error white   default
-```
+```neomuttrc
 
 ## Attributes
 
@@ -161,7 +161,7 @@ The quoted email colours don't use a pattern. The first colour, `quoted`, provid
 (command-syntax)=
 ## Command Syntax
 
-```
+```neomuttrc
 color object [attribute ...] foreground background
 color {header | body} [attribute ...] foreground background regex
 color index [attribute ...] foreground background [pattern]

@@ -357,9 +357,9 @@ This command is used to list the secret key ring's contents.  The
 output format must be analogous to the one used by:
 
 
-```
+```neomuttrc
 gpg --list-keys --with-colons --with-fingerprint
-```
+```neomuttrc
 
 
 Note: gpg's `fixed-list-mode` option should not be used.  It

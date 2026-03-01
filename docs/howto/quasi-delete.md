@@ -43,7 +43,7 @@ On its own, this feature isn't very useful. It forms a useful part of the notmuc
 
 ## neomuttrc
 
-```
+```neomuttrc
 # Example NeoMutt config file for the quasi-delete feature.
 
 # The 'quasi-delete' function marks an email that should be hidden

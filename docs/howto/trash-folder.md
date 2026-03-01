@@ -53,7 +53,7 @@ Emails deleted from the trash folder are gone forever.
 
 ## neomuttrc
 
-```
+```neomuttrc
 # Example NeoMutt config file for the 'trash' feature.
 
 # This feature defines a new 'trash' folder.

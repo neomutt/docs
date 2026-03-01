@@ -41,9 +41,9 @@ desired effect.
 
 Example:
 
-```
+```neomuttrc
 set abort_key = "<Esc>"
-```
+```neomuttrc
 
 Please note that when using <Esc> as the abort key, you may also want to
 set the environment variable ESCDELAY to a low value or even 0 which will
@@ -64,7 +64,7 @@ as such will never be aborted.
 
 Example:
 
-```
+```neomuttrc
 set abort_noattach_regex = "\\<attach(|ed|ments?)\\>"
 ```
 
@@ -144,7 +144,7 @@ message could include a line like
 
 ```
 [-- PGP output follows ...
-```
+```neomuttrc
 
 and give it the same color as your attachment color (see also
 [$crypt_timestamp](#crypt-timestamp)).
@@ -229,9 +229,9 @@ indication are assumed to be in "us-ascii".
 
 For example, Japanese users might prefer this:
 
-```
+```neomuttrc
 set assumed_charset="iso-2022-jp:euc-jp:shift_jis:utf-8"
-```
+```neomuttrc
 
 However, only the first content is valid for the message body.
 
@@ -408,9 +408,9 @@ also automatically accepted.
 
 Example:
 
-```
+```neomuttrc
 set certificate_file=~/.neomutt/certificates
-```
+```neomuttrc
 
 (OpenSSL and GnuTLS only)
 
@@ -519,7 +519,7 @@ not implement directcolors):
 
 ```
 TERM=xterm-direct neomutt
-```
+```neomuttrc
 
 Note: This variable must be set before using any `color` commands.
 
@@ -774,9 +774,9 @@ notified of successful transmission.
 
 Example:
 
-```
+```neomuttrc
 set dsn_notify="failure,delay"
-```
+```neomuttrc
 
 **Note:** when using [$sendmail](#sendmail) for delivery, you should not enable this
 unless you are either using Sendmail 8.8.x or greater or a MTA providing a
@@ -796,7 +796,7 @@ message header, or *full* to return the full message.
 
 Example:
 
-```
+```neomuttrc
 set dsn_return=hdrs
 ```
 
@@ -852,9 +852,9 @@ not appear in `[$editor](#editor)`, a space and the name to be edited are append
 
 The resulting string is then executed by running
 
-```
+```neomuttrc
 sh -c 'string'
-```
+```neomuttrc
 
 where *string* is the expansion of `[$editor](#editor)` described above.
 
@@ -1614,9 +1614,9 @@ news server.  The following printf-style sequence is understood:
 
 Example:
 
-```
+```neomuttrc
 set inews_command="/usr/local/bin/inews -hS"
-```
+```neomuttrc
 
 (ispell)=
 ## `$ispell`
@@ -2128,10 +2128,10 @@ a connection to the server. This is useful for setting up secure
 connections, e.g. with `ssh(1)`. If the command returns a  nonzero
 status, NeoMutt gives up opening the server. Example:
 
-```
+```neomuttrc
 set preconnect="ssh -f -q -L 1234:mailhost.net:143 mailhost.net \
 sleep 20 < /dev/null > /dev/null"
-```
+```neomuttrc
 
 Mailbox "foo" on "mailhost.net" can now be reached
 as "{localhost:1234}foo".
@@ -2149,9 +2149,9 @@ This variable specifies a list of comma-separated languages.
 RFC8255 : user preferred languages to be searched in parts and display.
 Example:
 
-```
+```neomuttrc
 set preferred_languages="en,fr,de"
-```
+```neomuttrc
 
 (general-print)=
 ## `$print`
@@ -2499,7 +2499,7 @@ name from your aliases in the index menu if it finds an alias that
 matches the message's sender.  For example, if you have the following
 alias:
 
-```
+```neomuttrc
 alias juser abd30425@somewhere.net (Joe User)
 ```
 
@@ -2561,7 +2561,7 @@ to save attachments to files named like:
 ```
 =?iso-8859-1?Q?file=5F=E4=5F991116=2Ezip?=
 =?utf-8?Q?z=C4=99ta.png?=
-```
+```neomuttrc
 
 When this variable is *set* interactively, the change won't be
 active until you change folders.
@@ -3172,9 +3172,9 @@ Setting this variable will cause NeoMutt to open a pipe to a command
 instead of a raw socket. You may be able to use this to set up
 preauthenticated connections to your IMAP/POP3/SMTP server. Example:
 
-```
+```neomuttrc
 set tunnel="ssh -q mailhost.net /usr/local/libexec/imapd"
-```
+```neomuttrc
 
 Note: For this example to work you must be able to log in to the remote
 machine without having to enter a password.
@@ -3304,7 +3304,7 @@ and `<sort-mailbox>` toggles `[$use_threads](#use-threads)`.
 
 Example:
 
-```
+```neomuttrc
 set use_threads=yes
 ```
 

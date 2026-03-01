@@ -159,7 +159,7 @@ Sidebar neomuttrc.
 
 **Let's turn on the Sidebar:**
 
-```
+```neomuttrc
 set sidebar_visible
 set sidebar_format = "%B%<F? [%F]>%* %<N?%N/>%S"
 set mail_check_stats
@@ -205,11 +205,11 @@ Seas          1/7|  4      Sep 25  Grace Hall       ( 27)  Capybara
                  |
                  |
                  |
-```
+```neomuttrc
 
 Let's map some functions:
 
-```
+```neomuttrc
 bind index,pager \CP sidebar-prev       # Ctrl-P – Previous Mailbox
 bind index,pager \CN sidebar-next       # Ctrl-N – Next Mailbox
 bind index,pager \CO sidebar-open       # Ctrl-O – Open Highlighted Mailbox
@@ -238,7 +238,7 @@ Functions `<sidebar-next>` and `<sidebar-prev>` move the Sidebar **highlight**. 
 
 Press "Ctrl-O" (`<sidebar-open>`) to open the highlighted mailbox.
 
-```
+```neomuttrc
 Fruit [1]     3/8|  1    ! Mar 07  Finley Jones     (139)  Molucca Sea
 Animals [1]   2/6|  2    + Mar 24  Summer Jackson   ( 25)  Arafura Sea
 Cars            4|  3    + Feb 28  Imogen Baker     (193)  Pechora Sea
@@ -249,7 +249,7 @@ Seas          1/7|  4 N  + Feb 23  Isla Hussain     (348)  Balearic Sea
                  |
                  |
                  |
-```
+```neomuttrc
 
 #### Features
 
@@ -302,10 +302,10 @@ For a quick reference:
 The most important variable is `$sidebar_visible`. You can set this in your "neomuttrc", or
 bind a key to the function `<sidebar-toggle-visible>`.
 
-```
+```neomuttrc
 set sidebar_visible                         # Make the Sidebar visible by default
 bind index,pager B sidebar-toggle-visible   # Use 'B' to switch the Sidebar on and off
-```
+```neomuttrc
 
 Next, decide how wide you want the Sidebar to be. 25 characters might be enough for the
 mailbox name and some numbers. Remember, you can hide/show the Sidebar at the press of
@@ -315,10 +315,10 @@ Finally, you might want to change the divider character. By default, Sidebar dra
 line between it and the Index panel. If your terminal supports it, you can use a Unicode
 line-drawing character.
 
-```
+```neomuttrc
 set sidebar_width = 25                  # Plenty of space
 set sidebar_divider_char = '│'          # Pretty line-drawing character
-```
+```neomuttrc
 
 ##### Sidebar Format String
 
@@ -359,9 +359,9 @@ Which breaks down as:
 
 † = To use these expandos, you must first:
 
-```
+```neomuttrc
 set mail_check_stats
-```
+```neomuttrc
 
 ‡ = Only applicable to the current folder
 
@@ -385,16 +385,16 @@ This example works well if your mailboxes have unique names after the last separ
 
 Add some mailboxes of different depths.
 
-```
+```neomuttrc
 set folder="~/mail"
 mailboxes =fruit/apple          =fruit/banana          =fruit/cherry
 mailboxes =water/sea/sicily     =water/sea/archipelago =water/sea/sibuyan
 mailboxes =water/ocean/atlantic =water/ocean/pacific   =water/ocean/arctic
-```
+```neomuttrc
 
 Shorten the names:
 
-```
+```neomuttrc
 set sidebar_short_path                  # Shorten mailbox names (truncate all subdirs)
 set sidebar_component_depth=1           # Shorten mailbox names (truncate 1 subdirs)
 set sidebar_delim_chars="/"             # Delete everything up to the last or Nth / character
@@ -428,7 +428,7 @@ The screenshot below shows what the Sidebar would look like before and after sho
 |water/ocean/atlantic                   |ocean/atlantic
 |water/ocean/pacific                    |ocean/pacific
 |water/ocean/arctic                     |ocean/arctic
-```
+```neomuttrc
 
 **Example 2**
 
@@ -436,7 +436,7 @@ This example works well if you have lots of mailboxes which are arranged in a tr
 
 Add some mailboxes of different depths.
 
-```
+```neomuttrc
 set folder="~/mail"
 mailboxes =fruit
 mailboxes =fruit/apple =fruit/banana =fruit/cherry
@@ -445,11 +445,11 @@ mailboxes =water/sea
 mailboxes =water/sea/sicily =water/sea/archipelago =water/sea/sibuyan
 mailboxes =water/ocean
 mailboxes =water/ocean/atlantic =water/ocean/pacific =water/ocean/arctic
-```
+```neomuttrc
 
 Shorten the names:
 
-```
+```neomuttrc
 set sidebar_short_path                  # Shorten mailbox names
 set sidebar_delim_chars="/"             # Delete everything up to the last / character
 set sidebar_folder_indent               # Indent folders whose names we've shortened
@@ -472,7 +472,7 @@ The screenshot below shows what the Sidebar would look like before and after sho
 |water/ocean/atlantic                   |    atlantic
 |water/ocean/pacific                    |    pacific
 |water/ocean/arctic                     |    arctic
-```
+```neomuttrc
 
 Sometimes, it will be necessary to add mailboxes, that you don't use, to fill in part of the
 tree. This will trade vertical space for horizontal space (but it looks good).
@@ -490,16 +490,16 @@ number of mails.
 If you want some mailboxes to be always visible, then use the `sidebar-pin` command. It takes
 a list of mailboxes as parameters.
 
-```
+```neomuttrc
 set sidebar_new_mail_only         # Only mailboxes with new/flagged email
 sidebar-pin +fruit +fruit/apple   # Always display these two mailboxes
-```
+```neomuttrc
 
 #### Colors
 
 Here is a sample color scheme:
 
-```
+```neomuttrc
 color sidebar_background default black       # Black background
 color sidebar_indicator  default color17     # Dark blue background
 color sidebar_highlight  white   color238    # Grey background

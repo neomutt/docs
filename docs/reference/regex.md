@@ -33,7 +33,7 @@ The fundamental building blocks are the regular expressions that match a single 
 
 ## Matching a Literal Dot
 
-```
+```neomuttrc
 # no quotes
 alternates only\.dot@example\.org
 

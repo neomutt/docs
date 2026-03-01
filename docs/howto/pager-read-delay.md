@@ -42,7 +42,7 @@ the moment the pager visits it.
 
 ## neomuttrc
 
-```bash
+```neomuttrc
 # Example NeoMutt config file for the pager-read-delay feature.
 
 # Stay at least 5 seconds on a message before the pager marks it as read

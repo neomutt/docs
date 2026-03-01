@@ -84,39 +84,39 @@ names that appear in emails or are required by your iconv library.
 
 ### `charset-hook` — Aliasing Unknown Charset Names
 
-```
+```neomuttrc
 charset-hook alias charset
-```
+```neomuttrc
 
 The `charset-hook` command defines an alias for a character set. This is useful to
 properly display messages which are tagged with a charset name not known to NeoMutt. For
 example, some mailers send messages labelled with the non-standard name `x-unknown` instead
 of a real IANA charset name. You can map it to a sane default:
 
-```
+```neomuttrc
 charset-hook x-unknown us-ascii
-```
+```neomuttrc
 
 Other common uses include mapping Windows-specific or application-specific names to their
 standard equivalents:
 
-```
+```neomuttrc
 charset-hook cp1252 windows-1252
 charset-hook latin-1 iso-8859-1
-```
+```neomuttrc
 
 ### `iconv-hook` — System-Specific iconv Names
 
-```
+```neomuttrc
 iconv-hook charset local-charset
-```
+```neomuttrc
 
 The `iconv-hook` command defines a system-specific name for a character set. This is
 helpful when your system's character conversion library (iconv) insists on using unusual,
 system-specific names for character sets. For example, some platforms name UTF-8 as
 `UTF8` (without the hyphen):
 
-```
+```neomuttrc
 iconv-hook utf-8 UTF8
 ```
 

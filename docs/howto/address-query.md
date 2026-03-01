@@ -19,7 +19,7 @@ give the steps, show the expected result.
 
 NeoMutt supports connecting to external directory databases such as LDAP, ph/qi, bbdb, or NIS through a wrapper script which connects to NeoMutt using a simple interface. Using the `$query_command` variable, you specify the wrapper command to use. For example:
 
-```
+```neomuttrc
 set query_command = "mutt_ldap_query.pl %s"
 ```
 

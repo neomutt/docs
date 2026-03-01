@@ -88,16 +88,16 @@ your original entry.
 
 To make history persistent across sessions, set:
 
-```
+```neomuttrc
 set history_file = ~/.config/neomutt/history
 set save_history = 100
-```
+```neomuttrc
 
 To remove all duplicate entries (not just consecutive ones):
 
-```
+```neomuttrc
 set history_remove_dups
-```
+```neomuttrc
 
 Entries starting with a space are silently ignored — useful in macros to avoid polluting
 history with transient values.
@@ -108,15 +108,15 @@ Use the `bind` command with the `editor` map to remap any function. For example,
 `<Delete>` behave like `<BackSpace>` (deleting the character *before* the cursor instead
 of *under* it):
 
-```
+```neomuttrc
 bind editor <delete> backspace
-```
+```neomuttrc
 
 ## Using an External Editor
 
 Set `$editor` to launch an external editor for composing message bodies:
 
-```
+```neomuttrc
 set editor = "vim"
 ```
 

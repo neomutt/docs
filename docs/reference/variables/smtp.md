@@ -34,7 +34,7 @@ for '+sasl' in the output of neomutt -v).
 Example:
 
 
-```
+```neomuttrc
 set smtp_authenticators="digest-md5:cram-md5"
 ```
 

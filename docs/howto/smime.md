@@ -25,21 +25,21 @@ give the steps, show the expected result.
 
 The recommended way to enable S/MIME is to use GPGME:
 
-```
+```neomuttrc
 # Enable GPGME
 set crypt_use_gpgme
-```
+```neomuttrc
 
 If you have complex crypto needs, you can enable "classic mode" by disabling
 GPGME and setting all `smime_command_*` config variables. For example config,
 see `smime.rc` in the [Contrib repository](https://github.com/neomutt/neomutt-contrib/).
 
-```
+```neomuttrc
 # Use manual crypto functions
 unset crypt_use_gpgme
 set smime_decrypt_command = "..."
 ...
-```
+```neomuttrc
 
 ## Configuring Your S/MIME Key
 
@@ -48,7 +48,7 @@ As with OpenPGP, the two most important settings are `$smime_default_key` and
 variable. If you have a separate signing key, or only have a signing key, then
 set the second. Most people will only need to set `$smime_default_key`.
 
-```
+```neomuttrc
 set smime_default_key = "bb345e23.0"
 ```
 

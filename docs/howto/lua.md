@@ -23,7 +23,7 @@ In NeoMutt, Lua can be used to get/set config options and run commands.
 
 ## Commands
 
-```
+```neomuttrc
 lua "lua-commands"
 lua-source filename
 ```
@@ -34,10 +34,10 @@ lua-source filename
 
 A simple example of running some Lua commands in NeoMutt:
 
-```
+```neomuttrc
 # In NeoMutt, make the Sidebar wider
 :lua "local x = mutt.get('sidebar_width'); x = x + 5; mutt.set('sidebar_width', x)"
-```
+```neomuttrc
 
 ### Using a Lua Script File
 

@@ -43,7 +43,7 @@ most-secure to least-secure.
 Example:
 
 
-```
+```neomuttrc
 set pop_authenticators="digest-md5:apop:user"
 ```
 

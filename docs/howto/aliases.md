@@ -17,10 +17,10 @@ give the steps, show the expected result.
 
 ## Syntax
 
-```
+```neomuttrc
 alias [-group name ...] key address [, address ...] [# [comments] [tags:...]]
 unalias {* | key ...}
-```
+```neomuttrc
 
 ## Defining Aliases
 
@@ -34,7 +34,7 @@ The optional `-group` argument to `alias` causes the aliased address(es) to be a
 
 To add aliases:
 
-```
+```neomuttrc
 # Some aliases, with comments and tags
 alias alan   Alan Jones <alan@example.com>      # Al tags:friends
 alias briony Briony Williams <bw@example.com>   # tags:friends
@@ -42,7 +42,7 @@ alias jim    James Smith <js@example.com>       # Pointy-haired boss
 
 # An alias that references two other aliases
 alias friends alan, briony
-```
+```neomuttrc
 
 Aliases can be given tags (labels) which can be used for searching or limiting. Tags consist of comma-separated strings after a comment of `tags:`. In the Address Book, you can search for a tag with `~Y friends` or limit the view to friends.
 
@@ -50,10 +50,10 @@ Aliases can be given tags (labels) which can be used for searching or limiting. 
 
 To remove an alias or aliases (`*` means all aliases):
 
-```
+```neomuttrc
 unalias muttdude
 unalias *
-```
+```neomuttrc
 
 :::{note}
 The alias *key* is matched case insensitively when creating (checking for duplicates), removing, or expanding aliases.
@@ -67,7 +67,7 @@ On the other hand, the `<create-alias>` function can use only one file, the one 
 
 ### Configuring external alias files
 
-```
+```neomuttrc
 source /usr/local/share/NeoMutt.aliases
 source ~/.mail_aliases
 set alias_file=~/.mail_aliases

@@ -116,7 +116,7 @@ d) These patterns read each message in, and can therefore be much slower. Over I
 
 Special attention has to be paid when using regular expressions inside of patterns. Specifically, NeoMutt's parser for these patterns will strip one level of backslash (`\`), which is normally used for quoting. If it is your intention to use a backslash in the regular expression, you will need to use two backslashes instead (`\\`).
 
-```
+```neomuttrc
 # no quotes
 save-hook ~h\ list-id:\\s*<only\\.dot>    '=archive'
 save-hook ~hlist-id:\\s*<only\\.dot-here> '=archive'

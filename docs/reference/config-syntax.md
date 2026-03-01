@@ -17,17 +17,17 @@ how-to guides and explanation pages instead.
 
 An initialization file consists of a series of [commands](commands.md). Each line of the file may contain one or more commands. When multiple commands are used, they must be separated by a semicolon (`;`).
 
-```
+```neomuttrc
 set real_name='John Smith' ; ignore x-
-```
+```neomuttrc
 
 ## Comments
 
 The hash mark, or pound sign (`#`), is used as a "comment" character. You can use it to annotate your initialization file. All text after the comment character to the end of the line is ignored.
 
-```
+```neomuttrc
 my-header X-Disclaimer: Why are you listening to me?   # This is a comment
-```
+```neomuttrc
 
 ## Quoting
 
@@ -35,9 +35,9 @@ Single quotes (`'`) and double quotes (`"`) can be used to quote strings which c
 
 `\` quotes the next character, just like in a shell. For example, if you want to put quotes `"` inside of a string, you can use `\` to force the next character to be a literal instead of interpreted character.
 
-```
+```neomuttrc
 set real_name="John \"anonymous\" Doe"
-```
+```neomuttrc
 
 `\\` means to insert a literal `\` into the line. `\n` and `\r` have their usual C meanings of linefeed and carriage-return, respectively.
 
@@ -45,11 +45,11 @@ set real_name="John \"anonymous\" Doe"
 
 A `\` at the end of a line can be used to split commands over multiple lines as it "escapes" the line end, provided that the split points don't appear in the middle of command names. Lines are first concatenated before interpretation so that a multi-line can be commented by commenting out the first line only.
 
-```
+```neomuttrc
 set status_format="some very \
 long value split \
 over several lines"
-```
+```neomuttrc
 
 :::{note}
 Using `\` at the end of a line *only* removes the newline character.
@@ -61,21 +61,21 @@ Any leading whitespace on the following lines will be part of the configuration.
 
 It is also possible to substitute the output of a Unix command in an initialization file. This is accomplished by enclosing the command in backticks (`` ` ``). The output of the Unix command will be substituted before the line is parsed. Since initialization files are line oriented, only the first line of output from the Unix command will be substituted.
 
-```
+```neomuttrc
 my-header X-Operating-System: `uname -a`
-```
+```neomuttrc
 
 To avoid the output of backticks being parsed, place them inside double quotes. This is useful so that special characters in the output (e.g. `'`, `#`, `$`) are not parsed and interpreted specially by NeoMutt.
 
-```
+```neomuttrc
 set imap_pass="`gpg --batch -q --decrypt ~/.neomutt/account.gpg`"
-```
+```neomuttrc
 
 ## Variable Expansion
 
 Both environment variables and NeoMutt variables can be accessed by prepending `$` to the name of the variable.
 
-```
+```neomuttrc
 set record = "+sent_on_$HOSTNAME"
 ```
 

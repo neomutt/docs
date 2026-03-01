@@ -29,9 +29,9 @@ NeoMutt uses the `$preferred_languages` variable to determine which languages
 to display when displaying a `multipart/multilingual` email. You can have
 several preferred languages, separated by `,`:
 
-```bash
+```neomuttrc
 set preferred_languages="fr,en,de"
-```
+```neomuttrc
 
 NeoMutt will try to match these strings against the multilingual header in the
 received emails "by prefix", e.g., `en` will match both `en` and `en_US`.

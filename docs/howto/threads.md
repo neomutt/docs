@@ -109,7 +109,7 @@ current threading method.
 
 ### neomuttrc
 
-```bash
+```neomuttrc
 # Example NeoMutt config file for the use-threads feature.
 
 # ------------------------------------------------------------

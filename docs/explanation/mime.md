@@ -37,7 +37,7 @@ NeoMutt uses the `$preferred_languages` variable to determine which languages to
 when displaying a `multipart/multilingual` email. You can have several preferred languages,
 separated by `,`:
 
-```
+```neomuttrc
 set preferred_languages="fr,en,de"
 ```
 

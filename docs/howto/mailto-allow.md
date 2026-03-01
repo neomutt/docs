@@ -17,7 +17,7 @@ give the steps, show the expected result.
 
 ## Usage
 
-```
+```neomuttrc
 mailto-allow { * | header-field... }
 unmailto-allow { * | header-field... }
 ```

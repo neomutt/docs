@@ -32,7 +32,7 @@ compose-to-sender adds the following function to NeoMutt. By default, it is not 
 
 ## neomuttrc
 
-```
+```neomuttrc
 # Example NeoMutt config file for the compose-to-sender feature.
 
 # --------------------------------------------------------------------------

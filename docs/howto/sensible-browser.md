@@ -23,11 +23,11 @@ The behavior is divided into two use cases: Fixed Order; Variable Order.
 
 This is for users who like their mailboxes in a fixed order, e.g. alphabetical, or unsorted (in the order of the config file).
 
-```bash
+```neomuttrc
 # Fixed order
 set browser_sort = "alpha"
 set browser_sort = "unsorted"
-```
+```neomuttrc
 
 When you first start the browser, e.g. `c?` your current mailbox will be highlighted.
 
@@ -39,7 +39,7 @@ When you navigate to a parent mailbox ("..") your old mailbox will be highlighte
 
 This is for users who like their mailboxes sorted by a characteristic that changes, e.g. count of new mail, or the size of mailbox.
 
-```bash
+```neomuttrc
 # Variable order
 set browser_sort = "reverse-count"
 set browser_sort = "reverse-size"

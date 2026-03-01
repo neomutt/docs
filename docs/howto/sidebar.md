@@ -79,10 +79,10 @@ Sidebar adds the following functions to NeoMutt. By default, none of them are bo
 
 Usage:
 
-```
+```neomuttrc
 sidebar-pin <mailbox> [<mailbox> ...]
 sidebar-unpin { * | <mailbox> [<mailbox> ...] }
-```
+```neomuttrc
 
 :::{note}
 Before 2026-01-13, these commands were called `sidebar_pin` and `sidebar_unpin`.
@@ -135,7 +135,7 @@ If the `sidebar_indicator` color isn't set, then the default NeoMutt indicator c
 (sidebar-neomuttrc)=
 ## neomuttrc
 
-```bash
+```neomuttrc
 # Example NeoMutt config file for the sidebar feature.
 
 # --------------------------------------------------------------------------

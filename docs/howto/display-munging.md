@@ -26,10 +26,10 @@ secondary interest.
 
 **Usage:**
 
-```
+```neomuttrc
 subject-regex regex replacement
 unsubject-regex { * | regex }
-```
+```neomuttrc
 
 :::{note}
 Before 2026-01-13, these commands were called `subjectrx` and `unsubjectrx`.
@@ -53,7 +53,7 @@ The "replacement" value replaces the **entire** subject, not just the match!
 :::{admonition} Example: Subject Munging
 :class: tip
 
-```bash
+```neomuttrc
 # Erase [rt #12345] tags from Request Tracker (RT) e-mails
 subject-regex '\[rt #[0-9]+\] *' '%L%R'
 # Servicedesk is another RT that sends more complex subjects.

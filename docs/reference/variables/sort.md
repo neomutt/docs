@@ -64,7 +64,7 @@ This provides a secondary sort for messages in the "index" menu, used when the `
 
 When sorting by threads, this variable controls how subthreads are sorted within a single thread (for the order between threads, see `$sort`). This can be set to any value that `$sort` can, including with the use of "reverse-" and "last-" prefixes, except for variations using "threads" (in that case, NeoMutt will just use "date"). For instance,
 
-```
+```neomuttrc
 set sort_aux=last-date-received
 ```
 

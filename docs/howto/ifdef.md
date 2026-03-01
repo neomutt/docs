@@ -19,7 +19,7 @@ give the steps, show the expected result.
 
 The "ifdef" feature introduces three new commands to NeoMutt and allows you to share one config file between versions of NeoMutt that may have different features compiled in.
 
-```
+```neomuttrc
 ifdef  symbol "config-command [args...]"  # If a symbol is defined
 ifndef symbol "config-command [args...]"  # If a symbol is not defined
 finish                                    # Finish reading the current file
@@ -42,28 +42,28 @@ A list of compile-time symbols can be seen in the output of the command:
 
 ```
 neomutt -v
-```
+```neomuttrc
 
 (in the "Compile options" section).
 
 `finish` is particularly useful when combined with `ifndef`. e.g.
 
-```
+```neomuttrc
 # Sidebar config file
 ifndef sidebar finish
-```
+```neomuttrc
 
 ## Commands
 
-```
+```neomuttrc
 ifdef  symbol "config-command [args...]"
 ifndef symbol "config-command [args...]"
 finish
-```
+```neomuttrc
 
 ## Example neomuttrc
 
-```
+```neomuttrc
 # Example NeoMutt config file for the ifdef feature.
 
 # This feature introduces three useful commands which allow you to share

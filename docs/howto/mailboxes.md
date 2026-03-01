@@ -17,9 +17,9 @@ give the steps, show the expected result.
 
 ## Using Multiple Spool Mailboxes
 
-```
+```neomuttrc
 mbox-hook [-noregex] regex mailbox
-```
+```neomuttrc
 
 This command is used to move read messages from a specified mailbox to a different mailbox automatically when you quit or change folders. *regex* is used to specify the mailbox to treat as a "spool" mailbox and *mailbox* specifies where mail should be saved when read. The *-noregex* switch controls whether *regex* is matched using a simple string comparison or a full regex match.
 
@@ -31,11 +31,11 @@ Unlike some of the other *hook* commands, only the *first* matching regex is use
 
 ## Monitoring Incoming Mail
 
-```
+```neomuttrc
 mailboxes [-label label] [-nolabel] [-notify] [-nonotify] [-poll] [-nopoll] mailbox [...]
 named-mailboxes [-notify] [-nonotify] [-poll] [-nopoll] label mailbox [label mailbox ...]
 unmailboxes { * | mailbox [...] }
-```
+```neomuttrc
 
 This command specifies folders which can receive mail and which will be checked for new messages periodically.
 
@@ -103,9 +103,9 @@ non-old message remaining in the folder.
 
 If mtime/atime-based detection is unreliable in your setup, use file-size tracking instead:
 
-```
+```neomuttrc
 set check_mbox_size
-```
+```neomuttrc
 
 Note that `check_mbox_size` won't detect changes that leave the file size unchanged.
 
@@ -129,15 +129,15 @@ NeoMutt does not poll POP3 folders for new mail — it only checks the currently
 Set `$mail_check_recent` (on by default) to be notified only about mail that arrived since
 you last opened the mailbox. Unset it to be notified of all new mail regardless:
 
-```
+```neomuttrc
 unset mail_check_recent
-```
+```neomuttrc
 
 Run a command whenever new mail arrives in the current inbox:
 
-```
+```neomuttrc
 set new_mail_command = "notify-send 'New mail in NeoMutt'"
-```
+```neomuttrc
 
 ### Polling Interval
 
@@ -150,9 +150,9 @@ Mailboxes added with `-nopoll` are excluded from polling.
 
 To also check all subscribed IMAP folders (not just those in `mailboxes`):
 
-```
+```neomuttrc
 set imap_check_subscribed
-```
+```neomuttrc
 
 ### Inotify (Linux)
 
@@ -166,7 +166,7 @@ Inotify debug output is available at log level 3 (`-d3` on the command line).
 
 Enable periodic calculation of unread, flagged, and total message counts:
 
-```
+```neomuttrc
 set mail_check_stats
 set mail_check_stats_interval = 60   # seconds between recalculations
 ```
