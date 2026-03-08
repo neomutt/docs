@@ -1,4 +1,9 @@
-/* Wider content panel */
+/* ═══════════════════════════════════════════════════════════════
+   NeoMutt — Custom Stylesheet
+   Palette: #005461  #018790  #00B7B5  #F4F4F4
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── Wider content panel ────────────────────────────────────── */
 .bd-article-container {
   max-width: 100% !important;
 }
@@ -11,58 +16,70 @@
   max-width: 100% !important;
 }
 
-/* Shrink the right (secondary) sidebar so the article gets more space */
 .bd-sidebar-secondary {
   max-width: 250px !important;
   min-width: 0 !important;
   flex: 0 0 250px !important;
 }
 
-/* Subtle green accent — light mode */
+/* ── Brand colours — light mode ─────────────────────────────── */
 html[data-theme=light] {
-  --pst-color-primary: #3a7a4a;
-  --pst-color-primary-highlight: #2e6239;
-  --pst-color-link: #3a7a4a;
-  --pst-color-link-hover: #2e6239;
+  --pst-color-primary: #005461;
+  --pst-color-primary-highlight: #018790;
+  --pst-color-link: #018790;
+  --pst-color-link-hover: #005461;
+  --pst-color-background: #e0f7f8;
 }
 
-/* Subtle green accent — dark mode */
+/* ── Brand colours — dark mode ──────────────────────────────── */
 html[data-theme=dark] {
-  --pst-color-primary: #5aac6a;
-  --pst-color-primary-highlight: #6dc07d;
-  --pst-color-link: #5aac6a;
-  --pst-color-link-hover: #6dc07d;
+  --pst-color-primary: #00B7B5;
+  --pst-color-primary-highlight: #018790;
+  --pst-color-link: #00B7B5;
+  --pst-color-link-hover: #018790;
+  --pst-color-background: #0d1e22;
 }
 
+.sd-card {
+  background: #fff;
+}
+
+/* ── Tables ─────────────────────────────────────────────────── */
 th {
   text-align: left;
-  background-color: #e8e8e8;
+  background-color: #005461;
+  color: #F4F4F4;
 }
 
 html[data-theme=dark] th {
-  background-color: #383838;
+  background-color: #018790;
+  color: #F4F4F4;
 }
 
 div.document table.docutils td {
-    padding: 0 0.5em 0 0.25em;
-    vertical-align: top;
+  padding: 0 0.5em 0 0.25em;
+  vertical-align: top;
 }
 
 div.document table.docutils th {
-    padding: 0 0.5em 0 0.25em;
-    vertical-align: top;
+  padding: 0 0.5em 0 0.25em;
+  vertical-align: top;
 }
 
-/* Terminal selection highlight — simulates a cursor bar in fake NeoMutt screenshots */
+/* ── Terminal highlight ─────────────────────────────────────── */
 html[data-theme=light] .highlight .hll {
-  background-color: #1d5276;
-  color: #f0f0f0;
+  background-color: #005461;
+  color: #F4F4F4;
   display: block;
 }
 
 html[data-theme=dark] .highlight .hll {
-  background-color: #2874a6;
-  color: #f0f0f0;
+  background-color: #018790;
+  color: #F4F4F4;
   display: block;
 }
 
+/* ── Footer accent ──────────────────────────────────────────── */
+.bd-footer {
+  border-top: 3px solid #018790 !important;
+}
