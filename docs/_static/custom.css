@@ -91,3 +91,50 @@ svg.fa-twitter {
 svg.fa-heart {
    color: #c00000;
 }
+
+/* ── Sponsor link in navbar ─────────────────────────────────── */
+.sponsor-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3em;
+  padding: 0.3em 0.8em;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #c00040;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+  white-space: nowrap;
+}
+
+html[data-theme=light] .sponsor-link:hover {
+  background: #d04060;
+  color: #fff;
+}
+
+html[data-theme=light] .sponsor-heart {
+  color: #c00040;
+  font-size: 1.1em;
+}
+
+html[data-theme=light] .sponsor-link:hover .sponsor-heart {
+  color: #fff;
+}
+
+html[data-theme=dark] .sponsor-link {
+  border-color: #e06070;
+  color: #f0a0a8;
+}
+
+html[data-theme=dark] .sponsor-heart {
+  color: #f0a0a8;
+}
+
+html[data-theme=dark] .sponsor-link:hover {
+  background: #d04060;
+  color: #fff;
+}
+
+html[data-theme=dark] .sponsor-link:hover .sponsor-heart {
+  color: #fff;
+}
