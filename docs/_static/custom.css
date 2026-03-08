@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════════════════
-   NeoMutt — Custom Stylesheet
+   NeoMutt Docs — Custom Stylesheet
    Palette: #005461  #018790  #00B7B5  #F4F4F4
    ═══════════════════════════════════════════════════════════════ */
 
@@ -82,4 +82,12 @@ html[data-theme=dark] .highlight .hll {
 /* ── Footer accent ──────────────────────────────────────────── */
 .bd-footer {
   border-top: 3px solid #018790 !important;
+}
+
+svg.fa-twitter {
+   color: #55acee;
+}
+
+svg.fa-heart {
+   color: #c00000;
 }

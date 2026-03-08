@@ -14,6 +14,7 @@ version = '0.1.0'
 extensions = [
     'myst_parser',
     'sphinx_design',
+    'sphinx_copybutton',
 ]
 
 myst_enable_extensions = [
@@ -28,6 +29,7 @@ html_theme = 'sphinx_book_theme'
 html_static_path = ["_static"]
 html_css_files = ["custom.css"]
 html_logo = "_static/logo.png"
+html_title = "NeoMutt Docs"
 html_favicon = "_static/favicon.png"
 
 html_theme_options = {
@@ -35,6 +37,9 @@ html_theme_options = {
     "pygments_light_style": "gruvbox-light",
     "pygments_dark_style": "gruvbox-dark",
     "use_download_button": False,
+    "repository_url": "https://github.com/neomutt/docs",
+    "use_repository_button": True,
+    "use_sidenotes": True,
     "icon_links": [
         {
             "name": "GitHub",
@@ -43,7 +48,7 @@ html_theme_options = {
             "type": "fontawesome",
         },
         {
-            "name": "Sponsor",
+            "name": "Thanks",
             "url": "https://neomutt.org/sponsor",
             "icon": "fa-solid fa-heart",
             "type": "fontawesome",
@@ -63,8 +68,7 @@ epub_show_urls = 'footnote'
 html_context = {
     "display_github": True,
     "github_user": "neomutt",
-    "github_repo": "neomutt",
+    "github_repo": "docs",
     "github_version": "main",
     "conf_py_path": "/docs/",
 }
-
