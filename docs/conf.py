@@ -35,6 +35,26 @@ html_theme_options = {
     "pygments_light_style": "gruvbox-light",
     "pygments_dark_style": "gruvbox-dark",
     "use_download_button": False,
+    "icon_links": [
+        {
+            "name": "GitHub",
+            "url": "https://github.com/neomutt/neomutt",
+            "icon": "fa-brands fa-github",
+            "type": "fontawesome",
+        },
+        {
+            "name": "Sponsor",
+            "url": "https://neomutt.org/sponsor",
+            "icon": "fa-solid fa-heart",
+            "type": "fontawesome",
+        },
+        {
+            "name": "Twitter",
+            "url": "https://twitter.com/NeoMutt_Org",
+            "icon": "fa-brands fa-twitter",
+            "type": "fontawesome",
+        },
+    ],
 }
 
 # -- Options for EPUB output
