@@ -40,8 +40,14 @@ html[data-theme=dark] {
   --pst-color-background: #0d1e22;
 }
 
-.sd-card {
+html[data-theme=light] .sd-card {
   background: #fff;
+  color: #000;
+}
+
+html[data-theme=dark] .sd-card {
+  background: #000;
+  color: #fff;
 }
 
 /* ── Tables ─────────────────────────────────────────────────── */
