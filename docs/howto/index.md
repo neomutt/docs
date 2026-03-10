@@ -78,6 +78,7 @@ maxdepth: 1
 
 mime
 mime-multilingual
+mailcap-html
 ```
 
 ## Sidebar & UI
