@@ -127,6 +127,7 @@ maxdepth: 1
 mailbox-formats
 compress
 caching
+header-cache-tuning
 trash-folder
 mailboxes
 header-cache-backends
