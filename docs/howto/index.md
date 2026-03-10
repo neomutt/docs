@@ -17,6 +17,7 @@ maxdepth: 1
 ---
 
 imap
+imap-performance
 pop
 smtp
 oauth
