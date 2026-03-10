@@ -142,6 +142,7 @@ maxdepth: 1
 ---
 
 notmuch
+notmuch-advanced
 tagging
 limit-thread
 ```
