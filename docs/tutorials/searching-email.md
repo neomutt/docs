@@ -7,6 +7,7 @@ keywords: [neomutt, search, filter, patterns, limit, notmuch, tutorial]
 # Searching and Filtering Email
 
 This tutorial teaches the basic search and limit workflow in the index.
+If you're new to reading mail in NeoMutt, start with [Reading Your First Email](first-email).
 
 ## Basic Search
 
@@ -84,4 +85,9 @@ Expected result: you can repeat complex searches quickly.
 
 Notmuch adds full-text search and tag-based queries. If you need whole-mailbox searching, set up Notmuch and use `notmuch://` virtual mailboxes.
 
-See [How to Use Notmuch](/home/mutt/rtd/docs/docs/howto/notmuch.md).
+See [How to Use Notmuch](../howto/notmuch).
+
+## Next Steps
+
+- "I want to organize with tags." Continue with [Organising Email with Tags](tags-workflow).
+- "I want to build saved searches." See [Macros](../howto/macros) and [Patterns](../reference/patterns).
