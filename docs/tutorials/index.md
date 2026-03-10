@@ -8,8 +8,13 @@ description: Step-by-step lessons to get started with NeoMutt
 Tutorials are **learning-oriented** lessons that guide you step by step through
 using NeoMutt. Start here if you're new to NeoMutt.
 
-Each tutorial takes you through a meaningful exercise, building your skills and
-confidence with the email client.
+Not sure where to begin? Start with [Start Here](../start-here) for a guided path,
+or pick the question that matches you:
+
+- "I just want NeoMutt to work with my mail account." Start with [Writing Your First Configuration](first-config).
+- "I use Gmail." Go to [Gmail Setup](gmail-setup).
+- "I use Office 365." Go to [Office 365 Setup](office365-setup).
+- "I have my own IMAP server." Start with [Writing Your First Configuration](first-config), then see [IMAP](../howto/imap).
 
 ## Getting Started
 
@@ -19,9 +24,9 @@ maxdepth: 1
 ---
 
 getting-started
+first-config
 first-email
 sending-email
-first-config
 ```
 
 ## Service-Specific Setup
