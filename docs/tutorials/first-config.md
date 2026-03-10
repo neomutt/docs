@@ -7,18 +7,17 @@ diataxis_type: tutorial
 
 # Writing Your First Configuration
 
-:::{admonition} Diátaxis: Tutorial
-:class: note
+This tutorial gets you to a working configuration quickly. You'll create a small `neomuttrc`,
+start NeoMutt, and confirm it connects to your account.
 
-Write as a **lesson**. Guide the learner through a meaningful exercise step by step.
-Use second person ("you"). Show concrete actions and their expected results.
-Don't explain concepts — demonstrate them through doing. Start with the simplest case
-and build complexity gradually. The reader should feel a sense of accomplishment at the end.
-:::
+If you use Gmail or Office 365, start with those tutorials because they include OAuth and
+provider-specific settings:
 
-NeoMutt is highly configurable because it's *meant* to be customized to your needs and
-preferences. However, this configurability can make it difficult when just getting started.
-A few sample neomuttrc files are available in the
+- [Gmail Setup](gmail-setup)
+- [Office 365 Setup](office365-setup)
+
+NeoMutt is highly configurable, but you only need a handful of settings to get started. A few
+sample neomuttrc files are also available in the
 [Contrib Repo](https://github.com/neomutt/neomutt-contrib).
 
 :::{admonition} 📷 Screenshot Needed
@@ -33,7 +32,23 @@ A few sample neomuttrc files are available in the
 
 ## Location of Initialization Files
 
+NeoMutt looks for a user configuration file in several places. For a clean start, use one of
+these common locations:
+
+- `~/.config/neomutt/neomuttrc` (recommended)
+- `~/.neomuttrc` (classic)
+
+If you already have a file in one of the other supported locations, NeoMutt will use the
+first one it finds. The full search order is listed later in this page.
+
 ## Minimal Configuration
+
+Follow these steps:
+
+1. Create your config file in one of the locations above.
+2. Copy the example below into the file.
+3. Replace the placeholder values with your real account details.
+4. Start NeoMutt and confirm it opens your inbox.
 
 Before diving into the full details of config file syntax and locations, here is a minimal
 `neomuttrc` to get you started. Copy it to `~/.neomuttrc` and adjust the values for your
@@ -80,6 +95,9 @@ in plain text — for example:
 ```neomuttrc
 set imap_pass = "`gpg --batch -q --decrypt ~/.neomutt/account.gpg`"
 ```
+
+For safer options and OAuth-based setups, see [Password Manager](../howto/password-manager)
+and [OAuth](../howto/oauth).
 
 Once NeoMutt starts without errors, continue reading to understand the full configuration
 syntax and all available file locations.
@@ -303,3 +321,10 @@ This mechanism should be avoided if possible as it has the following implication
   introducing question marks or other characters as part of errors (unconvertible characters,
   transliteration) may introduce syntax errors or silently change the meaning of certain
   tokens (e.g. inserting question marks into regular expressions).
+
+## Next Steps
+
+- "I want to read mail." Continue with [Reading Your First Email](first-email).
+- "I want to send mail." Continue with [Sending Email](sending-email).
+- "I have multiple accounts." Continue with [Multiple Accounts](multiple-accounts).
+- "I want more details on config files." See [Config Locations](../reference/config-locations) and [Config Syntax](../reference/config-syntax).
