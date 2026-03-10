@@ -7,6 +7,7 @@ keywords: [neomutt, gmail, imap, smtp, oauth2, tutorial]
 # Setting Up NeoMutt with Gmail
 
 This tutorial walks you through a working Gmail setup using IMAP + SMTP and OAuth2.
+If you're brand new to NeoMutt, read [Getting Started](getting-started) first.
 
 ## Prerequisites
 
@@ -14,6 +15,9 @@ This tutorial walks you through a working Gmail setup using IMAP + SMTP and OAut
 2. IMAP enabled in Gmail settings.
 3. OAuth2 credentials for Gmail, or an app password if your account allows it.
 4. NeoMutt installed with IMAP and SMTP support.
+
+If you're unsure about any prerequisite, the links in the References section point to Gmail's
+current instructions.
 
 ## Create a Minimal Configuration for Gmail IMAP
 
@@ -65,6 +69,8 @@ set smtp_oauth_refresh_command = "$imap_oauth_refresh_command"
 
 Expected result: NeoMutt authenticates without storing a long-lived password.
 
+For safer storage of secrets, see [Password Manager](../howto/password-manager).
+
 ## Read Your First Email
 
 1. Start NeoMutt.
@@ -92,3 +98,9 @@ References:
 - Gmail IMAP settings and server details: https://support.google.com/a/answer/9003945
 - Gmail OAuth2 and IMAP/SMTP configuration: https://developers.google.com/gmail/imap/imap-smtp
 - App passwords: https://support.google.com/accounts/answer/185833
+
+## Next Steps
+
+- "I want a quick tour of NeoMutt." See [Getting Started](getting-started).
+- "I want to read and send mail." Continue with [Reading Your First Email](first-email) and [Sending Email](sending-email).
+- "I want to search and filter." Continue with [Searching and Filtering Email](searching-email).
