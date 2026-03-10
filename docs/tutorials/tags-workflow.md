@@ -7,6 +7,7 @@ keywords: [neomutt, tags, notmuch, virtual mailboxes, workflow, tutorial]
 # Organising Email with Tags
 
 This tutorial uses Notmuch tags to build a simple, repeatable workflow.
+If Notmuch is not set up yet, start with [How to Use Notmuch](../howto/notmuch).
 
 ## What Are Tags?
 
@@ -84,4 +85,9 @@ set index_format = "%4C %Z %{%b %d} %-15.15F %g %s"
 
 Expected result: tags appear next to messages in the index.
 
-See [How to Use Notmuch](/home/mutt/rtd/docs/docs/howto/notmuch.md) for full configuration details.
+See [How to Use Notmuch](../howto/notmuch) for full configuration details.
+
+## Next Steps
+
+- "I want to search by tag quickly." Continue with [Searching and Filtering Email](searching-email).
+- "I want to tune my index view." See [Format Strings](../howto/format-strings) and [Index Format](../reference/variables/index).
