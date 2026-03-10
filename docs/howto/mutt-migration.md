@@ -28,7 +28,7 @@ neomutt -F ~/.neomuttrc
 
 Expected result: NeoMutt starts using your existing configuration.
 
-See [Configuration File Locations](/home/mutt/rtd/docs/docs/reference/config-locations.md).
+See [Configuration File Locations](../reference/config-locations).
 
 ## New Features in NeoMutt
 

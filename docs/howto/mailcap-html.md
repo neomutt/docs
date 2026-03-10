@@ -68,4 +68,4 @@ Expected result: you see the search path NeoMutt will use for mailcap.
 
 Expected result: HTML rendering works without introducing unsafe command execution.
 
-See also [MIME Types](/home/mutt/rtd/docs/docs/reference/mime-types.md) and [MIME](/home/mutt/rtd/docs/docs/explanation/mime.md).
+See also [MIME Types](../reference/mime-types) and [MIME](../explanation/mime).

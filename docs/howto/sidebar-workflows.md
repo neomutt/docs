@@ -58,4 +58,4 @@ set sidebar_format = "%D%* %<N?%N/>%S"
 
 Expected result: you can see new and total message counts at a glance.
 
-See [How to Use the Sidebar](/home/mutt/rtd/docs/docs/howto/sidebar.md) for full options.
+See [How to Use the Sidebar](sidebar) for full options.

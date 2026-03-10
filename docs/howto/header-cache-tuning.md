@@ -57,4 +57,4 @@ set message_cache_clean = yes
 
 Expected result: cache files no longer reference messages removed by other clients.
 
-See [How to Set Up Header/Body Caching](/home/mutt/rtd/docs/docs/howto/caching.md) for full details and supported backends.
+See [How to Set Up Header/Body Caching](caching) for full details and supported backends.

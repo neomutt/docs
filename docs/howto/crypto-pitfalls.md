@@ -54,4 +54,4 @@ Expected result: NeoMutt can pick keys without prompting every time.
 
 Expected result: S/MIME verification succeeds for trusted senders.
 
-See [How to Use PGP Encryption](/home/mutt/rtd/docs/docs/howto/pgp.md) and [How to Use S/MIME](/home/mutt/rtd/docs/docs/howto/smime.md).
+See [How to Use PGP Encryption](pgp) and [How to Use S/MIME](smime).

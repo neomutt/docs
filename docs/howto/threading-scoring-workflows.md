@@ -52,4 +52,4 @@ folder-hook . 'push "<enter-command>score ~= 10<enter>"'
 
 Expected result: score rules that depend on thread state take effect.
 
-See [How to Edit and Navigate Threads](/home/mutt/rtd/docs/docs/howto/threads.md) and [How to Use Scoring](/home/mutt/rtd/docs/docs/howto/scoring.md).
+See [How to Edit and Navigate Threads](threads) and [How to Use Scoring](scoring).

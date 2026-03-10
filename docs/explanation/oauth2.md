@@ -27,7 +27,7 @@ OAuth2 integration relies on the same configuration model as other credentials:
 - `imap_authenticators` and `smtp_authenticators` select OAuth-capable mechanisms.
 - `account_command` can also provide credentials, but OAuth2 helpers are more common for modern providers.
 
-For the practical setup steps, see [How to Use OAuth Authentication](/home/mutt/rtd/docs/docs/howto/oauth.md) and the Gmail/Office 365 tutorials.
+For the practical setup steps, see [How to Use OAuth Authentication](../howto/oauth) and the Gmail/Office 365 tutorials.
 
 ### Security Considerations
 
@@ -35,6 +35,6 @@ OAuth2 reduces the need for reusable passwords, but it does not eliminate risk. 
 
 ### See Also
 
-- [How to Use OAuth Authentication](/home/mutt/rtd/docs/docs/howto/oauth.md)
-- [Setting Up NeoMutt with Gmail](/home/mutt/rtd/docs/docs/tutorials/gmail-setup.md)
-- [Setting Up NeoMutt with Office 365](/home/mutt/rtd/docs/docs/tutorials/office365-setup.md)
+- [How to Use OAuth Authentication](../howto/oauth)
+- [Setting Up NeoMutt with Gmail](../tutorials/gmail-setup)
+- [Setting Up NeoMutt with Office 365](../tutorials/office365-setup)

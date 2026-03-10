@@ -34,7 +34,7 @@ set query_command = "abook --mutt-query %s"
 
 Expected result: the query menu shows matches from your address book.
 
-See [How to Set Up Address Book Integration](/home/mutt/rtd/docs/docs/howto/address-book.md).
+See [How to Set Up Address Book Integration](address-book).
 
 ## Sending Mail with msmtp
 
@@ -72,7 +72,7 @@ References: offlineimap and isync documentation.
 1. Install and configure notmuch.
 2. Follow the Notmuch setup steps in NeoMutt.
 
-See [How to Use Notmuch](/home/mutt/rtd/docs/docs/howto/notmuch.md).
+See [How to Use Notmuch](notmuch).
 
 ## Rendering HTML Email with w3m / lynx / elinks
 

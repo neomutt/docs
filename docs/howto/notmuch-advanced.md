@@ -59,4 +59,4 @@ set nm_query_window_or_terms = "tag:unread and tag:flagged"
 
 Expected result: queries use a rolling two-week window but keep unread/flagged messages visible.
 
-See [How to Use Notmuch](/home/mutt/rtd/docs/docs/howto/notmuch.md) for full configuration details.
+See [How to Use Notmuch](notmuch) for full configuration details.

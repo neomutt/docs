@@ -29,7 +29,7 @@ The fork reflects a reality of mature software: upstream changes can be slow, an
 
 ### NeoMutt's Governance and Development Model
 
-NeoMutt remains community-driven, centered around public source control, mailing lists, and a contributor culture similar to Mutt. The project keeps its development visible and accepts input across a broad contributor base. For project structure and contact points, see [About NeoMutt](/home/mutt/rtd/docs/docs/explanation/about-neomutt.md).
+NeoMutt remains community-driven, centered around public source control, mailing lists, and a contributor culture similar to Mutt. The project keeps its development visible and accepts input across a broad contributor base. For project structure and contact points, see [About NeoMutt](about-neomutt).
 
 ### Community Reception and Growth
 

@@ -13,23 +13,23 @@ When you open a mailbox, NeoMutt reads message metadata, builds an index view, a
 
 ### Fetching Messages from Backends
 
-Mailbox backends are responsible for retrieving message data. Local backends read mbox, Maildir, or MH directly from disk, while remote backends (IMAP, POP3, NNTP) fetch message data over the network. The backend choice affects how quickly new mail appears and what metadata is available for searching. See [Mailbox Formats](/home/mutt/rtd/docs/docs/howto/mailbox-formats.md) and [IMAP](/home/mutt/rtd/docs/docs/howto/imap.md).
+Mailbox backends are responsible for retrieving message data. Local backends read mbox, Maildir, or MH directly from disk, while remote backends (IMAP, POP3, NNTP) fetch message data over the network. The backend choice affects how quickly new mail appears and what metadata is available for searching. See [Mailbox Formats](../howto/mailbox-formats) and [IMAP](../howto/imap).
 
 ### MIME Parsing and Multipart Handling
 
-Once a message is opened in the pager, NeoMutt parses its MIME structure. This is how attachments, multipart alternatives, and embedded messages are represented. The parser decides which parts are rendered inline and which are shown as attachments, with mailcap and MIME configuration controlling the final behavior. See [MIME](/home/mutt/rtd/docs/docs/explanation/mime.md) and [MIME Types](/home/mutt/rtd/docs/docs/reference/mime-types.md).
+Once a message is opened in the pager, NeoMutt parses its MIME structure. This is how attachments, multipart alternatives, and embedded messages are represented. The parser decides which parts are rendered inline and which are shown as attachments, with mailcap and MIME configuration controlling the final behavior. See [MIME](mime) and [MIME Types](../reference/mime-types).
 
 ### Character Set Conversion
 
-Messages can use many character sets, and NeoMutt converts them to match your locale. This is why incorrect terminal encoding can cause unreadable output. Charset handling is a first-class part of the pipeline because it affects both headers and body content. See [Charsets](/home/mutt/rtd/docs/docs/explanation/charsets.md).
+Messages can use many character sets, and NeoMutt converts them to match your locale. This is why incorrect terminal encoding can cause unreadable output. Charset handling is a first-class part of the pipeline because it affects both headers and body content. See [Charsets](charsets).
 
 ### Header Processing and Display Filtering
 
-Headers are parsed early and displayed in the pager, but what you see depends on header weeding, ordering, and custom headers. This keeps the display focused while still preserving full RFC compliance under the hood. See [How to Customise Header Display](/home/mutt/rtd/docs/docs/howto/header-display.md).
+Headers are parsed early and displayed in the pager, but what you see depends on header weeding, ordering, and custom headers. This keeps the display focused while still preserving full RFC compliance under the hood. See [How to Customise Header Display](../howto/header-display).
 
 ### The Indexing and Threading Pipeline
 
-The index view is built from message headers and flags. Threading groups related messages so you can navigate conversations instead of individual messages. Threading is optional and configurable, and the index can be customized heavily with format strings and patterns. See [Threading](/home/mutt/rtd/docs/docs/explanation/threading.md).
+The index view is built from message headers and flags. Threading groups related messages so you can navigate conversations instead of individual messages. Threading is optional and configurable, and the index can be customized heavily with format strings and patterns. See [Threading](threading).
 
 ### How the Index and Pager Interact
 

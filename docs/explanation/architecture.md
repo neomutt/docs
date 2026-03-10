@@ -34,23 +34,23 @@ Each library exposes a clear surface area and keeps implementation details conta
 
 ### The Configuration System
 
-Configuration is a first-class part of the architecture, not an afterthought. NeoMutt parses config files into typed variables, applies precedence rules, and allows runtime changes via commands. This makes the UI, message handling, and backend behavior all configurable without recompilation. For details, see [Configuration File Syntax](/home/mutt/rtd/docs/docs/reference/config-syntax.md) and [Variables](/home/mutt/rtd/docs/docs/reference/variables.md).
+Configuration is a first-class part of the architecture, not an afterthought. NeoMutt parses config files into typed variables, applies precedence rules, and allows runtime changes via commands. This makes the UI, message handling, and backend behavior all configurable without recompilation. For details, see [Configuration File Syntax](../reference/config-syntax) and [Variables](../reference/variables).
 
 ### Mailbox Backends
 
-Mail storage and access are modular. Local formats (mbox, MMDF, MH, Maildir) are handled separately from remote protocols (IMAP, POP3, NNTP). Notmuch integration sits alongside these backends and provides a query-based virtual mailbox model. For how each backend is configured, see [Mailbox Formats](/home/mutt/rtd/docs/docs/howto/mailbox-formats.md), [IMAP](/home/mutt/rtd/docs/docs/howto/imap.md), and [Notmuch](/home/mutt/rtd/docs/docs/howto/notmuch.md).
+Mail storage and access are modular. Local formats (mbox, MMDF, MH, Maildir) are handled separately from remote protocols (IMAP, POP3, NNTP). Notmuch integration sits alongside these backends and provides a query-based virtual mailbox model. For how each backend is configured, see [Mailbox Formats](../howto/mailbox-formats), [IMAP](../howto/imap), and [Notmuch](../howto/notmuch).
 
 ### The MIME Parser
 
-NeoMutt handles MIME as a core competency. The email library parses MIME structures, decodes parts, and hands them to the pager or external handlers. The mailcap system and MIME type mappings are designed to keep rendering flexible and secure. See [MIME Types](/home/mutt/rtd/docs/docs/reference/mime-types.md) and [MIME](/home/mutt/rtd/docs/docs/explanation/mime.md).
+NeoMutt handles MIME as a core competency. The email library parses MIME structures, decodes parts, and hands them to the pager or external handlers. The mailcap system and MIME type mappings are designed to keep rendering flexible and secure. See [MIME Types](../reference/mime-types) and [MIME](mime).
 
 ### Pattern Matching Engine
 
-Patterns are the backbone of search, limit, tagging, and many hooks. This shared engine is reused across the UI and configuration system so the same language drives selection, filtering, and automation. See [Patterns](/home/mutt/rtd/docs/docs/reference/patterns.md), [Regex](/home/mutt/rtd/docs/docs/reference/regex.md), and the [Searching Email tutorial](/home/mutt/rtd/docs/docs/tutorials/searching-email.md).
+Patterns are the backbone of search, limit, tagging, and many hooks. This shared engine is reused across the UI and configuration system so the same language drives selection, filtering, and automation. See [Patterns](../reference/patterns), [Regex](../reference/regex), and the [Searching Email tutorial](../tutorials/searching-email).
 
 ### The GUI and Curses Layer
 
-NeoMutt is a curses-based UI with a clear separation between data structures and rendering. The index, pager, menus, and sidebar are independent components that share a common window and dialog framework. This modular UI makes it possible to customize layout and behavior without forking the client. For a tour, see [Getting Started](/home/mutt/rtd/docs/docs/tutorials/getting-started.md).
+NeoMutt is a curses-based UI with a clear separation between data structures and rendering. The index, pager, menus, and sidebar are independent components that share a common window and dialog framework. This modular UI makes it possible to customize layout and behavior without forking the client. For a tour, see [Getting Started](../tutorials/getting-started).
 
 ### Build System and Dependencies
 

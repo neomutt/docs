@@ -68,7 +68,7 @@ set query_command = "mutt_ldap_query.pl %s"
 
 Expected result: a query menu with matching results and selectable addresses.
 
-See [How to Use External Address Queries](/home/mutt/rtd/docs/docs/howto/address-query.md).
+See [How to Use External Address Queries](address-query).
 
 ## Using LDAP for Address Lookups
 
