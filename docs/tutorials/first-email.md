@@ -7,20 +7,20 @@ diataxis_type: tutorial
 
 # Reading Your First Email
 
-:::{admonition} Diátaxis: Tutorial
-:class: note
+This tutorial shows you how to read mail in NeoMutt using the message list (Index) and the
+message view (Pager). You'll open a message, move around, and use search.
 
-Write as a **lesson**. Guide the learner through a meaningful exercise step by step.
-Use second person ("you"). Show concrete actions and their expected results.
-Don't explain concepts — demonstrate them through doing. Start with the simplest case
-and build complexity gradually. The reader should feel a sense of accomplishment at the end.
-:::
+If you don't see any mail yet, finish your setup first in [Writing Your First Configuration](first-config)
+or the guided [Start Here](../start-here) page.
 
-Similar to many other mail clients, there are two modes in which mail is read in NeoMutt. The
-first is a list of messages in the mailbox, which is called the "index" menu in NeoMutt. The
-second mode is the display of the message contents. This is called the "pager."
+What you'll do:
 
-The next few sections describe the functions provided in each of these modes.
+1. Open a message from the Index.
+2. Read it in the Pager and move around.
+3. Search for a message by keyword.
+
+If you want only the basics, you can stop after the "Most Common Pager Keys" section. The
+rest of the page is optional detail.
 
 ## The Message Index
 
@@ -401,3 +401,9 @@ In addition, the *index* and *pager* menus have these interesting functions:
 
   The variable `$toggle_quoted_show_levels` can be used to show some context by continuing to
   show that number of levels rather than hiding all quoted levels.
+
+## Next Steps
+
+- "I want to send a message." Continue with [Sending Your First Email](sending-email).
+- "I want to search and filter faster." Continue with [Searching and Filtering Email](searching-email).
+- "I want a key reference." See [Shortcuts Reference](../reference/shortcuts).
