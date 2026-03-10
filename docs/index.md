@@ -6,20 +6,36 @@ keywords: [neomutt, email, terminal, documentation]
 
 # NeoMutt Guide
 
-*Teaching an old dog new tricks*
-
-Welcome to the NeoMutt documentation. NeoMutt is a powerful text-based email client
-for the terminal, highly configurable with advanced features like key bindings,
-keyboard macros, mail threading, regular expression searches, and a powerful pattern
-matching language.
+Welcome. If you have only used GUI email clients before, you are in the right place.
+This guide will help you get a working NeoMutt setup quickly, then show you how to go further.
 
 - **Source:** [github.com/neomutt/neomutt](https://github.com/neomutt/neomutt)
 - **Website:** [neomutt.org](https://neomutt.org)
 
 ---
 
+## Start Here
+
+Begin with a short, guided path:
+
+:::{button-link} start-here
+:color: primary
+:outline:
+
+Start Here
+:::
+
+If you prefer to browse, use the sections below. Technical details are always one click away.
+
 ::::{grid} 2
 :gutter: 3
+
+:::{grid-item-card} ✅ Start Here
+:link: start-here
+:link-type: doc
+
+**Beginner-friendly** — A few questions that route you to the right setup steps.
+:::
 
 :::{grid-item-card} 📖 Tutorials
 :link: tutorials/index
@@ -65,9 +81,9 @@ maxdepth: 2
 hidden: true
 ---
 
+start-here
 tutorials/index
 howto/index
 reference/index
 explanation/index
 ```
-
