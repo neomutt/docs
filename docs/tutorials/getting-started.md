@@ -7,27 +7,26 @@ diataxis_type: tutorial
 
 # Getting Started with NeoMutt
 
-:::{admonition} Diátaxis: Tutorial
-:class: note
+This tutorial gives you a friendly tour of NeoMutt's main screens and the keys you'll use
+every day. You'll launch NeoMutt, move around, and find help when you need it.
 
-Write as a **lesson**. Guide the learner through a meaningful exercise step by step.
-Use second person ("you"). Show concrete actions and their expected results.
-Don't explain concepts — demonstrate them through doing. Start with the simplest case
-and build complexity gradually. The reader should feel a sense of accomplishment at the end.
-:::
+If you haven't configured an account yet, start with [Writing Your First Configuration](first-config)
+or the guided [Start Here](../start-here) page, then come back for the tour.
 
-This section is intended as a brief overview of how to use NeoMutt. There are many other
-features which are described elsewhere in the manual. There is even more information available
-in the NeoMutt FAQ and various web pages. See the [NeoMutt homepage](https://neomutt.org) for
-more details.
+The keybindings shown here are the defaults. Your system may differ. In any menu, press `?`
+to see the current bindings for your setup.
 
-The keybindings described in this section are the defaults as distributed. Your local system
-administrator may have altered the defaults for your site. You can always type "?" in any
-menu to display the current bindings.
+Start NeoMutt by running `neomutt` in your terminal.
 
-The first thing you need to do is invoke NeoMutt, simply by typing `neomutt` at the command
-line. There are various command-line options, see either the NeoMutt man page or the
-reference.
+## Quick Tour
+
+1. Start NeoMutt and wait for the message list (the Index).
+2. Press `?` to open the help screen and note the keys for moving up and down and for quitting.
+3. Use `j` and `k` to move the selection. Use the help screen to find the key that opens a message.
+4. In the message view (the Pager), press `?` again to see its keys, then press `q` to return.
+5. Press `q` to quit when you're done.
+
+If you want more depth on the screens and menus, keep reading.
 
 ## Core Concepts
 
@@ -205,11 +204,11 @@ Seas          1/7|  4      Sep 25  Grace Hall       ( 27)  Capybara
                  |
                  |
                  |
-```neomuttrc
+```
 
 Let's map some functions:
 
-```
+```neomuttrc
 bind index,pager \CP sidebar-prev       # Ctrl-P – Previous Mailbox
 bind index,pager \CN sidebar-next       # Ctrl-N – Next Mailbox
 bind index,pager \CO sidebar-open       # Ctrl-O – Open Highlighted Mailbox
@@ -428,7 +427,7 @@ The screenshot below shows what the Sidebar would look like before and after sho
 |water/ocean/atlantic                   |ocean/atlantic
 |water/ocean/pacific                    |ocean/pacific
 |water/ocean/arctic                     |ocean/arctic
-```neomuttrc
+```
 
 **Example 2**
 
@@ -436,7 +435,7 @@ This example works well if you have lots of mailboxes which are arranged in a tr
 
 Add some mailboxes of different depths.
 
-```
+```neomuttrc
 set folder="~/mail"
 mailboxes =fruit
 mailboxes =fruit/apple =fruit/banana =fruit/cherry
@@ -445,11 +444,11 @@ mailboxes =water/sea
 mailboxes =water/sea/sicily =water/sea/archipelago =water/sea/sibuyan
 mailboxes =water/ocean
 mailboxes =water/ocean/atlantic =water/ocean/pacific =water/ocean/arctic
-```neomuttrc
+```
 
 Shorten the names:
 
-```
+```neomuttrc
 set sidebar_short_path                  # Shorten mailbox names
 set sidebar_delim_chars="/"             # Delete everything up to the last / character
 set sidebar_folder_indent               # Indent folders whose names we've shortened
@@ -490,10 +489,10 @@ number of mails.
 If you want some mailboxes to be always visible, then use the `sidebar-pin` command. It takes
 a list of mailboxes as parameters.
 
-```
+```neomuttrc
 set sidebar_new_mail_only         # Only mailboxes with new/flagged email
 sidebar-pin +fruit +fruit/apple   # Always display these two mailboxes
-```neomuttrc
+```
 
 #### Colors
 
@@ -634,3 +633,9 @@ well as keys for page-based menus.
 | \- or \<PageUp\> | `<previous-page>` | move the previous page |
 | \<Home\> | `<top>` | move to the top |
 | \<End\> | `<bottom>` | move to the bottom |
+
+## Next Steps
+
+- "I want to connect my account." Go to [Writing Your First Configuration](first-config), or choose your provider in [Start Here](../start-here).
+- "I want to read and send mail." Continue with [Reading Your First Email](first-email) and [Sending Email](sending-email).
+- "I want a shortcut list of keys." See the [Shortcuts Reference](../reference/shortcuts).
