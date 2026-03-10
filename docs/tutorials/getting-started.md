@@ -237,7 +237,7 @@ Functions `<sidebar-next>` and `<sidebar-prev>` move the Sidebar **highlight**. 
 
 Press "Ctrl-O" (`<sidebar-open>`) to open the highlighted mailbox.
 
-```neomuttrc
+```
 Fruit [1]     3/8|  1    ! Mar 07  Finley Jones     (139)  Molucca Sea
 Animals [1]   2/6|  2    + Mar 24  Summer Jackson   ( 25)  Arafura Sea
 Cars            4|  3    + Feb 28  Imogen Baker     (193)  Pechora Sea

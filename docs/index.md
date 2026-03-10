@@ -12,21 +12,6 @@ This guide will help you get a working NeoMutt setup quickly, then show you how 
 - **Source:** [github.com/neomutt/neomutt](https://github.com/neomutt/neomutt)
 - **Website:** [neomutt.org](https://neomutt.org)
 
----
-
-## Start Here
-
-Begin with a short, guided path:
-
-:::{button-link} start-here
-:color: primary
-:outline:
-
-Start Here
-:::
-
-If you prefer to browse, use the sections below. Technical details are always one click away.
-
 ::::{grid} 2
 :gutter: 3
 
