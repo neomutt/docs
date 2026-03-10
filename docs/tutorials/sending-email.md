@@ -7,14 +7,17 @@ diataxis_type: tutorial
 
 # Sending Your First Email
 
-:::{admonition} Diátaxis: Tutorial
-:class: note
+This tutorial shows you how to compose, reply, and send messages in NeoMutt.
 
-Write as a **lesson**. Guide the learner through a meaningful exercise step by step.
-Use second person ("you"). Show concrete actions and their expected results.
-Don't explain concepts — demonstrate them through doing. Start with the simplest case
-and build complexity gradually. The reader should feel a sense of accomplishment at the end.
-:::
+If you haven't configured SMTP yet, start with [Writing Your First Configuration](first-config)
+or the guided [Start Here](../start-here) page.
+
+Quick send:
+
+1. Press `m` to compose a new message.
+2. Enter the recipient and subject when prompted.
+3. Write the message in your editor, save, and exit.
+4. In the Compose Menu, press `y` to send.
 
 ## Introduction
 
@@ -328,3 +331,9 @@ messages. In order to take advantage of these, `$reflow_text` must be set.
   format (i.e. with `$text_flowed` unset).
 - If `$reflow_space_quotes` is unset, NeoMutt will still add one trailing space after all the
   quotes in the pager (but not when replying).
+
+## Next Steps
+
+- "I want to read and search mail faster." See [Reading Your First Email](first-email) and [Searching and Filtering Email](searching-email).
+- "I want better address completion." See [Address Book](../howto/address-book).
+- "I want encryption and signing." See [Encryption](../explanation/encryption) and [PGP](../howto/pgp).
