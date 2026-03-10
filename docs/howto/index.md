@@ -36,6 +36,7 @@ pgp
 smime
 autocrypt
 encrypt-to-self
+crypto-pitfalls
 password-manager
 ```
 
