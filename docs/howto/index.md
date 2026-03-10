@@ -65,6 +65,7 @@ maxdepth: 1
 
 header-display
 threads
+threading-scoring-workflows
 skip-quoted
 pager-read-delay
 display-munging
