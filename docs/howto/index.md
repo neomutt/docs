@@ -92,6 +92,7 @@ maxdepth: 1
 ---
 
 sidebar
+sidebar-workflows
 colours
 progress-bar
 sensible-browser
