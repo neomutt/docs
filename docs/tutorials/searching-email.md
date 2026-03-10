@@ -1,66 +1,87 @@
 ---
-title: "[TEMPLATE] Searching and Filtering Email"
+title: Searching and Filtering Email
 description: Step-by-step guide to finding messages using NeoMutt's search and pattern matching
 keywords: [neomutt, search, filter, patterns, limit, notmuch, tutorial]
-status: template
 ---
 
 # Searching and Filtering Email
 
-:::{admonition} Diátaxis: Tutorial
-:class: note
-
-Write as a **lesson**. Guide the learner through a meaningful exercise step by step.
-Use second person ("you"). Show concrete actions and their expected results.
-Don't explain concepts — demonstrate them through doing. Start with the simplest case
-and build complexity gradually. The reader should feel a sense of accomplishment at the end.
-:::
-
-:::{admonition} Template — Content Needed
-:class: warning
-
-This page is a **placeholder**. The following content needs to be written:
-
-- Basic search with `/` in the index
-- Using limit (`l`) to filter the message list
-- Introduction to NeoMutt's pattern matching language
-- Searching by sender, subject, date, body
-- Combining patterns with AND/OR
-- Saving and reusing search patterns
-- Using Notmuch for full-text search (brief intro, link to how-to)
-:::
+This tutorial teaches the basic search and limit workflow in the index.
 
 ## Basic Search
 
-<!-- Show the reader how to press / in the index to search for a string.
-     Demonstrate searching for a word in the subject line. -->
+1. Open a mailbox in the index.
+2. Press `/` and type a word from a message subject, then press `Enter`.
+3. Press `n` to jump to the next match.
+
+Expected result: the cursor moves to messages that match the search string.
 
 ## Filter the Message List with Limit
 
-<!-- Introduce the l key to limit the displayed messages to those matching
-     a pattern. Show how to clear the limit afterwards. -->
+1. Press `l` in the index to limit the view.
+2. Enter a pattern like `~f alice@example.com`.
+3. Press `Enter` to apply the limit.
+4. Press `l` again and enter `*` to clear the limit.
+
+Expected result: the index shows only matching messages while the limit is active.
 
 ## NeoMutt's Pattern Matching Language
 
-<!-- Walk through the most useful pattern prefixes: ~f (from), ~s (subject),
-     ~d (date), ~b (body). Use a real example for each. -->
+Try these common patterns:
+
+```text
+~f alice@example.com     (from)
+~s "build report"        (subject)
+~d <1w                  (date within 1 week)
+~b "error code"          (body)
+```
+
+Expected result: you can target specific message fields using patterns.
 
 ## Search by Sender, Subject, Date, and Body
 
-<!-- Concrete exercises: find all mail from a specific sender, find messages
-     from last week, find messages containing a keyword in the body. -->
+1. Limit to a sender with `~f`.
+2. Limit to last week with `~d <1w`.
+3. Limit to a keyword in the body with `~b`.
+
+Expected result: you can filter messages by common criteria.
 
 ## Combine Patterns
 
-<!-- Show AND (implicit), OR (|), and NOT (!) combinations.
-     Build a realistic compound query step by step. -->
+1. Combine with AND by listing patterns:
+
+```
+~f alice@example.com ~s report
+```
+
+2. Use OR with `|`:
+
+```
+(~f alice@example.com | ~f bob@example.com)
+```
+
+3. Exclude with `!`:
+
+```
+~s report !~b draft
+```
+
+Expected result: you can build precise queries.
 
 ## Save and Reuse Search Patterns
 
-<!-- Demonstrate binding a search pattern to a macro or storing it
-     in the configuration for quick access. -->
+1. Create a macro for a frequent search:
+
+```neomuttrc
+macro index ,r "<limit>~f alice@example.com ~s report<Enter>" "Limit to reports from Alice"
+```
+
+2. Use `,r` in the index.
+
+Expected result: you can repeat complex searches quickly.
 
 ## Full-Text Search with Notmuch
 
-<!-- Brief taste of Notmuch integration for whole-mailbox search.
-     Link to the dedicated how-to guide for full setup. -->
+Notmuch adds full-text search and tag-based queries. If you need whole-mailbox searching, set up Notmuch and use `notmuch://` virtual mailboxes.
+
+See [How to Use Notmuch](/home/mutt/rtd/docs/docs/howto/notmuch.md).

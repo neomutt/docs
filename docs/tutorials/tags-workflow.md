@@ -1,67 +1,87 @@
 ---
-title: "[TEMPLATE] Organising Email with Tags"
+title: Organising Email with Tags
 description: Step-by-step guide to using tags and virtual mailboxes for email organisation in NeoMutt
 keywords: [neomutt, tags, notmuch, virtual mailboxes, workflow, tutorial]
-status: template
 ---
 
 # Organising Email with Tags
 
-:::{admonition} Diátaxis: Tutorial
-:class: note
-
-Write as a **lesson**. Guide the learner through a meaningful exercise step by step.
-Use second person ("you"). Show concrete actions and their expected results.
-Don't explain concepts — demonstrate them through doing. Start with the simplest case
-and build complexity gradually. The reader should feel a sense of accomplishment at the end.
-:::
-
-:::{admonition} Template — Content Needed
-:class: warning
-
-This page is a **placeholder**. The following content needs to be written:
-
-- What are tags and why use them
-- Setting up NeoMutt with Notmuch for tagging
-- Adding and removing tags from messages
-- Searching by tags
-- Using virtual mailboxes based on tags
-- Building a tag-based workflow (inbox zero, GTD, etc.)
-- Displaying tags in the index format string
-:::
+This tutorial uses Notmuch tags to build a simple, repeatable workflow.
 
 ## What Are Tags?
 
-<!-- Very brief orientation: tags as flexible, non-exclusive labels.
-     Keep it minimal — let the exercises teach the concept. -->
+Tags are labels attached to messages. One message can have many tags, and tags can drive virtual mailboxes.
 
 ## Set Up Notmuch for Tagging
 
-<!-- Walk through the minimum Notmuch configuration needed:
-     notmuch setup, initial indexing, and NeoMutt's virtual mailbox settings. -->
+1. Install and initialize notmuch.
+2. Configure NeoMutt with a notmuch URL:
+
+```neomuttrc
+set nm_default_url = "notmuch:///path/to/your/maildir"
+```
+
+3. Add a virtual mailbox for your inbox tag:
+
+```neomuttrc
+named-mailboxes "Inbox" "notmuch://?query=tag:inbox"
+```
+
+Expected result: you can open the Inbox virtual mailbox from NeoMutt.
 
 ## Add and Remove Tags
 
-<!-- Show the reader how to tag a message (modify-tags keybinding),
-     add multiple tags, and remove a tag. Verify the result. -->
+1. Bind a key for tagging if you do not already have one:
+
+```neomuttrc
+bind index,pager \eT modify-tags
+```
+
+2. Open a message and press `Esc T`.
+3. Add or remove tags as prompted.
+
+Expected result: the message tags change in the notmuch database.
 
 ## Search by Tags
 
-<!-- Use Notmuch queries (tag:xxx) to find tagged messages.
-     Demonstrate from NeoMutt's virtual mailbox prompt. -->
+1. Use a notmuch query to open a tagged view:
+
+```neomuttrc
+named-mailboxes "Action" "notmuch://?query=tag:action"
+```
+
+2. Open the mailbox.
+
+Expected result: you see only messages with the `action` tag.
 
 ## Create Virtual Mailboxes from Tags
 
-<!-- Define virtual-mailboxes in neomuttrc that automatically show
-     messages matching a tag query. Show the sidebar listing them. -->
+1. Add more tag-based mailboxes:
+
+```neomuttrc
+named-mailboxes "Waiting" "notmuch://?query=tag:waiting"
+named-mailboxes "Reference" "notmuch://?query=tag:reference"
+```
+
+2. Open each mailbox and confirm the filters.
+
+Expected result: virtual mailboxes map directly to tag queries.
 
 ## Build a Tag-Based Workflow
 
-<!-- Walk through a simple workflow: triage inbox, tag messages as
-     "action", "waiting", "reference", archive the rest.
-     Mention inbox zero / GTD as inspiration. -->
+1. Triage your inbox and tag items as `action`, `waiting`, or `reference`.
+2. Remove the `inbox` tag from items once they are triaged.
+
+Expected result: the Inbox mailbox becomes a short list of untriaged items.
 
 ## Display Tags in the Index
 
-<!-- Show how to add %g or %(strstrstrstrstrstrstrstr) to index_format to display tags
-     next to each message in the index view. -->
+1. Update your index format to show tags:
+
+```neomuttrc
+set index_format = "%4C %Z %{%b %d} %-15.15F %g %s"
+```
+
+Expected result: tags appear next to messages in the index.
+
+See [How to Use Notmuch](/home/mutt/rtd/docs/docs/howto/notmuch.md) for full configuration details.

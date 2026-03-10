@@ -1,64 +1,83 @@
 ---
-title: "[TEMPLATE] Setting Up NeoMutt with Office 365"
+title: Setting Up NeoMutt with Office 365
 description: Step-by-step guide to configure NeoMutt for use with Microsoft 365
 keywords: [neomutt, office365, microsoft, imap, smtp, oauth2, tutorial]
-status: template
 ---
 
 # Setting Up NeoMutt with Office 365
 
-:::{admonition} Diátaxis: Tutorial
-:class: note
-
-Write as a **lesson**. Guide the learner through a meaningful exercise step by step.
-Use second person ("you"). Show concrete actions and their expected results.
-Don't explain concepts — demonstrate them through doing. Start with the simplest case
-and build complexity gradually. The reader should feel a sense of accomplishment at the end.
-:::
-
-:::{admonition} Template — Content Needed
-:class: warning
-
-This page is a **placeholder**. The following content needs to be written:
-
-- Prerequisites (Microsoft 365 account, OAuth registration)
-- Configuring IMAP access for Office 365
-- Setting up SMTP for Office 365
-- OAuth2 authentication with Microsoft (required since Basic Auth deprecation)
-- Reading and sending test emails
-- Handling calendar invites and meeting requests
-- Troubleshooting common Office 365 issues
-:::
+This tutorial configures an Exchange Online account using OAuth2 for IMAP and SMTP.
 
 ## Prerequisites
 
-<!-- What the reader needs: a Microsoft 365 account, an Azure AD app
-     registration for OAuth2 (required since Basic Auth was deprecated). -->
+1. A Microsoft 365 account (work or school).
+2. An Azure app registration for OAuth2 (client ID and secret if required).
+3. NeoMutt installed with IMAP and SMTP support.
+4. The `mutt_oauth2.py` helper script from the NeoMutt contrib directory.
 
 ## Configure IMAP Access
 
-<!-- Walk through the neomuttrc settings for Office 365 IMAP:
-     folder, spoolfile, imap_user, and OAuth2 token helper. -->
+1. Add IMAP settings:
+
+```neomuttrc
+set imap_user = "you@yourdomain.com"
+set folder = "imaps://outlook.office365.com/"
+set spoolfile = "+INBOX"
+```
+
+2. Confirm NeoMutt can open the mailbox.
+
+Expected result: the Office 365 inbox appears in the index.
 
 ## Set Up SMTP for Sending
 
-<!-- Add SMTP settings for Office 365. Show smtp_url and authentication. -->
+1. Add SMTP settings:
+
+```neomuttrc
+set smtp_url = "smtp://smtp.office365.com:587/"
+```
+
+Expected result: NeoMutt is configured to send via Office 365 SMTP.
 
 ## Configure OAuth2 Authentication
 
-<!-- Step-by-step Azure AD app registration, obtaining client ID/secret,
-     and configuring NeoMutt's OAuth2 token script. Required path. -->
+Office 365 requires OAuth2 for IMAP/SMTP. Use `mutt_oauth2.py` to obtain tokens.
+
+1. Register an OAuth app in Azure and note the client ID (and secret if used).
+2. Authorize tokens with `mutt_oauth2.py` (see its README for the exact command).
+3. Configure NeoMutt to use OAuth:
+
+```neomuttrc
+set imap_authenticators = "oauthbearer:xoauth2"
+set imap_oauth_refresh_command = "/path/to/mutt_oauth2.py you@yourdomain.com.tokens --provider microsoft"
+set smtp_oauth_refresh_command = "$imap_oauth_refresh_command"
+```
+
+Expected result: NeoMutt authenticates to IMAP and SMTP without storing a password.
 
 ## Read and Send Test Emails
 
-<!-- Launch NeoMutt, read a message, compose and send a test reply. -->
+1. Start NeoMutt and open the inbox.
+2. Compose a message to yourself and send it.
+
+Expected result: the message appears in Sent Items and arrives in your inbox.
 
 ## Handle Calendar Invites
 
-<!-- Brief guidance on viewing calendar invites and meeting requests
-     that arrive as email attachments (ICS files). -->
+1. Open a message with a calendar invite.
+2. Save the `.ics` attachment and open it with your calendar tool.
+
+Expected result: the invite is visible in your calendar tool.
 
 ## Troubleshooting
 
-<!-- Common problems: OAuth token expiry, tenant restrictions,
-     conditional access policies, MFA prompts. -->
+If login fails:
+
+1. Confirm your tenant allows IMAP/SMTP OAuth access.
+2. Re-run `mutt_oauth2.py` authorization if tokens expired.
+3. Verify server names and ports.
+
+References:
+
+- Exchange Online OAuth2 for IMAP/SMTP: https://learn.microsoft.com/en-us/exchange/client-developer/legacy-protocols/how-to-authenticate-an-imap-pop-smtp-application-by-using-oauth
+- Exchange Online server settings: https://learn.microsoft.com/en-us/exchange/troubleshoot/administration/incorrect-settings-in-outlook-desktop-application

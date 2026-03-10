@@ -1,66 +1,87 @@
 ---
-title: "[TEMPLATE] Managing Multiple Email Accounts"
+title: Managing Multiple Email Accounts
 description: Step-by-step guide to configuring and switching between multiple email accounts in NeoMutt
 keywords: [neomutt, multiple accounts, folder-hook, account-hook, sidebar, tutorial]
-status: template
 ---
 
 # Managing Multiple Email Accounts
 
-:::{admonition} Diátaxis: Tutorial
-:class: note
-
-Write as a **lesson**. Guide the learner through a meaningful exercise step by step.
-Use second person ("you"). Show concrete actions and their expected results.
-Don't explain concepts — demonstrate them through doing. Start with the simplest case
-and build complexity gradually. The reader should feel a sense of accomplishment at the end.
-:::
-
-:::{admonition} Template — Content Needed
-:class: warning
-
-This page is a **placeholder**. The following content needs to be written:
-
-- Why use multiple accounts in NeoMutt
-- Setting up folder-hooks for account switching
-- Using account-hook for different credentials
-- Organizing mailboxes per account
-- Configuring different sender identities (from, signature)
-- Switching between accounts smoothly
-- Using the sidebar to navigate between accounts
-:::
+In this tutorial you will configure two IMAP accounts and switch between them reliably.
 
 ## Why Multiple Accounts?
 
-<!-- Brief motivation: work + personal, multiple projects, etc.
-     Keep it short — this is a tutorial, not an explanation. -->
+You might have a personal and a work account, or multiple accounts for different roles. NeoMutt can switch settings automatically based on the mailbox you enter.
 
 ## Set Up Folder-Hooks for Account Switching
 
-<!-- Show how folder-hook changes settings when you enter a mailbox
-     belonging to a different account. Provide a concrete two-account example. -->
+1. Add two folder hooks, one per account:
+
+```neomuttrc
+folder-hook imaps://imap.work.example/ "set folder=imaps://imap.work.example/; set spoolfile=+INBOX; set record=+Sent; set from=work@example.com; set signature=~/.neomutt/sig-work"
+folder-hook imaps://imap.personal.example/ "set folder=imaps://imap.personal.example/; set spoolfile=+INBOX; set record=+Sent; set from=me@example.com; set signature=~/.neomutt/sig-personal"
+```
+
+2. Restart NeoMutt.
+
+Expected result: when you enter a mailbox on each server, the identity settings change automatically.
 
 ## Use Account-Hook for Credentials
 
-<!-- Demonstrate account-hook to supply different usernames and passwords
-     (or OAuth tokens) per server. -->
+1. Add account hooks to set credentials per server:
+
+```neomuttrc
+account-hook imaps://imap.work.example/ "set imap_user=work@example.com"
+account-hook imaps://imap.personal.example/ "set imap_user=me@example.com"
+```
+
+2. Use `account_command` or encrypted helpers for passwords.
+
+Expected result: NeoMutt uses the right credentials for each server.
 
 ## Organise Mailboxes per Account
 
-<!-- Show a directory layout and mailboxes configuration that keeps
-     each account's folders separate and clearly labelled. -->
+1. Declare mailboxes for each account:
+
+```neomuttrc
+mailboxes imaps://imap.work.example/INBOX
+mailboxes imaps://imap.personal.example/INBOX
+```
+
+2. Add labels if you want friendly names:
+
+```neomuttrc
+named-mailboxes "Work INBOX" "imaps://imap.work.example/INBOX"
+named-mailboxes "Personal INBOX" "imaps://imap.personal.example/INBOX"
+```
+
+Expected result: both accounts appear in mailbox lists and the sidebar.
 
 ## Configure Sender Identities
 
-<!-- Set different from addresses, realnames, and signature files
-     per account using folder-hook or send-hook. -->
+1. Set identity variables inside each `folder-hook`.
+2. Optionally add a `send-hook` for specific addresses:
+
+```neomuttrc
+send-hook '~f work@example.com' "set from=work@example.com"
+```
+
+Expected result: the correct sender appears in outgoing mail.
 
 ## Switch Between Accounts
 
-<!-- Walk through the reader's workflow: opening one account, switching
-     to another, verifying the correct identity is active. -->
+1. Open the Work INBOX, then switch to Personal INBOX.
+2. Press `?` to verify the active settings if needed.
+
+Expected result: each mailbox uses its own identity and settings.
 
 ## Use the Sidebar for Navigation
 
-<!-- Enable the sidebar, configure it to show mailboxes from all accounts,
-     and demonstrate switching with sidebar keybindings. -->
+1. Enable the sidebar:
+
+```neomuttrc
+set sidebar_visible
+```
+
+2. Use sidebar navigation keys to move between mailboxes.
+
+Expected result: you can switch accounts without typing mailbox URLs.

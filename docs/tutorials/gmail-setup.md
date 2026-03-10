@@ -1,65 +1,94 @@
 ---
-title: "[TEMPLATE] Setting Up NeoMutt with Gmail"
+title: Setting Up NeoMutt with Gmail
 description: Step-by-step guide to configure NeoMutt for use with Gmail
 keywords: [neomutt, gmail, imap, smtp, oauth2, tutorial]
-status: template
 ---
 
 # Setting Up NeoMutt with Gmail
 
-:::{admonition} Diátaxis: Tutorial
-:class: note
-
-Write as a **lesson**. Guide the learner through a meaningful exercise step by step.
-Use second person ("you"). Show concrete actions and their expected results.
-Don't explain concepts — demonstrate them through doing. Start with the simplest case
-and build complexity gradually. The reader should feel a sense of accomplishment at the end.
-:::
-
-:::{admonition} Template — Content Needed
-:class: warning
-
-This page is a **placeholder**. The following content needs to be written:
-
-- Prerequisites (Gmail account, app password or OAuth)
-- Creating a minimal neomuttrc for Gmail IMAP
-- Setting up SMTP for sending through Gmail
-- Configuring OAuth2 authentication (recommended over app passwords)
-- Reading your first email from Gmail
-- Sending a test email
-- Troubleshooting common Gmail issues (2FA, less secure apps, OAuth token refresh)
-:::
+This tutorial walks you through a working Gmail setup using IMAP + SMTP and OAuth2.
 
 ## Prerequisites
 
-<!-- What the reader needs before starting: a Gmail account, 2FA enabled,
-     an app password or OAuth client credentials. -->
+1. A Gmail account.
+2. IMAP enabled in Gmail settings.
+3. OAuth2 credentials for Gmail, or an app password if your account allows it.
+4. NeoMutt installed with IMAP and SMTP support.
 
 ## Create a Minimal Configuration for Gmail IMAP
 
-<!-- Walk through writing a neomuttrc that connects to Gmail's IMAP server.
-     Show the exact settings: imap_user, folder, spoolfile, etc. -->
+1. Create a minimal Gmail config:
+
+```neomuttrc
+set imap_user = "you@gmail.com"
+set folder = "imaps://imap.gmail.com/"
+set spoolfile = "+INBOX"
+set postponed = "+[Gmail]/Drafts"
+set record = "+[Gmail]/Sent Mail"
+set trash = "+[Gmail]/Trash"
+```
+
+If your Gmail labels use different names, adjust the folder paths accordingly.
+
+2. Start NeoMutt and confirm the mailbox opens.
+
+Expected result: your Gmail inbox appears in the index.
 
 ## Set Up SMTP for Sending
 
-<!-- Add SMTP settings so the reader can send mail through Gmail.
-     Show smtp_url, smtp_pass, and a test send. -->
+1. Add SMTP settings:
+
+```neomuttrc
+set smtp_url = "smtps://you@gmail.com@smtp.gmail.com:465/"
+```
+
+2. If you are using app passwords, add:
+
+```neomuttrc
+set smtp_pass = "your-app-password"
+```
+
+Expected result: NeoMutt can send mail via Gmail SMTP.
 
 ## Configure OAuth2 Authentication
 
-<!-- Recommended path. Walk through obtaining OAuth2 credentials and
-     configuring NeoMutt to use them instead of app passwords. -->
+Gmail supports OAuth2 SASL for IMAP and SMTP. NeoMutt delegates token handling to an external helper. The NeoMutt repo includes `mutt_oauth2.py` for this purpose.
+
+1. Generate tokens using `mutt_oauth2.py` (see the script README for details).
+2. Configure NeoMutt to use OAuth:
+
+```neomuttrc
+set imap_authenticators = "oauthbearer:xoauth2"
+set imap_oauth_refresh_command = "/path/to/mutt_oauth2.py you@gmail.com.tokens"
+set smtp_oauth_refresh_command = "$imap_oauth_refresh_command"
+```
+
+Expected result: NeoMutt authenticates without storing a long-lived password.
 
 ## Read Your First Email
 
-<!-- Have the reader launch NeoMutt, open their inbox, and read a message.
-     Describe what they should see on screen. -->
+1. Start NeoMutt.
+2. Open the inbox and press `Enter` on a message.
+
+Expected result: the pager shows the message content.
 
 ## Send a Test Email
 
-<!-- Compose and send a short test message. Verify it arrives. -->
+1. Press `m` to compose a new message.
+2. Send it to yourself.
+
+Expected result: the message arrives in your inbox and appears in the Sent folder.
 
 ## Troubleshooting
 
-<!-- Common problems: 2FA blocking access, "less secure apps" setting,
-     OAuth token refresh failures, connection timeouts. -->
+If authentication fails:
+
+1. Confirm IMAP access is enabled in Gmail settings.
+2. Re-run `mutt_oauth2.py` authorization if tokens expired.
+3. If using app passwords, confirm 2-step verification is enabled and the app password is valid.
+
+References:
+
+- Gmail IMAP settings and server details: https://support.google.com/a/answer/9003945
+- Gmail OAuth2 and IMAP/SMTP configuration: https://developers.google.com/gmail/imap/imap-smtp
+- App passwords: https://support.google.com/accounts/answer/185833

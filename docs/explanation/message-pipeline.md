@@ -1,42 +1,36 @@
 ---
-title: About the Message Processing Pipeline [TEMPLATE]
+title: About the Message Processing Pipeline
 description: How NeoMutt fetches, parses, and displays email messages
 ---
 
-# About the Message Processing Pipeline [TEMPLATE]
+# About the Message Processing Pipeline
 
-:::{admonition} Diátaxis: Explanation
-:class: note
-
-Write as **discursive discussion**. Explain WHY things are the way they are. Provide context,
-background, and history. Connect concepts together. Use "about" framing. It’s OK to include
-opinion and perspective. Don’t include step-by-step instructions — link to tutorials and
-how-to guides instead. The reader should come away with deeper understanding.
-:::
-
-This page needs content covering the following topics:
-
-- How NeoMutt processes incoming messages
-- The journey from mailbox fetching to screen display
-- MIME parsing and multipart handling
-- Character set detection and charset conversion
-- Header processing and display filtering
-- How display filters and content transformations work
-- The indexing and threading pipeline
-- How the pager interacts with the index view
-
-## Suggested Section Headings
+NeoMutt's message pipeline is designed for reliability and speed. It separates fetching, parsing, indexing, and display so each stage can be tuned or replaced without breaking the others.
 
 ### From Mailbox to Screen: The Big Picture
 
+When you open a mailbox, NeoMutt reads message metadata, builds an index view, and only parses message bodies when they are displayed. This keeps navigation fast, even in large mailboxes. The index and pager are separate views over the same underlying message data, which is why the UI can show message lists and full content without duplicating work.
+
 ### Fetching Messages from Backends
+
+Mailbox backends are responsible for retrieving message data. Local backends read mbox, Maildir, or MH directly from disk, while remote backends (IMAP, POP3, NNTP) fetch message data over the network. The backend choice affects how quickly new mail appears and what metadata is available for searching. See [Mailbox Formats](/home/mutt/rtd/docs/docs/howto/mailbox-formats.md) and [IMAP](/home/mutt/rtd/docs/docs/howto/imap.md).
 
 ### MIME Parsing and Multipart Handling
 
+Once a message is opened in the pager, NeoMutt parses its MIME structure. This is how attachments, multipart alternatives, and embedded messages are represented. The parser decides which parts are rendered inline and which are shown as attachments, with mailcap and MIME configuration controlling the final behavior. See [MIME](/home/mutt/rtd/docs/docs/explanation/mime.md) and [MIME Types](/home/mutt/rtd/docs/docs/reference/mime-types.md).
+
 ### Character Set Conversion
+
+Messages can use many character sets, and NeoMutt converts them to match your locale. This is why incorrect terminal encoding can cause unreadable output. Charset handling is a first-class part of the pipeline because it affects both headers and body content. See [Charsets](/home/mutt/rtd/docs/docs/explanation/charsets.md).
 
 ### Header Processing and Display Filtering
 
+Headers are parsed early and displayed in the pager, but what you see depends on header weeding, ordering, and custom headers. This keeps the display focused while still preserving full RFC compliance under the hood. See [How to Customise Header Display](/home/mutt/rtd/docs/docs/howto/header-display.md).
+
 ### The Indexing and Threading Pipeline
 
+The index view is built from message headers and flags. Threading groups related messages so you can navigate conversations instead of individual messages. Threading is optional and configurable, and the index can be customized heavily with format strings and patterns. See [Threading](/home/mutt/rtd/docs/docs/explanation/threading.md).
+
 ### How the Index and Pager Interact
+
+The index and pager are tightly linked. The pager shows one message, while the index provides context, threading, and message state. Actions in one view update the other, which is why tag, delete, and read flags appear consistently across the UI. The separation keeps the UI responsive and makes it possible to use external tools (mailcap, filters) without blocking the index.

@@ -1,44 +1,49 @@
 ---
-title: About NeoMutt's History [TEMPLATE]
+title: About NeoMutt's History
 description: The origins, evolution, and community behind NeoMutt
 ---
 
-# About NeoMutt's History [TEMPLATE]
+# About NeoMutt's History
 
-:::{admonition} Diátaxis: Explanation
-:class: note
-
-Write as **discursive discussion**. Explain WHY things are the way they are. Provide context,
-background, and history. Connect concepts together. Use "about" framing. It's OK to include
-opinion and perspective. Don't include step-by-step instructions — link to tutorials and
-how-to guides instead. The reader should come away with deeper understanding.
-:::
-
-This page needs content covering the following topics:
-
-- The origins of Mutt (Michael Elkins, 1995)
-- Mutt's naming and philosophy ("All mail clients suck. This one just sucks less.")
-- The fork from Mutt to NeoMutt (2016, Richard Russon / flatcap)
-- Why NeoMutt was created (stalled patches, slow upstream development)
-- Key contributions from Mutt's long history
-- NeoMutt's governance model and community structure
-- Notable contributors and feedback from the Mutt community
-- Timeline of major features and milestones
-
-## Suggested Section Headings
+NeoMutt grew out of a long-lived Mutt ecosystem. Its history makes the project easier to understand: why the codebase is conservative in some places, innovative in others, and why community collaboration remains central.
 
 ### The Birth of Mutt
 
+Mutt was created by Michael Elkins in 1995 and quickly became a favorite among terminal mail users. From the beginning it emphasized speed, keyboard-driven workflows, and a no-nonsense UNIX approach. See the historical overview on the Mutt site and Wikipedia for the early timeline.
+
 ### "All Mail Clients Suck"
+
+Mutt's famous motto, "All mail clients suck. This one just sucks less.", captures its pragmatic, user-driven culture. The project never tried to be everything; instead, it aimed to be the least-worst tool for power users. This attitude is inherited by NeoMutt.
 
 ### Mutt's Legacy and Lasting Influence
 
+Mutt established expectations for terminal mail clients: threading, macros, powerful searching, and a configuration language that could model complex workflows. Many of NeoMutt's patterns and conventions follow from this heritage rather than a desire to re-invent them.
+
 ### The Fork: Why NeoMutt Was Born
+
+NeoMutt began as a consolidation effort to gather long-standing patches and keep the Mutt ecosystem moving. Richard Russon (FlatCap) assembled and maintained a large collection of improvements and made them available as a single project. The NeoMutt README describes this as a "project of projects" and a place for developers to gather and share patches.
 
 ### Stalled Patches and the Case for Change
 
+The fork reflects a reality of mature software: upstream changes can be slow, and large patch sets can stagnate. NeoMutt's motivation was to reduce duplicated effort, provide a maintained home for improvements, and keep compatible with Mutt while adding features and fixes.
+
 ### NeoMutt's Governance and Development Model
+
+NeoMutt remains community-driven, centered around public source control, mailing lists, and a contributor culture similar to Mutt. The project keeps its development visible and accepts input across a broad contributor base. For project structure and contact points, see [About NeoMutt](/home/mutt/rtd/docs/docs/explanation/about-neomutt.md).
 
 ### Community Reception and Growth
 
+Because it preserves Mutt's workflow while adding new features, NeoMutt has attracted both long-time Mutt users and new contributors. The project maintains compatibility where possible, which keeps migration low-friction.
+
 ### Timeline of Key Milestones
+
+- 1995: Mutt is created by Michael Elkins.
+- Mid-2010s: NeoMutt forms to aggregate long-standing patches and improvements.
+- 2016: NeoMutt begins publishing regular releases and stabilizing features in the fork.
+- Ongoing: The project continues to evolve with community contributions and integrations.
+
+Sources and further reading:
+
+- Mutt history: https://mutt.org, https://en.wikipedia.org/wiki/Mutt_(email_client)
+- NeoMutt project overview: https://github.com/neomutt/neomutt/blob/main/README.md
+- NeoMutt home and releases: https://neomutt.org, https://neomutt.org/2024/
