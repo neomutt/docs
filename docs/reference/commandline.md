@@ -148,7 +148,7 @@ The `-a` option must be last in the option list.
 
 ## Mailto URLs
 
-In addition to accepting a list of email addresses, NeoMutt also accepts a URL with the `mailto:` schema as specified in RFC2368. This is useful when configuring a web browser to launch NeoMutt when clicking on mailto links.
+In addition to accepting a list of email addresses, NeoMutt also accepts a URL with the `mailto:` schema as specified in [RFC2368](https://www.rfc-editor.org/rfc/rfc2368.html). This is useful when configuring a web browser to launch NeoMutt when clicking on mailto links.
 
 ```
 neomutt mailto:some@one.org?subject=test&cc=other@one.org

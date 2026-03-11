@@ -159,11 +159,11 @@ In addition, the *index* and *pager* menus have these interesting functions:
 
 `<list-subscribe>`
 : Send an email to the address specified in the List-Subscribe header as specified in
-  RFC2369.
+  [RFC2369](https://www.rfc-editor.org/rfc/rfc2369.html).
 
 `<list-unsubscribe>`
 : Send an email to the address specified in the List-Unsubscribe header as specified in
-  RFC2369.
+  [RFC2369](https://www.rfc-editor.org/rfc/rfc2369.html).
 
 `<pipe-message>` (default: |)
 : Asks for an external Unix command and pipes the current or tagged message(s) to it. The

@@ -32,7 +32,7 @@ if the {ref}`$text_flowed <text-flowed>` variable is set, specifically it does n
 trailing spaces.
 
 After editing, NeoMutt properly space-stuffs the message. *Space-stuffing* is required by
-RFC3676, defining `format=flowed`, and means to prepend a space to:
+[RFC3676](https://www.rfc-editor.org/rfc/rfc3676.html), defining `format=flowed`, and means to prepend a space to:
 
 - all lines starting with a space
 - lines starting with the word `From` followed by space

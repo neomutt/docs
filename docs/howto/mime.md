@@ -246,8 +246,8 @@ MIME types are not arbitrary, they need to be assigned by
 
 ## MIME Viewer Configuration with Mailcap
 
-NeoMutt supports RFC1524 MIME Configuration, in particular the Unix specific
-format specified in Appendix A of RFC1524. This file format is commonly referred
+NeoMutt supports [RFC1524](https://www.rfc-editor.org/rfc/rfc1524.html) MIME Configuration, in particular the Unix specific
+format specified in Appendix A of [RFC1524](https://www.rfc-editor.org/rfc/rfc1524.html). This file format is commonly referred
 to as the "mailcap" format. Many MIME compliant programs utilize the mailcap
 format, allowing you to specify handling for all MIME types in one place for all
 programs. Programs known to use this format include Firefox, lynx and metamail.
@@ -567,7 +567,7 @@ information from NeoMutt. The keywords NeoMutt expands are:
 - **\\%** — This will be replaced by a literal `%`.
 
 NeoMutt does not currently support the `%F` and `%n` keywords specified in
-RFC1524. The main purpose of these parameters is for multipart messages, which
+[RFC1524](https://www.rfc-editor.org/rfc/rfc1524.html). The main purpose of these parameters is for multipart messages, which
 is handled internally by NeoMutt.
 
 ### Example Mailcap Files

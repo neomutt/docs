@@ -32,5 +32,5 @@ special way. The `mailto-allow` and `unmailto-allow` commands allow the user to 
 of approved headers.
 
 NeoMutt initializes the default list to contain only the `Subject` and `Body` header fields,
-which are the only requirement specified by the `mailto:` specification in RFC2368, and the
+which are the only requirement specified by the `mailto:` specification in [RFC2368](https://www.rfc-editor.org/rfc/rfc2368.html), and the
 `Cc`, `In-Reply-To`, `References` headers to aid with replies to mailing lists.

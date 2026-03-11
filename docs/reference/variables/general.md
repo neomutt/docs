@@ -827,9 +827,9 @@ This option allows you to edit the header of your outgoing messages
 along with the body of your message.
 
 Although the compose menu may have localized header labels, the
-labels passed to your editor will be standard RFC2822 headers,
+labels passed to your editor will be standard [RFC2822](https://www.rfc-editor.org/rfc/rfc2822.html) headers,
 (e.g. To:, Cc:, Subject:).  Headers added in your editor must
-also be RFC2822 headers, or one of the pseudo headers listed in
+also be [RFC2822](https://www.rfc-editor.org/rfc/rfc2822.html) headers, or one of the pseudo headers listed in
 "`edit-header`".  NeoMutt will not understand localized header
 labels, just as it would not when parsing an actual email.
 
@@ -1407,7 +1407,7 @@ This variable only affects decoding. (IDN only)
 - **Default:** yes
 
 When *set*, NeoMutt will encode international domain names using
-IDN.  Unset this if your SMTP server can handle newer (RFC6531)
+IDN.  Unset this if your SMTP server can handle newer ([RFC6531](https://www.rfc-editor.org/rfc/rfc6531.html))
 UTF-8 encoded domains. (IDN only)
 
 (ignore-list-reply-to)=
@@ -1720,7 +1720,7 @@ manual.
 
 [$mailcap_path](#mailcap-path) is overridden by the environment variable `$MAILCAPS`.
 
-The default search path is from RFC1524.
+The default search path is from [RFC1524](https://www.rfc-editor.org/rfc/rfc1524.html).
 
 (mailcap-sanitize)=
 ## `$mailcap_sanitize`
@@ -1887,7 +1887,7 @@ See **format string filters**.
 
 Please note that the Message-ID value follows a strict syntax, and you are
 responsible for ensuring correctness if you change this from the default.
-In particular, the value must follow the syntax in RFC 5322:
+In particular, the value must follow the syntax in [RFC5322](https://www.rfc-editor.org/rfc/rfc5322.html):
 "`"<" id-left "@" id-right ">"`".  No spaces are allowed, and
 `id-left` should follow the dot-atom-text syntax in the RFC.
 The `id-right` should generally be left as "`%f`".
@@ -2146,7 +2146,7 @@ remote machine without having to enter a password.
 - **Default:** (empty)
 
 This variable specifies a list of comma-separated languages.
-RFC8255 : user preferred languages to be searched in parts and display.
+[RFC8255](https://www.rfc-editor.org/rfc/rfc8255.html) : user preferred languages to be searched in parts and display.
 Example:
 
 ```neomuttrc
@@ -2343,7 +2343,7 @@ Also, this option does not affect replies when [$text_flowed](#text-flowed) is *
 
 When *set*, NeoMutt will reformat paragraphs in text/plain
 parts marked format=flowed.  If *unset*, NeoMutt will display paragraphs
-unaltered from how they appear in the message body.  See RFC3676 for
+unaltered from how they appear in the message body.  See [RFC3676](https://www.rfc-editor.org/rfc/rfc3676.html) for
 details on the *format=flowed* format.
 
 Also see [$reflow_wrap](#reflow-wrap), and [$wrap](#wrap).
@@ -2554,7 +2554,7 @@ using the value of [$real_name](#real-name).
 - **Type:** boolean
 - **Default:** yes
 
-When this variable is *set*, NeoMutt will decode RFC2047-encoded MIME
+When this variable is *set*, NeoMutt will decode [RFC2047](https://www.rfc-editor.org/rfc/rfc2047.html)-encoded MIME
 parameters. You want to set this variable when NeoMutt suggests you
 to save attachments to files named like:
 
@@ -2566,13 +2566,13 @@ to save attachments to files named like:
 When this variable is *set* interactively, the change won't be
 active until you change folders.
 
-Note that this use of RFC2047's encoding is explicitly
+Note that this use of [RFC2047](https://www.rfc-editor.org/rfc/rfc2047.html)'s encoding is explicitly
 prohibited by the standard, but nevertheless encountered in the
 wild and produced by, e.g., Outlook.
 
 Also note that setting this parameter will *not* have the effect
 that NeoMutt *generates* this kind of encoding.  Instead, NeoMutt will
-unconditionally use the encoding specified in RFC2231.
+unconditionally use the encoding specified in [RFC2231](https://www.rfc-editor.org/rfc/rfc2231.html).
 
 (save-address)=
 ## `$save_address`
@@ -3382,7 +3382,7 @@ This option specifies the number of characters to use for wrapping
 an outgoing message's headers. Allowed values are between 78 and 998
 inclusive.
 
-**Note:** This option usually shouldn't be changed. RFC5233
+**Note:** This option usually shouldn't be changed. [RFC5233](https://www.rfc-editor.org/rfc/rfc5233.html)
 recommends a line length of 78 (the default), so **please only change
 this setting when you know what you're doing**.
 

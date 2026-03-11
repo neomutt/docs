@@ -143,7 +143,7 @@ my-header Organization: A Really Big Company, Anytown, USA
 
 :::{note}
 Space characters are *not* allowed between the keyword and the colon (":").
-The standard for electronic mail (RFC2822) says that space is illegal there, so
+The standard for electronic mail ([RFC2822](https://www.rfc-editor.org/rfc/rfc2822.html)) says that space is illegal there, so
 NeoMutt enforces the rule.
 :::
 
@@ -162,7 +162,7 @@ unmy-header to cc
 
 ## Editing Raw Messages
 
-NeoMutt provides four related functions for accessing the raw RFC 2822 source
+NeoMutt provides four related functions for accessing the raw [RFC2822](https://www.rfc-editor.org/rfc/rfc2822.html) source
 of a message:
 
 | Function | Description |

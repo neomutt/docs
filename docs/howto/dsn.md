@@ -15,7 +15,7 @@ to explanation pages instead. Keep it focused on the specific task. Start with p
 give the steps, show the expected result.
 :::
 
-RFC1894 defines a set of MIME content types for relaying information about the status of
+[RFC1894](https://www.rfc-editor.org/rfc/rfc1894.html) defines a set of MIME content types for relaying information about the status of
 electronic mail messages. These can be thought of as "return receipts."
 
 ## Configure DSN Variables

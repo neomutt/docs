@@ -185,8 +185,8 @@ Click the **Group** link to see full details including type, default value, and 
 | `$ignore_list_reply_to` | Affects the behavior of the <reply> function when replying to messages from mailing lists (as defined by the "subscri... | [General](variables/general) |
 | `$imap_authenticators` | This is a colon-separated list of authentication methods NeoMutt may attempt to use to log in to an IMAP server, in t... | [IMAP](variables/imap) |
 | `$imap_check_subscribed` | When set, NeoMutt will fetch the set of subscribed folders from your server whenever a mailbox is selected, and add t... | [IMAP](variables/imap) |
-| `$imap_condstore` | When set, NeoMutt will use the CONDSTORE extension (RFC7162) if advertised by the server. | [IMAP](variables/imap) |
-| `$imap_deflate` | When set, NeoMutt will use the COMPRESS=DEFLATE extension (RFC4978) if advertised by the server. | [IMAP](variables/imap) |
+| `$imap_condstore` | When set, NeoMutt will use the CONDSTORE extension ([RFC7162](https://www.rfc-editor.org/rfc/rfc7162.html)) if advertised by the server. | [IMAP](variables/imap) |
+| `$imap_deflate` | When set, NeoMutt will use the COMPRESS=DEFLATE extension ([RFC4978](https://www.rfc-editor.org/rfc/rfc4978.html)) if advertised by the server. | [IMAP](variables/imap) |
 | `$imap_delim_chars` | This contains the list of characters that NeoMutt will use as folder separators for IMAP paths, when no separator is ... | [IMAP](variables/imap) |
 | `$imap_fetch_chunk_size` | When set to a value greater than 0, new headers will be downloaded in groups of this many headers per request. | [IMAP](variables/imap) |
 | `$imap_headers` | NeoMutt requests these header fields in addition to the default headers ("Date:", "From:", "Sender:", "Subject:", "To... | [IMAP](variables/imap) |
@@ -200,9 +200,9 @@ Click the **Group** link to see full details including type, default value, and 
 | `$imap_peek` | When set, NeoMutt will avoid implicitly marking your mail as read whenever you fetch a message from the server. | [IMAP](variables/imap) |
 | `$imap_pipeline_depth` | Controls the number of IMAP commands that may be queued up before they are sent to the server. | [IMAP](variables/imap) |
 | `$imap_poll_timeout` | This variable specifies the maximum amount of time in seconds that NeoMutt will wait for a response when polling IMAP... | [IMAP](variables/imap) |
-| `$imap_qresync` | When set, NeoMutt will use the QRESYNC extension (RFC7162) if advertised by the server. | [IMAP](variables/imap) |
-| `$imap_rfc5161` | When set, NeoMutt will use the IMAP ENABLE extension (RFC5161) to select CAPABILITIES. | [IMAP](variables/imap) |
-| `$imap_send_id` | When set, NeoMutt will send an IMAP ID command (RFC2971) to the server when logging in if advertised by the server. | [IMAP](variables/imap) |
+| `$imap_qresync` | When set, NeoMutt will use the QRESYNC extension ([RFC7162](https://www.rfc-editor.org/rfc/rfc7162.html)) if advertised by the server. | [IMAP](variables/imap) |
+| `$imap_rfc5161` | When set, NeoMutt will use the IMAP ENABLE extension ([RFC5161](https://www.rfc-editor.org/rfc/rfc5161.html)) to select CAPABILITIES. | [IMAP](variables/imap) |
+| `$imap_send_id` | When set, NeoMutt will send an IMAP ID command ([RFC2971](https://www.rfc-editor.org/rfc/rfc2971.html)) to the server when logging in if advertised by the server. | [IMAP](variables/imap) |
 | `$imap_server_noise` | When set, NeoMutt will display warning messages from the IMAP server as error messages. | [IMAP](variables/imap) |
 | `$imap_user` | The name of the user whose mail you intend to access on the IMAP server. | [IMAP](variables/imap) |
 | `$implicit_auto_view` | If set to "yes", NeoMutt will look for a mailcap entry with the "copiousoutput" flag set for every MIME attachment it... | [General](variables/general) |
@@ -373,7 +373,7 @@ Click the **Group** link to see full details including type, default value, and 
 | `$reverse_alias` | This variable controls whether or not NeoMutt will display the "personal" name from your aliases in the index menu if... | [General](variables/general) |
 | `$reverse_name` | It may sometimes arrive that you receive mail to a certain machine, move the messages to another machine, and reply t... | [General](variables/general) |
 | `$reverse_real_name` | This variable fine-tunes the behavior of the $reverse_name feature. | [General](variables/general) |
-| `$rfc2047_parameters` | When this variable is set, NeoMutt will decode RFC2047-encoded MIME parameters. | [General](variables/general) |
+| `$rfc2047_parameters` | When this variable is set, NeoMutt will decode [RFC2047](https://www.rfc-editor.org/rfc/rfc2047.html)-encoded MIME parameters. | [General](variables/general) |
 | `$save_address` | If set, NeoMutt will take the sender's full address when choosing a default folder for saving a mail. | [General](variables/general) |
 | `$save_empty` | When unset, mailboxes which contain no saved messages will be removed when closed (the exception is $spool_file which... | [General](variables/general) |
 | `$save_history` | This variable controls the size of the history (per category) saved in the $history_file file. | [General](variables/general) |

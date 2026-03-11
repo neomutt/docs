@@ -73,7 +73,7 @@ To prevent these issues, NeoMutt by default only accepts the `Subject`, `Body`, 
 NeoMutt in many places has to rely on external applications or for convenience supports
 mechanisms involving external applications.
 
-One of these is the `mailcap` mechanism as defined by RFC1524. Details about a secure use of
+One of these is the `mailcap` mechanism as defined by [RFC1524](https://www.rfc-editor.org/rfc/rfc1524.html). Details about a secure use of
 the mailcap mechanisms is given in the mailcap section of the manual.
 
 Besides the mailcap mechanism, NeoMutt uses a number of other external utilities for

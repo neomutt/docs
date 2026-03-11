@@ -58,7 +58,7 @@ of mailboxes it polls for new mail just as if you had issued individual
 - **Type:** boolean
 - **Default:** no
 
-When *set*, NeoMutt will use the CONDSTORE extension (RFC7162)
+When *set*, NeoMutt will use the CONDSTORE extension ([RFC7162](https://www.rfc-editor.org/rfc/rfc7162.html))
 if advertised by the server.  NeoMutt's current implementation is basic,
 used only for initial message fetching and flag updates.
 
@@ -73,7 +73,7 @@ mileage may vary.
 - **Type:** boolean
 - **Default:** yes
 
-When *set*, NeoMutt will use the COMPRESS=DEFLATE extension (RFC4978)
+When *set*, NeoMutt will use the COMPRESS=DEFLATE extension ([RFC4978](https://www.rfc-editor.org/rfc/rfc4978.html))
 if advertised by the server.
 
 In general a good compression efficiency can be achieved, which
@@ -244,7 +244,7 @@ to 0 to disable timing out.
 - **Type:** boolean
 - **Default:** no
 
-When *set*, NeoMutt will use the QRESYNC extension (RFC7162)
+When *set*, NeoMutt will use the QRESYNC extension ([RFC7162](https://www.rfc-editor.org/rfc/rfc7162.html))
 if advertised by the server.  NeoMutt's current implementation is basic,
 used only for initial message fetching and flag updates.
 
@@ -258,7 +258,7 @@ file a bug report to let us know.
 - **Type:** boolean
 - **Default:** yes
 
-When *set*, NeoMutt will use the IMAP ENABLE extension (RFC5161) to
+When *set*, NeoMutt will use the IMAP ENABLE extension ([RFC5161](https://www.rfc-editor.org/rfc/rfc5161.html)) to
 select CAPABILITIES. Some servers (notably Coremail System IMap Server) do
 not properly respond to ENABLE commands, which might cause NeoMutt to hang.
 If your connection seems to freeze at login, try unsetting this. See also
@@ -270,7 +270,7 @@ If your connection seems to freeze at login, try unsetting this. See also
 - **Type:** boolean
 - **Default:** no
 
-When *set*, NeoMutt will send an IMAP ID command (RFC2971) to the
+When *set*, NeoMutt will send an IMAP ID command ([RFC2971](https://www.rfc-editor.org/rfc/rfc2971.html)) to the
 server when logging in if advertised by the server. This command provides
 information about the IMAP client, such as "NeoMutt" and the current version.
 

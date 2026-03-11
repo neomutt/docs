@@ -21,7 +21,7 @@ NeoMutt includes support for reading and writing `multipart/multilingual`
 emails. A `multipart/multilingual` email is like a `multipart/alternative`
 email, except that it comes with parts of different versions of languages
 instead of appearances. Its format is described by
-[RFC8255](https://tools.ietf.org/html/rfc8255).
+[RFC8255](https://www.rfc-editor.org/rfc/rfc8255.html).
 
 ### Reading Multipart/Multilingual Emails
 
@@ -83,7 +83,7 @@ emails, but it is possible to write a `multipart/related` email.
 A `multipart/related` attachment is intended for compound objects consisting of
 several inter-related body parts which are linked together using the
 `Content-ID` header. Its format is described by
-[RFC2387](https://tools.ietf.org/html/rfc2387).
+[RFC2387](https://www.rfc-editor.org/rfc/rfc2387.html).
 
 ### Composing Multipart/Related Emails
 

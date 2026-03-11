@@ -56,7 +56,7 @@ the section on [`$index_format`](#index-format).  See also [`$attribution_locale
 - **Default:** yes
 
 Controls the decoding of complex MIME messages into `text/plain` when
-forwarding a message.  The message header is also RFC2047 decoded.
+forwarding a message.  The message header is also [RFC2047](https://www.rfc-editor.org/rfc/rfc2047.html) decoded.
 This variable is only used, if [`$mime_forward`](#mime-forward) is *unset*,
 otherwise [`$mime_forward_decode`](#mime-forward-decode) is used instead.
 
