@@ -5,8 +5,8 @@ The official documentation for `NeoMutt <https://neomutt.org>`_, a
 terminal-based email client.  Built with `Sphinx <https://www.sphinx-doc.org/>`_
 and hosted on `Read the Docs <https://readthedocs.org/>`_.
 
-.. image:: https://readthedocs.org/projects/neomutt/badge/?version=latest
-   :target: https://neomutt.readthedocs.io/en/latest/?badge=latest
+.. image:: https://app.readthedocs.org/projects/neomutt-docs/badge/
+   :target: https://app.readthedocs.org/projects/neomutt-docs/builds/
    :alt: Documentation Status
 
 Structure
