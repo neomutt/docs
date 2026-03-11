@@ -159,6 +159,12 @@ html[data-theme=dark] .sponsor-link:hover .sponsor-heart {
   border: 1px solid black;
 }
 
+@media screen and (max-width: 1500px) {
+  .devel-warning, .sponsor-link, .stars-link {
+    display: none;
+  }
+}
+
 /* ── Article header toolbar — force horizontal flex layout ─── */
 .header-article-items__end, .header-article-items__start {
   display: flex !important;
