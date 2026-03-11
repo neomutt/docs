@@ -3,6 +3,11 @@
    Palette: #005461  #018790  #00B7B5  #F4F4F4
    ═══════════════════════════════════════════════════════════════ */
 
+/* ── Sidebar logo spacing ───────────────────────────────────── */
+.bd-sidebar-primary .navbar-brand {
+  padding-top: 0;
+}
+
 /* ── Wider content panel ────────────────────────────────────── */
 .bd-article-container {
   max-width: 100% !important;
