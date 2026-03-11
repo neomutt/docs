@@ -178,14 +178,41 @@ NeoMutt's pager recognises ANSI escape sequences embedded in message text and
 renders them as colour and attribute changes. Sequences use the format
 `ESC[Ps;Ps;...m` (e.g., `\e[1;32m` for bold green, `\e[0m` to reset).
 
+### Set Attributes
+
 | Code | Effect |
 |------|--------|
-| `0` | Normal (reset all attributes) |
+| `0` | Normal (reset all attributes and colours) |
 | `1` | Bold |
 | `3` | Italic |
 | `4` | Underline |
 | `5` | Blink |
 | `7` | Reverse video |
-| `8` | Concealed |
-| `30`–`37` | Foreground colours (black, red, green, yellow, blue, magenta, cyan, white) |
-| `40`–`47` | Background colours (same order) |
+
+### Clear Attributes
+
+| Code | Effect |
+|------|--------|
+| `22` | Clear bold |
+| `23` | Clear italic |
+| `24` | Clear underline |
+| `25` | Clear blink |
+| `27` | Clear reverse video |
+
+### Foreground Colours
+
+| Code | Effect |
+|------|--------|
+| `30`–`37` | Basic foreground colours (black, red, green, yellow, blue, magenta, cyan, white) |
+| `38;5;n` | 256-colour palette foreground (`n` = 0–255) |
+| `38;2;R;G;B` | True colour (24-bit RGB) foreground |
+| `39` | Default foreground colour |
+
+### Background Colours
+
+| Code | Effect |
+|------|--------|
+| `40`–`47` | Basic background colours (same order as foreground) |
+| `48;5;n` | 256-colour palette background (`n` = 0–255) |
+| `48;2;R;G;B` | True colour (24-bit RGB) background |
+| `49` | Default background colour |
