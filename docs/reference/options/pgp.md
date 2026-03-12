@@ -107,18 +107,15 @@ application/pgp attachments.
 The PGP command formats have their own set of `printf(3)`-like
 sequences:
 
-
-
-| **Short** | **Long Name** | **Description** |
-|---|---|---|
-| `%a` | `%{sign-as}` | Value of [$pgp_sign_as](#pgp-sign-as) if set, otherwise the value of [$pgp_default_key](#pgp-default-key) |
-| `%f` | `%{file-message}` | Expands to the name of a file containing a message |
-| `%p` | `%{need-pass}` | Expands to `PGPPASSFD=0` when a pass phrase is needed, to an empty string otherwise. |
-|  |  | Note: This may be used with a `%<...>` construct. |
-| `%r` | `%{key-ids}` | One or more key IDs (or fingerprints if available) |
-| `%s` | `%{file-signature}` | Expands to the name of a file containing the signature part |
-|  |  | of a `multipart/signed` attachment when verifying it |
-
+| Short | Long Name           | Description                                                                                               |
+|-------|---------------------|-----------------------------------------------------------------------------------------------------------|
+| `%a`  | `%{sign-as}`        | Value of [$pgp_sign_as](#pgp-sign-as) if set, otherwise the value of [$pgp_default_key](#pgp-default-key) |
+| `%f`  | `%{file-message}`   | Expands to the name of a file containing a message                                                        |
+| `%p`  | `%{need-pass}`      | Expands to `PGPPASSFD=0` when a pass phrase is needed, to an empty string otherwise.                      |
+|       |                     | Note: This may be used with a `%<...>` construct.                                                         |
+| `%r`  | `%{key-ids}`        | One or more key IDs (or fingerprints if available)                                                        |
+| `%s`  | `%{file-signature}` | Expands to the name of a file containing the signature part                                               |
+|       |                     | of a `multipart/signed` attachment when verifying it                                                      |
 
 (PGP only)
 
@@ -210,31 +207,28 @@ your personal taste. If [$crypt_use_gpgme](#crypt-use-gpgme) is *set*, then it a
 to S/MIME key selection menu also. This string is similar to [$index_format](#index-format),
 but has its own set of `printf(3)`-like sequences:
 
-
-
-| **Short** | **Long Name** | **Description** |
-|---|---|---|
-| `%a` | `%{key-algorithm}` | Algorithm |
-| `%c` | `%{key-capabilities}` | Capabilities |
-| `%f` | `%{key-flags}` | Flags |
-| `%i` | `%{key-fingerprint}` | Key fingerprint (or long key id if non-existent) |
-| `%k` | `%{key-id}` | Key id |
-| `%l` | `%{key-length}` | Key length |
-| `%n` | `%{number}` | Number |
-| `%p` | `%{protocol}` | Protocol |
-| `%t` | `%{trust}` | Trust/validity of the key-uid association |
-| `%u` | `%{user-id}` | User id |
-| `%A` | `%{pkey-algorithm}` | Primary Key Algorithm |
-| `%C` | `%{pkey-capabilities}` | Primary Key Capabilities |
-| `%F` | `%{pkey-flags}` | Primary Key Flags |
-| `%I` | `%{pkey-fingerprint}` | Primary Key fingerprint (or long key id if non-existent) |
-| `%K` | `%{pkey-id}` | Primary Key id |
-| `%L` | `%{pkey-length}` | Primary Key length |
-| `%[<s>]` | `%{date}` | Date of the key where `<s>` is an `strftime(3)` expression |
-| `%*X` | `%{padding-soft}` | Soft-fill with character `X` as pad |
-| `%>X` | `%{padding-hard}` | Right justify the rest of the string and pad with character `X` |
-| `%|X` | `%{padding-eol}` | Pad to the end of the line with character `X` |
-
+| Short    | Long Name              | Description                                                     |
+|----------|------------------------|-----------------------------------------------------------------|
+| `%a`     | `%{key-algorithm}`     | Algorithm                                                       |
+| `%c`     | `%{key-capabilities}`  | Capabilities                                                    |
+| `%f`     | `%{key-flags}`         | Flags                                                           |
+| `%i`     | `%{key-fingerprint}`   | Key fingerprint (or long key id if non-existent)                |
+| `%k`     | `%{key-id}`            | Key id                                                          |
+| `%l`     | `%{key-length}`        | Key length                                                      |
+| `%n`     | `%{number}`            | Number                                                          |
+| `%p`     | `%{protocol}`          | Protocol                                                        |
+| `%t`     | `%{trust}`             | Trust/validity of the key-uid association                       |
+| `%u`     | `%{user-id}`           | User id                                                         |
+| `%A`     | `%{pkey-algorithm}`    | Primary Key Algorithm                                           |
+| `%C`     | `%{pkey-capabilities}` | Primary Key Capabilities                                        |
+| `%F`     | `%{pkey-flags}`        | Primary Key Flags                                               |
+| `%I`     | `%{pkey-fingerprint}`  | Primary Key fingerprint (or long key id if non-existent)        |
+| `%K`     | `%{pkey-id}`           | Primary Key id                                                  |
+| `%L`     | `%{pkey-length}`       | Primary Key length                                              |
+| `%[<s>]` | `%{date}`              | Date of the key where `<s>` is an `strftime(3)` expression      |
+| `%*X`    | `%{padding-soft}`      | Soft-fill with character `X` as pad                             |
+| `%>X`    | `%{padding-hard}`      | Right justify the rest of the string and pad with character `X` |
+| `%\|X`   | `%{padding-eol}`       | Pad to the end of the line with character `X`                   |
 
 See the section "Sending Cryptographically Signed/Encrypted Messages" of the
 user manual for the meaning of the letters some of these sequences expand
@@ -312,14 +306,12 @@ possible `printf(3)`-like sequences.
 
 Specifies how the entries in the pgp menu are sorted.
 
-
-
-| **Value** | **Sort by** |
-|---|---|
-| `address` | Address |
-| `date` | Date |
-| `keyid` | Key id |
-| `trust` | Trust level |
+| Value     | Sort by     |
+|-----------|-------------|
+| `address` | Address     |
+| `date`    | Date        |
+| `keyid`   | Key id      |
+| `trust`   | Trust level |
 
 
 Prefixing the value with `reverse-` sorts the entries in reverse order,

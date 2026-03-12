@@ -33,19 +33,19 @@ The default `"alpha"` setting of [`$browser_sort`](#browser-sort) uses locale-ba
 
 Specifies how to sort entries in the file browser.
 
-| Value | Sort by |
-|-------|---------|
-| `alpha` | Name |
-| `count` | Total message count |
-| `date` | Date |
-| `desc` | Description |
-| `size` | Count of new messages |
-| `new` | Size |
-| `unsorted` | Unsorted |
+| Value      | Sort by               |
+|------------|-----------------------|
+| `alpha`    | Name                  |
+| `count`    | Total message count   |
+| `date`     | Date                  |
+| `desc`     | Description           |
+| `size`     | Count of new messages |
+| `new`      | Size                  |
+| `unsorted` | Unsorted              |
 
 | Deprecated Value | Use this instead |
-|------------------|-----------------|
-| `unread` | `new` |
+|------------------|------------------|
+| `unread`         | `new`            |
 
 Prefixing the value with `reverse-` sorts the entries in reverse order, e.g. `set browser_sort = "reverse-date"`
 

@@ -23,12 +23,12 @@ how-to guides and explanation pages instead.
 
 Controls the characters used by the "%r" indicator in [`$status_format`](#status-format).
 
-| Character | Default | Description |
-|-----------|---------|-------------|
-| 1 | `-` | Mailbox is unchanged |
-| 2 | `*` | Mailbox has been changed and needs to be resynchronized |
-| 3 | `%` | Mailbox is read-only, or will not be written when exiting. (You can toggle whether to write changes to a mailbox with the `<toggle-write>` operation, bound by default to "%") |
-| 4 | `A` | Folder opened in attach-message mode. (Certain operations like composing a new mail, replying, forwarding, etc. are not permitted in this mode) |
+| Character | Default | Description                                                                                                                                                                    |
+|-----------|---------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 1         | `-`     | Mailbox is unchanged                                                                                                                                                           |
+| 2         | `*`     | Mailbox has been changed and needs to be resynchronized                                                                                                                        |
+| 3         | `%`     | Mailbox is read-only, or will not be written when exiting. (You can toggle whether to write changes to a mailbox with the `<toggle-write>` operation, bound by default to "%") |
+| 4         | `A`     | Folder opened in attach-message mode. (Certain operations like composing a new mail, replying, forwarding, etc. are not permitted in this mode)                                |
 
 (status-format)=
 ## `$status_format`
@@ -38,34 +38,34 @@ Controls the characters used by the "%r" indicator in [`$status_format`](#status
 
 Controls the format of the status line displayed in the "index" menu. This string is similar to `$index_format`, but has its own set of `printf(3)`-like sequences:
 
-| Short | Long Name | Description |
-|-------|-----------|-------------|
-| `%b` | `%{unread-mailboxes}` | Number of mailboxes with new mail |
-| `%D` | `%{description}` | Description of the mailbox |
-| `%d` | `%{deleted-count}` | Number of deleted messages |
-| `%f` | `%{flagged-count}` | Full pathname of the current mailbox |
-| `%F` | `%{mailbox-path}` | Number of flagged messages |
-| `%h` | `%{hostname}` | Local hostname |
-| `%l` | `%{limit-size}` | Size (in bytes) of the current mailbox (see formatstrings-size) |
-| `%L` | `%{mailbox-size}` | Size (in bytes) of the messages shown (i.e., which match the current limit) (see formatstrings-size) |
-| `%m` | `%{limit-count}` | Number of messages in the mailbox |
-| `%M` | `%{message-count}` | Number of messages shown (i.e., which match the current limit) |
-| `%n` | `%{new-count}` | Number of new messages in the mailbox (unread, unseen) |
-| `%o` | `%{old-count}` | Number of old messages in the mailbox (unread, seen) |
-| `%P` | `%{percentage}` | Percentage of the way through the index |
-| `%p` | `%{postponed-count}` | Number of postponed messages |
-| `%r` | `%{read-count}` | Modified/read-only/won't-write/attach-message indicator, according to [`$status_chars`](#status-chars) |
-| `%R` | `%{readonly}` | Number of read messages in the mailbox (read, seen) |
-| `%S` | `%{sort-aux}` | Current aux sorting method (`$sort_aux`) |
-| `%s` | `%{sort}` | Current sorting mode (`$sort`) |
-| `%T` | `%{use-threads}` | Current threading mode (`$use_threads`) |
-| `%t` | `%{tagged-count}` | Number of tagged messages in the mailbox |
-| `%u` | `%{unread-count}` | Number of unread messages in the mailbox (seen or unseen) |
-| `%v` | `%{limit-pattern}` | NeoMutt version string |
-| `%V` | `%{version}` | Currently active limit pattern, if any |
-| `%*X` | `%{padding-soft}` | Soft-fill with character `X` as pad |
-| `%>X` | `%{padding-hard}` | Right justify the rest of the string and pad with character `X` |
-| `%\|X` | `%{padding-eol}` | Pad to the end of the line with character `X` |
+| Short  | Long Name             | Description                                                                                            |
+|--------|-----------------------|--------------------------------------------------------------------------------------------------------|
+| `%b`   | `%{unread-mailboxes}` | Number of mailboxes with new mail                                                                      |
+| `%D`   | `%{description}`      | Description of the mailbox                                                                             |
+| `%d`   | `%{deleted-count}`    | Number of deleted messages                                                                             |
+| `%f`   | `%{flagged-count}`    | Full pathname of the current mailbox                                                                   |
+| `%F`   | `%{mailbox-path}`     | Number of flagged messages                                                                             |
+| `%h`   | `%{hostname}`         | Local hostname                                                                                         |
+| `%l`   | `%{limit-size}`       | Size (in bytes) of the current mailbox (see formatstrings-size)                                        |
+| `%L`   | `%{mailbox-size}`     | Size (in bytes) of the messages shown (i.e., which match the current limit) (see formatstrings-size)   |
+| `%m`   | `%{limit-count}`      | Number of messages in the mailbox                                                                      |
+| `%M`   | `%{message-count}`    | Number of messages shown (i.e., which match the current limit)                                         |
+| `%n`   | `%{new-count}`        | Number of new messages in the mailbox (unread, unseen)                                                 |
+| `%o`   | `%{old-count}`        | Number of old messages in the mailbox (unread, seen)                                                   |
+| `%P`   | `%{percentage}`       | Percentage of the way through the index                                                                |
+| `%p`   | `%{postponed-count}`  | Number of postponed messages                                                                           |
+| `%r`   | `%{read-count}`       | Modified/read-only/won't-write/attach-message indicator, according to [`$status_chars`](#status-chars) |
+| `%R`   | `%{readonly}`         | Number of read messages in the mailbox (read, seen)                                                    |
+| `%S`   | `%{sort-aux}`         | Current aux sorting method (`$sort_aux`)                                                               |
+| `%s`   | `%{sort}`             | Current sorting mode (`$sort`)                                                                         |
+| `%T`   | `%{use-threads}`      | Current threading mode (`$use_threads`)                                                                |
+| `%t`   | `%{tagged-count}`     | Number of tagged messages in the mailbox                                                               |
+| `%u`   | `%{unread-count}`     | Number of unread messages in the mailbox (seen or unseen)                                              |
+| `%v`   | `%{limit-pattern}`    | NeoMutt version string                                                                                 |
+| `%V`   | `%{version}`          | Currently active limit pattern, if any                                                                 |
+| `%*X`  | `%{padding-soft}`     | Soft-fill with character `X` as pad                                                                    |
+| `%>X`  | `%{padding-hard}`     | Right justify the rest of the string and pad with character `X`                                        |
+| `%\|X` | `%{padding-eol}`      | Pad to the end of the line with character `X`                                                          |
 
 For an explanation of "soft-fill", see the `$index_format` documentation.
 

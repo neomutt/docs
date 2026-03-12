@@ -1002,19 +1002,19 @@ See also [$pgp_self_encrypt](#pgp-self-encrypt), [$smime_self_encrypt](#smime-se
 
 Controls the characters used in several flags.
 
-| **Character** | **Default** | **Description** |
-| --- | --- | --- |
-| 1 | * | The mail is tagged. |
-| 2 | ! | The mail is flagged as important. |
-| 3 | D | The mail is marked for deletion. |
-| 4 | d | The mail has attachments marked for deletion. |
-| 5 | r | The mail has been replied to. |
-| 6 | O | The mail is Old (Unread but seen). |
-| 7 | N | The mail is New (Unread but not seen). |
-| 8 | o | The mail thread is Old (Unread but seen). |
-| 9 | n | The mail thread is New (Unread but not seen). |
-| 10 | - | The mail is read - %S expando. |
-| 11 | <space> | The mail is read - %Z expando. |
+| Character | Default | Description                              |
+|-----------|---------|------------------------------------------|
+| 1         | *       | Mail is tagged                           |
+| 2         | !       | Mail is flagged as important             |
+| 3         | D       | Mail is marked for deletion              |
+| 4         | d       | Mail has attachments marked for deletion |
+| 5         | r       | Mail has been replied to                 |
+| 6         | O       | Mail is Old (Unread but seen)            |
+| 7         | N       | Mail is New (Unread but not seen)        |
+| 8         | o       | Mail thread is Old (Unread but seen)     |
+| 9         | n       | Mail thread is New (Unread but not seen) |
+| 10        | -       | Mail is read - %S expando                |
+| 11        | <space> | Mail is read - %Z expando                |
 
 (flag-safe)=
 ## `$flag_safe`
@@ -1047,30 +1047,30 @@ This variable allows you to customize the file browser display to your
 personal taste.  This string is similar to [$index_format](#index-format), but has
 its own set of `printf(3)`-like sequences:
 
-| **Short** | **Long Name** | **Description** |
-| --- | --- | --- |
-| `%a` | `%{notify}` | Alert: 1 if user is notified of new mail |
-| `%C` | `%{number}` | Current file number |
-| `%D` | `%{date}` | Date/time folder was last modified using [$date_format](#date-format). |
-|  |  | It is recommended to use `%[fmt]` instead, where `fmt` is the value of [$date_format](#date-format). |
-| `%d` | `%{date-format}` | Date/time folder was last modified |
-| `%F` | `%{file-mode}` | File permissions |
-| `%f` | `%{filename}` | Filename (`/` is appended to directory names, |
-|  |  | `@` to symbolic links and `*` to executable files) |
-| `%g` | `%{file-group}` | Group name (or numeric gid, if missing) |
-| `%i` | `%{description}` | Description of the folder |
-| `%l` | `%{hard-links}` | Number of hard links |
-| `%m` | `%{message-count}` | Number of messages in the mailbox |
-| `%N` | `%{new-mail}` | `N` if mailbox has new mail, ` ` (space) otherwise |
-| `%n` | `%{unread-count}` | Number of unread messages in the mailbox |
-| `%p` | `%{poll}` | Poll: 1 if Mailbox is checked for new mail |
-| `%s` | `%{file-size}` | Size in bytes (see **Size Format**) |
-| `%t` | `%{tagged}` | `*` if the file is tagged, blank otherwise |
-| `%u` | `%{file-owner}` | Owner name (or numeric uid, if missing) |
-| `%[fmt]` |  | Date/time folder was last modified using an `strftime(3)` expression |
-| `%*X` | `%{padding-soft}` | Soft-fill with character `X` as pad |
-| `%>X` | `%{padding-hard}` | Right justify the rest of the string and pad with character `X` |
-| `%|X` | `%{padding-eol}` | Pad to the end of the line with character `X` |
+| Short    | Long Name          | Description                                                                                          |
+|----------|--------------------|------------------------------------------------------------------------------------------------------|
+| `%a`     | `%{notify}`        | Alert: 1 if user is notified of new mail                                                             |
+| `%C`     | `%{number}`        | Current file number                                                                                  |
+| `%D`     | `%{date}`          | Date/time folder was last modified using [$date_format](#date-format).                               |
+|          |                    | It is recommended to use `%[fmt]` instead, where `fmt` is the value of [$date_format](#date-format). |
+| `%d`     | `%{date-format}`   | Date/time folder was last modified                                                                   |
+| `%F`     | `%{file-mode}`     | File permissions                                                                                     |
+| `%f`     | `%{filename}`      | Filename (`/` is appended to directory names,                                                        |
+|          |                    | `@` to symbolic links and `*` to executable files)                                                   |
+| `%g`     | `%{file-group}`    | Group name (or numeric gid, if missing)                                                              |
+| `%i`     | `%{description}`   | Description of the folder                                                                            |
+| `%l`     | `%{hard-links}`    | Number of hard links                                                                                 |
+| `%m`     | `%{message-count}` | Number of messages in the mailbox                                                                    |
+| `%N`     | `%{new-mail}`      | `N` if mailbox has new mail, ` ` (space) otherwise                                                   |
+| `%n`     | `%{unread-count}`  | Number of unread messages in the mailbox                                                             |
+| `%p`     | `%{poll}`          | Poll: 1 if Mailbox is checked for new mail                                                           |
+| `%s`     | `%{file-size}`     | Size in bytes (see **Size Format**)                                                                  |
+| `%t`     | `%{tagged}`        | `*` if the file is tagged, blank otherwise                                                           |
+| `%u`     | `%{file-owner}`    | Owner name (or numeric uid, if missing)                                                              |
+| `%[fmt]` |                    | Date/time folder was last modified using an `strftime(3)` expression                                 |
+| `%*X`    | `%{padding-soft}`  | Soft-fill with character `X` as pad                                                                  |
+| `%>X`    | `%{padding-hard}`  | Right justify the rest of the string and pad with character `X`                                      |
+| `%\|X`   | `%{padding-eol}`   | Pad to the end of the line with character `X`                                                        |
 
 For an explanation of "soft-fill", see the [$index_format](#index-format) documentation.
 
@@ -1149,12 +1149,12 @@ If not specified, then it may be read from the environment variable
 Controls the character used to prefix the %F and %L fields in the
 index.
 
-| **Character** | **Description** |
-| --- | --- |
-| 1 | Mail is written by you and has a To address, or has a known mailing list in the To address. |
-| 2 | Mail is written by you and has a Cc address, or has a known mailing list in the Cc address. |
-| 3 | Mail is written by you and has a Bcc address. |
-| 4 | All remaining cases. |
+| Character | Description                                                                                 |
+|-----------|---------------------------------------------------------------------------------------------|
+| 1         | Mail is written by you and has a To address, or has a known mailing list in the To address. |
+| 2         | Mail is written by you and has a Cc address, or has a known mailing list in the Cc address. |
+| 3         | Mail is written by you and has a Bcc address.                                               |
+| 4         | All remaining cases.                                                                        |
 
 If this is empty or unset (default), the traditional long "To ",
 "Cc " and "Bcc " prefixes are used.  If set but too short to
@@ -1198,11 +1198,11 @@ greeting phrase to the recipients.
 function printf to format output (see the man page for more detail).
 The following sequences are defined in NeoMutt:
 
-| **Short** | **Long Name** | **Description** |
-| --- | --- | --- |
-| `%n` | `%{real-name}` | Recipient's real name |
-| `%u` | `%{user-name}` | User (login) name of recipient |
-| `%v` | `%{first-name}` | First name of recipient |
+| Short | Long Name       | Description                    |
+|-------|-----------------|--------------------------------|
+| `%n` | `%{real-name}`  | Recipient's real name          |
+| `%u` | `%{user-name}`  | User (login) name of recipient |
+| `%v` | `%{first-name}` | First name of recipient        |
 
 (group-index-format)=
 ## `$group_index_format`
@@ -1214,20 +1214,20 @@ This variable allows you to customize the newsgroup browser display to
 your personal taste.  This string is similar to "[index_format](#index-format)", but
 has its own set of printf()-like sequences:
 
-| **Short** | **Long Name** | **Description** |
-| --- | --- | --- |
-| `%a` | `%{notify}` | Alert: 1 if user is notified of new mail |
-| `%C` | `%{number}` | Current newsgroup number |
-| `%d` | `%{description}` | Description of newsgroup (becomes from server) |
-| `%f` | `%{newsgroup}` | Newsgroup name |
-| `%M` | `%{flags}` | `-` if newsgroup not allowed for direct post (moderated for example) |
-| `%N` | `%{flags2}` | `N` if newsgroup is new, `u` if unsubscribed, ` ` (space) otherwise |
-| `%n` | `%{new-count}` | Number of new articles in newsgroup |
-| `%p` | `%{poll}` | Poll: 1 if Mailbox is checked for new mail |
-| `%s` | `%{unread-count}` | Number of unread articles in newsgroup |
-| `%*X` | `%{padding-soft}` | Soft-fill with character `X` as pad |
-| `%>X` | `%{padding-hard}` | Right justify the rest of the string and pad with character `X` |
-| `%|X` | `%{padding-eol}` | Pad to the end of the line with character `X` |
+| Short  | Long Name         | Description                                                          |
+|--------|-------------------|----------------------------------------------------------------------|
+| `%a`   | `%{notify}`       | Alert: 1 if user is notified of new mail                             |
+| `%C`   | `%{number}`       | Current newsgroup number                                             |
+| `%d`   | `%{description}`  | Description of newsgroup (becomes from server)                       |
+| `%f`   | `%{newsgroup}`    | Newsgroup name                                                       |
+| `%M`   | `%{flags}`        | `-` if newsgroup not allowed for direct post (moderated for example) |
+| `%N`   | `%{flags2}`       | `N` if newsgroup is new, `u` if unsubscribed, ` ` (space) otherwise  |
+| `%n`   | `%{new-count}`    | Number of new articles in newsgroup                                  |
+| `%p`   | `%{poll}`         | Poll: 1 if Mailbox is checked for new mail                           |
+| `%s`   | `%{unread-count}` | Number of unread articles in newsgroup                               |
+| `%*X`  | `%{padding-soft}` | Soft-fill with character `X` as pad                                  |
+| `%>X`  | `%{padding-hard}` | Right justify the rest of the string and pad with character `X`      |
+| `%\|X` | `%{padding-eol}`  | Pad to the end of the line with character `X`                        |
 
 (hdrs)=
 ## `$hdrs`
@@ -1499,78 +1499,78 @@ your personal taste.
 explanation of the %<...> construct, see the [status_format](#status-format) description. The
 following sequences are defined in NeoMutt:
 
-| **Short** | **Long Name** | **Description** |
-| --- | --- | --- |
-| `%A` | `%{reply-to}` | Reply-to address (if present; otherwise: address of author) |
-| `%a` | `%{from}` | Address of the author |
-| `%B` | `%{list-address}` | List to which the email was sent (if any; otherwise: Mailbox name) |
-| `%b` | `%{mailbox-name}` | Filename of the original message folder (think mailbox) |
-| `%C` | `%{number}` | Current message number |
-| `%c` | `%{body-characters}` | Number of characters (bytes) in the body of the message (see **Size Format**) |
-| `%cr` | `%{size}` | Number of characters (bytes) in the raw message, including the header (see **Size Format**) |
-| `%D` | `%{date-format-local}` | Date and time of message using [$date_format](#date-format) and local timezone. |
-|  |  | It is recommended to use `%[fmt]` instead, where `fmt` is the value of [$date_format](#date-format). |
-| `%d` | `%{date-format}` | Date and time of message using [$date_format](#date-format) and sender's timezone. |
-|  |  | It is recommended to use `%{fmt}` instead, where `fmt` is the value of [$date_format](#date-format). |
-| `%E` | `%{thread-count}` | Number of messages in current thread |
-| `%e` | `%{thread-number}` | Current message number in thread |
-| `%F` | `%{sender}` | Author name, or recipient name if the message is from you |
-| `%Fp` | `%{sender-plain}` | Like `%F`, but plain. No contextual formatting is applied to recipient name |
-| `%f` | `%{from-full}` | Sender (address + real name), either From: or Return-Path: |
-| `%Gx` | `%{tags-transformed}` | Individual message tag (e.g. Notmuch tags/imap flags) |
-| `%g` | `%{tags}` | Message tags (e.g. Notmuch tags/imap flags) |
-| `%H` | `%{spam}` | Spam attribute(s) of this message |
-| `%I` | `%{initials}` | Initials of author |
-| `%i` | `%{message-id}` | Message-id of the current message |
-| `%J` | `%{thread-tags}` | Message tags (if present, tree unfolded, and != parent's tags) |
-| `%K` | `%{list-empty}` | List to which the email was sent (if any; otherwise: empty) |
-| `%L` | `%{from-list}` | If an address in the `To:` or `Cc:` header field matches an address |
-|  |  | defined by the user's `$subscribe` command, this displays. |
-| `%l` | `%{lines}` | Number of lines in the unprocessed message (may not work with maildir, mh, and IMAP folders) |
-| `%M` | `%{thread-hidden-count}` | Number of hidden messages if the thread is collapsed |
-| `%m` | `%{message-count}` | Total number of message in the mailbox |
-| `%N` | `%{score}` | Message score |
-| `%n` | `%{name}` | Author's real name (or address if missing) |
-| `%O` | `%{save-folder}` | Original save folder where NeoMutt would formerly have Stashed the message: |
-|  |  | list name or recipient name if not sent to a list |
-| `%P` | `%{percentage}` | Progress indicator for the built-in pager (how much of the file has been displayed) |
-| `%q` | `%{newsgroup}` | Newsgroup name (if compiled with NNTP support) |
-| `%R` | `%{cc-all}` | Comma separated list of `Cc:` recipients |
-| `%r` | `%{to-all}` | Comma separated list of `To:` recipients |
-| `%S` | `%{flag-chars}` | Single character status of the message (`N`/`O`/`D`/`d`/`!`/`r`/`*`) |
-| `%s` | `%{subject}` | Subject of the message |
-| `%T` | `%{to-chars}` | Appropriate character from the [$to_chars](#to-chars) string |
-| `%t` | `%{to}` | `%{To:}` field (recipients) |
-| `%u` | `%{username}` | User (login) name of the author |
-| `%v` | `%{first-name}` | First name of the author, or the recipient if the message is from you |
-| `%W` | `%{organization}` | Name of organization of author (`Organization:` field) |
-| `%X` | `%{attachment-count}` | Number of MIME attachments (see the `$attachments` section for possible speed effects) |
-| `%x` | `%{x-comment-to}` | `%{X-Comment-To:}` field (if present) |
-| `%Y` | `%{thread-x-label}` | `%{X-Label:}` field, if present, and |
-|  |  | 1. not at part of a thread tree |
-|  |  | 2. at the top of a thread, or |
-|  |  | 3. `X-Label:` is different from Preceding message's `X-Label:` |
-| `%y` | `%{x-label}` | `%{X-Label:}` field, if present |
-| `%Z` | `%{combined-flags}` | A three character set of message status flags. |
-|  |  | The first character is new/read/replied flags (`n`/`o`/`r`/`O`/`N`). |
-|  |  | The second is deleted or encryption flags (`D`/`d`/`S`/`P`/`s`/`K`). |
-|  |  | The third is either tagged/flagged (`*`/`!`), or one of the characters. |
-|  |  | Listed in [$to_chars](#to-chars). |
-| `%zc` | `%{crypto-flags}` | Message crypto flags |
-| `%zs` | `%{status-flags}` | Message status flags |
-| `%zt` | `%{message-flags}` | Message tag flags |
-| `%@name@` |  | Insert and evaluate format-string from the matching ``index-format-hook`` command |
-| `%{fmt}` |  | Date and time of the message is converted to sender's time zone, and `fmt` is expanded by the library function `strftime(3)`; |
-|  |  | if the first character inside the braces is a bang (`!`), the date is formatted ignoring any locale settings. |
-|  |  | Note that the sender's time zone might only be available as a numerical offset, so `%Z` behaves like `%z`. |
-|  |  | `%{fmt}` behaves like `%[fmt]` on systems where `struct tm` doesn't have a `tm_gmtoff` member. |
-| `%[fmt]` |  | Date and time of the message is converted to the local time zone, and `fmt` is expanded by the library function `strftime(3)`; |
-|  |  | if the first character inside the brackets is a bang (`!`), the date is formatted ignoring any locale settings. |
-| `%(fmt)` |  | Local date and time when the message was received, and `fmt` is expanded by the library function `strftime(3)`; |
-|  |  | if the first character inside the parentheses is a bang (`!`), the date is formatted ignoring any locale settings. |
-| `%*X` | `%{padding-soft}` | Soft-fill with character `X` as pad |
-| `%>X` | `%{padding-hard}` | Right justify the rest of the string and pad with character `X` |
-| `%|X` | `%{padding-eol}` | Pad to the end of the line with character `X` |
+| Short     | Long Name                | Description                                                                                                                    |
+|-----------|--------------------------|--------------------------------------------------------------------------------------------------------------------------------|
+| `%A`      | `%{reply-to}`            | Reply-to address (if present; otherwise: address of author)                                                                    |
+| `%a`      | `%{from}`                | Address of the author                                                                                                          |
+| `%B`      | `%{list-address}`        | List to which the email was sent (if any; otherwise: Mailbox name)                                                             |
+| `%b`      | `%{mailbox-name}`        | Filename of the original message folder (think mailbox)                                                                        |
+| `%C`      | `%{number}`              | Current message number                                                                                                         |
+| `%c`      | `%{body-characters}`     | Number of characters (bytes) in the body of the message (see **Size Format**)                                                  |
+| `%cr`     | `%{size}`                | Number of characters (bytes) in the raw message, including the header (see **Size Format**)                                    |
+| `%D`      | `%{date-format-local}`   | Date and time of message using [$date_format](#date-format) and local timezone.                                                |
+|           |                          | It is recommended to use `%[fmt]` instead, where `fmt` is the value of [$date_format](#date-format).                           |
+| `%d`      | `%{date-format}`         | Date and time of message using [$date_format](#date-format) and sender's timezone.                                             |
+|           |                          | It is recommended to use `%{fmt}` instead, where `fmt` is the value of [$date_format](#date-format).                           |
+| `%E`      | `%{thread-count}`        | Number of messages in current thread                                                                                           |
+| `%e`      | `%{thread-number}`       | Current message number in thread                                                                                               |
+| `%F`      | `%{sender}`              | Author name, or recipient name if the message is from you                                                                      |
+| `%Fp`     | `%{sender-plain}`        | Like `%F`, but plain. No contextual formatting is applied to recipient name                                                    |
+| `%f`      | `%{from-full}`           | Sender (address + real name), either From: or Return-Path:                                                                     |
+| `%Gx`     | `%{tags-transformed}`    | Individual message tag (e.g. Notmuch tags/imap flags)                                                                          |
+| `%g`      | `%{tags}`                | Message tags (e.g. Notmuch tags/imap flags)                                                                                    |
+| `%H`      | `%{spam}`                | Spam attribute(s) of this message                                                                                              |
+| `%I`      | `%{initials}`            | Initials of author                                                                                                             |
+| `%i`      | `%{message-id}`          | Message-id of the current message                                                                                              |
+| `%J`      | `%{thread-tags}`         | Message tags (if present, tree unfolded, and != parent's tags)                                                                 |
+| `%K`      | `%{list-empty}`          | List to which the email was sent (if any; otherwise: empty)                                                                    |
+| `%L`      | `%{from-list}`           | If an address in the `To:` or `Cc:` header field matches an address                                                            |
+|           |                          | defined by the user's `$subscribe` command, this displays.                                                                     |
+| `%l`      | `%{lines}`               | Number of lines in the unprocessed message (may not work with maildir, mh, and IMAP folders)                                   |
+| `%M`      | `%{thread-hidden-count}` | Number of hidden messages if the thread is collapsed                                                                           |
+| `%m`      | `%{message-count}`       | Total number of message in the mailbox                                                                                         |
+| `%N`      | `%{score}`               | Message score                                                                                                                  |
+| `%n`      | `%{name}`                | Author's real name (or address if missing)                                                                                     |
+| `%O`      | `%{save-folder}`         | Original save folder where NeoMutt would formerly have Stashed the message:                                                    |
+|           |                          | list name or recipient name if not sent to a list                                                                              |
+| `%P`      | `%{percentage}`          | Progress indicator for the built-in pager (how much of the file has been displayed)                                            |
+| `%q`      | `%{newsgroup}`           | Newsgroup name (if compiled with NNTP support)                                                                                 |
+| `%R`      | `%{cc-all}`              | Comma separated list of `Cc:` recipients                                                                                       |
+| `%r`      | `%{to-all}`              | Comma separated list of `To:` recipients                                                                                       |
+| `%S`      | `%{flag-chars}`          | Single character status of the message (`N`/`O`/`D`/`d`/`!`/`r`/`*`)                                                           |
+| `%s`      | `%{subject}`             | Subject of the message                                                                                                         |
+| `%T`      | `%{to-chars}`            | Appropriate character from the [$to_chars](#to-chars) string                                                                   |
+| `%t`      | `%{to}`                  | `%{To:}` field (recipients)                                                                                                    |
+| `%u`      | `%{username}`            | User (login) name of the author                                                                                                |
+| `%v`      | `%{first-name}`          | First name of the author, or the recipient if the message is from you                                                          |
+| `%W`      | `%{organization}`        | Name of organization of author (`Organization:` field)                                                                         |
+| `%X`      | `%{attachment-count}`    | Number of MIME attachments (see the `$attachments` section for possible speed effects)                                         |
+| `%x`      | `%{x-comment-to}`        | `%{X-Comment-To:}` field (if present)                                                                                          |
+| `%Y`      | `%{thread-x-label}`      | `%{X-Label:}` field, if present, and                                                                                           |
+|           |                          | 1. not at part of a thread tree                                                                                                |
+|           |                          | 2. at the top of a thread, or                                                                                                  |
+|           |                          | 3. `X-Label:` is different from Preceding message's `X-Label:`                                                                 |
+| `%y`      | `%{x-label}`             | `%{X-Label:}` field, if present                                                                                                |
+| `%Z`      | `%{combined-flags}`      | A three character set of message status flags.                                                                                 |
+|           |                          | The first character is new/read/replied flags (`n`/`o`/`r`/`O`/`N`).                                                           |
+|           |                          | The second is deleted or encryption flags (`D`/`d`/`S`/`P`/`s`/`K`).                                                           |
+|           |                          | The third is either tagged/flagged (`*`/`!`), or one of the characters.                                                        |
+|           |                          | Listed in [$to_chars](#to-chars).                                                                                              |
+| `%zc`     | `%{crypto-flags}`        | Message crypto flags                                                                                                           |
+| `%zs`     | `%{status-flags}`        | Message status flags                                                                                                           |
+| `%zt`     | `%{message-flags}`       | Message tag flags                                                                                                              |
+| `%@name@` |                          | Insert and evaluate format-string from the matching ``index-format-hook`` command                                              |
+| `%{fmt}`  |                          | Date and time of the message is converted to sender's time zone, and `fmt` is expanded by the library function `strftime(3)`;  |
+|           |                          | if the first character inside the braces is a bang (`!`), the date is formatted ignoring any locale settings.                  |
+|           |                          | Note that the sender's time zone might only be available as a numerical offset, so `%Z` behaves like `%z`.                     |
+|           |                          | `%{fmt}` behaves like `%[fmt]` on systems where `struct tm` doesn't have a `tm_gmtoff` member.                                 |
+| `%[fmt]`  |                          | Date and time of the message is converted to the local time zone, and `fmt` is expanded by the library function `strftime(3)`; |
+|           |                          | if the first character inside the brackets is a bang (`!`), the date is formatted ignoring any locale settings.                |
+| `%(fmt)`  |                          | Local date and time when the message was received, and `fmt` is expanded by the library function `strftime(3)`;                |
+|           |                          | if the first character inside the parentheses is a bang (`!`), the date is formatted ignoring any locale settings.             |
+| `%*X`     | `%{padding-soft}`        | Soft-fill with character `X` as pad                                                                                            |
+| `%>X`     | `%{padding-hard}`        | Right justify the rest of the string and pad with character `X`                                                                |
+| `%\|X`    | `%{padding-eol}`         | Pad to the end of the line with character `X`                                                                                  |
 
 Date format expressions can be constructed based on relative dates. Using
 the date formatting operators along with nested conditionals, the date
@@ -1604,13 +1604,14 @@ If set, specifies the program and arguments used to deliver news posted
 by NeoMutt.  Otherwise, NeoMutt posts article using current connection to
 news server.  The following printf-style sequence is understood:
 
-| %a | account url |
-| --- | --- |
-| %p | port |
-| %P | port if specified |
-| %s | news server name |
-| %S | url schema |
-| %u | username |
+| Short | Description       |
+|-------|-------------------|
+| `%a`  | account url       |
+| `%p`  | port              |
+| `%P`  | port if specified |
+| `%s`  | news server name  |
+| `%S`  | url schema        |
+| `%u`  | username          |
 
 Example:
 
@@ -1901,20 +1902,20 @@ The old Message-ID format can be used by setting this to:
 
 The following `printf(3)`-style sequences are understood:
 
-| **Short** | **Long Name** | **Description** |
-| --- | --- | --- |
-| %c | `%{counter}` | Step counter looping from `A` to `Z` |
-| %d | `%{day}` | Current day of the month (GMT) |
-| %f | `%{hostname}` | [$hostname](#hostname) |
-| %H | `%{hour}` | Current hour using a 24-hour clock (GMT) |
-| %m | `%{minute}` | Current month number (GMT) |
-| %M | `%{month}` | Current minute of the hour (GMT) |
-| %p | `%{pid}` | Pid of the running mutt process |
-| %r | `%{random_3}` | 3 bytes of pseudo-random data encoded in Base64 |
-| %S | `%{second}` | Current second of the minute (GMT) |
-| %x | `%{random_1}` | 1 byte of pseudo-random data hex encoded (example: `1b`) |
-| %Y | `%{year}` | Current year using 4 digits (GMT) |
-| %z | `%{random_12}` | 4 byte timestamp + 8 bytes of pseudo-random data encoded in Base64 |
+| Short | Long Name      | Description                                                        |
+|-------|----------------|--------------------------------------------------------------------|
+| %c    | `%{counter}`   | Step counter looping from `A` to `Z`                               |
+| %d    | `%{day}`       | Current day of the month (GMT)                                     |
+| %f    | `%{hostname}`  | [$hostname](#hostname)                                             |
+| %H    | `%{hour}`      | Current hour using a 24-hour clock (GMT)                           |
+| %m    | `%{minute}`    | Current month number (GMT)                                         |
+| %M    | `%{month}`     | Current minute of the hour (GMT)                                   |
+| %p    | `%{pid}`       | Pid of the running mutt process                                    |
+| %r    | `%{random_3}`  | 3 bytes of pseudo-random data encoded in Base64                    |
+| %S    | `%{second}`    | Current second of the minute (GMT)                                 |
+| %x    | `%{random_1}`  | 1 byte of pseudo-random data hex encoded (example: `1b`)           |
+| %Y    | `%{year}`      | Current year using 4 digits (GMT)                                  |
+| %z    | `%{random_12}` | 4 byte timestamp + 8 bytes of pseudo-random data encoded in Base64 |
 
 See also: Base64Url: [https://datatracker.ietf.org/doc/html/rfc4648#section-5](https://datatracker.ietf.org/doc/html/rfc4648#section-5)
 
@@ -2017,14 +2018,14 @@ The file, containing info about subscribed newsgroups - names and
 indexes of read articles.  The following printf-style sequence
 is understood:
 
-| **Short** | **Long Name** | **Description** |
-| --- | --- | --- |
-| `%a` | `%{account}` | Account url |
-| `%P` | `%{port-if}` | Port if specified |
-| `%p` | `%{port}` | Port |
-| `%S` | `%{schema}` | Url schema |
-| `%s` | `%{server}` | News server name |
-| `%u` | `%{username}` | Username |
+| Short | Long Name     | Description       |
+|-------|---------------|------------------|
+| `%a` | `%{account}`  | Account url       |
+| `%P` | `%{port-if}`  | Port if specified |
+| `%p` | `%{port}`     | Port              |
+| `%S` | `%{schema}`   | Url schema        |
+| `%s` | `%{server}`   | News server name  |
+| `%u` | `%{username}` | Username          |
 
 (general-pager)=
 ## `$pager`
@@ -2051,14 +2052,14 @@ the screen width to be badly formatted in the help menu.
 This variable describes the format of the "pattern completion" menu. The
 following `printf(3)`-style sequences are understood:
 
-| **Short** | **Long Name** | **Description** |
-| --- | --- | --- |
-| `%d` | `%{description}` | Pattern description |
-| `%e` | `%{expression}` | Pattern expression |
-| `%n` | `%{number}` | Index number |
-| `%*X` | `%{padding-soft}` | Soft-fill with character `X` as pad |
-| `%>X` | `%{padding-hard}` | Right justify the rest of the string and pad with character `X` |
-| `%|X` | `%{padding-eol}` | Pad to the end of the line with character `X` |
+| Short  | Long Name         | Description                                                     |
+|--------|-------------------|-----------------------------------------------------------------|
+| `%d`   | `%{description}`  | Pattern description                                             |
+| `%e`   | `%{expression}`   | Pattern expression                                              |
+| `%n`   | `%{number}`       | Index number                                                    |
+| `%*X`  | `%{padding-soft}` | Soft-fill with character `X` as pad                             |
+| `%>X`  | `%{padding-hard}` | Right justify the rest of the string and pad with character `X` |
+| `%\|X` | `%{padding-eol}`  | Pad to the end of the line with character `X`                   |
 
 (post-moderated)=
 ## `$post_moderated`
@@ -2197,28 +2198,29 @@ See [Address Queries](../../howto/address-query).
 This variable describes the format of the "query" menu. The
 following `printf(3)`-style sequences are understood:
 
-| **Short** | **Long Name** | **Description** |
-| --- | --- | --- |
-| `%A` | `%{address}` | Full Address (Name and Email) |
-| `%C` | `%{comment}` | Comment |
-| `%E` | `%{email}` | Email Address |
-| `%i` | `%{number}` | Index number |
-| `%N` | `%{name}` | Real name |
-| `%t` | `%{tagged}` | Alias is tagged (selected) |
-| `%Y` | `%{tags}` | User-defined tags (labels) |
-| `%*X` | `%{padding-soft}` | Soft-fill with character `X` as pad |
-| `%>X` | `%{padding-hard}` | Right justify the rest of the string and pad with character `X` |
-| `%|X` | `%{padding-eol}` | Pad to the end of the line with character `X` |
+| Short  | Long Name         | Description                                                     |
+|--------|-------------------|-----------------------------------------------------------------|
+| `%A`   | `%{address}`      | Full Address (Name and Email)                                   |
+| `%C`   | `%{comment}`      | Comment                                                         |
+| `%E`   | `%{email}`        | Email Address                                                   |
+| `%i`   | `%{number}`       | Index number                                                    |
+| `%N`   | `%{name}`         | Real name                                                       |
+| `%t`   | `%{tagged}`       | Alias is tagged (selected)                                      |
+| `%Y`   | `%{tags}`         | User-defined tags (labels)                                      |
+| `%*X`  | `%{padding-soft}` | Soft-fill with character `X` as pad                             |
+| `%>X`  | `%{padding-hard}` | Right justify the rest of the string and pad with character `X` |
+| `%\|X` | `%{padding-eol}`  | Pad to the end of the line with character `X`                   |
 
 For an explanation of "soft-fill", see the [$index_format](#index-format) documentation.
 
 The following sequences are deprecated; they will be removed in the future.
 
-| %a | Use %E instead |
-| --- | --- |
-| %c | Use %i instead |
-| %e | Use %C instead |
-| %n | Use %N instead |
+| Old  | Action           |
+|------|------------------|
+| `%a` | Use `%E` instead |
+| `%c` | Use `%i` instead |
+| `%e` | Use `%C` instead |
+| `%n` | Use `%N` instead |
 
 (quit)=
 ## `$quit`
@@ -2703,10 +2705,11 @@ to finish before giving up and putting delivery in the background.
 
 NeoMutt interprets the value of this variable as follows:
 
+| Value | Description                                                        |
+|-------|--------------------------------------------------------------------|
 | >0 | number of seconds to wait for sendmail to finish before continuing |
-| --- | --- |
-| 0 | wait forever for sendmail to finish |
-| <0 | always put sendmail in the background without waiting |
+| 0  | wait forever for sendmail to finish                                |
+| <0 | always put sendmail in the background without waiting              |
 
 Note that if you specify a value other than 0, the output of the child
 process will be put in a temporary file.  If there is some error, you
@@ -2892,24 +2895,24 @@ wait indefinitely.
 
 Specifies how to sort messages in the "index" menu.
 
-| **Value** | **Sort by** |
-| --- | --- |
-| `date` | The date the email was sent |
-| `date-received` | When the message was delivered locally |
-| `from` | The email's From field |
-| `label` | The emails label |
-| `score` | The email's score |
-| `size` | The size of the email |
-| `spam` | The email's spam score |
-| `subject` | The email's subject |
-| `threads` | Email threads |
-| `to` | The email's To field |
-| `unsorted` | The order the messages appear in the mailbox |
+| Value           | Sort by                                      |
+|-----------------|----------------------------------------------|
+| `date`          | The date the email was sent                  |
+| `date-received` | When the message was delivered locally       |
+| `from`          | The email's From field                       |
+| `label`         | The emails label                             |
+| `score`         | The email's score                            |
+| `size`          | The size of the email                        |
+| `spam`          | The email's spam score                       |
+| `subject`       | The email's subject                          |
+| `threads`       | Email threads                                |
+| `to`            | The email's To field                         |
+| `unsorted`      | The order the messages appear in the mailbox |
 
-| **Deprecated Value** | **Use this instead** |
-| --- | --- |
-| `date-sent` | `date` |
-| `mailbox-order` | `unsorted` |
+| Deprecated Value | Use this instead |
+|------------------|------------------|
+| `date-sent`      | `date`           |
+| `mailbox-order`  | `unsorted`       |
 
 You may optionally use the "reverse-" prefix to specify reverse
 sorting order, or the "last-" prefix to sort threads based on the
@@ -3100,15 +3103,15 @@ used.  Failing that, then "`/tmp`" is used.
 
 Controls the character used to indicate mail addressed to you.
 
-| **Character** | **Default** | **Description** |
-| --- | --- | --- |
-| 1 | <space> | The mail is *not* addressed to your address. |
-| 2 | + | You are the only recipient of the message. |
-| 3 | T | Your address appears in the "To:" header field, but you are not the only recipient of the message. |
-| 4 | C | Your address is specified in the "Cc:" header field, but you are not the only recipient. |
-| 5 | F | Indicates the mail that was sent by *you*. |
-| 6 | L | Indicates the mail was sent to a mailing-list you subscribe to. |
-| 7 | R | Your address appears in the "Reply-To:" header field but none of the above applies. |
+| Character | Default | Description                                                                                        |
+|-----------|---------|----------------------------------------------------------------------------------------------------|
+| 1         | <space> | The mail is *not* addressed to your address.                                                       |
+| 2         | +       | You are the only recipient of the message.                                                         |
+| 3         | T       | Your address appears in the "To:" header field, but you are not the only recipient of the message. |
+| 4         | C       | Your address is specified in the "Cc:" header field, but you are not the only recipient.           |
+| 5         | F       | Indicates the mail that was sent by *you*.                                                         |
+| 6         | L       | Indicates the mail was sent to a mailing-list you subscribe to.                                    |
+| 7         | R       | Your address appears in the "Reply-To:" header field but none of the above applies.                |
 
 (toggle-quoted-show-levels)=
 ## `$toggle_quoted_show_levels`

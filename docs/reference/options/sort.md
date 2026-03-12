@@ -23,24 +23,24 @@ how-to guides and explanation pages instead.
 
 Specifies how to sort messages in the "index" menu.
 
-| Value | Sort by |
-|-------|---------|
-| `date` | The date the email was sent |
-| `date-received` | When the message was delivered locally |
-| `from` | The email's From field |
-| `label` | The email's label |
-| `score` | The email's score |
-| `size` | The size of the email |
-| `spam` | The email's spam score |
-| `subject` | The email's subject |
-| `threads` | Email threads |
-| `to` | The email's To field |
-| `unsorted` | The order the messages appear in the mailbox |
+| Value           | Sort by                                      |
+|-----------------|----------------------------------------------|
+| `date`          | The date the email was sent                  |
+| `date-received` | When the message was delivered locally       |
+| `from`          | The email's From field                       |
+| `label`         | The email's label                            |
+| `score`         | The email's score                            |
+| `size`          | The size of the email                        |
+| `spam`          | The email's spam score                       |
+| `subject`       | The email's subject                          |
+| `threads`       | Email threads                                |
+| `to`            | The email's To field                         |
+| `unsorted`      | The order the messages appear in the mailbox |
 
 | Deprecated Value | Use this instead |
-|------------------|-----------------|
-| `date-sent` | `date` |
-| `mailbox-order` | `unsorted` |
+|------------------|------------------|
+| `date-sent`      | `date`           |
+| `mailbox-order`  | `unsorted`       |
 
 You may optionally use the "reverse-" prefix to specify reverse sorting order, or the "last-" prefix to sort threads based on the corresponding attribute of the last descendant rather than the thread root. If both prefixes are in use, "reverse-" must come before "last-". The "last-" prefix has no effect on a flat view.
 
