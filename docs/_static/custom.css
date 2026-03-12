@@ -56,6 +56,12 @@ html[data-theme=dark] .sd-card {
 }
 
 /* ── Tables ─────────────────────────────────────────────────── */
+table {
+  width: auto !important;
+  margin-left: 0 !important;
+  margin-right: auto !important;
+}
+
 th {
   text-align: left;
   background-color: #005461;
@@ -75,6 +81,14 @@ div.document table.docutils td {
 div.document table.docutils th {
   padding: 0 0.5em 0 0.25em;
   vertical-align: top;
+}
+
+html[data-theme=light] table tbody tr:hover {
+  background-color: #00B7B5 !important;
+}
+
+html[data-theme=dark] table tbody tr:hover {
+  background-color: #005461 !important;
 }
 
 /* ── Terminal highlight ─────────────────────────────────────── */
