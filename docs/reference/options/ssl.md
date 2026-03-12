@@ -1,10 +1,10 @@
 ---
-title: "SSL/TLS Variables"
+title: "SSL/TLS Options"
 description: "Reference for NeoMutt SSL/TLS configuration variables."
 keywords: "ssl, tls, encryption, certificates, variables, neomutt"
 ---
 
-# SSL/TLS Variables
+# SSL/TLS Options
 
 :::{admonition} Diátaxis: Reference
 :class: note

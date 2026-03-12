@@ -1,10 +1,10 @@
 ---
-title: "Alias Variables"
+title: "Alias Options"
 description: "Reference for NeoMutt alias configuration variables."
 keywords: "alias, contacts, address book, variables, neomutt"
 ---
 
-# Alias Variables
+# Alias Options
 
 :::{admonition} Diátaxis: Reference
 :class: note

@@ -1,10 +1,10 @@
 ---
-title: "Autocrypt Variables"
+title: "Autocrypt Options"
 description: "Reference for NeoMutt autocrypt configuration variables."
 keywords: "autocrypt, encryption, variables, neomutt"
 ---
 
-# Autocrypt Variables
+# Autocrypt Options
 
 :::{admonition} Diátaxis: Reference
 :class: note

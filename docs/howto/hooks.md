@@ -279,7 +279,7 @@ The command string can contain expandos, such as `%n` for the number of new mess
 :::{note}
 When the notification is sent, the folder of the new mail is no longer known. This is a limitation of NeoMutt. The `%f` expando will show the open folder.
 
-When using Maildir local mailboxes, you must set `$check_new` config variable for this feature to work.
+When using Maildir local mailboxes, you must set `$check_new` config option for this feature to work.
 :::
 
 ### Linux Example

@@ -1,10 +1,10 @@
 ---
-title: "Sidebar Variables"
+title: "Sidebar Options"
 description: "Reference for NeoMutt sidebar configuration variables."
 keywords: "sidebar, navigation, variables, neomutt"
 ---
 
-# Sidebar Variables
+# Sidebar Options
 
 :::{admonition} Diátaxis: Reference
 :class: note

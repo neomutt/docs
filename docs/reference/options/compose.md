@@ -1,10 +1,10 @@
 ---
-title: "Compose Variables"
+title: "Compose Options"
 description: "Reference for NeoMutt compose mode configuration variables."
 keywords: "compose, editing, variables, neomutt"
 ---
 
-# Compose Variables
+# Compose Options
 
 :::{admonition} Diátaxis: Reference
 :class: note

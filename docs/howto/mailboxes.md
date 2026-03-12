@@ -83,7 +83,7 @@ The folder NeoMutt opens at startup is determined in the following order of prec
 2. The `$MAIL` environment variable, if set.
 3. The `$MAILDIR` environment variable, if set.
 4. The compile-time mail spool (`/var/spool/mail/$USER` or similar; last fallback).
-5. The `$spool_file` config variable overrides the compile-time default spool location.
+5. The `$spool_file` config option overrides the compile-time default spool location.
 
 ## New Mail Detection
 

@@ -1,10 +1,10 @@
 ---
-title: MH Variables
+title: MH Options
 description: NeoMutt configuration variables for MH-format mailbox handling.
 keywords: neomutt, mh, mh_purge, mh_seq_flagged, mh_seq_replied, mh_seq_unseen, configuration
 ---
 
-# MH Variables
+# MH Options
 
 :::{admonition} Diátaxis: Reference
 :class: note

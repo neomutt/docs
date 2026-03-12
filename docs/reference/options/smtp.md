@@ -1,10 +1,10 @@
 ---
-title: SMTP Variables
+title: SMTP Options
 description: SMTP protocol configuration variables for NeoMutt
 keywords: smtp_authenticators, smtp_oauth_refresh_command, smtp_pass, smtp_url, smtp_user
 ---
 
-# SMTP Variables
+# SMTP Options
 
 :::{admonition} Diátaxis: Reference
 :class: note

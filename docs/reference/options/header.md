@@ -1,10 +1,10 @@
 ---
-title: "Header/Cache Variables"
+title: "Header/Cache Options"
 description: "Reference for NeoMutt header and header cache configuration variables."
 keywords: "header, cache, variables, neomutt"
 ---
 
-# Header/Cache Variables
+# Header/Cache Options
 
 :::{admonition} Diátaxis: Reference
 :class: note

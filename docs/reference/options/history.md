@@ -1,10 +1,10 @@
 ---
-title: History Variables
+title: History Options
 description: NeoMutt configuration variables for command history buffer and persistence.
 keywords: neomutt, history, history_file, history_format, history_remove_dups, configuration
 ---
 
-# History Variables
+# History Options
 
 :::{admonition} Diátaxis: Reference
 :class: note

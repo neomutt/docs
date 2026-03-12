@@ -1,13 +1,13 @@
 ---
 title: Reference
-description: Technical descriptions of NeoMutt's commands, variables, and functions
+description: Technical descriptions of NeoMutt's commands, options, and functions
 ---
 
 # Reference
 
 Reference material provides **information-oriented** technical descriptions of
 NeoMutt's machinery. Use these pages to look up specific details about commands,
-variables, functions, and syntax.
+options, functions, and syntax.
 
 ## Core Reference
 
@@ -18,7 +18,7 @@ maxdepth: 1
 
 commandline
 commands
-variables
+options
 functions
 patterns
 regex
@@ -48,41 +48,41 @@ mime-types
 colour-names
 ```
 
-## Variable Groups
+## Option Groups
 
 ```{toctree}
 ---
 maxdepth: 1
 ---
 
-variables/imap
-variables/pop
-variables/smtp
-variables/nntp
-variables/pgp
-variables/smime
-variables/crypto
-variables/autocrypt
-variables/ssl
-variables/sidebar
-variables/notmuch
-variables/compose
-variables/pager
-variables/alias
-variables/attach
-variables/header
-variables/forward
-variables/sort
-variables/score
-variables/maildir
-variables/mh
-variables/history
-variables/mime
-variables/print
-variables/pipe
-variables/status
-variables/browser
-variables/general
+options/imap
+options/pop
+options/smtp
+options/nntp
+options/pgp
+options/smime
+options/crypto
+options/autocrypt
+options/ssl
+options/sidebar
+options/notmuch
+options/compose
+options/pager
+options/alias
+options/attach
+options/header
+options/forward
+options/sort
+options/score
+options/maildir
+options/mh
+options/history
+options/mime
+options/print
+options/pipe
+options/status
+options/browser
+options/general
 ```
 
 ## Function Groups

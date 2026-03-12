@@ -1,10 +1,10 @@
 ---
-title: Maildir Variables
+title: Maildir Options
 description: NeoMutt configuration variables for Maildir-format mailbox handling.
 keywords: neomutt, maildir, maildir_check_cur, maildir_field_delimiter, maildir_header_cache_verify, maildir_trash, configuration
 ---
 
-# Maildir Variables
+# Maildir Options
 
 :::{admonition} Diátaxis: Reference
 :class: note

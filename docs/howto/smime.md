@@ -31,7 +31,7 @@ set crypt_use_gpgme
 ```
 
 If you have complex crypto needs, you can enable "classic mode" by disabling
-GPGME and setting all `smime_command_*` config variables. For example config,
+GPGME and setting all `smime_command_*` config options. For example config,
 see `smime.rc` in the [Contrib repository](https://github.com/neomutt/neomutt-contrib/).
 
 ```

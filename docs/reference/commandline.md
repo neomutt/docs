@@ -73,8 +73,8 @@ full details and examples.
 | `-b`, `--bcc` *address* | Specify a blind carbon copy (Bcc) recipient |
 | `-C`, `--crypto` | Enable cryptographic operations in the cases in which they're disabled by default. Those include batch mode, sending a postponed message, and resending a message |
 | `-c`, `--cc` *address* | Specify a carbon copy (Cc) recipient |
-| `-D`, `--dump-config` | Dump all config variables as **name=value** pairs to stdout |
-| `-DD`, `--dump-changed-config` | Dump all changed config variables as **name=value** pairs to stdout |
+| `-D`, `--dump-config` | Dump all config options as **name=value** pairs to stdout |
+| `-DD`, `--dump-changed-config` | Dump all changed config options as **name=value** pairs to stdout |
 | `-D -O`, `--with-docs` | Like **-D**, but show one-liner documentation |
 | `-D -S`, `--hide-sensitive` | Like **-D**, but hide the value of sensitive config options |
 | `-d`, `--debug-level` *level* | Log debugging output to a file (default is `~/.neomuttdebug0`). The `level` can range from 1–5 and affects verbosity (a value of 2 is recommended) |

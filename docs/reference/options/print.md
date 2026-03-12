@@ -1,10 +1,10 @@
 ---
-title: Print Variables
+title: Print Options
 description: NeoMutt configuration variables for message printing behavior.
 keywords: neomutt, print, print_command, print_decode, print_decode_weed, print_split, configuration
 ---
 
-# Print Variables
+# Print Options
 
 :::{admonition} Diátaxis: Reference
 :class: note

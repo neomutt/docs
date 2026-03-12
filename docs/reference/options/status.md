@@ -1,10 +1,10 @@
 ---
-title: Status Variables
+title: Status Options
 description: NeoMutt configuration variables for the status bar display and formatting.
 keywords: neomutt, status, status_chars, status_format, status_on_top, configuration
 ---
 
-# Status Variables
+# Status Options
 
 :::{admonition} Diátaxis: Reference
 :class: note

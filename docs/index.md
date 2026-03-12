@@ -44,7 +44,7 @@ Find solutions to real-world problems.
 :link: reference/index
 :link-type: doc
 
-**Information-oriented** — Technical descriptions of NeoMutt's commands, variables, and functions.
+**Information-oriented** — Technical descriptions of NeoMutt's commands, options, and functions.
 
 Look up the details.
 :::

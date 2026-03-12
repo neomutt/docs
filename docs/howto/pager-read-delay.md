@@ -21,7 +21,7 @@ give the steps, show the expected result.
 
 ## Introduction
 
-The "Pager Read Delay" feature adds a new config variable to allow the pager to
+The "Pager Read Delay" feature adds a new config option to allow the pager to
 operate in a preview mode. A new message is not marked as read merely because
 the pager opened it, but only after the pager remains on the message for a
 given length of time.
@@ -34,7 +34,7 @@ message as read.
 
 ## Variables
 
-The "Pager Read Delay" feature adds one new config variable,
+The "Pager Read Delay" feature adds one new config option,
 `$pager_read_delay`, which is an integer for how many
 seconds the pager must remain on a given message before marking it as read. The
 variable defaults to 0 for the original behavior of marking a message as read

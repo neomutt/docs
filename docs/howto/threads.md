@@ -63,7 +63,7 @@ different thread.
 
 ### Introduction
 
-The "Use Threads" feature adds a new config variable to allow more precise
+The "Use Threads" feature adds a new config option to allow more precise
 control of how threads are displayed in the index. Whether threads are in use
 is now orthogonal from how messages are sorted.
 
@@ -76,7 +76,7 @@ backwards-compatible behavior on `$sort` if this feature is not used.
 
 ### Variables
 
-The "Use Threads" feature adds one new config variable,
+The "Use Threads" feature adds one new config option,
 {ref}`$use_threads <use-threads>`, which is an enumeration of possible thread
 views. The variable defaults to unset for the original behavior of overloading
 {ref}`$sort=threads <sort>` to enable sorting. It can be set to `flat` (or
@@ -97,7 +97,7 @@ Within a single thread, the value of `$sort_aux` determines
 how siblings are sorted. The same prefixes apply as for `$sort`, although it is
 less common to use the `last-` prefix.
 
-The "Use Threads" feature also modifies the existing config variable
+The "Use Threads" feature also modifies the existing config option
 `$status_format`, adding the `%T` expando which shows the
 current threading method.
 

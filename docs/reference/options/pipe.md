@@ -1,10 +1,10 @@
 ---
-title: Pipe Variables
+title: Pipe Options
 description: NeoMutt configuration variables for piping messages to external commands.
 keywords: neomutt, pipe, pipe_decode, pipe_decode_weed, pipe_sep, pipe_split, configuration
 ---
 
-# Pipe Variables
+# Pipe Options
 
 :::{admonition} Diátaxis: Reference
 :class: note

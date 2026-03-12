@@ -103,11 +103,11 @@ The following are the commands understood by NeoMutt.
 | `send2-hook` | `send2-hook pattern command` | Execute command when changing a message during composition |
 | `score` | `score pattern value` | Assign a score to messages matching pattern |
 | `unscore` | `unscore {* \| pattern ...}` | Remove score entries |
-| `set` | `set [no\|inv\|&]variable[?] [...]` | Set, query, toggle, or reset a config variable |
-| `set` | `set variable=value [variable+=increment] [variable-=decrement] [...]` | Assign a value to a config variable |
-| `unset` | `unset variable [variable ...]` | Unset a boolean config variable |
-| `reset` | `reset variable [variable ...]` | Reset a config variable to its default |
-| `toggle` | `toggle variable [variable ...]` | Toggle a boolean config variable |
+| `set` | `set [no\|inv\|&]variable[?] [...]` | Set, query, toggle, or reset a config option |
+| `set` | `set variable=value [variable+=increment] [variable-=decrement] [...]` | Assign a value to a config option |
+| `unset` | `unset variable [variable ...]` | Unset a boolean config option |
+| `reset` | `reset variable [variable ...]` | Reset a config option to its default |
+| `toggle` | `toggle variable [variable ...]` | Toggle a boolean config option |
 | `setenv` | `setenv {variable? \| variable=value}` | Set or query an environment variable |
 | `unsetenv` | `unsetenv variable` | Remove an environment variable |
 | `sidebar-pin` | `sidebar-pin mailbox [mailbox ...]` | Pin a mailbox to the top of the sidebar |

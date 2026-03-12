@@ -1,10 +1,10 @@
 ---
-title: Sort Variables
+title: Sort Options
 description: NeoMutt configuration variables for controlling message sort order in the index menu.
 keywords: neomutt, sort, sort_aux, sort_re, threading, index, configuration
 ---
 
-# Sort Variables
+# Sort Options
 
 :::{admonition} Diátaxis: Reference
 :class: note
@@ -44,7 +44,7 @@ Specifies how to sort messages in the "index" menu.
 
 You may optionally use the "reverse-" prefix to specify reverse sorting order, or the "last-" prefix to sort threads based on the corresponding attribute of the last descendant rather than the thread root. If both prefixes are in use, "reverse-" must come before "last-". The "last-" prefix has no effect on a flat view.
 
-Any ties in the primary sort are broken by [`$sort_aux`](#sort-aux). When [`$use_threads`](../variables) is "threads" or "reverse", `$sort` controls the sorting between threads, and [`$sort_aux`](#sort-aux) controls the sorting within a thread.
+Any ties in the primary sort are broken by [`$sort_aux`](#sort-aux). When [`$use_threads`](../options) is "threads" or "reverse", `$sort` controls the sorting between threads, and [`$sort_aux`](#sort-aux) controls the sorting within a thread.
 
 The values of "threads" and "reverse-threads" are legacy options, which cause the value of `$sort_aux` to also control sorting between threads, and they may not be used with the "last-" prefix. The preferred way to enable a threaded view is via `$use_threads`. This variable can also be set via the `<sort-mailbox>` and `<sort-reverse>` functions.
 

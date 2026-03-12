@@ -1,10 +1,10 @@
 ---
-title: Score Variables
+title: Score Options
 description: NeoMutt configuration variables for message scoring and automatic actions based on score thresholds.
 keywords: neomutt, score, score_threshold_delete, score_threshold_flag, score_threshold_read, configuration
 ---
 
-# Score Variables
+# Score Options
 
 :::{admonition} Diátaxis: Reference
 :class: note

@@ -1,10 +1,10 @@
 ---
-title: "Notmuch Variables"
+title: "Notmuch Options"
 description: "Reference for NeoMutt Notmuch integration configuration variables."
 keywords: "notmuch, search, indexing, variables, neomutt"
 ---
 
-# Notmuch Variables
+# Notmuch Options
 
 :::{admonition} Diátaxis: Reference
 :class: note

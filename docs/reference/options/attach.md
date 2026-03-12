@@ -1,10 +1,10 @@
 ---
-title: "Attachment Variables"
+title: "Attachment Options"
 description: "Reference for NeoMutt attachment configuration variables."
 keywords: "attachment, mime, variables, neomutt"
 ---
 
-# Attachment Variables
+# Attachment Options
 
 :::{admonition} Diátaxis: Reference
 :class: note

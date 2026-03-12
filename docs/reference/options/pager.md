@@ -1,10 +1,10 @@
 ---
-title: "Pager Variables"
+title: "Pager Options"
 description: "Reference for NeoMutt pager configuration variables."
 keywords: "pager, reading, display, variables, neomutt"
 ---
 
-# Pager Variables
+# Pager Options
 
 :::{admonition} Diátaxis: Reference
 :class: note

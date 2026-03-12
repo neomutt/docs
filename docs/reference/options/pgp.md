@@ -1,10 +1,10 @@
 ---
-title: PGP Variables
+title: PGP Options
 description: PGP encryption and signing configuration variables for NeoMutt
 keywords: pgp_auto_decode, pgp_auto_inline, pgp_check_exit, pgp_check_gpg_decrypt_status_fd, pgp_clear_sign_command, pgp_decode_command, pgp_decrypt_command, pgp_decryption_okay, pgp_default_key, pgp_encrypt_only_command, pgp_encrypt_sign_command, pgp_entry_format, pgp_export_command, pgp_get_keys_command, pgp_good_sign, pgp_ignore_subkeys, pgp_import_command, pgp_key_sort, pgp_list_pubring_command, pgp_list_secring_command, pgp_long_ids, pgp_mime_auto, pgp_reply_inline, pgp_retainable_sigs, pgp_self_encrypt, pgp_show_unusable, pgp_sign_as, pgp_sign_command, pgp_strict_enc, pgp_timeout, pgp_use_gpg_agent, pgp_verify_command, pgp_verify_key_command
 ---
 
-# PGP Variables
+# PGP Options
 
 :::{admonition} Diátaxis: Reference
 :class: note

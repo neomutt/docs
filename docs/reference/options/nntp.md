@@ -1,10 +1,10 @@
 ---
-title: NNTP Variables
+title: NNTP Options
 description: NNTP (Usenet) protocol configuration variables for NeoMutt
 keywords: nntp_authenticators, nntp_context, nntp_listgroup, nntp_load_description, nntp_pass, nntp_poll, nntp_user
 ---
 
-# NNTP Variables
+# NNTP Options
 
 :::{admonition} Diátaxis: Reference
 :class: note

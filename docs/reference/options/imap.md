@@ -1,10 +1,10 @@
 ---
-title: IMAP Variables
+title: IMAP Options
 description: IMAP protocol configuration variables for NeoMutt
 keywords: imap_authenticators, imap_check_subscribed, imap_condstore, imap_deflate, imap_delim_chars, imap_fetch_chunk_size, imap_headers, imap_idle, imap_keep_alive, imap_list_subscribed, imap_login, imap_oauth_refresh_command, imap_pass, imap_passive, imap_peek, imap_pipeline_depth, imap_poll_timeout, imap_qresync, imap_rfc5161, imap_send_id, imap_server_noise, imap_user
 ---
 
-# IMAP Variables
+# IMAP Options
 
 :::{admonition} Diátaxis: Reference
 :class: note

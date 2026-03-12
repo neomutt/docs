@@ -1,10 +1,10 @@
 ---
-title: S/MIME Variables
+title: S/MIME Options
 description: S/MIME encryption and signing configuration variables for NeoMutt
 keywords: smime_ask_cert_label, smime_ca_location, smime_certificates, smime_decrypt_command, smime_decrypt_use_default_key, smime_default_key, smime_encrypt_command, smime_encrypt_with, smime_get_cert_command, smime_get_cert_email_command, smime_get_signer_cert_command, smime_import_cert_command, smime_is_default, smime_keys, smime_pk7out_command, smime_self_encrypt, smime_sign_as, smime_sign_command, smime_sign_digest_alg, smime_timeout, smime_verify_command, smime_verify_opaque_command
 ---
 
-# S/MIME Variables
+# S/MIME Options
 
 :::{admonition} Diátaxis: Reference
 :class: note

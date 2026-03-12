@@ -1,10 +1,10 @@
 ---
-title: MIME Variables
+title: MIME Options
 description: NeoMutt configuration variables for MIME message forwarding and type queries.
 keywords: neomutt, mime, mime_forward, mime_forward_decode, mime_forward_rest, mime_type_query_command, mime_type_query_first, configuration
 ---
 
-# MIME Variables
+# MIME Options
 
 :::{admonition} Diátaxis: Reference
 :class: note

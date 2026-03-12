@@ -1,10 +1,10 @@
 ---
-title: General Variables
+title: General Options
 description: Reference for NeoMutt general configuration variables
 keywords: neomutt, configuration, variables, general, settings
 ---
 
-# General Variables
+# General Options
 
 :::{admonition} Diátaxis: Reference
 :class: note

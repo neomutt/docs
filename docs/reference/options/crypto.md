@@ -1,10 +1,10 @@
 ---
-title: Crypto Variables
+title: Crypto Options
 description: General cryptography configuration variables for NeoMutt
 keywords: crypt_auto_encrypt, crypt_auto_pgp, crypt_auto_sign, crypt_auto_smime, crypt_chars, crypt_confirm_hook, crypt_encryption_info, crypt_opportunistic_encrypt, crypt_opportunistic_encrypt_strong_keys, crypt_protected_headers_read, crypt_protected_headers_save, crypt_protected_headers_subject, crypt_protected_headers_weed, crypt_protected_headers_write, crypt_reply_encrypt, crypt_reply_sign, crypt_reply_sign_encrypted, crypt_timestamp, crypt_use_gpgme, crypt_use_pka, crypt_verify_sig
 ---
 
-# Crypto Variables
+# Crypto Options
 
 :::{admonition} Diátaxis: Reference
 :class: note

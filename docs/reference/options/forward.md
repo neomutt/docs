@@ -1,10 +1,10 @@
 ---
-title: "Forwarding Variables"
+title: "Forwarding Options"
 description: "Reference for NeoMutt message forwarding configuration variables."
 keywords: "forward, forwarding, variables, neomutt"
 ---
 
-# Forwarding Variables
+# Forwarding Options
 
 :::{admonition} Diátaxis: Reference
 :class: note

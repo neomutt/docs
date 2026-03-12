@@ -1,10 +1,10 @@
 ---
-title: Browser Variables
+title: Browser Options
 description: NeoMutt configuration variables for the file browser display and sorting.
 keywords: neomutt, browser, browser_abbreviate_mailboxes, browser_sort, browser_sort_dirs_first, configuration
 ---
 
-# Browser Variables
+# Browser Options
 
 :::{admonition} Diátaxis: Reference
 :class: note
