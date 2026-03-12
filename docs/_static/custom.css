@@ -45,6 +45,27 @@ html[data-theme=dark] {
   --pst-color-background: #0d1e22;
 }
 
+/* ── Brand colours — auto (follow system) ───────────────────── */
+@media (prefers-color-scheme: light) {
+  html[data-theme=auto] {
+    --pst-color-primary: #005461;
+    --pst-color-primary-highlight: #018790;
+    --pst-color-link: #018790;
+    --pst-color-link-hover: #005461;
+    --pst-color-background: #e0f7f8;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  html[data-theme=auto] {
+    --pst-color-primary: #00B7B5;
+    --pst-color-primary-highlight: #018790;
+    --pst-color-link: #00B7B5;
+    --pst-color-link-hover: #018790;
+    --pst-color-background: #0d1e22;
+  }
+}
+
 html[data-theme=light] .sd-card {
   background: #fff;
   color: #000;
@@ -53,6 +74,20 @@ html[data-theme=light] .sd-card {
 html[data-theme=dark] .sd-card {
   background: #000;
   color: #fff;
+}
+
+@media (prefers-color-scheme: light) {
+  html[data-theme=auto] .sd-card {
+    background: #fff;
+    color: #000;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  html[data-theme=auto] .sd-card {
+    background: #000;
+    color: #fff;
+  }
 }
 
 /* ── Tables ─────────────────────────────────────────────────── */
@@ -73,6 +108,13 @@ html[data-theme=dark] th {
   color: #F4F4F4;
 }
 
+@media (prefers-color-scheme: dark) {
+  html[data-theme=auto] th {
+    background-color: #018790;
+    color: #F4F4F4;
+  }
+}
+
 div.document table.docutils td {
   padding: 0 0.5em 0 0.25em;
   vertical-align: top;
@@ -91,6 +133,18 @@ html[data-theme=dark] table tbody tr:hover {
   background-color: #005461 !important;
 }
 
+@media (prefers-color-scheme: light) {
+  html[data-theme=auto] table tbody tr:hover {
+    background-color: #00B7B5 !important;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  html[data-theme=auto] table tbody tr:hover {
+    background-color: #005461 !important;
+  }
+}
+
 /* ── Terminal highlight ─────────────────────────────────────── */
 html[data-theme=light] .highlight .hll {
   background-color: #005461;
@@ -102,6 +156,22 @@ html[data-theme=dark] .highlight .hll {
   background-color: #018790;
   color: #F4F4F4;
   display: block;
+}
+
+@media (prefers-color-scheme: light) {
+  html[data-theme=auto] .highlight .hll {
+    background-color: #005461;
+    color: #F4F4F4;
+    display: block;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  html[data-theme=auto] .highlight .hll {
+    background-color: #018790;
+    color: #F4F4F4;
+    display: block;
+  }
 }
 
 /* ── Footer accent ──────────────────────────────────────────── */
@@ -162,6 +232,42 @@ html[data-theme=dark] .sponsor-link:hover {
 
 html[data-theme=dark] .sponsor-link:hover .sponsor-heart {
   color: #fff;
+}
+
+@media (prefers-color-scheme: light) {
+  html[data-theme=auto] .sponsor-link:hover {
+    background: #d04060;
+    color: #fff;
+  }
+
+  html[data-theme=auto] .sponsor-heart {
+    color: #c00040;
+    font-size: 1.1em;
+  }
+
+  html[data-theme=auto] .sponsor-link:hover .sponsor-heart {
+    color: #fff;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  html[data-theme=auto] .sponsor-link {
+    border-color: #e06070;
+    color: #f0a0a8;
+  }
+
+  html[data-theme=auto] .sponsor-heart {
+    color: #f0a0a8;
+  }
+
+  html[data-theme=auto] .sponsor-link:hover {
+    background: #d04060;
+    color: #fff;
+  }
+
+  html[data-theme=auto] .sponsor-link:hover .sponsor-heart {
+    color: #fff;
+  }
 }
 
 .devel-warning {
