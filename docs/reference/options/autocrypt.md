@@ -35,23 +35,16 @@ See **Autocrypt** for more details.
 This variable describes the format of the "autocrypt account" menu.
 The following `printf(3)`-style sequences are understood
 
-*Short* *Long Name*         *Description*
-
-`%a`    `%{address}`        Email address
-
-`%k`    `%{keyid}`          GPG keyid
-
-`%n`    `%{number}`         Current entry number
-
-`%p`    `%{prefer-encrypt}` Prefer-encrypt flag
-
-`%s`    `%{enabled}`        Status flag (active/inactive)
-
-`%*X`   `%{padding-soft}`   Soft-fill with character `X` as pad
-
-`%>X`   `%{padding-hard}`   Right justify the rest of the string and pad with character `X`
-
-`%|X`   `%{padding-eol}`    Pad to the end of the line with character `X`
+| Short  | Long Name          | Description                                                     |
+|--------|--------------------|-----------------------------------------------------------------|
+| `%a`   | `%{address}`       | Email address                                                   |
+| `%k`   | `%{keyid}`         | GPG keyid                                                       |
+| `%n`   | `%{number}`        | Current entry number                                            |
+| `%p`   | `%{prefer-encrypt}`| Prefer-encrypt flag                                             |
+| `%s`   | `%{enabled}`       | Status flag (active/inactive)                                   |
+| `%*X`  | `%{padding-soft}`  | Soft-fill with character `X` as pad                             |
+| `%>X`  | `%{padding-hard}`  | Right justify the rest of the string and pad with character `X` |
+| `%\|X` | `%{padding-eol}`   | Pad to the end of the line with character `X`                   |
 
 (Autocrypt only)
 

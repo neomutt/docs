@@ -42,41 +42,30 @@ The default for this option is the currently used neomuttrc file, or
 Specifies the format of the data displayed for the "[`alias`](#alias)" menu.  The
 following `printf(3)`-style sequences are available:
 
-*Short* *Long Name*       *Description*
-
-`%A`    `%{address}`      Full Address (Name and Email)
-
-`%a`    `%{alias}`        Alias name
-
-`%C`    `%{comment}`      Comment
-
-`%E`    `%{email}`        Email Address
-
-`%f`    `%{flags}`        Flags - currently, a `d` for an alias marked for deletion
-
-`%i`    `%{number}`       Index number
-
-`%N`    `%{name}`         Real name
-
-`%t`    `%{tagged}`       Alias is tagged (selected)
-
-`%Y`    `%{tags}`         User-defined tags (labels)
-
-`%*X`   `%{padding-soft}` Soft-fill with character `X` as pad
-
-`%>X`   `%{padding-hard}` Right justify the rest of the string and pad with character `X`
-
-`%|X`   `%{padding-eol}`  Pad to the end of the line with character `X`
+| Short  | Long Name         | Description                                                     |
+|--------|-------------------|-----------------------------------------------------------------|
+| `%A`   | `%{address}`      | Full Address (Name and Email)                                   |
+| `%a`   | `%{alias}`        | Alias name                                                      |
+| `%C`   | `%{comment}`      | Comment                                                         |
+| `%E`   | `%{email}`        | Email Address                                                   |
+| `%f`   | `%{flags}`        | Flags - currently, a `d` for an alias marked for deletion       |
+| `%i`   | `%{number}`       | Index number                                                    |
+| `%N`   | `%{name}`         | Real name                                                       |
+| `%t`   | `%{tagged}`       | Alias is tagged (selected)                                      |
+| `%Y`   | `%{tags}`         | User-defined tags (labels)                                      |
+| `%*X`  | `%{padding-soft}` | Soft-fill with character `X` as pad                             |
+| `%>X`  | `%{padding-hard}` | Right justify the rest of the string and pad with character `X` |
+| `%\|X` | `%{padding-eol}`  | Pad to the end of the line with character `X`                   |
 
 For an explanation of "soft-fill", see the [`$index_format`](#index-format) documentation.
 
 The following sequences are deprecated; they will be removed in the future.
 
-%c  Use %C instead
-
-%n  Use %i instead
-
-%r  Use %A instead
+| Old  | Action           |
+|------|------------------|
+| `%c` | Use `%C` instead |
+| `%n` | Use `%i` instead |
+| `%r` | Use `%A` instead |
 
 (alias-sort)=
 ## `$alias_sort`
@@ -86,19 +75,18 @@ The following sequences are deprecated; they will be removed in the future.
 
 Specifies how the entries in the "alias" and "query" menus are sorted.
 
-*Value*    *Sort by*
+| Value      | Sort by                               |
+|------------|---------------------------------------|
+| `alias`    | Alias short name                      |
+| `email`    | Email Address                         |
+| `name`     | Real Name                             |
+| `unsorted` | The order the Aliases were configured |
 
-`alias`    Alias short name
+*Deprecated Value*
 
-`email`    Email Address
-
-`name`     Real Name
-
-`unsorted` The order the Aliases were configured
-
-*Deprecated Value* *Use this instead*
-
-`address`          `email`
+| Old       | Action              |
+|-----------|---------------------|
+| `address` | Use `email` instead |
 
 Prefixing the value with `reverse-` sorts the entries in reverse order,
 e.g. `set alias_sort = "reverse-alias"`

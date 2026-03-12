@@ -91,47 +91,26 @@ This variable allows you to customize the sidebar display. This string is
 similar to [`$index_format`](#index-format), but has its own set of `printf(3)`-like
 sequences:
 
-*Short* *Long Name*        *Cur* *Description*
-
-`%a`    `%{notify}`                  Alert: 1 if user is notified of new mail
-
-`%B`    `%{name}`                    Name of the mailbox
-
-`%D`    `%{description}`             Descriptive name of the mailbox
-
-`%d`    `%{deleted-count}` Cur       Number of deleted messages in the mailbox
-
-`%F`    `%{flagged-count}`           Number of flagged messages in the mailbox
-
-`%L`    `%{limited-count}` Cur       Number of messages after limiting
-
-`%N`    `%{new-mail}`                Number of unread messages in the mailbox (seen or unseen)
-
-`%n`    `%{unread-count}`            `N` if mailbox has new mail, ` ` (space) otherwise
-
-`%o`    `%{old-count}`               Number of old messages in the mailbox (unread, seen)
-
-`%p`    `%{poll}`                    Poll: 1 if Mailbox is checked for new mail
-
-`%r`    `%{read-count}`              Number of read messages in the mailbox (read, seen)
-
-`%S`    `%{message-count}`           Size of mailbox (total number of messages)
-
-`%t`    `%{tagged-count}`  Cur       Number of tagged messages in the mailbox
-
-`%Z`    `%{unseen-count}`            Number of new messages in the mailbox (unread, unseen)
-
-`%!`    `%{flagged}`                 `!` : one flagged message
-
-                                             `!!` : two flagged messages
-
-                                             `n!` : n flagged messages (for n > 2)
-
-`%*X`   `%{padding-soft}`            Soft-fill with character `X` as pad
-
-`%>X`   `%{padding-hard}`            Right justify the rest of the string and pad with character `X`
-
-`%|X`   `%{padding-eol}`             Pad to the end of the line with character `X`
+| Short  | Long Name           | Cur | Description                                                          |
+|--------|---------------------|-----|----------------------------------------------------------------------|
+| `%a`   | `%{notify}`         |     | Alert: 1 if user is notified of new mail                             |
+| `%B`   | `%{name}`           |     | Name of the mailbox                                                  |
+| `%D`   | `%{description}`    |     | Descriptive name of the mailbox                                      |
+| `%d`   | `%{deleted-count}`  | Cur | Number of deleted messages in the mailbox                            |
+| `%F`   | `%{flagged-count}`  |     | Number of flagged messages in the mailbox                            |
+| `%L`   | `%{limited-count}`  | Cur | Number of messages after limiting                                    |
+| `%N`   | `%{new-mail}`       |     | Number of unread messages in the mailbox (seen or unseen)            |
+| `%n`   | `%{unread-count}`   |     | `N` if mailbox has new mail, ` ` (space) otherwise                   |
+| `%o`   | `%{old-count}`      |     | Number of old messages in the mailbox (unread, seen)                 |
+| `%p`   | `%{poll}`           |     | Poll: 1 if Mailbox is checked for new mail                           |
+| `%r`   | `%{read-count}`     |     | Number of read messages in the mailbox (read, seen)                  |
+| `%S`   | `%{message-count}`  |     | Size of mailbox (total number of messages)                           |
+| `%t`   | `%{tagged-count}`   | Cur | Number of tagged messages in the mailbox                             |
+| `%Z`   | `%{unseen-count}`   |     | Number of new messages in the mailbox (unread, unseen)               |
+| `%!`   | `%{flagged}`        |     | `!`: one flagged message; `!!`: two flagged messages; `n!`: n flagged messages (for n > 2) |
+| `%*X`  | `%{padding-soft}`   |     | Soft-fill with character `X` as pad                                  |
+| `%>X`  | `%{padding-hard}`   |     | Right justify the rest of the string and pad with character `X`      |
+| `%\|X` | `%{padding-eol}`    |     | Pad to the end of the line with character `X`                        |
 
 *Cur* = Only applicable to the current folder
 
@@ -202,15 +181,12 @@ By default the sidebar will show the mailbox's path, relative to the
 [`$folder`](#folder) variable. Setting `sidebar_shortpath=yes` will shorten the
 names relative to the previous name. Here's an example:
 
-*shortpath=no* *shortpath=yes* *shortpath=yes, folderindent=yes, indentstr=".."*
-
-`fruit`        `fruit`         `fruit`
-
-`fruit.apple`  `apple`         `..apple`
-
-`fruit.banana` `banana`        `..banana`
-
-`fruit.cherry` `cherry`        `..cherry`
+| shortpath=no    | shortpath=yes | shortpath=yes, folderindent=yes, indentstr=".." |
+|-----------------|---------------|-------------------------------------------------|
+| `fruit`         | `fruit`       | `fruit`                                         |
+| `fruit.apple`   | `apple`       | `..apple`                                       |
+| `fruit.banana`  | `banana`      | `..banana`                                      |
+| `fruit.cherry`  | `cherry`      | `..cherry`                                      |
 
 *See also:* [`$sidebar_delim_chars`](#sidebar-delim-chars), [`$sidebar_folder_indent`](#sidebar-folder-indent),
 [`$sidebar_indent_string`](#sidebar-indent-string), [`$sidebar_component_depth`](#sidebar-component-depth).
@@ -223,29 +199,23 @@ names relative to the previous name. Here's an example:
 
 Specifies how to sort mailbox entries in the sidebar.
 
-*Value*    *Sort by*
+| Value      | Sort by                               |
+|------------|---------------------------------------|
+| `count`    | Total message count                   |
+| `desc`     | Mailbox description                   |
+| `flagged`  | Count of flagged messages             |
+| `path`     | Mailbox path (alphabetically)         |
+| `unread`   | Count of unread messages              |
+| `unsorted` | The order the mailboxes were configured |
 
-`count`    Total message count
+*Deprecated Value*
 
-`desc`     Mailbox description
-
-`flagged`  Count of flagged messages
-
-`path`     Mailbox path (alphabetically)
-
-`unread`   Count of unread messages
-
-`unsorted` The order the mailboxes were configured
-
-*Deprecated Value* *Use this instead*
-
-`alpha`            `path`
-
-`mailbox-order`    `unsorted`
-
-`name`             `path`
-
-`new`              `unread`
+| Old             | Action           |
+|-----------------|------------------|
+| `alpha`         | Use `path` instead     |
+| `mailbox-order` | Use `unsorted` instead |
+| `name`          | Use `path` instead     |
+| `new`           | Use `unread` instead   |
 
 (sidebar-visible)=
 ## `$sidebar_visible`

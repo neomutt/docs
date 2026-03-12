@@ -40,21 +40,15 @@ Controls the format of the status line displayed in the "compose"
 menu.  This string is similar to [`$status_format`](#status-format), but has its own
 set of `printf(3)`-like sequences:
 
-*Short* *Long Name*       *Description*
-
-`%a`    `%{attach-count}` Total number of attachments
-
-`%h`    `%{hostname}`     Local hostname
-
-`%l`    `%{attach-size}`  Approximate size (in bytes) of the current message (see **Size Format**)
-
-`%v`    `%{version}`      NeoMutt version string
-
-`%*X`   `%{padding-soft}` Soft-fill with character `X` as pad
-
-`%>X`   `%{padding-hard}` Right justify the rest of the string and pad with character `X`
-
-`%|X`   `%{padding-eol}`  Pad to the end of the line with character `X`
+| Short  | Long Name         | Description                                                                      |
+|--------|-------------------|----------------------------------------------------------------------------------|
+| `%a`   | `%{attach-count}` | Total number of attachments                                                      |
+| `%h`   | `%{hostname}`     | Local hostname                                                                   |
+| `%l`   | `%{attach-size}`  | Approximate size (in bytes) of the current message (see **Size Format**)         |
+| `%v`   | `%{version}`      | NeoMutt version string                                                           |
+| `%*X`  | `%{padding-soft}` | Soft-fill with character `X` as pad                                              |
+| `%>X`  | `%{padding-hard}` | Right justify the rest of the string and pad with character `X`                  |
+| `%\|X` | `%{padding-eol}`  | Pad to the end of the line with character `X`                                    |
 
 See the text describing the [`$status_format`](#status-format) option for more
 information on how to set [`$compose_format`](#compose-format).
