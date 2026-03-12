@@ -2186,7 +2186,7 @@ with the query string the user types.  NeoMutt will add quotes around the
 string substituted for "%s" automatically according to shell quoting
 rules, so you should avoid adding your own.  If no "%s" is found in
 the string, NeoMutt will append the user's query to the end of the string.
-See "`query`": [https://neomutt.org/guide/advancedusage.html#query](https://neomutt.org/guide/advancedusage.html#query)
+See [Address Queries](../../howto/address-query).
 
 (query-format)=
 ## `$query_format`
@@ -2935,7 +2935,7 @@ The use of "reverse-" in `$sort` swaps which end the last thread
 will sort to.
 
 See the "Use Threads Feature" section for further explanation and
-examples, [https://neomutt.org/feature/use-threads](https://neomutt.org/feature/use-threads)
+examples, see [Use Threads](../../howto/threads).
 
 (spam-separator)=
 ## `$spam_separator`

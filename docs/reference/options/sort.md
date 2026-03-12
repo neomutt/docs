@@ -52,7 +52,7 @@ The values of "threads" and "reverse-threads" are legacy options, which cause th
 When `$use_threads` is "threads", the last thread sorts to the bottom; when it is "reversed", the last thread sorts to the top. The use of "reverse-" in `$sort` swaps which end the last thread will sort to.
 :::
 
-See the "Use Threads Feature" section for further explanation and examples: <https://neomutt.org/feature/use-threads>
+See [Use Threads](../../howto/threads) for further explanation and examples.
 
 (sort-aux)=
 ## `$sort_aux`
@@ -70,7 +70,7 @@ set sort_aux=last-date-received
 
 would mean that if a new message is received in a thread, that subthread becomes the last one displayed (or the first, if you have "`set use_threads=reverse`".) When using `$use_threads`, it is more common to use "last-" with `$sort` and not with `$sort_aux`.
 
-See the "Use Threads Feature" section for further explanation and examples: <https://neomutt.org/feature/use-threads>
+See [Use Threads](../../howto/threads) for further explanation and examples.
 
 (sort-re)=
 ## `$sort_re`
