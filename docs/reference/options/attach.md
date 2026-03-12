@@ -46,28 +46,28 @@ of the value as shown above if included.
 This variable describes the format of the "attachment" menu.  The
 following `printf(3)`-style sequences are understood:
 
-| Short  | Long Name             | Description                                                                                                                               |
-|--------|-----------------------|-------------------------------------------------------------------------------------------------------------------------------------------|
-| `%C`   | `%{charset}`          | Charset                                                                                                                                   |
-| `%c`   | `%{charset-convert}`  | Requires charset conversion (`n` or `c`)                                                                                                  |
-| `%D`   | `%{deleted}`          | Deleted flag                                                                                                                              |
-| `%d`   | `%{description}`      | Description (if none, falls back to `%F`)                                                                                                 |
-| `%e`   | `%{mime-encoding}`    | MIME content-transfer-encoding                                                                                                            |
-| `%F`   | `%{file-disposition}` | Filename in content-disposition header (if none, falls back to `%f`)                                                                      |
-| `%f`   | `%{file}`             | Filename                                                                                                                                  |
-| `%I`   | `%{disposition}`      | Disposition (`I` for inline, `A` for attachment)                                                                                          |
-| `%M`   | `%{mime-minor}`       | MIME subtype                                                                                                                              |
-| `%m`   | `%{mime-major}`       | Major MIME type                                                                                                                           |
-| `%n`   | `%{number}`           | Attachment number                                                                                                                         |
-| `%Q`   | `%{attach-qualifies}` | `Q`, if MIME part qualifies for attachment counting                                                                                       |
-| `%s`   | `%{file-size}`        | Size (see **Size Format**)                                                                                                                |
-| `%T`   | `%{tree}`             | Graphic tree characters                                                                                                                   |
-| `%t`   | `%{tagged}`           | Tagged flag                                                                                                                               |
-| `%u`   | `%{unlink}`           | Unlink (=to delete) flag                                                                                                                  |
+| Short  | Long Name             | Description                                                                                                                                                        |
+|--------|-----------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `%C`   | `%{charset}`          | Charset                                                                                                                                                            |
+| `%c`   | `%{charset-convert}`  | Requires charset conversion (`n` or `c`)                                                                                                                           |
+| `%D`   | `%{deleted}`          | Deleted flag                                                                                                                                                       |
+| `%d`   | `%{description}`      | Description (if none, falls back to `%F`)                                                                                                                          |
+| `%e`   | `%{mime-encoding}`    | MIME content-transfer-encoding                                                                                                                                     |
+| `%F`   | `%{file-disposition}` | Filename in content-disposition header (if none, falls back to `%f`)                                                                                               |
+| `%f`   | `%{file}`             | Filename                                                                                                                                                           |
+| `%I`   | `%{disposition}`      | Disposition (`I` for inline, `A` for attachment)                                                                                                                   |
+| `%M`   | `%{mime-minor}`       | MIME subtype                                                                                                                                                       |
+| `%m`   | `%{mime-major}`       | Major MIME type                                                                                                                                                    |
+| `%n`   | `%{number}`           | Attachment number                                                                                                                                                  |
+| `%Q`   | `%{attach-qualifies}` | `Q`, if MIME part qualifies for attachment counting                                                                                                                |
+| `%s`   | `%{file-size}`        | Size (see **Size Format**)                                                                                                                                         |
+| `%T`   | `%{tree}`             | Graphic tree characters                                                                                                                                            |
+| `%t`   | `%{tagged}`           | Tagged flag                                                                                                                                                        |
+| `%u`   | `%{unlink}`           | Unlink (=to delete) flag                                                                                                                                           |
 | `%X`   | `%{attach-count}`     | Number of qualifying MIME parts in this part and its children (see the {ref}`$attachments <attachment-searching-and-counting>` section for possible speed effects) |
-| `%*X`  | `%{padding-soft}`     | Soft-fill with character `X` as pad                                                                                                       |
-| `%>X`  | `%{padding-hard}`     | Right justify the rest of the string and pad with character `X`                                                                           |
-| `%\|X` | `%{padding-eol}`      | Pad to the end of the line with character `X`                                                                                             |
+| `%*X`  | `%{padding-soft:X}`   | Soft-fill with character `X` as pad                                                                                                                                |
+| `%>X`  | `%{padding-hard:X}`   | Right justify the rest of the string and pad with character `X`                                                                                                    |
+| `%\|X` | `%{padding-eol:X}`    | Pad to the end of the line with character `X`                                                                                                                      |
 
 For an explanation of "soft-fill", see the [`$index_format`](#index-format) documentation.
 

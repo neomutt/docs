@@ -1047,30 +1047,30 @@ This variable allows you to customize the file browser display to your
 personal taste.  This string is similar to [$index_format](#index-format), but has
 its own set of `printf(3)`-like sequences:
 
-| Short    | Long Name          | Description                                                                                          |
-|----------|--------------------|------------------------------------------------------------------------------------------------------|
-| `%a`     | `%{notify}`        | Alert: 1 if user is notified of new mail                                                             |
-| `%C`     | `%{number}`        | Current file number                                                                                  |
-| `%D`     | `%{date}`          | Date/time folder was last modified using [$date_format](#date-format).                               |
-|          |                    | It is recommended to use `%[fmt]` instead, where `fmt` is the value of [$date_format](#date-format). |
-| `%d`     | `%{date-format}`   | Date/time folder was last modified                                                                   |
-| `%F`     | `%{file-mode}`     | File permissions                                                                                     |
-| `%f`     | `%{filename}`      | Filename (`/` is appended to directory names,                                                        |
-|          |                    | `@` to symbolic links and `*` to executable files)                                                   |
-| `%g`     | `%{file-group}`    | Group name (or numeric gid, if missing)                                                              |
-| `%i`     | `%{description}`   | Description of the folder                                                                            |
-| `%l`     | `%{hard-links}`    | Number of hard links                                                                                 |
-| `%m`     | `%{message-count}` | Number of messages in the mailbox                                                                    |
-| `%N`     | `%{new-mail}`      | `N` if mailbox has new mail, ` ` (space) otherwise                                                   |
-| `%n`     | `%{unread-count}`  | Number of unread messages in the mailbox                                                             |
-| `%p`     | `%{poll}`          | Poll: 1 if Mailbox is checked for new mail                                                           |
-| `%s`     | `%{file-size}`     | Size in bytes (see **Size Format**)                                                                  |
-| `%t`     | `%{tagged}`        | `*` if the file is tagged, blank otherwise                                                           |
-| `%u`     | `%{file-owner}`    | Owner name (or numeric uid, if missing)                                                              |
-| `%[fmt]` |                    | Date/time folder was last modified using an `strftime(3)` expression                                 |
-| `%*X`    | `%{padding-soft}`  | Soft-fill with character `X` as pad                                                                  |
-| `%>X`    | `%{padding-hard}`  | Right justify the rest of the string and pad with character `X`                                      |
-| `%\|X`   | `%{padding-eol}`   | Pad to the end of the line with character `X`                                                        |
+| Short    | Long Name           | Description                                                                                          |
+|----------|---------------------|------------------------------------------------------------------------------------------------------|
+| `%a`     | `%{notify}`         | Alert: 1 if user is notified of new mail                                                             |
+| `%C`     | `%{number}`         | Current file number                                                                                  |
+| `%D`     | `%{date}`           | Date/time folder was last modified using [$date_format](#date-format).                               |
+|          |                     | It is recommended to use `%[fmt]` instead, where `fmt` is the value of [$date_format](#date-format). |
+| `%d`     | `%{date-format}`    | Date/time folder was last modified                                                                   |
+| `%F`     | `%{file-mode}`      | File permissions                                                                                     |
+| `%f`     | `%{filename}`       | Filename (`/` is appended to directory names,                                                        |
+|          |                     | `@` to symbolic links and `*` to executable files)                                                   |
+| `%g`     | `%{file-group}`     | Group name (or numeric gid, if missing)                                                              |
+| `%i`     | `%{description}`    | Description of the folder                                                                            |
+| `%l`     | `%{hard-links}`     | Number of hard links                                                                                 |
+| `%m`     | `%{message-count}`  | Number of messages in the mailbox                                                                    |
+| `%N`     | `%{new-mail}`       | `N` if mailbox has new mail, ` ` (space) otherwise                                                   |
+| `%n`     | `%{unread-count}`   | Number of unread messages in the mailbox                                                             |
+| `%p`     | `%{poll}`           | Poll: 1 if Mailbox is checked for new mail                                                           |
+| `%s`     | `%{file-size}`      | Size in bytes (see **Size Format**)                                                                  |
+| `%t`     | `%{tagged}`         | `*` if the file is tagged, blank otherwise                                                           |
+| `%u`     | `%{file-owner}`     | Owner name (or numeric uid, if missing)                                                              |
+| `%[fmt]` |                     | Date/time folder was last modified using an `strftime(3)` expression                                 |
+| `%*X`    | `%{padding-soft:X}` | Soft-fill with character `X` as pad                                                                  |
+| `%>X`    | `%{padding-hard:X}` | Right justify the rest of the string and pad with character `X`                                      |
+| `%\|X`   | `%{padding-eol:X}`  | Pad to the end of the line with character `X`                                                        |
 
 For an explanation of "soft-fill", see the [$index_format](#index-format) documentation.
 
@@ -1214,20 +1214,20 @@ This variable allows you to customize the newsgroup browser display to
 your personal taste.  This string is similar to "[index_format](#index-format)", but
 has its own set of printf()-like sequences:
 
-| Short  | Long Name         | Description                                                          |
-|--------|-------------------|----------------------------------------------------------------------|
-| `%a`   | `%{notify}`       | Alert: 1 if user is notified of new mail                             |
-| `%C`   | `%{number}`       | Current newsgroup number                                             |
-| `%d`   | `%{description}`  | Description of newsgroup (becomes from server)                       |
-| `%f`   | `%{newsgroup}`    | Newsgroup name                                                       |
-| `%M`   | `%{flags}`        | `-` if newsgroup not allowed for direct post (moderated for example) |
-| `%N`   | `%{flags2}`       | `N` if newsgroup is new, `u` if unsubscribed, ` ` (space) otherwise  |
-| `%n`   | `%{new-count}`    | Number of new articles in newsgroup                                  |
-| `%p`   | `%{poll}`         | Poll: 1 if Mailbox is checked for new mail                           |
-| `%s`   | `%{unread-count}` | Number of unread articles in newsgroup                               |
-| `%*X`  | `%{padding-soft}` | Soft-fill with character `X` as pad                                  |
-| `%>X`  | `%{padding-hard}` | Right justify the rest of the string and pad with character `X`      |
-| `%\|X` | `%{padding-eol}`  | Pad to the end of the line with character `X`                        |
+| Short  | Long Name           | Description                                                          |
+|--------|---------------------|----------------------------------------------------------------------|
+| `%a`   | `%{notify}`         | Alert: 1 if user is notified of new mail                             |
+| `%C`   | `%{number}`         | Current newsgroup number                                             |
+| `%d`   | `%{description}`    | Description of newsgroup (becomes from server)                       |
+| `%f`   | `%{newsgroup}`      | Newsgroup name                                                       |
+| `%M`   | `%{flags}`          | `-` if newsgroup not allowed for direct post (moderated for example) |
+| `%N`   | `%{flags2}`         | `N` if newsgroup is new, `u` if unsubscribed, ` ` (space) otherwise  |
+| `%n`   | `%{new-count}`      | Number of new articles in newsgroup                                  |
+| `%p`   | `%{poll}`           | Poll: 1 if Mailbox is checked for new mail                           |
+| `%s`   | `%{unread-count}`   | Number of unread articles in newsgroup                               |
+| `%*X`  | `%{padding-soft:X}` | Soft-fill with character `X` as pad                                  |
+| `%>X`  | `%{padding-hard:X}` | Right justify the rest of the string and pad with character `X`      |
+| `%\|X` | `%{padding-eol:X}`  | Pad to the end of the line with character `X`                        |
 
 (hdrs)=
 ## `$hdrs`
@@ -1568,9 +1568,9 @@ following sequences are defined in NeoMutt:
 |           |                          | if the first character inside the brackets is a bang (`!`), the date is formatted ignoring any locale settings.                |
 | `%(fmt)`  |                          | Local date and time when the message was received, and `fmt` is expanded by the library function `strftime(3)`;                |
 |           |                          | if the first character inside the parentheses is a bang (`!`), the date is formatted ignoring any locale settings.             |
-| `%*X`     | `%{padding-soft}`        | Soft-fill with character `X` as pad                                                                                            |
-| `%>X`     | `%{padding-hard}`        | Right justify the rest of the string and pad with character `X`                                                                |
-| `%\|X`    | `%{padding-eol}`         | Pad to the end of the line with character `X`                                                                                  |
+| `%*X`     | `%{padding-soft:X}`      | Soft-fill with character `X` as pad                                                                                            |
+| `%>X`     | `%{padding-hard:X}`      | Right justify the rest of the string and pad with character `X`                                                                |
+| `%\|X`    | `%{padding-eol:X}`       | Pad to the end of the line with character `X`                                                                                  |
 
 Date format expressions can be constructed based on relative dates. Using
 the date formatting operators along with nested conditionals, the date
@@ -2052,14 +2052,14 @@ the screen width to be badly formatted in the help menu.
 This variable describes the format of the "pattern completion" menu. The
 following `printf(3)`-style sequences are understood:
 
-| Short  | Long Name         | Description                                                     |
-|--------|-------------------|-----------------------------------------------------------------|
-| `%d`   | `%{description}`  | Pattern description                                             |
-| `%e`   | `%{expression}`   | Pattern expression                                              |
-| `%n`   | `%{number}`       | Index number                                                    |
-| `%*X`  | `%{padding-soft}` | Soft-fill with character `X` as pad                             |
-| `%>X`  | `%{padding-hard}` | Right justify the rest of the string and pad with character `X` |
-| `%\|X` | `%{padding-eol}`  | Pad to the end of the line with character `X`                   |
+| Short  | Long Name           | Description                                                     |
+|--------|---------------------|-----------------------------------------------------------------|
+| `%d`   | `%{description}`    | Pattern description                                             |
+| `%e`   | `%{expression}`     | Pattern expression                                              |
+| `%n`   | `%{number}`         | Index number                                                    |
+| `%*X`  | `%{padding-soft:X}` | Soft-fill with character `X` as pad                             |
+| `%>X`  | `%{padding-hard:X}` | Right justify the rest of the string and pad with character `X` |
+| `%\|X` | `%{padding-eol:X}`  | Pad to the end of the line with character `X`                   |
 
 (post-moderated)=
 ## `$post_moderated`
@@ -2198,18 +2198,18 @@ See [Address Queries](../../howto/address-query).
 This variable describes the format of the "query" menu. The
 following `printf(3)`-style sequences are understood:
 
-| Short  | Long Name         | Description                                                     |
-|--------|-------------------|-----------------------------------------------------------------|
-| `%A`   | `%{address}`      | Full Address (Name and Email)                                   |
-| `%C`   | `%{comment}`      | Comment                                                         |
-| `%E`   | `%{email}`        | Email Address                                                   |
-| `%i`   | `%{number}`       | Index number                                                    |
-| `%N`   | `%{name}`         | Real name                                                       |
-| `%t`   | `%{tagged}`       | Alias is tagged (selected)                                      |
-| `%Y`   | `%{tags}`         | User-defined tags (labels)                                      |
-| `%*X`  | `%{padding-soft}` | Soft-fill with character `X` as pad                             |
-| `%>X`  | `%{padding-hard}` | Right justify the rest of the string and pad with character `X` |
-| `%\|X` | `%{padding-eol}`  | Pad to the end of the line with character `X`                   |
+| Short  | Long Name           | Description                                                     |
+|--------|---------------------|-----------------------------------------------------------------|
+| `%A`   | `%{address}`        | Full Address (Name and Email)                                   |
+| `%C`   | `%{comment}`        | Comment                                                         |
+| `%E`   | `%{email}`          | Email Address                                                   |
+| `%i`   | `%{number}`         | Index number                                                    |
+| `%N`   | `%{name}`           | Real name                                                       |
+| `%t`   | `%{tagged}`         | Alias is tagged (selected)                                      |
+| `%Y`   | `%{tags}`           | User-defined tags (labels)                                      |
+| `%*X`  | `%{padding-soft:X}` | Soft-fill with character `X` as pad                             |
+| `%>X`  | `%{padding-hard:X}` | Right justify the rest of the string and pad with character `X` |
+| `%\|X` | `%{padding-eol:X}`  | Pad to the end of the line with character `X`                   |
 
 For an explanation of "soft-fill", see the [$index_format](#index-format) documentation.
 

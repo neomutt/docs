@@ -63,9 +63,9 @@ Controls the format of the status line displayed in the "index" menu. This strin
 | `%u`   | `%{unread-count}`     | Number of unread messages in the mailbox (seen or unseen)                                              |
 | `%v`   | `%{limit-pattern}`    | NeoMutt version string                                                                                 |
 | `%V`   | `%{version}`          | Currently active limit pattern, if any                                                                 |
-| `%*X`  | `%{padding-soft}`     | Soft-fill with character `X` as pad                                                                    |
-| `%>X`  | `%{padding-hard}`     | Right justify the rest of the string and pad with character `X`                                        |
-| `%\|X` | `%{padding-eol}`      | Pad to the end of the line with character `X`                                                          |
+| `%*X`  | `%{padding-soft:X}`   | Soft-fill with character `X` as pad                                                                    |
+| `%>X`  | `%{padding-hard:X}`   | Right justify the rest of the string and pad with character `X`                                        |
+| `%\|X` | `%{padding-eol:X}`    | Pad to the end of the line with character `X`                                                          |
 
 For an explanation of "soft-fill", see the `$index_format` documentation.
 

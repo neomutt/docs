@@ -226,9 +226,9 @@ but has its own set of `printf(3)`-like sequences:
 | `%K`     | `%{pkey-id}`           | Primary Key id                                                  |
 | `%L`     | `%{pkey-length}`       | Primary Key length                                              |
 | `%[<s>]` | `%{date}`              | Date of the key where `<s>` is an `strftime(3)` expression      |
-| `%*X`    | `%{padding-soft}`      | Soft-fill with character `X` as pad                             |
-| `%>X`    | `%{padding-hard}`      | Right justify the rest of the string and pad with character `X` |
-| `%\|X`   | `%{padding-eol}`       | Pad to the end of the line with character `X`                   |
+| `%*X`    | `%{padding-soft:X}`    | Soft-fill with character `X` as pad                             |
+| `%>X`    | `%{padding-hard:X}`    | Right justify the rest of the string and pad with character `X` |
+| `%\|X`   | `%{padding-eol:X}`     | Pad to the end of the line with character `X`                   |
 
 See the section "Sending Cryptographically Signed/Encrypted Messages" of the
 user manual for the meaning of the letters some of these sequences expand

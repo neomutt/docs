@@ -449,7 +449,7 @@ color status blue white
 # Highlight New, Deleted, or Flagged emails
 color status brightred white '(New|Del|Flag):[0-9]+'
 # Highlight mailbox ordering if it's different from the default
-# First, highlight anything (*/*) 
+# First, highlight anything (*/*)
 color status brightred default '\([^)]+/[^)]+\)'
 # Then override the color for one specific case
 color status default default '\(threads/last-date-received\)'

@@ -42,20 +42,20 @@ The default for this option is the currently used neomuttrc file, or
 Specifies the format of the data displayed for the "[`alias`](#alias)" menu.  The
 following `printf(3)`-style sequences are available:
 
-| Short  | Long Name         | Description                                                     |
-|--------|-------------------|-----------------------------------------------------------------|
-| `%A`   | `%{address}`      | Full Address (Name and Email)                                   |
-| `%a`   | `%{alias}`        | Alias name                                                      |
-| `%C`   | `%{comment}`      | Comment                                                         |
-| `%E`   | `%{email}`        | Email Address                                                   |
-| `%f`   | `%{flags}`        | Flags - currently, a `d` for an alias marked for deletion       |
-| `%i`   | `%{number}`       | Index number                                                    |
-| `%N`   | `%{name}`         | Real name                                                       |
-| `%t`   | `%{tagged}`       | Alias is tagged (selected)                                      |
-| `%Y`   | `%{tags}`         | User-defined tags (labels)                                      |
-| `%*X`  | `%{padding-soft}` | Soft-fill with character `X` as pad                             |
-| `%>X`  | `%{padding-hard}` | Right justify the rest of the string and pad with character `X` |
-| `%\|X` | `%{padding-eol}`  | Pad to the end of the line with character `X`                   |
+| Short  | Long Name           | Description                                                     |
+|--------|---------------------|-----------------------------------------------------------------|
+| `%A`   | `%{address}`        | Full Address (Name and Email)                                   |
+| `%a`   | `%{alias}`          | Alias name                                                      |
+| `%C`   | `%{comment}`        | Comment                                                         |
+| `%E`   | `%{email}`          | Email Address                                                   |
+| `%f`   | `%{flags}`          | Flags - currently, a `d` for an alias marked for deletion       |
+| `%i`   | `%{number}`         | Index number                                                    |
+| `%N`   | `%{name}`           | Real name                                                       |
+| `%t`   | `%{tagged}`         | Alias is tagged (selected)                                      |
+| `%Y`   | `%{tags}`           | User-defined tags (labels)                                      |
+| `%*X`  | `%{padding-soft:X}` | Soft-fill with character `X` as pad                             |
+| `%>X`  | `%{padding-hard:X}` | Right justify the rest of the string and pad with character `X` |
+| `%\|X` | `%{padding-eol:X}`  | Pad to the end of the line with character `X`                   |
 
 For an explanation of "soft-fill", see the [`$index_format`](#index-format) documentation.
 

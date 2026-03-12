@@ -45,13 +45,13 @@ Also see `$save_history`.
 
 Controls the format of the entries of the history list. This string is similar to `$index_format`, but has its own set of `printf(3)`-like sequences:
 
-| Short  | Long Name         | Description                                                     |
-|--------|-------------------|-----------------------------------------------------------------|
-| `%C`   | `%{number}`       | Line number                                                     |
-| `%s`   | `%{match}`        | History match                                                   |
-| `%*X`  | `%{padding-soft}` | Soft-fill with character `X` as pad                             |
-| `%>X`  | `%{padding-hard}` | Right justify the rest of the string and pad with character `X` |
-| `%\|X` | `%{padding-eol}`  | Pad to the end of the line with character `X`                   |
+| Short  | Long Name           | Description                                                     |
+|--------|---------------------|-----------------------------------------------------------------|
+| `%C`   | `%{number}`         | Line number                                                     |
+| `%s`   | `%{match}`          | History match                                                   |
+| `%*X`  | `%{padding-soft:X}` | Soft-fill with character `X` as pad                             |
+| `%>X`  | `%{padding-hard:X}` | Right justify the rest of the string and pad with character `X` |
+| `%\|X` | `%{padding-eol:X}`  | Pad to the end of the line with character `X`                   |
 
 (history-remove-dups)=
 ## `$history_remove_dups`

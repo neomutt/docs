@@ -91,26 +91,26 @@ This variable allows you to customize the sidebar display. This string is
 similar to [`$index_format`](#index-format), but has its own set of `printf(3)`-like
 sequences:
 
-| Short  | Long Name           | Cur | Description                                                          |
-|--------|---------------------|-----|----------------------------------------------------------------------|
-| `%a`   | `%{notify}`         |     | Alert: 1 if user is notified of new mail                             |
-| `%B`   | `%{name}`           |     | Name of the mailbox                                                  |
-| `%D`   | `%{description}`    |     | Descriptive name of the mailbox                                      |
-| `%d`   | `%{deleted-count}`  | Cur | Number of deleted messages in the mailbox                            |
-| `%F`   | `%{flagged-count}`  |     | Number of flagged messages in the mailbox                            |
-| `%L`   | `%{limited-count}`  | Cur | Number of messages after limiting                                    |
-| `%N`   | `%{new-mail}`       |     | Number of unread messages in the mailbox (seen or unseen)            |
-| `%n`   | `%{unread-count}`   |     | `N` if mailbox has new mail, ` ` (space) otherwise                   |
-| `%o`   | `%{old-count}`      |     | Number of old messages in the mailbox (unread, seen)                 |
-| `%p`   | `%{poll}`           |     | Poll: 1 if Mailbox is checked for new mail                           |
-| `%r`   | `%{read-count}`     |     | Number of read messages in the mailbox (read, seen)                  |
-| `%S`   | `%{message-count}`  |     | Size of mailbox (total number of messages)                           |
-| `%t`   | `%{tagged-count}`   | Cur | Number of tagged messages in the mailbox                             |
-| `%Z`   | `%{unseen-count}`   |     | Number of new messages in the mailbox (unread, unseen)               |
+| Short  | Long Name           | Cur | Description                                                                                |
+|--------|---------------------|-----|--------------------------------------------------------------------------------------------|
+| `%a`   | `%{notify}`         |     | Alert: 1 if user is notified of new mail                                                   |
+| `%B`   | `%{name}`           |     | Name of the mailbox                                                                        |
+| `%D`   | `%{description}`    |     | Descriptive name of the mailbox                                                            |
+| `%d`   | `%{deleted-count}`  | Cur | Number of deleted messages in the mailbox                                                  |
+| `%F`   | `%{flagged-count}`  |     | Number of flagged messages in the mailbox                                                  |
+| `%L`   | `%{limited-count}`  | Cur | Number of messages after limiting                                                          |
+| `%N`   | `%{new-mail}`       |     | Number of unread messages in the mailbox (seen or unseen)                                  |
+| `%n`   | `%{unread-count}`   |     | `N` if mailbox has new mail, ` ` (space) otherwise                                         |
+| `%o`   | `%{old-count}`      |     | Number of old messages in the mailbox (unread, seen)                                       |
+| `%p`   | `%{poll}`           |     | Poll: 1 if Mailbox is checked for new mail                                                 |
+| `%r`   | `%{read-count}`     |     | Number of read messages in the mailbox (read, seen)                                        |
+| `%S`   | `%{message-count}`  |     | Size of mailbox (total number of messages)                                                 |
+| `%t`   | `%{tagged-count}`   | Cur | Number of tagged messages in the mailbox                                                   |
+| `%Z`   | `%{unseen-count}`   |     | Number of new messages in the mailbox (unread, unseen)                                     |
 | `%!`   | `%{flagged}`        |     | `!`: one flagged message; `!!`: two flagged messages; `n!`: n flagged messages (for n > 2) |
-| `%*X`  | `%{padding-soft}`   |     | Soft-fill with character `X` as pad                                  |
-| `%>X`  | `%{padding-hard}`   |     | Right justify the rest of the string and pad with character `X`      |
-| `%\|X` | `%{padding-eol}`    |     | Pad to the end of the line with character `X`                        |
+| `%*X`  | `%{padding-soft:X}` |     | Soft-fill with character `X` as pad                                                        |
+| `%>X`  | `%{padding-hard:X}` |     | Right justify the rest of the string and pad with character `X`                            |
+| `%\|X` | `%{padding-eol:X}`  |     | Pad to the end of the line with character `X`                                              |
 
 *Cur* = Only applicable to the current folder
 

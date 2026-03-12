@@ -309,7 +309,7 @@ In addition, the *index* and *pager* menus have these interesting functions:
 
   See also `<edit-or-view-raw-message>`, `<view-raw-message>`.
 
-`<edit>` 
+`<edit>`
 : Alias of `<edit-raw-message>` for backwards compatibility.
 
 `<edit-or-view-raw-message>` (default: e)
