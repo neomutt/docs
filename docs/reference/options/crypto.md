@@ -77,6 +77,7 @@ Controls the characters used in cryptography flags.
 
 
 | **Character** | **Default** | **Description** |
+|---|---|---|
 | 1 | S | The mail is signed, and the signature is successfully verified. |
 | 2 | P | The mail is PGP encrypted. |
 | 3 | s | The mail is signed. |

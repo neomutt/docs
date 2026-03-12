@@ -64,6 +64,7 @@ sequences similar to PGP's:
 
 
 | **Short** | **Long Name** | **Description** |
+|---|---|---|
 | `%a` | `%{algorithm}` | Algorithm used for encryption |
 | `%C` | `%{certificate-path}` | CA location:  Depending on whether [$smime_ca_location](#smime-ca-location) points to a directory or file, |
 |  |  | this expands to "-CApath [$smime_ca_location](#smime-ca-location)" or "-CAfile [$smime_ca_location](#smime-ca-location)" |

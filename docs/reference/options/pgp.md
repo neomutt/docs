@@ -110,6 +110,7 @@ sequences:
 
 
 | **Short** | **Long Name** | **Description** |
+|---|---|---|
 | `%a` | `%{sign-as}` | Value of [$pgp_sign_as](#pgp-sign-as) if set, otherwise the value of [$pgp_default_key](#pgp-default-key) |
 | `%f` | `%{file-message}` | Expands to the name of a file containing a message |
 | `%p` | `%{need-pass}` | Expands to `PGPPASSFD=0` when a pass phrase is needed, to an empty string otherwise. |
@@ -212,6 +213,7 @@ but has its own set of `printf(3)`-like sequences:
 
 
 | **Short** | **Long Name** | **Description** |
+|---|---|---|
 | `%a` | `%{key-algorithm}` | Algorithm |
 | `%c` | `%{key-capabilities}` | Capabilities |
 | `%f` | `%{key-flags}` | Flags |
@@ -313,6 +315,7 @@ Specifies how the entries in the pgp menu are sorted.
 
 
 | **Value** | **Sort by** |
+|---|---|
 | `address` | Address |
 | `date` | Date |
 | `keyid` | Key id |
