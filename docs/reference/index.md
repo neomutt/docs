@@ -55,34 +55,34 @@ colour-names
 maxdepth: 1
 ---
 
-options/imap
-options/pop
-options/smtp
-options/nntp
-options/pgp
-options/smime
-options/crypto
-options/autocrypt
-options/ssl
-options/sidebar
-options/notmuch
-options/compose
-options/pager
 options/alias
 options/attach
-options/header
+options/autocrypt
+options/browser
+options/compose
+options/crypto
 options/forward
-options/sort
-options/score
+options/general
+options/header
+options/history
+options/imap
 options/maildir
 options/mh
-options/history
 options/mime
-options/print
+options/nntp
+options/notmuch
+options/pager
+options/pgp
 options/pipe
+options/pop
+options/print
+options/score
+options/sidebar
+options/smime
+options/smtp
+options/sort
+options/ssl
 options/status
-options/browser
-options/general
 ```
 
 ## Function Groups
@@ -92,18 +92,18 @@ options/general
 maxdepth: 1
 ---
 
+functions/alias
+functions/attachment
+functions/autocrypt
+functions/browser
+functions/compose
+functions/editor
 functions/generic
 functions/index-menu
 functions/pager
-functions/alias
-functions/query
-functions/attachment
-functions/compose
-functions/postpone
-functions/browser
 functions/pgp
-functions/smime
-functions/editor
+functions/postpone
+functions/query
 functions/sidebar
-functions/autocrypt
+functions/smime
 ```
