@@ -33,7 +33,7 @@ When browsing the list of newsgroups on the server the function `<subscribe>` ca
 **Highlights:** The group list layout with subscription status indicators, article counts per group, and the newsgroup description column loaded via `$nntp_load_description`.
 :::
 
-This list is stored in the `$newsrc` file, so NeoMutt remembers it across invocations (see also `$save_unsubscribed`). With the `<unsubscribe>` function a group can be deleted from that list. You can also specify the list of interesting groups with the {ref}`mailboxes <mailboxes>` command in your config file.
+This list is stored in the `$newsrc` file, so NeoMutt remembers it across invocations (see also `$save_unsubscribed`). With the `<unsubscribe>` function a group can be deleted from that list. You can also specify the list of interesting groups with the [`mailboxes`](mailboxes) command in your config file.
 
 When checking for new messages, NeoMutt only polls the subscribed newsgroups.
 

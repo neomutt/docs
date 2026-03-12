@@ -780,6 +780,7 @@ macro compose Y "<first-entry><enter-command>set wait_key=no<enter>\
 "send the message as 'multipart/alternative'"
 ```
 
+(attachment-searching-and-counting)=
 ## Attachment Searching and Counting
 
 If you ever lose track of attachments in your mailboxes, NeoMutt's

@@ -64,7 +64,7 @@ following `printf(3)`-style sequences are understood:
 | `%T`   | `%{tree}`             | Graphic tree characters                                                                                                                   |
 | `%t`   | `%{tagged}`           | Tagged flag                                                                                                                               |
 | `%u`   | `%{unlink}`           | Unlink (=to delete) flag                                                                                                                  |
-| `%X`   | `%{attach-count}`     | Number of qualifying MIME parts in this part and its children (see the [`$attachments`](#attachment-searching-and-counting) section for possible speed effects) |
+| `%X`   | `%{attach-count}`     | Number of qualifying MIME parts in this part and its children (see the {ref}`$attachments <attachment-searching-and-counting>` section for possible speed effects) |
 | `%*X`  | `%{padding-soft}`     | Soft-fill with character `X` as pad                                                                                                       |
 | `%>X`  | `%{padding-hard}`     | Right justify the rest of the string and pad with character `X`                                                                           |
 | `%\|X` | `%{padding-eol}`      | Pad to the end of the line with character `X`                                                                                             |
