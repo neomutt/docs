@@ -357,7 +357,7 @@ expando.
 
 ```
 unhook {* | hook-type}
-```neomuttrc
+```
 
 This command permits you to flush hooks you have previously defined. You can either remove all hooks by giving the `*` character as an argument, or you can remove all hooks of a specific type by saying something like `unhook send-hook`.
 
@@ -373,7 +373,7 @@ NeoMutt lets you control the environment it passes to child processes using the 
 setenv NAME=value
 unsetenv NAME
 setenv NAME?
-```neomuttrc
+```
 
 The variable name must start with a letter or underscore and contain only letters, digits, and underscores.
 
@@ -384,13 +384,13 @@ setenv BROWSER firefox
 setenv ORGANIZATION "The NeoMutt Development Team"
 setenv EDITOR vim
 unsetenv DISPLAY
-```neomuttrc
+```
 
 You can also query the current value of an environment variable by appending `?`:
 
 ```
 setenv TERM?
-```neomuttrc
+```
 
 Running `setenv` with no parameters shows a list of all currently set environment variables.
 

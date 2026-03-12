@@ -103,7 +103,7 @@ removing the header order effects set by the system-wide startup file.
 
 ```
 header-order From Date: From: To: Cc: Subject:
-```neomuttrc
+```
 :::
 
 :::{admonition} 📷 Screenshot Needed
@@ -123,7 +123,7 @@ header-order From Date: From: To: Cc: Subject:
 ```
 my-header string
 unmy-header { * | field ... }
-```neomuttrc
+```
 
 :::{note}
 Before 2026-01-13, these commands were called `my_hdr` and `unmy_hdr`.

@@ -698,10 +698,10 @@ messages based on size, etc. `unauto-view *` will remove all previous entries.
 
 **Usage:**
 
-```
+```neomuttrc
 alternative-order mime-type[/mime-subtype] [mime-type[/mime-subtype] ...]
 unalternative-order { * | mime-type[/mime-subtype] ... }
-```neomuttrc
+```
 
 :::{note}
 Before 2026-01-13, these commands were called `alternative_order` and
@@ -770,7 +770,7 @@ in one single command, with one part being `text/plain` and the other
 `text/html`. An example macro which adds an HTML part to the main body of an
 email and sends it could be the following:
 
-```
+```neomuttrc
 macro compose Y "<first-entry><enter-command>set wait_key=no<enter>\
 <pipe-entry>pandoc -o /tmp/neomutt-alternative.html<enter>\
 <attach-file>/tmp/neomutt-alternative.html<enter>\
@@ -778,7 +778,7 @@ macro compose Y "<first-entry><enter-command>set wait_key=no<enter>\
 <tag-entry><first-entry><tag-entry><group-alternatives>\
 <enter-command>set wait_key=yes<enter><send-message>" \
 "send the message as 'multipart/alternative'"
-```neomuttrc
+```
 
 ## Attachment Searching and Counting
 
@@ -837,7 +837,7 @@ disposition is `inline` and it is not a `multipart/*` or `message/*` MIME-type.
 :::{admonition} Example: Attachment counting
 :class: tip
 
-```
+```neomuttrc
 # Removing a pattern from a list removes that pattern literally. It
 # does not remove any type matching the pattern.
 #

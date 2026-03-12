@@ -42,7 +42,7 @@ A list of compile-time symbols can be seen in the output of the command:
 
 ```
 neomutt -v
-```neomuttrc
+```
 
 (in the "Compile options" section).
 
@@ -51,7 +51,7 @@ neomutt -v
 ```
 # Sidebar config file
 ifndef sidebar finish
-```neomuttrc
+```
 
 ## Commands
 
@@ -59,7 +59,7 @@ ifndef sidebar finish
 ifdef  symbol "config-command [args...]"
 ifndef symbol "config-command [args...]"
 finish
-```neomuttrc
+```
 
 ## Example neomuttrc
 

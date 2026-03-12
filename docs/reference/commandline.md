@@ -32,7 +32,7 @@ if NeoMutt was compiled with GnuTLS instead of OpenSSL:
 
 ```
 -openssl +gnutls
-```neomuttrc
+```
 
 Running `neomutt -vv` shows the full license and copyright information in addition to the
 version output.

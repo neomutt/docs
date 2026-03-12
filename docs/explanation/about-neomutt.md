@@ -94,7 +94,7 @@ argument may be repeated arbitrary times.
 
 ## Copyright
 
-NeoMutt is Copyright © 2015-2024 Richard Russon `rich@flatcap.org` and friends.
+NeoMutt is Copyright © 2015-2026 Richard Russon and friends.
 
 This program is free software; you can redistribute it and/or modify it under the terms of
 the GNU General Public License as published by the Free Software Foundation; either version

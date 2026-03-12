@@ -62,7 +62,7 @@ The conditional sequences can also be nested by using the `%<` and `>` operators
 ```
 %<x?true&false>
 %<x?%<y?%<z?xyz&xy>&x>&none>
-```neomuttrc
+```
 
 ## Filters
 
@@ -72,7 +72,7 @@ All % expandos in a format string are expanded before the script is called so th
 
 ```
 set status_format="script.sh '%r %f (%L)'|"
-```neomuttrc
+```
 
 will make NeoMutt expand `%r`, `%f` and `%L` before calling the script. The example also shows that arguments can be quoted: the script will receive the expanded string between the single quotes as the only argument.
 
@@ -88,7 +88,7 @@ When this occurs, NeoMutt will fill the rest of the line with the character `X`.
 
 ```
 set status_format = "%v on %h: %B: %<n?%n&no> new messages %|-"
-```neomuttrc
+```
 
 ### `%>X` — Right-Justify with Fill
 
@@ -96,7 +96,7 @@ This puts as many characters `X` in between two items so that the rest of the li
 
 ```
 set status_format = "%B: %<n?%n&no> new messages %> (%v on %h)"
-```neomuttrc
+```
 
 ### `%*X` — Soft-Fill (Priority Right-Justify)
 
@@ -238,7 +238,7 @@ Another view:
 
 ```
 %<[y? %<[m? %<[d? AAA & BBB > & CCC > & DDD >
-```neomuttrc
+```
 
 AAA = `%[%H:%M ]` BBB = `%[%a %d]` CCC = `%[%b %d]` DDD = `%[%m/%y ]`
 
@@ -321,13 +321,13 @@ if (x > 0) {
     print 'NONE'
   }
 }
-```neomuttrc
+```
 
 ### Examples
 
 ```
 set index_format='%4C %Z %{%b %d} %-25.25n %s%> %<M?%M Msgs &%<l?%l Lines&%c Bytes>>'
-```neomuttrc
+```
 
 If a thread is folded display the number of messages (%M), else if we know how many lines in the message display lines in message (%l), else display the size of the message in bytes (%c).
 
@@ -420,7 +420,7 @@ set index_format='%4C %Z %{%b %d} %I (%<l?%4l&%4c>) %s'
 
 ```
 index-format-hook name [!]pattern format-string
-```neomuttrc
+```
 
 This command is used to inject format strings dynamically into `$index_format` based on pattern matching against the current message.
 
@@ -439,7 +439,7 @@ index-format-hook  date  "~d<1d"    "%[%H:%M]"
 index-format-hook  date  "~d<1m"    "%[%a %d]"
 index-format-hook  date  "~d<1y"    "%[%b %d]"
 index-format-hook  date  "~A"       "%[%m/%y]"
-```neomuttrc
+```
 
 ### Example: Prepending to the Subject
 
