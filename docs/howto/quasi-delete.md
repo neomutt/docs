@@ -50,7 +50,7 @@ On its own, this feature isn't very useful. It forms a useful part of the notmuc
 # from the index, but NOT deleted.
 bind index,pager Q quasi-delete
 
-# vim: syntax=neomuttrc
+# vim: filetype=neomuttrc
 ```
 
 ## See Also

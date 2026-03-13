@@ -178,7 +178,7 @@ bind index < vfolder-window-backward
 bind index > vfolder-window-forward
 # --------------------------------------------------------------------------
 
-# vim: syntax=neomuttrc
+# vim: filetype=neomuttrc
 ```
 
 ## See Also

@@ -186,7 +186,7 @@ set use_threads=threads sort=last-date sort_aux=date
 #   Barbara  12:05  thread 2
 #   Erica    12:08  `->re: thread 2
 
-# vim: syntax=neomuttrc
+# vim: filetype=neomuttrc
 ```
 
 :::{admonition} 📷 Screenshot Needed

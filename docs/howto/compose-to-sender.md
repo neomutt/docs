@@ -41,7 +41,7 @@ compose-to-sender adds the following function to NeoMutt. By default, it is not 
 # Compose a new email (not a reply) to the sender
 bind index,pager @ compose-to-sender
 
-# vim: syntax=neomuttrc
+# vim: filetype=neomuttrc
 ```
 
 ## Known Bugs

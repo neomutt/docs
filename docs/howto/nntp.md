@@ -175,7 +175,7 @@ bind index \eG get-parent
 bind index \CG get-message
 # --------------------------------------------------------------------------
 
-# vim: syntax=neomuttrc
+# vim: filetype=neomuttrc
 ```
 
 ## Known Bugs

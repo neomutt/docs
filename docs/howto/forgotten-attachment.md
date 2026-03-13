@@ -67,7 +67,7 @@ set abort_noattach_regex = "\\<attach(|ed|ments?)\\>"
 # Français:
 # set abort_noattach_regex = "\\<(attaché|attachés|attache|attachons|joint|jointe|joints|jointes|joins|joignons)\\>"
 
-# vim: syntax=neomuttrc
+# vim: filetype=neomuttrc
 ```
 
 ## See Also

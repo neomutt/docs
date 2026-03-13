@@ -369,7 +369,7 @@ color index_number red default
 # Message size, %c %cr %l
 color index_size cyan default
 
-# vim: syntax=neomuttrc
+# vim: filetype=neomuttrc
 ```
 
 :::{admonition} 📷 Screenshot Needed
@@ -464,7 +464,7 @@ color status red default '\[([^]]+)\]' 1
 color status brightwhite default 'NeoMutt: ([^ ]+)' 1
 # Search for 'NeoMutt: ' but only highlight what comes after it
 
-# vim: syntax=neomuttrc
+# vim: filetype=neomuttrc
 ```
 
 :::{admonition} 📷 Screenshot Needed
@@ -530,7 +530,7 @@ color   attach_headers     brightmagenta   default    "can't handle these multip
 color   attach_headers     brightmagenta   default    "signature verification suppressed"
 color   attach_headers     brightmagenta   default    "invalid node with packet of type"
 
-# vim: syntax=neomuttrc
+# vim: filetype=neomuttrc
 ```
 
 :::{admonition} 📷 Screenshot Needed

@@ -45,7 +45,7 @@ Limit-current-thread adds the following function to NeoMutt. By default, it is n
 # Limit view to current thread
 bind index <esc>L limit-current-thread
 
-# vim: syntax=neomuttrc
+# vim: filetype=neomuttrc
 ```
 
 ## Known Bugs

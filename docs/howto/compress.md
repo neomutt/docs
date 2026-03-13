@@ -171,7 +171,7 @@ close-hook  '\.pgp$' "pgp -fe YourPgpUserIdOrKeyId < '%t' > '%f'"
 open-hook   '\.gpg$' "gpg --decrypt < '%f' > '%t'"
 close-hook  '\.gpg$' "gpg --encrypt --recipient YourGpgUserIdOrKeyId < '%t' > '%f'"
 
-# vim: syntax=neomuttrc
+# vim: filetype=neomuttrc
 ```
 
 ## See Also

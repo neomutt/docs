@@ -35,7 +35,7 @@ The "progress" feature shows a visual progress bar on slow tasks, such as indexi
 # White text on a red background
 color progress white red
 
-# vim: syntax=neomuttrc
+# vim: filetype=neomuttrc
 ```
 
 :::{admonition} 📷 Screenshot Needed

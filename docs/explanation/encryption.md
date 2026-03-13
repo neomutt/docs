@@ -129,7 +129,7 @@ set crypt_opportunistic_encrypt = yes
 # Self encrypt mail
 set crypt_self_encrypt = yes
 
-# vim: syntax=neomuttrc
+# vim: filetype=neomuttrc
 ```
 
 ### gitconfig

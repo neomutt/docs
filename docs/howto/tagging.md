@@ -130,7 +130,7 @@ color index_tag red white "inbox"
 color index_tags green default
 # --------------------------------------------------------------------------
 
-# vim: syntax=neomuttrc
+# vim: filetype=neomuttrc
 ```
 
 ### Credits

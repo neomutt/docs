@@ -82,7 +82,7 @@ set smime_self_encrypt = "yes"
 set smime_default_key = "SMIME-KEY"
 # set smime_sign_as = "SMIME-SIGNING-KEY"
 
-# vim: syntax=neomuttrc
+# vim: filetype=neomuttrc
 ```
 
 ## Known Bugs

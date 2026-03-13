@@ -68,7 +68,7 @@ set pager_skip_quoted_context = 3
 # Preserve the first level of quoted text
 set toggle_quoted_show_levels = 1
 
-# vim: syntax=neomuttrc
+# vim: filetype=neomuttrc
 ```
 
 :::{admonition} 📷 Screenshot Needed

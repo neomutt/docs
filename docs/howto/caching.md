@@ -87,7 +87,7 @@ The `header_cache_compress_level` defines the compression level, which should be
 set header_cache_compress_level = 1
 set header_cache_compress_method = ""
 
-# vim: syntax=neomuttrc
+# vim: filetype=neomuttrc
 ```
 
 ### Known Bugs

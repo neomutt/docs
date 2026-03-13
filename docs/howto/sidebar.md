@@ -238,7 +238,7 @@ color sidebar_spool_file color207 default
 color sidebar_unread color136 default
 # --------------------------------------------------------------------------
 
-# vim: syntax=neomuttrc
+# vim: filetype=neomuttrc
 ```
 
 :::{admonition} 📷 Screenshot Needed

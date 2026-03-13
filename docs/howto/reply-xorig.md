@@ -41,7 +41,7 @@ header of the answer.
 # is found.
 set reply_with_xorig = "yes"
 
-# vim: syntax=neomuttrc
+# vim: filetype=neomuttrc
 ```
 
 ## Credits

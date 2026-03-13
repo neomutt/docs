@@ -48,7 +48,7 @@ the moment the pager visits it.
 # Stay at least 5 seconds on a message before the pager marks it as read
 set pager_read_delay = 5
 
-# vim: syntax=neomuttrc
+# vim: filetype=neomuttrc
 ```
 
 ## Known Bugs

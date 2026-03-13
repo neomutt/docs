@@ -68,7 +68,7 @@ set trash='/home/flatcap/Mail/Trash'
 bind index D purge-message
 # Note: Deleting emails from the 'trash' folder will REALLY delete them.
 
-# vim: syntax=neomuttrc
+# vim: filetype=neomuttrc
 ```
 
 ## See Also
