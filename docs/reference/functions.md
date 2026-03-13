@@ -600,6 +600,7 @@ here affects the defaults for all other menus (except as noted).
 
 | Function | Default key | Description |
 |----------|-------------|-------------|
+| `<sidebar-abort-search>` | | close the sidebar search |
 | `<sidebar-first>` | | move the highlight to the first mailbox |
 | `<sidebar-last>` | | move the highlight to the last mailbox |
 | `<sidebar-next>` | | move the highlight to next mailbox |
@@ -609,6 +610,7 @@ here affects the defaults for all other menus (except as noted).
 | `<sidebar-page-up>` | | scroll the sidebar up 1 page |
 | `<sidebar-prev>` | | move the highlight to previous mailbox |
 | `<sidebar-prev-new>` | | move the highlight to previous mailbox with new mail |
+| `<sidebar-start-search>` | | fuzzy search the sidebar |
 | `<sidebar-toggle-virtual>` | | toggle between mailboxes and virtual mailboxes |
 | `<sidebar-toggle-visible>` | | make the sidebar (in)visible |
 
