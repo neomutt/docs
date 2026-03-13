@@ -1,0 +1,62 @@
+---
+title: How to Use Pager Read Delay
+description: Delay when the pager marks a previewed message as read in NeoMutt
+keywords: pager, read delay, preview, pager_read_delay, new message, mark read
+---
+
+# How to Use Pager Read Delay
+
+:::{admonition} Diátaxis: How-To Guide
+:class: note
+
+Write as **directions**. Assume the reader is competent and knows what they want to achieve.
+Be practical and goal-focused. Use numbered steps for procedures. Don't explain why — link
+to explanation pages instead. Keep it focused on the specific task. Start with prerequisites,
+give the steps, show the expected result.
+:::
+
+## Support
+
+**Since:** NeoMutt 2021-06-16
+
+## Introduction
+
+The "Pager Read Delay" feature adds a new config option to allow the pager to
+operate in a preview mode. A new message is not marked as read merely because
+the pager opened it, but only after the pager remains on the message for a
+given length of time.
+
+## Functions
+
+The "Pager Read Delay" feature adds no new functions to NeoMutt. Existing pager
+functions for navigating to a different message now check whether to mark a
+message as read.
+
+## Variables
+
+The "Pager Read Delay" feature adds one new config option,
+`$pager_read_delay`, which is an integer for how many
+seconds the pager must remain on a given message before marking it as read. The
+variable defaults to 0 for the original behavior of marking a message as read
+the moment the pager visits it.
+
+## neomuttrc
+
+```neomuttrc
+# Example NeoMutt config file for the pager-read-delay feature.
+
+# Stay at least 5 seconds on a message before the pager marks it as read
+set pager_read_delay = 5
+
+# vim: syntax=neomuttrc
+```
+
+## Known Bugs
+
+When `$pager_index_lines` is non-zero, the "N" status
+indicator from the "%Z" expando of {ref}`$index_format <index-format>` does not
+actively reflect the current new/read status of the message.
+
+## Credits
+
+Eric Blake

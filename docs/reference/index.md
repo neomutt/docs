@@ -9,13 +9,48 @@ Reference material provides **information-oriented** technical descriptions of
 NeoMutt's machinery. Use these pages to look up specific details about commands,
 options, functions, and syntax.
 
+## About
+
+```{toctree}
+---
+maxdepth: 2
+---
+about/index.md
+```
+
+## Features
+
+```{toctree}
+---
+maxdepth: 2
+---
+features/index.md
+```
+
+## Releases
+
+```{toctree}
+---
+maxdepth: 2
+---
+releases/index.md
+```
+
+## Misc
+
+```{toctree}
+---
+maxdepth: 1
+---
+colour-names
+```
+
 ## Core Reference
 
 ```{toctree}
 ---
 maxdepth: 1
 ---
-
 commandline
 commands
 options
@@ -30,7 +65,6 @@ regex
 ---
 maxdepth: 1
 ---
-
 config-syntax
 config-locations
 url-syntax
@@ -43,9 +77,7 @@ shortcuts
 ---
 maxdepth: 1
 ---
-
 mime-types
-colour-names
 ```
 
 ## Option Groups
@@ -54,7 +86,6 @@ colour-names
 ---
 maxdepth: 1
 ---
-
 options/alias
 options/attach
 options/autocrypt
@@ -91,7 +122,6 @@ options/status
 ---
 maxdepth: 1
 ---
-
 functions/alias
 functions/attachment
 functions/autocrypt
