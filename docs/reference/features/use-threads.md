@@ -1,80 +1,28 @@
 ---
-title: How to Edit and Navigate Threads
+title: Use Threads
 description: Link, break, and configure threaded message views in NeoMutt
 keywords: threads, link-threads, break-thread, use_threads, sort, sort_aux, threading
+since: 2021-08-01
 ---
 
-# How to Edit and Navigate Threads
-
-:::{admonition} Diátaxis: How-To Guide
-:class: note
-
-Write as **directions**. Assume the reader is competent and knows what they want to achieve.
-Be practical and goal-focused. Use numbered steps for procedures. Don't explain why — link
-to explanation pages instead. Keep it focused on the specific task. Start with prerequisites,
-give the steps, show the expected result.
-:::
-
-## Editing Threads
-
-NeoMutt has the ability to dynamically restructure threads that are broken
-either by misconfigured software or bad behavior from some correspondents.
-This allows you to clean your mailboxes from these annoyances which make it
-hard to follow a discussion.
-
-### Linking Threads
-
-Some mailers tend to "forget" to correctly set the "In-Reply-To:" and
-"References:" headers when replying to a message. This results in broken
-discussions because NeoMutt has not enough information to guess the correct
-threading.
-
-1. Tag a number of replies that belong to the same thread.
-2. Move to the parent message.
-3. Use the `<link-threads>` function (bound to `&` by default).
-
-The replies will then be connected to this parent message.
-
-### Breaking Threads
-
-On mailing lists, some people are in the bad habit of starting a new discussion
-by hitting "reply" to any message from the list and changing the subject to a
-totally unrelated one.
-
-1. Navigate to the message where the off-topic subthread begins.
-2. Use the `<break-thread>` function (bound to `#` by default).
-
-This will turn the subthread starting from the current message into a whole
-different thread.
-
-:::{admonition} 📷 Screenshot Needed
-:class: tip
-
-**Subject:** Linked and broken threads in the index
-
-**Description:** NeoMutt index view showing a thread that has been repaired with `<link-threads>` — several replies are now correctly nested under a parent message with tree-drawing characters (`|->`, `` `-> ``) connecting them.
-
-**Highlights:** The tree structure showing parent-child relationships between messages, with the thread connector characters visible in the index.
-:::
-
-## Use Threads Feature
+# Use Threads
 
 **Since:** NeoMutt 2021-08-01
 
-### Introduction
+## Introduction
 
 The "Use Threads" feature adds a new config option to allow more precise
 control of how threads are displayed in the index. Whether threads are in use
 is now orthogonal from how messages are sorted.
 
-### Functions
+## Functions
 
 The "Use Threads" feature adds no new functions to NeoMutt. The existing
 functions `<sort-mailbox>` and `<sort-reverse>` are updated to toggle the
 state of `$use_threads` once it has been set, while preserving
 backwards-compatible behavior on `$sort` if this feature is not used.
 
-### Variables
+## Variables
 
 The "Use Threads" feature adds one new config option,
 {ref}`$use_threads <use-threads>`, which is an enumeration of possible thread
@@ -101,13 +49,13 @@ The "Use Threads" feature also modifies the existing config option
 `$status_format`, adding the `%T` expando which shows the
 current threading method.
 
-### Use Threads Variable
+## Use Threads Variable
 
 | Name | Type | Default |
 |------|------|---------|
 | `use_threads` | enum | `unset` |
 
-### neomuttrc
+## neomuttrc
 
 ```neomuttrc
 # Example NeoMutt config file for the use-threads feature.
@@ -186,7 +134,7 @@ set use_threads=threads sort=last-date sort_aux=date
 #   Barbara  12:05  thread 2
 #   Erica    12:08  `->re: thread 2
 
-# vim: syntax=neomuttrc
+# vim: filetype=neomuttrc
 ```
 
 :::{admonition} 📷 Screenshot Needed
@@ -199,13 +147,13 @@ set use_threads=threads sort=last-date sort_aux=date
 **Highlights:** The difference in message ordering and the tree-drawing characters (`|->`, `` `-> ``, `,->`) — particularly how the same messages appear in completely different positions depending on the threading mode.
 :::
 
-### Known Bugs
+## Known Bugs
 
 Even though `use_threads` accepts the values `yes` and `no`, it does not behave
 like a boolean or quad-option variable. A bare `set use_threads` performs a
 query rather than setting it to `yes`, and the variable is not usable with
 `toggle`.
 
-### Credits
+## Credits
 
 Eric Blake

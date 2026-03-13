@@ -1,10 +1,11 @@
 ---
-title: How to Use the Account Command
+title: Account Command
 description: Populate account credentials via an external command in NeoMutt
 keywords: account_command, credentials, password manager, external command, imap_user, imap_pass
+since: 2022-05-16
 ---
 
-# How to Use the Account Command
+# Account Command
 
 :::{admonition} Diátaxis: How-To Guide
 :class: note

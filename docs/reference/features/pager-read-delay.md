@@ -1,10 +1,11 @@
 ---
-title: How to Use Pager Read Delay
+title: Pager Read Delay
 description: Delay when the pager marks a previewed message as read in NeoMutt
 keywords: pager, read delay, preview, pager_read_delay, new message, mark read
+since: 2021-06-16
 ---
 
-# How to Use Pager Read Delay
+# Pager Read Delay
 
 :::{admonition} Diátaxis: How-To Guide
 :class: note
@@ -48,7 +49,7 @@ the moment the pager visits it.
 # Stay at least 5 seconds on a message before the pager marks it as read
 set pager_read_delay = 5
 
-# vim: syntax=neomuttrc
+# vim: filetype=neomuttrc
 ```
 
 ## Known Bugs

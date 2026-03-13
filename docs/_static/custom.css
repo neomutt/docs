@@ -296,7 +296,6 @@ html[data-theme=dark] .sponsor-link:hover .sponsor-heart {
 
 .header-article-items__end .header-article-item,
 .header-article-items__start .header-article-item {
-{
   display: flex !important;
   align-items: center;
 }
@@ -400,4 +399,5 @@ html[data-theme=dark] .index-preview {
 .term-window .terminal .sb_new        {                              color: var(--c3); }
 .term-window .terminal .sb_ordinary   {                              color: var(--c8); }
 
+.term-window .terminal .progress2      { background-color: #f00; color: #fff; }
 

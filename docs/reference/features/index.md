@@ -10,9 +10,7 @@ keywords:
 ---
 maxdepth: 1
 glob:
-reversed:
 ---
 *
 ```
-
 

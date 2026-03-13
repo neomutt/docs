@@ -1,10 +1,11 @@
 ---
-title: Fuzzy Search Feature
+title: Fuzzy Search
 description: Find items quickly by typing approximate or abbreviated text using FZF-style subsequence matching
 keywords: fuzzy, fuzzy search, fzf, subsequence, matching, scoring, smart case, sidebar search
+since: 2026-02-11
 ---
 
-# Fuzzy Search Feature
+# Fuzzy Search
 
 :::{admonition} Diátaxis: Reference
 :class: note

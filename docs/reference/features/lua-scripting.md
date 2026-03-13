@@ -1,7 +1,8 @@
 ---
-title: How to Use Lua Scripting
+title: Lua Scripting
 description: Embed Lua scripts in NeoMutt to get/set config options and run commands
 keywords: lua, lua-source, scripting, embedded lua, automation
+since: 2017-04-14
 ---
 
 :::{admonition} Diátaxis: How-To Guide
@@ -13,7 +14,7 @@ to explanation pages instead. Keep it focused on the specific task. Start with p
 give the steps, show the expected result.
 :::
 
-# How to Use Lua Scripting
+# Lua Scripting
 
 ## Introduction
 

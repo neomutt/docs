@@ -1,10 +1,11 @@
 ---
-title: Sidebar Search Feature
+title: Sidebar Search
 description: Quickly select a mailbox by typing a few characters using fuzzy matching in the NeoMutt Sidebar
 keywords: sidebar, search, fuzzy, sidebar-start-search, sidebar-abort-search, mailbox, filter
+since: 2026-03-01
 ---
 
-# Sidebar Search Feature
+# Sidebar Search
 
 :::{admonition} Diátaxis: Reference
 :class: note
@@ -36,7 +37,7 @@ cancels and restores the original view.
 If the Sidebar is currently hidden, it will be shown temporarily
 during the search and hidden again afterwards.
 
-The search uses the [Fuzzy Search](fuzzy) engine,
+The search uses the [Fuzzy Search](fuzzy-search) engine,
 so you don't need to type the exact name. For example, typing
 "mlnd" is enough to reach "mailinglists/neomutt-dev".
 
