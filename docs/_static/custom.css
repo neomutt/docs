@@ -300,3 +300,104 @@ html[data-theme=dark] .sponsor-link:hover .sponsor-heart {
   display: flex !important;
   align-items: center;
 }
+
+
+/* ── Terminal highlight ─────────────────────────────────────── */
+html[data-theme=light] .highlight .hll {
+  background-color: #005461;
+  color: #F4F4F4;
+  display: block;
+}
+
+html[data-theme=dark] .highlight .hll {
+  background-color: #018790;
+  color: #F4F4F4;
+  display: block;
+}
+
+
+/* ── Terminal preview window ────────────────────────────────── */
+.term-window {
+  display: inline-block;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 84, 97, 0.35);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+.term-titlebar {
+  background: #005461;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  gap: 6px;
+  position: relative;
+}
+
+.term-titlebar .title {
+  color: #F4F4F4;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.blob {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.red    { background: #ff5f57; }
+.yellow { background: #febc2e; }
+.green  { background: #28c840; }
+
+.terminal {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: #000;
+  color: #fff;
+  white-space: pre;
+  line-height: 1.35;
+}
+
+.terminal span {
+  display: inline-block;
+  line-height: inherit;
+}
+
+/* ── Index page screenshot – Dayfox (light) / Zenburn (dark) ──── */
+html[data-theme=light] .index-preview {
+  --s0: #3d2b5a; --s1: #f6f2ee; --s2: #3d2b5a; --s3: #e7d2be;
+  --c0: #352c24; --c1: #a5222f; --c2: #396847; --c3: #ac5402;
+  --c4: #2848a9; --c5: #6e33ce; --c6: #287980; --c7: #bfb6ae;
+  --c8: #534c45; --c9: #b3434e; --c10: #577f63; --c11: #b86e28;
+  --c12: #4863b6; --c13: #8452d5; --c14: #488d93; --c15: #f4ece6;
+}
+
+html[data-theme=dark] .index-preview {
+  --s0: #f0e4cf; --s1: #404040; --s2: #f3eadb; --s3: #746956;
+  --c0: #404040; --c1: #e3716e; --c2: #819b69; --c3: #b77e64;
+  --c4: #6099c0; --c5: #b279a7; --c6: #66a5ad; --c7: #f0e4cf;
+  --c8: #6f6768; --c9: #ec8685; --c10: #8bae68; --c11: #d68c67;
+  --c12: #61abda; --c13: #cf86c1; --c14: #65b8c1; --c15: #c0ab86;
+}
+
+/* ── Preview terminal – uses CSS variables set by theme-data.js ── */
+.term-window .terminal          { background: var(--s1); }
+.term-window .terminal .status  { background-color: var(--s3); color: var(--s0); }
+.term-window .terminal .header  { background-color: var(--s1); color: var(--c4); }
+.term-window .terminal .normal  { background-color: var(--s1); color: var(--s0); }
+.term-window .terminal .sign    { background-color: var(--s1); color: var(--c5); }
+
+.term-window .terminal .sb_background { background-color: var(--s3);                   }
+.term-window .terminal .sb_divider    { background-color: var(--s3);                   }
+.term-window .terminal .sb_flagged    {                              color: var(--c9); }
+.term-window .terminal .sb_highlight  { background-color: var(--c8);                   }
+.term-window .terminal .sb_indicator  { background-color: var(--c4);                   }
+.term-window .terminal .sb_new        {                              color: var(--c3); }
+.term-window .terminal .sb_ordinary   {                              color: var(--c8); }
+
+

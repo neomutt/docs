@@ -6,6 +6,42 @@ keywords: progress, progress bar, color, slow operations
 
 # How to Customise the Progress Bar
 
+## Screenshot
+
+<div class="term-window index-preview">
+  <div class="term-titlebar">
+    <span class="blob red"></span>
+    <span class="blob yellow"></span>
+    <span class="blob green"></span>
+    <span class="title">Compose</span>
+  </div>
+  <pre class="terminal">
+<span class="status">q:Quit  d:Del  u:Undel  m:Mail  r:Reply  ?:Help                                                     </span>
+<span class="header">        From: </span><span class="normal">Ryan Reynolds &lt;ryanr@yew.com&gt;                                                         </span>
+<span class="header">          To: </span><span class="normal">Diane Wiest &lt;dianew@apple.com&gt;, Glenn Close &lt;glennc@kumquat.com&gt;          </span>
+<span class="header">          Cc: </span><span class="normal">Jamie Foxx &lt;jamief@olive.com&gt;                                                   </span>
+<span class="header">         Bcc: </span><span class="normal">                                                                                      </span>
+<span class="header">     Subject: </span><span class="normal">Party in London                                                                       </span>
+<span class="header">    Reply-To: </span><span class="normal">                                                                                      </span>
+<span class="header">         Fcc: </span><span class="normal">                                                                                      </span>
+<span class="header">    Security: </span><span class="sign">Sign</span><span class="normal"> (PGP/MIME)                                                                       </span>
+<span class="header">     Sign as: </span><span class="normal">0x54BE8DECB4041D988854E3F2EA0E60D133D46E38                                            </span>
+<span class="status">-- Attachments                                                                                      </span>
+<span class="normal">- I     1 /tmp/mutt/neomutt-user-12345678                         [text/plain, 7bit, us-ascii, 0.5K]</span>
+<span class="normal">  A     2 ~/dress-code.md                                         [text/markdown, 8bit, utf-8, 3.6K]</span>
+<span class="status">-- Preview                                                                                          </span>
+<span class="normal">Hey guys!                                                                                           </span>
+<span class="normal">                                                                                                    </span>
+<span class="normal">I've having a small party and you're all invited.                                                   </span>
+<span class="normal">Don't forget to bring your Oscars!                                                                  </span>
+<span class="normal">                                                                                                    </span>
+<span class="normal">RR                                                                                                  </span>
+<span class="normal">                                                                                                    </span>
+<span class="status">-- NeoMutt: Compose  [Approx. msg size: 4.1K   Atts: 2]---------------------------------------------</span>
+<span class="normal">                                                                                                    </span>
+</pre>
+</div>
+
 :::{admonition} Diátaxis: How-To Guide
 :class: note
 
