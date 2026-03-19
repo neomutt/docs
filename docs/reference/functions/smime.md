@@ -1,10 +1,10 @@
 ---
-title: S/MIME Menu Functions
+title: S/MIME Menu
 description: Default key bindings and functions for the NeoMutt S/MIME Menu.
 keywords: neomutt, functions, smime, s/mime, menu, bindings, keys, encryption
 ---
 
-# S/MIME Menu Functions
+# S/MIME Menu
 
 :::{admonition} Di√°taxis: Reference
 :class: note
@@ -15,8 +15,9 @@ Mirror the structure of the software itself. Avoid instruction or explanation ‚Ä
 how-to guides and explanation pages instead.
 :::
 
-| Function | Default Key | Description |
-|----------|-------------|-------------|
-| `<exit>` | q | exit this menu |
-| `<verify-key>` | c | verify a public key |
-| `<view-name>` | % | view the key's user id |
+| Function       | Default Key | Description            |
+|----------------|-------------|------------------------|
+| `<exit>`       | `q`         | exit this menu         |
+| `<verify-key>` | `c`         | verify a public key    |
+| `<view-name>`  | `%`         | view the key's user id |
+

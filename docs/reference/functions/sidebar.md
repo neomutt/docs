@@ -1,10 +1,10 @@
 ---
-title: Sidebar Menu Functions
+title: Sidebar Menu
 description: Default key bindings and functions for the NeoMutt Sidebar Menu.
 keywords: neomutt, functions, sidebar, menu, bindings, keys
 ---
 
-# Sidebar Menu Functions
+# Sidebar Menu
 
 :::{admonition} Di√°taxis: Reference
 :class: note
@@ -15,18 +15,19 @@ Mirror the structure of the software itself. Avoid instruction or explanation ‚Ä
 how-to guides and explanation pages instead.
 :::
 
-| Function | Default Key | Description |
-|----------|-------------|-------------|
-| `<sidebar-abort-search>` |  | close the sidebar search |
-| `<sidebar-first>` |  | move the highlight to the first mailbox |
-| `<sidebar-last>` |  | move the highlight to the last mailbox |
-| `<sidebar-next>` |  | move the highlight to next mailbox |
-| `<sidebar-next-new>` |  | move the highlight to next mailbox with new mail |
-| `<sidebar-open>` |  | open highlighted mailbox |
-| `<sidebar-page-down>` |  | scroll the sidebar down 1 page |
-| `<sidebar-page-up>` |  | scroll the sidebar up 1 page |
-| `<sidebar-prev>` |  | move the highlight to previous mailbox |
-| `<sidebar-prev-new>` |  | move the highlight to previous mailbox with new mail |
-| `<sidebar-start-search>` |  | fuzzy search the sidebar |
-| `<sidebar-toggle-virtual>` |  | toggle between mailboxes and virtual mailboxes |
-| `<sidebar-toggle-visible>` |  | make the sidebar (in)visible |
+| Function                   | Default Key | Description                                          |
+|----------------------------|-------------|------------------------------------------------------|
+| `<sidebar-abort-search>`   |             | close the sidebar search                             |
+| `<sidebar-first>`          |             | move the highlight to the first mailbox              |
+| `<sidebar-last>`           |             | move the highlight to the last mailbox               |
+| `<sidebar-next>`           |             | move the highlight to next mailbox                   |
+| `<sidebar-next-new>`       |             | move the highlight to next mailbox with new mail     |
+| `<sidebar-open>`           |             | open highlighted mailbox                             |
+| `<sidebar-page-down>`      |             | scroll the sidebar down 1 page                       |
+| `<sidebar-page-up>`        |             | scroll the sidebar up 1 page                         |
+| `<sidebar-prev>`           |             | move the highlight to previous mailbox               |
+| `<sidebar-prev-new>`       |             | move the highlight to previous mailbox with new mail |
+| `<sidebar-start-search>`   |             | fuzzy search the sidebar                             |
+| `<sidebar-toggle-virtual>` |             | toggle between mailboxes and virtual mailboxes       |
+| `<sidebar-toggle-visible>` |             | make the sidebar (in)visible                         |
+

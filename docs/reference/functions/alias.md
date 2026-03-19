@@ -1,10 +1,10 @@
 ---
-title: Alias Menu Functions
+title: Alias Menu
 description: Default key bindings and functions for the NeoMutt Alias Menu.
 keywords: neomutt, functions, alias, menu, bindings, keys, address book
 ---
 
-# Alias Menu Functions
+# Alias Menu
 
 :::{admonition} Di√°taxis: Reference
 :class: note
@@ -15,15 +15,16 @@ Mirror the structure of the software itself. Avoid instruction or explanation ‚Ä
 how-to guides and explanation pages instead.
 :::
 
-| Function | Default Key | Description |
-|----------|-------------|-------------|
-| `<delete-entry>` | d | delete the current entry |
-| `<exit>` | q | exit this menu |
-| `<limit>` | l | show only messages matching a pattern |
-| `<mail>` | m | compose a new mail message |
-| `<sort-alias>` | o | sort messages |
-| `<sort-alias-reverse>` | O | sort messages in reverse order |
-| `<tag-entry>` | <Space> | tag the current entry |
-| `<tag-pattern>` | T | tag non-hidden messages matching a pattern |
-| `<undelete-entry>` | u | undelete the current entry |
-| `<untag-pattern>` | ^T | untag non-hidden messages matching a pattern |
+| Function               | Default Key | Description                                  |
+|------------------------|-------------|----------------------------------------------|
+| `<delete-entry>`       | `d`         | delete the current entry                     |
+| `<exit>`               | `q`         | exit this menu                               |
+| `<limit>`              | `l`         | show only messages matching a pattern        |
+| `<mail>`               | `m`         | compose a new mail message                   |
+| `<sort-alias>`         | `o`         | sort messages                                |
+| `<sort-alias-reverse>` | `O`         | sort messages in reverse order               |
+| `<tag-entry>`          | `<Space>`   | tag the current entry                        |
+| `<tag-pattern>`        | `T`         | tag non-hidden messages matching a pattern   |
+| `<undelete-entry>`     | `u`         | undelete the current entry                   |
+| `<untag-pattern>`      | `^T`        | untag non-hidden messages matching a pattern |
+

@@ -401,3 +401,11 @@ html[data-theme=dark] .index-preview {
 
 .term-window .terminal .progress2      { background-color: #f00; color: #fff; }
 
+html[data-theme=light] hr {
+    border: 1px solid #000;
+}
+
+html[data-theme=dark] hr {
+    border: 1px solid #fff;
+}
+

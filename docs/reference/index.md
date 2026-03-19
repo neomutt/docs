@@ -54,7 +54,6 @@ maxdepth: 1
 commandline
 commands
 options
-functions
 patterns
 regex
 ```
@@ -80,60 +79,20 @@ maxdepth: 1
 mime-types
 ```
 
-## Option Groups
+## Config Options
 
 ```{toctree}
 ---
-maxdepth: 1
+maxdepth: 2
 ---
-options/alias
-options/attach
-options/autocrypt
-options/browser
-options/compose
-options/crypto
-options/forward
-options/general
-options/header
-options/history
-options/imap
-options/maildir
-options/mh
-options/mime
-options/nntp
-options/notmuch
-options/pager
-options/pgp
-options/pipe
-options/pop
-options/print
-options/score
-options/sidebar
-options/smime
-options/smtp
-options/sort
-options/ssl
-options/status
+config/overview
 ```
 
-## Function Groups
+## Functions
 
 ```{toctree}
 ---
-maxdepth: 1
+maxdepth: 2
 ---
-functions/alias
-functions/attachment
-functions/autocrypt
-functions/browser
-functions/compose
-functions/editor
-functions/generic
-functions/index-menu
-functions/pager
-functions/pgp
-functions/postpone
-functions/query
-functions/sidebar
-functions/smime
+functions/overview
 ```

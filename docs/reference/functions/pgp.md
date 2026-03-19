@@ -1,10 +1,10 @@
 ---
-title: PGP Menu Functions
+title: PGP Menu
 description: Default key bindings and functions for the NeoMutt PGP Menu.
 keywords: neomutt, functions, pgp, menu, bindings, keys, encryption
 ---
 
-# PGP Menu Functions
+# PGP Menu
 
 :::{admonition} Di√°taxis: Reference
 :class: note
@@ -15,8 +15,9 @@ Mirror the structure of the software itself. Avoid instruction or explanation ‚Ä
 how-to guides and explanation pages instead.
 :::
 
-| Function | Default Key | Description |
-|----------|-------------|-------------|
-| `<exit>` | q | exit this menu |
-| `<verify-key>` | c | verify a public key |
-| `<view-name>` | % | view the key's user id |
+| Function       | Default Key | Description            |
+|----------------|-------------|------------------------|
+| `<exit>`       | `q`         | exit this menu         |
+| `<verify-key>` | `c`         | verify a public key    |
+| `<view-name>`  | `%`         | view the key's user id |
+

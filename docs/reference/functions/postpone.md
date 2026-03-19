@@ -1,10 +1,10 @@
 ---
-title: Postpone Menu Functions
+title: Postpone Menu
 description: Default key bindings and functions for the NeoMutt Postpone Menu.
 keywords: neomutt, functions, postpone, menu, bindings, keys, drafts
 ---
 
-# Postpone Menu Functions
+# Postpone Menu
 
 :::{admonition} Di√°taxis: Reference
 :class: note
@@ -15,8 +15,9 @@ Mirror the structure of the software itself. Avoid instruction or explanation ‚Ä
 how-to guides and explanation pages instead.
 :::
 
-| Function | Default Key | Description |
-|----------|-------------|-------------|
-| `<delete-entry>` | d | delete the current entry |
-| `<exit>` | q | exit this menu |
-| `<undelete-entry>` | u | undelete the current entry |
+| Function           | Default Key | Description                |
+|--------------------|-------------|----------------------------|
+| `<delete-entry>`   | `d`         | delete the current entry   |
+| `<exit>`           | `q`         | exit this menu             |
+| `<undelete-entry>` | `u`         | undelete the current entry |
+

@@ -1,0 +1,169 @@
+---
+title: "Alias Options"
+description: "Reference for NeoMutt alias configuration variables."
+keywords: "alias, contacts, address book, variables, neomutt"
+---
+
+# Alias Options
+
+:::{admonition} Diátaxis: Reference
+:class: note
+
+Write as **austere description**. Be factual, precise, and complete. Use consistent formatting
+throughout. Describe what things ARE, not how to use them. Use tables for structured data.
+Mirror the structure of the software itself. Avoid instruction or explanation — link out to
+how-to guides and explanation pages instead.
+:::
+
+
+alias.md
+	  { "alias_file", DT_PATH|D_PATH_FILE, IP "~/.neomuttrc", 0, NULL,
+	  { "alias_format", DT_EXPANDO|D_NOT_EMPTY, IP "%3i %f%t %-15a %-56A | %C%> %Y", IP &AliasFormatDef, NULL,
+	  { "alias_sort", DT_SORT|D_SORT_REVERSE, ALIAS_SORT_ALIAS, IP AliasSortMethods, NULL,
+	  { "query_command", DT_STRING|D_STRING_COMMAND, 0, 0, NULL,
+	  { "query_format", DT_EXPANDO|D_NOT_EMPTY, IP "%3i %t %-25N %-25E | %C%> %Y", IP &QueryFormatDef, NULL,
+	  { "sort_alias", DT_SYNONYM, IP "alias_sort", IP "2024-11-19" },
+
+----------------------------------------------------------------------------------------------------------
+
+(alias-file)=
+## `$alias_file`
+
+- **Type:** path
+- **Default:** "`~/.neomuttrc`"
+
+The default file in which to save aliases created by the
+[`<create-alias>`](#create-alias) function. Entries added to this file are
+encoded in the character set specified by [`$config_charset`](#config-charset) if it
+is *set* or the current character set otherwise.
+
+*Note:* NeoMutt will not automatically source this file; you must
+explicitly use the `source` command for it to be executed in case
+this option points to a dedicated alias file.
+
+The default for this option is the currently used neomuttrc file, or
+"~/.neomuttrc" if no user neomuttrc was found.
+
+----------------------------------------------------------------------------------------------------------
+
+(alias-format)=
+## `$alias_format`
+
+- **Type:**        expando (string)
+- **Default:**
+    ```
+    set alias_format = "%3i %f%t %-15a %-56A | %C%> %Y"
+    ```
+- **Alternative:**
+    ```
+    set alias_format = "%3{number} %{flags}%{tagged} %-15{alias} %-56{address} | %{comment}%{padding-hard: }%{tags}"
+    ```
+
+Specifies the format of the data displayed for the "[`alias`](#alias)" menu.  The
+following `printf(3)`-style sequences are available:
+
+| Short  | Long Name           | Description                                                     |
+|--------|---------------------|-----------------------------------------------------------------|
+| `%A`   | `%{address}`        | Full Address (Name and Email)                                   |
+| `%a`   | `%{alias}`          | Alias name                                                      |
+| `%C`   | `%{comment}`        | Comment                                                         |
+| `%E`   | `%{email}`          | Email Address                                                   |
+| `%f`   | `%{flags}`          | Flags - currently, a `d` for an alias marked for deletion       |
+| `%i`   | `%{number}`         | Index number                                                    |
+| `%N`   | `%{name}`           | Real name                                                       |
+| `%t`   | `%{tagged}`         | Alias is tagged (selected)                                      |
+| `%Y`   | `%{tags}`           | User-defined tags (labels)                                      |
+| `%*X`  | `%{padding-soft:X}` | Soft-fill with character `X` as pad                             |
+| `%>X`  | `%{padding-hard:X}` | Right justify the rest of the string and pad with character `X` |
+| `%\|X` | `%{padding-eol:X}`  | Pad to the end of the line with character `X`                   |
+
+For an explanation of "soft-fill", see the [`$index_format`](#index-format) documentation.
+
+The following sequences are deprecated; they will be removed in the future.
+
+| Old  | Action           |
+|------|------------------|
+| `%c` | Use `%C` instead |
+| `%n` | Use `%i` instead |
+| `%r` | Use `%A` instead |
+
+----------------------------------------------------------------------------------------------------------
+
+(alias-sort)=
+## `$alias_sort`
+
+- **Type:** sort order
+- **Default:** alias
+
+Specifies how the entries in the "alias" and "query" menus are sorted.
+
+| Value      | Sort by                               |
+|------------|---------------------------------------|
+| `alias`    | Alias short name                      |
+| `email`    | Email Address                         |
+| `name`     | Real Name                             |
+| `unsorted` | The order the Aliases were configured |
+
+*Deprecated Value*
+
+| Old       | Action              |
+|-----------|---------------------|
+| `address` | Use `email` instead |
+
+Prefixing the value with `reverse-` sorts the entries in reverse order,
+e.g. `set alias_sort = "reverse-alias"`
+
+Note: This also affects the entries of the address query menu, thus
+potentially overruling the order of entries as generated by [`$query_command`](#query-command).
+
+----------------------------------------------------------------------------------------------------------
+
+(query-command)=
+## `$query_command`
+
+- **Type:** command
+- **Default:** (empty)
+
+This specifies the command NeoMutt will use to make external address
+queries.  The string may contain a "%s", which will be substituted
+with the query string the user types.  NeoMutt will add quotes around the
+string substituted for "%s" automatically according to shell quoting
+rules, so you should avoid adding your own.  If no "%s" is found in
+the string, NeoMutt will append the user's query to the end of the string.
+See [Address Queries](../../howto/address-query).
+
+----------------------------------------------------------------------------------------------------------
+
+(query-format)=
+## `$query_format`
+
+- **Type:** string
+- **Default:** "`%3i %t %-25N %-25E | %C%> %Y`"
+
+This variable describes the format of the "query" menu. The
+following `printf(3)`-style sequences are understood:
+
+| Short  | Long Name           | Description                                                     |
+|--------|---------------------|-----------------------------------------------------------------|
+| `%A`   | `%{address}`        | Full Address (Name and Email)                                   |
+| `%C`   | `%{comment}`        | Comment                                                         |
+| `%E`   | `%{email}`          | Email Address                                                   |
+| `%i`   | `%{number}`         | Index number                                                    |
+| `%N`   | `%{name}`           | Real name                                                       |
+| `%t`   | `%{tagged}`         | Alias is tagged (selected)                                      |
+| `%Y`   | `%{tags}`           | User-defined tags (labels)                                      |
+| `%*X`  | `%{padding-soft:X}` | Soft-fill with character `X` as pad                             |
+| `%>X`  | `%{padding-hard:X}` | Right justify the rest of the string and pad with character `X` |
+| `%\|X` | `%{padding-eol:X}`  | Pad to the end of the line with character `X`                   |
+
+For an explanation of "soft-fill", see the [$index_format](#index-format) documentation.
+
+The following sequences are deprecated; they will be removed in the future.
+
+| Old  | Action           |
+|------|------------------|
+| `%a` | Use `%E` instead |
+| `%c` | Use `%i` instead |
+| `%e` | Use `%C` instead |
+| `%n` | Use `%N` instead |
+
