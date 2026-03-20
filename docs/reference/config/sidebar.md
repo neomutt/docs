@@ -244,23 +244,21 @@ Here's an example:
 
 Specifies how to sort mailbox entries in the sidebar.
 
-| Value      | Sort by                               |
-|------------|---------------------------------------|
-| `count`    | Total message count                   |
-| `desc`     | Mailbox description                   |
-| `flagged`  | Count of flagged messages             |
-| `path`     | Mailbox path (alphabetically)         |
-| `unread`   | Count of unread messages              |
+| Value      | Sort by                                 |
+|------------|-----------------------------------------|
+| `count`    | Total message count                     |
+| `desc`     | Mailbox description                     |
+| `flagged`  | Count of flagged messages               |
+| `path`     | Mailbox path (alphabetically)           |
+| `unread`   | Count of unread messages                |
 | `unsorted` | The order the mailboxes were configured |
 
-*Deprecated Value*
-
-| Old             | Action           |
-|-----------------|------------------|
-| `alpha`         | Use `path` instead     |
-| `mailbox-order` | Use `unsorted` instead |
-| `name`          | Use `path` instead     |
-| `new`           | Use `unread` instead   |
+| Deprecated Value | Use this instead |
+|------------------|------------------|
+| `alpha`          | `path`           |
+| `mailbox-order`  | `unsorted`       |
+| `name`           | `path`           |
+| `new`            | `unread`         |
 
 --------------------------------------------------------------------------------
 

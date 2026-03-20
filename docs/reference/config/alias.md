@@ -95,11 +95,9 @@ Specifies how the entries in the "alias" and "query" menus are sorted.
 | `name`     | Real Name                             |
 | `unsorted` | The order the Aliases were configured |
 
-*Deprecated Value*
-
-| Old       | Action              |
-|-----------|---------------------|
-| `address` | Use `email` instead |
+| Deprecated Value | Use this instead |
+|------------------|------------------|
+| `address`        | `email`          |
 
 Prefixing the value with `reverse-` sorts the entries in reverse order, e.g.
 `set alias_sort = "reverse-alias"`

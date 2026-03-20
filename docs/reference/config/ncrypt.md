@@ -600,9 +600,6 @@ Specifies how the entries in the pgp menu are sorted.
 | `keyid`   | Key id      |
 | `trust`   | Trust level |
 
-Prefixing the value with `reverse-` sorts the entries in reverse order, e.g.
-`set pgp_key_sort = "reverse-date"`
-
 --------------------------------------------------------------------------------
 
 (pgp-list-pubring-command)=

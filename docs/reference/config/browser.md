@@ -60,8 +60,6 @@ Specifies how to sort entries in the file browser.
 |------------------|------------------|
 | `unread`         | `new`            |
 
-Prefixing the value with `reverse-` sorts the entries in reverse order, e.g. `set browser_sort = "reverse-date"`
-
 --------------------------------------------------------------------------------
 
 (browser-sort-dirs-first)=

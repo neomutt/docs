@@ -217,7 +217,7 @@ NeoMutt tries to detect whether the terminal supports 24-bit colours and enables
 If this fails for some reason, you can force 24-bit colours by setting this variable manually.
 You may also try to force a certain TERM environment variable by starting NeoMutt from a terminal as follows (this results in wrong colours if the terminal does not implement directcolors):
 
-```
+```sh
 TERM=xterm-direct neomutt 
 ```
 
@@ -699,7 +699,13 @@ Also see the $$move variable.
     ```
 
 The default mailbox type used when creating new folders.
-May be any of "mbox", "MMDF", "MH" or "Maildir".
+
+| Values    |
+|-----------|
+| `maildir` |
+| `mbox`    |
+| `mh`      |
+| `mmdf`    |
 
 This can also be set using the `-m` command-line option.
 
@@ -1194,7 +1200,8 @@ See the "Use Threads Feature" section for further explanation and examples, http
 
 This provides a secondary sort for messages in the "index" menu, used when the $$sort value is equal for two messages.
 
-When sorting by threads, this variable controls how subthreads are sorted within a single thread (for the order between threads, see $$sort).  This can be set to any value that $$sort can, including with the use of "reverse-" and "last-" prefixes, except for variations using "threads" (in that case, NeoMutt will just use "date").
+When sorting by threads, this variable controls how subthreads are sorted within a single thread (for the order between threads, see $$sort).
+This can be set to any value that $$sort can, including with the use of "reverse-" and "last-" prefixes, except for variations using "threads" (in that case, NeoMutt will just use "date").
 
 For instance, 
 ```
@@ -1365,14 +1372,20 @@ If _unset_, no addresses will be qualified.
     ```
 
 The style of threading used in the index.
-May be one of "flat" (no threading), "threads" (threaded, with subthreads below root message) or "reverse" (threaded, with subthreads above root message).
-For convenience, the value "yes" is a synonym for "threads", and "no" is a synonym for "flat".
+
+| Value     | Meaning                                      |
+|-----------|----------------------------------------------|
+| `flat`    | No threading                                 |
+| `threads` | Threaded, with subthreads below root message |
+| `reverse` | Threaded, with subthreads above root message |
+| `yes`     | Synonym for `threads`                        |
+| `no`      | Synonym for `flat`                           |
 
 If this variable is never set, then `$$sort` controls whether threading is used, `$$sort_aux` controls both the sorting of threads and subthreads, and using `<sort-mailbox>` to select threads affects only `$$sort`.  Once this variable is set, attempting to set `$$sort` to a value using "threads" will warn, the value of `$$sort` controls the sorting between threads while `$$sort_aux` controls sorting within a thread, and `<sort-mailbox>` toggles `$$use_threads`.
 
 Example:
 ```
-set use_threads=yes 
+set use_threads = yes 
 ```
 
 See the "Use Threads Feature" section for further explanation and examples.
