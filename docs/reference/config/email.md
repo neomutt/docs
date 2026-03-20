@@ -266,7 +266,7 @@ alias juser abd30425@somewhere.net (Joe User)
 
 and then you receive mail which contains the following header:
 
-```mail
+```email
 From: abd30425@somewhere.net 
 ```
 

@@ -34,7 +34,7 @@ Each library exposes a clear surface area and keeps implementation details conta
 
 ## The Configuration System
 
-Configuration is a first-class part of the architecture, not an afterthought. NeoMutt parses config files into typed variables, applies precedence rules, and allows runtime changes via commands. This makes the UI, message handling, and backend behavior all configurable without recompilation. For details, see [Configuration File Syntax](../reference/config-syntax) and [Options](../reference/options).
+Configuration is a first-class part of the architecture, not an afterthought. NeoMutt parses config files into typed variables, applies precedence rules, and allows runtime changes via commands. This makes the UI, message handling, and backend behavior all configurable without recompilation. For details, see [Configuration File Syntax](../reference/config-syntax) and [Options](../reference/config).
 
 ## Mailbox Backends
 

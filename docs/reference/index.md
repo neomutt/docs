@@ -53,7 +53,7 @@ maxdepth: 1
 ---
 commandline
 commands
-options
+config
 patterns
 regex
 ```

@@ -72,4 +72,4 @@ set imap_passive = yes
 
 Expected result: NeoMutt only checks mail over existing connections.
 
-See [How to Set Up IMAP](imap) and [IMAP Variables](../reference/options/imap) for full details.
+See [How to Set Up IMAP](imap) and [IMAP Variables](../reference/config/imap) for full details.
