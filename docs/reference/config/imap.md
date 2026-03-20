@@ -34,8 +34,8 @@ This option is case-insensitive.
 If it's _unset_ (the default) NeoMutt will try all available methods, in order from most-secure to least-secure.
 
 Example:
-```
-set imap_authenticators="gssapi:cram-md5:login" 
+```neomuttrc
+set imap_authenticators = "gssapi:cram-md5:login" 
 ```
 
 **Note:** NeoMutt will only fall back to other authentication methods if the previous methods are unavailable.
@@ -48,7 +48,7 @@ If a method is available but authentication fails, NeoMutt will not connect to t
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set imap_check_subscribed = no
     ```
 
@@ -61,7 +61,7 @@ When _set_, NeoMutt will fetch the set of subscribed folders from your server wh
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set imap_condstore = no
     ```
 
@@ -80,7 +80,7 @@ Your mileage may vary.
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set imap_deflate = yes
     ```
 
@@ -96,7 +96,7 @@ In general a good compression efficiency can be achieved, which speeds up readin
 
 - **Type:** string
 - **Default:**
-    ```
+    ```neomuttrc
     set imap_delim_chars = "/."
     ```
 
@@ -110,7 +110,7 @@ This contains the list of characters that NeoMutt will use as folder separators 
 - **Type:** number (long)
 - **Notes:** Not negative
 - **Default:**
-    ```
+    ```neomuttrc
     set imap_fetch_chunk_size = 0
     ```
 
@@ -141,7 +141,7 @@ You may want to add more headers for spam detection.
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set imap_idle = no
     ```
 
@@ -157,7 +157,7 @@ If your connection seems to freeze up periodically, try unsetting this.
 - **Type:** number
 - **Notes:** Not negative
 - **Default:**
-    ```
+    ```neomuttrc
     set imap_keep_alive = 300
     ```
 
@@ -172,7 +172,7 @@ Reduce this number if you find yourself getting disconnected from your IMAP serv
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set imap_list_subscribed = no
     ```
 
@@ -236,7 +236,7 @@ function or try to open an IMAP folder.
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set imap_passive = yes
     ```
 
@@ -251,7 +251,7 @@ This is useful if you don't want to be prompted for user/password pairs on NeoMu
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set imap_peek = yes
     ```
 
@@ -267,7 +267,7 @@ This option exists to appease speed freaks.
 - **Type:** number
 - **Notes:** Not negative
 - **Default:**
-    ```
+    ```neomuttrc
     set imap_pipeline_depth = 15
     ```
 
@@ -285,7 +285,7 @@ But not all servers correctly handle pipelined commands, so if you have problems
 - **Type:** number
 - **Notes:** Not negative
 - **Default:**
-    ```
+    ```neomuttrc
     set imap_poll_timeout = 15
     ```
 
@@ -299,7 +299,7 @@ Set to 0 to disable timing out.
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set imap_qresync = no
     ```
 
@@ -317,7 +317,7 @@ If you experience strange behavior, such as duplicate or missing messages please
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set imap_rfc5161 = yes
     ```
 
@@ -333,7 +333,7 @@ See also https://github.com/neomutt/neomutt/issues/1689
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set imap_send_id = no
     ```
 
@@ -347,7 +347,7 @@ This command provides information about the IMAP client, such as "NeoMutt" and t
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set imap_server_noise = yes
     ```
 

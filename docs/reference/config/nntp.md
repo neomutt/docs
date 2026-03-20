@@ -22,7 +22,7 @@ how-to guides and explanation pages instead.
 
 - **Type:** quad-option
 - **Default:**
-    ```
+    ```neomuttrc
     set catchup_newsgroup = ask-yes
     ```
 
@@ -35,7 +35,7 @@ If this variable is _set_, NeoMutt will mark all articles in newsgroup as read w
 
 - **Type:** quad-option
 - **Default:**
-    ```
+    ```neomuttrc
     set followup_to_poster = ask-yes
     ```
 
@@ -49,7 +49,7 @@ The message will be mailed to the submitter of the message via mail.
 
 - **Type:** string
 - **Default:**
-    ```
+    ```neomuttrc
     set newsgroups_charset = "utf-8"
     ```
 
@@ -63,7 +63,7 @@ Character set of newsgroups descriptions.
 - **Type:** expando
 - **Notes:** File only
 - **Default:**
-    ```
+    ```neomuttrc
     set newsrc = "~/.newsrc"
     ```
 
@@ -87,7 +87,7 @@ The following printf-style sequence is understood:
 - **Type:** path (string)
 - **Notes:** Directory only
 - **Default:**
-    ```
+    ```neomuttrc
     set news_cache_dir = "~/.neomutt"
     ```
 
@@ -130,8 +130,8 @@ If it's _unset_ (the default)
 NeoMutt will try all available methods, in order from most-secure to least-secure.
 
 Example:
-```
-set nntp_authenticators="digest-md5:user" 
+```neomuttrc
+set nntp_authenticators = "digest-md5:user" 
 ```
 
 **Note:** NeoMutt will only fall back to other authentication methods if the previous methods are unavailable.
@@ -145,7 +145,7 @@ If a method is available but authentication fails, NeoMutt will not connect to t
 - **Type:** number (long)
 - **Notes:** Not negative
 - **Default:**
-    ```
+    ```neomuttrc
     set nntp_context = 1000
     ```
 
@@ -160,7 +160,7 @@ Also controls how many articles headers will be saved in cache when you quit new
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set nntp_listgroup = yes
     ```
 
@@ -173,7 +173,7 @@ This variable controls whether or not existence of each article is checked when 
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set nntp_load_description = yes
     ```
 
@@ -201,7 +201,7 @@ Your password for NNTP account.
 - **Type:** number
 - **Notes:** Not negative
 - **Default:**
-    ```
+    ```neomuttrc
     set nntp_poll = 60
     ```
 
@@ -230,7 +230,7 @@ If _unset_ and NNTP server requires authentication, NeoMutt will prompt you for 
 
 - **Type:** quad-option
 - **Default:**
-    ```
+    ```neomuttrc
     set post_moderated = ask-yes
     ```
 
@@ -244,7 +244,7 @@ If set to _yes_, NeoMutt will post article to newsgroup that have not permission
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set save_unsubscribed = no
     ```
 
@@ -257,7 +257,7 @@ When _set_, info about unsubscribed newsgroups will be saved into "newsrc" file 
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set show_new_news = yes
     ```
 
@@ -272,7 +272,7 @@ Also controls whether or not number of new articles of subscribed newsgroups wil
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set x_comment_to = no
     ```
 

@@ -23,7 +23,7 @@ how-to guides and explanation pages instead.
 - **Type:** number
 - **Notes:** Not negative
 - **Default:**
-    ```
+    ```neomuttrc
     set history = 10
     ```
 
@@ -44,7 +44,7 @@ To prevent duplicates over all entries use $$history_remove_dups.
 - **Type:** path (string)
 - **Notes:** File only
 - **Default:**
-    ```
+    ```neomuttrc
     set history_file = "~/.mutthistory"
     ```
 
@@ -59,7 +59,7 @@ Also see $$save_history.
 
 - **Type:** expando
 - **Default:**
-    ```
+    ```neomuttrc
     set history_format = "%s"
     ```
 
@@ -81,7 +81,7 @@ This string is similar to $$index_format, but has its own set of `printf(3)`-lik
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set history_remove_dups = no
     ```
 
@@ -96,7 +96,7 @@ Duplicate entries in the $$history_file will also be removed when it is periodic
 - **Type:** number
 - **Notes:** Not negative
 - **Default:**
-    ```
+    ```neomuttrc
     set save_history = 0
     ```
 

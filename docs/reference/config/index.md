@@ -22,7 +22,7 @@ how-to guides and explanation pages instead.
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set beep_new = no
     ```
 
@@ -36,7 +36,7 @@ This is independent of the setting of the $$beep variable.
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set change_folder_next = no
     ```
 
@@ -49,7 +49,7 @@ When this variable is _set_, the `<change-folder>` function mailbox suggestion w
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set collapse_all = no
     ```
 
@@ -62,7 +62,7 @@ When _set_, NeoMutt will collapse all threads when entering a folder.
 
 - **Type:** character string
 - **Default:**
-    ```
+    ```neomuttrc
     set crypt_chars = "SPsK "
     ```
 
@@ -83,7 +83,7 @@ Controls the characters used in cryptography flags.
 
 - **Type:** character string
 - **Default:**
-    ```
+    ```neomuttrc
     set flag_chars = "*!DdrONon- "
     ```
 
@@ -138,7 +138,7 @@ This slightly odd interface is necessitated by NeoMutt's handling of string vari
 - **Type:** expando
 - **Notes:** Not empty
 - **Default:**
-    ```
+    ```neomuttrc
     set index_format = "%4C %Z %{%b %d} %-15.15L (%<l?%4l&%4c>) %s"
     ```
 
@@ -241,7 +241,7 @@ Note that these expandos are supported in "$save-hook", "$fcc-hook" and "$fcc-sa
 
 - **Type:** string
 - **Default:**
-    ```
+    ```neomuttrc
     set mark_macro_prefix = "'"
     ```
 
@@ -269,7 +269,7 @@ See the $$status_format documentation for the values that can be formatted into 
 
 - **Type:** quad-option
 - **Default:**
-    ```
+    ```neomuttrc
     set quit = yes
     ```
 
@@ -286,7 +286,7 @@ This can usually be achieved by pressing CTRL-C in the terminal.
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set read_only = no
     ```
 
@@ -299,7 +299,7 @@ If _set_, all folders are opened in read-only mode.
 
 - **Type:** character string
 - **Default:**
-    ```
+    ```neomuttrc
     set status_chars = "-*%A"
     ```
 
@@ -322,7 +322,7 @@ Controls the characters used by the "%r" indicator in $$status_format.
 - **Type:** expando
 - **Notes:** Localised
 - **Default:**
-    ```
+    ```neomuttrc
     set status_format = "-%r-NeoMutt: %D [Msgs:%<M?%M/>%m%<n? New:%n>%<o? Old:%o>%<d? Del:%d>%<F? Flag:%F>%<t? Tag:%t>%<p? Post:%p>%<b? Inc:%b>%<l? %l>]---(%<T?%T/>%s/%S)-%>-(%P)---"
     ```
 
@@ -397,7 +397,7 @@ This might be helpful with IMAP folders that don't like dots in folder names.
 
 - **Type:** character string
 - **Default:**
-    ```
+    ```neomuttrc
     set to_chars = " +TCFLR"
     ```
 
@@ -420,7 +420,7 @@ Controls the character used to indicate mail addressed to you.
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set ts_enabled = no
     ```
 
@@ -435,7 +435,7 @@ Most terminal emulators emulate the status line in the window title.
 - **Type:** expando
 - **Notes:** Localised
 - **Default:**
-    ```
+    ```neomuttrc
     set ts_icon_format = "M%<n?AIL&ail>"
     ```
 
@@ -450,7 +450,7 @@ This string is identical in formatting to the one used by "$$status_format".
 - **Type:** expando
 - **Notes:** Localised
 - **Default:**
-    ```
+    ```neomuttrc
     set ts_status_format = "NeoMutt with %<m?%m messages&no messages>%<n? [%n NEW]>"
     ```
 
@@ -464,7 +464,7 @@ This string is identical in formatting to the one used by "$$status_format".
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set uncollapse_jump = no
     ```
 
@@ -477,7 +477,7 @@ When _set_, NeoMutt will jump to the next unread message, if any, when the curre
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set uncollapse_new = yes
     ```
 

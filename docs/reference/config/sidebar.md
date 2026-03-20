@@ -22,13 +22,13 @@ how-to guides and explanation pages instead.
 
 - **Type:** number
 - **Default:**
-    ```
+    ```neomuttrc
     set sidebar_component_depth = 0
     ```
 
 By default the sidebar will show the mailbox's path, relative to the $$folder variable.
 This specifies the number of parent directories to hide from display in the sidebar.
-For example: If a maildir is normally displayed in the sidebar as dir1/dir2/dir3/maildir, setting `sidebar_component_depth=2` will display it as dir3/maildir, having truncated the 2 highest directories.
+For example: If a maildir is normally displayed in the sidebar as dir1/dir2/dir3/maildir, setting `set sidebar_component_depth = 2` will display it as dir3/maildir, having truncated the 2 highest directories.
 
 **See also:** $$sidebar_short_path 
 
@@ -39,7 +39,7 @@ For example: If a maildir is normally displayed in the sidebar as dir1/dir2/dir3
 
 - **Type:** string
 - **Default:**
-    ```
+    ```neomuttrc
     set sidebar_delim_chars = "/."
     ```
 
@@ -48,13 +48,13 @@ This contains the list of characters which you would like to treat as folder sep
 Local mail is often arranged in directories: 'dir1/dir2/mailbox'.
 
 ```neomuttrc
-set sidebar_delim_chars='/' 
+set sidebar_delim_chars = '/' 
 ```
 
 IMAP mailboxes are often named: 'folder1.folder2.mailbox'.
 
 ```neomuttrc
-set sidebar_delim_chars='.'
+set sidebar_delim_chars = '.'
 ```
 
 **See also:** $$sidebar_short_path, $$sidebar_folder_indent, $$sidebar_indent_string.
@@ -66,7 +66,7 @@ set sidebar_delim_chars='.'
 
 - **Type:** string
 - **Default:**
-    ```
+    ```neomuttrc
     set sidebar_divider_char = "\342\224\202"
     ```
 
@@ -85,7 +85,7 @@ If empty, setting the sidebar_background color may help distinguish the sidebar 
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set sidebar_folder_indent = no
     ```
 
@@ -101,7 +101,7 @@ Set this to indent mailboxes in the sidebar.
 - **Type:** expando
 - **Notes:** Not empty
 - **Default:**
-    ```
+    ```neomuttrc
     set sidebar_format = "%D%*  %n"
     ```
 
@@ -141,7 +141,7 @@ When thus set, a suggested value for this option is "%B%<F? [%F]>%* %<N?%N/>%S".
 
 - **Type:** string
 - **Default:**
-    ```
+    ```neomuttrc
     set sidebar_indent_string = "  "
     ```
 
@@ -157,7 +157,7 @@ It defaults to two spaces.
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set sidebar_new_mail_only = no
     ```
 
@@ -172,7 +172,7 @@ When set, the sidebar will only display mailboxes containing new, or flagged, ma
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set sidebar_next_new_wrap = no
     ```
 
@@ -186,7 +186,7 @@ The `<sidebar-prev-new>` command is similarly affected, wrapping around to the e
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set sidebar_non_empty_mailbox_only = no
     ```
 
@@ -201,7 +201,7 @@ When set, the sidebar will only display mailboxes that contain one or more mails
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set sidebar_on_right = no
     ```
 
@@ -214,12 +214,12 @@ When set, the sidebar will appear on the right-hand side of the screen.
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set sidebar_short_path = no
     ```
 
 By default the sidebar will show the mailbox's path, relative to the $$folder variable.
-Setting `sidebar_shortpath=yes` will shorten the names relative to the previous name.
+Setting `set sidebar_shortpath = yes` will shorten the names relative to the previous name.
 Here's an example:
 
 | shortpath=no    | shortpath=yes | shortpath=yes, folderindent=yes, indentstr=".." |
@@ -238,7 +238,7 @@ Here's an example:
 
 - **Type:** sort order
 - **Default:**
-    ```
+    ```neomuttrc
     set sidebar_sort = "unsorted"
     ```
 
@@ -267,7 +267,7 @@ Specifies how to sort mailbox entries in the sidebar.
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set sidebar_visible = no
     ```
 
@@ -284,11 +284,11 @@ The sidebar shows a list of all your mailboxes.
 - **Type:** number
 - **Notes:** Not negative
 - **Default:**
-    ```
+    ```neomuttrc
     set sidebar_width = 30
     ```
 
 This controls the width of the sidebar.
 It is measured in screen columns.
-For example: sidebar_width=20 could display 20 ASCII characters, or 10 Chinese characters.
+For example: `set sidebar_width = 20` could display 20 ASCII characters, or 10 Chinese characters.
 

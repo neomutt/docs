@@ -40,7 +40,7 @@ Currently supported output lines are _login_, _username_, and _password_.
 - **Type:** path (string)
 - **Notes:** File only
 - **Default:**
-    ```
+    ```neomuttrc
     set certificate_file = "~/.mutt_certificates"
     ```
 - **Scope:** OpenSSL and GnuTLS only
@@ -51,11 +51,6 @@ If you accept it, the certificate can also be saved in this file and further con
 
 You can also manually add CA certificates in this file.
 Any server certificate that is signed with one of these CA certificates is also automatically accepted.
-
-Example:
-```
-set certificate_file=~/.neomutt/certificates 
-```
 
 --------------------------------------------------------------------------------
 
@@ -88,8 +83,8 @@ This is useful for setting up secure connections, e.g. with `ssh(1)`.
 If the command returns a  nonzero status, NeoMutt gives up opening the server.
 
 Example:
-```
-set preconnect="ssh -f -q -L 1234:mailhost.net:143 mailhost.net \(rs sleep 20 < /dev/null > /dev/null" 
+```neomuttrc
+set preconnect = "ssh -f -q -L 1234:mailhost.net:143 mailhost.net \(rs sleep 20 < /dev/null > /dev/null" 
 ```
 
 Mailbox "foo" on "mailhost.net" can now be reached as "{localhost:1234}foo".
@@ -103,7 +98,7 @@ Note: For this example to work, you must be able to log in to the remote machine
 
 - **Type:** number
 - **Default:**
-    ```
+    ```neomuttrc
     set socket_timeout = 30
     ```
 
@@ -127,8 +122,8 @@ This variable specifies a file containing trusted CA certificates.
 Any server certificate that is signed with one of these CA certificates is also automatically accepted.
 
 Example:
-```
-set ssl_ca_certificates_file=/etc/ssl/certs/ca-certificates.crt 
+```neomuttrc
+set ssl_ca_certificates_file = /etc/ssl/certs/ca-certificates.crt 
 ```
 
 --------------------------------------------------------------------------------
@@ -170,7 +165,7 @@ The file containing a client certificate and its associated private key.
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set ssl_force_tls = yes
     ```
 
@@ -186,7 +181,7 @@ This option supersedes $$ssl_starttls.
 - **Type:** number
 - **Notes:** Not negative
 - **Default:**
-    ```
+    ```neomuttrc
     set ssl_min_dh_prime_bits = 0
     ```
 - **Scope:** GnuTLS only
@@ -202,7 +197,7 @@ A value of 0 will use the default from the GNUTLS library.
 
 - **Type:** quad-option
 - **Default:**
-    ```
+    ```neomuttrc
     set ssl_starttls = yes
     ```
 
@@ -219,7 +214,7 @@ Setting $$ssl_force_tls is recommended if you rely on `STARTTLS`.
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set ssl_use_system_certs = yes
     ```
 - **Scope:** GnuTLS only
@@ -233,7 +228,7 @@ If set to _yes_, NeoMutt will use CA certificates in the system-wide certificate
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set ssl_use_tlsv1_2 = yes
     ```
 
@@ -246,7 +241,7 @@ If _set_ , NeoMutt will use TLSv1.2 when communicating with servers that request
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set ssl_use_tlsv1_3 = yes
     ```
 
@@ -259,7 +254,7 @@ If _set_ , NeoMutt will use TLSv1.3 when communicating with servers that request
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set ssl_verify_dates = yes
     ```
 
@@ -273,7 +268,7 @@ You should only unset this for particular known hosts, using the `$<account-hook
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set ssl_verify_host = yes
     ```
 
@@ -287,7 +282,7 @@ You should only unset this for particular known hosts, using the `$<account-hook
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set ssl_verify_partial_chains = no
     ```
 - **Scope:** OpenSSL 1.0.2b and newer only
@@ -311,8 +306,8 @@ Setting this variable will cause NeoMutt to open a pipe to a command instead of 
 You may be able to use this to set up preauthenticated connections to your IMAP/POP3/SMTP server.
 
 Example:
-```
-set tunnel="ssh -q mailhost.net /usr/local/libexec/imapd" 
+```neomuttrc
+set tunnel = "ssh -q mailhost.net /usr/local/libexec/imapd" 
 ```
 
 Note: For this example to work you must be able to log in to the remote machine without having to enter a password.
@@ -327,7 +322,7 @@ Please see "$account-hook" in the manual for how to use different tunnel command
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set tunnel_is_secure = yes
     ```
 
@@ -346,7 +341,7 @@ This setting is appropriate if $$tunnel does not provide security and could be t
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set use_ipv6 = yes
     ```
 

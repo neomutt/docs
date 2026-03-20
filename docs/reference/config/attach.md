@@ -21,9 +21,8 @@ how-to guides and explanation pages instead.
 ## `$attach_save_dir`
 
 - **Type:** path (string)
-- **Notes:** Directory only
 - **Default:**
-    ```
+    ```neomuttrc
     set attach_save_dir = "./"
     ```
 
@@ -36,7 +35,7 @@ The directory where attachments are saved.
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set attach_save_without_prompting = no
     ```
 
@@ -49,7 +48,7 @@ This variable, when set to true, will cause attachments to be saved to the 'atta
 
 - **Type:** string
 - **Default:**
-    ```
+    ```neomuttrc
     set attach_sep = "\n"
     ```
 
@@ -62,7 +61,7 @@ The separator to add between attachments when operating (saving, printing, pipin
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set attach_split = yes
     ```
 
@@ -77,7 +76,7 @@ When _set_, NeoMutt will operate on the attachments one by one.
 
 - **Type:** quad-option
 - **Default:**
-    ```
+    ```neomuttrc
     set bounce = ask-yes
     ```
 
@@ -92,7 +91,7 @@ Setting this variable to _no_ is not generally useful, and thus not recommended,
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set count_alternatives = no
     ```
 
@@ -109,7 +108,7 @@ Setting this will allow NeoMutt to find and count matching attachments hidden th
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set digest_collapse = yes
     ```
 
@@ -122,9 +121,8 @@ To see these subparts, press "v" on that menu.
 ## `$message_format`
 
 - **Type:** expando
-- **Notes:** Not empty
 - **Default:**
-    ```
+    ```neomuttrc
     set message_format = "%s"
     ```
 
@@ -137,7 +135,7 @@ This is the string displayed in the "attachment" menu for attachments of type `m
 
 - **Type:** quad-option
 - **Default:**
-    ```
+    ```neomuttrc
     set mime_forward = no
     ```
 
@@ -154,11 +152,9 @@ Also see $$forward_decode and $$mime_forward_decode.
 
 - **Type:** quad-option
 - **Default:**
-    ```
+    ```neomuttrc
     set mime_forward_rest = yes
     ```
 
 When forwarding multiple attachments of a MIME message from the attachment menu, attachments which can't be decoded in a reasonable manner will be attached to the newly composed message if this option is _set_.
-rder="0" align="left" colspan="3"><font color="#303030" point-size="10">+4
-more</font></td> </tr>
 

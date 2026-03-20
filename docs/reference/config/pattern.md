@@ -48,7 +48,7 @@ You, the user, still have to rewrite the mairix_filter script to match the behav
 
 - **Type:** expando
 - **Default:**
-    ```
+    ```neomuttrc
     set pattern_format = "%2n %-15e  %d"
     ```
 
@@ -71,7 +71,7 @@ The following `printf(3)`-style sequences are understood:
 
 - **Type:** string
 - **Default:**
-    ```
+    ```neomuttrc
     set simple_search = "~f %s | ~s %s"
     ```
 
@@ -91,7 +91,7 @@ For the default value, "joe" would be expanded to: "~f joe | ~s joe".
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set thorough_search = yes
     ```
 

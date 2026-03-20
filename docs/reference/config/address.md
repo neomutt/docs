@@ -22,7 +22,7 @@ how-to guides and explanation pages instead.
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set idn_decode = yes
     ```
 - **Scope:** IDN only
@@ -38,7 +38,7 @@ This variable only affects decoding.
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set idn_encode = yes
     ```
 

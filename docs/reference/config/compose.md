@@ -22,7 +22,7 @@ how-to guides and explanation pages instead.
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set compose_confirm_detach_first = yes
     ```
 
@@ -40,7 +40,7 @@ It doesn't keep track of which message is the typed message if the entries are r
 - **Type:** expando
 - **Notes:** Localised
 - **Default:**
-    ```
+    ```neomuttrc
     set compose_format = "-- NeoMutt: Compose  [Approx. msg size: %l   Atts: %a]%>-"
     ```
 
@@ -66,7 +66,7 @@ See the text describing the $$status_format option for more information on how t
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set compose_preview_above_attachments = no
     ```
 
@@ -81,7 +81,7 @@ By default it is shown below it.
 - **Type:** number
 - **Notes:** Not negative
 - **Default:**
-    ```
+    ```neomuttrc
     set compose_preview_min_rows = 5
     ```
 
@@ -94,7 +94,7 @@ This variable specifies the minimum number of rows that have to be available for
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set compose_show_preview = yes
     ```
 
@@ -107,7 +107,7 @@ When _set_, NeoMutt will display a preview of message in the compose view.
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set compose_show_user_headers = yes
     ```
 
@@ -120,7 +120,7 @@ When _set_, NeoMutt will display user-defined headers (set via $my-header or fro
 
 - **Type:** quad-option
 - **Default:**
-    ```
+    ```neomuttrc
     set copy = yes
     ```
 
@@ -134,7 +134,7 @@ Also see $$record, $$save_name, $$force_name and "$fcc-hook".
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set edit_headers = no
     ```
 
@@ -153,7 +153,7 @@ NeoMutt will not understand localized header labels, just as it would not when p
 
 - **Type:** command (string)
 - **Default:**
-    ```
+    ```neomuttrc
     set ispell = "ispell"
     ```
 
@@ -166,7 +166,7 @@ How to invoke ispell (GNU's spell-checking software).
 
 - **Type:** quad-option
 - **Default:**
-    ```
+    ```neomuttrc
     set postpone = ask-yes
     ```
 

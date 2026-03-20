@@ -22,7 +22,7 @@ how-to guides and explanation pages instead.
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set allow_ansi = no
     ```
 
@@ -66,7 +66,7 @@ This can be fixed by adding this to your config:
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set header_color_partial = no
     ```
 
@@ -85,7 +85,7 @@ See "$color" for more details.
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set markers = yes
     ```
 
@@ -118,7 +118,7 @@ Using an external pager may have some disadvantages: Additional keystrokes are n
 - **Type:** number
 - **Notes:** Not negative
 - **Default:**
-    ```
+    ```neomuttrc
     set pager_context = 0
     ```
 
@@ -135,7 +135,7 @@ If positive, this many lines will be given before a match, if 0, the match will 
 
 - **Type:** expando
 - **Default:**
-    ```
+    ```neomuttrc
     set pager_format = "-%Z- %C/%m: %-20.20n   %s%*  -- (%P)"
     ```
 
@@ -150,7 +150,7 @@ The valid sequences are listed in the $$index_format section.
 - **Type:** number
 - **Notes:** Not negative
 - **Default:**
-    ```
+    ```neomuttrc
     set pager_index_lines = 0
     ```
 
@@ -167,7 +167,7 @@ A value of 0 results in no index being shown.
 - **Type:** number
 - **Notes:** Not negative
 - **Default:**
-    ```
+    ```neomuttrc
     set pager_read_delay = 0
     ```
 
@@ -183,7 +183,7 @@ This setting is ignored if $$pager is set.
 - **Type:** number
 - **Notes:** Not negative
 - **Default:**
-    ```
+    ```neomuttrc
     set pager_skip_quoted_context = 0
     ```
 
@@ -198,7 +198,7 @@ If the previous quote is shorter the whole quote is displayed.
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set pager_stop = no
     ```
 
@@ -212,7 +212,7 @@ function.
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set prompt_after = yes
     ```
 
@@ -227,7 +227,7 @@ If _unset_, NeoMutt will return to the index menu when the external pager exits.
 - **Type:** number
 - **Notes:** Not negative
 - **Default:**
-    ```
+    ```neomuttrc
     set search_context = 0
     ```
 
@@ -241,7 +241,7 @@ By default, search results will be top-aligned.
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set smart_wrap = yes
     ```
 
@@ -257,7 +257,7 @@ Also see the $$markers variable.
 
 - **Type:** regular expression
 - **Default:**
-    ```
+    ```neomuttrc
     set smileys = "(>From )|(:[-^]?[][)(><}{|/DP])"
     ```
 
@@ -271,7 +271,7 @@ This mostly happens at the beginning of a line.
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set tilde = no
     ```
 
@@ -285,7 +285,7 @@ When _set_, the internal-pager will pad blank lines to the bottom of the screen 
 - **Type:** number
 - **Notes:** Not negative
 - **Default:**
-    ```
+    ```neomuttrc
     set toggle_quoted_show_levels = 0
     ```
 

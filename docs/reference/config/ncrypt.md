@@ -22,7 +22,7 @@ how-to guides and explanation pages instead.
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set crypt_confirm_hook = yes
     ```
 
@@ -37,7 +37,7 @@ This is generally considered unsafe, especially where typos are concerned.
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set crypt_encryption_info = yes
     ```
 - **Scope:** Crypto only
@@ -51,7 +51,7 @@ If _set_, NeoMutt will include an informative block before an encrypted part, wi
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set crypt_opportunistic_encrypt = no
     ```
 - **Scope:** Crypto only
@@ -74,7 +74,7 @@ It can be manually re-enabled in the pgp or smime menus.
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set crypt_opportunistic_encrypt_strong_keys = no
     ```
 
@@ -92,7 +92,7 @@ The GPGME backend will use the same filters as with OpenPGP, and depends on GPGM
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set crypt_protected_headers_read = yes
     ```
 - **Scope:** Crypto only
@@ -113,7 +113,7 @@ If you reply to a message before opening it, NeoMutt will end up using the dummy
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set crypt_protected_headers_save = no
     ```
 - **Scope:** Crypto only
@@ -135,7 +135,7 @@ Please make sure you understand the consequences of this before you enable this 
 
 - **Type:** string
 - **Default:**
-    ```
+    ```neomuttrc
     set crypt_protected_headers_subject = "..."
     ```
 - **Scope:** Crypto only
@@ -151,7 +151,7 @@ To prevent a subject from being substituted, unset this variable, or set it to t
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set crypt_protected_headers_weed = no
     ```
 - **Scope:** Crypto only
@@ -165,7 +165,7 @@ Controls whether NeoMutt will weed protected header fields.
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set crypt_protected_headers_write = yes
     ```
 - **Scope:** Crypto only
@@ -184,7 +184,7 @@ Currently NeoMutt only supports the Subject header.
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set crypt_timestamp = yes
     ```
 - **Scope:** Crypto only
@@ -200,7 +200,7 @@ If you are using colors to mark these lines, and rely on these, you may _unset_ 
 - **Type:** boolean
 - **Notes:** On Startup
 - **Default:**
-    ```
+    ```neomuttrc
     set crypt_use_gpgme = yes
     ```
 
@@ -217,7 +217,7 @@ Note that the GPGME backend does not support creating old-style inline (traditio
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set crypt_use_pka = no
     ```
 
@@ -231,7 +231,7 @@ See: http://www.g10code.de/docs/pka-intro.de.pdf
 
 - **Type:** quad-option
 - **Default:**
-    ```
+    ```neomuttrc
     set crypt_verify_sig = yes
     ```
 - **Scope:** Crypto only
@@ -261,7 +261,7 @@ This value is ignored if $$use_envelope_from is _unset_.
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set pgp_auto_decode = no
     ```
 
@@ -275,7 +275,7 @@ For example, if the user displays a pgp-traditional message which has not been m
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set pgp_auto_inline = no
     ```
 - **Scope:** PGP only
@@ -298,7 +298,7 @@ Also note that using the old-style PGP message format is **strongly** **deprecat
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set pgp_check_exit = yes
     ```
 - **Scope:** PGP only
@@ -313,7 +313,7 @@ A non-zero exit code means that the subprocess failed.
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set pgp_check_gpg_decrypt_status_fd = yes
     ```
 - **Scope:** PGP only
@@ -465,7 +465,7 @@ This is a format string, see the $$pgp_decode_command command for possible `prin
 - **Type:** expando
 - **Notes:** Not empty
 - **Default:**
-    ```
+    ```neomuttrc
     set pgp_entry_format = "%4n %t%f %4l/0x%k %-4a %2c %u"
     ```
 - **Scope:** Crypto only or PGP only when GPGME disabled
@@ -553,7 +553,7 @@ Use this variable if the exit code from the command is 0 even for bad signatures
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set pgp_ignore_subkeys = yes
     ```
 - **Scope:** PGP only
@@ -586,7 +586,7 @@ This is a format string, see the $$pgp_decode_command command for possible `prin
 - **Type:** sort order
 - **Notes:** Sort Reverse
 - **Default:**
-    ```
+    ```neomuttrc
     set pgp_key_sort = "address"
     ```
 - **Scope:** PGP only
@@ -615,7 +615,7 @@ Specifies how the entries in the pgp menu are sorted.
 This command is used to list the public key ring's contents.
 The output format must be analogous to the one used by:
 
-```
+```sh
 gpg --list-keys --with-colons --with-fingerprint 
 ```
 
@@ -639,7 +639,7 @@ This is a format string, see the $$pgp_decode_command command for possible `prin
 This command is used to list the secret key ring's contents.
 The output format must be analogous to the one used by:
 
-```
+```sh
 gpg --list-keys --with-colons --with-fingerprint 
 ```
 
@@ -655,7 +655,7 @@ This is a format string, see the $$pgp_decode_command command for possible `prin
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set pgp_long_ids = yes
     ```
 - **Scope:** PGP only
@@ -671,7 +671,7 @@ This option now only controls the display of key IDs in the key selection menu a
 
 - **Type:** quad-option
 - **Default:**
-    ```
+    ```neomuttrc
     set pgp_mime_auto = ask-yes
     ```
 - **Scope:** PGP only
@@ -687,7 +687,7 @@ Also note that using the old-style PGP message format is **strongly** **deprecat
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set pgp_retainable_sigs = no
     ```
 - **Scope:** PGP only
@@ -703,7 +703,7 @@ This is useful for applications like encrypted and signed mailing lists, where t
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set pgp_self_encrypt = yes
     ```
 - **Scope:** PGP only
@@ -717,7 +717,7 @@ When _set_, PGP encrypted messages will also be encrypted using the key in $$pgp
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set pgp_show_unusable = yes
     ```
 - **Scope:** PGP only
@@ -765,7 +765,7 @@ This is a format string, see the $$pgp_decode_command command for possible `prin
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set pgp_strict_enc = yes
     ```
 - **Scope:** PGP only
@@ -781,7 +781,7 @@ Please note that unsetting this variable may lead to problems with non-verifyabl
 - **Type:** number (long)
 - **Notes:** Not negative
 - **Default:**
-    ```
+    ```neomuttrc
     set pgp_timeout = 300
     ```
 - **Scope:** PGP only
@@ -795,7 +795,7 @@ The number of seconds after which a cached passphrase will expire if not used.
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set pgp_use_gpg_agent = yes
     ```
 - **Scope:** PGP only
@@ -850,7 +850,7 @@ This is a format string, see the $$pgp_decode_command command for possible `prin
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set smime_ask_cert_label = yes
     ```
 - **Scope:** S/MIME only
@@ -929,7 +929,7 @@ For examples on how to configure these formats, see the `smime.rc` in the `sampl
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set smime_decrypt_use_default_key = yes
     ```
 - **Scope:** S/MIME only
@@ -984,7 +984,7 @@ Encrypt the message to $$smime_default_key too.
 
 - **Type:** string
 - **Default:**
-    ```
+    ```neomuttrc
     set smime_encrypt_with = "aes256"
     ```
 - **Scope:** S/MIME only
@@ -1064,7 +1064,7 @@ NOTE: %c and %k will default to $$smime_sign_as if set, otherwise $$smime_defaul
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set smime_is_default = no
     ```
 - **Scope:** S/MIME only
@@ -1115,7 +1115,7 @@ This is a format string, see the $$smime_decrypt_command command for possible `p
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set smime_self_encrypt = yes
     ```
 - **Scope:** S/MIME only
@@ -1160,7 +1160,7 @@ This is a format string, see the $$smime_decrypt_command command for possible `p
 
 - **Type:** string
 - **Default:**
-    ```
+    ```neomuttrc
     set smime_sign_digest_alg = "sha256"
     ```
 - **Scope:** S/MIME only
@@ -1176,7 +1176,7 @@ Valid choices are "md5", "sha1", "sha224", "sha256", "sha384", "sha512".
 - **Type:** number
 - **Notes:** Not negative
 - **Default:**
-    ```
+    ```neomuttrc
     set smime_timeout = 300
     ```
 - **Scope:** S/MIME only

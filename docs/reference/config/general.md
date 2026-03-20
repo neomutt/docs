@@ -25,7 +25,7 @@ do not belong to a specific feature domain (such as IMAP, PGP, or Sidebar).
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set abort_backspace = yes
     ```
 
@@ -39,7 +39,7 @@ If _set_, hitting backspace against an empty prompt aborts the prompt.
 - **Type:** string
 - **Notes:** Not Empty, On Startup
 - **Default:**
-    ```
+    ```neomuttrc
     set abort_key = "\007"
     ```
 
@@ -49,7 +49,7 @@ The default is equivalent to "Ctrl-G".
 Note that the specified key should not be used in other bindings, as the abort operation has higher precedence and the binding will not have the desired effect.
 
 Example:
-```
+```neomuttrc
 set abort_key = "<Esc>" 
 ```
 
@@ -63,7 +63,7 @@ The default time is 1000 milliseconds and thus quite noticeable.
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set ascii_chars = no
     ```
 
@@ -86,8 +86,8 @@ Header field values and message body content without character encoding indicati
 By default, all the header fields and message body without any charset indication are assumed to be in "us-ascii".
 
 For example, Japanese users might prefer this:
-```
-set assumed_charset="iso-2022-jp:euc-jp:shift_jis:utf-8" 
+```neomuttrc
+set assumed_charset = "iso-2022-jp:euc-jp:shift_jis:utf-8" 
 ```
 
 However, only the first content is valid for the message body.
@@ -100,7 +100,7 @@ However, only the first content is valid for the message body.
 - **Type:** expando
 - **Notes:** Not empty
 - **Default:**
-    ```
+    ```neomuttrc
     set attach_format = "%u%D%I %t%4n %T%d %> [%.7m/%.10M, %.6e%<C?, %C>, %s] "
     ```
 
@@ -139,7 +139,7 @@ For an explanation of "soft-fill", see the $$index_format documentation.
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set auto_edit = no
     ```
 
@@ -157,7 +157,7 @@ Also see $$fast_reply.
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set auto_tag = no
     ```
 
@@ -171,7 +171,7 @@ When unset, you must first use the `<tag-prefix>` function (bound to ";" by defa
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set braille_friendly = no
     ```
 
@@ -205,7 +205,7 @@ Upon startup NeoMutt tries to derive this value from environment variables such 
 - **Type:** boolean
 - **Notes:** On Startup
 - **Default:**
-    ```
+    ```neomuttrc
     set color_directcolor = no
     ```
 
@@ -247,7 +247,7 @@ Recoding should be avoided as it may render unconvertible characters as question
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set confirm_append = yes
     ```
 
@@ -260,7 +260,7 @@ When _set_, NeoMutt will prompt for confirmation when appending messages to an e
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set confirm_create = yes
     ```
 
@@ -273,7 +273,7 @@ When _set_, NeoMutt will prompt for confirmation when saving messages to a mailb
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set copy_decode_weed = no
     ```
 
@@ -287,7 +287,7 @@ Controls whether NeoMutt will weed headers when invoking the `<decode-copy>` or 
 - **Type:** string
 - **Notes:** Not empty
 - **Default:**
-    ```
+    ```neomuttrc
     set date_format = "!%a, %b %d, %Y at %I:%M:%S%p %Z"
     ```
 
@@ -315,7 +315,7 @@ Composing: $$attribution_intro, $$forward_attribution_intro, $$forward_attributi
 - **Type:** path (string)
 - **Notes:** File only
 - **Default:**
-    ```
+    ```neomuttrc
     set debug_file = "~/.neomuttdebug"
     ```
 
@@ -336,7 +336,7 @@ See also: `$$debug_level`
 
 - **Type:** number
 - **Default:**
-    ```
+    ```neomuttrc
     set debug_level = 0
     ```
 
@@ -360,7 +360,7 @@ See also: `$$debug_file`
 
 - **Type:** quad-option
 - **Default:**
-    ```
+    ```neomuttrc
     set delete = ask-yes
     ```
 
@@ -375,7 +375,7 @@ If set to _no_, messages marked for deletion will be kept in the mailbox.
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set delete_untag = yes
     ```
 
@@ -389,7 +389,7 @@ This applies when you either explicitly delete a message, or when you save it to
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set devel_security = no
     ```
 
@@ -417,7 +417,7 @@ If the _%s_ escape does not appear in `$$editor`, a space and the name to be edi
 
 The resulting string is then executed by running:
 
-```
+```sh
 sh -c 'string' 
 ```
 
@@ -430,7 +430,7 @@ where _string_ is the expansion of `$$editor` described above.
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set flag_safe = no
     ```
 
@@ -443,7 +443,7 @@ If set, flagged messages can't be deleted.
 
 - **Type:** mailbox (string)
 - **Default:**
-    ```
+    ```neomuttrc
     set folder = "~/Mail"
     ```
 
@@ -459,7 +459,7 @@ value you need to make sure that the assignment occurs _before_ you use "+" or "
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set forward_decode = yes
     ```
 
@@ -474,7 +474,7 @@ This variable is only used, if $$mime_forward is _unset_, otherwise $$mime_forwa
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set forward_quote = no
     ```
 
@@ -504,7 +504,7 @@ If not specified, then it may be read from the environment variable `$$$EMAIL`.
 
 - **Type:** regular expression
 - **Default:**
-    ```
+    ```neomuttrc
     set gecos_mask = "^[^,]*"
     ```
 
@@ -522,7 +522,7 @@ If NeoMutt expands "stevef" to '"Franklin" stevef@foo.bar' then you should set t
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set header = no
     ```
 
@@ -556,7 +556,7 @@ Also see $$use_domain and $$hidden_host.
 
 - **Type:** expando
 - **Default:**
-    ```
+    ```neomuttrc
     set indent_string = "> "
     ```
 
@@ -574,7 +574,7 @@ This option is a format string, please see the description of $$index_format for
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set keep_flagged = no
     ```
 
@@ -589,7 +589,7 @@ Note that $$keep_flagged only has an effect if $$move is set.
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set local_date_header = yes
     ```
 
@@ -604,7 +604,7 @@ If unset a UTC date will be used instead to avoid leaking information about your
 - **Type:** number
 - **Notes:** Not negative
 - **Default:**
-    ```
+    ```neomuttrc
     set mail_check = 5
     ```
 
@@ -618,7 +618,7 @@ Also see the $$timeout variable.
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set mail_check_recent = yes
     ```
 
@@ -632,7 +632,7 @@ When _unset_, NeoMutt will notify you if any new mail exists in the mailbox, reg
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set mail_check_stats = no
     ```
 
@@ -652,7 +652,7 @@ Message statistics can also be explicitly calculated by invoking the `<check-sta
 - **Type:** number
 - **Notes:** Not negative
 - **Default:**
-    ```
+    ```neomuttrc
     set mail_check_stats_interval = 60
     ```
 
@@ -665,7 +665,7 @@ When $$mail_check_stats is _set_, this variable configures how often (in seconds
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set mark_old = yes
     ```
 
@@ -679,7 +679,7 @@ With this option _set_, the next time you start NeoMutt, the messages will show 
 
 - **Type:** mailbox (string)
 - **Default:**
-    ```
+    ```neomuttrc
     set mbox = "~/mbox"
     ```
 
@@ -694,7 +694,7 @@ Also see the $$move variable.
 
 - **Type:** enumeration
 - **Default:**
-    ```
+    ```neomuttrc
     set mbox_type = "mbox"
     ```
 
@@ -716,7 +716,7 @@ This can also be set using the `-m` command-line option.
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set message_cache_clean = no
     ```
 
@@ -749,7 +749,7 @@ Also see the $$message_cache_clean variable.
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set meta_key = no
     ```
 
@@ -764,7 +764,7 @@ This is because the result of removing the high bit from `0xf8` is `0x78`, which
 
 - **Type:** quad-option
 - **Default:**
-    ```
+    ```neomuttrc
     set move = no
     ```
 
@@ -779,7 +779,7 @@ See also $$keep_flagged.
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set pipe_decode = no
     ```
 
@@ -796,7 +796,7 @@ Also see $$pipe_decode_weed, which controls whether headers will be weeded when 
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set pipe_decode_weed = yes
     ```
 
@@ -809,7 +809,7 @@ For `<pipe-message>`, when $$pipe_decode is set, this further controls whether N
 
 - **Type:** string
 - **Default:**
-    ```
+    ```neomuttrc
     set pipe_sep = "\n"
     ```
 
@@ -822,7 +822,7 @@ The separator to add between messages when piping a list of tagged messages to a
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set pipe_split = no
     ```
 
@@ -837,7 +837,7 @@ In both cases the messages are piped in the current sorted order, and the $$pipe
 
 - **Type:** mailbox (string)
 - **Default:**
-    ```
+    ```neomuttrc
     set postponed = "~/postponed"
     ```
 
@@ -853,7 +853,7 @@ Also see the $$postpone variable.
 
 - **Type:** quad-option
 - **Default:**
-    ```
+    ```neomuttrc
     set print = ask-no
     ```
 
@@ -867,7 +867,7 @@ This is set to "ask-no" by default, because some people accidentally hit "p" oft
 
 - **Type:** command (string)
 - **Default:**
-    ```
+    ```neomuttrc
     set print_command = "lpr"
     ```
 
@@ -880,7 +880,7 @@ This specifies the command pipe that should be used to print messages.
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set print_decode = yes
     ```
 
@@ -898,7 +898,7 @@ Also see $$print_decode_weed, which controls whether headers will be weeded when
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set print_decode_weed = yes
     ```
 
@@ -911,7 +911,7 @@ For `<print-message>`, when $$print_decode is set, this further controls whether
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set print_split = no
     ```
 
@@ -928,7 +928,7 @@ Those who use the `enscript(1)` program's mail-printing mode will most likely wa
 
 - **Type:** regular expression
 - **Default:**
-    ```
+    ```neomuttrc
     set quote_regex = "^([ \t]*[|>:}#])+"
     ```
 
@@ -963,7 +963,7 @@ This option will not be used, if "$$from" is set.
 
 - **Type:** mailbox (string)
 - **Default:**
-    ```
+    ```neomuttrc
     set record = "~/sent"
     ```
 
@@ -980,7 +980,7 @@ Also see $$copy and $$write_bcc.
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set resolve = yes
     ```
 
@@ -995,7 +995,7 @@ Examples of such commands are tagging a message, deleting an entry, or saving an
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set resume_edited_draft_files = yes
     ```
 
@@ -1013,7 +1013,7 @@ This option is designed to prevent multiple signatures, user-defined headers, an
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set save_address = no
     ```
 
@@ -1027,7 +1027,7 @@ If $$save_name or $$force_name is _set_ too, the selection of the Fcc folder wil
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set save_empty = yes
     ```
 
@@ -1044,7 +1044,7 @@ If _set_, mailboxes are never removed.
 - **Type:** string list
 - **Notes:** Colon-separated, Allow empty, Strict Charset
 - **Default:**
-    ```
+    ```neomuttrc
     set send_charset = "us-ascii:iso-8859-1:utf-8"
     ```
 
@@ -1061,7 +1061,7 @@ In case the text can't be converted into one of these exactly, NeoMutt uses $$ch
 
 - **Type:** command (string)
 - **Default:**
-    ```
+    ```neomuttrc
     set shell = "/bin/sh"
     ```
 
@@ -1075,7 +1075,7 @@ If not specified, then the user's login shell from `/etc/passwd` is used.
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set size_show_bytes = no
     ```
 
@@ -1089,7 +1089,7 @@ See $formatstrings-size.
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set size_show_fractions = yes
     ```
 
@@ -1103,7 +1103,7 @@ See $formatstrings-size.
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set size_show_mb = yes
     ```
 
@@ -1117,7 +1117,7 @@ See $formatstrings-size.
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set size_units_on_left = no
     ```
 
@@ -1132,7 +1132,7 @@ See $formatstrings-size.
 - **Type:** number
 - **Notes:** Not negative
 - **Default:**
-    ```
+    ```neomuttrc
     set sleep_time = 1
     ```
 
@@ -1147,7 +1147,7 @@ The default is to pause one second, so a value of zero for this option suppresse
 - **Type:** sort order
 - **Notes:** Sort Reverse, Sort Last
 - **Default:**
-    ```
+    ```neomuttrc
     set sort = "date"
     ```
 
@@ -1194,7 +1194,7 @@ See the "Use Threads Feature" section for further explanation and examples, http
 - **Type:** sort order
 - **Notes:** Sort Reverse, Sort Last
 - **Default:**
-    ```
+    ```neomuttrc
     set sort_aux = "date"
     ```
 
@@ -1204,11 +1204,11 @@ When sorting by threads, this variable controls how subthreads are sorted within
 This can be set to any value that $$sort can, including with the use of "reverse-" and "last-" prefixes, except for variations using "threads" (in that case, NeoMutt will just use "date").
 
 For instance, 
-```
-set sort_aux=last-date-received 
+```neomuttrc
+set sort_aux = last-date-received 
 ```
 
-would mean that if a new message is received in a thread, that subthread becomes the last one displayed (or the first, if you have "`set use_threads=reverse`".)  When using $$use_threads, it is more common to use "last-" with $$sort and not with $$sort_aux.
+would mean that if a new message is received in a thread, that subthread becomes the last one displayed (or the first, if you have "`set use_threads = reverse`".)  When using $$use_threads, it is more common to use "last-" with $$sort and not with $$sort_aux.
 
 See the "Use Threads Feature" section for further explanation and examples, https://neomutt.org/feature/use-threads 
 
@@ -1235,7 +1235,7 @@ If not specified, then the environment variables `$$$MAIL` and `$$$MAILDIR` will
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set status_on_top = no
     ```
 
@@ -1249,7 +1249,7 @@ If $$help is _set_ too, it'll be placed at the bottom.
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set suspend = yes
     ```
 
@@ -1266,7 +1266,7 @@ If so, the default of $suspend is "no" otherwise "yes".  This default covers the
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set text_flowed = no
     ```
 
@@ -1287,7 +1287,7 @@ Note that $$indent_string is ignored when this option is _set_.
 - **Type:** number
 - **Notes:** Not negative
 - **Default:**
-    ```
+    ```neomuttrc
     set timeout = 600
     ```
 
@@ -1303,7 +1303,7 @@ A value of zero disables timeout hooks.
 - **Type:** path (string)
 - **Notes:** Directory only, Not empty
 - **Default:**
-    ```
+    ```neomuttrc
     set tmp_dir = "/tmp"
     ```
 
@@ -1320,7 +1320,7 @@ Failing that, then "`/tmp`" is used.
 - **Type:** path (string)
 - **Notes:** Directory only, Not empty
 - **Default:**
-    ```
+    ```neomuttrc
     set tmp_draft_dir = "/var/tmp"
     ```
 
@@ -1333,7 +1333,7 @@ It is recommended that this be set to a directory whose contents won't be remove
 
 --------------------------------------------------------------------------------
 
-trash=
+(trash)=
 ## `$trash`
 
 - **Type:** mailbox (string)
@@ -1353,7 +1353,7 @@ NOTE: When you delete a message in the trash folder, it is really deleted, so th
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set use_domain = yes
     ```
 
@@ -1367,7 +1367,7 @@ If _unset_, no addresses will be qualified.
 
 - **Type:** enumeration
 - **Default:**
-    ```
+    ```neomuttrc
     set use_threads = "unset"
     ```
 
@@ -1384,7 +1384,7 @@ The style of threading used in the index.
 If this variable is never set, then `$$sort` controls whether threading is used, `$$sort_aux` controls both the sorting of threads and subthreads, and using `<sort-mailbox>` to select threads affects only `$$sort`.  Once this variable is set, attempting to set `$$sort` to a value using "threads" will warn, the value of `$$sort` controls the sorting between threads while `$$sort_aux` controls sorting within a thread, and `<sort-mailbox>` toggles `$$use_threads`.
 
 Example:
-```
+```neomuttrc
 set use_threads = yes 
 ```
 
@@ -1397,7 +1397,7 @@ See the "Use Threads Feature" section for further explanation and examples.
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set wait_key = yes
     ```
 
@@ -1415,7 +1415,7 @@ When _unset_, NeoMutt will wait for a key only if the external command returned 
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set weed = yes
     ```
 
@@ -1430,7 +1430,7 @@ Also see $$copy_decode_weed, $$pipe_decode_weed, $$print_decode_weed.
 
 - **Type:** number
 - **Default:**
-    ```
+    ```neomuttrc
     set wrap = 0
     ```
 
@@ -1447,7 +1447,7 @@ Also see $$reflow_wrap.
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set wrap_search = yes
     ```
 

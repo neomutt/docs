@@ -22,7 +22,7 @@ how-to guides and explanation pages instead.
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set auto_subscribe = no
     ```
 
@@ -37,7 +37,7 @@ Parsing and checking these things slows header reading down, so this option is d
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set honor_disposition = no
     ```
 
@@ -54,7 +54,7 @@ If _unset_, NeoMutt will render all MIME parts it can properly transform to plai
 - **Type:** string list
 - **Notes:** Comma-separated
 - **Default:**
-    ```
+    ```neomuttrc
     set hidden_tags = "unread,draft,flagged,passed,replied,attachment,signed,encrypted"
     ```
 
@@ -67,7 +67,7 @@ This variable specifies a list of comma-separated private notmuch/imap tags whic
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set implicit_auto_view = no
     ```
 
@@ -81,7 +81,7 @@ If such an entry is found, NeoMutt will use the viewer defined in that entry to 
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set include_encrypted = no
     ```
 
@@ -97,7 +97,7 @@ If a previously encrypted message were attached by the attacker, they could tric
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set include_only_first = no
     ```
 
@@ -111,7 +111,7 @@ Controls whether or not NeoMutt includes only the first attachment of the messag
 - **Type:** string list
 - **Notes:** Colon-separated
 - **Default:**
-    ```
+    ```neomuttrc
     set mailcap_path = "~/.mailcap:" PKGDATADIR "/mailcap:" SYSCONFDIR "/mailcap:/etc/mailcap:/usr/etc/mailcap:/usr/local/etc/mailcap"
     ```
 
@@ -129,7 +129,7 @@ The default search path is from RFC1524.
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set mailcap_sanitize = yes
     ```
 
@@ -154,8 +154,8 @@ This variable specifies a list of comma-separated languages.
 RFC8255 : user preferred languages to be searched in parts and display.
 
 Example:
-```
-set preferred_languages="en,fr,de" 
+```neomuttrc
+set preferred_languages = "en,fr,de" 
 ```
 
 --------------------------------------------------------------------------------
@@ -165,7 +165,7 @@ set preferred_languages="en,fr,de"
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set reflow_space_quotes = yes
     ```
 
@@ -182,7 +182,7 @@ Also, this option does not affect replies when $$text_flowed is _set_.
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set reflow_text = yes
     ```
 
@@ -199,7 +199,7 @@ Also see $$reflow_wrap, and $$wrap.
 
 - **Type:** number
 - **Default:**
-    ```
+    ```neomuttrc
     set reflow_wrap = 78
     ```
 
@@ -221,7 +221,7 @@ Also see $$wrap.
 - **Type:** regular expression
 - **Notes:** Localised
 - **Default:**
-    ```
+    ```neomuttrc
     set reply_regex = "^((re)(\\[[0-9]+\\])*:[ \t]*)*"
     ```
 
@@ -253,20 +253,20 @@ If that fixes the problem, then once the variable is set to your liking, remove 
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set reverse_alias = no
     ```
 
 This variable controls whether or not NeoMutt will display the "personal" name from your aliases in the index menu if it finds an alias that matches the message's sender.
 For example, if you have the following alias:
 
-```
+```neomuttrc
 alias juser abd30425@somewhere.net (Joe User)
 ```
 
 and then you receive mail which contains the following header:
 
-```
+```mail
 From: abd30425@somewhere.net 
 ```
 
@@ -279,7 +279,7 @@ It would be displayed in the index menu as "Joe User" instead of "abd30425@somew
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set rfc2047_parameters = yes
     ```
 
@@ -305,7 +305,7 @@ Instead, NeoMutt will unconditionally use the encoding specified in RFC2231.
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set score = yes
     ```
 
@@ -319,7 +319,7 @@ This can be useful to selectively disable scoring for certain folders when the $
 
 - **Type:** number
 - **Default:**
-    ```
+    ```neomuttrc
     set score_threshold_delete = -1
     ```
 
@@ -333,7 +333,7 @@ Since NeoMutt scores are always greater than or equal to zero, the default setti
 
 - **Type:** number
 - **Default:**
-    ```
+    ```neomuttrc
     set score_threshold_flag = 9999
     ```
 
@@ -346,7 +346,7 @@ Messages which have been assigned a score greater than or equal to this variable
 
 - **Type:** number
 - **Default:**
-    ```
+    ```neomuttrc
     set score_threshold_read = -1
     ```
 
@@ -375,7 +375,7 @@ When not set, the default behavior is to show only the chosen alternative.
 
 - **Type:** string
 - **Default:**
-    ```
+    ```neomuttrc
     set spam_separator = ","
     ```
 

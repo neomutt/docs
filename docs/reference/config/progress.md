@@ -23,7 +23,7 @@ how-to guides and explanation pages instead.
 - **Type:** number
 - **Notes:** Not negative
 - **Default:**
-    ```
+    ```neomuttrc
     set net_inc = 10
     ```
 
@@ -40,7 +40,7 @@ See also $$read_inc, $$write_inc and $$net_inc.
 - **Type:** number
 - **Notes:** Not negative
 - **Default:**
-    ```
+    ```neomuttrc
     set read_inc = 10
     ```
 
@@ -59,7 +59,7 @@ Also see the $$write_inc, $$net_inc and $$time_inc variables and the "$tuning" s
 - **Type:** number
 - **Notes:** Not negative
 - **Default:**
-    ```
+    ```neomuttrc
     set time_inc = 0
     ```
 
@@ -77,7 +77,7 @@ Also see the "$tuning" section of the manual for performance considerations.
 - **Type:** number
 - **Notes:** Not negative
 - **Default:**
-    ```
+    ```neomuttrc
     set write_inc = 10
     ```
 

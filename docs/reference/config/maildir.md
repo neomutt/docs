@@ -22,7 +22,7 @@ how-to guides and explanation pages instead.
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set check_new = yes
     ```
 
@@ -39,7 +39,7 @@ If this variable is _unset_, no check for new mail is performed while the mailbo
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set maildir_check_cur = no
     ```
 
@@ -55,7 +55,7 @@ Note that setting this option may slow down polling for new messages in large fo
 - **Type:** string
 - **Notes:** Not Empty, On Startup
 - **Default:**
-    ```
+    ```neomuttrc
     set maildir_field_delimiter = ":"
     ```
 
@@ -75,7 +75,7 @@ Setting it will have no effect on other mailbox types.
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set maildir_header_cache_verify = yes
     ```
 
@@ -89,7 +89,7 @@ This incurs one `stat(2)` per message every time the folder is opened (which can
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set maildir_trash = no
     ```
 

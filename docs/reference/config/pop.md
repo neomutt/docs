@@ -36,7 +36,7 @@ If this option is _unset_ (the default) NeoMutt will try all available methods, 
 Example:
 
 ```neomuttrc
-set pop_authenticators="digest-md5:apop:user"
+set pop_authenticators = "digest-md5:apop:user"
 ```
 
 --------------------------------------------------------------------------------
@@ -46,7 +46,7 @@ set pop_authenticators="digest-md5:apop:user"
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set pop_auth_try_all = yes
     ```
 
@@ -62,7 +62,7 @@ If a method is available but authentication fails, NeoMutt will not connect to t
 - **Type:** number
 - **Notes:** Not negative
 - **Default:**
-    ```
+    ```neomuttrc
     set pop_check_interval = 60
     ```
 
@@ -75,7 +75,7 @@ This variable configures how often (in seconds) NeoMutt should look for new mail
 
 - **Type:** quad-option
 - **Default:**
-    ```
+    ```neomuttrc
     set pop_delete = ask-no
     ```
 
@@ -109,7 +109,7 @@ where "[...]" denotes an optional part.
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set pop_last = no
     ```
 
@@ -155,7 +155,7 @@ If _unset_, NeoMutt will prompt you for your password when you open a POP mailbo
 
 - **Type:** quad-option
 - **Default:**
-    ```
+    ```neomuttrc
     set pop_reconnect = ask-yes
     ```
 

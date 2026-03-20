@@ -22,7 +22,7 @@ how-to guides and explanation pages instead.
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set browser_abbreviate_mailboxes = yes
     ```
 
@@ -40,7 +40,7 @@ In those cases, it may be desirable to _unset_ this variable.
 - **Type:** sort order
 - **Notes:** Sort Reverse
 - **Default:**
-    ```
+    ```neomuttrc
     set browser_sort = "alpha"
     ```
 
@@ -67,7 +67,7 @@ Specifies how to sort entries in the file browser.
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set browser_sort_dirs_first = no
     ```
 
@@ -81,7 +81,7 @@ If this variable is _set_, the browser will group directories before files.
 - **Type:** expando
 - **Notes:** Not empty
 - **Default:**
-    ```
+    ```neomuttrc
     set folder_format = "%2C %t %N %F %2l %-8.8u %-8.8g %8s %d %i"
     ```
 
@@ -129,7 +129,7 @@ For an explanation of "soft-fill", see the $$index_format documentation.
 - **Type:** expando
 - **Notes:** Not empty
 - **Default:**
-    ```
+    ```neomuttrc
     set group_index_format = "%4C %M%N %5s  %-45.45f %d"
     ```
 
@@ -159,7 +159,7 @@ This string is similar to "$index_format", but has its own set of printf()-like 
 - **Type:** expando
 - **Notes:** Not empty
 - **Default:**
-    ```
+    ```neomuttrc
     set mailbox_folder_format = "%2C %<n?%6n&      > %6m %i"
     ```
 
@@ -175,7 +175,7 @@ This string is identical in formatting to the one used by "$$folder_format".
 - **Type:** regular expression
 - **Notes:** Match Case, Allow Not, No Sub-match
 - **Default:**
-    ```
+    ```neomuttrc
     set mask = "!^\\.[^.]"
     ```
 
@@ -189,7 +189,7 @@ The match is always case-sensitive.
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set show_only_unread = no
     ```
 

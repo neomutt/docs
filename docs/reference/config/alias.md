@@ -23,7 +23,7 @@ how-to guides and explanation pages instead.
 - **Type:** path (string)
 - **Notes:** File only
 - **Default:**
-    ```
+    ```neomuttrc
     set alias_file = "~/.neomuttrc"
     ```
 
@@ -42,7 +42,7 @@ The default for this option is the currently used neomuttrc file, or "~/.neomutt
 - **Type:** expando
 - **Notes:** Not empty
 - **Default:**
-    ```
+    ```neomuttrc
     set alias_format = "%3i %f%t %-15a %-56A | %C%> %Y"
     ```
 
@@ -82,7 +82,7 @@ The following sequences are deprecated; they will be removed in the future.
 - **Type:** sort order
 - **Notes:** Sort Reverse
 - **Default:**
-    ```
+    ```neomuttrc
     set alias_sort = "alias"
     ```
 
@@ -129,7 +129,7 @@ See "$query": https://neomutt.org/guide/advancedusage.html#query
 - **Type:** expando
 - **Notes:** Not empty
 - **Default:**
-    ```
+    ```neomuttrc
     set query_format = "%3i %t %-25N %-25E | %C%> %Y"
     ```
 

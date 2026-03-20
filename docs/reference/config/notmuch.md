@@ -23,7 +23,7 @@ how-to guides and explanation pages instead.
 - **Type:** path (string)
 - **Notes:** File only
 - **Default:**
-    ```
+    ```neomuttrc
     set nm_config_file = "auto"
     ```
 
@@ -51,7 +51,7 @@ Configuration profile for notmuch.
 - **Type:** number
 - **Notes:** Not negative
 - **Default:**
-    ```
+    ```neomuttrc
     set nm_db_limit = 0
     ```
 
@@ -90,7 +90,7 @@ The messages tagged with these tags are excluded and not loaded from notmuch DB 
 
 - **Type:** string
 - **Default:**
-    ```
+    ```neomuttrc
     set nm_flagged_tag = "flagged"
     ```
 
@@ -107,7 +107,7 @@ flags.
 - **Type:** number
 - **Notes:** Not negative
 - **Default:**
-    ```
+    ```neomuttrc
     set nm_open_timeout = 5
     ```
 
@@ -120,7 +120,7 @@ This variable specifies the timeout for database open in seconds.
 
 - **Type:** string
 - **Default:**
-    ```
+    ```neomuttrc
     set nm_query_type = "messages"
     ```
 
@@ -133,7 +133,7 @@ This variable specifies the default query type (threads or messages) used in not
 
 - **Type:** number
 - **Default:**
-    ```
+    ```neomuttrc
     set nm_query_window_current_position = 0
     ```
 
@@ -160,7 +160,7 @@ This variable contains the currently setup notmuch search for window based vfold
 - **Type:** number
 - **Notes:** Not negative
 - **Default:**
-    ```
+    ```neomuttrc
     set nm_query_window_duration = 0
     ```
 
@@ -175,7 +175,7 @@ A value of 0 disables the feature.
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set nm_query_window_enable = no
     ```
 
@@ -207,7 +207,7 @@ notmuch://?query=tag:inbox and (date:... or (tag:flagged and tag:unread))
 
 - **Type:** string
 - **Default:**
-    ```
+    ```neomuttrc
     set nm_query_window_timebase = "week"
     ```
 
@@ -235,7 +235,7 @@ See the description of the `<modify-labels>` function for the syntax.
 
 - **Type:** string
 - **Default:**
-    ```
+    ```neomuttrc
     set nm_replied_tag = "replied"
     ```
 
@@ -250,7 +250,7 @@ All other NeoMutt commands use standard (e.g. maildir) flags.
 
 - **Type:** string
 - **Default:**
-    ```
+    ```neomuttrc
     set nm_unread_tag = "unread"
     ```
 
@@ -265,7 +265,7 @@ All other NeoMutt commands use standard (e.g. maildir) flags.
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set virtual_spool_file = no
     ```
 

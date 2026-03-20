@@ -22,7 +22,7 @@ how-to guides and explanation pages instead.
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set beep = yes
     ```
 
@@ -35,7 +35,7 @@ When this variable is _set_, NeoMutt will beep when an error occurs.
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set collapse_flagged = yes
     ```
 
@@ -48,7 +48,7 @@ When _unset_, NeoMutt will not collapse a thread if it contains any flagged mess
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set collapse_unread = yes
     ```
 
@@ -61,7 +61,7 @@ When _unset_, NeoMutt will not collapse a thread if it contains any unread messa
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set duplicate_threads = yes
     ```
 
@@ -75,7 +75,7 @@ If it is _set_, it will indicate that it thinks they are duplicates of each othe
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set hide_limited = no
     ```
 
@@ -88,7 +88,7 @@ When _set_, NeoMutt will not show the presence of messages that are hidden by li
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set hide_missing = yes
     ```
 
@@ -101,7 +101,7 @@ When _set_, NeoMutt will not show the presence of missing messages in the thread
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set hide_thread_subject = yes
     ```
 
@@ -114,7 +114,7 @@ When _set_, NeoMutt will not show the subject of messages in the thread tree tha
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set hide_top_limited = no
     ```
 
@@ -128,7 +128,7 @@ Note that when $$hide_limited is _set_, this option will have no effect.
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set hide_top_missing = yes
     ```
 
@@ -142,7 +142,7 @@ Note that when $$hide_missing is _set_, this option will have no effect.
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set narrow_tree = no
     ```
 
@@ -155,7 +155,7 @@ This variable, when _set_, makes the thread tree narrower, allowing deeper threa
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set sort_re = yes
     ```
 
@@ -171,7 +171,7 @@ With $$sort_re _unset_, neomutt will attach the message whether or not this is t
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set strict_threads = no
     ```
 
@@ -187,7 +187,7 @@ See also $$sort_re for a less drastic way of controlling this behavior.
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set thread_received = no
     ```
 

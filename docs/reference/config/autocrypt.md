@@ -22,7 +22,7 @@ how-to guides and explanation pages instead.
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set autocrypt = no
     ```
 - **Scope:** Autocrypt only
@@ -37,7 +37,7 @@ See "$autocryptdoc" for more details.
 
 - **Type:** expando
 - **Default:**
-    ```
+    ```neomuttrc
     set autocrypt_acct_format = "%4n %-30a %20p %10s"
     ```
 - **Scope:** Autocrypt only
@@ -64,7 +64,7 @@ The following `printf(3)`-style sequences are understood
 - **Type:** path (string)
 - **Notes:** Directory only
 - **Default:**
-    ```
+    ```neomuttrc
     set autocrypt_dir = "~/.mutt/autocrypt"
     ```
 - **Scope:** Autocrypt only
@@ -79,7 +79,7 @@ See "$autocryptdoc" for more details.
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set autocrypt_reply = yes
     ```
 - **Scope:** Autocrypt only

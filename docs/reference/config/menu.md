@@ -22,7 +22,7 @@ how-to guides and explanation pages instead.
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set arrow_cursor = no
     ```
 
@@ -37,7 +37,7 @@ On slow network or modem links this will make response faster because there is l
 - **Type:** string
 - **Notes:** Not empty
 - **Default:**
-    ```
+    ```neomuttrc
     set arrow_string = "->"
     ```
 
@@ -51,7 +51,7 @@ Specifies the string of arrow_cursor when arrow_cursor enabled.
 - **Type:** number
 - **Notes:** Not negative
 - **Default:**
-    ```
+    ```neomuttrc
     set menu_context = 0
     ```
 
@@ -65,7 +65,7 @@ This variable controls the number of lines of context that are given when scroll
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set menu_move_off = yes
     ```
 
@@ -79,7 +79,7 @@ When _set_, the bottom entry may move off the bottom.
 
 - **Type:** boolean
 - **Default:**
-    ```
+    ```neomuttrc
     set menu_scroll = no
     ```
 
