@@ -45,9 +45,9 @@ The default value matches if the message is either from a user matching the regu
     set force_name = no
     ```
 
-This variable is similar to $$save_name, except that NeoMutt will store a copy of your outgoing message by the username of the address you are sending to even if that mailbox does not exist.
+This variable is similar to [$save_name](save-name), except that NeoMutt will store a copy of your outgoing message by the username of the address you are sending to even if that mailbox does not exist.
 
-Also see the $$record variable.
+Also see the [$record](record) variable.
 
 --------------------------------------------------------------------------------
 
@@ -61,7 +61,7 @@ Also see the $$record variable.
     ```
 
 This variable controls how copies of outgoing messages are saved.
-When _set_, a check is made to see if a mailbox specified by the recipient address exists (this is done by searching for a mailbox in the $$folder directory with the _username_ part of the recipient address).  If the mailbox exists, the outgoing message will be saved to that mailbox, otherwise the message is saved to the $$record mailbox.
+When _set_, a check is made to see if a mailbox specified by the recipient address exists (this is done by searching for a mailbox in the [$folder](folder) directory with the _username_ part of the recipient address).  If the mailbox exists, the outgoing message will be saved to that mailbox, otherwise the message is saved to the [$record](record) mailbox.
 
-Also see the $$force_name variable.
+Also see the [$force_name](force-name) variable.
 

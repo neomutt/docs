@@ -26,11 +26,11 @@ how-to guides and explanation pages instead.
     set sidebar_component_depth = 0
     ```
 
-By default the sidebar will show the mailbox's path, relative to the $$folder variable.
+By default the sidebar will show the mailbox's path, relative to the [$folder](folder) variable.
 This specifies the number of parent directories to hide from display in the sidebar.
 For example: If a maildir is normally displayed in the sidebar as dir1/dir2/dir3/maildir, setting `set sidebar_component_depth = 2` will display it as dir3/maildir, having truncated the 2 highest directories.
 
-**See also:** $$sidebar_short_path 
+**See also:** [$sidebar_short_path](sidebar-short-path) 
 
 --------------------------------------------------------------------------------
 
@@ -57,7 +57,7 @@ IMAP mailboxes are often named: 'folder1.folder2.mailbox'.
 set sidebar_delim_chars = '.'
 ```
 
-**See also:** $$sidebar_short_path, $$sidebar_folder_indent, $$sidebar_indent_string.
+**See also:** [$sidebar_short_path](sidebar-short-path), [$sidebar_folder_indent](sidebar-folder-indent), [$sidebar_indent_string](sidebar-indent-string).
 
 --------------------------------------------------------------------------------
 
@@ -91,7 +91,7 @@ If empty, setting the sidebar_background color may help distinguish the sidebar 
 
 Set this to indent mailboxes in the sidebar.
 
-**See also:** $$sidebar_short_path, $$sidebar_indent_string, $$sidebar_delim_chars.
+**See also:** [$sidebar_short_path](sidebar-short-path), [$sidebar_indent_string](sidebar-indent-string), [$sidebar_delim_chars](sidebar-delim-chars).
 
 --------------------------------------------------------------------------------
 
@@ -106,7 +106,7 @@ Set this to indent mailboxes in the sidebar.
     ```
 
 This variable allows you to customize the sidebar display.
-This string is similar to $$index_format, but has its own set of `printf(3)`-like sequences:
+This string is similar to [$index_format](index-format), but has its own set of `printf(3)`-like sequences:
 
 | Short  | Long Name           | Cur | Description                                                                                |
 |--------|---------------------|-----|--------------------------------------------------------------------------------------------|
@@ -131,7 +131,7 @@ This string is similar to $$index_format, but has its own set of `printf(3)`-lik
 
 **Cur** = Only applicable to the current folder 
 
-In order to use %S, %N, %F, and %!, $$mail_check_stats must be _set_.
+In order to use %S, %N, %F, and %!, [$mail_check_stats](mail-check-stats) must be _set_.
 When thus set, a suggested value for this option is "%B%<F? [%F]>%* %<N?%N/>%S".
 
 --------------------------------------------------------------------------------
@@ -148,7 +148,7 @@ When thus set, a suggested value for this option is "%B%<F? [%F]>%* %<N?%N/>%S".
 This specifies the string that is used to indent mailboxes in the sidebar.
 It defaults to two spaces.
 
-**See also:** $$sidebar_short_path, $$sidebar_folder_indent, $$sidebar_delim_chars.
+**See also:** [$sidebar_short_path](sidebar-short-path), [$sidebar_folder_indent](sidebar-folder-indent), [$sidebar_delim_chars](sidebar-delim-chars).
 
 --------------------------------------------------------------------------------
 
@@ -163,7 +163,7 @@ It defaults to two spaces.
 
 When set, the sidebar will only display mailboxes containing new, or flagged, mail.
 
-**See also:** $sidebar-pin, $$sidebar_non_empty_mailbox_only.
+**See also:** $sidebar-pin, [$sidebar_non_empty_mailbox_only](sidebar-non-empty-mailbox-only).
 
 --------------------------------------------------------------------------------
 
@@ -192,7 +192,7 @@ The `<sidebar-prev-new>` command is similarly affected, wrapping around to the e
 
 When set, the sidebar will only display mailboxes that contain one or more mails.
 
-**See also:** $$sidebar_new_mail_only, $sidebar-pin.
+**See also:** [$sidebar_new_mail_only](sidebar-new-mail-only), $sidebar-pin.
 
 --------------------------------------------------------------------------------
 
@@ -218,7 +218,7 @@ When set, the sidebar will appear on the right-hand side of the screen.
     set sidebar_short_path = no
     ```
 
-By default the sidebar will show the mailbox's path, relative to the $$folder variable.
+By default the sidebar will show the mailbox's path, relative to the [$folder](folder) variable.
 Setting `set sidebar_shortpath = yes` will shorten the names relative to the previous name.
 Here's an example:
 
@@ -229,7 +229,7 @@ Here's an example:
 | `fruit.banana`  | `banana`      | `..banana`                                      |
 | `fruit.cherry`  | `cherry`      | `..cherry`                                      |
 
-**See also:** $$sidebar_delim_chars, $$sidebar_folder_indent, $$sidebar_indent_string, $$sidebar_component_depth.
+**See also:** [$sidebar_delim_chars](sidebar-delim-chars), [$sidebar_folder_indent](sidebar-folder-indent), [$sidebar_indent_string](sidebar-indent-string), [$sidebar_component_depth](sidebar-component-depth).
 
 --------------------------------------------------------------------------------
 
@@ -274,7 +274,7 @@ Specifies how to sort mailbox entries in the sidebar.
 This specifies whether or not to show sidebar.
 The sidebar shows a list of all your mailboxes.
 
-**See also:** $$sidebar_format, $$sidebar_width 
+**See also:** [$sidebar_format](sidebar-format), [$sidebar_width](sidebar-width) 
 
 --------------------------------------------------------------------------------
 

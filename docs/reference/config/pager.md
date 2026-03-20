@@ -34,7 +34,7 @@ Note that this may override your color choices, and even present a security prob
 [-- PGP output follows ...
 ```
 
-and give it the same color as your attachment color (see also $$crypt_timestamp).
+and give it the same color as your attachment color (see also [$crypt_timestamp](crypt-timestamp)).
 
 --------------------------------------------------------------------------------
 
@@ -48,7 +48,7 @@ and give it the same color as your attachment color (see also $$crypt_timestamp)
     ```
 
 When set, specifies a command used to filter messages.
-When a message is viewed it is passed as standard input to $$display_filter, and the filtered message is read from the standard output.
+When a message is viewed it is passed as standard input to [$display_filter](display-filter), and the filtered message is read from the standard output.
 
 When preparing the message, NeoMutt inserts some escape sequences into the text.
 They are of the form: `<esc>]9;XXX<bel>` where "XXX" is a random 64-bit number.
@@ -92,7 +92,7 @@ See "$color" for more details.
 Controls the display of wrapped lines in the internal pager.
 If set, a "+" marker is displayed at the beginning of wrapped lines.
 
-Also see the $$smart_wrap variable.
+Also see the [$smart_wrap](smart-wrap) variable.
 
 --------------------------------------------------------------------------------
 
@@ -140,7 +140,7 @@ If positive, this many lines will be given before a match, if 0, the match will 
     ```
 
 This variable controls the format of the one-line message "status" displayed before each message in either the internal or an external pager.
-The valid sequences are listed in the $$index_format section.
+The valid sequences are listed in the [$index_format](index-format) section.
 
 --------------------------------------------------------------------------------
 
@@ -173,7 +173,7 @@ A value of 0 results in no index being shown.
 
 Determines the number of seconds that must elapse after first opening a new message in the pager before that message will be marked as read.
 A value of 0 results in the message being marked read unconditionally; for other values, navigating to another message or exiting the pager before the timeout will leave the message marked unread.
-This setting is ignored if $$pager is set.
+This setting is ignored if [$pager](pager) is set.
 
 --------------------------------------------------------------------------------
 
@@ -216,7 +216,7 @@ function.
     set prompt_after = yes
     ```
 
-If you use an _external_ $$pager, setting this variable will cause NeoMutt to prompt you for a command when the pager exits rather than returning to the index menu.
+If you use an _external_ [$pager](pager), setting this variable will cause NeoMutt to prompt you for a command when the pager exits rather than returning to the index menu.
 If _unset_, NeoMutt will return to the index menu when the external pager exits.
 
 --------------------------------------------------------------------------------
@@ -248,7 +248,7 @@ By default, search results will be top-aligned.
 Controls the display of lines longer than the screen width in the internal pager.
 If _set_, long lines are wrapped at a word boundary.
 If _unset_, lines are simply wrapped at the screen edge.
-Also see the $$markers variable.
+Also see the [$markers](markers) variable.
 
 --------------------------------------------------------------------------------
 
@@ -261,7 +261,7 @@ Also see the $$markers variable.
     set smileys = "(>From )|(:[-^]?[][)(><}{|/DP])"
     ```
 
-The _pager_ uses this variable to catch some common false positives of $$quote_regex, most notably smileys and not consider a line quoted text if it also matches $$smileys.
+The _pager_ uses this variable to catch some common false positives of [$quote_regex](quote-regex), most notably smileys and not consider a line quoted text if it also matches [$smileys](smileys).
 This mostly happens at the beginning of a line.
 
 --------------------------------------------------------------------------------

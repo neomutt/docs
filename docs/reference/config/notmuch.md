@@ -225,7 +225,7 @@ Accepted values are 'minute', 'hour', 'day', 'week', 'month', 'year'.
     set nm_record_tags = ""
     ```
 
-This variable specifies the notmuch tag modifications (addition, removal, toggling) applied to messages added to the NeoMutt record when $$nm_record is true.
+This variable specifies the notmuch tag modifications (addition, removal, toggling) applied to messages added to the NeoMutt record when [$nm_record](nm-record) is true.
 See the description of the `<modify-labels>` function for the syntax.
 
 --------------------------------------------------------------------------------

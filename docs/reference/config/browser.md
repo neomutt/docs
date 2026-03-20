@@ -28,7 +28,7 @@ how-to guides and explanation pages instead.
 
 When this variable is _set_, NeoMutt will abbreviate mailbox names in the browser mailbox list, using '~' and '=' shortcuts.
 
-The default `"alpha"` setting of $$browser_sort uses locale-based sorting (using `strcoll(3)`), which ignores some punctuation.
+The default `"alpha"` setting of [$browser_sort](browser-sort) uses locale-based sorting (using `strcoll(3)`), which ignores some punctuation.
 This can lead to some situations where the order doesn't make intuitive sense.
 In those cases, it may be desirable to _unset_ this variable.
 
@@ -86,7 +86,7 @@ If this variable is _set_, the browser will group directories before files.
     ```
 
 This variable allows you to customize the file browser display to your personal taste.
-This string is similar to $$index_format, but has its own set of `printf(3)`-like sequences:
+This string is similar to [$index_format](index-format), but has its own set of `printf(3)`-like sequences:
 
 | Short    | Long Name           | Description                                                                                          |
 |----------|---------------------|------------------------------------------------------------------------------------------------------|
@@ -113,7 +113,7 @@ This string is similar to $$index_format, but has its own set of `printf(3)`-lik
 | `%>X`    | `%{padding-hard:X}` | Right justify the rest of the string and pad with character `X`                                      |
 | `%\|X`   | `%{padding-eol:X}`  | Pad to the end of the line with character `X`                                                        |
 
-For an explanation of "soft-fill", see the $$index_format documentation.
+For an explanation of "soft-fill", see the [$index_format](index-format) documentation.
 
 * = can be optionally printed if nonzero
 
@@ -165,7 +165,7 @@ This string is similar to "$index_format", but has its own set of printf()-like 
 
 This variable allows you to customize the file browser display to your personal taste.
 It's only used to customize network mailboxes (e.g. imap).
-This string is identical in formatting to the one used by "$$folder_format".
+This string is identical in formatting to the one used by "[$folder_format](folder-format)".
 
 --------------------------------------------------------------------------------
 

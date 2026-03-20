@@ -45,7 +45,7 @@ It doesn't keep track of which message is the typed message if the entries are r
     ```
 
 Controls the format of the status line displayed in the "compose" menu.
-This string is similar to $$status_format, but has its own set of `printf(3)`-like sequences:
+This string is similar to [$status_format](status-format), but has its own set of `printf(3)`-like sequences:
 
 | Short  | Long Name           | Description                                                              |
 |--------|---------------------|--------------------------------------------------------------------------|
@@ -57,7 +57,7 @@ This string is similar to $$status_format, but has its own set of `printf(3)`-li
 | `%>X`  | `%{padding-hard:X}` | Right justify the rest of the string and pad with character `X`          |
 | `%\|X` | `%{padding-eol:X}`  | Pad to the end of the line with character `X`                            |
 
-See the text describing the $$status_format option for more information on how to set $$compose_format.
+See the text describing the [$status_format](status-format) option for more information on how to set [$compose_format](compose-format).
 
 --------------------------------------------------------------------------------
 
@@ -125,7 +125,7 @@ When _set_, NeoMutt will display user-defined headers (set via $my-header or fro
     ```
 
 This variable controls whether or not copies of your outgoing messages will be saved for later references.
-Also see $$record, $$save_name, $$force_name and "$fcc-hook".
+Also see [$record](record), [$save_name](save-name), [$force_name](force-name) and "$fcc-hook".
 
 --------------------------------------------------------------------------------
 
@@ -170,8 +170,8 @@ How to invoke ispell (GNU's spell-checking software).
     set postpone = ask-yes
     ```
 
-Controls whether or not messages are saved in the $$postponed mailbox when you elect not to send immediately.
+Controls whether or not messages are saved in the [$postponed](postponed) mailbox when you elect not to send immediately.
 If set to _ask-yes_ or _ask-no_, you will be prompted with "Save (postpone) draft message?" when quitting from the "compose" screen.
 
-Also see the $$recall variable.
+Also see the [$recall](recall) variable.
 

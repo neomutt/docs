@@ -34,7 +34,7 @@ Note that strings (e.g. commands) starting with a space are never recorded in th
 This is for example useful to prevent leaking sensitive information into the history file or for one off tests.
 
 Also note that a string is not added to the history if it exactly matches its immediate predecessor, e.g. executing the same command twice in a row results in only one copy being added to the history.
-To prevent duplicates over all entries use $$history_remove_dups.
+To prevent duplicates over all entries use [$history_remove_dups](history-remove-dups).
 
 --------------------------------------------------------------------------------
 
@@ -50,7 +50,7 @@ To prevent duplicates over all entries use $$history_remove_dups.
 
 The file in which NeoMutt will save its history.
 
-Also see $$save_history.
+Also see [$save_history](save-history).
 
 --------------------------------------------------------------------------------
 
@@ -64,7 +64,7 @@ Also see $$save_history.
     ```
 
 Controls the format of the entries of the history list.
-This string is similar to $$index_format, but has its own set of `printf(3)`-like sequences:
+This string is similar to [$index_format](index-format), but has its own set of `printf(3)`-like sequences:
 
 | Short  | Long Name           | Description                                                     |
 |--------|---------------------|-----------------------------------------------------------------|
@@ -86,7 +86,7 @@ This string is similar to $$index_format, but has its own set of `printf(3)`-lik
     ```
 
 When _set_, all of the string history will be scanned for duplicates when a new entry is added.
-Duplicate entries in the $$history_file will also be removed when it is periodically compacted.
+Duplicate entries in the [$history_file](history-file) will also be removed when it is periodically compacted.
 
 --------------------------------------------------------------------------------
 
@@ -100,8 +100,8 @@ Duplicate entries in the $$history_file will also be removed when it is periodic
     set save_history = 0
     ```
 
-This variable controls the size of the history (per category) saved in the $$history_file file.
+This variable controls the size of the history (per category) saved in the [$history_file](history-file) file.
 
-Setting this to a value greater than $$history is possible.
-However, there will never be more than $$history entries to select from even if more are recorded in the history file.
+Setting this to a value greater than [$history](history) is possible.
+However, there will never be more than [$history](history) entries to select from even if more are recorded in the history file.
 

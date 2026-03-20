@@ -30,7 +30,7 @@ When _unset_, NeoMutt will mimic mh's behavior and rename deleted messages to _,
 This leaves the message on disk but makes programs reading the folder ignore it.
 If the variable is _set_, the message files will simply be deleted.
 
-This option is similar to $$maildir_trash for Maildir folders.
+This option is similar to [$maildir_trash](maildir-trash) for Maildir folders.
 
 --------------------------------------------------------------------------------
 

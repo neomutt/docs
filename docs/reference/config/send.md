@@ -26,7 +26,7 @@ how-to guides and explanation pages instead.
     set abort_noattach = no
     ```
 
-If set to _yes_, when composing messages containing the regular expression specified by $$abort_noattach_regex and no attachments are given, composition will be aborted.
+If set to _yes_, when composing messages containing the regular expression specified by [$abort_noattach_regex](abort-noattach-regex) and no attachments are given, composition will be aborted.
 If set to _no_, composing messages as such will never be aborted.
 
 Example:
@@ -47,7 +47,7 @@ set abort_noattach_regex = "\\<attach(|ed|ments?)\\>"
     ```
 
 Specifies a regular expression to match against the body of the message, to determine if an attachment was mentioned but mistakenly forgotten.
-If it matches, $$abort_noattach will be consulted to determine if message sending will be aborted.
+If it matches, [$abort_noattach](abort-noattach) will be consulted to determine if message sending will be aborted.
 
 Like other regular expressions in NeoMutt, the search is case sensitive if the pattern contains at least one upper case letter, and case insensitive otherwise.
 
@@ -157,9 +157,9 @@ If set, NeoMutt will prompt you for x-comment-to field before editing the body o
     ```
 
 This variable is a colon-separated list of character encoding schemes for text file attachments.
-NeoMutt uses this setting to guess which encoding files being attached are encoded in to convert them to a proper character set given in $$send_charset.
+NeoMutt uses this setting to guess which encoding files being attached are encoded in to convert them to a proper character set given in [$send_charset](send-charset).
 
-If _unset_, the value of $$charset will be used instead.
+If _unset_, the value of [$charset](charset) will be used instead.
 
 For example, the following configuration would work for Japanese text handling:
 ```neomuttrc
@@ -180,10 +180,10 @@ Note: for Japanese users, "iso-2022-*" must be put at the head of the value as s
     set attribution_intro = "On %d, %n wrote:"
     ```
 
-This is the string that will precede a replied-to message which is quoted in the main body of the reply (this is the case when $$include is set).
+This is the string that will precede a replied-to message which is quoted in the main body of the reply (this is the case when [$include](include) is set).
 
-For a full listing of defined `printf(3)`-like sequences see the section on $$index_format.
-See also $$attribution_locale.
+For a full listing of defined `printf(3)`-like sequences see the section on [$index_format](index-format).
+See also [$attribution_locale](attribution-locale).
 
 --------------------------------------------------------------------------------
 
@@ -202,7 +202,7 @@ Valid values are the strings your system accepts for the locale environment vari
 This variable is to allow the attribution date format to be customized by recipient or folder using hooks.
 By default, NeoMutt will use your locale environment, so there is no need to set this except to override that default.
 
-Affected variables are: $$attribution_intro, $$attribution_trailer, $$forward_attribution_intro, $$forward_attribution_trailer, $$indent_string.
+Affected variables are: [$attribution_intro](attribution-intro), [$attribution_trailer](attribution-trailer), [$forward_attribution_intro](forward-attribution-intro), [$forward_attribution_trailer](forward-attribution-trailer), [$indent_string](indent-string).
 
 --------------------------------------------------------------------------------
 
@@ -215,10 +215,10 @@ Affected variables are: $$attribution_intro, $$attribution_trailer, $$forward_at
     set attribution_trailer = ""
     ```
 
-Similar to the $$attribution_intro variable, this is the string that will come after a replied-to message which is quoted in the main body of the reply (this is the case when $$include is set).
+Similar to the [$attribution_intro](attribution-intro) variable, this is the string that will come after a replied-to message which is quoted in the main body of the reply (this is the case when [$include](include) is set).
 
-For a full listing of defined `printf(3)`-like sequences see the section on $$index_format.
-See also $$attribution_locale.
+For a full listing of defined `printf(3)`-like sequences see the section on [$index_format](index-format).
+See also [$attribution_locale](attribution-locale).
 
 --------------------------------------------------------------------------------
 
@@ -275,7 +275,7 @@ Sets the default Content-Type for the body of newly composed messages.
 Setting this variable will cause NeoMutt to always attempt to PGP encrypt outgoing messages.
 This is probably only useful in connection to the "$send-hook" command.
 It can be overridden by use of the pgp menu, when encryption is not required or signing is requested as well.
-If $$smime_is_default is _set_, then OpenSSL is used instead to create S/MIME messages and settings can be overridden by use of the smime menu instead.
+If [$smime_is_default](smime-is-default) is _set_, then OpenSSL is used instead to create S/MIME messages and settings can be overridden by use of the smime menu instead.
 
 --------------------------------------------------------------------------------
 
@@ -289,7 +289,7 @@ If $$smime_is_default is _set_, then OpenSSL is used instead to create S/MIME me
     ```
 
 This variable controls whether or not NeoMutt may automatically enable PGP encryption/signing for messages.
-See also $$crypt_auto_encrypt, $$crypt_reply_encrypt, $$crypt_auto_sign, $$crypt_reply_sign and $$smime_is_default.
+See also [$crypt_auto_encrypt](crypt-auto-encrypt), [$crypt_reply_encrypt](crypt-reply-encrypt), [$crypt_auto_sign](crypt-auto-sign), [$crypt_reply_sign](crypt-reply-sign) and [$smime_is_default](smime-is-default).
 
 --------------------------------------------------------------------------------
 
@@ -305,7 +305,7 @@ See also $$crypt_auto_encrypt, $$crypt_reply_encrypt, $$crypt_auto_sign, $$crypt
 
 Setting this variable will cause NeoMutt to always attempt to cryptographically sign outgoing messages.
 This can be overridden by use of the pgp menu, when signing is not required or encryption is requested as well.
-If $$smime_is_default is _set_, then OpenSSL is used instead to create S/MIME messages and settings can be overridden by use of the smime menu instead of the pgp menu.
+If [$smime_is_default](smime-is-default) is _set_, then OpenSSL is used instead to create S/MIME messages and settings can be overridden by use of the smime menu instead of the pgp menu.
 
 --------------------------------------------------------------------------------
 
@@ -319,7 +319,7 @@ If $$smime_is_default is _set_, then OpenSSL is used instead to create S/MIME me
     ```
 
 This variable controls whether or not NeoMutt may automatically enable S/MIME encryption/signing for messages.
-See also $$crypt_auto_encrypt, $$crypt_reply_encrypt, $$crypt_auto_sign, $$crypt_reply_sign and $$smime_is_default.
+See also [$crypt_auto_encrypt](crypt-auto-encrypt), [$crypt_reply_encrypt](crypt-reply-encrypt), [$crypt_auto_sign](crypt-auto-sign), [$crypt_reply_sign](crypt-reply-sign) and [$smime_is_default](smime-is-default).
 
 --------------------------------------------------------------------------------
 
@@ -364,8 +364,8 @@ If _set_, automatically PGP or OpenSSL sign replies to messages which are signed
 - **Scope:** Crypto only
 
 If _set_, automatically PGP or OpenSSL sign replies to messages which are encrypted.
-This makes sense in combination with $$crypt_reply_encrypt, because it allows you to sign all messages which are automatically encrypted.
-This works around the problem noted in $$crypt_reply_sign, that NeoMutt is not able to find out whether an encrypted message is also signed.
+This makes sense in combination with [$crypt_reply_encrypt](crypt-reply-encrypt), because it allows you to sign all messages which are automatically encrypted.
+This works around the problem noted in [$crypt_reply_sign](crypt-reply-sign), that NeoMutt is not able to find out whether an encrypted message is also signed.
 
 --------------------------------------------------------------------------------
 
@@ -386,7 +386,7 @@ Example:
 set dsn_notify = "failure,delay" 
 ```
 
-**Note:** when using $$sendmail for delivery, you should not enable this unless you are either using Sendmail 8.8.x or greater or a MTA providing a `sendmail(1)`-compatible interface supporting the `-N` option for DSN.
+**Note:** when using [$sendmail](sendmail) for delivery, you should not enable this unless you are either using Sendmail 8.8.x or greater or a MTA providing a `sendmail(1)`-compatible interface supporting the `-N` option for DSN.
 For SMTP delivery, DSN support is auto-detected so that it depends on the server whether DSN will be used or not.
 
 --------------------------------------------------------------------------------
@@ -408,7 +408,7 @@ Example:
 set dsn_return = "hdrs" 
 ```
 
-**Note:** when using $$sendmail for delivery, you should not enable this unless you are either using Sendmail 8.8.x or greater or a MTA providing a `sendmail(1)`-compatible interface supporting the `-R` option for DSN.
+**Note:** when using [$sendmail](sendmail) for delivery, you should not enable this unless you are either using Sendmail 8.8.x or greater or a MTA providing a `sendmail(1)`-compatible interface supporting the `-R` option for DSN.
 For SMTP delivery, DSN support is auto-detected so that it depends on the server whether DSN will be used or not.
 
 --------------------------------------------------------------------------------
@@ -454,9 +454,9 @@ When _set_, the initial prompt for recipients (to, cc, bcc) and subject are skip
 These cases include replying to messages and passing the relevant command line arguments.
 The initial prompt for recipients is also skipped when composing a new message to the current message sender, while the initial prompt for subject is also skipped when forwarding messages.
 
-**Note:** this variable has no effect when the $$auto_edit variable is _set_.
+**Note:** this variable has no effect when the [$auto_edit](auto-edit) variable is _set_.
 
-See also: $$auto_edit, $$edit_headers, $$ask_cc, $$ask_bcc.
+See also: [$auto_edit](auto-edit), [$edit_headers](edit-headers), [$ask_cc](ask-cc), [$ask_bcc](ask-bcc).
 
 --------------------------------------------------------------------------------
 
@@ -471,7 +471,7 @@ See also: $$auto_edit, $$edit_headers, $$ask_cc, $$ask_bcc.
 
 This variable controls whether or not attachments on outgoing messages are saved along with the main body of your message.
 
-Note: $$fcc_before_send forces the default (set) behavior of this option.
+Note: [$fcc_before_send](fcc-before-send) forces the default (set) behavior of this option.
 
 --------------------------------------------------------------------------------
 
@@ -486,10 +486,10 @@ Note: $$fcc_before_send forces the default (set) behavior of this option.
 
 When this variable is _set_, FCCs will occur before sending the message.
 Before sending, the message cannot be manipulated, so it will be stored the exact same as sent:
-$$fcc_attach and $$fcc_clear will be ignored (using their default values).
+[$fcc_attach](fcc-attach) and [$fcc_clear](fcc-clear) will be ignored (using their default values).
 
 When _unset_, the default, FCCs will occur after sending.
-Variables $$fcc_attach and $$fcc_clear will be respected, allowing it to be stored without attachments or encryption/signing if desired.
+Variables [$fcc_attach](fcc-attach) and [$fcc_clear](fcc-clear) will be respected, allowing it to be stored without attachments or encryption/signing if desired.
 
 --------------------------------------------------------------------------------
 
@@ -505,9 +505,9 @@ Variables $$fcc_attach and $$fcc_clear will be respected, allowing it to be stor
 
 When this variable is _set_, FCCs will be stored unencrypted and unsigned, even when the actual message is encrypted and/or signed.
 
-Note: $$fcc_before_send forces the default (unset) behavior of this option.
+Note: [$fcc_before_send](fcc-before-send) forces the default (unset) behavior of this option.
 
-See also $$pgp_self_encrypt, $$smime_self_encrypt.
+See also [$pgp_self_encrypt](pgp-self-encrypt), [$smime_self_encrypt](smime-self-encrypt).
 
 --------------------------------------------------------------------------------
 
@@ -541,7 +541,7 @@ Without this header, a group reply to your message sent to a subscribed list wil
     ```
 
 When forwarding inline (i.e.
-$$mime_forward _unset_ or answered with "no" and $$forward_decode _set_), attachments which cannot be decoded in a reasonable manner will be attached to the newly composed message if this quadoption is _set_ or answered with "yes".
+[$mime_forward](mime-forward) _unset_ or answered with "no" and [$forward_decode](forward-decode) _set_), attachments which cannot be decoded in a reasonable manner will be attached to the newly composed message if this quadoption is _set_ or answered with "yes".
 
 --------------------------------------------------------------------------------
 
@@ -555,9 +555,9 @@ $$mime_forward _unset_ or answered with "no" and $$forward_decode _set_), attach
     set forward_attribution_intro = "----- Forwarded message from %f -----"
     ```
 
-This is the string that will precede a message which has been forwarded in the main body of a message (when $$mime_forward is unset).
-For a full listing of defined `printf(3)`-like sequences see the section on $$index_format.
-See also $$attribution_locale.
+This is the string that will precede a message which has been forwarded in the main body of a message (when [$mime_forward](mime-forward) is unset).
+For a full listing of defined `printf(3)`-like sequences see the section on [$index_format](index-format).
+See also [$attribution_locale](attribution-locale).
 
 --------------------------------------------------------------------------------
 
@@ -571,9 +571,9 @@ See also $$attribution_locale.
     set forward_attribution_trailer = "----- End forwarded message -----"
     ```
 
-This is the string that will follow a message which has been forwarded in the main body of a message (when $$mime_forward is unset).
-For a full listing of defined `printf(3)`-like sequences see the section on $$index_format.
-See also $$attribution_locale.
+This is the string that will follow a message which has been forwarded in the main body of a message (when [$mime_forward](mime-forward) is unset).
+For a full listing of defined `printf(3)`-like sequences see the section on [$index_format](index-format).
+See also [$attribution_locale](attribution-locale).
 
 --------------------------------------------------------------------------------
 
@@ -588,7 +588,7 @@ See also $$attribution_locale.
 
 Controls the handling of encrypted messages when forwarding a message.
 When _set_, the outer layer of encryption is stripped off.
-This variable is only used if $$mime_forward is _set_ and $$mime_forward_decode is _unset_.
+This variable is only used if [$mime_forward](mime-forward) is _set_ and [$mime_forward_decode](mime-forward-decode) is _unset_.
 
 --------------------------------------------------------------------------------
 
@@ -617,7 +617,7 @@ For those who always want to forward with no modification, use a setting of "no"
     ```
 
 This variable controls the default subject when forwarding a message.
-It uses the same format sequences as the $$index_format variable.
+It uses the same format sequences as the [$index_format](index-format) variable.
 
 --------------------------------------------------------------------------------
 
@@ -681,7 +681,7 @@ If _set_, the user defined header fields are added to every new message.
     set hidden_host = no
     ```
 
-When _set_, NeoMutt will skip the host name part of $$hostname variable when adding the domain part to addresses.
+When _set_, NeoMutt will skip the host name part of [$hostname](hostname) variable when adding the domain part to addresses.
 
 --------------------------------------------------------------------------------
 
@@ -821,8 +821,8 @@ If _unset_, NeoMutt will remove your address (see the "$alternates" command) fro
     set mime_forward_decode = no
     ```
 
-Controls the decoding of complex MIME messages into `text/plain` when forwarding a message while $$mime_forward is _set_.
-Otherwise $$forward_decode is used instead.
+Controls the decoding of complex MIME messages into `text/plain` when forwarding a message while [$mime_forward](mime-forward) is _set_.
+Otherwise [$forward_decode](forward-decode) is used instead.
 
 --------------------------------------------------------------------------------
 
@@ -836,7 +836,7 @@ Otherwise $$forward_decode is used instead.
     ```
 
 This specifies a command to run, to determine the mime type of a new attachment when composing a message.
-Unless $$mime_type_query_first is set, this will only be run if the attachment's extension is not found in the mime.types file.
+Unless [$mime_type_query_first](mime-type-query-first) is set, this will only be run if the attachment's extension is not found in the mime.types file.
 
 The string may contain a "%s", which will be substituted with the attachment filename.
 NeoMutt will add quotes around the string substituted for "%s" automatically according to shell quoting rules, so you should avoid adding your own.
@@ -857,7 +857,7 @@ Suggested values are "xdg-mime query filetype" or "file -bi".
     set mime_type_query_first = no
     ```
 
-When _set_, the $$mime_type_query_command will be run before the mime.types lookup.
+When _set_, the [$mime_type_query_command](mime-type-query-command) will be run before the mime.types lookup.
 
 --------------------------------------------------------------------------------
 
@@ -870,9 +870,9 @@ When _set_, the $$mime_type_query_command will be run before the mime.types look
     set nm_record = no
     ```
 
-This variable specifies whether, when writing a just-sent message to the $$record, the message should also be added to the notmuch DB.
+This variable specifies whether, when writing a just-sent message to the [$record](record), the message should also be added to the notmuch DB.
 Replies inherit the notmuch tags from the original message.
-See $$nm_record_tags for how to modify the set of notmuch tags assigned to sent messages written to the record.
+See [$nm_record_tags](nm-record-tags) for how to modify the set of notmuch tags assigned to sent messages written to the record.
 
 --------------------------------------------------------------------------------
 
@@ -893,7 +893,7 @@ This option does not automatically detect if the (replied-to) message is inline;
 Note that NeoMutt might automatically use PGP/MIME for messages which consist of more than a single MIME part.
 NeoMutt can be configured to ask before sending PGP/MIME messages when inline (traditional) would not work.
 
-Also see the $$pgp_mime_auto variable.
+Also see the [$pgp_mime_auto](pgp-mime-auto) variable.
 
 Also note that using the old-style PGP message format is **strongly** **deprecated**.
 
@@ -910,7 +910,7 @@ Also note that using the old-style PGP message format is **strongly** **deprecat
 - **Scope:** Crypto only
 
 When _set_, postponed messages that are marked for encryption will be self-encrypted.
-NeoMutt will first try to encrypt using the value specified in $$pgp_default_key or $$smime_default_key.
+NeoMutt will first try to encrypt using the value specified in [$pgp_default_key](pgp-default-key) or [$smime_default_key](smime-default-key).
 
 --------------------------------------------------------------------------------
 
@@ -941,7 +941,7 @@ Controls whether or not NeoMutt recalls postponed messages when composing a new 
 Setting this variable to _yes_ is not generally useful, and thus not recommended.
 Note that the `<recall-message>` function can be used to manually recall postponed messages.
 
-Also see $$postponed variable.
+Also see [$postponed](postponed) variable.
 
 --------------------------------------------------------------------------------
 
@@ -1019,7 +1019,7 @@ Recipients are not prompted for; send-hooks are not evaluated; no alias expansio
 It may sometimes arrive that you receive mail to a certain machine, move the messages to another machine, and reply to some the messages from there.
 If this variable is _set_, the default _From:_ line of the reply messages is built using the address where you received the messages you are replying to **if** that address matches your "$alternates".  If the variable is _unset_, or the address that would be used doesn't match your "$alternates", the _From:_ line will use your address on the current machine.
 
-Also see the "$alternates" command and $$reverse_real_name.
+Also see the "$alternates" command and [$reverse_real_name](reverse-real-name).
 
 --------------------------------------------------------------------------------
 
@@ -1032,14 +1032,14 @@ Also see the "$alternates" command and $$reverse_real_name.
     set reverse_real_name = yes
     ```
 
-This variable fine-tunes the behavior of the $$reverse_name feature.
+This variable fine-tunes the behavior of the [$reverse_name](reverse-name) feature.
 
 When it is _unset_, NeoMutt will remove the real name part of a matching address.
 This allows the use of the email address without having to also use what the sender put in the real name field.
 
 When it is _set_, NeoMutt will use the matching address as-is.
 
-In either case, a missing real name will be filled in afterwards using the value of $$real_name.
+In either case, a missing real name will be filled in afterwards using the value of [$real_name](real-name).
 
 --------------------------------------------------------------------------------
 
@@ -1054,13 +1054,13 @@ In either case, a missing real name will be filled in afterwards using the value
 
 Specifies the program and arguments used to deliver mail sent by NeoMutt.
 NeoMutt expects that the specified program interprets additional arguments as recipient addresses.
-NeoMutt appends all recipients after adding a `--` delimiter (if not already present).  Additional flags, such as for $$use_8bit_mime, $$use_envelope_from, $$dsn_notify, or $$dsn_return will be added before the delimiter.
+NeoMutt appends all recipients after adding a `--` delimiter (if not already present).  Additional flags, such as for [$use_8bit_mime](use-8bit-mime), [$use_envelope_from](use-envelope-from), [$dsn_notify](dsn-notify), or [$dsn_return](dsn-return) will be added before the delimiter.
 
 **Note:** This command is invoked differently from most other commands in NeoMutt.
 It is tokenized by space, and invoked directly via `execvp(3)` with an array of arguments - so commands or arguments with spaces in them are not supported.
 The shell is not used to run the command, so shell quoting is also not supported.
 
-**See also:** $$write_bcc.
+**See also:** [$write_bcc](write-bcc).
 
 --------------------------------------------------------------------------------
 
@@ -1073,7 +1073,7 @@ The shell is not used to run the command, so shell quoting is also not supported
     set sendmail_wait = 0
     ```
 
-Specifies the number of seconds to wait for the $$sendmail process to finish before giving up and putting delivery in the background.
+Specifies the number of seconds to wait for the [$sendmail](sendmail) process to finish before giving up and putting delivery in the background.
 
 NeoMutt interprets the value of this variable as follows:
 
@@ -1112,7 +1112,7 @@ If the filename ends with a pipe ("|"), it is assumed that filename is a shell c
     set sig_dashes = yes
     ```
 
-If _set_, a line containing "-- " (note the trailing space) will be inserted before your $$signature.
+If _set_, a line containing "-- " (note the trailing space) will be inserted before your [$signature](signature).
 It is **strongly** recommended that you not _unset_ this variable unless your signature contains just your name.
 The reason for this is because many software packages use "-- \n" to detect your signature.
 For example, NeoMutt has the ability to highlight the signature in a different color in the built-in pager.
@@ -1186,7 +1186,7 @@ See "$oauth" for details.
 
 Specifies the password for your SMTP account.
 If _unset_, NeoMutt will prompt you for your password when you first send mail via SMTP.
-See $$smtp_url to configure NeoMutt to send mail via SMTP.
+See [$smtp_url](smtp-url) to configure NeoMutt to send mail via SMTP.
 
 **Warning**: you should only use this option when you are on a fairly secure machine, because the superuser can read your neomuttrc even if you are the only one who can read the file.
 
@@ -1210,9 +1210,9 @@ smtp[s]://[user[:pass]@]host[:port]
 ```
 
 where "[...]" denotes an optional part.
-Setting this variable overrides the value of the $$sendmail variable.
+Setting this variable overrides the value of the [$sendmail](sendmail) variable.
 
-Also see $$write_bcc.
+Also see [$write_bcc](write-bcc).
 
 --------------------------------------------------------------------------------
 
@@ -1256,7 +1256,7 @@ When _set_, NeoMutt will add a "User-Agent:" header to outgoing messages, indica
 
 **Warning:** do not set this variable unless you are using a version of sendmail which supports the `-B8BITMIME` flag (such as sendmail 8.8.x) or you may not be able to send mail.
 
-When _set_, NeoMutt will invoke $$sendmail with the `-B8BITMIME`
+When _set_, NeoMutt will invoke [$sendmail](sendmail) with the `-B8BITMIME`
 flag when sending 8-bit messages to enable ESMTP negotiation.
 
 --------------------------------------------------------------------------------
@@ -1271,11 +1271,11 @@ flag when sending 8-bit messages to enable ESMTP negotiation.
     ```
 
 When _set_, NeoMutt will set the _envelope_ sender of the message.
-If $$envelope_from_address is _set_, it will be used as the sender address.
+If [$envelope_from_address](envelope-from-address) is _set_, it will be used as the sender address.
 If _unset_, NeoMutt will attempt to derive the sender from the "From:" header.
 
 Note that this information is passed to sendmail command using the `-f` command line switch.
-Therefore setting this option is not useful if the $$sendmail variable already contains `-f` or if the executable pointed to by $$sendmail doesn't support the `-f` switch.
+Therefore setting this option is not useful if the [$sendmail](sendmail) variable already contains `-f` or if the executable pointed to by [$sendmail](sendmail) doesn't support the `-f` switch.
 
 --------------------------------------------------------------------------------
 
@@ -1323,7 +1323,7 @@ Allowed values are between 78 and 998 inclusive.
 Controls whether NeoMutt writes out the "Bcc:" header when preparing messages to be sent.
 Some MTAs, such as Exim and Courier, do not strip the "Bcc:" header; so it is advisable to leave this unset unless you have a particular need for the header to be in the sent message.
 
-If NeoMutt is set to deliver directly via SMTP(see $$smtp_url), this option does nothing: NeoMutt will never write out the "Bcc:" header in this case.
+If NeoMutt is set to deliver directly via SMTP(see [$smtp_url](smtp-url)), this option does nothing: NeoMutt will never write out the "Bcc:" header in this case.
 
 Note this option only affects the sending of messages.
 Fcc'ed copies of a message will always contain the "Bcc:" header if one exists.

@@ -27,7 +27,7 @@ how-to guides and explanation pages instead.
     ```
 
 When this variable is _set_, NeoMutt will beep whenever it prints a message notifying you of new mail.
-This is independent of the setting of the $$beep variable.
+This is independent of the setting of the [$beep](beep) variable.
 
 --------------------------------------------------------------------------------
 
@@ -260,7 +260,7 @@ A new macro automatically generated with _<mark-message>a_ will be composed from
     ```
 
 If _set_, NeoMutt will call this command after a new message is received.
-See the $$status_format documentation for the values that can be formatted into this command.
+See the [$status_format](status-format) documentation for the values that can be formatted into this command.
 
 --------------------------------------------------------------------------------
 
@@ -303,7 +303,7 @@ If _set_, all folders are opened in read-only mode.
     set status_chars = "-*%A"
     ```
 
-Controls the characters used by the "%r" indicator in $$status_format.
+Controls the characters used by the "%r" indicator in [$status_format](status-format).
 
 | Character | Default | Description                                                                                                                                                                    |
 |-----------|---------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -327,7 +327,7 @@ Controls the characters used by the "%r" indicator in $$status_format.
     ```
 
 Controls the format of the status line displayed in the "index" menu.
-This string is similar to $$index_format, but has its own set of `printf(3)`-like sequences:
+This string is similar to [$index_format](index-format), but has its own set of `printf(3)`-like sequences:
 
 | Short  | Long Name             | Description                                                                                            |
 |--------|-----------------------|--------------------------------------------------------------------------------------------------------|
@@ -358,7 +358,7 @@ This string is similar to $$index_format, but has its own set of `printf(3)`-lik
 | `%>X`  | `%{padding-hard:X}`   | Right justify the rest of the string and pad with character `X`                                        |
 | `%\|X` | `%{padding-eol:X}`    | Pad to the end of the line with character `X`                                                          |
 
-For an explanation of "soft-fill", see the $$index_format documentation.
+For an explanation of "soft-fill", see the [$index_format](index-format) documentation.
 
 * = can be optionally printed if nonzero 
 
@@ -381,7 +381,7 @@ You can also switch between two strings using the following construct:
 
 If the value of _sequence_char_ is non-zero, _if_string_ will be expanded, otherwise _else_string_ will be expanded.
 
-As another example, here is how to show either $$sort and $$sort_aux or $$use_threads and $$sort, based on whether threads are enabled with $$use_threads:
+As another example, here is how to show either [$sort](sort) and [$sort_aux](sort-aux) or [$use_threads](use-threads) and [$sort](sort), based on whether threads are enabled with [$use_threads](use-threads):
 
 `%<T?%s/%S&%T/%s>`
 
@@ -439,8 +439,8 @@ Most terminal emulators emulate the status line in the window title.
     set ts_icon_format = "M%<n?AIL&ail>"
     ```
 
-Controls the format of the icon title, as long as "$$ts_enabled" is set.
-This string is identical in formatting to the one used by "$$status_format".
+Controls the format of the icon title, as long as "[$ts_enabled](ts-enabled)" is set.
+This string is identical in formatting to the one used by "[$status_format](status-format)".
 
 --------------------------------------------------------------------------------
 
@@ -454,8 +454,8 @@ This string is identical in formatting to the one used by "$$status_format".
     set ts_status_format = "NeoMutt with %<m?%m messages&no messages>%<n? [%n NEW]>"
     ```
 
-Controls the format of the terminal status line (or window title), provided that "$$ts_enabled" has been set.
-This string is identical in formatting to the one used by "$$status_format".
+Controls the format of the terminal status line (or window title), provided that "[$ts_enabled](ts-enabled)" has been set.
+This string is identical in formatting to the one used by "[$status_format](status-format)".
 
 --------------------------------------------------------------------------------
 
