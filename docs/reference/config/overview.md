@@ -20,6 +20,7 @@ how-to guides and explanation pages instead.
 maxdepth: 1
 hidden:
 ---
+types
 alias
 attach
 autocrypt
