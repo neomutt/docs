@@ -83,7 +83,7 @@ However, only the first content is valid for the message body.
 (attach-format)=
 ## `$attach_format`
 
-- **Type:** string
+- **Type:** expando
 - **Default:** "`%u%D%I %t%4n %T%d %> [%.7m/%.10M, %.6e%<C?, %C>, %s] `"
 
 This variable describes the format of the "attachment" menu.
@@ -261,7 +261,7 @@ Composing: $$attribution_intro, $$forward_attribution_intro, $$forward_attributi
 (debug-file)=
 ## `$debug_file`
 
-- **Type:** path
+- **Type:** path (string)
 - **Default:** "`~/.neomuttdebug`"
 
 Debug logging is controlled by the variables `$$debug_file` and `$$debug_level`.
@@ -300,7 +300,7 @@ See also: `$$debug_file`
 (delete)=
 ## `$delete`
 
-- **Type:** quadoption
+- **Type:** quad-option
 - **Default:** ask-yes
 
 Controls whether or not messages are really deleted when closing or synchronizing a mailbox.
@@ -335,7 +335,7 @@ https://github.com/neomutt/neomutt/discussions/4251
 (editor)=
 ## `$editor`
 
-- **Type:** command
+- **Type:** command (string)
 - **Default:** (empty)
 
 This variable specifies which editor is used by NeoMutt.
@@ -367,7 +367,7 @@ If set, flagged messages can't be deleted.
 (folder)=
 ## `$folder`
 
-- **Type:** mailbox
+- **Type:** mailbox (string)
 - **Default:** "`~/Mail`"
 
 Specifies the default location of your mailboxes.
@@ -402,7 +402,7 @@ When _set_, forwarded messages included in the main body of the message (when $$
 (from)=
 ## `$from`
 
-- **Type:** e-mail address
+- **Type:** address
 - **Default:** (empty)
 
 When _set_, this variable contains a default "from" address.
@@ -459,7 +459,7 @@ Also see $$use_domain and $$hidden_host.
 (indent-string)=
 ## `$indent_string`
 
-- **Type:** string
+- **Type:** expando
 - **Default:** "`> `"
 
 Specifies the string to prepend to each line of text quoted in a message to which you are replying.
@@ -556,7 +556,7 @@ With this option _set_, the next time you start NeoMutt, the messages will show 
 (mbox)=
 ## `$mbox`
 
-- **Type:** mailbox
+- **Type:** mailbox (string)
 - **Default:** "`~/mbox`"
 
 This specifies the folder into which read mail in your $$spool_file folder will be appended.
@@ -592,7 +592,7 @@ You probably only want to set it every once in a while, since it can be a little
 (message-cache-dir)=
 ## `$message_cache_dir`
 
-- **Type:** path
+- **Type:** path (string)
 - **Default:** (empty)
 
 Set this to a directory and NeoMutt will cache copies of messages from your IMAP and POP servers here.
@@ -619,7 +619,7 @@ This is because the result of removing the high bit from `0xf8` is `0x78`, which
 (move)=
 ## `$move`
 
-- **Type:** quadoption
+- **Type:** quad-option
 - **Default:** no
 
 If this variable is _set_, then NeoMutt will move read messages from your spool mailbox to your $$mbox mailbox or to the "mbox" specified by a $mbox-hook command.
@@ -677,7 +677,7 @@ In both cases the messages are piped in the current sorted order, and the $$pipe
 (postponed)=
 ## `$postponed`
 
-- **Type:** mailbox
+- **Type:** mailbox (string)
 - **Default:** "`~/postponed`"
 
 NeoMutt allows you to indefinitely "$postpone sending a message" which you are editing.
@@ -690,7 +690,7 @@ Also see the $$postpone variable.
 (print)=
 ## `$print`
 
-- **Type:** quadoption
+- **Type:** quad-option
 - **Default:** ask-no
 
 Controls whether or not NeoMutt really prints messages.
@@ -701,7 +701,7 @@ This is set to "ask-no" by default, because some people accidentally hit "p" oft
 (print-command)=
 ## `$print_command`
 
-- **Type:** command
+- **Type:** command (string)
 - **Default:** `"lpr"`
 
 This specifies the command pipe that should be used to print messages.
@@ -779,7 +779,7 @@ This option will not be used, if "$$from" is set.
 (record)=
 ## `$record`
 
-- **Type:** mailbox
+- **Type:** mailbox (string)
 - **Default:** "`~/sent`"
 
 This specifies the file into which your outgoing messages should be appended.
@@ -858,7 +858,7 @@ In case the text can't be converted into one of these exactly, NeoMutt uses $$ch
 (shell)=
 ## `$shell`
 
-- **Type:** command
+- **Type:** command (string)
 - **Default:** "`/bin/sh`"
 
 Command to use when spawning a subshell.
@@ -988,7 +988,7 @@ See the "Use Threads Feature" section for further explanation and examples, http
 (spool-file)=
 ## `$spool_file`
 
-- **Type:** mailbox
+- **Type:** mailbox (string)
 - **Default:** (empty)
 
 If your spool mailbox is in a non-default place where NeoMutt can't find it, you can specify its location with this variable.
@@ -1055,7 +1055,7 @@ A value of zero disables timeout hooks.
 (tmp-dir)=
 ## `$tmp_dir`
 
-- **Type:** path
+- **Type:** path (string)
 - **Default:** "`/tmp`"
 
 This variable allows you to specify where NeoMutt will place its temporary files needed for displaying messages.
@@ -1068,7 +1068,7 @@ Failing that, then "`/tmp`" is used.
 (tmp-draft-dir)=
 ## `$tmp_draft_dir`
 
-- **Type:** path
+- **Type:** path (string)
 - **Default:** "`/var/tmp`"
 
 This variable allows you to specify where NeoMutt will place its temporary files when composing messages.
@@ -1083,7 +1083,7 @@ It is recommended that this be set to a directory whose contents won't be remove
 trash=
 ## `$trash`
 
-- **Type:** mailbox
+- **Type:** mailbox (string)
 - **Default:** (empty)
 
 If set, this variable specifies the path of the trash folder where the mails marked for deletion will be moved, instead of being irremediably purged.

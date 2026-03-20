@@ -117,7 +117,7 @@ This slightly odd interface is necessitated by NeoMutt's handling of string vari
 (index-format)=
 ## `$index_format`
 
-- **Type:** string
+- **Type:** expando
 - **Default:** "`%4C %Z %{%b %d} %-15.15L (%<l?%4l&%4c>) %s`"
 
 This variable allows you to customize the message index display to your personal taste.
@@ -228,7 +228,7 @@ A new macro automatically generated with _<mark-message>a_ will be composed from
 (new-mail-command)=
 ## `$new_mail_command`
 
-- **Type:** command
+- **Type:** expando (command string)
 - **Default:** (empty)
 
 If _set_, NeoMutt will call this command after a new message is received.
@@ -239,7 +239,7 @@ See the $$status_format documentation for the values that can be formatted into 
 (quit)=
 ## `$quit`
 
-- **Type:** quadoption
+- **Type:** quad-option
 - **Default:** yes
 
 This variable controls whether "quit" and "exit" actually quit from NeoMutt.
@@ -282,7 +282,7 @@ Controls the characters used by the "%r" indicator in $$status_format.
 (status-format)=
 ## `$status_format`
 
-- **Type:** string
+- **Type:** expando
 - **Default:** `"-%r-NeoMutt: %D [Msgs:%<M?%M/>%m%<n? New:%n>%<o? Old:%o>%<d? Del:%d>%<F? Flag:%F>%<t? Tag:%t>%<p? Post:%p>%<b? Inc:%b>%<l? %l>]---(%<T?%T/>%s/%S)-%>-(%P)---"`
 
 Controls the format of the status line displayed in the "index" menu.
@@ -385,7 +385,7 @@ Most terminal emulators emulate the status line in the window title.
 (ts-icon-format)=
 ## `$ts_icon_format`
 
-- **Type:** string
+- **Type:** expando
 - **Default:** "`M%<n?AIL&ail>`"
 
 Controls the format of the icon title, as long as "$$ts_enabled" is set.
@@ -396,7 +396,7 @@ This string is identical in formatting to the one used by "$$status_format".
 (ts-status-format)=
 ## `$ts_status_format`
 
-- **Type:** string
+- **Type:** expando
 - **Default:** "`NeoMutt with %<m?%m messages&no messages>%<n? [%n NEW]>`"
 
 Controls the format of the terminal status line (or window title), provided that "$$ts_enabled" has been set.

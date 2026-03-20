@@ -20,7 +20,7 @@ how-to guides and explanation pages instead.
 (attach-save-dir)=
 ## `$attach_save_dir`
 
-- **Type:** path
+- **Type:** path (string)
 - **Default:** "`./`"
 
 The directory where attachments are saved.
@@ -62,7 +62,7 @@ When _set_, NeoMutt will operate on the attachments one by one.
 (bounce)=
 ## `$bounce`
 
-- **Type:** quadoption
+- **Type:** quad-option
 - **Default:** ask-yes
 
 Controls whether you will be asked to confirm bouncing messages.
@@ -99,7 +99,7 @@ To see these subparts, press "v" on that menu.
 (message-format)=
 ## `$message_format`
 
-- **Type:** string
+- **Type:** expando
 - **Default:** "`%s`"
 
 This is the string displayed in the "attachment" menu for attachments of type `message/rfc822`.  For a full listing of defined `printf(3)`-like sequences see the section on $$index_format.
@@ -109,7 +109,7 @@ This is the string displayed in the "attachment" menu for attachments of type `m
 (mime-forward)=
 ## `$mime_forward`
 
-- **Type:** quadoption
+- **Type:** quad-option
 - **Default:** `no`
 
 When _set_, the message you are forwarding will be attached as a separate `message/rfc822` MIME part instead of included in the main body of the message.
@@ -123,7 +123,7 @@ Also see $$forward_decode and $$mime_forward_decode.
 (mime-forward-rest)=
 ## `$mime_forward_rest`
 
-- **Type:** quadoption
+- **Type:** quad-option
 - **Default:** `yes`
 
 When forwarding multiple attachments of a MIME message from the attachment menu, attachments which can't be decoded in a reasonable manner will be attached to the newly composed message if this option is _set_.

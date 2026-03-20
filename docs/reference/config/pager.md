@@ -38,7 +38,7 @@ and give it the same color as your attachment color (see also $$crypt_timestamp)
 (display-filter)=
 ## `$display_filter`
 
-- **Type:** command
+- **Type:** command (string)
 - **Default:** (empty)
 
 When set, specifies a command used to filter messages.
@@ -87,7 +87,7 @@ Also see the $$smart_wrap variable.
 (pager)=
 ## `$pager`
 
-- **Type:** command
+- **Type:** command (string)
 - **Default:** (empty)
 
 This variable specifies which pager you would like to use to view messages.
@@ -114,7 +114,7 @@ If positive, this many lines will be given before a match, if 0, the match will 
 (pager-format)=
 ## `$pager_format`
 
-- **Type:** string
+- **Type:** expando
 - **Default:** "`-%Z- %C/%m: %-20.20n   %s%*  -- (%P)`"
 
 This variable controls the format of the one-line message "status" displayed before each message in either the internal or an external pager.

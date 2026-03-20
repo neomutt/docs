@@ -163,7 +163,7 @@ This variable defaults to the value of $$imap_user.
 (imap-oauth-refresh-command)=
 ## `$imap_oauth_refresh_command`
 
-- **Type:** command
+- **Type:** command (string)
 - **Default:** (empty)
 
 The command to run to generate an OAUTH refresh token for authorizing your connection to your IMAP server.

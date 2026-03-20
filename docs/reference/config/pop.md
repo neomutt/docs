@@ -62,7 +62,7 @@ This variable configures how often (in seconds) NeoMutt should look for new mail
 (pop-delete)=
 ## `$pop_delete`
 
-- **Type:** quadoption
+- **Type:** quad-option
 - **Default:** ask-no
 
 If _set_, NeoMutt will delete successfully downloaded messages from the POP server when using the `$<fetch-mail>` function.
@@ -100,7 +100,7 @@ If this variable is _set_, NeoMutt will try to use the "`LAST`" POP command for 
 (pop-oauth-refresh-command)=
 ## `$pop_oauth_refresh_command`
 
-- **Type:** command
+- **Type:** command (string)
 - **Default:** (empty)
 
 The command to run to generate an OAUTH refresh token for authorizing your connection to your POP server.
@@ -125,7 +125,7 @@ If _unset_, NeoMutt will prompt you for your password when you open a POP mailbo
 (pop-reconnect)=
 ## `$pop_reconnect`
 
-- **Type:** quadoption
+- **Type:** quad-option
 - **Default:** ask-yes
 
 Controls whether or not NeoMutt will try to reconnect to the POP server if the connection is lost.

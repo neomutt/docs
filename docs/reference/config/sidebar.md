@@ -86,7 +86,7 @@ Set this to indent mailboxes in the sidebar.
 (sidebar-format)=
 ## `$sidebar_format`
 
-- **Type:** string
+- **Type:** expando
 - **Default:** "`%D%*  %n`"
 
 This variable allows you to customize the sidebar display.

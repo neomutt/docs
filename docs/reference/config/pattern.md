@@ -20,7 +20,7 @@ how-to guides and explanation pages instead.
 (external-search-command)=
 ## `$external_search_command`
 
-- **Type:** command
+- **Type:** command (string)
 - **Default:** (empty)
 
 If set, contains the name of the external program used by "~I" patterns.
@@ -43,7 +43,7 @@ You, the user, still have to rewrite the mairix_filter script to match the behav
 (pattern-format)=
 ## `$pattern_format`
 
-- **Type:** string
+- **Type:** expando
 - **Default:** "`%2n %-15e  %d`"
 
 This variable describes the format of the "pattern completion" menu.

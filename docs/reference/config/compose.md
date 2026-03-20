@@ -34,7 +34,7 @@ It doesn't keep track of which message is the typed message if the entries are r
 (compose-format)=
 ## `$compose_format`
 
-- **Type:** string
+- **Type:** expando
 - **Default:** "`-- NeoMutt: Compose  [Approx. msg size: %l   Atts: %a]%>-`"
 
 Controls the format of the status line displayed in the "compose" menu.
@@ -98,7 +98,7 @@ When _set_, NeoMutt will display user-defined headers (set via $my-header or fro
 (copy)=
 ## `$copy`
 
-- **Type:** quadoption
+- **Type:** quad-option
 - **Default:** yes
 
 This variable controls whether or not copies of your outgoing messages will be saved for later references.
@@ -125,7 +125,7 @@ NeoMutt will not understand localized header labels, just as it would not when p
 (ispell)=
 ## `$ispell`
 
-- **Type:** command
+- **Type:** command (string)
 - **Default:** "`ispell`"
 
 How to invoke ispell (GNU's spell-checking software).
@@ -135,7 +135,7 @@ How to invoke ispell (GNU's spell-checking software).
 (postpone)=
 ## `$postpone`
 
-- **Type:** quadoption
+- **Type:** quad-option
 - **Default:** ask-yes
 
 Controls whether or not messages are saved in the $$postponed mailbox when you elect not to send immediately.

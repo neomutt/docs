@@ -37,7 +37,7 @@ To prevent duplicates over all entries use $$history_remove_dups.
 (history-file)=
 ## `$history_file`
 
-- **Type:** path
+- **Type:** path (string)
 - **Default:** `"~/.mutthistory"`
 
 The file in which NeoMutt will save its history.
@@ -49,7 +49,7 @@ Also see $$save_history.
 (history-format)=
 ## `$history_format`
 
-- **Type:** string
+- **Type:** expando
 - **Default:** `"%s"`
 
 Controls the format of the entries of the history list.

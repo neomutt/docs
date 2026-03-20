@@ -70,7 +70,7 @@ If this variable is _set_, the browser will group directories before files.
 (folder-format)=
 ## `$folder_format`
 
-- **Type:** string
+- **Type:** expando
 - **Default:** "`%2C %t %N %F %2l %-8.8u %-8.8g %8s %d %i`"
 
 This variable allows you to customize the file browser display to your personal taste.
@@ -114,7 +114,7 @@ For an explanation of "soft-fill", see the $$index_format documentation.
 (group-index-format)=
 ## `$group_index_format`
 
-- **Type:** string
+- **Type:** expando
 - **Default:** "`%4C %M%N %5s  %-45.45f %d`"
 
 This variable allows you to customize the newsgroup browser display to your personal taste.
@@ -140,7 +140,7 @@ This string is similar to "$index_format", but has its own set of printf()-like 
 (mailbox-folder-format)=
 ## `$mailbox_folder_format`
 
-- **Type:** string
+- **Type:** expando
 - **Default:** "`%2C %<n?%6n&      > %6m %i`"
 
 This variable allows you to customize the file browser display to your personal taste.

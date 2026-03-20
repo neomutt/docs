@@ -20,7 +20,7 @@ how-to guides and explanation pages instead.
 (catchup-newsgroup)=
 ## `$catchup_newsgroup`
 
-- **Type:** quadoption
+- **Type:** quad-option
 - **Default:** ask-yes
 
 If this variable is _set_, NeoMutt will mark all articles in newsgroup as read when you quit the newsgroup (catchup newsgroup).
@@ -30,7 +30,7 @@ If this variable is _set_, NeoMutt will mark all articles in newsgroup as read w
 (followup-to-poster)=
 ## `$followup_to_poster`
 
-- **Type:** quadoption
+- **Type:** quad-option
 - **Default:** ask-yes
 
 If this variable is _set_ and the keyword "poster" is present in _Followup-To_ header, follow-up to newsgroup function is not permitted.
@@ -51,7 +51,7 @@ Character set of newsgroups descriptions.
 (newsrc)=
 ## `$newsrc`
 
-- **Type:** path
+- **Type:** expando
 - **Default:** "`~/.newsrc`"
 
 The file, containing info about subscribed newsgroups - names and indexes of read articles.
@@ -71,7 +71,7 @@ The following printf-style sequence is understood:
 (news-cache-dir)=
 ## `$news_cache_dir`
 
-- **Type:** path
+- **Type:** path (string)
 - **Default:** "`~/.neomutt`"
 
 This variable pointing to directory where NeoMutt will save cached news articles and headers in.
@@ -183,7 +183,7 @@ If _unset_ and NNTP server requires authentication, NeoMutt will prompt you for 
 (post-moderated)=
 ## `$post_moderated`
 
-- **Type:** quadoption
+- **Type:** quad-option
 - **Default:** ask-yes
 
 If set to _yes_, NeoMutt will post article to newsgroup that have not permissions to posting (e.g. moderated).

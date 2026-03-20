@@ -20,7 +20,7 @@ how-to guides and explanation pages instead.
 (nm-config-file)=
 ## `$nm_config_file`
 
-- **Type:** path
+- **Type:** path (string)
 - **Default:** "`auto`"
 
 Configuration file for notmuch.

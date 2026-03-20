@@ -20,7 +20,7 @@ how-to guides and explanation pages instead.
 (header-cache)=
 ## `$header_cache`
 
-- **Type:** path
+- **Type:** path (string)
 - **Default:** (empty)
 
 This variable points to the header cache database.

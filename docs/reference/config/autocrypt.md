@@ -32,7 +32,7 @@ See "$autocryptdoc" for more details.
 (autocrypt-acct-format)=
 ## `$autocrypt_acct_format`
 
-- **Type:** string
+- **Type:** expando
 - **Default:** "`%4n %-30a %20p %10s`"
 - **Scope:** Autocrypt only
 
@@ -55,7 +55,7 @@ The following `printf(3)`-style sequences are understood
 (autocrypt-dir)=
 ## `$autocrypt_dir`
 
-- **Type:** path
+- **Type:** path (string)
 - **Default:** "`~/.mutt/autocrypt`"
 - **Scope:** Autocrypt only
 

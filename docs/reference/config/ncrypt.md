@@ -192,7 +192,7 @@ See: http://www.g10code.de/docs/pka-intro.de.pdf
 (crypt-verify-sig)=
 ## `$crypt_verify_sig`
 
-- **Type:** quadoption
+- **Type:** quad-option
 - **Default:** yes
 - **Scope:** Crypto only
 
@@ -205,7 +205,7 @@ If _"no"_, never attempt to verify cryptographic signatures.
 (envelope-from-address)=
 ## `$envelope_from_address`
 
-- **Type:** e-mail address
+- **Type:** address
 - **Default:** (empty)
 
 Manually sets the _envelope_ sender for outgoing messages.
@@ -273,7 +273,7 @@ If _unset_, NeoMutt will instead match the status fd output against $$pgp_decryp
 (pgp-clear-sign-command)=
 ## `$pgp_clear_sign_command`
 
-- **Type:** command
+- **Type:** expando (command string)
 - **Default:** (empty)
 - **Scope:** PGP only
 
@@ -288,7 +288,7 @@ Note that in this case, %r expands to the search string, which is a list of one 
 (pgp-decode-command)=
 ## `$pgp_decode_command`
 
-- **Type:** command
+- **Type:** expando (command string)
 - **Default:** (empty)
 - **Scope:** PGP only
 
@@ -326,7 +326,7 @@ Note that if $$pgp_check_gpg_decrypt_status_fd is set, this variable is ignored.
 (pgp-decrypt-command)=
 ## `$pgp_decrypt_command`
 
-- **Type:** command
+- **Type:** expando (command string)
 - **Default:** (empty)
 - **Scope:** PGP only
 
@@ -359,7 +359,7 @@ It will also be used for signing unless $$pgp_sign_as is set.
 (pgp-encrypt-only-command)=
 ## `$pgp_encrypt_only_command`
 
-- **Type:** command
+- **Type:** expando (command string)
 - **Default:** (empty)
 - **Scope:** PGP only
 
@@ -373,7 +373,7 @@ Note that in this case, %r expands to the search string, which is a list of one 
 (pgp-encrypt-sign-command)=
 ## `$pgp_encrypt_sign_command`
 
-- **Type:** command
+- **Type:** expando (command string)
 - **Default:** (empty)
 - **Scope:** PGP only
 
@@ -386,7 +386,7 @@ This is a format string, see the $$pgp_decode_command command for possible `prin
 (pgp-entry-format)=
 ## `$pgp_entry_format`
 
-- **Type:** string
+- **Type:** expando
 - **Default:** "`%4n %t%f %4l/0x%k %-4a %2c %u`"
 - **Scope:** Crypto only or PGP only when GPGME disabled
 
@@ -424,7 +424,7 @@ See the section "Sending Cryptographically Signed/Encrypted Messages" of the use
 (pgp-export-command)=
 ## `$pgp_export_command`
 
-- **Type:** command
+- **Type:** expando (command string)
 - **Default:** (empty)
 - **Scope:** PGP only
 
@@ -437,7 +437,7 @@ This is a format string, see the $$pgp_decode_command command for possible `prin
 (pgp-get-keys-command)=
 ## `$pgp_get_keys_command`
 
-- **Type:** command
+- **Type:** expando (command string)
 - **Default:** (empty)
 - **Scope:** PGP only
 
@@ -475,7 +475,7 @@ _Unset_ this if you want to play interesting key selection games.
 (pgp-import-command)=
 ## `$pgp_import_command`
 
-- **Type:** command
+- **Type:** expando (command string)
 - **Default:** (empty)
 - **Scope:** PGP only
 
@@ -509,7 +509,7 @@ Prefixing the value with `reverse-` sorts the entries in reverse order, e.g.
 (pgp-list-pubring-command)=
 ## `$pgp_list_pubring_command`
 
-- **Type:** command
+- **Type:** expando (command string)
 - **Default:** (empty)
 - **Scope:** PGP only
 
@@ -530,7 +530,7 @@ This is a format string, see the $$pgp_decode_command command for possible `prin
 (pgp-list-secring-command)=
 ## `$pgp_list_secring_command`
 
-- **Type:** command
+- **Type:** expando (command string)
 - **Default:** (empty)
 - **Scope:** PGP only
 
@@ -564,7 +564,7 @@ This option now only controls the display of key IDs in the key selection menu a
 (pgp-mime-auto)=
 ## `$pgp_mime_auto`
 
-- **Type:** quadoption
+- **Type:** quad-option
 - **Default:** ask-yes
 - **Scope:** PGP only
 
@@ -627,7 +627,7 @@ It is recommended that you use the keyid form to specify your key (e.g.
 (pgp-sign-command)=
 ## `$pgp_sign_command`
 
-- **Type:** command
+- **Type:** expando (command string)
 - **Default:** (empty)
 - **Scope:** PGP only
 
@@ -683,7 +683,7 @@ If you are using an older version of GnuPG without an agent running, or another 
 (pgp-verify-command)=
 ## `$pgp_verify_command`
 
-- **Type:** command
+- **Type:** expando (command string)
 - **Default:** (empty)
 - **Scope:** PGP only
 
@@ -696,7 +696,7 @@ This is a format string, see the $$pgp_decode_command command for possible `prin
 (pgp-verify-key-command)=
 ## `$pgp_verify_key_command`
 
-- **Type:** command
+- **Type:** expando (command string)
 - **Default:** (empty)
 - **Scope:** PGP only
 
@@ -721,7 +721,7 @@ It is _set_ by default.
 (smime-ca-location)=
 ## `$smime_ca_location`
 
-- **Type:** path
+- **Type:** path (string)
 - **Default:** (empty)
 - **Scope:** S/MIME only
 
@@ -732,7 +732,7 @@ This variable contains the name of either a directory, or a file which contains 
 (smime-certificates)=
 ## `$smime_certificates`
 
-- **Type:** path
+- **Type:** path (string)
 - **Default:** (empty)
 - **Scope:** S/MIME only
 
@@ -746,7 +746,7 @@ This option points to the location of the certificates.
 (smime-decrypt-command)=
 ## `$smime_decrypt_command`
 
-- **Type:** command
+- **Type:** expando (command string)
 - **Default:** (empty)
 - **Scope:** S/MIME only
 
@@ -805,7 +805,7 @@ It will also be used for signing unless $$smime_sign_as is set.
 (smime-encrypt-command)=
 ## `$smime_encrypt_command`
 
-- **Type:** command
+- **Type:** expando (command string)
 - **Default:** (empty)
 - **Scope:** S/MIME only
 
@@ -832,7 +832,7 @@ Valid choices are "aes128", "aes192", "aes256", "des", "des3", "rc2-40", "rc2-64
 (smime-get-cert-command)=
 ## `$smime_get_cert_command`
 
-- **Type:** command
+- **Type:** expando (command string)
 - **Default:** (empty)
 - **Scope:** S/MIME only
 
@@ -845,7 +845,7 @@ This is a format string, see the $$smime_decrypt_command command for possible `p
 (smime-get-cert-email-command)=
 ## `$smime_get_cert_email_command`
 
-- **Type:** command
+- **Type:** expando (command string)
 - **Default:** (empty)
 - **Scope:** S/MIME only
 
@@ -858,7 +858,7 @@ This is a format string, see the $$smime_decrypt_command command for possible `p
 (smime-get-signer-cert-command)=
 ## `$smime_get_signer_cert_command`
 
-- **Type:** command
+- **Type:** expando (command string)
 - **Default:** (empty)
 - **Scope:** S/MIME only
 
@@ -871,7 +871,7 @@ This is a format string, see the $$smime_decrypt_command command for possible `p
 (smime-import-cert-command)=
 ## `$smime_import_cert_command`
 
-- **Type:** command
+- **Type:** expando (command string)
 - **Default:** (empty)
 - **Scope:** S/MIME only
 
@@ -899,7 +899,7 @@ However, this has no effect while replying, since NeoMutt will automatically sel
 (smime-keys)=
 ## `$smime_keys`
 
-- **Type:** path
+- **Type:** path (string)
 - **Default:** (empty)
 - **Scope:** S/MIME only
 
@@ -913,7 +913,7 @@ This option points to the location of the private keys.
 (smime-pk7out-command)=
 ## `$smime_pk7out_command`
 
-- **Type:** command
+- **Type:** expando (command string)
 - **Default:** (empty)
 - **Scope:** S/MIME only
 
@@ -949,7 +949,7 @@ Most people will only need to set $$smime_default_key.
 (smime-sign-command)=
 ## `$smime_sign_command`
 
-- **Type:** command
+- **Type:** expando (command string)
 - **Default:** (empty)
 - **Scope:** S/MIME only
 
@@ -985,7 +985,7 @@ The number of seconds after which a cached passphrase will expire if not used.
 (smime-verify-command)=
 ## `$smime_verify_command`
 
-- **Type:** command
+- **Type:** expando (command string)
 - **Default:** (empty)
 - **Scope:** S/MIME only
 
@@ -998,7 +998,7 @@ This is a format string, see the $$smime_decrypt_command command for possible `p
 (smime-verify-opaque-command)=
 ## `$smime_verify_opaque_command`
 
-- **Type:** command
+- **Type:** expando (command string)
 - **Default:** (empty)
 - **Scope:** S/MIME only
 

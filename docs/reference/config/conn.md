@@ -20,7 +20,7 @@ how-to guides and explanation pages instead.
 (account-command)=
 ## `$account_command`
 
-- **Type:** command
+- **Type:** command (string)
 - **Default:** (empty)
 
 If set, this command is used to retrieve account credentials.
@@ -34,7 +34,7 @@ Currently supported output lines are _login_, _username_, and _password_.
 (certificate-file)=
 ## `$certificate_file`
 
-- **Type:** path
+- **Type:** path (string)
 - **Default:** "`~/.mutt_certificates`"
 - **Scope:** OpenSSL and GnuTLS only
 
@@ -55,7 +55,7 @@ set certificate_file=~/.neomutt/certificates
 (entropy-file)=
 ## `$entropy_file`
 
-- **Type:** path
+- **Type:** path (string)
 - **Default:** (empty)
 - **Scope:** OpenSSL only
 
@@ -98,7 +98,7 @@ A negative value causes NeoMutt to wait indefinitely.
 (ssl-ca-certificates-file)=
 ## `$ssl_ca_certificates_file`
 
-- **Type:** path
+- **Type:** path (string)
 - **Default:** (empty)
 - **Scope:** GnuTLS only
 
@@ -130,7 +130,7 @@ See `gnutls_priority_init(3)` for the syntax and more details.
 (ssl-client-cert)=
 ## `$ssl_client_cert`
 
-- **Type:** path
+- **Type:** path (string)
 - **Default:** (empty)
 
 The file containing a client certificate and its associated private key.
@@ -165,7 +165,7 @@ A value of 0 will use the default from the GNUTLS library.
 (ssl-starttls)=
 ## `$ssl_starttls`
 
-- **Type:** quadoption
+- **Type:** quad-option
 - **Default:** yes
 
 If _set_ (the default), NeoMutt will attempt to use `STARTTLS` on servers advertising the capability.
@@ -245,7 +245,7 @@ Setting this variable to _yes_ will permit verifying partial certification chain
 (tunnel)=
 ## `$tunnel`
 
-- **Type:** command
+- **Type:** command (string)
 - **Default:** (empty)
 
 Setting this variable will cause NeoMutt to open a pipe to a command instead of a raw socket.

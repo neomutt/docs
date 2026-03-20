@@ -20,7 +20,7 @@ how-to guides and explanation pages instead.
 (abort-noattach)=
 ## `$abort_noattach`
 
-- **Type:** quadoption
+- **Type:** quad-option
 - **Default:** no
 
 If set to _yes_, when composing messages containing the regular expression specified by $$abort_noattach_regex and no attachments are given, composition will be aborted.
@@ -50,7 +50,7 @@ Like other regular expressions in NeoMutt, the search is case sensitive if the p
 (abort-nosubject)=
 ## `$abort_nosubject`
 
-- **Type:** quadoption
+- **Type:** quad-option
 - **Default:** ask-yes
 
 If set to _yes_, when composing messages and no subject is given at the subject prompt, composition will be aborted.
@@ -61,7 +61,7 @@ If set to _no_, composing messages with no subject given at the subject prompt w
 (abort-unmodified)=
 ## `$abort_unmodified`
 
-- **Type:** quadoption
+- **Type:** quad-option
 - **Default:** yes
 
 If set to _yes_, composition will automatically abort after editing the message body if no changes are made to the file (this check only happens after the _first_ edit of the file).
@@ -142,7 +142,7 @@ Note: for Japanese users, "iso-2022-*" must be put at the head of the value as s
 (attribution-intro)=
 ## `$attribution_intro`
 
-- **Type:** string
+- **Type:** expando
 - **Default:** "`On %d, %n wrote:`"
 
 This is the string that will precede a replied-to message which is quoted in the main body of the reply (this is the case when $$include is set).
@@ -171,7 +171,7 @@ Affected variables are: $$attribution_intro, $$attribution_trailer, $$forward_at
 (attribution-trailer)=
 ## `$attribution_trailer`
 
-- **Type:** string
+- **Type:** expando
 - **Default:** (empty)
 
 Similar to the $$attribution_intro variable, this is the string that will come after a replied-to message which is quoted in the main body of the reply (this is the case when $$include is set).
@@ -377,7 +377,7 @@ See also: $$auto_edit, $$edit_headers, $$ask_cc, $$ask_bcc.
 (fcc-attach)=
 ## `$fcc_attach`
 
-- **Type:** quadoption
+- **Type:** quad-option
 - **Default:** yes
 
 This variable controls whether or not attachments on outgoing messages are saved along with the main body of your message.
@@ -436,7 +436,7 @@ Without this header, a group reply to your message sent to a subscribed list wil
 (forward-attachments)=
 ## `$forward_attachments`
 
-- **Type:** quadoption
+- **Type:** quad-option
 - **Default:** ask-yes
 
 When forwarding inline (i.e.
@@ -447,7 +447,7 @@ $$mime_forward _unset_ or answered with "no" and $$forward_decode _set_), attach
 (forward-attribution-intro)=
 ## `$forward_attribution_intro`
 
-- **Type:** string
+- **Type:** expando
 - **Default:** "`----- Forwarded message from %f -----`"
 
 This is the string that will precede a message which has been forwarded in the main body of a message (when $$mime_forward is unset).
@@ -459,7 +459,7 @@ See also $$attribution_locale.
 (forward-attribution-trailer)=
 ## `$forward_attribution_trailer`
 
-- **Type:** string
+- **Type:** expando
 - **Default:** "`----- End forwarded message -----`"
 
 This is the string that will follow a message which has been forwarded in the main body of a message (when $$mime_forward is unset).
@@ -483,7 +483,7 @@ This variable is only used if $$mime_forward is _set_ and $$mime_forward_decode 
 (forward-edit)=
 ## `$forward_edit`
 
-- **Type:** quadoption
+- **Type:** quad-option
 - **Default:** yes
 
 This quadoption controls whether or not the user is automatically placed in the editor when forwarding messages.
@@ -494,7 +494,7 @@ For those who always want to forward with no modification, use a setting of "no"
 (forward-format)=
 ## `$forward_format`
 
-- **Type:** string
+- **Type:** expando
 - **Default:** "`[%a: %s]`"
 
 This variable controls the default subject when forwarding a message.
@@ -516,7 +516,7 @@ Hence the forwarded message becomes part of the original thread instead of start
 (greeting)=
 ## `$greeting`
 
-- **Type:** string
+- **Type:** expando
 - **Default:** (empty)
 
 When set, this is the string that will precede every message as a greeting phrase to the recipients.
@@ -557,7 +557,7 @@ When _set_, NeoMutt will skip the host name part of $$hostname variable when add
 (honor-followup-to)=
 ## `$honor_followup_to`
 
-- **Type:** quadoption
+- **Type:** quad-option
 - **Default:** yes
 
 This variable controls whether or not a Mail-Followup-To header is honored when group-replying to a message.
@@ -578,7 +578,7 @@ To direct a response to the mailing list when this option is _set_, use the `$<l
 (include)=
 ## `$include`
 
-- **Type:** quadoption
+- **Type:** quad-option
 - **Default:** ask-yes
 
 Controls whether or not a copy of the message(s) you are replying to is included in your reply.
@@ -588,7 +588,7 @@ Controls whether or not a copy of the message(s) you are replying to is included
 (inews-command)=
 ## `$inews_command`
 
-- **Type:** command
+- **Type:** expando (command string)
 - **Default:** (empty)
 
 If set, specifies the program and arguments used to deliver news posted by NeoMutt.
@@ -616,7 +616,7 @@ set inews_command="/usr/local/bin/inews -hS"
 (message-id-format)=
 ## `$message_id_format`
 
-- **Type:** string
+- **Type:** expando
 - **Default:** "`<%z@%f>`"
 
 This variable allows you to choose a custom format for the Message-Id when sending messages.
@@ -679,7 +679,7 @@ Otherwise $$forward_decode is used instead.
 (mime-type-query-command)=
 ## `$mime_type_query_command`
 
-- **Type:** command
+- **Type:** command (string)
 - **Default:** (empty)
 
 This specifies a command to run, to determine the mime type of a new attachment when composing a message.
@@ -762,7 +762,7 @@ When _set_, NeoMutt will use this as a fallback encryption key for postponed mes
 (recall)=
 ## `$recall`
 
-- **Type:** quadoption
+- **Type:** quad-option
 - **Default:** ask-yes
 
 Controls whether or not NeoMutt recalls postponed messages when composing a new message.
@@ -789,7 +789,7 @@ Also see the "$alternates" command.
 (reply-to)=
 ## `$reply_to`
 
-- **Type:** quadoption
+- **Type:** quad-option
 - **Default:** ask-yes
 
 If _set_, when replying to a message, NeoMutt will use the address listed in the Reply-to: header as the recipient of the reply.
@@ -857,7 +857,7 @@ In either case, a missing real name will be filled in afterwards using the value
 (sendmail)=
 ## `$sendmail`
 
-- **Type:** command
+- **Type:** command (string)
 - **Default:** "`/usr/sbin/sendmail -oem -oi`"
 
 Specifies the program and arguments used to deliver mail sent by NeoMutt.
@@ -896,7 +896,7 @@ If there is some error, you will be informed as to where to find the output.
 (signature)=
 ## `$signature`
 
-- **Type:** path
+- **Type:** path (string)
 - **Default:** "`~/.signature`"
 
 Specifies the filename of your signature, which is appended to all outgoing messages.
@@ -952,7 +952,7 @@ set smtp_authenticators="digest-md5:cram-md5"
 (smtp-oauth-refresh-command)=
 ## `$smtp_oauth_refresh_command`
 
-- **Type:** command
+- **Type:** command (string)
 - **Default:** (empty)
 
 The command to run to generate an OAUTH refresh token for authorizing your connection to your SMTP server.
