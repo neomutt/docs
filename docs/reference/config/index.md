@@ -68,13 +68,13 @@ When _set_, NeoMutt will collapse all threads when entering a folder.
 
 Controls the characters used in cryptography flags.
 
-| Character | Default | Description                                                     |
-|-----------|---------|-----------------------------------------------------------------|
-| 1         | S       | The mail is signed, and the signature is successfully verified |
-| 2         | P       | The mail is PGP encrypted                                      |
-| 3         | s       | The mail is signed                                             |
-| 4         | K       | The mail contains a PGP public key                             |
-| 5         | <space> | The mail has no crypto info                                    |
+| Character | Default     | Description                                                    |
+|-----------|-------------|----------------------------------------------------------------|
+| 1         | `S`         | The mail is signed, and the signature is successfully verified |
+| 2         | `P`         | The mail is PGP encrypted                                      |
+| 3         | `s`         | The mail is signed                                             |
+| 4         | `K`         | The mail contains a PGP public key                             |
+| 5         | ` ` (space) | The mail has no crypto info                                    |
 
 --------------------------------------------------------------------------------
 
@@ -89,19 +89,19 @@ Controls the characters used in cryptography flags.
 
 Controls the characters used in several flags.
 
-| Character | Default | Description                              |
-|-----------|---------|------------------------------------------|
-| 1         | *       | Mail is tagged                           |
-| 2         | !       | Mail is flagged as important             |
-| 3         | D       | Mail is marked for deletion              |
-| 4         | d       | Mail has attachments marked for deletion |
-| 5         | r       | Mail has been replied to                 |
-| 6         | O       | Mail is Old (Unread but seen)            |
-| 7         | N       | Mail is New (Unread but not seen)        |
-| 8         | o       | Mail thread is Old (Unread but seen)     |
-| 9         | n       | Mail thread is New (Unread but not seen) |
-| 10        | -       | Mail is read - %S expando                |
-| 11        | <space> | Mail is read - %Z expando                |
+| Character | Default     | Description                              |
+|-----------|-------------|------------------------------------------|
+| 1         | `*`         | Mail is tagged                           |
+| 2         | `!`         | Mail is flagged as important             |
+| 3         | `D`         | Mail is marked for deletion              |
+| 4         | `d`         | Mail has attachments marked for deletion |
+| 5         | `r`         | Mail has been replied to                 |
+| 6         | `O`         | Mail is Old (Unread but seen)            |
+| 7         | `N`         | Mail is New (Unread but not seen)        |
+| 8         | `o`         | Mail thread is Old (Unread but seen)     |
+| 9         | `n`         | Mail thread is New (Unread but not seen) |
+| 10        | `-`         | Mail is read - %S expando                |
+| 11        | ` ` (space) | Mail is read - %Z expando                |
 
 --------------------------------------------------------------------------------
 
@@ -403,15 +403,15 @@ This might be helpful with IMAP folders that don't like dots in folder names.
 
 Controls the character used to indicate mail addressed to you.
 
-| Character | Default | Description                                                                                        |
-|-----------|---------|----------------------------------------------------------------------------------------------------|
-| 1         | <space> | The mail is *not* addressed to your address.                                                       |
-| 2         | +       | You are the only recipient of the message.                                                         |
-| 3         | T       | Your address appears in the "To:" header field, but you are not the only recipient of the message. |
-| 4         | C       | Your address is specified in the "Cc:" header field, but you are not the only recipient.           |
-| 5         | F       | Indicates the mail that was sent by *you*.                                                         |
-| 6         | L       | Indicates the mail was sent to a mailing-list you subscribe to.                                    |
-| 7         | R       | Your address appears in the "Reply-To:" header field but none of the above applies.                |
+| Character | Default     | Description                                                                                       |
+|-----------|-------------|---------------------------------------------------------------------------------------------------|
+| 1         | ` ` (space) | The mail is *not* addressed to your address                                                       |
+| 2         | `+`         | You are the only recipient of the message                                                         |
+| 3         | `T`         | Your address appears in the "To:" header field, but you are not the only recipient of the message |
+| 4         | `C`         | Your address is specified in the "Cc:" header field, but you are not the only recipient           |
+| 5         | `F`         | Indicates the mail that was sent by *you*                                                         |
+| 6         | `L`         | Indicates the mail was sent to a mailing-list you subscribe to                                    |
+| 7         | `R`         | Your address appears in the "Reply-To:" header field but none of the above applies                |
 
 --------------------------------------------------------------------------------
 
