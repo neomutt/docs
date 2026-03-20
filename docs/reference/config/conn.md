@@ -15,8 +15,7 @@ Mirror the structure of the software itself. Avoid instruction or explanation â€
 how-to guides and explanation pages instead.
 :::
 
-
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (account-command)=
 ## `$account_command`
@@ -30,7 +29,7 @@ The command writes to standard output a number of _key: value_ lines.
 Currently supported arguments are _--hostname_, _--username_, and _--type_, where type can be any of _imap_, _imaps_, _pop_, _pops_, _smtp_, _smtps_, _nntp_, and _nntps_.
 Currently supported output lines are _login_, _username_, and _password_.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (certificate-file)=
 ## `$certificate_file`
@@ -50,10 +49,9 @@ Example:
 set certificate_file=~/.neomutt/certificates 
 ```
 
-
 (OpenSSL and GnuTLS only)
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (entropy-file)=
 ## `$entropy_file`
@@ -64,7 +62,7 @@ set certificate_file=~/.neomutt/certificates
 The file which includes random data that is used to initialize SSL library functions.
 (OpenSSL only)
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (preconnect)=
 ## `$preconnect`
@@ -85,7 +83,7 @@ Mailbox "foo" on "mailhost.net" can now be reached as "{localhost:1234}foo".
 
 Note: For this example to work, you must be able to log in to the remote machine without having to enter a password.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (socket-timeout)=
 ## `$socket_timeout`
@@ -96,7 +94,7 @@ Note: For this example to work, you must be able to log in to the remote machine
 Causes NeoMutt to timeout any socket connect/read/write operation (for IMAP, POP or SMTP) after this many seconds.
 A negative value causes NeoMutt to wait indefinitely.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (ssl-ca-certificates-file)=
 ## `$ssl_ca_certificates_file`
@@ -113,8 +111,7 @@ Example:
 set ssl_ca_certificates_file=/etc/ssl/certs/ca-certificates.crt 
 ```
 
-
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (ssl-ciphers)=
 ## `$ssl_ciphers`
@@ -129,7 +126,7 @@ For GnuTLS, this option will be used in place of "NORMAL" at the start of the pr
 See `gnutls_priority_init(3)` for the syntax and more details.
 (Note: GnuTLS version 2.1.7 or higher is required.)
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (ssl-client-cert)=
 ## `$ssl_client_cert`
@@ -139,7 +136,7 @@ See `gnutls_priority_init(3)` for the syntax and more details.
 
 The file containing a client certificate and its associated private key.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (ssl-force-tls)=
 ## `$ssl_force_tls`
@@ -151,7 +148,7 @@ If this variable is _set_, NeoMutt will require that all connections to remote s
 Furthermore it will attempt to negotiate TLS even if the server does not advertise the capability, since it would otherwise have to abort the connection anyway.
 This option supersedes $$ssl_starttls.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (ssl-min-dh-prime-bits)=
 ## `$ssl_min_dh_prime_bits`
@@ -164,7 +161,7 @@ for use in any Diffie-Hellman key exchange.
 A value of 0 will use the default from the GNUTLS library.
 (GnuTLS only)
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (ssl-starttls)=
 ## `$ssl_starttls`
@@ -178,7 +175,7 @@ When _unset_, NeoMutt will not attempt to use `STARTTLS` regardless of the serve
 **Note** that `STARTTLS` is subject to many kinds of attacks, including the ability of a machine-in-the-middle to suppress the advertising of support.
 Setting $$ssl_force_tls is recommended if you rely on `STARTTLS`.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (ssl-use-system-certs)=
 ## `$ssl_use_system_certs`
@@ -189,7 +186,7 @@ Setting $$ssl_force_tls is recommended if you rely on `STARTTLS`.
 If set to _yes_, NeoMutt will use CA certificates in the system-wide certificate store when checking if a server certificate is signed by a trusted CA.
 (OpenSSL only)
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (ssl-use-tlsv1-2)=
 ## `$ssl_use_tlsv1_2`
@@ -199,7 +196,7 @@ If set to _yes_, NeoMutt will use CA certificates in the system-wide certificate
 
 If _set_ , NeoMutt will use TLSv1.2 when communicating with servers that request it.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (ssl-use-tlsv1-3)=
 ## `$ssl_use_tlsv1_3`
@@ -209,7 +206,7 @@ If _set_ , NeoMutt will use TLSv1.2 when communicating with servers that request
 
 If _set_ , NeoMutt will use TLSv1.3 when communicating with servers that request it.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (ssl-verify-dates)=
 ## `$ssl_verify_dates`
@@ -220,7 +217,7 @@ If _set_ , NeoMutt will use TLSv1.3 when communicating with servers that request
 If _set_ (the default), NeoMutt will not automatically accept a server certificate that is either not yet valid or already expired.
 You should only unset this for particular known hosts, using the `$<account-hook>` function.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (ssl-verify-host)=
 ## `$ssl_verify_host`
@@ -231,7 +228,7 @@ You should only unset this for particular known hosts, using the `$<account-hook
 If _set_ (the default), NeoMutt will not automatically accept a server certificate whose host name does not match the host used in your folder URL.
 You should only unset this for particular known hosts, using the `$<account-hook>` function.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (ssl-verify-partial-chains)=
 ## `$ssl_verify_partial_chains`
@@ -245,7 +242,7 @@ Setting this variable to _yes_ will permit verifying partial certification chain
 
 (OpenSSL 1.0.2b and newer only).
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (tunnel)=
 ## `$tunnel`
@@ -266,7 +263,7 @@ Note: For this example to work you must be able to log in to the remote machine 
 When set, NeoMutt uses the tunnel for all remote connections.
 Please see "$account-hook" in the manual for how to use different tunnel commands per connection.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (tunnel-is-secure)=
 ## `$tunnel_is_secure`
@@ -282,7 +279,7 @@ When _unset_, NeoMutt will negotiate STARTTLS according to the $ssl_starttls and
 If $ssl_force_tls is set, NeoMutt will abort connecting if an IMAP server responds with PREAUTH.
 This setting is appropriate if $$tunnel does not provide security and could be tampered with by attackers.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (use-ipv6)=
 ## `$use_ipv6`

@@ -15,7 +15,7 @@ Mirror the structure of the software itself. Avoid instruction or explanation â€
 how-to guides and explanation pages instead.
 :::
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (attach-save-dir)=
 ## `$attach_save_dir`
@@ -25,7 +25,7 @@ how-to guides and explanation pages instead.
 
 The directory where attachments are saved.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (attach-save-without-prompting)=
 ## `$attach_save_without_prompting`
@@ -35,7 +35,7 @@ The directory where attachments are saved.
 
 This variable, when set to true, will cause attachments to be saved to the 'attach_save_dir' location without prompting the user for the filename.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (attach-sep)=
 ## `$attach_sep`
@@ -45,7 +45,7 @@ This variable, when set to true, will cause attachments to be saved to the 'atta
 
 The separator to add between attachments when operating (saving, printing, piping, etc) on a list of tagged attachments.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (attach-split)=
 ## `$attach_split`
@@ -57,7 +57,7 @@ If this variable is _unset_, when operating (saving, printing, piping, etc) on a
 The $$attach_sep separator is added after each attachment.
 When _set_, NeoMutt will operate on the attachments one by one.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (bounce)=
 ## `$bounce`
@@ -69,7 +69,7 @@ Controls whether you will be asked to confirm bouncing messages.
 If set to _yes_ you don't get asked if you want to bounce a message.
 Setting this variable to _no_ is not generally useful, and thus not recommended, because you are unable to bounce messages.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (count-alternatives)=
 ## `$count_alternatives`
@@ -83,7 +83,7 @@ Traditionally, multipart/alternative parts have simply represented different enc
 Unfortunately, some mail clients have started to place email attachments inside one of alternatives.
 Setting this will allow NeoMutt to find and count matching attachments hidden there, and include them in the index via %X or through ~X pattern matching.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (digest-collapse)=
 ## `$digest_collapse`
@@ -94,7 +94,7 @@ Setting this will allow NeoMutt to find and count matching attachments hidden th
 If this option is _set_, NeoMutt's received-attachments menu will not show the subparts of individual messages in a multipart/digest.
 To see these subparts, press "v" on that menu.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (message-format)=
 ## `$message_format`
@@ -104,7 +104,7 @@ To see these subparts, press "v" on that menu.
 
 This is the string displayed in the "attachment" menu for attachments of type `message/rfc822`.  For a full listing of defined `printf(3)`-like sequences see the section on $$index_format.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (mime-forward)=
 ## `$mime_forward`
@@ -118,7 +118,7 @@ If you like to switch between MIME and not MIME from mail to mail, set this vari
 
 Also see $$forward_decode and $$mime_forward_decode.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (mime-forward-rest)=
 ## `$mime_forward_rest`
@@ -127,4 +127,6 @@ Also see $$forward_decode and $$mime_forward_decode.
 - **Default:** `yes`
 
 When forwarding multiple attachments of a MIME message from the attachment menu, attachments which can't be decoded in a reasonable manner will be attached to the newly composed message if this option is _set_.
+rder="0" align="left" colspan="3"><font color="#303030" point-size="10">+4
+more</font></td> </tr>
 

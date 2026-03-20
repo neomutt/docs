@@ -15,8 +15,7 @@ Mirror the structure of the software itself. Avoid instruction or explanation â€
 how-to guides and explanation pages instead.
 :::
 
-
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (external-search-command)=
 ## `$external_search_command`
@@ -39,7 +38,7 @@ Finally, NeoMutt reads the Message-IDs and targets the matching messages with th
 
 You, the user, still have to rewrite the mairix_filter script to match the behavior of your indexer, but this should help users of indexers other than notmuch to integrate them cleanly with NeoMutt.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (pattern-format)=
 ## `$pattern_format`
@@ -59,7 +58,7 @@ The following `printf(3)`-style sequences are understood:
 | `%>X`  | `%{padding-hard:X}` | Right justify the rest of the string and pad with character `X` |
 | `%\|X` | `%{padding-eol:X}`  | Pad to the end of the line with character `X`                   |
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (simple-search)=
 ## `$simple_search`
@@ -76,7 +75,7 @@ simple_search applies to several functions, e.g. `<delete-pattern>`, `<limit>`, 
 For example, if you simply type "joe" at a search or limit prompt, NeoMutt will automatically expand it to the value specified by this variable by replacing "%s" with the supplied string.
 For the default value, "joe" would be expanded to: "~f joe | ~s joe".
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (thorough-search)=
 ## `$thorough_search`

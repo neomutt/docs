@@ -15,9 +15,7 @@ Mirror the structure of the software itself. Avoid instruction or explanation â€
 how-to guides and explanation pages instead.
 :::
 
-
-
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (mh-purge)=
 ## `$mh_purge`
@@ -31,7 +29,7 @@ If the variable is _set_, the message files will simply be deleted.
 
 This option is similar to $$maildir_trash for Maildir folders.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (mh-seq-flagged)=
 ## `$mh_seq_flagged`
@@ -41,7 +39,7 @@ This option is similar to $$maildir_trash for Maildir folders.
 
 The name of the MH sequence used for flagged messages.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (mh-seq-replied)=
 ## `$mh_seq_replied`
@@ -51,7 +49,7 @@ The name of the MH sequence used for flagged messages.
 
 The name of the MH sequence used to tag replied messages.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (mh-seq-unseen)=
 ## `$mh_seq_unseen`

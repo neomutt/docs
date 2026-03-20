@@ -15,8 +15,7 @@ Mirror the structure of the software itself. Avoid instruction or explanation â€
 how-to guides and explanation pages instead.
 :::
 
-
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (default-hook)=
 ## `$default_hook`
@@ -32,7 +31,7 @@ The hooks are expanded when they are declared, so a hook will be interpreted acc
 
 The default value matches if the message is either from a user matching the regular expression given, or if it is from you (if the from address matches "$alternates") and is to or cc'ed to a user matching the given regular expression.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (force-name)=
 ## `$force_name`
@@ -44,7 +43,7 @@ This variable is similar to $$save_name, except that NeoMutt will store a copy o
 
 Also see the $$record variable.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (save-name)=
 ## `$save_name`

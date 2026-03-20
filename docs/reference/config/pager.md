@@ -15,9 +15,7 @@ Mirror the structure of the software itself. Avoid instruction or explanation â€
 how-to guides and explanation pages instead.
 :::
 
-
-
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (allow-ansi)=
 ## `$allow_ansi`
@@ -35,7 +33,7 @@ Note that this may override your color choices, and even present a security prob
 
 and give it the same color as your attachment color (see also $$crypt_timestamp).
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (display-filter)=
 ## `$display_filter`
@@ -55,7 +53,7 @@ If they are removed, then PGP and MIME headers will no longer be coloured.
 This can be fixed by adding this to your config:
 `color body magenta default '^\[-- .* --\]$$$'`.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (header-color-partial)=
 ## `$header_color_partial`
@@ -71,7 +69,7 @@ One use of this option might be to apply color to just the header labels.
 
 See "$color" for more details.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (markers)=
 ## `$markers`
@@ -84,7 +82,7 @@ If set, a "+" marker is displayed at the beginning of wrapped lines.
 
 Also see the $$smart_wrap variable.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (pager)=
 ## `$pager`
@@ -97,7 +95,7 @@ When empty, NeoMutt will use the built-in pager, otherwise this variable should 
 
 Using an external pager may have some disadvantages: Additional keystrokes are necessary because you can't call NeoMutt functions directly from the pager, and screen resizes cause lines longer than the screen width to be badly formatted in the help menu.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (pager-context)=
 ## `$pager_context`
@@ -111,7 +109,7 @@ By default, NeoMutt will display the line after the last one on the screen at th
 This variable also specifies the amount of context given for search results.
 If positive, this many lines will be given before a match, if 0, the match will be top-aligned.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (pager-format)=
 ## `$pager_format`
@@ -122,7 +120,7 @@ If positive, this many lines will be given before a match, if 0, the match will 
 This variable controls the format of the one-line message "status" displayed before each message in either the internal or an external pager.
 The valid sequences are listed in the $$index_format section.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (pager-index-lines)=
 ## `$pager_index_lines`
@@ -135,7 +133,7 @@ The current message, unless near the top or bottom of the folder, will be roughl
 This is useful, for example, to determine how many messages remain to be read in the current thread.
 A value of 0 results in no index being shown.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (pager-read-delay)=
 ## `$pager_read_delay`
@@ -147,7 +145,7 @@ Determines the number of seconds that must elapse after first opening a new mess
 A value of 0 results in the message being marked read unconditionally; for other values, navigating to another message or exiting the pager before the timeout will leave the message marked unread.
 This setting is ignored if $$pager is set.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (pager-skip-quoted-context)=
 ## `$pager_skip_quoted_context`
@@ -159,7 +157,7 @@ Determines the number of lines of context to show before the unquoted text when 
 When set to a positive number at most that many lines of the previous quote are displayed.
 If the previous quote is shorter the whole quote is displayed.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (pager-stop)=
 ## `$pager_stop`
@@ -170,7 +168,7 @@ If the previous quote is shorter the whole quote is displayed.
 When _set_, the internal-pager will **not** move to the next message when you are at the end of a message and invoke the `<next-page>`
 function.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (prompt-after)=
 ## `$prompt_after`
@@ -181,7 +179,7 @@ function.
 If you use an _external_ $$pager, setting this variable will cause NeoMutt to prompt you for a command when the pager exits rather than returning to the index menu.
 If _unset_, NeoMutt will return to the index menu when the external pager exits.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (search-context)=
 ## `$search_context`
@@ -192,7 +190,7 @@ If _unset_, NeoMutt will return to the index menu when the external pager exits.
 For the pager, this variable specifies the number of lines shown before search results.
 By default, search results will be top-aligned.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (smart-wrap)=
 ## `$smart_wrap`
@@ -205,7 +203,7 @@ If _set_, long lines are wrapped at a word boundary.
 If _unset_, lines are simply wrapped at the screen edge.
 Also see the $$markers variable.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (smileys)=
 ## `$smileys`
@@ -216,7 +214,7 @@ Also see the $$markers variable.
 The _pager_ uses this variable to catch some common false positives of $$quote_regex, most notably smileys and not consider a line quoted text if it also matches $$smileys.
 This mostly happens at the beginning of a line.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (tilde)=
 ## `$tilde`
@@ -226,7 +224,7 @@ This mostly happens at the beginning of a line.
 
 When _set_, the internal-pager will pad blank lines to the bottom of the screen with a tilde ("~").
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (toggle-quoted-show-levels)=
 ## `$toggle_quoted_show_levels`

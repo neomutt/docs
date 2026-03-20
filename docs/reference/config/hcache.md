@@ -15,9 +15,7 @@ Mirror the structure of the software itself. Avoid instruction or explanation â€
 how-to guides and explanation pages instead.
 :::
 
-
-
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (header-cache)=
 ## `$header_cache`
@@ -32,7 +30,7 @@ By default it is _unset_ so no header caching will be used.
 
 Header caching can greatly improve speed when opening POP, IMAP MH or Maildir folders, see "$caching" in the NeoMutt Guide for details.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (header-cache-backend)=
 ## `$header_cache_backend`
@@ -44,7 +42,17 @@ This variable specifies the header cache backend.
 If no backend is specified, the first available backend will be used in the following order:
 tokyocabinet, kyotocabinet, qdbm, rocksdb, gdbm, bdb, tdb, lmdb.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+(header-cache-compress-level)=
+## `$header_cache_compress_level`
+
+- **Type:** number
+- **Default:** 1
+
+When NeoMutt is compiled with lz4, zstd or zlib, this option can be used to setup the compression level.
+
+--------------------------------------------------------------------------------
 
 (header-cache-compress-method)=
 ## `$header_cache_compress_method`
@@ -54,14 +62,4 @@ tokyocabinet, kyotocabinet, qdbm, rocksdb, gdbm, bdb, tdb, lmdb.
 
 When NeoMutt is compiled with lz4, zstd or zlib, the header cache backend can use these compression methods for compressing the cache files.
 This results in much smaller cache file sizes and may even improve speed.
-
-----------------------------------------------------------------------------------------------------------
-
-(header-cache-compress-level)=
-## `$header_cache_compress_level`
-
-- **Type:** number
-- **Default:** 1
-
-When NeoMutt is compiled with lz4, zstd or zlib, this option can be used to setup the compression level.
 

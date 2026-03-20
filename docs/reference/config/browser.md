@@ -15,7 +15,7 @@ Mirror the structure of the software itself. Avoid instruction or explanation â€
 how-to guides and explanation pages instead.
 :::
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (browser-abbreviate-mailboxes)=
 ## `$browser_abbreviate_mailboxes`
@@ -29,7 +29,7 @@ The default `"alpha"` setting of $$browser_sort uses locale-based sorting (using
 This can lead to some situations where the order doesn't make intuitive sense.
 In those cases, it may be desirable to _unset_ this variable.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (browser-sort)=
 ## `$browser_sort`
@@ -55,7 +55,7 @@ Specifies how to sort entries in the file browser.
 
 Prefixing the value with `reverse-` sorts the entries in reverse order, e.g. `set browser_sort = "reverse-date"`
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (browser-sort-dirs-first)=
 ## `$browser_sort_dirs_first`
@@ -65,7 +65,7 @@ Prefixing the value with `reverse-` sorts the entries in reverse order, e.g. `se
 
 If this variable is _set_, the browser will group directories before files.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (folder-format)=
 ## `$folder_format`
@@ -109,7 +109,7 @@ For an explanation of "soft-fill", see the $$index_format documentation.
 %m requires [$mail_check_stats](#mail-check-stats) to be set.
 %n requires [$mail_check_stats](#mail-check-stats) to be set (except for IMAP mailboxes).
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (group-index-format)=
 ## `$group_index_format`
@@ -135,7 +135,7 @@ This string is similar to "$index_format", but has its own set of printf()-like 
 | `%>X`  | `%{padding-hard:X}` | Right justify the rest of the string and pad with character `X`      |
 | `%\|X` | `%{padding-eol:X}`  | Pad to the end of the line with character `X`                        |
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (mailbox-folder-format)=
 ## `$mailbox_folder_format`
@@ -147,7 +147,7 @@ This variable allows you to customize the file browser display to your personal 
 It's only used to customize network mailboxes (e.g. imap).
 This string is identical in formatting to the one used by "$$folder_format".
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (mask)=
 ## `$mask`
@@ -158,7 +158,7 @@ This string is identical in formatting to the one used by "$$folder_format".
 A regular expression used in the file browser, optionally preceded by the _not_ operator "!".  Only files whose names match this mask will be shown.
 The match is always case-sensitive.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (show-only-unread)=
 ## `$show_only_unread`

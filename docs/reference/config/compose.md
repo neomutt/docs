@@ -15,8 +15,7 @@ Mirror the structure of the software itself. Avoid instruction or explanation â€
 how-to guides and explanation pages instead.
 :::
 
-
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (compose-confirm-detach-first)=
 ## `$compose_confirm_detach_first`
@@ -30,7 +29,7 @@ This is to help prevent irreversible loss of the typed message by accidentally h
 Note: NeoMutt only prompts for the first entry.
 It doesn't keep track of which message is the typed message if the entries are reordered, or if the first entry was already deleted.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (compose-format)=
 ## `$compose_format`
@@ -53,37 +52,7 @@ This string is similar to $$status_format, but has its own set of `printf(3)`-li
 
 See the text describing the $$status_format option for more information on how to set $$compose_format.
 
-----------------------------------------------------------------------------------------------------------
-
-(compose-show-preview)=
-## `$compose_show_preview`
-
-- **Type:** boolean
-- **Default:** yes
-
-When _set_, NeoMutt will display a preview of message in the compose view.
-
-----------------------------------------------------------------------------------------------------------
-
-(compose-show-user-headers)=
-## `$compose_show_user_headers`
-
-- **Type:** boolean
-- **Default:** yes
-
-When _set_, NeoMutt will display user-defined headers (set via $my-header or from editing with edit-headers).
-
-----------------------------------------------------------------------------------------------------------
-
-(compose-preview-min-rows)=
-## `$compose_preview_min_rows`
-
-- **Type:** number
-- **Default:** 5
-
-This variable specifies the minimum number of rows that have to be available for the message preview window to shown.
-
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (compose-preview-above-attachments)=
 ## `$compose_preview_above_attachments`
@@ -94,7 +63,37 @@ This variable specifies the minimum number of rows that have to be available for
 Show the message preview above the attachments list.
 By default it is shown below it.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+(compose-preview-min-rows)=
+## `$compose_preview_min_rows`
+
+- **Type:** number
+- **Default:** 5
+
+This variable specifies the minimum number of rows that have to be available for the message preview window to shown.
+
+--------------------------------------------------------------------------------
+
+(compose-show-preview)=
+## `$compose_show_preview`
+
+- **Type:** boolean
+- **Default:** yes
+
+When _set_, NeoMutt will display a preview of message in the compose view.
+
+--------------------------------------------------------------------------------
+
+(compose-show-user-headers)=
+## `$compose_show_user_headers`
+
+- **Type:** boolean
+- **Default:** yes
+
+When _set_, NeoMutt will display user-defined headers (set via $my-header or from editing with edit-headers).
+
+--------------------------------------------------------------------------------
 
 (copy)=
 ## `$copy`
@@ -105,7 +104,7 @@ By default it is shown below it.
 This variable controls whether or not copies of your outgoing messages will be saved for later references.
 Also see $$record, $$save_name, $$force_name and "$fcc-hook".
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (edit-headers)=
 ## `$edit_headers`
@@ -121,7 +120,7 @@ NeoMutt will not understand localized header labels, just as it would not when p
 
 **Note** that changes made to the References: and Date: headers are ignored for interoperability reasons.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (ispell)=
 ## `$ispell`
@@ -131,7 +130,7 @@ NeoMutt will not understand localized header labels, just as it would not when p
 
 How to invoke ispell (GNU's spell-checking software).
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (postpone)=
 ## `$postpone`

@@ -15,9 +15,7 @@ Mirror the structure of the software itself. Avoid instruction or explanation â€
 how-to guides and explanation pages instead.
 :::
 
-
-
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (nm-config-file)=
 ## `$nm_config_file`
@@ -28,7 +26,7 @@ how-to guides and explanation pages instead.
 Configuration file for notmuch.
 Use 'auto' to detect configuration.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (nm-config-profile)=
 ## `$nm_config_profile`
@@ -38,7 +36,7 @@ Use 'auto' to detect configuration.
 
 Configuration profile for notmuch.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (nm-db-limit)=
 ## `$nm_db_limit`
@@ -48,7 +46,7 @@ Configuration profile for notmuch.
 
 This variable specifies the default limit used in notmuch queries.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (nm-default-url)=
 ## `$nm_default_url`
@@ -58,7 +56,7 @@ This variable specifies the default limit used in notmuch queries.
 
 This variable specifies the default Notmuch database in format notmuch://<absolute path>.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (nm-exclude-tags)=
 ## `$nm_exclude_tags`
@@ -68,7 +66,7 @@ This variable specifies the default Notmuch database in format notmuch://<absolu
 
 The messages tagged with these tags are excluded and not loaded from notmuch DB to NeoMutt unless specified explicitly.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (nm-flagged-tag)=
 ## `$nm_flagged_tag`
@@ -81,7 +79,7 @@ The variable is used to count flagged messages in DB and set the flagged flag wh
 All other NeoMutt commands use standard (e.g. maildir)
 flags.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (nm-open-timeout)=
 ## `$nm_open_timeout`
@@ -91,7 +89,7 @@ flags.
 
 This variable specifies the timeout for database open in seconds.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (nm-query-type)=
 ## `$nm_query_type`
@@ -101,7 +99,7 @@ This variable specifies the timeout for database open in seconds.
 
 This variable specifies the default query type (threads or messages) used in notmuch queries.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (nm-query-window-current-position)=
 ## `$nm_query_window_current_position`
@@ -111,7 +109,7 @@ This variable specifies the default query type (threads or messages) used in not
 
 This variable contains the position of the current search for window based vfolder.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (nm-query-window-current-search)=
 ## `$nm_query_window_current_search`
@@ -121,7 +119,7 @@ This variable contains the position of the current search for window based vfold
 
 This variable contains the currently setup notmuch search for window based vfolder.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (nm-query-window-duration)=
 ## `$nm_query_window_duration`
@@ -133,7 +131,7 @@ This variable sets the time duration of a windowed notmuch query.
 Accepted values all non negative integers.
 A value of 0 disables the feature.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (nm-query-window-enable)=
 ## `$nm_query_window_enable`
@@ -143,7 +141,7 @@ A value of 0 disables the feature.
 
 This variable enables windowed notmuch queries even if window duration is 0.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (nm-query-window-or-terms)=
 ## `$nm_query_window_or_terms`
@@ -159,7 +157,7 @@ Using "notmuch://?query=tag:inbox" as the mailbox and "tag:flagged and tag:unrea
 
 notmuch://?query=tag:inbox and (date:... or (tag:flagged and tag:unread))
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (nm-query-window-timebase)=
 ## `$nm_query_window_timebase`
@@ -170,7 +168,7 @@ notmuch://?query=tag:inbox and (date:... or (tag:flagged and tag:unread))
 This variable sets the time base of a windowed notmuch query.
 Accepted values are 'minute', 'hour', 'day', 'week', 'month', 'year'.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (nm-record-tags)=
 ## `$nm_record_tags`
@@ -181,7 +179,7 @@ Accepted values are 'minute', 'hour', 'day', 'week', 'month', 'year'.
 This variable specifies the notmuch tag modifications (addition, removal, toggling) applied to messages added to the NeoMutt record when $$nm_record is true.
 See the description of the `<modify-labels>` function for the syntax.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (nm-replied-tag)=
 ## `$nm_replied_tag`
@@ -193,7 +191,7 @@ This variable specifies notmuch tag which is used for replied messages.
 The variable is used to set the replied flag when modifying tags.
 All other NeoMutt commands use standard (e.g. maildir) flags.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (nm-unread-tag)=
 ## `$nm_unread_tag`
@@ -205,7 +203,7 @@ This variable specifies notmuch tag which is used for unread messages.
 The variable is used to count unread messages in DB and set the unread flag when modifying tags.
 All other NeoMutt commands use standard (e.g. maildir) flags.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (virtual-spool-file)=
 ## `$virtual_spool_file`

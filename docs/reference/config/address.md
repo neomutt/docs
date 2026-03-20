@@ -15,7 +15,7 @@ Mirror the structure of the software itself. Avoid instruction or explanation â€
 how-to guides and explanation pages instead.
 :::
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (idn-decode)=
 ## `$idn_decode`
@@ -28,7 +28,7 @@ Note: You can use IDNs for addresses even if this is _unset_.
 This variable only affects decoding.
 (IDN only)
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (idn-encode)=
 ## `$idn_encode`

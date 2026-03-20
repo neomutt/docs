@@ -15,9 +15,7 @@ Mirror the structure of the software itself. Avoid instruction or explanation â€
 how-to guides and explanation pages instead.
 :::
 
-
-
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (beep)=
 ## `$beep`
@@ -27,7 +25,7 @@ how-to guides and explanation pages instead.
 
 When this variable is _set_, NeoMutt will beep when an error occurs.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (collapse-flagged)=
 ## `$collapse_flagged`
@@ -37,7 +35,7 @@ When this variable is _set_, NeoMutt will beep when an error occurs.
 
 When _unset_, NeoMutt will not collapse a thread if it contains any flagged messages.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (collapse-unread)=
 ## `$collapse_unread`
@@ -47,7 +45,7 @@ When _unset_, NeoMutt will not collapse a thread if it contains any flagged mess
 
 When _unset_, NeoMutt will not collapse a thread if it contains any unread messages.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (duplicate-threads)=
 ## `$duplicate_threads`
@@ -58,7 +56,7 @@ When _unset_, NeoMutt will not collapse a thread if it contains any unread messa
 This variable controls whether NeoMutt, when $$sort is set to _threads_, threads messages with the same Message-Id together.
 If it is _set_, it will indicate that it thinks they are duplicates of each other with an equals sign in the thread tree.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (hide-limited)=
 ## `$hide_limited`
@@ -68,7 +66,7 @@ If it is _set_, it will indicate that it thinks they are duplicates of each othe
 
 When _set_, NeoMutt will not show the presence of messages that are hidden by limiting, in the thread tree.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (hide-missing)=
 ## `$hide_missing`
@@ -78,7 +76,7 @@ When _set_, NeoMutt will not show the presence of messages that are hidden by li
 
 When _set_, NeoMutt will not show the presence of missing messages in the thread tree.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (hide-thread-subject)=
 ## `$hide_thread_subject`
@@ -88,7 +86,7 @@ When _set_, NeoMutt will not show the presence of missing messages in the thread
 
 When _set_, NeoMutt will not show the subject of messages in the thread tree that have the same subject as their parent or closest previously displayed sibling.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (hide-top-limited)=
 ## `$hide_top_limited`
@@ -99,7 +97,7 @@ When _set_, NeoMutt will not show the subject of messages in the thread tree tha
 When _set_, NeoMutt will not show the presence of messages that are hidden by limiting, at the top of threads in the thread tree.
 Note that when $$hide_limited is _set_, this option will have no effect.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (hide-top-missing)=
 ## `$hide_top_missing`
@@ -110,7 +108,7 @@ Note that when $$hide_limited is _set_, this option will have no effect.
 When _set_, NeoMutt will not show the presence of missing messages at the top of threads in the thread tree.
 Note that when $$hide_missing is _set_, this option will have no effect.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (narrow-tree)=
 ## `$narrow_tree`
@@ -120,7 +118,7 @@ Note that when $$hide_missing is _set_, this option will have no effect.
 
 This variable, when _set_, makes the thread tree narrower, allowing deeper threads to fit on the screen.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (sort-re)=
 ## `$sort_re`
@@ -133,7 +131,7 @@ In that case, it changes the heuristic neomutt uses to thread messages by subjec
 With $$sort_re _set_, neomutt will only attach a message as the child of another message by subject if the subject of the child message starts with a substring matching the setting of $$reply_regex.
 With $$sort_re _unset_, neomutt will attach the message whether or not this is the case, as long as the non-$$reply_regex parts of both messages are identical.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (strict-threads)=
 ## `$strict_threads`
@@ -146,7 +144,7 @@ By default, messages with the same subject are grouped together in "pseudo threa
 This may not always be desirable, such as in a personal mailbox where you might have several unrelated messages with the subjects like "hi" which will get grouped together.
 See also $$sort_re for a less drastic way of controlling this behavior.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (thread-received)=
 ## `$thread_received`

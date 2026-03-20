@@ -15,8 +15,7 @@ Mirror the structure of the software itself. Avoid instruction or explanation â€
 how-to guides and explanation pages instead.
 :::
 
-
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (net-inc)=
 ## `$net_inc`
@@ -29,7 +28,7 @@ If set to 0, no progress messages will be displayed.
 
 See also $$read_inc, $$write_inc and $$net_inc.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (read-inc)=
 ## `$read_inc`
@@ -44,7 +43,7 @@ When set to 0, only a single message will appear before the reading the mailbox.
 
 Also see the $$write_inc, $$net_inc and $$time_inc variables and the "$tuning" section of the manual for performance considerations.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (time-inc)=
 ## `$time_inc`
@@ -58,7 +57,7 @@ This can improve throughput on systems with slow terminals, or when running NeoM
 
 Also see the "$tuning" section of the manual for performance considerations.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (write-inc)=
 ## `$write_inc`

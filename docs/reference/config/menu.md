@@ -15,9 +15,7 @@ Mirror the structure of the software itself. Avoid instruction or explanation â€
 how-to guides and explanation pages instead.
 :::
 
-
-
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (arrow-cursor)=
 ## `$arrow_cursor`
@@ -28,7 +26,7 @@ how-to guides and explanation pages instead.
 When _set_, an arrow ("->") will be used to indicate the current entry in menus instead of highlighting the whole line.
 On slow network or modem links this will make response faster because there is less that has to be redrawn on the screen when moving to the next or previous entries in the menu.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (arrow-string)=
 ## `$arrow_string`
@@ -38,7 +36,7 @@ On slow network or modem links this will make response faster because there is l
 
 Specifies the string of arrow_cursor when arrow_cursor enabled.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (menu-context)=
 ## `$menu_context`
@@ -49,7 +47,7 @@ Specifies the string of arrow_cursor when arrow_cursor enabled.
 This variable controls the number of lines of context that are given when scrolling through menus.
 (Similar to $$pager_context.)
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (menu-move-off)=
 ## `$menu_move_off`
@@ -60,7 +58,7 @@ This variable controls the number of lines of context that are given when scroll
 When _unset_, the bottom entry of menus will never scroll up past the bottom of the screen, unless there are less entries than lines.
 When _set_, the bottom entry may move off the bottom.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (menu-scroll)=
 ## `$menu_scroll`

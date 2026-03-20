@@ -15,9 +15,7 @@ Mirror the structure of the software itself. Avoid instruction or explanation â€
 how-to guides and explanation pages instead.
 :::
 
-
-
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (history)=
 ## `$history`
@@ -34,7 +32,7 @@ This is for example useful to prevent leaking sensitive information into the his
 Also note that a string is not added to the history if it exactly matches its immediate predecessor, e.g. executing the same command twice in a row results in only one copy being added to the history.
 To prevent duplicates over all entries use $$history_remove_dups.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (history-file)=
 ## `$history_file`
@@ -46,7 +44,7 @@ The file in which NeoMutt will save its history.
 
 Also see $$save_history.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (history-format)=
 ## `$history_format`
@@ -65,7 +63,7 @@ This string is similar to $$index_format, but has its own set of `printf(3)`-lik
 | `%>X`  | `%{padding-hard:X}` | Right justify the rest of the string and pad with character `X` |
 | `%\|X` | `%{padding-eol:X}`  | Pad to the end of the line with character `X`                   |
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (history-remove-dups)=
 ## `$history_remove_dups`
@@ -76,7 +74,7 @@ This string is similar to $$index_format, but has its own set of `printf(3)`-lik
 When _set_, all of the string history will be scanned for duplicates when a new entry is added.
 Duplicate entries in the $$history_file will also be removed when it is periodically compacted.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (save-history)=
 ## `$save_history`

@@ -15,8 +15,7 @@ Mirror the structure of the software itself. Avoid instruction or explanation â€
 how-to guides and explanation pages instead.
 :::
 
-
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (autocrypt)=
 ## `$autocrypt`
@@ -28,7 +27,7 @@ When _set_, enables autocrypt, which provides passive encryption protection with
 See "$autocryptdoc" for more details.
 (Autocrypt only)
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (autocrypt-acct-format)=
 ## `$autocrypt_acct_format`
@@ -52,7 +51,7 @@ The following `printf(3)`-style sequences are understood
 
 (Autocrypt only)
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (autocrypt-dir)=
 ## `$autocrypt_dir`
@@ -64,7 +63,7 @@ This variable sets where autocrypt files are stored, including the GPG keyring a
 See "$autocryptdoc" for more details.
 (Autocrypt only)
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (autocrypt-reply)=
 ## `$autocrypt_reply`

@@ -15,9 +15,7 @@ Mirror the structure of the software itself. Avoid instruction or explanation â€
 how-to guides and explanation pages instead.
 :::
 
-
-
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (crypt-confirm-hook)=
 ## `$crypt_confirm_hook`
@@ -29,7 +27,18 @@ If set, then you will be prompted for confirmation of keys when using the _crypt
 If unset, no such confirmation prompt will be presented.
 This is generally considered unsafe, especially where typos are concerned.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+(crypt-encryption-info)=
+## `$crypt_encryption_info`
+
+- **Type:** boolean
+- **Default:** yes
+
+If _set_, NeoMutt will include an informative block before an encrypted part, with details about the encryption.
+(Crypto only)
+
+--------------------------------------------------------------------------------
 
 (crypt-opportunistic-encrypt)=
 ## `$crypt_opportunistic_encrypt`
@@ -49,7 +58,7 @@ If $$crypt_auto_encrypt or $$crypt_reply_encrypt enable encryption for a message
 It can be manually re-enabled in the pgp or smime menus.
 (Crypto only)
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (crypt-opportunistic-encrypt-strong-keys)=
 ## `$crypt_opportunistic_encrypt_strong_keys`
@@ -64,7 +73,7 @@ For S/MIME, the behavior depends on the backend.
 Classic S/MIME will filter for certificates with the 't'(trusted) flag in the .index file.
 The GPGME backend will use the same filters as with OpenPGP, and depends on GPGME's logic for assigning the GPGME_VALIDITY_FULL and GPGME_VALIDITY_ULTIMATE validity flag.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (crypt-protected-headers-read)=
 ## `$crypt_protected_headers_read`
@@ -82,7 +91,26 @@ NeoMutt will update its concept of the correct subject **after** the message is 
 If you reply to a message before opening it, NeoMutt will end up using the dummy Subject header, so be sure to open such a message first.
 (Crypto only)
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+(crypt-protected-headers-save)=
+## `$crypt_protected_headers_save`
+
+- **Type:** boolean
+- **Default:** no
+
+When $$crypt_protected_headers_read is set, and a message with a protected Subject is opened, NeoMutt will save the updated Subject into the header cache by default.
+This allows searching/limiting based on the protected Subject header if the mailbox is re-opened, without having to re-open the message each time.
+However, for mbox/mh mailbox types, or if header caching is not set up, you would need to re-open the message each time the mailbox was reopened before you could see or search/limit on the protected subject again.
+
+When this variable is set, NeoMutt additionally saves the protected Subject back **in the clear-text message headers**.
+This provides better usability, but with the tradeoff of reduced security.
+The protected Subject header, which may have previously been encrypted, is now stored in clear-text in the message headers.
+Copying the message elsewhere, via NeoMutt or external tools, could expose this previously encrypted data.
+Please make sure you understand the consequences of this before you enable this variable.
+(Crypto only)
+
+--------------------------------------------------------------------------------
 
 (crypt-protected-headers-subject)=
 ## `$crypt_protected_headers_subject`
@@ -95,7 +123,7 @@ When $$crypt_protected_headers_write is set, and the message is marked for encry
 To prevent a subject from being substituted, unset this variable, or set it to the empty string.
 (Crypto only)
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (crypt-protected-headers-weed)=
 ## `$crypt_protected_headers_weed`
@@ -106,7 +134,7 @@ To prevent a subject from being substituted, unset this variable, or set it to t
 Controls whether NeoMutt will weed protected header fields.
 (Crypto only)
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (crypt-protected-headers-write)=
 ## `$crypt_protected_headers_write`
@@ -122,18 +150,7 @@ For more information see https://github.com/autocrypt/protected-headers
 Currently NeoMutt only supports the Subject header.
 (Crypto only)
 
-----------------------------------------------------------------------------------------------------------
-
-(crypt-encryption-info)=
-## `$crypt_encryption_info`
-
-- **Type:** boolean
-- **Default:** yes
-
-If _set_, NeoMutt will include an informative block before an encrypted part, with details about the encryption.
-(Crypto only)
-
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (crypt-timestamp)=
 ## `$crypt_timestamp`
@@ -145,7 +162,45 @@ If _set_, NeoMutt will include a time stamp in the lines surrounding PGP or S/MI
 If you are using colors to mark these lines, and rely on these, you may _unset_ this setting.
 (Crypto only)
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+(crypt-use-gpgme)=
+## `$crypt_use_gpgme`
+
+- **Type:** boolean
+- **Default:** yes
+
+This variable controls the use of the GPGME-enabled crypto backends.
+If it is _set_ and NeoMutt was built with GPGME support, the gpgme code for S/MIME and PGP will be used instead of the classic code.
+Note that you need to set this option in .neomuttrc; it won't have any effect when used interactively.
+
+Note that the GPGME backend does not support creating old-style inline (traditional) PGP encrypted or signed messages (see $$pgp_auto_inline).
+
+--------------------------------------------------------------------------------
+
+(crypt-use-pka)=
+## `$crypt_use_pka`
+
+- **Type:** boolean
+- **Default:** no
+
+Controls whether NeoMutt uses PKA during signature verification (only supported by the GPGME backend).
+See: http://www.g10code.de/docs/pka-intro.de.pdf 
+
+--------------------------------------------------------------------------------
+
+(crypt-verify-sig)=
+## `$crypt_verify_sig`
+
+- **Type:** quadoption
+- **Default:** yes
+
+If _"yes"_, always attempt to verify PGP or S/MIME signatures.
+If _"ask-*"_, ask whether or not to verify the signature.
+If _"no"_, never attempt to verify cryptographic signatures.
+(Crypto only)
+
+--------------------------------------------------------------------------------
 
 (envelope-from-address)=
 ## `$envelope_from_address`
@@ -156,7 +211,18 @@ If you are using colors to mark these lines, and rely on these, you may _unset_ 
 Manually sets the _envelope_ sender for outgoing messages.
 This value is ignored if $$use_envelope_from is _unset_.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+(pgp-auto-decode)=
+## `$pgp_auto_decode`
+
+- **Type:** boolean
+- **Default:** no
+
+If _set_, NeoMutt will automatically attempt to decrypt traditional PGP messages whenever the user performs an operation which ordinarily would result in the contents of the message being operated on.
+For example, if the user displays a pgp-traditional message which has not been manually checked with the `$<check-traditional-pgp>` function, NeoMutt will automatically check the message for traditional pgp.
+
+--------------------------------------------------------------------------------
 
 (pgp-auto-inline)=
 ## `$pgp_auto_inline`
@@ -176,7 +242,106 @@ Also see the $$pgp_mime_auto variable.
 Also note that using the old-style PGP message format is **strongly** **deprecated**.
 (PGP only)
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+(pgp-check-exit)=
+## `$pgp_check_exit`
+
+- **Type:** boolean
+- **Default:** yes
+
+If _set_, NeoMutt will check the exit code of the PGP subprocess when signing or encrypting.
+A non-zero exit code means that the subprocess failed.
+(PGP only)
+
+--------------------------------------------------------------------------------
+
+(pgp-check-gpg-decrypt-status-fd)=
+## `$pgp_check_gpg_decrypt_status_fd`
+
+- **Type:** boolean
+- **Default:** yes
+
+If _set_, NeoMutt will check the status file descriptor output of $$pgp_decrypt_command and $$pgp_decode_command for GnuPG status codes indicating successful decryption.
+This will check for the presence of DECRYPTION_OKAY, absence of DECRYPTION_FAILED, and that all PLAINTEXT occurs between the BEGIN_DECRYPTION and END_DECRYPTION status codes.
+
+If _unset_, NeoMutt will instead match the status fd output against $$pgp_decryption_okay.
+(PGP only)
+
+--------------------------------------------------------------------------------
+
+(pgp-clear-sign-command)=
+## `$pgp_clear_sign_command`
+
+- **Type:** command
+- **Default:** (empty)
+
+This format is used to create an old-style "clearsigned" PGP message.
+Note that the use of this format is **strongly** **deprecated**.
+
+This is a format string, see the $$pgp_decode_command command for possible `printf(3)`-like sequences.
+Note that in this case, %r expands to the search string, which is a list of one or more quoted values such as email address, name, or keyid.
+(PGP only)
+
+--------------------------------------------------------------------------------
+
+(pgp-decode-command)=
+## `$pgp_decode_command`
+
+- **Type:** command
+- **Default:** (empty)
+
+This format strings specifies a command which is used to decode application/pgp attachments.
+
+The PGP command formats have their own set of `printf(3)`-like sequences:
+
+| Short | Long Name           | Description                                                                                               |
+|-------|---------------------|-----------------------------------------------------------------------------------------------------------|
+| `%a`  | `%{sign-as}`        | Value of [$pgp_sign_as](#pgp-sign-as) if set, otherwise the value of [$pgp_default_key](#pgp-default-key) |
+| `%f`  | `%{file-message}`   | Expands to the name of a file containing a message                                                        |
+| `%p`  | `%{need-pass}`      | Expands to `PGPPASSFD=0` when a pass phrase is needed, to an empty string otherwise.                      |
+|       |                     | Note: This may be used with a `%<...>` construct.                                                         |
+| `%r`  | `%{key-ids}`        | One or more key IDs (or fingerprints if available)                                                        |
+| `%s`  | `%{file-signature}` | Expands to the name of a file containing the signature part                                               |
+|       |                     | of a `multipart/signed` attachment when verifying it                                                      |
+
+(PGP only)
+
+--------------------------------------------------------------------------------
+
+(pgp-decryption-okay)=
+## `$pgp_decryption_okay`
+
+- **Type:** regular expression
+- **Default:** (empty)
+
+If you assign text to this variable, then an encrypted PGP message is only considered successfully decrypted if the output from $$pgp_decrypt_command contains the text.
+This is used to protect against a spoofed encrypted message, with multipart/encrypted headers but containing a block that is not actually encrypted.
+(e.g. simply signed and ascii armored text).
+
+Note that if $$pgp_check_gpg_decrypt_status_fd is set, this variable is ignored.
+(PGP only)
+
+--------------------------------------------------------------------------------
+
+(pgp-decrypt-command)=
+## `$pgp_decrypt_command`
+
+- **Type:** command
+- **Default:** (empty)
+
+This command is used to decrypt a PGP encrypted message.
+
+This is a format string, see the $$pgp_decode_command command for possible `printf(3)`-like sequences.
+(PGP only)
+
+Note: When decrypting messages using `gpg`, a pinentry program needs to be invoked unless the password is cached within `gpg-agent`.
+Currently, the `pinentry-tty` program (usually distributed with `gpg`) isn't suitable for being invoked by NeoMutt.
+You are encouraged to use a different pinentry-program when running NeoMutt in order to avoid problems.
+
+See also: https://github.com/neomutt/neomutt/issues/1014 
+
+--------------------------------------------------------------------------------
 
 (pgp-default-key)=
 ## `$pgp_default_key`
@@ -191,7 +356,34 @@ It will also be used for signing unless $$pgp_sign_as is set.
 
 (PGP only)
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+(pgp-encrypt-only-command)=
+## `$pgp_encrypt_only_command`
+
+- **Type:** command
+- **Default:** (empty)
+
+This command is used to encrypt a body part without signing it.
+
+This is a format string, see the $$pgp_decode_command command for possible `printf(3)`-like sequences.
+Note that in this case, %r expands to the search string, which is a list of one or more quoted values such as email address, name, or keyid.
+(PGP only)
+
+--------------------------------------------------------------------------------
+
+(pgp-encrypt-sign-command)=
+## `$pgp_encrypt_sign_command`
+
+- **Type:** command
+- **Default:** (empty)
+
+This command is used to both sign and encrypt a body part.
+
+This is a format string, see the $$pgp_decode_command command for possible `printf(3)`-like sequences.
+(PGP only)
+
+--------------------------------------------------------------------------------
 
 (pgp-entry-format)=
 ## `$pgp_entry_format`
@@ -230,7 +422,45 @@ See the section "Sending Cryptographically Signed/Encrypted Messages" of the use
 
 (Crypto only) or (PGP only when GPGME disabled)
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+(pgp-export-command)=
+## `$pgp_export_command`
+
+- **Type:** command
+- **Default:** (empty)
+
+This command is used to export a public key from the user's key ring.
+
+This is a format string, see the $$pgp_decode_command command for possible `printf(3)`-like sequences.
+(PGP only)
+
+--------------------------------------------------------------------------------
+
+(pgp-get-keys-command)=
+## `$pgp_get_keys_command`
+
+- **Type:** command
+- **Default:** (empty)
+
+This command is invoked whenever NeoMutt needs to fetch the public key associated with an email address.
+Of the sequences supported by $$pgp_decode_command, %r is the only `printf(3)`-like sequence used with this format.
+Note that in this case, %r expands to the email address, not the public key ID (the key ID is unknown, which is why NeoMutt is invoking this command).
+(PGP only)
+
+--------------------------------------------------------------------------------
+
+(pgp-good-sign)=
+## `$pgp_good_sign`
+
+- **Type:** regular expression
+- **Default:** (empty)
+
+If you assign a text to this variable, then a PGP signature is only considered verified if the output from $$pgp_verify_command contains the text.
+Use this variable if the exit code from the command is 0 even for bad signatures.
+(PGP only)
+
+--------------------------------------------------------------------------------
 
 (pgp-ignore-subkeys)=
 ## `$pgp_ignore_subkeys`
@@ -243,83 +473,20 @@ Instead, the principal key will inherit the subkeys' capabilities.
 _Unset_ this if you want to play interesting key selection games.
 (PGP only)
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
-(pgp-long-ids)=
-## `$pgp_long_ids`
+(pgp-import-command)=
+## `$pgp_import_command`
 
-- **Type:** boolean
-- **Default:** yes
-
-If _set_, use 64-bit PGP key IDs, if _unset_ use the normal 32-bit key IDs.
-NOTE: Internally, NeoMutt has transitioned to using fingerprints (or long key IDs as a fallback).
-This option now only controls the display of key IDs in the key selection menu and a few other places.
-(PGP only)
-
-----------------------------------------------------------------------------------------------------------
-
-(pgp-mime-auto)=
-## `$pgp_mime_auto`
-
-- **Type:** quadoption
-- **Default:** ask-yes
-
-This option controls whether NeoMutt will prompt you for automatically sending a (signed/encrypted) message using PGP/MIME when inline (traditional) fails (for any reason).
-
-Also note that using the old-style PGP message format is **strongly** **deprecated**.
-(PGP only)
-
-----------------------------------------------------------------------------------------------------------
-
-(pgp-retainable-sigs)=
-## `$pgp_retainable_sigs`
-
-- **Type:** boolean
-- **Default:** no
-
-If _set_, signed and encrypted messages will consist of nested `multipart/signed` and `multipart/encrypted` body parts.
-
-This is useful for applications like encrypted and signed mailing lists, where the outer layer (`multipart/encrypted`) can be easily removed, while the inner `multipart/signed` part is retained.
-(PGP only)
-
-----------------------------------------------------------------------------------------------------------
-
-(pgp-self-encrypt)=
-## `$pgp_self_encrypt`
-
-- **Type:** boolean
-- **Default:** yes
-
-When _set_, PGP encrypted messages will also be encrypted using the key in $$pgp_default_key.
-(PGP only)
-
-----------------------------------------------------------------------------------------------------------
-
-(pgp-show-unusable)=
-## `$pgp_show_unusable`
-
-- **Type:** boolean
-- **Default:** yes
-
-If _set_, NeoMutt will display non-usable keys on the PGP key selection menu.
-This includes keys which have been revoked, have expired, or have been marked as "disabled" by the user.
-(PGP only)
-
-----------------------------------------------------------------------------------------------------------
-
-(pgp-sign-as)=
-## `$pgp_sign_as`
-
-- **Type:** string
+- **Type:** command
 - **Default:** (empty)
 
-If you have a different key pair to use for signing, you should set this to the signing key.
-Most people will only need to set $$pgp_default_key.
-It is recommended that you use the keyid form to specify your key (e.g.
-`0x00112233`).
+This command is used to import a key from a message into the user's public key ring.
+
+This is a format string, see the $$pgp_decode_command command for possible `printf(3)`-like sequences.
 (PGP only)
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (pgp-key-sort)=
 ## `$pgp_key_sort`
@@ -341,332 +508,7 @@ Prefixing the value with `reverse-` sorts the entries in reverse order, e.g.
 
 (PGP only)
 
-----------------------------------------------------------------------------------------------------------
-
-(pgp-strict-enc)=
-## `$pgp_strict_enc`
-
-- **Type:** boolean
-- **Default:** yes
-
-If _set_, NeoMutt will automatically encode PGP/MIME signed messages as quoted-printable.
-Please note that unsetting this variable may lead to problems with non-verifyable PGP signatures, so only change this if you know what you are doing.
-(PGP only)
-
-----------------------------------------------------------------------------------------------------------
-
-(smime-default-key)=
-## `$smime_default_key`
-
-- **Type:** string
-- **Default:** (empty)
-
-This is the default key-pair to use for S/MIME operations, and must be set to the keyid (the hash-value that OpenSSL generates) to work properly.
-
-It will be used for encryption (see $$postpone_encrypt and $$smime_self_encrypt).
-If GPGME is enabled, this is the key id displayed by gpgsm.
-
-It will be used for decryption unless $$smime_decrypt_use_default_key is _unset_.
-
-It will also be used for signing unless $$smime_sign_as is set.
-
-(S/MIME only)
-
-----------------------------------------------------------------------------------------------------------
-
-(smime-encrypt-with)=
-## `$smime_encrypt_with`
-
-- **Type:** string
-- **Default:** "`aes256`"
-
-This sets the algorithm that should be used for encryption.
-Valid choices are "aes128", "aes192", "aes256", "des", "des3", "rc2-40", "rc2-64", "rc2-128".
-(S/MIME only)
-
-----------------------------------------------------------------------------------------------------------
-
-(smime-self-encrypt)=
-## `$smime_self_encrypt`
-
-- **Type:** boolean
-- **Default:** yes
-
-When _set_, S/MIME encrypted messages will also be encrypted using the certificate in $$smime_default_key.
-(S/MIME only)
-
-----------------------------------------------------------------------------------------------------------
-
-(smime-sign-as)=
-## `$smime_sign_as`
-
-- **Type:** string
-- **Default:** (empty)
-
-If you have a separate key to use for signing, you should set this to the signing key.
-Most people will only need to set $$smime_default_key.
-(S/MIME only)
-
-----------------------------------------------------------------------------------------------------------
-
-(smime-is-default)=
-## `$smime_is_default`
-
-- **Type:** boolean
-- **Default:** no
-
-The default behavior of NeoMutt is to use PGP on all auto-sign/encryption operations.
-To override and to use OpenSSL instead this must be _set_.
-However, this has no effect while replying, since NeoMutt will automatically select the same application that was used to sign/encrypt the original message.
-(Note that this variable can be overridden by unsetting $$crypt_auto_smime.)
-(S/MIME only)
-
-----------------------------------------------------------------------------------------------------------
-
-(pgp-auto-decode)=
-## `$pgp_auto_decode`
-
-- **Type:** boolean
-- **Default:** no
-
-If _set_, NeoMutt will automatically attempt to decrypt traditional PGP messages whenever the user performs an operation which ordinarily would result in the contents of the message being operated on.
-For example, if the user displays a pgp-traditional message which has not been manually checked with the `$<check-traditional-pgp>` function, NeoMutt will automatically check the message for traditional pgp.
-
-----------------------------------------------------------------------------------------------------------
-
-(crypt-verify-sig)=
-## `$crypt_verify_sig`
-
-- **Type:** quadoption
-- **Default:** yes
-
-If _"yes"_, always attempt to verify PGP or S/MIME signatures.
-If _"ask-*"_, ask whether or not to verify the signature.
-If _"no"_, never attempt to verify cryptographic signatures.
-(Crypto only)
-
-----------------------------------------------------------------------------------------------------------
-
-(crypt-protected-headers-save)=
-## `$crypt_protected_headers_save`
-
-- **Type:** boolean
-- **Default:** no
-
-When $$crypt_protected_headers_read is set, and a message with a protected Subject is opened, NeoMutt will save the updated Subject into the header cache by default.
-This allows searching/limiting based on the protected Subject header if the mailbox is re-opened, without having to re-open the message each time.
-However, for mbox/mh mailbox types, or if header caching is not set up, you would need to re-open the message each time the mailbox was reopened before you could see or search/limit on the protected subject again.
-
-When this variable is set, NeoMutt additionally saves the protected Subject back **in the clear-text message headers**.
-This provides better usability, but with the tradeoff of reduced security.
-The protected Subject header, which may have previously been encrypted, is now stored in clear-text in the message headers.
-Copying the message elsewhere, via NeoMutt or external tools, could expose this previously encrypted data.
-Please make sure you understand the consequences of this before you enable this variable.
-(Crypto only)
-
-----------------------------------------------------------------------------------------------------------
-
-(crypt-use-gpgme)=
-## `$crypt_use_gpgme`
-
-- **Type:** boolean
-- **Default:** yes
-
-This variable controls the use of the GPGME-enabled crypto backends.
-If it is _set_ and NeoMutt was built with GPGME support, the gpgme code for S/MIME and PGP will be used instead of the classic code.
-Note that you need to set this option in .neomuttrc; it won't have any effect when used interactively.
-
-Note that the GPGME backend does not support creating old-style inline (traditional) PGP encrypted or signed messages (see $$pgp_auto_inline).
-
-----------------------------------------------------------------------------------------------------------
-
-(crypt-use-pka)=
-## `$crypt_use_pka`
-
-- **Type:** boolean
-- **Default:** no
-
-Controls whether NeoMutt uses PKA during signature verification (only supported by the GPGME backend).
-See: http://www.g10code.de/docs/pka-intro.de.pdf 
-
-----------------------------------------------------------------------------------------------------------
-
-(pgp-check-exit)=
-## `$pgp_check_exit`
-
-- **Type:** boolean
-- **Default:** yes
-
-If _set_, NeoMutt will check the exit code of the PGP subprocess when signing or encrypting.
-A non-zero exit code means that the subprocess failed.
-(PGP only)
-
-----------------------------------------------------------------------------------------------------------
-
-(pgp-check-gpg-decrypt-status-fd)=
-## `$pgp_check_gpg_decrypt_status_fd`
-
-- **Type:** boolean
-- **Default:** yes
-
-If _set_, NeoMutt will check the status file descriptor output of $$pgp_decrypt_command and $$pgp_decode_command for GnuPG status codes indicating successful decryption.
-This will check for the presence of DECRYPTION_OKAY, absence of DECRYPTION_FAILED, and that all PLAINTEXT occurs between the BEGIN_DECRYPTION and END_DECRYPTION status codes.
-
-If _unset_, NeoMutt will instead match the status fd output against $$pgp_decryption_okay.
-(PGP only)
-
-----------------------------------------------------------------------------------------------------------
-
-(pgp-clear-sign-command)=
-## `$pgp_clear_sign_command`
-
-- **Type:** command
-- **Default:** (empty)
-
-This format is used to create an old-style "clearsigned" PGP message.
-Note that the use of this format is **strongly** **deprecated**.
-
-This is a format string, see the $$pgp_decode_command command for possible `printf(3)`-like sequences.
-Note that in this case, %r expands to the search string, which is a list of one or more quoted values such as email address, name, or keyid.
-(PGP only)
-
-----------------------------------------------------------------------------------------------------------
-
-(pgp-decode-command)=
-## `$pgp_decode_command`
-
-- **Type:** command
-- **Default:** (empty)
-
-This format strings specifies a command which is used to decode application/pgp attachments.
-
-The PGP command formats have their own set of `printf(3)`-like sequences:
-
-| Short | Long Name           | Description                                                                                               |
-|-------|---------------------|-----------------------------------------------------------------------------------------------------------|
-| `%a`  | `%{sign-as}`        | Value of [$pgp_sign_as](#pgp-sign-as) if set, otherwise the value of [$pgp_default_key](#pgp-default-key) |
-| `%f`  | `%{file-message}`   | Expands to the name of a file containing a message                                                        |
-| `%p`  | `%{need-pass}`      | Expands to `PGPPASSFD=0` when a pass phrase is needed, to an empty string otherwise.                      |
-|       |                     | Note: This may be used with a `%<...>` construct.                                                         |
-| `%r`  | `%{key-ids}`        | One or more key IDs (or fingerprints if available)                                                        |
-| `%s`  | `%{file-signature}` | Expands to the name of a file containing the signature part                                               |
-|       |                     | of a `multipart/signed` attachment when verifying it                                                      |
-
-(PGP only)
-
-----------------------------------------------------------------------------------------------------------
-
-(pgp-decrypt-command)=
-## `$pgp_decrypt_command`
-
-- **Type:** command
-- **Default:** (empty)
-
-This command is used to decrypt a PGP encrypted message.
-
-This is a format string, see the $$pgp_decode_command command for possible `printf(3)`-like sequences.
-(PGP only)
-
-Note: When decrypting messages using `gpg`, a pinentry program needs to be invoked unless the password is cached within `gpg-agent`.
-Currently, the `pinentry-tty` program (usually distributed with `gpg`) isn't suitable for being invoked by NeoMutt.
-You are encouraged to use a different pinentry-program when running NeoMutt in order to avoid problems.
-
-See also: https://github.com/neomutt/neomutt/issues/1014 
-
-----------------------------------------------------------------------------------------------------------
-
-(pgp-decryption-okay)=
-## `$pgp_decryption_okay`
-
-- **Type:** regular expression
-- **Default:** (empty)
-
-If you assign text to this variable, then an encrypted PGP message is only considered successfully decrypted if the output from $$pgp_decrypt_command contains the text.
-This is used to protect against a spoofed encrypted message, with multipart/encrypted headers but containing a block that is not actually encrypted.
-(e.g. simply signed and ascii armored text).
-
-Note that if $$pgp_check_gpg_decrypt_status_fd is set, this variable is ignored.
-(PGP only)
-
-----------------------------------------------------------------------------------------------------------
-
-(pgp-encrypt-only-command)=
-## `$pgp_encrypt_only_command`
-
-- **Type:** command
-- **Default:** (empty)
-
-This command is used to encrypt a body part without signing it.
-
-This is a format string, see the $$pgp_decode_command command for possible `printf(3)`-like sequences.
-Note that in this case, %r expands to the search string, which is a list of one or more quoted values such as email address, name, or keyid.
-(PGP only)
-
-----------------------------------------------------------------------------------------------------------
-
-(pgp-encrypt-sign-command)=
-## `$pgp_encrypt_sign_command`
-
-- **Type:** command
-- **Default:** (empty)
-
-This command is used to both sign and encrypt a body part.
-
-This is a format string, see the $$pgp_decode_command command for possible `printf(3)`-like sequences.
-(PGP only)
-
-----------------------------------------------------------------------------------------------------------
-
-(pgp-export-command)=
-## `$pgp_export_command`
-
-- **Type:** command
-- **Default:** (empty)
-
-This command is used to export a public key from the user's key ring.
-
-This is a format string, see the $$pgp_decode_command command for possible `printf(3)`-like sequences.
-(PGP only)
-
-----------------------------------------------------------------------------------------------------------
-
-(pgp-get-keys-command)=
-## `$pgp_get_keys_command`
-
-- **Type:** command
-- **Default:** (empty)
-
-This command is invoked whenever NeoMutt needs to fetch the public key associated with an email address.
-Of the sequences supported by $$pgp_decode_command, %r is the only `printf(3)`-like sequence used with this format.
-Note that in this case, %r expands to the email address, not the public key ID (the key ID is unknown, which is why NeoMutt is invoking this command).
-(PGP only)
-
-----------------------------------------------------------------------------------------------------------
-
-(pgp-good-sign)=
-## `$pgp_good_sign`
-
-- **Type:** regular expression
-- **Default:** (empty)
-
-If you assign a text to this variable, then a PGP signature is only considered verified if the output from $$pgp_verify_command contains the text.
-Use this variable if the exit code from the command is 0 even for bad signatures.
-(PGP only)
-
-----------------------------------------------------------------------------------------------------------
-
-(pgp-import-command)=
-## `$pgp_import_command`
-
-- **Type:** command
-- **Default:** (empty)
-
-This command is used to import a key from a message into the user's public key ring.
-
-This is a format string, see the $$pgp_decode_command command for possible `printf(3)`-like sequences.
-(PGP only)
-
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (pgp-list-pubring-command)=
 ## `$pgp_list_pubring_command`
@@ -687,7 +529,7 @@ It produces a different date format which may result in NeoMutt showing incorrec
 This is a format string, see the $$pgp_decode_command command for possible `printf(3)`-like sequences.
 (PGP only)
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (pgp-list-secring-command)=
 ## `$pgp_list_secring_command`
@@ -708,7 +550,83 @@ It produces a different date format which may result in NeoMutt showing incorrec
 This is a format string, see the $$pgp_decode_command command for possible `printf(3)`-like sequences.
 (PGP only)
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+(pgp-long-ids)=
+## `$pgp_long_ids`
+
+- **Type:** boolean
+- **Default:** yes
+
+If _set_, use 64-bit PGP key IDs, if _unset_ use the normal 32-bit key IDs.
+NOTE: Internally, NeoMutt has transitioned to using fingerprints (or long key IDs as a fallback).
+This option now only controls the display of key IDs in the key selection menu and a few other places.
+(PGP only)
+
+--------------------------------------------------------------------------------
+
+(pgp-mime-auto)=
+## `$pgp_mime_auto`
+
+- **Type:** quadoption
+- **Default:** ask-yes
+
+This option controls whether NeoMutt will prompt you for automatically sending a (signed/encrypted) message using PGP/MIME when inline (traditional) fails (for any reason).
+
+Also note that using the old-style PGP message format is **strongly** **deprecated**.
+(PGP only)
+
+--------------------------------------------------------------------------------
+
+(pgp-retainable-sigs)=
+## `$pgp_retainable_sigs`
+
+- **Type:** boolean
+- **Default:** no
+
+If _set_, signed and encrypted messages will consist of nested `multipart/signed` and `multipart/encrypted` body parts.
+
+This is useful for applications like encrypted and signed mailing lists, where the outer layer (`multipart/encrypted`) can be easily removed, while the inner `multipart/signed` part is retained.
+(PGP only)
+
+--------------------------------------------------------------------------------
+
+(pgp-self-encrypt)=
+## `$pgp_self_encrypt`
+
+- **Type:** boolean
+- **Default:** yes
+
+When _set_, PGP encrypted messages will also be encrypted using the key in $$pgp_default_key.
+(PGP only)
+
+--------------------------------------------------------------------------------
+
+(pgp-show-unusable)=
+## `$pgp_show_unusable`
+
+- **Type:** boolean
+- **Default:** yes
+
+If _set_, NeoMutt will display non-usable keys on the PGP key selection menu.
+This includes keys which have been revoked, have expired, or have been marked as "disabled" by the user.
+(PGP only)
+
+--------------------------------------------------------------------------------
+
+(pgp-sign-as)=
+## `$pgp_sign_as`
+
+- **Type:** string
+- **Default:** (empty)
+
+If you have a different key pair to use for signing, you should set this to the signing key.
+Most people will only need to set $$pgp_default_key.
+It is recommended that you use the keyid form to specify your key (e.g.
+`0x00112233`).
+(PGP only)
+
+--------------------------------------------------------------------------------
 
 (pgp-sign-command)=
 ## `$pgp_sign_command`
@@ -721,7 +639,19 @@ This command is used to create the detached PGP signature for a `multipart/signe
 This is a format string, see the $$pgp_decode_command command for possible `printf(3)`-like sequences.
 (PGP only)
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+(pgp-strict-enc)=
+## `$pgp_strict_enc`
+
+- **Type:** boolean
+- **Default:** yes
+
+If _set_, NeoMutt will automatically encode PGP/MIME signed messages as quoted-printable.
+Please note that unsetting this variable may lead to problems with non-verifyable PGP signatures, so only change this if you know what you are doing.
+(PGP only)
+
+--------------------------------------------------------------------------------
 
 (pgp-timeout)=
 ## `$pgp_timeout`
@@ -732,7 +662,7 @@ This is a format string, see the $$pgp_decode_command command for possible `prin
 The number of seconds after which a cached passphrase will expire if not used.
 (PGP only)
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (pgp-use-gpg-agent)=
 ## `$pgp_use_gpg_agent`
@@ -752,7 +682,7 @@ A TTY pinentry should not be used.
 If you are using an older version of GnuPG without an agent running, or another encryption program without an agent, you will need to _unset_ this variable.
 (PGP only)
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (pgp-verify-command)=
 ## `$pgp_verify_command`
@@ -765,7 +695,7 @@ This command is used to verify PGP signatures.
 This is a format string, see the $$pgp_decode_command command for possible `printf(3)`-like sequences.
 (PGP only)
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (pgp-verify-key-command)=
 ## `$pgp_verify_key_command`
@@ -778,7 +708,7 @@ This command is used to verify key information from the key selection menu.
 This is a format string, see the $$pgp_decode_command command for possible `printf(3)`-like sequences.
 (PGP only)
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (smime-ask-cert-label)=
 ## `$smime_ask_cert_label`
@@ -790,7 +720,7 @@ This flag controls whether you want to be asked to enter a label for a certifica
 It is _set_ by default.
 (S/MIME only)
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (smime-ca-location)=
 ## `$smime_ca_location`
@@ -801,7 +731,7 @@ It is _set_ by default.
 This variable contains the name of either a directory, or a file which contains trusted certificates for use with OpenSSL.
 (S/MIME only)
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (smime-certificates)=
 ## `$smime_certificates`
@@ -815,7 +745,7 @@ There is an index file which contains mailbox-address keyid pairs, and which can
 This option points to the location of the certificates.
 (S/MIME only)
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (smime-decrypt-command)=
 ## `$smime_decrypt_command`
@@ -843,7 +773,7 @@ The OpenSSL command formats have their own set of `printf(3)`-like sequences sim
 For examples on how to configure these formats, see the `smime.rc` in the `samples/` subdirectory which has been installed on your system alongside the documentation.
 (S/MIME only)
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (smime-decrypt-use-default-key)=
 ## `$smime_decrypt_use_default_key`
@@ -856,7 +786,26 @@ Otherwise, if managing multiple certificate-key-pairs, NeoMutt will try to use t
 It will ask you to supply a key, if it can't find one.
 (S/MIME only)
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+(smime-default-key)=
+## `$smime_default_key`
+
+- **Type:** string
+- **Default:** (empty)
+
+This is the default key-pair to use for S/MIME operations, and must be set to the keyid (the hash-value that OpenSSL generates) to work properly.
+
+It will be used for encryption (see $$postpone_encrypt and $$smime_self_encrypt).
+If GPGME is enabled, this is the key id displayed by gpgsm.
+
+It will be used for decryption unless $$smime_decrypt_use_default_key is _unset_.
+
+It will also be used for signing unless $$smime_sign_as is set.
+
+(S/MIME only)
+
+--------------------------------------------------------------------------------
 
 (smime-encrypt-command)=
 ## `$smime_encrypt_command`
@@ -872,7 +821,19 @@ This is a format string, see the $$smime_decrypt_command command for possible `p
 Encrypt the message to $$smime_default_key too.
 (S/MIME only)
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+(smime-encrypt-with)=
+## `$smime_encrypt_with`
+
+- **Type:** string
+- **Default:** "`aes256`"
+
+This sets the algorithm that should be used for encryption.
+Valid choices are "aes128", "aes192", "aes256", "des", "des3", "rc2-40", "rc2-64", "rc2-128".
+(S/MIME only)
+
+--------------------------------------------------------------------------------
 
 (smime-get-cert-command)=
 ## `$smime_get_cert_command`
@@ -885,7 +846,7 @@ This command is used to extract X509 certificates from a PKCS7 structure.
 This is a format string, see the $$smime_decrypt_command command for possible `printf(3)`-like sequences.
 (S/MIME only)
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (smime-get-cert-email-command)=
 ## `$smime_get_cert_email_command`
@@ -898,7 +859,7 @@ This command is used to extract the mail address(es) used for storing X509 certi
 This is a format string, see the $$smime_decrypt_command command for possible `printf(3)`-like sequences.
 (S/MIME only)
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (smime-get-signer-cert-command)=
 ## `$smime_get_signer_cert_command`
@@ -911,7 +872,7 @@ This command is used to extract only the signers X509 certificate from a S/MIME 
 This is a format string, see the $$smime_decrypt_command command for possible `printf(3)`-like sequences.
 (S/MIME only)
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (smime-import-cert-command)=
 ## `$smime_import_cert_command`
@@ -925,7 +886,21 @@ This is a format string, see the $$smime_decrypt_command command for possible `p
 NOTE: %c and %k will default to $$smime_sign_as if set, otherwise $$smime_default_key.
 (S/MIME only)
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+(smime-is-default)=
+## `$smime_is_default`
+
+- **Type:** boolean
+- **Default:** no
+
+The default behavior of NeoMutt is to use PGP on all auto-sign/encryption operations.
+To override and to use OpenSSL instead this must be _set_.
+However, this has no effect while replying, since NeoMutt will automatically select the same application that was used to sign/encrypt the original message.
+(Note that this variable can be overridden by unsetting $$crypt_auto_smime.)
+(S/MIME only)
+
+--------------------------------------------------------------------------------
 
 (smime-keys)=
 ## `$smime_keys`
@@ -939,7 +914,7 @@ There is an index file which contains mailbox-address keyid pair, and which can 
 This option points to the location of the private keys.
 (S/MIME only)
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (smime-pk7out-command)=
 ## `$smime_pk7out_command`
@@ -952,7 +927,30 @@ This command is used to extract PKCS7 structures of S/MIME signatures, in order 
 This is a format string, see the $$smime_decrypt_command command for possible `printf(3)`-like sequences.
 (S/MIME only)
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+(smime-self-encrypt)=
+## `$smime_self_encrypt`
+
+- **Type:** boolean
+- **Default:** yes
+
+When _set_, S/MIME encrypted messages will also be encrypted using the certificate in $$smime_default_key.
+(S/MIME only)
+
+--------------------------------------------------------------------------------
+
+(smime-sign-as)=
+## `$smime_sign_as`
+
+- **Type:** string
+- **Default:** (empty)
+
+If you have a separate key to use for signing, you should set this to the signing key.
+Most people will only need to set $$smime_default_key.
+(S/MIME only)
+
+--------------------------------------------------------------------------------
 
 (smime-sign-command)=
 ## `$smime_sign_command`
@@ -965,7 +963,7 @@ This command is used to created S/MIME signatures of type `multipart/signed`, wh
 This is a format string, see the $$smime_decrypt_command command for possible `printf(3)`-like sequences.
 (S/MIME only)
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (smime-sign-digest-alg)=
 ## `$smime_sign_digest_alg`
@@ -977,7 +975,7 @@ This sets the algorithm that should be used for the signature message digest.
 Valid choices are "md5", "sha1", "sha224", "sha256", "sha384", "sha512".
 (S/MIME only)
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (smime-timeout)=
 ## `$smime_timeout`
@@ -988,7 +986,7 @@ Valid choices are "md5", "sha1", "sha224", "sha256", "sha384", "sha512".
 The number of seconds after which a cached passphrase will expire if not used.
 (S/MIME only)
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (smime-verify-command)=
 ## `$smime_verify_command`
@@ -1001,7 +999,7 @@ This command is used to verify S/MIME signatures of type `multipart/signed`.
 This is a format string, see the $$smime_decrypt_command command for possible `printf(3)`-like sequences.
 (S/MIME only)
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (smime-verify-opaque-command)=
 ## `$smime_verify_opaque_command`

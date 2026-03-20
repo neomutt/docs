@@ -15,20 +15,7 @@ Mirror the structure of the software itself. Avoid instruction or explanation â€
 how-to guides and explanation pages instead.
 :::
 
-
-----------------------------------------------------------------------------------------------------------
-
-(pop-auth-try-all)=
-## `$pop_auth_try_all`
-
-- **Type:** boolean
-- **Default:** yes
-
-If _set_, NeoMutt will try all available authentication methods.
-When _unset_, NeoMutt will only fall back to other authentication methods if the previous methods are unavailable.
-If a method is available but authentication fails, NeoMutt will not connect to the POP server.
-
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (pop-authenticators)=
 ## `$pop_authenticators`
@@ -48,7 +35,19 @@ Example:
 set pop_authenticators="digest-md5:apop:user"
 ```
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+(pop-auth-try-all)=
+## `$pop_auth_try_all`
+
+- **Type:** boolean
+- **Default:** yes
+
+If _set_, NeoMutt will try all available authentication methods.
+When _unset_, NeoMutt will only fall back to other authentication methods if the previous methods are unavailable.
+If a method is available but authentication fails, NeoMutt will not connect to the POP server.
+
+--------------------------------------------------------------------------------
 
 (pop-check-interval)=
 ## `$pop_check_interval`
@@ -58,7 +57,7 @@ set pop_authenticators="digest-md5:apop:user"
 
 This variable configures how often (in seconds) NeoMutt should look for new mail in the currently selected mailbox if it is a POP mailbox.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (pop-delete)=
 ## `$pop_delete`
@@ -69,7 +68,7 @@ This variable configures how often (in seconds) NeoMutt should look for new mail
 If _set_, NeoMutt will delete successfully downloaded messages from the POP server when using the `$<fetch-mail>` function.
 When _unset_, NeoMutt will download messages but also leave them on the POP server.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (pop-host)=
 ## `$pop_host`
@@ -86,8 +85,7 @@ You can also specify an alternative port, username and password, i.e.:
 
 where "[...]" denotes an optional part.
 
-
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (pop-last)=
 ## `$pop_last`
@@ -97,7 +95,7 @@ where "[...]" denotes an optional part.
 
 If this variable is _set_, NeoMutt will try to use the "`LAST`" POP command for retrieving only unread messages from the POP server when using the `$<fetch-mail>` function.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (pop-oauth-refresh-command)=
 ## `$pop_oauth_refresh_command`
@@ -109,7 +107,7 @@ The command to run to generate an OAUTH refresh token for authorizing your conne
 This command will be run on every connection attempt that uses the OAUTHBEARER authentication mechanism.
 See "$oauth" for details.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (pop-pass)=
 ## `$pop_pass`
@@ -122,7 +120,7 @@ If _unset_, NeoMutt will prompt you for your password when you open a POP mailbo
 
 **Warning**: you should only use this option when you are on a fairly secure machine, because the superuser can read your neomuttrc even if you are the only one who can read the file.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (pop-reconnect)=
 ## `$pop_reconnect`
@@ -132,7 +130,7 @@ If _unset_, NeoMutt will prompt you for your password when you open a POP mailbo
 
 Controls whether or not NeoMutt will try to reconnect to the POP server if the connection is lost.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (pop-user)=
 ## `$pop_user`

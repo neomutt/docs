@@ -15,9 +15,7 @@ Mirror the structure of the software itself. Avoid instruction or explanation â€
 how-to guides and explanation pages instead.
 :::
 
-
-
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (beep-new)=
 ## `$beep_new`
@@ -28,7 +26,7 @@ how-to guides and explanation pages instead.
 When this variable is _set_, NeoMutt will beep whenever it prints a message notifying you of new mail.
 This is independent of the setting of the $$beep variable.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (change-folder-next)=
 ## `$change_folder_next`
@@ -38,7 +36,7 @@ This is independent of the setting of the $$beep variable.
 
 When this variable is _set_, the `<change-folder>` function mailbox suggestion will start at the next folder in your "$mailboxes" list, instead of starting at the first folder in the list.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (collapse-all)=
 ## `$collapse_all`
@@ -48,7 +46,7 @@ When this variable is _set_, the `<change-folder>` function mailbox suggestion w
 
 When _set_, NeoMutt will collapse all threads when entering a folder.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (crypt-chars)=
 ## `$crypt_chars`
@@ -66,7 +64,7 @@ Controls the characters used in cryptography flags.
 | 4         | K       | The mail contains a PGP public key                             |
 | 5         | <space> | The mail has no crypto info                                    |
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (flag-chars)=
 ## `$flag_chars`
@@ -90,7 +88,7 @@ Controls the characters used in several flags.
 | 10        | -       | Mail is read - %S expando                |
 | 11        | <space> | Mail is read - %Z expando                |
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (from-chars)=
 ## `$from_chars`
@@ -114,7 +112,7 @@ for the corresponding character.
 
 This slightly odd interface is necessitated by NeoMutt's handling of string variables; one can't tell a variable that is unset from one that is set to the empty string.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (index-format)=
 ## `$index_format`
@@ -214,7 +212,7 @@ If necessary, soft-fill will eat text leftwards to make room for rightward text.
 
 Note that these expandos are supported in "$save-hook", "$fcc-hook" and "$fcc-save-hook", too.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (mark-macro-prefix)=
 ## `$mark_macro_prefix`
@@ -225,7 +223,7 @@ Note that these expandos are supported in "$save-hook", "$fcc-hook" and "$fcc-sa
 Prefix for macros created using mark-message.
 A new macro automatically generated with _<mark-message>a_ will be composed from this prefix and the letter _a_.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (new-mail-command)=
 ## `$new_mail_command`
@@ -236,7 +234,7 @@ A new macro automatically generated with _<mark-message>a_ will be composed from
 If _set_, NeoMutt will call this command after a new message is received.
 See the $$status_format documentation for the values that can be formatted into this command.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (quit)=
 ## `$quit`
@@ -250,7 +248,7 @@ If this option is _set_, they do quit, if it is _unset_, they have no effect, an
 In order to quit from NeoMutt if this variable is _unset_, you must send the signal SIGINT to NeoMutt.
 This can usually be achieved by pressing CTRL-C in the terminal.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (read-only)=
 ## `$read_only`
@@ -260,7 +258,26 @@ This can usually be achieved by pressing CTRL-C in the terminal.
 
 If _set_, all folders are opened in read-only mode.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+(status-chars)=
+## `$status_chars`
+
+- **Type:** character string
+- **Default:** `"-*%A"`
+
+Controls the characters used by the "%r" indicator in $$status_format.
+
+| Character | Default | Description                                                                                                                                                                    |
+|-----------|---------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 1         | `-`     | Mailbox is unchanged                                                                                                                                                           |
+| 2         | `*`     | Mailbox has been changed and needs to be resynchronized                                                                                                                        |
+| 3         | `%`     | Mailbox is read-only, or will not be written when exiting. (You can toggle whether to write changes to a mailbox with the `<toggle-write>` operation, bound by default to "%") |
+| 4         | `A`     | Folder opened in attach-message mode. (Certain operations like composing a new mail, replying, forwarding, etc. are not permitted in this mode)                                |
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
 
 (status-format)=
 ## `$status_format`
@@ -334,25 +351,6 @@ For example, if you want to display the local hostname in lowercase, you would u
 If you prefix the sequence character with a colon (":") character, NeoMutt will replace any dots in the expansion by underscores.
 This might be helpful with IMAP folders that don't like dots in folder names.
 
-----------------------------------------------------------------------------------------------------------
-
-(status-chars)=
-## `$status_chars`
-
-- **Type:** character string
-- **Default:** `"-*%A"`
-
-Controls the characters used by the "%r" indicator in $$status_format.
-
-| Character | Default | Description                                                                                                                                                                    |
-|-----------|---------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1         | `-`     | Mailbox is unchanged                                                                                                                                                           |
-| 2         | `*`     | Mailbox has been changed and needs to be resynchronized                                                                                                                        |
-| 3         | `%`     | Mailbox is read-only, or will not be written when exiting. (You can toggle whether to write changes to a mailbox with the `<toggle-write>` operation, bound by default to "%") |
-| 4         | `A`     | Folder opened in attach-message mode. (Certain operations like composing a new mail, replying, forwarding, etc. are not permitted in this mode)                                |
-
-----------------------------------------------------------------------------------------------------------
-
 (to-chars)=
 ## `$to_chars`
 
@@ -371,7 +369,7 @@ Controls the character used to indicate mail addressed to you.
 | 6         | L       | Indicates the mail was sent to a mailing-list you subscribe to.                                    |
 | 7         | R       | Your address appears in the "Reply-To:" header field but none of the above applies.                |
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (ts-enabled)=
 ## `$ts_enabled`
@@ -382,7 +380,7 @@ Controls the character used to indicate mail addressed to you.
 Controls whether NeoMutt tries to set the terminal status line and icon name.
 Most terminal emulators emulate the status line in the window title.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (ts-icon-format)=
 ## `$ts_icon_format`
@@ -393,7 +391,7 @@ Most terminal emulators emulate the status line in the window title.
 Controls the format of the icon title, as long as "$$ts_enabled" is set.
 This string is identical in formatting to the one used by "$$status_format".
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (ts-status-format)=
 ## `$ts_status_format`
@@ -404,7 +402,7 @@ This string is identical in formatting to the one used by "$$status_format".
 Controls the format of the terminal status line (or window title), provided that "$$ts_enabled" has been set.
 This string is identical in formatting to the one used by "$$status_format".
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (uncollapse-jump)=
 ## `$uncollapse_jump`
@@ -414,7 +412,7 @@ This string is identical in formatting to the one used by "$$status_format".
 
 When _set_, NeoMutt will jump to the next unread message, if any, when the current thread is _un_collapsed.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (uncollapse-new)=
 ## `$uncollapse_new`

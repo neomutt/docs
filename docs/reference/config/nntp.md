@@ -15,9 +15,7 @@ Mirror the structure of the software itself. Avoid instruction or explanation â€
 how-to guides and explanation pages instead.
 :::
 
-
-
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (catchup-newsgroup)=
 ## `$catchup_newsgroup`
@@ -27,7 +25,7 @@ how-to guides and explanation pages instead.
 
 If this variable is _set_, NeoMutt will mark all articles in newsgroup as read when you quit the newsgroup (catchup newsgroup).
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (followup-to-poster)=
 ## `$followup_to_poster`
@@ -38,7 +36,7 @@ If this variable is _set_, NeoMutt will mark all articles in newsgroup as read w
 If this variable is _set_ and the keyword "poster" is present in _Followup-To_ header, follow-up to newsgroup function is not permitted.
 The message will be mailed to the submitter of the message via mail.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (newsgroups-charset)=
 ## `$newsgroups_charset`
@@ -48,7 +46,7 @@ The message will be mailed to the submitter of the message via mail.
 
 Character set of newsgroups descriptions.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (newsrc)=
 ## `$newsrc`
@@ -68,7 +66,7 @@ The following printf-style sequence is understood:
 | `%s` | `%{server}`   | News server name  |
 | `%u` | `%{username}` | Username          |
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (news-cache-dir)=
 ## `$news_cache_dir`
@@ -79,7 +77,7 @@ The following printf-style sequence is understood:
 This variable pointing to directory where NeoMutt will save cached news articles and headers in.
 If _unset_, articles and headers will not be saved at all and will be reloaded from the server each time.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (news-server)=
 ## `$news_server`
@@ -93,7 +91,7 @@ You can also specify username and an alternative port for each news server, e.g.
 
 This option can also be set using the command line option "-g", the environment variable `$$$NNTPSERVER`, or putting the server name in the file "/etc/nntpserver".
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (nntp-authenticators)=
 ## `$nntp_authenticators`
@@ -116,8 +114,7 @@ set nntp_authenticators="digest-md5:user"
 **Note:** NeoMutt will only fall back to other authentication methods if the previous methods are unavailable.
 If a method is available but authentication fails, NeoMutt will not connect to the IMAP server.
 
-
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (nntp-context)=
 ## `$nntp_context`
@@ -129,7 +126,7 @@ This variable defines number of articles which will be in index when newsgroup e
 If active newsgroup have more articles than this number, oldest articles will be ignored.
 Also controls how many articles headers will be saved in cache when you quit newsgroup.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (nntp-listgroup)=
 ## `$nntp_listgroup`
@@ -139,7 +136,7 @@ Also controls how many articles headers will be saved in cache when you quit new
 
 This variable controls whether or not existence of each article is checked when newsgroup is entered.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (nntp-load-description)=
 ## `$nntp_load_description`
@@ -149,7 +146,7 @@ This variable controls whether or not existence of each article is checked when 
 
 This variable controls whether or not descriptions for each newsgroup must be loaded when newsgroup is added to list (first time list loading or new newsgroup adding).
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (nntp-pass)=
 ## `$nntp_pass`
@@ -159,7 +156,7 @@ This variable controls whether or not descriptions for each newsgroup must be lo
 
 Your password for NNTP account.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (nntp-poll)=
 ## `$nntp_poll`
@@ -170,7 +167,7 @@ Your password for NNTP account.
 The time in seconds until any operations on newsgroup except post new article will cause recheck for new news.
 If set to 0, NeoMutt will recheck newsgroup on each operation in index (stepping, read article, etc.).
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (nntp-user)=
 ## `$nntp_user`
@@ -181,7 +178,7 @@ If set to 0, NeoMutt will recheck newsgroup on each operation in index (stepping
 Your login name on the NNTP server.
 If _unset_ and NNTP server requires authentication, NeoMutt will prompt you for your account name when you connect to news server.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (post-moderated)=
 ## `$post_moderated`
@@ -192,7 +189,7 @@ If _unset_ and NNTP server requires authentication, NeoMutt will prompt you for 
 If set to _yes_, NeoMutt will post article to newsgroup that have not permissions to posting (e.g. moderated).
 **Note:** if news server does not support posting to that newsgroup or totally read-only, that posting will not have an effect.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (save-unsubscribed)=
 ## `$save_unsubscribed`
@@ -202,7 +199,7 @@ If set to _yes_, NeoMutt will post article to newsgroup that have not permission
 
 When _set_, info about unsubscribed newsgroups will be saved into "newsrc" file and into cache.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (show-new-news)=
 ## `$show_new_news`
@@ -214,7 +211,7 @@ If _set_, news server will be asked for new newsgroups on entering the browser.
 Otherwise, it will be done only once for a news server.
 Also controls whether or not number of new articles of subscribed newsgroups will be then checked.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (x-comment-to)=
 ## `$x_comment_to`

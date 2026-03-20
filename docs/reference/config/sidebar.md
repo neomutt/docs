@@ -15,8 +15,7 @@ Mirror the structure of the software itself. Avoid instruction or explanation â€
 how-to guides and explanation pages instead.
 :::
 
-
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (sidebar-component-depth)=
 ## `$sidebar_component_depth`
@@ -30,7 +29,7 @@ For example: If a maildir is normally displayed in the sidebar as dir1/dir2/dir3
 
 **See also:** $$sidebar_short_path 
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (sidebar-delim-chars)=
 ## `$sidebar_delim_chars`
@@ -54,7 +53,7 @@ set sidebar_delim_chars='.'
 
 **See also:** $$sidebar_short_path, $$sidebar_folder_indent, $$sidebar_indent_string.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (sidebar-divider-char)=
 ## `$sidebar_divider_char`
@@ -70,7 +69,7 @@ ASCII and Unicode line-drawing characters are supported.
 The divider char can be set to an empty string for some extra space.
 If empty, setting the sidebar_background color may help distinguish the sidebar from other panels.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (sidebar-folder-indent)=
 ## `$sidebar_folder_indent`
@@ -82,7 +81,7 @@ Set this to indent mailboxes in the sidebar.
 
 **See also:** $$sidebar_short_path, $$sidebar_indent_string, $$sidebar_delim_chars.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (sidebar-format)=
 ## `$sidebar_format`
@@ -119,7 +118,7 @@ This string is similar to $$index_format, but has its own set of `printf(3)`-lik
 In order to use %S, %N, %F, and %!, $$mail_check_stats must be _set_.
 When thus set, a suggested value for this option is "%B%<F? [%F]>%* %<N?%N/>%S".
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (sidebar-indent-string)=
 ## `$sidebar_indent_string`
@@ -132,7 +131,7 @@ It defaults to two spaces.
 
 **See also:** $$sidebar_short_path, $$sidebar_folder_indent, $$sidebar_delim_chars.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (sidebar-new-mail-only)=
 ## `$sidebar_new_mail_only`
@@ -144,7 +143,7 @@ When set, the sidebar will only display mailboxes containing new, or flagged, ma
 
 **See also:** $sidebar-pin, $$sidebar_non_empty_mailbox_only.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (sidebar-next-new-wrap)=
 ## `$sidebar_next_new_wrap`
@@ -155,7 +154,7 @@ When set, the sidebar will only display mailboxes containing new, or flagged, ma
 When set, the `<sidebar-next-new>` command will not stop at the end of the list of mailboxes, but wrap around to the beginning.
 The `<sidebar-prev-new>` command is similarly affected, wrapping around to the end of the list.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (sidebar-non-empty-mailbox-only)=
 ## `$sidebar_non_empty_mailbox_only`
@@ -167,7 +166,7 @@ When set, the sidebar will only display mailboxes that contain one or more mails
 
 **See also:** $$sidebar_new_mail_only, $sidebar-pin.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (sidebar-on-right)=
 ## `$sidebar_on_right`
@@ -177,7 +176,7 @@ When set, the sidebar will only display mailboxes that contain one or more mails
 
 When set, the sidebar will appear on the right-hand side of the screen.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (sidebar-short-path)=
 ## `$sidebar_short_path`
@@ -198,7 +197,7 @@ Here's an example:
 
 **See also:** $$sidebar_delim_chars, $$sidebar_folder_indent, $$sidebar_indent_string, $$sidebar_component_depth.
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (sidebar-sort)=
 ## `$sidebar_sort`
@@ -226,7 +225,7 @@ Specifies how to sort mailbox entries in the sidebar.
 | `name`          | Use `path` instead     |
 | `new`           | Use `unread` instead   |
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (sidebar-visible)=
 ## `$sidebar_visible`
@@ -239,7 +238,7 @@ The sidebar shows a list of all your mailboxes.
 
 **See also:** $$sidebar_format, $$sidebar_width 
 
-----------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 (sidebar-width)=
 ## `$sidebar_width`
