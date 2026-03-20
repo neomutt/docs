@@ -54,6 +54,7 @@ tokyocabinet, kyotocabinet, qdbm, rocksdb, gdbm, bdb, tdb, lmdb.
 ## `$header_cache_compress_level`
 
 - **Type:** number
+- **Notes:** Not negative
 - **Default:**
     ```
     set header_cache_compress_level = 1

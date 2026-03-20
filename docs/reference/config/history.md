@@ -21,6 +21,7 @@ how-to guides and explanation pages instead.
 ## `$history`
 
 - **Type:** number
+- **Notes:** Not negative
 - **Default:**
     ```
     set history = 10
@@ -41,6 +42,7 @@ To prevent duplicates over all entries use $$history_remove_dups.
 ## `$history_file`
 
 - **Type:** path (string)
+- **Notes:** File only
 - **Default:**
     ```
     set history_file = "~/.mutthistory"
@@ -92,6 +94,7 @@ Duplicate entries in the $$history_file will also be removed when it is periodic
 ## `$save_history`
 
 - **Type:** number
+- **Notes:** Not negative
 - **Default:**
     ```
     set save_history = 0

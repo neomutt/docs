@@ -38,6 +38,7 @@ In those cases, it may be desirable to _unset_ this variable.
 ## `$browser_sort`
 
 - **Type:** sort order
+- **Notes:** Sort Reverse
 - **Default:**
     ```
     set browser_sort = "alpha"
@@ -80,6 +81,7 @@ If this variable is _set_, the browser will group directories before files.
 ## `$folder_format`
 
 - **Type:** expando
+- **Notes:** Not empty
 - **Default:**
     ```
     set folder_format = "%2C %t %N %F %2l %-8.8u %-8.8g %8s %d %i"
@@ -127,6 +129,7 @@ For an explanation of "soft-fill", see the $$index_format documentation.
 ## `$group_index_format`
 
 - **Type:** expando
+- **Notes:** Not empty
 - **Default:**
     ```
     set group_index_format = "%4C %M%N %5s  %-45.45f %d"
@@ -156,6 +159,7 @@ This string is similar to "$index_format", but has its own set of printf()-like 
 ## `$mailbox_folder_format`
 
 - **Type:** expando
+- **Notes:** Not empty
 - **Default:**
     ```
     set mailbox_folder_format = "%2C %<n?%6n&      > %6m %i"
@@ -171,6 +175,7 @@ This string is identical in formatting to the one used by "$$folder_format".
 ## `$mask`
 
 - **Type:** regular expression
+- **Notes:** Match Case, Allow Not, No Sub-match
 - **Default:**
     ```
     set mask = "!^\\.[^.]"

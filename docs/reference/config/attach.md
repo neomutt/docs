@@ -21,6 +21,7 @@ how-to guides and explanation pages instead.
 ## `$attach_save_dir`
 
 - **Type:** path (string)
+- **Notes:** Directory only
 - **Default:**
     ```
     set attach_save_dir = "./"
@@ -121,6 +122,7 @@ To see these subparts, press "v" on that menu.
 ## `$message_format`
 
 - **Type:** expando
+- **Notes:** Not empty
 - **Default:**
     ```
     set message_format = "%s"

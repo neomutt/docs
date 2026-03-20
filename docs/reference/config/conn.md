@@ -38,6 +38,7 @@ Currently supported output lines are _login_, _username_, and _password_.
 ## `$certificate_file`
 
 - **Type:** path (string)
+- **Notes:** File only
 - **Default:**
     ```
     set certificate_file = "~/.mutt_certificates"
@@ -62,6 +63,7 @@ set certificate_file=~/.neomutt/certificates
 ## `$entropy_file`
 
 - **Type:** path (string)
+- **Notes:** File only
 - **Default:** (empty)
     ```
     set entropy_file = ""
@@ -114,6 +116,7 @@ A negative value causes NeoMutt to wait indefinitely.
 ## `$ssl_ca_certificates_file`
 
 - **Type:** path (string)
+- **Notes:** File only
 - **Default:** (empty)
     ```
     set ssl_ca_certificates_file = ""
@@ -152,6 +155,7 @@ See `gnutls_priority_init(3)` for the syntax and more details.
 ## `$ssl_client_cert`
 
 - **Type:** path (string)
+- **Notes:** File only
 - **Default:** (empty)
     ```
     set ssl_client_cert = ""
@@ -180,6 +184,7 @@ This option supersedes $$ssl_starttls.
 ## `$ssl_min_dh_prime_bits`
 
 - **Type:** number
+- **Notes:** Not negative
 - **Default:**
     ```
     set ssl_min_dh_prime_bits = 0

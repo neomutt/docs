@@ -61,6 +61,7 @@ Character set of newsgroups descriptions.
 ## `$newsrc`
 
 - **Type:** expando
+- **Notes:** File only
 - **Default:**
     ```
     set newsrc = "~/.newsrc"
@@ -84,6 +85,7 @@ The following printf-style sequence is understood:
 ## `$news_cache_dir`
 
 - **Type:** path (string)
+- **Notes:** Directory only
 - **Default:**
     ```
     set news_cache_dir = "~/.neomutt"
@@ -141,6 +143,7 @@ If a method is available but authentication fails, NeoMutt will not connect to t
 ## `$nntp_context`
 
 - **Type:** number (long)
+- **Notes:** Not negative
 - **Default:**
     ```
     set nntp_context = 1000
@@ -182,6 +185,7 @@ This variable controls whether or not descriptions for each newsgroup must be lo
 ## `$nntp_pass`
 
 - **Type:** string
+- **Notes:** Sensitive
 - **Default:** (empty)
     ```
     set nntp_pass = ""
@@ -195,6 +199,7 @@ Your password for NNTP account.
 ## `$nntp_poll`
 
 - **Type:** number
+- **Notes:** Not negative
 - **Default:**
     ```
     set nntp_poll = 60
@@ -209,6 +214,7 @@ If set to 0, NeoMutt will recheck newsgroup on each operation in index (stepping
 ## `$nntp_user`
 
 - **Type:** string
+- **Notes:** Sensitive
 - **Default:** (empty)
     ```
     set nntp_user = ""

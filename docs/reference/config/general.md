@@ -37,6 +37,7 @@ If _set_, hitting backspace against an empty prompt aborts the prompt.
 ## `$abort_key`
 
 - **Type:** string
+- **Notes:** Not Empty, On Startup
 - **Default:**
     ```
     set abort_key = "\007"
@@ -74,6 +75,7 @@ If _set_, NeoMutt will use plain ASCII characters when displaying thread and att
 ## `$assumed_charset`
 
 - **Type:** string list
+- **Notes:** Colon-separated, Allow empty
 - **Default:** (empty)
     ```
     set assumed_charset = ""
@@ -96,6 +98,7 @@ However, only the first content is valid for the message body.
 ## `$attach_format`
 
 - **Type:** expando
+- **Notes:** Not empty
 - **Default:**
     ```
     set attach_format = "%u%D%I %t%4n %T%d %> [%.7m/%.10M, %.6e%<C?, %C>, %s] "
@@ -181,6 +184,7 @@ The option is _unset_ by default because many visual terminals don't permit maki
 ## `$charset`
 
 - **Type:** string
+- **Notes:** Not Empty, Single Charset
 - **Default:** (empty)
     ```
     set charset = ""
@@ -199,6 +203,7 @@ Upon startup NeoMutt tries to derive this value from environment variables such 
 ## `$color_directcolor`
 
 - **Type:** boolean
+- **Notes:** On Startup
 - **Default:**
     ```
     set color_directcolor = no
@@ -280,6 +285,7 @@ Controls whether NeoMutt will weed headers when invoking the `<decode-copy>` or 
 ## `$date_format`
 
 - **Type:** string
+- **Notes:** Not empty
 - **Default:**
     ```
     set date_format = "!%a, %b %d, %Y at %I:%M:%S%p %Z"
@@ -307,6 +313,7 @@ Composing: $$attribution_intro, $$forward_attribution_intro, $$forward_attributi
 ## `$debug_file`
 
 - **Type:** path (string)
+- **Notes:** File only
 - **Default:**
     ```
     set debug_file = "~/.neomuttdebug"
@@ -396,6 +403,7 @@ https://github.com/neomutt/neomutt/discussions/4251
 ## `$editor`
 
 - **Type:** command (string)
+- **Notes:** Not empty
 - **Default:** (empty)
     ```
     set editor = ""
@@ -594,6 +602,7 @@ If unset a UTC date will be used instead to avoid leaking information about your
 ## `$mail_check`
 
 - **Type:** number
+- **Notes:** Not negative
 - **Default:**
     ```
     set mail_check = 5
@@ -641,6 +650,7 @@ Message statistics can also be explicitly calculated by invoking the `<check-sta
 ## `$mail_check_stats_interval`
 
 - **Type:** number
+- **Notes:** Not negative
 - **Default:**
     ```
     set mail_check_stats_interval = 60
@@ -713,6 +723,7 @@ You probably only want to set it every once in a while, since it can be a little
 ## `$message_cache_dir`
 
 - **Type:** path (string)
+- **Notes:** Directory only
 - **Default:** (empty)
     ```
     set message_cache_dir = ""
@@ -1025,6 +1036,7 @@ If _set_, mailboxes are never removed.
 ## `$send_charset`
 
 - **Type:** string list
+- **Notes:** Colon-separated, Allow empty, Strict Charset
 - **Default:**
     ```
     set send_charset = "us-ascii:iso-8859-1:utf-8"
@@ -1112,6 +1124,7 @@ See $formatstrings-size.
 ## `$sleep_time`
 
 - **Type:** number
+- **Notes:** Not negative
 - **Default:**
     ```
     set sleep_time = 1
@@ -1126,6 +1139,7 @@ The default is to pause one second, so a value of zero for this option suppresse
 ## `$sort`
 
 - **Type:** sort order
+- **Notes:** Sort Reverse, Sort Last
 - **Default:**
     ```
     set sort = "date"
@@ -1172,6 +1186,7 @@ See the "Use Threads Feature" section for further explanation and examples, http
 ## `$sort_aux`
 
 - **Type:** sort order
+- **Notes:** Sort Reverse, Sort Last
 - **Default:**
     ```
     set sort_aux = "date"
@@ -1263,6 +1278,7 @@ Note that $$indent_string is ignored when this option is _set_.
 ## `$timeout`
 
 - **Type:** number
+- **Notes:** Not negative
 - **Default:**
     ```
     set timeout = 600
@@ -1278,6 +1294,7 @@ A value of zero disables timeout hooks.
 ## `$tmp_dir`
 
 - **Type:** path (string)
+- **Notes:** Directory only, Not empty
 - **Default:**
     ```
     set tmp_dir = "/tmp"
@@ -1294,6 +1311,7 @@ Failing that, then "`/tmp`" is used.
 ## `$tmp_draft_dir`
 
 - **Type:** path (string)
+- **Notes:** Directory only, Not empty
 - **Default:**
     ```
     set tmp_draft_dir = "/var/tmp"

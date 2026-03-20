@@ -99,6 +99,7 @@ Set this to indent mailboxes in the sidebar.
 ## `$sidebar_format`
 
 - **Type:** expando
+- **Notes:** Not empty
 - **Default:**
     ```
     set sidebar_format = "%D%*  %n"
@@ -283,6 +284,7 @@ The sidebar shows a list of all your mailboxes.
 ## `$sidebar_width`
 
 - **Type:** number
+- **Notes:** Not negative
 - **Default:**
     ```
     set sidebar_width = 30

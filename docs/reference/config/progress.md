@@ -21,6 +21,7 @@ how-to guides and explanation pages instead.
 ## `$net_inc`
 
 - **Type:** number
+- **Notes:** Not negative
 - **Default:**
     ```
     set net_inc = 10
@@ -37,6 +38,7 @@ See also $$read_inc, $$write_inc and $$net_inc.
 ## `$read_inc`
 
 - **Type:** number
+- **Notes:** Not negative
 - **Default:**
     ```
     set read_inc = 10
@@ -55,6 +57,7 @@ Also see the $$write_inc, $$net_inc and $$time_inc variables and the "$tuning" s
 ## `$time_inc`
 
 - **Type:** number
+- **Notes:** Not negative
 - **Default:**
     ```
     set time_inc = 0
@@ -72,6 +75,7 @@ Also see the "$tuning" section of the manual for performance considerations.
 ## `$write_inc`
 
 - **Type:** number
+- **Notes:** Not negative
 - **Default:**
     ```
     set write_inc = 10

@@ -62,6 +62,7 @@ The following `printf(3)`-style sequences are understood
 ## `$autocrypt_dir`
 
 - **Type:** path (string)
+- **Notes:** Directory only
 - **Default:**
     ```
     set autocrypt_dir = "~/.mutt/autocrypt"

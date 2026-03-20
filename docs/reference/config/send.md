@@ -150,6 +150,7 @@ If set, NeoMutt will prompt you for x-comment-to field before editing the body o
 ## `$attach_charset`
 
 - **Type:** string list
+- **Notes:** Colon-separated, Allow empty
 - **Default:** (empty)
     ```
     set attach_charset = ""
@@ -173,6 +174,7 @@ Note: for Japanese users, "iso-2022-*" must be put at the head of the value as s
 ## `$attribution_intro`
 
 - **Type:** expando
+- **Notes:** Localised
 - **Default:**
     ```
     set attribution_intro = "On %d, %n wrote:"
@@ -547,6 +549,7 @@ $$mime_forward _unset_ or answered with "no" and $$forward_decode _set_), attach
 ## `$forward_attribution_intro`
 
 - **Type:** expando
+- **Notes:** Localised
 - **Default:**
     ```
     set forward_attribution_intro = "----- Forwarded message from %f -----"
@@ -562,6 +565,7 @@ See also $$attribution_locale.
 ## `$forward_attribution_trailer`
 
 - **Type:** expando
+- **Notes:** Localised
 - **Default:**
     ```
     set forward_attribution_trailer = "----- End forwarded message -----"
@@ -606,6 +610,7 @@ For those who always want to forward with no modification, use a setting of "no"
 ## `$forward_format`
 
 - **Type:** expando
+- **Notes:** Not empty
 - **Default:**
     ```
     set forward_format = "[%a: %s]"
@@ -1089,6 +1094,7 @@ If there is some error, you will be informed as to where to find the output.
 ## `$signature`
 
 - **Type:** path (string)
+- **Notes:** File only
 - **Default:**
     ```
     set signature = "~/.signature"
@@ -1133,6 +1139,7 @@ It is **strongly** recommended that you do not set this variable unless you real
 ## `$smtp_authenticators`
 
 - **Type:** string list
+- **Notes:** Colon-separated
 - **Default:** (empty)
     ```
     set smtp_authenticators = ""
@@ -1157,6 +1164,7 @@ set smtp_authenticators="digest-md5:cram-md5"
 ## `$smtp_oauth_refresh_command`
 
 - **Type:** command (string)
+- **Notes:** Sensitive
 - **Default:** (empty)
     ```
     set smtp_oauth_refresh_command = ""
@@ -1172,6 +1180,7 @@ See "$oauth" for details.
 ## `$smtp_pass`
 
 - **Type:** string
+- **Notes:** Sensitive
 - **Default:** (empty)
     ```
     set smtp_pass = ""
@@ -1189,6 +1198,7 @@ See $$smtp_url to configure NeoMutt to send mail via SMTP.
 ## `$smtp_url`
 
 - **Type:** string
+- **Notes:** Sensitive
 - **Default:** (empty)
     ```
     set smtp_url = ""
@@ -1212,6 +1222,7 @@ Also see $$write_bcc.
 ## `$smtp_user`
 
 - **Type:** string
+- **Notes:** Sensitive
 - **Default:** (empty)
     ```
     set smtp_user = ""
@@ -1288,6 +1299,7 @@ If _unset_, no "From:" header field will be generated unless the user explicitly
 ## `$wrap_headers`
 
 - **Type:** number
+- **Notes:** Not negative
 - **Default:**
     ```
     set wrap_headers = 78

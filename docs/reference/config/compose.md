@@ -38,6 +38,7 @@ It doesn't keep track of which message is the typed message if the entries are r
 ## `$compose_format`
 
 - **Type:** expando
+- **Notes:** Localised
 - **Default:**
     ```
     set compose_format = "-- NeoMutt: Compose  [Approx. msg size: %l   Atts: %a]%>-"
@@ -78,6 +79,7 @@ By default it is shown below it.
 ## `$compose_preview_min_rows`
 
 - **Type:** number
+- **Notes:** Not negative
 - **Default:**
     ```
     set compose_preview_min_rows = 5

@@ -52,6 +52,7 @@ If _unset_, NeoMutt will render all MIME parts it can properly transform to plai
 ## `$hidden_tags`
 
 - **Type:** string list
+- **Notes:** Comma-separated
 - **Default:**
     ```
     set hidden_tags = "unread,draft,flagged,passed,replied,attachment,signed,encrypted"
@@ -108,6 +109,7 @@ Controls whether or not NeoMutt includes only the first attachment of the messag
 ## `$mailcap_path`
 
 - **Type:** string list
+- **Notes:** Colon-separated
 - **Default:**
     ```
     set mailcap_path = "~/.mailcap:" PKGDATADIR "/mailcap:" SYSCONFDIR "/mailcap:/etc/mailcap:/usr/etc/mailcap:/usr/local/etc/mailcap"
@@ -142,6 +144,7 @@ This is the safe setting, but we are not sure it doesn't break some more advance
 ## `$preferred_languages`
 
 - **Type:** string list
+- **Notes:** Comma-separated
 - **Default:** (empty)
     ```
     set preferred_languages = ""
@@ -216,6 +219,7 @@ Also see $$wrap.
 ## `$reply_regex`
 
 - **Type:** regular expression
+- **Notes:** Localised
 - **Default:**
     ```
     set reply_regex = "^((re)(\\[[0-9]+\\])*:[ \t]*)*"

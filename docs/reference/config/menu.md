@@ -35,6 +35,7 @@ On slow network or modem links this will make response faster because there is l
 ## `$arrow_string`
 
 - **Type:** string
+- **Notes:** Not empty
 - **Default:**
     ```
     set arrow_string = "->"
@@ -48,6 +49,7 @@ Specifies the string of arrow_cursor when arrow_cursor enabled.
 ## `$menu_context`
 
 - **Type:** number
+- **Notes:** Not negative
 - **Default:**
     ```
     set menu_context = 0

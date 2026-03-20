@@ -198,6 +198,7 @@ If you are using colors to mark these lines, and rely on these, you may _unset_ 
 ## `$crypt_use_gpgme`
 
 - **Type:** boolean
+- **Notes:** On Startup
 - **Default:**
     ```
     set crypt_use_gpgme = yes
@@ -462,6 +463,7 @@ This is a format string, see the $$pgp_decode_command command for possible `prin
 ## `$pgp_entry_format`
 
 - **Type:** expando
+- **Notes:** Not empty
 - **Default:**
     ```
     set pgp_entry_format = "%4n %t%f %4l/0x%k %-4a %2c %u"
@@ -582,6 +584,7 @@ This is a format string, see the $$pgp_decode_command command for possible `prin
 ## `$pgp_key_sort`
 
 - **Type:** sort order
+- **Notes:** Sort Reverse
 - **Default:**
     ```
     set pgp_key_sort = "address"
@@ -779,6 +782,7 @@ Please note that unsetting this variable may lead to problems with non-verifyabl
 ## `$pgp_timeout`
 
 - **Type:** number (long)
+- **Notes:** Not negative
 - **Default:**
     ```
     set pgp_timeout = 300
@@ -863,6 +867,7 @@ It is _set_ by default.
 ## `$smime_ca_location`
 
 - **Type:** path (string)
+- **Notes:** File only
 - **Default:** (empty)
     ```
     set smime_ca_location = ""
@@ -877,6 +882,7 @@ This variable contains the name of either a directory, or a file which contains 
 ## `$smime_certificates`
 
 - **Type:** path (string)
+- **Notes:** Directory only
 - **Default:** (empty)
     ```
     set smime_certificates = ""
@@ -1077,6 +1083,7 @@ However, this has no effect while replying, since NeoMutt will automatically sel
 ## `$smime_keys`
 
 - **Type:** path (string)
+- **Notes:** Directory only
 - **Default:** (empty)
     ```
     set smime_keys = ""
@@ -1170,6 +1177,7 @@ Valid choices are "md5", "sha1", "sha224", "sha256", "sha384", "sha512".
 ## `$smime_timeout`
 
 - **Type:** number
+- **Notes:** Not negative
 - **Default:**
     ```
     set smime_timeout = 300

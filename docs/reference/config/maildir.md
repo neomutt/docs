@@ -53,6 +53,7 @@ Note that setting this option may slow down polling for new messages in large fo
 ## `$maildir_field_delimiter`
 
 - **Type:** string
+- **Notes:** Not Empty, On Startup
 - **Default:**
     ```
     set maildir_field_delimiter = ":"

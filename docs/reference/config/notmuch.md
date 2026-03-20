@@ -21,6 +21,7 @@ how-to guides and explanation pages instead.
 ## `$nm_config_file`
 
 - **Type:** path (string)
+- **Notes:** File only
 - **Default:**
     ```
     set nm_config_file = "auto"
@@ -48,6 +49,7 @@ Configuration profile for notmuch.
 ## `$nm_db_limit`
 
 - **Type:** number
+- **Notes:** Not negative
 - **Default:**
     ```
     set nm_db_limit = 0
@@ -103,6 +105,7 @@ flags.
 ## `$nm_open_timeout`
 
 - **Type:** number
+- **Notes:** Not negative
 - **Default:**
     ```
     set nm_open_timeout = 5
@@ -155,6 +158,7 @@ This variable contains the currently setup notmuch search for window based vfold
 ## `$nm_query_window_duration`
 
 - **Type:** number
+- **Notes:** Not negative
 - **Default:**
     ```
     set nm_query_window_duration = 0

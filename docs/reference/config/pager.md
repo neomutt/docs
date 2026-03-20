@@ -116,6 +116,7 @@ Using an external pager may have some disadvantages: Additional keystrokes are n
 ## `$pager_context`
 
 - **Type:** number
+- **Notes:** Not negative
 - **Default:**
     ```
     set pager_context = 0
@@ -147,6 +148,7 @@ The valid sequences are listed in the $$index_format section.
 ## `$pager_index_lines`
 
 - **Type:** number
+- **Notes:** Not negative
 - **Default:**
     ```
     set pager_index_lines = 0
@@ -163,6 +165,7 @@ A value of 0 results in no index being shown.
 ## `$pager_read_delay`
 
 - **Type:** number
+- **Notes:** Not negative
 - **Default:**
     ```
     set pager_read_delay = 0
@@ -178,6 +181,7 @@ This setting is ignored if $$pager is set.
 ## `$pager_skip_quoted_context`
 
 - **Type:** number
+- **Notes:** Not negative
 - **Default:**
     ```
     set pager_skip_quoted_context = 0
@@ -221,6 +225,7 @@ If _unset_, NeoMutt will return to the index menu when the external pager exits.
 ## `$search_context`
 
 - **Type:** number
+- **Notes:** Not negative
 - **Default:**
     ```
     set search_context = 0
@@ -278,6 +283,7 @@ When _set_, the internal-pager will pad blank lines to the bottom of the screen 
 ## `$toggle_quoted_show_levels`
 
 - **Type:** number
+- **Notes:** Not negative
 - **Default:**
     ```
     set toggle_quoted_show_levels = 0

@@ -21,6 +21,7 @@ how-to guides and explanation pages instead.
 ## `$alias_file`
 
 - **Type:** path (string)
+- **Notes:** File only
 - **Default:**
     ```
     set alias_file = "~/.neomuttrc"
@@ -39,6 +40,7 @@ The default for this option is the currently used neomuttrc file, or "~/.neomutt
 ## `$alias_format`
 
 - **Type:** expando
+- **Notes:** Not empty
 - **Default:**
     ```
     set alias_format = "%3i %f%t %-15a %-56A | %C%> %Y"
@@ -78,6 +80,7 @@ The following sequences are deprecated; they will be removed in the future.
 ## `$alias_sort`
 
 - **Type:** sort order
+- **Notes:** Sort Reverse
 - **Default:**
     ```
     set alias_sort = "alias"
@@ -126,6 +129,7 @@ See "$query": https://neomutt.org/guide/advancedusage.html#query
 ## `$query_format`
 
 - **Type:** expando
+- **Notes:** Not empty
 - **Default:**
     ```
     set query_format = "%3i %t %-25N %-25E | %C%> %Y"

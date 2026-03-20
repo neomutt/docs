@@ -21,6 +21,7 @@ how-to guides and explanation pages instead.
 ## `$pop_authenticators`
 
 - **Type:** string list
+- **Notes:** Colon-separated
 - **Default:** (empty)
     ```
     set pop_authenticators = ""
@@ -59,6 +60,7 @@ If a method is available but authentication fails, NeoMutt will not connect to t
 ## `$pop_check_interval`
 
 - **Type:** number
+- **Notes:** Not negative
 - **Default:**
     ```
     set pop_check_interval = 60
@@ -119,6 +121,7 @@ If this variable is _set_, NeoMutt will try to use the "`LAST`" POP command for 
 ## `$pop_oauth_refresh_command`
 
 - **Type:** command (string)
+- **Notes:** Sensitive
 - **Default:** (empty)
     ```
     set pop_oauth_refresh_command = ""
@@ -134,6 +137,7 @@ See "$oauth" for details.
 ## `$pop_pass`
 
 - **Type:** string
+- **Notes:** Sensitive
 - **Default:** (empty)
     ```
     set pop_pass = ""
@@ -163,6 +167,7 @@ Controls whether or not NeoMutt will try to reconnect to the POP server if the c
 ## `$pop_user`
 
 - **Type:** string
+- **Notes:** Sensitive
 - **Default:** (empty)
     ```
     set pop_user = ""

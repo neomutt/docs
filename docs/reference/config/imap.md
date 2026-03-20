@@ -21,6 +21,7 @@ how-to guides and explanation pages instead.
 ## `$imap_authenticators`
 
 - **Type:** string list
+- **Notes:** Colon-separated
 - **Default:** (empty)
     ```
     set imap_authenticators = ""
@@ -107,6 +108,7 @@ This contains the list of characters that NeoMutt will use as folder separators 
 ## `$imap_fetch_chunk_size`
 
 - **Type:** number (long)
+- **Notes:** Not negative
 - **Default:**
     ```
     set imap_fetch_chunk_size = 0
@@ -153,6 +155,7 @@ If your connection seems to freeze up periodically, try unsetting this.
 ## `$imap_keep_alive`
 
 - **Type:** number
+- **Notes:** Not negative
 - **Default:**
     ```
     set imap_keep_alive = 300
@@ -182,6 +185,7 @@ This can be toggled in the IMAP browser with the `<toggle-subscribed>` function.
 ## `$imap_login`
 
 - **Type:** string
+- **Notes:** Sensitive
 - **Default:** (empty)
     ```
     set imap_login = ""
@@ -197,6 +201,7 @@ This variable defaults to the value of $$imap_user.
 ## `$imap_oauth_refresh_command`
 
 - **Type:** command (string)
+- **Notes:** Sensitive
 - **Default:** (empty)
     ```
     set imap_oauth_refresh_command = ""
@@ -212,6 +217,7 @@ See "$oauth" for details.
 ## `$imap_pass`
 
 - **Type:** string
+- **Notes:** Sensitive
 - **Default:** (empty)
     ```
     set imap_pass = ""
@@ -259,6 +265,7 @@ This option exists to appease speed freaks.
 ## `$imap_pipeline_depth`
 
 - **Type:** number
+- **Notes:** Not negative
 - **Default:**
     ```
     set imap_pipeline_depth = 15
@@ -276,6 +283,7 @@ But not all servers correctly handle pipelined commands, so if you have problems
 ## `$imap_poll_timeout`
 
 - **Type:** number
+- **Notes:** Not negative
 - **Default:**
     ```
     set imap_poll_timeout = 15
@@ -352,6 +360,7 @@ Since these messages are often harmless, or generated due to configuration probl
 ## `$imap_user`
 
 - **Type:** string
+- **Notes:** Sensitive
 - **Default:** (empty)
     ```
     set imap_user = ""
