@@ -20,7 +20,7 @@ how-to guides and explanation pages instead.
 (pop-authenticators)=
 ## `$pop_authenticators`
 
-- **Type:** string list
+- **Type:** String List
 - **Notes:** Colon-separated
 - **Default:** (empty)
     ```
@@ -44,7 +44,7 @@ set pop_authenticators = "digest-md5:apop:user"
 (pop-auth-try-all)=
 ## `$pop_auth_try_all`
 
-- **Type:** boolean
+- **Type:** Boolean
 - **Default:**
     ```neomuttrc
     set pop_auth_try_all = yes
@@ -59,7 +59,7 @@ If a method is available but authentication fails, NeoMutt will not connect to t
 (pop-check-interval)=
 ## `$pop_check_interval`
 
-- **Type:** number
+- **Type:** Number
 - **Notes:** Not negative
 - **Default:**
     ```neomuttrc
@@ -73,7 +73,7 @@ This variable configures how often (in seconds) NeoMutt should look for new mail
 (pop-delete)=
 ## `$pop_delete`
 
-- **Type:** quad-option
+- **Type:** Quad-Option
 - **Default:**
     ```neomuttrc
     set pop_delete = ask-no
@@ -87,7 +87,7 @@ When _unset_, NeoMutt will download messages but also leave them on the POP serv
 (pop-host)=
 ## `$pop_host`
 
-- **Type:** string
+- **Type:** String
 - **Default:** (empty)
     ```
     set pop_host = ""
@@ -107,7 +107,7 @@ where "[...]" denotes an optional part.
 (pop-last)=
 ## `$pop_last`
 
-- **Type:** boolean
+- **Type:** Boolean
 - **Default:**
     ```neomuttrc
     set pop_last = no
@@ -120,7 +120,7 @@ If this variable is _set_, NeoMutt will try to use the "`LAST`" POP command for 
 (pop-oauth-refresh-command)=
 ## `$pop_oauth_refresh_command`
 
-- **Type:** command (string)
+- **Type:** Command (String)
 - **Notes:** Sensitive
 - **Default:** (empty)
     ```
@@ -136,7 +136,7 @@ See "$oauth" for details.
 (pop-pass)=
 ## `$pop_pass`
 
-- **Type:** string
+- **Type:** String
 - **Notes:** Sensitive
 - **Default:** (empty)
     ```
@@ -153,7 +153,7 @@ If _unset_, NeoMutt will prompt you for your password when you open a POP mailbo
 (pop-reconnect)=
 ## `$pop_reconnect`
 
-- **Type:** quad-option
+- **Type:** Quad-Option
 - **Default:**
     ```neomuttrc
     set pop_reconnect = ask-yes
@@ -166,7 +166,7 @@ Controls whether or not NeoMutt will try to reconnect to the POP server if the c
 (pop-user)=
 ## `$pop_user`
 
-- **Type:** string
+- **Type:** String
 - **Notes:** Sensitive
 - **Default:** (empty)
     ```

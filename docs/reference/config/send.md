@@ -20,7 +20,7 @@ how-to guides and explanation pages instead.
 (abort-noattach)=
 ## `$abort_noattach`
 
-- **Type:** quad-option
+- **Type:** Quad-Option
 - **Default:**
     ```neomuttrc
     set abort_noattach = no
@@ -40,7 +40,7 @@ set abort_noattach_regex = "\\<attach(|ed|ments?)\\>"
 (abort-noattach-regex)=
 ## `$abort_noattach_regex`
 
-- **Type:** regular expression
+- **Type:** Regular Expression
 - **Default:**
     ```neomuttrc
     set abort_noattach_regex = "\\<(attach|attached|attachments?)\\>"
@@ -56,7 +56,7 @@ Like other regular expressions in NeoMutt, the search is case sensitive if the p
 (abort-nosubject)=
 ## `$abort_nosubject`
 
-- **Type:** quad-option
+- **Type:** Quad-Option
 - **Default:**
     ```neomuttrc
     set abort_nosubject = ask-yes
@@ -70,7 +70,7 @@ If set to _no_, composing messages with no subject given at the subject prompt w
 (abort-unmodified)=
 ## `$abort_unmodified`
 
-- **Type:** quad-option
+- **Type:** Quad-Option
 - **Default:**
     ```neomuttrc
     set abort_unmodified = yes
@@ -84,7 +84,7 @@ When set to _no_, composition will never be aborted.
 (allow-8bit)=
 ## `$allow_8bit`
 
-- **Type:** boolean
+- **Type:** Boolean
 - **Default:**
     ```neomuttrc
     set allow_8bit = yes
@@ -97,7 +97,7 @@ Controls whether 8-bit data is converted to 7-bit using either Quoted-Printable 
 (ask-bcc)=
 ## `$ask_bcc`
 
-- **Type:** boolean
+- **Type:** Boolean
 - **Default:**
     ```neomuttrc
     set ask_bcc = no
@@ -110,7 +110,7 @@ If _set_, NeoMutt will prompt you for blind-carbon-copy (Bcc) recipients before 
 (ask-cc)=
 ## `$ask_cc`
 
-- **Type:** boolean
+- **Type:** Boolean
 - **Default:**
     ```neomuttrc
     set ask_cc = no
@@ -123,7 +123,7 @@ If _set_, NeoMutt will prompt you for carbon-copy (Cc) recipients before editing
 (ask-followup-to)=
 ## `$ask_followup_to`
 
-- **Type:** boolean
+- **Type:** Boolean
 - **Default:**
     ```neomuttrc
     set ask_followup_to = no
@@ -136,7 +136,7 @@ If set, NeoMutt will prompt you for follow-up groups before editing the body of 
 (ask-x-comment-to)=
 ## `$ask_x_comment_to`
 
-- **Type:** boolean
+- **Type:** Boolean
 - **Default:**
     ```neomuttrc
     set ask_x_comment_to = no
@@ -149,7 +149,7 @@ If set, NeoMutt will prompt you for x-comment-to field before editing the body o
 (attach-charset)=
 ## `$attach_charset`
 
-- **Type:** string list
+- **Type:** String List
 - **Notes:** Colon-separated, Allow empty
 - **Default:** (empty)
     ```
@@ -173,7 +173,7 @@ Note: for Japanese users, "iso-2022-*" must be put at the head of the value as s
 (attribution-intro)=
 ## `$attribution_intro`
 
-- **Type:** expando
+- **Type:** Expando
 - **Notes:** Localised
 - **Default:**
     ```neomuttrc
@@ -190,7 +190,7 @@ See also $$attribution_locale.
 (attribution-locale)=
 ## `$attribution_locale`
 
-- **Type:** string
+- **Type:** String
 - **Default:** (empty)
     ```
     set attribution_locale = ""
@@ -209,7 +209,7 @@ Affected variables are: $$attribution_intro, $$attribution_trailer, $$forward_at
 (attribution-trailer)=
 ## `$attribution_trailer`
 
-- **Type:** expando
+- **Type:** Expando
 - **Default:** (empty)
     ```
     set attribution_trailer = ""
@@ -225,7 +225,7 @@ See also $$attribution_locale.
 (bounce-delivered)=
 ## `$bounce_delivered`
 
-- **Type:** boolean
+- **Type:** Boolean
 - **Default:**
     ```neomuttrc
     set bounce_delivered = yes
@@ -239,7 +239,7 @@ Postfix users may wish to _unset_ this variable.
 (confirm-empty-to)=
 ## `$confirm_empty_to`
 
-- **Type:** boolean
+- **Type:** Boolean
 - **Default:**
     ```neomuttrc
     set confirm_empty_to = no
@@ -252,7 +252,7 @@ When _set_, NeoMutt will prompt for confirmation when sending an e-mail with an 
 (content-type)=
 ## `$content_type`
 
-- **Type:** string
+- **Type:** String
 - **Default:**
     ```neomuttrc
     set content_type = "text/plain"
@@ -265,7 +265,7 @@ Sets the default Content-Type for the body of newly composed messages.
 (crypt-auto-encrypt)=
 ## `$crypt_auto_encrypt`
 
-- **Type:** boolean
+- **Type:** Boolean
 - **Default:**
     ```neomuttrc
     set crypt_auto_encrypt = no
@@ -282,7 +282,7 @@ If $$smime_is_default is _set_, then OpenSSL is used instead to create S/MIME me
 (crypt-auto-pgp)=
 ## `$crypt_auto_pgp`
 
-- **Type:** boolean
+- **Type:** Boolean
 - **Default:**
     ```neomuttrc
     set crypt_auto_pgp = yes
@@ -296,7 +296,7 @@ See also $$crypt_auto_encrypt, $$crypt_reply_encrypt, $$crypt_auto_sign, $$crypt
 (crypt-auto-sign)=
 ## `$crypt_auto_sign`
 
-- **Type:** boolean
+- **Type:** Boolean
 - **Default:**
     ```neomuttrc
     set crypt_auto_sign = no
@@ -312,7 +312,7 @@ If $$smime_is_default is _set_, then OpenSSL is used instead to create S/MIME me
 (crypt-auto-smime)=
 ## `$crypt_auto_smime`
 
-- **Type:** boolean
+- **Type:** Boolean
 - **Default:**
     ```neomuttrc
     set crypt_auto_smime = yes
@@ -326,7 +326,7 @@ See also $$crypt_auto_encrypt, $$crypt_reply_encrypt, $$crypt_auto_sign, $$crypt
 (crypt-reply-encrypt)=
 ## `$crypt_reply_encrypt`
 
-- **Type:** boolean
+- **Type:** Boolean
 - **Default:**
     ```neomuttrc
     set crypt_reply_encrypt = yes
@@ -340,7 +340,7 @@ If _set_, automatically PGP or OpenSSL encrypt replies to messages which are enc
 (crypt-reply-sign)=
 ## `$crypt_reply_sign`
 
-- **Type:** boolean
+- **Type:** Boolean
 - **Default:**
     ```neomuttrc
     set crypt_reply_sign = no
@@ -356,7 +356,7 @@ If _set_, automatically PGP or OpenSSL sign replies to messages which are signed
 (crypt-reply-sign-encrypted)=
 ## `$crypt_reply_sign_encrypted`
 
-- **Type:** boolean
+- **Type:** Boolean
 - **Default:**
     ```neomuttrc
     set crypt_reply_sign_encrypted = no
@@ -372,7 +372,7 @@ This works around the problem noted in $$crypt_reply_sign, that NeoMutt is not a
 (dsn-notify)=
 ## `$dsn_notify`
 
-- **Type:** string
+- **Type:** String
 - **Default:** (empty)
     ```
     set dsn_notify = ""
@@ -394,7 +394,7 @@ For SMTP delivery, DSN support is auto-detected so that it depends on the server
 (dsn-return)=
 ## `$dsn_return`
 
-- **Type:** string
+- **Type:** String
 - **Default:** (empty)
     ```
     set dsn_return = ""
@@ -416,7 +416,7 @@ For SMTP delivery, DSN support is auto-detected so that it depends on the server
 (empty-subject)=
 ## `$empty_subject`
 
-- **Type:** string
+- **Type:** String
 - **Default:**
     ```neomuttrc
     set empty_subject = "Re: your mail"
@@ -430,7 +430,7 @@ It defaults to "Re: your mail".
 (encode-from)=
 ## `$encode_from`
 
-- **Type:** boolean
+- **Type:** Boolean
 - **Default:**
     ```neomuttrc
     set encode_from = no
@@ -444,7 +444,7 @@ This is useful to avoid the tampering certain mail delivery and transport agents
 (fast-reply)=
 ## `$fast_reply`
 
-- **Type:** boolean
+- **Type:** Boolean
 - **Default:**
     ```neomuttrc
     set fast_reply = no
@@ -463,7 +463,7 @@ See also: $$auto_edit, $$edit_headers, $$ask_cc, $$ask_bcc.
 (fcc-attach)=
 ## `$fcc_attach`
 
-- **Type:** quad-option
+- **Type:** Quad-Option
 - **Default:**
     ```neomuttrc
     set fcc_attach = yes
@@ -478,7 +478,7 @@ Note: $$fcc_before_send forces the default (set) behavior of this option.
 (fcc-before-send)=
 ## `$fcc_before_send`
 
-- **Type:** boolean
+- **Type:** Boolean
 - **Default:**
     ```neomuttrc
     set fcc_before_send = no
@@ -496,7 +496,7 @@ Variables $$fcc_attach and $$fcc_clear will be respected, allowing it to be stor
 (fcc-clear)=
 ## `$fcc_clear`
 
-- **Type:** boolean
+- **Type:** Boolean
 - **Default:**
     ```neomuttrc
     set fcc_clear = no
@@ -514,7 +514,7 @@ See also $$pgp_self_encrypt, $$smime_self_encrypt.
 (followup-to)=
 ## `$followup_to`
 
-- **Type:** boolean
+- **Type:** Boolean
 - **Default:**
     ```neomuttrc
     set followup_to = yes
@@ -534,7 +534,7 @@ Without this header, a group reply to your message sent to a subscribed list wil
 (forward-attachments)=
 ## `$forward_attachments`
 
-- **Type:** quad-option
+- **Type:** Quad-Option
 - **Default:**
     ```neomuttrc
     set forward_attachments = ask-yes
@@ -548,7 +548,7 @@ $$mime_forward _unset_ or answered with "no" and $$forward_decode _set_), attach
 (forward-attribution-intro)=
 ## `$forward_attribution_intro`
 
-- **Type:** expando
+- **Type:** Expando
 - **Notes:** Localised
 - **Default:**
     ```neomuttrc
@@ -564,7 +564,7 @@ See also $$attribution_locale.
 (forward-attribution-trailer)=
 ## `$forward_attribution_trailer`
 
-- **Type:** expando
+- **Type:** Expando
 - **Notes:** Localised
 - **Default:**
     ```neomuttrc
@@ -580,7 +580,7 @@ See also $$attribution_locale.
 (forward-decrypt)=
 ## `$forward_decrypt`
 
-- **Type:** boolean
+- **Type:** Boolean
 - **Default:**
     ```neomuttrc
     set forward_decrypt = yes
@@ -595,7 +595,7 @@ This variable is only used if $$mime_forward is _set_ and $$mime_forward_decode 
 (forward-edit)=
 ## `$forward_edit`
 
-- **Type:** quad-option
+- **Type:** Quad-Option
 - **Default:**
     ```neomuttrc
     set forward_edit = yes
@@ -609,7 +609,7 @@ For those who always want to forward with no modification, use a setting of "no"
 (forward-format)=
 ## `$forward_format`
 
-- **Type:** expando
+- **Type:** Expando
 - **Notes:** Not empty
 - **Default:**
     ```neomuttrc
@@ -624,7 +624,7 @@ It uses the same format sequences as the $$index_format variable.
 (forward-references)=
 ## `$forward_references`
 
-- **Type:** boolean
+- **Type:** Boolean
 - **Default:**
     ```neomuttrc
     set forward_references = no
@@ -638,7 +638,7 @@ Hence the forwarded message becomes part of the original thread instead of start
 (greeting)=
 ## `$greeting`
 
-- **Type:** expando
+- **Type:** Expando
 - **Default:** (empty)
     ```
     set greeting = ""
@@ -660,7 +660,7 @@ The following sequences are defined in NeoMutt:
 (hdrs)=
 ## `$hdrs`
 
-- **Type:** boolean
+- **Type:** Boolean
 - **Default:**
     ```neomuttrc
     set hdrs = yes
@@ -675,7 +675,7 @@ If _set_, the user defined header fields are added to every new message.
 (hidden-host)=
 ## `$hidden_host`
 
-- **Type:** boolean
+- **Type:** Boolean
 - **Default:**
     ```neomuttrc
     set hidden_host = no
@@ -688,7 +688,7 @@ When _set_, NeoMutt will skip the host name part of $$hostname variable when add
 (honor-followup-to)=
 ## `$honor_followup_to`
 
-- **Type:** quad-option
+- **Type:** Quad-Option
 - **Default:**
     ```neomuttrc
     set honor_followup_to = yes
@@ -701,7 +701,7 @@ This variable controls whether or not a Mail-Followup-To header is honored when 
 (ignore-list-reply-to)=
 ## `$ignore_list_reply_to`
 
-- **Type:** boolean
+- **Type:** Boolean
 - **Default:**
     ```neomuttrc
     set ignore_list_reply_to = no
@@ -715,7 +715,7 @@ To direct a response to the mailing list when this option is _set_, use the `$<l
 (include)=
 ## `$include`
 
-- **Type:** quad-option
+- **Type:** Quad-Option
 - **Default:**
     ```neomuttrc
     set include = ask-yes
@@ -728,7 +728,7 @@ Controls whether or not a copy of the message(s) you are replying to is included
 (inews-command)=
 ## `$inews_command`
 
-- **Type:** expando (command string)
+- **Type:** Expando (Command String)
 - **Default:** (empty)
     ```
     set inews_command = ""
@@ -757,7 +757,7 @@ set inews_command = "/usr/local/bin/inews -hS"
 (message-id-format)=
 ## `$message_id_format`
 
-- **Type:** expando
+- **Type:** Expando
 - **Default:**
     ```neomuttrc
     set message_id_format = "<%z@%f>"
@@ -802,7 +802,7 @@ See also: Base64Url: https://datatracker.ietf.org/doc/html/rfc4648#section-5
 (me-too)=
 ## `$me_too`
 
-- **Type:** boolean
+- **Type:** Boolean
 - **Default:**
     ```neomuttrc
     set me_too = no
@@ -815,7 +815,7 @@ If _unset_, NeoMutt will remove your address (see the "$alternates" command) fro
 (mime-forward-decode)=
 ## `$mime_forward_decode`
 
-- **Type:** boolean
+- **Type:** Boolean
 - **Default:**
     ```neomuttrc
     set mime_forward_decode = no
@@ -829,7 +829,7 @@ Otherwise $$forward_decode is used instead.
 (mime-type-query-command)=
 ## `$mime_type_query_command`
 
-- **Type:** command (string)
+- **Type:** Command (String)
 - **Default:** (empty)
     ```
     set mime_type_query_command = ""
@@ -851,7 +851,7 @@ Suggested values are "xdg-mime query filetype" or "file -bi".
 (mime-type-query-first)=
 ## `$mime_type_query_first`
 
-- **Type:** boolean
+- **Type:** Boolean
 - **Default:**
     ```neomuttrc
     set mime_type_query_first = no
@@ -864,7 +864,7 @@ When _set_, the $$mime_type_query_command will be run before the mime.types look
 (nm-record)=
 ## `$nm_record`
 
-- **Type:** boolean
+- **Type:** Boolean
 - **Default:**
     ```neomuttrc
     set nm_record = no
@@ -879,7 +879,7 @@ See $$nm_record_tags for how to modify the set of notmuch tags assigned to sent 
 (pgp-reply-inline)=
 ## `$pgp_reply_inline`
 
-- **Type:** boolean
+- **Type:** Boolean
 - **Default:**
     ```neomuttrc
     set pgp_reply_inline = no
@@ -902,7 +902,7 @@ Also note that using the old-style PGP message format is **strongly** **deprecat
 (postpone-encrypt)=
 ## `$postpone_encrypt`
 
-- **Type:** boolean
+- **Type:** Boolean
 - **Default:**
     ```neomuttrc
     set postpone_encrypt = no
@@ -917,7 +917,7 @@ NeoMutt will first try to encrypt using the value specified in $$pgp_default_key
 (postpone-encrypt-as)=
 ## `$postpone_encrypt_as`
 
-- **Type:** string
+- **Type:** String
 - **Default:** (empty)
     ```
     set postpone_encrypt_as = ""
@@ -930,7 +930,7 @@ When _set_, NeoMutt will use this as a fallback encryption key for postponed mes
 (recall)=
 ## `$recall`
 
-- **Type:** quad-option
+- **Type:** Quad-Option
 - **Default:**
     ```neomuttrc
     set recall = ask-yes
@@ -948,7 +948,7 @@ Also see $$postponed variable.
 (reply-self)=
 ## `$reply_self`
 
-- **Type:** boolean
+- **Type:** Boolean
 - **Default:**
     ```neomuttrc
     set reply_self = no
@@ -963,7 +963,7 @@ Also see the "$alternates" command.
 (reply-to)=
 ## `$reply_to`
 
-- **Type:** quad-option
+- **Type:** Quad-Option
 - **Default:**
     ```neomuttrc
     set reply_to = ask-yes
@@ -979,7 +979,7 @@ header field to the list address and you want to send a private message to the a
 (reply-with-xorig)=
 ## `$reply_with_xorig`
 
-- **Type:** boolean
+- **Type:** Boolean
 - **Default:**
     ```neomuttrc
     set reply_with_xorig = no
@@ -996,7 +996,7 @@ Assuming 'fast_reply' is disabled, this option will prompt the user with a prefi
 (resume-draft-files)=
 ## `$resume_draft_files`
 
-- **Type:** boolean
+- **Type:** Boolean
 - **Default:**
     ```neomuttrc
     set resume_draft_files = no
@@ -1010,7 +1010,7 @@ Recipients are not prompted for; send-hooks are not evaluated; no alias expansio
 (reverse-name)=
 ## `$reverse_name`
 
-- **Type:** boolean
+- **Type:** Boolean
 - **Default:**
     ```neomuttrc
     set reverse_name = no
@@ -1026,7 +1026,7 @@ Also see the "$alternates" command and $$reverse_real_name.
 (reverse-real-name)=
 ## `$reverse_real_name`
 
-- **Type:** boolean
+- **Type:** Boolean
 - **Default:**
     ```neomuttrc
     set reverse_real_name = yes
@@ -1046,7 +1046,7 @@ In either case, a missing real name will be filled in afterwards using the value
 (sendmail)=
 ## `$sendmail`
 
-- **Type:** command (string)
+- **Type:** Command (String)
 - **Default:**
     ```neomuttrc
     set sendmail = SENDMAIL " -oem -oi"
@@ -1067,7 +1067,7 @@ The shell is not used to run the command, so shell quoting is also not supported
 (sendmail-wait)=
 ## `$sendmail_wait`
 
-- **Type:** number
+- **Type:** Number
 - **Default:**
     ```neomuttrc
     set sendmail_wait = 0
@@ -1091,7 +1091,7 @@ If there is some error, you will be informed as to where to find the output.
 (signature)=
 ## `$signature`
 
-- **Type:** path (string)
+- **Type:** Path (String)
 - **Notes:** File only
 - **Default:**
     ```neomuttrc
@@ -1106,7 +1106,7 @@ If the filename ends with a pipe ("|"), it is assumed that filename is a shell c
 (sig-dashes)=
 ## `$sig_dashes`
 
-- **Type:** boolean
+- **Type:** Boolean
 - **Default:**
     ```neomuttrc
     set sig_dashes = yes
@@ -1122,7 +1122,7 @@ For example, NeoMutt has the ability to highlight the signature in a different c
 (sig-on-top)=
 ## `$sig_on_top`
 
-- **Type:** boolean
+- **Type:** Boolean
 - **Default:**
     ```neomuttrc
     set sig_on_top = no
@@ -1136,7 +1136,7 @@ It is **strongly** recommended that you do not set this variable unless you real
 (smtp-authenticators)=
 ## `$smtp_authenticators`
 
-- **Type:** string list
+- **Type:** String List
 - **Notes:** Colon-separated
 - **Default:** (empty)
     ```
@@ -1161,7 +1161,7 @@ set smtp_authenticators = "digest-md5:cram-md5"
 (smtp-oauth-refresh-command)=
 ## `$smtp_oauth_refresh_command`
 
-- **Type:** command (string)
+- **Type:** Command (String)
 - **Notes:** Sensitive
 - **Default:** (empty)
     ```
@@ -1177,7 +1177,7 @@ See "$oauth" for details.
 (smtp-pass)=
 ## `$smtp_pass`
 
-- **Type:** string
+- **Type:** String
 - **Notes:** Sensitive
 - **Default:** (empty)
     ```
@@ -1195,7 +1195,7 @@ See $$smtp_url to configure NeoMutt to send mail via SMTP.
 (smtp-url)=
 ## `$smtp_url`
 
-- **Type:** string
+- **Type:** String
 - **Notes:** Sensitive
 - **Default:** (empty)
     ```
@@ -1219,7 +1219,7 @@ Also see $$write_bcc.
 (smtp-user)=
 ## `$smtp_user`
 
-- **Type:** string
+- **Type:** String
 - **Notes:** Sensitive
 - **Default:** (empty)
     ```
@@ -1235,7 +1235,7 @@ This variable defaults to your user name on the local machine.
 (user-agent)=
 ## `$user_agent`
 
-- **Type:** boolean
+- **Type:** Boolean
 - **Default:**
     ```neomuttrc
     set user_agent = no
@@ -1248,7 +1248,7 @@ When _set_, NeoMutt will add a "User-Agent:" header to outgoing messages, indica
 (use-8bit-mime)=
 ## `$use_8bit_mime`
 
-- **Type:** boolean
+- **Type:** Boolean
 - **Default:**
     ```neomuttrc
     set use_8bit_mime = no
@@ -1264,7 +1264,7 @@ flag when sending 8-bit messages to enable ESMTP negotiation.
 (use-envelope-from)=
 ## `$use_envelope_from`
 
-- **Type:** boolean
+- **Type:** Boolean
 - **Default:**
     ```neomuttrc
     set use_envelope_from = no
@@ -1282,7 +1282,7 @@ Therefore setting this option is not useful if the $$sendmail variable already c
 (use-from)=
 ## `$use_from`
 
-- **Type:** boolean
+- **Type:** Boolean
 - **Default:**
     ```neomuttrc
     set use_from = yes
@@ -1296,7 +1296,7 @@ If _unset_, no "From:" header field will be generated unless the user explicitly
 (wrap-headers)=
 ## `$wrap_headers`
 
-- **Type:** number
+- **Type:** Number
 - **Notes:** Not negative
 - **Default:**
     ```neomuttrc
@@ -1314,7 +1314,7 @@ RFC5233 recommends a line length of 78 (the default), so **please only change th
 (write-bcc)=
 ## `$write_bcc`
 
-- **Type:** boolean
+- **Type:** Boolean
 - **Default:**
     ```neomuttrc
     set write_bcc = no

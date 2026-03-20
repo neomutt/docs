@@ -20,7 +20,7 @@ how-to guides and explanation pages instead.
 (nm-config-file)=
 ## `$nm_config_file`
 
-- **Type:** path (string)
+- **Type:** Path (String)
 - **Notes:** File only
 - **Default:**
     ```neomuttrc
@@ -35,7 +35,7 @@ Use 'auto' to detect configuration.
 (nm-config-profile)=
 ## `$nm_config_profile`
 
-- **Type:** string
+- **Type:** String
 - **Default:** (empty)
     ```
     set nm_config_profile = ""
@@ -48,7 +48,7 @@ Configuration profile for notmuch.
 (nm-db-limit)=
 ## `$nm_db_limit`
 
-- **Type:** number
+- **Type:** Number
 - **Notes:** Not negative
 - **Default:**
     ```neomuttrc
@@ -62,7 +62,7 @@ This variable specifies the default limit used in notmuch queries.
 (nm-default-url)=
 ## `$nm_default_url`
 
-- **Type:** string
+- **Type:** String
 - **Default:** (empty)
     ```
     set nm_default_url = ""
@@ -75,7 +75,7 @@ This variable specifies the default Notmuch database in format notmuch://<absolu
 (nm-exclude-tags)=
 ## `$nm_exclude_tags`
 
-- **Type:** string
+- **Type:** String
 - **Default:** (empty)
     ```
     set nm_exclude_tags = ""
@@ -88,7 +88,7 @@ The messages tagged with these tags are excluded and not loaded from notmuch DB 
 (nm-flagged-tag)=
 ## `$nm_flagged_tag`
 
-- **Type:** string
+- **Type:** String
 - **Default:**
     ```neomuttrc
     set nm_flagged_tag = "flagged"
@@ -104,7 +104,7 @@ flags.
 (nm-open-timeout)=
 ## `$nm_open_timeout`
 
-- **Type:** number
+- **Type:** Number
 - **Notes:** Not negative
 - **Default:**
     ```neomuttrc
@@ -118,7 +118,7 @@ This variable specifies the timeout for database open in seconds.
 (nm-query-type)=
 ## `$nm_query_type`
 
-- **Type:** string
+- **Type:** String
 - **Default:**
     ```neomuttrc
     set nm_query_type = "messages"
@@ -131,7 +131,7 @@ This variable specifies the default query type (threads or messages) used in not
 (nm-query-window-current-position)=
 ## `$nm_query_window_current_position`
 
-- **Type:** number
+- **Type:** Number
 - **Default:**
     ```neomuttrc
     set nm_query_window_current_position = 0
@@ -144,7 +144,7 @@ This variable contains the position of the current search for window based vfold
 (nm-query-window-current-search)=
 ## `$nm_query_window_current_search`
 
-- **Type:** string
+- **Type:** String
 - **Default:** (empty)
     ```
     set nm_query_window_current_search = ""
@@ -157,7 +157,7 @@ This variable contains the currently setup notmuch search for window based vfold
 (nm-query-window-duration)=
 ## `$nm_query_window_duration`
 
-- **Type:** number
+- **Type:** Number
 - **Notes:** Not negative
 - **Default:**
     ```neomuttrc
@@ -173,7 +173,7 @@ A value of 0 disables the feature.
 (nm-query-window-enable)=
 ## `$nm_query_window_enable`
 
-- **Type:** boolean
+- **Type:** Boolean
 - **Default:**
     ```neomuttrc
     set nm_query_window_enable = no
@@ -186,7 +186,7 @@ This variable enables windowed notmuch queries even if window duration is 0.
 (nm-query-window-or-terms)=
 ## `$nm_query_window_or_terms`
 
-- **Type:** string
+- **Type:** String
 - **Default:** (empty)
     ```
     set nm_query_window_or_terms = ""
@@ -205,7 +205,7 @@ notmuch://?query=tag:inbox and (date:... or (tag:flagged and tag:unread))
 (nm-query-window-timebase)=
 ## `$nm_query_window_timebase`
 
-- **Type:** string
+- **Type:** String
 - **Default:**
     ```neomuttrc
     set nm_query_window_timebase = "week"
@@ -219,7 +219,7 @@ Accepted values are 'minute', 'hour', 'day', 'week', 'month', 'year'.
 (nm-record-tags)=
 ## `$nm_record_tags`
 
-- **Type:** string
+- **Type:** String
 - **Default:** (empty)
     ```
     set nm_record_tags = ""
@@ -233,7 +233,7 @@ See the description of the `<modify-labels>` function for the syntax.
 (nm-replied-tag)=
 ## `$nm_replied_tag`
 
-- **Type:** string
+- **Type:** String
 - **Default:**
     ```neomuttrc
     set nm_replied_tag = "replied"
@@ -248,7 +248,7 @@ All other NeoMutt commands use standard (e.g. maildir) flags.
 (nm-unread-tag)=
 ## `$nm_unread_tag`
 
-- **Type:** string
+- **Type:** String
 - **Default:**
     ```neomuttrc
     set nm_unread_tag = "unread"
@@ -263,7 +263,7 @@ All other NeoMutt commands use standard (e.g. maildir) flags.
 (virtual-spool-file)=
 ## `$virtual_spool_file`
 
-- **Type:** boolean
+- **Type:** Boolean
 - **Default:**
     ```neomuttrc
     set virtual_spool_file = no

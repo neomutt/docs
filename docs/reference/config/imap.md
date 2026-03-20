@@ -20,7 +20,7 @@ how-to guides and explanation pages instead.
 (imap-authenticators)=
 ## `$imap_authenticators`
 
-- **Type:** string list
+- **Type:** String List
 - **Notes:** Colon-separated
 - **Default:** (empty)
     ```
@@ -46,7 +46,7 @@ If a method is available but authentication fails, NeoMutt will not connect to t
 (imap-check-subscribed)=
 ## `$imap_check_subscribed`
 
-- **Type:** boolean
+- **Type:** Boolean
 - **Default:**
     ```neomuttrc
     set imap_check_subscribed = no
@@ -59,7 +59,7 @@ When _set_, NeoMutt will fetch the set of subscribed folders from your server wh
 (imap-condstore)=
 ## `$imap_condstore`
 
-- **Type:** boolean
+- **Type:** Boolean
 - **Default:**
     ```neomuttrc
     set imap_condstore = no
@@ -78,7 +78,7 @@ Your mileage may vary.
 (imap-deflate)=
 ## `$imap_deflate`
 
-- **Type:** boolean
+- **Type:** Boolean
 - **Default:**
     ```neomuttrc
     set imap_deflate = yes
@@ -94,7 +94,7 @@ In general a good compression efficiency can be achieved, which speeds up readin
 (imap-delim-chars)=
 ## `$imap_delim_chars`
 
-- **Type:** string
+- **Type:** String
 - **Default:**
     ```neomuttrc
     set imap_delim_chars = "/."
@@ -107,7 +107,7 @@ This contains the list of characters that NeoMutt will use as folder separators 
 (imap-fetch-chunk-size)=
 ## `$imap_fetch_chunk_size`
 
-- **Type:** number (long)
+- **Type:** Number (Long)
 - **Notes:** Not negative
 - **Default:**
     ```neomuttrc
@@ -122,7 +122,7 @@ If you have a very large mailbox, this might prevent a timeout and disconnect wh
 (imap-headers)=
 ## `$imap_headers`
 
-- **Type:** string
+- **Type:** String
 - **Default:** (empty)
     ```
     set imap_headers = ""
@@ -139,7 +139,7 @@ You may want to add more headers for spam detection.
 (imap-idle)=
 ## `$imap_idle`
 
-- **Type:** boolean
+- **Type:** Boolean
 - **Default:**
     ```neomuttrc
     set imap_idle = no
@@ -154,7 +154,7 @@ If your connection seems to freeze up periodically, try unsetting this.
 (imap-keep-alive)=
 ## `$imap_keep_alive`
 
-- **Type:** number
+- **Type:** Number
 - **Notes:** Not negative
 - **Default:**
     ```neomuttrc
@@ -170,7 +170,7 @@ Reduce this number if you find yourself getting disconnected from your IMAP serv
 (imap-list-subscribed)=
 ## `$imap_list_subscribed`
 
-- **Type:** boolean
+- **Type:** Boolean
 - **Default:**
     ```neomuttrc
     set imap_list_subscribed = no
@@ -184,7 +184,7 @@ This can be toggled in the IMAP browser with the `<toggle-subscribed>` function.
 (imap-login)=
 ## `$imap_login`
 
-- **Type:** string
+- **Type:** String
 - **Notes:** Sensitive
 - **Default:** (empty)
     ```
@@ -200,7 +200,7 @@ This variable defaults to the value of $$imap_user.
 (imap-oauth-refresh-command)=
 ## `$imap_oauth_refresh_command`
 
-- **Type:** command (string)
+- **Type:** Command (String)
 - **Notes:** Sensitive
 - **Default:** (empty)
     ```
@@ -216,7 +216,7 @@ See "$oauth" for details.
 (imap-pass)=
 ## `$imap_pass`
 
-- **Type:** string
+- **Type:** String
 - **Notes:** Sensitive
 - **Default:** (empty)
     ```
@@ -234,7 +234,7 @@ function or try to open an IMAP folder.
 (imap-passive)=
 ## `$imap_passive`
 
-- **Type:** boolean
+- **Type:** Boolean
 - **Default:**
     ```neomuttrc
     set imap_passive = yes
@@ -249,7 +249,7 @@ This is useful if you don't want to be prompted for user/password pairs on NeoMu
 (imap-peek)=
 ## `$imap_peek`
 
-- **Type:** boolean
+- **Type:** Boolean
 - **Default:**
     ```neomuttrc
     set imap_peek = yes
@@ -264,7 +264,7 @@ This option exists to appease speed freaks.
 (imap-pipeline-depth)=
 ## `$imap_pipeline_depth`
 
-- **Type:** number
+- **Type:** Number
 - **Notes:** Not negative
 - **Default:**
     ```neomuttrc
@@ -282,7 +282,7 @@ But not all servers correctly handle pipelined commands, so if you have problems
 (imap-poll-timeout)=
 ## `$imap_poll_timeout`
 
-- **Type:** number
+- **Type:** Number
 - **Notes:** Not negative
 - **Default:**
     ```neomuttrc
@@ -297,7 +297,7 @@ Set to 0 to disable timing out.
 (imap-qresync)=
 ## `$imap_qresync`
 
-- **Type:** boolean
+- **Type:** Boolean
 - **Default:**
     ```neomuttrc
     set imap_qresync = no
@@ -315,7 +315,7 @@ If you experience strange behavior, such as duplicate or missing messages please
 (imap-rfc5161)=
 ## `$imap_rfc5161`
 
-- **Type:** boolean
+- **Type:** Boolean
 - **Default:**
     ```neomuttrc
     set imap_rfc5161 = yes
@@ -331,7 +331,7 @@ See also https://github.com/neomutt/neomutt/issues/1689
 (imap-send-id)=
 ## `$imap_send_id`
 
-- **Type:** boolean
+- **Type:** Boolean
 - **Default:**
     ```neomuttrc
     set imap_send_id = no
@@ -345,7 +345,7 @@ This command provides information about the IMAP client, such as "NeoMutt" and t
 (imap-server-noise)=
 ## `$imap_server_noise`
 
-- **Type:** boolean
+- **Type:** Boolean
 - **Default:**
     ```neomuttrc
     set imap_server_noise = yes
@@ -359,7 +359,7 @@ Since these messages are often harmless, or generated due to configuration probl
 (imap-user)=
 ## `$imap_user`
 
-- **Type:** string
+- **Type:** String
 - **Notes:** Sensitive
 - **Default:** (empty)
     ```

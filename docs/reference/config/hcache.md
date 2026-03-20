@@ -20,7 +20,7 @@ how-to guides and explanation pages instead.
 (header-cache)=
 ## `$header_cache`
 
-- **Type:** path (string)
+- **Type:** Path (String)
 - **Default:** (empty)
     ```
     set header_cache = ""
@@ -38,7 +38,7 @@ Header caching can greatly improve speed when opening POP, IMAP MH or Maildir fo
 (header-cache-backend)=
 ## `$header_cache_backend`
 
-- **Type:** string
+- **Type:** String
 - **Default:** (empty)
     ```
     set header_cache_backend = ""
@@ -53,7 +53,7 @@ tokyocabinet, kyotocabinet, qdbm, rocksdb, gdbm, bdb, tdb, lmdb.
 (header-cache-compress-level)=
 ## `$header_cache_compress_level`
 
-- **Type:** number
+- **Type:** Number
 - **Notes:** Not negative
 - **Default:**
     ```neomuttrc
@@ -67,7 +67,7 @@ When NeoMutt is compiled with lz4, zstd or zlib, this option can be used to setu
 (header-cache-compress-method)=
 ## `$header_cache_compress_method`
 
-- **Type:** string
+- **Type:** String
 - **Default:** (empty)
     ```
     set header_cache_compress_method = ""

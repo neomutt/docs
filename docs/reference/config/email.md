@@ -20,7 +20,7 @@ how-to guides and explanation pages instead.
 (auto-subscribe)=
 ## `$auto_subscribe`
 
-- **Type:** boolean
+- **Type:** Boolean
 - **Default:**
     ```neomuttrc
     set auto_subscribe = no
@@ -35,7 +35,7 @@ Parsing and checking these things slows header reading down, so this option is d
 (honor-disposition)=
 ## `$honor_disposition`
 
-- **Type:** boolean
+- **Type:** Boolean
 - **Default:**
     ```neomuttrc
     set honor_disposition = no
@@ -51,7 +51,7 @@ If _unset_, NeoMutt will render all MIME parts it can properly transform to plai
 (hidden-tags)=
 ## `$hidden_tags`
 
-- **Type:** string list
+- **Type:** String List
 - **Notes:** Comma-separated
 - **Default:**
     ```neomuttrc
@@ -65,7 +65,7 @@ This variable specifies a list of comma-separated private notmuch/imap tags whic
 (implicit-auto-view)=
 ## `$implicit_auto_view`
 
-- **Type:** boolean
+- **Type:** Boolean
 - **Default:**
     ```neomuttrc
     set implicit_auto_view = no
@@ -79,7 +79,7 @@ If such an entry is found, NeoMutt will use the viewer defined in that entry to 
 (include-encrypted)=
 ## `$include_encrypted`
 
-- **Type:** boolean
+- **Type:** Boolean
 - **Default:**
     ```neomuttrc
     set include_encrypted = no
@@ -95,7 +95,7 @@ If a previously encrypted message were attached by the attacker, they could tric
 (include-only-first)=
 ## `$include_only_first`
 
-- **Type:** boolean
+- **Type:** Boolean
 - **Default:**
     ```neomuttrc
     set include_only_first = no
@@ -108,7 +108,7 @@ Controls whether or not NeoMutt includes only the first attachment of the messag
 (mailcap-path)=
 ## `$mailcap_path`
 
-- **Type:** string list
+- **Type:** String List
 - **Notes:** Colon-separated
 - **Default:**
     ```neomuttrc
@@ -127,7 +127,7 @@ The default search path is from RFC1524.
 (mailcap-sanitize)=
 ## `$mailcap_sanitize`
 
-- **Type:** boolean
+- **Type:** Boolean
 - **Default:**
     ```neomuttrc
     set mailcap_sanitize = yes
@@ -143,7 +143,7 @@ This is the safe setting, but we are not sure it doesn't break some more advance
 (preferred-languages)=
 ## `$preferred_languages`
 
-- **Type:** string list
+- **Type:** String List
 - **Notes:** Comma-separated
 - **Default:** (empty)
     ```
@@ -163,7 +163,7 @@ set preferred_languages = "en,fr,de"
 (reflow-space-quotes)=
 ## `$reflow_space_quotes`
 
-- **Type:** boolean
+- **Type:** Boolean
 - **Default:**
     ```neomuttrc
     set reflow_space_quotes = yes
@@ -180,7 +180,7 @@ Also, this option does not affect replies when $$text_flowed is _set_.
 (reflow-text)=
 ## `$reflow_text`
 
-- **Type:** boolean
+- **Type:** Boolean
 - **Default:**
     ```neomuttrc
     set reflow_text = yes
@@ -197,7 +197,7 @@ Also see $$reflow_wrap, and $$wrap.
 (reflow-wrap)=
 ## `$reflow_wrap`
 
-- **Type:** number
+- **Type:** Number
 - **Default:**
     ```neomuttrc
     set reflow_wrap = 78
@@ -218,7 +218,7 @@ Also see $$wrap.
 (reply-regex)=
 ## `$reply_regex`
 
-- **Type:** regular expression
+- **Type:** Regular Expression
 - **Notes:** Localised
 - **Default:**
     ```neomuttrc
@@ -251,7 +251,7 @@ If that fixes the problem, then once the variable is set to your liking, remove 
 (reverse-alias)=
 ## `$reverse_alias`
 
-- **Type:** boolean
+- **Type:** Boolean
 - **Default:**
     ```neomuttrc
     set reverse_alias = no
@@ -277,7 +277,7 @@ It would be displayed in the index menu as "Joe User" instead of "abd30425@somew
 (rfc2047-parameters)=
 ## `$rfc2047_parameters`
 
-- **Type:** boolean
+- **Type:** Boolean
 - **Default:**
     ```neomuttrc
     set rfc2047_parameters = yes
@@ -303,7 +303,7 @@ Instead, NeoMutt will unconditionally use the encoding specified in RFC2231.
 (score)=
 ## `$score`
 
-- **Type:** boolean
+- **Type:** Boolean
 - **Default:**
     ```neomuttrc
     set score = yes
@@ -317,7 +317,7 @@ This can be useful to selectively disable scoring for certain folders when the $
 (score-threshold-delete)=
 ## `$score_threshold_delete`
 
-- **Type:** number
+- **Type:** Number
 - **Default:**
     ```neomuttrc
     set score_threshold_delete = -1
@@ -331,7 +331,7 @@ Since NeoMutt scores are always greater than or equal to zero, the default setti
 (score-threshold-flag)=
 ## `$score_threshold_flag`
 
-- **Type:** number
+- **Type:** Number
 - **Default:**
     ```neomuttrc
     set score_threshold_flag = 9999
@@ -344,7 +344,7 @@ Messages which have been assigned a score greater than or equal to this variable
 (score-threshold-read)=
 ## `$score_threshold_read`
 
-- **Type:** number
+- **Type:** Number
 - **Default:**
     ```neomuttrc
     set score_threshold_read = -1
@@ -358,7 +358,7 @@ Since NeoMutt scores are always greater than or equal to zero, the default setti
 (show-multipart-alternative)=
 ## `$show_multipart_alternative`
 
-- **Type:** string
+- **Type:** String
 - **Default:** (empty)
     ```
     set show_multipart_alternative = ""
@@ -373,7 +373,7 @@ When not set, the default behavior is to show only the chosen alternative.
 (spam-separator)=
 ## `$spam_separator`
 
-- **Type:** string
+- **Type:** String
 - **Default:**
     ```neomuttrc
     set spam_separator = ","

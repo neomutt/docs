@@ -20,7 +20,7 @@ how-to guides and explanation pages instead.
 (net-inc)=
 ## `$net_inc`
 
-- **Type:** number
+- **Type:** Number
 - **Notes:** Not negative
 - **Default:**
     ```neomuttrc
@@ -37,7 +37,7 @@ See also $$read_inc, $$write_inc and $$net_inc.
 (read-inc)=
 ## `$read_inc`
 
-- **Type:** number
+- **Type:** Number
 - **Notes:** Not negative
 - **Default:**
     ```neomuttrc
@@ -56,7 +56,7 @@ Also see the $$write_inc, $$net_inc and $$time_inc variables and the "$tuning" s
 (time-inc)=
 ## `$time_inc`
 
-- **Type:** number
+- **Type:** Number
 - **Notes:** Not negative
 - **Default:**
     ```neomuttrc
@@ -74,7 +74,7 @@ Also see the "$tuning" section of the manual for performance considerations.
 (write-inc)=
 ## `$write_inc`
 
-- **Type:** number
+- **Type:** Number
 - **Notes:** Not negative
 - **Default:**
     ```neomuttrc

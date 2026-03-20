@@ -20,7 +20,7 @@ how-to guides and explanation pages instead.
 (allow-ansi)=
 ## `$allow_ansi`
 
-- **Type:** boolean
+- **Type:** Boolean
 - **Default:**
     ```neomuttrc
     set allow_ansi = no
@@ -41,7 +41,7 @@ and give it the same color as your attachment color (see also $$crypt_timestamp)
 (display-filter)=
 ## `$display_filter`
 
-- **Type:** command (string)
+- **Type:** Command (String)
 - **Default:** (empty)
     ```
     set display_filter = ""
@@ -64,7 +64,7 @@ This can be fixed by adding this to your config:
 (header-color-partial)=
 ## `$header_color_partial`
 
-- **Type:** boolean
+- **Type:** Boolean
 - **Default:**
     ```neomuttrc
     set header_color_partial = no
@@ -83,7 +83,7 @@ See "$color" for more details.
 (markers)=
 ## `$markers`
 
-- **Type:** boolean
+- **Type:** Boolean
 - **Default:**
     ```neomuttrc
     set markers = yes
@@ -99,7 +99,7 @@ Also see the $$smart_wrap variable.
 (pager)=
 ## `$pager`
 
-- **Type:** command (string)
+- **Type:** Command (String)
 - **Default:** (empty)
     ```
     set pager = ""
@@ -115,7 +115,7 @@ Using an external pager may have some disadvantages: Additional keystrokes are n
 (pager-context)=
 ## `$pager_context`
 
-- **Type:** number
+- **Type:** Number
 - **Notes:** Not negative
 - **Default:**
     ```neomuttrc
@@ -133,7 +133,7 @@ If positive, this many lines will be given before a match, if 0, the match will 
 (pager-format)=
 ## `$pager_format`
 
-- **Type:** expando
+- **Type:** Expando
 - **Default:**
     ```neomuttrc
     set pager_format = "-%Z- %C/%m: %-20.20n   %s%*  -- (%P)"
@@ -147,7 +147,7 @@ The valid sequences are listed in the $$index_format section.
 (pager-index-lines)=
 ## `$pager_index_lines`
 
-- **Type:** number
+- **Type:** Number
 - **Notes:** Not negative
 - **Default:**
     ```neomuttrc
@@ -164,7 +164,7 @@ A value of 0 results in no index being shown.
 (pager-read-delay)=
 ## `$pager_read_delay`
 
-- **Type:** number
+- **Type:** Number
 - **Notes:** Not negative
 - **Default:**
     ```neomuttrc
@@ -180,7 +180,7 @@ This setting is ignored if $$pager is set.
 (pager-skip-quoted-context)=
 ## `$pager_skip_quoted_context`
 
-- **Type:** number
+- **Type:** Number
 - **Notes:** Not negative
 - **Default:**
     ```neomuttrc
@@ -196,7 +196,7 @@ If the previous quote is shorter the whole quote is displayed.
 (pager-stop)=
 ## `$pager_stop`
 
-- **Type:** boolean
+- **Type:** Boolean
 - **Default:**
     ```neomuttrc
     set pager_stop = no
@@ -210,7 +210,7 @@ function.
 (prompt-after)=
 ## `$prompt_after`
 
-- **Type:** boolean
+- **Type:** Boolean
 - **Default:**
     ```neomuttrc
     set prompt_after = yes
@@ -224,7 +224,7 @@ If _unset_, NeoMutt will return to the index menu when the external pager exits.
 (search-context)=
 ## `$search_context`
 
-- **Type:** number
+- **Type:** Number
 - **Notes:** Not negative
 - **Default:**
     ```neomuttrc
@@ -239,7 +239,7 @@ By default, search results will be top-aligned.
 (smart-wrap)=
 ## `$smart_wrap`
 
-- **Type:** boolean
+- **Type:** Boolean
 - **Default:**
     ```neomuttrc
     set smart_wrap = yes
@@ -255,7 +255,7 @@ Also see the $$markers variable.
 (smileys)=
 ## `$smileys`
 
-- **Type:** regular expression
+- **Type:** Regular Expression
 - **Default:**
     ```neomuttrc
     set smileys = "(>From )|(:[-^]?[][)(><}{|/DP])"
@@ -269,7 +269,7 @@ This mostly happens at the beginning of a line.
 (tilde)=
 ## `$tilde`
 
-- **Type:** boolean
+- **Type:** Boolean
 - **Default:**
     ```neomuttrc
     set tilde = no
@@ -282,7 +282,7 @@ When _set_, the internal-pager will pad blank lines to the bottom of the screen 
 (toggle-quoted-show-levels)=
 ## `$toggle_quoted_show_levels`
 
-- **Type:** number
+- **Type:** Number
 - **Notes:** Not negative
 - **Default:**
     ```neomuttrc

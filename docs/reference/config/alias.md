@@ -20,7 +20,7 @@ how-to guides and explanation pages instead.
 (alias-file)=
 ## `$alias_file`
 
-- **Type:** path (string)
+- **Type:** Path (String)
 - **Notes:** File only
 - **Default:**
     ```neomuttrc
@@ -39,7 +39,7 @@ The default for this option is the currently used neomuttrc file, or "~/.neomutt
 (alias-format)=
 ## `$alias_format`
 
-- **Type:** expando
+- **Type:** Expando
 - **Notes:** Not empty
 - **Default:**
     ```neomuttrc
@@ -79,7 +79,7 @@ The following sequences are deprecated; they will be removed in the future.
 (alias-sort)=
 ## `$alias_sort`
 
-- **Type:** sort order
+- **Type:** Sort Order
 - **Notes:** Sort Reverse
 - **Default:**
     ```neomuttrc
@@ -109,7 +109,7 @@ Note: This also affects the entries of the address query menu, thus potentially 
 (query-command)=
 ## `$query_command`
 
-- **Type:** command (string)
+- **Type:** Command (String)
 - **Default:** (empty)
     ```
     set query_command = ""
@@ -126,7 +126,7 @@ See "$query": https://neomutt.org/guide/advancedusage.html#query
 (query-format)=
 ## `$query_format`
 
-- **Type:** expando
+- **Type:** Expando
 - **Notes:** Not empty
 - **Default:**
     ```neomuttrc

@@ -20,7 +20,7 @@ how-to guides and explanation pages instead.
 (idn-decode)=
 ## `$idn_decode`
 
-- **Type:** boolean
+- **Type:** Boolean
 - **Default:**
     ```neomuttrc
     set idn_decode = yes
@@ -36,7 +36,7 @@ This variable only affects decoding.
 (idn-encode)=
 ## `$idn_encode`
 
-- **Type:** boolean
+- **Type:** Boolean
 - **Default:**
     ```neomuttrc
     set idn_encode = yes

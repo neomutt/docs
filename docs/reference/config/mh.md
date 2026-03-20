@@ -20,7 +20,7 @@ how-to guides and explanation pages instead.
 (mh-purge)=
 ## `$mh_purge`
 
-- **Type:** boolean
+- **Type:** Boolean
 - **Default:**
     ```neomuttrc
     set mh_purge = no
@@ -37,7 +37,7 @@ This option is similar to $$maildir_trash for Maildir folders.
 (mh-seq-flagged)=
 ## `$mh_seq_flagged`
 
-- **Type:** string
+- **Type:** String
 - **Default:**
     ```neomuttrc
     set mh_seq_flagged = "flagged"
@@ -50,7 +50,7 @@ The name of the MH sequence used for flagged messages.
 (mh-seq-replied)=
 ## `$mh_seq_replied`
 
-- **Type:** string
+- **Type:** String
 - **Default:**
     ```neomuttrc
     set mh_seq_replied = "replied"
@@ -63,7 +63,7 @@ The name of the MH sequence used to tag replied messages.
 (mh-seq-unseen)=
 ## `$mh_seq_unseen`
 
-- **Type:** string
+- **Type:** String
 - **Default:**
     ```neomuttrc
     set mh_seq_unseen = "unseen"

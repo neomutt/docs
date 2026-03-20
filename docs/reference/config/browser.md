@@ -20,7 +20,7 @@ how-to guides and explanation pages instead.
 (browser-abbreviate-mailboxes)=
 ## `$browser_abbreviate_mailboxes`
 
-- **Type:** boolean
+- **Type:** Boolean
 - **Default:**
     ```neomuttrc
     set browser_abbreviate_mailboxes = yes
@@ -37,7 +37,7 @@ In those cases, it may be desirable to _unset_ this variable.
 (browser-sort)=
 ## `$browser_sort`
 
-- **Type:** sort order
+- **Type:** Sort Order
 - **Notes:** Sort Reverse
 - **Default:**
     ```neomuttrc
@@ -65,7 +65,7 @@ Specifies how to sort entries in the file browser.
 (browser-sort-dirs-first)=
 ## `$browser_sort_dirs_first`
 
-- **Type:** boolean
+- **Type:** Boolean
 - **Default:**
     ```neomuttrc
     set browser_sort_dirs_first = no
@@ -78,7 +78,7 @@ If this variable is _set_, the browser will group directories before files.
 (folder-format)=
 ## `$folder_format`
 
-- **Type:** expando
+- **Type:** Expando
 - **Notes:** Not empty
 - **Default:**
     ```neomuttrc
@@ -126,7 +126,7 @@ For an explanation of "soft-fill", see the $$index_format documentation.
 (group-index-format)=
 ## `$group_index_format`
 
-- **Type:** expando
+- **Type:** Expando
 - **Notes:** Not empty
 - **Default:**
     ```neomuttrc
@@ -156,7 +156,7 @@ This string is similar to "$index_format", but has its own set of printf()-like 
 (mailbox-folder-format)=
 ## `$mailbox_folder_format`
 
-- **Type:** expando
+- **Type:** Expando
 - **Notes:** Not empty
 - **Default:**
     ```neomuttrc
@@ -172,7 +172,7 @@ This string is identical in formatting to the one used by "$$folder_format".
 (mask)=
 ## `$mask`
 
-- **Type:** regular expression
+- **Type:** Regular Expression
 - **Notes:** Match Case, Allow Not, No Sub-match
 - **Default:**
     ```neomuttrc
@@ -187,7 +187,7 @@ The match is always case-sensitive.
 (show-only-unread)=
 ## `$show_only_unread`
 
-- **Type:** boolean
+- **Type:** Boolean
 - **Default:**
     ```neomuttrc
     set show_only_unread = no

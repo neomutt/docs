@@ -20,7 +20,7 @@ how-to guides and explanation pages instead.
 (catchup-newsgroup)=
 ## `$catchup_newsgroup`
 
-- **Type:** quad-option
+- **Type:** Quad-Option
 - **Default:**
     ```neomuttrc
     set catchup_newsgroup = ask-yes
@@ -33,7 +33,7 @@ If this variable is _set_, NeoMutt will mark all articles in newsgroup as read w
 (followup-to-poster)=
 ## `$followup_to_poster`
 
-- **Type:** quad-option
+- **Type:** Quad-Option
 - **Default:**
     ```neomuttrc
     set followup_to_poster = ask-yes
@@ -47,7 +47,7 @@ The message will be mailed to the submitter of the message via mail.
 (newsgroups-charset)=
 ## `$newsgroups_charset`
 
-- **Type:** string
+- **Type:** String
 - **Default:**
     ```neomuttrc
     set newsgroups_charset = "utf-8"
@@ -60,7 +60,7 @@ Character set of newsgroups descriptions.
 (newsrc)=
 ## `$newsrc`
 
-- **Type:** expando
+- **Type:** Expando
 - **Notes:** File only
 - **Default:**
     ```neomuttrc
@@ -84,7 +84,7 @@ The following printf-style sequence is understood:
 (news-cache-dir)=
 ## `$news_cache_dir`
 
-- **Type:** path (string)
+- **Type:** Path (String)
 - **Notes:** Directory only
 - **Default:**
     ```neomuttrc
@@ -99,7 +99,7 @@ If _unset_, articles and headers will not be saved at all and will be reloaded f
 (news-server)=
 ## `$news_server`
 
-- **Type:** string
+- **Type:** String
 - **Default:** (empty)
     ```
     set news_server = ""
@@ -116,7 +116,7 @@ This option can also be set using the command line option "-g", the environment 
 (nntp-authenticators)=
 ## `$nntp_authenticators`
 
-- **Type:** string
+- **Type:** String
 - **Default:** (empty)
     ```
     set nntp_authenticators = ""
@@ -142,7 +142,7 @@ If a method is available but authentication fails, NeoMutt will not connect to t
 (nntp-context)=
 ## `$nntp_context`
 
-- **Type:** number (long)
+- **Type:** Number (Long)
 - **Notes:** Not negative
 - **Default:**
     ```neomuttrc
@@ -158,7 +158,7 @@ Also controls how many articles headers will be saved in cache when you quit new
 (nntp-listgroup)=
 ## `$nntp_listgroup`
 
-- **Type:** boolean
+- **Type:** Boolean
 - **Default:**
     ```neomuttrc
     set nntp_listgroup = yes
@@ -171,7 +171,7 @@ This variable controls whether or not existence of each article is checked when 
 (nntp-load-description)=
 ## `$nntp_load_description`
 
-- **Type:** boolean
+- **Type:** Boolean
 - **Default:**
     ```neomuttrc
     set nntp_load_description = yes
@@ -184,7 +184,7 @@ This variable controls whether or not descriptions for each newsgroup must be lo
 (nntp-pass)=
 ## `$nntp_pass`
 
-- **Type:** string
+- **Type:** String
 - **Notes:** Sensitive
 - **Default:** (empty)
     ```
@@ -198,7 +198,7 @@ Your password for NNTP account.
 (nntp-poll)=
 ## `$nntp_poll`
 
-- **Type:** number
+- **Type:** Number
 - **Notes:** Not negative
 - **Default:**
     ```neomuttrc
@@ -213,7 +213,7 @@ If set to 0, NeoMutt will recheck newsgroup on each operation in index (stepping
 (nntp-user)=
 ## `$nntp_user`
 
-- **Type:** string
+- **Type:** String
 - **Notes:** Sensitive
 - **Default:** (empty)
     ```
@@ -228,7 +228,7 @@ If _unset_ and NNTP server requires authentication, NeoMutt will prompt you for 
 (post-moderated)=
 ## `$post_moderated`
 
-- **Type:** quad-option
+- **Type:** Quad-Option
 - **Default:**
     ```neomuttrc
     set post_moderated = ask-yes
@@ -242,7 +242,7 @@ If set to _yes_, NeoMutt will post article to newsgroup that have not permission
 (save-unsubscribed)=
 ## `$save_unsubscribed`
 
-- **Type:** boolean
+- **Type:** Boolean
 - **Default:**
     ```neomuttrc
     set save_unsubscribed = no
@@ -255,7 +255,7 @@ When _set_, info about unsubscribed newsgroups will be saved into "newsrc" file 
 (show-new-news)=
 ## `$show_new_news`
 
-- **Type:** boolean
+- **Type:** Boolean
 - **Default:**
     ```neomuttrc
     set show_new_news = yes
@@ -270,7 +270,7 @@ Also controls whether or not number of new articles of subscribed newsgroups wil
 (x-comment-to)=
 ## `$x_comment_to`
 
-- **Type:** boolean
+- **Type:** Boolean
 - **Default:**
     ```neomuttrc
     set x_comment_to = no
