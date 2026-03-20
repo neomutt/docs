@@ -15,18 +15,6 @@ Mirror the structure of the software itself. Avoid instruction or explanation â€
 how-to guides and explanation pages instead.
 :::
 
-
-browser.md
-	  { "browser_abbreviate_mailboxes", DT_BOOL, true, 0, NULL,
-	  { "browser_sort", DT_SORT|D_SORT_REVERSE, BROWSER_SORT_ALPHA, IP BrowserSortMethods, NULL,
-	  { "browser_sort_dirs_first", DT_BOOL, false, 0, NULL,
-	  { "folder_format", DT_EXPANDO|D_NOT_EMPTY, IP "%2C %t %N %F %2l %-8.8u %-8.8g %8s %d %i", IP &FolderFormatDef, NULL,
-	  { "group_index_format", DT_EXPANDO|D_NOT_EMPTY, IP "%4C %M%N %5s  %-45.45f %d", IP &GroupIndexFormatDef, NULL,
-	  { "mailbox_folder_format", DT_EXPANDO|D_NOT_EMPTY, IP "%2C %<n?%6n&      > %6m %i", IP &FolderFormatDef, NULL,
-	  { "mask", DT_REGEX|D_REGEX_MATCH_CASE|D_REGEX_ALLOW_NOT|D_REGEX_NOSUB, IP "!^\\.[^.]", 0, NULL,
-	  { "show_only_unread", DT_BOOL, false, 0, NULL,
-	  { "sort_browser", DT_SYNONYM, IP "browser_sort", IP "2024-11-20" },
-
 ----------------------------------------------------------------------------------------------------------
 
 (browser-abbreviate-mailboxes)=
@@ -35,9 +23,11 @@ browser.md
 - **Type:** boolean
 - **Default:** `yes`
 
-When this variable is *set*, NeoMutt will abbreviate mailbox names in the browser mailbox list, using '~' and '=' shortcuts.
+When this variable is _set_, NeoMutt will abbreviate mailbox names in the browser mailbox list, using '~' and '=' shortcuts.
 
-The default `"alpha"` setting of [`$browser_sort`](#browser-sort) uses locale-based sorting (using `strcoll(3)`), which ignores some punctuation. This can lead to some situations where the order doesn't make intuitive sense. In those cases, it may be desirable to *unset* this variable.
+The default `"alpha"` setting of $$browser_sort uses locale-based sorting (using `strcoll(3)`), which ignores some punctuation.
+This can lead to some situations where the order doesn't make intuitive sense.
+In those cases, it may be desirable to _unset_ this variable.
 
 ----------------------------------------------------------------------------------------------------------
 
@@ -73,7 +63,7 @@ Prefixing the value with `reverse-` sorts the entries in reverse order, e.g. `se
 - **Type:** boolean
 - **Default:** `no`
 
-If this variable is *set*, the browser will group directories before files.
+If this variable is _set_, the browser will group directories before files.
 
 ----------------------------------------------------------------------------------------------------------
 
@@ -83,9 +73,8 @@ If this variable is *set*, the browser will group directories before files.
 - **Type:** string
 - **Default:** "`%2C %t %N %F %2l %-8.8u %-8.8g %8s %d %i`"
 
-This variable allows you to customize the file browser display to your
-personal taste.  This string is similar to [$index_format](#index-format), but has
-its own set of `printf(3)`-like sequences:
+This variable allows you to customize the file browser display to your personal taste.
+This string is similar to $$index_format, but has its own set of `printf(3)`-like sequences:
 
 | Short    | Long Name           | Description                                                                                          |
 |----------|---------------------|------------------------------------------------------------------------------------------------------|
@@ -112,7 +101,7 @@ its own set of `printf(3)`-like sequences:
 | `%>X`    | `%{padding-hard:X}` | Right justify the rest of the string and pad with character `X`                                      |
 | `%\|X`   | `%{padding-eol:X}`  | Pad to the end of the line with character `X`                                                        |
 
-For an explanation of "soft-fill", see the [$index_format](#index-format) documentation.
+For an explanation of "soft-fill", see the $$index_format documentation.
 
 * = can be optionally printed if nonzero
 
@@ -128,9 +117,8 @@ For an explanation of "soft-fill", see the [$index_format](#index-format) docume
 - **Type:** string
 - **Default:** "`%4C %M%N %5s  %-45.45f %d`"
 
-This variable allows you to customize the newsgroup browser display to
-your personal taste.  This string is similar to "[index_format](#index-format)", but
-has its own set of printf()-like sequences:
+This variable allows you to customize the newsgroup browser display to your personal taste.
+This string is similar to "$index_format", but has its own set of printf()-like sequences:
 
 | Short  | Long Name           | Description                                                          |
 |--------|---------------------|----------------------------------------------------------------------|
@@ -155,10 +143,9 @@ has its own set of printf()-like sequences:
 - **Type:** string
 - **Default:** "`%2C %<n?%6n&      > %6m %i`"
 
-This variable allows you to customize the file browser display to your
-personal taste. It's only used to customize network mailboxes (e.g. imap).
-This string is identical in formatting to the one used by
-"[$folder_format](#folder-format)".
+This variable allows you to customize the file browser display to your personal taste.
+It's only used to customize network mailboxes (e.g. imap).
+This string is identical in formatting to the one used by "$$folder_format".
 
 ----------------------------------------------------------------------------------------------------------
 
@@ -168,9 +155,8 @@ This string is identical in formatting to the one used by
 - **Type:** regular expression
 - **Default:** "`!^\.[^.]`"
 
-A regular expression used in the file browser, optionally preceded by
-the *not* operator "!".  Only files whose names match this mask
-will be shown. The match is always case-sensitive.
+A regular expression used in the file browser, optionally preceded by the _not_ operator "!".  Only files whose names match this mask will be shown.
+The match is always case-sensitive.
 
 ----------------------------------------------------------------------------------------------------------
 
@@ -180,6 +166,5 @@ will be shown. The match is always case-sensitive.
 - **Type:** boolean
 - **Default:** no
 
-If *set*, only subscribed newsgroups that contain unread articles
-will be displayed in browser.
+If _set_, only subscribed newsgroups that contain unread articles will be displayed in browser.
 

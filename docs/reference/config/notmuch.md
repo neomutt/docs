@@ -16,28 +16,6 @@ how-to guides and explanation pages instead.
 :::
 
 
-notmuch.md
-	  { "nm_config_file", DT_PATH|D_PATH_FILE, IP "auto", 0, NULL,
-	  { "nm_config_profile", DT_STRING, 0, 0, NULL,
-	  { "nm_db_limit", DT_NUMBER|D_INTEGER_NOT_NEGATIVE, 0, 0, NULL,
-	  { "nm_default_url", DT_STRING, 0, 0, nm_default_url_validator,
-	  { "nm_exclude_tags", DT_STRING, 0, 0, NULL,
-	  { "nm_flagged_tag", DT_STRING, IP "flagged", 0, NULL,
-	  { "nm_open_timeout", DT_NUMBER|D_INTEGER_NOT_NEGATIVE, 5, 0, NULL,
-	  { "nm_query_type", DT_STRING, IP "messages", 0, NULL,
-	  { "nm_query_window_current_position", DT_NUMBER, 0, 0, NULL,
-	  { "nm_query_window_current_search", DT_STRING, 0, 0, NULL,
-	  { "nm_query_window_duration", DT_NUMBER|D_INTEGER_NOT_NEGATIVE, 0, 0, NULL,
-	  { "nm_query_window_enable", DT_BOOL, false, 0, NULL,
-	  { "nm_query_window_or_terms", DT_STRING, 0, 0, NULL,
-	  { "nm_query_window_timebase", DT_STRING, IP "week", 0, nm_query_window_timebase_validator,
-	  { "nm_record_tags", DT_STRING, 0, 0, NULL,
-	  { "nm_replied_tag", DT_STRING, IP "replied", 0, NULL,
-	  { "nm_unread_tag", DT_STRING, IP "unread", 0, NULL,
-	  { "virtual_spool_file", DT_BOOL, false, 0, NULL,
-	  { "vfolder_format",     D_INTERNAL_DEPRECATED|DT_STRING, 0,  IP "2018-11-01" },
-	  { "nm_default_uri",     DT_SYNONYM, IP "nm_default_url",     IP "2021-02-11" },
-	  { "virtual_spoolfile",  DT_SYNONYM, IP "virtual_spool_file", IP "2025-12-08" },
 
 ----------------------------------------------------------------------------------------------------------
 
@@ -47,7 +25,8 @@ notmuch.md
 - **Type:** path
 - **Default:** "`auto`"
 
-Configuration file for notmuch. Use 'auto' to detect configuration.
+Configuration file for notmuch.
+Use 'auto' to detect configuration.
 
 ----------------------------------------------------------------------------------------------------------
 
@@ -77,8 +56,7 @@ This variable specifies the default limit used in notmuch queries.
 - **Type:** string
 - **Default:** (empty)
 
-This variable specifies the default Notmuch database in format
-notmuch://<absolute path>.
+This variable specifies the default Notmuch database in format notmuch://<absolute path>.
 
 ----------------------------------------------------------------------------------------------------------
 
@@ -88,8 +66,7 @@ notmuch://<absolute path>.
 - **Type:** string
 - **Default:** (empty)
 
-The messages tagged with these tags are excluded and not loaded
-from notmuch DB to NeoMutt unless specified explicitly.
+The messages tagged with these tags are excluded and not loaded from notmuch DB to NeoMutt unless specified explicitly.
 
 ----------------------------------------------------------------------------------------------------------
 
@@ -99,9 +76,9 @@ from notmuch DB to NeoMutt unless specified explicitly.
 - **Type:** string
 - **Default:** "`flagged`"
 
-This variable specifies notmuch tag which is used for flagged messages. The
-variable is used to count flagged messages in DB and set the flagged flag
-when modifying tags. All other NeoMutt commands use standard (e.g. maildir)
+This variable specifies notmuch tag which is used for flagged messages.
+The variable is used to count flagged messages in DB and set the flagged flag when modifying tags.
+All other NeoMutt commands use standard (e.g. maildir)
 flags.
 
 ----------------------------------------------------------------------------------------------------------
@@ -122,8 +99,7 @@ This variable specifies the timeout for database open in seconds.
 - **Type:** string
 - **Default:** "`messages`"
 
-This variable specifies the default query type (threads or messages) used in
-notmuch queries.
+This variable specifies the default query type (threads or messages) used in notmuch queries.
 
 ----------------------------------------------------------------------------------------------------------
 
@@ -133,8 +109,7 @@ notmuch queries.
 - **Type:** number
 - **Default:** 0
 
-This variable contains the position of the current search for window based
-vfolder.
+This variable contains the position of the current search for window based vfolder.
 
 ----------------------------------------------------------------------------------------------------------
 
@@ -144,8 +119,7 @@ vfolder.
 - **Type:** string
 - **Default:** (empty)
 
-This variable contains the currently setup notmuch search for window based
-vfolder.
+This variable contains the currently setup notmuch search for window based vfolder.
 
 ----------------------------------------------------------------------------------------------------------
 
@@ -156,7 +130,8 @@ vfolder.
 - **Default:** 0
 
 This variable sets the time duration of a windowed notmuch query.
-Accepted values all non negative integers. A value of 0 disables the feature.
+Accepted values all non negative integers.
+A value of 0 disables the feature.
 
 ----------------------------------------------------------------------------------------------------------
 
@@ -176,13 +151,11 @@ This variable enables windowed notmuch queries even if window duration is 0.
 - **Type:** string
 - **Default:** (empty)
 
-This variable contains additional notmuch search terms for messages to be
-shown regardless of date.
+This variable contains additional notmuch search terms for messages to be shown regardless of date.
 
 Example:
 
-Using "notmuch://?query=tag:inbox" as the mailbox and "tag:flagged and
-tag:unread" as the or terms, NeoMutt will produce a query window such as:
+Using "notmuch://?query=tag:inbox" as the mailbox and "tag:flagged and tag:unread" as the or terms, NeoMutt will produce a query window such as:
 
 notmuch://?query=tag:inbox and (date:... or (tag:flagged and tag:unread))
 
@@ -195,7 +168,7 @@ notmuch://?query=tag:inbox and (date:... or (tag:flagged and tag:unread))
 - **Default:** "`week`"
 
 This variable sets the time base of a windowed notmuch query.
-Accepted values are 'minute', 'hour', 'day', 'week', 'month', 'year'
+Accepted values are 'minute', 'hour', 'day', 'week', 'month', 'year'.
 
 ----------------------------------------------------------------------------------------------------------
 
@@ -205,10 +178,8 @@ Accepted values are 'minute', 'hour', 'day', 'week', 'month', 'year'
 - **Type:** string
 - **Default:** (empty)
 
-This variable specifies the notmuch tag modifications (addition, removal,
-toggling) applied to messages added to the NeoMutt record when [`$nm_record`](#nm-record) is
-true. See the description of the `<modify-labels>` function for the
-syntax.
+This variable specifies the notmuch tag modifications (addition, removal, toggling) applied to messages added to the NeoMutt record when $$nm_record is true.
+See the description of the `<modify-labels>` function for the syntax.
 
 ----------------------------------------------------------------------------------------------------------
 
@@ -218,9 +189,9 @@ syntax.
 - **Type:** string
 - **Default:** "`replied`"
 
-This variable specifies notmuch tag which is used for replied messages. The
-variable is used to set the replied flag when modifying tags. All other
-NeoMutt commands use standard (e.g. maildir) flags.
+This variable specifies notmuch tag which is used for replied messages.
+The variable is used to set the replied flag when modifying tags.
+All other NeoMutt commands use standard (e.g. maildir) flags.
 
 ----------------------------------------------------------------------------------------------------------
 
@@ -230,9 +201,9 @@ NeoMutt commands use standard (e.g. maildir) flags.
 - **Type:** string
 - **Default:** "`unread`"
 
-This variable specifies notmuch tag which is used for unread messages. The
-variable is used to count unread messages in DB and set the unread flag when
-modifying tags. All other NeoMutt commands use standard (e.g. maildir) flags.
+This variable specifies notmuch tag which is used for unread messages.
+The variable is used to count unread messages in DB and set the unread flag when modifying tags.
+All other NeoMutt commands use standard (e.g. maildir) flags.
 
 ----------------------------------------------------------------------------------------------------------
 
@@ -242,6 +213,5 @@ modifying tags. All other NeoMutt commands use standard (e.g. maildir) flags.
 - **Type:** boolean
 - **Default:** no
 
-When *set*, NeoMutt will use the first Notmuch virtual mailbox as a
-spool file.
+When _set_, NeoMutt will use the first Notmuch virtual mailbox as a spool file.
 

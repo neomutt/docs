@@ -16,23 +16,6 @@ how-to guides and explanation pages instead.
 :::
 
 
-sidebar.md
-	  { "sidebar_component_depth", DT_NUMBER, 0, 0, NULL,
-	  { "sidebar_delim_chars", DT_STRING, IP "/.", 0, NULL,
-	  { "sidebar_divider_char", DT_STRING, IP "\342\224\202", 0, NULL, // Box Drawings Light Vertical, U+2502
-	  { "sidebar_folder_indent", DT_BOOL, false, 0, NULL,
-	  { "sidebar_format", DT_EXPANDO|D_NOT_EMPTY, IP "%D%*  %n", IP &SidebarFormatDef, NULL,
-	  { "sidebar_indent_string", DT_STRING, IP "  ", 0, NULL,
-	  { "sidebar_new_mail_only", DT_BOOL, false, 0, NULL,
-	  { "sidebar_next_new_wrap", DT_BOOL, false, 0, NULL,
-	  { "sidebar_non_empty_mailbox_only", DT_BOOL, false, 0, NULL,
-	  { "sidebar_on_right", DT_BOOL, false, 0, NULL,
-	  { "sidebar_short_path", DT_BOOL, false, 0, NULL,
-	  { "sidebar_sort", DT_SORT, SB_SORT_UNSORTED, IP SidebarSortMethods, NULL,
-	  { "sidebar_visible", DT_BOOL, false, 0, NULL,
-	  { "sidebar_width", DT_NUMBER|D_INTEGER_NOT_NEGATIVE, 30, 0, NULL,
-	  { "sidebar_sort_method", DT_SYNONYM, IP "sidebar_sort", IP "2024-11-20" },
-
 ----------------------------------------------------------------------------------------------------------
 
 (sidebar-component-depth)=
@@ -41,14 +24,11 @@ sidebar.md
 - **Type:** number
 - **Default:** 0
 
-By default the sidebar will show the mailbox's path, relative to the
-[`$folder`](#folder) variable. This specifies the number of parent directories to hide
-from display in the sidebar. For example: If a maildir is normally
-displayed in the sidebar as dir1/dir2/dir3/maildir, setting
-`sidebar_component_depth=2` will display it as dir3/maildir, having
-truncated the 2 highest directories.
+By default the sidebar will show the mailbox's path, relative to the $$folder variable.
+This specifies the number of parent directories to hide from display in the sidebar.
+For example: If a maildir is normally displayed in the sidebar as dir1/dir2/dir3/maildir, setting `sidebar_component_depth=2` will display it as dir3/maildir, having truncated the 2 highest directories.
 
-*See also:* [`$sidebar_short_path`](#sidebar-short-path)
+**See also:** $$sidebar_short_path 
 
 ----------------------------------------------------------------------------------------------------------
 
@@ -58,13 +38,12 @@ truncated the 2 highest directories.
 - **Type:** string
 - **Default:** "`/.`"
 
-This contains the list of characters which you would like to treat
-as folder separators for displaying paths in the sidebar.
+This contains the list of characters which you would like to treat as folder separators for displaying paths in the sidebar.
 
 Local mail is often arranged in directories: 'dir1/dir2/mailbox'.
 
 ```neomuttrc
-set sidebar_delim_chars='/'
+set sidebar_delim_chars='/' 
 ```
 
 IMAP mailboxes are often named: 'folder1.folder2.mailbox'.
@@ -73,8 +52,7 @@ IMAP mailboxes are often named: 'folder1.folder2.mailbox'.
 set sidebar_delim_chars='.'
 ```
 
-*See also:* [`$sidebar_short_path`](#sidebar-short-path), [`$sidebar_folder_indent`](#sidebar-folder-indent),
-[`$sidebar_indent_string`](#sidebar-indent-string).
+**See also:** $$sidebar_short_path, $$sidebar_folder_indent, $$sidebar_indent_string.
 
 ----------------------------------------------------------------------------------------------------------
 
@@ -86,13 +64,11 @@ set sidebar_delim_chars='.'
 
 The default is a Unicode vertical line.
 
-This specifies the characters to be drawn between the sidebar (when
-visible) and the other NeoMutt panels. ASCII and Unicode line-drawing
-characters are supported.
+This specifies the characters to be drawn between the sidebar (when visible) and the other NeoMutt panels.
+ASCII and Unicode line-drawing characters are supported.
 
 The divider char can be set to an empty string for some extra space.
-If empty, setting the sidebar_background color may help distinguish the
-sidebar from other panels.
+If empty, setting the sidebar_background color may help distinguish the sidebar from other panels.
 
 ----------------------------------------------------------------------------------------------------------
 
@@ -104,8 +80,7 @@ sidebar from other panels.
 
 Set this to indent mailboxes in the sidebar.
 
-*See also:* [`$sidebar_short_path`](#sidebar-short-path), [`$sidebar_indent_string`](#sidebar-indent-string),
-[`$sidebar_delim_chars`](#sidebar-delim-chars).
+**See also:** $$sidebar_short_path, $$sidebar_indent_string, $$sidebar_delim_chars.
 
 ----------------------------------------------------------------------------------------------------------
 
@@ -115,9 +90,8 @@ Set this to indent mailboxes in the sidebar.
 - **Type:** string
 - **Default:** "`%D%*  %n`"
 
-This variable allows you to customize the sidebar display. This string is
-similar to [`$index_format`](#index-format), but has its own set of `printf(3)`-like
-sequences:
+This variable allows you to customize the sidebar display.
+This string is similar to $$index_format, but has its own set of `printf(3)`-like sequences:
 
 | Short  | Long Name           | Cur | Description                                                                                |
 |--------|---------------------|-----|--------------------------------------------------------------------------------------------|
@@ -140,11 +114,10 @@ sequences:
 | `%>X`  | `%{padding-hard:X}` |     | Right justify the rest of the string and pad with character `X`                            |
 | `%\|X` | `%{padding-eol:X}`  |     | Pad to the end of the line with character `X`                                              |
 
-*Cur* = Only applicable to the current folder
+**Cur** = Only applicable to the current folder 
 
-In order to use %S, %N, %F, and %!, [`$mail_check_stats`](#mail-check-stats) must
-be *set*.  When thus set, a suggested value for this option is
-"%B%<F? [%F]>%* %<N?%N/>%S".
+In order to use %S, %N, %F, and %!, $$mail_check_stats must be _set_.
+When thus set, a suggested value for this option is "%B%<F? [%F]>%* %<N?%N/>%S".
 
 ----------------------------------------------------------------------------------------------------------
 
@@ -157,8 +130,7 @@ be *set*.  When thus set, a suggested value for this option is
 This specifies the string that is used to indent mailboxes in the sidebar.
 It defaults to two spaces.
 
-*See also:* [`$sidebar_short_path`](#sidebar-short-path), [`$sidebar_folder_indent`](#sidebar-folder-indent),
-[`$sidebar_delim_chars`](#sidebar-delim-chars).
+**See also:** $$sidebar_short_path, $$sidebar_folder_indent, $$sidebar_delim_chars.
 
 ----------------------------------------------------------------------------------------------------------
 
@@ -168,10 +140,9 @@ It defaults to two spaces.
 - **Type:** boolean
 - **Default:** no
 
-When set, the sidebar will only display mailboxes containing new, or
-flagged, mail.
+When set, the sidebar will only display mailboxes containing new, or flagged, mail.
 
-*See also:* `sidebar-pin`, [`$sidebar_non_empty_mailbox_only`](#sidebar-non-empty-mailbox-only).
+**See also:** $sidebar-pin, $$sidebar_non_empty_mailbox_only.
 
 ----------------------------------------------------------------------------------------------------------
 
@@ -181,10 +152,8 @@ flagged, mail.
 - **Type:** boolean
 - **Default:** no
 
-When set, the `<sidebar-next-new>` command will not stop at the end of
-the list of mailboxes, but wrap around to the beginning. The
-`<sidebar-prev-new>` command is similarly affected, wrapping around to
-the end of the list.
+When set, the `<sidebar-next-new>` command will not stop at the end of the list of mailboxes, but wrap around to the beginning.
+The `<sidebar-prev-new>` command is similarly affected, wrapping around to the end of the list.
 
 ----------------------------------------------------------------------------------------------------------
 
@@ -194,10 +163,9 @@ the end of the list.
 - **Type:** boolean
 - **Default:** no
 
-When set, the sidebar will only display mailboxes that contain one or more
-mails.
+When set, the sidebar will only display mailboxes that contain one or more mails.
 
-*See also:* [`$sidebar_new_mail_only`](#sidebar-new-mail-only), `sidebar-pin`.
+**See also:** $$sidebar_new_mail_only, $sidebar-pin.
 
 ----------------------------------------------------------------------------------------------------------
 
@@ -217,9 +185,9 @@ When set, the sidebar will appear on the right-hand side of the screen.
 - **Type:** boolean
 - **Default:** no
 
-By default the sidebar will show the mailbox's path, relative to the
-[`$folder`](#folder) variable. Setting `sidebar_shortpath=yes` will shorten the
-names relative to the previous name. Here's an example:
+By default the sidebar will show the mailbox's path, relative to the $$folder variable.
+Setting `sidebar_shortpath=yes` will shorten the names relative to the previous name.
+Here's an example:
 
 | shortpath=no    | shortpath=yes | shortpath=yes, folderindent=yes, indentstr=".." |
 |-----------------|---------------|-------------------------------------------------|
@@ -228,8 +196,7 @@ names relative to the previous name. Here's an example:
 | `fruit.banana`  | `banana`      | `..banana`                                      |
 | `fruit.cherry`  | `cherry`      | `..cherry`                                      |
 
-*See also:* [`$sidebar_delim_chars`](#sidebar-delim-chars), [`$sidebar_folder_indent`](#sidebar-folder-indent),
-[`$sidebar_indent_string`](#sidebar-indent-string), [`$sidebar_component_depth`](#sidebar-component-depth).
+**See also:** $$sidebar_delim_chars, $$sidebar_folder_indent, $$sidebar_indent_string, $$sidebar_component_depth.
 
 ----------------------------------------------------------------------------------------------------------
 
@@ -267,10 +234,10 @@ Specifies how to sort mailbox entries in the sidebar.
 - **Type:** boolean
 - **Default:** no
 
-This specifies whether or not to show sidebar. The sidebar shows a list of
-all your mailboxes.
+This specifies whether or not to show sidebar.
+The sidebar shows a list of all your mailboxes.
 
-*See also:* [`$sidebar_format`](#sidebar-format), [`$sidebar_width`](#sidebar-width)
+**See also:** $$sidebar_format, $$sidebar_width 
 
 ----------------------------------------------------------------------------------------------------------
 
@@ -280,7 +247,7 @@ all your mailboxes.
 - **Type:** number
 - **Default:** 30
 
-This controls the width of the sidebar.  It is measured in screen columns.
-For example: sidebar_width=20 could display 20 ASCII characters, or 10
-Chinese characters.
+This controls the width of the sidebar.
+It is measured in screen columns.
+For example: sidebar_width=20 could display 20 ASCII characters, or 10 Chinese characters.
 

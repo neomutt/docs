@@ -16,19 +16,6 @@ how-to guides and explanation pages instead.
 :::
 
 
-compose.md
-	  { "compose_confirm_detach_first", DT_BOOL, true, 0, NULL,
-	  { "compose_format", DT_EXPANDO|D_L10N_STRING, IP N_("-- NeoMutt: Compose  [Approx. msg size: %l   Atts: %a]%>-"), IP &ComposeFormatDef, NULL,
-	  { "compose_show_preview", DT_BOOL, true, 0, NULL,
-	  { "compose_show_user_headers", DT_BOOL, true, 0, NULL,
-	  { "compose_preview_min_rows", DT_NUMBER|D_INTEGER_NOT_NEGATIVE, 5, 0, NULL,
-	  { "compose_preview_above_attachments", DT_BOOL, false, 0, NULL,
-	  { "copy", DT_QUAD, MUTT_YES, 0, NULL,
-	  { "edit_headers", DT_BOOL, false, 0, NULL,
-	  { "ispell", DT_STRING|D_STRING_COMMAND, IP ISPELL, 0, NULL,
-	  { "postpone", DT_QUAD, MUTT_ASKYES, 0, NULL,
-	  { "edit_hdrs", DT_SYNONYM, IP "edit_headers", IP "2021-03-21" },
-
 ----------------------------------------------------------------------------------------------------------
 
 (compose-confirm-detach-first)=
@@ -37,14 +24,11 @@ compose.md
 - **Type:** boolean
 - **Default:** yes
 
-When *set*, NeoMutt will prompt for confirmation when trying to use
-`<detach-file>` on the first entry in the compose menu. This is to help
-prevent irreversible loss of the typed message by accidentally hitting 'D' in
-the menu.
+When _set_, NeoMutt will prompt for confirmation when trying to use `<detach-file>` on the first entry in the compose menu.
+This is to help prevent irreversible loss of the typed message by accidentally hitting 'D' in the menu.
 
-Note: NeoMutt only prompts for the first entry.  It doesn't keep track of
-which message is the typed message if the entries are reordered, or if the
-first entry was already deleted.
+Note: NeoMutt only prompts for the first entry.
+It doesn't keep track of which message is the typed message if the entries are reordered, or if the first entry was already deleted.
 
 ----------------------------------------------------------------------------------------------------------
 
@@ -54,9 +38,8 @@ first entry was already deleted.
 - **Type:** string
 - **Default:** "`-- NeoMutt: Compose  [Approx. msg size: %l   Atts: %a]%>-`"
 
-Controls the format of the status line displayed in the "compose"
-menu.  This string is similar to [`$status_format`](#status-format), but has its own
-set of `printf(3)`-like sequences:
+Controls the format of the status line displayed in the "compose" menu.
+This string is similar to $$status_format, but has its own set of `printf(3)`-like sequences:
 
 | Short  | Long Name           | Description                                                              |
 |--------|---------------------|--------------------------------------------------------------------------|
@@ -68,8 +51,7 @@ set of `printf(3)`-like sequences:
 | `%>X`  | `%{padding-hard:X}` | Right justify the rest of the string and pad with character `X`          |
 | `%\|X` | `%{padding-eol:X}`  | Pad to the end of the line with character `X`                            |
 
-See the text describing the [`$status_format`](#status-format) option for more
-information on how to set [`$compose_format`](#compose-format).
+See the text describing the $$status_format option for more information on how to set $$compose_format.
 
 ----------------------------------------------------------------------------------------------------------
 
@@ -79,8 +61,7 @@ information on how to set [`$compose_format`](#compose-format).
 - **Type:** boolean
 - **Default:** yes
 
-When *set*, NeoMutt will display a preview of message in the compose
-view.
+When _set_, NeoMutt will display a preview of message in the compose view.
 
 ----------------------------------------------------------------------------------------------------------
 
@@ -90,8 +71,7 @@ view.
 - **Type:** boolean
 - **Default:** yes
 
-When *set*, NeoMutt will display user-defined headers (set via `my_header`
-or from editing with edit-headers).
+When _set_, NeoMutt will display user-defined headers (set via $my-header or from editing with edit-headers).
 
 ----------------------------------------------------------------------------------------------------------
 
@@ -101,8 +81,7 @@ or from editing with edit-headers).
 - **Type:** number
 - **Default:** 5
 
-This variable specifies the minimum number of rows that have to be
-available for the message preview window to shown.
+This variable specifies the minimum number of rows that have to be available for the message preview window to shown.
 
 ----------------------------------------------------------------------------------------------------------
 
@@ -123,9 +102,8 @@ By default it is shown below it.
 - **Type:** quadoption
 - **Default:** yes
 
-This variable controls whether or not copies of your outgoing messages
-will be saved for later references.  Also see [$record](#record),
-[$save_name](#save-name), [$force_name](#force-name) and "`fcc-hook`".
+This variable controls whether or not copies of your outgoing messages will be saved for later references.
+Also see $$record, $$save_name, $$force_name and "$fcc-hook".
 
 ----------------------------------------------------------------------------------------------------------
 
@@ -135,18 +113,13 @@ will be saved for later references.  Also see [$record](#record),
 - **Type:** boolean
 - **Default:** no
 
-This option allows you to edit the header of your outgoing messages
-along with the body of your message.
+This option allows you to edit the header of your outgoing messages along with the body of your message.
 
-Although the compose menu may have localized header labels, the
-labels passed to your editor will be standard [RFC2822](https://www.rfc-editor.org/rfc/rfc2822.html) headers,
-(e.g. To:, Cc:, Subject:).  Headers added in your editor must
-also be [RFC2822](https://www.rfc-editor.org/rfc/rfc2822.html) headers, or one of the pseudo headers listed in
-"`edit-header`".  NeoMutt will not understand localized header
-labels, just as it would not when parsing an actual email.
+Although the compose menu may have localized header labels, the labels passed to your editor will be standard RFC2822 headers, (e.g. To:, Cc:, Subject:).
+Headers added in your editor must also be RFC2822 headers, or one of the pseudo headers listed in "$edit-header".
+NeoMutt will not understand localized header labels, just as it would not when parsing an actual email.
 
-**Note** that changes made to the References: and Date: headers are
-ignored for interoperability reasons.
+**Note** that changes made to the References: and Date: headers are ignored for interoperability reasons.
 
 ----------------------------------------------------------------------------------------------------------
 
@@ -166,11 +139,8 @@ How to invoke ispell (GNU's spell-checking software).
 - **Type:** quadoption
 - **Default:** ask-yes
 
-Controls whether or not messages are saved in the [$postponed](#postponed)
-mailbox when you elect not to send immediately. If set to
-*ask-yes* or *ask-no*, you will be prompted with "Save
-(postpone) draft message?" when quitting from the "compose"
-screen.
+Controls whether or not messages are saved in the $$postponed mailbox when you elect not to send immediately.
+If set to _ask-yes_ or _ask-no_, you will be prompted with "Save (postpone) draft message?" when quitting from the "compose" screen.
 
-Also see the [$recall](#recall) variable.
+Also see the $$recall variable.
 

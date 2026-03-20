@@ -16,12 +16,6 @@ how-to guides and explanation pages instead.
 :::
 
 
-autocrypt.md
-	  { "autocrypt", DT_BOOL, false, 0, NULL,
-	  { "autocrypt_acct_format", DT_EXPANDO, IP "%4n %-30a %20p %10s", IP &AutocryptFormatDef, NULL,
-	  { "autocrypt_dir", DT_PATH|D_PATH_DIR, IP "~/.mutt/autocrypt", 0, NULL,
-	  { "autocrypt_reply", DT_BOOL, true, 0, NULL,
-
 ----------------------------------------------------------------------------------------------------------
 
 (autocrypt)=
@@ -30,9 +24,8 @@ autocrypt.md
 - **Type:** boolean
 - **Default:** no
 
-When *set*, enables autocrypt, which provides
-passive encryption protection with keys exchanged via headers.
-See **Autocrypt** for more details.
+When _set_, enables autocrypt, which provides passive encryption protection with keys exchanged via headers.
+See "$autocryptdoc" for more details.
 (Autocrypt only)
 
 ----------------------------------------------------------------------------------------------------------
@@ -44,7 +37,7 @@ See **Autocrypt** for more details.
 - **Default:** "`%4n %-30a %20p %10s`"
 
 This variable describes the format of the "autocrypt account" menu.
-The following `printf(3)`-style sequences are understood
+The following `printf(3)`-style sequences are understood 
 
 | Short  | Long Name           | Description                                                     |
 |--------|---------------------|-----------------------------------------------------------------|
@@ -67,8 +60,8 @@ The following `printf(3)`-style sequences are understood
 - **Type:** path
 - **Default:** "`~/.mutt/autocrypt`"
 
-This variable sets where autocrypt files are stored, including the GPG
-keyring and SQLite database.  See **Autocrypt** for more details.
+This variable sets where autocrypt files are stored, including the GPG keyring and SQLite database.
+See "$autocryptdoc" for more details.
 (Autocrypt only)
 
 ----------------------------------------------------------------------------------------------------------
@@ -79,9 +72,7 @@ keyring and SQLite database.  See **Autocrypt** for more details.
 - **Type:** boolean
 - **Default:** yes
 
-When *set*, replying to an autocrypt email automatically
-enables autocrypt in the reply.  You may want to unset this if you're using
-the same key for autocrypt as normal web-of-trust, so that autocrypt
-isn't forced on for all encrypted replies.
+When _set_, replying to an autocrypt email automatically enables autocrypt in the reply.
+You may want to unset this if you're using the same key for autocrypt as normal web-of-trust, so that autocrypt isn't forced on for all encrypted replies.
 (Autocrypt only)
 

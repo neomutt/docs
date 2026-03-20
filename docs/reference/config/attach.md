@@ -15,21 +15,6 @@ Mirror the structure of the software itself. Avoid instruction or explanation â€
 how-to guides and explanation pages instead.
 :::
 
-
-attach.md
-	  { "attach_save_dir", DT_PATH|D_PATH_DIR, IP "./", 0, NULL,
-	  { "attach_save_without_prompting", DT_BOOL, false, 0, NULL,
-	  { "attach_sep", DT_STRING, IP "\n", 0, NULL,
-	  { "attach_split", DT_BOOL, true, 0, NULL,
-	  { "bounce", DT_QUAD, MUTT_ASKYES, 0, NULL,
-	  { "count_alternatives", DT_BOOL, false, 0, NULL,
-	  { "digest_collapse", DT_BOOL, true, 0, NULL,
-	  { "message_format", DT_EXPANDO|D_NOT_EMPTY, IP "%s", IP &IndexFormatDef, NULL,
-	  { "mime_forward", DT_QUAD, MUTT_NO, 0, NULL,
-	  { "mime_forward_rest", DT_QUAD, MUTT_YES, 0, NULL,
-	  { "mime_fwd",   DT_SYNONYM, IP "mime_forward",   IP "2021-03-21" },
-	  { "msg_format", DT_SYNONYM, IP "message_format", IP "2021-03-21" },
-
 ----------------------------------------------------------------------------------------------------------
 
 (attach-save-dir)=
@@ -48,8 +33,7 @@ The directory where attachments are saved.
 - **Type:** boolean
 - **Default:** no
 
-This variable, when set to true, will cause attachments to be saved to
-the 'attach_save_dir' location without prompting the user for the filename.
+This variable, when set to true, will cause attachments to be saved to the 'attach_save_dir' location without prompting the user for the filename.
 
 ----------------------------------------------------------------------------------------------------------
 
@@ -59,8 +43,7 @@ the 'attach_save_dir' location without prompting the user for the filename.
 - **Type:** string
 - **Default:** "`\n`"
 
-The separator to add between attachments when operating (saving,
-printing, piping, etc) on a list of tagged attachments.
+The separator to add between attachments when operating (saving, printing, piping, etc) on a list of tagged attachments.
 
 ----------------------------------------------------------------------------------------------------------
 
@@ -70,11 +53,9 @@ printing, piping, etc) on a list of tagged attachments.
 - **Type:** boolean
 - **Default:** yes
 
-If this variable is *unset*, when operating (saving, printing, piping,
-etc) on a list of tagged attachments, NeoMutt will concatenate the
-attachments and will operate on them as a single attachment. The
-[`$attach_sep`](#attach-sep) separator is added after each attachment. When *set*,
-NeoMutt will operate on the attachments one by one.
+If this variable is _unset_, when operating (saving, printing, piping, etc) on a list of tagged attachments, NeoMutt will concatenate the attachments and will operate on them as a single attachment.
+The $$attach_sep separator is added after each attachment.
+When _set_, NeoMutt will operate on the attachments one by one.
 
 ----------------------------------------------------------------------------------------------------------
 
@@ -85,9 +66,8 @@ NeoMutt will operate on the attachments one by one.
 - **Default:** ask-yes
 
 Controls whether you will be asked to confirm bouncing messages.
-If set to *yes* you don't get asked if you want to bounce a
-message. Setting this variable to *no* is not generally useful,
-and thus not recommended, because you are unable to bounce messages.
+If set to _yes_ you don't get asked if you want to bounce a message.
+Setting this variable to _no_ is not generally useful, and thus not recommended, because you are unable to bounce messages.
 
 ----------------------------------------------------------------------------------------------------------
 
@@ -97,15 +77,11 @@ and thus not recommended, because you are unable to bounce messages.
 - **Type:** boolean
 - **Default:** no
 
-When *set*, NeoMutt will recurse inside multipart/alternatives while
-performing attachment searching and counting(see `attachments`).
+When _set_, NeoMutt will recurse inside multipart/alternatives while performing attachment searching and counting(see $attachments).
 
-Traditionally, multipart/alternative parts have simply represented
-different encodings of the main content of the email.  Unfortunately,
-some mail clients have started to place email attachments inside
-one of alternatives.  Setting this will allow NeoMutt to find
-and count matching attachments hidden there, and include them
-in the index via %X or through ~X pattern matching.
+Traditionally, multipart/alternative parts have simply represented different encodings of the main content of the email.
+Unfortunately, some mail clients have started to place email attachments inside one of alternatives.
+Setting this will allow NeoMutt to find and count matching attachments hidden there, and include them in the index via %X or through ~X pattern matching.
 
 ----------------------------------------------------------------------------------------------------------
 
@@ -115,9 +91,8 @@ in the index via %X or through ~X pattern matching.
 - **Type:** boolean
 - **Default:** yes
 
-If this option is *set*, NeoMutt's received-attachments menu will not
-show the subparts of individual messages in a multipart/digest. To see these
-subparts, press "v" on that menu.
+If this option is _set_, NeoMutt's received-attachments menu will not show the subparts of individual messages in a multipart/digest.
+To see these subparts, press "v" on that menu.
 
 ----------------------------------------------------------------------------------------------------------
 
@@ -127,9 +102,7 @@ subparts, press "v" on that menu.
 - **Type:** string
 - **Default:** "`%s`"
 
-This is the string displayed in the "attachment" menu for
-attachments of type `message/rfc822`.  For a full listing of defined
-`printf(3)`-like sequences see the section on [$index_format](#index-format).
+This is the string displayed in the "attachment" menu for attachments of type `message/rfc822`.  For a full listing of defined `printf(3)`-like sequences see the section on $$index_format.
 
 ----------------------------------------------------------------------------------------------------------
 
@@ -139,9 +112,11 @@ attachments of type `message/rfc822`.  For a full listing of defined
 - **Type:** quadoption
 - **Default:** `no`
 
-When *set*, the message you are forwarding will be attached as a separate `message/rfc822` MIME part instead of included in the main body of the message. This is useful for forwarding MIME messages so the receiver can properly view the message as it was delivered to you. If you like to switch between MIME and not MIME from mail to mail, set this variable to "ask-no" or "ask-yes".
+When _set_, the message you are forwarding will be attached as a separate `message/rfc822` MIME part instead of included in the main body of the message.
+This is useful for forwarding MIME messages so the receiver can properly view the message as it was delivered to you.
+If you like to switch between MIME and not MIME from mail to mail, set this variable to "ask-no" or "ask-yes".
 
-Also see `$forward_decode` and [`$mime_forward_decode`](#mime-forward-decode).
+Also see $$forward_decode and $$mime_forward_decode.
 
 ----------------------------------------------------------------------------------------------------------
 
@@ -151,5 +126,5 @@ Also see `$forward_decode` and [`$mime_forward_decode`](#mime-forward-decode).
 - **Type:** quadoption
 - **Default:** `yes`
 
-When forwarding multiple attachments of a MIME message from the attachment menu, attachments which can't be decoded in a reasonable manner will be attached to the newly composed message if this option is *set*.
+When forwarding multiple attachments of a MIME message from the attachment menu, attachments which can't be decoded in a reasonable manner will be attached to the newly composed message if this option is _set_.
 

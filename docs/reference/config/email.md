@@ -16,31 +16,6 @@ how-to guides and explanation pages instead.
 :::
 
 
-email.md
-	  { "auto_subscribe", DT_BOOL, false, 0, NULL,
-	  { "honor_disposition", DT_BOOL, false, 0, NULL,
-	  { "hidden_tags", DT_SLIST|D_SLIST_SEP_COMMA, IP "unread,draft,flagged,passed,replied,attachment,signed,encrypted", 0, NULL,
-	  { "implicit_auto_view", DT_BOOL, false, 0, NULL,
-	  { "include_encrypted", DT_BOOL, false, 0, NULL,
-	  { "include_only_first", DT_BOOL, false, 0, NULL,
-	  { "mailcap_path", DT_SLIST|D_SLIST_SEP_COLON, IP "~/.mailcap:" PKGDATADIR "/mailcap:" SYSCONFDIR "/mailcap:/etc/mailcap:/usr/etc/mailcap:/usr/local/etc/mailcap", 0, NULL,
-	  { "mailcap_sanitize", DT_BOOL, true, 0, NULL,
-	  { "preferred_languages", DT_SLIST|D_SLIST_SEP_COMMA, 0, 0, NULL,
-	  { "reflow_space_quotes", DT_BOOL, true, 0, NULL,
-	  { "reflow_text", DT_BOOL, true, 0, NULL,
-	  { "reflow_wrap", DT_NUMBER, 78, 0, NULL,
-	  { "reply_regex", DT_REGEX|D_L10N_STRING, IP N_("^((re)(\\[[0-9]+\\])*:[ \t]*)*"), 0, NULL,
-	  { "score", DT_BOOL, true, 0, NULL,
-	  { "score_threshold_delete", DT_NUMBER, -1, 0, NULL,
-	  { "score_threshold_flag", DT_NUMBER, 9999, 0, NULL,
-	  { "score_threshold_read", DT_NUMBER, -1, 0, NULL,
-	  { "show_multipart_alternative", DT_STRING, 0, 0, multipart_validator,
-	  { "reverse_alias", DT_BOOL, false, 0, NULL,
-	  { "rfc2047_parameters", DT_BOOL, true, 0, NULL,
-	  { "spam_separator", DT_STRING, IP ",", 0, NULL,
-	  { "implicit_autoview", DT_SYNONYM, IP "implicit_auto_view", IP "2023-01-25" },
-	  { "include_onlyfirst", DT_SYNONYM, IP "include_only_first", IP "2021-03-21" },
-	  { "reply_regexp", DT_SYNONYM, IP "reply_regex", IP "2021-03-21" },
 
 ----------------------------------------------------------------------------------------------------------
 
@@ -50,11 +25,9 @@ email.md
 - **Type:** boolean
 - **Default:** no
 
-When *set*, NeoMutt assumes the presence of a List-Post header
-means the recipient is subscribed to the list.  Unless the mailing list
-is in the "unsubscribe" or "unlist" lists, it will be added
-to the "`subscribe`" list.  Parsing and checking these things slows
-header reading down, so this option is disabled by default.
+When _set_, NeoMutt assumes the presence of a List-Post header means the recipient is subscribed to the list.
+Unless the mailing list is in the "unsubscribe" or "unlist" lists, it will be added to the "$subscribe" list.
+Parsing and checking these things slows header reading down, so this option is disabled by default.
 
 ----------------------------------------------------------------------------------------------------------
 
@@ -64,13 +37,10 @@ header reading down, so this option is disabled by default.
 - **Type:** boolean
 - **Default:** no
 
-When *set*, NeoMutt will not display attachments with a
-disposition of "attachment" inline even if it could
-render the part to plain text. These MIME parts can only
-be viewed from the attachment menu.
+When _set_, NeoMutt will not display attachments with a disposition of "attachment" inline even if it could render the part to plain text.
+These MIME parts can only be viewed from the attachment menu.
 
-If *unset*, NeoMutt will render all MIME parts it can
-properly transform to plain text.
+If _unset_, NeoMutt will render all MIME parts it can properly transform to plain text.
 
 ----------------------------------------------------------------------------------------------------------
 
@@ -80,8 +50,7 @@ properly transform to plain text.
 - **Type:** string list
 - **Default:** "`unread,draft,flagged,passed,replied,attachment,signed,encrypted`"
 
-This variable specifies a list of comma-separated private notmuch/imap tags
-which should not be printed on screen.
+This variable specifies a list of comma-separated private notmuch/imap tags which should not be printed on screen.
 
 ----------------------------------------------------------------------------------------------------------
 
@@ -91,10 +60,8 @@ which should not be printed on screen.
 - **Type:** boolean
 - **Default:** no
 
-If set to "yes", NeoMutt will look for a mailcap entry with the
-"`copiousoutput`" flag set for *every* MIME attachment it doesn't
-have an internal viewer defined for. If such an entry is found, NeoMutt will
-use the viewer defined in that entry to convert the body part to text form.
+If set to "yes", NeoMutt will look for a mailcap entry with the "`copiousoutput`" flag set for _every_ MIME attachment it doesn't have an internal viewer defined for.
+If such an entry is found, NeoMutt will use the viewer defined in that entry to convert the body part to text form.
 
 ----------------------------------------------------------------------------------------------------------
 
@@ -104,13 +71,10 @@ use the viewer defined in that entry to convert the body part to text form.
 - **Type:** boolean
 - **Default:** no
 
-Controls whether or not NeoMutt includes separately encrypted attachment
-contents when replying.
+Controls whether or not NeoMutt includes separately encrypted attachment contents when replying.
 
-This variable was added to prevent accidental exposure of encrypted
-contents when replying to an attacker.  If a previously encrypted message
-were attached by the attacker, they could trick an unwary recipient into
-decrypting and including the message in their reply.
+This variable was added to prevent accidental exposure of encrypted contents when replying to an attacker.
+If a previously encrypted message were attached by the attacker, they could trick an unwary recipient into decrypting and including the message in their reply.
 
 ----------------------------------------------------------------------------------------------------------
 
@@ -120,8 +84,7 @@ decrypting and including the message in their reply.
 - **Type:** boolean
 - **Default:** no
 
-Controls whether or not NeoMutt includes only the first attachment
-of the message you are replying.
+Controls whether or not NeoMutt includes only the first attachment of the message you are replying.
 
 ----------------------------------------------------------------------------------------------------------
 
@@ -131,14 +94,12 @@ of the message you are replying.
 - **Type:** string list
 - **Default:** "`~/.mailcap:/usr/share/neomutt/mailcap:/etc/mailcap:/etc/mailcap:/usr/etc/mailcap:/usr/local/etc/mailcap`"
 
-This variable specifies a list of colon-separated files to consult when
-attempting to display MIME bodies not directly supported by NeoMutt.  The
-default value is generated during startup: see the "`mailcap`" section of the
-manual.
+This variable specifies a list of colon-separated files to consult when attempting to display MIME bodies not directly supported by NeoMutt.
+The default value is generated during startup: see the "$mailcap" section of the manual.
 
-[$mailcap_path](#mailcap-path) is overridden by the environment variable `$MAILCAPS`.
+$$mailcap_path is overridden by the environment variable `$$$MAILCAPS`.
 
-The default search path is from [RFC1524](https://www.rfc-editor.org/rfc/rfc1524.html).
+The default search path is from RFC1524.
 
 ----------------------------------------------------------------------------------------------------------
 
@@ -148,12 +109,10 @@ The default search path is from [RFC1524](https://www.rfc-editor.org/rfc/rfc1524
 - **Type:** boolean
 - **Default:** yes
 
-If *set*, NeoMutt will restrict possible characters in mailcap % expandos
-to a well-defined set of safe characters.  This is the safe setting,
-but we are not sure it doesn't break some more advanced MIME stuff.
+If _set_, NeoMutt will restrict possible characters in mailcap % expandos to a well-defined set of safe characters.
+This is the safe setting, but we are not sure it doesn't break some more advanced MIME stuff.
 
-**DON'T CHANGE THIS SETTING UNLESS YOU ARE REALLY SURE WHAT YOU ARE
-DOING!**
+**DON'T CHANGE THIS SETTING UNLESS YOU ARE REALLY SURE WHAT YOU ARE DOING!** 
 
 ----------------------------------------------------------------------------------------------------------
 
@@ -164,11 +123,11 @@ DOING!**
 - **Default:** (empty)
 
 This variable specifies a list of comma-separated languages.
-[RFC8255](https://www.rfc-editor.org/rfc/rfc8255.html) : user preferred languages to be searched in parts and display.
-Example:
+RFC8255 : user preferred languages to be searched in parts and display.
 
-```neomuttrc
-set preferred_languages="en,fr,de"
+Example:
+```
+set preferred_languages="en,fr,de" 
 ```
 
 ----------------------------------------------------------------------------------------------------------
@@ -179,13 +138,11 @@ set preferred_languages="en,fr,de"
 - **Type:** boolean
 - **Default:** yes
 
-This option controls how quotes from format=flowed messages are displayed
-in the pager and when replying (with [$text_flowed](#text-flowed) *unset*).
-When set, this option adds spaces after each level of quote marks, turning
-">>>foo" into "> > > foo".
+This option controls how quotes from format=flowed messages are displayed in the pager and when replying (with $$text_flowed _unset_).
+When set, this option adds spaces after each level of quote marks, turning ">>>foo" into "> > > foo".
 
-**Note:** If [$reflow_text](#reflow-text) is *unset*, this option has no effect.
-Also, this option does not affect replies when [$text_flowed](#text-flowed) is *set*.
+**Note:** If $$reflow_text is _unset_, this option has no effect.
+Also, this option does not affect replies when $$text_flowed is _set_.
 
 ----------------------------------------------------------------------------------------------------------
 
@@ -195,12 +152,11 @@ Also, this option does not affect replies when [$text_flowed](#text-flowed) is *
 - **Type:** boolean
 - **Default:** yes
 
-When *set*, NeoMutt will reformat paragraphs in text/plain
-parts marked format=flowed.  If *unset*, NeoMutt will display paragraphs
-unaltered from how they appear in the message body.  See [RFC3676](https://www.rfc-editor.org/rfc/rfc3676.html) for
-details on the *format=flowed* format.
+When _set_, NeoMutt will reformat paragraphs in text/plain parts marked format=flowed.
+If _unset_, NeoMutt will display paragraphs unaltered from how they appear in the message body.
+See RFC3676 for details on the _format=flowed_ format.
 
-Also see [$reflow_wrap](#reflow-wrap), and [$wrap](#wrap).
+Also see $$reflow_wrap, and $$wrap.
 
 ----------------------------------------------------------------------------------------------------------
 
@@ -210,19 +166,15 @@ Also see [$reflow_wrap](#reflow-wrap), and [$wrap](#wrap).
 - **Type:** number
 - **Default:** 78
 
-This variable controls the maximum paragraph width when reformatting
-text/plain parts when [$reflow_text](#reflow-text) is *set*. When the value is 0,
-paragraphs will be wrapped at the terminal's right margin. A positive value
-sets the paragraph width relative to the left margin. A negative value set
-the paragraph width relative to the right margin.
+This variable controls the maximum paragraph width when reformatting text/plain parts when $$reflow_text is _set_.
+When the value is 0, paragraphs will be wrapped at the terminal's right margin.
+A positive value sets the paragraph width relative to the left margin.
+A negative value set the paragraph width relative to the right margin.
 
-Be aware that the reformatted lines of a paragraph are still subject to
-[$wrap](#wrap). This means if [$reflow_wrap](#reflow-wrap) is 40 and [$wrap](#wrap) is 30, then the
-paragraph gets reformatted to 40 characters a line (due to [$reflow_wrap](#reflow-wrap)) and
-afterwards each 40-character-line is split at 30 characters (due to [$wrap](#wrap)),
-resulting in alternating line lengths of 30 and 10 characters.
+Be aware that the reformatted lines of a paragraph are still subject to $$wrap.
+This means if $$reflow_wrap is 40 and $$wrap is 30, then the paragraph gets reformatted to 40 characters a line (due to $$reflow_wrap) and afterwards each 40-character-line is split at 30 characters (due to $$wrap), resulting in alternating line lengths of 30 and 10 characters.
 
-Also see [$wrap](#wrap).
+Also see $$wrap.
 
 ----------------------------------------------------------------------------------------------------------
 
@@ -232,37 +184,26 @@ Also see [$wrap](#wrap).
 - **Type:** regular expression
 - **Default:** "`^((re)(\[[0-9]+\])*:[ \t]*)*`"
 
-A regular expression used to recognize reply messages when
-threading and replying. The default value corresponds to the
-standard Latin "Re:" prefix.
+A regular expression used to recognize reply messages when threading and replying.
+The default value corresponds to the standard Latin "Re:" prefix.
 
-This value may have been localized by the translator for your
-locale, adding other prefixes that are common in the locale. You
-can add your own prefixes by appending inside `"^(re)"`.  For
-example: `"^(re|sv)"` or `"^(re|aw|sv)"`.
+This value may have been localized by the translator for your locale, adding other prefixes that are common in the locale.
+You can add your own prefixes by appending inside `"^(re)"`.  For example: `"^(re|sv)"` or `"^(re|aw|sv)"`.
 
-The second parenthesized expression matches zero or more
-bracketed numbers following the prefix, such as `"Re[1]: "`.
+The second parenthesized expression matches zero or more bracketed numbers following the prefix, such as `"Re[1]: "`.
 The initial `"\\["` means a literal left-bracket character.
-Note the backslash must be doubled when used inside a double
-quoted string in the neomuttrc.  `"[0-9]+"` means one or more
-numbers.  `"\\]"` means a literal right-bracket.  Finally the
-whole parenthesized expression has a `"*"` suffix, meaning it
-can occur zero or more times.
+Note the backslash must be doubled when used inside a double quoted string in the neomuttrc.
+`"[0-9]+"` means one or more numbers.
+`"\\]"` means a literal right-bracket.
+Finally the whole parenthesized expression has a `"*"` suffix, meaning it can occur zero or more times.
 
-The last part matches a colon followed by an optional space or
-tab.  Note `"\t"` is converted to a literal tab inside a
-double quoted string.  If you use a single quoted string, you
-would have to type an actual tab character, and would need to
-convert the double-backslashes to single backslashes.
+The last part matches a colon followed by an optional space or tab.
+Note `"\t"` is converted to a literal tab inside a double quoted string.
+If you use a single quoted string, you would have to type an actual tab character, and would need to convert the double-backslashes to single backslashes.
 
-Note: the result of this regex match against the subject is
-stored in the header cache.  Mutt isn't smart enough to
-invalidate a header cache entry based on changing [$reply_regex](#reply-regex),
-so if you aren't seeing correct values in the index, try
-temporarily turning off the header cache.  If that fixes the
-problem, then once the variable is set to your liking, remove
-your stale header cache files and turn the header cache back on.
+Note: the result of this regex match against the subject is stored in the header cache.
+Mutt isn't smart enough to invalidate a header cache entry based on changing $$reply_regex, so if you aren't seeing correct values in the index, try temporarily turning off the header cache.
+If that fixes the problem, then once the variable is set to your liking, remove your stale header cache files and turn the header cache back on.
 
 ----------------------------------------------------------------------------------------------------------
 
@@ -272,9 +213,8 @@ your stale header cache files and turn the header cache back on.
 - **Type:** boolean
 - **Default:** yes
 
-When this variable is *unset*, scoring is turned off.  This can
-be useful to selectively disable scoring for certain folders when the
-[$score_threshold_delete](#score-threshold-delete) variable and related are used.
+When this variable is _unset_, scoring is turned off.
+This can be useful to selectively disable scoring for certain folders when the $$score_threshold_delete variable and related are used.
 
 ----------------------------------------------------------------------------------------------------------
 
@@ -284,7 +224,8 @@ be useful to selectively disable scoring for certain folders when the
 - **Type:** number
 - **Default:** `-1`
 
-Messages which have been assigned a score equal to or lower than the value of this variable are automatically marked for deletion by NeoMutt. Since NeoMutt scores are always greater than or equal to zero, the default setting of this variable will never mark a message for deletion.
+Messages which have been assigned a score equal to or lower than the value of this variable are automatically marked for deletion by NeoMutt.
+Since NeoMutt scores are always greater than or equal to zero, the default setting of this variable will never mark a message for deletion.
 
 ----------------------------------------------------------------------------------------------------------
 
@@ -304,7 +245,8 @@ Messages which have been assigned a score greater than or equal to this variable
 - **Type:** number
 - **Default:** `-1`
 
-Messages which have been assigned a score equal to or lower than the value of this variable are automatically marked as read by NeoMutt. Since NeoMutt scores are always greater than or equal to zero, the default setting of this variable will never mark a message read.
+Messages which have been assigned a score equal to or lower than the value of this variable are automatically marked as read by NeoMutt.
+Since NeoMutt scores are always greater than or equal to zero, the default setting of this variable will never mark a message read.
 
 ----------------------------------------------------------------------------------------------------------
 
@@ -314,8 +256,8 @@ Messages which have been assigned a score equal to or lower than the value of th
 - **Type:** string
 - **Default:** (empty)
 
-When *set* to `info`, the multipart/alternative information is shown.
-When *set* to `inline`, all of the alternatives are displayed.
+When _set_ to `info`, the multipart/alternative information is shown.
+When _set_ to `inline`, all of the alternatives are displayed.
 When not set, the default behavior is to show only the chosen alternative.
 
 ----------------------------------------------------------------------------------------------------------
@@ -326,24 +268,20 @@ When not set, the default behavior is to show only the chosen alternative.
 - **Type:** boolean
 - **Default:** no
 
-This variable controls whether or not NeoMutt will display the "personal"
-name from your aliases in the index menu if it finds an alias that
-matches the message's sender.  For example, if you have the following
-alias:
+This variable controls whether or not NeoMutt will display the "personal" name from your aliases in the index menu if it finds an alias that matches the message's sender.
+For example, if you have the following alias:
 
-```neomuttrc
+```
 alias juser abd30425@somewhere.net (Joe User)
 ```
 
 and then you receive mail which contains the following header:
 
 ```
-From: abd30425@somewhere.net
+From: abd30425@somewhere.net 
 ```
 
-It would be displayed in the index menu as "Joe User" instead of
-"abd30425@somewhere.net."  This is useful when the person's e-mail
-address is not human friendly.
+It would be displayed in the index menu as "Joe User" instead of "abd30425@somewhere.net."  This is useful when the person's e-mail address is not human friendly.
 
 ----------------------------------------------------------------------------------------------------------
 
@@ -353,25 +291,20 @@ address is not human friendly.
 - **Type:** boolean
 - **Default:** yes
 
-When this variable is *set*, NeoMutt will decode [RFC2047](https://www.rfc-editor.org/rfc/rfc2047.html)-encoded MIME
-parameters. You want to set this variable when NeoMutt suggests you
-to save attachments to files named like:
+When this variable is _set_, NeoMutt will decode RFC2047-encoded MIME parameters.
+You want to set this variable when NeoMutt suggests you to save attachments to files named like:
 
 ```
-=?iso-8859-1?Q?file=5F=E4=5F991116=2Ezip?=
-=?utf-8?Q?z=C4=99ta.png?=
+=?iso-8859-1?Q?file=5F=E4=5F991116=2Ezip?= 
+=?utf-8?Q?z=C4=99ta.png?= 
 ```
 
-When this variable is *set* interactively, the change won't be
-active until you change folders.
+When this variable is _set_ interactively, the change won't be active until you change folders.
 
-Note that this use of [RFC2047](https://www.rfc-editor.org/rfc/rfc2047.html)'s encoding is explicitly
-prohibited by the standard, but nevertheless encountered in the
-wild and produced by, e.g., Outlook.
+Note that this use of RFC2047's encoding is explicitly prohibited by the standard, but nevertheless encountered in the wild and produced by, e.g., Outlook.
 
-Also note that setting this parameter will *not* have the effect
-that NeoMutt *generates* this kind of encoding.  Instead, NeoMutt will
-unconditionally use the encoding specified in [RFC2231](https://www.rfc-editor.org/rfc/rfc2231.html).
+Also note that setting this parameter will _not_ have the effect that NeoMutt _generates_ this kind of encoding.
+Instead, NeoMutt will unconditionally use the encoding specified in RFC2231.
 
 ----------------------------------------------------------------------------------------------------------
 
@@ -381,9 +314,6 @@ unconditionally use the encoding specified in [RFC2231](https://www.rfc-editor.o
 - **Type:** string
 - **Default:** "`,`"
 
-This variable controls what happens when multiple spam headers
-are matched: if *unset*, each successive header will overwrite any
-previous matches value for the spam label. If *set*, each successive
-match will append to the previous, using this variable's value as a
-separator.
+This variable controls what happens when multiple spam headers are matched: if _unset_, each successive header will overwrite any previous matches value for the spam label.
+If _set_, each successive match will append to the previous, using this variable's value as a separator.
 

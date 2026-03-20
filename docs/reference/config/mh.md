@@ -16,11 +16,6 @@ how-to guides and explanation pages instead.
 :::
 
 
-mh.md
-	  { "mh_purge", DT_BOOL, false, 0, NULL,
-	  { "mh_seq_flagged", DT_STRING, IP "flagged", 0, NULL,
-	  { "mh_seq_replied", DT_STRING, IP "replied", 0, NULL,
-	  { "mh_seq_unseen", DT_STRING, IP "unseen", 0, NULL,
 
 ----------------------------------------------------------------------------------------------------------
 
@@ -30,9 +25,11 @@ mh.md
 - **Type:** boolean
 - **Default:** `no`
 
-When *unset*, NeoMutt will mimic mh's behavior and rename deleted messages to `,<old file name>` in mh folders instead of really deleting them. This leaves the message on disk but makes programs reading the folder ignore it. If the variable is *set*, the message files will simply be deleted.
+When _unset_, NeoMutt will mimic mh's behavior and rename deleted messages to _,<old file name>_ in mh folders instead of really deleting them.
+This leaves the message on disk but makes programs reading the folder ignore it.
+If the variable is _set_, the message files will simply be deleted.
 
-This option is similar to [`$maildir_trash`](#maildir-trash) for Maildir folders.
+This option is similar to $$maildir_trash for Maildir folders.
 
 ----------------------------------------------------------------------------------------------------------
 

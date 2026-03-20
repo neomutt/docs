@@ -16,24 +16,6 @@ how-to guides and explanation pages instead.
 :::
 
 
-nntp.md
-	  { "catchup_newsgroup", DT_QUAD, MUTT_ASKYES, 0, NULL,
-	  { "followup_to_poster", DT_QUAD, MUTT_ASKYES, 0, NULL,
-	  { "newsgroups_charset", DT_STRING, IP "utf-8", 0, charset_validator,
-	  { "newsrc", DT_EXPANDO|D_PATH_FILE, IP "~/.newsrc", IP &NntpFormatDef, NULL,
-	  { "news_cache_dir", DT_PATH|D_PATH_DIR, IP "~/.neomutt", 0, NULL,
-	  { "news_server", DT_STRING, 0, 0, NULL,
-	  { "nntp_authenticators", DT_STRING, 0, 0, NULL,
-	  { "nntp_context", DT_LONG|D_INTEGER_NOT_NEGATIVE, 1000, 0, NULL,
-	  { "nntp_listgroup", DT_BOOL, true, 0, NULL,
-	  { "nntp_load_description", DT_BOOL, true, 0, NULL,
-	  { "nntp_pass", DT_STRING|D_SENSITIVE, 0, 0, NULL,
-	  { "nntp_poll", DT_NUMBER|D_INTEGER_NOT_NEGATIVE, 60, 0, NULL,
-	  { "nntp_user", DT_STRING|D_SENSITIVE, 0, 0, NULL,
-	  { "post_moderated", DT_QUAD, MUTT_ASKYES, 0, NULL,
-	  { "save_unsubscribed", DT_BOOL, false, 0, NULL,
-	  { "show_new_news", DT_BOOL, true, 0, NULL,
-	  { "x_comment_to", DT_BOOL, false, 0, NULL,
 
 ----------------------------------------------------------------------------------------------------------
 
@@ -43,8 +25,7 @@ nntp.md
 - **Type:** quadoption
 - **Default:** ask-yes
 
-If this variable is *set*, NeoMutt will mark all articles in newsgroup
-as read when you quit the newsgroup (catchup newsgroup).
+If this variable is _set_, NeoMutt will mark all articles in newsgroup as read when you quit the newsgroup (catchup newsgroup).
 
 ----------------------------------------------------------------------------------------------------------
 
@@ -54,10 +35,8 @@ as read when you quit the newsgroup (catchup newsgroup).
 - **Type:** quadoption
 - **Default:** ask-yes
 
-If this variable is *set* and the keyword "poster" is present in
-*Followup-To* header, follow-up to newsgroup function is not
-permitted.  The message will be mailed to the submitter of the
-message via mail.
+If this variable is _set_ and the keyword "poster" is present in _Followup-To_ header, follow-up to newsgroup function is not permitted.
+The message will be mailed to the submitter of the message via mail.
 
 ----------------------------------------------------------------------------------------------------------
 
@@ -77,9 +56,8 @@ Character set of newsgroups descriptions.
 - **Type:** path
 - **Default:** "`~/.newsrc`"
 
-The file, containing info about subscribed newsgroups - names and
-indexes of read articles.  The following printf-style sequence
-is understood:
+The file, containing info about subscribed newsgroups - names and indexes of read articles.
+The following printf-style sequence is understood:
 
 | Short | Long Name     | Description       |
 |-------|---------------|------------------|
@@ -98,9 +76,8 @@ is understood:
 - **Type:** path
 - **Default:** "`~/.neomutt`"
 
-This variable pointing to directory where NeoMutt will save cached news
-articles and headers in. If *unset*, articles and headers will not be
-saved at all and will be reloaded from the server each time.
+This variable pointing to directory where NeoMutt will save cached news articles and headers in.
+If _unset_, articles and headers will not be saved at all and will be reloaded from the server each time.
 
 ----------------------------------------------------------------------------------------------------------
 
@@ -112,12 +89,9 @@ saved at all and will be reloaded from the server each time.
 
 This variable specifies domain name or address of NNTP server.
 
-You can also specify username and an alternative port for each news server,
-e.g. `[[s]news://][username[:password]@]server[:port]`
+You can also specify username and an alternative port for each news server, e.g. `[[s]news://][username[:password]@]server[:port]`
 
-This option can also be set using the command line option "-g", the
-environment variable `$NNTPSERVER`, or putting the server name in the
-file "/etc/nntpserver".
+This option can also be set using the command line option "-g", the environment variable `$$$NNTPSERVER`, or putting the server name in the file "/etc/nntpserver".
 
 ----------------------------------------------------------------------------------------------------------
 
@@ -127,23 +101,21 @@ file "/etc/nntpserver".
 - **Type:** string
 - **Default:** (empty)
 
-This is a colon-delimited list of authentication methods NeoMutt may
-attempt to use to log in to a news server, in the order NeoMutt should
-try them.  Authentication methods are either "user" or any
-SASL mechanism, e.g. "digest-md5", "gssapi" or "cram-md5".
-This option is case-insensitive.  If it's *unset* (the default)
-NeoMutt will try all available methods, in order from most-secure to
-least-secure.
+This is a colon-delimited list of authentication methods NeoMutt may attempt to use to log in to a news server, in the order NeoMutt should try them.
+Authentication methods are either "user" or any SASL mechanism, e.g.
+"digest-md5", "gssapi" or "cram-md5".
+This option is case-insensitive.
+If it's _unset_ (the default)
+NeoMutt will try all available methods, in order from most-secure to least-secure.
 
 Example:
-
-```neomuttrc
-set nntp_authenticators="digest-md5:user"
+```
+set nntp_authenticators="digest-md5:user" 
 ```
 
-**Note:** NeoMutt will only fall back to other authentication methods if
-the previous methods are unavailable. If a method is available but
-authentication fails, NeoMutt will not connect to the IMAP server.
+**Note:** NeoMutt will only fall back to other authentication methods if the previous methods are unavailable.
+If a method is available but authentication fails, NeoMutt will not connect to the IMAP server.
+
 
 ----------------------------------------------------------------------------------------------------------
 
@@ -153,10 +125,9 @@ authentication fails, NeoMutt will not connect to the IMAP server.
 - **Type:** number (long)
 - **Default:** 1000
 
-This variable defines number of articles which will be in index when
-newsgroup entered.  If active newsgroup have more articles than this
-number, oldest articles will be ignored.  Also controls how many
-articles headers will be saved in cache when you quit newsgroup.
+This variable defines number of articles which will be in index when newsgroup entered.
+If active newsgroup have more articles than this number, oldest articles will be ignored.
+Also controls how many articles headers will be saved in cache when you quit newsgroup.
 
 ----------------------------------------------------------------------------------------------------------
 
@@ -166,8 +137,7 @@ articles headers will be saved in cache when you quit newsgroup.
 - **Type:** boolean
 - **Default:** yes
 
-This variable controls whether or not existence of each article is
-checked when newsgroup is entered.
+This variable controls whether or not existence of each article is checked when newsgroup is entered.
 
 ----------------------------------------------------------------------------------------------------------
 
@@ -177,9 +147,7 @@ checked when newsgroup is entered.
 - **Type:** boolean
 - **Default:** yes
 
-This variable controls whether or not descriptions for each newsgroup
-must be loaded when newsgroup is added to list (first time list
-loading or new newsgroup adding).
+This variable controls whether or not descriptions for each newsgroup must be loaded when newsgroup is added to list (first time list loading or new newsgroup adding).
 
 ----------------------------------------------------------------------------------------------------------
 
@@ -199,10 +167,8 @@ Your password for NNTP account.
 - **Type:** number
 - **Default:** 60
 
-The time in seconds until any operations on newsgroup except post new
-article will cause recheck for new news.  If set to 0, NeoMutt will
-recheck newsgroup on each operation in index (stepping, read article,
-etc.).
+The time in seconds until any operations on newsgroup except post new article will cause recheck for new news.
+If set to 0, NeoMutt will recheck newsgroup on each operation in index (stepping, read article, etc.).
 
 ----------------------------------------------------------------------------------------------------------
 
@@ -212,9 +178,8 @@ etc.).
 - **Type:** string
 - **Default:** (empty)
 
-Your login name on the NNTP server.  If *unset* and NNTP server requires
-authentication, NeoMutt will prompt you for your account name when you
-connect to news server.
+Your login name on the NNTP server.
+If _unset_ and NNTP server requires authentication, NeoMutt will prompt you for your account name when you connect to news server.
 
 ----------------------------------------------------------------------------------------------------------
 
@@ -224,10 +189,8 @@ connect to news server.
 - **Type:** quadoption
 - **Default:** ask-yes
 
-If set to *yes*, NeoMutt will post article to newsgroup that have
-not permissions to posting (e.g. moderated).  **Note:** if news server
-does not support posting to that newsgroup or totally read-only, that
-posting will not have an effect.
+If set to _yes_, NeoMutt will post article to newsgroup that have not permissions to posting (e.g. moderated).
+**Note:** if news server does not support posting to that newsgroup or totally read-only, that posting will not have an effect.
 
 ----------------------------------------------------------------------------------------------------------
 
@@ -237,8 +200,7 @@ posting will not have an effect.
 - **Type:** boolean
 - **Default:** no
 
-When *set*, info about unsubscribed newsgroups will be saved into
-"newsrc" file and into cache.
+When _set_, info about unsubscribed newsgroups will be saved into "newsrc" file and into cache.
 
 ----------------------------------------------------------------------------------------------------------
 
@@ -248,10 +210,9 @@ When *set*, info about unsubscribed newsgroups will be saved into
 - **Type:** boolean
 - **Default:** yes
 
-If *set*, news server will be asked for new newsgroups on entering
-the browser.  Otherwise, it will be done only once for a news server.
-Also controls whether or not number of new articles of subscribed
-newsgroups will be then checked.
+If _set_, news server will be asked for new newsgroups on entering the browser.
+Otherwise, it will be done only once for a news server.
+Also controls whether or not number of new articles of subscribed newsgroups will be then checked.
 
 ----------------------------------------------------------------------------------------------------------
 
@@ -261,6 +222,5 @@ newsgroups will be then checked.
 - **Type:** boolean
 - **Default:** no
 
-If *set*, NeoMutt will add "X-Comment-To:" field (that contains full
-name of original article author) to article that followuped to newsgroup.
+If _set_, NeoMutt will add "X-Comment-To:" field (that contains full name of original article author) to article that followuped to newsgroup.
 

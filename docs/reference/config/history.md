@@ -16,12 +16,6 @@ how-to guides and explanation pages instead.
 :::
 
 
-history.md
-	  { "history", DT_NUMBER|D_INTEGER_NOT_NEGATIVE, 10, 0, NULL,
-	  { "history_file", DT_PATH|D_PATH_FILE, IP "~/.mutthistory", 0, NULL,
-	  { "history_format", DT_EXPANDO, IP "%s", IP &HistoryFormatDef, NULL,
-	  { "history_remove_dups", DT_BOOL, false, 0, NULL,
-	  { "save_history", DT_NUMBER|D_INTEGER_NOT_NEGATIVE, 0, 0, NULL,
 
 ----------------------------------------------------------------------------------------------------------
 
@@ -31,18 +25,14 @@ history.md
 - **Type:** number
 - **Default:** `10`
 
-This variable controls the size (in number of strings remembered) of
-the string history buffer per category. The buffer is cleared each time the
-variable is set.
+This variable controls the size (in number of strings remembered) of the string history buffer per category.
+The buffer is cleared each time the variable is set.
 
-Note that strings (e.g. commands) starting with a space are never recorded
-in the history.  This is for example useful to prevent leaking sensitive
-information into the history file or for one off tests.
+Note that strings (e.g. commands) starting with a space are never recorded in the history.
+This is for example useful to prevent leaking sensitive information into the history file or for one off tests.
 
-Also note that a string is not added to the history if it exactly matches
-its immediate predecessor, e.g. executing the same command twice in a row
-results in only one copy being added to the history.  To prevent duplicates
-over all entries use [$history_remove_dups](#history-remove-dups).
+Also note that a string is not added to the history if it exactly matches its immediate predecessor, e.g. executing the same command twice in a row results in only one copy being added to the history.
+To prevent duplicates over all entries use $$history_remove_dups.
 
 ----------------------------------------------------------------------------------------------------------
 
@@ -54,7 +44,7 @@ over all entries use [$history_remove_dups](#history-remove-dups).
 
 The file in which NeoMutt will save its history.
 
-Also see `$save_history`.
+Also see $$save_history.
 
 ----------------------------------------------------------------------------------------------------------
 
@@ -64,7 +54,8 @@ Also see `$save_history`.
 - **Type:** string
 - **Default:** `"%s"`
 
-Controls the format of the entries of the history list. This string is similar to `$index_format`, but has its own set of `printf(3)`-like sequences:
+Controls the format of the entries of the history list.
+This string is similar to $$index_format, but has its own set of `printf(3)`-like sequences:
 
 | Short  | Long Name           | Description                                                     |
 |--------|---------------------|-----------------------------------------------------------------|
@@ -82,7 +73,8 @@ Controls the format of the entries of the history list. This string is similar t
 - **Type:** boolean
 - **Default:** `no`
 
-When *set*, all of the string history will be scanned for duplicates when a new entry is added. Duplicate entries in the [`$history_file`](#history-file) will also be removed when it is periodically compacted.
+When _set_, all of the string history will be scanned for duplicates when a new entry is added.
+Duplicate entries in the $$history_file will also be removed when it is periodically compacted.
 
 ----------------------------------------------------------------------------------------------------------
 
@@ -92,10 +84,8 @@ When *set*, all of the string history will be scanned for duplicates when a new 
 - **Type:** number
 - **Default:** 0
 
-This variable controls the size of the history (per category) saved in the
-[$history_file](#history-file) file.
+This variable controls the size of the history (per category) saved in the $$history_file file.
 
-Setting this to a value greater than `$history` is possible.  However, there
-will never be more than `$history` entries to select from even if more are
-recorded in the history file.
+Setting this to a value greater than $$history is possible.
+However, there will never be more than $$history entries to select from even if more are recorded in the history file.
 

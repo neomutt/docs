@@ -16,30 +16,6 @@ how-to guides and explanation pages instead.
 :::
 
 
-index.md
-	  { "beep_new", DT_BOOL, false, 0, NULL,
-	  { "change_folder_next", DT_BOOL, false, 0, NULL,
-	  { "collapse_all", DT_BOOL, false, 0, NULL,
-	  { "crypt_chars", DT_MBTABLE, IP "SPsK ", 0, NULL,
-	  { "flag_chars", DT_MBTABLE, IP "*!DdrONon- ", 0, NULL,
-	  { "from_chars", DT_MBTABLE, 0, 0, NULL,
-	  { "index_format", DT_EXPANDO|D_NOT_EMPTY, IP "%4C %Z %{%b %d} %-15.15L (%<l?%4l&%4c>) %s", IP &IndexFormatDef, NULL,
-	  { "mark_macro_prefix", DT_STRING, IP "'", 0, NULL,
-	  { "new_mail_command", DT_EXPANDO|D_STRING_COMMAND, 0, IP StatusFormatDefNoPadding, NULL,
-	  { "quit", DT_QUAD, MUTT_YES, 0, NULL,
-	  { "read_only", DT_BOOL, false, 0, NULL,
-	  { "status_format", DT_EXPANDO|D_L10N_STRING, IP N_("-%r-NeoMutt: %D [Msgs:%<M?%M/>%m%<n? New:%n>%<o? Old:%o>%<d? Del:%d>%<F? Flag:%F>%<t? Tag:%t>%<p? Post:%p>%<b? Inc:%b>%<l? %l>]---(%<T?%T/>%s/%S)-%>-(%P)---"), IP &StatusFormatDef, NULL,
-	  { "status_chars", DT_MBTABLE, IP "-*%A", 0, NULL,
-	  { "to_chars", DT_MBTABLE, IP " +TCFLR", 0, NULL,
-	  { "ts_enabled", DT_BOOL, false, 0, NULL,
-	  { "ts_icon_format", DT_EXPANDO|D_L10N_STRING, IP N_("M%<n?AIL&ail>"), IP StatusFormatDefNoPadding, NULL,
-	  { "ts_status_format", DT_EXPANDO|D_L10N_STRING, IP N_("NeoMutt with %<m?%m messages&no messages>%<n? [%n NEW]>"), IP StatusFormatDefNoPadding, NULL,
-	  { "uncollapse_jump", DT_BOOL, false, 0, NULL,
-	  { "uncollapse_new", DT_BOOL, true, 0, NULL,
-	  { "hdr_format",       DT_SYNONYM, IP "index_format",   IP "2021-03-21" },
-	  { "xterm_icon",       DT_SYNONYM, IP "ts_icon_format", IP "2021-03-21" },
-	  { "xterm_set_titles", DT_SYNONYM, IP "ts_enabled",     IP "2021-03-21" },
-	  { "xterm_title",      DT_SYNONYM, IP "ts_status_format", IP "2021-03-21" },
 
 ----------------------------------------------------------------------------------------------------------
 
@@ -49,9 +25,8 @@ index.md
 - **Type:** boolean
 - **Default:** no
 
-When this variable is *set*, NeoMutt will beep whenever it prints a
-message notifying you of new mail. This is independent of the setting of the
-[$beep](#beep) variable.
+When this variable is _set_, NeoMutt will beep whenever it prints a message notifying you of new mail.
+This is independent of the setting of the $$beep variable.
 
 ----------------------------------------------------------------------------------------------------------
 
@@ -61,9 +36,7 @@ message notifying you of new mail. This is independent of the setting of the
 - **Type:** boolean
 - **Default:** no
 
-When this variable is *set*, the `<change-folder>` function
-mailbox suggestion will start at the next folder in your "`mailboxes`"
-list, instead of starting at the first folder in the list.
+When this variable is _set_, the `<change-folder>` function mailbox suggestion will start at the next folder in your "$mailboxes" list, instead of starting at the first folder in the list.
 
 ----------------------------------------------------------------------------------------------------------
 
@@ -73,7 +46,7 @@ list, instead of starting at the first folder in the list.
 - **Type:** boolean
 - **Default:** no
 
-When *set*, NeoMutt will collapse all threads when entering a folder.
+When _set_, NeoMutt will collapse all threads when entering a folder.
 
 ----------------------------------------------------------------------------------------------------------
 
@@ -125,8 +98,7 @@ Controls the characters used in several flags.
 - **Type:** character string
 - **Default:** (empty)
 
-Controls the character used to prefix the %F and %L fields in the
-index.
+Controls the character used to prefix the %F and %L fields in the index.
 
 | Character | Description                                                                                 |
 |-----------|---------------------------------------------------------------------------------------------|
@@ -135,16 +107,12 @@ index.
 | 3         | Mail is written by you and has a Bcc address.                                               |
 | 4         | All remaining cases.                                                                        |
 
-If this is empty or unset (default), the traditional long "To ",
-"Cc " and "Bcc " prefixes are used.  If set but too short to
-include a character for a particular case, a single space will be
-prepended to the field.  To prevent any prefix at all from being
-added in a particular case, use the special value CR (aka ^M)
+If this is empty or unset (default), the traditional long "To ", "Cc " and "Bcc " prefixes are used.
+If set but too short to include a character for a particular case, a single space will be prepended to the field.
+To prevent any prefix at all from being added in a particular case, use the special value CR (aka ^M)
 for the corresponding character.
 
-This slightly odd interface is necessitated by NeoMutt's handling of
-string variables; one can't tell a variable that is unset from one
-that is set to the empty string.
+This slightly odd interface is necessitated by NeoMutt's handling of string variables; one can't tell a variable that is unset from one that is set to the empty string.
 
 ----------------------------------------------------------------------------------------------------------
 
@@ -154,13 +122,11 @@ that is set to the empty string.
 - **Type:** string
 - **Default:** "`%4C %Z %{%b %d} %-15.15L (%<l?%4l&%4c>) %s`"
 
-This variable allows you to customize the message index display to
-your personal taste.
+This variable allows you to customize the message index display to your personal taste.
 
-"Format strings" are similar to the strings used in the C function
-`printf(3)` to format output (see the man page for more details). For an
-explanation of the %<...> construct, see the [status_format](#status-format) description. The
-following sequences are defined in NeoMutt:
+"Format strings" are similar to the strings used in the C function `printf(3)` to format output (see the man page for more details).
+For an explanation of the %<...> construct, see the $status_format description.
+The following sequences are defined in NeoMutt:
 
 | Short     | Long Name                | Description                                                                                                                    |
 |-----------|--------------------------|--------------------------------------------------------------------------------------------------------------------------------|
@@ -235,27 +201,18 @@ following sequences are defined in NeoMutt:
 | `%>X`     | `%{padding-hard:X}`      | Right justify the rest of the string and pad with character `X`                                                                |
 | `%\|X`    | `%{padding-eol:X}`       | Pad to the end of the line with character `X`                                                                                  |
 
-Date format expressions can be constructed based on relative dates. Using
-the date formatting operators along with nested conditionals, the date
-format can be modified based on how old a message is.  See the section on
-"Conditional Dates" for an explanation and examples
+Date format expressions can be constructed based on relative dates.
+Using the date formatting operators along with nested conditionals, the date format can be modified based on how old a message is.
+See the section on "Conditional Dates" for an explanation and examples.
 
-Note that for mbox/mmdf, "%l" applies to the unprocessed message, and
-for maildir/mh, the value comes from the "Lines:" header field when
-present (the meaning is normally the same). Thus the value depends on
-the encodings used in the different parts of the message and has little
-meaning in practice.
+Note that for mbox/mmdf, "%l" applies to the unprocessed message, and for maildir/mh, the value comes from the "Lines:" header field when present (the meaning is normally the same).
+Thus the value depends on the encodings used in the different parts of the message and has little meaning in practice.
 
-"Soft-fill" deserves some explanation: Normal right-justification
-will print everything to the left of the "%>", displaying padding and
-whatever lies to the right only if there's room. By contrast,
-soft-fill gives priority to the right-hand side, guaranteeing space
-to display it and showing padding only if there's still room. If
-necessary, soft-fill will eat text leftwards to make room for
-rightward text.
+"Soft-fill" deserves some explanation: Normal right-justification will print everything to the left of the "%>", displaying padding and whatever lies to the right only if there's room.
+By contrast, soft-fill gives priority to the right-hand side, guaranteeing space to display it and showing padding only if there's still room.
+If necessary, soft-fill will eat text leftwards to make room for rightward text.
 
-Note that these expandos are supported in
-"`save-hook`", "`fcc-hook`" and "`fcc-save-hook`", too.
+Note that these expandos are supported in "$save-hook", "$fcc-hook" and "$fcc-save-hook", too.
 
 ----------------------------------------------------------------------------------------------------------
 
@@ -265,9 +222,8 @@ Note that these expandos are supported in
 - **Type:** string
 - **Default:** "`'`"
 
-Prefix for macros created using mark-message.  A new macro
-automatically generated with *<mark-message>a* will be composed
-from this prefix and the letter *a*.
+Prefix for macros created using mark-message.
+A new macro automatically generated with _<mark-message>a_ will be composed from this prefix and the letter _a_.
 
 ----------------------------------------------------------------------------------------------------------
 
@@ -277,9 +233,8 @@ from this prefix and the letter *a*.
 - **Type:** command
 - **Default:** (empty)
 
-If *set*, NeoMutt will call this command after a new message is received.
-See the [$status_format](#status-format) documentation for the values that can be formatted
-into this command.
+If _set_, NeoMutt will call this command after a new message is received.
+See the $$status_format documentation for the values that can be formatted into this command.
 
 ----------------------------------------------------------------------------------------------------------
 
@@ -290,13 +245,10 @@ into this command.
 - **Default:** yes
 
 This variable controls whether "quit" and "exit" actually quit from NeoMutt.
-If this option is *set*, they do quit, if it is *unset*, they have no
-effect, and if it is set to *ask-yes* or *ask-no*, you are prompted
-for confirmation when you try to quit.
+If this option is _set_, they do quit, if it is _unset_, they have no effect, and if it is set to _ask-yes_ or _ask-no_, you are prompted for confirmation when you try to quit.
 
-In order to quit from NeoMutt if this variable is *unset*, you must send
-the signal SIGINT to NeoMutt.  This can usually be achieved by pressing
-CTRL-C in the terminal.
+In order to quit from NeoMutt if this variable is _unset_, you must send the signal SIGINT to NeoMutt.
+This can usually be achieved by pressing CTRL-C in the terminal.
 
 ----------------------------------------------------------------------------------------------------------
 
@@ -306,7 +258,7 @@ CTRL-C in the terminal.
 - **Type:** boolean
 - **Default:** no
 
-If *set*, all folders are opened in read-only mode.
+If _set_, all folders are opened in read-only mode.
 
 ----------------------------------------------------------------------------------------------------------
 
@@ -316,7 +268,8 @@ If *set*, all folders are opened in read-only mode.
 - **Type:** string
 - **Default:** `"-%r-NeoMutt: %D [Msgs:%<M?%M/>%m%<n? New:%n>%<o? Old:%o>%<d? Del:%d>%<F? Flag:%F>%<t? Tag:%t>%<p? Post:%p>%<b? Inc:%b>%<l? %l>]---(%<T?%T/>%s/%S)-%>-(%P)---"`
 
-Controls the format of the status line displayed in the "index" menu. This string is similar to `$index_format`, but has its own set of `printf(3)`-like sequences:
+Controls the format of the status line displayed in the "index" menu.
+This string is similar to $$index_format, but has its own set of `printf(3)`-like sequences:
 
 | Short  | Long Name             | Description                                                                                            |
 |--------|-----------------------|--------------------------------------------------------------------------------------------------------|
@@ -347,15 +300,18 @@ Controls the format of the status line displayed in the "index" menu. This strin
 | `%>X`  | `%{padding-hard:X}`   | Right justify the rest of the string and pad with character `X`                                        |
 | `%\|X` | `%{padding-eol:X}`    | Pad to the end of the line with character `X`                                                          |
 
-For an explanation of "soft-fill", see the `$index_format` documentation.
+For an explanation of "soft-fill", see the $$index_format documentation.
 
-\* = can be optionally printed if nonzero
+* = can be optionally printed if nonzero 
 
-Some of the above sequences can be used to optionally print a string if their value is nonzero. For example, you may only want to see the number of flagged messages if such messages exist, since zero is not particularly meaningful. To optionally print a string based upon one of the above sequences, the following construct is used:
+Some of the above sequences can be used to optionally print a string if their value is nonzero.
+For example, you may only want to see the number of flagged messages if such messages exist, since zero is not particularly meaningful.
+To optionally print a string based upon one of the above sequences, the following construct is used:
 
 `%<sequence_char?optional_string>`
 
-where *sequence_char* is a character from the table above, and *optional_string* is the string you would like printed if *sequence_char* is nonzero. *optional_string* **may** contain other sequences as well as normal text.
+where _sequence_char_ is a character from the table above, and _optional_string_ is the string you would like printed if _sequence_char_ is nonzero.
+_optional_string_ **may** contain other sequences as well as normal text.
 
 Here is an example illustrating how to optionally print the number of new messages in a mailbox:
 
@@ -365,15 +321,18 @@ You can also switch between two strings using the following construct:
 
 `%<sequence_char?if_string&else_string>`
 
-If the value of *sequence_char* is non-zero, *if_string* will be expanded, otherwise *else_string* will be expanded.
+If the value of _sequence_char_ is non-zero, _if_string_ will be expanded, otherwise _else_string_ will be expanded.
 
-As another example, here is how to show either `$sort` and `$sort_aux` or `$use_threads` and `$sort`, based on whether threads are enabled with `$use_threads`:
+As another example, here is how to show either $$sort and $$sort_aux or $$use_threads and $$sort, based on whether threads are enabled with $$use_threads:
 
 `%<T?%s/%S&%T/%s>`
 
-You can force the result of any `printf(3)`-like sequence to be lowercase by prefixing the sequence character with an underscore ("\_") sign. For example, if you want to display the local hostname in lowercase, you would use: "`%_h`".
+You can force the result of any `printf(3)`-like sequence to be lowercase by prefixing the sequence character with an underscore ("_")
+sign.
+For example, if you want to display the local hostname in lowercase, you would use: "`%_h`".
 
-If you prefix the sequence character with a colon (":") character, NeoMutt will replace any dots in the expansion by underscores. This might be helpful with IMAP folders that don't like dots in folder names.
+If you prefix the sequence character with a colon (":") character, NeoMutt will replace any dots in the expansion by underscores.
+This might be helpful with IMAP folders that don't like dots in folder names.
 
 ----------------------------------------------------------------------------------------------------------
 
@@ -383,7 +342,7 @@ If you prefix the sequence character with a colon (":") character, NeoMutt will 
 - **Type:** character string
 - **Default:** `"-*%A"`
 
-Controls the characters used by the "%r" indicator in [`$status_format`](#status-format).
+Controls the characters used by the "%r" indicator in $$status_format.
 
 | Character | Default | Description                                                                                                                                                                    |
 |-----------|---------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -431,9 +390,8 @@ Most terminal emulators emulate the status line in the window title.
 - **Type:** string
 - **Default:** "`M%<n?AIL&ail>`"
 
-Controls the format of the icon title, as long as "[$ts_enabled](#ts-enabled)" is set.
-This string is identical in formatting to the one used by
-"[$status_format](#status-format)".
+Controls the format of the icon title, as long as "$$ts_enabled" is set.
+This string is identical in formatting to the one used by "$$status_format".
 
 ----------------------------------------------------------------------------------------------------------
 
@@ -443,9 +401,8 @@ This string is identical in formatting to the one used by
 - **Type:** string
 - **Default:** "`NeoMutt with %<m?%m messages&no messages>%<n? [%n NEW]>`"
 
-Controls the format of the terminal status line (or window title),
-provided that "[$ts_enabled](#ts-enabled)" has been set. This string is identical in
-formatting to the one used by "[$status_format](#status-format)".
+Controls the format of the terminal status line (or window title), provided that "$$ts_enabled" has been set.
+This string is identical in formatting to the one used by "$$status_format".
 
 ----------------------------------------------------------------------------------------------------------
 
@@ -455,8 +412,7 @@ formatting to the one used by "[$status_format](#status-format)".
 - **Type:** boolean
 - **Default:** no
 
-When *set*, NeoMutt will jump to the next unread message, if any,
-when the current thread is *un*collapsed.
+When _set_, NeoMutt will jump to the next unread message, if any, when the current thread is _un_collapsed.
 
 ----------------------------------------------------------------------------------------------------------
 
@@ -466,9 +422,7 @@ when the current thread is *un*collapsed.
 - **Type:** boolean
 - **Default:** yes
 
-When *set*, NeoMutt will automatically uncollapse any collapsed
-thread that receives a newly delivered message.  When
-*unset*, collapsed threads will remain collapsed. The
-presence of the newly delivered message will still affect index
-sorting, though.
+When _set_, NeoMutt will automatically uncollapse any collapsed thread that receives a newly delivered message.
+When _unset_, collapsed threads will remain collapsed.
+The presence of the newly delivered message will still affect index sorting, though.
 

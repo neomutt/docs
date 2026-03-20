@@ -15,11 +15,6 @@ Mirror the structure of the software itself. Avoid instruction or explanation â€
 how-to guides and explanation pages instead.
 :::
 
-
-address.md
-	  { "idn_decode", DT_BOOL, true, 0, NULL,
-	  { "idn_encode", DT_BOOL, true, 0, NULL,
-
 ----------------------------------------------------------------------------------------------------------
 
 (idn-decode)=
@@ -28,9 +23,10 @@ address.md
 - **Type:** boolean
 - **Default:** yes
 
-When *set*, NeoMutt will show you international domain names decoded.
-Note: You can use IDNs for addresses even if this is *unset*.
-This variable only affects decoding. (IDN only)
+When _set_, NeoMutt will show you international domain names decoded.
+Note: You can use IDNs for addresses even if this is _unset_.
+This variable only affects decoding.
+(IDN only)
 
 ----------------------------------------------------------------------------------------------------------
 
@@ -40,7 +36,8 @@ This variable only affects decoding. (IDN only)
 - **Type:** boolean
 - **Default:** yes
 
-When *set*, NeoMutt will encode international domain names using
-IDN.  Unset this if your SMTP server can handle newer ([RFC6531](https://www.rfc-editor.org/rfc/rfc6531.html))
-UTF-8 encoded domains. (IDN only)
+When _set_, NeoMutt will encode international domain names using IDN.
+Unset this if your SMTP server can handle newer (RFC6531)
+UTF-8 encoded domains.
+(IDN only)
 

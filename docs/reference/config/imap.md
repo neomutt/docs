@@ -16,31 +16,6 @@ how-to guides and explanation pages instead.
 :::
 
 
-imap.md
-	  { "imap_check_subscribed", DT_BOOL, false, 0, NULL,
-	  { "imap_condstore", DT_BOOL, false, 0, NULL,
-	  { "imap_authenticators", DT_SLIST|D_SLIST_SEP_COLON, 0, 0, imap_auth_validator,
-	  { "imap_delim_chars", DT_STRING, IP "/.", 0, NULL,
-	  { "imap_fetch_chunk_size", DT_LONG|D_INTEGER_NOT_NEGATIVE, 0, 0, NULL,
-	  { "imap_headers", DT_STRING, 0, 0, NULL,
-	  { "imap_idle", DT_BOOL, false, 0, NULL,
-	  { "imap_login", DT_STRING|D_SENSITIVE, 0, 0, NULL,
-	  { "imap_oauth_refresh_command", DT_STRING|D_STRING_COMMAND|D_SENSITIVE, 0, 0, NULL,
-	  { "imap_pass", DT_STRING|D_SENSITIVE, 0, 0, NULL,
-	  { "imap_pipeline_depth", DT_NUMBER|D_INTEGER_NOT_NEGATIVE, 15, 0, NULL,
-	  { "imap_rfc5161", DT_BOOL, true, 0, NULL,
-	  { "imap_server_noise", DT_BOOL, true, 0, NULL,
-	  { "imap_keep_alive", DT_NUMBER|D_INTEGER_NOT_NEGATIVE, 300, 0, NULL,
-	  { "imap_list_subscribed", DT_BOOL, false, 0, NULL,
-	  { "imap_passive", DT_BOOL, true, 0, NULL,
-	  { "imap_peek", DT_BOOL, true, 0, NULL,
-	  { "imap_poll_timeout", DT_NUMBER|D_INTEGER_NOT_NEGATIVE, 15, 0, NULL,
-	  { "imap_qresync", DT_BOOL, false, 0, NULL,
-	  { "imap_send_id", DT_BOOL, false, 0, NULL,
-	  { "imap_user", DT_STRING|D_SENSITIVE, 0, 0, NULL,
-	  { "imap_keepalive",   DT_SYNONYM, IP "imap_keep_alive",   IP "2023-05-31" },
-	  { "imap_servernoise", DT_SYNONYM, IP "imap_server_noise", IP "2021-02-11" },
-	  { "imap_deflate", DT_BOOL, true, 0, NULL,
 
 ----------------------------------------------------------------------------------------------------------
 
@@ -50,10 +25,7 @@ imap.md
 - **Type:** boolean
 - **Default:** no
 
-When *set*, NeoMutt will fetch the set of subscribed folders from
-your server whenever a mailbox is **selected**, and add them to the set
-of mailboxes it polls for new mail just as if you had issued individual
-`mailboxes` commands.
+When _set_, NeoMutt will fetch the set of subscribed folders from your server whenever a mailbox is **selected**, and add them to the set of mailboxes it polls for new mail just as if you had issued individual "$mailboxes" commands.
 
 ----------------------------------------------------------------------------------------------------------
 
@@ -63,14 +35,13 @@ of mailboxes it polls for new mail just as if you had issued individual
 - **Type:** boolean
 - **Default:** no
 
-When *set*, NeoMutt will use the CONDSTORE extension ([RFC7162](https://www.rfc-editor.org/rfc/rfc7162.html))
-if advertised by the server.  NeoMutt's current implementation is basic,
-used only for initial message fetching and flag updates.
+When _set_, NeoMutt will use the CONDSTORE extension (RFC7162)
+if advertised by the server.
+NeoMutt's current implementation is basic, used only for initial message fetching and flag updates.
 
-For some IMAP servers, enabling this will slightly speed up
-downloading initial messages.  Unfortunately, Gmail is not one
-those, and displays worse performance when enabled.  Your
-mileage may vary.
+For some IMAP servers, enabling this will slightly speed up downloading initial messages.
+Unfortunately, Gmail is not one those, and displays worse performance when enabled.
+Your mileage may vary.
 
 ----------------------------------------------------------------------------------------------------------
 
@@ -80,23 +51,19 @@ mileage may vary.
 - **Type:** string list
 - **Default:** (empty)
 
-This is a colon-separated list of authentication methods NeoMutt may
-attempt to use to log in to an IMAP server, in the order NeoMutt should
-try them.  Authentication methods are either "login" or the right
-side of an IMAP "AUTH=xxx" capability string, e.g. "digest-md5", "gssapi"
-or "cram-md5". This option is case-insensitive. If it's
-*unset* (the default) NeoMutt will try all available methods,
-in order from most-secure to least-secure.
+This is a colon-separated list of authentication methods NeoMutt may attempt to use to log in to an IMAP server, in the order NeoMutt should try them.
+Authentication methods are either "login" or the right side of an IMAP "AUTH=xxx" capability string, e.g.
+"digest-md5", "gssapi" or "cram-md5".
+This option is case-insensitive.
+If it's _unset_ (the default) NeoMutt will try all available methods, in order from most-secure to least-secure.
 
 Example:
-
-```neomuttrc
-set imap_authenticators="gssapi:cram-md5:login"
+```
+set imap_authenticators="gssapi:cram-md5:login" 
 ```
 
-**Note:** NeoMutt will only fall back to other authentication methods if
-the previous methods are unavailable. If a method is available but
-authentication fails, NeoMutt will not connect to the IMAP server.
+**Note:** NeoMutt will only fall back to other authentication methods if the previous methods are unavailable.
+If a method is available but authentication fails, NeoMutt will not connect to the IMAP server.
 
 ----------------------------------------------------------------------------------------------------------
 
@@ -106,9 +73,7 @@ authentication fails, NeoMutt will not connect to the IMAP server.
 - **Type:** string
 - **Default:** "`/.`"
 
-This contains the list of characters that NeoMutt will use as folder
-separators for IMAP paths, when no separator is provided on the IMAP
-connection.
+This contains the list of characters that NeoMutt will use as folder separators for IMAP paths, when no separator is provided on the IMAP connection.
 
 ----------------------------------------------------------------------------------------------------------
 
@@ -118,12 +83,8 @@ connection.
 - **Type:** number (long)
 - **Default:** 0
 
-When set to a value greater than 0, new headers will be
-downloaded in groups of this many headers per request.  If you
-have a very large mailbox, this might prevent a timeout and
-disconnect when opening the mailbox, by sending a FETCH per set
-of this many headers, instead of a single FETCH for all new
-headers.
+When set to a value greater than 0, new headers will be downloaded in groups of this many headers per request.
+If you have a very large mailbox, this might prevent a timeout and disconnect when opening the mailbox, by sending a FETCH per set of this many headers, instead of a single FETCH for all new headers.
 
 ----------------------------------------------------------------------------------------------------------
 
@@ -133,16 +94,11 @@ headers.
 - **Type:** string
 - **Default:** (empty)
 
-NeoMutt requests these header fields in addition to the default headers
-("Date:", "From:", "Sender:", "Subject:", "To:", "Cc:", "Message-Id:",
-"References:", "Content-Type:", "Content-Description:", "In-Reply-To:",
-"Reply-To:", "Lines:", "List-Post:", "X-Label:") from IMAP
-servers before displaying the index menu. You may want to add more
-headers for spam detection.
+NeoMutt requests these header fields in addition to the default headers ("Date:", "From:", "Sender:", "Subject:", "To:", "Cc:", "Message-Id:", "References:", "Content-Type:", "Content-Description:", "In-Reply-To:", "Reply-To:", "Lines:", "List-Post:", "X-Label:") from IMAP servers before displaying the index menu.
+You may want to add more headers for spam detection.
 
-**Note:** This is a space separated list, items should be uppercase
-and not contain the colon, e.g. "X-BOGOSITY X-SPAM-STATUS" for the
-"X-Bogosity:" and "X-Spam-Status:" header fields.
+**Note:** This is a space separated list, items should be uppercase and not contain the colon, e.g.
+"X-BOGOSITY X-SPAM-STATUS" for the "X-Bogosity:" and "X-Spam-Status:" header fields.
 
 ----------------------------------------------------------------------------------------------------------
 
@@ -152,11 +108,9 @@ and not contain the colon, e.g. "X-BOGOSITY X-SPAM-STATUS" for the
 - **Type:** boolean
 - **Default:** no
 
-When *set*, NeoMutt will attempt to use the IMAP IDLE extension
-to check for new mail in the current mailbox. Some servers
-(dovecot was the inspiration for this option) react badly
-to NeoMutt's implementation. If your connection seems to freeze
-up periodically, try unsetting this.
+When _set_, NeoMutt will attempt to use the IMAP IDLE extension to check for new mail in the current mailbox.
+Some servers (dovecot was the inspiration for this option) react badly to NeoMutt's implementation.
+If your connection seems to freeze up periodically, try unsetting this.
 
 ----------------------------------------------------------------------------------------------------------
 
@@ -168,7 +122,7 @@ up periodically, try unsetting this.
 
 Your login name on the IMAP server.
 
-This variable defaults to the value of [$imap_user](#imap-user).
+This variable defaults to the value of $$imap_user.
 
 ----------------------------------------------------------------------------------------------------------
 
@@ -178,10 +132,9 @@ This variable defaults to the value of [$imap_user](#imap-user).
 - **Type:** command
 - **Default:** (empty)
 
-The command to run to generate an OAUTH refresh token for
-authorizing your connection to your IMAP server.  This command will be
-run on every connection attempt that uses the OAUTHBEARER or XOAUTH2
-authentication mechanisms.  See [OAuth](../../howto/oauth.md) for details.
+The command to run to generate an OAUTH refresh token for authorizing your connection to your IMAP server.
+This command will be run on every connection attempt that uses the OAUTHBEARER or XOAUTH2 authentication mechanisms.
+See "$oauth" for details.
 
 ----------------------------------------------------------------------------------------------------------
 
@@ -191,13 +144,11 @@ authentication mechanisms.  See [OAuth](../../howto/oauth.md) for details.
 - **Type:** string
 - **Default:** (empty)
 
-Specifies the password for your IMAP account. If *unset*, NeoMutt will
-prompt you for your password when you invoke the `<imap-fetch-mail>`
+Specifies the password for your IMAP account.
+If _unset_, NeoMutt will prompt you for your password when you invoke the `<imap-fetch-mail>`
 function or try to open an IMAP folder.
 
-**Warning**: you should only use this option when you are on a
-fairly secure machine, because the superuser can read your neomuttrc even
-if you are the only one who can read the file.
+**Warning**: you should only use this option when you are on a fairly secure machine, because the superuser can read your neomuttrc even if you are the only one who can read the file.
 
 ----------------------------------------------------------------------------------------------------------
 
@@ -207,11 +158,9 @@ if you are the only one who can read the file.
 - **Type:** number
 - **Default:** 15
 
-Controls the number of IMAP commands that may be queued up before they
-are sent to the server. A deeper pipeline reduces the amount of time
-NeoMutt must wait for the server, and can make IMAP servers feel much
-more responsive. But not all servers correctly handle pipelined commands,
-so if you have problems you might want to try setting this variable to 0.
+Controls the number of IMAP commands that may be queued up before they are sent to the server.
+A deeper pipeline reduces the amount of time NeoMutt must wait for the server, and can make IMAP servers feel much more responsive.
+But not all servers correctly handle pipelined commands, so if you have problems you might want to try setting this variable to 0.
 
 **Note:** Changes to this variable have no effect on open connections.
 
@@ -223,11 +172,10 @@ so if you have problems you might want to try setting this variable to 0.
 - **Type:** boolean
 - **Default:** yes
 
-When *set*, NeoMutt will use the IMAP ENABLE extension ([RFC5161](https://www.rfc-editor.org/rfc/rfc5161.html)) to
-select CAPABILITIES. Some servers (notably Coremail System IMap Server) do
-not properly respond to ENABLE commands, which might cause NeoMutt to hang.
-If your connection seems to freeze at login, try unsetting this. See also
-[https://github.com/neomutt/neomutt/issues/1689](https://github.com/neomutt/neomutt/issues/1689)
+When _set_, NeoMutt will use the IMAP ENABLE extension (RFC5161) to select CAPABILITIES.
+Some servers (notably Coremail System IMap Server) do not properly respond to ENABLE commands, which might cause NeoMutt to hang.
+If your connection seems to freeze at login, try unsetting this.
+See also https://github.com/neomutt/neomutt/issues/1689 
 
 ----------------------------------------------------------------------------------------------------------
 
@@ -237,11 +185,8 @@ If your connection seems to freeze at login, try unsetting this. See also
 - **Type:** boolean
 - **Default:** yes
 
-When *set*, NeoMutt will display warning messages from the IMAP
-server as error messages. Since these messages are often
-harmless, or generated due to configuration problems on the
-server which are out of the users' hands, you may wish to suppress
-them at some point.
+When _set_, NeoMutt will display warning messages from the IMAP server as error messages.
+Since these messages are often harmless, or generated due to configuration problems on the server which are out of the users' hands, you may wish to suppress them at some point.
 
 ----------------------------------------------------------------------------------------------------------
 
@@ -251,13 +196,9 @@ them at some point.
 - **Type:** number
 - **Default:** 300
 
-This variable specifies the maximum amount of time in seconds that NeoMutt
-will wait before polling open IMAP connections, to prevent the server
-from closing them before NeoMutt has finished with them. The default is
-well within the RFC-specified minimum amount of time (30 minutes) before
-a server is allowed to do this, but in practice the RFC does get
-violated every now and then. Reduce this number if you find yourself
-getting disconnected from your IMAP server due to inactivity.
+This variable specifies the maximum amount of time in seconds that NeoMutt will wait before polling open IMAP connections, to prevent the server from closing them before NeoMutt has finished with them.
+The default is well within the RFC-specified minimum amount of time (30 minutes) before a server is allowed to do this, but in practice the RFC does get violated every now and then.
+Reduce this number if you find yourself getting disconnected from your IMAP server due to inactivity.
 
 ----------------------------------------------------------------------------------------------------------
 
@@ -267,9 +208,8 @@ getting disconnected from your IMAP server due to inactivity.
 - **Type:** boolean
 - **Default:** no
 
-This variable configures whether IMAP folder browsing will look for
-only subscribed folders or all folders.  This can be toggled in the
-IMAP browser with the `<toggle-subscribed>` function.
+This variable configures whether IMAP folder browsing will look for only subscribed folders or all folders.
+This can be toggled in the IMAP browser with the `<toggle-subscribed>` function.
 
 ----------------------------------------------------------------------------------------------------------
 
@@ -279,11 +219,9 @@ IMAP browser with the `<toggle-subscribed>` function.
 - **Type:** boolean
 - **Default:** yes
 
-When *set*, NeoMutt will not open new IMAP connections to check for new
-mail.  NeoMutt will only check for new mail over existing IMAP
-connections.  This is useful if you don't want to be prompted for
-user/password pairs on NeoMutt invocation, or if opening the connection
-is slow.
+When _set_, NeoMutt will not open new IMAP connections to check for new mail.
+NeoMutt will only check for new mail over existing IMAP connections.
+This is useful if you don't want to be prompted for user/password pairs on NeoMutt invocation, or if opening the connection is slow.
 
 ----------------------------------------------------------------------------------------------------------
 
@@ -293,10 +231,9 @@ is slow.
 - **Type:** boolean
 - **Default:** yes
 
-When *set*, NeoMutt will avoid implicitly marking your mail as read
-whenever you fetch a message from the server. This is generally a good thing,
-but can make closing an IMAP folder somewhat slower. This option exists to
-appease speed freaks.
+When _set_, NeoMutt will avoid implicitly marking your mail as read whenever you fetch a message from the server.
+This is generally a good thing, but can make closing an IMAP folder somewhat slower.
+This option exists to appease speed freaks.
 
 ----------------------------------------------------------------------------------------------------------
 
@@ -306,10 +243,8 @@ appease speed freaks.
 - **Type:** number
 - **Default:** 15
 
-This variable specifies the maximum amount of time in seconds
-that NeoMutt will wait for a response when polling IMAP connections
-for new mail, before timing out and closing the connection.  Set
-to 0 to disable timing out.
+This variable specifies the maximum amount of time in seconds that NeoMutt will wait for a response when polling IMAP connections for new mail, before timing out and closing the connection.
+Set to 0 to disable timing out.
 
 ----------------------------------------------------------------------------------------------------------
 
@@ -319,13 +254,12 @@ to 0 to disable timing out.
 - **Type:** boolean
 - **Default:** no
 
-When *set*, NeoMutt will use the QRESYNC extension ([RFC7162](https://www.rfc-editor.org/rfc/rfc7162.html))
-if advertised by the server.  NeoMutt's current implementation is basic,
-used only for initial message fetching and flag updates.
+When _set_, NeoMutt will use the QRESYNC extension (RFC7162)
+if advertised by the server.
+NeoMutt's current implementation is basic, used only for initial message fetching and flag updates.
 
-Note: this feature is currently experimental.  If you experience
-strange behavior, such as duplicate or missing messages please
-file a bug report to let us know.
+Note: this feature is currently experimental.
+If you experience strange behavior, such as duplicate or missing messages please file a bug report to let us know.
 
 ----------------------------------------------------------------------------------------------------------
 
@@ -335,9 +269,8 @@ file a bug report to let us know.
 - **Type:** boolean
 - **Default:** no
 
-When *set*, NeoMutt will send an IMAP ID command ([RFC2971](https://www.rfc-editor.org/rfc/rfc2971.html)) to the
-server when logging in if advertised by the server. This command provides
-information about the IMAP client, such as "NeoMutt" and the current version.
+When _set_, NeoMutt will send an IMAP ID command (RFC2971) to the server when logging in if advertised by the server.
+This command provides information about the IMAP client, such as "NeoMutt" and the current version.
 
 ----------------------------------------------------------------------------------------------------------
 
@@ -347,8 +280,7 @@ information about the IMAP client, such as "NeoMutt" and the current version.
 - **Type:** string
 - **Default:** (empty)
 
-The name of the user whose mail you intend to access on the IMAP
-server.
+The name of the user whose mail you intend to access on the IMAP server.
 
 This variable defaults to your user name on the local machine.
 
@@ -360,9 +292,8 @@ This variable defaults to your user name on the local machine.
 - **Type:** boolean
 - **Default:** yes
 
-When *set*, NeoMutt will use the COMPRESS=DEFLATE extension ([RFC4978](https://www.rfc-editor.org/rfc/rfc4978.html))
+When _set_, NeoMutt will use the COMPRESS=DEFLATE extension (RFC4978)
 if advertised by the server.
 
-In general a good compression efficiency can be achieved, which
-speeds up reading large mailboxes also on fairly good connections.
+In general a good compression efficiency can be achieved, which speeds up reading large mailboxes also on fairly good connections.
 
