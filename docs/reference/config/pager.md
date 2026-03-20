@@ -21,7 +21,10 @@ how-to guides and explanation pages instead.
 ## `$allow_ansi`
 
 - **Type:** boolean
-- **Default:** no
+- **Default:**
+    ```
+    set allow_ansi = no
+    ```
 
 Controls whether ANSI color codes in messages (and color tags in rich text messages) are to be interpreted.
 Messages containing these codes are rare, but if this option is _set_, their text will be colored accordingly.
@@ -40,6 +43,9 @@ and give it the same color as your attachment color (see also $$crypt_timestamp)
 
 - **Type:** command (string)
 - **Default:** (empty)
+    ```
+    set display_filter = ""
+    ```
 
 When set, specifies a command used to filter messages.
 When a message is viewed it is passed as standard input to $$display_filter, and the filtered message is read from the standard output.
@@ -59,7 +65,10 @@ This can be fixed by adding this to your config:
 ## `$header_color_partial`
 
 - **Type:** boolean
-- **Default:** no
+- **Default:**
+    ```
+    set header_color_partial = no
+    ```
 
 When _set_, color header regexes behave like color body regexes:
 color is applied to the exact text matched by the regex.
@@ -75,7 +84,10 @@ See "$color" for more details.
 ## `$markers`
 
 - **Type:** boolean
-- **Default:** yes
+- **Default:**
+    ```
+    set markers = yes
+    ```
 
 Controls the display of wrapped lines in the internal pager.
 If set, a "+" marker is displayed at the beginning of wrapped lines.
@@ -89,6 +101,9 @@ Also see the $$smart_wrap variable.
 
 - **Type:** command (string)
 - **Default:** (empty)
+    ```
+    set pager = ""
+    ```
 
 This variable specifies which pager you would like to use to view messages.
 When empty, NeoMutt will use the built-in pager, otherwise this variable should specify the pathname of the external pager you would like to use.
@@ -101,7 +116,10 @@ Using an external pager may have some disadvantages: Additional keystrokes are n
 ## `$pager_context`
 
 - **Type:** number
-- **Default:** 0
+- **Default:**
+    ```
+    set pager_context = 0
+    ```
 
 This variable controls the number of lines of context that are given when displaying the next or previous page in the internal pager.
 By default, NeoMutt will display the line after the last one on the screen at the top of the next page (0 lines of context).
@@ -115,7 +133,10 @@ If positive, this many lines will be given before a match, if 0, the match will 
 ## `$pager_format`
 
 - **Type:** expando
-- **Default:** "`-%Z- %C/%m: %-20.20n   %s%*  -- (%P)`"
+- **Default:**
+    ```
+    set pager_format = "-%Z- %C/%m: %-20.20n   %s%*  -- (%P)"
+    ```
 
 This variable controls the format of the one-line message "status" displayed before each message in either the internal or an external pager.
 The valid sequences are listed in the $$index_format section.
@@ -126,7 +147,10 @@ The valid sequences are listed in the $$index_format section.
 ## `$pager_index_lines`
 
 - **Type:** number
-- **Default:** 0
+- **Default:**
+    ```
+    set pager_index_lines = 0
+    ```
 
 Determines the number of lines of a mini-index which is shown when in the pager.
 The current message, unless near the top or bottom of the folder, will be roughly one third of the way down this mini-index, giving the reader the context of a few messages before and after the message.
@@ -139,7 +163,10 @@ A value of 0 results in no index being shown.
 ## `$pager_read_delay`
 
 - **Type:** number
-- **Default:** 0
+- **Default:**
+    ```
+    set pager_read_delay = 0
+    ```
 
 Determines the number of seconds that must elapse after first opening a new message in the pager before that message will be marked as read.
 A value of 0 results in the message being marked read unconditionally; for other values, navigating to another message or exiting the pager before the timeout will leave the message marked unread.
@@ -151,7 +178,10 @@ This setting is ignored if $$pager is set.
 ## `$pager_skip_quoted_context`
 
 - **Type:** number
-- **Default:** 0
+- **Default:**
+    ```
+    set pager_skip_quoted_context = 0
+    ```
 
 Determines the number of lines of context to show before the unquoted text when using the `<skip-quoted>` function.
 When set to a positive number at most that many lines of the previous quote are displayed.
@@ -163,7 +193,10 @@ If the previous quote is shorter the whole quote is displayed.
 ## `$pager_stop`
 
 - **Type:** boolean
-- **Default:** no
+- **Default:**
+    ```
+    set pager_stop = no
+    ```
 
 When _set_, the internal-pager will **not** move to the next message when you are at the end of a message and invoke the `<next-page>`
 function.
@@ -174,7 +207,10 @@ function.
 ## `$prompt_after`
 
 - **Type:** boolean
-- **Default:** yes
+- **Default:**
+    ```
+    set prompt_after = yes
+    ```
 
 If you use an _external_ $$pager, setting this variable will cause NeoMutt to prompt you for a command when the pager exits rather than returning to the index menu.
 If _unset_, NeoMutt will return to the index menu when the external pager exits.
@@ -185,7 +221,10 @@ If _unset_, NeoMutt will return to the index menu when the external pager exits.
 ## `$search_context`
 
 - **Type:** number
-- **Default:** 0
+- **Default:**
+    ```
+    set search_context = 0
+    ```
 
 For the pager, this variable specifies the number of lines shown before search results.
 By default, search results will be top-aligned.
@@ -196,7 +235,10 @@ By default, search results will be top-aligned.
 ## `$smart_wrap`
 
 - **Type:** boolean
-- **Default:** yes
+- **Default:**
+    ```
+    set smart_wrap = yes
+    ```
 
 Controls the display of lines longer than the screen width in the internal pager.
 If _set_, long lines are wrapped at a word boundary.
@@ -209,7 +251,10 @@ Also see the $$markers variable.
 ## `$smileys`
 
 - **Type:** regular expression
-- **Default:** "`(>From )|(:[-^]?[][)(><}{|/DP])`"
+- **Default:**
+    ```
+    set smileys = "(>From )|(:[-^]?[][)(><}{|/DP])"
+    ```
 
 The _pager_ uses this variable to catch some common false positives of $$quote_regex, most notably smileys and not consider a line quoted text if it also matches $$smileys.
 This mostly happens at the beginning of a line.
@@ -220,7 +265,10 @@ This mostly happens at the beginning of a line.
 ## `$tilde`
 
 - **Type:** boolean
-- **Default:** no
+- **Default:**
+    ```
+    set tilde = no
+    ```
 
 When _set_, the internal-pager will pad blank lines to the bottom of the screen with a tilde ("~").
 
@@ -230,7 +278,10 @@ When _set_, the internal-pager will pad blank lines to the bottom of the screen 
 ## `$toggle_quoted_show_levels`
 
 - **Type:** number
-- **Default:** 0
+- **Default:**
+    ```
+    set toggle_quoted_show_levels = 0
+    ```
 
 Quoted text may be filtered out using the `<toggle-quoted>` command.
 If set to a number greater than 0, then the `<toggle-quoted>`

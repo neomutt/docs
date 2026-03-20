@@ -21,7 +21,10 @@ how-to guides and explanation pages instead.
 ## `$beep`
 
 - **Type:** boolean
-- **Default:** yes
+- **Default:**
+    ```
+    set beep = yes
+    ```
 
 When this variable is _set_, NeoMutt will beep when an error occurs.
 
@@ -31,7 +34,10 @@ When this variable is _set_, NeoMutt will beep when an error occurs.
 ## `$collapse_flagged`
 
 - **Type:** boolean
-- **Default:** yes
+- **Default:**
+    ```
+    set collapse_flagged = yes
+    ```
 
 When _unset_, NeoMutt will not collapse a thread if it contains any flagged messages.
 
@@ -41,7 +47,10 @@ When _unset_, NeoMutt will not collapse a thread if it contains any flagged mess
 ## `$collapse_unread`
 
 - **Type:** boolean
-- **Default:** yes
+- **Default:**
+    ```
+    set collapse_unread = yes
+    ```
 
 When _unset_, NeoMutt will not collapse a thread if it contains any unread messages.
 
@@ -51,7 +60,10 @@ When _unset_, NeoMutt will not collapse a thread if it contains any unread messa
 ## `$duplicate_threads`
 
 - **Type:** boolean
-- **Default:** yes
+- **Default:**
+    ```
+    set duplicate_threads = yes
+    ```
 
 This variable controls whether NeoMutt, when $$sort is set to _threads_, threads messages with the same Message-Id together.
 If it is _set_, it will indicate that it thinks they are duplicates of each other with an equals sign in the thread tree.
@@ -62,7 +74,10 @@ If it is _set_, it will indicate that it thinks they are duplicates of each othe
 ## `$hide_limited`
 
 - **Type:** boolean
-- **Default:** no
+- **Default:**
+    ```
+    set hide_limited = no
+    ```
 
 When _set_, NeoMutt will not show the presence of messages that are hidden by limiting, in the thread tree.
 
@@ -72,7 +87,10 @@ When _set_, NeoMutt will not show the presence of messages that are hidden by li
 ## `$hide_missing`
 
 - **Type:** boolean
-- **Default:** yes
+- **Default:**
+    ```
+    set hide_missing = yes
+    ```
 
 When _set_, NeoMutt will not show the presence of missing messages in the thread tree.
 
@@ -82,7 +100,10 @@ When _set_, NeoMutt will not show the presence of missing messages in the thread
 ## `$hide_thread_subject`
 
 - **Type:** boolean
-- **Default:** yes
+- **Default:**
+    ```
+    set hide_thread_subject = yes
+    ```
 
 When _set_, NeoMutt will not show the subject of messages in the thread tree that have the same subject as their parent or closest previously displayed sibling.
 
@@ -92,7 +113,10 @@ When _set_, NeoMutt will not show the subject of messages in the thread tree tha
 ## `$hide_top_limited`
 
 - **Type:** boolean
-- **Default:** no
+- **Default:**
+    ```
+    set hide_top_limited = no
+    ```
 
 When _set_, NeoMutt will not show the presence of messages that are hidden by limiting, at the top of threads in the thread tree.
 Note that when $$hide_limited is _set_, this option will have no effect.
@@ -103,7 +127,10 @@ Note that when $$hide_limited is _set_, this option will have no effect.
 ## `$hide_top_missing`
 
 - **Type:** boolean
-- **Default:** yes
+- **Default:**
+    ```
+    set hide_top_missing = yes
+    ```
 
 When _set_, NeoMutt will not show the presence of missing messages at the top of threads in the thread tree.
 Note that when $$hide_missing is _set_, this option will have no effect.
@@ -114,7 +141,10 @@ Note that when $$hide_missing is _set_, this option will have no effect.
 ## `$narrow_tree`
 
 - **Type:** boolean
-- **Default:** no
+- **Default:**
+    ```
+    set narrow_tree = no
+    ```
 
 This variable, when _set_, makes the thread tree narrower, allowing deeper threads to fit on the screen.
 
@@ -124,7 +154,10 @@ This variable, when _set_, makes the thread tree narrower, allowing deeper threa
 ## `$sort_re`
 
 - **Type:** boolean
-- **Default:** `yes`
+- **Default:**
+    ```
+    set sort_re = yes
+    ```
 
 This variable is only useful when sorting by threads with $$strict_threads _unset_.
 In that case, it changes the heuristic neomutt uses to thread messages by subject.
@@ -137,7 +170,10 @@ With $$sort_re _unset_, neomutt will attach the message whether or not this is t
 ## `$strict_threads`
 
 - **Type:** boolean
-- **Default:** no
+- **Default:**
+    ```
+    set strict_threads = no
+    ```
 
 If _set_, threading will only make use of the "In-Reply-To" and "References:" fields when you $$sort by message threads.
 By default, messages with the same subject are grouped together in "pseudo threads.".
@@ -150,7 +186,10 @@ See also $$sort_re for a less drastic way of controlling this behavior.
 ## `$thread_received`
 
 - **Type:** boolean
-- **Default:** no
+- **Default:**
+    ```
+    set thread_received = no
+    ```
 
 If $$strict_threads is _unset_, then messages may also be grouped by subject.
 Unlike threading by "In-Reply-To:" and "References:" header, grouping by subject does not imply a parent-child relation between two messages.

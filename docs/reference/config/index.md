@@ -21,7 +21,10 @@ how-to guides and explanation pages instead.
 ## `$beep_new`
 
 - **Type:** boolean
-- **Default:** no
+- **Default:**
+    ```
+    set beep_new = no
+    ```
 
 When this variable is _set_, NeoMutt will beep whenever it prints a message notifying you of new mail.
 This is independent of the setting of the $$beep variable.
@@ -32,7 +35,10 @@ This is independent of the setting of the $$beep variable.
 ## `$change_folder_next`
 
 - **Type:** boolean
-- **Default:** no
+- **Default:**
+    ```
+    set change_folder_next = no
+    ```
 
 When this variable is _set_, the `<change-folder>` function mailbox suggestion will start at the next folder in your "$mailboxes" list, instead of starting at the first folder in the list.
 
@@ -42,7 +48,10 @@ When this variable is _set_, the `<change-folder>` function mailbox suggestion w
 ## `$collapse_all`
 
 - **Type:** boolean
-- **Default:** no
+- **Default:**
+    ```
+    set collapse_all = no
+    ```
 
 When _set_, NeoMutt will collapse all threads when entering a folder.
 
@@ -52,7 +61,10 @@ When _set_, NeoMutt will collapse all threads when entering a folder.
 ## `$crypt_chars`
 
 - **Type:** character string
-- **Default:** "`SPsK `"
+- **Default:**
+    ```
+    set crypt_chars = "SPsK "
+    ```
 
 Controls the characters used in cryptography flags.
 
@@ -70,7 +82,10 @@ Controls the characters used in cryptography flags.
 ## `$flag_chars`
 
 - **Type:** character string
-- **Default:** "`*!DdrONon- `"
+- **Default:**
+    ```
+    set flag_chars = "*!DdrONon- "
+    ```
 
 Controls the characters used in several flags.
 
@@ -95,6 +110,9 @@ Controls the characters used in several flags.
 
 - **Type:** character string
 - **Default:** (empty)
+    ```
+    set from_chars = ""
+    ```
 
 Controls the character used to prefix the %F and %L fields in the index.
 
@@ -118,7 +136,10 @@ This slightly odd interface is necessitated by NeoMutt's handling of string vari
 ## `$index_format`
 
 - **Type:** expando
-- **Default:** "`%4C %Z %{%b %d} %-15.15L (%<l?%4l&%4c>) %s`"
+- **Default:**
+    ```
+    set index_format = "%4C %Z %{%b %d} %-15.15L (%<l?%4l&%4c>) %s"
+    ```
 
 This variable allows you to customize the message index display to your personal taste.
 
@@ -218,7 +239,10 @@ Note that these expandos are supported in "$save-hook", "$fcc-hook" and "$fcc-sa
 ## `$mark_macro_prefix`
 
 - **Type:** string
-- **Default:** "`'`"
+- **Default:**
+    ```
+    set mark_macro_prefix = "'"
+    ```
 
 Prefix for macros created using mark-message.
 A new macro automatically generated with _<mark-message>a_ will be composed from this prefix and the letter _a_.
@@ -230,6 +254,9 @@ A new macro automatically generated with _<mark-message>a_ will be composed from
 
 - **Type:** expando (command string)
 - **Default:** (empty)
+    ```
+    set new_mail_command = ""
+    ```
 
 If _set_, NeoMutt will call this command after a new message is received.
 See the $$status_format documentation for the values that can be formatted into this command.
@@ -240,7 +267,10 @@ See the $$status_format documentation for the values that can be formatted into 
 ## `$quit`
 
 - **Type:** quad-option
-- **Default:** yes
+- **Default:**
+    ```
+    set quit = yes
+    ```
 
 This variable controls whether "quit" and "exit" actually quit from NeoMutt.
 If this option is _set_, they do quit, if it is _unset_, they have no effect, and if it is set to _ask-yes_ or _ask-no_, you are prompted for confirmation when you try to quit.
@@ -254,7 +284,10 @@ This can usually be achieved by pressing CTRL-C in the terminal.
 ## `$read_only`
 
 - **Type:** boolean
-- **Default:** no
+- **Default:**
+    ```
+    set read_only = no
+    ```
 
 If _set_, all folders are opened in read-only mode.
 
@@ -264,7 +297,10 @@ If _set_, all folders are opened in read-only mode.
 ## `$status_chars`
 
 - **Type:** character string
-- **Default:** `"-*%A"`
+- **Default:**
+    ```
+    set status_chars = "-*%A"
+    ```
 
 Controls the characters used by the "%r" indicator in $$status_format.
 
@@ -283,7 +319,10 @@ Controls the characters used by the "%r" indicator in $$status_format.
 ## `$status_format`
 
 - **Type:** expando
-- **Default:** `"-%r-NeoMutt: %D [Msgs:%<M?%M/>%m%<n? New:%n>%<o? Old:%o>%<d? Del:%d>%<F? Flag:%F>%<t? Tag:%t>%<p? Post:%p>%<b? Inc:%b>%<l? %l>]---(%<T?%T/>%s/%S)-%>-(%P)---"`
+- **Default:**
+    ```
+    set status_format = "-%r-NeoMutt: %D [Msgs:%<M?%M/>%m%<n? New:%n>%<o? Old:%o>%<d? Del:%d>%<F? Flag:%F>%<t? Tag:%t>%<p? Post:%p>%<b? Inc:%b>%<l? %l>]---(%<T?%T/>%s/%S)-%>-(%P)---"
+    ```
 
 Controls the format of the status line displayed in the "index" menu.
 This string is similar to $$index_format, but has its own set of `printf(3)`-like sequences:
@@ -355,7 +394,10 @@ This might be helpful with IMAP folders that don't like dots in folder names.
 ## `$to_chars`
 
 - **Type:** character string
-- **Default:** "` +TCFLR`"
+- **Default:**
+    ```
+    set to_chars = " +TCFLR"
+    ```
 
 Controls the character used to indicate mail addressed to you.
 
@@ -375,7 +417,10 @@ Controls the character used to indicate mail addressed to you.
 ## `$ts_enabled`
 
 - **Type:** boolean
-- **Default:** no
+- **Default:**
+    ```
+    set ts_enabled = no
+    ```
 
 Controls whether NeoMutt tries to set the terminal status line and icon name.
 Most terminal emulators emulate the status line in the window title.
@@ -386,7 +431,10 @@ Most terminal emulators emulate the status line in the window title.
 ## `$ts_icon_format`
 
 - **Type:** expando
-- **Default:** "`M%<n?AIL&ail>`"
+- **Default:**
+    ```
+    set ts_icon_format = "M%<n?AIL&ail>"
+    ```
 
 Controls the format of the icon title, as long as "$$ts_enabled" is set.
 This string is identical in formatting to the one used by "$$status_format".
@@ -397,7 +445,10 @@ This string is identical in formatting to the one used by "$$status_format".
 ## `$ts_status_format`
 
 - **Type:** expando
-- **Default:** "`NeoMutt with %<m?%m messages&no messages>%<n? [%n NEW]>`"
+- **Default:**
+    ```
+    set ts_status_format = "NeoMutt with %<m?%m messages&no messages>%<n? [%n NEW]>"
+    ```
 
 Controls the format of the terminal status line (or window title), provided that "$$ts_enabled" has been set.
 This string is identical in formatting to the one used by "$$status_format".
@@ -408,7 +459,10 @@ This string is identical in formatting to the one used by "$$status_format".
 ## `$uncollapse_jump`
 
 - **Type:** boolean
-- **Default:** no
+- **Default:**
+    ```
+    set uncollapse_jump = no
+    ```
 
 When _set_, NeoMutt will jump to the next unread message, if any, when the current thread is _un_collapsed.
 
@@ -418,7 +472,10 @@ When _set_, NeoMutt will jump to the next unread message, if any, when the curre
 ## `$uncollapse_new`
 
 - **Type:** boolean
-- **Default:** yes
+- **Default:**
+    ```
+    set uncollapse_new = yes
+    ```
 
 When _set_, NeoMutt will automatically uncollapse any collapsed thread that receives a newly delivered message.
 When _unset_, collapsed threads will remain collapsed.

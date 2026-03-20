@@ -21,7 +21,10 @@ how-to guides and explanation pages instead.
 ## `$history`
 
 - **Type:** number
-- **Default:** `10`
+- **Default:**
+    ```
+    set history = 10
+    ```
 
 This variable controls the size (in number of strings remembered) of the string history buffer per category.
 The buffer is cleared each time the variable is set.
@@ -38,7 +41,10 @@ To prevent duplicates over all entries use $$history_remove_dups.
 ## `$history_file`
 
 - **Type:** path (string)
-- **Default:** `"~/.mutthistory"`
+- **Default:**
+    ```
+    set history_file = "~/.mutthistory"
+    ```
 
 The file in which NeoMutt will save its history.
 
@@ -50,7 +56,10 @@ Also see $$save_history.
 ## `$history_format`
 
 - **Type:** expando
-- **Default:** `"%s"`
+- **Default:**
+    ```
+    set history_format = "%s"
+    ```
 
 Controls the format of the entries of the history list.
 This string is similar to $$index_format, but has its own set of `printf(3)`-like sequences:
@@ -69,7 +78,10 @@ This string is similar to $$index_format, but has its own set of `printf(3)`-lik
 ## `$history_remove_dups`
 
 - **Type:** boolean
-- **Default:** `no`
+- **Default:**
+    ```
+    set history_remove_dups = no
+    ```
 
 When _set_, all of the string history will be scanned for duplicates when a new entry is added.
 Duplicate entries in the $$history_file will also be removed when it is periodically compacted.
@@ -80,7 +92,10 @@ Duplicate entries in the $$history_file will also be removed when it is periodic
 ## `$save_history`
 
 - **Type:** number
-- **Default:** 0
+- **Default:**
+    ```
+    set save_history = 0
+    ```
 
 This variable controls the size of the history (per category) saved in the $$history_file file.
 

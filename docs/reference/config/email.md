@@ -21,7 +21,10 @@ how-to guides and explanation pages instead.
 ## `$auto_subscribe`
 
 - **Type:** boolean
-- **Default:** no
+- **Default:**
+    ```
+    set auto_subscribe = no
+    ```
 
 When _set_, NeoMutt assumes the presence of a List-Post header means the recipient is subscribed to the list.
 Unless the mailing list is in the "unsubscribe" or "unlist" lists, it will be added to the "$subscribe" list.
@@ -33,7 +36,10 @@ Parsing and checking these things slows header reading down, so this option is d
 ## `$honor_disposition`
 
 - **Type:** boolean
-- **Default:** no
+- **Default:**
+    ```
+    set honor_disposition = no
+    ```
 
 When _set_, NeoMutt will not display attachments with a disposition of "attachment" inline even if it could render the part to plain text.
 These MIME parts can only be viewed from the attachment menu.
@@ -46,7 +52,10 @@ If _unset_, NeoMutt will render all MIME parts it can properly transform to plai
 ## `$hidden_tags`
 
 - **Type:** string list
-- **Default:** "`unread,draft,flagged,passed,replied,attachment,signed,encrypted`"
+- **Default:**
+    ```
+    set hidden_tags = "unread,draft,flagged,passed,replied,attachment,signed,encrypted"
+    ```
 
 This variable specifies a list of comma-separated private notmuch/imap tags which should not be printed on screen.
 
@@ -56,7 +65,10 @@ This variable specifies a list of comma-separated private notmuch/imap tags whic
 ## `$implicit_auto_view`
 
 - **Type:** boolean
-- **Default:** no
+- **Default:**
+    ```
+    set implicit_auto_view = no
+    ```
 
 If set to "yes", NeoMutt will look for a mailcap entry with the "`copiousoutput`" flag set for _every_ MIME attachment it doesn't have an internal viewer defined for.
 If such an entry is found, NeoMutt will use the viewer defined in that entry to convert the body part to text form.
@@ -67,7 +79,10 @@ If such an entry is found, NeoMutt will use the viewer defined in that entry to 
 ## `$include_encrypted`
 
 - **Type:** boolean
-- **Default:** no
+- **Default:**
+    ```
+    set include_encrypted = no
+    ```
 
 Controls whether or not NeoMutt includes separately encrypted attachment contents when replying.
 
@@ -80,7 +95,10 @@ If a previously encrypted message were attached by the attacker, they could tric
 ## `$include_only_first`
 
 - **Type:** boolean
-- **Default:** no
+- **Default:**
+    ```
+    set include_only_first = no
+    ```
 
 Controls whether or not NeoMutt includes only the first attachment of the message you are replying.
 
@@ -90,7 +108,10 @@ Controls whether or not NeoMutt includes only the first attachment of the messag
 ## `$mailcap_path`
 
 - **Type:** string list
-- **Default:** "`~/.mailcap:/usr/share/neomutt/mailcap:/etc/mailcap:/etc/mailcap:/usr/etc/mailcap:/usr/local/etc/mailcap`"
+- **Default:**
+    ```
+    set mailcap_path = "~/.mailcap:" PKGDATADIR "/mailcap:" SYSCONFDIR "/mailcap:/etc/mailcap:/usr/etc/mailcap:/usr/local/etc/mailcap"
+    ```
 
 This variable specifies a list of colon-separated files to consult when attempting to display MIME bodies not directly supported by NeoMutt.
 The default value is generated during startup: see the "$mailcap" section of the manual.
@@ -105,7 +126,10 @@ The default search path is from RFC1524.
 ## `$mailcap_sanitize`
 
 - **Type:** boolean
-- **Default:** yes
+- **Default:**
+    ```
+    set mailcap_sanitize = yes
+    ```
 
 If _set_, NeoMutt will restrict possible characters in mailcap % expandos to a well-defined set of safe characters.
 This is the safe setting, but we are not sure it doesn't break some more advanced MIME stuff.
@@ -119,6 +143,9 @@ This is the safe setting, but we are not sure it doesn't break some more advance
 
 - **Type:** string list
 - **Default:** (empty)
+    ```
+    set preferred_languages = ""
+    ```
 
 This variable specifies a list of comma-separated languages.
 RFC8255 : user preferred languages to be searched in parts and display.
@@ -134,7 +161,10 @@ set preferred_languages="en,fr,de"
 ## `$reflow_space_quotes`
 
 - **Type:** boolean
-- **Default:** yes
+- **Default:**
+    ```
+    set reflow_space_quotes = yes
+    ```
 
 This option controls how quotes from format=flowed messages are displayed in the pager and when replying (with $$text_flowed _unset_).
 When set, this option adds spaces after each level of quote marks, turning ">>>foo" into "> > > foo".
@@ -148,7 +178,10 @@ Also, this option does not affect replies when $$text_flowed is _set_.
 ## `$reflow_text`
 
 - **Type:** boolean
-- **Default:** yes
+- **Default:**
+    ```
+    set reflow_text = yes
+    ```
 
 When _set_, NeoMutt will reformat paragraphs in text/plain parts marked format=flowed.
 If _unset_, NeoMutt will display paragraphs unaltered from how they appear in the message body.
@@ -162,7 +195,10 @@ Also see $$reflow_wrap, and $$wrap.
 ## `$reflow_wrap`
 
 - **Type:** number
-- **Default:** 78
+- **Default:**
+    ```
+    set reflow_wrap = 78
+    ```
 
 This variable controls the maximum paragraph width when reformatting text/plain parts when $$reflow_text is _set_.
 When the value is 0, paragraphs will be wrapped at the terminal's right margin.
@@ -180,7 +216,10 @@ Also see $$wrap.
 ## `$reply_regex`
 
 - **Type:** regular expression
-- **Default:** "`^((re)(\[[0-9]+\])*:[ \t]*)*`"
+- **Default:**
+    ```
+    set reply_regex = "^((re)(\\[[0-9]+\\])*:[ \t]*)*"
+    ```
 
 A regular expression used to recognize reply messages when threading and replying.
 The default value corresponds to the standard Latin "Re:" prefix.
@@ -209,7 +248,10 @@ If that fixes the problem, then once the variable is set to your liking, remove 
 ## `$reverse_alias`
 
 - **Type:** boolean
-- **Default:** no
+- **Default:**
+    ```
+    set reverse_alias = no
+    ```
 
 This variable controls whether or not NeoMutt will display the "personal" name from your aliases in the index menu if it finds an alias that matches the message's sender.
 For example, if you have the following alias:
@@ -232,7 +274,10 @@ It would be displayed in the index menu as "Joe User" instead of "abd30425@somew
 ## `$rfc2047_parameters`
 
 - **Type:** boolean
-- **Default:** yes
+- **Default:**
+    ```
+    set rfc2047_parameters = yes
+    ```
 
 When this variable is _set_, NeoMutt will decode RFC2047-encoded MIME parameters.
 You want to set this variable when NeoMutt suggests you to save attachments to files named like:
@@ -255,7 +300,10 @@ Instead, NeoMutt will unconditionally use the encoding specified in RFC2231.
 ## `$score`
 
 - **Type:** boolean
-- **Default:** yes
+- **Default:**
+    ```
+    set score = yes
+    ```
 
 When this variable is _unset_, scoring is turned off.
 This can be useful to selectively disable scoring for certain folders when the $$score_threshold_delete variable and related are used.
@@ -266,7 +314,10 @@ This can be useful to selectively disable scoring for certain folders when the $
 ## `$score_threshold_delete`
 
 - **Type:** number
-- **Default:** `-1`
+- **Default:**
+    ```
+    set score_threshold_delete = -1
+    ```
 
 Messages which have been assigned a score equal to or lower than the value of this variable are automatically marked for deletion by NeoMutt.
 Since NeoMutt scores are always greater than or equal to zero, the default setting of this variable will never mark a message for deletion.
@@ -277,7 +328,10 @@ Since NeoMutt scores are always greater than or equal to zero, the default setti
 ## `$score_threshold_flag`
 
 - **Type:** number
-- **Default:** `9999`
+- **Default:**
+    ```
+    set score_threshold_flag = 9999
+    ```
 
 Messages which have been assigned a score greater than or equal to this variable's value are automatically marked "flagged".
 
@@ -287,7 +341,10 @@ Messages which have been assigned a score greater than or equal to this variable
 ## `$score_threshold_read`
 
 - **Type:** number
-- **Default:** `-1`
+- **Default:**
+    ```
+    set score_threshold_read = -1
+    ```
 
 Messages which have been assigned a score equal to or lower than the value of this variable are automatically marked as read by NeoMutt.
 Since NeoMutt scores are always greater than or equal to zero, the default setting of this variable will never mark a message read.
@@ -299,6 +356,9 @@ Since NeoMutt scores are always greater than or equal to zero, the default setti
 
 - **Type:** string
 - **Default:** (empty)
+    ```
+    set show_multipart_alternative = ""
+    ```
 
 When _set_ to `info`, the multipart/alternative information is shown.
 When _set_ to `inline`, all of the alternatives are displayed.
@@ -310,7 +370,10 @@ When not set, the default behavior is to show only the chosen alternative.
 ## `$spam_separator`
 
 - **Type:** string
-- **Default:** "`,`"
+- **Default:**
+    ```
+    set spam_separator = ","
+    ```
 
 This variable controls what happens when multiple spam headers are matched: if _unset_, each successive header will overwrite any previous matches value for the spam label.
 If _set_, each successive match will append to the previous, using this variable's value as a separator.

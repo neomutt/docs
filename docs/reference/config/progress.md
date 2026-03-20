@@ -21,7 +21,10 @@ how-to guides and explanation pages instead.
 ## `$net_inc`
 
 - **Type:** number
-- **Default:** 10
+- **Default:**
+    ```
+    set net_inc = 10
+    ```
 
 Operations that expect to transfer a large amount of data over the network will update their progress every $$net_inc kilobytes.
 If set to 0, no progress messages will be displayed.
@@ -34,7 +37,10 @@ See also $$read_inc, $$write_inc and $$net_inc.
 ## `$read_inc`
 
 - **Type:** number
-- **Default:** 10
+- **Default:**
+    ```
+    set read_inc = 10
+    ```
 
 If set to a value greater than 0, NeoMutt will display which message it is currently on when reading a mailbox or when performing search actions such as search and limit.
 The message is printed after this many messages have been read or searched (e.g., if set to 25, NeoMutt will print a message when it is at message 25, and then again when it gets to message 50).
@@ -49,7 +55,10 @@ Also see the $$write_inc, $$net_inc and $$time_inc variables and the "$tuning" s
 ## `$time_inc`
 
 - **Type:** number
-- **Default:** 0
+- **Default:**
+    ```
+    set time_inc = 0
+    ```
 
 Along with $$read_inc, $$write_inc, and $$net_inc, this variable controls the frequency with which progress updates are displayed.
 It suppresses updates less than $$time_inc milliseconds apart.
@@ -63,7 +72,10 @@ Also see the "$tuning" section of the manual for performance considerations.
 ## `$write_inc`
 
 - **Type:** number
-- **Default:** 10
+- **Default:**
+    ```
+    set write_inc = 10
+    ```
 
 When writing a mailbox, a message will be printed every $$write_inc messages to indicate progress.
 If set to 0, only a single message will be displayed before writing a mailbox.

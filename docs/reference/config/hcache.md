@@ -22,6 +22,9 @@ how-to guides and explanation pages instead.
 
 - **Type:** path (string)
 - **Default:** (empty)
+    ```
+    set header_cache = ""
+    ```
 
 This variable points to the header cache database.
 If the path points to an existing directory, NeoMutt will create a dedicated header cache database per folder.
@@ -37,6 +40,9 @@ Header caching can greatly improve speed when opening POP, IMAP MH or Maildir fo
 
 - **Type:** string
 - **Default:** (empty)
+    ```
+    set header_cache_backend = ""
+    ```
 
 This variable specifies the header cache backend.
 If no backend is specified, the first available backend will be used in the following order:
@@ -48,7 +54,10 @@ tokyocabinet, kyotocabinet, qdbm, rocksdb, gdbm, bdb, tdb, lmdb.
 ## `$header_cache_compress_level`
 
 - **Type:** number
-- **Default:** 1
+- **Default:**
+    ```
+    set header_cache_compress_level = 1
+    ```
 
 When NeoMutt is compiled with lz4, zstd or zlib, this option can be used to setup the compression level.
 
@@ -59,6 +68,9 @@ When NeoMutt is compiled with lz4, zstd or zlib, this option can be used to setu
 
 - **Type:** string
 - **Default:** (empty)
+    ```
+    set header_cache_compress_method = ""
+    ```
 
 When NeoMutt is compiled with lz4, zstd or zlib, the header cache backend can use these compression methods for compressing the cache files.
 This results in much smaller cache file sizes and may even improve speed.

@@ -21,7 +21,10 @@ how-to guides and explanation pages instead.
 ## `$check_mbox_size`
 
 - **Type:** boolean
-- **Default:** no
+- **Default:**
+    ```
+    set check_mbox_size = no
+    ```
 
 When this variable is _set_, NeoMutt will use file size attribute instead of access time when checking for new mail in mbox and mmdf folders.
 

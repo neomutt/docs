@@ -21,7 +21,10 @@ how-to guides and explanation pages instead.
 ## `$browser_abbreviate_mailboxes`
 
 - **Type:** boolean
-- **Default:** `yes`
+- **Default:**
+    ```
+    set browser_abbreviate_mailboxes = yes
+    ```
 
 When this variable is _set_, NeoMutt will abbreviate mailbox names in the browser mailbox list, using '~' and '=' shortcuts.
 
@@ -35,7 +38,10 @@ In those cases, it may be desirable to _unset_ this variable.
 ## `$browser_sort`
 
 - **Type:** sort order
-- **Default:** `alpha`
+- **Default:**
+    ```
+    set browser_sort = "alpha"
+    ```
 
 Specifies how to sort entries in the file browser.
 
@@ -61,7 +67,10 @@ Prefixing the value with `reverse-` sorts the entries in reverse order, e.g. `se
 ## `$browser_sort_dirs_first`
 
 - **Type:** boolean
-- **Default:** `no`
+- **Default:**
+    ```
+    set browser_sort_dirs_first = no
+    ```
 
 If this variable is _set_, the browser will group directories before files.
 
@@ -71,7 +80,10 @@ If this variable is _set_, the browser will group directories before files.
 ## `$folder_format`
 
 - **Type:** expando
-- **Default:** "`%2C %t %N %F %2l %-8.8u %-8.8g %8s %d %i`"
+- **Default:**
+    ```
+    set folder_format = "%2C %t %N %F %2l %-8.8u %-8.8g %8s %d %i"
+    ```
 
 This variable allows you to customize the file browser display to your personal taste.
 This string is similar to $$index_format, but has its own set of `printf(3)`-like sequences:
@@ -115,7 +127,10 @@ For an explanation of "soft-fill", see the $$index_format documentation.
 ## `$group_index_format`
 
 - **Type:** expando
-- **Default:** "`%4C %M%N %5s  %-45.45f %d`"
+- **Default:**
+    ```
+    set group_index_format = "%4C %M%N %5s  %-45.45f %d"
+    ```
 
 This variable allows you to customize the newsgroup browser display to your personal taste.
 This string is similar to "$index_format", but has its own set of printf()-like sequences:
@@ -141,7 +156,10 @@ This string is similar to "$index_format", but has its own set of printf()-like 
 ## `$mailbox_folder_format`
 
 - **Type:** expando
-- **Default:** "`%2C %<n?%6n&      > %6m %i`"
+- **Default:**
+    ```
+    set mailbox_folder_format = "%2C %<n?%6n&      > %6m %i"
+    ```
 
 This variable allows you to customize the file browser display to your personal taste.
 It's only used to customize network mailboxes (e.g. imap).
@@ -153,7 +171,10 @@ This string is identical in formatting to the one used by "$$folder_format".
 ## `$mask`
 
 - **Type:** regular expression
-- **Default:** "`!^\.[^.]`"
+- **Default:**
+    ```
+    set mask = "!^\\.[^.]"
+    ```
 
 A regular expression used in the file browser, optionally preceded by the _not_ operator "!".  Only files whose names match this mask will be shown.
 The match is always case-sensitive.
@@ -164,7 +185,10 @@ The match is always case-sensitive.
 ## `$show_only_unread`
 
 - **Type:** boolean
-- **Default:** no
+- **Default:**
+    ```
+    set show_only_unread = no
+    ```
 
 If _set_, only subscribed newsgroups that contain unread articles will be displayed in browser.
 

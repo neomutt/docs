@@ -21,7 +21,10 @@ how-to guides and explanation pages instead.
 ## `$catchup_newsgroup`
 
 - **Type:** quad-option
-- **Default:** ask-yes
+- **Default:**
+    ```
+    set catchup_newsgroup = ask-yes
+    ```
 
 If this variable is _set_, NeoMutt will mark all articles in newsgroup as read when you quit the newsgroup (catchup newsgroup).
 
@@ -31,7 +34,10 @@ If this variable is _set_, NeoMutt will mark all articles in newsgroup as read w
 ## `$followup_to_poster`
 
 - **Type:** quad-option
-- **Default:** ask-yes
+- **Default:**
+    ```
+    set followup_to_poster = ask-yes
+    ```
 
 If this variable is _set_ and the keyword "poster" is present in _Followup-To_ header, follow-up to newsgroup function is not permitted.
 The message will be mailed to the submitter of the message via mail.
@@ -42,7 +48,10 @@ The message will be mailed to the submitter of the message via mail.
 ## `$newsgroups_charset`
 
 - **Type:** string
-- **Default:** "`utf-8`"
+- **Default:**
+    ```
+    set newsgroups_charset = "utf-8"
+    ```
 
 Character set of newsgroups descriptions.
 
@@ -52,7 +61,10 @@ Character set of newsgroups descriptions.
 ## `$newsrc`
 
 - **Type:** expando
-- **Default:** "`~/.newsrc`"
+- **Default:**
+    ```
+    set newsrc = "~/.newsrc"
+    ```
 
 The file, containing info about subscribed newsgroups - names and indexes of read articles.
 The following printf-style sequence is understood:
@@ -72,7 +84,10 @@ The following printf-style sequence is understood:
 ## `$news_cache_dir`
 
 - **Type:** path (string)
-- **Default:** "`~/.neomutt`"
+- **Default:**
+    ```
+    set news_cache_dir = "~/.neomutt"
+    ```
 
 This variable pointing to directory where NeoMutt will save cached news articles and headers in.
 If _unset_, articles and headers will not be saved at all and will be reloaded from the server each time.
@@ -84,6 +99,9 @@ If _unset_, articles and headers will not be saved at all and will be reloaded f
 
 - **Type:** string
 - **Default:** (empty)
+    ```
+    set news_server = ""
+    ```
 
 This variable specifies domain name or address of NNTP server.
 
@@ -98,6 +116,9 @@ This option can also be set using the command line option "-g", the environment 
 
 - **Type:** string
 - **Default:** (empty)
+    ```
+    set nntp_authenticators = ""
+    ```
 
 This is a colon-delimited list of authentication methods NeoMutt may attempt to use to log in to a news server, in the order NeoMutt should try them.
 Authentication methods are either "user" or any SASL mechanism, e.g.
@@ -120,7 +141,10 @@ If a method is available but authentication fails, NeoMutt will not connect to t
 ## `$nntp_context`
 
 - **Type:** number (long)
-- **Default:** 1000
+- **Default:**
+    ```
+    set nntp_context = 1000
+    ```
 
 This variable defines number of articles which will be in index when newsgroup entered.
 If active newsgroup have more articles than this number, oldest articles will be ignored.
@@ -132,7 +156,10 @@ Also controls how many articles headers will be saved in cache when you quit new
 ## `$nntp_listgroup`
 
 - **Type:** boolean
-- **Default:** yes
+- **Default:**
+    ```
+    set nntp_listgroup = yes
+    ```
 
 This variable controls whether or not existence of each article is checked when newsgroup is entered.
 
@@ -142,7 +169,10 @@ This variable controls whether or not existence of each article is checked when 
 ## `$nntp_load_description`
 
 - **Type:** boolean
-- **Default:** yes
+- **Default:**
+    ```
+    set nntp_load_description = yes
+    ```
 
 This variable controls whether or not descriptions for each newsgroup must be loaded when newsgroup is added to list (first time list loading or new newsgroup adding).
 
@@ -153,6 +183,9 @@ This variable controls whether or not descriptions for each newsgroup must be lo
 
 - **Type:** string
 - **Default:** (empty)
+    ```
+    set nntp_pass = ""
+    ```
 
 Your password for NNTP account.
 
@@ -162,7 +195,10 @@ Your password for NNTP account.
 ## `$nntp_poll`
 
 - **Type:** number
-- **Default:** 60
+- **Default:**
+    ```
+    set nntp_poll = 60
+    ```
 
 The time in seconds until any operations on newsgroup except post new article will cause recheck for new news.
 If set to 0, NeoMutt will recheck newsgroup on each operation in index (stepping, read article, etc.).
@@ -174,6 +210,9 @@ If set to 0, NeoMutt will recheck newsgroup on each operation in index (stepping
 
 - **Type:** string
 - **Default:** (empty)
+    ```
+    set nntp_user = ""
+    ```
 
 Your login name on the NNTP server.
 If _unset_ and NNTP server requires authentication, NeoMutt will prompt you for your account name when you connect to news server.
@@ -184,7 +223,10 @@ If _unset_ and NNTP server requires authentication, NeoMutt will prompt you for 
 ## `$post_moderated`
 
 - **Type:** quad-option
-- **Default:** ask-yes
+- **Default:**
+    ```
+    set post_moderated = ask-yes
+    ```
 
 If set to _yes_, NeoMutt will post article to newsgroup that have not permissions to posting (e.g. moderated).
 **Note:** if news server does not support posting to that newsgroup or totally read-only, that posting will not have an effect.
@@ -195,7 +237,10 @@ If set to _yes_, NeoMutt will post article to newsgroup that have not permission
 ## `$save_unsubscribed`
 
 - **Type:** boolean
-- **Default:** no
+- **Default:**
+    ```
+    set save_unsubscribed = no
+    ```
 
 When _set_, info about unsubscribed newsgroups will be saved into "newsrc" file and into cache.
 
@@ -205,7 +250,10 @@ When _set_, info about unsubscribed newsgroups will be saved into "newsrc" file 
 ## `$show_new_news`
 
 - **Type:** boolean
-- **Default:** yes
+- **Default:**
+    ```
+    set show_new_news = yes
+    ```
 
 If _set_, news server will be asked for new newsgroups on entering the browser.
 Otherwise, it will be done only once for a news server.
@@ -217,7 +265,10 @@ Also controls whether or not number of new articles of subscribed newsgroups wil
 ## `$x_comment_to`
 
 - **Type:** boolean
-- **Default:** no
+- **Default:**
+    ```
+    set x_comment_to = no
+    ```
 
 If _set_, NeoMutt will add "X-Comment-To:" field (that contains full name of original article author) to article that followuped to newsgroup.
 

@@ -21,7 +21,10 @@ how-to guides and explanation pages instead.
 ## `$default_hook`
 
 - **Type:** string
-- **Default:** "`~f %s !~P | (~P ~C %s)`"
+- **Default:**
+    ```
+    set default_hook = "~f %s !~P | (~P ~C %s)"
+    ```
 
 This variable controls how some hooks are interpreted if their pattern is a plain string or a regex. i.e. they don't contain a pattern, like `~f`
 
@@ -37,7 +40,10 @@ The default value matches if the message is either from a user matching the regu
 ## `$force_name`
 
 - **Type:** boolean
-- **Default:** no
+- **Default:**
+    ```
+    set force_name = no
+    ```
 
 This variable is similar to $$save_name, except that NeoMutt will store a copy of your outgoing message by the username of the address you are sending to even if that mailbox does not exist.
 
@@ -49,7 +55,10 @@ Also see the $$record variable.
 ## `$save_name`
 
 - **Type:** boolean
-- **Default:** no
+- **Default:**
+    ```
+    set save_name = no
+    ```
 
 This variable controls how copies of outgoing messages are saved.
 When _set_, a check is made to see if a mailbox specified by the recipient address exists (this is done by searching for a mailbox in the $$folder directory with the _username_ part of the recipient address).  If the mailbox exists, the outgoing message will be saved to that mailbox, otherwise the message is saved to the $$record mailbox.

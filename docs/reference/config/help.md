@@ -21,7 +21,10 @@ how-to guides and explanation pages instead.
 ## `$help`
 
 - **Type:** boolean
-- **Default:** yes
+- **Default:**
+    ```
+    set help = yes
+    ```
 
 When _set_, help lines describing the bindings for the major functions provided by each menu are displayed on the first line of the screen.
 

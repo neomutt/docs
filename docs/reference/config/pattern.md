@@ -22,6 +22,9 @@ how-to guides and explanation pages instead.
 
 - **Type:** command (string)
 - **Default:** (empty)
+    ```
+    set external_search_command = ""
+    ```
 
 If set, contains the name of the external program used by "~I" patterns.
 This will usually be a wrapper script around mairix, mu, or similar indexers other than notmuch (for which there is optional special support).
@@ -44,7 +47,10 @@ You, the user, still have to rewrite the mairix_filter script to match the behav
 ## `$pattern_format`
 
 - **Type:** expando
-- **Default:** "`%2n %-15e  %d`"
+- **Default:**
+    ```
+    set pattern_format = "%2n %-15e  %d"
+    ```
 
 This variable describes the format of the "pattern completion" menu.
 The following `printf(3)`-style sequences are understood:
@@ -64,7 +70,10 @@ The following `printf(3)`-style sequences are understood:
 ## `$simple_search`
 
 - **Type:** string
-- **Default:** "`~f %s | ~s %s`"
+- **Default:**
+    ```
+    set simple_search = "~f %s | ~s %s"
+    ```
 
 Specifies how NeoMutt should expand a simple search into a real search pattern.
 A simple search is one that does not contain any of the "~" pattern operators.
@@ -81,7 +90,10 @@ For the default value, "joe" would be expanded to: "~f joe | ~s joe".
 ## `$thorough_search`
 
 - **Type:** boolean
-- **Default:** yes
+- **Default:**
+    ```
+    set thorough_search = yes
+    ```
 
 Affects the `~b`, `~B`, and `~h` search operations described in section "$patterns".  If _set_, the headers and body/attachments of messages to be searched are decoded before searching.
 If _unset_, messages are searched as they appear in the folder.

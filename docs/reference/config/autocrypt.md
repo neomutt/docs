@@ -21,7 +21,10 @@ how-to guides and explanation pages instead.
 ## `$autocrypt`
 
 - **Type:** boolean
-- **Default:** no
+- **Default:**
+    ```
+    set autocrypt = no
+    ```
 - **Scope:** Autocrypt only
 
 When _set_, enables autocrypt, which provides passive encryption protection with keys exchanged via headers.
@@ -33,7 +36,10 @@ See "$autocryptdoc" for more details.
 ## `$autocrypt_acct_format`
 
 - **Type:** expando
-- **Default:** "`%4n %-30a %20p %10s`"
+- **Default:**
+    ```
+    set autocrypt_acct_format = "%4n %-30a %20p %10s"
+    ```
 - **Scope:** Autocrypt only
 
 This variable describes the format of the "autocrypt account" menu.
@@ -56,7 +62,10 @@ The following `printf(3)`-style sequences are understood
 ## `$autocrypt_dir`
 
 - **Type:** path (string)
-- **Default:** "`~/.mutt/autocrypt`"
+- **Default:**
+    ```
+    set autocrypt_dir = "~/.mutt/autocrypt"
+    ```
 - **Scope:** Autocrypt only
 
 This variable sets where autocrypt files are stored, including the GPG keyring and SQLite database.
@@ -68,7 +77,10 @@ See "$autocryptdoc" for more details.
 ## `$autocrypt_reply`
 
 - **Type:** boolean
-- **Default:** yes
+- **Default:**
+    ```
+    set autocrypt_reply = yes
+    ```
 - **Scope:** Autocrypt only
 
 When _set_, replying to an autocrypt email automatically enables autocrypt in the reply.

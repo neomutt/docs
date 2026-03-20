@@ -21,7 +21,10 @@ how-to guides and explanation pages instead.
 ## `$crypt_confirm_hook`
 
 - **Type:** boolean
-- **Default:** yes
+- **Default:**
+    ```
+    set crypt_confirm_hook = yes
+    ```
 
 If set, then you will be prompted for confirmation of keys when using the _crypt-hook_ command.
 If unset, no such confirmation prompt will be presented.
@@ -33,7 +36,10 @@ This is generally considered unsafe, especially where typos are concerned.
 ## `$crypt_encryption_info`
 
 - **Type:** boolean
-- **Default:** yes
+- **Default:**
+    ```
+    set crypt_encryption_info = yes
+    ```
 - **Scope:** Crypto only
 
 If _set_, NeoMutt will include an informative block before an encrypted part, with details about the encryption.
@@ -44,7 +50,10 @@ If _set_, NeoMutt will include an informative block before an encrypted part, wi
 ## `$crypt_opportunistic_encrypt`
 
 - **Type:** boolean
-- **Default:** no
+- **Default:**
+    ```
+    set crypt_opportunistic_encrypt = no
+    ```
 - **Scope:** Crypto only
 
 Setting this variable will cause NeoMutt to automatically enable and disable encryption, based on whether all message recipient keys can be located by NeoMutt.
@@ -64,7 +73,10 @@ It can be manually re-enabled in the pgp or smime menus.
 ## `$crypt_opportunistic_encrypt_strong_keys`
 
 - **Type:** boolean
-- **Default:** no
+- **Default:**
+    ```
+    set crypt_opportunistic_encrypt_strong_keys = no
+    ```
 
 When set, this modifies the behavior of $$crypt_opportunistic_encrypt to only search for "strong keys", that is, keys with full validity according to the web-of-trust algorithm.
 A key with marginal or no validity will not enable opportunistic encryption.
@@ -79,7 +91,10 @@ The GPGME backend will use the same filters as with OpenPGP, and depends on GPGM
 ## `$crypt_protected_headers_read`
 
 - **Type:** boolean
-- **Default:** yes
+- **Default:**
+    ```
+    set crypt_protected_headers_read = yes
+    ```
 - **Scope:** Crypto only
 
 When set, NeoMutt will display protected headers ("Memory Hole") in the pager, When set, NeoMutt will display protected headers in the pager, and will update the index and header cache with revised headers.
@@ -97,7 +112,10 @@ If you reply to a message before opening it, NeoMutt will end up using the dummy
 ## `$crypt_protected_headers_save`
 
 - **Type:** boolean
-- **Default:** no
+- **Default:**
+    ```
+    set crypt_protected_headers_save = no
+    ```
 - **Scope:** Crypto only
 
 When $$crypt_protected_headers_read is set, and a message with a protected Subject is opened, NeoMutt will save the updated Subject into the header cache by default.
@@ -116,7 +134,10 @@ Please make sure you understand the consequences of this before you enable this 
 ## `$crypt_protected_headers_subject`
 
 - **Type:** string
-- **Default:** "`...`"
+- **Default:**
+    ```
+    set crypt_protected_headers_subject = "..."
+    ```
 - **Scope:** Crypto only
 
 When $$crypt_protected_headers_write is set, and the message is marked for encryption, this will be substituted into the Subject field in the message headers.
@@ -129,7 +150,10 @@ To prevent a subject from being substituted, unset this variable, or set it to t
 ## `$crypt_protected_headers_weed`
 
 - **Type:** boolean
-- **Default:** no
+- **Default:**
+    ```
+    set crypt_protected_headers_weed = no
+    ```
 - **Scope:** Crypto only
 
 Controls whether NeoMutt will weed protected header fields.
@@ -140,7 +164,10 @@ Controls whether NeoMutt will weed protected header fields.
 ## `$crypt_protected_headers_write`
 
 - **Type:** boolean
-- **Default:** yes
+- **Default:**
+    ```
+    set crypt_protected_headers_write = yes
+    ```
 - **Scope:** Crypto only
 
 When set, NeoMutt will generate protected headers for signed and encrypted emails.
@@ -156,7 +183,10 @@ Currently NeoMutt only supports the Subject header.
 ## `$crypt_timestamp`
 
 - **Type:** boolean
-- **Default:** yes
+- **Default:**
+    ```
+    set crypt_timestamp = yes
+    ```
 - **Scope:** Crypto only
 
 If _set_, NeoMutt will include a time stamp in the lines surrounding PGP or S/MIME output, so spoofing such lines is more difficult.
@@ -168,7 +198,10 @@ If you are using colors to mark these lines, and rely on these, you may _unset_ 
 ## `$crypt_use_gpgme`
 
 - **Type:** boolean
-- **Default:** yes
+- **Default:**
+    ```
+    set crypt_use_gpgme = yes
+    ```
 
 This variable controls the use of the GPGME-enabled crypto backends.
 If it is _set_ and NeoMutt was built with GPGME support, the gpgme code for S/MIME and PGP will be used instead of the classic code.
@@ -182,7 +215,10 @@ Note that the GPGME backend does not support creating old-style inline (traditio
 ## `$crypt_use_pka`
 
 - **Type:** boolean
-- **Default:** no
+- **Default:**
+    ```
+    set crypt_use_pka = no
+    ```
 
 Controls whether NeoMutt uses PKA during signature verification (only supported by the GPGME backend).
 See: http://www.g10code.de/docs/pka-intro.de.pdf 
@@ -193,7 +229,10 @@ See: http://www.g10code.de/docs/pka-intro.de.pdf
 ## `$crypt_verify_sig`
 
 - **Type:** quad-option
-- **Default:** yes
+- **Default:**
+    ```
+    set crypt_verify_sig = yes
+    ```
 - **Scope:** Crypto only
 
 If _"yes"_, always attempt to verify PGP or S/MIME signatures.
@@ -207,6 +246,9 @@ If _"no"_, never attempt to verify cryptographic signatures.
 
 - **Type:** address
 - **Default:** (empty)
+    ```
+    set envelope_from_address = ""
+    ```
 
 Manually sets the _envelope_ sender for outgoing messages.
 This value is ignored if $$use_envelope_from is _unset_.
@@ -217,7 +259,10 @@ This value is ignored if $$use_envelope_from is _unset_.
 ## `$pgp_auto_decode`
 
 - **Type:** boolean
-- **Default:** no
+- **Default:**
+    ```
+    set pgp_auto_decode = no
+    ```
 
 If _set_, NeoMutt will automatically attempt to decrypt traditional PGP messages whenever the user performs an operation which ordinarily would result in the contents of the message being operated on.
 For example, if the user displays a pgp-traditional message which has not been manually checked with the `$<check-traditional-pgp>` function, NeoMutt will automatically check the message for traditional pgp.
@@ -228,7 +273,10 @@ For example, if the user displays a pgp-traditional message which has not been m
 ## `$pgp_auto_inline`
 
 - **Type:** boolean
-- **Default:** no
+- **Default:**
+    ```
+    set pgp_auto_inline = no
+    ```
 - **Scope:** PGP only
 
 This option controls whether NeoMutt generates old-style inline (traditional) PGP encrypted or signed messages under certain circumstances.
@@ -248,7 +296,10 @@ Also note that using the old-style PGP message format is **strongly** **deprecat
 ## `$pgp_check_exit`
 
 - **Type:** boolean
-- **Default:** yes
+- **Default:**
+    ```
+    set pgp_check_exit = yes
+    ```
 - **Scope:** PGP only
 
 If _set_, NeoMutt will check the exit code of the PGP subprocess when signing or encrypting.
@@ -260,7 +311,10 @@ A non-zero exit code means that the subprocess failed.
 ## `$pgp_check_gpg_decrypt_status_fd`
 
 - **Type:** boolean
-- **Default:** yes
+- **Default:**
+    ```
+    set pgp_check_gpg_decrypt_status_fd = yes
+    ```
 - **Scope:** PGP only
 
 If _set_, NeoMutt will check the status file descriptor output of $$pgp_decrypt_command and $$pgp_decode_command for GnuPG status codes indicating successful decryption.
@@ -275,6 +329,9 @@ If _unset_, NeoMutt will instead match the status fd output against $$pgp_decryp
 
 - **Type:** expando (command string)
 - **Default:** (empty)
+    ```
+    set pgp_clear_sign_command = ""
+    ```
 - **Scope:** PGP only
 
 This format is used to create an old-style "clearsigned" PGP message.
@@ -290,6 +347,9 @@ Note that in this case, %r expands to the search string, which is a list of one 
 
 - **Type:** expando (command string)
 - **Default:** (empty)
+    ```
+    set pgp_decode_command = ""
+    ```
 - **Scope:** PGP only
 
 This format strings specifies a command which is used to decode application/pgp attachments.
@@ -313,6 +373,9 @@ The PGP command formats have their own set of `printf(3)`-like sequences:
 
 - **Type:** regular expression
 - **Default:** (empty)
+    ```
+    set pgp_decryption_okay = ""
+    ```
 - **Scope:** PGP only
 
 If you assign text to this variable, then an encrypted PGP message is only considered successfully decrypted if the output from $$pgp_decrypt_command contains the text.
@@ -328,6 +391,9 @@ Note that if $$pgp_check_gpg_decrypt_status_fd is set, this variable is ignored.
 
 - **Type:** expando (command string)
 - **Default:** (empty)
+    ```
+    set pgp_decrypt_command = ""
+    ```
 - **Scope:** PGP only
 
 This command is used to decrypt a PGP encrypted message.
@@ -347,6 +413,9 @@ See also: https://github.com/neomutt/neomutt/issues/1014
 
 - **Type:** string
 - **Default:** (empty)
+    ```
+    set pgp_default_key = ""
+    ```
 - **Scope:** PGP only
 
 This is the default key-pair to use for PGP operations.
@@ -361,6 +430,9 @@ It will also be used for signing unless $$pgp_sign_as is set.
 
 - **Type:** expando (command string)
 - **Default:** (empty)
+    ```
+    set pgp_encrypt_only_command = ""
+    ```
 - **Scope:** PGP only
 
 This command is used to encrypt a body part without signing it.
@@ -375,6 +447,9 @@ Note that in this case, %r expands to the search string, which is a list of one 
 
 - **Type:** expando (command string)
 - **Default:** (empty)
+    ```
+    set pgp_encrypt_sign_command = ""
+    ```
 - **Scope:** PGP only
 
 This command is used to both sign and encrypt a body part.
@@ -387,7 +462,10 @@ This is a format string, see the $$pgp_decode_command command for possible `prin
 ## `$pgp_entry_format`
 
 - **Type:** expando
-- **Default:** "`%4n %t%f %4l/0x%k %-4a %2c %u`"
+- **Default:**
+    ```
+    set pgp_entry_format = "%4n %t%f %4l/0x%k %-4a %2c %u"
+    ```
 - **Scope:** Crypto only or PGP only when GPGME disabled
 
 This variable allows you to customize the PGP key selection menu to your personal taste.
@@ -426,6 +504,9 @@ See the section "Sending Cryptographically Signed/Encrypted Messages" of the use
 
 - **Type:** expando (command string)
 - **Default:** (empty)
+    ```
+    set pgp_export_command = ""
+    ```
 - **Scope:** PGP only
 
 This command is used to export a public key from the user's key ring.
@@ -439,6 +520,9 @@ This is a format string, see the $$pgp_decode_command command for possible `prin
 
 - **Type:** expando (command string)
 - **Default:** (empty)
+    ```
+    set pgp_get_keys_command = ""
+    ```
 - **Scope:** PGP only
 
 This command is invoked whenever NeoMutt needs to fetch the public key associated with an email address.
@@ -452,6 +536,9 @@ Note that in this case, %r expands to the email address, not the public key ID (
 
 - **Type:** regular expression
 - **Default:** (empty)
+    ```
+    set pgp_good_sign = ""
+    ```
 - **Scope:** PGP only
 
 If you assign a text to this variable, then a PGP signature is only considered verified if the output from $$pgp_verify_command contains the text.
@@ -463,7 +550,10 @@ Use this variable if the exit code from the command is 0 even for bad signatures
 ## `$pgp_ignore_subkeys`
 
 - **Type:** boolean
-- **Default:** yes
+- **Default:**
+    ```
+    set pgp_ignore_subkeys = yes
+    ```
 - **Scope:** PGP only
 
 Setting this variable will cause NeoMutt to ignore OpenPGP subkeys.
@@ -477,6 +567,9 @@ _Unset_ this if you want to play interesting key selection games.
 
 - **Type:** expando (command string)
 - **Default:** (empty)
+    ```
+    set pgp_import_command = ""
+    ```
 - **Scope:** PGP only
 
 This command is used to import a key from a message into the user's public key ring.
@@ -489,7 +582,10 @@ This is a format string, see the $$pgp_decode_command command for possible `prin
 ## `$pgp_key_sort`
 
 - **Type:** sort order
-- **Default:** address
+- **Default:**
+    ```
+    set pgp_key_sort = "address"
+    ```
 - **Scope:** PGP only
 
 Specifies how the entries in the pgp menu are sorted.
@@ -511,6 +607,9 @@ Prefixing the value with `reverse-` sorts the entries in reverse order, e.g.
 
 - **Type:** expando (command string)
 - **Default:** (empty)
+    ```
+    set pgp_list_pubring_command = ""
+    ```
 - **Scope:** PGP only
 
 This command is used to list the public key ring's contents.
@@ -532,6 +631,9 @@ This is a format string, see the $$pgp_decode_command command for possible `prin
 
 - **Type:** expando (command string)
 - **Default:** (empty)
+    ```
+    set pgp_list_secring_command = ""
+    ```
 - **Scope:** PGP only
 
 This command is used to list the secret key ring's contents.
@@ -552,7 +654,10 @@ This is a format string, see the $$pgp_decode_command command for possible `prin
 ## `$pgp_long_ids`
 
 - **Type:** boolean
-- **Default:** yes
+- **Default:**
+    ```
+    set pgp_long_ids = yes
+    ```
 - **Scope:** PGP only
 
 If _set_, use 64-bit PGP key IDs, if _unset_ use the normal 32-bit key IDs.
@@ -565,7 +670,10 @@ This option now only controls the display of key IDs in the key selection menu a
 ## `$pgp_mime_auto`
 
 - **Type:** quad-option
-- **Default:** ask-yes
+- **Default:**
+    ```
+    set pgp_mime_auto = ask-yes
+    ```
 - **Scope:** PGP only
 
 This option controls whether NeoMutt will prompt you for automatically sending a (signed/encrypted) message using PGP/MIME when inline (traditional) fails (for any reason).
@@ -578,7 +686,10 @@ Also note that using the old-style PGP message format is **strongly** **deprecat
 ## `$pgp_retainable_sigs`
 
 - **Type:** boolean
-- **Default:** no
+- **Default:**
+    ```
+    set pgp_retainable_sigs = no
+    ```
 - **Scope:** PGP only
 
 If _set_, signed and encrypted messages will consist of nested `multipart/signed` and `multipart/encrypted` body parts.
@@ -591,7 +702,10 @@ This is useful for applications like encrypted and signed mailing lists, where t
 ## `$pgp_self_encrypt`
 
 - **Type:** boolean
-- **Default:** yes
+- **Default:**
+    ```
+    set pgp_self_encrypt = yes
+    ```
 - **Scope:** PGP only
 
 When _set_, PGP encrypted messages will also be encrypted using the key in $$pgp_default_key.
@@ -602,7 +716,10 @@ When _set_, PGP encrypted messages will also be encrypted using the key in $$pgp
 ## `$pgp_show_unusable`
 
 - **Type:** boolean
-- **Default:** yes
+- **Default:**
+    ```
+    set pgp_show_unusable = yes
+    ```
 - **Scope:** PGP only
 
 If _set_, NeoMutt will display non-usable keys on the PGP key selection menu.
@@ -615,6 +732,9 @@ This includes keys which have been revoked, have expired, or have been marked as
 
 - **Type:** string
 - **Default:** (empty)
+    ```
+    set pgp_sign_as = ""
+    ```
 - **Scope:** PGP only
 
 If you have a different key pair to use for signing, you should set this to the signing key.
@@ -629,6 +749,9 @@ It is recommended that you use the keyid form to specify your key (e.g.
 
 - **Type:** expando (command string)
 - **Default:** (empty)
+    ```
+    set pgp_sign_command = ""
+    ```
 - **Scope:** PGP only
 
 This command is used to create the detached PGP signature for a `multipart/signed` PGP/MIME body part.
@@ -641,7 +764,10 @@ This is a format string, see the $$pgp_decode_command command for possible `prin
 ## `$pgp_strict_enc`
 
 - **Type:** boolean
-- **Default:** yes
+- **Default:**
+    ```
+    set pgp_strict_enc = yes
+    ```
 - **Scope:** PGP only
 
 If _set_, NeoMutt will automatically encode PGP/MIME signed messages as quoted-printable.
@@ -653,7 +779,10 @@ Please note that unsetting this variable may lead to problems with non-verifyabl
 ## `$pgp_timeout`
 
 - **Type:** number (long)
-- **Default:** 300
+- **Default:**
+    ```
+    set pgp_timeout = 300
+    ```
 - **Scope:** PGP only
 
 The number of seconds after which a cached passphrase will expire if not used.
@@ -664,7 +793,10 @@ The number of seconds after which a cached passphrase will expire if not used.
 ## `$pgp_use_gpg_agent`
 
 - **Type:** boolean
-- **Default:** yes
+- **Default:**
+    ```
+    set pgp_use_gpg_agent = yes
+    ```
 - **Scope:** PGP only
 
 If _set_, NeoMutt expects a `gpg-agent(1)` process will handle private key passphrase prompts.
@@ -685,6 +817,9 @@ If you are using an older version of GnuPG without an agent running, or another 
 
 - **Type:** expando (command string)
 - **Default:** (empty)
+    ```
+    set pgp_verify_command = ""
+    ```
 - **Scope:** PGP only
 
 This command is used to verify PGP signatures.
@@ -698,6 +833,9 @@ This is a format string, see the $$pgp_decode_command command for possible `prin
 
 - **Type:** expando (command string)
 - **Default:** (empty)
+    ```
+    set pgp_verify_key_command = ""
+    ```
 - **Scope:** PGP only
 
 This command is used to verify key information from the key selection menu.
@@ -710,7 +848,10 @@ This is a format string, see the $$pgp_decode_command command for possible `prin
 ## `$smime_ask_cert_label`
 
 - **Type:** boolean
-- **Default:** yes
+- **Default:**
+    ```
+    set smime_ask_cert_label = yes
+    ```
 - **Scope:** S/MIME only
 
 This flag controls whether you want to be asked to enter a label for a certificate about to be added to the database or not.
@@ -723,6 +864,9 @@ It is _set_ by default.
 
 - **Type:** path (string)
 - **Default:** (empty)
+    ```
+    set smime_ca_location = ""
+    ```
 - **Scope:** S/MIME only
 
 This variable contains the name of either a directory, or a file which contains trusted certificates for use with OpenSSL.
@@ -734,6 +878,9 @@ This variable contains the name of either a directory, or a file which contains 
 
 - **Type:** path (string)
 - **Default:** (empty)
+    ```
+    set smime_certificates = ""
+    ```
 - **Scope:** S/MIME only
 
 Since for S/MIME there is no pubring/secring as with PGP, NeoMutt has to handle storage and retrieval of keys by itself.
@@ -748,6 +895,9 @@ This option points to the location of the certificates.
 
 - **Type:** expando (command string)
 - **Default:** (empty)
+    ```
+    set smime_decrypt_command = ""
+    ```
 - **Scope:** S/MIME only
 
 This format string specifies a command which is used to decrypt `application/pkcs7-mime` attachments.
@@ -775,7 +925,10 @@ For examples on how to configure these formats, see the `smime.rc` in the `sampl
 ## `$smime_decrypt_use_default_key`
 
 - **Type:** boolean
-- **Default:** yes
+- **Default:**
+    ```
+    set smime_decrypt_use_default_key = yes
+    ```
 - **Scope:** S/MIME only
 
 If _set_ (default) this tells NeoMutt to use the default key for decryption.
@@ -789,6 +942,9 @@ It will ask you to supply a key, if it can't find one.
 
 - **Type:** string
 - **Default:** (empty)
+    ```
+    set smime_default_key = ""
+    ```
 - **Scope:** S/MIME only
 
 This is the default key-pair to use for S/MIME operations, and must be set to the keyid (the hash-value that OpenSSL generates) to work properly.
@@ -807,6 +963,9 @@ It will also be used for signing unless $$smime_sign_as is set.
 
 - **Type:** expando (command string)
 - **Default:** (empty)
+    ```
+    set smime_encrypt_command = ""
+    ```
 - **Scope:** S/MIME only
 
 This command is used to create encrypted S/MIME messages.
@@ -821,7 +980,10 @@ Encrypt the message to $$smime_default_key too.
 ## `$smime_encrypt_with`
 
 - **Type:** string
-- **Default:** "`aes256`"
+- **Default:**
+    ```
+    set smime_encrypt_with = "aes256"
+    ```
 - **Scope:** S/MIME only
 
 This sets the algorithm that should be used for encryption.
@@ -834,6 +996,9 @@ Valid choices are "aes128", "aes192", "aes256", "des", "des3", "rc2-40", "rc2-64
 
 - **Type:** expando (command string)
 - **Default:** (empty)
+    ```
+    set smime_get_cert_command = ""
+    ```
 - **Scope:** S/MIME only
 
 This command is used to extract X509 certificates from a PKCS7 structure.
@@ -847,6 +1012,9 @@ This is a format string, see the $$smime_decrypt_command command for possible `p
 
 - **Type:** expando (command string)
 - **Default:** (empty)
+    ```
+    set smime_get_cert_email_command = ""
+    ```
 - **Scope:** S/MIME only
 
 This command is used to extract the mail address(es) used for storing X509 certificates, and for verification purposes (to check whether the certificate was issued for the sender's mailbox).
@@ -860,6 +1028,9 @@ This is a format string, see the $$smime_decrypt_command command for possible `p
 
 - **Type:** expando (command string)
 - **Default:** (empty)
+    ```
+    set smime_get_signer_cert_command = ""
+    ```
 - **Scope:** S/MIME only
 
 This command is used to extract only the signers X509 certificate from a S/MIME signature, so that the certificate's owner may get compared to the email's "From:" field.
@@ -873,6 +1044,9 @@ This is a format string, see the $$smime_decrypt_command command for possible `p
 
 - **Type:** expando (command string)
 - **Default:** (empty)
+    ```
+    set smime_import_cert_command = ""
+    ```
 - **Scope:** S/MIME only
 
 This command is used to import a certificate via smime_keys.
@@ -886,7 +1060,10 @@ NOTE: %c and %k will default to $$smime_sign_as if set, otherwise $$smime_defaul
 ## `$smime_is_default`
 
 - **Type:** boolean
-- **Default:** no
+- **Default:**
+    ```
+    set smime_is_default = no
+    ```
 - **Scope:** S/MIME only
 
 The default behavior of NeoMutt is to use PGP on all auto-sign/encryption operations.
@@ -901,6 +1078,9 @@ However, this has no effect while replying, since NeoMutt will automatically sel
 
 - **Type:** path (string)
 - **Default:** (empty)
+    ```
+    set smime_keys = ""
+    ```
 - **Scope:** S/MIME only
 
 Since for S/MIME there is no pubring/secring as with PGP, NeoMutt has to handle storage and retrieval of keys/certs by itself.
@@ -915,6 +1095,9 @@ This option points to the location of the private keys.
 
 - **Type:** expando (command string)
 - **Default:** (empty)
+    ```
+    set smime_pk7out_command = ""
+    ```
 - **Scope:** S/MIME only
 
 This command is used to extract PKCS7 structures of S/MIME signatures, in order to extract the public X509 certificate(s).
@@ -927,7 +1110,10 @@ This is a format string, see the $$smime_decrypt_command command for possible `p
 ## `$smime_self_encrypt`
 
 - **Type:** boolean
-- **Default:** yes
+- **Default:**
+    ```
+    set smime_self_encrypt = yes
+    ```
 - **Scope:** S/MIME only
 
 When _set_, S/MIME encrypted messages will also be encrypted using the certificate in $$smime_default_key.
@@ -939,6 +1125,9 @@ When _set_, S/MIME encrypted messages will also be encrypted using the certifica
 
 - **Type:** string
 - **Default:** (empty)
+    ```
+    set smime_sign_as = ""
+    ```
 - **Scope:** S/MIME only
 
 If you have a separate key to use for signing, you should set this to the signing key.
@@ -951,6 +1140,9 @@ Most people will only need to set $$smime_default_key.
 
 - **Type:** expando (command string)
 - **Default:** (empty)
+    ```
+    set smime_sign_command = ""
+    ```
 - **Scope:** S/MIME only
 
 This command is used to created S/MIME signatures of type `multipart/signed`, which can be read by all mail clients.
@@ -963,7 +1155,10 @@ This is a format string, see the $$smime_decrypt_command command for possible `p
 ## `$smime_sign_digest_alg`
 
 - **Type:** string
-- **Default:** "`sha256`"
+- **Default:**
+    ```
+    set smime_sign_digest_alg = "sha256"
+    ```
 - **Scope:** S/MIME only
 
 This sets the algorithm that should be used for the signature message digest.
@@ -975,7 +1170,10 @@ Valid choices are "md5", "sha1", "sha224", "sha256", "sha384", "sha512".
 ## `$smime_timeout`
 
 - **Type:** number
-- **Default:** 300
+- **Default:**
+    ```
+    set smime_timeout = 300
+    ```
 - **Scope:** S/MIME only
 
 The number of seconds after which a cached passphrase will expire if not used.
@@ -987,6 +1185,9 @@ The number of seconds after which a cached passphrase will expire if not used.
 
 - **Type:** expando (command string)
 - **Default:** (empty)
+    ```
+    set smime_verify_command = ""
+    ```
 - **Scope:** S/MIME only
 
 This command is used to verify S/MIME signatures of type `multipart/signed`.
@@ -1000,6 +1201,9 @@ This is a format string, see the $$smime_decrypt_command command for possible `p
 
 - **Type:** expando (command string)
 - **Default:** (empty)
+    ```
+    set smime_verify_opaque_command = ""
+    ```
 - **Scope:** S/MIME only
 
 This command is used to verify S/MIME signatures of type `application/pkcs7-mime`.

@@ -21,7 +21,10 @@ how-to guides and explanation pages instead.
 ## `$check_new`
 
 - **Type:** boolean
-- **Default:** yes
+- **Default:**
+    ```
+    set check_new = yes
+    ```
 
 **Note:** this option only affects _maildir_ and _MH_ style mailboxes.
 
@@ -35,7 +38,10 @@ If this variable is _unset_, no check for new mail is performed while the mailbo
 ## `$maildir_check_cur`
 
 - **Type:** boolean
-- **Default:** `no`
+- **Default:**
+    ```
+    set maildir_check_cur = no
+    ```
 
 If _set_, NeoMutt will poll both the new and cur directories of a maildir folder for new messages.
 This might be useful if other programs interacting with the folder (e.g. dovecot) are moving new messages to the cur directory.
@@ -47,7 +53,10 @@ Note that setting this option may slow down polling for new messages in large fo
 ## `$maildir_field_delimiter`
 
 - **Type:** string
-- **Default:** `":"`
+- **Default:**
+    ```
+    set maildir_field_delimiter = ":"
+    ```
 
 Use the value as maildir field delimiter.
 This is a single-character used to accommodate maildir mailboxes on platforms where `:` is not allowed in a filename.
@@ -64,7 +73,10 @@ Setting it will have no effect on other mailbox types.
 ## `$maildir_header_cache_verify`
 
 - **Type:** boolean
-- **Default:** `yes`
+- **Default:**
+    ```
+    set maildir_header_cache_verify = yes
+    ```
 
 Check for Maildir unaware programs other than NeoMutt having modified maildir files when the header cache is in use.
 This incurs one `stat(2)` per message every time the folder is opened (which can be very slow for NFS folders).
@@ -75,7 +87,10 @@ This incurs one `stat(2)` per message every time the folder is opened (which can
 ## `$maildir_trash`
 
 - **Type:** boolean
-- **Default:** `no`
+- **Default:**
+    ```
+    set maildir_trash = no
+    ```
 
 If _set_, messages marked as deleted will be saved with the maildir trashed flag instead of unlinked.
 **Note:** this only applies to maildir-style mailboxes.

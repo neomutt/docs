@@ -21,7 +21,10 @@ how-to guides and explanation pages instead.
 ## `$idn_decode`
 
 - **Type:** boolean
-- **Default:** yes
+- **Default:**
+    ```
+    set idn_decode = yes
+    ```
 - **Scope:** IDN only
 
 When _set_, NeoMutt will show you international domain names decoded.
@@ -34,7 +37,10 @@ This variable only affects decoding.
 ## `$idn_encode`
 
 - **Type:** boolean
-- **Default:** yes
+- **Default:**
+    ```
+    set idn_encode = yes
+    ```
 
 When _set_, NeoMutt will encode international domain names using IDN.
 Unset this if your SMTP server can handle newer (RFC6531) UTF-8 encoded domains.

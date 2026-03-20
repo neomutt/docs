@@ -21,7 +21,10 @@ how-to guides and explanation pages instead.
 ## `$nm_config_file`
 
 - **Type:** path (string)
-- **Default:** "`auto`"
+- **Default:**
+    ```
+    set nm_config_file = "auto"
+    ```
 
 Configuration file for notmuch.
 Use 'auto' to detect configuration.
@@ -33,6 +36,9 @@ Use 'auto' to detect configuration.
 
 - **Type:** string
 - **Default:** (empty)
+    ```
+    set nm_config_profile = ""
+    ```
 
 Configuration profile for notmuch.
 
@@ -42,7 +48,10 @@ Configuration profile for notmuch.
 ## `$nm_db_limit`
 
 - **Type:** number
-- **Default:** 0
+- **Default:**
+    ```
+    set nm_db_limit = 0
+    ```
 
 This variable specifies the default limit used in notmuch queries.
 
@@ -53,6 +62,9 @@ This variable specifies the default limit used in notmuch queries.
 
 - **Type:** string
 - **Default:** (empty)
+    ```
+    set nm_default_url = ""
+    ```
 
 This variable specifies the default Notmuch database in format notmuch://<absolute path>.
 
@@ -63,6 +75,9 @@ This variable specifies the default Notmuch database in format notmuch://<absolu
 
 - **Type:** string
 - **Default:** (empty)
+    ```
+    set nm_exclude_tags = ""
+    ```
 
 The messages tagged with these tags are excluded and not loaded from notmuch DB to NeoMutt unless specified explicitly.
 
@@ -72,7 +87,10 @@ The messages tagged with these tags are excluded and not loaded from notmuch DB 
 ## `$nm_flagged_tag`
 
 - **Type:** string
-- **Default:** "`flagged`"
+- **Default:**
+    ```
+    set nm_flagged_tag = "flagged"
+    ```
 
 This variable specifies notmuch tag which is used for flagged messages.
 The variable is used to count flagged messages in DB and set the flagged flag when modifying tags.
@@ -85,7 +103,10 @@ flags.
 ## `$nm_open_timeout`
 
 - **Type:** number
-- **Default:** 5
+- **Default:**
+    ```
+    set nm_open_timeout = 5
+    ```
 
 This variable specifies the timeout for database open in seconds.
 
@@ -95,7 +116,10 @@ This variable specifies the timeout for database open in seconds.
 ## `$nm_query_type`
 
 - **Type:** string
-- **Default:** "`messages`"
+- **Default:**
+    ```
+    set nm_query_type = "messages"
+    ```
 
 This variable specifies the default query type (threads or messages) used in notmuch queries.
 
@@ -105,7 +129,10 @@ This variable specifies the default query type (threads or messages) used in not
 ## `$nm_query_window_current_position`
 
 - **Type:** number
-- **Default:** 0
+- **Default:**
+    ```
+    set nm_query_window_current_position = 0
+    ```
 
 This variable contains the position of the current search for window based vfolder.
 
@@ -116,6 +143,9 @@ This variable contains the position of the current search for window based vfold
 
 - **Type:** string
 - **Default:** (empty)
+    ```
+    set nm_query_window_current_search = ""
+    ```
 
 This variable contains the currently setup notmuch search for window based vfolder.
 
@@ -125,7 +155,10 @@ This variable contains the currently setup notmuch search for window based vfold
 ## `$nm_query_window_duration`
 
 - **Type:** number
-- **Default:** 0
+- **Default:**
+    ```
+    set nm_query_window_duration = 0
+    ```
 
 This variable sets the time duration of a windowed notmuch query.
 Accepted values all non negative integers.
@@ -137,7 +170,10 @@ A value of 0 disables the feature.
 ## `$nm_query_window_enable`
 
 - **Type:** boolean
-- **Default:** no
+- **Default:**
+    ```
+    set nm_query_window_enable = no
+    ```
 
 This variable enables windowed notmuch queries even if window duration is 0.
 
@@ -148,6 +184,9 @@ This variable enables windowed notmuch queries even if window duration is 0.
 
 - **Type:** string
 - **Default:** (empty)
+    ```
+    set nm_query_window_or_terms = ""
+    ```
 
 This variable contains additional notmuch search terms for messages to be shown regardless of date.
 
@@ -163,7 +202,10 @@ notmuch://?query=tag:inbox and (date:... or (tag:flagged and tag:unread))
 ## `$nm_query_window_timebase`
 
 - **Type:** string
-- **Default:** "`week`"
+- **Default:**
+    ```
+    set nm_query_window_timebase = "week"
+    ```
 
 This variable sets the time base of a windowed notmuch query.
 Accepted values are 'minute', 'hour', 'day', 'week', 'month', 'year'.
@@ -175,6 +217,9 @@ Accepted values are 'minute', 'hour', 'day', 'week', 'month', 'year'.
 
 - **Type:** string
 - **Default:** (empty)
+    ```
+    set nm_record_tags = ""
+    ```
 
 This variable specifies the notmuch tag modifications (addition, removal, toggling) applied to messages added to the NeoMutt record when $$nm_record is true.
 See the description of the `<modify-labels>` function for the syntax.
@@ -185,7 +230,10 @@ See the description of the `<modify-labels>` function for the syntax.
 ## `$nm_replied_tag`
 
 - **Type:** string
-- **Default:** "`replied`"
+- **Default:**
+    ```
+    set nm_replied_tag = "replied"
+    ```
 
 This variable specifies notmuch tag which is used for replied messages.
 The variable is used to set the replied flag when modifying tags.
@@ -197,7 +245,10 @@ All other NeoMutt commands use standard (e.g. maildir) flags.
 ## `$nm_unread_tag`
 
 - **Type:** string
-- **Default:** "`unread`"
+- **Default:**
+    ```
+    set nm_unread_tag = "unread"
+    ```
 
 This variable specifies notmuch tag which is used for unread messages.
 The variable is used to count unread messages in DB and set the unread flag when modifying tags.
@@ -209,7 +260,10 @@ All other NeoMutt commands use standard (e.g. maildir) flags.
 ## `$virtual_spool_file`
 
 - **Type:** boolean
-- **Default:** no
+- **Default:**
+    ```
+    set virtual_spool_file = no
+    ```
 
 When _set_, NeoMutt will use the first Notmuch virtual mailbox as a spool file.
 

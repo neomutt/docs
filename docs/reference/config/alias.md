@@ -21,7 +21,10 @@ how-to guides and explanation pages instead.
 ## `$alias_file`
 
 - **Type:** path (string)
-- **Default:** "`~/.neomuttrc`"
+- **Default:**
+    ```
+    set alias_file = "~/.neomuttrc"
+    ```
 
 The default file in which to save aliases created by the `$<create-alias>` function.
 Entries added to this file are encoded in the character set specified by $$config_charset if it is _set_ or the current character set otherwise.
@@ -36,7 +39,10 @@ The default for this option is the currently used neomuttrc file, or "~/.neomutt
 ## `$alias_format`
 
 - **Type:** expando
-- **Default:** "%3i %f%t %-15a %-56A | %C%> %Y"
+- **Default:**
+    ```
+    set alias_format = "%3i %f%t %-15a %-56A | %C%> %Y"
+    ```
 
 Specifies the format of the data displayed for the "$alias" menu.
 The following `printf(3)`-style sequences are available:
@@ -72,7 +78,10 @@ The following sequences are deprecated; they will be removed in the future.
 ## `$alias_sort`
 
 - **Type:** sort order
-- **Default:** alias
+- **Default:**
+    ```
+    set alias_sort = "alias"
+    ```
 
 Specifies how the entries in the "alias" and "query" menus are sorted.
 
@@ -101,6 +110,9 @@ Note: This also affects the entries of the address query menu, thus potentially 
 
 - **Type:** command (string)
 - **Default:** (empty)
+    ```
+    set query_command = ""
+    ```
 
 This specifies the command NeoMutt will use to make external address queries.
 The string may contain a "%s", which will be substituted with the query string the user types.
@@ -114,7 +126,10 @@ See "$query": https://neomutt.org/guide/advancedusage.html#query
 ## `$query_format`
 
 - **Type:** expando
-- **Default:** "`%3i %t %-25N %-25E | %C%> %Y`"
+- **Default:**
+    ```
+    set query_format = "%3i %t %-25N %-25E | %C%> %Y"
+    ```
 
 This variable describes the format of the "query" menu.
 The following `printf(3)`-style sequences are understood:

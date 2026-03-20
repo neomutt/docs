@@ -21,7 +21,10 @@ how-to guides and explanation pages instead.
 ## `$attach_save_dir`
 
 - **Type:** path (string)
-- **Default:** "`./`"
+- **Default:**
+    ```
+    set attach_save_dir = "./"
+    ```
 
 The directory where attachments are saved.
 
@@ -31,7 +34,10 @@ The directory where attachments are saved.
 ## `$attach_save_without_prompting`
 
 - **Type:** boolean
-- **Default:** no
+- **Default:**
+    ```
+    set attach_save_without_prompting = no
+    ```
 
 This variable, when set to true, will cause attachments to be saved to the 'attach_save_dir' location without prompting the user for the filename.
 
@@ -41,7 +47,10 @@ This variable, when set to true, will cause attachments to be saved to the 'atta
 ## `$attach_sep`
 
 - **Type:** string
-- **Default:** "`\n`"
+- **Default:**
+    ```
+    set attach_sep = "\n"
+    ```
 
 The separator to add between attachments when operating (saving, printing, piping, etc) on a list of tagged attachments.
 
@@ -51,7 +60,10 @@ The separator to add between attachments when operating (saving, printing, pipin
 ## `$attach_split`
 
 - **Type:** boolean
-- **Default:** yes
+- **Default:**
+    ```
+    set attach_split = yes
+    ```
 
 If this variable is _unset_, when operating (saving, printing, piping, etc) on a list of tagged attachments, NeoMutt will concatenate the attachments and will operate on them as a single attachment.
 The $$attach_sep separator is added after each attachment.
@@ -63,7 +75,10 @@ When _set_, NeoMutt will operate on the attachments one by one.
 ## `$bounce`
 
 - **Type:** quad-option
-- **Default:** ask-yes
+- **Default:**
+    ```
+    set bounce = ask-yes
+    ```
 
 Controls whether you will be asked to confirm bouncing messages.
 If set to _yes_ you don't get asked if you want to bounce a message.
@@ -75,7 +90,10 @@ Setting this variable to _no_ is not generally useful, and thus not recommended,
 ## `$count_alternatives`
 
 - **Type:** boolean
-- **Default:** no
+- **Default:**
+    ```
+    set count_alternatives = no
+    ```
 
 When _set_, NeoMutt will recurse inside multipart/alternatives while performing attachment searching and counting(see $attachments).
 
@@ -89,7 +107,10 @@ Setting this will allow NeoMutt to find and count matching attachments hidden th
 ## `$digest_collapse`
 
 - **Type:** boolean
-- **Default:** yes
+- **Default:**
+    ```
+    set digest_collapse = yes
+    ```
 
 If this option is _set_, NeoMutt's received-attachments menu will not show the subparts of individual messages in a multipart/digest.
 To see these subparts, press "v" on that menu.
@@ -100,7 +121,10 @@ To see these subparts, press "v" on that menu.
 ## `$message_format`
 
 - **Type:** expando
-- **Default:** "`%s`"
+- **Default:**
+    ```
+    set message_format = "%s"
+    ```
 
 This is the string displayed in the "attachment" menu for attachments of type `message/rfc822`.  For a full listing of defined `printf(3)`-like sequences see the section on $$index_format.
 
@@ -110,7 +134,10 @@ This is the string displayed in the "attachment" menu for attachments of type `m
 ## `$mime_forward`
 
 - **Type:** quad-option
-- **Default:** `no`
+- **Default:**
+    ```
+    set mime_forward = no
+    ```
 
 When _set_, the message you are forwarding will be attached as a separate `message/rfc822` MIME part instead of included in the main body of the message.
 This is useful for forwarding MIME messages so the receiver can properly view the message as it was delivered to you.
@@ -124,7 +151,10 @@ Also see $$forward_decode and $$mime_forward_decode.
 ## `$mime_forward_rest`
 
 - **Type:** quad-option
-- **Default:** `yes`
+- **Default:**
+    ```
+    set mime_forward_rest = yes
+    ```
 
 When forwarding multiple attachments of a MIME message from the attachment menu, attachments which can't be decoded in a reasonable manner will be attached to the newly composed message if this option is _set_.
 rder="0" align="left" colspan="3"><font color="#303030" point-size="10">+4
