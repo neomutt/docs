@@ -20,7 +20,7 @@ how-to guides and explanation pages instead.
 (attach-save-dir)=
 ## `$attach_save_dir`
 
-- **Type:** [Path (String)](types.md#path)
+- **Type:** [Path (String)](path)
 - **Default:**
     ```neomuttrc
     set attach_save_dir = "./"
@@ -33,7 +33,7 @@ The directory where attachments are saved.
 (attach-save-without-prompting)=
 ## `$attach_save_without_prompting`
 
-- **Type:** [Boolean](types.md#bool)
+- **Type:** [Boolean](bool)
 - **Default:**
     ```neomuttrc
     set attach_save_without_prompting = no
@@ -46,7 +46,7 @@ This variable, when set to true, will cause attachments to be saved to the 'atta
 (attach-sep)=
 ## `$attach_sep`
 
-- **Type:** [String](types.md#string)
+- **Type:** [String](string)
 - **Default:**
     ```neomuttrc
     set attach_sep = "\n"
@@ -59,7 +59,7 @@ The separator to add between attachments when operating (saving, printing, pipin
 (attach-split)=
 ## `$attach_split`
 
-- **Type:** [Boolean](types.md#bool)
+- **Type:** [Boolean](bool)
 - **Default:**
     ```neomuttrc
     set attach_split = yes
@@ -74,7 +74,7 @@ When _set_, NeoMutt will operate on the attachments one by one.
 (bounce)=
 ## `$bounce`
 
-- **Type:** [Quad-Option](types.md#quad)
+- **Type:** [Quad-Option](quad)
 - **Default:**
     ```neomuttrc
     set bounce = ask-yes
@@ -89,7 +89,7 @@ Setting this variable to _no_ is not generally useful, and thus not recommended,
 (count-alternatives)=
 ## `$count_alternatives`
 
-- **Type:** [Boolean](types.md#bool)
+- **Type:** [Boolean](bool)
 - **Default:**
     ```neomuttrc
     set count_alternatives = no
@@ -106,7 +106,7 @@ Setting this will allow NeoMutt to find and count matching attachments hidden th
 (digest-collapse)=
 ## `$digest_collapse`
 
-- **Type:** [Boolean](types.md#bool)
+- **Type:** [Boolean](bool)
 - **Default:**
     ```neomuttrc
     set digest_collapse = yes
@@ -120,7 +120,7 @@ To see these subparts, press "v" on that menu.
 (message-format)=
 ## `$message_format`
 
-- **Type:** [Expando](types.md#expando)
+- **Type:** [Expando](expando)
 - **Default:**
     ```neomuttrc
     set message_format = "%s"
@@ -133,7 +133,7 @@ This is the string displayed in the "attachment" menu for attachments of type `m
 (mime-forward)=
 ## `$mime_forward`
 
-- **Type:** [Quad-Option](types.md#quad)
+- **Type:** [Quad-Option](quad)
 - **Default:**
     ```neomuttrc
     set mime_forward = no
@@ -150,7 +150,7 @@ Also see $$forward_decode and $$mime_forward_decode.
 (mime-forward-rest)=
 ## `$mime_forward_rest`
 
-- **Type:** [Quad-Option](types.md#quad)
+- **Type:** [Quad-Option](quad)
 - **Default:**
     ```neomuttrc
     set mime_forward_rest = yes

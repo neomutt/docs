@@ -20,7 +20,7 @@ how-to guides and explanation pages instead.
 (check-mbox-size)=
 ## `$check_mbox_size`
 
-- **Type:** [Boolean](types.md#bool)
+- **Type:** [Boolean](bool)
 - **Default:**
     ```neomuttrc
     set check_mbox_size = no

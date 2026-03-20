@@ -20,7 +20,7 @@ how-to guides and explanation pages instead.
 (catchup-newsgroup)=
 ## `$catchup_newsgroup`
 
-- **Type:** [Quad-Option](types.md#quad)
+- **Type:** [Quad-Option](quad)
 - **Default:**
     ```neomuttrc
     set catchup_newsgroup = ask-yes
@@ -33,7 +33,7 @@ If this variable is _set_, NeoMutt will mark all articles in newsgroup as read w
 (followup-to-poster)=
 ## `$followup_to_poster`
 
-- **Type:** [Quad-Option](types.md#quad)
+- **Type:** [Quad-Option](quad)
 - **Default:**
     ```neomuttrc
     set followup_to_poster = ask-yes
@@ -47,7 +47,7 @@ The message will be mailed to the submitter of the message via mail.
 (newsgroups-charset)=
 ## `$newsgroups_charset`
 
-- **Type:** [String](types.md#string)
+- **Type:** [String](string)
 - **Default:**
     ```neomuttrc
     set newsgroups_charset = "utf-8"
@@ -60,8 +60,8 @@ Character set of newsgroups descriptions.
 (newsrc)=
 ## `$newsrc`
 
-- **Type:** [Expando](types.md#expando)
-- **Notes:** [File only](types.md#path)
+- **Type:** [Expando](expando)
+- **Notes:** [File only](path)
 - **Default:**
     ```neomuttrc
     set newsrc = "~/.newsrc"
@@ -84,8 +84,8 @@ The following printf-style sequence is understood:
 (news-cache-dir)=
 ## `$news_cache_dir`
 
-- **Type:** [Path (String)](types.md#path)
-- **Notes:** [Directory only](types.md#path)
+- **Type:** [Path (String)](path)
+- **Notes:** [Directory only](path)
 - **Default:**
     ```neomuttrc
     set news_cache_dir = "~/.neomutt"
@@ -99,7 +99,7 @@ If _unset_, articles and headers will not be saved at all and will be reloaded f
 (news-server)=
 ## `$news_server`
 
-- **Type:** [String](types.md#string)
+- **Type:** [String](string)
 - **Default:** (empty)
     ```
     set news_server = ""
@@ -116,7 +116,7 @@ This option can also be set using the command line option "-g", the environment 
 (nntp-authenticators)=
 ## `$nntp_authenticators`
 
-- **Type:** [String](types.md#string)
+- **Type:** [String](string)
 - **Default:** (empty)
     ```
     set nntp_authenticators = ""
@@ -142,8 +142,8 @@ If a method is available but authentication fails, NeoMutt will not connect to t
 (nntp-context)=
 ## `$nntp_context`
 
-- **Type:** [Number (Long)](types.md#long)
-- **Notes:** [Not Negative](types.md#general)
+- **Type:** [Number (Long)](long)
+- **Notes:** {ref}`Not Negative <general>`
 - **Default:**
     ```neomuttrc
     set nntp_context = 1000
@@ -158,7 +158,7 @@ Also controls how many articles headers will be saved in cache when you quit new
 (nntp-listgroup)=
 ## `$nntp_listgroup`
 
-- **Type:** [Boolean](types.md#bool)
+- **Type:** [Boolean](bool)
 - **Default:**
     ```neomuttrc
     set nntp_listgroup = yes
@@ -171,7 +171,7 @@ This variable controls whether or not existence of each article is checked when 
 (nntp-load-description)=
 ## `$nntp_load_description`
 
-- **Type:** [Boolean](types.md#bool)
+- **Type:** [Boolean](bool)
 - **Default:**
     ```neomuttrc
     set nntp_load_description = yes
@@ -184,8 +184,8 @@ This variable controls whether or not descriptions for each newsgroup must be lo
 (nntp-pass)=
 ## `$nntp_pass`
 
-- **Type:** [String](types.md#string)
-- **Notes:** [Sensitive](types.md#general)
+- **Type:** [String](string)
+- **Notes:** {ref}`Sensitive <general>`
 - **Default:** (empty)
     ```
     set nntp_pass = ""
@@ -198,8 +198,8 @@ Your password for NNTP account.
 (nntp-poll)=
 ## `$nntp_poll`
 
-- **Type:** [Number](types.md#number)
-- **Notes:** [Not Negative](types.md#general)
+- **Type:** [Number](number)
+- **Notes:** {ref}`Not Negative <general>`
 - **Default:**
     ```neomuttrc
     set nntp_poll = 60
@@ -213,8 +213,8 @@ If set to 0, NeoMutt will recheck newsgroup on each operation in index (stepping
 (nntp-user)=
 ## `$nntp_user`
 
-- **Type:** [String](types.md#string)
-- **Notes:** [Sensitive](types.md#general)
+- **Type:** [String](string)
+- **Notes:** {ref}`Sensitive <general>`
 - **Default:** (empty)
     ```
     set nntp_user = ""
@@ -228,7 +228,7 @@ If _unset_ and NNTP server requires authentication, NeoMutt will prompt you for 
 (post-moderated)=
 ## `$post_moderated`
 
-- **Type:** [Quad-Option](types.md#quad)
+- **Type:** [Quad-Option](quad)
 - **Default:**
     ```neomuttrc
     set post_moderated = ask-yes
@@ -242,7 +242,7 @@ If set to _yes_, NeoMutt will post article to newsgroup that have not permission
 (save-unsubscribed)=
 ## `$save_unsubscribed`
 
-- **Type:** [Boolean](types.md#bool)
+- **Type:** [Boolean](bool)
 - **Default:**
     ```neomuttrc
     set save_unsubscribed = no
@@ -255,7 +255,7 @@ When _set_, info about unsubscribed newsgroups will be saved into "newsrc" file 
 (show-new-news)=
 ## `$show_new_news`
 
-- **Type:** [Boolean](types.md#bool)
+- **Type:** [Boolean](bool)
 - **Default:**
     ```neomuttrc
     set show_new_news = yes
@@ -270,7 +270,7 @@ Also controls whether or not number of new articles of subscribed newsgroups wil
 (x-comment-to)=
 ## `$x_comment_to`
 
-- **Type:** [Boolean](types.md#bool)
+- **Type:** [Boolean](bool)
 - **Default:**
     ```neomuttrc
     set x_comment_to = no

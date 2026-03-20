@@ -20,7 +20,7 @@ how-to guides and explanation pages instead.
 (external-search-command)=
 ## `$external_search_command`
 
-- **Type:** [Command (String)](types.md#string)
+- **Type:** [Command (String)](string)
 - **Default:** (empty)
     ```
     set external_search_command = ""
@@ -46,7 +46,7 @@ You, the user, still have to rewrite the mairix_filter script to match the behav
 (pattern-format)=
 ## `$pattern_format`
 
-- **Type:** [Expando](types.md#expando)
+- **Type:** [Expando](expando)
 - **Default:**
     ```neomuttrc
     set pattern_format = "%2n %-15e  %d"
@@ -69,7 +69,7 @@ The following `printf(3)`-style sequences are understood:
 (simple-search)=
 ## `$simple_search`
 
-- **Type:** [String](types.md#string)
+- **Type:** [String](string)
 - **Default:**
     ```neomuttrc
     set simple_search = "~f %s | ~s %s"
@@ -89,7 +89,7 @@ For the default value, "joe" would be expanded to: "~f joe | ~s joe".
 (thorough-search)=
 ## `$thorough_search`
 
-- **Type:** [Boolean](types.md#bool)
+- **Type:** [Boolean](bool)
 - **Default:**
     ```neomuttrc
     set thorough_search = yes

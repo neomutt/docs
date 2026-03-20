@@ -20,7 +20,7 @@ how-to guides and explanation pages instead.
 (allow-ansi)=
 ## `$allow_ansi`
 
-- **Type:** [Boolean](types.md#bool)
+- **Type:** [Boolean](bool)
 - **Default:**
     ```neomuttrc
     set allow_ansi = no
@@ -41,7 +41,7 @@ and give it the same color as your attachment color (see also $$crypt_timestamp)
 (display-filter)=
 ## `$display_filter`
 
-- **Type:** [Command (String)](types.md#string)
+- **Type:** [Command (String)](string)
 - **Default:** (empty)
     ```
     set display_filter = ""
@@ -64,7 +64,7 @@ This can be fixed by adding this to your config:
 (header-color-partial)=
 ## `$header_color_partial`
 
-- **Type:** [Boolean](types.md#bool)
+- **Type:** [Boolean](bool)
 - **Default:**
     ```neomuttrc
     set header_color_partial = no
@@ -83,7 +83,7 @@ See "$color" for more details.
 (markers)=
 ## `$markers`
 
-- **Type:** [Boolean](types.md#bool)
+- **Type:** [Boolean](bool)
 - **Default:**
     ```neomuttrc
     set markers = yes
@@ -99,7 +99,7 @@ Also see the $$smart_wrap variable.
 (pager)=
 ## `$pager`
 
-- **Type:** [Command (String)](types.md#string)
+- **Type:** [Command (String)](string)
 - **Default:** (empty)
     ```
     set pager = ""
@@ -115,8 +115,8 @@ Using an external pager may have some disadvantages: Additional keystrokes are n
 (pager-context)=
 ## `$pager_context`
 
-- **Type:** [Number](types.md#number)
-- **Notes:** [Not Negative](types.md#general)
+- **Type:** [Number](number)
+- **Notes:** {ref}`Not Negative <general>`
 - **Default:**
     ```neomuttrc
     set pager_context = 0
@@ -133,7 +133,7 @@ If positive, this many lines will be given before a match, if 0, the match will 
 (pager-format)=
 ## `$pager_format`
 
-- **Type:** [Expando](types.md#expando)
+- **Type:** [Expando](expando)
 - **Default:**
     ```neomuttrc
     set pager_format = "-%Z- %C/%m: %-20.20n   %s%*  -- (%P)"
@@ -147,8 +147,8 @@ The valid sequences are listed in the $$index_format section.
 (pager-index-lines)=
 ## `$pager_index_lines`
 
-- **Type:** [Number](types.md#number)
-- **Notes:** [Not Negative](types.md#general)
+- **Type:** [Number](number)
+- **Notes:** {ref}`Not Negative <general>`
 - **Default:**
     ```neomuttrc
     set pager_index_lines = 0
@@ -164,8 +164,8 @@ A value of 0 results in no index being shown.
 (pager-read-delay)=
 ## `$pager_read_delay`
 
-- **Type:** [Number](types.md#number)
-- **Notes:** [Not Negative](types.md#general)
+- **Type:** [Number](number)
+- **Notes:** {ref}`Not Negative <general>`
 - **Default:**
     ```neomuttrc
     set pager_read_delay = 0
@@ -180,8 +180,8 @@ This setting is ignored if $$pager is set.
 (pager-skip-quoted-context)=
 ## `$pager_skip_quoted_context`
 
-- **Type:** [Number](types.md#number)
-- **Notes:** [Not Negative](types.md#general)
+- **Type:** [Number](number)
+- **Notes:** {ref}`Not Negative <general>`
 - **Default:**
     ```neomuttrc
     set pager_skip_quoted_context = 0
@@ -196,7 +196,7 @@ If the previous quote is shorter the whole quote is displayed.
 (pager-stop)=
 ## `$pager_stop`
 
-- **Type:** [Boolean](types.md#bool)
+- **Type:** [Boolean](bool)
 - **Default:**
     ```neomuttrc
     set pager_stop = no
@@ -210,7 +210,7 @@ function.
 (prompt-after)=
 ## `$prompt_after`
 
-- **Type:** [Boolean](types.md#bool)
+- **Type:** [Boolean](bool)
 - **Default:**
     ```neomuttrc
     set prompt_after = yes
@@ -224,8 +224,8 @@ If _unset_, NeoMutt will return to the index menu when the external pager exits.
 (search-context)=
 ## `$search_context`
 
-- **Type:** [Number](types.md#number)
-- **Notes:** [Not Negative](types.md#general)
+- **Type:** [Number](number)
+- **Notes:** {ref}`Not Negative <general>`
 - **Default:**
     ```neomuttrc
     set search_context = 0
@@ -239,7 +239,7 @@ By default, search results will be top-aligned.
 (smart-wrap)=
 ## `$smart_wrap`
 
-- **Type:** [Boolean](types.md#bool)
+- **Type:** [Boolean](bool)
 - **Default:**
     ```neomuttrc
     set smart_wrap = yes
@@ -255,7 +255,7 @@ Also see the $$markers variable.
 (smileys)=
 ## `$smileys`
 
-- **Type:** [Regular Expression](types.md#regex)
+- **Type:** [Regular Expression](regex)
 - **Default:**
     ```neomuttrc
     set smileys = "(>From )|(:[-^]?[][)(><}{|/DP])"
@@ -269,7 +269,7 @@ This mostly happens at the beginning of a line.
 (tilde)=
 ## `$tilde`
 
-- **Type:** [Boolean](types.md#bool)
+- **Type:** [Boolean](bool)
 - **Default:**
     ```neomuttrc
     set tilde = no
@@ -282,8 +282,8 @@ When _set_, the internal-pager will pad blank lines to the bottom of the screen 
 (toggle-quoted-show-levels)=
 ## `$toggle_quoted_show_levels`
 
-- **Type:** [Number](types.md#number)
-- **Notes:** [Not Negative](types.md#general)
+- **Type:** [Number](number)
+- **Notes:** {ref}`Not Negative <general>`
 - **Default:**
     ```neomuttrc
     set toggle_quoted_show_levels = 0

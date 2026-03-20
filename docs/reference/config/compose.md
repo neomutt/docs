@@ -20,7 +20,7 @@ how-to guides and explanation pages instead.
 (compose-confirm-detach-first)=
 ## `$compose_confirm_detach_first`
 
-- **Type:** [Boolean](types.md#bool)
+- **Type:** [Boolean](bool)
 - **Default:**
     ```neomuttrc
     set compose_confirm_detach_first = yes
@@ -37,8 +37,8 @@ It doesn't keep track of which message is the typed message if the entries are r
 (compose-format)=
 ## `$compose_format`
 
-- **Type:** [Expando](types.md#expando)
-- **Notes:** [Localised String](types.md#general)
+- **Type:** [Expando](expando)
+- **Notes:** {ref}`Localised String <general>`
 - **Default:**
     ```neomuttrc
     set compose_format = "-- NeoMutt: Compose  [Approx. msg size: %l   Atts: %a]%>-"
@@ -64,7 +64,7 @@ See the text describing the $$status_format option for more information on how t
 (compose-preview-above-attachments)=
 ## `$compose_preview_above_attachments`
 
-- **Type:** [Boolean](types.md#bool)
+- **Type:** [Boolean](bool)
 - **Default:**
     ```neomuttrc
     set compose_preview_above_attachments = no
@@ -78,8 +78,8 @@ By default it is shown below it.
 (compose-preview-min-rows)=
 ## `$compose_preview_min_rows`
 
-- **Type:** [Number](types.md#number)
-- **Notes:** [Not Negative](types.md#general)
+- **Type:** [Number](number)
+- **Notes:** {ref}`Not Negative <general>`
 - **Default:**
     ```neomuttrc
     set compose_preview_min_rows = 5
@@ -92,7 +92,7 @@ This variable specifies the minimum number of rows that have to be available for
 (compose-show-preview)=
 ## `$compose_show_preview`
 
-- **Type:** [Boolean](types.md#bool)
+- **Type:** [Boolean](bool)
 - **Default:**
     ```neomuttrc
     set compose_show_preview = yes
@@ -105,7 +105,7 @@ When _set_, NeoMutt will display a preview of message in the compose view.
 (compose-show-user-headers)=
 ## `$compose_show_user_headers`
 
-- **Type:** [Boolean](types.md#bool)
+- **Type:** [Boolean](bool)
 - **Default:**
     ```neomuttrc
     set compose_show_user_headers = yes
@@ -118,7 +118,7 @@ When _set_, NeoMutt will display user-defined headers (set via $my-header or fro
 (copy)=
 ## `$copy`
 
-- **Type:** [Quad-Option](types.md#quad)
+- **Type:** [Quad-Option](quad)
 - **Default:**
     ```neomuttrc
     set copy = yes
@@ -132,7 +132,7 @@ Also see $$record, $$save_name, $$force_name and "$fcc-hook".
 (edit-headers)=
 ## `$edit_headers`
 
-- **Type:** [Boolean](types.md#bool)
+- **Type:** [Boolean](bool)
 - **Default:**
     ```neomuttrc
     set edit_headers = no
@@ -151,7 +151,7 @@ NeoMutt will not understand localized header labels, just as it would not when p
 (ispell)=
 ## `$ispell`
 
-- **Type:** [Command (String)](types.md#string)
+- **Type:** [Command (String)](string)
 - **Default:**
     ```neomuttrc
     set ispell = "ispell"
@@ -164,7 +164,7 @@ How to invoke ispell (GNU's spell-checking software).
 (postpone)=
 ## `$postpone`
 
-- **Type:** [Quad-Option](types.md#quad)
+- **Type:** [Quad-Option](quad)
 - **Default:**
     ```neomuttrc
     set postpone = ask-yes

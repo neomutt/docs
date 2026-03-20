@@ -20,8 +20,8 @@ how-to guides and explanation pages instead.
 (net-inc)=
 ## `$net_inc`
 
-- **Type:** [Number](types.md#number)
-- **Notes:** [Not Negative](types.md#general)
+- **Type:** [Number](number)
+- **Notes:** {ref}`Not Negative <general>`
 - **Default:**
     ```neomuttrc
     set net_inc = 10
@@ -37,8 +37,8 @@ See also $$read_inc, $$write_inc and $$net_inc.
 (read-inc)=
 ## `$read_inc`
 
-- **Type:** [Number](types.md#number)
-- **Notes:** [Not Negative](types.md#general)
+- **Type:** [Number](number)
+- **Notes:** {ref}`Not Negative <general>`
 - **Default:**
     ```neomuttrc
     set read_inc = 10
@@ -56,8 +56,8 @@ Also see the $$write_inc, $$net_inc and $$time_inc variables and the "$tuning" s
 (time-inc)=
 ## `$time_inc`
 
-- **Type:** [Number](types.md#number)
-- **Notes:** [Not Negative](types.md#general)
+- **Type:** [Number](number)
+- **Notes:** {ref}`Not Negative <general>`
 - **Default:**
     ```neomuttrc
     set time_inc = 0
@@ -74,8 +74,8 @@ Also see the "$tuning" section of the manual for performance considerations.
 (write-inc)=
 ## `$write_inc`
 
-- **Type:** [Number](types.md#number)
-- **Notes:** [Not Negative](types.md#general)
+- **Type:** [Number](number)
+- **Notes:** {ref}`Not Negative <general>`
 - **Default:**
     ```neomuttrc
     set write_inc = 10
