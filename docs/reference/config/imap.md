@@ -65,7 +65,7 @@ When _set_, NeoMutt will fetch the set of subscribed folders from your server wh
     set imap_condstore = no
     ```
 
-When _set_, NeoMutt will use the CONDSTORE extension (RFC7162)
+When _set_, NeoMutt will use the CONDSTORE extension ([RFC7162](https://www.rfc-editor.org/rfc/rfc7162.html))
 if advertised by the server.
 NeoMutt's current implementation is basic, used only for initial message fetching and flag updates.
 
@@ -84,7 +84,7 @@ Your mileage may vary.
     set imap_deflate = yes
     ```
 
-When _set_, NeoMutt will use the COMPRESS=DEFLATE extension (RFC4978)
+When _set_, NeoMutt will use the COMPRESS=DEFLATE extension ([RFC4978](https://www.rfc-editor.org/rfc/rfc4978.html))
 if advertised by the server.
 
 In general a good compression efficiency can be achieved, which speeds up reading large mailboxes also on fairly good connections.
@@ -303,7 +303,7 @@ Set to 0 to disable timing out.
     set imap_qresync = no
     ```
 
-When _set_, NeoMutt will use the QRESYNC extension (RFC7162)
+When _set_, NeoMutt will use the QRESYNC extension ([RFC7162](https://www.rfc-editor.org/rfc/rfc7162.html))
 if advertised by the server.
 NeoMutt's current implementation is basic, used only for initial message fetching and flag updates.
 
@@ -321,7 +321,7 @@ If you experience strange behavior, such as duplicate or missing messages please
     set imap_rfc5161 = yes
     ```
 
-When _set_, NeoMutt will use the IMAP ENABLE extension (RFC5161) to select CAPABILITIES.
+When _set_, NeoMutt will use the IMAP ENABLE extension ([RFC5161](https://www.rfc-editor.org/rfc/rfc5161.html)) to select CAPABILITIES.
 Some servers (notably Coremail System IMap Server) do not properly respond to ENABLE commands, which might cause NeoMutt to hang.
 If your connection seems to freeze at login, try unsetting this.
 See also https://github.com/neomutt/neomutt/issues/1689 
@@ -337,7 +337,7 @@ See also https://github.com/neomutt/neomutt/issues/1689
     set imap_send_id = no
     ```
 
-When _set_, NeoMutt will send an IMAP ID command (RFC2971) to the server when logging in if advertised by the server.
+When _set_, NeoMutt will send an IMAP ID command ([RFC2971](https://www.rfc-editor.org/rfc/rfc2971.html)) to the server when logging in if advertised by the server.
 This command provides information about the IMAP client, such as "NeoMutt" and the current version.
 
 --------------------------------------------------------------------------------

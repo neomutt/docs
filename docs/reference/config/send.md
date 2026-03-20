@@ -1307,7 +1307,7 @@ This option specifies the number of characters to use for wrapping an outgoing m
 Allowed values are between 78 and 998 inclusive.
 
 **Note:** This option usually shouldn't be changed.
-RFC5233 recommends a line length of 78 (the default), so **please only change this setting when you know what you're doing**.
+[RFC5233](https://www.rfc-editor.org/rfc/rfc5233.html) recommends a line length of 78 (the default), so **please only change this setting when you know what you're doing**.
 
 --------------------------------------------------------------------------------
 

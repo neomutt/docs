@@ -120,7 +120,7 @@ The default value is generated during startup: see the "$mailcap" section of the
 
 $$mailcap_path is overridden by the environment variable `$$$MAILCAPS`.
 
-The default search path is from RFC1524.
+The default search path is from [RFC1524](https://www.rfc-editor.org/rfc/rfc1524.html).
 
 --------------------------------------------------------------------------------
 
@@ -151,7 +151,7 @@ This is the safe setting, but we are not sure it doesn't break some more advance
     ```
 
 This variable specifies a list of comma-separated languages.
-RFC8255 : user preferred languages to be searched in parts and display.
+[RFC8255](https://www.rfc-editor.org/rfc/rfc8255.html) : user preferred languages to be searched in parts and display.
 
 Example:
 ```neomuttrc
@@ -188,7 +188,7 @@ Also, this option does not affect replies when $$text_flowed is _set_.
 
 When _set_, NeoMutt will reformat paragraphs in text/plain parts marked format=flowed.
 If _unset_, NeoMutt will display paragraphs unaltered from how they appear in the message body.
-See RFC3676 for details on the _format=flowed_ format.
+See [RFC3676](https://www.rfc-editor.org/rfc/rfc3676.html) for details on the _format=flowed_ format.
 
 Also see $$reflow_wrap, and $$wrap.
 
@@ -283,7 +283,7 @@ It would be displayed in the index menu as "Joe User" instead of "abd30425@somew
     set rfc2047_parameters = yes
     ```
 
-When this variable is _set_, NeoMutt will decode RFC2047-encoded MIME parameters.
+When this variable is _set_, NeoMutt will decode [RFC2047](https://www.rfc-editor.org/rfc/rfc2047.html)-encoded MIME parameters.
 You want to set this variable when NeoMutt suggests you to save attachments to files named like:
 
 ```
@@ -293,10 +293,10 @@ You want to set this variable when NeoMutt suggests you to save attachments to f
 
 When this variable is _set_ interactively, the change won't be active until you change folders.
 
-Note that this use of RFC2047's encoding is explicitly prohibited by the standard, but nevertheless encountered in the wild and produced by, e.g., Outlook.
+Note that this use of [RFC2047](https://www.rfc-editor.org/rfc/rfc2047.html)'s encoding is explicitly prohibited by the standard, but nevertheless encountered in the wild and produced by, e.g., Outlook.
 
 Also note that setting this parameter will _not_ have the effect that NeoMutt _generates_ this kind of encoding.
-Instead, NeoMutt will unconditionally use the encoding specified in RFC2231.
+Instead, NeoMutt will unconditionally use the encoding specified in [RFC2231](https://www.rfc-editor.org/rfc/rfc2231.html).
 
 --------------------------------------------------------------------------------
 

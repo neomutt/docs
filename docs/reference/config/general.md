@@ -464,7 +464,7 @@ value you need to make sure that the assignment occurs _before_ you use "+" or "
     ```
 
 Controls the decoding of complex MIME messages into `text/plain` when forwarding a message.
-The message header is also RFC2047 decoded.
+The message header is also [RFC2047](https://www.rfc-editor.org/rfc/rfc2047.html) decoded.
 This variable is only used, if $$mime_forward is _unset_, otherwise $$mime_forward_decode is used instead.
 
 --------------------------------------------------------------------------------
