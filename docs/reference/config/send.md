@@ -217,12 +217,12 @@ Sets the default Content-Type for the body of newly composed messages.
 
 - **Type:** boolean
 - **Default:** no
+- **Scope:** Crypto only
 
 Setting this variable will cause NeoMutt to always attempt to PGP encrypt outgoing messages.
 This is probably only useful in connection to the "$send-hook" command.
 It can be overridden by use of the pgp menu, when encryption is not required or signing is requested as well.
 If $$smime_is_default is _set_, then OpenSSL is used instead to create S/MIME messages and settings can be overridden by use of the smime menu instead.
-(Crypto only)
 
 --------------------------------------------------------------------------------
 
@@ -242,11 +242,11 @@ See also $$crypt_auto_encrypt, $$crypt_reply_encrypt, $$crypt_auto_sign, $$crypt
 
 - **Type:** boolean
 - **Default:** no
+- **Scope:** Crypto only
 
 Setting this variable will cause NeoMutt to always attempt to cryptographically sign outgoing messages.
 This can be overridden by use of the pgp menu, when signing is not required or encryption is requested as well.
 If $$smime_is_default is _set_, then OpenSSL is used instead to create S/MIME messages and settings can be overridden by use of the smime menu instead of the pgp menu.
-(Crypto only)
 
 --------------------------------------------------------------------------------
 
@@ -266,9 +266,9 @@ See also $$crypt_auto_encrypt, $$crypt_reply_encrypt, $$crypt_auto_sign, $$crypt
 
 - **Type:** boolean
 - **Default:** yes
+- **Scope:** Crypto only
 
 If _set_, automatically PGP or OpenSSL encrypt replies to messages which are encrypted.
-(Crypto only)
 
 --------------------------------------------------------------------------------
 
@@ -277,11 +277,11 @@ If _set_, automatically PGP or OpenSSL encrypt replies to messages which are enc
 
 - **Type:** boolean
 - **Default:** no
+- **Scope:** Crypto only
 
 If _set_, automatically PGP or OpenSSL sign replies to messages which are signed.
 
 **Note:** this does not work on messages that are encrypted _and_ signed!
-(Crypto only)
 
 --------------------------------------------------------------------------------
 
@@ -290,11 +290,11 @@ If _set_, automatically PGP or OpenSSL sign replies to messages which are signed
 
 - **Type:** boolean
 - **Default:** no
+- **Scope:** Crypto only
 
 If _set_, automatically PGP or OpenSSL sign replies to messages which are encrypted.
 This makes sense in combination with $$crypt_reply_encrypt, because it allows you to sign all messages which are automatically encrypted.
 This works around the problem noted in $$crypt_reply_sign, that NeoMutt is not able to find out whether an encrypted message is also signed.
-(Crypto only)
 
 --------------------------------------------------------------------------------
 
@@ -406,11 +406,11 @@ Variables $$fcc_attach and $$fcc_clear will be respected, allowing it to be stor
 
 - **Type:** boolean
 - **Default:** no
+- **Scope:** PGP only
 
 When this variable is _set_, FCCs will be stored unencrypted and unsigned, even when the actual message is encrypted and/or signed.
 
 Note: $$fcc_before_send forces the default (unset) behavior of this option.
-(PGP only)
 
 See also $$pgp_self_encrypt, $$smime_self_encrypt.
 
@@ -722,6 +722,7 @@ See $$nm_record_tags for how to modify the set of notmuch tags assigned to sent 
 
 - **Type:** boolean
 - **Default:** no
+- **Scope:** PGP only
 
 Setting this variable will cause NeoMutt to always attempt to create an inline (traditional) message when replying to a message which is PGP encrypted/signed inline.
 This can be overridden by use of the pgp menu, when inline is not required.
@@ -733,7 +734,6 @@ NeoMutt can be configured to ask before sending PGP/MIME messages when inline (t
 Also see the $$pgp_mime_auto variable.
 
 Also note that using the old-style PGP message format is **strongly** **deprecated**.
-(PGP only)
 
 --------------------------------------------------------------------------------
 
@@ -742,10 +742,10 @@ Also note that using the old-style PGP message format is **strongly** **deprecat
 
 - **Type:** boolean
 - **Default:** no
+- **Scope:** Crypto only
 
 When _set_, postponed messages that are marked for encryption will be self-encrypted.
 NeoMutt will first try to encrypt using the value specified in $$pgp_default_key or $$smime_default_key.
-(Crypto only)
 
 --------------------------------------------------------------------------------
 

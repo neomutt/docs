@@ -22,11 +22,11 @@ how-to guides and explanation pages instead.
 
 - **Type:** boolean
 - **Default:** yes
+- **Scope:** IDN only
 
 When _set_, NeoMutt will show you international domain names decoded.
 Note: You can use IDNs for addresses even if this is _unset_.
 This variable only affects decoding.
-(IDN only)
 
 --------------------------------------------------------------------------------
 
@@ -37,7 +37,5 @@ This variable only affects decoding.
 - **Default:** yes
 
 When _set_, NeoMutt will encode international domain names using IDN.
-Unset this if your SMTP server can handle newer (RFC6531)
-UTF-8 encoded domains.
-(IDN only)
+Unset this if your SMTP server can handle newer (RFC6531) UTF-8 encoded domains.
 

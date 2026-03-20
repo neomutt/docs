@@ -22,10 +22,10 @@ how-to guides and explanation pages instead.
 
 - **Type:** boolean
 - **Default:** no
+- **Scope:** Autocrypt only
 
 When _set_, enables autocrypt, which provides passive encryption protection with keys exchanged via headers.
 See "$autocryptdoc" for more details.
-(Autocrypt only)
 
 --------------------------------------------------------------------------------
 
@@ -34,6 +34,7 @@ See "$autocryptdoc" for more details.
 
 - **Type:** string
 - **Default:** "`%4n %-30a %20p %10s`"
+- **Scope:** Autocrypt only
 
 This variable describes the format of the "autocrypt account" menu.
 The following `printf(3)`-style sequences are understood 
@@ -49,8 +50,6 @@ The following `printf(3)`-style sequences are understood
 | `%>X`  | `%{padding-hard:X}` | Right justify the rest of the string and pad with character `X` |
 | `%\|X` | `%{padding-eol:X}`  | Pad to the end of the line with character `X`                   |
 
-(Autocrypt only)
-
 --------------------------------------------------------------------------------
 
 (autocrypt-dir)=
@@ -58,10 +57,10 @@ The following `printf(3)`-style sequences are understood
 
 - **Type:** path
 - **Default:** "`~/.mutt/autocrypt`"
+- **Scope:** Autocrypt only
 
 This variable sets where autocrypt files are stored, including the GPG keyring and SQLite database.
 See "$autocryptdoc" for more details.
-(Autocrypt only)
 
 --------------------------------------------------------------------------------
 
@@ -70,8 +69,8 @@ See "$autocryptdoc" for more details.
 
 - **Type:** boolean
 - **Default:** yes
+- **Scope:** Autocrypt only
 
 When _set_, replying to an autocrypt email automatically enables autocrypt in the reply.
 You may want to unset this if you're using the same key for autocrypt as normal web-of-trust, so that autocrypt isn't forced on for all encrypted replies.
-(Autocrypt only)
 

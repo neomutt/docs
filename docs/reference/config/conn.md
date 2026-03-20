@@ -36,6 +36,7 @@ Currently supported output lines are _login_, _username_, and _password_.
 
 - **Type:** path
 - **Default:** "`~/.mutt_certificates`"
+- **Scope:** OpenSSL and GnuTLS only
 
 This variable specifies the file where the certificates you trust are saved.
 When an unknown certificate is encountered, you are asked if you accept it or not.
@@ -49,8 +50,6 @@ Example:
 set certificate_file=~/.neomutt/certificates 
 ```
 
-(OpenSSL and GnuTLS only)
-
 --------------------------------------------------------------------------------
 
 (entropy-file)=
@@ -58,9 +57,9 @@ set certificate_file=~/.neomutt/certificates
 
 - **Type:** path
 - **Default:** (empty)
+- **Scope:** OpenSSL only
 
 The file which includes random data that is used to initialize SSL library functions.
-(OpenSSL only)
 
 --------------------------------------------------------------------------------
 
@@ -101,10 +100,10 @@ A negative value causes NeoMutt to wait indefinitely.
 
 - **Type:** path
 - **Default:** (empty)
+- **Scope:** GnuTLS only
 
 This variable specifies a file containing trusted CA certificates.
 Any server certificate that is signed with one of these CA certificates is also automatically accepted.
-(GnuTLS only)
 
 Example:
 ```
@@ -155,11 +154,11 @@ This option supersedes $$ssl_starttls.
 
 - **Type:** number
 - **Default:** 0
+- **Scope:** GnuTLS only
 
 This variable specifies the minimum acceptable prime size (in bits)
 for use in any Diffie-Hellman key exchange.
 A value of 0 will use the default from the GNUTLS library.
-(GnuTLS only)
 
 --------------------------------------------------------------------------------
 
@@ -182,9 +181,9 @@ Setting $$ssl_force_tls is recommended if you rely on `STARTTLS`.
 
 - **Type:** boolean
 - **Default:** yes
+- **Scope:** GnuTLS only
 
 If set to _yes_, NeoMutt will use CA certificates in the system-wide certificate store when checking if a server certificate is signed by a trusted CA.
-(OpenSSL only)
 
 --------------------------------------------------------------------------------
 
@@ -235,12 +234,11 @@ You should only unset this for particular known hosts, using the `$<account-hook
 
 - **Type:** boolean
 - **Default:** no
+- **Scope:** OpenSSL 1.0.2b and newer only
 
 This option should not be changed from the default unless you understand what you are doing.
 
 Setting this variable to _yes_ will permit verifying partial certification chains, i.e. a certificate chain where not the root, but an intermediate certificate CA, or the host certificate, are marked trusted (in $$certificate_file), without marking the root signing CA as trusted.
-
-(OpenSSL 1.0.2b and newer only).
 
 --------------------------------------------------------------------------------
 
