@@ -20,8 +20,8 @@ how-to guides and explanation pages instead.
 (alias-file)=
 ## `$alias_file`
 
-- **Type:** Path (String)
-- **Notes:** File only
+- **Type:** [Path (String)](types.md#path)
+- **Notes:** [File only](types.md#path)
 - **Default:**
     ```neomuttrc
     set alias_file = "~/.neomuttrc"
@@ -39,8 +39,8 @@ The default for this option is the currently used neomuttrc file, or "~/.neomutt
 (alias-format)=
 ## `$alias_format`
 
-- **Type:** Expando
-- **Notes:** Not empty
+- **Type:** [Expando](types.md#expando)
+- **Notes:** [Not Empty](types.md#general)
 - **Default:**
     ```neomuttrc
     set alias_format = "%3i %f%t %-15a %-56A | %C%> %Y"
@@ -79,8 +79,8 @@ The following sequences are deprecated; they will be removed in the future.
 (alias-sort)=
 ## `$alias_sort`
 
-- **Type:** Sort Order
-- **Notes:** Sort Reverse
+- **Type:** [Sort Order](types.md#sort)
+- **Notes:** [Reverse](types.md#sort)
 - **Default:**
     ```neomuttrc
     set alias_sort = "alias"
@@ -109,7 +109,7 @@ Note: This also affects the entries of the address query menu, thus potentially 
 (query-command)=
 ## `$query_command`
 
-- **Type:** Command (String)
+- **Type:** [Command (String)](types.md#string)
 - **Default:** (empty)
     ```
     set query_command = ""
@@ -126,8 +126,8 @@ See "$query": https://neomutt.org/guide/advancedusage.html#query
 (query-format)=
 ## `$query_format`
 
-- **Type:** Expando
-- **Notes:** Not empty
+- **Type:** [Expando](types.md#expando)
+- **Notes:** [Not Empty](types.md#general)
 - **Default:**
     ```neomuttrc
     set query_format = "%3i %t %-25N %-25E | %C%> %Y"

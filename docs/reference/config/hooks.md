@@ -20,7 +20,7 @@ how-to guides and explanation pages instead.
 (default-hook)=
 ## `$default_hook`
 
-- **Type:** String
+- **Type:** [String](types.md#string)
 - **Default:**
     ```neomuttrc
     set default_hook = "~f %s !~P | (~P ~C %s)"
@@ -39,7 +39,7 @@ The default value matches if the message is either from a user matching the regu
 (force-name)=
 ## `$force_name`
 
-- **Type:** Boolean
+- **Type:** [Boolean](types.md#bool)
 - **Default:**
     ```neomuttrc
     set force_name = no
@@ -54,7 +54,7 @@ Also see the $$record variable.
 (save-name)=
 ## `$save_name`
 
-- **Type:** Boolean
+- **Type:** [Boolean](types.md#bool)
 - **Default:**
     ```neomuttrc
     set save_name = no

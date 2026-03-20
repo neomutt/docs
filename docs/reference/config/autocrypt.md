@@ -20,7 +20,7 @@ how-to guides and explanation pages instead.
 (autocrypt)=
 ## `$autocrypt`
 
-- **Type:** Boolean
+- **Type:** [Boolean](types.md#bool)
 - **Default:**
     ```neomuttrc
     set autocrypt = no
@@ -35,7 +35,7 @@ See "$autocryptdoc" for more details.
 (autocrypt-acct-format)=
 ## `$autocrypt_acct_format`
 
-- **Type:** Expando
+- **Type:** [Expando](types.md#expando)
 - **Default:**
     ```neomuttrc
     set autocrypt_acct_format = "%4n %-30a %20p %10s"
@@ -61,8 +61,8 @@ The following `printf(3)`-style sequences are understood
 (autocrypt-dir)=
 ## `$autocrypt_dir`
 
-- **Type:** Path (String)
-- **Notes:** Directory only
+- **Type:** [Path (String)](types.md#path)
+- **Notes:** [Directory only](types.md#path)
 - **Default:**
     ```neomuttrc
     set autocrypt_dir = "~/.mutt/autocrypt"
@@ -77,7 +77,7 @@ See "$autocryptdoc" for more details.
 (autocrypt-reply)=
 ## `$autocrypt_reply`
 
-- **Type:** Boolean
+- **Type:** [Boolean](types.md#bool)
 - **Default:**
     ```neomuttrc
     set autocrypt_reply = yes

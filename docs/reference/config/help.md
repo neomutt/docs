@@ -20,7 +20,7 @@ how-to guides and explanation pages instead.
 (help)=
 ## `$help`
 
-- **Type:** Boolean
+- **Type:** [Boolean](types.md#bool)
 - **Default:**
     ```neomuttrc
     set help = yes

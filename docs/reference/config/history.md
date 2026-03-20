@@ -20,8 +20,8 @@ how-to guides and explanation pages instead.
 (history)=
 ## `$history`
 
-- **Type:** Number
-- **Notes:** Not negative
+- **Type:** [Number](types.md#number)
+- **Notes:** [Not Negative](types.md#general)
 - **Default:**
     ```neomuttrc
     set history = 10
@@ -41,8 +41,8 @@ To prevent duplicates over all entries use $$history_remove_dups.
 (history-file)=
 ## `$history_file`
 
-- **Type:** Path (String)
-- **Notes:** File only
+- **Type:** [Path (String)](types.md#path)
+- **Notes:** [File only](types.md#path)
 - **Default:**
     ```neomuttrc
     set history_file = "~/.mutthistory"
@@ -57,7 +57,7 @@ Also see $$save_history.
 (history-format)=
 ## `$history_format`
 
-- **Type:** Expando
+- **Type:** [Expando](types.md#expando)
 - **Default:**
     ```neomuttrc
     set history_format = "%s"
@@ -79,7 +79,7 @@ This string is similar to $$index_format, but has its own set of `printf(3)`-lik
 (history-remove-dups)=
 ## `$history_remove_dups`
 
-- **Type:** Boolean
+- **Type:** [Boolean](types.md#bool)
 - **Default:**
     ```neomuttrc
     set history_remove_dups = no
@@ -93,8 +93,8 @@ Duplicate entries in the $$history_file will also be removed when it is periodic
 (save-history)=
 ## `$save_history`
 
-- **Type:** Number
-- **Notes:** Not negative
+- **Type:** [Number](types.md#number)
+- **Notes:** [Not Negative](types.md#general)
 - **Default:**
     ```neomuttrc
     set save_history = 0
