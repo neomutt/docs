@@ -91,7 +91,7 @@ sidebar
 | [`$attribution_intro`](attribution-intro)                         | Message to start a reply, "On DATE, PERSON wrote:"                          |
 | [`$attribution_locale`](attribution-locale)                       | Locale for dates in the `$attribution` message                              |
 | [`$attribution_trailer`](attribution-trailer)                     | Suffix message to add after reply text                                      |
-| [`$autocrypt`](autocrypt)                                         | Enables the Autocrypt feature                                               |
+| {ref}``$autocrypt` <autocrypt>`                                         | Enables the Autocrypt feature                                               |
 | [`$autocrypt_acct_format`](autocrypt-acct-format)                 | Format of the Autocrypt account menu                                        |
 | [`$autocrypt_dir`](autocrypt-dir)                                 | Location of Autocrypt files, including the GPG keyring and SQLite database  |
 | [`$autocrypt_reply`](autocrypt-reply)                             | Replying to an Autocrypt email automatically enables Autocrypt in the reply |
@@ -260,7 +260,7 @@ sidebar
 | [`$header_cache_compress_method`](header-cache-compress-method) | Enable generic hcache database compression                                 |
 | `$header_cache_pagesize`                                        | **Deprecated**                                                             |
 | [`$header_color_partial`](header-color-partial)                 | Only color the part of the header matching the regex                       |
-| [`$help`](help)                                                 | Display a help line with common key bindings                               |
+| {ref}``$help` <help>`                                                 | Display a help line with common key bindings                               |
 | [`$hidden_host`](hidden-host)                                   | Don't use the hostname, just the domain, when generating the message id    |
 | [`$hidden_tags`](hidden-tags)                                   | List of tags that shouldn't be displayed on screen (comma-separated)       |
 | [`$hide_limited`](hide-limited)                                 | Don't indicate hidden messages, in the thread tree                         |
@@ -268,7 +268,7 @@ sidebar
 | [`$hide_thread_subject`](hide-thread-subject)                   | Hide subjects that are similar to that of the parent message               |
 | [`$hide_top_limited`](hide-top-limited)                         | Don't indicate hidden top message, in the thread tree                      |
 | [`$hide_top_missing`](hide-top-missing)                         | Don't indicate missing top message, in the thread tree                     |
-| [`$history`](history)                                           | Number of history entries to keep in memory per category                   |
+| {ref}``$history` <history>`                                           | Number of history entries to keep in memory per category                   |
 | [`$history_file`](history-file)                                 | File to save history in                                                    |
 | [`$history_format`](history-format)                             | printf-like format string for the history menu                             |
 | [`$history_remove_dups`](history-remove-dups)                   | Remove duplicate entries from the history                                  |
@@ -324,7 +324,7 @@ sidebar
 
 | Config Option                   | Description                                                                     |
 |---------------------------------|---------------------------------------------------------------------------------|
-| [`$keep_flagged`](keep-flagged) | Don't move flagged messages from [`$spool_file`](spool-file) to [`$mbox`](mbox) |
+| [`$keep_flagged`](keep-flagged) | Don't move flagged messages from [`$spool_file`](spool-file) to {ref}``$mbox` <mbox>` |
 
 ## L
 
@@ -351,7 +351,7 @@ sidebar
 | [`$mark_macro_prefix`](mark-macro-prefix)                     | Prefix for macros using `<mark-message>`                                                                     |
 | [`$mark_old`](mark-old)                                       | Mark new emails as old when leaving the mailbox                                                              |
 | [`$mask`](mask)                                               | Only display files/dirs matching this regex in the browser                                                   |
-| [`$mbox`](mbox)                                               | Folder that receives read emails (see Move)                                                                  |
+| {ref}``$mbox` <mbox>`                                               | Folder that receives read emails (see Move)                                                                  |
 | [`$mbox_type`](mbox-type)                                     | Default type for creating new mailboxes                                                                      |
 | [`$menu_context`](menu-context)                               | Number of lines of overlap when changing pages in the index                                                  |
 | [`$menu_move_off`](menu-move-off)                             | Allow the last menu item to move off the bottom of the screen                                                |
@@ -377,7 +377,7 @@ sidebar
 | [`$mime_type_query_first`](mime-type-query-first)             | Run the [`$mime_type_query_command`](mime-type-query-command) before the mime.types lookup                   |
 | `$mixmaster`                                                  | **Deprecated**                                                                                               |
 | `$mix_entry_format`                                           | **Deprecated**                                                                                               |
-| [`$move`](move)                                               | Move emails from [`$spool_file`](spool-file) to [`$mbox`](mbox) when read                                    |
+| [`$move`](move)                                               | Move emails from [`$spool_file`](spool-file) to {ref}``$mbox` <mbox>` when read                                    |
 | `$msg_format`                                                 | **Renamed to**: [`$message_format`](message-format)                                                          |
 
 ## N
@@ -422,7 +422,7 @@ sidebar
 
 | Config Option                                                         | Description                                                                            |
 |-----------------------------------------------------------------------|----------------------------------------------------------------------------------------|
-| [`$pager`](pager)                                                     | External command for viewing messages, or empty to use NeoMutt's                       |
+| {ref}``$pager` <pager>`                                                     | External command for viewing messages, or empty to use NeoMutt's                       |
 | [`$pager_context`](pager-context)                                     | Number of lines of overlap when changing pages in the pager                            |
 | [`$pager_format`](pager-format)                                       | printf-like format string for the pager's status bar                                   |
 | [`$pager_index_lines`](pager-index-lines)                             | Number of index lines to display above the pager                                       |
