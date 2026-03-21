@@ -1,10 +1,14 @@
 ---
 title: Dialog Menu
-description: Default key bindings and functions for the NeoMutt Dialog Menu.
+description: Default Keys bindings and functions for the NeoMutt Dialog Menu.
 keywords: neomutt, functions, dialog, menu, bindings, keys, input
 ---
 
+(menu-dialog)=
 # Dialog Menu
+
+A simple informational pop-up, such as the help screen or log messages.
+It only supports quitting.
 
 :::{admonition} Di√°taxis: Reference
 :class: note
@@ -15,8 +19,8 @@ Mirror the structure of the software itself. Avoid instruction or explanation ‚Ä
 how-to guides and explanation pages instead.
 :::
 
-| Function | Default Key | Description                      |
-|----------|-------------|----------------------------------|
-| `<exit>` |             | exit this menu                   |
-| `<quit>` | q           | save changes to mailbox and quit |
+| Function | Default Keys | Description                      |
+|----------|--------------|----------------------------------|
+| `<exit>` |              | exit this menu                   |
+| `<quit>` | `q`          | save changes to mailbox and quit |
 

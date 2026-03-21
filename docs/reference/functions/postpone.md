@@ -1,10 +1,14 @@
 ---
 title: Postpone Menu
-description: Default key bindings and functions for the NeoMutt Postpone Menu.
+description: Default Keys bindings and functions for the NeoMutt Postpone Menu.
 keywords: neomutt, functions, postpone, menu, bindings, keys, drafts
 ---
 
+(menu-postpone)=
 # Postpone Menu
+
+Select from your saved draft emails to resume editing.
+You can pick a previously postponed message to continue composing it.
 
 :::{admonition} Di√°taxis: Reference
 :class: note
@@ -15,9 +19,9 @@ Mirror the structure of the software itself. Avoid instruction or explanation ‚Ä
 how-to guides and explanation pages instead.
 :::
 
-| Function           | Default Key | Description                |
-|--------------------|-------------|----------------------------|
-| `<delete-entry>`   | `d`         | delete the current entry   |
-| `<exit>`           | `q`         | exit this menu             |
-| `<undelete-entry>` | `u`         | undelete the current entry |
+| Function           | Default Keys | Description                |
+|--------------------|--------------|----------------------------|
+| `<delete-entry>`   | `d`          | delete the current entry   |
+| `<exit>`           | `q`          | exit this menu             |
+| `<undelete-entry>` | `u`          | undelete the current entry |
 

@@ -79,15 +79,6 @@ maxdepth: 1
 mime-types
 ```
 
-## Config Options
-
-```{toctree}
----
-maxdepth: 2
----
-config/overview
-```
-
 ## Functions
 
 ```{toctree}
