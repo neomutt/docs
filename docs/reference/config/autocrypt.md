@@ -17,7 +17,7 @@ how-to guides and explanation pages instead.
 
 --------------------------------------------------------------------------------
 
-(autocrypt)=
+(opt-autocrypt)=
 ## `$autocrypt`
 
 - **Type:** [Boolean](bool)

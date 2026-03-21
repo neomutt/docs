@@ -17,7 +17,7 @@ how-to guides and explanation pages instead.
 
 --------------------------------------------------------------------------------
 
-(help)=
+(opt-help)=
 ## `$help`
 
 - **Type:** [Boolean](bool)

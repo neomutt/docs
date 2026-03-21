@@ -577,7 +577,7 @@ This option is a format string, please see the description of [$index_format](in
     set keep_flagged = no
     ```
 
-If _set_, read messages marked as flagged will not be moved from your spool mailbox to your [`$mbox`](#mbox) mailbox or to the "mbox" specified by a $mbox-hook command.
+If _set_, read messages marked as flagged will not be moved from your spool mailbox to your [`$mbox`](#opt-mbox) mailbox or to the "mbox" specified by a $mbox-hook command.
 
 Note that [$keep_flagged](keep-flagged) only has an effect if [$move](move) is set.
 
@@ -673,7 +673,7 @@ With this option _set_, the next time you start NeoMutt, the messages will show 
 
 --------------------------------------------------------------------------------
 
-(mbox)=
+(opt-mbox)=
 ## `$mbox`
 
 - **Type:** [Mailbox (String)](string)
@@ -767,7 +767,7 @@ This is because the result of removing the high bit from `0xf8` is `0x78`, which
     set move = no
     ```
 
-If this variable is _set_, then NeoMutt will move read messages from your spool mailbox to your [`$mbox`](#mbox) mailbox or to the "mbox" specified by a $mbox-hook command.
+If this variable is _set_, then NeoMutt will move read messages from your spool mailbox to your [`$mbox`](#opt-mbox) mailbox or to the "mbox" specified by a $mbox-hook command.
 
 See also [$keep_flagged](keep-flagged).
 
@@ -1239,7 +1239,7 @@ If not specified, then the environment variables `$$$MAIL` and `$$$MAILDIR` will
     ```
 
 Setting this variable causes the "status bar" to be displayed on the first line of the screen rather than near the bottom.
-If [`$help`](#help) is _set_ too, it'll be placed at the bottom.
+If [`$help`](#opt-help) is _set_ too, it'll be placed at the bottom.
 
 --------------------------------------------------------------------------------
 
