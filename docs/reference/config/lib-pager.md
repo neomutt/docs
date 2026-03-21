@@ -96,7 +96,7 @@ Also see the [$smart_wrap](smart-wrap) variable.
 
 --------------------------------------------------------------------------------
 
-(opt-pager)=
+(pager)=
 ## `$pager`
 
 - **Type:** [Command (String)](string)
@@ -173,7 +173,7 @@ A value of 0 results in no index being shown.
 
 Determines the number of seconds that must elapse after first opening a new message in the pager before that message will be marked as read.
 A value of 0 results in the message being marked read unconditionally; for other values, navigating to another message or exiting the pager before the timeout will leave the message marked unread.
-This setting is ignored if [`$pager`](#opt-pager) is set.
+This setting is ignored if [`$pager`](#pager) is set.
 
 --------------------------------------------------------------------------------
 
@@ -216,7 +216,7 @@ function.
     set prompt_after = yes
     ```
 
-If you use an _external_ [`$pager`](#opt-pager), setting this variable will cause NeoMutt to prompt you for a command when the pager exits rather than returning to the index menu.
+If you use an _external_ [`$pager`](#pager), setting this variable will cause NeoMutt to prompt you for a command when the pager exits rather than returning to the index menu.
 If _unset_, NeoMutt will return to the index menu when the external pager exits.
 
 --------------------------------------------------------------------------------
