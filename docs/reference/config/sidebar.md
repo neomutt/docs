@@ -236,7 +236,7 @@ Here's an example:
 (sidebar-sort)=
 ## `$sidebar_sort`
 
-- **Type:** [Sort Order](sort)
+- **Type:** [Sort Order](sort-order)
 - **Default:**
     ```neomuttrc
     set sidebar_sort = "unsorted"

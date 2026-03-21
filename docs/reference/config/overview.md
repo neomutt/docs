@@ -44,7 +44,6 @@ mh
 ncrypt
 nntp
 notmuch
-overview
 pager
 pattern
 pop

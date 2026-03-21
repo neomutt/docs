@@ -37,8 +37,8 @@ In those cases, it may be desirable to _unset_ this variable.
 (browser-sort)=
 ## `$browser_sort`
 
-- **Type:** [Sort Order](sort)
-- **Notes:** [Reverse](sort)
+- **Type:** [Sort Order](sort-order)
+- **Notes:** [Reverse](sort-order)
 - **Default:**
     ```neomuttrc
     set browser_sort = "alpha"

@@ -79,8 +79,8 @@ The following sequences are deprecated; they will be removed in the future.
 (alias-sort)=
 ## `$alias_sort`
 
-- **Type:** [Sort Order](sort)
-- **Notes:** [Reverse](sort)
+- **Type:** [Sort Order](sort-order)
+- **Notes:** [Reverse](sort-order)
 - **Default:**
     ```neomuttrc
     set alias_sort = "alias"

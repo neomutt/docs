@@ -90,4 +90,4 @@ See [How to Use Notmuch](../howto/notmuch) for full configuration details.
 ## Next Steps
 
 - "I want to search by tag quickly." Continue with [Searching and Filtering Email](searching-email).
-- "I want to tune my index view." See [Format Strings](../howto/format-strings) and [Index Format](../reference/options).
+- "I want to tune my index view." See [Format Strings](../howto/format-strings) and [Index Format](../reference/config/overview).

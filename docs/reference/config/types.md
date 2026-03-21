@@ -229,7 +229,7 @@ set quote_regex = "^([ \t]*[|>:}#])+"
 set hidden_tags = "unread,draft,flagged,passed,replied,attachment,signed,encrypted"
 ```
 
-(sort)=
+(sort-order)=
 ## Sort Order
 
 - Sort - A sorting method that controls the order things appear in, such as sorting messages by date, subject, or sender.  

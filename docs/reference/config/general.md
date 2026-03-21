@@ -50,7 +50,7 @@ Note that the specified key should not be used in other bindings, as the abort o
 
 Example:
 ```neomuttrc
-set abort_key = "<Esc>" 
+set abort_key = "<Esc>"
 ```
 
 Please note that when using <Esc> as the abort key, you may also want to set the environment variable ESCDELAY to a low value or even 0 which will reduce the time that ncurses waits to distinguish singular <Esc> key presses from the start of a terminal escape sequence.
@@ -87,7 +87,7 @@ By default, all the header fields and message body without any charset indicatio
 
 For example, Japanese users might prefer this:
 ```neomuttrc
-set assumed_charset = "iso-2022-jp:euc-jp:shift_jis:utf-8" 
+set assumed_charset = "iso-2022-jp:euc-jp:shift_jis:utf-8"
 ```
 
 However, only the first content is valid for the message body.
@@ -218,7 +218,7 @@ If this fails for some reason, you can force 24-bit colours by setting this vari
 You may also try to force a certain TERM environment variable by starting NeoMutt from a terminal as follows (this results in wrong colours if the terminal does not implement directcolors):
 
 ```sh
-TERM=xterm-direct neomutt 
+TERM=xterm-direct neomutt
 ```
 
 Note: This variable must be set before using any `color` commands.
@@ -325,7 +325,7 @@ NeoMutt will add "0" to the end.
 Each time NeoMutt is run with logging enabled, the log files are rotated.
 A maximum of five log files are kept, numbered 0 (most recent) to 4 (oldest).
 
-This option can be enabled on the command line, "neomutt -l mylog" 
+This option can be enabled on the command line, `neomutt -l mylog`
 
 See also: `[$debug_level](debug-level)`
 
@@ -349,7 +349,7 @@ Levels 4,5 will be extremely verbose.
 
 Warning: Logging at high levels may save private information to the file.
 
-This option can be enabled on the command line, "neomutt -d 2" 
+This option can be enabled on the command line, `neomutt -d 2`
 
 See also: `[$debug_file](debug-file)`
 
@@ -394,8 +394,7 @@ This applies when you either explicitly delete a message, or when you save it to
     ```
 
 If this option is _set_, NeoMutt will enable the **Security** development features.
-See:
-https://github.com/neomutt/neomutt/discussions/4251 
+See: https://github.com/neomutt/neomutt/discussions/4251
 
 --------------------------------------------------------------------------------
 
@@ -418,7 +417,7 @@ If the _%s_ escape does not appear in `[$editor](editor)`, a space and the name 
 The resulting string is then executed by running:
 
 ```sh
-sh -c 'string' 
+sh -c 'string'
 ```
 
 where _string_ is the expansion of `[$editor](editor)` described above.
@@ -1144,8 +1143,8 @@ The default is to pause one second, so a value of zero for this option suppresse
 (sort)=
 ## `$sort`
 
-- **Type:** [Sort Order](sort)
-- **Notes:** [Reverse](sort), [Last](sort)
+- **Type:** [Sort Order](sort-order)
+- **Notes:** [Reverse](sort-order), [Last](sort-order)
 - **Default:**
     ```neomuttrc
     set sort = "date"
@@ -1184,15 +1183,15 @@ The preferred way to enable a threaded view is via `[$use_threads](use-threads)`
 Note: When [$use_threads](use-threads) is "threads", the last thread sorts to the bottom; when it is "reversed", the last thread sorts to the top.
 The use of "reverse-" in [$sort](sort) swaps which end the last thread will sort to.
 
-See the "Use Threads Feature" section for further explanation and examples, https://neomutt.org/feature/use-threads 
+See the "Use Threads Feature" section for further explanation and examples, https://neomutt.org/feature/use-threads
 
 --------------------------------------------------------------------------------
 
 (sort-aux)=
 ## `$sort_aux`
 
-- **Type:** [Sort Order](sort)
-- **Notes:** [Reverse](sort), [Last](sort)
+- **Type:** [Sort Order](sort-order)
+- **Notes:** [Reverse](sort-order), [Last](sort-order)
 - **Default:**
     ```neomuttrc
     set sort_aux = "date"
@@ -1203,14 +1202,14 @@ This provides a secondary sort for messages in the "index" menu, used when the [
 When sorting by threads, this variable controls how subthreads are sorted within a single thread (for the order between threads, see [$sort](sort)).
 This can be set to any value that [$sort](sort) can, including with the use of "reverse-" and "last-" prefixes, except for variations using "threads" (in that case, NeoMutt will just use "date").
 
-For instance, 
+For instance,
 ```neomuttrc
-set sort_aux = last-date-received 
+set sort_aux = last-date-received
 ```
 
 would mean that if a new message is received in a thread, that subthread becomes the last one displayed (or the first, if you have "`set use_threads = reverse`".)  When using [$use_threads](use-threads), it is more common to use "last-" with [$sort](sort) and not with [$sort_aux](sort-aux).
 
-See the "Use Threads Feature" section for further explanation and examples, https://neomutt.org/feature/use-threads 
+See the "Use Threads Feature" section for further explanation and examples, https://neomutt.org/feature/use-threads
 
 --------------------------------------------------------------------------------
 
@@ -1381,11 +1380,12 @@ The style of threading used in the index.
 | `yes`     | Synonym for `threads`                        |
 | `no`      | Synonym for `flat`                           |
 
-If this variable is never set, then `[$sort](sort)` controls whether threading is used, `[$sort_aux](sort-aux)` controls both the sorting of threads and subthreads, and using `<sort-mailbox>` to select threads affects only `[$sort](sort)`.  Once this variable is set, attempting to set `[$sort](sort)` to a value using "threads" will warn, the value of `[$sort](sort)` controls the sorting between threads while `[$sort_aux](sort-aux)` controls sorting within a thread, and `<sort-mailbox>` toggles `[$use_threads](use-threads)`.
+If this variable is never set, then `[$sort](sort)` controls whether threading is used, `[$sort_aux](sort-aux)` controls both the sorting of threads and subthreads, and using `<sort-mailbox>` to select threads affects only `[$sort](sort)`.
+Once this variable is set, attempting to set `[$sort](sort)` to a value using "threads" will warn, the value of `[$sort](sort)` controls the sorting between threads while `[$sort_aux](sort-aux)` controls sorting within a thread, and `<sort-mailbox>` toggles `[$use_threads](use-threads)`.
 
 Example:
 ```neomuttrc
-set use_threads = yes 
+set use_threads = yes
 ```
 
 See the "Use Threads Feature" section for further explanation and examples.

@@ -314,8 +314,6 @@ Controls the characters used by the "%r" indicator in [$status_format](status-fo
 
 --------------------------------------------------------------------------------
 
---------------------------------------------------------------------------------
-
 (status-format)=
 ## `$status_format`
 

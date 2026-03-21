@@ -583,8 +583,8 @@ This is a format string, see the [$pgp_decode_command](pgp-decode-command) comma
 (pgp-key-sort)=
 ## `$pgp_key_sort`
 
-- **Type:** [Sort Order](sort)
-- **Notes:** [Reverse](sort)
+- **Type:** [Sort Order](sort-order)
+- **Notes:** [Reverse](sort-order)
 - **Default:**
     ```neomuttrc
     set pgp_key_sort = "address"
