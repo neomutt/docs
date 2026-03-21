@@ -125,7 +125,7 @@ The following `printf(3)`-style sequences are understood:
 | `%T`   | `%{tree}`             | Graphic tree characters                                                                                                                                            |
 | `%t`   | `%{tagged}`           | Tagged flag                                                                                                                                                        |
 | `%u`   | `%{unlink}`           | Unlink (=to delete) flag                                                                                                                                           |
-| `%X`   | `%{attach-count}`     | Number of qualifying MIME parts in this part and its children (see the {ref}`$attachments <attachment-searching-and-counting>` section for possible speed effects) |
+| `%X`   | `%{attach-count}`     | Number of qualifying MIME parts in this part and its children (see the [`$attachments`](#attachment-searching-and-counting) section for possible speed effects) |
 | `%*X`  | `%{padding-soft:X}`   | Soft-fill with character `X` as pad                                                                                                                                |
 | `%>X`  | `%{padding-hard:X}`   | Right justify the rest of the string and pad with character `X`                                                                                                    |
 | `%\|X` | `%{padding-eol:X}`    | Pad to the end of the line with character `X`                                                                                                                      |
@@ -577,7 +577,7 @@ This option is a format string, please see the description of [$index_format](in
     set keep_flagged = no
     ```
 
-If _set_, read messages marked as flagged will not be moved from your spool mailbox to your {ref}`$mbox <mbox>` mailbox or to the "mbox" specified by a $mbox-hook command.
+If _set_, read messages marked as flagged will not be moved from your spool mailbox to your [`$mbox`](#mbox) mailbox or to the "mbox" specified by a $mbox-hook command.
 
 Note that [$keep_flagged](keep-flagged) only has an effect if [$move](move) is set.
 
@@ -767,7 +767,7 @@ This is because the result of removing the high bit from `0xf8` is `0x78`, which
     set move = no
     ```
 
-If this variable is _set_, then NeoMutt will move read messages from your spool mailbox to your {ref}`$mbox <mbox>` mailbox or to the "mbox" specified by a $mbox-hook command.
+If this variable is _set_, then NeoMutt will move read messages from your spool mailbox to your [`$mbox`](#mbox) mailbox or to the "mbox" specified by a $mbox-hook command.
 
 See also [$keep_flagged](keep-flagged).
 
@@ -1239,7 +1239,7 @@ If not specified, then the environment variables `$$$MAIL` and `$$$MAILDIR` will
     ```
 
 Setting this variable causes the "status bar" to be displayed on the first line of the screen rather than near the bottom.
-If {ref}`$help <help>` is _set_ too, it'll be placed at the bottom.
+If [`$help`](#help) is _set_ too, it'll be placed at the bottom.
 
 --------------------------------------------------------------------------------
 
