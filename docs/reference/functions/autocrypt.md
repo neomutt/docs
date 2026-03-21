@@ -21,9 +21,9 @@ how-to guides and explanation pages instead.
 
 | Function                  | Default Keys | Description                                    |
 |---------------------------|--------------|------------------------------------------------|
-| `<create-account>`        | `c`          | create a new autocrypt account                 |
-| `<delete-account>`        | `D`          | delete the current account                     |
-| `<exit>`                  | `q`          | exit this menu                                 |
-| `<toggle-active>`         | `a`          | toggle the current account active/inactive     |
-| `<toggle-prefer-encrypt>` | `p`          | toggle the current account prefer-encrypt flag |
+| `<create-account>`        | `c`          | Create a new autocrypt account                 |
+| `<delete-account>`        | `D`          | Delete the current account                     |
+| `<exit>`                  | `q`          | Exit this menu                                 |
+| `<toggle-active>`         | `a`          | Toggle the current account active/inactive     |
+| `<toggle-prefer-encrypt>` | `p`          | Toggle the current account prefer-encrypt flag |
 

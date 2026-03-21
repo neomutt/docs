@@ -51,56 +51,56 @@ The variable `$news_cache_dir` can be used to point to a directory. NeoMutt will
 
 ## Variables
 
-| Name | Type | Default |
-|------|------|---------|
-| `ask_followup_to` | boolean | `no` |
-| `ask_x_comment_to` | boolean | `no` |
-| `catchup_newsgroup` | quad | `ask-yes` |
-| `followup_to_poster` | quad | `ask-yes` |
-| `group_index_format` | string | `%4C %M%N %5s %-45.45f %d` |
-| `inews_command` | string | (empty) |
-| `newsgroups_charset` | string | `utf-8` |
-| `newsrc` | string | `~/.newsrc` |
-| `news_cache_dir` | string | `~/.neomutt` |
-| `news_server` | string | (empty) |
-| `nntp_authenticators` | string | (empty) |
-| `nntp_context` | number | `1000` |
-| `nntp_listgroup` | boolean | `yes` |
-| `nntp_load_description` | boolean | `yes` |
-| `nntp_pass` | string | (empty) |
-| `nntp_poll` | number | `60` |
-| `nntp_user` | string | (empty) |
-| `post_moderated` | quad | `ask-yes` |
-| `save_unsubscribed` | boolean | `no` |
-| `show_new_news` | boolean | `yes` |
-| `show_only_unread` | boolean | `no` |
-| `x_comment_to` | boolean | `no` |
+| Name                    | Type    | Default                    |
+|-------------------------|---------|----------------------------|
+| `ask_followup_to`       | boolean | `no`                       |
+| `ask_x_comment_to`      | boolean | `no`                       |
+| `catchup_newsgroup`     | quad    | `ask-yes`                  |
+| `followup_to_poster`    | quad    | `ask-yes`                  |
+| `group_index_format`    | string  | `%4C %M%N %5s %-45.45f %d` |
+| `inews_command`         | string  | (empty)                    |
+| `newsgroups_charset`    | string  | `utf-8`                    |
+| `newsrc`                | string  | `~/.newsrc`                |
+| `news_cache_dir`        | string  | `~/.neomutt`               |
+| `news_server`           | string  | (empty)                    |
+| `nntp_authenticators`   | string  | (empty)                    |
+| `nntp_context`          | number  | `1000`                     |
+| `nntp_listgroup`        | boolean | `yes`                      |
+| `nntp_load_description` | boolean | `yes`                      |
+| `nntp_pass`             | string  | (empty)                    |
+| `nntp_poll`             | number  | `60`                       |
+| `nntp_user`             | string  | (empty)                    |
+| `post_moderated`        | quad    | `ask-yes`                  |
+| `save_unsubscribed`     | boolean | `no`                       |
+| `show_new_news`         | boolean | `yes`                      |
+| `show_only_unread`      | boolean | `no`                       |
+| `x_comment_to`          | boolean | `no`                       |
 
 ## Functions
 
 NNTP adds the following functions to NeoMutt. By default, none of them are bound to keys.
 
-| Menus | Function | Description |
-|-------|----------|-------------|
-| browser,index | `<catchup>` | mark all articles in newsgroup as read |
-| index,pager | `<change-newsgroup>` | open a different newsgroup |
-| compose | `<edit-followup-to>` | edit the Followup-To field |
-| compose | `<edit-newsgroups>` | edit the newsgroups list |
-| compose | `<edit-x-comment-to>` | edit the X-Comment-To field |
-| attach,index,pager | `<followup-message>` | followup to newsgroup |
-| index,pager | `<post-message>` | post message to newsgroup |
-| browser | `<reload-active>` | load list of all newsgroups from NNTP server |
-| browser | `<subscribe>` | subscribe to current mbox (IMAP/NNTP only) |
-| browser | `<subscribe-pattern>` | subscribe to newsgroups matching a pattern |
-| browser | `<uncatchup>` | mark all articles in newsgroup as unread |
-| browser | `<unsubscribe>` | unsubscribe from current mbox (IMAP/NNTP only) |
-| browser | `<unsubscribe-pattern>` | unsubscribe from newsgroups matching a pattern |
-| index,pager | `<change-newsgroup-readonly>` | open a different newsgroup in read only mode |
-| attach,index,pager | `<forward-to-group>` | forward to newsgroup |
-| index | `<get-children>` | get all children of the current message |
-| index | `<get-parent>` | get parent of the current message |
-| index | `<reconstruct-thread>` | reconstruct thread containing current message |
-| index | `<get-message>` | get message with Message-Id |
+| Menus              | Function                      | Description                                    |
+|--------------------|-------------------------------|------------------------------------------------|
+| browser,index      | `<catchup>`                   | Mark all articles in newsgroup as read         |
+| index,pager        | `<change-newsgroup>`          | Open a different newsgroup                     |
+| compose            | `<edit-followup-to>`          | Edit the Followup-To field                     |
+| compose            | `<edit-newsgroups>`           | Edit the newsgroups list                       |
+| compose            | `<edit-x-comment-to>`         | Edit the X-Comment-To field                    |
+| attach,index,pager | `<followup-message>`          | Followup to newsgroup                          |
+| index,pager        | `<post-message>`              | Post message to newsgroup                      |
+| browser            | `<reload-active>`             | Load list of all newsgroups from NNTP server   |
+| browser            | `<subscribe>`                 | Subscribe to current mbox (IMAP/NNTP only)     |
+| browser            | `<subscribe-pattern>`         | Subscribe to newsgroups matching a pattern     |
+| browser            | `<uncatchup>`                 | Mark all articles in newsgroup as unread       |
+| browser            | `<unsubscribe>`               | Unsubscribe from current mbox (IMAP/NNTP only) |
+| browser            | `<unsubscribe-pattern>`       | Unsubscribe from newsgroups matching a pattern |
+| index,pager        | `<change-newsgroup-readonly>` | Open a different newsgroup in read only mode   |
+| attach,index,pager | `<forward-to-group>`          | Forward to newsgroup                           |
+| index              | `<get-children>`              | Get all children of the current message        |
+| index              | `<get-parent>`                | Get parent of the current message              |
+| index              | `<reconstruct-thread>`        | Reconstruct thread containing current message  |
+| index              | `<get-message>`               | Get message with Message-Id                    |
 
 ## neomuttrc
 
@@ -135,43 +135,43 @@ set x_comment_to = no
 # --------------------------------------------------------------------------
 # FUNCTIONS – shown with an example mapping
 # --------------------------------------------------------------------------
-# mark all articles in newsgroup as read
+# Mark all articles in newsgroup as read
 bind browser,index y catchup
-# open a different newsgroup
+# Open a different newsgroup
 bind index,pager i change-newsgroup
-# edit the Followup-To field
+# Edit the Followup-To field
 bind compose o edit-followup-to
-# edit the newsgroups list
+# Edit the newsgroups list
 bind compose N edit-newsgroups
-# edit the X-Comment-To field
+# Edit the X-Comment-To field
 bind compose x edit-x-comment-to
-# followup to newsgroup
+# Followup to newsgroup
 bind attach,index,pager F followup-message
-# post message to newsgroup
+# Post message to newsgroup
 bind index,pager P post-message
-# load list of all newsgroups from NNTP server
+# Load list of all newsgroups from NNTP server
 bind browser g reload-active
-# subscribe to current mbox (IMAP/NNTP only)
+# Subscribe to current mbox (IMAP/NNTP only)
 bind browser s subscribe
-# subscribe to newsgroups matching a pattern
+# Subscribe to newsgroups matching a pattern
 bind browser S subscribe-pattern
-# mark all articles in newsgroup as unread
+# Mark all articles in newsgroup as unread
 bind browser Y uncatchup
-# unsubscribe from current mbox (IMAP/NNTP only)
+# Unsubscribe from current mbox (IMAP/NNTP only)
 bind browser u unsubscribe
-# unsubscribe from newsgroups matching a pattern
+# Unsubscribe from newsgroups matching a pattern
 bind browser U unsubscribe-pattern
-# open a different newsgroup in read only mode
+# Open a different newsgroup in read only mode
 bind index,pager \ei change-newsgroup-readonly
-# forward to newsgroup
+# Forward to newsgroup
 bind attach,index,pager \eF forward-to-group
-# get all children of the current message
+# Get all children of the current message
 # bind index ??? get-children
-# get parent of the current message
+# Get parent of the current message
 bind index \eG get-parent
-# reconstruct thread containing current message
+# Reconstruct thread containing current message
 # bind index ??? reconstruct-thread
-# get message with Message-Id
+# Get message with Message-Id
 bind index \CG get-message
 # --------------------------------------------------------------------------
 

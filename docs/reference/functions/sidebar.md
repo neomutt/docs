@@ -21,19 +21,19 @@ how-to guides and explanation pages instead.
 
 | Function                   | Default Keys | Description                                          |
 |----------------------------|--------------|------------------------------------------------------|
-| `<sidebar-abort-search>`   |              | close the sidebar search                             |
-| `<sidebar-first>`          |              | move the highlight to the first mailbox              |
-| `<sidebar-last>`           |              | move the highlight to the last mailbox               |
-| `<sidebar-next>`           | `<Down>`     | move the highlight to next mailbox                   |
-| `<sidebar-next-new>`       |              | move the highlight to next mailbox with new mail     |
-| `<sidebar-open>`           |              | open highlighted mailbox                             |
-| `<sidebar-page-down>`      |              | scroll the sidebar down 1 page                       |
-| `<sidebar-page-up>`        |              | scroll the sidebar up 1 page                         |
-| `<sidebar-prev>`           | `<Up>`       | move the highlight to previous mailbox               |
-| `<sidebar-prev-new>`       |              | move the highlight to previous mailbox with new mail |
-| `<sidebar-start-search>`   |              | fuzzy search the sidebar                             |
-| `<sidebar-toggle-virtual>` |              | toggle between mailboxes and virtual mailboxes       |
-| `<sidebar-toggle-visible>` |              | make the sidebar (in)visible                         |
+| `<sidebar-abort-search>`   |              | Close the sidebar search                             |
+| `<sidebar-first>`          |              | Move the highlight to the first mailbox              |
+| `<sidebar-last>`           |              | Move the highlight to the last mailbox               |
+| `<sidebar-next>`           | `<Down>`     | Move the highlight to next mailbox                   |
+| `<sidebar-next-new>`       |              | Move the highlight to next mailbox with new mail     |
+| `<sidebar-open>`           |              | Open highlighted mailbox                             |
+| `<sidebar-page-down>`      |              | Scroll the sidebar down 1 page                       |
+| `<sidebar-page-up>`        |              | Scroll the sidebar up 1 page                         |
+| `<sidebar-prev>`           | `<Up>`       | Move the highlight to previous mailbox               |
+| `<sidebar-prev-new>`       |              | Move the highlight to previous mailbox with new mail |
+| `<sidebar-start-search>`   |              | Fuzzy search the sidebar                             |
+| `<sidebar-toggle-virtual>` |              | Toggle between mailboxes and virtual mailboxes       |
+| `<sidebar-toggle-visible>` |              | Make the sidebar (in)visible                         |
 
 The default keys are only accessible in "sidebar search" mode.
 

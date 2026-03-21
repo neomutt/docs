@@ -21,29 +21,29 @@ how-to guides and explanation pages instead.
 
 | Function                | Default Keys | Description                                                |
 |-------------------------|--------------|------------------------------------------------------------|
-| `<catchup>`             |              | mark all articles in newsgroup as read                     |
-| `<change-dir>`          | `c`          | change directories                                         |
-| `<check-new>`           |              | check mailboxes for new mail                               |
-| `<create-mailbox>`      | `C`          | create a new mailbox (IMAP only)                           |
-| `<delete-mailbox>`      | `d`          | delete the current mailbox (IMAP only)                     |
-| `<descend-directory>`   |              | descend into a directory                                   |
-| `<display-filename>`    | `@`          | display the currently selected file's name                 |
-| `<enter-mask>`          | `m`          | enter a file mask                                          |
-| `<exit>`                | `q`          | exit this menu                                             |
-| `<goto-folder>`         | `=`          | swap the current folder position with $folder if it exists |
-| `<goto-parent>`         | `p`          | go to parent directory                                     |
-| `<mailbox-list>`        | `.`          | list mailboxes with new mail                               |
-| `<reload-active>`       |              | load list of all newsgroups from NNTP server               |
-| `<rename-mailbox>`      | `r`          | rename the current mailbox (IMAP only)                     |
-| `<select-new>`          | `N`          | select a new file in this directory                        |
-| `<sort>`                | `o`          | sort messages                                              |
-| `<sort-reverse>`        | `O`          | sort messages in reverse order                             |
-| `<subscribe>`           | `s`          | subscribe to current mbox (IMAP/NNTP only)                 |
-| `<subscribe-pattern>`   |              | subscribe to newsgroups matching a pattern                 |
-| `<toggle-mailboxes>`    | `<Tab>`      | toggle whether to browse mailboxes or all files            |
-| `<toggle-subscribed>`   | `T`          | toggle view all/subscribed mailboxes (IMAP only)           |
-| `<uncatchup>`           |              | mark all articles in newsgroup as unread                   |
-| `<unsubscribe>`         | `u`          | unsubscribe from current mbox (IMAP/NNTP only)             |
-| `<unsubscribe-pattern>` |              | unsubscribe from newsgroups matching a pattern             |
-| `<view-file>`           | `<Space>`    | view file                                                  |
+| `<catchup>`             |              | Mark all articles in newsgroup as read                     |
+| `<change-dir>`          | `c`          | Change directories                                         |
+| `<check-new>`           |              | Check mailboxes for new mail                               |
+| `<create-mailbox>`      | `C`          | Create a new mailbox (IMAP only)                           |
+| `<delete-mailbox>`      | `d`          | Delete the current mailbox (IMAP only)                     |
+| `<descend-directory>`   |              | Descend into a directory                                   |
+| `<display-filename>`    | `@`          | Display the currently selected file's name                 |
+| `<enter-mask>`          | `m`          | Enter a file mask                                          |
+| `<exit>`                | `q`          | Exit this menu                                             |
+| `<goto-folder>`         | `=`          | Swap the current folder position with $folder if it exists |
+| `<goto-parent>`         | `p`          | Go to parent directory                                     |
+| `<mailbox-list>`        | `.`          | List mailboxes with new mail                               |
+| `<reload-active>`       |              | Load list of all newsgroups from NNTP server               |
+| `<rename-mailbox>`      | `r`          | Rename the current mailbox (IMAP only)                     |
+| `<select-new>`          | `N`          | Select a new file in this directory                        |
+| `<sort>`                | `o`          | Sort messages                                              |
+| `<sort-reverse>`        | `O`          | Sort messages in reverse order                             |
+| `<subscribe>`           | `s`          | Subscribe to current mbox (IMAP/NNTP only)                 |
+| `<subscribe-pattern>`   |              | Subscribe to newsgroups matching a pattern                 |
+| `<toggle-mailboxes>`    | `<Tab>`      | Toggle whether to browse mailboxes or all files            |
+| `<toggle-subscribed>`   | `T`          | Toggle view all/subscribed mailboxes (IMAP only)           |
+| `<uncatchup>`           |              | Mark all articles in newsgroup as unread                   |
+| `<unsubscribe>`         | `u`          | Unsubscribe from current mbox (IMAP/NNTP only)             |
+| `<unsubscribe-pattern>` |              | Unsubscribe from newsgroups matching a pattern             |
+| `<view-file>`           | `<Space>`    | View file                                                  |
 

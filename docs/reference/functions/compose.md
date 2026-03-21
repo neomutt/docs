@@ -21,64 +21,64 @@ how-to guides and explanation pages instead.
 
 | Function                | Default Keys                           | Description                                          | Inhertied from                      |
 |-------------------------|----------------------------------------|------------------------------------------------------|-------------------------------------|
-| `<attach-file>`         | `a`                                    | attach files to this message                         |                                     |
-| `<attach-key>`          | `Esc k`                                | attach a PGP public key                              |                                     |
-| `<attach-message>`      | `A`                                    | attach messages to this message                      |                                     |
-| `<attach-news-message>` |                                        | attach news articles to this message                 |                                     |
-| `<autocrypt-menu>`      | `o`                                    | show autocrypt compose menu options                  |                                     |
-| `<copy-file>`           | `C`                                    | save message/attachment to a mailbox/file            |                                     |
-| `<detach-file>`         | `D`                                    | delete the current entry                             |                                     |
-| `<display-toggle-weed>` | `h`                                    | display message and toggle header weeding            |                                     |
-| `<edit-bcc>`            | `b`                                    | edit the BCC list                                    |                                     |
-| `<edit-cc>`             | `c`                                    | edit the CC list                                     |                                     |
-| `<edit-content-id>`     | `Esc i`                                | edit the 'Content-ID' of the attachment              |                                     |
-| `<edit-description>`    | `d`                                    | edit attachment description                          |                                     |
-| `<edit-encoding>`       | `^E`                                   | edit attachment transfer-encoding                    |                                     |
-| `<edit-fcc>`            | `f`                                    | enter a file to save a copy of this message in       |                                     |
-| `<edit-file>`           | `Esc e`                                | edit the file to be attached                         |                                     |
-| `<edit-followup-to>`    |                                        | edit the Followup-To field                           |                                     |
-| `<edit-from>`           | `Esc f`                                | edit the from field                                  |                                     |
-| `<edit-headers>`        | `E`                                    | edit the message with headers                        |                                     |
-| `<edit-language>`       | `^L`                                   | edit the 'Content-Language' of the attachment        |                                     |
-| `<edit-message>`        | `e`                                    | edit the message                                     |                                     |
-| `<edit-mime>`           | `m`                                    | edit attachment using mailcap entry                  |                                     |
-| `<edit-newsgroups>`     |                                        | edit the newsgroups list                             |                                     |
-| `<edit-reply-to>`       | `r`                                    | edit the Reply-To field                              |                                     |
-| `<edit-subject>`        | `s`                                    | edit the subject of this message                     |                                     |
-| `<edit-to>`             | `t`                                    | edit the TO list                                     |                                     |
-| `<edit-type>`           | `^T`                                   | edit attachment content type                         |                                     |
-| `<edit-x-comment-to>`   |                                        | edit the X-Comment-To field                          |                                     |
-| `<exit>`                | `q`                                    | exit this menu                                       |                                     |
-| `<filter-entry>`        | `F`                                    | filter attachment through a shell command            |                                     |
-| `<forget-passphrase>`   | `^F`                                   | wipe passphrases from memory                         |                                     |
-| `<get-attachment>`      | `G`                                    | get a temporary copy of an attachment                |                                     |
-| `<group-alternatives>`  | `&`                                    | group tagged attachments as 'multipart/alternative'  |                                     |
-| `<group-multilingual>`  | `^`                                    | group tagged attachments as 'multipart/multilingual' |                                     |
-| `<group-related>`       | `%`                                    | group tagged attachments as 'multipart/related'      |                                     |
-| `<ispell>`              | `i`                                    | run ispell on the message                            |                                     |
-| `<move-down>`           | `+`                                    | move an attachment down in the attachment list       |                                     |
-| `<move-up>`             | `-`                                    | move an attachment up in the attachment list         |                                     |
-| `<new-mime>`            | `n`                                    | compose new attachment using mailcap entry           |                                     |
-| `<pgp-menu>`            | `p`                                    | show PGP options                                     |                                     |
-| `<pipe-entry>`          |                                        | pipe message/attachment to a shell command           |                                     |
-| `<pipe-message>`        | `\|`                                   | pipe message/attachment to a shell command           |                                     |
-| `<postpone-message>`    | `P`                                    | save this message to send later                      |                                     |
-| `<preview-page-down>`   | `<PageDown>`                           | show the next page of the message                    |                                     |
-| `<preview-page-up>`     | `<PageUp>`                             | show the previous page of the message                |                                     |
-| `<print-entry>`         | `l`                                    | print the current entry                              |                                     |
-| `<rename-attachment>`   | `^O`                                   | send attachment with a different name                |                                     |
-| `<rename-file>`         | `R`                                    | rename/move an attached file                         |                                     |
-| `<send-message>`        | `y`                                    | send the message                                     |                                     |
-| `<smime-menu>`          | `S`                                    | show S/MIME options                                  |                                     |
-| `<tag-entry>`           | `T`                                    | tag the current entry                                | [{bdg-info}`generic`](menu-generic) |
-| `<toggle-disposition>`  | `^D`                                   | toggle disposition between inline/attachment         |                                     |
-| `<toggle-recode>`       |                                        | toggle recoding of this attachment                   |                                     |
-| `<toggle-unlink>`       | `u`                                    | toggle whether to delete file after sending it       |                                     |
-| `<ungroup-attachment>`  | `#`                                    | ungroup 'multipart' attachment                       |                                     |
-| `<update-encoding>`     | `U`                                    | update an attachment's encoding info                 |                                     |
-| `<view-attach>`         | `<Enter>`, `<Return>`, `<KeypadEnter>` | view attachment using mailcap entry if necessary     |                                     |
-| `<view-mailcap>`        |                                        | force viewing of attachment using mailcap            |                                     |
-| `<view-pager>`          |                                        | view attachment in pager using copiousoutput mailcap |                                     |
-| `<view-text>`           |                                        | view attachment as text                              |                                     |
-| `<write-fcc>`           | `w`                                    | write the message to a folder                        |                                     |
+| `<attach-file>`         | `a`                                    | Attach files to this message                         |                                     |
+| `<attach-key>`          | `Esc k`                                | Attach a PGP public key                              |                                     |
+| `<attach-message>`      | `A`                                    | Attach messages to this message                      |                                     |
+| `<attach-news-message>` |                                        | Attach news articles to this message                 |                                     |
+| `<autocrypt-menu>`      | `o`                                    | Show autocrypt compose menu options                  |                                     |
+| `<copy-file>`           | `C`                                    | Save message/attachment to a mailbox/file            |                                     |
+| `<detach-file>`         | `D`                                    | Delete the current entry                             |                                     |
+| `<display-toggle-weed>` | `h`                                    | Display message and toggle header weeding            |                                     |
+| `<edit-bcc>`            | `b`                                    | Edit the BCC list                                    |                                     |
+| `<edit-cc>`             | `c`                                    | Edit the CC list                                     |                                     |
+| `<edit-content-id>`     | `Esc i`                                | Edit the 'Content-ID' of the attachment              |                                     |
+| `<edit-description>`    | `d`                                    | Edit attachment description                          |                                     |
+| `<edit-encoding>`       | `^E`                                   | Edit attachment transfer-encoding                    |                                     |
+| `<edit-fcc>`            | `f`                                    | Enter a file to save a copy of this message in       |                                     |
+| `<edit-file>`           | `Esc e`                                | Edit the file to be attached                         |                                     |
+| `<edit-followup-to>`    |                                        | Edit the Followup-To field                           |                                     |
+| `<edit-from>`           | `Esc f`                                | Edit the from field                                  |                                     |
+| `<edit-headers>`        | `E`                                    | Edit the message with headers                        |                                     |
+| `<edit-language>`       | `^L`                                   | Edit the 'Content-Language' of the attachment        |                                     |
+| `<edit-message>`        | `e`                                    | Edit the message                                     |                                     |
+| `<edit-mime>`           | `m`                                    | Edit attachment using mailcap entry                  |                                     |
+| `<edit-newsgroups>`     |                                        | Edit the newsgroups list                             |                                     |
+| `<edit-reply-to>`       | `r`                                    | Edit the Reply-To field                              |                                     |
+| `<edit-subject>`        | `s`                                    | Edit the subject of this message                     |                                     |
+| `<edit-to>`             | `t`                                    | Edit the TO list                                     |                                     |
+| `<edit-type>`           | `^T`                                   | Edit attachment content type                         |                                     |
+| `<edit-x-comment-to>`   |                                        | Edit the X-Comment-To field                          |                                     |
+| `<exit>`                | `q`                                    | Exit this menu                                       |                                     |
+| `<filter-entry>`        | `F`                                    | Filter attachment through a shell command            |                                     |
+| `<forget-passphrase>`   | `^F`                                   | Wipe passphrases from memory                         |                                     |
+| `<get-attachment>`      | `G`                                    | Get a temporary copy of an attachment                |                                     |
+| `<group-alternatives>`  | `&`                                    | Group tagged attachments as 'multipart/alternative'  |                                     |
+| `<group-multilingual>`  | `^`                                    | Group tagged attachments as 'multipart/multilingual' |                                     |
+| `<group-related>`       | `%`                                    | Group tagged attachments as 'multipart/related'      |                                     |
+| `<ispell>`              | `i`                                    | Run ispell on the message                            |                                     |
+| `<move-down>`           | `+`                                    | Move an attachment down in the attachment list       |                                     |
+| `<move-up>`             | `-`                                    | Move an attachment up in the attachment list         |                                     |
+| `<new-mime>`            | `n`                                    | Compose new attachment using mailcap entry           |                                     |
+| `<pgp-menu>`            | `p`                                    | Show PGP options                                     |                                     |
+| `<pipe-entry>`          |                                        | Pipe message/attachment to a shell command           |                                     |
+| `<pipe-message>`        | `\|`                                   | Pipe message/attachment to a shell command           |                                     |
+| `<postpone-message>`    | `P`                                    | Save this message to send later                      |                                     |
+| `<preview-page-down>`   | `<PageDown>`                           | Show the next page of the message                    |                                     |
+| `<preview-page-up>`     | `<PageUp>`                             | Show the previous page of the message                |                                     |
+| `<print-entry>`         | `l`                                    | Print the current entry                              |                                     |
+| `<rename-attachment>`   | `^O`                                   | Send attachment with a different name                |                                     |
+| `<rename-file>`         | `R`                                    | Rename/move an attached file                         |                                     |
+| `<send-message>`        | `y`                                    | Send the message                                     |                                     |
+| `<smime-menu>`          | `S`                                    | Show S/MIME options                                  |                                     |
+| `<tag-entry>`           | `T`                                    | Tag the current entry                                | [{bdg-info}`generic`](menu-generic) |
+| `<toggle-disposition>`  | `^D`                                   | Toggle disposition between inline/attachment         |                                     |
+| `<toggle-recode>`       |                                        | Toggle recoding of this attachment                   |                                     |
+| `<toggle-unlink>`       | `u`                                    | Toggle whether to delete file after sending it       |                                     |
+| `<ungroup-attachment>`  | `#`                                    | Ungroup 'multipart' attachment                       |                                     |
+| `<update-encoding>`     | `U`                                    | Update an attachment's encoding info                 |                                     |
+| `<view-attach>`         | `<Enter>`, `<Return>`, `<KeypadEnter>` | View attachment using mailcap entry if necessary     |                                     |
+| `<view-mailcap>`        |                                        | Force viewing of attachment using mailcap            |                                     |
+| `<view-pager>`          |                                        | View attachment in pager using copiousoutput mailcap |                                     |
+| `<view-text>`           |                                        | View attachment as text                              |                                     |
+| `<write-fcc>`           | `w`                                    | Write the message to a folder                        |                                     |
 

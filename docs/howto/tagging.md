@@ -41,17 +41,17 @@ Some backends allow to index and tag mail without storing the tags within the ma
 
 ### Variables
 
-| Name | Type | Default |
-|------|------|---------|
+| Name          | Type   | Default                                                           |
+|---------------|--------|-------------------------------------------------------------------|
 | `hidden_tags` | string | `unread,draft,flagged,passed,replied,attachment,signed,encrypted` |
 
 ### Functions
 
 Notmuch adds the following functions to NeoMutt. By default, none of them are bound to keys.
 
-| Menus | Function | Description |
-|-------|----------|-------------|
-| index,pager | `<modify-labels>` | add, remove, or toggle tags: IMAP: edit the tags list Notmuch: [+]\<tag\> to add, -\<tag\> to remove, !\<tag\> to toggle(notmuch) tags. Note: Tab completion of tag names is available |
+| Menus       | Function                    | Description                                                                                                                                                                                                                                                                                                                                                                                                  |
+|-------------|-----------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| index,pager | `<modify-labels>`           | add, remove, or toggle tags: IMAP: edit the tags list Notmuch: [+]\<tag\> to add, -\<tag\> to remove, !\<tag\> to toggle(notmuch) tags. Note: Tab completion of tag names is available                                                                                                                                                                                                                       |
 | index,pager | `<modify-labels-then-hide>` | add, remove, or toggle tags IMAP: edit the tags list Notmuch: [+]\<tag\> to add, -\<tag\> to remove, !\<tag\> to toggle labels and then hide or unhide the message by changing the "quasi-deleted" to match if it would be shown when requerying. Normal redisplay rules apply here, so the user must call \<sync-mailbox\> for the changes to be displayed. Note: Tab completion of tag names is available. |
 
 ### Commands
@@ -65,10 +65,10 @@ tag-formats    tag format-string      { tag format-string ...}
 
 Adds the objects, below, to index-color feature. The objects can take an optional pattern.
 
-| Object | Highlights |
-|--------|-----------|
-| `index_tag` | an individual message tag, %G, uses tag name |
-| `index_tags` | the transformed message tags, %g or %J |
+| Object       | Highlights                                   |
+|--------------|----------------------------------------------|
+| `index_tag`  | an individual message tag, %G, uses tag name |
+| `index_tags` | the transformed message tags, %g or %J       |
 
 ### neomuttrc
 
@@ -153,6 +153,6 @@ Message marking is implemented as a shortcut for defining a macro that returns y
 
 ### Variables
 
-| Name | Type | Default |
-|---|---|---|
-| `mark_macro_prefix` | string | `'` |
+| Name                | Type   | Default |
+|---------------------|--------|---------|
+| `mark_macro_prefix` | string | `'`     |

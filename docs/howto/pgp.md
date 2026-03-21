@@ -156,12 +156,12 @@ The validity field (`%t`) indicates how well-certified a user ID is. Its values
 depend on the backend used. Note that S/MIME (which uses X509 certificates) has
 no concept of validity, so this field simply shows `x`.
 
-| Flag (classic PGP) | Flag (GPGME) | Description |
-|---------------------|--------------|-------------|
-| N/A | ? | unknown validity |
-| ? | q | undefined validity |
-| - | n | never valid key (untrusted association) |
-| (space) | m | marginal validity (partially trusted) |
-| + | f | full validity (fully trusted) |
-| N/A | u | ultimate validity |
-| N/A | x | the entry is an X509 certificate (S/MIME) |
+| Flag (classic PGP) | Flag (GPGME) | Description                               |
+|--------------------|--------------|-------------------------------------------|
+| N/A                | `?`          | Unknown validity                          |
+| `?`                | `q`          | Undefined validity                        |
+| `-`                | `n`          | Never valid key (untrusted association)   |
+| ` ` (space)        | `m`          | Marginal validity (partially trusted)     |
+| `+`                | `f`          | Full validity (fully trusted)             |
+| N/A                | `u`          | Ultimate validity                         |
+| N/A                | `x`          | The entry is an X509 certificate (S/MIME) |

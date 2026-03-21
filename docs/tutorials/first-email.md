@@ -61,12 +61,12 @@ messages are presented in the index menu can be customized using the `$index_for
 | v | view-attachments |
 | x | abort changes and exit |
 | \<Return\> | display-message |
-| \<Tab\> | jump to the next new or unread message |
+| \<Tab\> | Jump to the next new or unread message |
 | @ | show the author's full e-mail address |
-| $ | save changes to mailbox |
+| $ | Save changes to mailbox |
 | / | search |
 | Esc / | search-reverse |
-| ^L | clear and redraw the screen |
+| ^L | Clear and redraw the screen |
 | ^T | untag messages matching a pattern |
 
 In addition to who sent the message and the subject, a short summary of the disposition of
@@ -139,14 +139,14 @@ to the Unix program `less(1)` though not nearly as featureful.
 | \<Return\> | go down one line |
 | \<Space\> | display the next page (or next message if at the end of a message) |
 | \- | go back to the previous page |
-| n | search for next match |
-| S | skip beyond quoted text |
-| T | toggle display of quoted text |
+| n | Search for next match |
+| S | Skip beyond quoted text |
+| T | Toggle display of quoted text |
 | ? | show keybindings |
 | / | regular expression search |
 | Esc / | backward regular expression search |
 | \\ | toggle highlighting of search matches |
-| ^ | jump to the top of the message |
+| ^ | Jump to the top of the message |
 
 In addition to the key bindings above, many of the functions from the index menu are also
 available in the pager, such as `<delete-message>` or `<copy-message>` (this is one advantage
@@ -239,16 +239,16 @@ available in the *index* and *pager* modes as shown below.
 | ^U | `<undelete-thread>` | undelete all messages in the current thread |
 | ^N | `<next-thread>` | jump to the start of the next thread |
 | ^P | `<previous-thread>` | jump to the start of the previous thread |
-| ^R | `<read-thread>` | mark the current thread as read |
+| ^R | `<read-thread>` | Mark the current thread as read |
 | Esc d | `<delete-subthread>` | delete all messages in the current subthread |
 | Esc u | `<undelete-subthread>` | undelete all messages in the current subthread |
 | Esc n | `<next-subthread>` | jump to the start of the next subthread |
 | Esc p | `<previous-subthread>` | jump to the start of the previous subthread |
-| Esc r | `<read-subthread>` | mark the current subthread as read |
+| Esc r | `<read-subthread>` | Mark the current subthread as read |
 | Esc t | `<tag-thread>` | toggle the tag on the current thread |
 | Esc v | `<collapse-thread>` | toggle collapse for the current thread |
 | Esc V | `<collapse-all>` | toggle collapse for all threads |
-| P | `<parent-message>` | jump to parent message in thread |
+| P | `<parent-message>` | Jump to parent message in thread |
 
 In the *index*, the subject of threaded children messages will be prepended with thread tree
 characters. By default, the subject itself will not be duplicated unless

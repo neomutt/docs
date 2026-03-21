@@ -21,14 +21,14 @@ how-to guides and explanation pages instead.
 
 | Function               | Default Keys | Description                                  | Inherited From                      |
 |------------------------|--------------|----------------------------------------------|-------------------------------------|
-| `<delete-entry>`       | `d`          | delete the current entry                     |                                     |
-| `<exit>`               | `q`          | exit this menu                               |                                     |
-| `<limit>`              | `l`          | show only messages matching a pattern        |                                     |
-| `<mail>`               | `m`          | compose a new mail message                   |                                     |
-| `<sort-alias>`         | `o`          | sort messages                                |                                     |
-| `<sort-alias-reverse>` | `O`          | sort messages in reverse order               |                                     |
-| `<tag-entry>`          | `<Space>`    | tag the current entry                        | [{bdg-info}`generic`](menu-generic) |
-| `<tag-pattern>`        | `T`          | tag non-hidden messages matching a pattern   |                                     |
-| `<undelete-entry>`     | `u`          | undelete the current entry                   |                                     |
-| `<untag-pattern>`      | `^T`         | untag non-hidden messages matching a pattern |                                     |
+| `<delete-entry>`       | `d`          | Delete the current entry                     |                                     |
+| `<exit>`               | `q`          | Exit this menu                               |                                     |
+| `<limit>`              | `l`          | Show only messages matching a pattern        |                                     |
+| `<mail>`               | `m`          | Compose a new mail message                   |                                     |
+| `<sort-alias>`         | `o`          | Sort messages                                |                                     |
+| `<sort-alias-reverse>` | `O`          | Sort messages in reverse order               |                                     |
+| `<tag-entry>`          | `<Space>`    | Tag the current entry                        | [{bdg-info}`generic`](menu-generic) |
+| `<tag-pattern>`        | `T`          | Tag non-hidden messages matching a pattern   |                                     |
+| `<undelete-entry>`     | `u`          | Undelete the current entry                   |                                     |
+| `<untag-pattern>`      | `^T`         | Untag non-hidden messages matching a pattern |                                     |
 

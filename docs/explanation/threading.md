@@ -27,22 +27,22 @@ available in the *index* and *pager* modes as shown in the table below.
 
 ### Thread Mode Keys
 
-| Key | Function | Description |
-|-----|----------|-------------|
-| ^D | `<delete-thread>` | delete all messages in the current thread |
-| ^U | `<undelete-thread>` | undelete all messages in the current thread |
-| ^N | `<next-thread>` | jump to the start of the next thread |
-| ^P | `<previous-thread>` | jump to the start of the previous thread |
-| ^R | `<read-thread>` | mark the current thread as read |
-| Esc d | `<delete-subthread>` | delete all messages in the current subthread |
-| Esc u | `<undelete-subthread>` | undelete all messages in the current subthread |
-| Esc n | `<next-subthread>` | jump to the start of the next subthread |
-| Esc p | `<previous-subthread>` | jump to the start of the previous subthread |
-| Esc r | `<read-subthread>` | mark the current subthread as read |
-| Esc t | `<tag-thread>` | toggle the tag on the current thread |
-| Esc v | `<collapse-thread>` | toggle collapse for the current thread |
-| Esc V | `<collapse-all>` | toggle collapse for all threads |
-| P | `<parent-message>` | jump to parent message in thread |
+| Key     | Function               | Description                                    |
+|---------|------------------------|------------------------------------------------|
+| `^D`    | `<delete-thread>`      | Delete all messages in the current thread      |
+| `^U`    | `<undelete-thread>`    | Undelete all messages in the current thread    |
+| `^N`    | `<next-thread>`        | Jump to the start of the next thread           |
+| `^P`    | `<previous-thread>`    | Jump to the start of the previous thread       |
+| `^R`    | `<read-thread>`        | Mark the current thread as read                |
+| `Esc d` | `<delete-subthread>`   | Delete all messages in the current subthread   |
+| `Esc u` | `<undelete-subthread>` | Undelete all messages in the current subthread |
+| `Esc n` | `<next-subthread>`     | Jump to the start of the next subthread        |
+| `Esc p` | `<previous-subthread>` | Jump to the start of the previous subthread    |
+| `Esc r` | `<read-subthread>`     | Mark the current subthread as read             |
+| `Esc t` | `<tag-thread>`         | Toggle the tag on the current thread           |
+| `Esc v` | `<collapse-thread>`    | Toggle collapse for the current thread         |
+| `Esc V` | `<collapse-all>`       | Toggle collapse for all threads                |
+| `P`     | `<parent-message>`     | Jump to parent message in thread               |
 
 ### Thread Tree Display
 

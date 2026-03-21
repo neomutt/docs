@@ -21,7 +21,7 @@ how-to guides and explanation pages instead.
 
 | Function       | Default Keys | Description            |
 |----------------|--------------|------------------------|
-| `<exit>`       | `q`          | exit this menu         |
-| `<verify-key>` | `c`          | verify a public key    |
-| `<view-name>`  | `%`          | view the key's user id |
+| `<exit>`       | `q`          | Exit this menu         |
+| `<verify-key>` | `c`          | Verify a public key    |
+| `<view-name>`  | `%`          | View the key's user id |
 

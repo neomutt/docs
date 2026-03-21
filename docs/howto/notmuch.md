@@ -71,25 +71,25 @@ Reads all matching messages or whole-threads. The default is 'messages' or nm_qu
 
 ## Variables
 
-| Name | Type | Default | Note |
-|------|------|---------|------|
-| `nm_config_file` | path | `auto` | Configuration file for the notmuch database. Either a path, `auto` for detecting a config. file, or empty for no configuration file. Only useful for notmuch 0.32+. |
-| `nm_config_profile` | string | (empty) | Configuration profile for the notmuch database. Only useful for notmuch 0.32+. |
-| `nm_db_limit` | number | `0` | |
-| `nm_default_url` | string | (empty) | Must use format: `notmuch://<absolute path>` |
-| `nm_exclude_tags` | string | (empty) | |
-| `nm_flagged_tag` | string | `flagged` | |
-| `nm_open_timeout` | number | `5` | |
-| `nm_query_type` | string | `messages` | |
-| `nm_query_window_current_position` | number | `0` | Position of current search window |
-| `nm_query_window_current_search` | string | (empty) | Current search parameters |
-| `nm_query_window_duration` | number | `0` | Duration between start and end dates for windowed notmuch query. This corresponds to a bounded notmuch `date:` query. See `notmuch-search-terms` manual page for more info. Value of `0` disables windowed queries unless `nm_query_window_enable=yes` |
-| `nm_query_window_enable` | boolean | `no` | Enables windowed notmuch queries for `nm_query_window_duration = 0` |
-| `nm_query_window_or_terms` | string | (empty) | Additional notmuch search terms to always include in the window even if they're outside the date range. This turns the window from `date:...` to `date:... or (additional search terms.)` For example, to always include flagged, unread emails, set to `tag:flagged and tag:unread` |
-| `nm_query_window_timebase` | string | `week` | Time base for windowed notmuch queries. Must be one of: `hour`, `day`, `week`, `month`, or `year` |
-| `nm_record` | boolean | `no` | |
-| `nm_record_tags` | string | (empty) | |
-| `nm_unread_tag` | string | `unread` | |
+| Name                               | Type    | Default    | Note                                                                                                                                                                                                                                                                                 |
+|------------------------------------|---------|------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `nm_config_file`                   | path    | `auto`     | Configuration file for the notmuch database. Either a path, `auto` for detecting a config. file, or empty for no configuration file. Only useful for notmuch 0.32+.                                                                                                                  |
+| `nm_config_profile`                | string  | (empty)    | Configuration profile for the notmuch database. Only useful for notmuch 0.32+.                                                                                                                                                                                                       |
+| `nm_db_limit`                      | number  | `0`        |                                                                                                                                                                                                                                                                                      |
+| `nm_default_url`                   | string  | (empty)    | Must use format: `notmuch://<absolute path>`                                                                                                                                                                                                                                         |
+| `nm_exclude_tags`                  | string  | (empty)    |                                                                                                                                                                                                                                                                                      |
+| `nm_flagged_tag`                   | string  | `flagged`  |                                                                                                                                                                                                                                                                                      |
+| `nm_open_timeout`                  | number  | `5`        |                                                                                                                                                                                                                                                                                      |
+| `nm_query_type`                    | string  | `messages` |                                                                                                                                                                                                                                                                                      |
+| `nm_query_window_current_position` | number  | `0`        | Position of current search window                                                                                                                                                                                                                                                    |
+| `nm_query_window_current_search`   | string  | (empty)    | Current search parameters                                                                                                                                                                                                                                                            |
+| `nm_query_window_duration`         | number  | `0`        | Duration between start and end dates for windowed notmuch query. This corresponds to a bounded notmuch `date:` query. See `notmuch-search-terms` manual page for more info. Value of `0` disables windowed queries unless `nm_query_window_enable=yes`                               |
+| `nm_query_window_enable`           | boolean | `no`       | Enables windowed notmuch queries for `nm_query_window_duration = 0`                                                                                                                                                                                                                  |
+| `nm_query_window_or_terms`         | string  | (empty)    | Additional notmuch search terms to always include in the window even if they're outside the date range. This turns the window from `date:...` to `date:... or (additional search terms.)` For example, to always include flagged, unread emails, set to `tag:flagged and tag:unread` |
+| `nm_query_window_timebase`         | string  | `week`     | Time base for windowed notmuch queries. Must be one of: `hour`, `day`, `week`, `month`, or `year`                                                                                                                                                                                    |
+| `nm_record`                        | boolean | `no`       |                                                                                                                                                                                                                                                                                      |
+| `nm_record_tags`                   | string  | (empty)    |                                                                                                                                                                                                                                                                                      |
+| `nm_unread_tag`                    | string  | `unread`   |                                                                                                                                                                                                                                                                                      |
 
 More variables about tags configuration can be found in **Custom backend Tags Feature**.
 
@@ -107,15 +107,15 @@ More variables about tags configuration can be found in **Custom backend Tags Fe
 
 Notmuch adds the following functions to NeoMutt. By default, none of them are bound to keys.
 
-| Menus | Function | Description |
-|-------|----------|-------------|
-| index,pager | `<change-vfolder>` | switch to another virtual folder, a new folder maybe be specified by vfolder description (see named-mailboxes) or URL. the default is next vfolder with unread messages |
-| index,pager | `<entire-thread>` | read entire thread of the current message |
-| index,pager | `<vfolder-from-query>` | generate virtual folder from notmuch search query. Note: TAB completion of 'tag:' names is available. |
-| index,pager | `<vfolder-from-query-readonly>` | The same as `<vfolder-from-query>`; however, the mailbox will be read-only. |
-| index | `<vfolder-window-forward>` | generate virtual folder by moving the query's time window forward |
-| index | `<vfolder-window-backward>` | generate virtual folder by moving the query's time window backward |
-| index | `<vfolder-window-reset>` | generate virtual folder by moving the query's time window to the present |
+| Menus       | Function                        | Description                                                                                                                                                             |
+|-------------|---------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| index,pager | `<change-vfolder>`              | Switch to another virtual folder, a new folder maybe be specified by vfolder description (see named-mailboxes) or URL. the default is next vfolder with unread messages |
+| index,pager | `<entire-thread>`               | Read entire thread of the current message                                                                                                                               |
+| index,pager | `<vfolder-from-query>`          | Generate virtual folder from notmuch search query. Note: TAB completion of 'tag:' names is available.                                                                   |
+| index,pager | `<vfolder-from-query-readonly>` | The same as `<vfolder-from-query>`; however, the mailbox will be read-only.                                                                                             |
+| index       | `<vfolder-window-forward>`      | Generate virtual folder by moving the query's time window forward                                                                                                       |
+| index       | `<vfolder-window-backward>`     | Generate virtual folder by moving the query's time window backward                                                                                                      |
+| index       | `<vfolder-window-reset>`        | Generate virtual folder by moving the query's time window to the present                                                                                                |
 
 More functions about tags can be found in **Custom backend Tags Feature**.
 
@@ -167,13 +167,13 @@ set nm_query_window_or_terms="tag:unread and tag:flagged"
 # --------------------------------------------------------------------------
 # FUNCTIONS – shown with an example mapping
 # --------------------------------------------------------------------------
-# open a different virtual folder
+# Open a different virtual folder
 bind index,pager X change-vfolder
-# read entire thread of the current message
+# Read entire thread of the current message
 bind index,pager + entire-thread
-# generate virtual folder from query
+# Generate virtual folder from query
 bind index,pager \eX vfolder-from-query
-# generate virtual folder from query with time window
+# Generate virtual folder from query with time window
 bind index < vfolder-window-backward
 bind index > vfolder-window-forward
 # --------------------------------------------------------------------------

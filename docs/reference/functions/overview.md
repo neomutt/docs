@@ -52,15 +52,15 @@ You can sort, search, delete, and compose messages to your contacts.
 
 | Function               | Description                                  |
 |------------------------|----------------------------------------------|
-| `<delete-entry>`       | delete the current entry                     |
-| `<exit>`               | exit this menu                               |
-| `<limit>`              | show only messages matching a pattern        |
-| `<mail>`               | compose a new mail message                   |
-| `<sort-alias-reverse>` | sort messages in reverse order               |
-| `<sort-alias>`         | sort messages                                |
-| `<tag-pattern>`        | tag non-hidden messages matching a pattern   |
-| `<undelete-entry>`     | undelete the current entry                   |
-| `<untag-pattern>`      | untag non-hidden messages matching a pattern |
+| `<delete-entry>`       | Delete the current entry                     |
+| `<exit>`               | Exit this menu                               |
+| `<limit>`              | Show only messages matching a pattern        |
+| `<mail>`               | Compose a new mail message                   |
+| `<sort-alias-reverse>` | Sort messages in reverse order               |
+| `<sort-alias>`         | Sort messages                                |
+| `<tag-pattern>`        | Tag non-hidden messages matching a pattern   |
+| `<undelete-entry>`     | Undelete the current entry                   |
+| `<untag-pattern>`      | Untag non-hidden messages matching a pattern |
 
 ## [Attach Menu](menu-attach)
 
@@ -69,35 +69,35 @@ You can save, print, pipe, delete, or open attachments, and reply or forward fro
 
 | Function                  | Description                                          |
 |---------------------------|------------------------------------------------------|
-| `<bounce-message>`        | remail a message to another user                     |
-| `<check-traditional-pgp>` | check for classic PGP                                |
-| `<collapse-parts>`        | toggle display of subparts                           |
-| `<compose-to-sender>`     | compose new message to the current message sender    |
-| `<delete-entry>`          | delete the current entry                             |
-| `<display-toggle-weed>`   | display message and toggle header weeding            |
-| `<edit-type>`             | edit attachment content type                         |
-| `<exit>`                  | exit this menu                                       |
-| `<extract-keys>`          | extract supported public keys                        |
-| `<followup-message>`      | followup to newsgroup                                |
-| `<forget-passphrase>`     | wipe passphrases from memory                         |
-| `<forward-message>`       | forward a message with comments                      |
-| `<forward-to-group>`      | forward to newsgroup                                 |
-| `<group-chat-reply>`      | reply to all recipients preserving To/Cc             |
-| `<group-reply>`           | reply to all recipients                              |
-| `<list-reply>`            | reply to specified mailing list                      |
-| `<list-subscribe>`        | subscribe to a mailing list                          |
-| `<list-unsubscribe>`      | unsubscribe from a mailing list                      |
-| `<pipe-entry>`            | pipe message/attachment to a shell command           |
-| `<pipe-message>`          | pipe message/attachment to a shell command           |
-| `<print-entry>`           | print the current entry                              |
-| `<reply>`                 | reply to a message                                   |
-| `<resend-message>`        | use the current message as a template for a new one  |
-| `<save-entry>`            | save message/attachment to a mailbox/file            |
-| `<undelete-entry>`        | undelete the current entry                           |
-| `<view-attach>`           | view attachment using mailcap entry if necessary     |
-| `<view-mailcap>`          | force viewing of attachment using mailcap            |
-| `<view-pager>`            | view attachment in pager using copiousoutput mailcap |
-| `<view-text>`             | view attachment as text                              |
+| `<bounce-message>`        | Remail a message to another user                     |
+| `<check-traditional-pgp>` | Check for classic PGP                                |
+| `<collapse-parts>`        | Toggle display of subparts                           |
+| `<compose-to-sender>`     | Compose new message to the current message sender    |
+| `<delete-entry>`          | Delete the current entry                             |
+| `<display-toggle-weed>`   | Display message and toggle header weeding            |
+| `<edit-type>`             | Edit attachment content type                         |
+| `<exit>`                  | Exit this menu                                       |
+| `<extract-keys>`          | Extract supported public keys                        |
+| `<followup-message>`      | Followup to newsgroup                                |
+| `<forget-passphrase>`     | Wipe passphrases from memory                         |
+| `<forward-message>`       | Forward a message with comments                      |
+| `<forward-to-group>`      | Forward to newsgroup                                 |
+| `<group-chat-reply>`      | Reply to all recipients preserving To/Cc             |
+| `<group-reply>`           | Reply to all recipients                              |
+| `<list-reply>`            | Reply to specified mailing list                      |
+| `<list-subscribe>`        | Subscribe to a mailing list                          |
+| `<list-unsubscribe>`      | Unsubscribe from a mailing list                      |
+| `<pipe-entry>`            | Pipe message/attachment to a shell command           |
+| `<pipe-message>`          | Pipe message/attachment to a shell command           |
+| `<print-entry>`           | Print the current entry                              |
+| `<reply>`                 | Reply to a message                                   |
+| `<resend-message>`        | Use the current message as a template for a new one  |
+| `<save-entry>`            | Save message/attachment to a mailbox/file            |
+| `<undelete-entry>`        | Undelete the current entry                           |
+| `<view-attach>`           | View attachment using mailcap entry if necessary     |
+| `<view-mailcap>`          | Force viewing of attachment using mailcap            |
+| `<view-pager>`            | View attachment in pager using copiousoutput mailcap |
+| `<view-text>`             | View attachment as text                              |
 
 ## [Autocrypt Menu](menu-autocrypt)
 
@@ -106,11 +106,11 @@ You can create, delete, toggle, and set preferences for automatic email encrypti
 
 | Function                  | Description                                    |
 |---------------------------|------------------------------------------------|
-| `<create-account>`        | create a new autocrypt account                 |
-| `<delete-account>`        | delete the current account                     |
-| `<exit>`                  | exit this menu                                 |
-| `<toggle-active>`         | toggle the current account active/inactive     |
-| `<toggle-prefer-encrypt>` | toggle the current account prefer-encrypt flag |
+| `<create-account>`        | Create a new autocrypt account                 |
+| `<delete-account>`        | Delete the current account                     |
+| `<exit>`                  | Exit this menu                                 |
+| `<toggle-active>`         | Toggle the current account active/inactive     |
+| `<toggle-prefer-encrypt>` | Toggle the current account prefer-encrypt flag |
 
 ## [Browser Menu](menu-browser)
 
@@ -120,31 +120,31 @@ You can navigate directories, sort listings, subscribe to mailboxes, and select 
 | Function                | Description                                                |
 |-------------------------|------------------------------------------------------------|
 | `<buffy-list>`          | {bdg-danger}`Deprecated` use `<mailbox-list>`              |
-| `<catchup>`             | mark all articles in newsgroup as read                     |
-| `<change-dir>`          | change directories                                         |
-| `<check-new>`           | check mailboxes for new mail                               |
-| `<create-mailbox>`      | create a new mailbox (IMAP only)                           |
-| `<delete-mailbox>`      | delete the current mailbox (IMAP only)                     |
-| `<descend-directory>`   | descend into a directory                                   |
-| `<display-filename>`    | display the currently selected file's name                 |
-| `<enter-mask>`          | enter a file mask                                          |
-| `<exit>`                | exit this menu                                             |
-| `<goto-folder>`         | swap the current folder position with $folder if it exists |
-| `<goto-parent>`         | go to parent directory                                     |
-| `<mailbox-list>`        | list mailboxes with new mail                               |
-| `<reload-active>`       | load list of all newsgroups from NNTP server               |
-| `<rename-mailbox>`      | rename the current mailbox (IMAP only)                     |
-| `<select-new>`          | select a new file in this directory                        |
-| `<sort-reverse>`        | sort messages in reverse order                             |
-| `<sort>`                | sort messages                                              |
-| `<subscribe-pattern>`   | subscribe to newsgroups matching a pattern                 |
-| `<subscribe>`           | subscribe to current mbox (IMAP/NNTP only)                 |
-| `<toggle-mailboxes>`    | toggle whether to browse mailboxes or all files            |
-| `<toggle-subscribed>`   | toggle view all/subscribed mailboxes (IMAP only)           |
-| `<uncatchup>`           | mark all articles in newsgroup as unread                   |
-| `<unsubscribe-pattern>` | unsubscribe from newsgroups matching a pattern             |
-| `<unsubscribe>`         | unsubscribe from current mbox (IMAP/NNTP only)             |
-| `<view-file>`           | view file                                                  |
+| `<catchup>`             | Mark all articles in newsgroup as read                     |
+| `<change-dir>`          | Change directories                                         |
+| `<check-new>`           | Check mailboxes for new mail                               |
+| `<create-mailbox>`      | Create a new mailbox (IMAP only)                           |
+| `<delete-mailbox>`      | Delete the current mailbox (IMAP only)                     |
+| `<descend-directory>`   | Descend into a directory                                   |
+| `<display-filename>`    | Display the currently selected file's name                 |
+| `<enter-mask>`          | Enter a file mask                                          |
+| `<exit>`                | Exit this menu                                             |
+| `<goto-folder>`         | Swap the current folder position with $folder if it exists |
+| `<goto-parent>`         | Go to parent directory                                     |
+| `<mailbox-list>`        | List mailboxes with new mail                               |
+| `<reload-active>`       | Load list of all newsgroups from NNTP server               |
+| `<rename-mailbox>`      | Rename the current mailbox (IMAP only)                     |
+| `<select-new>`          | Select a new file in this directory                        |
+| `<sort-reverse>`        | Sort messages in reverse order                             |
+| `<sort>`                | Sort messages                                              |
+| `<subscribe-pattern>`   | Subscribe to newsgroups matching a pattern                 |
+| `<subscribe>`           | Subscribe to current mbox (IMAP/NNTP only)                 |
+| `<toggle-mailboxes>`    | Toggle whether to browse mailboxes or all files            |
+| `<toggle-subscribed>`   | Toggle view all/subscribed mailboxes (IMAP only)           |
+| `<uncatchup>`           | Mark all articles in newsgroup as unread                   |
+| `<unsubscribe-pattern>` | Unsubscribe from newsgroups matching a pattern             |
+| `<unsubscribe>`         | Unsubscribe from current mbox (IMAP/NNTP only)             |
+| `<view-file>`           | View file                                                  |
 
 ## [Compose Menu](menu-compose)
 
@@ -153,65 +153,65 @@ You can edit recipients, subject, and headers, attach files, configure encryptio
 
 | Function                | Description                                          |
 |-------------------------|------------------------------------------------------|
-| `<attach-file>`         | attach files to this message                         |
-| `<attach-key>`          | attach a PGP public key                              |
-| `<attach-message>`      | attach messages to this message                      |
-| `<attach-news-message>` | attach news articles to this message                 |
-| `<autocrypt-menu>`      | show autocrypt compose menu options                  |
-| `<copy-file>`           | save message/attachment to a mailbox/file            |
-| `<detach-file>`         | delete the current entry                             |
-| `<display-toggle-weed>` | display message and toggle header weeding            |
-| `<edit-bcc>`            | edit the BCC list                                    |
-| `<edit-cc>`             | edit the CC list                                     |
-| `<edit-content-id>`     | edit the 'Content-ID' of the attachment              |
-| `<edit-description>`    | edit attachment description                          |
-| `<edit-encoding>`       | edit attachment transfer-encoding                    |
-| `<edit-fcc>`            | enter a file to save a copy of this message in       |
-| `<edit-file>`           | edit the file to be attached                         |
-| `<edit-followup-to>`    | edit the Followup-To field                           |
-| `<edit-from>`           | edit the from field                                  |
-| `<edit-headers>`        | edit the message with headers                        |
-| `<edit-language>`       | edit the 'Content-Language' of the attachment        |
-| `<edit-message>`        | edit the message                                     |
-| `<edit-mime>`           | edit attachment using mailcap entry                  |
-| `<edit-newsgroups>`     | edit the newsgroups list                             |
-| `<edit-reply-to>`       | edit the Reply-To field                              |
-| `<edit-subject>`        | edit the subject of this message                     |
-| `<edit-to>`             | edit the TO list                                     |
-| `<edit-type>`           | edit attachment content type                         |
-| `<edit-x-comment-to>`   | edit the X-Comment-To field                          |
-| `<exit>`                | exit this menu                                       |
-| `<filter-entry>`        | filter attachment through a shell command            |
-| `<forget-passphrase>`   | wipe passphrases from memory                         |
-| `<get-attachment>`      | get a temporary copy of an attachment                |
-| `<group-alternatives>`  | group tagged attachments as 'multipart/alternative'  |
-| `<group-multilingual>`  | group tagged attachments as 'multipart/multilingual' |
-| `<group-related>`       | group tagged attachments as 'multipart/related'      |
-| `<ispell>`              | run ispell on the message                            |
-| `<move-down>`           | move an attachment down in the attachment list       |
-| `<move-up>`             | move an attachment up in the attachment list         |
-| `<new-mime>`            | compose new attachment using mailcap entry           |
-| `<pgp-menu>`            | show PGP options                                     |
-| `<pipe-entry>`          | pipe message/attachment to a shell command           |
-| `<pipe-message>`        | pipe message/attachment to a shell command           |
-| `<postpone-message>`    | save this message to send later                      |
-| `<preview-page-down>`   | show the next page of the message                    |
-| `<preview-page-up>`     | show the previous page of the message                |
-| `<print-entry>`         | print the current entry                              |
-| `<rename-attachment>`   | send attachment with a different name                |
-| `<rename-file>`         | rename/move an attached file                         |
-| `<send-message>`        | send the message                                     |
-| `<smime-menu>`          | show S/MIME options                                  |
-| `<toggle-disposition>`  | toggle disposition between inline/attachment         |
-| `<toggle-recode>`       | toggle recoding of this attachment                   |
-| `<toggle-unlink>`       | toggle whether to delete file after sending it       |
-| `<ungroup-attachment>`  | ungroup 'multipart' attachment                       |
-| `<update-encoding>`     | update an attachment's encoding info                 |
-| `<view-attach>`         | view attachment using mailcap entry if necessary     |
-| `<view-mailcap>`        | force viewing of attachment using mailcap            |
-| `<view-pager>`          | view attachment in pager using copiousoutput mailcap |
-| `<view-text>`           | view attachment as text                              |
-| `<write-fcc>`           | write the message to a folder                        |
+| `<attach-file>`         | Attach files to this message                         |
+| `<attach-key>`          | Attach a PGP public key                              |
+| `<attach-message>`      | Attach messages to this message                      |
+| `<attach-news-message>` | Attach news articles to this message                 |
+| `<autocrypt-menu>`      | Show autocrypt compose menu options                  |
+| `<copy-file>`           | Save message/attachment to a mailbox/file            |
+| `<detach-file>`         | Delete the current entry                             |
+| `<display-toggle-weed>` | Display message and toggle header weeding            |
+| `<edit-bcc>`            | Edit the BCC list                                    |
+| `<edit-cc>`             | Edit the CC list                                     |
+| `<edit-content-id>`     | Edit the 'Content-ID' of the attachment              |
+| `<edit-description>`    | Edit attachment description                          |
+| `<edit-encoding>`       | Edit attachment transfer-encoding                    |
+| `<edit-fcc>`            | Enter a file to save a copy of this message in       |
+| `<edit-file>`           | Edit the file to be attached                         |
+| `<edit-followup-to>`    | Edit the Followup-To field                           |
+| `<edit-from>`           | Edit the from field                                  |
+| `<edit-headers>`        | Edit the message with headers                        |
+| `<edit-language>`       | Edit the 'Content-Language' of the attachment        |
+| `<edit-message>`        | Edit the message                                     |
+| `<edit-mime>`           | Edit attachment using mailcap entry                  |
+| `<edit-newsgroups>`     | Edit the newsgroups list                             |
+| `<edit-reply-to>`       | Edit the Reply-To field                              |
+| `<edit-subject>`        | Edit the subject of this message                     |
+| `<edit-to>`             | Edit the TO list                                     |
+| `<edit-type>`           | Edit attachment content type                         |
+| `<edit-x-comment-to>`   | Edit the X-Comment-To field                          |
+| `<exit>`                | Exit this menu                                       |
+| `<filter-entry>`        | Filter attachment through a shell command            |
+| `<forget-passphrase>`   | Wipe passphrases from memory                         |
+| `<get-attachment>`      | Get a temporary copy of an attachment                |
+| `<group-alternatives>`  | Group tagged attachments as 'multipart/alternative'  |
+| `<group-multilingual>`  | Group tagged attachments as 'multipart/multilingual' |
+| `<group-related>`       | Group tagged attachments as 'multipart/related'      |
+| `<ispell>`              | Run ispell on the message                            |
+| `<move-down>`           | Move an attachment down in the attachment list       |
+| `<move-up>`             | Move an attachment up in the attachment list         |
+| `<new-mime>`            | Compose new attachment using mailcap entry           |
+| `<pgp-menu>`            | Show PGP options                                     |
+| `<pipe-entry>`          | Pipe message/attachment to a shell command           |
+| `<pipe-message>`        | Pipe message/attachment to a shell command           |
+| `<postpone-message>`    | Save this message to send later                      |
+| `<preview-page-down>`   | Show the next page of the message                    |
+| `<preview-page-up>`     | Show the previous page of the message                |
+| `<print-entry>`         | Print the current entry                              |
+| `<rename-attachment>`   | Send attachment with a different name                |
+| `<rename-file>`         | Rename/move an attached file                         |
+| `<send-message>`        | Send the message                                     |
+| `<smime-menu>`          | Show S/MIME options                                  |
+| `<toggle-disposition>`  | Toggle disposition between inline/attachment         |
+| `<toggle-recode>`       | Toggle recoding of this attachment                   |
+| `<toggle-unlink>`       | Toggle whether to delete file after sending it       |
+| `<ungroup-attachment>`  | Ungroup 'multipart' attachment                       |
+| `<update-encoding>`     | Update an attachment's encoding info                 |
+| `<view-attach>`         | View attachment using mailcap entry if necessary     |
+| `<view-mailcap>`        | Force viewing of attachment using mailcap            |
+| `<view-pager>`          | View attachment in pager using copiousoutput mailcap |
+| `<view-text>`           | View attachment as text                              |
+| `<write-fcc>`           | Write the message to a folder                        |
 
 ## [Dialog Menu](menu-dialog)
 
@@ -220,8 +220,8 @@ It only supports quitting.
 
 | Function | Description                      |
 |----------|----------------------------------|
-| `<exit>` | exit this menu                   |
-| `<quit>` | save changes to mailbox and quit |
+| `<exit>` | Exit this menu                   |
+| `<quit>` | Save changes to mailbox and quit |
 
 ## [Editor Menu](menu-editor)
 
@@ -230,33 +230,33 @@ It supports cursor movement, word editing, tab-completion, and command history.
 
 | Function            | Description                                         |
 |---------------------|-----------------------------------------------------|
-| `<backspace>`       | delete the char in front of the cursor              |
-| `<backward-char>`   | move the cursor one character to the left           |
-| `<backward-word>`   | move the cursor to the beginning of the word        |
-| `<bol>`             | jump to the beginning of the line                   |
+| `<backspace>`       | Delete the char in front of the cursor              |
+| `<backward-char>`   | Move the cursor one character to the left           |
+| `<backward-word>`   | Move the cursor to the beginning of the word        |
+| `<bol>`             | Jump to the beginning of the line                   |
 | `<buffy-cycle>`     | {bdg-danger}`Deprecated` use `<mailbox-cycle>`      |
-| `<capitalize-word>` | capitalize the word                                 |
-| `<complete-query>`  | complete address with query                         |
-| `<complete>`        | complete filename or alias                          |
-| `<delete-char>`     | delete the char under the cursor                    |
-| `<downcase-word>`   | convert the word to lower case                      |
-| `<eol>`             | jump to the end of the line                         |
-| `<forward-char>`    | move the cursor one character to the right          |
-| `<forward-word>`    | move the cursor to the end of the word              |
-| `<help>`            | this screen                                         |
-| `<history-down>`    | scroll down through the history list                |
-| `<history-search>`  | search through the history list                     |
-| `<history-up>`      | scroll up through the history list                  |
-| `<kill-eol>`        | delete chars from cursor to end of line             |
-| `<kill-eow>`        | delete chars from the cursor to the end of the word |
-| `<kill-line>`       | delete chars from cursor to beginning the line      |
-| `<kill-whole-line>` | delete all chars on the line                        |
-| `<kill-word>`       | delete the word in front of the cursor              |
-| `<mailbox-cycle>`   | cycle among incoming mailboxes                      |
-| `<quote-char>`      | quote the next typed key                            |
-| `<redraw-screen>`   | clear and redraw the screen                         |
-| `<transpose-chars>` | transpose character under cursor with previous      |
-| `<upcase-word>`     | convert the word to upper case                      |
+| `<capitalize-word>` | Capitalize the word                                 |
+| `<complete-query>`  | Complete address with query                         |
+| `<complete>`        | Complete filename or alias                          |
+| `<delete-char>`     | Delete the char under the cursor                    |
+| `<downcase-word>`   | Convert the word to lower case                      |
+| `<eol>`             | Jump to the end of the line                         |
+| `<forward-char>`    | Move the cursor one character to the right          |
+| `<forward-word>`    | Move the cursor to the end of the word              |
+| `<help>`            | This screen                                         |
+| `<history-down>`    | Scroll down through the history list                |
+| `<history-search>`  | Search through the history list                     |
+| `<history-up>`      | Scroll up through the history list                  |
+| `<kill-eol>`        | Delete chars from cursor to end of line             |
+| `<kill-eow>`        | Delete chars from the cursor to the end of the word |
+| `<kill-line>`       | Delete chars from cursor to beginning the line      |
+| `<kill-whole-line>` | Delete all chars on the line                        |
+| `<kill-word>`       | Delete the word in front of the cursor              |
+| `<mailbox-cycle>`   | Cycle among incoming mailboxes                      |
+| `<quote-char>`      | Quote the next typed key                            |
+| `<redraw-screen>`   | Clear and redraw the screen                         |
+| `<transpose-chars>` | Transpose character under cursor with previous      |
+| `<upcase-word>`     | Convert the word to upper case                      |
 
 ## [Generic Menu](menu-generic)
 
@@ -264,43 +264,43 @@ Not a menu itself, but provides common functions — such as scrolling, searchin
 
 | Function              | Description                                        |
 |-----------------------|----------------------------------------------------|
-| `<bottom-page>`       | move to the bottom of the page                     |
-| `<check-stats>`       | calculate message statistics for all mailboxes     |
-| `<current-bottom>`    | move entry to bottom of screen                     |
-| `<current-middle>`    | move entry to middle of screen                     |
-| `<current-top>`       | move entry to top of screen                        |
-| `<end-cond>`          | end of conditional execution (noop)                |
-| `<enter-command>`     | enter a neomuttrc command                          |
+| `<bottom-page>`       | Move to the bottom of the page                     |
+| `<check-stats>`       | Calculate message statistics for all mailboxes     |
+| `<current-bottom>`    | Move entry to bottom of screen                     |
+| `<current-middle>`    | Move entry to middle of screen                     |
+| `<current-top>`       | Move entry to top of screen                        |
+| `<end-cond>`          | End of conditional execution (noop)                |
+| `<enter-command>`     | Enter a neomuttrc command                          |
 | `<error-history>`     | {bdg-danger}`Deprecated` use `<show-log-messages>` |
-| `<exit>`              | exit this menu                                     |
-| `<first-entry>`       | move to the first entry                            |
-| `<half-down>`         | scroll down 1/2 page                               |
-| `<half-up>`           | scroll up 1/2 page                                 |
-| `<help>`              | this screen                                        |
-| `<jump>`              | jump to an index number                            |
-| `<last-entry>`        | move to the last entry                             |
-| `<middle-page>`       | move to the middle of the page                     |
-| `<next-entry>`        | move to the next entry                             |
-| `<next-line>`         | scroll down one line                               |
-| `<next-page>`         | move to the next page                              |
-| `<previous-entry>`    | move to the previous entry                         |
-| `<previous-line>`     | scroll up one line                                 |
-| `<previous-page>`     | move to the previous page                          |
-| `<redraw-screen>`     | clear and redraw the screen                        |
+| `<exit>`              | Exit this menu                                     |
+| `<first-entry>`       | Move to the first entry                            |
+| `<half-down>`         | Scroll down 1/2 page                               |
+| `<half-up>`           | Scroll up 1/2 page                                 |
+| `<help>`              | This screen                                        |
+| `<jump>`              | Jump to an index number                            |
+| `<last-entry>`        | Move to the last entry                             |
+| `<middle-page>`       | Move to the middle of the page                     |
+| `<next-entry>`        | Move to the next entry                             |
+| `<next-line>`         | Scroll down one line                               |
+| `<next-page>`         | Move to the next page                              |
+| `<previous-entry>`    | Move to the previous entry                         |
+| `<previous-line>`     | Scroll up one line                                 |
+| `<previous-page>`     | Move to the previous page                          |
+| `<redraw-screen>`     | Clear and redraw the screen                        |
 | `<refresh>`           | {bdg-danger}`Deprecated` use `<redraw-screen>`     |
-| `<search-next>`       | search for next match                              |
-| `<search-opposite>`   | search for next match in opposite direction        |
-| `<search-reverse>`    | search backwards for a regular expression          |
-| `<search>`            | search for a regular expression                    |
-| `<select-entry>`      | select the current entry                           |
-| `<shell-escape>`      | invoke a command in a subshell                     |
-| `<show-log-messages>` | show log (and debug) messages                      |
-| `<show-version>`      | show the NeoMutt version number and date           |
-| `<tag-entry>`         | tag the current entry                              |
-| `<tag-prefix-cond>`   | apply next function ONLY to tagged messages        |
-| `<tag-prefix>`        | apply next function to tagged messages             |
-| `<top-page>`          | move to the top of the page                        |
-| `<what-key>`          | display the keycode for a key press                |
+| `<search-next>`       | Search for next match                              |
+| `<search-opposite>`   | Search for next match in opposite direction        |
+| `<search-reverse>`    | Search backwards for a regular expression          |
+| `<search>`            | Search for a regular expression                    |
+| `<select-entry>`      | Select the current entry                           |
+| `<shell-escape>`      | Invoke a command in a subshell                     |
+| `<show-log-messages>` | Show log (and debug) messages                      |
+| `<show-version>`      | Show the NeoMutt version number and date           |
+| `<tag-entry>`         | Tag the current entry                              |
+| `<tag-prefix-cond>`   | Apply next function ONLY to tagged messages        |
+| `<tag-prefix>`        | Apply next function to tagged messages             |
+| `<top-page>`          | Move to the top of the page                        |
+| `<what-key>`          | Display the keycode for a key press                |
 
 ## [Index Menu](menu-index)
 
@@ -309,128 +309,128 @@ You can read, reply, forward, delete, tag, sort, search, and manage messages.
 
 | Function                        | Description                                                             |
 |---------------------------------|-------------------------------------------------------------------------|
-| `<alias-dialog>`                | open the aliases dialog                                                 |
-| `<autocrypt-acct-menu>`         | manage autocrypt accounts                                               |
-| `<bounce-message>`              | remail a message to another user                                        |
-| `<break-thread>`                | break the thread in two                                                 |
+| `<alias-dialog>`                | Open the aliases dialog                                                 |
+| `<autocrypt-acct-menu>`         | Manage autocrypt accounts                                               |
+| `<bounce-message>`              | Remail a message to another user                                        |
+| `<break-thread>`                | Break the thread in two                                                 |
 | `<buffy-list>`                  | {bdg-danger}`Deprecated` use `<mailbox-list>`                           |
-| `<catchup>`                     | mark all articles in newsgroup as read                                  |
-| `<change-folder-readonly>`      | open a different folder in read only mode                               |
-| `<change-folder>`               | open a different folder                                                 |
-| `<change-newsgroup-readonly>`   | open a different newsgroup in read only mode                            |
-| `<change-newsgroup>`            | open a different newsgroup                                              |
-| `<change-vfolder>`              | open a different virtual folder                                         |
-| `<check-traditional-pgp>`       | check for classic PGP                                                   |
-| `<clear-flag>`                  | clear a status flag from a message                                      |
-| `<close-all-threads>`           | collapse all threads                                                    |
-| `<close-thread>`                | collapse current thread                                                 |
-| `<collapse-all>`                | collapse/uncollapse all threads                                         |
-| `<collapse-thread>`             | collapse/uncollapse current thread                                      |
-| `<compose-to-sender>`           | compose new message to the current message sender                       |
-| `<copy-message>`                | copy a message to a file/mailbox                                        |
-| `<create-alias>`                | create an alias from a message sender                                   |
-| `<decode-copy>`                 | make decoded (text/plain) copy                                          |
-| `<decode-save>`                 | make decoded copy (text/plain) and delete                               |
-| `<decrypt-copy>`                | make decrypted copy                                                     |
-| `<decrypt-save>`                | make decrypted copy and delete                                          |
-| `<delete-message>`              | delete the current entry                                                |
-| `<delete-pattern>`              | delete non-hidden messages matching a pattern                           |
-| `<delete-subthread>`            | delete all messages in subthread                                        |
-| `<delete-thread>`               | delete all messages in thread                                           |
-| `<display-address>`             | display full address of sender                                          |
-| `<display-message>`             | display a message                                                       |
-| `<display-toggle-weed>`         | display message and toggle header weeding                               |
-| `<edit-label>`                  | add, change, or delete a message's label                                |
-| `<edit-or-view-raw-message>`    | edit the raw message if the mailbox is not read-only, otherwise view it |
-| `<edit-raw-message>`            | edit the raw message (edit and edit-raw-message are synonyms)           |
-| `<edit-type>`                   | edit attachment content type                                            |
-| `<edit>`                        | edit the raw message (edit and edit-raw-message are synonyms)           |
-| `<entire-thread>`               | read entire thread of the current message                               |
-| `<exit>`                        | exit this menu                                                          |
-| `<extract-keys>`                | extract supported public keys                                           |
-| `<fetch-mail>`                  | retrieve mail from POP server                                           |
-| `<flag-message>`                | toggle a message's 'important' flag                                     |
-| `<followup-message>`            | followup to newsgroup                                                   |
-| `<forget-passphrase>`           | wipe passphrases from memory                                            |
-| `<forward-message>`             | forward a message with comments                                         |
-| `<forward-to-group>`            | forward to newsgroup                                                    |
-| `<get-children>`                | get all children of the current message                                 |
-| `<get-message>`                 | get message with Message-Id                                             |
-| `<get-parent>`                  | get parent of the current message                                       |
-| `<group-chat-reply>`            | reply to all recipients preserving To/Cc                                |
-| `<group-reply>`                 | reply to all recipients                                                 |
-| `<imap-fetch-mail>`             | force retrieval of mail from IMAP server                                |
-| `<imap-logout-all>`             | logout from all IMAP servers                                            |
-| `<limit-current-thread>`        | limit view to current thread                                            |
-| `<limit>`                       | show only messages matching a pattern                                   |
-| `<link-threads>`                | link tagged message to the current one                                  |
-| `<list-reply>`                  | reply to specified mailing list                                         |
-| `<list-subscribe>`              | subscribe to a mailing list                                             |
-| `<list-unsubscribe>`            | unsubscribe from a mailing list                                         |
-| `<mail-key>`                    | mail a PGP public key                                                   |
-| `<mail>`                        | compose a new mail message                                              |
-| `<mailbox-list>`                | list mailboxes with new mail                                            |
-| `<mark-message>`                | create a hotkey macro for the current message                           |
-| `<modify-labels-then-hide>`     | modify (notmuch/imap) tags and then hide message                        |
-| `<modify-labels>`               | modify (notmuch/imap) tags                                              |
-| `<modify-tags-then-hide>`       | modify (notmuch/imap) tags and then hide message                        |
-| `<modify-tags>`                 | modify (notmuch/imap) tags                                              |
-| `<next-new-then-unread>`        | jump to the next new or unread message                                  |
-| `<next-new>`                    | jump to the next new message                                            |
-| `<next-subthread>`              | jump to the next subthread                                              |
-| `<next-thread>`                 | jump to the next thread                                                 |
-| `<next-undeleted>`              | move to the next undeleted message                                      |
-| `<next-unread-mailbox>`         | open next mailbox with new mail                                         |
-| `<next-unread>`                 | jump to the next unread message                                         |
-| `<open-all-threads>`            | uncollapse all threads                                                  |
-| `<open-thread>`                 | uncollapse current thread                                               |
-| `<parent-message>`              | jump to parent message in thread                                        |
-| `<pipe-entry>`                  | pipe message/attachment to a shell command                              |
-| `<pipe-message>`                | pipe message/attachment to a shell command                              |
-| `<post-message>`                | post message to newsgroup                                               |
-| `<previous-new-then-unread>`    | jump to the previous new or unread message                              |
-| `<previous-new>`                | jump to the previous new message                                        |
-| `<previous-subthread>`          | jump to previous subthread                                              |
-| `<previous-thread>`             | jump to previous thread                                                 |
-| `<previous-undeleted>`          | move to the previous undeleted message                                  |
-| `<previous-unread>`             | jump to the previous unread message                                     |
-| `<print-message>`               | print the current entry                                                 |
-| `<purge-message>`               | delete the current entry, bypassing the trash folder                    |
-| `<purge-thread>`                | delete the current thread, bypassing the trash folder                   |
-| `<quasi-delete>`                | delete from NeoMutt, don't touch on disk                                |
-| `<query>`                       | query external program for addresses                                    |
-| `<quit>`                        | save changes to mailbox and quit                                        |
-| `<read-subthread>`              | mark the current subthread as read                                      |
-| `<read-thread>`                 | mark the current thread as read                                         |
-| `<recall-message>`              | recall a postponed message                                              |
-| `<reconstruct-thread>`          | reconstruct thread containing current message                           |
-| `<reply>`                       | reply to a message                                                      |
-| `<resend-message>`              | use the current message as a template for a new one                     |
-| `<root-message>`                | jump to root message in thread                                          |
-| `<save-message>`                | save message/attachment to a mailbox/file                               |
-| `<set-flag>`                    | set a status flag on a message                                          |
-| `<show-limit>`                  | show currently active limit pattern                                     |
-| `<sort-mailbox>`                | sort messages                                                           |
-| `<sort-reverse>`                | sort messages in reverse order                                          |
-| `<sync-mailbox>`                | save changes to mailbox                                                 |
-| `<tag-pattern>`                 | tag non-hidden messages matching a pattern                              |
-| `<tag-subthread>`               | tag the current subthread                                               |
-| `<tag-thread>`                  | tag the current thread                                                  |
-| `<toggle-new>`                  | toggle a message's 'new' flag                                           |
-| `<toggle-read>`                 | toggle view of read messages                                            |
-| `<toggle-write>`                | toggle whether the mailbox will be rewritten                            |
-| `<undelete-message>`            | undelete the current entry                                              |
-| `<undelete-pattern>`            | undelete non-hidden messages matching a pattern                         |
-| `<undelete-subthread>`          | undelete all messages in subthread                                      |
-| `<undelete-thread>`             | undelete all messages in thread                                         |
-| `<untag-pattern>`               | untag non-hidden messages matching a pattern                            |
-| `<vfolder-from-query-readonly>` | generate a read-only virtual folder from query                          |
-| `<vfolder-from-query>`          | generate virtual folder from query                                      |
-| `<vfolder-window-backward>`     | shifts virtual folder time window backwards                             |
-| `<vfolder-window-forward>`      | shifts virtual folder time window forwards                              |
-| `<vfolder-window-reset>`        | resets virtual folder time window to the present                        |
-| `<view-attachments>`            | show MIME attachments                                                   |
-| `<view-raw-message>`            | show the raw message                                                    |
+| `<catchup>`                     | Mark all articles in newsgroup as read                                  |
+| `<change-folder-readonly>`      | Open a different folder in read only mode                               |
+| `<change-folder>`               | Open a different folder                                                 |
+| `<change-newsgroup-readonly>`   | Open a different newsgroup in read only mode                            |
+| `<change-newsgroup>`            | Open a different newsgroup                                              |
+| `<change-vfolder>`              | Open a different virtual folder                                         |
+| `<check-traditional-pgp>`       | Check for classic PGP                                                   |
+| `<clear-flag>`                  | Clear a status flag from a message                                      |
+| `<close-all-threads>`           | Collapse all threads                                                    |
+| `<close-thread>`                | Collapse current thread                                                 |
+| `<collapse-all>`                | Collapse/Uncollapse all threads                                         |
+| `<collapse-thread>`             | Collapse/Uncollapse current thread                                      |
+| `<compose-to-sender>`           | Compose new message to the current message sender                       |
+| `<copy-message>`                | Copy a message to a file/mailbox                                        |
+| `<create-alias>`                | Create an alias from a message sender                                   |
+| `<decode-copy>`                 | Make decoded (text/plain) copy                                          |
+| `<decode-save>`                 | Make decoded copy (text/plain) and delete                               |
+| `<decrypt-copy>`                | Make decrypted copy                                                     |
+| `<decrypt-save>`                | Make decrypted copy and delete                                          |
+| `<delete-message>`              | Delete the current entry                                                |
+| `<delete-pattern>`              | Delete non-hidden messages matching a pattern                           |
+| `<delete-subthread>`            | Delete all messages in subthread                                        |
+| `<delete-thread>`               | Delete all messages in thread                                           |
+| `<display-address>`             | Display full address of sender                                          |
+| `<display-message>`             | Display a message                                                       |
+| `<display-toggle-weed>`         | Display message and toggle header weeding                               |
+| `<edit-label>`                  | Add, change, or delete a message's label                                |
+| `<edit-or-view-raw-message>`    | Edit the raw message if the mailbox is not read-only, otherwise view it |
+| `<edit-raw-message>`            | Edit the raw message (edit and edit-raw-message are synonyms)           |
+| `<edit-type>`                   | Edit attachment content type                                            |
+| `<edit>`                        | Edit the raw message (edit and edit-raw-message are synonyms)           |
+| `<entire-thread>`               | Read entire thread of the current message                               |
+| `<exit>`                        | Exit this menu                                                          |
+| `<extract-keys>`                | Extract supported public keys                                           |
+| `<fetch-mail>`                  | Retrieve mail from POP server                                           |
+| `<flag-message>`                | Toggle a message's 'important' flag                                     |
+| `<followup-message>`            | Followup to newsgroup                                                   |
+| `<forget-passphrase>`           | Wipe passphrases from memory                                            |
+| `<forward-message>`             | Forward a message with comments                                         |
+| `<forward-to-group>`            | Forward to newsgroup                                                    |
+| `<get-children>`                | Get all children of the current message                                 |
+| `<get-message>`                 | Get message with Message-Id                                             |
+| `<get-parent>`                  | Get parent of the current message                                       |
+| `<group-chat-reply>`            | Reply to all recipients preserving To/Cc                                |
+| `<group-reply>`                 | Reply to all recipients                                                 |
+| `<imap-fetch-mail>`             | Force retrieval of mail from IMAP server                                |
+| `<imap-logout-all>`             | Logout from all IMAP servers                                            |
+| `<limit-current-thread>`        | Limit view to current thread                                            |
+| `<limit>`                       | Show only messages matching a pattern                                   |
+| `<link-threads>`                | Link tagged message to the current one                                  |
+| `<list-reply>`                  | Reply to specified mailing list                                         |
+| `<list-subscribe>`              | Subscribe to a mailing list                                             |
+| `<list-unsubscribe>`            | Unsubscribe from a mailing list                                         |
+| `<mail-key>`                    | Mail a PGP public key                                                   |
+| `<mail>`                        | Compose a new mail message                                              |
+| `<mailbox-list>`                | List mailboxes with new mail                                            |
+| `<mark-message>`                | Create a hotkey macro for the current message                           |
+| `<modify-labels-then-hide>`     | Modify (notmuch/imap) tags and then hide message                        |
+| `<modify-labels>`               | Modify (notmuch/imap) tags                                              |
+| `<modify-tags-then-hide>`       | Modify (notmuch/imap) tags and then hide message                        |
+| `<modify-tags>`                 | Modify (notmuch/imap) tags                                              |
+| `<next-new-then-unread>`        | Jump to the next new or unread message                                  |
+| `<next-new>`                    | Jump to the next new message                                            |
+| `<next-subthread>`              | Jump to the next subthread                                              |
+| `<next-thread>`                 | Jump to the next thread                                                 |
+| `<next-undeleted>`              | Move to the next undeleted message                                      |
+| `<next-unread-mailbox>`         | Open next mailbox with new mail                                         |
+| `<next-unread>`                 | Jump to the next unread message                                         |
+| `<open-all-threads>`            | Uncollapse all threads                                                  |
+| `<open-thread>`                 | Uncollapse current thread                                               |
+| `<parent-message>`              | Jump to parent message in thread                                        |
+| `<pipe-entry>`                  | Pipe message/attachment to a shell command                              |
+| `<pipe-message>`                | Pipe message/attachment to a shell command                              |
+| `<post-message>`                | Post message to newsgroup                                               |
+| `<previous-new-then-unread>`    | Jump to the previous new or unread message                              |
+| `<previous-new>`                | Jump to the previous new message                                        |
+| `<previous-subthread>`          | Jump to previous subthread                                              |
+| `<previous-thread>`             | Jump to previous thread                                                 |
+| `<previous-undeleted>`          | Move to the previous undeleted message                                  |
+| `<previous-unread>`             | Jump to the previous unread message                                     |
+| `<print-message>`               | Print the current entry                                                 |
+| `<purge-message>`               | Delete the current entry, bypassing the trash folder                    |
+| `<purge-thread>`                | Delete the current thread, bypassing the trash folder                   |
+| `<quasi-delete>`                | Delete from NeoMutt, don't touch on disk                                |
+| `<query>`                       | Query external program for addresses                                    |
+| `<quit>`                        | Save changes to mailbox and quit                                        |
+| `<read-subthread>`              | Mark the current subthread as read                                      |
+| `<read-thread>`                 | Mark the current thread as read                                         |
+| `<recall-message>`              | Recall a postponed message                                              |
+| `<reconstruct-thread>`          | Reconstruct thread containing current message                           |
+| `<reply>`                       | Reply to a message                                                      |
+| `<resend-message>`              | Use the current message as a template for a new one                     |
+| `<root-message>`                | Jump to root message in thread                                          |
+| `<save-message>`                | Save message/attachment to a mailbox/file                               |
+| `<set-flag>`                    | Set a status flag on a message                                          |
+| `<show-limit>`                  | Show currently active limit pattern                                     |
+| `<sort-mailbox>`                | Sort messages                                                           |
+| `<sort-reverse>`                | Sort messages in reverse order                                          |
+| `<sync-mailbox>`                | Save changes to mailbox                                                 |
+| `<tag-pattern>`                 | Tag non-hidden messages matching a pattern                              |
+| `<tag-subthread>`               | Tag the current subthread                                               |
+| `<tag-thread>`                  | Tag the current thread                                                  |
+| `<toggle-new>`                  | Toggle a message's 'new' flag                                           |
+| `<toggle-read>`                 | Toggle view of read messages                                            |
+| `<toggle-write>`                | Toggle whether the mailbox will be rewritten                            |
+| `<undelete-message>`            | Undelete the current entry                                              |
+| `<undelete-pattern>`            | Undelete non-hidden messages matching a pattern                         |
+| `<undelete-subthread>`          | Undelete all messages in subthread                                      |
+| `<undelete-thread>`             | Undelete all messages in thread                                         |
+| `<untag-pattern>`               | Untag non-hidden messages matching a pattern                            |
+| `<vfolder-from-query-readonly>` | Generate a read-only virtual folder from query                          |
+| `<vfolder-from-query>`          | Generate virtual folder from query                                      |
+| `<vfolder-window-backward>`     | Shifts virtual folder time window backwards                             |
+| `<vfolder-window-forward>`      | Shifts virtual folder time window forwards                              |
+| `<vfolder-window-reset>`        | Resets virtual folder time window to the present                        |
+| `<view-attachments>`            | Show MIME attachments                                                   |
+| `<view-raw-message>`            | Show the raw message                                                    |
 
 ## [Pager Menu](menu-pager)
 
@@ -439,130 +439,130 @@ You can scroll, search within the text, and perform many of the same actions as 
 
 | Function                        | Description                                                             |
 |---------------------------------|-------------------------------------------------------------------------|
-| `<bottom>`                      | jump to the bottom of the message                                       |
-| `<bounce-message>`              | remail a message to another user                                        |
-| `<break-thread>`                | break the thread in two                                                 |
+| `<bottom>`                      | Jump to the bottom of the message                                       |
+| `<bounce-message>`              | Remail a message to another user                                        |
+| `<break-thread>`                | Break the thread in two                                                 |
 | `<buffy-list>`                  | {bdg-danger}`Deprecated` use `<mailbox-list>`                           |
-| `<change-folder-readonly>`      | open a different folder in read only mode                               |
-| `<change-folder>`               | open a different folder                                                 |
-| `<change-newsgroup-readonly>`   | open a different newsgroup in read only mode                            |
-| `<change-newsgroup>`            | open a different newsgroup                                              |
-| `<change-vfolder>`              | open a different virtual folder                                         |
-| `<check-stats>`                 | calculate message statistics for all mailboxes                          |
-| `<check-traditional-pgp>`       | check for classic PGP                                                   |
-| `<clear-flag>`                  | clear a status flag from a message                                      |
-| `<compose-to-sender>`           | compose new message to the current message sender                       |
-| `<copy-message>`                | copy a message to a file/mailbox                                        |
-| `<create-alias>`                | create an alias from a message sender                                   |
-| `<decode-copy>`                 | make decoded (text/plain) copy                                          |
-| `<decode-save>`                 | make decoded copy (text/plain) and delete                               |
-| `<decrypt-copy>`                | make decrypted copy                                                     |
-| `<decrypt-save>`                | make decrypted copy and delete                                          |
-| `<delete-message>`              | delete the current entry                                                |
-| `<delete-subthread>`            | delete all messages in subthread                                        |
-| `<delete-thread>`               | delete all messages in thread                                           |
-| `<display-address>`             | display full address of sender                                          |
-| `<display-toggle-weed>`         | display message and toggle header weeding                               |
-| `<edit-label>`                  | add, change, or delete a message's label                                |
-| `<edit-or-view-raw-message>`    | edit the raw message if the mailbox is not read-only, otherwise view it |
-| `<edit-raw-message>`            | edit the raw message (edit and edit-raw-message are synonyms)           |
-| `<edit-type>`                   | edit attachment content type                                            |
-| `<edit>`                        | edit the raw message (edit and edit-raw-message are synonyms)           |
-| `<enter-command>`               | enter a neomuttrc command                                               |
-| `<entire-thread>`               | read entire thread of the current message                               |
+| `<change-folder-readonly>`      | Open a different folder in read only mode                               |
+| `<change-folder>`               | Open a different folder                                                 |
+| `<change-newsgroup-readonly>`   | Open a different newsgroup in read only mode                            |
+| `<change-newsgroup>`            | Open a different newsgroup                                              |
+| `<change-vfolder>`              | Open a different virtual folder                                         |
+| `<check-stats>`                 | Calculate message statistics for all mailboxes                          |
+| `<check-traditional-pgp>`       | Check for classic PGP                                                   |
+| `<clear-flag>`                  | Clear a status flag from a message                                      |
+| `<compose-to-sender>`           | Compose new message to the current message sender                       |
+| `<copy-message>`                | Copy a message to a file/mailbox                                        |
+| `<create-alias>`                | Create an alias from a message sender                                   |
+| `<decode-copy>`                 | Make decoded (text/plain) copy                                          |
+| `<decode-save>`                 | Make decoded copy (text/plain) and delete                               |
+| `<decrypt-copy>`                | Make decrypted copy                                                     |
+| `<decrypt-save>`                | Make decrypted copy and delete                                          |
+| `<delete-message>`              | Delete the current entry                                                |
+| `<delete-subthread>`            | Delete all messages in subthread                                        |
+| `<delete-thread>`               | Delete all messages in thread                                           |
+| `<display-address>`             | Display full address of sender                                          |
+| `<display-toggle-weed>`         | Display message and toggle header weeding                               |
+| `<edit-label>`                  | Add, change, or delete a message's label                                |
+| `<edit-or-view-raw-message>`    | Edit the raw message if the mailbox is not read-only, otherwise view it |
+| `<edit-raw-message>`            | Edit the raw message (edit and edit-raw-message are synonyms)           |
+| `<edit-type>`                   | Edit attachment content type                                            |
+| `<edit>`                        | Edit the raw message (edit and edit-raw-message are synonyms)           |
+| `<enter-command>`               | Enter a neomuttrc command                                               |
+| `<entire-thread>`               | Read entire thread of the current message                               |
 | `<error-history>`               | {bdg-danger}`Deprecated` use `<show-log-messages>`                      |
-| `<exit>`                        | exit this menu                                                          |
-| `<extract-keys>`                | extract supported public keys                                           |
-| `<flag-message>`                | toggle a message's 'important' flag                                     |
-| `<followup-message>`            | followup to newsgroup                                                   |
-| `<forget-passphrase>`           | wipe passphrases from memory                                            |
-| `<forward-message>`             | forward a message with comments                                         |
-| `<forward-to-group>`            | forward to newsgroup                                                    |
-| `<group-chat-reply>`            | reply to all recipients preserving To/Cc                                |
-| `<group-reply>`                 | reply to all recipients                                                 |
-| `<half-down>`                   | scroll down 1/2 page                                                    |
-| `<half-up>`                     | scroll up 1/2 page                                                      |
-| `<help>`                        | this screen                                                             |
-| `<imap-fetch-mail>`             | force retrieval of mail from IMAP server                                |
-| `<imap-logout-all>`             | logout from all IMAP servers                                            |
-| `<jump>`                        | jump to an index number                                                 |
-| `<link-threads>`                | link tagged message to the current one                                  |
-| `<list-reply>`                  | reply to specified mailing list                                         |
-| `<list-subscribe>`              | subscribe to a mailing list                                             |
-| `<list-unsubscribe>`            | unsubscribe from a mailing list                                         |
-| `<mail-key>`                    | mail a PGP public key                                                   |
-| `<mail>`                        | compose a new mail message                                              |
-| `<mailbox-list>`                | list mailboxes with new mail                                            |
-| `<mark-as-new>`                 | toggle a message's 'new' flag                                           |
-| `<modify-labels-then-hide>`     | modify (notmuch/imap) tags and then hide message                        |
-| `<modify-labels>`               | modify (notmuch/imap) tags                                              |
-| `<modify-tags-then-hide>`       | modify (notmuch/imap) tags and then hide message                        |
-| `<modify-tags>`                 | modify (notmuch/imap) tags                                              |
-| `<next-entry>`                  | move to the next entry                                                  |
-| `<next-line>`                   | scroll down one line                                                    |
-| `<next-new-then-unread>`        | jump to the next new or unread message                                  |
-| `<next-new>`                    | jump to the next new message                                            |
-| `<next-page>`                   | move to the next page                                                   |
-| `<next-subthread>`              | jump to the next subthread                                              |
-| `<next-thread>`                 | jump to the next thread                                                 |
-| `<next-undeleted>`              | move to the next undeleted message                                      |
-| `<next-unread-mailbox>`         | open next mailbox with new mail                                         |
-| `<next-unread>`                 | jump to the next unread message                                         |
-| `<parent-message>`              | jump to parent message in thread                                        |
-| `<pipe-entry>`                  | pipe message/attachment to a shell command                              |
-| `<pipe-message>`                | pipe message/attachment to a shell command                              |
-| `<post-message>`                | post message to newsgroup                                               |
-| `<previous-entry>`              | move to the previous entry                                              |
-| `<previous-line>`               | scroll up one line                                                      |
-| `<previous-new-then-unread>`    | jump to the previous new or unread message                              |
-| `<previous-new>`                | jump to the previous new message                                        |
-| `<previous-page>`               | move to the previous page                                               |
-| `<previous-subthread>`          | jump to previous subthread                                              |
-| `<previous-thread>`             | jump to previous thread                                                 |
-| `<previous-undeleted>`          | move to the previous undeleted message                                  |
-| `<previous-unread>`             | jump to the previous unread message                                     |
-| `<print-entry>`                 | print the current entry                                                 |
-| `<print-message>`               | print the current entry                                                 |
-| `<purge-message>`               | delete the current entry, bypassing the trash folder                    |
-| `<purge-thread>`                | delete the current thread, bypassing the trash folder                   |
-| `<quasi-delete>`                | delete from NeoMutt, don't touch on disk                                |
-| `<quit>`                        | save changes to mailbox and quit                                        |
-| `<read-subthread>`              | mark the current subthread as read                                      |
-| `<read-thread>`                 | mark the current thread as read                                         |
-| `<recall-message>`              | recall a postponed message                                              |
-| `<reconstruct-thread>`          | reconstruct thread containing current message                           |
-| `<redraw-screen>`               | clear and redraw the screen                                             |
-| `<reply>`                       | reply to a message                                                      |
-| `<resend-message>`              | use the current message as a template for a new one                     |
-| `<root-message>`                | jump to root message in thread                                          |
-| `<save-entry>`                  | save message/attachment to a mailbox/file                               |
-| `<save-message>`                | save message/attachment to a mailbox/file                               |
-| `<search-next>`                 | search for next match                                                   |
-| `<search-opposite>`             | search for next match in opposite direction                             |
-| `<search-reverse>`              | search backwards for a regular expression                               |
-| `<search-toggle>`               | toggle search pattern coloring                                          |
-| `<search>`                      | search for a regular expression                                         |
-| `<set-flag>`                    | set a status flag on a message                                          |
-| `<shell-escape>`                | invoke a command in a subshell                                          |
-| `<show-log-messages>`           | show log (and debug) messages                                           |
-| `<show-version>`                | show the NeoMutt version number and date                                |
-| `<skip-headers>`                | jump to first line after headers                                        |
-| `<skip-quoted>`                 | skip beyond quoted text                                                 |
-| `<sort-mailbox>`                | sort messages                                                           |
-| `<sort-reverse>`                | sort messages in reverse order                                          |
-| `<sync-mailbox>`                | save changes to mailbox                                                 |
-| `<tag-message>`                 | tag the current entry                                                   |
-| `<toggle-quoted>`               | toggle display of quoted text                                           |
-| `<toggle-write>`                | toggle whether the mailbox will be rewritten                            |
-| `<top>`                         | jump to the top of the message                                          |
-| `<undelete-message>`            | undelete the current entry                                              |
-| `<undelete-subthread>`          | undelete all messages in subthread                                      |
-| `<undelete-thread>`             | undelete all messages in thread                                         |
-| `<vfolder-from-query-readonly>` | generate a read-only virtual folder from query                          |
-| `<vfolder-from-query>`          | generate virtual folder from query                                      |
-| `<view-attachments>`            | show MIME attachments                                                   |
-| `<view-raw-message>`            | show the raw message                                                    |
-| `<what-key>`                    | display the keycode for a key press                                     |
+| `<exit>`                        | Exit this menu                                                          |
+| `<extract-keys>`                | Extract supported public keys                                           |
+| `<flag-message>`                | Toggle a message's 'important' flag                                     |
+| `<followup-message>`            | Followup to newsgroup                                                   |
+| `<forget-passphrase>`           | Wipe passphrases from memory                                            |
+| `<forward-message>`             | Forward a message with comments                                         |
+| `<forward-to-group>`            | Forward to newsgroup                                                    |
+| `<group-chat-reply>`            | Reply to all recipients preserving To/Cc                                |
+| `<group-reply>`                 | Reply to all recipients                                                 |
+| `<half-down>`                   | Scroll down 1/2 page                                                    |
+| `<half-up>`                     | Scroll up 1/2 page                                                      |
+| `<help>`                        | This screen                                                             |
+| `<imap-fetch-mail>`             | Force retrieval of mail from IMAP server                                |
+| `<imap-logout-all>`             | Logout from all IMAP servers                                            |
+| `<jump>`                        | Jump to an index number                                                 |
+| `<link-threads>`                | Link tagged message to the current one                                  |
+| `<list-reply>`                  | Reply to specified mailing list                                         |
+| `<list-subscribe>`              | Subscribe to a mailing list                                             |
+| `<list-unsubscribe>`            | Unsubscribe from a mailing list                                         |
+| `<mail-key>`                    | Mail a PGP public key                                                   |
+| `<mail>`                        | Compose a new mail message                                              |
+| `<mailbox-list>`                | List mailboxes with new mail                                            |
+| `<mark-as-new>`                 | Toggle a message's 'new' flag                                           |
+| `<modify-labels-then-hide>`     | Modify (notmuch/imap) tags and then hide message                        |
+| `<modify-labels>`               | Modify (notmuch/imap) tags                                              |
+| `<modify-tags-then-hide>`       | Modify (notmuch/imap) tags and then hide message                        |
+| `<modify-tags>`                 | Modify (notmuch/imap) tags                                              |
+| `<next-entry>`                  | Move to the next entry                                                  |
+| `<next-line>`                   | Scroll down one line                                                    |
+| `<next-new-then-unread>`        | Jump to the next new or unread message                                  |
+| `<next-new>`                    | Jump to the next new message                                            |
+| `<next-page>`                   | Move to the next page                                                   |
+| `<next-subthread>`              | Jump to the next subthread                                              |
+| `<next-thread>`                 | Jump to the next thread                                                 |
+| `<next-undeleted>`              | Move to the next undeleted message                                      |
+| `<next-unread-mailbox>`         | Open next mailbox with new mail                                         |
+| `<next-unread>`                 | Jump to the next unread message                                         |
+| `<parent-message>`              | Jump to parent message in thread                                        |
+| `<pipe-entry>`                  | Pipe message/attachment to a shell command                              |
+| `<pipe-message>`                | Pipe message/attachment to a shell command                              |
+| `<post-message>`                | Post message to newsgroup                                               |
+| `<previous-entry>`              | Move to the previous entry                                              |
+| `<previous-line>`               | Scroll up one line                                                      |
+| `<previous-new-then-unread>`    | Jump to the previous new or unread message                              |
+| `<previous-new>`                | Jump to the previous new message                                        |
+| `<previous-page>`               | Move to the previous page                                               |
+| `<previous-subthread>`          | Jump to previous subthread                                              |
+| `<previous-thread>`             | Jump to previous thread                                                 |
+| `<previous-undeleted>`          | Move to the previous undeleted message                                  |
+| `<previous-unread>`             | Jump to the previous unread message                                     |
+| `<print-entry>`                 | Print the current entry                                                 |
+| `<print-message>`               | Print the current entry                                                 |
+| `<purge-message>`               | Delete the current entry, bypassing the trash folder                    |
+| `<purge-thread>`                | Delete the current thread, bypassing the trash folder                   |
+| `<quasi-delete>`                | Delete from NeoMutt, don't touch on disk                                |
+| `<quit>`                        | Save changes to mailbox and quit                                        |
+| `<read-subthread>`              | Mark the current subthread as read                                      |
+| `<read-thread>`                 | Mark the current thread as read                                         |
+| `<recall-message>`              | Recall a postponed message                                              |
+| `<reconstruct-thread>`          | Reconstruct thread containing current message                           |
+| `<redraw-screen>`               | Clear and redraw the screen                                             |
+| `<reply>`                       | Reply to a message                                                      |
+| `<resend-message>`              | Use the current message as a template for a new one                     |
+| `<root-message>`                | Jump to root message in thread                                          |
+| `<save-entry>`                  | Save message/attachment to a mailbox/file                               |
+| `<save-message>`                | Save message/attachment to a mailbox/file                               |
+| `<search-next>`                 | Search for next match                                                   |
+| `<search-opposite>`             | Search for next match in opposite direction                             |
+| `<search-reverse>`              | Search backwards for a regular expression                               |
+| `<search-toggle>`               | Toggle search pattern coloring                                          |
+| `<search>`                      | Search for a regular expression                                         |
+| `<set-flag>`                    | Set a status flag on a message                                          |
+| `<shell-escape>`                | Invoke a command in a subshell                                          |
+| `<show-log-messages>`           | Show log (and debug) messages                                           |
+| `<show-version>`                | Show the NeoMutt version number and date                                |
+| `<skip-headers>`                | Jump to first line after headers                                        |
+| `<skip-quoted>`                 | Skip beyond quoted text                                                 |
+| `<sort-mailbox>`                | Sort messages                                                           |
+| `<sort-reverse>`                | Sort messages in reverse order                                          |
+| `<sync-mailbox>`                | Save changes to mailbox                                                 |
+| `<tag-message>`                 | Tag the current entry                                                   |
+| `<toggle-quoted>`               | Toggle display of quoted text                                           |
+| `<toggle-write>`                | Toggle whether the mailbox will be rewritten                            |
+| `<top>`                         | Jump to the top of the message                                          |
+| `<undelete-message>`            | Undelete the current entry                                              |
+| `<undelete-subthread>`          | Undelete all messages in subthread                                      |
+| `<undelete-thread>`             | Undelete all messages in thread                                         |
+| `<vfolder-from-query-readonly>` | Generate a read-only virtual folder from query                          |
+| `<vfolder-from-query>`          | Generate virtual folder from query                                      |
+| `<view-attachments>`            | Show MIME attachments                                                   |
+| `<view-raw-message>`            | Show the raw message                                                    |
+| `<what-key>`                    | Display the keycode for a key press                                     |
 
 ## [PGP Menu](menu-pgp)
 
@@ -571,9 +571,9 @@ You can verify key details before choosing which key to use.
 
 | Function       | Description            |
 |----------------|------------------------|
-| `<exit>`       | exit this menu         |
-| `<verify-key>` | verify a public key    |
-| `<view-name>`  | view the key's user id |
+| `<exit>`       | Exit this menu         |
+| `<verify-key>` | Verify a public key    |
+| `<view-name>`  | View the key's user id |
 
 ## [Postpone Menu](menu-postpone)
 
@@ -582,9 +582,9 @@ You can pick a previously postponed message to continue composing it.
 
 | Function           | Description                |
 |--------------------|----------------------------|
-| `<delete-entry>`   | delete the current entry   |
-| `<exit>`           | exit this menu             |
-| `<undelete-entry>` | undelete the current entry |
+| `<delete-entry>`   | Delete the current entry   |
+| `<exit>`           | Exit this menu             |
+| `<undelete-entry>` | Undelete the current entry |
 
 ## [Query Menu](menu-query)
 
@@ -593,16 +593,16 @@ You can search for contacts, create aliases from the results, and compose messag
 
 | Function          | Description                                  |
 |-------------------|----------------------------------------------|
-| `<create-alias>`  | create an alias from a message sender        |
-| `<exit>`          | exit this menu                               |
-| `<limit>`         | show only messages matching a pattern        |
-| `<mail>`          | compose a new mail message                   |
-| `<query-append>`  | append new query results to current results  |
-| `<query>`         | query external program for addresses         |
-| `<sort-reverse>`  | sort messages in reverse order               |
-| `<sort>`          | sort messages                                |
-| `<tag-pattern>`   | tag non-hidden messages matching a pattern   |
-| `<untag-pattern>` | untag non-hidden messages matching a pattern |
+| `<create-alias>`  | Create an alias from a message sender        |
+| `<exit>`          | Exit this menu                               |
+| `<limit>`         | Show only messages matching a pattern        |
+| `<mail>`          | Compose a new mail message                   |
+| `<query-append>`  | Append new query results to current results  |
+| `<query>`         | Query external program for addresses         |
+| `<sort-reverse>`  | Sort messages in reverse order               |
+| `<sort>`          | Sort messages                                |
+| `<tag-pattern>`   | Tag non-hidden messages matching a pattern   |
+| `<untag-pattern>` | Untag non-hidden messages matching a pattern |
 
 ## [Sidebar Menu](menu-sidebar)
 
@@ -611,19 +611,19 @@ You can move between mailboxes, open them, and toggle the sidebar's visibility.
 
 | Function                   | Description                                          |
 |----------------------------|------------------------------------------------------|
-| `<sidebar-abort-search>`   | close the sidebar search                             |
-| `<sidebar-first>`          | move the highlight to the first mailbox              |
-| `<sidebar-last>`           | move the highlight to the last mailbox               |
-| `<sidebar-next-new>`       | move the highlight to next mailbox with new mail     |
-| `<sidebar-next>`           | move the highlight to next mailbox                   |
-| `<sidebar-open>`           | open highlighted mailbox                             |
-| `<sidebar-page-down>`      | scroll the sidebar down 1 page                       |
-| `<sidebar-page-up>`        | scroll the sidebar up 1 page                         |
-| `<sidebar-prev-new>`       | move the highlight to previous mailbox with new mail |
-| `<sidebar-prev>`           | move the highlight to previous mailbox               |
-| `<sidebar-start-search>`   | fuzzy search the sidebar                             |
-| `<sidebar-toggle-virtual>` | toggle between mailboxes and virtual mailboxes       |
-| `<sidebar-toggle-visible>` | make the sidebar (in)visible                         |
+| `<sidebar-abort-search>`   | Close the sidebar search                             |
+| `<sidebar-first>`          | Move the highlight to the first mailbox              |
+| `<sidebar-last>`           | Move the highlight to the last mailbox               |
+| `<sidebar-next-new>`       | Move the highlight to next mailbox with new mail     |
+| `<sidebar-next>`           | Move the highlight to next mailbox                   |
+| `<sidebar-open>`           | Open highlighted mailbox                             |
+| `<sidebar-page-down>`      | Scroll the sidebar down 1 page                       |
+| `<sidebar-page-up>`        | Scroll the sidebar up 1 page                         |
+| `<sidebar-prev-new>`       | Move the highlight to previous mailbox with new mail |
+| `<sidebar-prev>`           | Move the highlight to previous mailbox               |
+| `<sidebar-start-search>`   | Fuzzy search the sidebar                             |
+| `<sidebar-toggle-virtual>` | Toggle between mailboxes and virtual mailboxes       |
+| `<sidebar-toggle-visible>` | Make the sidebar (in)visible                         |
 
 ## [S/MIME Menu](menu-smime)
 
@@ -632,7 +632,7 @@ You can verify certificate details before choosing which one to use.
 
 | Function       | Description            |
 |----------------|------------------------|
-| `<exit>`       | exit this menu         |
-| `<verify-key>` | verify a public key    |
-| `<view-name>`  | view the key's user id |
+| `<exit>`       | Exit this menu         |
+| `<verify-key>` | Verify a public key    |
+| `<view-name>`  | View the key's user id |
 

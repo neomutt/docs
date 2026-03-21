@@ -39,7 +39,7 @@ Also, it can be handy to jump directly to the start of the email body with the
 
 | Menus | Default Key | Function | Description |
 |-------|-------------|----------|-------------|
-| pager | H | `<skip-headers>` | jump to first line after headers |
+| pager | H | `<skip-headers>` | Jump to first line after headers |
 
 ## Variables
 

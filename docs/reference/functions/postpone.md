@@ -21,7 +21,7 @@ how-to guides and explanation pages instead.
 
 | Function           | Default Keys | Description                |
 |--------------------|--------------|----------------------------|
-| `<delete-entry>`   | `d`          | delete the current entry   |
-| `<exit>`           | `q`          | exit this menu             |
-| `<undelete-entry>` | `u`          | undelete the current entry |
+| `<delete-entry>`   | `d`          | Delete the current entry   |
+| `<exit>`           | `q`          | Exit this menu             |
+| `<undelete-entry>` | `u`          | Undelete the current entry |
 

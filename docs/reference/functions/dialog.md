@@ -21,6 +21,6 @@ how-to guides and explanation pages instead.
 
 | Function | Default Keys | Description                      |
 |----------|--------------|----------------------------------|
-| `<exit>` |              | exit this menu                   |
-| `<quit>` | `q`          | save changes to mailbox and quit |
+| `<exit>` |              | Exit this menu                   |
+| `<quit>` | `q`          | Save changes to mailbox and quit |
 

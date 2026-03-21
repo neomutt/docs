@@ -614,8 +614,8 @@ well as keys for page-based menus.
 
 | Key | Function | Description |
 |-----|----------|-------------|
-| j or \<Down\> | `<next-entry>` | move to the next entry |
-| k or \<Up\> | `<previous-entry>` | move to the previous entry |
+| j or \<Down\> | `<next-entry>` | Move to the next entry |
+| k or \<Up\> | `<previous-entry>` | Move to the previous entry |
 | z or \<PageDn\> | `<next-page>` | go to the next page |
 | Z or \<PageUp\> | `<previous-page>` | go to the previous page |
 | = or \<Home\> | `<first-entry>` | jump to the first entry |
@@ -627,9 +627,9 @@ well as keys for page-based menus.
 
 | Key | Function | Description |
 |-----|----------|-------------|
-| J or \<Return\> | `<next-line>` | scroll down one line |
-| \<Backspace\> | `<previous-line>` | scroll up one line |
-| K, \<Space\> or \<PageDn\> | `<next-page>` | move to the next page |
+| J or \<Return\> | `<next-line>` | Scroll down one line |
+| \<Backspace\> | `<previous-line>` | Scroll up one line |
+| K, \<Space\> or \<PageDn\> | `<next-page>` | Move to the next page |
 | \- or \<PageUp\> | `<previous-page>` | move the previous page |
 | \<Home\> | `<top>` | move to the top |
 | \<End\> | `<bottom>` | move to the bottom |

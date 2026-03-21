@@ -37,9 +37,9 @@ On its own, this feature isn't very useful. It forms a useful part of the notmuc
 
 ## Functions
 
-| Menus | Default Key | Function | Description |
-|-------|-------------|----------|-------------|
-| index,pager | (none) | `<quasi-delete>` | delete from NeoMutt, don't touch on disk |
+| Menus       | Default Key | Function         | Description                              |
+|-------------|-------------|------------------|------------------------------------------|
+| index,pager | (none)      | `<quasi-delete>` | Delete from NeoMutt, don't touch on disk |
 
 ## neomuttrc
 
