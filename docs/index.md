@@ -40,15 +40,6 @@ Start here if you're new.
 Find solutions to real-world problems.
 :::
 
-:::{grid-item-card} 📋 Reference
-:link: reference/index
-:link-type: doc
-
-**Information-oriented** — Technical descriptions of NeoMutt's commands, options, and functions.
-
-Look up the details.
-:::
-
 :::{grid-item-card} 💡 Explanation
 :link: explanation/index
 :link-type: doc
@@ -56,6 +47,15 @@ Look up the details.
 **Understanding-oriented** — Background, context, and the "why" behind NeoMutt.
 
 Deepen your understanding.
+:::
+
+:::{grid-item-card} 📋 Reference
+:link: reference/index
+:link-type: doc
+
+**Information-oriented** — Technical descriptions of NeoMutt's commands, options, and functions.
+
+Look up the details.
 :::
 
 ::::

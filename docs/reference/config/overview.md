@@ -54,51 +54,51 @@ sidebar
 
 ## A
 
-| Config Option                                                     | Description                                                                 |
-|-------------------------------------------------------------------|-----------------------------------------------------------------------------|
-| [`$abort_backspace`](abort-backspace)                             | Hitting backspace against an empty prompt aborts the prompt                 |
-| [`$abort_key`](abort-key)                                         | String representation of key to abort prompts                               |
-| [`$abort_noattach`](abort-noattach)                               | Abort sending the email if attachments are missing                          |
-| [`$abort_noattach_regex`](abort-noattach-regex)                   | Regex to match text indicating attachments are expected                     |
-| `$abort_noattach_regexp`                                          | **Renamed to**: [`$abort_noattach_regex`](abort-noattach-regex)             |
-| [`$abort_nosubject`](abort-nosubject)                             | Abort creating the email if subject is missing                              |
-| [`$abort_unmodified`](abort-unmodified)                           | Abort the sending if the message hasn't been edited                         |
-| [`$account_command`](account-command)                             | Shell command to retrieve account credentials                               |
-| [`$alias_file`](alias-file)                                       | Save new aliases to this file                                               |
-| [`$alias_format`](alias-format)                                   | printf-like format string for the alias menu                                |
-| [`$alias_sort`](alias-sort)                                       | Sort method for the alias menu                                              |
-| [`$allow_8bit`](allow-8bit)                                       | Allow 8-bit messages, don't use quoted-printable or base64                  |
-| [`$allow_ansi`](allow-ansi)                                       | Allow ANSI color codes in rich text messages                                |
-| [`$arrow_cursor`](arrow-cursor)                                   | Use an arrow `->` instead of highlighting in the index                      |
-| [`$arrow_string`](arrow-string)                                   | Use a custom string for `arrow_cursor`                                      |
-| [`$ascii_chars`](ascii-chars)                                     | Use plain ASCII characters, when drawing email threads                      |
-| `$askbcc`                                                         | **Renamed to**: [`$ask_bcc`](ask-bcc)                                       |
-| `$askcc`                                                          | **Renamed to**: [`$ask_cc`](ask-cc)                                         |
-| [`$ask_bcc`](ask-bcc)                                             | Ask the user for the blind-carbon-copy recipients                           |
-| [`$ask_cc`](ask-cc)                                               | Ask the user for the carbon-copy recipients                                 |
-| [`$ask_followup_to`](ask-followup-to)                             | Ask the user for follow-up groups before editing                            |
-| `$ask_follow_up`                                                  | **Renamed to**: [`$ask_followup_to`](ask-followup-to)                       |
-| [`$ask_x_comment_to`](ask-x-comment-to)                           | Ask the user for the `X-Comment-To` field before editing                    |
-| [`$assumed_charset`](assumed-charset)                             | If a message is missing a character set, assume this character set          |
-| [`$attach_charset`](attach-charset)                               | When attaching files, use one of these character sets                       |
-| [`$attach_format`](attach-format)                                 | printf-like format string for the attachment menu                           |
-| `$attach_keyword`                                                 | **Renamed to**: [`$abort_noattach_regex`](abort-noattach-regex)             |
-| [`$attach_save_dir`](attach-save-dir)                             | Default directory where attachments are saved                               |
-| [`$attach_save_without_prompting`](attach-save-without-prompting) | If true, then don't prompt to save                                          |
-| [`$attach_sep`](attach-sep)                                       | Separator to add between saved/printed/piped attachments                    |
-| [`$attach_split`](attach-split)                                   | Save/print/pipe tagged messages individually                                |
-| `$attribution`                                                    | **Renamed to**: [`$attribution_intro`](attribution-intro)                   |
-| [`$attribution_intro`](attribution-intro)                         | Message to start a reply, "On DATE, PERSON wrote:"                          |
-| [`$attribution_locale`](attribution-locale)                       | Locale for dates in the `$attribution` message                              |
-| [`$attribution_trailer`](attribution-trailer)                     | Suffix message to add after reply text                                      |
-| [`$autocrypt`](#autocrypt)                                         | Enables the Autocrypt feature                                               |
-| [`$autocrypt_acct_format`](autocrypt-acct-format)                 | Format of the Autocrypt account menu                                        |
-| [`$autocrypt_dir`](autocrypt-dir)                                 | Location of Autocrypt files, including the GPG keyring and SQLite database  |
-| [`$autocrypt_reply`](autocrypt-reply)                             | Replying to an Autocrypt email automatically enables Autocrypt in the reply |
-| `$autoedit`                                                       | **Renamed to**: [`$auto_edit`](auto-edit)                                   |
-| [`$auto_edit`](auto-edit)                                         | Skip the initial compose menu and edit the email                            |
-| [`$auto_subscribe`](auto-subscribe)                               | Automatically check if the user is subscribed to a mailing list             |
-| [`$auto_tag`](auto-tag)                                           | Automatically apply actions to all tagged messages                          |
+| Config Option                                                     | Description                                                                     |
+|-------------------------------------------------------------------|---------------------------------------------------------------------------------|
+| [`$abort_backspace`](abort-backspace)                             | Hitting backspace against an empty prompt aborts the prompt                     |
+| [`$abort_key`](abort-key)                                         | String representation of key to abort prompts                                   |
+| [`$abort_noattach`](abort-noattach)                               | Abort sending the email if attachments are missing                              |
+| [`$abort_noattach_regex`](abort-noattach-regex)                   | Regex to match text indicating attachments are expected                         |
+| `$abort_noattach_regexp`                                          | {bdg-warning-line}`Renamed to:` [`$abort_noattach_regex`](abort-noattach-regex) |
+| [`$abort_nosubject`](abort-nosubject)                             | Abort creating the email if subject is missing                                  |
+| [`$abort_unmodified`](abort-unmodified)                           | Abort the sending if the message hasn't been edited                             |
+| [`$account_command`](account-command)                             | Shell command to retrieve account credentials                                   |
+| [`$alias_file`](alias-file)                                       | Save new aliases to this file                                                   |
+| [`$alias_format`](alias-format)                                   | printf-like format string for the alias menu                                    |
+| [`$alias_sort`](alias-sort)                                       | Sort method for the alias menu                                                  |
+| [`$allow_8bit`](allow-8bit)                                       | Allow 8-bit messages, don't use quoted-printable or base64                      |
+| [`$allow_ansi`](allow-ansi)                                       | Allow ANSI color codes in rich text messages                                    |
+| [`$arrow_cursor`](arrow-cursor)                                   | Use an arrow `->` instead of highlighting in the index                          |
+| [`$arrow_string`](arrow-string)                                   | Use a custom string for `arrow_cursor`                                          |
+| [`$ascii_chars`](ascii-chars)                                     | Use plain ASCII characters, when drawing email threads                          |
+| `$askbcc`                                                         | {bdg-warning-line}`Renamed to:` [`$ask_bcc`](ask-bcc)                           |
+| `$askcc`                                                          | {bdg-warning-line}`Renamed to:` [`$ask_cc`](ask-cc)                             |
+| [`$ask_bcc`](ask-bcc)                                             | Ask the user for the blind-carbon-copy recipients                               |
+| [`$ask_cc`](ask-cc)                                               | Ask the user for the carbon-copy recipients                                     |
+| [`$ask_followup_to`](ask-followup-to)                             | Ask the user for follow-up groups before editing                                |
+| `$ask_follow_up`                                                  | {bdg-warning-line}`Renamed to:` [`$ask_followup_to`](ask-followup-to)           |
+| [`$ask_x_comment_to`](ask-x-comment-to)                           | Ask the user for the `X-Comment-To` field before editing                        |
+| [`$assumed_charset`](assumed-charset)                             | If a message is missing a character set, assume this character set              |
+| [`$attach_charset`](attach-charset)                               | When attaching files, use one of these character sets                           |
+| [`$attach_format`](attach-format)                                 | printf-like format string for the attachment menu                               |
+| `$attach_keyword`                                                 | {bdg-warning-line}`Renamed to:` [`$abort_noattach_regex`](abort-noattach-regex) |
+| [`$attach_save_dir`](attach-save-dir)                             | Default directory where attachments are saved                                   |
+| [`$attach_save_without_prompting`](attach-save-without-prompting) | If true, then don't prompt to save                                              |
+| [`$attach_sep`](attach-sep)                                       | Separator to add between saved/printed/piped attachments                        |
+| [`$attach_split`](attach-split)                                   | Save/print/pipe tagged messages individually                                    |
+| `$attribution`                                                    | {bdg-warning-line}`Renamed to:` [`$attribution_intro`](attribution-intro)       |
+| [`$attribution_intro`](attribution-intro)                         | Message to start a reply, "On DATE, PERSON wrote:"                              |
+| [`$attribution_locale`](attribution-locale)                       | Locale for dates in the `$attribution` message                                  |
+| [`$attribution_trailer`](attribution-trailer)                     | Suffix message to add after reply text                                          |
+| [`$autocrypt`](#autocrypt)                                        | Enables the Autocrypt feature                                                   |
+| [`$autocrypt_acct_format`](autocrypt-acct-format)                 | Format of the Autocrypt account menu                                            |
+| [`$autocrypt_dir`](autocrypt-dir)                                 | Location of Autocrypt files, including the GPG keyring and SQLite database      |
+| [`$autocrypt_reply`](autocrypt-reply)                             | Replying to an Autocrypt email automatically enables Autocrypt in the reply     |
+| `$autoedit`                                                       | {bdg-warning-line}`Renamed to:` [`$auto_edit`](auto-edit)                       |
+| [`$auto_edit`](auto-edit)                                         | Skip the initial compose menu and edit the email                                |
+| [`$auto_subscribe`](auto-subscribe)                               | Automatically check if the user is subscribed to a mailing list                 |
+| [`$auto_tag`](auto-tag)                                           | Automatically apply actions to all tagged messages                              |
 
 ## B
 
@@ -115,65 +115,65 @@ sidebar
 
 ## C
 
-| Config Option                                                                         | Description                                                                           |
-|---------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------|
-| [`$catchup_newsgroup`](catchup-newsgroup)                                             | Mark all articles as read when leaving a newsgroup                                    |
-| [`$certificate_file`](certificate-file)                                               | File containing trusted certificates                                                  |
-| [`$change_folder_next`](change-folder-next)                                           | Suggest the next folder, rather than the first when using `<change-folder>`           |
-| [`$charset`](charset)                                                                 | Default character set for displaying text on screen                                   |
-| [`$check_mbox_size`](check-mbox-size)                                                 | Use mailbox size as an indicator of new mail                                          |
-| [`$check_new`](check-new)                                                             | Check for new mail while the mailbox is open                                          |
-| [`$collapse_all`](collapse-all)                                                       | Collapse all threads when entering a folder                                           |
-| [`$collapse_flagged`](collapse-flagged)                                               | Prevent the collapse of threads with flagged emails                                   |
-| [`$collapse_unread`](collapse-unread)                                                 | Prevent the collapse of threads with unread emails                                    |
-| [`$color_directcolor`](color-directcolor)                                             | Use 24bit colors (aka truecolor aka directcolor)                                      |
-| [`$compose_confirm_detach_first`](compose-confirm-detach-first)                       | Prevent the accidental deletion of the composed message                               |
-| [`$compose_format`](compose-format)                                                   | printf-like format string for the Compose panel's status bar                          |
-| [`$compose_preview_above_attachments`](compose-preview-above-attachments)             | Show the message preview above the attachments list. By default it is shown below it. |
-| [`$compose_preview_min_rows`](compose-preview-min-rows)                               | Hide the preview if it has fewer than this number of rows                             |
-| [`$compose_show_preview`](compose-show-preview)                                       | Display a preview of the message body in the Compose window                           |
-| [`$compose_show_user_headers`](compose-show-user-headers)                             | Controls whether or not custom headers are shown in the compose envelope              |
-| [`$config_charset`](config-charset)                                                   | Character set that the config files are in                                            |
-| `$confirmappend`                                                                      | **Renamed to**: [`$confirm_append`](confirm-append)                                   |
-| `$confirmcreate`                                                                      | **Renamed to**: [`$confirm_create`](confirm-create)                                   |
-| [`$confirm_append`](confirm-append)                                                   | Confirm before appending emails to a mailbox                                          |
-| [`$confirm_create`](confirm-create)                                                   | Confirm before creating a new mailbox                                                 |
-| [`$confirm_empty_to`](confirm-empty-to)                                               | Ask for a confirmation before sending an email with an empty To recipients list       |
-| `$connect_timeout`                                                                    | **Renamed to**: [`$socket_timeout`](socket-timeout)                                   |
-| [`$content_type`](content-type)                                                       | Default `Content-Type` for newly composed messages                                    |
-| [`$copy`](copy)                                                                       | Save outgoing emails to [`$record`](record)                                           |
-| [`$copy_decode_weed`](copy-decode-weed)                                               | Controls whether to weed headers when copying or saving emails                        |
-| [`$count_alternatives`](count-alternatives)                                           | Recurse inside multipart/alternatives while counting attachments                      |
-| `$crypt_autoencrypt`                                                                  | **Renamed to**: [`$crypt_auto_encrypt`](crypt-auto-encrypt)                           |
-| `$crypt_autopgp`                                                                      | **Renamed to**: [`$crypt_auto_pgp`](crypt-auto-pgp)                                   |
-| `$crypt_autosign`                                                                     | **Renamed to**: [`$crypt_auto_sign`](crypt-auto-sign)                                 |
-| `$crypt_autosmime`                                                                    | **Renamed to**: [`$crypt_auto_smime`](crypt-auto-smime)                               |
-| [`$crypt_auto_encrypt`](crypt-auto-encrypt)                                           | Automatically PGP encrypt all outgoing mail                                           |
-| [`$crypt_auto_pgp`](crypt-auto-pgp)                                                   | Allow automatic PGP functions                                                         |
-| [`$crypt_auto_sign`](crypt-auto-sign)                                                 | Automatically PGP sign all outgoing mail                                              |
-| [`$crypt_auto_smime`](crypt-auto-smime)                                               | Allow automatic SMIME functions                                                       |
-| [`$crypt_chars`](crypt-chars)                                                         | User-configurable crypto flags: signed, encrypted etc.                                |
-| `$crypt_confirmhook`                                                                  | **Renamed to**: [`$crypt_confirm_hook`](crypt-confirm-hook)                           |
-| [`$crypt_confirm_hook`](crypt-confirm-hook)                                           | Prompt the user to confirm keys before use                                            |
-| [`$crypt_encryption_info`](crypt-encryption-info)                                     | Add an informative block with details about the encryption                            |
-| [`$crypt_opportunistic_encrypt`](crypt-opportunistic-encrypt)                         | Enable encryption when the recipient's key is available                               |
-| [`$crypt_opportunistic_encrypt_strong_keys`](crypt-opportunistic-encrypt-strong-keys) | Enable encryption only when strong a key is available                                 |
-| [`$crypt_protected_headers_read`](crypt-protected-headers-read)                       | Display protected headers (Memory Hole) in the pager                                  |
-| [`$crypt_protected_headers_save`](crypt-protected-headers-save)                       | Save the cleartext Subject with the headers                                           |
-| [`$crypt_protected_headers_subject`](crypt-protected-headers-subject)                 | Use this as the subject for encrypted emails                                          |
-| [`$crypt_protected_headers_weed`](crypt-protected-headers-weed)                       | Controls whether NeoMutt will weed protected header fields                            |
-| [`$crypt_protected_headers_write`](crypt-protected-headers-write)                     | Generate protected header (Memory Hole) for signed and encrypted emails               |
-| `$crypt_replyencrypt`                                                                 | **Renamed to**: [`$crypt_reply_encrypt`](crypt-reply-encrypt)                         |
-| `$crypt_replysign`                                                                    | **Renamed to**: [`$crypt_reply_sign`](crypt-reply-sign)                               |
-| `$crypt_replysignencrypted`                                                           | **Renamed to**: [`$crypt_reply_sign_encrypted`](crypt-reply-sign-encrypted)           |
-| [`$crypt_reply_encrypt`](crypt-reply-encrypt)                                         | Encrypt replies to encrypted messages                                                 |
-| [`$crypt_reply_sign`](crypt-reply-sign)                                               | Sign replies to signed messages                                                       |
-| [`$crypt_reply_sign_encrypted`](crypt-reply-sign-encrypted)                           | Sign replies to encrypted messages                                                    |
-| [`$crypt_timestamp`](crypt-timestamp)                                                 | Add a timestamp to PGP or SMIME output to prevent spoofing                            |
-| [`$crypt_use_gpgme`](crypt-use-gpgme)                                                 | Use GPGME crypto backend                                                              |
-| [`$crypt_use_pka`](crypt-use-pka)                                                     | Use GPGME to use PKA (lookup PGP keys using DNS)                                      |
-| [`$crypt_verify_sig`](crypt-verify-sig)                                               | Verify PGP or SMIME signatures                                                        |
-| `$cursor_overlay`                                                                     | **Deprecated**                                                                        |
+| Config Option                                                                         | Description                                                                                 |
+|---------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------|
+| [`$catchup_newsgroup`](catchup-newsgroup)                                             | Mark all articles as read when leaving a newsgroup                                          |
+| [`$certificate_file`](certificate-file)                                               | File containing trusted certificates                                                        |
+| [`$change_folder_next`](change-folder-next)                                           | Suggest the next folder, rather than the first when using `<change-folder>`                 |
+| [`$charset`](charset)                                                                 | Default character set for displaying text on screen                                         |
+| [`$check_mbox_size`](check-mbox-size)                                                 | Use mailbox size as an indicator of new mail                                                |
+| [`$check_new`](check-new)                                                             | Check for new mail while the mailbox is open                                                |
+| [`$collapse_all`](collapse-all)                                                       | Collapse all threads when entering a folder                                                 |
+| [`$collapse_flagged`](collapse-flagged)                                               | Prevent the collapse of threads with flagged emails                                         |
+| [`$collapse_unread`](collapse-unread)                                                 | Prevent the collapse of threads with unread emails                                          |
+| [`$color_directcolor`](color-directcolor)                                             | Use 24bit colors (aka truecolor aka directcolor)                                            |
+| [`$compose_confirm_detach_first`](compose-confirm-detach-first)                       | Prevent the accidental deletion of the composed message                                     |
+| [`$compose_format`](compose-format)                                                   | printf-like format string for the Compose panel's status bar                                |
+| [`$compose_preview_above_attachments`](compose-preview-above-attachments)             | Show the message preview above the attachments list. By default it is shown below it.       |
+| [`$compose_preview_min_rows`](compose-preview-min-rows)                               | Hide the preview if it has fewer than this number of rows                                   |
+| [`$compose_show_preview`](compose-show-preview)                                       | Display a preview of the message body in the Compose window                                 |
+| [`$compose_show_user_headers`](compose-show-user-headers)                             | Controls whether or not custom headers are shown in the compose envelope                    |
+| [`$config_charset`](config-charset)                                                   | Character set that the config files are in                                                  |
+| `$confirmappend`                                                                      | {bdg-warning-line}`Renamed to:` [`$confirm_append`](confirm-append)                         |
+| `$confirmcreate`                                                                      | {bdg-warning-line}`Renamed to:` [`$confirm_create`](confirm-create)                         |
+| [`$confirm_append`](confirm-append)                                                   | Confirm before appending emails to a mailbox                                                |
+| [`$confirm_create`](confirm-create)                                                   | Confirm before creating a new mailbox                                                       |
+| [`$confirm_empty_to`](confirm-empty-to)                                               | Ask for a confirmation before sending an email with an empty To recipients list             |
+| `$connect_timeout`                                                                    | {bdg-warning-line}`Renamed to:` [`$socket_timeout`](socket-timeout)                         |
+| [`$content_type`](content-type)                                                       | Default `Content-Type` for newly composed messages                                          |
+| [`$copy`](copy)                                                                       | Save outgoing emails to [`$record`](record)                                                 |
+| [`$copy_decode_weed`](copy-decode-weed)                                               | Controls whether to weed headers when copying or saving emails                              |
+| [`$count_alternatives`](count-alternatives)                                           | Recurse inside multipart/alternatives while counting attachments                            |
+| `$crypt_autoencrypt`                                                                  | {bdg-warning-line}`Renamed to:` [`$crypt_auto_encrypt`](crypt-auto-encrypt)                 |
+| `$crypt_autopgp`                                                                      | {bdg-warning-line}`Renamed to:` [`$crypt_auto_pgp`](crypt-auto-pgp)                         |
+| `$crypt_autosign`                                                                     | {bdg-warning-line}`Renamed to:` [`$crypt_auto_sign`](crypt-auto-sign)                       |
+| `$crypt_autosmime`                                                                    | {bdg-warning-line}`Renamed to:` [`$crypt_auto_smime`](crypt-auto-smime)                     |
+| [`$crypt_auto_encrypt`](crypt-auto-encrypt)                                           | Automatically PGP encrypt all outgoing mail                                                 |
+| [`$crypt_auto_pgp`](crypt-auto-pgp)                                                   | Allow automatic PGP functions                                                               |
+| [`$crypt_auto_sign`](crypt-auto-sign)                                                 | Automatically PGP sign all outgoing mail                                                    |
+| [`$crypt_auto_smime`](crypt-auto-smime)                                               | Allow automatic SMIME functions                                                             |
+| [`$crypt_chars`](crypt-chars)                                                         | User-configurable crypto flags: signed, encrypted etc.                                      |
+| `$crypt_confirmhook`                                                                  | {bdg-warning-line}`Renamed to:` [`$crypt_confirm_hook`](crypt-confirm-hook)                 |
+| [`$crypt_confirm_hook`](crypt-confirm-hook)                                           | Prompt the user to confirm keys before use                                                  |
+| [`$crypt_encryption_info`](crypt-encryption-info)                                     | Add an informative block with details about the encryption                                  |
+| [`$crypt_opportunistic_encrypt`](crypt-opportunistic-encrypt)                         | Enable encryption when the recipient's key is available                                     |
+| [`$crypt_opportunistic_encrypt_strong_keys`](crypt-opportunistic-encrypt-strong-keys) | Enable encryption only when strong a key is available                                       |
+| [`$crypt_protected_headers_read`](crypt-protected-headers-read)                       | Display protected headers (Memory Hole) in the pager                                        |
+| [`$crypt_protected_headers_save`](crypt-protected-headers-save)                       | Save the cleartext Subject with the headers                                                 |
+| [`$crypt_protected_headers_subject`](crypt-protected-headers-subject)                 | Use this as the subject for encrypted emails                                                |
+| [`$crypt_protected_headers_weed`](crypt-protected-headers-weed)                       | Controls whether NeoMutt will weed protected header fields                                  |
+| [`$crypt_protected_headers_write`](crypt-protected-headers-write)                     | Generate protected header (Memory Hole) for signed and encrypted emails                     |
+| `$crypt_replyencrypt`                                                                 | {bdg-warning-line}`Renamed to:` [`$crypt_reply_encrypt`](crypt-reply-encrypt)               |
+| `$crypt_replysign`                                                                    | {bdg-warning-line}`Renamed to:` [`$crypt_reply_sign`](crypt-reply-sign)                     |
+| `$crypt_replysignencrypted`                                                           | {bdg-warning-line}`Renamed to:` [`$crypt_reply_sign_encrypted`](crypt-reply-sign-encrypted) |
+| [`$crypt_reply_encrypt`](crypt-reply-encrypt)                                         | Encrypt replies to encrypted messages                                                       |
+| [`$crypt_reply_sign`](crypt-reply-sign)                                               | Sign replies to signed messages                                                             |
+| [`$crypt_reply_sign_encrypted`](crypt-reply-sign-encrypted)                           | Sign replies to encrypted messages                                                          |
+| [`$crypt_timestamp`](crypt-timestamp)                                                 | Add a timestamp to PGP or SMIME output to prevent spoofing                                  |
+| [`$crypt_use_gpgme`](crypt-use-gpgme)                                                 | Use GPGME crypto backend                                                                    |
+| [`$crypt_use_pka`](crypt-use-pka)                                                     | Use GPGME to use PKA (lookup PGP keys using DNS)                                            |
+| [`$crypt_verify_sig`](crypt-verify-sig)                                               | Verify PGP or SMIME signatures                                                              |
+| `$cursor_overlay`                                                                     | {bdg-danger-line}`Deprecated`                                                               |
 
 ## D
 
@@ -194,18 +194,18 @@ sidebar
 
 ## E
 
-| Config Option                                         | Description                                                   |
-|-------------------------------------------------------|---------------------------------------------------------------|
-| [`$editor`](editor)                                   | External command to use as an email editor                    |
-| `$edit_hdrs`                                          | **Renamed to**: [`$edit_headers`](edit-headers)               |
-| [`$edit_headers`](edit-headers)                       | Let the user edit the email headers whilst editing an email   |
-| [`$empty_subject`](empty-subject)                     | Subject to use when replying to an email with none            |
-| [`$encode_from`](encode-from)                         | Encode `From ` as "quote-printable" at the beginning of lines |
-| [`$entropy_file`](entropy-file)                       | File/device containing random data to initialise SSL          |
-| `$envelope_from`                                      | **Renamed to**: [`$use_envelope_from`](use-envelope-from)     |
-| [`$envelope_from_address`](envelope-from-address)     | Manually set the sender for outgoing messages                 |
-| `$escape`                                             | **Deprecated**                                                |
-| [`$external_search_command`](external-search-command) | External search command                                       |
+| Config Option                                         | Description                                                               |
+|-------------------------------------------------------|---------------------------------------------------------------------------|
+| [`$editor`](editor)                                   | External command to use as an email editor                                |
+| `$edit_hdrs`                                          | {bdg-warning-line}`Renamed to:` [`$edit_headers`](edit-headers)           |
+| [`$edit_headers`](edit-headers)                       | Let the user edit the email headers whilst editing an email               |
+| [`$empty_subject`](empty-subject)                     | Subject to use when replying to an email with none                        |
+| [`$encode_from`](encode-from)                         | Encode `From ` as "quote-printable" at the beginning of lines             |
+| [`$entropy_file`](entropy-file)                       | File/device containing random data to initialise SSL                      |
+| `$envelope_from`                                      | {bdg-warning-line}`Renamed to:` [`$use_envelope_from`](use-envelope-from) |
+| [`$envelope_from_address`](envelope-from-address)     | Manually set the sender for outgoing messages                             |
+| `$escape`                                             | {bdg-danger-line}`Deprecated`                                             |
+| [`$external_search_command`](external-search-command) | External search command                                                   |
 
 ## F
 
@@ -231,10 +231,10 @@ sidebar
 | [`$forward_format`](forward-format)                           | printf-like format string to control the subject when forwarding a message      |
 | [`$forward_quote`](forward-quote)                             | Automatically quote a forwarded message using [`$indent_string`](indent-string) |
 | [`$forward_references`](forward-references)                   | Set the `In-Reply-To` and `References` headers when forwarding a message        |
-| `$forw_decode`                                                | **Renamed to**: [`$forward_decode`](forward-decode)                             |
-| `$forw_decrypt`                                               | **Renamed to**: [`$forward_decrypt`](forward-decrypt)                           |
-| `$forw_format`                                                | **Renamed to**: [`$forward_format`](forward-format)                             |
-| `$forw_quote`                                                 | **Renamed to**: [`$forward_quote`](forward-quote)                               |
+| `$forw_decode`                                                | {bdg-warning-line}`Renamed to:` [`$forward_decode`](forward-decode)             |
+| `$forw_decrypt`                                               | {bdg-warning-line}`Renamed to:` [`$forward_decrypt`](forward-decrypt)           |
+| `$forw_format`                                                | {bdg-warning-line}`Renamed to:` [`$forward_format`](forward-format)             |
+| `$forw_quote`                                                 | {bdg-warning-line}`Renamed to:` [`$forward_quote`](forward-quote)               |
 | [`$from`](from)                                               | Default `From` address to use, if isn't otherwise set                           |
 | [`$from_chars`](from-chars)                                   | User-configurable index flags: to address, cc address, etc                      |
 
@@ -251,16 +251,16 @@ sidebar
 | Config Option                                                   | Description                                                                |
 |-----------------------------------------------------------------|----------------------------------------------------------------------------|
 | [`$hdrs`](hdrs)                                                 | Add custom headers to outgoing mail                                        |
-| `$hdr_format`                                                   | **Renamed to**: [`$index_format`](index-format)                            |
+| `$hdr_format`                                                   | {bdg-warning-line}`Renamed to:` [`$index_format`](index-format)            |
 | [`$header`](header)                                             | Include the message headers in the reply email (Weed applies)              |
 | [`$header_cache`](header-cache)                                 | Directory/file for the header cache database                               |
 | [`$header_cache_backend`](header-cache-backend)                 | Header cache backend to use                                                |
-| `$header_cache_compress`                                        | **Deprecated**                                                             |
+| `$header_cache_compress`                                        | {bdg-danger-line}`Deprecated`                                              |
 | [`$header_cache_compress_level`](header-cache-compress-level)   | Level of compression for method                                            |
 | [`$header_cache_compress_method`](header-cache-compress-method) | Enable generic hcache database compression                                 |
-| `$header_cache_pagesize`                                        | **Deprecated**                                                             |
+| `$header_cache_pagesize`                                        | {bdg-danger-line}`Deprecated`                                              |
 | [`$header_color_partial`](header-color-partial)                 | Only color the part of the header matching the regex                       |
-| [`$help`](#help)                                                 | Display a help line with common key bindings                               |
+| [`$help`](#help)                                                | Display a help line with common key bindings                               |
 | [`$hidden_host`](hidden-host)                                   | Don't use the hostname, just the domain, when generating the message id    |
 | [`$hidden_tags`](hidden-tags)                                   | List of tags that shouldn't be displayed on screen (comma-separated)       |
 | [`$hide_limited`](hide-limited)                                 | Don't indicate hidden messages, in the thread tree                         |
@@ -268,7 +268,7 @@ sidebar
 | [`$hide_thread_subject`](hide-thread-subject)                   | Hide subjects that are similar to that of the parent message               |
 | [`$hide_top_limited`](hide-top-limited)                         | Don't indicate hidden top message, in the thread tree                      |
 | [`$hide_top_missing`](hide-top-missing)                         | Don't indicate missing top message, in the thread tree                     |
-| [`$history`](#history)                                           | Number of history entries to keep in memory per category                   |
+| [`$history`](#history)                                          | Number of history entries to keep in memory per category                   |
 | [`$history_file`](history-file)                                 | File to save history in                                                    |
 | [`$history_format`](history-format)                             | printf-like format string for the history menu                             |
 | [`$history_remove_dups`](history-remove-dups)                   | Remove duplicate entries from the history                                  |
@@ -278,52 +278,52 @@ sidebar
 
 ## I
 
-| Config Option                                               | Description                                                               |
-|-------------------------------------------------------------|---------------------------------------------------------------------------|
-| [`$idn_decode`](idn-decode)                                 | Decode international domain names                                         |
-| [`$idn_encode`](idn-encode)                                 | Encode international domain names                                         |
-| `$ignore_linear_white_space`                                | **Deprecated**                                                            |
-| [`$ignore_list_reply_to`](ignore-list-reply-to)             | Ignore the `Reply-To` header when using `<reply>` on a mailing list       |
-| [`$imap_authenticators`](imap-authenticators)               | List of allowed IMAP authentication methods (colon-separated)             |
-| [`$imap_check_subscribed`](imap-check-subscribed)           | When opening a mailbox, ask the server for a list of subscribed folders   |
-| [`$imap_condstore`](imap-condstore)                         | Enable the CONDSTORE extension                                            |
-| [`$imap_deflate`](imap-deflate)                             | Compress network traffic                                                  |
-| [`$imap_delim_chars`](imap-delim-chars)                     | Characters that denote separators in IMAP folders                         |
-| [`$imap_fetch_chunk_size`](imap-fetch-chunk-size)           | Download headers in blocks of this size                                   |
-| [`$imap_headers`](imap-headers)                             | Additional email headers to download when getting index                   |
-| [`$imap_idle`](imap-idle)                                   | Use the IMAP IDLE extension to check for new mail                         |
-| `$imap_keepalive`                                           | **Renamed to**: [`$imap_keep_alive`](imap-keep-alive)                     |
-| [`$imap_keep_alive`](imap-keep-alive)                       | Time to wait before polling an open IMAP connection                       |
-| [`$imap_list_subscribed`](imap-list-subscribed)             | When browsing a mailbox, only display subscribed folders                  |
-| [`$imap_login`](imap-login)                                 | Login name for the IMAP server (defaults to [`$imap_user`](imap-user))    |
-| [`$imap_oauth_refresh_command`](imap-oauth-refresh-command) | External command to generate OAUTH refresh token                          |
-| [`$imap_pass`](imap-pass)                                   | Password for the IMAP server                                              |
-| [`$imap_passive`](imap-passive)                             | Reuse an existing IMAP connection to check for new mail                   |
-| [`$imap_peek`](imap-peek)                                   | Don't mark messages as read when fetching them from the server            |
-| [`$imap_pipeline_depth`](imap-pipeline-depth)               | Number of IMAP commands that may be queued up                             |
-| [`$imap_poll_timeout`](imap-poll-timeout)                   | Maximum time to wait for a server response                                |
-| [`$imap_qresync`](imap-qresync)                             | Enable the QRESYNC extension                                              |
-| [`$imap_rfc5161`](imap-rfc5161)                             | Use the IMAP ENABLE extension to select capabilities                      |
-| [`$imap_send_id`](imap-send-id)                             | Send ID command when logging in                                           |
-| `$imap_servernoise`                                         | **Renamed to**: [`$imap_server_noise`](imap-server-noise)                 |
-| [`$imap_server_noise`](imap-server-noise)                   | Display server warnings as error messages                                 |
-| [`$imap_user`](imap-user)                                   | Username for the IMAP server                                              |
-| `$implicit_autoview`                                        | **Renamed to**: [`$implicit_auto_view`](implicit-auto-view)               |
-| [`$implicit_auto_view`](implicit-auto-view)                 | Display MIME attachments inline if a `copiousoutput` mailcap entry exists |
-| [`$include`](include)                                       | Include a copy of the email that's being replied to                       |
-| [`$include_encrypted`](include-encrypted)                   | Whether to include encrypted content when replying                        |
-| `$include_onlyfirst`                                        | **Renamed to**: [`$include_only_first`](include-only-first)               |
-| [`$include_only_first`](include-only-first)                 | Only include the first attachment when replying                           |
-| `$indent_str`                                               | **Renamed to**: [`$indent_string`](indent-string)                         |
-| [`$indent_string`](indent-string)                           | String used to indent "reply" text                                        |
-| [`$index_format`](index-format)                             | printf-like format string for the index menu (emails)                     |
-| [`$inews_command`](inews-command)                           | External command to post news articles                                    |
-| [`$ispell`](ispell)                                         | External command to perform spell-checking                                |
+| Config Option                                               | Description                                                                 |
+|-------------------------------------------------------------|-----------------------------------------------------------------------------|
+| [`$idn_decode`](idn-decode)                                 | Decode international domain names                                           |
+| [`$idn_encode`](idn-encode)                                 | Encode international domain names                                           |
+| `$ignore_linear_white_space`                                | {bdg-danger-line}`Deprecated`                                               |
+| [`$ignore_list_reply_to`](ignore-list-reply-to)             | Ignore the `Reply-To` header when using `<reply>` on a mailing list         |
+| [`$imap_authenticators`](imap-authenticators)               | List of allowed IMAP authentication methods (colon-separated)               |
+| [`$imap_check_subscribed`](imap-check-subscribed)           | When opening a mailbox, ask the server for a list of subscribed folders     |
+| [`$imap_condstore`](imap-condstore)                         | Enable the CONDSTORE extension                                              |
+| [`$imap_deflate`](imap-deflate)                             | Compress network traffic                                                    |
+| [`$imap_delim_chars`](imap-delim-chars)                     | Characters that denote separators in IMAP folders                           |
+| [`$imap_fetch_chunk_size`](imap-fetch-chunk-size)           | Download headers in blocks of this size                                     |
+| [`$imap_headers`](imap-headers)                             | Additional email headers to download when getting index                     |
+| [`$imap_idle`](imap-idle)                                   | Use the IMAP IDLE extension to check for new mail                           |
+| `$imap_keepalive`                                           | {bdg-warning-line}`Renamed to:` [`$imap_keep_alive`](imap-keep-alive)       |
+| [`$imap_keep_alive`](imap-keep-alive)                       | Time to wait before polling an open IMAP connection                         |
+| [`$imap_list_subscribed`](imap-list-subscribed)             | When browsing a mailbox, only display subscribed folders                    |
+| [`$imap_login`](imap-login)                                 | Login name for the IMAP server (defaults to [`$imap_user`](imap-user))      |
+| [`$imap_oauth_refresh_command`](imap-oauth-refresh-command) | External command to generate OAUTH refresh token                            |
+| [`$imap_pass`](imap-pass)                                   | Password for the IMAP server                                                |
+| [`$imap_passive`](imap-passive)                             | Reuse an existing IMAP connection to check for new mail                     |
+| [`$imap_peek`](imap-peek)                                   | Don't mark messages as read when fetching them from the server              |
+| [`$imap_pipeline_depth`](imap-pipeline-depth)               | Number of IMAP commands that may be queued up                               |
+| [`$imap_poll_timeout`](imap-poll-timeout)                   | Maximum time to wait for a server response                                  |
+| [`$imap_qresync`](imap-qresync)                             | Enable the QRESYNC extension                                                |
+| [`$imap_rfc5161`](imap-rfc5161)                             | Use the IMAP ENABLE extension to select capabilities                        |
+| [`$imap_send_id`](imap-send-id)                             | Send ID command when logging in                                             |
+| `$imap_servernoise`                                         | {bdg-warning-line}`Renamed to:` [`$imap_server_noise`](imap-server-noise)   |
+| [`$imap_server_noise`](imap-server-noise)                   | Display server warnings as error messages                                   |
+| [`$imap_user`](imap-user)                                   | Username for the IMAP server                                                |
+| `$implicit_autoview`                                        | {bdg-warning-line}`Renamed to:` [`$implicit_auto_view`](implicit-auto-view) |
+| [`$implicit_auto_view`](implicit-auto-view)                 | Display MIME attachments inline if a `copiousoutput` mailcap entry exists   |
+| [`$include`](include)                                       | Include a copy of the email that's being replied to                         |
+| [`$include_encrypted`](include-encrypted)                   | Whether to include encrypted content when replying                          |
+| `$include_onlyfirst`                                        | {bdg-warning-line}`Renamed to:` [`$include_only_first`](include-only-first) |
+| [`$include_only_first`](include-only-first)                 | Only include the first attachment when replying                             |
+| `$indent_str`                                               | {bdg-warning-line}`Renamed to:` [`$indent_string`](indent-string)           |
+| [`$indent_string`](indent-string)                           | String used to indent "reply" text                                          |
+| [`$index_format`](index-format)                             | printf-like format string for the index menu (emails)                       |
+| [`$inews_command`](inews-command)                           | External command to post news articles                                      |
+| [`$ispell`](ispell)                                         | External command to perform spell-checking                                  |
 
 ## K
 
-| Config Option                   | Description                                                                     |
-|---------------------------------|---------------------------------------------------------------------------------|
+| Config Option                   | Description                                                                      |
+|---------------------------------|----------------------------------------------------------------------------------|
 | [`$keep_flagged`](keep-flagged) | Don't move flagged messages from [`$spool_file`](spool-file) to [`$mbox`](#mbox) |
 
 ## L
@@ -351,18 +351,18 @@ sidebar
 | [`$mark_macro_prefix`](mark-macro-prefix)                     | Prefix for macros using `<mark-message>`                                                                     |
 | [`$mark_old`](mark-old)                                       | Mark new emails as old when leaving the mailbox                                                              |
 | [`$mask`](mask)                                               | Only display files/dirs matching this regex in the browser                                                   |
-| [`$mbox`](#mbox)                                               | Folder that receives read emails (see Move)                                                                  |
+| [`$mbox`](#mbox)                                              | Folder that receives read emails (see Move)                                                                  |
 | [`$mbox_type`](mbox-type)                                     | Default type for creating new mailboxes                                                                      |
 | [`$menu_context`](menu-context)                               | Number of lines of overlap when changing pages in the index                                                  |
 | [`$menu_move_off`](menu-move-off)                             | Allow the last menu item to move off the bottom of the screen                                                |
 | [`$menu_scroll`](menu-scroll)                                 | Scroll the menu/index by one line, rather than a page                                                        |
-| `$message_cachedir`                                           | **Renamed to**: [`$message_cache_dir`](message-cache-dir)                                                    |
+| `$message_cachedir`                                           | {bdg-warning-line}`Renamed to:` [`$message_cache_dir`](message-cache-dir)                                    |
 | [`$message_cache_clean`](message-cache-clean)                 | Clean out obsolete entries from the message cache                                                            |
 | [`$message_cache_dir`](message-cache-dir)                     | Directory for the message cache                                                                              |
 | [`$message_format`](message-format)                           | printf-like format string for listing attached messages                                                      |
 | [`$message_id_format`](message-id-format)                     | printf-like format string for customising the `Message-Id`                                                   |
 | [`$meta_key`](meta-key)                                       | Interpret 'ALT-x' as 'ESC-x'                                                                                 |
-| `$metoo`                                                      | **Renamed to**: [`$me_too`](me-too)                                                                          |
+| `$metoo`                                                      | {bdg-warning-line}`Renamed to:` [`$me_too`](me-too)                                                          |
 | [`$me_too`](me-too)                                           | Remove the user's address from the list of recipients                                                        |
 | [`$mh_purge`](mh-purge)                                       | Really delete files in MH mailboxes                                                                          |
 | [`$mh_seq_flagged`](mh-seq-flagged)                           | MH sequence for flagged message                                                                              |
@@ -371,14 +371,14 @@ sidebar
 | [`$mime_forward`](mime-forward)                               | Forward a message as a `message/RFC822` MIME part                                                            |
 | [`$mime_forward_decode`](mime-forward-decode)                 | Decode the forwarded message before attaching it                                                             |
 | [`$mime_forward_rest`](mime-forward-rest)                     | Forward all attachments, even if they can't be decoded                                                       |
-| `$mime_fwd`                                                   | **Renamed to**: [`$mime_forward`](mime-forward)                                                              |
-| `$mime_subject`                                               | **Deprecated**                                                                                               |
+| `$mime_fwd`                                                   | {bdg-warning-line}`Renamed to:` [`$mime_forward`](mime-forward)                                              |
+| `$mime_subject`                                               | {bdg-danger-line}`Deprecated`                                                                                |
 | [`$mime_type_query_command`](mime-type-query-command)         | External command to determine the MIME type of an attachment                                                 |
 | [`$mime_type_query_first`](mime-type-query-first)             | Run the [`$mime_type_query_command`](mime-type-query-command) before the mime.types lookup                   |
-| `$mixmaster`                                                  | **Deprecated**                                                                                               |
-| `$mix_entry_format`                                           | **Deprecated**                                                                                               |
-| [`$move`](move)                                               | Move emails from [`$spool_file`](spool-file) to [`$mbox`](#mbox) when read                                    |
-| `$msg_format`                                                 | **Renamed to**: [`$message_format`](message-format)                                                          |
+| `$mixmaster`                                                  | {bdg-danger-line}`Deprecated`                                                                                |
+| `$mix_entry_format`                                           | {bdg-danger-line}`Deprecated`                                                                                |
+| [`$move`](move)                                               | Move emails from [`$spool_file`](spool-file) to [`$mbox`](#mbox) when read                                   |
+| `$msg_format`                                                 | {bdg-warning-line}`Renamed to:` [`$message_format`](message-format)                                          |
 
 ## N
 
@@ -394,7 +394,7 @@ sidebar
 | [`$nm_config_file`](nm-config-file)                                     | Configuration file for notmuch. Use `auto` to detect configuration.         |
 | [`$nm_config_profile`](nm-config-profile)                               | Configuration profile for notmuch.                                          |
 | [`$nm_db_limit`](nm-db-limit)                                           | Default limit for Notmuch queries                                           |
-| `$nm_default_uri`                                                       | **Renamed to**: [`$nm_default_url`](nm-default-url)                         |
+| `$nm_default_uri`                                                       | {bdg-warning-line}`Renamed to:` [`$nm_default_url`](nm-default-url)         |
 | [`$nm_default_url`](nm-default-url)                                     | Path to the Notmuch database                                                |
 | [`$nm_exclude_tags`](nm-exclude-tags)                                   | Exclude messages with these tags                                            |
 | [`$nm_flagged_tag`](nm-flagged-tag)                                     | Tag to use for flagged messages                                             |
@@ -420,132 +420,132 @@ sidebar
 
 ## P
 
-| Config Option                                                         | Description                                                                            |
-|-----------------------------------------------------------------------|----------------------------------------------------------------------------------------|
-| [`$pager`](#pager)                                                     | External command for viewing messages, or empty to use NeoMutt's                       |
-| [`$pager_context`](pager-context)                                     | Number of lines of overlap when changing pages in the pager                            |
-| [`$pager_format`](pager-format)                                       | printf-like format string for the pager's status bar                                   |
-| [`$pager_index_lines`](pager-index-lines)                             | Number of index lines to display above the pager                                       |
-| [`$pager_read_delay`](pager-read-delay)                               | Number of seconds to wait before marking a message read                                |
-| [`$pager_skip_quoted_context`](pager-skip-quoted-context)             | Lines of context to show when skipping quoted text                                     |
-| [`$pager_stop`](pager-stop)                                           | Don't automatically open the next message when at the end of a message                 |
-| [`$pattern_format`](pattern-format)                                   | printf-like format string for the pattern completion menu                              |
-| `$pgp_autoencrypt`                                                    | **Renamed to**: [`$crypt_auto_encrypt`](crypt-auto-encrypt)                            |
-| `$pgp_autoinline`                                                     | **Renamed to**: [`$pgp_auto_inline`](pgp-auto-inline)                                  |
-| `$pgp_autosign`                                                       | **Renamed to**: [`$crypt_auto_sign`](crypt-auto-sign)                                  |
-| [`$pgp_auto_decode`](pgp-auto-decode)                                 | Automatically decrypt PGP messages                                                     |
-| [`$pgp_auto_inline`](pgp-auto-inline)                                 | Use old-style inline PGP messages (not recommended)                                    |
-| `$pgp_auto_traditional`                                               | **Renamed to**: [`$pgp_reply_inline`](pgp-reply-inline)                                |
-| [`$pgp_check_exit`](pgp-check-exit)                                   | Check the exit code of PGP subprocess                                                  |
-| [`$pgp_check_gpg_decrypt_status_fd`](pgp-check-gpg-decrypt-status-fd) | File descriptor used for status info                                                   |
-| `$pgp_clearsign_command`                                              | **Renamed to**: [`$pgp_clear_sign_command`](pgp-clear-sign-command)                    |
-| [`$pgp_clear_sign_command`](pgp-clear-sign-command)                   | External command to inline-sign a message                                              |
-| `$pgp_create_traditional`                                             | **Renamed to**: [`$pgp_auto_inline`](pgp-auto-inline)                                  |
-| [`$pgp_decode_command`](pgp-decode-command)                           | External command to decode a PGP attachment                                            |
-| [`$pgp_decryption_okay`](pgp-decryption-okay)                         | Text indicating a successful decryption                                                |
-| [`$pgp_decrypt_command`](pgp-decrypt-command)                         | External command to decrypt a PGP message                                              |
-| [`$pgp_default_key`](pgp-default-key)                                 | Default key to use for PGP operations                                                  |
-| [`$pgp_encrypt_only_command`](pgp-encrypt-only-command)               | External command to encrypt, but not sign a message                                    |
-| `$pgp_encrypt_self`                                                   | **Deprecated**                                                                         |
-| [`$pgp_encrypt_sign_command`](pgp-encrypt-sign-command)               | External command to encrypt and sign a message                                         |
-| [`$pgp_entry_format`](pgp-entry-format)                               | printf-like format string for the PGP key selection menu                               |
-| [`$pgp_export_command`](pgp-export-command)                           | External command to export a public key from the user's keyring                        |
-| `$pgp_getkeys_command`                                                | **Renamed to**: [`$pgp_get_keys_command`](pgp-get-keys-command)                        |
-| [`$pgp_get_keys_command`](pgp-get-keys-command)                       | External command to download a key for an email address                                |
-| [`$pgp_good_sign`](pgp-good-sign)                                     | Text indicating a good signature                                                       |
-| [`$pgp_ignore_subkeys`](pgp-ignore-subkeys)                           | Only use the principal PGP key                                                         |
-| [`$pgp_import_command`](pgp-import-command)                           | External command to import a key into the user's keyring                               |
-| [`$pgp_key_sort`](pgp-key-sort)                                       | Sort order for PGP keys                                                                |
-| [`$pgp_list_pubring_command`](pgp-list-pubring-command)               | External command to list the public keys in a user's keyring                           |
-| [`$pgp_list_secring_command`](pgp-list-secring-command)               | External command to list the private keys in a user's keyring                          |
-| [`$pgp_long_ids`](pgp-long-ids)                                       | Display long PGP key IDs to the user                                                   |
-| [`$pgp_mime_auto`](pgp-mime-auto)                                     | Prompt the user to use MIME if inline PGP fails                                        |
-| `$pgp_replyencrypt`                                                   | **Renamed to**: [`$crypt_reply_encrypt`](crypt-reply-encrypt)                          |
-| `$pgp_replyinline`                                                    | **Renamed to**: [`$pgp_reply_inline`](pgp-reply-inline)                                |
-| `$pgp_replysign`                                                      | **Renamed to**: [`$crypt_reply_sign`](crypt-reply-sign)                                |
-| `$pgp_replysignencrypted`                                             | **Renamed to**: [`$crypt_reply_sign_encrypted`](crypt-reply-sign-encrypted)            |
-| [`$pgp_reply_inline`](pgp-reply-inline)                               | Reply using old-style inline PGP messages (not recommended)                            |
-| [`$pgp_retainable_sigs`](pgp-retainable-sigs)                         | Create nested multipart/signed or encrypted messages                                   |
-| [`$pgp_self_encrypt`](pgp-self-encrypt)                               | Encrypted messages will also be encrypted to [`$pgp_default_key`](pgp-default-key) too |
-| `$pgp_self_encrypt_as`                                                | **Renamed to**: [`$pgp_default_key`](pgp-default-key)                                  |
-| [`$pgp_show_unusable`](pgp-show-unusable)                             | Show non-usable keys in the key selection                                              |
-| [`$pgp_sign_as`](pgp-sign-as)                                         | Use this alternative key for signing messages                                          |
-| [`$pgp_sign_command`](pgp-sign-command)                               | External command to create a detached PGP signature                                    |
-| `$pgp_sort_keys`                                                      | **Renamed to**: [`$pgp_key_sort`](pgp-key-sort)                                        |
-| [`$pgp_strict_enc`](pgp-strict-enc)                                   | Encode PGP signed messages with quoted-printable (don't unset)                         |
-| [`$pgp_timeout`](pgp-timeout)                                         | Time in seconds to cache a passphrase                                                  |
-| [`$pgp_use_gpg_agent`](pgp-use-gpg-agent)                             | Use a PGP agent for caching passwords                                                  |
-| [`$pgp_verify_command`](pgp-verify-command)                           | External command to verify PGP signatures                                              |
-| [`$pgp_verify_key_command`](pgp-verify-key-command)                   | External command to verify key information                                             |
-| `$pgp_verify_sig`                                                     | **Renamed to**: [`$crypt_verify_sig`](crypt-verify-sig)                                |
-| [`$pipe_decode`](pipe-decode)                                         | Decode the message when piping it                                                      |
-| [`$pipe_decode_weed`](pipe-decode-weed)                               | Control whether to weed headers when piping an email                                   |
-| [`$pipe_sep`](pipe-sep)                                               | Separator to add between multiple piped messages                                       |
-| [`$pipe_split`](pipe-split)                                           | Run the pipe command on each message separately                                        |
-| [`$pop_authenticators`](pop-authenticators)                           | List of allowed authentication methods (colon-separated)                               |
-| [`$pop_auth_try_all`](pop-auth-try-all)                               | Try all available authentication methods                                               |
-| `$pop_checkinterval`                                                  | **Renamed to**: [`$pop_check_interval`](pop-check-interval)                            |
-| [`$pop_check_interval`](pop-check-interval)                           | Interval between checks for new mail                                                   |
-| [`$pop_delete`](pop-delete)                                           | After downloading POP messages, delete them on the server                              |
-| [`$pop_host`](pop-host)                                               | Url of the POP server                                                                  |
-| [`$pop_last`](pop-last)                                               | Use the `LAST` command to fetch new mail                                               |
-| [`$pop_oauth_refresh_command`](pop-oauth-refresh-command)             | External command to generate OAUTH refresh token                                       |
-| [`$pop_pass`](pop-pass)                                               | Password of the POP server                                                             |
-| [`$pop_reconnect`](pop-reconnect)                                     | Reconnect to the server is the connection is lost                                      |
-| [`$pop_user`](pop-user)                                               | Username of the POP server                                                             |
-| [`$postpone`](postpone)                                               | Save messages to the [`$postponed`](postponed) folder                                  |
-| [`$postponed`](postponed)                                             | Folder to store postponed messages                                                     |
-| [`$postpone_encrypt`](postpone-encrypt)                               | Self-encrypt postponed messages                                                        |
-| [`$postpone_encrypt_as`](postpone-encrypt-as)                         | Fallback encryption key for postponed messages                                         |
-| `$post_indent_str`                                                    | **Renamed to**: `$post_indent_string`                                                  |
-| `$post_indent_string`                                                 | **Renamed to**: [`$attribution_trailer`](attribution-trailer)                          |
-| [`$post_moderated`](post-moderated)                                   | Allow posting to moderated newsgroups                                                  |
-| [`$preconnect`](preconnect)                                           | External command to run prior to opening a socket                                      |
-| [`$preferred_languages`](preferred-languages)                         | List of Preferred Languages for multilingual MIME (comma-separated)                    |
-| [`$print`](print)                                                     | Confirm before printing a message                                                      |
-| `$print_cmd`                                                          | **Renamed to**: [`$print_command`](print-command)                                      |
-| [`$print_command`](print-command)                                     | External command to print a message                                                    |
-| [`$print_decode`](print-decode)                                       | Decode message before printing it                                                      |
-| [`$print_decode_weed`](print-decode-weed)                             | Control whether to weed headers when printing an email                                 |
-| [`$print_split`](print-split)                                         | Print multiple messages separately                                                     |
-| [`$prompt_after`](prompt-after)                                       | Pause after running an external pager                                                  |
+| Config Option                                                         | Description                                                                                 |
+|-----------------------------------------------------------------------|---------------------------------------------------------------------------------------------|
+| [`$pager`](#pager)                                                    | External command for viewing messages, or empty to use NeoMutt's                            |
+| [`$pager_context`](pager-context)                                     | Number of lines of overlap when changing pages in the pager                                 |
+| [`$pager_format`](pager-format)                                       | printf-like format string for the pager's status bar                                        |
+| [`$pager_index_lines`](pager-index-lines)                             | Number of index lines to display above the pager                                            |
+| [`$pager_read_delay`](pager-read-delay)                               | Number of seconds to wait before marking a message read                                     |
+| [`$pager_skip_quoted_context`](pager-skip-quoted-context)             | Lines of context to show when skipping quoted text                                          |
+| [`$pager_stop`](pager-stop)                                           | Don't automatically open the next message when at the end of a message                      |
+| [`$pattern_format`](pattern-format)                                   | printf-like format string for the pattern completion menu                                   |
+| `$pgp_autoencrypt`                                                    | {bdg-warning-line}`Renamed to:` [`$crypt_auto_encrypt`](crypt-auto-encrypt)                 |
+| `$pgp_autoinline`                                                     | {bdg-warning-line}`Renamed to:` [`$pgp_auto_inline`](pgp-auto-inline)                       |
+| `$pgp_autosign`                                                       | {bdg-warning-line}`Renamed to:` [`$crypt_auto_sign`](crypt-auto-sign)                       |
+| [`$pgp_auto_decode`](pgp-auto-decode)                                 | Automatically decrypt PGP messages                                                          |
+| [`$pgp_auto_inline`](pgp-auto-inline)                                 | Use old-style inline PGP messages (not recommended)                                         |
+| `$pgp_auto_traditional`                                               | {bdg-warning-line}`Renamed to:` [`$pgp_reply_inline`](pgp-reply-inline)                     |
+| [`$pgp_check_exit`](pgp-check-exit)                                   | Check the exit code of PGP subprocess                                                       |
+| [`$pgp_check_gpg_decrypt_status_fd`](pgp-check-gpg-decrypt-status-fd) | File descriptor used for status info                                                        |
+| `$pgp_clearsign_command`                                              | {bdg-warning-line}`Renamed to:` [`$pgp_clear_sign_command`](pgp-clear-sign-command)         |
+| [`$pgp_clear_sign_command`](pgp-clear-sign-command)                   | External command to inline-sign a message                                                   |
+| `$pgp_create_traditional`                                             | {bdg-warning-line}`Renamed to:` [`$pgp_auto_inline`](pgp-auto-inline)                       |
+| [`$pgp_decode_command`](pgp-decode-command)                           | External command to decode a PGP attachment                                                 |
+| [`$pgp_decryption_okay`](pgp-decryption-okay)                         | Text indicating a successful decryption                                                     |
+| [`$pgp_decrypt_command`](pgp-decrypt-command)                         | External command to decrypt a PGP message                                                   |
+| [`$pgp_default_key`](pgp-default-key)                                 | Default key to use for PGP operations                                                       |
+| [`$pgp_encrypt_only_command`](pgp-encrypt-only-command)               | External command to encrypt, but not sign a message                                         |
+| `$pgp_encrypt_self`                                                   | {bdg-danger-line}`Deprecated`                                                               |
+| [`$pgp_encrypt_sign_command`](pgp-encrypt-sign-command)               | External command to encrypt and sign a message                                              |
+| [`$pgp_entry_format`](pgp-entry-format)                               | printf-like format string for the PGP key selection menu                                    |
+| [`$pgp_export_command`](pgp-export-command)                           | External command to export a public key from the user's keyring                             |
+| `$pgp_getkeys_command`                                                | {bdg-warning-line}`Renamed to:` [`$pgp_get_keys_command`](pgp-get-keys-command)             |
+| [`$pgp_get_keys_command`](pgp-get-keys-command)                       | External command to download a key for an email address                                     |
+| [`$pgp_good_sign`](pgp-good-sign)                                     | Text indicating a good signature                                                            |
+| [`$pgp_ignore_subkeys`](pgp-ignore-subkeys)                           | Only use the principal PGP key                                                              |
+| [`$pgp_import_command`](pgp-import-command)                           | External command to import a key into the user's keyring                                    |
+| [`$pgp_key_sort`](pgp-key-sort)                                       | Sort order for PGP keys                                                                     |
+| [`$pgp_list_pubring_command`](pgp-list-pubring-command)               | External command to list the public keys in a user's keyring                                |
+| [`$pgp_list_secring_command`](pgp-list-secring-command)               | External command to list the private keys in a user's keyring                               |
+| [`$pgp_long_ids`](pgp-long-ids)                                       | Display long PGP key IDs to the user                                                        |
+| [`$pgp_mime_auto`](pgp-mime-auto)                                     | Prompt the user to use MIME if inline PGP fails                                             |
+| `$pgp_replyencrypt`                                                   | {bdg-warning-line}`Renamed to:` [`$crypt_reply_encrypt`](crypt-reply-encrypt)               |
+| `$pgp_replyinline`                                                    | {bdg-warning-line}`Renamed to:` [`$pgp_reply_inline`](pgp-reply-inline)                     |
+| `$pgp_replysign`                                                      | {bdg-warning-line}`Renamed to:` [`$crypt_reply_sign`](crypt-reply-sign)                     |
+| `$pgp_replysignencrypted`                                             | {bdg-warning-line}`Renamed to:` [`$crypt_reply_sign_encrypted`](crypt-reply-sign-encrypted) |
+| [`$pgp_reply_inline`](pgp-reply-inline)                               | Reply using old-style inline PGP messages (not recommended)                                 |
+| [`$pgp_retainable_sigs`](pgp-retainable-sigs)                         | Create nested multipart/signed or encrypted messages                                        |
+| [`$pgp_self_encrypt`](pgp-self-encrypt)                               | Encrypted messages will also be encrypted to [`$pgp_default_key`](pgp-default-key) too      |
+| `$pgp_self_encrypt_as`                                                | {bdg-warning-line}`Renamed to:` [`$pgp_default_key`](pgp-default-key)                       |
+| [`$pgp_show_unusable`](pgp-show-unusable)                             | Show non-usable keys in the key selection                                                   |
+| [`$pgp_sign_as`](pgp-sign-as)                                         | Use this alternative key for signing messages                                               |
+| [`$pgp_sign_command`](pgp-sign-command)                               | External command to create a detached PGP signature                                         |
+| `$pgp_sort_keys`                                                      | {bdg-warning-line}`Renamed to:` [`$pgp_key_sort`](pgp-key-sort)                             |
+| [`$pgp_strict_enc`](pgp-strict-enc)                                   | Encode PGP signed messages with quoted-printable (don't unset)                              |
+| [`$pgp_timeout`](pgp-timeout)                                         | Time in seconds to cache a passphrase                                                       |
+| [`$pgp_use_gpg_agent`](pgp-use-gpg-agent)                             | Use a PGP agent for caching passwords                                                       |
+| [`$pgp_verify_command`](pgp-verify-command)                           | External command to verify PGP signatures                                                   |
+| [`$pgp_verify_key_command`](pgp-verify-key-command)                   | External command to verify key information                                                  |
+| `$pgp_verify_sig`                                                     | {bdg-warning-line}`Renamed to:` [`$crypt_verify_sig`](crypt-verify-sig)                     |
+| [`$pipe_decode`](pipe-decode)                                         | Decode the message when piping it                                                           |
+| [`$pipe_decode_weed`](pipe-decode-weed)                               | Control whether to weed headers when piping an email                                        |
+| [`$pipe_sep`](pipe-sep)                                               | Separator to add between multiple piped messages                                            |
+| [`$pipe_split`](pipe-split)                                           | Run the pipe command on each message separately                                             |
+| [`$pop_authenticators`](pop-authenticators)                           | List of allowed authentication methods (colon-separated)                                    |
+| [`$pop_auth_try_all`](pop-auth-try-all)                               | Try all available authentication methods                                                    |
+| `$pop_checkinterval`                                                  | {bdg-warning-line}`Renamed to:` [`$pop_check_interval`](pop-check-interval)                 |
+| [`$pop_check_interval`](pop-check-interval)                           | Interval between checks for new mail                                                        |
+| [`$pop_delete`](pop-delete)                                           | After downloading POP messages, delete them on the server                                   |
+| [`$pop_host`](pop-host)                                               | Url of the POP server                                                                       |
+| [`$pop_last`](pop-last)                                               | Use the `LAST` command to fetch new mail                                                    |
+| [`$pop_oauth_refresh_command`](pop-oauth-refresh-command)             | External command to generate OAUTH refresh token                                            |
+| [`$pop_pass`](pop-pass)                                               | Password of the POP server                                                                  |
+| [`$pop_reconnect`](pop-reconnect)                                     | Reconnect to the server is the connection is lost                                           |
+| [`$pop_user`](pop-user)                                               | Username of the POP server                                                                  |
+| [`$postpone`](postpone)                                               | Save messages to the [`$postponed`](postponed) folder                                       |
+| [`$postponed`](postponed)                                             | Folder to store postponed messages                                                          |
+| [`$postpone_encrypt`](postpone-encrypt)                               | Self-encrypt postponed messages                                                             |
+| [`$postpone_encrypt_as`](postpone-encrypt-as)                         | Fallback encryption key for postponed messages                                              |
+| `$post_indent_str`                                                    | {bdg-warning-line}`Renamed to:` `$post_indent_string`                                       |
+| `$post_indent_string`                                                 | {bdg-warning-line}`Renamed to:` [`$attribution_trailer`](attribution-trailer)               |
+| [`$post_moderated`](post-moderated)                                   | Allow posting to moderated newsgroups                                                       |
+| [`$preconnect`](preconnect)                                           | External command to run prior to opening a socket                                           |
+| [`$preferred_languages`](preferred-languages)                         | List of Preferred Languages for multilingual MIME (comma-separated)                         |
+| [`$print`](print)                                                     | Confirm before printing a message                                                           |
+| `$print_cmd`                                                          | {bdg-warning-line}`Renamed to:` [`$print_command`](print-command)                           |
+| [`$print_command`](print-command)                                     | External command to print a message                                                         |
+| [`$print_decode`](print-decode)                                       | Decode message before printing it                                                           |
+| [`$print_decode_weed`](print-decode-weed)                             | Control whether to weed headers when printing an email                                      |
+| [`$print_split`](print-split)                                         | Print multiple messages separately                                                          |
+| [`$prompt_after`](prompt-after)                                       | Pause after running an external pager                                                       |
 
 ## Q
 
-| Config Option                     | Description                                                 |
-|-----------------------------------|-------------------------------------------------------------|
-| [`$query_command`](query-command) | External command to query and external address book         |
-| [`$query_format`](query-format)   | printf-like format string for the query menu (address book) |
-| [`$quit`](quit)                   | Prompt before exiting NeoMutt                               |
-| [`$quote_regex`](quote-regex)     | Regex to match quoted text in a reply                       |
-| `$quote_regexp`                   | **Renamed to**: [`$quote_regex`](quote-regex)               |
+| Config Option                     | Description                                                   |
+|-----------------------------------|---------------------------------------------------------------|
+| [`$query_command`](query-command) | External command to query and external address book           |
+| [`$query_format`](query-format)   | printf-like format string for the query menu (address book)   |
+| [`$quit`](quit)                   | Prompt before exiting NeoMutt                                 |
+| [`$quote_regex`](quote-regex)     | Regex to match quoted text in a reply                         |
+| `$quote_regexp`                   | {bdg-warning-line}`Renamed to:` [`$quote_regex`](quote-regex) |
 
 ## R
 
-| Config Option                                             | Description                                                         |
-|-----------------------------------------------------------|---------------------------------------------------------------------|
-| [`$read_inc`](read-inc)                                   | Update the progress bar after this many records read (0 to disable) |
-| [`$read_only`](read-only)                                 | Open folders in read-only mode                                      |
-| `$realname`                                               | **Renamed to**: [`$real_name`](real-name)                           |
-| [`$real_name`](real-name)                                 | Real name of the user                                               |
-| [`$recall`](recall)                                       | Recall postponed mesaages when asked to compose a message           |
-| [`$record`](record)                                       | Folder to save 'sent' messages                                      |
-| [`$reflow_space_quotes`](reflow-space-quotes)             | Insert spaces into reply quotes for `format=flowed` messages        |
-| [`$reflow_text`](reflow-text)                             | Reformat paragraphs of `format=flowed` text                         |
-| [`$reflow_wrap`](reflow-wrap)                             | Maximum paragraph width for reformatting `format=flowed` text       |
-| [`$reply_regex`](reply-regex)                             | Regex to match message reply subjects like `re: `                   |
-| `$reply_regexp`                                           | **Renamed to**: [`$reply_regex`](reply-regex)                       |
-| [`$reply_self`](reply-self)                               | Really reply to yourself, when replying to your own email           |
-| [`$reply_to`](reply-to)                                   | Address to use as a `Reply-To` header                               |
-| [`$reply_with_xorig`](reply-with-xorig)                   | Create `From` header from `X-Original-To` header                    |
-| [`$resolve`](resolve)                                     | Move to the next email whenever a command modifies an email         |
-| [`$resume_draft_files`](resume-draft-files)               | Process draft files like postponed messages                         |
-| [`$resume_edited_draft_files`](resume-edited-draft-files) | Resume editing previously saved draft files                         |
-| [`$reverse_alias`](reverse-alias)                         | Display the alias in the index, rather than the message's sender    |
-| [`$reverse_name`](reverse-name)                           | Set the `From` from the address the email was sent to               |
-| `$reverse_realname`                                       | **Renamed to**: [`$reverse_real_name`](reverse-real-name)           |
-| [`$reverse_real_name`](reverse-real-name)                 | Set the `From` from the full `To` address the email was sent to     |
-| [`$rfc2047_parameters`](rfc2047-parameters)               | Decode RFC2047-encoded MIME parameters                              |
+| Config Option                                             | Description                                                               |
+|-----------------------------------------------------------|---------------------------------------------------------------------------|
+| [`$read_inc`](read-inc)                                   | Update the progress bar after this many records read (0 to disable)       |
+| [`$read_only`](read-only)                                 | Open folders in read-only mode                                            |
+| `$realname`                                               | {bdg-warning-line}`Renamed to:` [`$real_name`](real-name)                 |
+| [`$real_name`](real-name)                                 | Real name of the user                                                     |
+| [`$recall`](recall)                                       | Recall postponed mesaages when asked to compose a message                 |
+| [`$record`](record)                                       | Folder to save 'sent' messages                                            |
+| [`$reflow_space_quotes`](reflow-space-quotes)             | Insert spaces into reply quotes for `format=flowed` messages              |
+| [`$reflow_text`](reflow-text)                             | Reformat paragraphs of `format=flowed` text                               |
+| [`$reflow_wrap`](reflow-wrap)                             | Maximum paragraph width for reformatting `format=flowed` text             |
+| [`$reply_regex`](reply-regex)                             | Regex to match message reply subjects like `re: `                         |
+| `$reply_regexp`                                           | {bdg-warning-line}`Renamed to:` [`$reply_regex`](reply-regex)             |
+| [`$reply_self`](reply-self)                               | Really reply to yourself, when replying to your own email                 |
+| [`$reply_to`](reply-to)                                   | Address to use as a `Reply-To` header                                     |
+| [`$reply_with_xorig`](reply-with-xorig)                   | Create `From` header from `X-Original-To` header                          |
+| [`$resolve`](resolve)                                     | Move to the next email whenever a command modifies an email               |
+| [`$resume_draft_files`](resume-draft-files)               | Process draft files like postponed messages                               |
+| [`$resume_edited_draft_files`](resume-edited-draft-files) | Resume editing previously saved draft files                               |
+| [`$reverse_alias`](reverse-alias)                         | Display the alias in the index, rather than the message's sender          |
+| [`$reverse_name`](reverse-name)                           | Set the `From` from the address the email was sent to                     |
+| `$reverse_realname`                                       | {bdg-warning-line}`Renamed to:` [`$reverse_real_name`](reverse-real-name) |
+| [`$reverse_real_name`](reverse-real-name)                 | Set the `From` from the full `To` address the email was sent to           |
+| [`$rfc2047_parameters`](rfc2047-parameters)               | Decode RFC2047-encoded MIME parameters                                    |
 
 ## S
 
@@ -580,7 +580,7 @@ sidebar
 | [`$sidebar_on_right`](sidebar-on-right)                             | Display the sidebar on the right                                                                   |
 | [`$sidebar_short_path`](sidebar-short-path)                         | Abbreviate the paths using the [`$folder`](folder) variable                                        |
 | [`$sidebar_sort`](sidebar-sort)                                     | Method to sort the sidebar                                                                         |
-| `$sidebar_sort_method`                                              | **Renamed to**: [`$sidebar_sort`](sidebar-sort)                                                    |
+| `$sidebar_sort_method`                                              | {bdg-warning-line}`Renamed to:` [`$sidebar_sort`](sidebar-sort)                                    |
 | [`$sidebar_visible`](sidebar-visible)                               | Show the sidebar                                                                                   |
 | [`$sidebar_width`](sidebar-width)                                   | Width of the sidebar                                                                               |
 | [`$signature`](signature)                                           | File containing a signature to append to all mail                                                  |
@@ -591,7 +591,7 @@ sidebar
 | [`$size_show_fractions`](size-show-fractions)                       | Show size fractions with a single decimal place                                                    |
 | [`$size_show_mb`](size-show-mb)                                     | Show sizes in megabytes for sizes greater than 1 megabyte                                          |
 | [`$size_units_on_left`](size-units-on-left)                         | Show the units as a prefix to the size                                                             |
-| `$skip_quoted_offset`                                               | **Renamed to**: [`$pager_skip_quoted_context`](pager-skip-quoted-context)                          |
+| `$skip_quoted_offset`                                               | {bdg-warning-line}`Renamed to:` [`$pager_skip_quoted_context`](pager-skip-quoted-context)          |
 | [`$sleep_time`](sleep-time)                                         | Time to pause after certain info messages                                                          |
 | [`$smart_wrap`](smart-wrap)                                         | Wrap text at word boundaries                                                                       |
 | [`$smileys`](smileys)                                               | Regex to match smileys to prevent mistakes when quoting text                                       |
@@ -602,7 +602,7 @@ sidebar
 | [`$smime_decrypt_use_default_key`](smime-decrypt-use-default-key)   | Use the default key for decryption                                                                 |
 | [`$smime_default_key`](smime-default-key)                           | Default key for SMIME operations                                                                   |
 | [`$smime_encrypt_command`](smime-encrypt-command)                   | External command to encrypt a message                                                              |
-| `$smime_encrypt_self`                                               | **Deprecated**                                                                                     |
+| `$smime_encrypt_self`                                               | {bdg-danger-line}`Deprecated`                                                                      |
 | [`$smime_encrypt_with`](smime-encrypt-with)                         | Algorithm for encryption                                                                           |
 | [`$smime_get_cert_command`](smime-get-cert-command)                 | External command to extract a certificate from a message                                           |
 | [`$smime_get_cert_email_command`](smime-get-cert-email-command)     | External command to get a certificate for an email                                                 |
@@ -612,7 +612,7 @@ sidebar
 | [`$smime_keys`](smime-keys)                                         | File containing user's private certificates                                                        |
 | [`$smime_pk7out_command`](smime-pk7out-command)                     | External command to extract a public certificate                                                   |
 | [`$smime_self_encrypt`](smime-self-encrypt)                         | Encrypted messages will also be encrypt to [`$smime_default_key`](smime-default-key) too           |
-| `$smime_self_encrypt_as`                                            | **Renamed to**: [`$smime_default_key`](smime-default-key)                                          |
+| `$smime_self_encrypt_as`                                            | {bdg-warning-line}`Renamed to:` [`$smime_default_key`](smime-default-key)                          |
 | [`$smime_sign_as`](smime-sign-as)                                   | Use this alternative key for signing messages                                                      |
 | [`$smime_sign_command`](smime-sign-command)                         | External command to sign a message                                                                 |
 | [`$smime_sign_digest_alg`](smime-sign-digest-alg)                   | Digest algorithm                                                                                   |
@@ -626,12 +626,12 @@ sidebar
 | [`$smtp_user`](smtp-user)                                           | Username for the SMTP server                                                                       |
 | [`$socket_timeout`](socket-timeout)                                 | Timeout for socket connect/read/write operations (-1 to wait indefinitely)                         |
 | [`$sort`](sort)                                                     | Sort method for the index                                                                          |
-| `$sort_alias`                                                       | **Renamed to**: [`$alias_sort`](alias-sort)                                                        |
+| `$sort_alias`                                                       | {bdg-warning-line}`Renamed to:` [`$alias_sort`](alias-sort)                                        |
 | [`$sort_aux`](sort-aux)                                             | Secondary sort method for the index                                                                |
-| `$sort_browser`                                                     | **Renamed to**: [`$browser_sort`](browser-sort)                                                    |
+| `$sort_browser`                                                     | {bdg-warning-line}`Renamed to:` [`$browser_sort`](browser-sort)                                    |
 | [`$sort_re`](sort-re)                                               | Whether [`$reply_regex`](reply-regex) must be matched when not [`$strict_threads`](strict-threads) |
 | [`$spam_separator`](spam-separator)                                 | Separator for multiple spam headers                                                                |
-| `$spoolfile`                                                        | **Renamed to**: [`$spool_file`](spool-file)                                                        |
+| `$spoolfile`                                                        | {bdg-warning-line}`Renamed to:` [`$spool_file`](spool-file)                                        |
 | [`$spool_file`](spool-file)                                         | Inbox                                                                                              |
 | [`$ssl_ca_certificates_file`](ssl-ca-certificates-file)             | File containing trusted CA certificates                                                            |
 | [`$ssl_ciphers`](ssl-ciphers)                                       | Ciphers to use when using SSL                                                                      |
@@ -639,12 +639,12 @@ sidebar
 | [`$ssl_force_tls`](ssl-force-tls)                                   | Require TLS encryption for all connections                                                         |
 | [`$ssl_min_dh_prime_bits`](ssl-min-dh-prime-bits)                   | Minimum keysize for Diffie-Hellman key exchange                                                    |
 | [`$ssl_starttls`](ssl-starttls)                                     | Use STARTTLS on servers advertising the capability                                                 |
-| `$ssl_usesystemcerts`                                               | **Renamed to**: [`$ssl_use_system_certs`](ssl-use-system-certs)                                    |
-| `$ssl_use_sslv2`                                                    | **Deprecated**                                                                                     |
-| `$ssl_use_sslv3`                                                    | **Deprecated**                                                                                     |
+| `$ssl_usesystemcerts`                                               | {bdg-warning-line}`Renamed to:` [`$ssl_use_system_certs`](ssl-use-system-certs)                    |
+| `$ssl_use_sslv2`                                                    | {bdg-danger-line}`Deprecated`                                                                      |
+| `$ssl_use_sslv3`                                                    | {bdg-danger-line}`Deprecated`                                                                      |
 | [`$ssl_use_system_certs`](ssl-use-system-certs)                     | Use CA certificates in the system-wide store                                                       |
-| `$ssl_use_tlsv1`                                                    | **Deprecated**                                                                                     |
-| `$ssl_use_tlsv1_1`                                                  | **Deprecated**                                                                                     |
+| `$ssl_use_tlsv1`                                                    | {bdg-danger-line}`Deprecated`                                                                      |
+| `$ssl_use_tlsv1_1`                                                  | {bdg-danger-line}`Deprecated`                                                                      |
 | [`$ssl_use_tlsv1_2`](ssl-use-tlsv1-2)                               | Use TLSv1.2 for authentication                                                                     |
 | [`$ssl_use_tlsv1_3`](ssl-use-tlsv1-3)                               | Use TLSv1.3 for authentication                                                                     |
 | [`$ssl_verify_dates`](ssl-verify-dates)                             | Verify the dates on the server certificate                                                         |
@@ -666,7 +666,7 @@ sidebar
 | [`$tilde`](tilde)                                         | Display `~` in the pager after the end of the email                |
 | [`$timeout`](timeout)                                     | Time to wait for user input in menus                               |
 | [`$time_inc`](time-inc)                                   | Frequency of progress bar updates (milliseconds)                   |
-| `$tmpdir`                                                 | **Renamed to**: [`$tmp_dir`](tmp-dir)                              |
+| `$tmpdir`                                                 | {bdg-warning-line}`Renamed to:` [`$tmp_dir`](tmp-dir)              |
 | [`$tmp_dir`](tmp-dir)                                     | Directory for temporary files                                      |
 | [`$toggle_quoted_show_levels`](toggle-quoted-show-levels) | Number of quote levels to show with toggle-quoted                  |
 | [`$to_chars`](to-chars)                                   | Indicator characters for the `To` field in the index               |
@@ -679,27 +679,27 @@ sidebar
 
 ## U
 
-| Config Option                             | Description                                            |
-|-------------------------------------------|--------------------------------------------------------|
-| [`$uncollapse_jump`](uncollapse-jump)     | When opening a thread, jump to the next unread message |
-| [`$uncollapse_new`](uncollapse-new)       | Open collapsed threads when new mail arrives           |
-| [`$user_agent`](user-agent)               | Add a `User-Agent` header to outgoing mail             |
-| `$use_8bitmime`                           | **Renamed to**: [`$use_8bit_mime`](use-8bit-mime)      |
-| [`$use_8bit_mime`](use-8bit-mime)         | Use 8-bit messages and ESMTP to send messages          |
-| [`$use_domain`](use-domain)               | Qualify local addresses using this domain              |
-| [`$use_envelope_from`](use-envelope-from) | Set the envelope sender of the message                 |
-| [`$use_from`](use-from)                   | Set the `From` header for outgoing mail                |
-| [`$use_ipv6`](use-ipv6)                   | Lookup IPv6 addresses when making connections          |
-| [`$use_threads`](use-threads)             | Whether to use threads for the index                   |
+| Config Option                             | Description                                                       |
+|-------------------------------------------|-------------------------------------------------------------------|
+| [`$uncollapse_jump`](uncollapse-jump)     | When opening a thread, jump to the next unread message            |
+| [`$uncollapse_new`](uncollapse-new)       | Open collapsed threads when new mail arrives                      |
+| [`$user_agent`](user-agent)               | Add a `User-Agent` header to outgoing mail                        |
+| `$use_8bitmime`                           | {bdg-warning-line}`Renamed to:` [`$use_8bit_mime`](use-8bit-mime) |
+| [`$use_8bit_mime`](use-8bit-mime)         | Use 8-bit messages and ESMTP to send messages                     |
+| [`$use_domain`](use-domain)               | Qualify local addresses using this domain                         |
+| [`$use_envelope_from`](use-envelope-from) | Set the envelope sender of the message                            |
+| [`$use_from`](use-from)                   | Set the `From` header for outgoing mail                           |
+| [`$use_ipv6`](use-ipv6)                   | Lookup IPv6 addresses when making connections                     |
+| [`$use_threads`](use-threads)             | Whether to use threads for the index                              |
 
 ## V
 
-| Config Option                               | Description                                                 |
-|---------------------------------------------|-------------------------------------------------------------|
-| `$vfolder_format`                           | **Deprecated**                                              |
-| `$virtual_spoolfile`                        | **Renamed to**: [`$virtual_spool_file`](virtual-spool-file) |
-| [`$virtual_spool_file`](virtual-spool-file) | Use the first virtual mailbox as a spool file               |
-| `$visual`                                   | **Deprecated**                                              |
+| Config Option                               | Description                                                                 |
+|---------------------------------------------|-----------------------------------------------------------------------------|
+| `$vfolder_format`                           | {bdg-danger-line}`Deprecated`                                               |
+| `$virtual_spoolfile`                        | {bdg-warning-line}`Renamed to:` [`$virtual_spool_file`](virtual-spool-file) |
+| [`$virtual_spool_file`](virtual-spool-file) | Use the first virtual mailbox as a spool file                               |
+| `$visual`                                   | {bdg-danger-line}`Deprecated`                                               |
 
 ## W
 
@@ -715,10 +715,10 @@ sidebar
 
 ## X
 
-| Config Option                   | Description                                             |
-|---------------------------------|---------------------------------------------------------|
-| `$xterm_icon`                   | **Renamed to**: [`$ts_icon_format`](ts-icon-format)     |
-| `$xterm_set_titles`             | **Renamed to**: [`$ts_enabled`](ts-enabled)             |
-| `$xterm_title`                  | **Renamed to**: [`$ts_status_format`](ts-status-format) |
-| [`$x_comment_to`](x-comment-to) | Add `X-Comment-To` header that contains article author  |
+| Config Option                   | Description                                                             |
+|---------------------------------|-------------------------------------------------------------------------|
+| `$xterm_icon`                   | {bdg-warning-line}`Renamed to:` [`$ts_icon_format`](ts-icon-format)     |
+| `$xterm_set_titles`             | {bdg-warning-line}`Renamed to:` [`$ts_enabled`](ts-enabled)             |
+| `$xterm_title`                  | {bdg-warning-line}`Renamed to:` [`$ts_status_format`](ts-status-format) |
+| [`$x_comment_to`](x-comment-to) | Add `X-Comment-To` header that contains article author                  |
 

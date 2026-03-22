@@ -119,7 +119,7 @@ You can navigate directories, sort listings, subscribe to mailboxes, and select 
 
 | Function                | Description                                                |
 |-------------------------|------------------------------------------------------------|
-| `<buffy-list>`          | {bdg-danger}`Deprecated` use `<mailbox-list>`              |
+| `<buffy-list>`          | {bdg-danger-line}`Deprecated` use `<mailbox-list>`         |
 | `<catchup>`             | Mark all articles in newsgroup as read                     |
 | `<change-dir>`          | Change directories                                         |
 | `<check-new>`           | Check mailboxes for new mail                               |
@@ -234,7 +234,7 @@ It supports cursor movement, word editing, tab-completion, and command history.
 | `<backward-char>`   | Move the cursor one character to the left           |
 | `<backward-word>`   | Move the cursor to the beginning of the word        |
 | `<bol>`             | Jump to the beginning of the line                   |
-| `<buffy-cycle>`     | {bdg-danger}`Deprecated` use `<mailbox-cycle>`      |
+| `<buffy-cycle>`     | {bdg-danger-line}`Deprecated` use `<mailbox-cycle>` |
 | `<capitalize-word>` | Capitalize the word                                 |
 | `<complete-query>`  | Complete address with query                         |
 | `<complete>`        | Complete filename or alias                          |
@@ -287,7 +287,7 @@ Not a menu itself, but provides common functions — such as scrolling, searchin
 | `<previous-line>`     | Scroll up one line                                 |
 | `<previous-page>`     | Move to the previous page                          |
 | `<redraw-screen>`     | Clear and redraw the screen                        |
-| `<refresh>`           | {bdg-danger}`Deprecated` use `<redraw-screen>`     |
+| `<refresh>`           | {bdg-danger-line}`Deprecated` use `<redraw-screen>`|
 | `<search-next>`       | Search for next match                              |
 | `<search-opposite>`   | Search for next match in opposite direction        |
 | `<search-reverse>`    | Search backwards for a regular expression          |
@@ -313,7 +313,7 @@ You can read, reply, forward, delete, tag, sort, search, and manage messages.
 | `<autocrypt-acct-menu>`         | Manage autocrypt accounts                                               |
 | `<bounce-message>`              | Remail a message to another user                                        |
 | `<break-thread>`                | Break the thread in two                                                 |
-| `<buffy-list>`                  | {bdg-danger}`Deprecated` use `<mailbox-list>`                           |
+| `<buffy-list>`                  | {bdg-danger-line}`Deprecated` use `<mailbox-list>`                      |
 | `<catchup>`                     | Mark all articles in newsgroup as read                                  |
 | `<change-folder-readonly>`      | Open a different folder in read only mode                               |
 | `<change-folder>`               | Open a different folder                                                 |
@@ -442,7 +442,7 @@ You can scroll, search within the text, and perform many of the same actions as 
 | `<bottom>`                      | Jump to the bottom of the message                                       |
 | `<bounce-message>`              | Remail a message to another user                                        |
 | `<break-thread>`                | Break the thread in two                                                 |
-| `<buffy-list>`                  | {bdg-danger}`Deprecated` use `<mailbox-list>`                           |
+| `<buffy-list>`                  | {bdg-danger-line}`Deprecated` use `<mailbox-list>`                      |
 | `<change-folder-readonly>`      | Open a different folder in read only mode                               |
 | `<change-folder>`               | Open a different folder                                                 |
 | `<change-newsgroup-readonly>`   | Open a different newsgroup in read only mode                            |
@@ -470,7 +470,7 @@ You can scroll, search within the text, and perform many of the same actions as 
 | `<edit>`                        | Edit the raw message (edit and edit-raw-message are synonyms)           |
 | `<enter-command>`               | Enter a neomuttrc command                                               |
 | `<entire-thread>`               | Read entire thread of the current message                               |
-| `<error-history>`               | {bdg-danger}`Deprecated` use `<show-log-messages>`                      |
+| `<error-history>`               | {bdg-danger-line}`Deprecated` use `<show-log-messages>`                 |
 | `<exit>`                        | Exit this menu                                                          |
 | `<extract-keys>`                | Extract supported public keys                                           |
 | `<flag-message>`                | Toggle a message's 'important' flag                                     |
