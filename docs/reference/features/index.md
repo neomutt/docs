@@ -1,10 +1,10 @@
 ---
-title: NeoMutt Features
+title: Features
 description: Recent new features of NeoMutt
 keywords: 
 ---
 
-# NeoMutt Features
+# Features
 
 ```{toctree}
 ---
