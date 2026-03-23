@@ -8,6 +8,7 @@ keywords: XXX
 
 Commands for defining tag display formats and transformations.
 
+(cmd-tag-formats)=
 ## `tag-formats`
 
 Define expando format strings for Notmuch tags, making them available as
@@ -21,6 +22,7 @@ tag-formats "signed"     "GS"
 tag-formats "important"  "GP"
 ```
 
+(cmd-tag-transforms)=
 ## `tag-transforms`
 
 Transform tags into short strings or icons for display.

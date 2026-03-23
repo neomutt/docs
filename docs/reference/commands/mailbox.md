@@ -8,6 +8,7 @@ keywords: XXX
 
 Commands for defining and managing monitored mailboxes.
 
+(cmd-mailboxes)=
 ## `mailboxes`
 
 Define mailboxes that NeoMutt should watch for new mail.
@@ -26,6 +27,7 @@ mailboxes -label "Work" ~/Mail/work
 mailboxes -poll ~/Mail/INBOX
 ```
 
+(cmd-named-mailboxes)=
 ## `named-mailboxes`
 
 Define labelled mailboxes — a label is required for each mailbox.
@@ -38,6 +40,7 @@ named-mailboxes "Sent" +Sent "Drafts" +Drafts
 named-mailboxes -poll "Work" imaps://user@work.example.com/INBOX
 ```
 
+(cmd-unmailboxes)=
 ## `unmailboxes`
 
 Remove mailboxes from the watch list.

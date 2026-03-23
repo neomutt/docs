@@ -8,6 +8,7 @@ keywords: XXX
 
 Commands for MIME type handling, auto-view, attachment counting, and content preferences.
 
+(cmd-alternative-order)=
 ## `alternative-order`
 
 Set the preference order for viewing multipart/alternative messages.
@@ -18,6 +19,7 @@ Set the preference order for viewing multipart/alternative messages.
 alternative-order text/plain text/enriched text/html
 ```
 
+(cmd-unalternative-order)=
 ## `unalternative-order`
 
 Remove types from the preference order.
@@ -29,6 +31,7 @@ Remove types from the preference order.
 unalternative-order *
 ```
 
+(cmd-auto-view)=
 ## `auto-view`
 
 Automatically display MIME types inline using a mailcap entry.
@@ -41,6 +44,7 @@ auto-view text/html application/pdf text/calendar
 auto-view application/pgp-encrypted
 ```
 
+(cmd-unauto-view)=
 ## `unauto-view`
 
 Remove types from the auto-view list.
@@ -53,6 +57,7 @@ unauto-view *
 unauto-view text/html
 ```
 
+(cmd-attachments)=
 ## `attachments`
 
 Define rules for how NeoMutt counts attachments (affects `%X`, `%Q`, `%q` expandos).
@@ -72,6 +77,7 @@ attachments -I message/external-body
 attachments ?
 ```
 
+(cmd-unattachments)=
 ## `unattachments`
 
 Remove attachment counting rules.
@@ -84,6 +90,7 @@ unattachments *
 unattachments +A text/x-vcard
 ```
 
+(cmd-mime-lookup)=
 ## `mime-lookup`
 
 Tell NeoMutt to look up mailcap handlers for specific MIME types via the mailcap file.
@@ -94,6 +101,7 @@ Tell NeoMutt to look up mailcap handlers for specific MIME types via the mailcap
 mime-lookup application/octet-stream
 ```
 
+(cmd-unmime-lookup)=
 ## `unmime-lookup`
 
 Remove custom MIME-lookup rules.
@@ -105,6 +113,7 @@ Remove custom MIME-lookup rules.
 unmime-lookup *
 ```
 
+(cmd-mailto-allow)=
 ## `mailto-allow`
 
 Permit specific header fields to be set by `mailto:` URLs.
@@ -117,6 +126,7 @@ mailto-allow subject body cc
 mailto-allow in-reply-to
 ```
 
+(cmd-unmailto-allow)=
 ## `unmailto-allow`
 
 Disallow headers in `mailto:` URL processing.

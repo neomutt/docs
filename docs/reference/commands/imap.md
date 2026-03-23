@@ -8,6 +8,7 @@ keywords: XXX
 
 Commands for managing IMAP mailbox subscriptions on the server.
 
+(cmd-subscribe-to)=
 ## `subscribe-to`
 
 Subscribe to an IMAP folder on the server.
@@ -19,6 +20,7 @@ subscribe-to imaps://user@mail.example.com/INBOX
 subscribe-to imaps://user@mail.example.com/Lists/neomutt-devel
 ```
 
+(cmd-unsubscribe-from)=
 ## `unsubscribe-from`
 
 Unsubscribe from an IMAP folder on the server.

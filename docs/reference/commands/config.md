@@ -8,6 +8,7 @@ keywords: XXX
 
 Commands for setting, unsetting, and resetting config options and environment variables.
 
+(cmd-set)=
 ## `set`
 
 Set the value of a config variable.
@@ -32,6 +33,7 @@ set index_format += " %g"
 set sort?
 ```
 
+(cmd-unset)=
 ## `unset`
 
 Reset a config option to false (booleans) or empty (strings).
@@ -44,6 +46,7 @@ unset imap_pass
 unset imap_authenticators smtp_authenticators
 ```
 
+(cmd-reset)=
 ## `reset`
 
 Reset a config option to its initial (default) value.
@@ -56,6 +59,7 @@ reset sort
 reset index_format status_format
 ```
 
+(cmd-toggle)=
 ## `toggle`
 
 Toggle the value of a boolean or quad-option variable.
@@ -67,6 +71,7 @@ toggle sidebar_visible
 toggle help
 ```
 
+(cmd-setenv)=
 ## `setenv`
 
 Set or query an environment variable.
@@ -80,6 +85,7 @@ setenv MAIL_DIR=/home/user/Mail
 setenv EDITOR?
 ```
 
+(cmd-unsetenv)=
 ## `unsetenv`
 
 Remove an environment variable.

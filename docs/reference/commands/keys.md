@@ -8,6 +8,7 @@ keywords: XXX
 
 Commands for binding keys to functions and defining keyboard macros.
 
+(cmd-bind)=
 ## `bind`
 
 Bind a key to a NeoMutt function in one or more keymaps.
@@ -26,6 +27,7 @@ bind index,pager \Cu half-up
 bind editor <Tab> complete-query
 ```
 
+(cmd-unbind)=
 ## `unbind`
 
 Remove a key binding.
@@ -38,6 +40,7 @@ unbind index g
 unbind index,pager \Cd
 ```
 
+(cmd-macro)=
 ## `macro`
 
 Define a keyboard macro — a key that expands to a sequence of keystrokes.
@@ -51,6 +54,7 @@ macro index S "<pipe-message>bogofilter -l<enter><delete-message>" "learn as spa
 macro index,pager B "<view-attachments><search>html<enter><view-mailcap><exit>" "open in browser"
 ```
 
+(cmd-unmacro)=
 ## `unmacro`
 
 Remove a keyboard macro.
@@ -62,6 +66,7 @@ Remove a keyboard macro.
 unmacro index A
 ```
 
+(cmd-exec)=
 ## `exec`
 
 Immediately execute one or more NeoMutt functions.
@@ -74,6 +79,7 @@ exec check-new
 exec sync-mailbox first-entry
 ```
 
+(cmd-push)=
 ## `push`
 
 Push a string of keystrokes into NeoMutt's input queue, as if the user had typed it.

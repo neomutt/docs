@@ -8,6 +8,7 @@ keywords: XXX
 
 Commands for defining and removing colors and mono-mode attributes.
 
+(cmd-color)=
 ## `color`
 
 Define colors for a UI element.
@@ -32,6 +33,7 @@ color index      red         default "~F"
 color header     cyan        default "^(From|Subject):"
 ```
 
+(cmd-uncolor)=
 ## `uncolor`
 
 Remove a color definition.
@@ -44,10 +46,12 @@ uncolor index *
 uncolor body "(https?|ftp)://[^ ]+"
 ```
 
+(cmd-mono)=
 ## `mono`
 
 **Deprecated** — use `color` instead.
 
+(cmd-unmono)=
 ## `unmono`
 
 **Deprecated** — use `uncolor` instead.

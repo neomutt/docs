@@ -69,6 +69,6 @@ hidden: true
 start-here
 tutorials/index
 howto/index
-reference/index
 explanation/index
+reference/index
 ```

@@ -8,6 +8,7 @@ keywords: XXX
 
 Commands for executing Lua code and scripts.
 
+(cmd-lua)=
 ## `lua`
 
 Run a Lua expression or call a Lua function.
@@ -19,6 +20,7 @@ lua mutt.message("NeoMutt version: " .. mutt.get("version"))
 lua mutt.set("sort", "date")
 ```
 
+(cmd-lua-source)=
 ## `lua-source`
 
 Execute a Lua script file.

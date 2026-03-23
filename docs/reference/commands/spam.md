@@ -8,6 +8,7 @@ keywords: XXX
 
 Commands for spam detection rules and message scoring.
 
+(cmd-spam)=
 ## `spam`
 
 Define a rule to detect and label spam based on a header regex.
@@ -20,6 +21,7 @@ spam "X-Spam-Status: Yes"          "Spam"
 spam "X-Bogosity: Spam"            "Bogus"
 ```
 
+(cmd-nospam)=
 ## `nospam`
 
 Remove a spam detection rule.
@@ -32,6 +34,7 @@ nospam *
 nospam "X-Bogosity: Spam"
 ```
 
+(cmd-score)=
 ## `score`
 
 Assign a score to messages matching a pattern.  Scores are cumulative.
@@ -45,6 +48,7 @@ score "~t neomutt-devel@"      3
 score "~f spammer@"          -50
 ```
 
+(cmd-unscore)=
 ## `unscore`
 
 Remove scoring rules.

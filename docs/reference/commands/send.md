@@ -8,6 +8,7 @@ keywords: XXX
 
 Commands for adding custom headers to outgoing messages.
 
+(cmd-my-header)=
 ## `my-header`
 
 Add a custom header to all outgoing messages.
@@ -20,6 +21,7 @@ my-header X-Editor: vim
 my-header Organization: NeoMutt Foundation
 ```
 
+(cmd-unmy-header)=
 ## `unmy-header`
 
 Remove a previously added custom header.
