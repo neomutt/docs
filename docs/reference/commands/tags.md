@@ -4,12 +4,34 @@ description: XXX
 keywords: XXX
 ---
 
-## Tags (Notmuch)
+# Tags (Notmuch)
 
 Commands for defining tag display formats and transformations.
 
-| #  | Command          | Source |
-|----|------------------|--------|
-| 78 | `tag-formats`    | email/ |
-| 79 | `tag-transforms` | email/ |
+## `tag-formats`
+
+Define expando format strings for Notmuch tags, making them available as
+variables for use in `$index_format`.
+
+- `tag-formats <tag> <format-string> [...]` — assign a format letter to a tag
+
+```neomuttrc
+tag-formats "inbox"      "GI"
+tag-formats "signed"     "GS"
+tag-formats "important"  "GP"
+```
+
+## `tag-transforms`
+
+Transform tags into short strings or icons for display.
+
+- `tag-transforms <tag> <display-string> [...]`
+
+```neomuttrc
+tag-transforms "inbox"      "I"
+tag-transforms "unread"     "N"
+tag-transforms "replied"    "R"
+tag-transforms "signed"     "S"
+tag-transforms "important"  "!"
+```
 

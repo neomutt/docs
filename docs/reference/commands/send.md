@@ -4,12 +4,31 @@ description: XXX
 keywords: XXX
 ---
 
-## Sending & Custom Headers
+# Sending & Custom Headers
 
 Commands for adding custom headers to outgoing messages.
 
-| #  | Command       | Source |
-|----|---------------|--------|
-| 76 | `my-header`   | send/  |
-| 77 | `unmy-header` | send/  |
+## `my-header`
+
+Add a custom header to all outgoing messages.
+
+- `my-header <header>: <value>` — add a header
+
+```neomuttrc
+my-header X-Mailer: NeoMutt
+my-header X-Editor: vim
+my-header Organization: NeoMutt Foundation
+```
+
+## `unmy-header`
+
+Remove a previously added custom header.
+
+- `unmy-header *` — remove all custom headers
+- `unmy-header <field>` — remove a specific header
+
+```neomuttrc
+unmy-header *
+unmy-header X-Editor
+```
 
