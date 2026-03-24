@@ -55,7 +55,7 @@ A simple example of running some Lua commands in NeoMutt:
 
 2. Alter your NeoMutt config to add:
 
-   ```
+   ```neomuttrc
    # Load the script once
    lua-source "sw.lua"
 

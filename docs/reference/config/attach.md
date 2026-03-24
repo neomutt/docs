@@ -6,8 +6,6 @@ keywords: "attachment, mime, variables, neomutt"
 
 # Attach Options
 
---------------------------------------------------------------------------------
-
 (attach-save-dir)=
 ## `$attach_save_dir`
 

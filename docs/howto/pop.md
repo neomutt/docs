@@ -18,20 +18,20 @@ Due to limitations in POP3, this method doesn't allow for some features such as 
 
 1. Set the POP3 password (optionally reuse the SMTP password):
 
-   ```
+   ```neomuttrc
    # If an SMTP password has been set, use this to set the same password for POP3.
    set pop_pass=$smtp_pass
    ```
 
 2. Set the POP3 server and user:
 
-   ```
+   ```neomuttrc
    set pop_host="pops://user@example.com"
    ```
 
 3. Use the remote server as the mailbox:
 
-   ```
+   ```neomuttrc
    set folder=$pop_host
    set spool_file=+
    ```
@@ -56,13 +56,13 @@ If you only need to fetch all messages to a local mailbox, you should consider u
 
 1. Set the local spool file (initialize it as an empty file if it doesn't exist):
 
-   ```
+   ```neomuttrc
    set spool_file="/home/user/.mailspool"
    ```
 
 2. Set the POP3 server and user from which to fetch messages:
 
-   ```
+   ```neomuttrc
    set pop_host="pops://user@example.com"
    ```
 

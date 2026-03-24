@@ -74,7 +74,7 @@ line.
 
 **Usage:**
 
-```
+```neomuttrc
 header-order header [header ...]
 unheader-order { * | header ... }
 ```
@@ -92,7 +92,7 @@ removing the header order effects set by the system-wide startup file.
 :::{admonition} Example: Configuring header display order
 :class: tip
 
-```
+```neomuttrc
 header-order From Date: From: To: Cc: Subject:
 ```
 :::
@@ -111,7 +111,7 @@ header-order From Date: From: To: Cc: Subject:
 
 **Usage:**
 
-```
+```neomuttrc
 my-header string
 unmy-header { * | field ... }
 ```
@@ -128,7 +128,7 @@ For example, if you would like to add an "Organization:" header field to all of
 your outgoing messages, you can put something like the following in your
 `.neomuttrc`:
 
-```
+```neomuttrc
 my-header Organization: A Really Big Company, Anytown, USA
 ```
 
@@ -147,7 +147,7 @@ To remove user defined header fields, use the `unmy-header` command. You may
 specify an asterisk ("*") to remove all header fields, or the fields to remove.
 For example, to remove all "To" and "Cc" header fields, you could use:
 
-```
+```neomuttrc
 unmy-header to cc
 ```
 

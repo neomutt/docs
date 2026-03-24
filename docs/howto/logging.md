@@ -45,7 +45,7 @@ The command bar shows only the last message. To show the last 100 messages (this
 
 1. Debug messages are not shown by default. Set the debug log level with the `-d` command line parameter at startup:
 
-   ```
+   ```sh
    neomutt -d 2
    ```
 

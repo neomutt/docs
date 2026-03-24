@@ -38,7 +38,7 @@ keys. More information can be found at [https://autocrypt.org/](https://autocryp
 1. Set `$autocrypt` in your `neomuttrc`, and optionally change the value of
    `$autocrypt_dir`:
 
-   ```
+   ```neomuttrc
    set autocrypt
    # set autocrypt_dir = "~/.local/share/autocrypt"
    ```

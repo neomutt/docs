@@ -6,8 +6,6 @@ keywords: "notmuch, search, indexing, variables, neomutt"
 
 # Notmuch Options
 
---------------------------------------------------------------------------------
-
 (nm-config-file)=
 ## `$nm_config_file`
 
@@ -28,7 +26,7 @@ Use 'auto' to detect configuration.
 
 - **Type:** [String](string)
 - **Default:** (empty)
-    ```
+    ```neomuttrc
     set nm_config_profile = ""
     ```
 
@@ -55,7 +53,7 @@ This variable specifies the default limit used in notmuch queries.
 
 - **Type:** [String](string)
 - **Default:** (empty)
-    ```
+    ```neomuttrc
     set nm_default_url = ""
     ```
 
@@ -68,7 +66,7 @@ This variable specifies the default Notmuch database in format notmuch://<absolu
 
 - **Type:** [String](string)
 - **Default:** (empty)
-    ```
+    ```neomuttrc
     set nm_exclude_tags = ""
     ```
 
@@ -137,7 +135,7 @@ This variable contains the position of the current search for window based vfold
 
 - **Type:** [String](string)
 - **Default:** (empty)
-    ```
+    ```neomuttrc
     set nm_query_window_current_search = ""
     ```
 
@@ -179,7 +177,7 @@ This variable enables windowed notmuch queries even if window duration is 0.
 
 - **Type:** [String](string)
 - **Default:** (empty)
-    ```
+    ```neomuttrc
     set nm_query_window_or_terms = ""
     ```
 
@@ -212,7 +210,7 @@ Accepted values are 'minute', 'hour', 'day', 'week', 'month', 'year'.
 
 - **Type:** [String](string)
 - **Default:** (empty)
-    ```
+    ```neomuttrc
     set nm_record_tags = ""
     ```
 

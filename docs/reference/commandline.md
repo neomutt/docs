@@ -13,7 +13,7 @@ Running `neomutt` with no arguments will make NeoMutt attempt to read your spool
 NeoMutt supports several optional features that can be enabled or disabled at compile-time.
 To see which features are compiled into your NeoMutt binary, run:
 
-```
+```sh
 neomutt -v
 ```
 
@@ -46,7 +46,7 @@ Common features you may see in `neomutt -v` output include:
 You can use the `ifdef` and `ifndef` commands in your config file to conditionally apply
 settings based on whether a feature is compiled in:
 
-```
+```neomuttrc
 ifdef sidebar 'set sidebar_visible = yes'
 ifndef notmuch finish
 ```
@@ -59,6 +59,6 @@ full details and examples.
 
 In addition to accepting a list of email addresses, NeoMutt also accepts a URL with the `mailto:` schema as specified in [RFC2368](https://www.rfc-editor.org/rfc/rfc2368.html). This is useful when configuring a web browser to launch NeoMutt when clicking on mailto links.
 
-```
+```sh
 neomutt mailto:some@one.org?subject=test&cc=other@one.org
 ```

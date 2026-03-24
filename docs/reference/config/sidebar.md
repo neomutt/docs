@@ -6,8 +6,6 @@ keywords: "sidebar, navigation, variables, neomutt"
 
 # Sidebar Options
 
---------------------------------------------------------------------------------
-
 (sidebar-component-depth)=
 ## `$sidebar_component_depth`
 

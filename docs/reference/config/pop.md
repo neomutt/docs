@@ -6,15 +6,13 @@ keywords: pop_auth_try_all, pop_authenticators, pop_check_interval, pop_delete, 
 
 # POP3 Options
 
---------------------------------------------------------------------------------
-
 (pop-authenticators)=
 ## `$pop_authenticators`
 
 - **Type:** [String List](slist)
 - **Notes:** [Colon-separated](slist)
 - **Default:** (empty)
-    ```
+    ```neomuttrc
     set pop_authenticators = ""
     ```
 
@@ -80,7 +78,7 @@ When _unset_, NeoMutt will download messages but also leave them on the POP serv
 
 - **Type:** [String](string)
 - **Default:** (empty)
-    ```
+    ```neomuttrc
     set pop_host = ""
     ```
 
@@ -114,7 +112,7 @@ If this variable is _set_, NeoMutt will try to use the "`LAST`" POP command for 
 - **Type:** [Command (String)](string)
 - **Notes:** {ref}`Sensitive <general>`
 - **Default:** (empty)
-    ```
+    ```neomuttrc
     set pop_oauth_refresh_command = ""
     ```
 
@@ -130,7 +128,7 @@ See "$oauth" for details.
 - **Type:** [String](string)
 - **Notes:** {ref}`Sensitive <general>`
 - **Default:** (empty)
-    ```
+    ```neomuttrc
     set pop_pass = ""
     ```
 
@@ -160,7 +158,7 @@ Controls whether or not NeoMutt will try to reconnect to the POP server if the c
 - **Type:** [String](string)
 - **Notes:** {ref}`Sensitive <general>`
 - **Default:** (empty)
-    ```
+    ```neomuttrc
     set pop_user = ""
     ```
 

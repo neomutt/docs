@@ -6,8 +6,6 @@ keywords: neomutt, history, history_file, history_format, history_remove_dups, c
 
 # History Options
 
---------------------------------------------------------------------------------
-
 (history)=
 ## `$history`
 

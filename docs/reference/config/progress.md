@@ -6,8 +6,6 @@ keywords: pop_auth_try_all, pop_authenticators, pop_check_interval, pop_delete, 
 
 # Progress Options
 
---------------------------------------------------------------------------------
-
 (net-inc)=
 ## `$net_inc`
 

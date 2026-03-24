@@ -116,7 +116,7 @@ See **Custom backend Tags colors**.
 
 ## neomuttrc
 
-```
+```neomuttrc
 # Example NeoMutt config file for the notmuch feature.
 
 # --------------------------------------------------------------------------
@@ -150,11 +150,11 @@ set nm_unread_tag = unread
 # first setup the duration, and then the time unit of that duration
 # when set to 0 (the default) the search window feature is disabled
 # unless explicitly enabled with nm_query_window_enable.
-set nm_query_window_enable=yes
-set nm_query_window_duration=2
-set nm_query_window_timebase="week" # or "hour", "day", "week", "month", "year"
+set nm_query_window_enable = yes
+set nm_query_window_duration = 2
+set nm_query_window_timebase = "week" # or "hour", "day", "week", "month", "year"
 # Extend query window to always show mail matching these terms.
-set nm_query_window_or_terms="tag:unread and tag:flagged"
+set nm_query_window_or_terms = "tag:unread and tag:flagged"
 # --------------------------------------------------------------------------
 # FUNCTIONS – shown with an example mapping
 # --------------------------------------------------------------------------
@@ -165,8 +165,8 @@ bind index,pager + entire-thread
 # Generate virtual folder from query
 bind index,pager \eX vfolder-from-query
 # Generate virtual folder from query with time window
-bind index < vfolder-window-backward
-bind index > vfolder-window-forward
+bind index '<' vfolder-window-backward
+bind index '>' vfolder-window-forward
 # --------------------------------------------------------------------------
 
 # vim: filetype=neomuttrc

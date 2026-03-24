@@ -23,7 +23,7 @@ NeoMutt's performance when reading mailboxes can be improved in two ways:
    value for `$read_inc` may be too low. It can be tuned on a folder-basis using
    `folder-hook`s:
 
-   ```
+   ```neomuttrc
    # use very high $read_inc to speed up reading hcache'd maildirs
    folder-hook . 'set read_inc=1000'
    # use lower value for reading slower remote IMAP folders

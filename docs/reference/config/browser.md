@@ -6,8 +6,6 @@ keywords: neomutt, browser, browser_abbreviate_mailboxes, browser_sort, browser_
 
 # Browser Options
 
---------------------------------------------------------------------------------
-
 (browser-abbreviate-mailboxes)=
 ## `$browser_abbreviate_mailboxes`
 

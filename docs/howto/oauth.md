@@ -20,7 +20,7 @@ Preliminary OAUTH support for IMAP, POP, and SMTP is provided via external scrip
 
 4. Configure NeoMutt:
 
-   ```
+   ```neomuttrc
    set imap_authenticators="oauthbearer"
    set imap_oauth_refresh_command="/path/to/oauth2.py --quiet --user=[email_address]\
        --client_id=[client_id] --client_secret=[client_secret]\
@@ -37,7 +37,7 @@ Preliminary OAUTH support for IMAP, POP, and SMTP is provided via external scrip
 
 3. Configure NeoMutt:
 
-   ```
+   ```neomuttrc
    set imap_authenticators="xoauth2"
    set imap_oauth_refresh_command="/path/to/mutt_oauth2.py /path/to/token"
    ```

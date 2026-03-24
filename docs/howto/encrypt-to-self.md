@@ -18,14 +18,14 @@ A better option is to encrypt the saved copy to yourself.
 
 1. Enable S/MIME self-encryption:
 
-   ```
+   ```neomuttrc
    set smime_self_encrypt = yes
    set smime_default_key  = bb345e23.0
    ```
 
 2. If you have a different key for signing, set it separately:
 
-   ```
+   ```neomuttrc
    set smime_sign_as = "SMIME-SIGNING-KEY"
    ```
 
@@ -33,14 +33,14 @@ A better option is to encrypt the saved copy to yourself.
 
 1. Enable PGP self-encryption:
 
-   ```
+   ```neomuttrc
    set pgp_self_encrypt = yes
    set pgp_default_key  = A4AF18C5582473BD35A1E9CE78BB3D480042198E
    ```
 
 2. If you have a different key for signing, set it separately:
 
-   ```
+   ```neomuttrc
    set pgp_sign_as = "PGP-SIGNING-KEY"
    ```
 

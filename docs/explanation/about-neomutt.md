@@ -75,7 +75,7 @@ below for typographical conventions for special terms.
 
 Examples are presented as:
 
-```
+```sh
 neomutt -v
 ```
 

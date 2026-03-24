@@ -498,7 +498,7 @@ sidebar-pin +fruit +fruit/apple   # Always display these two mailboxes
 
 Here is a sample color scheme:
 
-```
+```neomuttrc
 color sidebar_background default black       # Black background
 color sidebar_indicator  default color17     # Dark blue background
 color sidebar_highlight  white   color238    # Grey background

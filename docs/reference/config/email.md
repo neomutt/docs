@@ -6,8 +6,6 @@ keywords: "compose, editing, variables, neomutt"
 
 # Conn Options
 
---------------------------------------------------------------------------------
-
 (auto-subscribe)=
 ## `$auto_subscribe`
 
@@ -137,7 +135,7 @@ This is the safe setting, but we are not sure it doesn't break some more advance
 - **Type:** [String List](slist)
 - **Notes:** [Comma-separated](slist)
 - **Default:** (empty)
-    ```
+    ```neomuttrc
     set preferred_languages = ""
     ```
 
@@ -351,7 +349,7 @@ Since NeoMutt scores are always greater than or equal to zero, the default setti
 
 - **Type:** [String](string)
 - **Default:** (empty)
-    ```
+    ```neomuttrc
     set show_multipart_alternative = ""
     ```
 

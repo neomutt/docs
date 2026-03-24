@@ -6,8 +6,6 @@ keywords: pop_auth_try_all, pop_authenticators, pop_check_interval, pop_delete, 
 
 # Send Options
 
---------------------------------------------------------------------------------
-
 (abort-noattach)=
 ## `$abort_noattach`
 
@@ -143,7 +141,7 @@ If set, NeoMutt will prompt you for x-comment-to field before editing the body o
 - **Type:** [String List](slist)
 - **Notes:** [Colon-separated](slist), [Allow Empty](slist)
 - **Default:** (empty)
-    ```
+    ```neomuttrc
     set attach_charset = ""
     ```
 
@@ -183,7 +181,7 @@ See also [$attribution_locale](attribution-locale).
 
 - **Type:** [String](string)
 - **Default:** (empty)
-    ```
+    ```neomuttrc
     set attribution_locale = ""
     ```
 
@@ -202,7 +200,7 @@ Affected variables are: [$attribution_intro](attribution-intro), [$attribution_t
 
 - **Type:** [Expando](expando)
 - **Default:** (empty)
-    ```
+    ```neomuttrc
     set attribution_trailer = ""
     ```
 
@@ -365,7 +363,7 @@ This works around the problem noted in [$crypt_reply_sign](crypt-reply-sign), th
 
 - **Type:** [String](string)
 - **Default:** (empty)
-    ```
+    ```neomuttrc
     set dsn_notify = ""
     ```
 
@@ -387,7 +385,7 @@ For SMTP delivery, DSN support is auto-detected so that it depends on the server
 
 - **Type:** [String](string)
 - **Default:** (empty)
-    ```
+    ```neomuttrc
     set dsn_return = ""
     ```
 
@@ -631,7 +629,7 @@ Hence the forwarded message becomes part of the original thread instead of start
 
 - **Type:** [Expando](expando)
 - **Default:** (empty)
-    ```
+    ```neomuttrc
     set greeting = ""
     ```
 
@@ -721,7 +719,7 @@ Controls whether or not a copy of the message(s) you are replying to is included
 
 - **Type:** [Expando (Command String)](expando)
 - **Default:** (empty)
-    ```
+    ```neomuttrc
     set inews_command = ""
     ```
 
@@ -822,7 +820,7 @@ Otherwise [$forward_decode](forward-decode) is used instead.
 
 - **Type:** [Command (String)](string)
 - **Default:** (empty)
-    ```
+    ```neomuttrc
     set mime_type_query_command = ""
     ```
 
@@ -910,7 +908,7 @@ NeoMutt will first try to encrypt using the value specified in [$pgp_default_key
 
 - **Type:** [String](string)
 - **Default:** (empty)
-    ```
+    ```neomuttrc
     set postpone_encrypt_as = ""
     ```
 
@@ -1130,7 +1128,7 @@ It is **strongly** recommended that you do not set this variable unless you real
 - **Type:** [String List](slist)
 - **Notes:** [Colon-separated](slist)
 - **Default:** (empty)
-    ```
+    ```neomuttrc
     set smtp_authenticators = ""
     ```
 
@@ -1155,7 +1153,7 @@ set smtp_authenticators = "digest-md5:cram-md5"
 - **Type:** [Command (String)](string)
 - **Notes:** {ref}`Sensitive <general>`
 - **Default:** (empty)
-    ```
+    ```neomuttrc
     set smtp_oauth_refresh_command = ""
     ```
 
@@ -1171,7 +1169,7 @@ See "$oauth" for details.
 - **Type:** [String](string)
 - **Notes:** {ref}`Sensitive <general>`
 - **Default:** (empty)
-    ```
+    ```neomuttrc
     set smtp_pass = ""
     ```
 
@@ -1189,7 +1187,7 @@ See [$smtp_url](smtp-url) to configure NeoMutt to send mail via SMTP.
 - **Type:** [String](string)
 - **Notes:** {ref}`Sensitive <general>`
 - **Default:** (empty)
-    ```
+    ```neomuttrc
     set smtp_url = ""
     ```
 
@@ -1213,7 +1211,7 @@ Also see [$write_bcc](write-bcc).
 - **Type:** [String](string)
 - **Notes:** {ref}`Sensitive <general>`
 - **Default:** (empty)
-    ```
+    ```neomuttrc
     set smtp_user = ""
     ```
 

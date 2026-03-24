@@ -6,14 +6,12 @@ keywords: "pattern, reading, display, variables, neomutt"
 
 # Pattern Options
 
---------------------------------------------------------------------------------
-
 (external-search-command)=
 ## `$external_search_command`
 
 - **Type:** [Command (String)](string)
 - **Default:** (empty)
-    ```
+    ```neomuttrc
     set external_search_command = ""
     ```
 

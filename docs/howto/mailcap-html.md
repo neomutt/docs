@@ -55,7 +55,7 @@ Expected result: NeoMutt renders HTML parts automatically.
 
 1. Check where NeoMutt looks for mailcap files:
 
-```
+```sh
 neomutt -nF /dev/null -Q mailcap_path
 ```
 

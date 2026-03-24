@@ -6,8 +6,6 @@ keywords: neomutt, hooks, configuration
 
 # Hooks Options
 
---------------------------------------------------------------------------------
-
 (default-hook)=
 ## `$default_hook`
 

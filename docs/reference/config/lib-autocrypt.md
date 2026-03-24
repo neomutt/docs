@@ -6,8 +6,6 @@ keywords: "autocrypt, encryption, variables, neomutt"
 
 # Autocrypt Options
 
---------------------------------------------------------------------------------
-
 (autocrypt)=
 ## `$autocrypt`
 

@@ -22,7 +22,7 @@ Expected result: you understand that most Mutt configuration still works, but Ne
 
 2. Start NeoMutt with that file:
 
-```
+```sh
 neomutt -F ~/.neomuttrc
 ```
 
@@ -48,7 +48,7 @@ Expected result: any incompatible settings are identified early.
 
 1. Run NeoMutt with system config disabled to isolate issues:
 
-```
+```sh
 neomutt -nF ~/.neomuttrc
 ```
 
@@ -69,7 +69,7 @@ Expected result: you can resolve issues by installing missing dependencies or fi
 1. Keep separate config files, for example `~/.muttrc` and `~/.neomuttrc`.
 2. Start each client with its own config:
 
-```
+```sh
 mutt -F ~/.muttrc
 neomutt -F ~/.neomuttrc
 ```

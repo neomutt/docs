@@ -28,7 +28,7 @@ and/or encrypted mail.
 To send an email from a file, enabling cryptographic operations as when sending
 interactively, simply use the `-C` flag.
 
-```
+```sh
 $ neomutt -C -H - < /mail/to/be/sent
 ```neomuttrc
 

@@ -6,8 +6,6 @@ keywords: "pager, reading, display, variables, neomutt"
 
 # Pager Options
 
---------------------------------------------------------------------------------
-
 (allow-ansi)=
 ## `$allow_ansi`
 
@@ -34,7 +32,7 @@ and give it the same color as your attachment color (see also [$crypt_timestamp]
 
 - **Type:** [Command (String)](string)
 - **Default:** (empty)
-    ```
+    ```neomuttrc
     set display_filter = ""
     ```
 
@@ -92,7 +90,7 @@ Also see the [$smart_wrap](smart-wrap) variable.
 
 - **Type:** [Command (String)](string)
 - **Default:** (empty)
-    ```
+    ```neomuttrc
     set pager = ""
     ```
 

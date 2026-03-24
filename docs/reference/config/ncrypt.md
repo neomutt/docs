@@ -6,8 +6,6 @@ keywords: neomutt, ncrypt, ncrypt_purge, ncrypt_seq_flagged, ncrypt_seq_replied,
 
 # Ncrypt Options
 
---------------------------------------------------------------------------------
-
 (crypt-confirm-hook)=
 ## `$crypt_confirm_hook`
 
@@ -238,7 +236,7 @@ If _"no"_, never attempt to verify cryptographic signatures.
 
 - **Type:** {ref}`Address <address>`
 - **Default:** (empty)
-    ```
+    ```neomuttrc
     set envelope_from_address = ""
     ```
 
@@ -321,7 +319,7 @@ If _unset_, NeoMutt will instead match the status fd output against [$pgp_decryp
 
 - **Type:** [Expando (Command String)](expando)
 - **Default:** (empty)
-    ```
+    ```neomuttrc
     set pgp_clear_sign_command = ""
     ```
 - **Scope:** PGP only
@@ -339,7 +337,7 @@ Note that in this case, %r expands to the search string, which is a list of one 
 
 - **Type:** [Expando (Command String)](expando)
 - **Default:** (empty)
-    ```
+    ```neomuttrc
     set pgp_decode_command = ""
     ```
 - **Scope:** PGP only
@@ -365,7 +363,7 @@ The PGP command formats have their own set of `printf(3)`-like sequences:
 
 - **Type:** [Regular Expression](regex)
 - **Default:** (empty)
-    ```
+    ```neomuttrc
     set pgp_decryption_okay = ""
     ```
 - **Scope:** PGP only
@@ -383,7 +381,7 @@ Note that if [$pgp_check_gpg_decrypt_status_fd](pgp-check-gpg-decrypt-status-fd)
 
 - **Type:** [Expando (Command String)](expando)
 - **Default:** (empty)
-    ```
+    ```neomuttrc
     set pgp_decrypt_command = ""
     ```
 - **Scope:** PGP only
@@ -405,7 +403,7 @@ See also: https://github.com/neomutt/neomutt/issues/1014
 
 - **Type:** [String](string)
 - **Default:** (empty)
-    ```
+    ```neomuttrc
     set pgp_default_key = ""
     ```
 - **Scope:** PGP only
@@ -422,7 +420,7 @@ It will also be used for signing unless [$pgp_sign_as](pgp-sign-as) is set.
 
 - **Type:** [Expando (Command String)](expando)
 - **Default:** (empty)
-    ```
+    ```neomuttrc
     set pgp_encrypt_only_command = ""
     ```
 - **Scope:** PGP only
@@ -439,7 +437,7 @@ Note that in this case, %r expands to the search string, which is a list of one 
 
 - **Type:** [Expando (Command String)](expando)
 - **Default:** (empty)
-    ```
+    ```neomuttrc
     set pgp_encrypt_sign_command = ""
     ```
 - **Scope:** PGP only
@@ -497,7 +495,7 @@ See the section "Sending Cryptographically Signed/Encrypted Messages" of the use
 
 - **Type:** [Expando (Command String)](expando)
 - **Default:** (empty)
-    ```
+    ```neomuttrc
     set pgp_export_command = ""
     ```
 - **Scope:** PGP only
@@ -513,7 +511,7 @@ This is a format string, see the [$pgp_decode_command](pgp-decode-command) comma
 
 - **Type:** [Expando (Command String)](expando)
 - **Default:** (empty)
-    ```
+    ```neomuttrc
     set pgp_get_keys_command = ""
     ```
 - **Scope:** PGP only
@@ -529,7 +527,7 @@ Note that in this case, %r expands to the email address, not the public key ID (
 
 - **Type:** [Regular Expression](regex)
 - **Default:** (empty)
-    ```
+    ```neomuttrc
     set pgp_good_sign = ""
     ```
 - **Scope:** PGP only
@@ -560,7 +558,7 @@ _Unset_ this if you want to play interesting key selection games.
 
 - **Type:** [Expando (Command String)](expando)
 - **Default:** (empty)
-    ```
+    ```neomuttrc
     set pgp_import_command = ""
     ```
 - **Scope:** PGP only
@@ -598,7 +596,7 @@ Specifies how the entries in the pgp menu are sorted.
 
 - **Type:** [Expando (Command String)](expando)
 - **Default:** (empty)
-    ```
+    ```neomuttrc
     set pgp_list_pubring_command = ""
     ```
 - **Scope:** PGP only
@@ -622,7 +620,7 @@ This is a format string, see the [$pgp_decode_command](pgp-decode-command) comma
 
 - **Type:** [Expando (Command String)](expando)
 - **Default:** (empty)
-    ```
+    ```neomuttrc
     set pgp_list_secring_command = ""
     ```
 - **Scope:** PGP only
@@ -723,7 +721,7 @@ This includes keys which have been revoked, have expired, or have been marked as
 
 - **Type:** [String](string)
 - **Default:** (empty)
-    ```
+    ```neomuttrc
     set pgp_sign_as = ""
     ```
 - **Scope:** PGP only
@@ -740,7 +738,7 @@ It is recommended that you use the keyid form to specify your key (e.g.
 
 - **Type:** [Expando (Command String)](expando)
 - **Default:** (empty)
-    ```
+    ```neomuttrc
     set pgp_sign_command = ""
     ```
 - **Scope:** PGP only
@@ -809,7 +807,7 @@ If you are using an older version of GnuPG without an agent running, or another 
 
 - **Type:** [Expando (Command String)](expando)
 - **Default:** (empty)
-    ```
+    ```neomuttrc
     set pgp_verify_command = ""
     ```
 - **Scope:** PGP only
@@ -825,7 +823,7 @@ This is a format string, see the [$pgp_decode_command](pgp-decode-command) comma
 
 - **Type:** [Expando (Command String)](expando)
 - **Default:** (empty)
-    ```
+    ```neomuttrc
     set pgp_verify_key_command = ""
     ```
 - **Scope:** PGP only
@@ -857,7 +855,7 @@ It is _set_ by default.
 - **Type:** [Path (String)](path)
 - **Notes:** [File only](path)
 - **Default:** (empty)
-    ```
+    ```neomuttrc
     set smime_ca_location = ""
     ```
 - **Scope:** S/MIME only
@@ -872,7 +870,7 @@ This variable contains the name of either a directory, or a file which contains 
 - **Type:** [Path (String)](path)
 - **Notes:** [Directory only](path)
 - **Default:** (empty)
-    ```
+    ```neomuttrc
     set smime_certificates = ""
     ```
 - **Scope:** S/MIME only
@@ -889,7 +887,7 @@ This option points to the location of the certificates.
 
 - **Type:** [Expando (Command String)](expando)
 - **Default:** (empty)
-    ```
+    ```neomuttrc
     set smime_decrypt_command = ""
     ```
 - **Scope:** S/MIME only
@@ -936,7 +934,7 @@ It will ask you to supply a key, if it can't find one.
 
 - **Type:** [String](string)
 - **Default:** (empty)
-    ```
+    ```neomuttrc
     set smime_default_key = ""
     ```
 - **Scope:** S/MIME only
@@ -957,7 +955,7 @@ It will also be used for signing unless [$smime_sign_as](smime-sign-as) is set.
 
 - **Type:** [Expando (Command String)](expando)
 - **Default:** (empty)
-    ```
+    ```neomuttrc
     set smime_encrypt_command = ""
     ```
 - **Scope:** S/MIME only
@@ -990,7 +988,7 @@ Valid choices are "aes128", "aes192", "aes256", "des", "des3", "rc2-40", "rc2-64
 
 - **Type:** [Expando (Command String)](expando)
 - **Default:** (empty)
-    ```
+    ```neomuttrc
     set smime_get_cert_command = ""
     ```
 - **Scope:** S/MIME only
@@ -1006,7 +1004,7 @@ This is a format string, see the [$smime_decrypt_command](smime-decrypt-command)
 
 - **Type:** [Expando (Command String)](expando)
 - **Default:** (empty)
-    ```
+    ```neomuttrc
     set smime_get_cert_email_command = ""
     ```
 - **Scope:** S/MIME only
@@ -1022,7 +1020,7 @@ This is a format string, see the [$smime_decrypt_command](smime-decrypt-command)
 
 - **Type:** [Expando (Command String)](expando)
 - **Default:** (empty)
-    ```
+    ```neomuttrc
     set smime_get_signer_cert_command = ""
     ```
 - **Scope:** S/MIME only
@@ -1038,7 +1036,7 @@ This is a format string, see the [$smime_decrypt_command](smime-decrypt-command)
 
 - **Type:** [Expando (Command String)](expando)
 - **Default:** (empty)
-    ```
+    ```neomuttrc
     set smime_import_cert_command = ""
     ```
 - **Scope:** S/MIME only
@@ -1073,7 +1071,7 @@ However, this has no effect while replying, since NeoMutt will automatically sel
 - **Type:** [Path (String)](path)
 - **Notes:** [Directory only](path)
 - **Default:** (empty)
-    ```
+    ```neomuttrc
     set smime_keys = ""
     ```
 - **Scope:** S/MIME only
@@ -1090,7 +1088,7 @@ This option points to the location of the private keys.
 
 - **Type:** [Expando (Command String)](expando)
 - **Default:** (empty)
-    ```
+    ```neomuttrc
     set smime_pk7out_command = ""
     ```
 - **Scope:** S/MIME only
@@ -1120,7 +1118,7 @@ When _set_, S/MIME encrypted messages will also be encrypted using the certifica
 
 - **Type:** [String](string)
 - **Default:** (empty)
-    ```
+    ```neomuttrc
     set smime_sign_as = ""
     ```
 - **Scope:** S/MIME only
@@ -1135,7 +1133,7 @@ Most people will only need to set [$smime_default_key](smime-default-key).
 
 - **Type:** [Expando (Command String)](expando)
 - **Default:** (empty)
-    ```
+    ```neomuttrc
     set smime_sign_command = ""
     ```
 - **Scope:** S/MIME only
@@ -1181,7 +1179,7 @@ The number of seconds after which a cached passphrase will expire if not used.
 
 - **Type:** [Expando (Command String)](expando)
 - **Default:** (empty)
-    ```
+    ```neomuttrc
     set smime_verify_command = ""
     ```
 - **Scope:** S/MIME only
@@ -1197,7 +1195,7 @@ This is a format string, see the [$smime_decrypt_command](smime-decrypt-command)
 
 - **Type:** [Expando (Command String)](expando)
 - **Default:** (empty)
-    ```
+    ```neomuttrc
     set smime_verify_opaque_command = ""
     ```
 - **Scope:** S/MIME only

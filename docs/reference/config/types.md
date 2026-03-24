@@ -100,7 +100,7 @@ set alias_format = "%3i %f%t %-15a %-56A | %C%> %Y"
 - Long - A large number.  
   It works just like a regular number but can hold much bigger values for settings that need them.
 
-```
+```neomuttrc
 # Example long
 set pgp_timeout = 86400 # 1 day
 ```

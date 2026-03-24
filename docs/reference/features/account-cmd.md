@@ -28,7 +28,7 @@ The goal of this feature is to get rid of most `_user` and `_pass` variables. To
 
 1. Set the `account_command` variable to point to your external script:
 
-   ```
+   ```neomuttrc
    set account_command = "/path/to/my/script.sh"
    ```
 

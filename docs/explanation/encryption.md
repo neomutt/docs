@@ -25,13 +25,13 @@ and setting all `pgp_command_*` and `smime_command_*` config options.
 For example config, see: `gpg.rc` and `smime.rc` in the
 [Contrib repository](https://github.com/neomutt/neomutt-contrib/).
 
-```
+```neomuttrc
 # Use manual crypto functions
 unset crypt_use_gpgme
 set pgp_clear_sign_command = "..."
-...
+# ...
 set smime_decrypt_command = "..."
-...
+# ...
 ```
 
 :::{admonition} 📷 Screenshot Needed
@@ -103,7 +103,7 @@ and/or encrypted mail.
 To send an email from a file, enabling cryptographic operations as when sending
 interactively, simply use the `-C` flag.
 
-```
+```sh
 $ neomutt -C -H - < /mail/to/be/sent
 ```neomuttrc
 
@@ -125,13 +125,13 @@ set crypt_self_encrypt = yes
 
 ### gitconfig
 
-```
+```dosini
 # Example .gitconfig config file for the cli-crypto feature.
 
 [sendemail]
 sendmailcmd = neomutt -C -H - && true
 ```
 
-### Credits
+## Credits
 
 Alejandro Colomar, Richard Russon, Jenya Sovetkin

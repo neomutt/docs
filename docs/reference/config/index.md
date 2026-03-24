@@ -6,8 +6,6 @@ keywords:
 
 # Index Options
 
---------------------------------------------------------------------------------
-
 (beep-new)=
 ## `$beep_new`
 
@@ -101,7 +99,7 @@ Controls the characters used in several flags.
 
 - **Type:** [Character String](mbtable)
 - **Default:** (empty)
-    ```
+    ```neomuttrc
     set from_chars = ""
     ```
 
@@ -246,7 +244,7 @@ A new macro automatically generated with _<mark-message>a_ will be composed from
 
 - **Type:** [Expando (Command String)](expando)
 - **Default:** (empty)
-    ```
+    ```neomuttrc
     set new_mail_command = ""
     ```
 

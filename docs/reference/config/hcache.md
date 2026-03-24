@@ -6,14 +6,12 @@ keywords: neomutt, configuration, variables, Hcache, settings
 
 # Hcache Options
 
---------------------------------------------------------------------------------
-
 (header-cache)=
 ## `$header_cache`
 
 - **Type:** [Path (String)](path)
 - **Default:** (empty)
-    ```
+    ```neomuttrc
     set header_cache = ""
     ```
 
@@ -31,7 +29,7 @@ Header caching can greatly improve speed when opening POP, IMAP MH or Maildir fo
 
 - **Type:** [String](string)
 - **Default:** (empty)
-    ```
+    ```neomuttrc
     set header_cache_backend = ""
     ```
 
@@ -60,7 +58,7 @@ When NeoMutt is compiled with lz4, zstd or zlib, this option can be used to setu
 
 - **Type:** [String](string)
 - **Default:** (empty)
-    ```
+    ```neomuttrc
     set header_cache_compress_method = ""
     ```
 

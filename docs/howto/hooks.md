@@ -58,17 +58,17 @@ The default value of `$default_hook` is `~f %s | (~b %s & ~A) | (~B %s)`, which 
 
 Hooks that match against mailboxes (`folder-hook`, `mbox-hook`) apply both regular expression syntax as well as mailbox shortcut expansion on the regex parameter. There is some overlap between these, so special attention should be paid to the first character of the regex.
 
-```
+```neomuttrc
 # Here, ^ will expand to "the current mailbox" not "beginning of string":
-folder-hook ^/home/user/Mail/bar "set sort=threads"
+folder-hook "^/home/user/Mail/bar" "set sort=threads"
 # If you want ^ to be interpreted as "beginning of string", one workaround
 # is to enclose the regex in parenthesis:
-folder-hook (^/home/user/Mail/bar) "set sort=threads"
+folder-hook "(^/home/user/Mail/bar)" "set sort=threads"
 # This will expand to the default save folder for the alias "imap.example.com", which
 # is probably not what you want:
-folder-hook @imap\.example\.com "set sort=threads"
+folder-hook "@imap\.example\.com" "set sort=threads"
 # A workaround is to use parenthesis or a backslash:
-folder-hook (@imap\.example\.com) "set sort=threads"
+folder-hook "(@imap\.example\.com)" "set sort=threads"
 folder-hook '\@imap\.example\.com' "set sort=threads"
 ```
 
@@ -346,7 +346,7 @@ expando.
 
 ### Syntax
 
-```
+```neomuttrc
 unhook {* | hook-type}
 ```
 
@@ -360,7 +360,7 @@ NeoMutt lets you control the environment it passes to child processes using the 
 
 ### Syntax
 
-```
+```neomuttrc
 setenv NAME=value
 unsetenv NAME
 setenv NAME?
@@ -370,7 +370,7 @@ The variable name must start with a letter or underscore and contain only letter
 
 ### Examples
 
-```
+```neomuttrc
 setenv BROWSER firefox
 setenv ORGANIZATION "The NeoMutt Development Team"
 setenv EDITOR vim
@@ -379,7 +379,7 @@ unsetenv DISPLAY
 
 You can also query the current value of an environment variable by appending `?`:
 
-```
+```neomuttrc
 setenv TERM?
 ```
 
@@ -387,7 +387,7 @@ Running `setenv` with no parameters shows a list of all currently set environmen
 
 The old whitespace-separated syntax is also supported for backward compatibility:
 
-```
+```neomuttrc
 setenv TERM vt100
 setenv ORGANIZATION "The NeoMutt Development Team"
 ```

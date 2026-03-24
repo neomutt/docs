@@ -6,8 +6,6 @@ keywords: neomutt, configuration, variables, gui, settings
 
 # GUI Options
 
---------------------------------------------------------------------------------
-
 (beep)=
 ## `$beep`
 

@@ -6,15 +6,13 @@ keywords: imap_authenticators, imap_check_subscribed, imap_condstore, imap_defla
 
 # IMAP Options
 
---------------------------------------------------------------------------------
-
 (imap-authenticators)=
 ## `$imap_authenticators`
 
 - **Type:** [String List](slist)
 - **Notes:** [Colon-separated](slist)
 - **Default:** (empty)
-    ```
+    ```neomuttrc
     set imap_authenticators = ""
     ```
 
@@ -115,7 +113,7 @@ If you have a very large mailbox, this might prevent a timeout and disconnect wh
 
 - **Type:** [String](string)
 - **Default:** (empty)
-    ```
+    ```neomuttrc
     set imap_headers = ""
     ```
 
@@ -178,7 +176,7 @@ This can be toggled in the IMAP browser with the `<toggle-subscribed>` function.
 - **Type:** [String](string)
 - **Notes:** {ref}`Sensitive <general>`
 - **Default:** (empty)
-    ```
+    ```neomuttrc
     set imap_login = ""
     ```
 
@@ -194,7 +192,7 @@ This variable defaults to the value of [$imap_user](imap-user).
 - **Type:** [Command (String)](string)
 - **Notes:** {ref}`Sensitive <general>`
 - **Default:** (empty)
-    ```
+    ```neomuttrc
     set imap_oauth_refresh_command = ""
     ```
 
@@ -210,7 +208,7 @@ See "$oauth" for details.
 - **Type:** [String](string)
 - **Notes:** {ref}`Sensitive <general>`
 - **Default:** (empty)
-    ```
+    ```neomuttrc
     set imap_pass = ""
     ```
 
@@ -353,7 +351,7 @@ Since these messages are often harmless, or generated due to configuration probl
 - **Type:** [String](string)
 - **Notes:** {ref}`Sensitive <general>`
 - **Default:** (empty)
-    ```
+    ```neomuttrc
     set imap_user = ""
     ```
 

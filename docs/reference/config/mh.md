@@ -6,8 +6,6 @@ keywords: neomutt, mh, mh_purge, mh_seq_flagged, mh_seq_replied, mh_seq_unseen, 
 
 # MH Options
 
---------------------------------------------------------------------------------
-
 (mh-purge)=
 ## `$mh_purge`
 

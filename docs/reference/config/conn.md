@@ -6,14 +6,12 @@ keywords: "compose, editing, variables, neomutt"
 
 # Conn Options
 
---------------------------------------------------------------------------------
-
 (account-command)=
 ## `$account_command`
 
 - **Type:** [Command (String)](string)
 - **Default:** (empty)
-    ```
+    ```neomuttrc
     set account_command = ""
     ```
 
@@ -51,7 +49,7 @@ Any server certificate that is signed with one of these CA certificates is also 
 - **Type:** [Path (String)](path)
 - **Notes:** [File only](path)
 - **Default:** (empty)
-    ```
+    ```neomuttrc
     set entropy_file = ""
     ```
 - **Scope:** OpenSSL only
@@ -65,7 +63,7 @@ The file which includes random data that is used to initialize SSL library funct
 
 - **Type:** [String](string)
 - **Default:** (empty)
-    ```
+    ```neomuttrc
     set preconnect = ""
     ```
 
@@ -104,7 +102,7 @@ A negative value causes NeoMutt to wait indefinitely.
 - **Type:** [Path (String)](path)
 - **Notes:** [File only](path)
 - **Default:** (empty)
-    ```
+    ```neomuttrc
     set ssl_ca_certificates_file = ""
     ```
 - **Scope:** GnuTLS only
@@ -124,7 +122,7 @@ set ssl_ca_certificates_file = /etc/ssl/certs/ca-certificates.crt
 
 - **Type:** [String](string)
 - **Default:** (empty)
-    ```
+    ```neomuttrc
     set ssl_ciphers = ""
     ```
 
@@ -143,7 +141,7 @@ See `gnutls_priority_init(3)` for the syntax and more details.
 - **Type:** [Path (String)](path)
 - **Notes:** [File only](path)
 - **Default:** (empty)
-    ```
+    ```neomuttrc
     set ssl_client_cert = ""
     ```
 
@@ -289,7 +287,7 @@ Setting this variable to _yes_ will permit verifying partial certification chain
 
 - **Type:** [Command (String)](string)
 - **Default:** (empty)
-    ```
+    ```neomuttrc
     set tunnel = ""
     ```
 

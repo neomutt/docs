@@ -6,8 +6,6 @@ keywords: "compose, editing, variables, neomutt"
 
 # Compose Options
 
---------------------------------------------------------------------------------
-
 (compose-confirm-detach-first)=
 ## `$compose_confirm_detach_first`
 

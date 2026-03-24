@@ -6,8 +6,6 @@ keywords: "address, contacts, address book, variables, neomutt"
 
 # Address Options
 
---------------------------------------------------------------------------------
-
 (idn-decode)=
 ## `$idn_decode`
 

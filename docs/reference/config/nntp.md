@@ -6,8 +6,6 @@ keywords: nntp_authenticators, nntp_context, nntp_listgroup, nntp_load_descripti
 
 # NNTP Options
 
---------------------------------------------------------------------------------
-
 (catchup-newsgroup)=
 ## `$catchup_newsgroup`
 
@@ -92,7 +90,7 @@ If _unset_, articles and headers will not be saved at all and will be reloaded f
 
 - **Type:** [String](string)
 - **Default:** (empty)
-    ```
+    ```neomuttrc
     set news_server = ""
     ```
 
@@ -109,7 +107,7 @@ This option can also be set using the command line option "-g", the environment 
 
 - **Type:** [String](string)
 - **Default:** (empty)
-    ```
+    ```neomuttrc
     set nntp_authenticators = ""
     ```
 
@@ -178,7 +176,7 @@ This variable controls whether or not descriptions for each newsgroup must be lo
 - **Type:** [String](string)
 - **Notes:** {ref}`Sensitive <general>`
 - **Default:** (empty)
-    ```
+    ```neomuttrc
     set nntp_pass = ""
     ```
 
@@ -207,7 +205,7 @@ If set to 0, NeoMutt will recheck newsgroup on each operation in index (stepping
 - **Type:** [String](string)
 - **Notes:** {ref}`Sensitive <general>`
 - **Default:** (empty)
-    ```
+    ```neomuttrc
     set nntp_user = ""
     ```
 

@@ -61,7 +61,7 @@ Any format string ending in a vertical bar (`|`) will be expanded and piped thro
 
 All % expandos in a format string are expanded before the script is called so that:
 
-```
+```neomuttrc
 set status_format="script.sh '%r %f (%L)'|"
 ```
 
@@ -77,7 +77,7 @@ In most format strings, NeoMutt supports different types of padding using specia
 
 When this occurs, NeoMutt will fill the rest of the line with the character `X`. For example, filling the rest of the line with dashes:
 
-```
+```neomuttrc
 set status_format = "%v on %h: %B: %<n?%n&no> new messages %|-"
 ```
 
@@ -85,7 +85,7 @@ set status_format = "%v on %h: %B: %<n?%n&no> new messages %|-"
 
 This puts as many characters `X` in between two items so that the rest of the line will be right-justified. For example, to put the version string and hostname on the right and fill the gap with spaces (note the space after `%>`):
 
-```
+```neomuttrc
 set status_format = "%B: %<n?%n&no> new messages %> (%v on %h)"
 ```
 
@@ -93,7 +93,7 @@ set status_format = "%B: %<n?%n&no> new messages %> (%v on %h)"
 
 Normal right-justification will print everything to the left of the `%>`, displaying padding and whatever lies to the right only if there's room. By contrast, "soft-fill" gives priority to the right-hand side, guaranteeing space to display it and showing padding only if there's still room. If necessary, soft-fill will eat text leftwards to make room for rightward text. For example (note two spaces after `%*`):
 
-```
+```neomuttrc
 set index_format="%4C %Z %{%b %d} %-15.15L (%<l?%4l&%4c>)%*  %s"
 ```
 
@@ -235,7 +235,7 @@ AAA = `%[%H:%M ]` BBB = `%[%a %d]` CCC = `%[%b %d]` DDD = `%[%m/%y ]`
 
 ### Example neomuttrc for Conditional Dates
 
-```
+```neomuttrc
 # Example NeoMutt config file for the cond-date feature.
 
 #
@@ -316,13 +316,13 @@ if (x > 0) {
 
 ### Examples
 
-```
+```neomuttrc
 set index_format='%4C %Z %{%b %d} %-25.25n %s%> %<M?%M Msgs &%<l?%l Lines&%c Bytes>>'
 ```
 
 If a thread is folded display the number of messages (%M), else if we know how many lines in the message display lines in message (%l), else display the size of the message in bytes (%c).
 
-```
+```neomuttrc
 set index_format='%4C %Z %{%b %d} %-25.25n %<M?[%M] %s&%s%* %<l?%l&%c>>'
 ```
 
@@ -331,14 +331,14 @@ If a thread is folded display the number of messages (%M) and the subject (%s), 
 :::{note}
 If you wish to use angle brackets `< >` in a nested condition, then it's necessary to escape them, e.g.
 
-```
+```neomuttrc
 set index_format='%<M?\<%M\>&%s>'
 ```
 :::
 
 ### Example neomuttrc for Nested-If
 
-```
+```neomuttrc
 # Example NeoMutt config file for the nested-if feature.
 
 # This feature uses the format: '%<VAR?TRUE&FALSE>' for conditional
@@ -375,7 +375,7 @@ This feature has no config of its own. It adds an expando which can be used in t
 
 ### Example neomuttrc for Initials
 
-```
+```neomuttrc
 # The default 'index_format' is:
 set index_format='%4C %Z %{%b %d} %-15.15L (%<l?%4l&%4c>) %s'
 # Where %L represents the author/recipient
@@ -409,7 +409,7 @@ set index_format='%4C %Z %{%b %d} %I (%<l?%4l&%4c>) %s'
 
 ### Syntax
 
-```
+```neomuttrc
 index-format-hook name [!]pattern format-string
 ```
 
@@ -423,7 +423,7 @@ Because the first match is used, best practice is to put a catch-all `~A` patter
 
 ### Example: Dynamic Date Formatting
 
-```
+```neomuttrc
 set index_format="%4C %-6@date@ %-15.15F %Z (%4c) %s"
 
 index-format-hook  date  "~d<1d"    "%[%H:%M]"
@@ -436,7 +436,7 @@ index-format-hook  date  "~A"       "%[%m/%y]"
 
 Note that without a catch-all `~A` pattern, no match results in the expando being replaced with an empty string.
 
-```
+```neomuttrc
 set index_format="%4C %@subj_flags@%s"
 
 index-format-hook  subj_flags  "~f boss@example.com"    "** BOSS ** "

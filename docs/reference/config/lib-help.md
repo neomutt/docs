@@ -6,8 +6,6 @@ keywords: neomutt, configuration, variables, help, settings
 
 # Help Options
 
---------------------------------------------------------------------------------
-
 (help)=
 ## `$help`
 

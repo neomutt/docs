@@ -6,8 +6,6 @@ keywords: neomutt, menu, menu_check_cur, menu_field_delimiter, menu_header_cache
 
 # Menu Options
 
---------------------------------------------------------------------------------
-
 (arrow-cursor)=
 ## `$arrow_cursor`
 

@@ -261,7 +261,7 @@ shared data, the latter for system configuration files.
 
 The default search path can be obtained by running the following command:
 
-```
+```sh
 neomutt -nF /dev/null -Q mailcap_path
 ```
 
@@ -643,7 +643,7 @@ application/ms-excel;   open.pl %s
 
 **Usage:**
 
-```
+```neomuttrc
 auto-view mime-type[/mime-subtype] [mime-type[/mime-subtype] ...]
 unauto-view { * | mime-type[/mime-subtype] ... }
 ```
@@ -664,7 +664,7 @@ view in the pager.
 You then use the `auto-view` configuration command to list the content-types
 that you wish to view automatically. For instance, if you set it to:
 
-```
+```neomuttrc
 auto-view text/html application/x-gunzip \
   application/postscript image/gif application/x-tar-gz
 ```
@@ -714,7 +714,7 @@ NeoMutt has some heuristics for determining which attachment of a
    of the available types is preferred. It consists of a number of MIME types in
    order, including support for implicit and explicit wildcards. For example:
 
-   ```
+   ```neomuttrc
    alternative-order text/enriched text/plain text application/postscript image/*
    ```
 
@@ -793,7 +793,7 @@ This can be changed via the
 
 **Usage:**
 
-```
+```neomuttrc
 attachments { + | - } disposition mime-type [mime-type ...]
 unattachments { + | - } disposition mime-type [mime-type ...]
 attachments ?

@@ -25,7 +25,7 @@ three kinds of color object, each with different syntax:
 
 ## General Syntax
 
-```
+```neomuttrc
 color <object> [<attribute> ...] <foreground> <background> [<regex-or-pattern>]
 ```
 
@@ -217,7 +217,7 @@ uppercase letters; otherwise matching is case-insensitive.
 
 Colorize text in the message body matching a regex.
 
-```
+```neomuttrc
 color body [<attr> ...] <fg> <bg> <regex>
 ```
 
@@ -245,7 +245,7 @@ color body  cyan         default  "[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{
 Colorize message headers matching a regex.  The regex is matched against
 the entire header line (name and value).
 
-```
+```neomuttrc
 color header [<attr> ...] <fg> <bg> <regex>
 ```
 
@@ -262,7 +262,7 @@ color header  yellow       default  "^X-Mailer:"
 
 Colorize MIME attachment header lines in the pager, matching a regex.
 
-```
+```neomuttrc
 color attach_headers [<attr> ...] <fg> <bg> <regex>
 ```
 
@@ -301,7 +301,7 @@ The pattern uses NeoMutt's search pattern language (the same syntax used by `lim
 
 Colorize the entire index line for messages matching a pattern.
 
-```
+```neomuttrc
 color index [<attr> ...] <fg> <bg> <pattern>
 ```
 
@@ -360,7 +360,7 @@ supports submatch highlighting.
 
 ### Simple status color
 
-```
+```neomuttrc
 color status [<attr> ...] <fg> <bg>
 ```
 
@@ -373,7 +373,7 @@ color status  bold white blue
 
 Colorize parts of the status bar matching a regex.
 
-```
+```neomuttrc
 color status [<attr> ...] <fg> <bg> <regex>
 ```
 
@@ -389,7 +389,7 @@ color status  brightyellow blue  "Msgs:[0-9]+"
 
 Colorize only the Nth parenthesized submatch of a regex.
 
-```
+```neomuttrc
 color status [<attr> ...] <fg> <bg> <regex> <num>
 ```
 
@@ -406,7 +406,7 @@ color status  brightred  blue  "Msgs:([0-9]+)" 1
 
 Remove color rules.
 
-```
+```neomuttrc
 uncolor <object> { * | <pattern> ... }
 ```
 

@@ -68,7 +68,7 @@ If _set_, NeoMutt will use plain ASCII characters when displaying thread and att
 - **Type:** [String List](slist)
 - **Notes:** [Colon-separated](slist), [Allow Empty](slist)
 - **Default:** (empty)
-    ```
+    ```neomuttrc
     set assumed_charset = ""
     ```
 
@@ -177,7 +177,7 @@ The option is _unset_ by default because many visual terminals don't permit maki
 - **Type:** [String](string)
 - **Notes:** {ref}`Not Empty <general>`, {ref}`Charset Single <general>`
 - **Default:** (empty)
-    ```
+    ```neomuttrc
     set charset = ""
     ```
 
@@ -221,7 +221,7 @@ Note: This variable must be set before using any `color` commands.
 
 - **Type:** [String](string)
 - **Default:** (empty)
-    ```
+    ```neomuttrc
     set config_charset = ""
     ```
 
@@ -395,7 +395,7 @@ See: https://github.com/neomutt/neomutt/discussions/4251
 - **Type:** [Command (String)](string)
 - **Notes:** {ref}`Not Empty <general>`
 - **Default:** (empty)
-    ```
+    ```neomuttrc
     set editor = ""
     ```
 
@@ -477,7 +477,7 @@ When _set_, forwarded messages included in the main body of the message (when [$
 
 - **Type:** {ref}`Address <address>`
 - **Default:** (empty)
-    ```
+    ```neomuttrc
     set from = ""
     ```
 
@@ -526,7 +526,7 @@ The [$weed](weed) setting applies.
 
 - **Type:** [String](string)
 - **Default:** (empty)
-    ```
+    ```neomuttrc
     set hostname = ""
     ```
 
@@ -721,7 +721,7 @@ You probably only want to set it every once in a while, since it can be a little
 - **Type:** [Path (String)](path)
 - **Notes:** [Directory only](path)
 - **Default:** (empty)
-    ```
+    ```neomuttrc
     set message_cache_dir = ""
     ```
 
@@ -937,7 +937,7 @@ Match detection may be overridden by the [$smileys](smileys) regular expression.
 
 - **Type:** [String](string)
 - **Default:** (empty)
-    ```
+    ```neomuttrc
     set real_name = ""
     ```
 
@@ -1209,7 +1209,7 @@ See the "Use Threads Feature" section for further explanation and examples, http
 
 - **Type:** [Mailbox (String)](string)
 - **Default:** (empty)
-    ```
+    ```neomuttrc
     set spool_file = ""
     ```
 
@@ -1328,7 +1328,7 @@ It is recommended that this be set to a directory whose contents won't be remove
 
 - **Type:** [Mailbox (String)](string)
 - **Default:** (empty)
-    ```
+    ```neomuttrc
     set trash = ""
     ```
 

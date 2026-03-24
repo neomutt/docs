@@ -6,8 +6,6 @@ keywords: "alias, contacts, address book, variables, neomutt"
 
 # Alias Options
 
---------------------------------------------------------------------------------
-
 (alias-file)=
 ## `$alias_file`
 
@@ -102,7 +100,7 @@ Note: This also affects the entries of the address query menu, thus potentially 
 
 - **Type:** [Command (String)](string)
 - **Default:** (empty)
-    ```
+    ```neomuttrc
     set query_command = ""
     ```
 

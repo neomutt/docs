@@ -25,11 +25,11 @@ If you have complex crypto needs, you can enable "classic mode" by disabling
 GPGME and setting all `smime_command_*` config options. For example config,
 see `smime.rc` in the [Contrib repository](https://github.com/neomutt/neomutt-contrib/).
 
-```
+```neomuttrc
 # Use manual crypto functions
 unset crypt_use_gpgme
 set smime_decrypt_command = "..."
-...
+# ...
 ```
 
 ## Configuring Your S/MIME Key
@@ -48,7 +48,7 @@ set smime_default_key = "bb345e23.0"
 When using GPGME as the S/MIME backend, keys and certificates are managed by
 GnuPG. You can add your key (or certificates) to GnuPG with the command:
 
-```
+```sh
 gpgsm --import mykey.p12
 ```
 
@@ -66,7 +66,7 @@ program that comes with NeoMutt. By default they are stored under `~/.smime/`.
 
 1. Initialize the key directory from a shell prompt:
 
-   ```
+   ```sh
    smime_keys init
    ```
 
@@ -75,7 +75,7 @@ program that comes with NeoMutt. By default they are stored under `~/.smime/`.
 3. Periodically run the following command to update status flags for your
    certificates:
 
-   ```
+   ```sh
    smime_keys refresh
    ```
 

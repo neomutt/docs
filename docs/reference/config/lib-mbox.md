@@ -6,8 +6,6 @@ keywords: neomutt, mbox, mbox_check_cur, mbox_field_delimiter, mbox_header_cache
 
 # Mbox Options
 
---------------------------------------------------------------------------------
-
 (check-mbox-size)=
 ## `$check_mbox_size`
 

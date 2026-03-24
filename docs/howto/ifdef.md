@@ -31,7 +31,7 @@ finish                                    # Finish reading the current file
 
 A list of compile-time symbols can be seen in the output of the command:
 
-```
+```sh
 neomutt -v
 ```
 
@@ -39,14 +39,14 @@ neomutt -v
 
 `finish` is particularly useful when combined with `ifndef`. e.g.
 
-```
+```neomuttrc
 # Sidebar config file
 ifndef sidebar finish
 ```
 
 ## Commands
 
-```
+```neomuttrc
 ifdef  symbol "config-command [args...]"
 ifndef symbol "config-command [args...]"
 finish
@@ -54,7 +54,7 @@ finish
 
 ## Example neomuttrc
 
-```
+```neomuttrc
 # Example NeoMutt config file for the ifdef feature.
 
 # This feature introduces three useful commands which allow you to share

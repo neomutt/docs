@@ -18,7 +18,7 @@ NeoMutt does not work with the `tty` pinentry program.
 1. Install a GUI or curses pinentry (for example `pinentry-curses`).
 2. Configure `gpg-agent`:
 
-```
+```sh
 pinentry-program /usr/bin/pinentry-curses
 ```
 

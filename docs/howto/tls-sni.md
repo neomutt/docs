@@ -45,7 +45,7 @@ This has been tested against Exim 4.80, which optionally logs SNI and can perfor
 
 To verify TLS SNI support by a server, you can use:
 
-```
+```sh
 openssl s_client -host <imap server> -port <port> -tls1 -servername <imap server>
 ```
 

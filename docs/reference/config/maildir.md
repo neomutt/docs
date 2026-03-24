@@ -6,8 +6,6 @@ keywords: neomutt, maildir, maildir_check_cur, maildir_field_delimiter, maildir_
 
 # Maildir Options
 
---------------------------------------------------------------------------------
-
 (check-new)=
 ## `$check_new`
 
