@@ -41,8 +41,36 @@ window.addEventListener("DOMContentLoaded", () => {
   const endpoint = new URL("/_/api/v3/search/", window.location.origin);
   endpoint.searchParams.set("q", `project:${project}/${version} ${query}`);
 
-  const getResultUrl = (result) => {
-    const block = result.blocks?.find((item) => item.type === "section");
+  const escapeHtml = (value) =>
+    (value ?? "").replace(/[&<>"']/g, (char) => {
+      const entities = {
+        "&": "&amp;",
+        "<": "&lt;",
+        ">": "&gt;",
+        '"': "&quot;",
+        "'": "&#39;",
+      };
+
+      return entities[char];
+    });
+
+  const truncateText = (value, maxLength = 220) => {
+    const text = (value ?? "").replace(/\s+/g, " ").trim();
+
+    if (text.length <= maxLength) {
+      return text;
+    }
+
+    return `${text.slice(0, maxLength - 1).trimEnd()}…`;
+  };
+
+  const sectionBlocks = (result) => {
+    const blocks = result.blocks?.filter((item) => item.type === "section") ?? [];
+
+    return blocks.length > 0 ? blocks : [null];
+  };
+
+  const resultUrl = (result, block) => {
     const url = new URL(result.path || "/", result.domain || window.location.origin);
 
     if (block?.id) {
@@ -52,56 +80,87 @@ window.addEventListener("DOMContentLoaded", () => {
     return url.toString();
   };
 
-  const firstSectionBlock = (result) =>
-    result.blocks?.find((item) => item.type === "section") ?? null;
+  const pageTitleHtml = (result) =>
+    result.highlights?.title?.[0] ||
+    escapeHtml(result.title || result.path || "Search result");
 
-  const renderResults = (payload) => {
-    const fragment = document.createDocumentFragment();
-    const summary = document.createElement("p");
-    const results = payload.results ?? [];
-    const count = payload.count ?? results.length;
+  const blockTitleHtml = (block) =>
+    block?.highlights?.title?.[0] ||
+    (block?.title ? escapeHtml(block.title) : "");
 
-    summary.className = "rtd-server-search-summary";
-    summary.textContent =
-      count === 0
-        ? `No server-side results for "${query}".`
-        : `${count} server-side result${count === 1 ? "" : "s"} for "${query}".`;
-    fragment.append(summary);
+  const resultTitleHtml = (result, block) => {
+    const pageTitle = pageTitleHtml(result);
+    const blockTitle = blockTitleHtml(block);
 
-    for (const result of results) {
-      const block = firstSectionBlock(result);
-      const article = document.createElement("article");
-      const heading = document.createElement("h2");
-      const link = document.createElement("a");
-      const meta = document.createElement("p");
-
-      article.className = "rtd-server-search-result";
-      link.href = getResultUrl(result);
-      link.textContent = result.title || result.path || "Search result";
-      heading.append(link);
-      article.append(heading);
-
-      meta.className = "rtd-server-search-meta";
-      meta.textContent = `${result.project?.slug || project} / ${result.version?.slug || version}`;
-      article.append(meta);
-
-      if (block?.title && block.title !== result.title) {
-        const section = document.createElement("p");
-        section.className = "rtd-server-search-section";
-        section.textContent = block.title;
-        article.append(section);
-      }
-
-      if (block?.content) {
-        const snippet = document.createElement("p");
-        snippet.textContent = block.content;
-        article.append(snippet);
-      }
-
-      fragment.append(article);
+    if (blockTitle && block?.title !== result.title) {
+      return `${pageTitle} <span class="rtd-server-search-separator">&rsaquo;</span> ${blockTitle}`;
     }
 
-    searchResults.replaceChildren(fragment);
+    return blockTitle || pageTitle;
+  };
+
+  const snippetHtml = (block) => {
+    const highlighted = block?.highlights?.content?.[0];
+
+    if (highlighted) {
+      return highlighted;
+    }
+
+    if (!block?.content) {
+      return "";
+    }
+
+    return escapeHtml(truncateText(block.content));
+  };
+
+  const renderResults = (payload) => {
+    const results = payload.results ?? [];
+
+    if (results.length === 0) {
+      return false;
+    }
+
+    const title = document.createElement("h2");
+    const summary = document.createElement("p");
+    const list = document.createElement("ul");
+
+    title.textContent = "Search Results";
+
+    summary.className = "search-summary rtd-server-search-summary";
+    summary.textContent = `Found ${payload.count ?? results.length} server-side result${
+      (payload.count ?? results.length) === 1 ? "" : "s"
+    } for "${query}".`;
+
+    list.className = "search rtd-server-search-list";
+
+    for (const result of results) {
+      for (const block of sectionBlocks(result)) {
+        const item = document.createElement("li");
+        const link = document.createElement("a");
+        const context = document.createElement("span");
+        const snippet = snippetHtml(block);
+
+        link.href = resultUrl(result, block);
+        link.innerHTML = resultTitleHtml(result, block);
+        item.append(link);
+
+        context.className = "rtd-server-search-context";
+        context.textContent = ` (${(result.path || "").replace(/^\//, "")})`;
+        item.append(context);
+
+        if (snippet) {
+          const snippetNode = document.createElement("p");
+          snippetNode.className = "rtd-server-search-snippet";
+          snippetNode.innerHTML = snippet;
+          item.append(snippetNode);
+        }
+
+        list.append(item);
+      }
+    }
+
+    searchResults.replaceChildren(title, summary, list);
+    return true;
   };
 
   searchResults.setAttribute("aria-busy", "true");
@@ -118,7 +177,9 @@ window.addEventListener("DOMContentLoaded", () => {
 
       return response.json();
     })
-    .then(renderResults)
+    .then((payload) => {
+      renderResults(payload);
+    })
     .catch((error) => {
       const message = document.createElement("p");
       message.className = "rtd-server-search-summary";

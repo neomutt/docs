@@ -372,21 +372,35 @@ html[data-theme=dark] .highlight .hll {
   margin: 1rem 0;
 }
 
-.rtd-server-search-result {
+.rtd-server-search-list {
+  margin-top: 1rem;
+}
+
+.rtd-server-search-list li {
   border-top: 1px solid var(--pst-color-border);
   padding: 1rem 0;
 }
 
-.rtd-server-search-result h2 {
-  font-size: 1.2rem;
-  margin-bottom: 0.25rem;
-}
-
-.rtd-server-search-meta,
-.rtd-server-search-section {
+.rtd-server-search-context,
+.rtd-server-search-snippet {
   color: var(--pst-color-text-muted);
   font-size: 0.9rem;
-  margin-bottom: 0.25rem;
+}
+
+.rtd-server-search-context {
+  margin-left: 0.25rem;
+}
+
+.rtd-server-search-snippet {
+  margin: 0.35rem 0 0;
+}
+
+.rtd-server-search-snippet span,
+.rtd-server-search-list a span {
+  background-color: var(--pst-color-primary-bg);
+  color: inherit;
+  padding: 0 0.1rem;
+  border-radius: 0.15rem;
 }
 
 /* ── Index page screenshot – Dayfox (light) / Zenburn (dark) ──── */
