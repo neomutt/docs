@@ -25,3 +25,16 @@ python:
 search:
   ignore:
     - "_templates/*"
+  ranking:
+    tutorials/*.html: 3
+    howto/*.html: 2
+    explanation/*.html: 1
+    reference/config/*.html: 1
+    reference/commands/*.html: 1
+    reference/functions/*.html: 1
+    index.html: -2
+    "*/index.html": -1
+    reference/about/*.html: -2
+    reference/releases/*.html: -3
+    reference/config/overview.html: -2
+    reference/functions/overview.html: -2
