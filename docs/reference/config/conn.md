@@ -278,7 +278,8 @@ You should only unset this for particular known hosts, using the `$<account-hook
 
 This option should not be changed from the default unless you understand what you are doing.
 
-Setting this variable to _yes_ will permit verifying partial certification chains, i.e. a certificate chain where not the root, but an intermediate certificate CA, or the host certificate, are marked trusted (in [$certificate_file](certificate-file)), without marking the root signing CA as trusted.
+Setting this variable to _yes_ will permit verifying partial certification chains, i.e. 
+a certificate chain where not the root, but an intermediate certificate CA, or the host certificate, are marked trusted (in [$certificate_file](certificate-file)), without marking the root signing CA as trusted.
 
 --------------------------------------------------------------------------------
 

@@ -50,7 +50,8 @@ Also see the [$record](record) variable.
     ```
 
 This variable controls how copies of outgoing messages are saved.
-When _set_, a check is made to see if a mailbox specified by the recipient address exists (this is done by searching for a mailbox in the [$folder](folder) directory with the _username_ part of the recipient address).  If the mailbox exists, the outgoing message will be saved to that mailbox, otherwise the message is saved to the [$record](record) mailbox.
+When _set_, a check is made to see if a mailbox specified by the recipient address exists (this is done by searching for a mailbox in the [$folder](folder) directory with the _username_ part of the recipient address).  
+If the mailbox exists, the outgoing message will be saved to that mailbox, otherwise the message is saved to the [$record](record) mailbox.
 
 Also see the [$force_name](force-name) variable.
 

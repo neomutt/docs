@@ -101,9 +101,11 @@ encrypted using the selected public keys when sent out.
 
 **Subject:** S/MIME certificate selection menu
 
-**Description:** The NeoMutt S/MIME key selection menu that appears when sending an encrypted message. The menu lists S/MIME certificates with key IDs, trust information, and associated email addresses.
+**Description:** The NeoMutt S/MIME key selection menu that appears when sending an encrypted message. 
+The menu lists S/MIME certificates with key IDs, trust information, and associated email addresses.
 
-**Highlights:** The certificate list layout and the prompt for selecting a certificate or entering a user ID manually. Press `^G` to abort and return to the compose screen.
+**Highlights:** The certificate list layout and the prompt for selecting a certificate or entering a user ID manually. 
+Press `^G` to abort and return to the compose screen.
 :::
 
 To ensure you can view encrypted messages you have sent, you may wish to set

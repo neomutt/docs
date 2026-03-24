@@ -36,9 +36,12 @@ The message preview is controlled by the following functions.
 
 **Subject:** Compose dialog with message preview
 
-**Description:** The NeoMutt compose dialog with `$compose_show_preview` enabled. The screen shows the message header fields at the top, the attachment list, and the message body preview pane displaying a portion of the email text. Show the default layout with the preview below the attachment list.
+**Description:** The NeoMutt compose dialog with `$compose_show_preview` enabled. 
+The screen shows the message header fields at the top, the attachment list, and the message body preview pane displaying a portion of the email text. 
+Show the default layout with the preview below the attachment list.
 
-**Highlights:** The message preview pane integrated into the compose dialog, showing how the email body appears before sending. The preview can be repositioned above attachments with `$compose_preview_above_attachments`, and scrolled with PageUp/PageDown.
+**Highlights:** The message preview pane integrated into the compose dialog, showing how the email body appears before sending. 
+The preview can be repositioned above attachments with `$compose_preview_above_attachments`, and scrolled with PageUp/PageDown.
 :::
 
 ## Limitations

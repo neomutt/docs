@@ -10,29 +10,44 @@ keywords: format strings, index_format, status_format, expandos, conditionals, n
 
 Format strings are a general concept you'll find in several locations through the NeoMutt configuration, especially in the `$index_format`, `$pager_format`, `$status_format`, and other related variables.
 
-The most basic format string element is a percent symbol followed by another character. For example, `%s` represents a message's Subject: header in the `$index_format` variable. The "expandos" available are documented with each format variable, but there are general modifiers available with all formatting expandos, too.
+The most basic format string element is a percent symbol followed by another character. 
+For example, `%s` represents a message's Subject: header in the `$index_format` variable. 
+The "expandos" available are documented with each format variable, but there are general modifiers available with all formatting expandos, too.
 
 ### Width and Justification Modifiers
 
-Some of the modifiers are borrowed right out of C. These are the `[-]m.n` modifiers, as in `%-12.12s`. These modifiers allow you to specify the minimum and maximum size of the resulting string, as well as its justification. If the `-` sign follows the percent, the string will be left-justified instead of right-justified. If there's a number immediately following that, it's the minimum amount of space the formatted string will occupy — if it's naturally smaller than that, it will be padded out with spaces. If a decimal point and another number follow, that's the maximum space allowable — the string will not be permitted to exceed that width, no matter its natural size. Each of these three elements is optional, so that all these are legal format strings: `%-12s`, `%4c`, `%.15F` and `%-12.15L`.
+Some of the modifiers are borrowed right out of C. 
+These are the `[-]m.n` modifiers, as in `%-12.12s`. 
+These modifiers allow you to specify the minimum and maximum size of the resulting string, as well as its justification. 
+If the `-` sign follows the percent, the string will be left-justified instead of right-justified. 
+If there's a number immediately following that, it's the minimum amount of space the formatted string will occupy — if it's naturally smaller than that, it will be padded out with spaces. 
+If a decimal point and another number follow, that's the maximum space allowable — the string will not be permitted to exceed that width, no matter its natural size. 
+Each of these three elements is optional, so that all these are legal format strings: `%-12s`, `%4c`, `%.15F` and `%-12.15L`.
 
 ### Centering
 
-NeoMutt adds some other modifiers to format strings. If you use an equals symbol (`=`) as a numeric prefix (like the minus above), it will force the string to be centered within its minimum space range. For example, `%=14y` will reserve 14 characters for the %y expansion — that's the set of message keywords (formerly X-Label). If the expansion results in a string less than 14 characters, it will be centered in a 14-character space.
+NeoMutt adds some other modifiers to format strings. 
+If you use an equals symbol (`=`) as a numeric prefix (like the minus above), it will force the string to be centered within its minimum space range. 
+For example, `%=14y` will reserve 14 characters for the %y expansion — that's the set of message keywords (formerly X-Label). 
+If the expansion results in a string less than 14 characters, it will be centered in a 14-character space.
 
 ### Case and Character Modifiers
 
-There are two very little-known modifiers that affect the way that an expando is replaced. If there is an underline (`_`) character between any format modifiers and the expando letter, it will expand in all lower case. And if you use a colon (`:`), it will replace all decimal points with underlines.
+There are two very little-known modifiers that affect the way that an expando is replaced. 
+If there is an underline (`_`) character between any format modifiers and the expando letter, it will expand in all lower case. 
+And if you use a colon (`:`), it will replace all decimal points with underlines.
 
 ## Conditionals
 
-Depending on the format string variable, some of its sequences can be used to optionally print a string if their value is nonzero. To optionally print a string based upon one of the above sequences, the following construct is used:
+Depending on the format string variable, some of its sequences can be used to optionally print a string if their value is nonzero. 
+To optionally print a string based upon one of the above sequences, the following construct is used:
 
 ```
 %<sequence_char?optional_string>
 ```
 
-where *sequence_char* is an expando, and *optional_string* is the string you would like printed if *sequence_char* is nonzero. *optional_string* may contain other sequences as well as normal text, but you may not nest optional strings.
+where *sequence_char* is an expando, and *optional_string* is the string you would like printed if *sequence_char* is nonzero. 
+*optional_string* may contain other sequences as well as normal text, but you may not nest optional strings.
 
 Here is an example illustrating how to optionally print the number of new messages (`%n`) in a mailbox in `$status_format`:
 
@@ -48,7 +63,9 @@ You can also switch between two strings using the following construct:
 
 If the value of *sequence_char* is non-zero, *if_string* will be expanded, otherwise *else_string* will be expanded.
 
-The conditional sequences can also be nested by using the `%<` and `>` operators. The `%?` notation can still be used but requires quoting. For example:
+The conditional sequences can also be nested by using the `%<` and `>` operators. 
+The `%?` notation can still be used but requires quoting. 
+For example:
 
 ```
 %<x?true&false>
@@ -57,7 +74,10 @@ The conditional sequences can also be nested by using the `%<` and `>` operators
 
 ## Filters
 
-Any format string ending in a vertical bar (`|`) will be expanded and piped through the first word in the string, using spaces as separator. The string returned will be used for display. If the returned string ends in %, it will be passed through the formatter a second time. This allows the filter to generate a replacement format string including % expandos.
+Any format string ending in a vertical bar (`|`) will be expanded and piped through the first word in the string, using spaces as separator. 
+The string returned will be used for display. 
+If the returned string ends in %, it will be passed through the formatter a second time. 
+This allows the filter to generate a replacement format string including % expandos.
 
 All % expandos in a format string are expanded before the script is called so that:
 
@@ -65,7 +85,8 @@ All % expandos in a format string are expanded before the script is called so th
 set status_format="script.sh '%r %f (%L)'|"
 ```
 
-will make NeoMutt expand `%r`, `%f` and `%L` before calling the script. The example also shows that arguments can be quoted: the script will receive the expanded string between the single quotes as the only argument.
+will make NeoMutt expand `%r`, `%f` and `%L` before calling the script. 
+The example also shows that arguments can be quoted: the script will receive the expanded string between the single quotes as the only argument.
 
 A practical example is the `mutt_xtitle` script installed in the `samples` subdirectory of the NeoMutt documentation: it can be used as filter for `$status_format` to set the current terminal's title, if supported.
 
@@ -83,7 +104,8 @@ set status_format = "%v on %h: %B: %<n?%n&no> new messages %|-"
 
 ### `%>X` — Right-Justify with Fill
 
-This puts as many characters `X` in between two items so that the rest of the line will be right-justified. For example, to put the version string and hostname on the right and fill the gap with spaces (note the space after `%>`):
+This puts as many characters `X` in between two items so that the rest of the line will be right-justified. 
+For example, to put the version string and hostname on the right and fill the gap with spaces (note the space after `%>`):
 
 ```neomuttrc
 set status_format = "%B: %<n?%n&no> new messages %> (%v on %h)"
@@ -91,7 +113,10 @@ set status_format = "%B: %<n?%n&no> new messages %> (%v on %h)"
 
 ### `%*X` — Soft-Fill (Priority Right-Justify)
 
-Normal right-justification will print everything to the left of the `%>`, displaying padding and whatever lies to the right only if there's room. By contrast, "soft-fill" gives priority to the right-hand side, guaranteeing space to display it and showing padding only if there's still room. If necessary, soft-fill will eat text leftwards to make room for rightward text. For example (note two spaces after `%*`):
+Normal right-justification will print everything to the left of the `%>`, displaying padding and whatever lies to the right only if there's room. 
+By contrast, "soft-fill" gives priority to the right-hand side, guaranteeing space to display it and showing padding only if there's still room. 
+If necessary, soft-fill will eat text leftwards to make room for rightward text. 
+For example (note two spaces after `%*`):
 
 ```neomuttrc
 set index_format="%4C %Z %{%b %d} %-15.15L (%<l?%4l&%4c>)%*  %s"
@@ -99,7 +124,9 @@ set index_format="%4C %Z %{%b %d} %-15.15L (%<l?%4l&%4c>)%*  %s"
 
 ## Bytes Size Display
 
-Various format strings contain expandos that display the size of messages in bytes. This includes `%s` in `$attach_format`, `%l` in `$compose_format`, `%s` in `$folder_format`, `%c` and `%cr` in `$index_format`, and `%l` and `%L` in `$status_format`. There are four configuration variables that can be used to customise how the numbers are displayed:
+Various format strings contain expandos that display the size of messages in bytes. 
+This includes `%s` in `$attach_format`, `%l` in `$compose_format`, `%s` in `$folder_format`, `%c` and `%cr` in `$index_format`, and `%l` and `%L` in `$status_format`. 
+There are four configuration variables that can be used to customise how the numbers are displayed:
 
 - `$size_show_bytes` — display the number of bytes when the size is < 1 kilobyte. When unset, kilobytes will be displayed instead.
 - `$size_show_mb` — display the number of megabytes when the size is >= 1 megabyte. When unset, kilobytes will be displayed instead.
@@ -112,7 +139,8 @@ These variables also affect size display in a few other places, such as progress
 
 ## Conditional Dates
 
-This feature allows the format of dates in the index to vary based on how recent the message is. This is especially useful in combination with the nested-if feature.
+This feature allows the format of dates in the index to vary based on how recent the message is. 
+This is especially useful in combination with the nested-if feature.
 
 For example, using `%<[y?%<[d?%[%H:%M]&%[%m/%d]>&%[%y.%m]>` for the date in the `$index_format` will produce a display like:
 
@@ -254,7 +282,9 @@ set index_format='%4C %Z %<[y?%<[m?%<[d?%[%H:%M ]&%[%a %d]>&%[%b %d]>&%[%m/%y ]>
 
 ### Known Bugs
 
-Date parsing doesn't quite do what you expect. "1w" doesn't mean "in the last 7 days", but "*this* week". This doesn't match the normal NeoMutt behavior: for example `~d>1w` means emails dated in the last 7 days.
+Date parsing doesn't quite do what you expect. 
+"1w" doesn't mean "in the last 7 days", but "*this* week". 
+This doesn't match the normal NeoMutt behavior: for example `~d>1w` means emails dated in the last 7 days.
 
 ---
 
@@ -278,7 +308,8 @@ Which can be read as:
 if (%S > 0) { print "Size: %S" } else { print "Empty" }
 ```
 
-These conditions are useful, but in NeoMutt they cannot be nested within one another. This feature uses the notation `%<VAR?TRUE&FALSE>` and allows them to be nested.
+These conditions are useful, but in NeoMutt they cannot be nested within one another. 
+This feature uses the notation `%<VAR?TRUE&FALSE>` and allows them to be nested.
 
 A simple nested condition might be (some whitespace has been introduced for clarity):
 
@@ -369,7 +400,10 @@ set index_format='%4C %Z %{%b %d} %-25.25n %<M?[%M] %s&%s%* %<l?%l&%c>>'
 
 The "initials" feature adds an expando (`%I`) for an author's initials.
 
-The index panel displays a list of emails. Its layout is controlled by the `$index_format` variable. Using this expando saves space in the index panel. This can be useful if you are regularly working with a small set of people.
+The index panel displays a list of emails. 
+Its layout is controlled by the `$index_format` variable. 
+Using this expando saves space in the index panel. 
+This can be useful if you are regularly working with a small set of people.
 
 This feature has no config of its own. It adds an expando which can be used in the `$index_format` variable.
 
@@ -417,7 +451,10 @@ This command is used to inject format strings dynamically into `$index_format` b
 
 If the pattern is a plain string, or a regex, it will be expanded to a pattern using `$default_hook`.
 
-The `$index_format` expando `%@name@` specifies a placeholder for the injection. Index-format-hooks with the same *name* are matched using *pattern* against the current message. Matching is done in the order specified in the .muttrc, with the first match being used. The hook's *format-string* is then substituted and evaluated.
+The `$index_format` expando `%@name@` specifies a placeholder for the injection. 
+Index-format-hooks with the same *name* are matched using *pattern* against the current message. 
+Matching is done in the order specified in the .muttrc, with the first match being used. 
+The hook's *format-string* is then substituted and evaluated.
 
 Because the first match is used, best practice is to put a catch-all `~A` pattern as the last hook.
 

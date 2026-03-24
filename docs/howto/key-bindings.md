@@ -23,7 +23,9 @@ The `bind` command allows you to assign a new effect to a key (e.g. `a`) or a ke
 bind map [,map ...] key function
 ```
 
-*map* specifies in which menu the binding belongs. Multiple maps may be specified by separating them with commas (no additional whitespace is allowed). The currently defined maps are:
+*map* specifies in which menu the binding belongs. 
+Multiple maps may be specified by separating them with commas (no additional whitespace is allowed). 
+The currently defined maps are:
 
 | Map        | Description                                                                                                                                         |
 |------------|-----------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -42,7 +44,11 @@ bind map [,map ...] key function
 
 ### Specifying Keys
 
-*key* is the key (or key sequence) you wish to bind. To specify a control character, use the sequence `\Cx`, where `x` is the letter of the control character (for example, to specify control-A use `\Ca`). Note that the case of `x` as well as `\C` is ignored, so that `\CA`, `\Ca`, `\cA` and `\ca` are all equivalent. An alternative form is to specify the key as a three digit octal number prefixed with a `\` (for example `\177` is equivalent to `\c?`). You can also use the form `<177>`, which allows octal numbers with an arbitrary number of digits.
+*key* is the key (or key sequence) you wish to bind. 
+To specify a control character, use the sequence `\Cx`, where `x` is the letter of the control character (for example, to specify control-A use `\Ca`). 
+Note that the case of `x` as well as `\C` is ignored, so that `\CA`, `\Ca`, `\cA` and `\ca` are all equivalent. 
+An alternative form is to specify the key as a three digit octal number prefixed with a `\` (for example `\177` is equivalent to `\c?`). 
+You can also use the form `<177>`, which allows octal numbers with an arbitrary number of digits.
 
 #### Symbolic Key Names
 
@@ -73,7 +79,8 @@ bind map [,map ...] key function
 | `<f1>`          | function key 1              |
 | `<f10>`         | function key 10             |
 
-The `<what-key>` function can be used to explore keycode and symbolic names for other keys on your keyboard. Executing this function will display information about each key pressed, until terminated by `^G`.
+The `<what-key>` function can be used to explore keycode and symbolic names for other keys on your keyboard. 
+Executing this function will display information about each key pressed, until terminated by `^G`.
 
 :::{admonition} 📷 Screenshot Needed
 :class: tip
@@ -87,7 +94,9 @@ The `<what-key>` function can be used to explore keycode and symbolic names for 
 
 *key* does not need to be enclosed in quotes unless it contains a space (" ") or semi-colon (";").
 
-*function* specifies which action to take when *key* is pressed. For a complete list of functions, see the reference. Note that the `bind` command expects *function* to be specified without angle brackets.
+*function* specifies which action to take when *key* is pressed. 
+For a complete list of functions, see the reference. 
+Note that the `bind` command expects *function* to be specified without angle brackets.
 
 The special function `<noop>` unbinds the specified key sequence. It is recommended to use `unbind` instead.
 
@@ -99,9 +108,13 @@ To remove a binding of a key or key sequence, `unbind` can be used:
 unbind {* | map [,map ...]} [key]
 ```
 
-*map* specifies from which menus the key sequence should be removed. Multiple maps may be specified by separating them with commas (no additional whitespace is allowed). If `*` is given, then the key sequence is removed from all menus.
+*map* specifies from which menus the key sequence should be removed. 
+Multiple maps may be specified by separating them with commas (no additional whitespace is allowed). 
+If `*` is given, then the key sequence is removed from all menus.
 
-*key* is the key or key sequence to be unbound. It may be omitted in which case all keybindings in the given menus are removed. To prevent NeoMutt from becoming unusable some fallback key bindings are added afterwards.
+*key* is the key or key sequence to be unbound. 
+It may be omitted in which case all keybindings in the given menus are removed. 
+To prevent NeoMutt from becoming unusable some fallback key bindings are added afterwards.
 
 ### Fallback Key Bindings
 
@@ -124,9 +137,11 @@ A key binding can also be unbound by mapping it to the special function `<noop>`
 
 ## Enter versus Return
 
-Prior to 2022, NeoMutt used a default ncurses mode (`nl()`). This mode maps keyboard input of either `<Enter>` or `<Return>` to the same value, which NeoMutt interpreted as `<Return>` internally.
+Prior to 2022, NeoMutt used a default ncurses mode (`nl()`). 
+This mode maps keyboard input of either `<Enter>` or `<Return>` to the same value, which NeoMutt interpreted as `<Return>` internally.
 
-However, starting in version 2.2, this mode is turned off, allowing `<Return>` and `<Enter>` to be mapped separately, if desired. The default keyboard mappings set both, but you can override this or create new bindings with one or the other (or both).
+However, starting in version 2.2, this mode is turned off, allowing `<Return>` and `<Enter>` to be mapped separately, if desired. 
+The default keyboard mappings set both, but you can override this or create new bindings with one or the other (or both).
 
 Note that in terminal applications, such as NeoMutt, `<Enter>` is the same as `\n` and `^J`; while `<Return>` is the same as `\r` and `^M`.
 
@@ -157,8 +172,15 @@ bind index gg first-entry
 
 ## Terminal Keybindings
 
-Some key bindings are controlled by the terminal, and so by default can't be bound inside NeoMutt. These may include `^C`, `^\`, `^Q`, `^S`, `^Z`, and on BSD/Mac `^Y`. These terminal settings can be viewed and changed using the `stty` program.
+Some key bindings are controlled by the terminal, and so by default can't be bound inside NeoMutt. 
+These may include `^C`, `^\`, `^Q`, `^S`, `^Z`, and on BSD/Mac `^Y`. 
+These terminal settings can be viewed and changed using the `stty` program.
 
-`stty -a` will list the bound characters (not all of them affect NeoMutt), and what actions they take when pressed. For example, you may see `intr = ^C` in its output. This means typing `^C` will send an interrupt signal. `quit = ^\` means typing `^\` (commonly also `^4`) will send a quit signal.
+`stty -a` will list the bound characters (not all of them affect NeoMutt), and what actions they take when pressed. 
+For example, you may see `intr = ^C` in its output. 
+This means typing `^C` will send an interrupt signal. 
+`quit = ^\` means typing `^\` (commonly also `^4`) will send a quit signal.
 
-To unbind a key from an action, you invoke `stty action undef`. For example, `stty quit undef` will unbind `^\` (and `^4`) from sending the quit signal. Once unbound (e.g. by placing that line in your .profile, or in a NeoMutt wrapper script/function) you can use the key sequence in your NeoMutt bindings.
+To unbind a key from an action, you invoke `stty action undef`. 
+For example, `stty quit undef` will unbind `^\` (and `^4`) from sending the quit signal. 
+Once unbound (e.g. by placing that line in your .profile, or in a NeoMutt wrapper script/function) you can use the key sequence in your NeoMutt bindings.

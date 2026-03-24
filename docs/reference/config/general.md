@@ -817,7 +817,8 @@ The separator to add between messages when piping a list of tagged messages to a
     set pipe_split = no
     ```
 
-Used in connection with the `<pipe-message>` function following `<tag-prefix>`.  If this variable is _unset_, when piping a list of tagged messages NeoMutt will concatenate the messages and will pipe them all concatenated.
+Used in connection with the `<pipe-message>` function following `<tag-prefix>`.  
+If this variable is _unset_, when piping a list of tagged messages NeoMutt will concatenate the messages and will pipe them all concatenated.
 When _set_, NeoMutt will pipe the messages one by one.
 In both cases the messages are piped in the current sorted order, and the [$pipe_sep](pipe-sep) separator is added after each message.
 
@@ -1170,7 +1171,8 @@ Any ties in the primary sort are broken by [$sort_aux](sort-aux).
 When [$use_threads](use-threads) is "threads" or "reverse", [$sort](sort) controls the sorting between threads, and [$sort_aux](sort-aux) controls the sorting within a thread.
 
 The values of "threads" and "reverse-threads" are legacy options, which cause the value of `[$sort_aux](sort-aux)` to also control sorting between threads, and they may not be used with the "last-" prefix.
-The preferred way to enable a threaded view is via `[$use_threads](use-threads)`.  This variable can also be set via the `<sort-mailbox>` and `<sort-reverse>` functions.
+The preferred way to enable a threaded view is via `[$use_threads](use-threads)`.  
+This variable can also be set via the `<sort-mailbox>` and `<sort-reverse>` functions.
 
 Note: When [$use_threads](use-threads) is "threads", the last thread sorts to the bottom; when it is "reversed", the last thread sorts to the top.
 The use of "reverse-" in [$sort](sort) swaps which end the last thread will sort to.

@@ -13,12 +13,16 @@ The Sidebar shows a list of all your mailboxes. The list can be turned on and of
 
 **Subject:** Sidebar overview with mailbox list
 
-**Description:** NeoMutt index view with the sidebar visible on the left side, showing a list of mailboxes (Inbox, Sent, Drafts, Trash, and several mstrstrailing list folders). The sidebar shows mailbox names with unread/total message counts. One mailbox is highlighted (the cursor), another is indicated (the currently open mailbox). The divider character separates the sidebar from the index panel on the right.
+**Description:** NeoMutt index view with the sidebar visible on the left side, showing a list of mailboxes (Inbox, Sent, Drafts, Trash, and several mstrstrailing list folders). 
+The sidebar shows mailbox names with unread/total message counts. 
+One mailbox is highlighted (the cursor), another is indicated (the currently open mailbox). 
+The divider character separates the sidebar from the index panel on the right.
 
 **Highlights:** The overall layout — sidebar panel on the left with the divider character, the highlight bar on one mailbox, the indicator on the open mailbox, and message counts displayed via `$sidebar_format`.
 :::
 
-If you want a simple introduction with examples see the Sidebar Howto. If you just want to get started, you could use the sample [neomuttrc](#sidebar-neomuttrc) below.
+If you want a simple introduction with examples see the Sidebar Howto. 
+If you just want to get started, you could use the sample [neomuttrc](#sidebar-neomuttrc) below.
 
 ## Variables
 

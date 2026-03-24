@@ -87,7 +87,8 @@ Finally, you can apply the usual message-related functions (like
 
 **Subject:** The attachment menu
 
-**Description:** NeoMutt attachment menu (`v` key) showing a multipart message with several attachments listed — a text/plain body, an HTML alternative, an inline image, and a PDF attachment. Each line shows the MIME type, encoding, size, and filename.
+**Description:** NeoMutt attachment menu (`v` key) showing a multipart message with several attachments listed — a text/plain body, an HTML alternative, an inline image, and a PDF attachment. 
+Each line shows the MIME type, encoding, size, and filename.
 
 **Highlights:** The tree structure for nested multipart containers, the MIME type and size columns, and the attachment numbering that lets users navigate and act on individual parts.
 :::

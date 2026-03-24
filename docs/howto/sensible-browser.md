@@ -47,9 +47,11 @@ When you navigate to a parent mailbox ("..") your old mailbox will be highlighte
 
 **Subject:** Mailbox browser with fixed vs variable sort
 
-**Description:** Two NeoMutt file browser views: (1) with `browser_sort=alpha` showing mailboxes in alphabetical order with the current mailbox highlighted, and (2) with `browser_sort=reverse-count` showing mailboxes sorted by message count (highest first) with the highlight on the top entry. Both views show ".." at the top.
+**Description:** Two NeoMutt file browser views: (1) with `browser_sort=alpha` showing mailboxes in alphabetical order with the current mailbox highlighted, and (2) with `browser_sort=reverse-count` showing mailboxes sorted by message count (highest first) with the highlight on the top entry. 
+Both views show ".." at the top.
 
-**Highlights:** The difference in highlight position — in fixed-order mode the current mailbox is highlighted wherever it falls alphabetically, while in variable-order mode the highlight starts at the top (the mailbox with the most mail). The ".." entry always stays at the top regardless of sort.
+**Highlights:** The difference in highlight position — in fixed-order mode the current mailbox is highlighted wherever it falls alphabetically, while in variable-order mode the highlight starts at the top (the mailbox with the most mail). 
+The ".." entry always stays at the top regardless of sort.
 :::
 
 ## See Also

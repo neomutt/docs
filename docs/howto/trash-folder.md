@@ -8,11 +8,15 @@ keywords: trash, delete, purge, purge-message, trash folder, undelete
 
 ## Introduction
 
-In NeoMutt, when you "delete" an email it is first marked deleted. The email isn't really gone until `<sync-mailbox>` is called. This happens when the user leaves the folder, or the function is called manually.
+In NeoMutt, when you "delete" an email it is first marked deleted. 
+The email isn't really gone until `<sync-mailbox>` is called. 
+This happens when the user leaves the folder, or the function is called manually.
 
 After `<sync-mailbox>` has been called the email is gone forever.
 
-The `$trash` variable defines a folder in which to keep old emails. As before, first you mark emails for deletion. When `<sync-mailbox>` is called the emails are moved to the trash folder.
+The `$trash` variable defines a folder in which to keep old emails. 
+As before, first you mark emails for deletion. 
+When `<sync-mailbox>` is called the emails are moved to the trash folder.
 
 The `$trash` path can be either a full directory, or be relative to the `$folder` variable, like the `mailboxes` command.
 
@@ -25,7 +29,8 @@ Emails deleted from the trash folder are gone forever.
 
 **Subject:** Trash folder in the sidebar
 
-**Description:** The NeoMutt sidebar showing a list of mailboxes including a visible "Trash" folder entry with a message count, alongside other folders like Inbox, Sent, and Drafts. The Trash folder should contain some messages to show it is in use.
+**Description:** The NeoMutt sidebar showing a list of mailboxes including a visible "Trash" folder entry with a message count, alongside other folders like Inbox, Sent, and Drafts. 
+The Trash folder should contain some messages to show it is in use.
 
 **Highlights:** How the Trash folder appears as a regular mailbox in the sidebar, its unread/total message count, and how it fits into the overall mailbox hierarchy.
 :::

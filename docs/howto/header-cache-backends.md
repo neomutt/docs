@@ -22,7 +22,8 @@ To check if NeoMutt supports Kyoto Cabinet, look for:
 
 ### Introduction
 
-This feature adds support for using Kyoto Cabinet, the successor to Tokyo Cabinet, as a storage backend for NeoMutt's header cache (hcache). It is enabled at configure time with the *--with-kyotocabinet=\<path\>* switch.
+This feature adds support for using Kyoto Cabinet, the successor to Tokyo Cabinet, as a storage backend for NeoMutt's header cache (hcache). 
+It is enabled at configure time with the *--with-kyotocabinet=\<path\>* switch.
 
 ### See Also
 
@@ -43,7 +44,8 @@ Clemens Lang
 
 ### Introduction
 
-This feature adds support for using LMDB as a storage backend for NeoMutt's header cache (hcache). It is enabled at configure time with the *--with-lmdb=\<path\>* switch.
+This feature adds support for using LMDB as a storage backend for NeoMutt's header cache (hcache). 
+It is enabled at configure time with the *--with-lmdb=\<path\>* switch.
 
 :::{note}
 It is not recommended to store the lmdb database on a shared drive.

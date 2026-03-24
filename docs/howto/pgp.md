@@ -88,7 +88,8 @@ encrypted using the selected public keys when sent out.
 
 **Subject:** PGP key selection menu during send
 
-**Description:** The NeoMutt PGP key selection menu that appears when sending an encrypted message and multiple matching keys exist for a recipient. The menu lists PGP keys with columns for key ID, capabilities, flags, validity, and user ID.
+**Description:** The NeoMutt PGP key selection menu that appears when sending an encrypted message and multiple matching keys exist for a recipient. 
+The menu lists PGP keys with columns for key ID, capabilities, flags, validity, and user ID.
 
 **Highlights:** The key list layout showing how to identify the correct key by its capability and validity indicators, and the prompt at the bottom for selecting a key or entering a user ID manually.
 :::
@@ -108,7 +109,8 @@ capabilities, flags, and validity fields.
 
 **Subject:** PGP key menu entry layout
 
-**Description:** The NeoMutt PGP key selection menu showing several key entries. Each entry displays the flags field (`%f`), capabilities field (`%c`), validity field (`%t`), key length, creation date, key ID, and user ID as formatted by `$pgp_entry_format`.
+**Description:** The NeoMutt PGP key selection menu showing several key entries. 
+Each entry displays the flags field (`%f`), capabilities field (`%c`), validity field (`%t`), key length, creation date, key ID, and user ID as formatted by `$pgp_entry_format`.
 
 **Highlights:** The flags, capabilities, and validity columns — the tables below explain what each indicator (R/X/d/c flags, e/s capabilities, trust levels) means in practice.
 :::

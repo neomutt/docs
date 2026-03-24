@@ -19,7 +19,8 @@ The attachment keyword will not be scanned in text matched by
 
 **Subject:** Forgotten attachment warning prompt
 
-**Description:** The NeoMutt screen showing the abort prompt that appears when the user tries to send a message containing an attachment keyword (e.g., "see attached") but no files are attached. The prompt at the bottom of the screen asks whether to abort sending.
+**Description:** The NeoMutt screen showing the abort prompt that appears when the user tries to send a message containing an attachment keyword (e.g., "see attached") but no files are attached. 
+The prompt at the bottom of the screen asks whether to abort sending.
 
 **Highlights:** The warning prompt triggered by `$abort_noattach`, showing the quadoption question that lets the user choose to abort or proceed with sending the message without an attachment.
 :::

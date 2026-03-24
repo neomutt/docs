@@ -52,9 +52,11 @@ shows the order and timing of hook execution.
 
 **Subject:** Compose menu during message composition
 
-**Description:** The NeoMutt compose screen at step 16 of the flow, showing all header fields (From, To, Cc, Bcc, Subject, Reply-To, Fcc), the security/encryption settings, and the attachment list. The message has been edited and is ready for final review before sending.
+**Description:** The NeoMutt compose screen at step 16 of the flow, showing all header fields (From, To, Cc, Bcc, Subject, Reply-To, Fcc), the security/encryption settings, and the attachment list. 
+The message has been edited and is ready for final review before sending.
 
-**Highlights:** The complete compose menu layout — header fields at the top, attachment list below, and the available key bindings (send, edit, attach, postpone, etc.) in the help bar. This is the stage where `send2-hook` fires on each header change.
+**Highlights:** The complete compose menu layout — header fields at the top, attachment list below, and the available key bindings (send, edit, attach, postpone, etc.) in the help bar. 
+This is the stage where `send2-hook` fires on each header change.
 :::
 
 17. **Message encryption and signing.** Key selection.

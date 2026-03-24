@@ -18,7 +18,8 @@ NeoMutt has different types of logging/error messages:
 
 ## Viewing Log Messages
 
-These log messages are shown in the command bar at the bottom of the UI (usually below the status line). Errors are shown in a different colour than the other message types.
+These log messages are shown in the command bar at the bottom of the UI (usually below the status line). 
+Errors are shown in a different colour than the other message types.
 
 To adjust the colours used for display:
 
@@ -29,7 +30,8 @@ color message ...
 
 See the description of `color` for the precise syntax.
 
-The command bar shows only the last message. To show the last 100 messages (this includes all types of messages from debug to error), use the `<show-log-messages>` function.
+The command bar shows only the last message. 
+To show the last 100 messages (this includes all types of messages from debug to error), use the `<show-log-messages>` function.
 
 :::{admonition} 📷 Screenshot Needed
 :class: tip
@@ -49,6 +51,7 @@ The command bar shows only the last message. To show the last 100 messages (this
    neomutt -d 2
    ```
 
-2. The `-d` parameter expects a debug level which can range from 1 to 5 and affects verbosity of the debug messages. A value of **2** is recommended to start with.
+2. The `-d` parameter expects a debug level which can range from 1 to 5 and affects verbosity of the debug messages. 
+   A value of **2** is recommended to start with.
 
 3. If debug logging is enabled, all log messages (i.e. errors, warnings, ..., debug) are additionally written to the file `~/.neomuttdebug0`.

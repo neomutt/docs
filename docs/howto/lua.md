@@ -8,7 +8,8 @@ keywords: lua, lua-source, scripting, embedded lua, automation
 
 ## Introduction
 
-Lua is a simple scripting language that's frequently embedded into other programs, such as NeoVim. It allows users to customise the behaviour of the host program.
+Lua is a simple scripting language that's frequently embedded into other programs, such as NeoVim. 
+It allows users to customise the behaviour of the host program.
 
 In NeoMutt, Lua can be used to get/set config options and run commands.
 
@@ -55,9 +56,13 @@ A simple example of running some Lua commands in NeoMutt:
 
 ## Limitations
 
-Currently, the Lua scripting is very limited. It doesn't have any way to interact with the objects within NeoMutt: the Mailboxes, the Emails, etc. Beyond that, there's almost zero documentation.
+Currently, the Lua scripting is very limited. 
+It doesn't have any way to interact with the objects within NeoMutt: the Mailboxes, the Emails, etc. 
+Beyond that, there's almost zero documentation.
 
-This state is changing. There is some new work coming to NeoMutt that exposes the Accounts, Mailboxes and Emails to Lua. This would allow the user to perform meaningful actions.
+This state is changing. 
+There is some new work coming to NeoMutt that exposes the Accounts, Mailboxes and Emails to Lua. 
+This would allow the user to perform meaningful actions.
 
 See: [https://github.com/neomutt/neomutt/pull/4707](https://github.com/neomutt/neomutt/pull/4707)
 

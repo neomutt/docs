@@ -27,9 +27,12 @@ Once a message is postponed, there are several ways to resume it:
 
 **Subject:** Postponed messages selection menu
 
-**Description:** The NeoMutt postponed messages menu showing a list of previously postponed drafts. Multiple entries are visible with their subjects, dates, and recipients. The user is about to select which message to resume composing.
+**Description:** The NeoMutt postponed messages menu showing a list of previously postponed drafts. 
+Multiple entries are visible with their subjects, dates, and recipients. 
+The user is about to select which message to resume composing.
 
-**Highlights:** The postponed message list that appears when multiple drafts exist, allowing the user to choose which message to resume. This menu pops up automatically when composing a new message while postponed messages exist.
+**Highlights:** The postponed message list that appears when multiple drafts exist, allowing the user to choose which message to resume. 
+This menu pops up automatically when composing a new message while postponed messages exist.
 :::
 
 :::{note}

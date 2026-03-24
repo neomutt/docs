@@ -84,7 +84,8 @@ For the default value, "joe" would be expanded to: "~f joe | ~s joe".
     set thorough_search = yes
     ```
 
-Affects the `~b`, `~B`, and `~h` search operations described in section "$patterns".  If _set_, the headers and body/attachments of messages to be searched are decoded before searching.
+Affects the `~b`, `~B`, and `~h` search operations described in section "$patterns".  
+If _set_, the headers and body/attachments of messages to be searched are decoded before searching.
 If _unset_, messages are searched as they appear in the folder.
 
 Users searching attachments or for non-ASCII characters should _set_ this value because decoding also includes MIME parsing/decoding and possible character set conversions.

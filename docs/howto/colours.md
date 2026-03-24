@@ -28,21 +28,27 @@ If your terminal supports color, you can spice up NeoMutt by creating your own c
 The config option `$color_directcolor` must be set to its final value *before* using any `color` command.
 :::
 
-The types of objects that can be colored fall into two categories: [Simple Colors](#simple-colors) such as the highlight in the index, and [Color Lists](#color-lists) such as the status bar. These lists can create complex coloring rules.
+The types of objects that can be colored fall into two categories: [Simple Colors](#simple-colors) such as the highlight in the index, and [Color Lists](#color-lists) such as the status bar. 
+These lists can create complex coloring rules.
 
 ### Color Style
 
 Objects in NeoMutt can be given colors and attributes to make things easier to find and use.
 
 :::{note}
-Objects must be given *both* a foreground and background color (it is not possible to specify one or the other). Note that `default` can be used as transparent color (see below).
+Objects must be given *both* a foreground and background color (it is not possible to specify one or the other). 
+Note that `default` can be used as transparent color (see below).
 :::
 
-Colors can be specified in up to three ways, using their name such as `green`, `blue`; by their number in the palette, such as `color12`, `color207` (the palette consists of the [256 Xterm colors](https://web.archive.org/web/20190712111427/https://jonasjacek.github.io/colors/)); or by using hexadecimal RGB codes `#RRGGBB`, where `RR`, `GG`, `BB` are the red, green, and blue components given as a hexadecimal number between 00 and FF (=255), e.g. `#00FFFF` (bright cyan) or `#12af84` (greenish). The last syntax is only accepted if `$color_directcolor` is set.
+Colors can be specified in up to three ways, using their name such as `green`, `blue`; by their number in the palette, such as `color12`, `color207` (the palette consists of the [256 Xterm colors](https://web.archive.org/web/20190712111427/https://jonasjacek.github.io/colors/)); or by using hexadecimal RGB codes `#RRGGBB`, where `RR`, `GG`, `BB` are the red, green, and blue components given as a hexadecimal number between 00 and FF (=255), e.g. `#00FFFF` (bright cyan) or `#12af84` (greenish). 
+The last syntax is only accepted if `$color_directcolor` is set.
 
-Named colours may also be prefixed by a *modifier*. `bright` or `light` will make the color boldfaced or light (e.g., `brightred`). `alert` to make a blinking/alert color (e.g., `alertred`).
+Named colours may also be prefixed by a *modifier*. 
+`bright` or `light` will make the color boldfaced or light (e.g., `brightred`). 
+`alert` to make a blinking/alert color (e.g., `alertred`).
 
-The precise behavior depends on the terminal and its configuration. In particular, the boldfaced/light difference and such background colors may be available only for terminals configured with at least 16 colors, as specified by the `$TERM` environment variable.
+The precise behavior depends on the terminal and its configuration. 
+In particular, the boldfaced/light difference and such background colors may be available only for terminals configured with at least 16 colors, as specified by the `$TERM` environment variable.
 
 *foreground* and *background* can be one of the following:
 
@@ -65,7 +71,9 @@ In addition to the colors, objects may have their *attributes* set:
 - standout
 - underline
 
-If your terminal supports it, the special keyword *default* can be used as a transparent color. In this case *default* can be used to only set the foreground or background color. The following sets the foreground and background color individually: the first command leaves the foreground untouched while the second one leaves the background untouched:
+If your terminal supports it, the special keyword *default* can be used as a transparent color. 
+In this case *default* can be used to only set the foreground or background color. 
+The following sets the foreground and background color individually: the first command leaves the foreground untouched while the second one leaves the background untouched:
 
 ```neomuttrc
 # Make error messages white text on a red background
@@ -73,9 +81,12 @@ color error default red
 color error white   default
 ```
 
-On startup NeoMutt tries to detect whether the terminal it is running in supports directcolor (aka TrueColor aka 24-bit color). If the terminal does, NeoMutt enables the config option `$color_directcolor` otherwise it disables it. Furthermore, NeoMutt allows to use the RGB colors syntax with the `color` command to colour elements with 24-bit colors.
+On startup NeoMutt tries to detect whether the terminal it is running in supports directcolor (aka TrueColor aka 24-bit color). 
+If the terminal does, NeoMutt enables the config option `$color_directcolor` otherwise it disables it. 
+Furthermore, NeoMutt allows to use the RGB colors syntax with the `color` command to colour elements with 24-bit colors.
 
-For the detection to work the *TERM* environment variable must be set up properly to advertise the terminals directcolor capability. *TERM*-values which do that usually end in `-direct`, e.g. `xterm-direct`.
+For the detection to work the *TERM* environment variable must be set up properly to advertise the terminals directcolor capability. 
+*TERM*-values which do that usually end in `-direct`, e.g. `xterm-direct`.
 
 If NeoMutt does not detect directcolor color support, but you are sure your terminal supports it, you may try to explicitly set the *TERM* environment variable by starting NeoMutt from the terminal as follows:
 
@@ -83,7 +94,8 @@ If NeoMutt does not detect directcolor color support, but you are sure your term
 TERM=xterm-direct neomutt
 ```
 
-If that still does not help, you can additionally force NeoMutt to use directcolors by setting `$color_directcolor`. Setting this variable manually is strongly discouraged since it usually leads to wrong colors.
+If that still does not help, you can additionally force NeoMutt to use directcolors by setting `$color_directcolor`. 
+Setting this variable manually is strongly discouraged since it usually leads to wrong colors.
 
 (simple-colors)=
 ### Simple Colors
@@ -168,7 +180,9 @@ uncolor compose_header
 
 The quoted objects refer to quoted lines in an email reply. They are defined using the `$reply_regex` config option.
 
-The quoted email colours don't use a pattern. The first colour, `quoted` provides a default colour for all quoted text. Also, each different level of quoting can be given a different colour using, `quoted1`, `quoted2`, `quoted3` up to `quoted9`.
+The quoted email colours don't use a pattern. 
+The first colour, `quoted` provides a default colour for all quoted text. 
+Also, each different level of quoting can be given a different colour using, `quoted1`, `quoted2`, `quoted3` up to `quoted9`.
 
 | Colour Name | Description                                           |
 |-------------|-------------------------------------------------------|
@@ -195,7 +209,8 @@ uncolor quoted2
 
 **Subject:** Quoted text with per-level colours
 
-**Description:** NeoMutt pager showing a deeply-quoted email reply with three or more levels of quoting — level 1 (`>`) in bright blue, level 2 (`>>`) in bright green, level 3 (`>>>`) in yellow, each visually distinct. The unquoted reply text appears in the default colour.
+**Description:** NeoMutt pager showing a deeply-quoted email reply with three or more levels of quoting — level 1 (`>`) in bright blue, level 2 (`>>`) in bright green, level 3 (`>>>`) in yellow, each visually distinct. 
+The unquoted reply text appears in the default colour.
 
 **Highlights:** The colour gradient across quote levels — how distinct colours make it easy to follow the conversation depth and quickly identify the newest reply text.
 :::
@@ -203,19 +218,27 @@ uncolor quoted2
 (color-lists)=
 ### Color Lists
 
-Some objects in NeoMutt support *lists* of color rules. Each rule has a pattern and a color. Each is checked in turn and any matching rules are applied cumulatively (overlaid).
+Some objects in NeoMutt support *lists* of color rules. 
+Each rule has a pattern and a color. 
+Each is checked in turn and any matching rules are applied cumulatively (overlaid).
 
-When applying the colours, each pattern will be tested against the field to be colored. All of the matching patterns will have their colors applied in the order they are configured.
+When applying the colours, each pattern will be tested against the field to be colored. 
+All of the matching patterns will have their colors applied in the order they are configured.
 
 The color lists work in slightly different ways to each other.
 
 `attach_headers`, `body` and `header` match a *regular expression* (regex) in the header/body of an email.
 
-`index` objects match a *pattern* in the email index (see Patterns). Note that IMAP server-side searches (=b, =B, =h) are not supported for color index patterns.
+`index` objects match a *pattern* in the email index (see Patterns). 
+Note that IMAP server-side searches (=b, =B, =h) are not supported for color index patterns.
 
-When `$header_color_partial` is unset (the default), a `header` matched by *regex* will have color applied to the entire header. When set, color is applied only to the exact text matched by *regex*.
+When `$header_color_partial` is unset (the default), a `header` matched by *regex* will have color applied to the entire header. 
+When set, color is applied only to the exact text matched by *regex*.
 
-For the `status` list, the *regular expression* is optional. Without one, the command will set the default style for the status bar. With a regex (and an optional number), it's possible to style parts of the status bar. See: [Status-Color feature](#status-color-feature) for more detail.
+For the `status` list, the *regular expression* is optional. 
+Without one, the command will set the default style for the status bar. 
+With a regex (and an optional number), it's possible to style parts of the status bar. 
+See: [Status-Color feature](#status-color-feature) for more detail.
 
 Color lists can be undone by using the `uncolor` command and the pattern or `*` to match.
 
@@ -486,7 +509,10 @@ David Sterba, Thomas Glanzmann, Kirill A. Shutemov, Richard Russon
 
 ## Attach Headers Color Feature
 
-The attach headers color feature allows specifying regexes to color attachment headers just like the mail body would. The headers are the parts colored by the `attachment` color. Coloring them is useful to highlight the results of GPGME's signature checks or simply the mimetype or size of the attachment. Only the part matched by the regex is colored.
+The attach headers color feature allows specifying regexes to color attachment headers just like the mail body would. 
+The headers are the parts colored by the `attachment` color. 
+Coloring them is useful to highlight the results of GPGME's signature checks or simply the mimetype or size of the attachment. 
+Only the part matched by the regex is colored.
 
 ### Attach Headers Color Usage
 

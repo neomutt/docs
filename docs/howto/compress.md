@@ -6,9 +6,13 @@ keywords: compress, compressed folders, open-hook, close-hook, append-hook, gzip
 
 # How to Compress Mailboxes
 
-The Compressed Folder feature allows NeoMutt to read mailbox files that are compressed. But it isn't limited to compressed files. It works well with encrypted files, too. In fact, if you can create a program/script to convert to and from your format, then NeoMutt can read it.
+The Compressed Folder feature allows NeoMutt to read mailbox files that are compressed. 
+But it isn't limited to compressed files. 
+It works well with encrypted files, too. 
+In fact, if you can create a program/script to convert to and from your format, then NeoMutt can read it.
 
-The feature adds three hooks to NeoMutt: `open-hook`, `close-hook` and `append-hook`. They define commands to: uncompress a file; compress a file; append messages to an already compressed file.
+The feature adds three hooks to NeoMutt: `open-hook`, `close-hook` and `append-hook`. 
+They define commands to: uncompress a file; compress a file; append messages to an already compressed file.
 
 There are some examples of both compressed and encrypted files, later. For now, the documentation will just concentrate on compressed files.
 
@@ -20,7 +24,9 @@ close-hook  regex "shell-command"
 append-hook regex "shell-command"
 ```
 
-The shell-command must contain two placeholders for filenames: `%f` and `%t`. These represent "from" and "to" filenames. These placeholders should be placed inside single-quotes to prevent unintended shell expansions.
+The shell-command must contain two placeholders for filenames: `%f` and `%t`. 
+These represent "from" and "to" filenames. 
+These placeholders should be placed inside single-quotes to prevent unintended shell expansions.
 
 If you need the exact string "%f" or "%t" in your command, simply double up the "%" character, e.g. "%%f" or "%%t".
 
@@ -121,7 +127,8 @@ The `append-hook` can also include extra options, e.g. compression level: `--bes
 
 ### Empty Files
 
-NeoMutt assumes that an empty file is not compressed. In this situation, unset `$save_empty`, so that the compressed file will be removed if you delete all of the messages.
+NeoMutt assumes that an empty file is not compressed. 
+In this situation, unset `$save_empty`, so that the compressed file will be removed if you delete all of the messages.
 
 ### Security
 

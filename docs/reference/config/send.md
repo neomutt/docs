@@ -696,7 +696,8 @@ This variable controls whether or not a Mail-Followup-To header is honored when 
     set ignore_list_reply_to = no
     ```
 
-Affects the behavior of the `<reply>` function when replying to messages from mailing lists (as defined by the "$subscribe" or "$lists" commands).  When _set_, if the "Reply-To:" field is set to the same value as the "To:" field, NeoMutt assumes that the "Reply-To:" field was set by the mailing list to automate responses to the list, and will ignore this field.
+Affects the behavior of the `<reply>` function when replying to messages from mailing lists (as defined by the "$subscribe" or "$lists" commands).  
+When _set_, if the "Reply-To:" field is set to the same value as the "To:" field, NeoMutt assumes that the "Reply-To:" field was set by the mailing list to automate responses to the list, and will ignore this field.
 To direct a response to the mailing list when this option is _set_, use the `$<list-reply>` function; `<group-reply>` will reply to both the sender and the list.
 
 --------------------------------------------------------------------------------
@@ -1006,7 +1007,8 @@ Recipients are not prompted for; send-hooks are not evaluated; no alias expansio
     ```
 
 It may sometimes arrive that you receive mail to a certain machine, move the messages to another machine, and reply to some the messages from there.
-If this variable is _set_, the default _From:_ line of the reply messages is built using the address where you received the messages you are replying to **if** that address matches your "$alternates".  If the variable is _unset_, or the address that would be used doesn't match your "$alternates", the _From:_ line will use your address on the current machine.
+If this variable is _set_, the default _From:_ line of the reply messages is built using the address where you received the messages you are replying to **if** that address matches your "$alternates".  
+If the variable is _unset_, or the address that would be used doesn't match your "$alternates", the _From:_ line will use your address on the current machine.
 
 Also see the "$alternates" command and [$reverse_real_name](reverse-real-name).
 
@@ -1043,7 +1045,8 @@ In either case, a missing real name will be filled in afterwards using the value
 
 Specifies the program and arguments used to deliver mail sent by NeoMutt.
 NeoMutt expects that the specified program interprets additional arguments as recipient addresses.
-NeoMutt appends all recipients after adding a `--` delimiter (if not already present).  Additional flags, such as for [$use_8bit_mime](use-8bit-mime), [$use_envelope_from](use-envelope-from), [$dsn_notify](dsn-notify), or [$dsn_return](dsn-return) will be added before the delimiter.
+NeoMutt appends all recipients after adding a `--` delimiter (if not already present).  
+Additional flags, such as for [$use_8bit_mime](use-8bit-mime), [$use_envelope_from](use-envelope-from), [$dsn_notify](dsn-notify), or [$dsn_return](dsn-return) will be added before the delimiter.
 
 **Note:** This command is invoked differently from most other commands in NeoMutt.
 It is tokenized by space, and invoked directly via `execvp(3)` with an array of arguments - so commands or arguments with spaces in them are not supported.
