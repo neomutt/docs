@@ -566,7 +566,7 @@ is handled internally by NeoMutt.
 
 This mailcap file is fairly simple and standard:
 
-```bash
+```
 # I'm always running X :)
 video/*;        xanim %s > /dev/null
 image/*;        xv %s > /dev/null
@@ -576,7 +576,7 @@ text/html;      firefox -remote 'openURL(%s)'
 
 These mailcap files show how to control the lifespan of the temporary file:
 
-```bash
+```
 # The `display` program shows an image and doesn't return until the user quits.
 
 # Display an image, but wait for the user to quit the display program.
@@ -589,7 +589,7 @@ image/png; display %s &;
 # The file will be automatically deleted after $timeout seconds.
 ```
 
-```bash
+```
 # Some graphical programs return immediately if they're already running.
 # We'll add an ampersand (&), just in case they're not.
 
@@ -602,7 +602,7 @@ application/x-tar; file-roller %s &;
 application/x-tar; file-roller %s &; x-neomutt-keep
 ```
 
-```bash
+```
 # Some programs watch any files they have open.
 # If NeoMutt deleted the file, the program would close prematurely.
 
@@ -612,7 +612,7 @@ application/pdf; my-pdf-script.sh %s; x-neomutt-keep
 
 This mailcap file shows quite a number of examples:
 
-```bash
+```
 # Use xanim to view all videos Xanim produces a header on startup,
 # send that to /dev/null so I don't see it
 video/*;        xanim %s > /dev/null

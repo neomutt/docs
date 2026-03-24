@@ -30,7 +30,7 @@ Expected result: the index shows only matching messages while the limit is activ
 
 Try these common patterns:
 
-```text
+```
 ~f alice@example.com     (from)
 ~s "build report"        (subject)
 ~d <1w                  (date within 1 week)

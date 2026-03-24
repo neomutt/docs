@@ -459,3 +459,14 @@ html[data-theme=dark] .dia-reference {
   color: #fff;
 }
 
+.highlight-sh pre {
+    background: #000;
+    color: #fff;
+}
+
+.highlight-neomuttrc pre
+{
+    border: 1px solid green;
+    border-radius: 0.25rem;
+}
+
