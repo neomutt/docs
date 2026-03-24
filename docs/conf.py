@@ -28,6 +28,7 @@ templates_path = ['_templates']
 html_theme = 'sphinx_book_theme'
 html_static_path = ["_static"]
 html_css_files = ["custom.css"]
+html_js_files = ["rtd-server-search.js"]
 html_logo = "_static/logo.png"
 html_title = "NeoMutt Docs"
 html_favicon = "_static/favicon.png"

@@ -367,6 +367,28 @@ html[data-theme=dark] .highlight .hll {
   line-height: inherit;
 }
 
+/* ── Read the Docs server-side search ─────────────────────────── */
+.rtd-server-search-summary {
+  margin: 1rem 0;
+}
+
+.rtd-server-search-result {
+  border-top: 1px solid var(--pst-color-border);
+  padding: 1rem 0;
+}
+
+.rtd-server-search-result h2 {
+  font-size: 1.2rem;
+  margin-bottom: 0.25rem;
+}
+
+.rtd-server-search-meta,
+.rtd-server-search-section {
+  color: var(--pst-color-text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 0.25rem;
+}
+
 /* ── Index page screenshot – Dayfox (light) / Zenburn (dark) ──── */
 html[data-theme=light] .index-preview {
   --s0: #3d2b5a; --s1: #f6f2ee; --s2: #3d2b5a; --s3: #e7d2be;
@@ -469,4 +491,3 @@ html[data-theme=dark] .dia-reference {
     border: 1px solid green;
     border-radius: 0.25rem;
 }
-
