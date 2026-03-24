@@ -22,3 +22,6 @@ python:
    - method: pip
      path: pygments
 
+search:
+  ignore:
+    - "_templates/*"
