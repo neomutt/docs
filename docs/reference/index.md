@@ -105,8 +105,10 @@ maxdepth: 1
 ---
 cli-syntax
 color-syntax
+conditional-expandos
 expando-conditional-guide
 expando-format-guide
+expando-syntax
 pattern-syntax
 sending-email
 ```
