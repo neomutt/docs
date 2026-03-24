@@ -6,15 +6,6 @@ keywords: neomutt, mbox, mbox_check_cur, mbox_field_delimiter, mbox_header_cache
 
 # Mbox Options
 
-:::{admonition} Diátaxis: Reference
-:class: note
-
-Write as **austere description**. Be factual, precise, and complete. Use consistent formatting
-throughout. Describe what things ARE, not how to use them. Use tables for structured data.
-Mirror the structure of the software itself. Avoid instruction or explanation — link out to
-how-to guides and explanation pages instead.
-:::
-
 --------------------------------------------------------------------------------
 
 (check-mbox-size)=

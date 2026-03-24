@@ -6,15 +6,6 @@ keywords: tags, tagging, tag-pattern, tag-prefix, custom tags, notmuch, imap, hi
 
 # How to Use Message Tagging
 
-:::{admonition} Diátaxis: How-To Guide
-:class: note
-
-Write as **directions**. Assume the reader is competent and knows what they want to achieve.
-Be practical and goal-focused. Use numbered steps for procedures. Don't explain why — link
-to explanation pages instead. Keep it focused on the specific task. Start with prerequisites,
-give the steps, show the expected result.
-:::
-
 ## Using Tags
 
 Sometimes it is desirable to perform an operation on a group of messages all at once rather than one at a time. An example might be to save messages to a mailing list to a separate folder, or to delete all messages with a given subject. To tag all messages matching a pattern, use the `<tag-pattern>` function, which is bound to "shift-T" by default. Patterns are completable in the editor menu. Invoke the `<complete>` function (by default bound to "Tab") after typing `~` to get a selectable list. Or you can select individual messages by hand using the `<tag-message>` function, which is bound to "t" by default. See [patterns](../reference/patterns.md) for NeoMutt's pattern matching syntax.

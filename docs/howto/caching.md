@@ -6,15 +6,6 @@ keywords: header cache, body cache, caching, hcache, message cache, lz4, zlib, z
 
 # How to Set Up Header/Body Caching
 
-:::{admonition} Diátaxis: How-To Guide
-:class: note
-
-Write as **directions**. Assume the reader is competent and knows what they want to achieve.
-Be practical and goal-focused. Use numbered steps for procedures. Don't explain why — link
-to explanation pages instead. Keep it focused on the specific task. Start with prerequisites,
-give the steps, show the expected result.
-:::
-
 NeoMutt contains two types of local caching: *(1)* the so-called "header caching" and *(2)* the so-called "body caching" which are both described in this section.
 
 Header caching is optional as it depends on external libraries, body caching is always enabled if NeoMutt is compiled with POP and/or IMAP support as these use it (body caching requires no external library).

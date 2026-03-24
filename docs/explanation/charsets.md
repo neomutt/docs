@@ -7,15 +7,6 @@ diataxis_type: explanation
 
 # Understanding Character Sets
 
-:::{admonition} Diátaxis: Explanation
-:class: note
-
-Write as **discursive discussion**. Explain WHY things are the way they are. Provide context,
-background, and history. Connect concepts together. Use "about" framing. It's OK to include
-opinion and perspective. Don't include step-by-step instructions — link to tutorials and
-how-to guides instead. The reader should come away with deeper understanding.
-:::
-
 A "character set" is basically a mapping between bytes and glyphs and implies a certain
 character encoding scheme. For example, for the ISO 8859 family of character sets, an
 encoding of 8bit per character is used. For the Unicode character set, different character

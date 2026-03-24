@@ -10,15 +10,6 @@ keywords: neomutt, functions, alias, menu, bindings, keys, address book
 Browse and select from your saved email address aliases.
 You can sort, search, delete, and compose messages to your contacts.
 
-:::{admonition} Diátaxis: Reference
-:class: note
-
-Write as **austere description**. Be factual, precise, and complete. Use consistent formatting
-throughout. Describe what things ARE, not how to use them. Use tables for structured data.
-Mirror the structure of the software itself. Avoid instruction or explanation — link out to
-how-to guides and explanation pages instead.
-:::
-
 | Function               | Default Keys | Description                                  | Inherited From                      |
 |------------------------|--------------|----------------------------------------------|-------------------------------------|
 | `<delete-entry>`       | `d`          | Delete the current entry                     |                                     |

@@ -6,15 +6,6 @@ keywords: neomutt, color, colour, attributes, theme, terminal
 
 # Colour Names and Attributes
 
-:::{admonition} Diátaxis: Reference
-:class: note
-
-Write as **austere description**. Be factual, precise, and complete. Use consistent formatting
-throughout. Describe what things ARE, not how to use them. Use tables for structured data.
-Mirror the structure of the software itself. Avoid instruction or explanation — link out to
-how-to guides and explanation pages instead.
-:::
-
 ## Colour Specification
 
 Objects in NeoMutt must be given *both* a foreground and background colour (it is not possible to specify one or the other). Note that `default` can be used as a transparent colour (see below).

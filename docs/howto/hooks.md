@@ -4,15 +4,6 @@ description: Execute commands automatically based on events, mailboxes, and mess
 keywords: hooks, folder-hook, send-hook, reply-hook, message-hook, crypt-hook, account-hook, timeout-hook, startup-hook, shutdown-hook, new-mail-hook
 ---
 
-:::{admonition} Diátaxis: How-To Guide
-:class: note
-
-Write as **directions**. Assume the reader is competent and knows what they want to achieve.
-Be practical and goal-focused. Use numbered steps for procedures. Don't explain why — link
-to explanation pages instead. Keep it focused on the specific task. Start with prerequisites,
-give the steps, show the expected result.
-:::
-
 # How to Use Hooks
 
 A *hook* is a concept found in many other programs which allows you to execute arbitrary commands before performing some operation. For example, you may wish to tailor your configuration based upon which mailbox you are reading, or to whom you are sending mail. In the NeoMutt world, a *hook* consists of a regular expression or pattern along with a configuration option/command.

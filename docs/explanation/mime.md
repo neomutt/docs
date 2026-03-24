@@ -7,15 +7,6 @@ diataxis_type: explanation
 
 # Understanding MIME
 
-:::{admonition} Diátaxis: Explanation
-:class: note
-
-Write as **discursive discussion**. Explain WHY things are the way they are. Provide context,
-background, and history. Connect concepts together. Use "about" framing. It's OK to include
-opinion and perspective. Don't include step-by-step instructions — link to tutorials and
-how-to guides instead. The reader should come away with deeper understanding.
-:::
-
 Quite a bit of effort has been made to make NeoMutt the premier text-mode MIME MUA. Every
 effort has been made to provide the functionality that the discerning MIME user requires,
 and the conformance to the standards wherever possible. When configuring NeoMutt for MIME,

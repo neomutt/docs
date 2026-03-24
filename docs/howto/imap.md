@@ -6,15 +6,6 @@ keywords: imap, remote mailbox, imap_user, imap_pass, imap_authenticators, folde
 
 # How to Set Up IMAP
 
-:::{admonition} Diátaxis: How-To Guide
-:class: note
-
-Write as **directions**. Assume the reader is competent and knows what they want to achieve.
-Be practical and goal-focused. Use numbered steps for procedures. Don't explain why — link
-to explanation pages instead. Keep it focused on the specific task. Start with prerequisites,
-give the steps, show the expected result.
-:::
-
 NeoMutt has IMAP support and has the ability to work with folders located on a remote IMAP server.
 
 You can access the remote inbox by selecting the folder by its URL (see **URL syntax** for details) using the `imap` or `imaps` protocol. Alternatively, a pine-compatible notation is also supported, i.e. `{[username@]imapserver[:port][/ssl]}path/to/folder`

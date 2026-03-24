@@ -6,15 +6,6 @@ keywords: dsn, delivery status, notification, return receipt, sendmail, smtp
 
 # How to Use Delivery Status Notifications
 
-:::{admonition} Diátaxis: How-To Guide
-:class: note
-
-Write as **directions**. Assume the reader is competent and knows what they want to achieve.
-Be practical and goal-focused. Use numbered steps for procedures. Don't explain why — link
-to explanation pages instead. Keep it focused on the specific task. Start with prerequisites,
-give the steps, show the expected result.
-:::
-
 [RFC1894](https://www.rfc-editor.org/rfc/rfc1894.html) defines a set of MIME content types for relaying information about the status of
 electronic mail messages. These can be thought of as "return receipts."
 

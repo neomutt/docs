@@ -10,15 +10,6 @@ keywords: neomutt, functions, postpone, menu, bindings, keys, drafts
 Select from your saved draft emails to resume editing.
 You can pick a previously postponed message to continue composing it.
 
-:::{admonition} Diátaxis: Reference
-:class: note
-
-Write as **austere description**. Be factual, precise, and complete. Use consistent formatting
-throughout. Describe what things ARE, not how to use them. Use tables for structured data.
-Mirror the structure of the software itself. Avoid instruction or explanation — link out to
-how-to guides and explanation pages instead.
-:::
-
 | Function           | Default Keys | Description                |
 |--------------------|--------------|----------------------------|
 | `<delete-entry>`   | `d`          | Delete the current entry   |

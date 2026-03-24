@@ -7,15 +7,6 @@ diataxis_type: explanation
 
 # Understanding Variable Types
 
-:::{admonition} Diátaxis: Explanation
-:class: note
-
-Write as **discursive discussion**. Explain WHY things are the way they are. Provide context,
-background, and history. Connect concepts together. Use "about" framing. It's OK to include
-opinion and perspective. Don't include step-by-step instructions — link to tutorials and
-how-to guides instead. The reader should come away with deeper understanding.
-:::
-
 ## Variable Types
 
 NeoMutt supports these types of configuration variables:

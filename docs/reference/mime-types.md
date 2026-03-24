@@ -6,15 +6,6 @@ keywords: neomutt, MIME, mime.types, mime-lookup, content-type, attachment
 
 # MIME Types
 
-:::{admonition} Diátaxis: Reference
-:class: note
-
-Write as **austere description**. Be factual, precise, and complete. Use consistent formatting
-throughout. Describe what things ARE, not how to use them. Use tables for structured data.
-Mirror the structure of the software itself. Avoid instruction or explanation — link out to
-how-to guides and explanation pages instead.
-:::
-
 ## MIME Type Configuration with `mime.types`
 
 To get most out of MIME, it's important that a MIME part's content type matches the content as closely as possible so that the recipient's client can automatically select the right viewer for the content. NeoMutt uses a simple plain text mapping file that specifies what file extension corresponds to what MIME type. This file is called `mime.types`.

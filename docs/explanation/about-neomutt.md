@@ -7,15 +7,6 @@ diataxis_type: explanation
 
 # About NeoMutt
 
-:::{admonition} Diátaxis: Explanation
-:class: note
-
-Write as **discursive discussion**. Explain WHY things are the way they are. Provide context,
-background, and history. Connect concepts together. Use "about" framing. It's OK to include
-opinion and perspective. Don't include step-by-step instructions — link to tutorials and
-how-to guides instead. The reader should come away with deeper understanding.
-:::
-
 **NeoMutt** is a small but very powerful text-based MIME mail client. NeoMutt is highly
 configurable, and is well suited to the mail power user with advanced features like key
 bindings, keyboard macros, mail threading, regular expression searches and a powerful

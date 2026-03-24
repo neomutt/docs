@@ -6,15 +6,6 @@ keywords: neomutt, URL, IMAP, POP3, SMTP, protocol, syntax
 
 # URL Syntax
 
-:::{admonition} Diátaxis: Reference
-:class: note
-
-Write as **austere description**. Be factual, precise, and complete. Use consistent formatting
-throughout. Describe what things ARE, not how to use them. Use tables for structured data.
-Mirror the structure of the software itself. Avoid instruction or explanation — link out to
-how-to guides and explanation pages instead.
-:::
-
 NeoMutt optionally supports the IMAP, POP3 and SMTP protocols which require to access servers using URLs. The canonical syntax for specifying URLs in NeoMutt is (an item enclosed in `[]` means it is optional and may be omitted):
 
 ```

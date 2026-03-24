@@ -10,15 +10,6 @@ keywords: neomutt, functions, pager, menu, bindings, keys, reading
 The email reading view that displays a message's contents.
 You can scroll, search within the text, and perform many of the same actions as the index.
 
-:::{admonition} Diátaxis: Reference
-:class: note
-
-Write as **austere description**. Be factual, precise, and complete. Use consistent formatting
-throughout. Describe what things ARE, not how to use them. Use tables for structured data.
-Mirror the structure of the software itself. Avoid instruction or explanation — link out to
-how-to guides and explanation pages instead.
-:::
-
 | Function                        | Default Keys                           | Description                                                             | Inherited From                      |
 |---------------------------------|----------------------------------------|-------------------------------------------------------------------------|-------------------------------------|
 | `<bottom>`                      | `<End>`                                | Jump to the bottom of the message                                       |                                     |

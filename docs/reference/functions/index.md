@@ -10,15 +10,6 @@ keywords: neomutt, functions, index, menu, bindings, keys, mail
 The main screen showing the list of emails in a mailbox.
 You can read, reply, forward, delete, tag, sort, search, and manage messages.
 
-:::{admonition} Diátaxis: Reference
-:class: note
-
-Write as **austere description**. Be factual, precise, and complete. Use consistent formatting
-throughout. Describe what things ARE, not how to use them. Use tables for structured data.
-Mirror the structure of the software itself. Avoid instruction or explanation — link out to
-how-to guides and explanation pages instead.
-:::
-
 | Function                        | Default Keys                                      | Description                                                             | Inherited From                      |
 |---------------------------------|---------------------------------------------------|-------------------------------------------------------------------------|-------------------------------------|
 | `<alias-dialog>`                |                                                   | Open the aliases dialog                                                 |                                     |

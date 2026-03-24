@@ -6,15 +6,6 @@ keywords: tls, ssl, starttls, sni, encryption, openssl, gnutls, tunnel, ssl_forc
 
 # How to Configure TLS/SNI
 
-:::{admonition} Diátaxis: How-To Guide
-:class: note
-
-Write as **directions**. Assume the reader is competent and knows what they want to achieve.
-Be practical and goal-focused. Use numbered steps for procedures. Don't explain why — link
-to explanation pages instead. Keep it focused on the specific task. Start with prerequisites,
-give the steps, show the expected result.
-:::
-
 ## SSL/TLS Support
 
 If NeoMutt is compiled with IMAP, POP3 and/or SMTP support, it can also be compiled with support for SSL or TLS using either OpenSSL or GnuTLS (by running the *configure* script with the *--ssl=...* option for OpenSSL or *--gnutls=...* for GnuTLS). NeoMutt can then attempt to encrypt communication with remote servers if these protocols are suffixed with "s" for "secure communication".

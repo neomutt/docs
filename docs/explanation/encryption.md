@@ -7,15 +7,6 @@ diataxis_type: explanation
 
 # Understanding Encryption
 
-:::{admonition} Diátaxis: Explanation
-:class: note
-
-Write as **discursive discussion**. Explain WHY things are the way they are. Provide context,
-background, and history. Connect concepts together. Use "about" framing. It's OK to include
-opinion and perspective. Don't include step-by-step instructions — link to tutorials and
-how-to guides instead. The reader should come away with deeper understanding.
-:::
-
 NeoMutt supports encrypting and signing emails when used interactively. In batch mode,
 cryptographic operations are disabled, so these options can't be used to sign an email sent
 via a cron job, for instance.

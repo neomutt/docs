@@ -6,15 +6,6 @@ keywords: forward, bounce, resend, mime-forward, inline forward
 
 # How to Forward and Bounce Mail
 
-:::{admonition} Diátaxis: How-To Guide
-:class: note
-
-Write as **directions**. Assume the reader is competent and knows what they want to achieve.
-Be practical and goal-focused. Use numbered steps for procedures. Don't explain why — link
-to explanation pages instead. Keep it focused on the specific task. Start with prerequisites,
-give the steps, show the expected result.
-:::
-
 Bouncing and forwarding let you send an existing message to recipients that you specify.
 Bouncing a message sends a verbatim copy of a message to alternative addresses as if they were
 the message's original recipients specified in the Bcc header. Forwarding a message, on the

@@ -6,15 +6,6 @@ keywords: compress, compressed folders, open-hook, close-hook, append-hook, gzip
 
 # How to Compress Mailboxes
 
-:::{admonition} Diátaxis: How-To Guide
-:class: note
-
-Write as **directions**. Assume the reader is competent and knows what they want to achieve.
-Be practical and goal-focused. Use numbered steps for procedures. Don't explain why — link
-to explanation pages instead. Keep it focused on the specific task. Start with prerequisites,
-give the steps, show the expected result.
-:::
-
 The Compressed Folder feature allows NeoMutt to read mailbox files that are compressed. But it isn't limited to compressed files. It works well with encrypted files, too. In fact, if you can create a program/script to convert to and from your format, then NeoMutt can read it.
 
 The feature adds three hooks to NeoMutt: `open-hook`, `close-hook` and `append-hook`. They define commands to: uncompress a file; compress a file; append messages to an already compressed file.

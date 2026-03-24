@@ -6,15 +6,6 @@ keywords: mailbox, mbox, mmdf, mh, maildir, format, mbox_type
 
 # How to Use Different Mailbox Formats
 
-:::{admonition} Diátaxis: How-To Guide
-:class: note
-
-Write as **directions**. Assume the reader is competent and knows what they want to achieve.
-Be practical and goal-focused. Use numbered steps for procedures. Don't explain why — link
-to explanation pages instead. Keep it focused on the specific task. Start with prerequisites,
-give the steps, show the expected result.
-:::
-
 NeoMutt supports reading and writing of four different local mailbox formats: mbox, MMDF, MH and Maildir. The mailbox type is auto detected, so there is no need to use a flag for different mailbox types. When creating new mailboxes, NeoMutt uses the default specified with the `$mbox_type` variable. A short description of the formats follows.
 
 ## mbox

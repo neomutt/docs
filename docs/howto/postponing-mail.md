@@ -6,15 +6,6 @@ keywords: postpone, draft, resume, recall, compose
 
 # How to Postpone Mail
 
-:::{admonition} Diátaxis: How-To Guide
-:class: note
-
-Write as **directions**. Assume the reader is competent and knows what they want to achieve.
-Be practical and goal-focused. Use numbered steps for procedures. Don't explain why — link
-to explanation pages instead. Keep it focused on the specific task. Start with prerequisites,
-give the steps, show the expected result.
-:::
-
 At times it is desirable to delay sending a message that you have already begun to compose.
 When the `<postpone-message>` function is used in the *compose* menu, the body of your message
 and attachments are stored in the mailbox specified by the {ref}`$postponed <postponed>`

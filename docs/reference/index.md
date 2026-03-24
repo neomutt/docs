@@ -3,6 +3,15 @@ title: Reference
 description: Technical descriptions of NeoMutt's commands, options, and functions
 ---
 
+:::{admonition} Diátaxis: Reference
+:class: note
+
+Write as **austere description**. Be factual, precise, and complete. Use consistent formatting
+throughout. Describe what things ARE, not how to use them. Use tables for structured data.
+Mirror the structure of the software itself. Avoid instruction or explanation — link out to
+how-to guides and explanation pages instead.
+:::
+
 # Reference
 
 Reference material provides **information-oriented** technical descriptions of

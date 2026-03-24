@@ -6,15 +6,6 @@ keywords:
 
 # Config Types
 
-:::{admonition} Diátaxis: Reference
-:class: note
-
-Write as **austere description**. Be factual, precise, and complete. Use consistent formatting
-throughout. Describe what things ARE, not how to use them. Use tables for structured data.
-Mirror the structure of the software itself. Avoid instruction or explanation - link out to
-how-to guides and explanation pages instead.
-:::
-
 NeoMutt configuration options are settings that control how the program behaves, and each one has a defined type that determines what kind of value it can accept.
 For example, some options are simple on/off switches, some expect numbers, and others require text or file paths.
 Because NeoMutt knows the expected type of each option, it can check your input when you set it and warn you if something isn’t valid.

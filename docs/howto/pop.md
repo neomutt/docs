@@ -6,15 +6,6 @@ keywords: pop3, remote mailbox, fetch mail, pop_host, pop_check_interval
 
 # How to Set Up POP3
 
-:::{admonition} Diátaxis: How-To Guide
-:class: note
-
-Write as **directions**. Assume the reader is competent and knows what they want to achieve.
-Be practical and goal-focused. Use numbered steps for procedures. Don't explain why — link
-to explanation pages instead. Keep it focused on the specific task. Start with prerequisites,
-give the steps, show the expected result.
-:::
-
 NeoMutt has POP3 support and has the ability to work with mailboxes located on a remote POP3 server and fetch mail for local browsing.
 
 Remote POP3 servers can be accessed using URLs with the `pop` protocol for unencrypted and `pops` for encrypted communication. See **URL syntax** for details.

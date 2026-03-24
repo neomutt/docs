@@ -4,15 +4,6 @@ description: Group addresses logically for use in patterns and hooks
 keywords: address groups, group, ungroup, patterns, hooks
 ---
 
-:::{admonition} Diátaxis: How-To Guide
-:class: note
-
-Write as **directions**. Assume the reader is competent and knows what they want to achieve.
-Be practical and goal-focused. Use numbered steps for procedures. Don't explain why — link
-to explanation pages instead. Keep it focused on the specific task. Start with prerequisites,
-give the steps, show the expected result.
-:::
-
 # How to Use Address Groups
 
 ## Syntax

@@ -6,15 +6,6 @@ keywords: [neomutt, encrypt-to-self, pgp, smime, fcc, self-encrypt, encryption-i
 
 # How to Encrypt to Self
 
-:::{admonition} Diátaxis: How-To Guide
-:class: note
-
-Write as **directions**. Assume the reader is competent and knows what they want to achieve.
-Be practical and goal-focused. Use numbered steps for procedures. Don't explain why — link
-to explanation pages instead. Keep it focused on the specific task. Start with prerequisites,
-give the steps, show the expected result.
-:::
-
 ## The Problem
 
 Once you encrypt an email to someone you cannot read it. This is good for

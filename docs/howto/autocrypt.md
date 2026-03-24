@@ -6,15 +6,6 @@ keywords: [neomutt, autocrypt, encryption, gpgme, ecc, opportunistic, keys]
 
 # How to Set Up Autocrypt
 
-:::{admonition} Diátaxis: How-To Guide
-:class: note
-
-Write as **directions**. Assume the reader is competent and knows what they want to achieve.
-Be practical and goal-focused. Use numbered steps for procedures. Don't explain why — link
-to explanation pages instead. Keep it focused on the specific task. Start with prerequisites,
-give the steps, show the expected result.
-:::
-
 ## Overview
 
 NeoMutt can be compiled with Autocrypt support by running `configure` with the

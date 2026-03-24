@@ -6,15 +6,6 @@ keywords: neomutt, config, syntax, neomuttrc, quoting, variables, backticks
 
 # Configuration File Syntax
 
-:::{admonition} Diátaxis: Reference
-:class: note
-
-Write as **austere description**. Be factual, precise, and complete. Use consistent formatting
-throughout. Describe what things ARE, not how to use them. Use tables for structured data.
-Mirror the structure of the software itself. Avoid instruction or explanation — link out to
-how-to guides and explanation pages instead.
-:::
-
 An initialization file consists of a series of [commands](commands.md). Each line of the file may contain one or more commands. When multiple commands are used, they must be separated by a semicolon (`;`).
 
 ```neomuttrc

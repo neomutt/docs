@@ -6,15 +6,6 @@ keywords: compose, send, hooks, send-hook, reply-hook, fcc, message flow
 
 # How to Use the Compose Flow
 
-:::{admonition} Diátaxis: How-To Guide
-:class: note
-
-Write as **directions**. Assume the reader is competent and knows what they want to achieve.
-Be practical and goal-focused. Use numbered steps for procedures. Don't explain why — link
-to explanation pages instead. Keep it focused on the specific task. Start with prerequisites,
-give the steps, show the expected result.
-:::
-
 This is a brief overview of the steps NeoMutt takes during message composition. It also
 shows the order and timing of hook execution.
 

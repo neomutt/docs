@@ -6,15 +6,6 @@ keywords: neomutt, config, configuration, neomuttrc, muttrc, XDG, location
 
 # Configuration File Locations
 
-:::{admonition} Diátaxis: Reference
-:class: note
-
-Write as **austere description**. Be factual, precise, and complete. Use consistent formatting
-throughout. Describe what things ARE, not how to use them. Use tables for structured data.
-Mirror the structure of the software itself. Avoid instruction or explanation — link out to
-how-to guides and explanation pages instead.
-:::
-
 When NeoMutt starts up it looks for two configuration files — one "system" file and one "user" file.
 
 NeoMutt first reads the system configuration file, then the user configuration file. The two files are merged in the sense that "last setting wins". That is, if a setting is defined in both files, the user configuration file's value for that setting is the one that takes precedence and becomes effective.

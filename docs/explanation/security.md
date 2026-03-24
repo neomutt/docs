@@ -7,15 +7,6 @@ diataxis_type: explanation
 
 # Understanding Security
 
-:::{admonition} Diátaxis: Explanation
-:class: note
-
-Write as **discursive discussion**. Explain WHY things are the way they are. Provide context,
-background, and history. Connect concepts together. Use "about" framing. It's OK to include
-opinion and perspective. Don't include step-by-step instructions — link to tutorials and
-how-to guides instead. The reader should come away with deeper understanding.
-:::
-
 First of all, NeoMutt contains no security holes included by intention but may contain
 unknown security holes. As a consequence, please run NeoMutt only with as few permissions
 as possible. Especially, do not run NeoMutt as the super user.

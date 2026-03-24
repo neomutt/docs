@@ -7,15 +7,6 @@ diataxis_type: explanation
 
 # Understanding Performance Tuning
 
-:::{admonition} Diátaxis: Explanation
-:class: note
-
-Write as **discursive discussion**. Explain WHY things are the way they are. Provide context,
-background, and history. Connect concepts together. Use "about" framing. It's OK to include
-opinion and perspective. Don't include step-by-step instructions — link to tutorials and
-how-to guides instead. The reader should come away with deeper understanding.
-:::
-
 ## Reading and Writing Mailboxes
 
 NeoMutt's performance when reading mailboxes can be improved in two ways:

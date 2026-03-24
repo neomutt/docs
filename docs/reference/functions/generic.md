@@ -9,15 +9,6 @@ keywords: neomutt, functions, generic, menu, bindings, keys
 
 Not a menu itself, but provides common functions — such as scrolling, searching, and tagging — that are inherited by all other menus (except pager and editor).
 
-:::{admonition} Diátaxis: Reference
-:class: note
-
-Write as **austere description**. Be factual, precise, and complete. Use consistent formatting
-throughout. Describe what things ARE, not how to use them. Use tables for structured data.
-Mirror the structure of the software itself. Avoid instruction or explanation — link out to
-how-to guides and explanation pages instead.
-:::
-
 The **generic** menu is not a real menu, but specifies common functions (such as
 movement) available in all menus except for **pager** and **editor**. Changing
 settings for this menu will affect the default bindings for all menus (except as
