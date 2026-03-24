@@ -18,16 +18,16 @@ finish                                    # Finish reading the current file
 
 ## Symbols
 
-| Example Symbol | Description |
-|---|---|
-| `sidebar_format` | Config variable |
-| `status-color`, `imap` | Compiled-in feature |
-| `pgp-menu`, `group-related` | Function |
-| `index-format-hook`, `tag-transforms` | Command |
-| `indicator`, `sidebar_new` | Colour |
-| `my_var` | My variable |
-| `lmdb`, `tokyocabinet` | Store (database) |
-| `HOME`, `COLUMNS` | Environment variable |
+| Example Symbol                        | Description          |
+|---------------------------------------|----------------------|
+| `sidebar_format`                      | Config variable      |
+| `status-color`, `imap`                | Compiled-in feature  |
+| `pgp-menu`, `group-related`           | Function             |
+| `index-format-hook`, `tag-transforms` | Command              |
+| `indicator`, `sidebar_new`            | Colour               |
+| `my_var`                              | My variable          |
+| `lmdb`, `tokyocabinet`                | Store (database)     |
+| `HOME`, `COLUMNS`                     | Environment variable |
 
 A list of compile-time symbols can be seen in the output of the command:
 

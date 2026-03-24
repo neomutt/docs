@@ -10,12 +10,12 @@ keywords: neomutt, command-line, options, arguments, flags
 
 NeoMutt has **four modes** of operation:
 
-| Mode   | Purpose                                    | Activated by                         |
-|--------|--------------------------------------------|--------------------------------------|
-| `help` | Display version, license, or usage info    | `-h`, `-v`, `-vv`                    |
-| `info` | Query config options and aliases           | `-A`, `-D`, `-DD`, `-Q`              |
-| `send` | Compose and send an email                  | `-s`, `-a`, `-c`, `-b`, `-H`, `-i`   |
-| `tui`  | Start the Terminal User Interface          | Default (no arguments)               |
+| Mode   | Purpose                                 | Activated by                       |
+|--------|-----------------------------------------|------------------------------------|
+| `help` | Display version, license, or usage info | `-h`, `-v`, `-vv`                  |
+| `info` | Query config options and aliases        | `-A`, `-D`, `-DD`, `-Q`            |
+| `send` | Compose and send an email               | `-s`, `-a`, `-c`, `-b`, `-H`, `-i` |
+| `tui`  | Start the Terminal User Interface       | Default (no arguments)             |
 
 The default mode, when no arguments are given, is **tui**.
 
@@ -35,14 +35,14 @@ are interchangeable and may be freely mixed on the same command line.
 Shared options may be combined with any mode.  They control which config
 files are loaded, allow extra config commands, and configure debug logging.
 
-| Short | Long                  | Argument   | Description                                |
-|-------|-----------------------|------------|--------------------------------------------|
-| `-n`  | `--no-system-config`  |            | Don't read the system config file          |
-| `-F`  | `--config`            | `<file>`   | Use this user config file (repeatable)     |
-| `-e`  | `--command`           | `<command>`| Run an extra config command (repeatable)   |
-| `-m`  | `--mbox-type`         | `<type>`   | Set the default mailbox type               |
-| `-d`  | `--debug-level`       | `<level>`  | Set logging level                          |
-| `-l`  | `--debug-file`        | `<file>`   | Set logging file                           |
+| Short | Long                 | Argument    | Description                              |
+|-------|----------------------|-------------|------------------------------------------|
+| `-n`  | `--no-system-config` |             | Don't read the system config file        |
+| `-F`  | `--config`           | `<file>`    | Use this user config file (repeatable)   |
+| `-e`  | `--command`          | `<command>` | Run an extra config command (repeatable) |
+| `-m`  | `--mbox-type`        | `<type>`    | Set the default mailbox type             |
+| `-d`  | `--debug-level`      | `<level>`   | Set logging level                        |
+| `-l`  | `--debug-file`       | `<file>`    | Set logging file                         |
 
 ### Config Files
 
@@ -107,12 +107,12 @@ neomutt --debug-level 5 --debug-file /tmp/neomutt.log
 Help mode displays usage information, the NeoMutt version, or the license
 text.  NeoMutt prints the requested information and exits.
 
-| Short | Long        | Argument | Description                                       |
-|-------|-------------|----------|---------------------------------------------------|
-| `-h`  | `--help`    |          | Overview of command-line options                   |
-| `-h`  | `--help`    | `<mode>` | Detailed help for a mode                           |
-| `-v`  | `--version` |          | NeoMutt version and build parameters               |
-| `-vv` | `--license` |          | NeoMutt copyright and license                      |
+| Short | Long        | Argument | Description                          |
+|-------|-------------|----------|--------------------------------------|
+| `-h`  | `--help`    |          | Overview of command-line options     |
+| `-h`  | `--help`    | `<mode>` | Detailed help for a mode             |
+| `-v`  | `--version` |          | NeoMutt version and build parameters |
+| `-vv` | `--license` |          | NeoMutt copyright and license        |
 
 ### Detailed Help
 
@@ -148,14 +148,14 @@ neomutt --license
 Info mode queries NeoMutt's configuration and exits.  It is useful for
 scripting and debugging config problems.
 
-| Short | Long                    | Argument       | Description                           |
-|-------|-------------------------|----------------|---------------------------------------|
-| `-A`  | `--alias`               | `<alias> [...]`| Lookup email aliases                  |
-| `-D`  | `--dump-config`         |                | Dump all config options               |
-| `-DD` | `--dump-changed-config` |                | Dump only changed config options      |
-| `-Q`  | `--query`               | `<option> [...]`| Query config options                 |
-| `-O`  | `--with-docs`           |                | Add one-liner documentation           |
-| `-S`  | `--hide-sensitive`      |                | Hide the value of sensitive options   |
+| Short | Long                    | Argument         | Description                         |
+|-------|-------------------------|------------------|-------------------------------------|
+| `-A`  | `--alias`               | `<alias> [...]`  | Lookup email aliases                |
+| `-D`  | `--dump-config`         |                  | Dump all config options             |
+| `-DD` | `--dump-changed-config` |                  | Dump only changed config options    |
+| `-Q`  | `--query`               | `<option> [...]` | Query config options                |
+| `-O`  | `--with-docs`           |                  | Add one-liner documentation         |
+| `-S`  | `--hide-sensitive`      |                  | Hide the value of sensitive options |
 
 ### Alias Lookup
 
@@ -326,14 +326,14 @@ TUI mode starts NeoMutt's Terminal User Interface.  This is the default
 when no command-line arguments are given.  By default, NeoMutt opens the
 Index Dialog with the `$spool_file` mailbox.
 
-| Short | Long               | Argument    | Description                    |
-|-------|--------------------|-------------|--------------------------------|
-| `-f`  | `--folder`         | `<mailbox>` | Open this mailbox              |
-| `-G`  | `--nntp-browser`   |             | Open NNTP browser              |
-| `-g`  | `--nntp-server`    | `<server>`  | Use this NNTP server           |
-| `-p`  | `--postponed`      |             | Resume postponed email         |
-| `-R`  | `--read-only`      |             | Open mailbox read-only         |
-| `-y`  | `--browser`        |             | Open mailbox browser           |
+| Short | Long               | Argument    | Description                       |
+|-------|--------------------|-------------|-----------------------------------|
+| `-f`  | `--folder`         | `<mailbox>` | Open this mailbox                 |
+| `-G`  | `--nntp-browser`   |             | Open NNTP browser                 |
+| `-g`  | `--nntp-server`    | `<server>`  | Use this NNTP server              |
+| `-p`  | `--postponed`      |             | Resume postponed email            |
+| `-R`  | `--read-only`      |             | Open mailbox read-only            |
+| `-y`  | `--browser`        |             | Open mailbox browser              |
 | `-Z`  | `--check-new-mail` |             | Check for new mail (exit if none) |
 | `-z`  | `--check-any-mail` |             | Check for any mail (exit if none) |
 
@@ -431,11 +431,11 @@ neomutt --subject 'Hello' -- alice@example.com bob@example.com
 
 Three options accept multiple space-separated arguments:
 
-| Option | Long        | Collects until      |
-|--------|-------------|---------------------|
-| `-A`   | `--alias`   | `--` or next `-X`   |
-| `-Q`   | `--query`   | `--` or next `-X`   |
-| `-a`   | `--attach`  | `--` or next `-X`   |
+| Option | Long       | Collects until    |
+|--------|------------|-------------------|
+| `-A`   | `--alias`  | `--` or next `-X` |
+| `-Q`   | `--query`  | `--` or next `-X` |
+| `-a`   | `--attach` | `--` or next `-X` |
 
 The argument list for these options ends when `--` or another option
 beginning with `-` is encountered.
@@ -452,9 +452,9 @@ neomutt --attach notes.txt slides.pdf -- team@example.com
 
 Two options change meaning when specified twice:
 
-| Once | Twice | Long Equivalent         | Effect                          |
-|------|-------|-------------------------|---------------------------------|
-| `-v` | `-vv` | `--version` / `--license` | Version → License            |
+| Once | Twice | Long Equivalent                           | Effect                    |
+|------|-------|-------------------------------------------|---------------------------|
+| `-v` | `-vv` | `--version` / `--license`                 | Version → License         |
 | `-D` | `-DD` | `--dump-config` / `--dump-changed-config` | All config → Changed only |
 
 ```sh

@@ -22,22 +22,22 @@ If you want a simple introduction with examples see the Sidebar Howto. If you ju
 
 ## Variables
 
-| Name | Type | Default |
-|------|------|---------|
-| `sidebar_component_depth` | number | `0` |
-| `sidebar_delim_chars` | string | `/.` |
-| `sidebar_divider_char` | string | `\|` |
-| `sidebar_folder_indent` | boolean | `no` |
-| `sidebar_format` | string | `%D%* %n` |
-| `sidebar_indent_string` | string | `  ` (two spaces) |
-| `sidebar_new_mail_only` | boolean | `no` |
-| `sidebar_next_new_wrap` | boolean | `no` |
-| `sidebar_non_empty_mailbox_only` | boolean | `no` |
-| `sidebar_on_right` | boolean | `no` |
-| `sidebar_short_path` | boolean | `no` |
-| `sidebar_sort` | enum | `unsorted` |
-| `sidebar_visible` | boolean | `no` |
-| `sidebar_width` | number | `20` |
+| Name                             | Type    | Default           |
+|----------------------------------|---------|-------------------|
+| `sidebar_component_depth`        | number  | `0`               |
+| `sidebar_delim_chars`            | string  | `/.`              |
+| `sidebar_divider_char`           | string  | `\|`              |
+| `sidebar_folder_indent`          | boolean | `no`              |
+| `sidebar_format`                 | string  | `%D%* %n`         |
+| `sidebar_indent_string`          | string  | `  ` (two spaces) |
+| `sidebar_new_mail_only`          | boolean | `no`              |
+| `sidebar_next_new_wrap`          | boolean | `no`              |
+| `sidebar_non_empty_mailbox_only` | boolean | `no`              |
+| `sidebar_on_right`               | boolean | `no`              |
+| `sidebar_short_path`             | boolean | `no`              |
+| `sidebar_sort`                   | enum    | `unsorted`        |
+| `sidebar_visible`                | boolean | `no`              |
+| `sidebar_width`                  | number  | `20`              |
 
 For more details, and examples, about the `$sidebar_format`, see the Sidebar Intro.
 
@@ -55,16 +55,16 @@ For more details, and examples, about the `$sidebar_format`, see the Sidebar Int
 
 Sidebar adds the following functions to NeoMutt. By default, none of them are bound to keys.
 
-| Menus | Function | Description |
-|-------|----------|-------------|
-| index,pager | `<sidebar-next>` | Move the highlight to next mailbox |
-| index,pager | `<sidebar-next-new>` | Move the highlight to next mailbox with new mail |
-| index,pager | `<sidebar-open>` | Open highlighted mailbox |
-| index,pager | `<sidebar-page-down>` | Scroll the Sidebar down 1 page |
-| index,pager | `<sidebar-page-up>` | Scroll the Sidebar up 1 page |
-| index,pager | `<sidebar-prev>` | Move the highlight to previous mailbox |
-| index,pager | `<sidebar-prev-new>` | Move the highlight to previous mailbox with new mail |
-| index,pager | `<sidebar-toggle-visible>` | Make the Sidebar (in)visible |
+| Menus       | Function                   | Description                                          |
+|-------------|----------------------------|------------------------------------------------------|
+| index,pager | `<sidebar-next>`           | Move the highlight to next mailbox                   |
+| index,pager | `<sidebar-next-new>`       | Move the highlight to next mailbox with new mail     |
+| index,pager | `<sidebar-open>`           | Open highlighted mailbox                             |
+| index,pager | `<sidebar-page-down>`      | Scroll the Sidebar down 1 page                       |
+| index,pager | `<sidebar-page-up>`        | Scroll the Sidebar up 1 page                         |
+| index,pager | `<sidebar-prev>`           | Move the highlight to previous mailbox               |
+| index,pager | `<sidebar-prev-new>`       | Move the highlight to previous mailbox with new mail |
+| index,pager | `<sidebar-toggle-visible>` | Make the Sidebar (in)visible                         |
 
 ## Commands
 
@@ -85,17 +85,17 @@ The `sidebar-unpin` command is used to remove a mailbox from the list of always 
 
 ## Colors
 
-| Name | Default Color | Description |
-|------|---------------|-------------|
-| `sidebar_background` | default | The entire sidebar panel |
-| `sidebar_divider` | default | The dividing line between the Sidebar and the Index/Pager panels |
-| `sidebar_flagged` | default | Mailboxes containing flagged mail |
-| `sidebar_highlight` | underline | Cursor to select a mailbox |
-| `sidebar_indicator` | neomutt `indicator` | The mailbox open in the Index panel |
-| `sidebar_new` | default | Mailboxes containing new mail |
-| `sidebar_ordinary` | default | Mailboxes that have no new/flagged mails, etc. |
-| `sidebar_spool_file` | default | Mailbox that receives incoming mail |
-| `sidebar_unread` | default | Mailboxes containing unread mail |
+| Name                 | Default Color       | Description                                                      |
+|----------------------|---------------------|------------------------------------------------------------------|
+| `sidebar_background` | default             | The entire sidebar panel                                         |
+| `sidebar_divider`    | default             | The dividing line between the Sidebar and the Index/Pager panels |
+| `sidebar_flagged`    | default             | Mailboxes containing flagged mail                                |
+| `sidebar_highlight`  | underline           | Cursor to select a mailbox                                       |
+| `sidebar_indicator`  | neomutt `indicator` | The mailbox open in the Index panel                              |
+| `sidebar_new`        | default             | Mailboxes containing new mail                                    |
+| `sidebar_ordinary`   | default             | Mailboxes that have no new/flagged mails, etc.                   |
+| `sidebar_spool_file` | default             | Mailbox that receives incoming mail                              |
+| `sidebar_unread`     | default             | Mailboxes containing unread mail                                 |
 
 If the `sidebar_indicator` color isn't set, then the default NeoMutt indicator color will be used (the color used in the index panel).
 
@@ -111,17 +111,17 @@ If the `sidebar_indicator` color isn't set, then the default NeoMutt indicator c
 
 ## Sort
 
-| Sort | Description |
-|------|-------------|
-| `alpha` | Alphabetically by path or label |
-| `count` | Total number of messages |
-| `desc` | Descriptive name of the mailbox |
-| `flagged` | Number of flagged messages |
-| `name` | Alphabetically by path or label |
-| `new` | Number of unread messages |
-| `path` | Alphabetically by path (ignores label) |
-| `unread` | Number of unread messages |
-| `unsorted` | Order of the `mailboxes` command |
+| Sort       | Description                            |
+|------------|----------------------------------------|
+| `alpha`    | Alphabetically by path or label        |
+| `count`    | Total number of messages               |
+| `desc`     | Descriptive name of the mailbox        |
+| `flagged`  | Number of flagged messages             |
+| `name`     | Alphabetically by path or label        |
+| `new`      | Number of unread messages              |
+| `path`     | Alphabetically by path (ignores label) |
+| `unread`   | Number of unread messages              |
+| `unsorted` | Order of the `mailboxes` command       |
 
 (sidebar-neomuttrc)=
 ## neomuttrc

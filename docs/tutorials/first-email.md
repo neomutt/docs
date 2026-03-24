@@ -37,37 +37,37 @@ messages are presented in the index menu can be customized using the `$index_for
 **Highlights:** The meaning of the flag column — how different status indicators (new, old, replied, flagged, tagged) appear next to each message in the list.
 :::
 
-| Key | Description |
-|-----|-------------|
-| c | change to a different mailbox |
-| Esc c | change to a folder in read-only mode |
-| C | copy the current message to another mailbox |
-| Esc C | decode a message and copy it to a folder |
-| Esc s | decode a message and save it to a folder |
-| D | delete messages matching a pattern |
-| d | delete the current message |
-| F | mark as important |
-| l | show messages matching a pattern |
-| N | mark message as new |
-| o | change the current sort method |
-| O | reverse sort the mailbox |
-| q | save changes and exit |
-| s | save-message |
-| T | tag messages matching a pattern |
-| t | toggle the tag on a message |
-| Esc t | toggle tag on entire message thread |
-| U | undelete messages matching a pattern |
-| u | undelete-message |
-| v | view-attachments |
-| x | abort changes and exit |
-| \<Return\> | display-message |
-| \<Tab\> | Jump to the next new or unread message |
-| @ | show the author's full e-mail address |
-| $ | Save changes to mailbox |
-| / | search |
-| Esc / | search-reverse |
-| ^L | Clear and redraw the screen |
-| ^T | untag messages matching a pattern |
+| Key        | Description                                 |
+|------------|---------------------------------------------|
+| c          | change to a different mailbox               |
+| Esc c      | change to a folder in read-only mode        |
+| C          | copy the current message to another mailbox |
+| Esc C      | decode a message and copy it to a folder    |
+| Esc s      | decode a message and save it to a folder    |
+| D          | delete messages matching a pattern          |
+| d          | delete the current message                  |
+| F          | mark as important                           |
+| l          | show messages matching a pattern            |
+| N          | mark message as new                         |
+| o          | change the current sort method              |
+| O          | reverse sort the mailbox                    |
+| q          | save changes and exit                       |
+| s          | save-message                                |
+| T          | tag messages matching a pattern             |
+| t          | toggle the tag on a message                 |
+| Esc t      | toggle tag on entire message thread         |
+| U          | undelete messages matching a pattern        |
+| u          | undelete-message                            |
+| v          | view-attachments                            |
+| x          | abort changes and exit                      |
+| \<Return\> | display-message                             |
+| \<Tab\>    | Jump to the next new or unread message      |
+| @          | show the author's full e-mail address       |
+| $          | Save changes to mailbox                     |
+| /          | search                                      |
+| Esc /      | search-reverse                              |
+| ^L         | Clear and redraw the screen                 |
+| ^T         | untag messages matching a pattern           |
 
 In addition to who sent the message and the subject, a short summary of the disposition of
 each message is printed beside the message number. Zero or more of the "flags" shown below
@@ -79,32 +79,32 @@ customized with the `$to_chars` variable.
 
 ### Message Status Flags
 
-| Flag | Description |
-|------|-------------|
-| D | message is deleted (is marked for deletion) |
-| d | message has attachments marked for deletion |
-| K | contains a PGP public key |
-| N | message is new |
-| O | message is old |
-| P | message is PGP encrypted |
-| r | message has been replied to |
-| S | message is signed, and the signature is successfully verified |
-| s | message is signed |
-| ! | message is flagged |
-| \* | message is tagged |
-| n | thread contains new messages (only if collapsed) |
-| o | thread contains old messages (only if collapsed) |
+| Flag | Description                                                   |
+|------|---------------------------------------------------------------|
+| D    | message is deleted (is marked for deletion)                   |
+| d    | message has attachments marked for deletion                   |
+| K    | contains a PGP public key                                     |
+| N    | message is new                                                |
+| O    | message is old                                                |
+| P    | message is PGP encrypted                                      |
+| r    | message has been replied to                                   |
+| S    | message is signed, and the signature is successfully verified |
+| s    | message is signed                                             |
+| !    | message is flagged                                            |
+| \*   | message is tagged                                             |
+| n    | thread contains new messages (only if collapsed)              |
+| o    | thread contains old messages (only if collapsed)              |
 
 ### Message Recipient Flags
 
-| Flag | Description |
-|------|-------------|
-| + | message is to you and you only |
-| T | message is to you, but also to or CC'ed to others |
-| C | message is CC'ed to you |
-| F | message is from you |
-| L | message is sent to a subscribed mailing list |
-| R | message has your address in the Reply-To field |
+| Flag | Description                                       |
+|------|---------------------------------------------------|
+| +    | message is to you and you only                    |
+| T    | message is to you, but also to or CC'ed to others |
+| C    | message is CC'ed to you                           |
+| F    | message is from you                               |
+| L    | message is sent to a subscribed mailing list      |
+| R    | message has your address in the Reply-To field    |
 
 :::{admonition} 📷 Screenshot Needed
 :class: tip
@@ -134,19 +134,19 @@ to the Unix program `less(1)` though not nearly as featureful.
 
 ### Most Common Pager Keys
 
-| Key | Description |
-|-----|-------------|
-| \<Return\> | go down one line |
-| \<Space\> | display the next page (or next message if at the end of a message) |
-| \- | go back to the previous page |
-| n | Search for next match |
-| S | Skip beyond quoted text |
-| T | Toggle display of quoted text |
-| ? | show keybindings |
-| / | regular expression search |
-| Esc / | backward regular expression search |
-| \\ | toggle highlighting of search matches |
-| ^ | Jump to the top of the message |
+| Key        | Description                                                        |
+|------------|--------------------------------------------------------------------|
+| \<Return\> | go down one line                                                   |
+| \<Space\>  | display the next page (or next message if at the end of a message) |
+| \-         | go back to the previous page                                       |
+| n          | Search for next match                                              |
+| S          | Skip beyond quoted text                                            |
+| T          | Toggle display of quoted text                                      |
+| ?          | show keybindings                                                   |
+| /          | regular expression search                                          |
+| Esc /      | backward regular expression search                                 |
+| \\         | toggle highlighting of search matches                              |
+| ^          | Jump to the top of the message                                     |
 
 In addition to the key bindings above, many of the functions from the index menu are also
 available in the pager, such as `<delete-message>` or `<copy-message>` (this is one advantage
@@ -173,29 +173,29 @@ where *Ps* can be one of the codes shown below.
 
 ### ANSI Escape Sequences
 
-| Escape code | Description |
-|-------------|-------------|
-| 0 | All attributes off |
-| 1 | Bold on |
-| 3 | Italics on |
-| 4 | Underline on |
-| 5 | Blink on |
-| 7 | Reverse video on |
+| Escape code   | Description                     |
+|---------------|---------------------------------|
+| 0             | All attributes off              |
+| 1             | Bold on                         |
+| 3             | Italics on                      |
+| 4             | Underline on                    |
+| 5             | Blink on                        |
+| 7             | Reverse video on                |
 | 3 *\<color\>* | Foreground color is *\<color\>* |
 | 4 *\<color\>* | Background color is *\<color\>* |
 
 ### Color Sequences
 
-| Color code | Color |
-|------------|-------|
-| 0 | Black |
-| 1 | Red |
-| 2 | Green |
-| 3 | Yellow |
-| 4 | Blue |
-| 5 | Magenta |
-| 6 | Cyan |
-| 7 | White |
+| Color code | Color   |
+|------------|---------|
+| 0          | Black   |
+| 1          | Red     |
+| 2          | Green   |
+| 3          | Yellow  |
+| 4          | Blue    |
+| 5          | Magenta |
+| 6          | Cyan    |
+| 7          | White   |
 
 NeoMutt uses these attributes for handling `text/enriched` messages, and they can also be used
 by an external autoview script for highlighting purposes.
@@ -233,22 +233,22 @@ available in the *index* and *pager* modes as shown below.
 
 ### Thread Mode Keys
 
-| Key | Function | Description |
-|-----|----------|-------------|
-| ^D | `<delete-thread>` | delete all messages in the current thread |
-| ^U | `<undelete-thread>` | undelete all messages in the current thread |
-| ^N | `<next-thread>` | jump to the start of the next thread |
-| ^P | `<previous-thread>` | jump to the start of the previous thread |
-| ^R | `<read-thread>` | Mark the current thread as read |
-| Esc d | `<delete-subthread>` | delete all messages in the current subthread |
+| Key   | Function               | Description                                    |
+|-------|------------------------|------------------------------------------------|
+| ^D    | `<delete-thread>`      | delete all messages in the current thread      |
+| ^U    | `<undelete-thread>`    | undelete all messages in the current thread    |
+| ^N    | `<next-thread>`        | jump to the start of the next thread           |
+| ^P    | `<previous-thread>`    | jump to the start of the previous thread       |
+| ^R    | `<read-thread>`        | Mark the current thread as read                |
+| Esc d | `<delete-subthread>`   | delete all messages in the current subthread   |
 | Esc u | `<undelete-subthread>` | undelete all messages in the current subthread |
-| Esc n | `<next-subthread>` | jump to the start of the next subthread |
-| Esc p | `<previous-subthread>` | jump to the start of the previous subthread |
-| Esc r | `<read-subthread>` | Mark the current subthread as read |
-| Esc t | `<tag-thread>` | toggle the tag on the current thread |
-| Esc v | `<collapse-thread>` | toggle collapse for the current thread |
-| Esc V | `<collapse-all>` | toggle collapse for all threads |
-| P | `<parent-message>` | Jump to parent message in thread |
+| Esc n | `<next-subthread>`     | jump to the start of the next subthread        |
+| Esc p | `<previous-subthread>` | jump to the start of the previous subthread    |
+| Esc r | `<read-subthread>`     | Mark the current subthread as read             |
+| Esc t | `<tag-thread>`         | toggle the tag on the current thread           |
+| Esc v | `<collapse-thread>`    | toggle collapse for the current thread         |
+| Esc V | `<collapse-all>`       | toggle collapse for all threads                |
+| P     | `<parent-message>`     | Jump to parent message in thread               |
 
 In the *index*, the subject of threaded children messages will be prepended with thread tree
 characters. By default, the subject itself will not be duplicated unless
@@ -257,12 +257,12 @@ detailed below.
 
 ### Special Thread Characters
 
-| Character | Description | Notes |
-|-----------|-------------|-------|
-| & | hidden message | see `$hide_limited` and `$hide_top_limited` |
-| ? | missing message | see `$hide_missing` and `$hide_top_missing` |
-| \* | pseudo thread | see `$strict_threads`; not displayed when `$narrow_tree` is set |
-| = | duplicate thread | see `$duplicate_threads`; not displayed when `$narrow_tree` is set |
+| Character | Description      | Notes                                                              |
+|-----------|------------------|--------------------------------------------------------------------|
+| &         | hidden message   | see `$hide_limited` and `$hide_top_limited`                        |
+| ?         | missing message  | see `$hide_missing` and `$hide_top_missing`                        |
+| \*        | pseudo thread    | see `$strict_threads`; not displayed when `$narrow_tree` is set    |
+| =         | duplicate thread | see `$duplicate_threads`; not displayed when `$narrow_tree` is set |
 
 Collapsing a thread displays only the first message in the thread and hides the others. This
 is useful when threads contain so many messages that you can only see a handful of threads on

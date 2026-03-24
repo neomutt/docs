@@ -52,12 +52,12 @@ tree characters. By default, the subject itself will not be duplicated unless
 `$hide_thread_subject` is unset. Special characters will be added to the thread tree as
 detailed in the table below.
 
-| Character | Description | Notes |
-|-----------|-------------|-------|
-| & | hidden message | see `$hide_limited` and `$hide_top_limited` |
-| ? | missing message | see `$hide_missing` and `$hide_top_missing` |
-| \* | pseudo thread | see `$strict_threads`; not displayed when `$narrow_tree` is set |
-| = | duplicate thread | see `$duplicate_threads`; not displayed when `$narrow_tree` is set |
+| Character | Description      | Notes                                                              |
+|-----------|------------------|--------------------------------------------------------------------|
+| &         | hidden message   | see `$hide_limited` and `$hide_top_limited`                        |
+| ?         | missing message  | see `$hide_missing` and `$hide_top_missing`                        |
+| \*        | pseudo thread    | see `$strict_threads`; not displayed when `$narrow_tree` is set    |
+| =         | duplicate thread | see `$duplicate_threads`; not displayed when `$narrow_tree` is set |
 
 NeoMutt uses Unicode box-drawing characters to draw the thread tree (e.g., `├`, `└`, `│`, `─`). If your terminal does not support Unicode, or you prefer plain ASCII, set the `$ascii_chars` boolean variable to `yes`. This switches the tree characters to ASCII equivalents: `+`, `+`, `|`, and `-` respectively.
 

@@ -16,9 +16,9 @@ header of the answer.
 
 ## Variables
 
-| Name | Type | Default |
-|------|------|---------|
-| `reply_with_xorig` | Boolean | `no` |
+| Name               | Type    | Default |
+|--------------------|---------|---------|
+| `reply_with_xorig` | Boolean | `no`    |
 
 ## neomuttrc
 

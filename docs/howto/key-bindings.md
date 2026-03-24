@@ -25,20 +25,20 @@ bind map [,map ...] key function
 
 *map* specifies in which menu the binding belongs. Multiple maps may be specified by separating them with commas (no additional whitespace is allowed). The currently defined maps are:
 
-| Map | Description |
-|---|---|
-| `generic` | Fallback for all other menus except pager and editor. If a key is not defined in another menu, NeoMutt will look for a binding to use in this menu. |
-| `alias` | The alias menu is the list of your personal aliases as defined in your `.neomuttrc`. |
-| `attach` | The attachment menu is used to access the attachments on received messages. |
-| `browser` | Used for both browsing the local directory structure, and for listing all of your incoming mailboxes. |
-| `editor` | Used to allow the user to enter a single line of text, such as the *To* or *Subject* prompts in the `compose` menu. |
-| `index` | The list of messages contained in a mailbox. |
-| `compose` | The screen used when sending a new message. |
-| `pager` | The mode used to display message/attachment data, and help listings. |
-| `pgp` | Used to select the OpenPGP keys used to encrypt outgoing messages. |
-| `smime` | Used to select the OpenSSL certificates used to encrypt outgoing messages. |
-| `postpone` | Similar to the index menu, except used when recalling a postponed message. |
-| `query` | The browser for results returned by `$query_command`. |
+| Map        | Description                                                                                                                                         |
+|------------|-----------------------------------------------------------------------------------------------------------------------------------------------------|
+| `generic`  | Fallback for all other menus except pager and editor. If a key is not defined in another menu, NeoMutt will look for a binding to use in this menu. |
+| `alias`    | The alias menu is the list of your personal aliases as defined in your `.neomuttrc`.                                                                |
+| `attach`   | The attachment menu is used to access the attachments on received messages.                                                                         |
+| `browser`  | Used for both browsing the local directory structure, and for listing all of your incoming mailboxes.                                               |
+| `editor`   | Used to allow the user to enter a single line of text, such as the *To* or *Subject* prompts in the `compose` menu.                                 |
+| `index`    | The list of messages contained in a mailbox.                                                                                                        |
+| `compose`  | The screen used when sending a new message.                                                                                                         |
+| `pager`    | The mode used to display message/attachment data, and help listings.                                                                                |
+| `pgp`      | Used to select the OpenPGP keys used to encrypt outgoing messages.                                                                                  |
+| `smime`    | Used to select the OpenSSL certificates used to encrypt outgoing messages.                                                                          |
+| `postpone` | Similar to the index menu, except used when recalling a postponed message.                                                                          |
+| `query`    | The browser for results returned by `$query_command`.                                                                                               |
 
 ### Specifying Keys
 
@@ -46,32 +46,32 @@ bind map [,map ...] key function
 
 #### Symbolic Key Names
 
-| Symbolic name | Meaning |
-|---|---|
-| `\t` | tab |
-| `<tab>` | tab |
-| `<backtab>` | backtab / shift-tab |
-| `\r` | carriage return |
-| `\n` | newline |
-| `\e` | escape/alt |
-| `<esc>` | escape/alt |
-| `<up>` | up arrow |
-| `<down>` | down arrow |
-| `<left>` | left arrow |
-| `<right>` | right arrow |
-| `<pageup>` | Page Up |
-| `<pagedown>` | Page Down |
-| `<backspace>` | Backspace |
-| `<delete>` | Delete |
-| `<insert>` | Insert |
-| `<enter>` | Enter |
-| `<return>` | Return |
+| Symbolic name   | Meaning                     |
+|-----------------|-----------------------------|
+| `\t`            | tab                         |
+| `<tab>`         | tab                         |
+| `<backtab>`     | backtab / shift-tab         |
+| `\r`            | carriage return             |
+| `\n`            | newline                     |
+| `\e`            | escape/alt                  |
+| `<esc>`         | escape/alt                  |
+| `<up>`          | up arrow                    |
+| `<down>`        | down arrow                  |
+| `<left>`        | left arrow                  |
+| `<right>`       | right arrow                 |
+| `<pageup>`      | Page Up                     |
+| `<pagedown>`    | Page Down                   |
+| `<backspace>`   | Backspace                   |
+| `<delete>`      | Delete                      |
+| `<insert>`      | Insert                      |
+| `<enter>`       | Enter                       |
+| `<return>`      | Return                      |
 | `<keypadenter>` | Enter key on numeric keypad |
-| `<home>` | Home |
-| `<end>` | End |
-| `<space>` | Space bar |
-| `<f1>` | function key 1 |
-| `<f10>` | function key 10 |
+| `<home>`        | Home                        |
+| `<end>`         | End                         |
+| `<space>`       | Space bar                   |
+| `<f1>`          | function key 1              |
+| `<f10>`         | function key 10             |
 
 The `<what-key>` function can be used to explore keycode and symbolic names for other keys on your keyboard. Executing this function will display information about each key pressed, until terminated by `^G`.
 
@@ -105,20 +105,20 @@ unbind {* | map [,map ...]} [key]
 
 ### Fallback Key Bindings
 
-| Menu | Key | Bound Function |
-|---|---|---|
-| generic | &lt;enter&gt; | `<select-entry>` |
-| generic | &lt;return&gt; | `<select-entry>` |
-| generic | : | `<enter-command>` |
-| generic | ? | `<help>` |
-| generic | q | `<exit>` |
-| editor | &lt;backspace&gt; | `<backspace>` |
-| editor | \177 | `<backspace>` |
-| index | &lt;enter&gt; | `<display-message>` |
-| index | &lt;return&gt; | `<display-message>` |
-| pager | ? | `<help>` |
-| pager | q | `<exit>` |
-| pager | : | `<enter-command>` |
+| Menu    | Key               | Bound Function      |
+|---------|-------------------|---------------------|
+| generic | &lt;enter&gt;     | `<select-entry>`    |
+| generic | &lt;return&gt;    | `<select-entry>`    |
+| generic | :                 | `<enter-command>`   |
+| generic | ?                 | `<help>`            |
+| generic | q                 | `<exit>`            |
+| editor  | &lt;backspace&gt; | `<backspace>`       |
+| editor  | \177              | `<backspace>`       |
+| index   | &lt;enter&gt;     | `<display-message>` |
+| index   | &lt;return&gt;    | `<display-message>` |
+| pager   | ?                 | `<help>`            |
+| pager   | q                 | `<exit>`            |
+| pager   | :                 | `<enter-command>`   |
 
 A key binding can also be unbound by mapping it to the special function `<noop>`. It is, however, recommended to use `unbind` instead.
 

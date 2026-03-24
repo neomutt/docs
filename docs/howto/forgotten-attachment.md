@@ -26,10 +26,10 @@ The attachment keyword will not be scanned in text matched by
 
 ## Variables
 
-| Name                   | Type               | Default                                      |
-|------------------------|--------------------|----------------------------------------------|
-| `abort_noattach_regex` | regular expression | `\\<(attach\|attached\|attachments?)\\>`     |
-| `abort_noattach`       | quadoption         | `no`                                         |
+| Name                   | Type               | Default                                  |
+|------------------------|--------------------|------------------------------------------|
+| `abort_noattach_regex` | regular expression | `\\<(attach\|attached\|attachments?)\\>` |
+| `abort_noattach`       | quadoption         | `no`                                     |
 
 ## neomuttrc
 

@@ -117,12 +117,12 @@ capabilities, flags, and validity fields.
 
 The flags sequence (`%f`) will expand to one of the following flags:
 
-| Flag | Description |
-|------|-------------|
-| R | The key has been revoked and can't be used. |
-| X | The key is expired and can't be used. |
-| d | You have marked the key as disabled. |
-| c | There are unknown critical self-signature packets. |
+| Flag | Description                                        |
+|------|----------------------------------------------------|
+| R    | The key has been revoked and can't be used.        |
+| X    | The key is expired and can't be used.              |
+| d    | You have marked the key as disabled.               |
+| c    | There are unknown critical self-signature packets. |
 
 ### Key Capabilities
 

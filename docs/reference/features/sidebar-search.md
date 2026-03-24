@@ -34,10 +34,10 @@ so you don't need to type the exact name. For example, typing
 
 ## Functions
 
-| Menus | Default Key | Function | Description |
-|-------|-------------|----------|-------------|
-| sidebar | | `<sidebar-start-search>` | Fuzzy search the sidebar |
-| sidebar | | `<sidebar-abort-search>` | Close the sidebar search |
+| Menus   | Default Key | Function                 | Description              |
+|---------|-------------|--------------------------|--------------------------|
+| sidebar |             | `<sidebar-start-search>` | Fuzzy search the sidebar |
+| sidebar |             | `<sidebar-abort-search>` | Close the sidebar search |
 
 The search is started with the `sidebar-start-search`
 function. It has no default keybinding, so you must add one yourself.

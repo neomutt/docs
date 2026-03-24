@@ -25,18 +25,18 @@ The following bindings are available in the *index* and *pager* to start a new m
 
 ### Mail Sending Keys
 
-| Key | Function | Description |
-|-----|----------|-------------|
-| m | `<mail>` | compose a new message |
-| r | `<reply>` | reply to sender |
-| g | `<group-reply>` | reply to all recipients |
-| | `<group-chat-reply>` | reply to all recipients preserving To/Cc |
-| L | `<list-reply>` | reply to a mailing list |
-| L | `<list-subscribe>` | send a subscription email to a mailing list |
-| L | `<list-unsubscribe>` | send an unsubscription email to a mailing list |
-| f | `<forward-message>` | forward message |
-| b | `<bounce-message>` | bounce (remail) message |
-| Esc k | `<mail-key>` | mail a PGP public key to someone |
+| Key   | Function             | Description                                    |
+|-------|----------------------|------------------------------------------------|
+| m     | `<mail>`             | compose a new message                          |
+| r     | `<reply>`            | reply to sender                                |
+| g     | `<group-reply>`      | reply to all recipients                        |
+|       | `<group-chat-reply>` | reply to all recipients preserving To/Cc       |
+| L     | `<list-reply>`       | reply to a mailing list                        |
+| L     | `<list-subscribe>`   | send a subscription email to a mailing list    |
+| L     | `<list-unsubscribe>` | send an unsubscription email to a mailing list |
+| f     | `<forward-message>`  | forward message                                |
+| b     | `<bounce-message>`   | bounce (remail) message                        |
+| Esc k | `<mail-key>`         | mail a PGP public key to someone               |
 
 *Bouncing* a message sends the message as-is to the recipient you specify. *Forwarding*
 a message allows you to add comments or modify the message you are forwarding. These items
@@ -103,28 +103,28 @@ Once you have finished editing the body of your mail message, you are returned t
 
 ### Compose Menu Keys
 
-| Key | Function | Description |
-|-----|----------|-------------|
-| a | `<attach-file>` | attach a file |
-| A | `<attach-message>` | attach message(s) to the message |
-| Esc k | `<attach-key>` | attach a PGP public key |
-| d | `<edit-description>` | edit description on attachment |
-| D | `<detach-file>` | detach a file |
-| t | `<edit-to>` | edit the To field |
-| Esc f | `<edit-from>` | edit the From field |
-| r | `<edit-reply-to>` | edit the Reply-To field |
-| c | `<edit-cc>` | edit the Cc field |
-| b | `<edit-bcc>` | edit the Bcc field |
-| y | `<send-message>` | send the message |
-| s | `<edit-subject>` | edit the Subject |
-| S | `<smime-menu>` | select S/MIME options |
-| f | `<edit-fcc>` | specify an "Fcc" mailbox |
-| p | `<pgp-menu>` | select PGP options |
-| P | `<postpone-message>` | postpone this message until later |
-| q | `<quit>` | quit (abort) sending the message |
-| w | `<write-fcc>` | write the message to a folder |
-| i | `<ispell>` | check spelling (if available on your system) |
-| ^F | `<forget-passphrase>` | wipe passphrase(s) from memory |
+| Key   | Function              | Description                                  |
+|-------|-----------------------|----------------------------------------------|
+| a     | `<attach-file>`       | attach a file                                |
+| A     | `<attach-message>`    | attach message(s) to the message             |
+| Esc k | `<attach-key>`        | attach a PGP public key                      |
+| d     | `<edit-description>`  | edit description on attachment               |
+| D     | `<detach-file>`       | detach a file                                |
+| t     | `<edit-to>`           | edit the To field                            |
+| Esc f | `<edit-from>`         | edit the From field                          |
+| r     | `<edit-reply-to>`     | edit the Reply-To field                      |
+| c     | `<edit-cc>`           | edit the Cc field                            |
+| b     | `<edit-bcc>`          | edit the Bcc field                           |
+| y     | `<send-message>`      | send the message                             |
+| s     | `<edit-subject>`      | edit the Subject                             |
+| S     | `<smime-menu>`        | select S/MIME options                        |
+| f     | `<edit-fcc>`          | specify an "Fcc" mailbox                     |
+| p     | `<pgp-menu>`          | select PGP options                           |
+| P     | `<postpone-message>`  | postpone this message until later            |
+| q     | `<quit>`              | quit (abort) sending the message             |
+| w     | `<write-fcc>`         | write the message to a folder                |
+| i     | `<ispell>`            | check spelling (if available on your system) |
+| ^F    | `<forget-passphrase>` | wipe passphrase(s) from memory               |
 
 The compose menu is also used to edit the attachments for a message which can be either files
 or other messages. The `<attach-message>` function will prompt you for a folder to attach
@@ -245,12 +245,12 @@ The flags sequence ("%f") will expand to one of the following flags:
 
 ### PGP Key Menu Flags
 
-| Flag | Description |
-|------|-------------|
-| R | The key has been revoked and can't be used. |
-| X | The key is expired and can't be used. |
-| d | You have marked the key as disabled. |
-| c | There are unknown critical self-signature packets. |
+| Flag | Description                                        |
+|------|----------------------------------------------------|
+| R    | The key has been revoked and can't be used.        |
+| X    | The key is expired and can't be used.              |
+| d    | You have marked the key as disabled.               |
+| c    | There are unknown critical self-signature packets. |
 
 The capabilities field ("%c") expands to a two-character sequence representing a key's
 capabilities. The first character gives the key's encryption capabilities: A minus sign ("-")
@@ -268,15 +268,15 @@ validity, so this field simply shows `x`.
 
 ### PGP Key Menu Validity
 
-| Flag (classic PGP) | Flag (GPGME) | Description |
-|---------------------|--------------|-------------|
-| N/A | ? | indicates unknown validity |
-| ? | q | indicates undefined validity |
-| \- | n | indicates a never valid key (untrusted association) |
-| space | m | indicates marginal validity (partially trusted) |
-| + | f | indicates full validity (fully trusted) |
-| N/A | u | indicates ultimate validity |
-| N/A | x | the entry is an X509 certificate (S/MIME) |
+| Flag (classic PGP) | Flag (GPGME) | Description                                         |
+|--------------------|--------------|-----------------------------------------------------|
+| N/A                | ?            | indicates unknown validity                          |
+| ?                  | q            | indicates undefined validity                        |
+| \-                 | n            | indicates a never valid key (untrusted association) |
+| space              | m            | indicates marginal validity (partially trusted)     |
+| +                  | f            | indicates full validity (fully trusted)             |
+| N/A                | u            | indicates ultimate validity                         |
+| N/A                | x            | the entry is an X509 certificate (S/MIME)           |
 
 ## Sending Format=Flowed Messages
 

@@ -46,14 +46,14 @@ A better option is to encrypt the saved copy to yourself.
 
 ## Variables
 
-| Name | Type | Default |
-|------|------|---------|
-| `pgp_default_key` | string | (empty) |
-| `pgp_self_encrypt` | boolean | `yes` |
-| `pgp_sign_as` | string | (empty) |
-| `smime_default_key` | string | (empty) |
-| `smime_self_encrypt` | boolean | `yes` |
-| `smime_sign_as` | string | (empty) |
+| Name                 | Type    | Default |
+|----------------------|---------|---------|
+| `pgp_default_key`    | string  | (empty) |
+| `pgp_self_encrypt`   | boolean | `yes`   |
+| `pgp_sign_as`        | string  | (empty) |
+| `smime_default_key`  | string  | (empty) |
+| `smime_self_encrypt` | boolean | `yes`   |
+| `smime_sign_as`      | string  | (empty) |
 
 ## Example neomuttrc
 

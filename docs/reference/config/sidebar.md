@@ -211,12 +211,12 @@ By default the sidebar will show the mailbox's path, relative to the [$folder](f
 Setting `set sidebar_shortpath = yes` will shorten the names relative to the previous name.
 Here's an example:
 
-| shortpath=no    | shortpath=yes | shortpath=yes, folderindent=yes, indentstr=".." |
-|-----------------|---------------|-------------------------------------------------|
-| `fruit`         | `fruit`       | `fruit`                                         |
-| `fruit.apple`   | `apple`       | `..apple`                                       |
-| `fruit.banana`  | `banana`      | `..banana`                                      |
-| `fruit.cherry`  | `cherry`      | `..cherry`                                      |
+| shortpath=no   | shortpath=yes | shortpath=yes, folderindent=yes, indentstr=".." |
+|----------------|---------------|-------------------------------------------------|
+| `fruit`        | `fruit`       | `fruit`                                         |
+| `fruit.apple`  | `apple`       | `..apple`                                       |
+| `fruit.banana` | `banana`      | `..banana`                                      |
+| `fruit.cherry` | `cherry`      | `..cherry`                                      |
 
 **See also:** [$sidebar_delim_chars](sidebar-delim-chars), [$sidebar_folder_indent](sidebar-folder-indent), [$sidebar_indent_string](sidebar-indent-string), [$sidebar_component_depth](sidebar-component-depth).
 

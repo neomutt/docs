@@ -26,12 +26,12 @@ If you need the exact string "%f" or "%t" in your command, simply double up the 
 
 ### Not all Hooks are Required
 
-| Open | Close | Append | Effect | Useful if |
-|------|-------|--------|--------|-----------|
-| Open | —     | —      | Folder is readonly | The folder is just a backup |
+| Open | Close | Append | Effect                                                                             | Useful if                                         |
+|------|-------|--------|------------------------------------------------------------------------------------|---------------------------------------------------|
+| Open | —     | —      | Folder is readonly                                                                 | The folder is just a backup                       |
 | Open | Close | —      | Folder is read/write, but the entire folder must be written if anything is changed | Your compression format doesn't support appending |
-| Open | Close | Append | Folder is read/write and emails can be efficiently added to the end | Your compression format supports appending |
-| Open | —     | Append | Folder is readonly, but can be appended to | You want to store emails, but never change them |
+| Open | Close | Append | Folder is read/write and emails can be efficiently added to the end                | Your compression format supports appending        |
+| Open | —     | Append | Folder is readonly, but can be appended to                                         | You want to store emails, but never change them   |
 
 :::{note}
 The command:

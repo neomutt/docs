@@ -52,10 +52,10 @@ The implementation sits on top of the header caching functions. So the header ca
 
 ### Variables
 
-| Name | Type | Default |
-|------|------|---------|
+| Name                           | Type   | Default |
+|--------------------------------|--------|---------|
 | `header_cache_compress_method` | string | (empty) |
-| `header_cache_compress_level` | number | `1` |
+| `header_cache_compress_level`  | number | `1`     |
 
 The `header_cache_compress_method` can be *(empty)* — which means that no header cache compression should be used. But when set to *lz4*, *zlib* or *zstd* — then the compression is turned on.
 

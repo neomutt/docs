@@ -32,15 +32,15 @@ Emails deleted from the trash folder are gone forever.
 
 ## Variables
 
-| Name | Type | Default |
-|------|------|---------|
-| trash | string | (none) |
+| Name  | Type   | Default |
+|-------|--------|---------|
+| trash | string | (none)  |
 
 ## Functions
 
-| Menus | Default Key | Function | Description |
-|-------|-------------|----------|-------------|
-| index,pager | (none) | `<purge-message>` | really delete the current entry, bypassing the trash folder |
+| Menus       | Default Key | Function          | Description                                                 |
+|-------------|-------------|-------------------|-------------------------------------------------------------|
+| index,pager | (none)      | `<purge-message>` | really delete the current entry, bypassing the trash folder |
 
 ## neomuttrc
 

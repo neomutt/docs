@@ -60,13 +60,13 @@ The file, containing info about subscribed newsgroups - names and indexes of rea
 The following printf-style sequence is understood:
 
 | Short | Long Name     | Description       |
-|-------|---------------|------------------|
-| `%a` | `%{account}`  | Account url       |
-| `%P` | `%{port-if}`  | Port if specified |
-| `%p` | `%{port}`     | Port              |
-| `%S` | `%{schema}`   | Url schema        |
-| `%s` | `%{server}`   | News server name  |
-| `%u` | `%{username}` | Username          |
+|-------|---------------|-------------------|
+| `%a`  | `%{account}`  | Account url       |
+| `%P`  | `%{port-if}`  | Port if specified |
+| `%p`  | `%{port}`     | Port              |
+| `%S`  | `%{schema}`   | Url schema        |
+| `%s`  | `%{server}`   | News server name  |
+| `%u`  | `%{username}` | Username          |
 
 --------------------------------------------------------------------------------
 

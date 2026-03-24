@@ -94,25 +94,25 @@ Simple colors can be undone by setting the foreground and background to `default
 
 These are general NeoMutt objects:
 
-| Colour Name | Description |
-|-------------|-------------|
-| attachment | Colour for attachment headers |
-| bold | Highlighting bold patterns in the body of messages |
-| error | Error messages printed by NeoMutt |
-| hdrdefault | Default colour of the message header in the pager |
-| indicator | Arrow or bar used to indicate the current item in a menu |
-| markers | The "+" markers at the beginning of wrapped lines in the pager |
-| message | Informational messages |
-| normal | Default colour for all text |
-| options | The key letters in multi-choice questions |
-| progress | Visual progress bar |
-| prompt | A question |
-| search | Highlighting of words in the pager |
-| signature | Email's signature lines (.sig) |
-| tilde | The "\~" used to pad blank lines in the pager |
-| tree | Thread tree drawn in the message index and attachment menu |
-| underline | Highlighting underlined patterns in the body of messages |
-| warning | Warning messages |
+| Colour Name | Description                                                    |
+|-------------|----------------------------------------------------------------|
+| attachment  | Colour for attachment headers                                  |
+| bold        | Highlighting bold patterns in the body of messages             |
+| error       | Error messages printed by NeoMutt                              |
+| hdrdefault  | Default colour of the message header in the pager              |
+| indicator   | Arrow or bar used to indicate the current item in a menu       |
+| markers     | The "+" markers at the beginning of wrapped lines in the pager |
+| message     | Informational messages                                         |
+| normal      | Default colour for all text                                    |
+| options     | The key letters in multi-choice questions                      |
+| progress    | Visual progress bar                                            |
+| prompt      | A question                                                     |
+| search      | Highlighting of words in the pager                             |
+| signature   | Email's signature lines (.sig)                                 |
+| tilde       | The "\~" used to pad blank lines in the pager                  |
+| tree        | Thread tree drawn in the message index and attachment menu     |
+| underline   | Highlighting underlined patterns in the body of messages       |
+| warning     | Warning messages                                               |
 
 ```neomuttrc
 # Make error messages white text on a red background
@@ -128,17 +128,17 @@ uncolor prompt
 
 These are sidebar objects. See [Sidebar](sidebar.md) for more details.
 
-| Colour Name | Description |
-|-------------|-------------|
-| sidebar_background | The entire sidebar panel |
-| sidebar_divider | The dividing line between the Sidebar and the Index/Pager panels |
-| sidebar_flagged | Mailboxes containing flagged mail |
-| sidebar_highlight | Cursor to select a mailbox |
-| sidebar_indicator | The mailbox open in the Index panel |
-| sidebar_new | Mailboxes containing new mail |
-| sidebar_ordinary | Mailboxes that have no new/flagged mails, etc |
-| sidebar_spool_file | Mailbox that receives incoming mail |
-| sidebar_unread | Mailboxes containing unread mail |
+| Colour Name        | Description                                                      |
+|--------------------|------------------------------------------------------------------|
+| sidebar_background | The entire sidebar panel                                         |
+| sidebar_divider    | The dividing line between the Sidebar and the Index/Pager panels |
+| sidebar_flagged    | Mailboxes containing flagged mail                                |
+| sidebar_highlight  | Cursor to select a mailbox                                       |
+| sidebar_indicator  | The mailbox open in the Index panel                              |
+| sidebar_new        | Mailboxes containing new mail                                    |
+| sidebar_ordinary   | Mailboxes that have no new/flagged mails, etc                    |
+| sidebar_spool_file | Mailbox that receives incoming mail                              |
+| sidebar_unread     | Mailboxes containing unread mail                                 |
 
 ```neomuttrc
 color sidebar_divider brightblack default
@@ -150,13 +150,13 @@ uncolor sidebar_divider
 
 These are compose objects.
 
-| Colour Name | Description |
-|-------------|-------------|
-| compose_header | Header labels, e.g. From: |
-| compose_security_encrypt | Mail will be encrypted |
-| compose_security_sign | Mail will be signed |
-| compose_security_both | Mail will be encrypted and signed |
-| compose_security_none | Mail will not be encrypted or signed |
+| Colour Name              | Description                          |
+|--------------------------|--------------------------------------|
+| compose_header           | Header labels, e.g. From:            |
+| compose_security_encrypt | Mail will be encrypted               |
+| compose_security_sign    | Mail will be signed                  |
+| compose_security_both    | Mail will be encrypted and signed    |
+| compose_security_none    | Mail will not be encrypted or signed |
 
 ```neomuttrc
 color compose_header bold white default
@@ -170,13 +170,13 @@ The quoted objects refer to quoted lines in an email reply. They are defined usi
 
 The quoted email colours don't use a pattern. The first colour, `quoted` provides a default colour for all quoted text. Also, each different level of quoting can be given a different colour using, `quoted1`, `quoted2`, `quoted3` up to `quoted9`.
 
-| Colour Name | Description |
-|-------------|-------------|
-| quoted | Text matching `$quote_regex` in the body of a message |
-| quoted1 | 1 level deeper quoted text, e.g. `> > text` |
-| quoted2 | 2 level deeper quoted text, e.g. `> > > text` |
-| ... | ... |
-| quoted9 | 9 level deeper quoted text |
+| Colour Name | Description                                           |
+|-------------|-------------------------------------------------------|
+| quoted      | Text matching `$quote_regex` in the body of a message |
+| quoted1     | 1 level deeper quoted text, e.g. `> > text`           |
+| quoted2     | 2 level deeper quoted text, e.g. `> > > text`         |
+| ...         | ...                                                   |
+| quoted9     | 9 level deeper quoted text                            |
 
 ```neomuttrc
 color quoted brightblue default
@@ -219,23 +219,23 @@ For the `status` list, the *regular expression* is optional. Without one, the co
 
 Color lists can be undone by using the `uncolor` command and the pattern or `*` to match.
 
-| Colour Name | Match | Description |
-|-------------|-------|-------------|
-| attach_headers | regex | Attachment headers |
-| body | regex | Email body |
-| header | regex | Email headers |
-| index | pattern | Default highlighting of the entire index line |
-| index_author | pattern | Author in the index: `%A`, `%a`, `%F`, `%L`, `%n` |
-| index_collapsed | pattern | Number of messages in a collapsed thread: `%M` |
-| index_date | pattern | Date field: `%d`, `%D`, `%{fmt}`, `%[fmt]`, `%(fmt)` |
-| index_flags | pattern | Flags in the index: `%S`, `%Z` |
-| index_label | pattern | Message label: `%y`, `%Y` |
-| index_number | pattern | Message number: `%C` |
-| index_size | pattern | Message size: `%c`, `%cr`, `%l` |
-| index_subject | pattern | Subject in the index: `%s` |
-| index_tag | pattern | Tags in the index: `%G` |
-| index_tags | pattern | Transformed message tags: `%g`, `%J` |
-| status | regex | Status bar |
+| Colour Name     | Match   | Description                                          |
+|-----------------|---------|------------------------------------------------------|
+| attach_headers  | regex   | Attachment headers                                   |
+| body            | regex   | Email body                                           |
+| header          | regex   | Email headers                                        |
+| index           | pattern | Default highlighting of the entire index line        |
+| index_author    | pattern | Author in the index: `%A`, `%a`, `%F`, `%L`, `%n`    |
+| index_collapsed | pattern | Number of messages in a collapsed thread: `%M`       |
+| index_date      | pattern | Date field: `%d`, `%D`, `%{fmt}`, `%[fmt]`, `%(fmt)` |
+| index_flags     | pattern | Flags in the index: `%S`, `%Z`                       |
+| index_label     | pattern | Message label: `%y`, `%Y`                            |
+| index_number    | pattern | Message number: `%C`                                 |
+| index_size      | pattern | Message size: `%c`, `%cr`, `%l`                      |
+| index_subject   | pattern | Subject in the index: `%s`                           |
+| index_tag       | pattern | Tags in the index: `%G`                              |
+| index_tags      | pattern | Transformed message tags: `%g`, `%J`                 |
+| status          | regex   | Status bar                                           |
 
 ```neomuttrc
 # Highlight emails from work (entire line)
@@ -317,19 +317,19 @@ The index objects can be themed using the `color` command and an optional patter
 color index-object foreground background [pattern]
 ```
 
-| Object | Highlights |
-|--------|------------|
-| `index` | Entire index line |
-| `index_author` | Author name, %A %a %F %L %n |
+| Object            | Highlights                                   |
+|-------------------|----------------------------------------------|
+| `index`           | Entire index line                            |
+| `index_author`    | Author name, %A %a %F %L %n                  |
 | `index_collapsed` | Number of messages in a collapsed thread, %M |
-| `index_date` | Date field |
-| `index_flags` | Message flags, %S %Z |
-| `index_label` | Message label, %y %Y |
-| `index_number` | Message number, %C |
-| `index_size` | Message size, %c %cr %l |
-| `index_subject` | Subject, %s |
-| `index_tag` | Message tags, `%G` |
-| `index_tags` | Transformed message tags, `%g` `%J` |
+| `index_date`      | Date field                                   |
+| `index_flags`     | Message flags, %S %Z                         |
+| `index_label`     | Message label, %y %Y                         |
+| `index_number`    | Message number, %C                           |
+| `index_size`      | Message size, %c %cr %l                      |
+| `index_subject`   | Subject, %s                                  |
+| `index_tag`       | Message tags, `%G`                           |
+| `index_tags`      | Transformed message tags, `%g` `%J`          |
 
 ### Index Color neomuttrc
 
@@ -410,9 +410,9 @@ With two parameters, NeoMutt will only color the num'th sub-match of the regex.
 
 ### Status Colors
 
-| Name | Default Color | Description |
-|------|---------------|-------------|
-| status | `reverse` | Status bar |
+| Name   | Default Color | Description |
+|--------|---------------|-------------|
+| status | `reverse`     | Status bar  |
 
 ### Status Color neomuttrc
 

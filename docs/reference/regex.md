@@ -43,20 +43,20 @@ A list of characters enclosed by `[` and `]` matches any single character in tha
 
 Certain named classes of characters are predefined. Character classes consist of `[:`, a keyword denoting the class, and `:]`. The following classes are defined by the POSIX standard:
 
-| Character class | Description |
-|-----------------|-------------|
-| `[:alnum:]` | Alphanumeric characters |
-| `[:alpha:]` | Alphabetic characters |
-| `[:blank:]` | Space or tab characters |
-| `[:cntrl:]` | Control characters |
-| `[:digit:]` | Numeric characters |
-| `[:graph:]` | Characters that are both printable and visible. (A space is printable, but not visible, while an "a" is both) |
-| `[:lower:]` | Lower-case alphabetic characters |
-| `[:print:]` | Printable characters (characters that are not control characters) |
-| `[:punct:]` | Punctuation characters (characters that are not letter, digits, control characters, or space characters) |
-| `[:space:]` | Space characters (such as space, tab and formfeed, to name a few) |
-| `[:upper:]` | Upper-case alphabetic characters |
-| `[:xdigit:]` | Characters that are hexadecimal digits |
+| Character class | Description                                                                                                   |
+|-----------------|---------------------------------------------------------------------------------------------------------------|
+| `[:alnum:]`     | Alphanumeric characters                                                                                       |
+| `[:alpha:]`     | Alphabetic characters                                                                                         |
+| `[:blank:]`     | Space or tab characters                                                                                       |
+| `[:cntrl:]`     | Control characters                                                                                            |
+| `[:digit:]`     | Numeric characters                                                                                            |
+| `[:graph:]`     | Characters that are both printable and visible. (A space is printable, but not visible, while an "a" is both) |
+| `[:lower:]`     | Lower-case alphabetic characters                                                                              |
+| `[:print:]`     | Printable characters (characters that are not control characters)                                             |
+| `[:punct:]`     | Punctuation characters (characters that are not letter, digits, control characters, or space characters)      |
+| `[:space:]`     | Space characters (such as space, tab and formfeed, to name a few)                                             |
+| `[:upper:]`     | Upper-case alphabetic characters                                                                              |
+| `[:xdigit:]`    | Characters that are hexadecimal digits                                                                        |
 
 A character class is only valid in a regular expression inside the brackets of a character list.
 
@@ -78,15 +78,15 @@ Two additional special sequences can appear in character lists. These apply to n
 
 A regular expression matching a single character may be followed by one of several repetition operators:
 
-| Operator | Description |
-|----------|-------------|
-| `?` | The preceding item is optional and matched at most once |
-| `*` | The preceding item will be matched zero or more times |
-| `+` | The preceding item will be matched one or more times |
-| `{n}` | The preceding item is matched exactly *n* times |
-| `{n,}` | The preceding item is matched *n* or more times |
-| `{,m}` | The preceding item is matched at most *m* times |
-| `{n,m}` | The preceding item is matched at least *n* times, but no more than *m* times |
+| Operator | Description                                                                  |
+|----------|------------------------------------------------------------------------------|
+| `?`      | The preceding item is optional and matched at most once                      |
+| `*`      | The preceding item will be matched zero or more times                        |
+| `+`      | The preceding item will be matched one or more times                         |
+| `{n}`    | The preceding item is matched exactly *n* times                              |
+| `{n,}`   | The preceding item is matched *n* or more times                              |
+| `{,m}`   | The preceding item is matched at most *m* times                              |
+| `{n,m}`  | The preceding item is matched at least *n* times, but no more than *m* times |
 
 ## Concatenation and Alternation
 
@@ -102,13 +102,13 @@ Repetition takes precedence over concatenation, which in turn takes precedence o
 If you compile NeoMutt with the included regular expression engine, the following operators may also be used in regular expressions. These operators are not defined by POSIX, so they may or may not be available in stock libraries on various systems.
 :::
 
-| Expression | Description |
-|------------|-------------|
-| `\y` | Matches the empty string at either the beginning or the end of a word |
-| `\B` | Matches the empty string within a word |
-| `\<` | Matches the empty string at the beginning of a word |
-| `\>` | Matches the empty string at the end of a word |
-| `\w` | Matches any word-constituent character (letter, digit, or underscore) |
-| `\W` | Matches any character that is not word-constituent |
-| `` \` `` | Matches the empty string at the beginning of a buffer (string) |
-| `\'` | Matches the empty string at the end of a buffer |
+| Expression | Description                                                           |
+|------------|-----------------------------------------------------------------------|
+| `\y`       | Matches the empty string at either the beginning or the end of a word |
+| `\B`       | Matches the empty string within a word                                |
+| `\<`       | Matches the empty string at the beginning of a word                   |
+| `\>`       | Matches the empty string at the end of a word                         |
+| `\w`       | Matches any word-constituent character (letter, digit, or underscore) |
+| `\W`       | Matches any character that is not word-constituent                    |
+| `` \` ``   | Matches the empty string at the beginning of a buffer (string)        |
+| `\'`       | Matches the empty string at the end of a buffer                       |

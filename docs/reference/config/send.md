@@ -640,9 +640,9 @@ The following sequences are defined in NeoMutt:
 
 | Short | Long Name       | Description                    |
 |-------|-----------------|--------------------------------|
-| `%n` | `%{real-name}`  | Recipient's real name          |
-| `%u` | `%{user-name}`  | User (login) name of recipient |
-| `%v` | `%{first-name}` | First name of recipient        |
+| `%n`  | `%{real-name}`  | Recipient's real name          |
+| `%u`  | `%{user-name}`  | User (login) name of recipient |
+| `%v`  | `%{first-name}` | First name of recipient        |
 
 --------------------------------------------------------------------------------
 
@@ -1068,9 +1068,9 @@ NeoMutt interprets the value of this variable as follows:
 
 | Value | Description                                                        |
 |-------|--------------------------------------------------------------------|
-| >0 | number of seconds to wait for sendmail to finish before continuing |
-| 0  | wait forever for sendmail to finish                                |
-| <0 | always put sendmail in the background without waiting              |
+| >0    | number of seconds to wait for sendmail to finish before continuing |
+| 0     | wait forever for sendmail to finish                                |
+| <0    | always put sendmail in the background without waiting              |
 
 Note that if you specify a value other than 0, the output of the child process will be put in a temporary file.
 If there is some error, you will be informed as to where to find the output.

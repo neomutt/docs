@@ -10,16 +10,16 @@ There are a number of built in shortcuts which refer to specific mailboxes. Thes
 
 ## Shortcut Reference
 
-| Shortcut | Refers to... |
-|----------|--------------|
-| `!` | Your `$spool_file` (incoming) mailbox |
-| `>` | Your `$mbox` file |
-| `<` | Your `$record` file |
-| `^` | The current mailbox |
-| `-` or `!!` | The file you've last visited |
-| `~` | Your home directory |
-| `=` or `+` | Your `$folder` directory |
-| *@alias* | To the default save folder as determined by the address of the alias |
+| Shortcut    | Refers to...                                                         |
+|-------------|----------------------------------------------------------------------|
+| `!`         | Your `$spool_file` (incoming) mailbox                                |
+| `>`         | Your `$mbox` file                                                    |
+| `<`         | Your `$record` file                                                  |
+| `^`         | The current mailbox                                                  |
+| `-` or `!!` | The file you've last visited                                         |
+| `~`         | Your home directory                                                  |
+| `=` or `+`  | Your `$folder` directory                                             |
+| *@alias*    | To the default save folder as determined by the address of the alias |
 
 ## Usage Example
 

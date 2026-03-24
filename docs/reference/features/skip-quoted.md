@@ -37,17 +37,17 @@ Also, it can be handy to jump directly to the start of the email body with the
 
 ## Functions
 
-| Menus | Default Key | Function | Description |
-|-------|-------------|----------|-------------|
-| pager | H | `<skip-headers>` | Jump to first line after headers |
+| Menus | Default Key | Function         | Description                      |
+|-------|-------------|------------------|----------------------------------|
+| pager | H           | `<skip-headers>` | Jump to first line after headers |
 
 ## Variables
 
-| Name | Type | Default |
-|------|------|---------|
-| `pager_skip_quoted_context` | number | 0 |
-| `skip_quoted_offset` | synonym | pager_skip_quoted_context |
-| `toggle_quoted_show_levels` | number | 0 |
+| Name                        | Type    | Default                   |
+|-----------------------------|---------|---------------------------|
+| `pager_skip_quoted_context` | number  | 0                         |
+| `skip_quoted_offset`        | synonym | pager_skip_quoted_context |
+| `toggle_quoted_show_levels` | number  | 0                         |
 
 ## neomuttrc
 

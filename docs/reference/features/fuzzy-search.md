@@ -65,27 +65,27 @@ better match. A score of `-1` means no match at all.
 
 **Base Score**
 
-| Rule | Points |
-|------|--------|
+| Rule                   | Points            |
+|------------------------|-------------------|
 | Each matched character | +10 per character |
 
 **Bonuses**
 
-| Condition | Points |
-|-----------|--------|
-| Match at position 0 (start of string) | +30 |
-| Match after a separator (`/` `.` `-` `_`) | +15 |
-| Each consecutive matched character | +15 |
-| CamelCase boundary (lowercase then uppercase ASCII) | +10 |
-| Match at position 0 with `prefer_prefix` enabled | +40 |
+| Condition                                           | Points |
+|-----------------------------------------------------|--------|
+| Match at position 0 (start of string)               | +30    |
+| Match after a separator (`/` `.` `-` `_`)           | +15    |
+| Each consecutive matched character                  | +15    |
+| CamelCase boundary (lowercase then uppercase ASCII) | +10    |
+| Match at position 0 with `prefer_prefix` enabled    | +40    |
 
 **Penalties**
 
-| Condition | Points |
-|-----------|--------|
-| Gap between two matched characters | −2 per skipped character |
-| Total match span (last position − first position + 1) | −1 per character |
-| Candidate string length | −(length / 4) |
+| Condition                                             | Points                   |
+|-------------------------------------------------------|--------------------------|
+| Gap between two matched characters                    | −2 per skipped character |
+| Total match span (last position − first position + 1) | −1 per character         |
+| Candidate string length                               | −(length / 4)            |
 
 After all bonuses and penalties are applied, the final score is
 clamped to a minimum of `0` for any valid match.

@@ -39,11 +39,11 @@ letter**, and (for some patterns) an **argument**.
 
 Patterns use three prefix characters to control matching behavior:
 
-| Prefix | Name | Argument Type | Description |
-|--------|------|---------------|-------------|
-| `~` | Standard | REGEX | Matches using a POSIX regular expression |
-| `=` | IMAP server-side | STRING | Matches using substring comparison (IMAP only) |
-| `%` | Address group | GROUP | Matches against a named address group |
+| Prefix | Name             | Argument Type | Description                                    |
+|--------|------------------|---------------|------------------------------------------------|
+| `~`    | Standard         | REGEX         | Matches using a POSIX regular expression       |
+| `=`    | IMAP server-side | STRING        | Matches using substring comparison (IMAP only) |
+| `%`    | Address group    | GROUP         | Matches against a named address group          |
 
 Examples:
 
@@ -62,14 +62,14 @@ color index yellow default "%f work"
 
 Multiple pattern terms can be combined using logical operators:
 
-| Operator | Meaning | Example |
-|----------|---------|---------|
-| *(implicit)* | AND | `~N ~F` — new **and** flagged |
-| `\|` | OR | `~N \| ~F` — new **or** flagged |
-| `!` | NOT | `!~D` — not deleted |
-| `()` | Grouping | `!(~N \| ~F)` — neither new nor flagged |
-| `^` | All addresses | `^~t user@example.com` — ALL To: addresses match |
-| `@` | Alias mode | Marks the pattern for alias matching |
+| Operator     | Meaning       | Example                                          |
+|--------------|---------------|--------------------------------------------------|
+| *(implicit)* | AND           | `~N ~F` — new **and** flagged                    |
+| `\|`         | OR            | `~N \| ~F` — new **or** flagged                  |
+| `!`          | NOT           | `!~D` — not deleted                              |
+| `()`         | Grouping      | `!(~N \| ~F)` — neither new nor flagged          |
+| `^`          | All addresses | `^~t user@example.com` — ALL To: addresses match |
+| `@`          | Alias mode    | Marks the pattern for alias matching             |
 
 Operator precedence (highest to lowest): `!`, implicit AND, `|`. Use
 parentheses to override precedence.
@@ -95,31 +95,31 @@ color index cyan default "(~f alice | ~f bob) ~U"
 
 These patterns match on message flags and properties. They take no argument.
 
-| Pattern | Description |
-|---------|-------------|
-| `~A` | All messages |
-| `~D` | Deleted messages |
-| `~E` | Expired messages |
-| `~F` | Flagged (important/starred) messages |
-| `~g` | Cryptographically signed messages |
-| `~G` | Cryptographically encrypted messages |
-| `~k` | Messages containing a PGP key |
-| `~l` | Messages addressed to a known mailing list |
-| `~N` | New messages |
-| `~O` | Old messages (seen in previous session, but not read) |
-| `~p` | Messages addressed to you |
-| `~P` | Messages from you |
-| `~Q` | Messages which have been replied to |
-| `~R` | Read messages |
-| `~S` | Superseded messages |
-| `~T` | Tagged messages |
-| `~u` | Messages addressed to a subscribed mailing list |
-| `~U` | Unread messages (combines `~N` and `~O`) |
-| `~v` | Messages part of a collapsed thread |
-| `~V` | Cryptographically verified messages |
-| `~#` | Broken threads (missing parent) |
-| `~$` | Unreferenced messages (not referenced by other messages) |
-| `~=` | Duplicated messages (same Message-Id) |
+| Pattern | Description                                              |
+|---------|----------------------------------------------------------|
+| `~A`    | All messages                                             |
+| `~D`    | Deleted messages                                         |
+| `~E`    | Expired messages                                         |
+| `~F`    | Flagged (important/starred) messages                     |
+| `~g`    | Cryptographically signed messages                        |
+| `~G`    | Cryptographically encrypted messages                     |
+| `~k`    | Messages containing a PGP key                            |
+| `~l`    | Messages addressed to a known mailing list               |
+| `~N`    | New messages                                             |
+| `~O`    | Old messages (seen in previous session, but not read)    |
+| `~p`    | Messages addressed to you                                |
+| `~P`    | Messages from you                                        |
+| `~Q`    | Messages which have been replied to                      |
+| `~R`    | Read messages                                            |
+| `~S`    | Superseded messages                                      |
+| `~T`    | Tagged messages                                          |
+| `~u`    | Messages addressed to a subscribed mailing list          |
+| `~U`    | Unread messages (combines `~N` and `~O`)                 |
+| `~v`    | Messages part of a collapsed thread                      |
+| `~V`    | Cryptographically verified messages                      |
+| `~#`    | Broken threads (missing parent)                          |
+| `~$`    | Unreferenced messages (not referenced by other messages) |
+| `~=`    | Duplicated messages (same Message-Id)                    |
 
 Examples:
 
@@ -149,26 +149,26 @@ limit "~="
 These patterns take a regular expression argument for `~` prefix, a plain
 string for `=` prefix, or an address group name for `%` prefix.
 
-| Pattern | `=` variant | `%` variant | Matches against |
-|---------|-------------|-------------|-----------------|
-| `~b REGEX` | `=b STRING` | | Message body |
-| `~B REGEX` | `=B STRING` | | Entire message (headers + body) |
-| `~c REGEX` | | `%c GROUP` | Cc: header |
-| `~C REGEX` | | `%C GROUP` | To:, Cc:, or Bcc: (any recipient) |
-| `~e REGEX` | | `%e GROUP` | Sender: header |
-| `~f REGEX` | | `%f GROUP` | From: header |
-| `~h REGEX` | `=h STRING` | | All headers (raw) |
-| `~H REGEX` | | | Spam header (X-Spam-Status, etc.) |
-| `~i REGEX` | | | Message-Id header |
-| `~K REGEX` | | | Bcc: header |
-| `~L REGEX` | | `%L GROUP` | From:, Sender:, To:, or Cc: (any address) |
-| `~M REGEX` | | | Content-Type header (MIME type) |
-| `~s REGEX` | | | Subject: header |
-| `~t REGEX` | | | To: header |
-| `~w REGEX` | | | Newsgroups header (NNTP only) |
-| `~x REGEX` | | | References: or In-Reply-To: header |
-| `~y REGEX` | | | X-Label: header |
-| `~Y REGEX` | | | Message tags |
+| Pattern    | `=` variant | `%` variant | Matches against                           |
+|------------|-------------|-------------|-------------------------------------------|
+| `~b REGEX` | `=b STRING` |             | Message body                              |
+| `~B REGEX` | `=B STRING` |             | Entire message (headers + body)           |
+| `~c REGEX` |             | `%c GROUP`  | Cc: header                                |
+| `~C REGEX` |             | `%C GROUP`  | To:, Cc:, or Bcc: (any recipient)         |
+| `~e REGEX` |             | `%e GROUP`  | Sender: header                            |
+| `~f REGEX` |             | `%f GROUP`  | From: header                              |
+| `~h REGEX` | `=h STRING` |             | All headers (raw)                         |
+| `~H REGEX` |             |             | Spam header (X-Spam-Status, etc.)         |
+| `~i REGEX` |             |             | Message-Id header                         |
+| `~K REGEX` |             |             | Bcc: header                               |
+| `~L REGEX` |             | `%L GROUP`  | From:, Sender:, To:, or Cc: (any address) |
+| `~M REGEX` |             |             | Content-Type header (MIME type)           |
+| `~s REGEX` |             |             | Subject: header                           |
+| `~t REGEX` |             |             | To: header                                |
+| `~w REGEX` |             |             | Newsgroups header (NNTP only)             |
+| `~x REGEX` |             |             | References: or In-Reply-To: header        |
+| `~y REGEX` |             |             | X-Label: header                           |
+| `~Y REGEX` |             |             | Message tags                              |
 
 > **Note:** `~w` is only available when NeoMutt is compiled with NNTP support.
 
@@ -211,65 +211,65 @@ message-hook "~f boss@company\\.com" "set scoring=yes"
 
 Date patterns filter messages by when they were sent or received.
 
-| Pattern | Description |
-|---------|-------------|
+| Pattern        | Description                              |
+|----------------|------------------------------------------|
 | `~d DATERANGE` | Date the message was sent (Date: header) |
-| `~r DATERANGE` | Date the message was received |
+| `~r DATERANGE` | Date the message was received            |
 
 #### Relative Date Offsets
 
 Relative offsets compare the message date to the current time:
 
-| Syntax | Meaning |
-|--------|---------|
-| `<3d` | Less than 3 days ago |
-| `>3d` | More than 3 days ago |
-| `=3d` | Exactly 3 days ago |
+| Syntax | Meaning              |
+|--------|----------------------|
+| `<3d`  | Less than 3 days ago |
+| `>3d`  | More than 3 days ago |
+| `=3d`  | Exactly 3 days ago   |
 
 #### Offset Units
 
 | Unit | Meaning |
 |------|---------|
-| `y` | Years |
-| `m` | Months |
-| `w` | Weeks |
-| `d` | Days |
-| `H` | Hours |
-| `M` | Minutes |
-| `S` | Seconds |
+| `y`  | Years   |
+| `m`  | Months  |
+| `w`  | Weeks   |
+| `d`  | Days    |
+| `H`  | Hours   |
+| `M`  | Minutes |
+| `S`  | Seconds |
 
 #### Absolute Dates
 
 Absolute dates can be specified in `DD/MM/YYYY` format (month and year are
 optional and default to the current month/year) or ISO 8601 `YYYYMMDD` format:
 
-| Example | Meaning |
-|---------|---------|
-| `10` | 10th of the current month |
-| `10/12` | 10th of December, current year |
-| `10/12/2024` | 10th of December, 2024 |
-| `20241210` | 10th of December, 2024 (ISO 8601) |
+| Example      | Meaning                           |
+|--------------|-----------------------------------|
+| `10`         | 10th of the current month         |
+| `10/12`      | 10th of December, current year    |
+| `10/12/2024` | 10th of December, 2024            |
+| `20241210`   | 10th of December, 2024 (ISO 8601) |
 
 #### Date Ranges
 
 Two dates separated by `-` define an inclusive range:
 
-| Example | Meaning |
-|---------|---------|
+| Example               | Meaning                        |
+|-----------------------|--------------------------------|
 | `1/1/2024-31/12/2024` | January 1 to December 31, 2024 |
-| `20240101-20241231` | Same range in ISO 8601 format |
-| `1/6/2024-` | June 1, 2024 until now |
+| `20240101-20241231`   | Same range in ISO 8601 format  |
+| `1/6/2024-`           | June 1, 2024 until now         |
 
 #### Mixed Date-Offset Ranges
 
 A date and an offset can be combined:
 
-| Example | Meaning |
-|---------|---------|
-| `-3d+2d` | From 3 days ago to 2 days from now |
-| `1/6/2024-3d` | June 1, 2024 minus 3 days (May 29) |
-| `1/6/2024+2w` | June 1, 2024 plus 2 weeks (June 15) |
-| `*2w` | 2 weeks in both directions from today |
+| Example       | Meaning                               |
+|---------------|---------------------------------------|
+| `-3d+2d`      | From 3 days ago to 2 days from now    |
+| `1/6/2024-3d` | June 1, 2024 minus 3 days (May 29)    |
+| `1/6/2024+2w` | June 1, 2024 plus 2 weeks (June 15)   |
+| `*2w`         | 2 weeks in both directions from today |
 
 Examples:
 
@@ -301,30 +301,30 @@ limit "~d *1m"
 
 Range patterns match on numeric properties of messages.
 
-| Pattern | Description |
-|---------|-------------|
+| Pattern    | Description                   |
+|------------|-------------------------------|
 | `~m RANGE` | Message number in the mailbox |
-| `~n RANGE` | Message score |
-| `~X RANGE` | Number of MIME attachments |
-| `~z RANGE` | Message size (in bytes) |
+| `~n RANGE` | Message score                 |
+| `~X RANGE` | Number of MIME attachments    |
+| `~z RANGE` | Message size (in bytes)       |
 
 #### Range Syntax
 
-| Syntax | Meaning |
-|--------|---------|
-| `100` | Exactly 100 |
+| Syntax   | Meaning                       |
+|----------|-------------------------------|
+| `100`    | Exactly 100                   |
 | `10-100` | Between 10 and 100, inclusive |
-| `-100` | Up to 100 (0 to 100) |
-| `100-` | 100 or more |
-| `<100` | Less than 100 (exclusive) |
-| `>100` | Greater than 100 (exclusive) |
+| `-100`   | Up to 100 (0 to 100)          |
+| `100-`   | 100 or more                   |
+| `<100`   | Less than 100 (exclusive)     |
+| `>100`   | Greater than 100 (exclusive)  |
 
 #### Size Suffixes (for `~z` only)
 
-| Suffix | Meaning |
-|--------|---------|
-| `K` | Kilobytes (×1024) |
-| `M` | Megabytes (×1048576) |
+| Suffix | Meaning              |
+|--------|----------------------|
+| `K`    | Kilobytes (×1024)    |
+| `M`    | Megabytes (×1048576) |
 
 Examples:
 
@@ -356,11 +356,11 @@ color index yellow default "~z 100K-500K"
 
 Thread patterns match messages based on their position in a thread hierarchy.
 
-| Pattern | Description |
-|---------|-------------|
-| `~(PATTERN)` | Messages in threads containing a message that matches PATTERN |
-| `~<(PATTERN)` | Messages whose immediate parent matches PATTERN |
-| `~>(PATTERN)` | Messages having a direct child that matches PATTERN |
+| Pattern       | Description                                                   |
+|---------------|---------------------------------------------------------------|
+| `~(PATTERN)`  | Messages in threads containing a message that matches PATTERN |
+| `~<(PATTERN)` | Messages whose immediate parent matches PATTERN               |
+| `~>(PATTERN)` | Messages having a direct child that matches PATTERN           |
 
 Examples:
 
@@ -390,11 +390,11 @@ When connected to an IMAP server, the `=` prefix performs server-side string
 matching. This is faster than downloading messages for local regex matching,
 but only supports substring comparison (not regular expressions).
 
-| Pattern | Description |
-|---------|-------------|
-| `=b STRING` | Body contains STRING |
-| `=B STRING` | Headers or body contain STRING |
-| `=h STRING` | Headers contain STRING |
+| Pattern     | Description                                  |
+|-------------|----------------------------------------------|
+| `=b STRING` | Body contains STRING                         |
+| `=B STRING` | Headers or body contain STRING               |
+| `=h STRING` | Headers contain STRING                       |
 | `=/ STRING` | Gmail custom server-side search (Gmail only) |
 
 The `=/ STRING` pattern is specific to Gmail's IMAP implementation and passes
@@ -455,19 +455,19 @@ set simple_search = "~f %s | ~s %s | ~b %s"
 
 Certain keywords are recognized and expanded to flag patterns:
 
-| Keyword | Expands to | Meaning |
-|---------|------------|---------|
-| `all` | `~A` | All messages |
-| `.` | `~A` | All messages |
-| `^` | `~A` | All messages |
-| `del` | `~D` | Deleted messages |
-| `flag` | `~F` | Flagged messages |
-| `new` | `~N` | New messages |
-| `old` | `~O` | Old messages |
-| `repl` | `~Q` | Replied-to messages |
-| `read` | `~R` | Read messages |
-| `tag` | `~T` | Tagged messages |
-| `unread` | `~U` | Unread messages |
+| Keyword  | Expands to | Meaning             |
+|----------|------------|---------------------|
+| `all`    | `~A`       | All messages        |
+| `.`      | `~A`       | All messages        |
+| `^`      | `~A`       | All messages        |
+| `del`    | `~D`       | Deleted messages    |
+| `flag`   | `~F`       | Flagged messages    |
+| `new`    | `~N`       | New messages        |
+| `old`    | `~O`       | Old messages        |
+| `repl`   | `~Q`       | Replied-to messages |
+| `read`   | `~R`       | Read messages       |
+| `tag`    | `~T`       | Tagged messages     |
+| `unread` | `~U`       | Unread messages     |
 
 These keywords work in the `limit` command. For example, typing `l` then
 entering `new` is equivalent to entering `~N`.
@@ -485,12 +485,12 @@ patterns.
 
 Only four pattern operators are supported in alias mode:
 
-| Pattern | Matches against |
-|---------|-----------------|
+| Pattern    | Matches against                           |
+|------------|-------------------------------------------|
 | `~f REGEX` | Alias **name** (the short identifier/key) |
-| `~t REGEX` | Alias **address list** (email addresses) |
-| `~c REGEX` | Alias **comment** (descriptive text) |
-| `~Y REGEX` | Alias **tags** |
+| `~t REGEX` | Alias **address list** (email addresses)  |
+| `~c REGEX` | Alias **comment** (descriptive text)      |
+| `~Y REGEX` | Alias **tags**                            |
 
 > **Important:** Although alias patterns reuse the same `~f`, `~t`, and `~c`
 > syntax as message patterns, they match against completely different fields.
@@ -540,21 +540,21 @@ example, entering `john` in the alias dialog limit prompt is equivalent to:
 
 ### Differences from Message Patterns
 
-| Feature | Message Patterns | Alias Patterns |
-|---------|-----------------|----------------|
-| `~f` | Matches From: header | Matches alias name |
-| `~t` | Matches To: header | Matches alias addresses |
-| `~c` | Matches Cc: header | Matches alias comment |
-| `~Y` | Matches message tags | Matches alias tags |
-| Flag patterns (`~N`, `~F`, etc.) | Supported | **Not supported** |
-| Date patterns (`~d`, `~r`) | Supported | **Not supported** |
-| Range patterns (`~m`, `~z`, etc.) | Supported | **Not supported** |
-| Thread patterns (`~()`, `~<()`, `~>()`) | Supported | **Not supported** |
-| Body/header search (`~b`, `~h`, etc.) | Supported | **Not supported** |
-| IMAP patterns (`=b`, `=h`, etc.) | Supported | **Not supported** |
-| Group patterns (`%f`, `%c`, etc.) | Supported | **Not supported** |
-| Logical operators (`!`, `\|`, `()`) | Supported | Supported |
-| Simple search | Configurable via `$simple_search` | Fixed: `~f %s \| ~t %s \| ~c %s` |
+| Feature                                 | Message Patterns                  | Alias Patterns                   |
+|-----------------------------------------|-----------------------------------|----------------------------------|
+| `~f`                                    | Matches From: header              | Matches alias name               |
+| `~t`                                    | Matches To: header                | Matches alias addresses          |
+| `~c`                                    | Matches Cc: header                | Matches alias comment            |
+| `~Y`                                    | Matches message tags              | Matches alias tags               |
+| Flag patterns (`~N`, `~F`, etc.)        | Supported                         | **Not supported**                |
+| Date patterns (`~d`, `~r`)              | Supported                         | **Not supported**                |
+| Range patterns (`~m`, `~z`, etc.)       | Supported                         | **Not supported**                |
+| Thread patterns (`~()`, `~<()`, `~>()`) | Supported                         | **Not supported**                |
+| Body/header search (`~b`, `~h`, etc.)   | Supported                         | **Not supported**                |
+| IMAP patterns (`=b`, `=h`, etc.)        | Supported                         | **Not supported**                |
+| Group patterns (`%f`, `%c`, etc.)       | Supported                         | **Not supported**                |
+| Logical operators (`!`, `\|`, `()`)     | Supported                         | Supported                        |
+| Simple search                           | Configurable via `$simple_search` | Fixed: `~f %s \| ~t %s \| ~c %s` |
 
 > **Note:** Unsupported operators in alias mode will silently fail to match any
 > alias. No error is reported.
@@ -565,107 +565,107 @@ example, entering `john` in the alias dialog limit prompt is equivalent to:
 
 ### Pattern Prefixes
 
-| Prefix | Type | Argument |
-|--------|------|----------|
-| `~` | Standard | Regular expression |
-| `=` | IMAP server-side | Substring |
-| `%` | Address group | Group name |
+| Prefix | Type             | Argument           |
+|--------|------------------|--------------------|
+| `~`    | Standard         | Regular expression |
+| `=`    | IMAP server-side | Substring          |
+| `%`    | Address group    | Group name         |
 
 ### All Message Pattern Operators
 
-| Pattern | Argument | Description |
-|---------|----------|-------------|
-| `~A` | — | All messages |
-| `~b` | REGEX | Body matches |
-| `~B` | REGEX | Entire message matches |
-| `~c` | REGEX | Cc: matches |
-| `~C` | REGEX | To:, Cc:, or Bcc: matches |
-| `~d` | DATE | Sent date |
-| `~D` | — | Deleted |
-| `~e` | REGEX | Sender: matches |
-| `~E` | — | Expired |
-| `~f` | REGEX | From: matches |
-| `~F` | — | Flagged |
-| `~g` | — | Cryptographically signed |
-| `~G` | — | Cryptographically encrypted |
-| `~h` | REGEX | Headers match |
-| `~H` | REGEX | Spam header matches |
-| `~i` | REGEX | Message-Id matches |
-| `~I` | QUERY | External search query |
-| `~k` | — | Contains PGP key |
-| `~K` | REGEX | Bcc: matches |
-| `~l` | — | To known mailing list |
-| `~L` | REGEX | Any address field matches |
-| `~m` | RANGE | Message number |
-| `~M` | REGEX | Content-Type matches |
-| `~n` | RANGE | Score |
-| `~N` | — | New |
-| `~O` | — | Old |
-| `~p` | — | Addressed to you |
-| `~P` | — | From you |
-| `~Q` | — | Replied to |
-| `~r` | DATE | Received date |
-| `~R` | — | Read |
-| `~s` | REGEX | Subject: matches |
-| `~S` | — | Superseded |
-| `~t` | REGEX | To: matches |
-| `~T` | — | Tagged |
-| `~u` | — | To subscribed mailing list |
-| `~U` | — | Unread |
-| `~v` | — | Collapsed thread |
-| `~V` | — | Cryptographically verified |
-| `~w` | REGEX | Newsgroups match |
-| `~x` | REGEX | References: or In-Reply-To: matches |
-| `~X` | RANGE | Number of attachments |
-| `~y` | REGEX | X-Label: matches |
-| `~Y` | REGEX | Tags match |
-| `~z` | RANGE | Message size |
-| `~#` | — | Broken thread |
-| `~$` | — | Unreferenced message |
-| `~=` | — | Duplicate (same Message-Id) |
-| `~()` | PATTERN | Thread contains match |
-| `~<()` | PATTERN | Parent matches |
-| `~>()` | PATTERN | Child matches |
+| Pattern | Argument | Description                         |
+|---------|----------|-------------------------------------|
+| `~A`    | —        | All messages                        |
+| `~b`    | REGEX    | Body matches                        |
+| `~B`    | REGEX    | Entire message matches              |
+| `~c`    | REGEX    | Cc: matches                         |
+| `~C`    | REGEX    | To:, Cc:, or Bcc: matches           |
+| `~d`    | DATE     | Sent date                           |
+| `~D`    | —        | Deleted                             |
+| `~e`    | REGEX    | Sender: matches                     |
+| `~E`    | —        | Expired                             |
+| `~f`    | REGEX    | From: matches                       |
+| `~F`    | —        | Flagged                             |
+| `~g`    | —        | Cryptographically signed            |
+| `~G`    | —        | Cryptographically encrypted         |
+| `~h`    | REGEX    | Headers match                       |
+| `~H`    | REGEX    | Spam header matches                 |
+| `~i`    | REGEX    | Message-Id matches                  |
+| `~I`    | QUERY    | External search query               |
+| `~k`    | —        | Contains PGP key                    |
+| `~K`    | REGEX    | Bcc: matches                        |
+| `~l`    | —        | To known mailing list               |
+| `~L`    | REGEX    | Any address field matches           |
+| `~m`    | RANGE    | Message number                      |
+| `~M`    | REGEX    | Content-Type matches                |
+| `~n`    | RANGE    | Score                               |
+| `~N`    | —        | New                                 |
+| `~O`    | —        | Old                                 |
+| `~p`    | —        | Addressed to you                    |
+| `~P`    | —        | From you                            |
+| `~Q`    | —        | Replied to                          |
+| `~r`    | DATE     | Received date                       |
+| `~R`    | —        | Read                                |
+| `~s`    | REGEX    | Subject: matches                    |
+| `~S`    | —        | Superseded                          |
+| `~t`    | REGEX    | To: matches                         |
+| `~T`    | —        | Tagged                              |
+| `~u`    | —        | To subscribed mailing list          |
+| `~U`    | —        | Unread                              |
+| `~v`    | —        | Collapsed thread                    |
+| `~V`    | —        | Cryptographically verified          |
+| `~w`    | REGEX    | Newsgroups match                    |
+| `~x`    | REGEX    | References: or In-Reply-To: matches |
+| `~X`    | RANGE    | Number of attachments               |
+| `~y`    | REGEX    | X-Label: matches                    |
+| `~Y`    | REGEX    | Tags match                          |
+| `~z`    | RANGE    | Message size                        |
+| `~#`    | —        | Broken thread                       |
+| `~$`    | —        | Unreferenced message                |
+| `~=`    | —        | Duplicate (same Message-Id)         |
+| `~()`   | PATTERN  | Thread contains match               |
+| `~<()`  | PATTERN  | Parent matches                      |
+| `~>()`  | PATTERN  | Child matches                       |
 
 ### Logical Operators
 
-| Operator | Meaning |
-|----------|---------|
-| *(space)* | AND |
-| `\|` | OR |
-| `!` | NOT |
-| `()` | Grouping |
-| `^` | All addresses must match |
+| Operator  | Meaning                  |
+|-----------|--------------------------|
+| *(space)* | AND                      |
+| `\|`      | OR                       |
+| `!`       | NOT                      |
+| `()`      | Grouping                 |
+| `^`       | All addresses must match |
 
 ### Date Range Quick Reference
 
-| Syntax | Example | Meaning |
-|--------|---------|---------|
-| `<Nd` | `<7d` | Within the last 7 days |
-| `>Nd` | `>30d` | More than 30 days ago |
-| `=Nd` | `=1d` | Exactly 1 day ago |
-| `DD/MM/YYYY` | `15/6/2025` | Specific date |
-| `YYYYMMDD` | `20250615` | Specific date (ISO 8601) |
-| `DATE-DATE` | `1/1/2025-31/3/2025` | Date range |
-| `*Nw` | `*2w` | ±2 weeks from today |
+| Syntax       | Example              | Meaning                  |
+|--------------|----------------------|--------------------------|
+| `<Nd`        | `<7d`                | Within the last 7 days   |
+| `>Nd`        | `>30d`               | More than 30 days ago    |
+| `=Nd`        | `=1d`                | Exactly 1 day ago        |
+| `DD/MM/YYYY` | `15/6/2025`          | Specific date            |
+| `YYYYMMDD`   | `20250615`           | Specific date (ISO 8601) |
+| `DATE-DATE`  | `1/1/2025-31/3/2025` | Date range               |
+| `*Nw`        | `*2w`                | ±2 weeks from today      |
 
 ### Number Range Quick Reference
 
-| Syntax | Example | Meaning |
-|--------|---------|---------|
-| `N` | `5` | Exactly 5 |
-| `N-M` | `10-50` | Between 10 and 50 |
-| `-N` | `-100` | Up to 100 |
-| `N-` | `100-` | 100 or more |
-| `<N` | `<10` | Less than 10 |
-| `>N` | `>100` | Greater than 100 |
+| Syntax      | Example       | Meaning                           |
+|-------------|---------------|-----------------------------------|
+| `N`         | `5`           | Exactly 5                         |
+| `N-M`       | `10-50`       | Between 10 and 50                 |
+| `-N`        | `-100`        | Up to 100                         |
+| `N-`        | `100-`        | 100 or more                       |
+| `<N`        | `<10`         | Less than 10                      |
+| `>N`        | `>100`        | Greater than 100                  |
 | `NK` / `NM` | `100K` / `5M` | Kilobytes / Megabytes (size only) |
 
 ### Alias Pattern Operators
 
-| Pattern | Matches |
-|---------|---------|
-| `~f REGEX` | Alias name |
+| Pattern    | Matches         |
+|------------|-----------------|
+| `~f REGEX` | Alias name      |
 | `~t REGEX` | Alias addresses |
-| `~c REGEX` | Alias comment |
-| `~Y REGEX` | Alias tags |
+| `~c REGEX` | Alias comment   |
+| `~Y REGEX` | Alias tags      |

@@ -26,20 +26,20 @@ NeoMutt shows you a preview of the message you are about to send in the compose 
 
 ## Variables
 
-| Name                                 | Type    | Default | Description                                              |
-|--------------------------------------|---------|---------|----------------------------------------------------------|
-| `compose_preview_above_attachments`  | boolean | `no`    | Show the message preview above the attachments list.     |
-| `compose_preview_min_rows`           | number  | `5`     | Hide the preview if it has fewer than this number of rows |
-| `compose_show_preview`               | boolean | `no`    | Enable or disable the message preview feature            |
+| Name                                | Type    | Default | Description                                               |
+|-------------------------------------|---------|---------|-----------------------------------------------------------|
+| `compose_preview_above_attachments` | boolean | `no`    | Show the message preview above the attachments list.      |
+| `compose_preview_min_rows`          | number  | `5`     | Hide the preview if it has fewer than this number of rows |
+| `compose_show_preview`              | boolean | `no`    | Enable or disable the message preview feature             |
 
 ## Functions
 
 The message preview is controlled by the following functions.
 
-| Menus   | Function                  | Description                            | Default        |
-|---------|---------------------------|----------------------------------------|----------------|
-| compose | `<preview-page-down>`     | Show the next page of the message      | `<PageDown>`   |
-| compose | `<preview-page-up>`       | Show the previous page of the message  | `<PageUp>`     |
+| Menus   | Function              | Description                           | Default      |
+|---------|-----------------------|---------------------------------------|--------------|
+| compose | `<preview-page-down>` | Show the next page of the message     | `<PageDown>` |
+| compose | `<preview-page-up>`   | Show the previous page of the message | `<PageUp>`   |
 
 :::{admonition} 📷 Screenshot Needed
 :class: tip

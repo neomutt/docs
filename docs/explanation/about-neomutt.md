@@ -64,18 +64,18 @@ pages at [https://neomutt.org/dev.html](https://neomutt.org/dev.html) for more d
 This section lists typographical conventions followed throughout this manual. See the table
 below for typographical conventions for special terms.
 
-| Item | Refers to... |
-|------|-------------|
-| `printf(3)` | UNIX manual pages, execute `man 3 printf` |
-| `<PageUp>` | named keys |
-| `<create-alias>` | named NeoMutt function |
-| `^G` | Control+G key combination |
-| $mail_check | NeoMutt configuration option |
-| `$HOME` | environment variable |
+| Item             | Refers to...                              |
+|------------------|-------------------------------------------|
+| `printf(3)`      | UNIX manual pages, execute `man 3 printf` |
+| `<PageUp>`       | named keys                                |
+| `<create-alias>` | named NeoMutt function                    |
+| `^G`             | Control+G key combination                 |
+| $mail_check      | NeoMutt configuration option              |
+| `$HOME`          | environment variable                      |
 
 Examples are presented as:
 
-```sh
+```
 neomutt -v
 ```
 

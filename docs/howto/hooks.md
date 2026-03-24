@@ -291,8 +291,8 @@ set new_mail_command="terminal-notifier -title '%v' -subtitle 'New Mail' \
 
 ### Variables
 
-| Name | Type | Default |
-|---|---|---|
+| Name               | Type   | Default |
+|--------------------|--------|---------|
 | `new_mail_command` | string | (empty) |
 
 ---

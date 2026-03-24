@@ -335,24 +335,24 @@ Which breaks down as:
 - `%<N?%N/>` – If new emails `%N/`, otherwise nothing
 - `%S` – Total number of emails
 
-| Format | Notes | Description |
-|--------|-------|-------------|
-| `%B` | | Name of the mailbox |
-| `%d` | * ‡ | Number of deleted messages |
-| `%D` | | Descriptive name of the mailbox |
-| `%F` | * † | Number of flagged messages in the mailbox |
-| `%L` | * ‡ | Number of messages after limiting |
-| `%n` | * | If there's new mail, display "N", otherwise " " (space) |
-| `%N` | * † | Number of unread messages in the mailbox (seen or unseen) |
-| `%o` | * † | Number of old messages in the mailbox (unread, but seen) |
-| `%r` | * † | Number of read messages in the mailbox |
-| `%S` | * † | Size of mailbox (total number of messages) |
-| `%t` | * ‡ | Number of tagged messages in the mailbox |
-| `%Z` | * † | Number of new messages in the mailbox (unread, unseen) |
-| `%!` | | "!": one flagged message; "!!": two flagged messages; "n!": n flagged messages (for n > 2). Otherwise prints nothing. |
-| `%>X` | | Right justify the rest of the string and pad with "X" |
-| `%\|X` | | Pad to the end of the line with "X" |
-| `%*X` | | Soft-fill with character "X" as pad |
+| Format | Notes | Description                                                                                                           |
+|--------|-------|-----------------------------------------------------------------------------------------------------------------------|
+| `%B`   |       | Name of the mailbox                                                                                                   |
+| `%d`   | * ‡   | Number of deleted messages                                                                                            |
+| `%D`   |       | Descriptive name of the mailbox                                                                                       |
+| `%F`   | * †   | Number of flagged messages in the mailbox                                                                             |
+| `%L`   | * ‡   | Number of messages after limiting                                                                                     |
+| `%n`   | *     | If there's new mail, display "N", otherwise " " (space)                                                               |
+| `%N`   | * †   | Number of unread messages in the mailbox (seen or unseen)                                                             |
+| `%o`   | * †   | Number of old messages in the mailbox (unread, but seen)                                                              |
+| `%r`   | * †   | Number of read messages in the mailbox                                                                                |
+| `%S`   | * †   | Size of mailbox (total number of messages)                                                                            |
+| `%t`   | * ‡   | Number of tagged messages in the mailbox                                                                              |
+| `%Z`   | * †   | Number of new messages in the mailbox (unread, unseen)                                                                |
+| `%!`   |       | "!": one flagged message; "!!": two flagged messages; "n!": n flagged messages (for n > 2). Otherwise prints nothing. |
+| `%>X`  |       | Right justify the rest of the string and pad with "X"                                                                 |
+| `%\|X` |       | Pad to the end of the line with "X"                                                                                   |
+| `%*X`  |       | Soft-fill with character "X" as pad                                                                                   |
 
 \* = Can be optionally printed if nonzero
 
@@ -366,12 +366,12 @@ set mail_check_stats
 
 Here are some examples. They show the number of (F)lagged, (N)ew and (S)ize.
 
-| Format | Example |
-|--------|---------|
+| Format                      | Example                      |
+|-----------------------------|------------------------------|
 | `%B%<F? [%F]>%* %<N?%N/>%S` | `mailbox [F]            N/S` |
-| `%B%* %F:%N:%S` | `mailbox              F:N:S` |
-| `%B %<N?(%N)>%* %S` | `mailbox (N)              S` |
-| `%B%* %<F?%F/>%N` | `mailbox                F/S` |
+| `%B%* %F:%N:%S`             | `mailbox              F:N:S` |
+| `%B %<N?(%N)>%* %S`         | `mailbox (N)              S` |
+| `%B%* %<F?%F/>%N`           | `mailbox                F/S` |
 
 ##### Abbreviating Mailbox Names
 
@@ -513,15 +513,15 @@ color sidebar_divider    color8  default     # Dark grey
 There is a priority order when coloring Sidebar mailboxes. e.g. If a mailbox has new mail it
 will have the `sidebar_new` color, even if it also contains flagged mails.
 
-| Priority | Color | Description |
-|----------|-------|-------------|
-| Highest | `sidebar_indicator` | Mailbox is open |
-| | `sidebar_highlight` | Mailbox is highlighted |
-| | `sidebar_new` | Mailbox contains new mail |
-| | `sidebar_unread` | Mailbox contains unread mail |
-| | `sidebar_flagged` | Mailbox contains flagged mail |
-| | `sidebar_spool_file` | Mailbox is the spool_file (receives incoming mail) |
-| Lowest | `sidebar_ordinary` | Mailbox does not match above |
+| Priority | Color                | Description                                        |
+|----------|----------------------|----------------------------------------------------|
+| Highest  | `sidebar_indicator`  | Mailbox is open                                    |
+|          | `sidebar_highlight`  | Mailbox is highlighted                             |
+|          | `sidebar_new`        | Mailbox contains new mail                          |
+|          | `sidebar_unread`     | Mailbox contains unread mail                       |
+|          | `sidebar_flagged`    | Mailbox contains flagged mail                      |
+|          | `sidebar_spool_file` | Mailbox is the spool_file (receives incoming mail) |
+| Lowest   | `sidebar_ordinary`   | Mailbox does not match above                       |
 
 :::{admonition} 📷 Screenshot Needed
 :class: tip
@@ -612,27 +612,27 @@ well as keys for page-based menus.
 
 ### Navigation Keys in Entry-Based Menus
 
-| Key | Function | Description |
-|-----|----------|-------------|
-| j or \<Down\> | `<next-entry>` | Move to the next entry |
-| k or \<Up\> | `<previous-entry>` | Move to the previous entry |
-| z or \<PageDn\> | `<next-page>` | go to the next page |
-| Z or \<PageUp\> | `<previous-page>` | go to the previous page |
-| = or \<Home\> | `<first-entry>` | jump to the first entry |
-| \* or \<End\> | `<last-entry>` | jump to the last entry |
-| q | `<quit>` | exit the current menu |
-| ? | `<help>` | list all keybindings for the current menu |
+| Key             | Function           | Description                               |
+|-----------------|--------------------|-------------------------------------------|
+| j or \<Down\>   | `<next-entry>`     | Move to the next entry                    |
+| k or \<Up\>     | `<previous-entry>` | Move to the previous entry                |
+| z or \<PageDn\> | `<next-page>`      | go to the next page                       |
+| Z or \<PageUp\> | `<previous-page>`  | go to the previous page                   |
+| = or \<Home\>   | `<first-entry>`    | jump to the first entry                   |
+| \* or \<End\>   | `<last-entry>`     | jump to the last entry                    |
+| q               | `<quit>`           | exit the current menu                     |
+| ?               | `<help>`           | list all keybindings for the current menu |
 
 ### Navigation Keys in Page-Based Menus
 
-| Key | Function | Description |
-|-----|----------|-------------|
-| J or \<Return\> | `<next-line>` | Scroll down one line |
-| \<Backspace\> | `<previous-line>` | Scroll up one line |
-| K, \<Space\> or \<PageDn\> | `<next-page>` | Move to the next page |
-| \- or \<PageUp\> | `<previous-page>` | move the previous page |
-| \<Home\> | `<top>` | move to the top |
-| \<End\> | `<bottom>` | move to the bottom |
+| Key                        | Function          | Description            |
+|----------------------------|-------------------|------------------------|
+| J or \<Return\>            | `<next-line>`     | Scroll down one line   |
+| \<Backspace\>              | `<previous-line>` | Scroll up one line     |
+| K, \<Space\> or \<PageDn\> | `<next-page>`     | Move to the next page  |
+| \- or \<PageUp\>           | `<previous-page>` | move the previous page |
+| \<Home\>                   | `<top>`           | move to the top        |
+| \<End\>                    | `<bottom>`        | move to the bottom     |
 
 ## Next Steps
 

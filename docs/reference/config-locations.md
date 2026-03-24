@@ -14,10 +14,10 @@ NeoMutt searches for several different file names when looking for config. It lo
 
 ## Config File Search Order
 
-| Filename |
-|----------|
+| Filename  |
+|-----------|
 | neomuttrc |
-| muttrc |
+| muttrc    |
 
 This allows the user to create separate NeoMutt and Mutt config files on the same system.
 
@@ -29,14 +29,14 @@ The system config file will not be read if the `-n` option is used on the comman
 
 NeoMutt will read just one file, the first file it finds, from the list below.
 
-| File Location | Notes |
-|---------------|-------|
-| `/etc/xdg/neomutt/neomuttrc` | |
-| `/etc/xdg/neomutt/Muttrc` | Note the case of the filename |
-| `/etc/neomuttrc` | |
-| `/etc/Muttrc` | Note the case of the filename |
-| `/usr/share/neomutt/neomuttrc` | |
-| `/usr/share/neomutt/Muttrc` | Note the case of the filename |
+| File Location                  | Notes                         |
+|--------------------------------|-------------------------------|
+| `/etc/xdg/neomutt/neomuttrc`   |                               |
+| `/etc/xdg/neomutt/Muttrc`      | Note the case of the filename |
+| `/etc/neomuttrc`               |                               |
+| `/etc/Muttrc`                  | Note the case of the filename |
+| `/usr/share/neomutt/neomuttrc` |                               |
+| `/usr/share/neomutt/Muttrc`    | Note the case of the filename |
 
 ## User Config File Locations
 
@@ -46,18 +46,18 @@ You may specify your own location for the user config file using the `-F` option
 
 NeoMutt will read just one file, the first file it finds, from the list below.
 
-| File Location |
-|---------------|
+| File Location                 |
+|-------------------------------|
 | `~/.config/neomutt/neomuttrc` |
-| `~/.config/neomutt/muttrc` |
-| `~/.config/mutt/neomuttrc` |
-| `~/.config/mutt/muttrc` |
-| `~/.neomutt/neomuttrc` |
-| `~/.neomutt/muttrc` |
-| `~/.mutt/neomuttrc` |
-| `~/.mutt/muttrc` |
-| `~/.neomuttrc` |
-| `~/.muttrc` |
+| `~/.config/neomutt/muttrc`    |
+| `~/.config/mutt/neomuttrc`    |
+| `~/.config/mutt/muttrc`       |
+| `~/.neomutt/neomuttrc`        |
+| `~/.neomutt/muttrc`           |
+| `~/.mutt/neomuttrc`           |
+| `~/.mutt/muttrc`              |
+| `~/.neomuttrc`                |
+| `~/.muttrc`                   |
 
 ## Config Priority
 
@@ -69,10 +69,10 @@ Additionally, there are a handful of config items which can be set using an envi
 
 Finally, it's possible to set some variables directly on the command-line using the `-e` option.
 
-| Priority | Where | Example |
-|----------|-------|---------|
-| Highest | Command line | `neomutt -e 'set from="John Doe <john@example.com>"'` |
-| | User Config | `~/.neomuttrc` |
-| | System Config | `/etc/neomuttrc` |
-| | Environment | `export EDITOR="/usr/bin/vim"` |
-| Lowest | Built-in | Defaults hard-coded into NeoMutt |
+| Priority | Where         | Example                                               |
+|----------|---------------|-------------------------------------------------------|
+| Highest  | Command line  | `neomutt -e 'set from="John Doe <john@example.com>"'` |
+|          | User Config   | `~/.neomuttrc`                                        |
+|          | System Config | `/etc/neomuttrc`                                      |
+|          | Environment   | `export EDITOR="/usr/bin/vim"`                        |
+| Lowest   | Built-in      | Defaults hard-coded into NeoMutt                      |

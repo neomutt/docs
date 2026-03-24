@@ -48,17 +48,17 @@ Every expando has a **short name** — one or two characters after `%`.  Most
 also have a **long name** enclosed in braces.  The two forms are
 interchangeable:
 
-| Short Name | Long Name            | Meaning             |
-|------------|----------------------|---------------------|
-| `%s`       | `%{subject}`         | Subject             |
-| `%n`       | `%{name}`            | Author's name       |
-| `%a`       | `%{from}`            | From address        |
-| `%C`       | `%{number}`          | Message number      |
-| `%c`       | `%{size}`            | Message size        |
-| `%d`       | `%{date-format}`     | Date                |
-| `%Z`       | `%{combined-flags}`  | Flag characters     |
-| `%l`       | `%{lines}`           | Line count          |
-| `%X`       | `%{attachment-count}`| Attachment count    |
+| Short Name | Long Name             | Meaning          |
+|------------|-----------------------|------------------|
+| `%s`       | `%{subject}`          | Subject          |
+| `%n`       | `%{name}`             | Author's name    |
+| `%a`       | `%{from}`             | From address     |
+| `%C`       | `%{number}`           | Message number   |
+| `%c`       | `%{size}`             | Message size     |
+| `%d`       | `%{date-format}`      | Date             |
+| `%Z`       | `%{combined-flags}`   | Flag characters  |
+| `%l`       | `%{lines}`            | Line count       |
+| `%X`       | `%{attachment-count}` | Attachment count |
 
 These two lines produce identical results:
 
@@ -169,11 +169,11 @@ Result:
 By default, values are **right-justified** — padded on the left side.  You
 can change this with a flag immediately after `%`:
 
-| Flag     | Alignment | Padding goes…    |
-|----------|-----------|------------------|
-| *(none)* | Right     | on the left      |
-| `-`      | Left      | on the right     |
-| `=`      | Centre    | on both sides    |
+| Flag     | Alignment | Padding goes… |
+|----------|-----------|---------------|
+| *(none)* | Right     | on the left   |
+| `-`      | Left      | on the right  |
+| `=`      | Centre    | on both sides |
 
 ### Right-Justified (Default)
 
@@ -332,14 +332,14 @@ name is:
 %[justification][zero][min_width][.max_width][lowercase]EXPANDO
 ```
 
-| Component       | Values                   | Default    |
-|-----------------|--------------------------|------------|
-| Justification   | `-` (left), `=` (centre) | Right      |
-| Zero-padding    | `0`                      | Spaces     |
-| Minimum width   | A number (e.g. `20`)     | 0 (none)   |
-| Maximum width   | `.` then a number        | Unlimited  |
-| Lowercase       | `_`                      | Off        |
-| Expando         | Letter or `{long-name}`  | —          |
+| Component     | Values                   | Default   |
+|---------------|--------------------------|-----------|
+| Justification | `-` (left), `=` (centre) | Right     |
+| Zero-padding  | `0`                      | Spaces    |
+| Minimum width | A number (e.g. `20`)     | 0 (none)  |
+| Maximum width | `.` then a number        | Unlimited |
+| Lowercase     | `_`                      | Off       |
+| Expando       | Letter or `{long-name}`  | —         |
 
 ### More Combined Examples
 
@@ -377,11 +377,11 @@ and a **right side**, then fills the gap between them with a character.
 
 ### The Three Padding Types
 
-| Expando | Long Name            | Name      | Left side   | Right side  |
-|---------|----------------------|-----------|-------------|-------------|
-| `%\|X`  | `%{padding-eol:X}`   | EOL fill  | Kept        | *(nothing)* |
-| `%>X`   | `%{padding-hard:X}`  | Hard fill | Kept        | Truncated   |
-| `%*X`   | `%{padding-soft:X}`  | Soft fill | Truncated   | Kept        |
+| Expando | Long Name           | Name      | Left side | Right side  |
+|---------|---------------------|-----------|-----------|-------------|
+| `%\|X`  | `%{padding-eol:X}`  | EOL fill  | Kept      | *(nothing)* |
+| `%>X`   | `%{padding-hard:X}` | Hard fill | Kept      | Truncated   |
+| `%*X`   | `%{padding-soft:X}` | Soft fill | Truncated | Kept        |
 
 The character `X` after the padding symbol is the **fill character**.  If
 you omit it (or use a space), the gap is filled with spaces.
@@ -489,11 +489,11 @@ On a narrow screen (the folder path gets cut):
 
 ### Choosing the Right Padding
 
-| You want…                              | Use             |
-|----------------------------------------|-----------------|
-| Fill to end of line, nothing after     | `%\|X` (EOL)   |
-| Left side kept, right side expendable  | `%>X`  (Hard)   |
-| Right side kept, left side expendable  | `%*X`  (Soft)   |
+| You want…                             | Use           |
+|---------------------------------------|---------------|
+| Fill to end of line, nothing after    | `%\|X` (EOL)  |
+| Left side kept, right side expendable | `%>X`  (Hard) |
+| Right side kept, left side expendable | `%*X`  (Soft) |
 
 ### Padding Rules
 
@@ -604,30 +604,30 @@ set alias_format = "%3i %f%t %-15a %-56A | %C%> %Y"
 
 ### Justification
 
-| Flag | Alignment | Example      | Result (width 10)  |
-|------|-----------|--------------|---------------------|
-| —    | Right     | `%10s`       | `···· Hello`       |
-| `-`  | Left      | `%-10s`      | `Hello ····`       |
-| `=`  | Centre    | `%=10s`      | `·· Hello ··`      |
+| Flag | Alignment | Example | Result (width 10) |
+|------|-----------|---------|-------------------|
+| —    | Right     | `%10s`  | `···· Hello`      |
+| `-`  | Left      | `%-10s` | `Hello ····`      |
+| `=`  | Centre    | `%=10s` | `·· Hello ··`     |
 
 *(dots represent spaces)*
 
 ### Width and Truncation
 
-| Spec      | Meaning                         | Example           |
-|-----------|---------------------------------|-------------------|
-| `%20n`    | At least 20 columns             | Pad if short      |
-| `%.30n`   | At most 30 columns              | Cut if long       |
-| `%20.30n` | Between 20 and 30 columns       | Pad or cut        |
-| `%20.20n` | Exactly 20 columns              | Always 20 wide    |
+| Spec      | Meaning                   | Example        |
+|-----------|---------------------------|----------------|
+| `%20n`    | At least 20 columns       | Pad if short   |
+| `%.30n`   | At most 30 columns        | Cut if long    |
+| `%20.30n` | Between 20 and 30 columns | Pad or cut     |
+| `%20.20n` | Exactly 20 columns        | Always 20 wide |
 
 ### Padding
 
-| Expando  | Effect                                |
-|----------|---------------------------------------|
-| `%>X`    | Hard fill — left kept, right trimmed  |
-| `%*X`    | Soft fill — right kept, left trimmed  |
-| `%\|X`   | EOL fill — fill to end of line        |
+| Expando | Effect                               |
+|---------|--------------------------------------|
+| `%>X`   | Hard fill — left kept, right trimmed |
+| `%*X`   | Soft fill — right kept, left trimmed |
+| `%\|X`  | EOL fill — fill to end of line       |
 
 Where `X` is the fill character (space if omitted).
 

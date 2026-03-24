@@ -253,45 +253,45 @@ It supports cursor movement, word editing, tab-completion, and command history.
 
 Not a menu itself, but provides common functions — such as scrolling, searching, and tagging — that are inherited by all other menus (except pager and editor).
 
-| Function              | Description                                        |
-|-----------------------|----------------------------------------------------|
-| `<bottom-page>`       | Move to the bottom of the page                     |
-| `<check-stats>`       | Calculate message statistics for all mailboxes     |
-| `<current-bottom>`    | Move entry to bottom of screen                     |
-| `<current-middle>`    | Move entry to middle of screen                     |
-| `<current-top>`       | Move entry to top of screen                        |
-| `<end-cond>`          | End of conditional execution (noop)                |
-| `<enter-command>`     | Enter a neomuttrc command                          |
-| `<error-history>`     | {bdg-danger}`Deprecated` use `<show-log-messages>` |
-| `<exit>`              | Exit this menu                                     |
-| `<first-entry>`       | Move to the first entry                            |
-| `<half-down>`         | Scroll down 1/2 page                               |
-| `<half-up>`           | Scroll up 1/2 page                                 |
-| `<help>`              | This screen                                        |
-| `<jump>`              | Jump to an index number                            |
-| `<last-entry>`        | Move to the last entry                             |
-| `<middle-page>`       | Move to the middle of the page                     |
-| `<next-entry>`        | Move to the next entry                             |
-| `<next-line>`         | Scroll down one line                               |
-| `<next-page>`         | Move to the next page                              |
-| `<previous-entry>`    | Move to the previous entry                         |
-| `<previous-line>`     | Scroll up one line                                 |
-| `<previous-page>`     | Move to the previous page                          |
-| `<redraw-screen>`     | Clear and redraw the screen                        |
-| `<refresh>`           | {bdg-danger-line}`Deprecated` use `<redraw-screen>`|
-| `<search-next>`       | Search for next match                              |
-| `<search-opposite>`   | Search for next match in opposite direction        |
-| `<search-reverse>`    | Search backwards for a regular expression          |
-| `<search>`            | Search for a regular expression                    |
-| `<select-entry>`      | Select the current entry                           |
-| `<shell-escape>`      | Invoke a command in a subshell                     |
-| `<show-log-messages>` | Show log (and debug) messages                      |
-| `<show-version>`      | Show the NeoMutt version number and date           |
-| `<tag-entry>`         | Tag the current entry                              |
-| `<tag-prefix-cond>`   | Apply next function ONLY to tagged messages        |
-| `<tag-prefix>`        | Apply next function to tagged messages             |
-| `<top-page>`          | Move to the top of the page                        |
-| `<what-key>`          | Display the keycode for a key press                |
+| Function              | Description                                         |
+|-----------------------|-----------------------------------------------------|
+| `<bottom-page>`       | Move to the bottom of the page                      |
+| `<check-stats>`       | Calculate message statistics for all mailboxes      |
+| `<current-bottom>`    | Move entry to bottom of screen                      |
+| `<current-middle>`    | Move entry to middle of screen                      |
+| `<current-top>`       | Move entry to top of screen                         |
+| `<end-cond>`          | End of conditional execution (noop)                 |
+| `<enter-command>`     | Enter a neomuttrc command                           |
+| `<error-history>`     | {bdg-danger}`Deprecated` use `<show-log-messages>`  |
+| `<exit>`              | Exit this menu                                      |
+| `<first-entry>`       | Move to the first entry                             |
+| `<half-down>`         | Scroll down 1/2 page                                |
+| `<half-up>`           | Scroll up 1/2 page                                  |
+| `<help>`              | This screen                                         |
+| `<jump>`              | Jump to an index number                             |
+| `<last-entry>`        | Move to the last entry                              |
+| `<middle-page>`       | Move to the middle of the page                      |
+| `<next-entry>`        | Move to the next entry                              |
+| `<next-line>`         | Scroll down one line                                |
+| `<next-page>`         | Move to the next page                               |
+| `<previous-entry>`    | Move to the previous entry                          |
+| `<previous-line>`     | Scroll up one line                                  |
+| `<previous-page>`     | Move to the previous page                           |
+| `<redraw-screen>`     | Clear and redraw the screen                         |
+| `<refresh>`           | {bdg-danger-line}`Deprecated` use `<redraw-screen>` |
+| `<search-next>`       | Search for next match                               |
+| `<search-opposite>`   | Search for next match in opposite direction         |
+| `<search-reverse>`    | Search backwards for a regular expression           |
+| `<search>`            | Search for a regular expression                     |
+| `<select-entry>`      | Select the current entry                            |
+| `<shell-escape>`      | Invoke a command in a subshell                      |
+| `<show-log-messages>` | Show log (and debug) messages                       |
+| `<show-version>`      | Show the NeoMutt version number and date            |
+| `<tag-entry>`         | Tag the current entry                               |
+| `<tag-prefix-cond>`   | Apply next function ONLY to tagged messages         |
+| `<tag-prefix>`        | Apply next function to tagged messages              |
+| `<top-page>`          | Move to the top of the page                         |
+| `<what-key>`          | Display the keycode for a key press                 |
 
 ## [Index Menu](menu-index)
 

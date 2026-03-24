@@ -24,8 +24,8 @@ This feature adds a new way of using the **Limit Command**. The `<limit-current-
 
 Limit-current-thread adds the following function to NeoMutt. By default, it is not bound to a key.
 
-| Menus | Function | Description |
-|-------|----------|-------------|
+| Menus | Function                 | Description                  |
+|-------|--------------------------|------------------------------|
 | index | `<limit-current-thread>` | Limit view to current thread |
 
 ## neomuttrc

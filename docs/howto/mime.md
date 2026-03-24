@@ -220,17 +220,17 @@ the recipient of the message is likely to be expecting such attachments.
 
 ### Supported MIME Types
 
-| MIME major type | Standard | Description |
-|-----------------|----------|-------------|
-| `application` | yes | General application data |
-| `audio` | yes | Audio data |
-| `image` | yes | Image data |
-| `message` | yes | Mail messages, message status information |
-| `model` | yes | VRML and other modeling data |
-| `multipart` | yes | Container for other MIME parts |
-| `text` | yes | Text data |
-| `video` | yes | Video data |
-| `chemical` | no | Mostly molecular data |
+| MIME major type | Standard | Description                               |
+|-----------------|----------|-------------------------------------------|
+| `application`   | yes      | General application data                  |
+| `audio`         | yes      | Audio data                                |
+| `image`         | yes      | Image data                                |
+| `message`       | yes      | Mail messages, message status information |
+| `model`         | yes      | VRML and other modeling data              |
+| `multipart`     | yes      | Container for other MIME parts            |
+| `text`          | yes      | Text data                                 |
+| `video`         | yes      | Video data                                |
+| `chemical`      | no       | Mostly molecular data                     |
 
 MIME types are not arbitrary, they need to be assigned by
 [IANA](http://www.iana.org/assignments/media-types/).

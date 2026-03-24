@@ -53,13 +53,13 @@ set status_format = "%f %<n?NEW>"
 
 How it works:
 
-| Part  | Meaning                                  |
-|-------|------------------------------------------|
-| `%<`  | Start a conditional                      |
-| `n`   | Test the `%n` expando (new message count)|
-| `?`   | Separator: "if true, then…"              |
-| `NEW` | Text to show when the condition is true  |
-| `>`   | End of the conditional                   |
+| Part  | Meaning                                   |
+|-------|-------------------------------------------|
+| `%<`  | Start a conditional                       |
+| `n`   | Test the `%n` expando (new message count) |
+| `?`   | Separator: "if true, then…"               |
+| `NEW` | Text to show when the condition is true   |
+| `>`   | End of the conditional                    |
 
 If there are new messages (`%n` is non-zero), NeoMutt shows `NEW`.
 If there are no new messages (`%n` is zero), it shows nothing.
@@ -79,13 +79,13 @@ Add an `&` to provide alternative text for when the condition is false:
 set status_format = "%<n?New mail!&No new mail>"
 ```
 
-| Part           | Meaning                         |
-|----------------|---------------------------------|
-| `%<n?`         | If `%n` is non-zero…            |
-| `New mail!`    | …show this                      |
-| `&`            | Otherwise…                      |
-| `No new mail`  | …show this                      |
-| `>`            | End                             |
+| Part          | Meaning              |
+|---------------|----------------------|
+| `%<n?`        | If `%n` is non-zero… |
+| `New mail!`   | …show this           |
+| `&`           | Otherwise…           |
+| `No new mail` | …show this           |
+| `>`           | End                  |
 
 ```
 inbox New mail!       ← has new messages
@@ -247,14 +247,14 @@ period.
 
 The condition is `[` followed by an optional count and a period letter:
 
-| Letter | Period  | Example      | Meaning               |
-|--------|---------|-------------|------------------------|
-| `y`    | Year    | `[y`        | This year              |
-| `m`    | Month   | `[m`        | This month             |
-| `w`    | Week    | `[w`        | This week              |
-| `d`    | Day     | `[d`        | Today                  |
-| `H`    | Hour    | `[H`        | This hour              |
-| `M`    | Minute  | `[M`        | This minute            |
+| Letter | Period | Example | Meaning     |
+|--------|--------|---------|-------------|
+| `y`    | Year   | `[y`    | This year   |
+| `m`    | Month  | `[m`    | This month  |
+| `w`    | Week   | `[w`    | This week   |
+| `d`    | Day    | `[d`    | Today       |
+| `H`    | Hour   | `[H`    | This hour   |
+| `M`    | Minute | `[M`    | This minute |
 
 ### "This" vs "Last N"
 
@@ -307,18 +307,18 @@ set index_format = "%4C %<[1H?*new* &      >%<[d?%[%H:%M]&%[%b %d]> %-20.20n %s"
 
 ### Date Period Reference
 
-| Condition | Meaning                          | Cutoff point             |
-|-----------|----------------------------------|--------------------------|
-| `[d`      | Today                            | Midnight today           |
-| `[w`      | This week                        | Monday 00:00             |
-| `[m`      | This month                       | 1st of the month 00:00   |
-| `[y`      | This year                        | January 1st 00:00        |
-| `[1d`     | Within the last 24 hours         | Exactly 24 hours ago     |
-| `[3d`     | Within the last 3 days           | Exactly 72 hours ago     |
-| `[2w`     | Within the last 2 weeks          | Exactly 14 days ago      |
-| `[6m`     | Within the last 6 months         | Exactly 6 months ago     |
-| `[1y`     | Within the last year             | Exactly 1 year ago       |
-| `[30M`    | Within the last 30 minutes       | Exactly 30 minutes ago   |
+| Condition | Meaning                    | Cutoff point           |
+|-----------|----------------------------|------------------------|
+| `[d`      | Today                      | Midnight today         |
+| `[w`      | This week                  | Monday 00:00           |
+| `[m`      | This month                 | 1st of the month 00:00 |
+| `[y`      | This year                  | January 1st 00:00      |
+| `[1d`     | Within the last 24 hours   | Exactly 24 hours ago   |
+| `[3d`     | Within the last 3 days     | Exactly 72 hours ago   |
+| `[2w`     | Within the last 2 weeks    | Exactly 14 days ago    |
+| `[6m`     | Within the last 6 months   | Exactly 6 months ago   |
+| `[1y`     | Within the last year       | Exactly 1 year ago     |
+| `[30M`    | Within the last 30 minutes | Exactly 30 minutes ago |
 
 ---
 
@@ -479,11 +479,11 @@ This is functionally identical to the new style:
 %<X?true-text&false-text>
 ```
 
-| New style                      | Old style                      |
-|--------------------------------|--------------------------------|
-| `%<n?%n new>`                  | `%?n?%n new?`                  |
-| `%<n?%n new&No new>`           | `%?n?%n new&No new?`           |
-| `%<[d?Today&%d>`               | `%?[d?Today&%d?`               |
+| New style            | Old style            |
+|----------------------|----------------------|
+| `%<n?%n new>`        | `%?n?%n new?`        |
+| `%<n?%n new&No new>` | `%?n?%n new&No new?` |
+| `%<[d?Today&%d>`     | `%?[d?Today&%d?`     |
 
 The new style (`%<…>`) is recommended because it's easier to read — the
 angle brackets clearly show where the conditional starts and ends.
@@ -492,11 +492,11 @@ angle brackets clearly show where the conditional starts and ends.
 
 ## Condition Logic Summary
 
-| Expando type | Condition is TRUE when…        | Condition is FALSE when…    |
-|--------------|--------------------------------|-----------------------------|
-| Number       | Value is non-zero              | Value is zero               |
-| String       | String is non-empty            | String is empty             |
-| Date         | Date is within the time period | Date is outside the period  |
+| Expando type | Condition is TRUE when…        | Condition is FALSE when…   |
+|--------------|--------------------------------|----------------------------|
+| Number       | Value is non-zero              | Value is zero              |
+| String       | String is non-empty            | String is empty            |
+| Date         | Date is within the time period | Date is outside the period |
 
 ---
 

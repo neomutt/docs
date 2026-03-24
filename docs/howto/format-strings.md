@@ -134,12 +134,12 @@ For example, using `%<[y?%<[d?%[%H:%M]&%[%m/%d]>&%[%y.%m]>` for the date in the 
 
 ### Potential Formatting Scheme
 
-| Email Sent | Format | Example |
-|---|---|---|
-| Today | `%H:%M` | 13:23 |
-| This Month | `%a %d` | Thu 17 |
-| This Year | `%b %d` | Dec 10 |
-| Older than 1 Year | `%m/%y` | 06/14 |
+| Email Sent        | Format  | Example |
+|-------------------|---------|---------|
+| Today             | `%H:%M` | 13:23   |
+| This Month        | `%a %d` | Thu 17  |
+| This Year         | `%b %d` | Dec 10  |
+| Older than 1 Year | `%m/%y` | 06/14   |
 
 For an explanation of the date formatting strings, see `strftime(3)`.
 
@@ -161,31 +161,31 @@ The date tests are of the form:
 #### Date Formatting Codes
 
 | Letter | Time Period |
-|---|---|
-| y | Years |
-| m | Months |
-| w | Weeks |
-| d | Days |
-| H | Hours |
-| M | Minutes |
+|--------|-------------|
+| y      | Years       |
+| m      | Months      |
+| w      | Weeks       |
+| d      | Days        |
+| H      | Hours       |
+| M      | Minutes     |
 
 #### Example Date Tests
 
-| Test | Meaning |
-|---|---|
-| `%[y` | This year |
-| `%[1y` | This year |
+| Test   | Meaning              |
+|--------|----------------------|
+| `%[y`  | This year            |
+| `%[1y` | This year            |
 | `%[6m` | In the last 6 months |
-| `%[w` | This week |
-| `%[d` | Today |
-| `%[4H` | In the last 4 hours |
+| `%[w`  | This week            |
+| `%[d`  | Today                |
+| `%[4H` | In the last 4 hours  |
 
 ### Example 1 — One-Condition Test
 
-| Test | Date Range | Format String | Example |
-|---|---|---|---|
-| `%[1m` | This month | `%[%b %d]` | Dec 10 |
-| | Older | `%[%Y-%m-%d]` | 2015-04-23 |
+| Test   | Date Range | Format String | Example    |
+|--------|------------|---------------|------------|
+| `%[1m` | This month | `%[%b %d]`    | Dec 10     |
+|        | Older      | `%[%Y-%m-%d]` | 2015-04-23 |
 
 The `$index_format` string would contain:
 
@@ -203,12 +203,12 @@ Reparsed for clarity:
 
 ### Example 2 — Three-Condition Test
 
-| Test | Date Range | Format String | Example |
-|---|---|---|---|
-| `%[d` | Today | `%[%H:%M ]` | 12:34 |
-| `%[m` | This month | `%[%a %d]` | Thu 12 |
-| `%[y` | This year | `%[%b %d]` | Dec 10 |
-| | Older | `%[%m/%y ]` | 06/15 |
+| Test  | Date Range | Format String | Example |
+|-------|------------|---------------|---------|
+| `%[d` | Today      | `%[%H:%M ]`   | 12:34   |
+| `%[m` | This month | `%[%a %d]`    | Thu 12  |
+| `%[y` | This year  | `%[%b %d]`    | Dec 10  |
+|       | Older      | `%[%m/%y ]`   | 06/15   |
 
 The `$index_format` string would contain:
 

@@ -17,9 +17,9 @@ It works on tagged messages too, sending one email to all of the senders of the 
 
 compose-to-sender adds the following function to NeoMutt. By default, it is not bound to a key.
 
-| Menus       | Function                 | Description                                              |
-|-------------|--------------------------|----------------------------------------------------------|
-| index,pager | `<compose-to-sender>`    | compose a new email to the sender of the current email   |
+| Menus       | Function              | Description                                            |
+|-------------|-----------------------|--------------------------------------------------------|
+| index,pager | `<compose-to-sender>` | compose a new email to the sender of the current email |
 
 ## neomuttrc
 

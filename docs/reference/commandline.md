@@ -31,15 +31,15 @@ version output.
 
 Common features you may see in `neomutt -v` output include:
 
-| Feature | Description |
-|---------|-------------|
-| `+gnutls` / `+openssl` | TLS encryption support |
-| `+sasl` | SASL authentication |
-| `+idn` / `+idn2` | Internationalized domain names |
-| `+notmuch` | Notmuch search integration |
-| `+sidebar` | Sidebar mailbox list |
-| `+gpgme` | GnuPG via GPGME |
-| `+lua` | Lua scripting |
+| Feature                | Description                    |
+|------------------------|--------------------------------|
+| `+gnutls` / `+openssl` | TLS encryption support         |
+| `+sasl`                | SASL authentication            |
+| `+idn` / `+idn2`       | Internationalized domain names |
+| `+notmuch`             | Notmuch search integration     |
+| `+sidebar`             | Sidebar mailbox list           |
+| `+gpgme`               | GnuPG via GPGME                |
+| `+lua`                 | Lua scripting                  |
 
 ### Conditionalizing Config on Features
 

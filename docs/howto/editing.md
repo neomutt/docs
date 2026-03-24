@@ -16,41 +16,41 @@ The key bindings follow Emacs conventions.
 
 ### Movement
 
-| Key | Function | Description |
-|-----|----------|-------------|
-| `^A` or `<Home>` | `<bol>` | Move to the start of the line |
-| `^E` or `<End>` | `<eol>` | Move to the end of the line |
-| `^B` or `<Left>` | `<backward-char>` | Move back one character |
-| `^F` or `<Right>` | `<forward-char>` | Move forward one character |
-| `Esc B` | `<backward-word>` | Move back one word |
-| `Esc F` | `<forward-word>` | Move forward one word |
+| Key               | Function          | Description                   |
+|-------------------|-------------------|-------------------------------|
+| `^A` or `<Home>`  | `<bol>`           | Move to the start of the line |
+| `^E` or `<End>`   | `<eol>`           | Move to the end of the line   |
+| `^B` or `<Left>`  | `<backward-char>` | Move back one character       |
+| `^F` or `<Right>` | `<forward-char>`  | Move forward one character    |
+| `Esc B`           | `<backward-word>` | Move back one word            |
+| `Esc F`           | `<forward-word>`  | Move forward one word         |
 
 ### Deletion
 
-| Key | Function | Description |
-|-----|----------|-------------|
-| `^D` or `<Delete>` | `<delete-char>` | Delete the character under the cursor |
-| `<BackSpace>` | `<backspace>` | Delete the character before the cursor |
-| `^K` | `<kill-eol>` | Delete to the end of the line |
-| `^U` | `<kill-line>` | Delete the entire line |
-| `^W` | `<kill-word>` | Delete the word before the cursor |
-| `Esc d` | `<kill-eow>` | Delete to the end of the word |
+| Key                | Function        | Description                            |
+|--------------------|-----------------|----------------------------------------|
+| `^D` or `<Delete>` | `<delete-char>` | Delete the character under the cursor  |
+| `<BackSpace>`      | `<backspace>`   | Delete the character before the cursor |
+| `^K`               | `<kill-eol>`    | Delete to the end of the line          |
+| `^U`               | `<kill-line>`   | Delete the entire line                 |
+| `^W`               | `<kill-word>`   | Delete the word before the cursor      |
+| `Esc d`            | `<kill-eow>`    | Delete to the end of the word          |
 
 ### Word Case
 
-| Key | Function | Description |
-|-----|----------|-------------|
-| `Esc u` | `<upcase-word>` | Convert word to upper case |
-| `Esc l` | `<downcase-word>` | Convert word to lower case |
-| `Esc c` | `<capitalize-word>` | Capitalize the word |
+| Key     | Function            | Description                |
+|---------|---------------------|----------------------------|
+| `Esc u` | `<upcase-word>`     | Convert word to upper case |
+| `Esc l` | `<downcase-word>`   | Convert word to lower case |
+| `Esc c` | `<capitalize-word>` | Capitalize the word        |
 
 ### Miscellaneous
 
-| Key | Function | Description |
-|-----|----------|-------------|
-| `^V` | `<quote-char>` | Quote (escape) the next typed key |
-| `^G` | n/a | Abort the current prompt or action |
-| `<Return>` | n/a | Confirm / finish editing |
+| Key        | Function       | Description                        |
+|------------|----------------|------------------------------------|
+| `^V`       | `<quote-char>` | Quote (escape) the next typed key  |
+| `^G`       | n/a            | Abort the current prompt or action |
+| `<Return>` | n/a            | Confirm / finish editing           |
 
 ## Tab Completion
 
@@ -68,11 +68,11 @@ NeoMutt keeps a separate history list for each input category (addresses, filena
 patterns, shell commands, mailboxes, config commands, and everything else). The number
 of history entries is controlled by `$history`.
 
-| Key | Function | Description |
-|-----|----------|-------------|
-| `<Up>` | `<history-up>` | Recall the previous string from history |
-| `<Down>` | `<history-down>` | Recall the next string from history |
-| `^R` | `<history-search>` | Search history using the current input |
+| Key      | Function           | Description                             |
+|----------|--------------------|-----------------------------------------|
+| `<Up>`   | `<history-up>`     | Recall the previous string from history |
+| `<Down>` | `<history-down>`   | Recall the next string from history     |
+| `^R`     | `<history-search>` | Search history using the current input  |
 
 NeoMutt remembers what you were typing as you cycle through history, and wraps back to
 your original entry.

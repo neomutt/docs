@@ -51,8 +51,8 @@ current threading method.
 
 ## Use Threads Variable
 
-| Name | Type | Default |
-|------|------|---------|
+| Name          | Type | Default |
+|---------------|------|---------|
 | `use_threads` | enum | `unset` |
 
 ## neomuttrc

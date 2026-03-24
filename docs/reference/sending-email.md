@@ -335,12 +335,12 @@ This is the body of the email.
 Draft files can include special headers that NeoMutt understands but does
 not send to the recipient:
 
-| Header                  | Purpose                                           |
-|-------------------------|---------------------------------------------------|
-| `X-Mutt-Fcc:`          | Save a copy to this folder instead of `$record`   |
-| `X-Mutt-PGP:`          | Set PGP options (e.g. `sign`, `encrypt`)          |
-| `X-Mutt-SMIME:`        | Set S/MIME options (e.g. `sign`, `encrypt`)        |
-| `X-Mutt-References:`   | Message-ID to thread this as a reply              |
+| Header               | Purpose                                         |
+|----------------------|-------------------------------------------------|
+| `X-Mutt-Fcc:`        | Save a copy to this folder instead of `$record` |
+| `X-Mutt-PGP:`        | Set PGP options (e.g. `sign`, `encrypt`)        |
+| `X-Mutt-SMIME:`      | Set S/MIME options (e.g. `sign`, `encrypt`)     |
+| `X-Mutt-References:` | Message-ID to thread this as a reply            |
 
 These headers are stripped before sending.  They only control NeoMutt's
 behavior.
