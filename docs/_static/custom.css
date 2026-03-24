@@ -409,3 +409,53 @@ html[data-theme=dark] hr {
     border: 1px solid #fff;
 }
 
+html[data-theme=light] .dia-start {
+  background: #ffffcf;
+  color: #000;
+}
+
+html[data-theme=light] .dia-tutorial {
+  background: #c7eeff;
+  color: #000;
+}
+
+html[data-theme=light] .dia-howto {
+  background: #d0ffd0;
+  color: #000;
+}
+
+html[data-theme=light] .dia-explanation {
+  background: #ffdfc0;
+  color: #000;
+}
+
+html[data-theme=light] .dia-reference {
+  background: #dddddd;
+  color: #000;
+}
+
+html[data-theme=dark] .dia-start {
+  background: #706a00;
+  color: #fff;
+}
+
+html[data-theme=dark] .dia-tutorial {
+  background: #2b414f;
+  color: #fff;
+}
+
+html[data-theme=dark] .dia-howto {
+  background: #315531;
+  color: #fff;
+}
+
+html[data-theme=dark] .dia-explanation {
+  background: #6b362a;
+  color: #fff;
+}
+
+html[data-theme=dark] .dia-reference {
+  background: #444444;
+  color: #fff;
+}
+

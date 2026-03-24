@@ -12,12 +12,16 @@ This guide will help you get a working NeoMutt setup quickly, then show you how 
 - **Source:** [github.com/neomutt/neomutt](https://github.com/neomutt/neomutt)
 - **Website:** [neomutt.org](https://neomutt.org)
 
+---
+
 ::::{grid} 2
 :gutter: 3
 
 :::{grid-item-card} ✅ Start Here
 :link: start-here
 :link-type: doc
+:class-card: dia-start
+:columns: 12
 
 **Beginner-friendly** — A few questions that route you to the right setup steps.
 :::
@@ -25,47 +29,55 @@ This guide will help you get a working NeoMutt setup quickly, then show you how 
 :::{grid-item-card} 📖 Tutorials
 :link: tutorials/index
 :link-type: doc
+:class-card: dia-tutorial
 
-**Learning-oriented** — Step-by-step lessons to get you started with NeoMutt.
+**Learning-oriented**
 
-Start here if you're new.
+Step-by-step guides that walk you through real tasks from start to finish.
+You’ll build confidence by doing—learning NeoMutt in a practical, hands-on way, with clear outcomes at each stage.
 :::
 
 :::{grid-item-card} 🔧 How-To Guides
 :link: howto/index
 :link-type: doc
+:class-card: dia-howto
 
-**Goal-oriented** — Practical directions to accomplish specific tasks.
+**Goal-oriented**
 
-Find solutions to real-world problems.
+Focused instructions for solving specific problems or achieving particular goals.
+You’ll find direct, task-oriented answers—helping you get things done quickly without unnecessary background detail.
 :::
 
 :::{grid-item-card} 💡 Explanation
 :link: explanation/index
 :link-type: doc
+:class-card: dia-explanation
 
-**Understanding-oriented** — Background, context, and the "why" behind NeoMutt.
+**Understanding-oriented**
 
-Deepen your understanding.
+In-depth discussions that explain how and why NeoMutt works the way it does.
+You’ll gain a deeper understanding of concepts, design decisions, and underlying mechanisms—so you can make better-informed choices.
 :::
 
 :::{grid-item-card} 📋 Reference
 :link: reference/index
 :link-type: doc
+:class-card: dia-reference
 
-**Information-oriented** — Technical descriptions of NeoMutt's commands, options, and functions.
+**Information-oriented**
 
-Look up the details.
+A complete, factual catalogue of NeoMutt’s commands, variables, and configuration options.
+You’ll get precise, authoritative information you can rely on when you need exact syntax, valid values, or detailed behaviour.
 :::
 
 ::::
 
+---
 ```{toctree}
 ---
 maxdepth: 2
 hidden: true
 ---
-
 start-here
 tutorials/index
 howto/index

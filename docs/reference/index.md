@@ -87,3 +87,17 @@ maxdepth: 2
 ---
 functions/overview
 ```
+
+## NEW
+
+```{toctree}
+---
+maxdepth: 1
+---
+cli-syntax
+color-syntax
+expando-conditional-guide
+expando-format-guide
+pattern-syntax
+sending-email
+```
