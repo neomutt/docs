@@ -7,14 +7,14 @@ diataxis_type: tutorial
 
 # Getting Started with NeoMutt
 
-This tutorial gives you a friendly tour of NeoMutt's main screens and the keys you'll use
-every day. You'll launch NeoMutt, move around, and find help when you need it.
+This tutorial gives you a friendly tour of NeoMutt's main screens and the keys you'll use every day.
+You'll launch NeoMutt, move around, and find help when you need it.
 
-If you haven't configured an account yet, start with [Writing Your First Configuration](first-config)
-or the guided [Start Here](../start-here) page, then come back for the tour.
+If you haven't configured an account yet, start with [Writing Your First Configuration](first-config) or the guided [Start Here](../start-here) page, then come back for the tour.
 
-The keybindings shown here are the defaults. Your system may differ. In any menu, press `?`
-to see the current bindings for your setup.
+The keybindings shown here are the defaults.
+Your system may differ.
+In any menu, press `?` to see the current bindings for your setup.
 
 Start NeoMutt by running `neomutt` in your terminal.
 
@@ -22,7 +22,8 @@ Start NeoMutt by running `neomutt` in your terminal.
 
 1. Start NeoMutt and wait for the message list (the Index).
 2. Press `?` to open the help screen and note the keys for moving up and down and for quitting.
-3. Use `j` and `k` to move the selection. Use the help screen to find the key that opens a message.
+3. Use `j` and `k` to move the selection.
+   Use the help screen to find the key that opens a message.
 4. In the message view (the Pager), press `?` again to see its keys, then press `q` to return.
 5. Press `q` to quit when you're done.
 
@@ -30,16 +31,12 @@ If you want more depth on the screens and menus, keep reading.
 
 ## Core Concepts
 
-NeoMutt is a text-based application which interacts with users through different menus which
-are mostly line-/entry-based or page-based. A line-based menu is the so-called "index" menu
-(listing all messages of the currently opened folder) or the "alias" menu (allowing you to
-select recipients from a list). Examples for page-based menus are the "pager" (showing one
-message at a time) or the "help" menu listing all available key bindings.
+NeoMutt is a text-based application which interacts with users through different menus which are mostly line-/entry-based or page-based.
+A line-based menu is the so-called "index" menu (listing all messages of the currently opened folder) or the "alias" menu (allowing you to select recipients from a list).
+Examples for page-based menus are the "pager" (showing one message at a time) or the "help" menu listing all available key bindings.
 
-The user interface consists of a context sensitive help line at the top, the menu's contents
-followed by a context sensitive status line and finally the command line. The command line is
-used to display informational and error messages as well as for prompts and for entering
-interactive commands.
+The user interface consists of a context sensitive help line at the top, the menu's contents followed by a context sensitive status line and finally the command line.
+The command line is used to display informational and error messages as well as for prompts and for entering interactive commands.
 
 :::{admonition} 📷 Screenshot Needed
 :class: tip
@@ -51,27 +48,18 @@ interactive commands.
 **Highlights:** The four distinct areas of the UI — help line, menu content, status line, and command line — should each be clearly visible and identifiable.
 :::
 
-NeoMutt is configured through variables which, if the user wants to permanently use
-a non-default value, are written to configuration files. NeoMutt supports a rich config file
-syntax to make even complex configuration files readable and commentable.
+NeoMutt is configured through variables which, if the user wants to permanently use a non-default value, are written to configuration files.
+NeoMutt supports a rich config file syntax to make even complex configuration files readable and commentable.
 
-Because NeoMutt allows for customizing almost all key bindings, there are so-called
-"functions" which can be executed manually (using the command line) or in macros. Macros allow
-the user to bind a sequence of commands to a single key or a short key sequence instead of
-repeating a sequence of actions over and over.
+Because NeoMutt allows for customizing almost all key bindings, there are so-called "functions" which can be executed manually (using the command line) or in macros.
+Macros allow the user to bind a sequence of commands to a single key or a short key sequence instead of repeating a sequence of actions over and over.
 
-Many commands (such as saving or copying a message to another folder) can be applied to
-a single message or a set of messages (so-called "tagged" messages). To help selecting
-messages, NeoMutt provides a rich set of message patterns (such as recipients, sender, body
-contents, date sent/received, etc.) which can be combined into complex expressions using the
-boolean *and* and *or* operations as well as negating. These patterns can also be used to
-(for example) search for messages or to limit the index to show only matching messages.
+Many commands (such as saving or copying a message to another folder) can be applied to a single message or a set of messages (so-called "tagged" messages).
+To help selecting messages, NeoMutt provides a rich set of message patterns (such as recipients, sender, body contents, date sent/received, etc.) which can be combined into complex expressions using the boolean *and* and *or* operations as well as negating.
+These patterns can also be used to (for example) search for messages or to limit the index to show only matching messages.
 
-NeoMutt supports a "hook" concept which allows the user to execute arbitrary configuration
-commands and functions in certain situations such as entering a folder, starting a new message
-or replying to an existing one. These hooks can be used to highly customize NeoMutt's
-behavior including managing multiple identities, customizing the display for a folder or even
-implementing auto-archiving based on a per-folder basis and much more.
+NeoMutt supports a "hook" concept which allows the user to execute arbitrary configuration commands and functions in certain situations such as entering a folder, starting a new message or replying to an existing one.
+These hooks can be used to highly customize NeoMutt's behavior including managing multiple identities, customizing the display for a folder or even implementing auto-archiving based on a per-folder basis and much more.
 
 Besides an interactive mode, NeoMutt can also be used as a command-line tool to send messages.
 
@@ -79,36 +67,32 @@ Besides an interactive mode, NeoMutt can also be used as a command-line tool to 
 
 ### Index
 
-The index is the screen that you usually see first when you start NeoMutt. It gives an
-overview over your emails in the currently opened mailbox. By default, this is your system
-mailbox. The information you see in the index is a list of emails, each with its number on the
-left, its flags (new email, important email, email that has been forwarded or replied to,
-tagged email, ...), the date when email was sent, its sender, the email size, and the subject.
-Additionally, the index also shows thread hierarchies: when you reply to an email, and the
-other person replies back, you can see the other person's email in a "sub-tree" below. This is
-especially useful for personal email between a group of people or when you've subscribed to
-mailing lists.
+The index is the screen that you usually see first when you start NeoMutt.
+It gives an overview over your emails in the currently opened mailbox.
+By default, this is your system mailbox.
+The information you see in the index is a list of emails, each with its number on the left, its flags (new email, important email, email that has been forwarded or replied to, tagged email, ...), the date when email was sent, its sender, the email size, and the subject.
+Additionally, the index also shows thread hierarchies: when you reply to an email, and the other person replies back, you can see the other person's email in a "sub-tree" below.
+This is especially useful for personal email between a group of people or when you've subscribed to mailing lists.
 
 :::{admonition} 📷 Screenshot Needed
 :class: tip
 
 **Subject:** The Index screen
 
-**Description:** The NeoMutt Index screen showing a list of emails with message numbers, status flags (N for new, r for replied, ! for flagged), dates, sender names, sizes, and subjects. Include some threaded messages to show the tree hierarchy with reply indentation.
+**Description:** The NeoMutt Index screen showing a list of emails with message numbers, status flags (N for new, r for replied, ! for flagged), dates, sender names, sizes, and subjects.
+Include some threaded messages to show the tree hierarchy with reply indentation.
 
 **Highlights:** The columnar layout of the message list — flags, date, sender, size, and subject — plus how threads are visually represented with tree characters.
 :::
 
 ### Pager
 
-The pager is responsible for showing the email content. On the top of the pager you have an
-overview over the most important email headers like the sender, the recipient, the subject,
-and much more information. How much information you actually see depends on your
-configuration, which we'll describe below.
+The pager is responsible for showing the email content.
+On the top of the pager you have an overview over the most important email headers like the sender, the recipient, the subject, and much more information.
+How much information you actually see depends on your configuration, which we'll describe below.
 
-Below the headers, you see the email body which usually contains the message. If the email
-contains any attachments, you will see more information about them below the email body, or,
-if the attachments are text files, you can view them directly in the pager.
+Below the headers, you see the email body which usually contains the message.
+If the email contains any attachments, you will see more information about them below the email body, or, if the attachments are text files, you can view them directly in the pager.
 
 :::{admonition} 📷 Screenshot Needed
 :class: tip
@@ -120,41 +104,38 @@ if the attachments are text files, you can view them directly in the pager.
 **Highlights:** The separation between email headers and body content, the status line showing progress through the message, and any color highlighting of quoted text or URLs.
 :::
 
-To give the user a good overview, it is possible to configure NeoMutt to show different things
-in the pager with different colors. Virtually everything that can be described with a regular
-expression can be colored, e.g. URLs, email addresses or smileys.
+To give the user a good overview, it is possible to configure NeoMutt to show different things in the pager with different colors.
+Virtually everything that can be described with a regular expression can be colored, e.g. URLs, email addresses or smileys.
 
 ### File Browser
 
-The file browser is the interface to the local or remote file system. When selecting
-a mailbox to open, the browser allows custom sorting of items, limiting the items shown by
-a regular expression and a freely adjustable format of what to display in which way. It also
-allows for easy navigation through the file system when selecting file(s) to attach to
-a message, select multiple files to attach and many more.
+The file browser is the interface to the local or remote file system.
+When selecting a mailbox to open, the browser allows custom sorting of items, limiting the items shown by a regular expression and a freely adjustable format of what to display in which way.
+It also allows for easy navigation through the file system when selecting file(s) to attach to a message, select multiple files to attach and many more.
 
-Some mail systems can nest mail folders inside other mail folders. The normal open entry
-commands in NeoMutt will open the mail folder and you can't see the sub-folders. If you
-instead use the `<descend-directory>` function it will go into the directory and not open it
-as a mail directory.
+Some mail systems can nest mail folders inside other mail folders.
+The normal open entry commands in NeoMutt will open the mail folder and you can't see the sub-folders.
+If you instead use the `<descend-directory>` function it will go into the directory and not open it as a mail directory.
 
 :::{admonition} 📷 Screenshot Needed
 :class: tip
 
 **Subject:** The File Browser screen
 
-**Description:** The NeoMutt File Browser showing a list of mailboxes or directories, with columns for file size, date, and name. Show a mix of directories and mail folders to illustrate navigation.
+**Description:** The NeoMutt File Browser showing a list of mailboxes or directories, with columns for file size, date, and name.
+Show a mix of directories and mail folders to illustrate navigation.
 
 **Highlights:** How mailboxes and directories are listed, the sorting columns, and the navigation prompt at the bottom for selecting a mailbox to open.
 :::
 
 ### Sidebar
 
-The Sidebar shows a list of all your mailboxes. The list can be turned on and off, it can be
-themed and the list style can be configured.
+The Sidebar shows a list of all your mailboxes.
+The list can be turned on and off, it can be themed and the list style can be configured.
 
-This part of the manual is suitable for beginners. If you already know NeoMutt you could skip
-ahead to the main Sidebar guide. If you just want to get started, you could use the sample
-Sidebar neomuttrc.
+This part of the manual is suitable for beginners.
+If you already know NeoMutt you could skip ahead to the main Sidebar guide.
+If you just want to get started, you could use the sample Sidebar neomuttrc.
 
 **Let's turn on the Sidebar:**
 
@@ -164,8 +145,9 @@ set sidebar_format = "%B%<F? [%F]>%* %<N?%N/>%S"
 set mail_check_stats
 ```
 
-You will see something like this. A list of mailboxes on the left. A list of emails, from the
-selected mailbox, on the right.
+You will see something like this.
+A list of mailboxes on the left.
+A list of emails, from the selected mailbox, on the right.
 
 ```
 Fruit [1]     3/8|  1    + Jan 24  Rhys Lee         (192)  Yew
@@ -182,16 +164,16 @@ Seas          1/7|  4    ! Feb 28  Summer Jackson   (264)  Lemon
 
 This user has four mailboxes: "Fruit", "Cars", "Animals" and "Seas".
 
-The current, open, mailbox is "Fruit". We can also see information about the other mailboxes.
-For example: The "Animals" mailbox contains, 1 flagged email, 2 new emails out of a total of
-6 emails.
+The current, open, mailbox is "Fruit".
+We can also see information about the other mailboxes.
+For example: The "Animals" mailbox contains, 1 flagged email, 2 new emails out of a total of 6 emails.
 
 #### Navigation
 
 The Sidebar adds some new functions to NeoMutt.
 
-The user pressed the "c" key to `<change-folder>` to the "Animals" mailbox. The Sidebar
-automatically updated the indicator to match.
+The user pressed the "c" key to `<change-folder>` to the "Animals" mailbox.
+The Sidebar automatically updated the indicator to match.
 
 ```
 Fruit [1]     3/8|  1      Jan 03  Tia Gibson       (362)  Caiman
@@ -214,8 +196,7 @@ bind index,pager \CN sidebar-next       # Ctrl-N – Next Mailbox
 bind index,pager \CO sidebar-open       # Ctrl-O – Open Highlighted Mailbox
 ```
 
-Pressing "Ctrl-N" (Next mailbox) twice will move the Sidebar **highlight** down to the "Seas"
-mailbox.
+Pressing "Ctrl-N" (Next mailbox) twice will move the Sidebar **highlight** down to the "Seas" mailbox.
 
 ```
 Fruit [1]     3/8|  1      Jan 03  Tia Gibson       (362)  Caiman
@@ -231,8 +212,8 @@ Seas          1/7|  4      Sep 25  Grace Hall       ( 27)  Capybara
 ```
 
 :::{note}
-Functions `<sidebar-next>` and `<sidebar-prev>` move the Sidebar **highlight**. They
-**do not** change the open mailbox.
+Functions `<sidebar-next>` and `<sidebar-prev>` move the Sidebar **highlight**.
+They **do not** change the open mailbox.
 :::
 
 Press "Ctrl-O" (`<sidebar-open>`) to open the highlighted mailbox.
@@ -298,21 +279,21 @@ For a quick reference:
 
 ##### Sidebar Basics
 
-The most important variable is `$sidebar_visible`. You can set this in your "neomuttrc", or
-bind a key to the function `<sidebar-toggle-visible>`.
+The most important variable is `$sidebar_visible`.
+You can set this in your "neomuttrc", or bind a key to the function `<sidebar-toggle-visible>`.
 
 ```neomuttrc
 set sidebar_visible                         # Make the Sidebar visible by default
 bind index,pager B sidebar-toggle-visible   # Use 'B' to switch the Sidebar on and off
 ```
 
-Next, decide how wide you want the Sidebar to be. 25 characters might be enough for the
-mailbox name and some numbers. Remember, you can hide/show the Sidebar at the press of
-button.
+Next, decide how wide you want the Sidebar to be.
+25 characters might be enough for the mailbox name and some numbers.
+Remember, you can hide/show the Sidebar at the press of button.
 
-Finally, you might want to change the divider character. By default, Sidebar draws an ASCII
-line between it and the Index panel. If your terminal supports it, you can use a Unicode
-line-drawing character.
+Finally, you might want to change the divider character.
+By default, Sidebar draws an ASCII line between it and the Index panel.
+If your terminal supports it, you can use a Unicode line-drawing character.
 
 ```neomuttrc
 set sidebar_width = 25                  # Plenty of space
@@ -321,8 +302,8 @@ set sidebar_divider_char = '│'          # Pretty line-drawing character
 
 ##### Sidebar Format String
 
-`$sidebar_format` allows you to customize the Sidebar display. For an introduction, read
-about format strings including the section about conditionals.
+`$sidebar_format` allows you to customize the Sidebar display.
+For an introduction, read about format strings including the section about conditionals.
 
 The default value is: `%D%* %n`
 
@@ -364,7 +345,8 @@ set mail_check_stats
 
 ‡ = Only applicable to the current folder
 
-Here are some examples. They show the number of (F)lagged, (N)ew and (S)ize.
+Here are some examples.
+They show the number of (F)lagged, (N)ew and (S)ize.
 
 | Format                      | Example                      |
 |-----------------------------|------------------------------|
@@ -375,8 +357,8 @@ Here are some examples. They show the number of (F)lagged, (N)ew and (S)ize.
 
 ##### Abbreviating Mailbox Names
 
-`$sidebar_delim_chars` tells Sidebar how to split up mailbox paths. For local directories use
-"/"; for IMAP folders use "."
+`$sidebar_delim_chars` tells Sidebar how to split up mailbox paths.
+For local directories use "/"; for IMAP folders use "."
 
 **Example 1**
 
@@ -399,8 +381,7 @@ set sidebar_component_depth=1           # Shorten mailbox names (truncate 1 subd
 set sidebar_delim_chars="/"             # Delete everything up to the last or Nth / character
 ```
 
-The screenshot below shows what the Sidebar would look like before and after shortening using
-`sidebar_short_path`.
+The screenshot below shows what the Sidebar would look like before and after shortening using `sidebar_short_path`.
 
 ```
 |fruit/apple                            |apple
@@ -414,8 +395,7 @@ The screenshot below shows what the Sidebar would look like before and after sho
 |water/ocean/arctic                     |arctic
 ```
 
-The screenshot below shows what the Sidebar would look like before and after shortening using
-`sidebar_component_depth=1`.
+The screenshot below shows what the Sidebar would look like before and after shortening using `sidebar_component_depth=1`.
 
 ```
 |fruit/apple                            |apple
@@ -473,21 +453,19 @@ The screenshot below shows what the Sidebar would look like before and after sho
 |water/ocean/arctic                     |    arctic
 ```
 
-Sometimes, it will be necessary to add mailboxes, that you don't use, to fill in part of the
-tree. This will trade vertical space for horizontal space (but it looks good).
+Sometimes, it will be necessary to add mailboxes, that you don't use, to fill in part of the tree.
+This will trade vertical space for horizontal space (but it looks good).
 
 ##### Limiting the Number of Mailboxes
 
 If you have a lot of mailboxes, sometimes it can be useful to hide the ones you aren't using.
-`$sidebar_new_mail_only` tells Sidebar to only show mailboxes that contain new, or flagged,
-email.
+`$sidebar_new_mail_only` tells Sidebar to only show mailboxes that contain new, or flagged, email.
 
 Sometimes it is useful to only show mailboxes that have mails in them, while hiding the rest.
-`$sidebar_non_empty_mailbox_only` tells the Sidebar to only show mailboxes with a non-zero
-number of mails.
+`$sidebar_non_empty_mailbox_only` tells the Sidebar to only show mailboxes with a non-zero number of mails.
 
-If you want some mailboxes to be always visible, then use the `sidebar-pin` command. It takes
-a list of mailboxes as parameters.
+If you want some mailboxes to be always visible, then use the `sidebar-pin` command.
+It takes a list of mailboxes as parameters.
 
 ```neomuttrc
 set sidebar_new_mail_only         # Only mailboxes with new/flagged email
@@ -510,8 +488,7 @@ color sidebar_flagged    red     default     # Red
 color sidebar_divider    color8  default     # Dark grey
 ```
 
-There is a priority order when coloring Sidebar mailboxes. e.g. If a mailbox has new mail it
-will have the `sidebar_new` color, even if it also contains flagged mails.
+There is a priority order when coloring Sidebar mailboxes. e.g. If a mailbox has new mail it will have the `sidebar_new` color, even if it also contains flagged mails.
 
 | Priority | Color                | Description                                        |
 |----------|----------------------|----------------------------------------------------|
@@ -535,10 +512,8 @@ will have the `sidebar_new` color, even if it also contains flagged mails.
 
 ### Help
 
-The help screen is meant to offer a quick help to the user. It lists the current
-configuration of key bindings and their associated commands including a short description, and
-currently unbound functions that still need to be associated with a key binding (or
-alternatively, they can be called via the NeoMutt command prompt).
+The help screen is meant to offer a quick help to the user.
+It lists the current configuration of key bindings and their associated commands including a short description, and currently unbound functions that still need to be associated with a key binding (or alternatively, they can be called via the NeoMutt command prompt).
 
 :::{admonition} 📷 Screenshot Needed
 :class: tip
@@ -552,11 +527,9 @@ alternatively, they can be called via the NeoMutt command prompt).
 
 ### Compose Menu
 
-The compose menu features a split screen containing the information which really matters
-before actually sending a message by mail: who gets the message as what (recipients and who
-gets what kind of copy). Additionally, users may set security options like deciding whether to
-sign, encrypt or sign and encrypt a message with/for what keys. Also, it's used to attach
-messages, to re-edit any attachment including the message itself.
+The compose menu features a split screen containing the information which really matters before actually sending a message by mail: who gets the message as what (recipients and who gets what kind of copy).
+Additionally, users may set security options like deciding whether to sign, encrypt or sign and encrypt a message with/for what keys.
+Also, it's used to attach messages, to re-edit any attachment including the message itself.
 
 :::{admonition} 📷 Screenshot Needed
 :class: tip
@@ -570,12 +543,10 @@ messages, to re-edit any attachment including the message itself.
 
 ### Alias Menu
 
-The alias menu is used to help users finding the recipients of messages. For users who need to
-contact many people, there's no need to remember addresses or names completely because it
-allows for searching, too. The alias mechanism and thus the alias menu also features grouping
-several addresses by a shorter nickname, the actual alias, so that users don't have to select
-each single recipient manually. The alias menu is also used to display the result of external
-address queries.
+The alias menu is used to help users finding the recipients of messages.
+For users who need to contact many people, there's no need to remember addresses or names completely because it allows for searching, too.
+The alias mechanism and thus the alias menu also features grouping several addresses by a shorter nickname, the actual alias, so that users don't have to select each single recipient manually.
+The alias menu is also used to display the result of external address queries.
 
 :::{admonition} 📷 Screenshot Needed
 :class: tip
@@ -589,11 +560,9 @@ address queries.
 
 ### Attachment Menu
 
-As will be later discussed in detail, NeoMutt features a good and stable MIME implementation,
-that is, it supports sending and receiving messages of arbitrary MIME types. The attachment
-menu displays a message's structure in detail: what content parts are attached to which parent
-part (which gives a true tree structure), which part is of what type and what size. Single
-parts may saved, deleted or modified to offer great and easy access to message's internals.
+As will be later discussed in detail, NeoMutt features a good and stable MIME implementation, that is, it supports sending and receiving messages of arbitrary MIME types.
+The attachment menu displays a message's structure in detail: what content parts are attached to which parent part (which gives a true tree structure), which part is of what type and what size.
+Single parts may saved, deleted or modified to offer great and easy access to message's internals.
 
 :::{admonition} 📷 Screenshot Needed
 :class: tip
@@ -607,8 +576,7 @@ parts may saved, deleted or modified to offer great and easy access to message's
 
 ## Moving Around in Menus
 
-The most important navigation keys common to line- or entry-based menus are shown below, as
-well as keys for page-based menus.
+The most important navigation keys common to line- or entry-based menus are shown below, as well as keys for page-based menus.
 
 ### Navigation Keys in Entry-Based Menus
 

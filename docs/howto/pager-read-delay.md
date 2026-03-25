@@ -2,6 +2,7 @@
 title: How to Use Pager Read Delay
 description: Delay when the pager marks a previewed message as read in NeoMutt
 keywords: pager, read delay, preview, pager_read_delay, new message, mark read
+since: 2021-06-16
 ---
 
 # How to Use Pager Read Delay

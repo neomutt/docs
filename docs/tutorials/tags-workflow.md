@@ -11,7 +11,8 @@ If Notmuch is not set up yet, start with [How to Use Notmuch](../howto/notmuch).
 
 ## What Are Tags?
 
-Tags are labels attached to messages. One message can have many tags, and tags can drive virtual mailboxes.
+Tags are labels attached to messages.
+One message can have many tags, and tags can drive virtual mailboxes.
 
 ## Set Up Notmuch for Tagging
 

@@ -83,7 +83,8 @@ Expected result: you can repeat complex searches quickly.
 
 ## Full-Text Search with Notmuch
 
-Notmuch adds full-text search and tag-based queries. If you need whole-mailbox searching, set up Notmuch and use `notmuch://` virtual mailboxes.
+Notmuch adds full-text search and tag-based queries.
+If you need whole-mailbox searching, set up Notmuch and use `notmuch://` virtual mailboxes.
 
 See [How to Use Notmuch](../howto/notmuch).
 

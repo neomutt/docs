@@ -16,8 +16,7 @@ If you're brand new to NeoMutt, read [Getting Started](getting-started) first.
 3. OAuth2 credentials for Gmail, or an app password if your account allows it.
 4. NeoMutt installed with IMAP and SMTP support.
 
-If you're unsure about any prerequisite, the links in the References section point to Gmail's
-current instructions.
+If you're unsure about any prerequisite, the links in the References section point to Gmail's current instructions.
 
 ## Create a Minimal Configuration for Gmail IMAP
 
@@ -56,7 +55,9 @@ Expected result: NeoMutt can send mail via Gmail SMTP.
 
 ## Configure OAuth2 Authentication
 
-Gmail supports OAuth2 SASL for IMAP and SMTP. NeoMutt delegates token handling to an external helper. The NeoMutt repo includes `mutt_oauth2.py` for this purpose.
+Gmail supports OAuth2 SASL for IMAP and SMTP.
+NeoMutt delegates token handling to an external helper.
+The NeoMutt repo includes `mutt_oauth2.py` for this purpose.
 
 1. Generate tokens using `mutt_oauth2.py` (see the script README for details).
 2. Configure NeoMutt to use OAuth:

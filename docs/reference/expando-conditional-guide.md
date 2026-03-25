@@ -6,13 +6,6 @@ keywords: neomutt, expando, conditional, format, if-else, date, boolean
 
 # Conditional Expandos
 
-:::{admonition} Diátaxis: How-to
-:class: note
-
-Practical steps to achieve a goal.  Assume the reader knows what they want to do and needs to
-know *how*.  Keep instructions action-oriented and provide realistic, copy-paste-ready examples.
-:::
-
 Conditional expandos let you show different text depending on the properties
 of a message, mailbox, or other context.  For example, you can display "New"
 next to unread messages, show a count only when it's non-zero, or format

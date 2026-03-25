@@ -2,6 +2,7 @@
 title: How to Use the Account Command
 description: Populate account credentials via an external command in NeoMutt
 keywords: account_command, credentials, password manager, external command, imap_user, imap_pass
+since: 2022-05-16
 ---
 
 # How to Use the Account Command
@@ -11,9 +12,10 @@ keywords: account_command, credentials, password manager, external command, imap
 ## Introduction
 
 NeoMutt provides dedicated config options to specify credentials for network servers.
-These include `imap_user`, `imap_pass`, `smtp_user`, `smtp_pass`, etc. There are a few downsides to this approach.
+These include `imap_user`, `imap_pass`, `smtp_user`, `smtp_pass`, etc.
+There are a few downsides to this approach.
 For one thing, their use encourages storing usernames and passwords in plain text inside a NeoMutt config file.
-People have come up with solutions to this, including using gpg-encrypted files and populating `my_` variables via external scripts through `source "/path/to/script|"`. 
+People have come up with solutions to this, including using gpg-encrypted files and populating `my_` variables via external scripts through `source "/path/to/script|"`.
 However, once the variables are set, the secrets can be inspected with the `set` command.
 Also, because these config options are not account-specific, they have been the cause of a proliferation of ways to mimic per-account setups using a combination of convoluted hooks and macros to modify them on folder change or on a keypress.
 

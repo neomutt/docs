@@ -1,28 +1,27 @@
 ---
-title: Account Command
+title: How to Use the Account Command
 description: Populate account credentials via an external command in NeoMutt
 keywords: account_command, credentials, password manager, external command, imap_user, imap_pass
 since: 2022-05-16
 ---
 
-# Account Command
-
-:::{admonition} Diátaxis: How-To Guide
-:class: note
-
-Write as **directions**. Assume the reader is competent and knows what they want to achieve.
-Be practical and goal-focused. Use numbered steps for procedures. Don't explain why — link
-to explanation pages instead. Keep it focused on the specific task. Start with prerequisites,
-give the steps, show the expected result.
-:::
+# How to Use the Account Command
 
 **Since:** NeoMutt 2022-05-16
 
 ## Introduction
 
-NeoMutt provides dedicated config options to specify credentials for network servers. These include `imap_user`, `imap_pass`, `smtp_user`, `smtp_pass`, etc. There are a few downsides to this approach. For one thing, their use encourages storing usernames and passwords in plain text inside a NeoMutt config file. People have come up with solutions to this, including using gpg-encrypted files and populating `my_` variables via external scripts through `source "/path/to/script|"`. However, once the variables are set, the secrets can be inspected with the `set` command. Also, because these config options are not account-specific, they have been the cause of a proliferation of ways to mimic per-account setups using a combination of convoluted hooks and macros to modify them on folder change or on a keypress.
+NeoMutt provides dedicated config options to specify credentials for network servers.
+These include `imap_user`, `imap_pass`, `smtp_user`, `smtp_pass`, etc.
+There are a few downsides to this approach.
+For one thing, their use encourages storing usernames and passwords in plain text inside a NeoMutt config file.
+People have come up with solutions to this, including using gpg-encrypted files and populating `my_` variables via external scripts through `source "/path/to/script|"`.
+However, once the variables are set, the secrets can be inspected with the `set` command.
+Also, because these config options are not account-specific, they have been the cause of a proliferation of ways to mimic per-account setups using a combination of convoluted hooks and macros to modify them on folder change or on a keypress.
 
-The goal of this feature is to get rid of most `_user` and `_pass` variables. To do so, it provides a way of specifying an external command that NeoMutt will call to populate account credentials for network servers such as IMAP, POP, or SMTP. The external command is called with a number of arguments indicating the known properties of the account such as the account type and hostname; the external command provides NeoMutt with a list of additional properties such as username and password.
+The goal of this feature is to get rid of most `_user` and `_pass` variables.
+To do so, it provides a way of specifying an external command that NeoMutt will call to populate account credentials for network servers such as IMAP, POP, or SMTP.
+The external command is called with a number of arguments indicating the known properties of the account such as the account type and hostname; the external command provides NeoMutt with a list of additional properties such as username and password.
 
 ## Usage
 

@@ -6,13 +6,6 @@ keywords: neomutt, send, email, command-line, attach, draft, pipe, encrypt, sign
 
 # Sending Email from the Command Line
 
-:::{admonition} Diátaxis: How-to
-:class: note
-
-Practical steps to achieve a goal.  Assume the reader knows what they want to do and needs to
-know *how*.  Keep instructions action-oriented and provide realistic, copy-paste-ready examples.
-:::
-
 NeoMutt can send email directly from the command line — no interactive
 interface required.  This guide walks through every way to compose, attach,
 sign, encrypt, and send messages without ever opening the full NeoMutt

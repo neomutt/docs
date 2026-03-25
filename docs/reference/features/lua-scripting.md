@@ -5,15 +5,6 @@ keywords: lua, lua-source, scripting, embedded lua, automation
 since: 2017-04-14
 ---
 
-:::{admonition} Diátaxis: How-To Guide
-:class: note
-
-Write as **directions**. Assume the reader is competent and knows what they want to achieve.
-Be practical and goal-focused. Use numbered steps for procedures. Don't explain why — link
-to explanation pages instead. Keep it focused on the specific task. Start with prerequisites,
-give the steps, show the expected result.
-:::
-
 # Lua Scripting
 
 ## Introduction

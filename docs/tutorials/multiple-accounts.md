@@ -8,12 +8,12 @@ keywords: [neomutt, multiple accounts, folder-hook, account-hook, sidebar, tutor
 
 In this tutorial you will configure two IMAP accounts and switch between them reliably.
 
-If you haven't connected a first account yet, start with [Writing Your First Configuration](first-config)
-or the guided [Start Here](../start-here) page.
+If you haven't connected a first account yet, start with [Writing Your First Configuration](first-config) or the guided [Start Here](../start-here) page.
 
 ## Why Multiple Accounts?
 
-You might have a personal and a work account, or multiple accounts for different roles. NeoMutt can switch settings automatically based on the mailbox you enter.
+You might have a personal and a work account, or multiple accounts for different roles.
+NeoMutt can switch settings automatically based on the mailbox you enter.
 
 If one of your accounts is Gmail or Office 365, follow those setup tutorials for the provider-specific settings, then return here to combine them.
 

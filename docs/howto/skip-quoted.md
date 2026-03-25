@@ -2,13 +2,14 @@
 title: How to Use Skip-Quoted
 description: Manage quoted text display in the NeoMutt pager with skip-quoted, toggle-quoted, and skip-headers
 keywords: skip-quoted, toggle-quoted, skip-headers, pager, quoted text, pager_skip_quoted_context, toggle_quoted_show_levels
+since: 2021-02-05
 ---
 
 # How to Use Skip-Quoted
 
 ## Support
 
-**Since:** `$skip_quoted_offset` in NeoMutt 2016-03-28, `$toggle_quoted_show_levels` in NeoMutt 2019-10-25, `<skip-headers>` in NeoMutt 2021-02-05
+**Since:** NeoMutt 2021-02-05
 
 ## Introduction
 

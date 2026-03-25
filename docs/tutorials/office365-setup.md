@@ -44,7 +44,8 @@ Expected result: NeoMutt is configured to send via Office 365 SMTP.
 
 ## Configure OAuth2 Authentication
 
-Office 365 requires OAuth2 for IMAP/SMTP. Use `mutt_oauth2.py` to obtain tokens.
+Office 365 requires OAuth2 for IMAP/SMTP.
+Use `mutt_oauth2.py` to obtain tokens.
 
 1. Register an OAuth app in Azure and note the client ID (and secret if used).
 2. Authorize tokens with `mutt_oauth2.py` (see its README for the exact command).

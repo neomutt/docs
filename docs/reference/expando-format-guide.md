@@ -6,13 +6,6 @@ keywords: neomutt, expando, format, width, padding, justification, alignment, tr
 
 # Formatting Expandos
 
-:::{admonition} Diátaxis: How-to
-:class: note
-
-Practical steps to achieve a goal.  Assume the reader knows what they want to do and needs to
-know *how*.  Keep instructions action-oriented and provide realistic, copy-paste-ready examples.
-:::
-
 NeoMutt uses **expandos** — short codes starting with `%` — to build the
 format strings that control how the message list, status bar, sidebar, and
 other parts of the interface look.  Each expando is replaced at runtime with

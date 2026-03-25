@@ -7,18 +7,16 @@ diataxis_type: tutorial
 
 # Writing Your First Configuration
 
-This tutorial gets you to a working configuration quickly. You'll create a small `neomuttrc`,
-start NeoMutt, and confirm it connects to your account.
+This tutorial gets you to a working configuration quickly.
+You'll create a small `neomuttrc`, start NeoMutt, and confirm it connects to your account.
 
-If you use Gmail or Office 365, start with those tutorials because they include OAuth and
-provider-specific settings:
+If you use Gmail or Office 365, start with those tutorials because they include OAuth and provider-specific settings:
 
 - [Gmail Setup](gmail-setup)
 - [Office 365 Setup](office365-setup)
 
-NeoMutt is highly configurable, but you only need a handful of settings to get started. A few
-sample neomuttrc files are also available in the
-[Contrib Repo](https://github.com/neomutt/neomutt-contrib).
+NeoMutt is highly configurable, but you only need a handful of settings to get started.
+A few sample neomuttrc files are also available in the [Contrib Repo](https://github.com/neomutt/neomutt-contrib).
 
 :::{admonition} 📷 Screenshot Needed
 :class: tip
@@ -32,14 +30,14 @@ sample neomuttrc files are also available in the
 
 ## Location of Initialization Files
 
-NeoMutt looks for a user configuration file in several places. For a clean start, use one of
-these common locations:
+NeoMutt looks for a user configuration file in several places.
+For a clean start, use one of these common locations:
 
 - `~/.config/neomutt/neomuttrc` (recommended)
 - `~/.neomuttrc` (classic)
 
-If you already have a file in one of the other supported locations, NeoMutt will use the
-first one it finds. The full search order is listed later in this page.
+If you already have a file in one of the other supported locations, NeoMutt will use the first one it finds.
+The full search order is listed later in this page.
 
 ## Minimal Configuration
 
@@ -50,9 +48,8 @@ Follow these steps:
 3. Replace the placeholder values with your real account details.
 4. Start NeoMutt and confirm it opens your inbox.
 
-Before diving into the full details of config file syntax and locations, here is a minimal
-`neomuttrc` to get you started. Copy it to `~/.neomuttrc` and adjust the values for your
-account:
+Before diving into the full details of config file syntax and locations, here is a minimal `neomuttrc` to get you started.
+Copy it to `~/.neomuttrc` and adjust the values for your account:
 
 ```neomuttrc
 # Identity
@@ -89,32 +86,27 @@ unignore from: to: cc: date: subject:
 hdr_order from: to: cc: date: subject:
 ```
 
-Store passwords in an encrypted file and load them with backticks rather than storing them
-in plain text — for example:
+Store passwords in an encrypted file and load them with backticks rather than storing them in plain text — for example:
 
 ```neomuttrc
 set imap_pass = "`gpg --batch -q --decrypt ~/.neomutt/account.gpg`"
 ```
 
-For safer options and OAuth-based setups, see [Password Manager](../howto/password-manager)
-and [OAuth](../howto/oauth).
+For safer options and OAuth-based setups, see [Password Manager](../howto/password-manager) and [OAuth](../howto/oauth).
 
-Once NeoMutt starts without errors, continue reading to understand the full configuration
-syntax and all available file locations.
+Once NeoMutt starts without errors, continue reading to understand the full configuration syntax and all available file locations.
 
 ---
 
-When NeoMutt starts up it looks for two configuration files – one "system" file and one "user"
-file.
+When NeoMutt starts up it looks for two configuration files – one "system" file and one "user" file.
 
-NeoMutt first reads the system configuration file, then the user configuration file. The two
-files are merged in the sense that "last setting wins". That is, if a setting is defined in
-both files, the user configuration file's value for that setting is the one that takes
-precedence and becomes effective.
+NeoMutt first reads the system configuration file, then the user configuration file.
+The two files are merged in the sense that "last setting wins".
+That is, if a setting is defined in both files, the user configuration file's value for that setting is the one that takes precedence and becomes effective.
 
-NeoMutt searches for several different file names when looking for config. It looks for
-NeoMutt config files before Mutt config files and versioned config before plain config. For
-example:
+NeoMutt searches for several different file names when looking for config.
+It looks for NeoMutt config files before Mutt config files and versioned config before plain config.
+For example:
 
 | Config file name |
 |------------------|
@@ -126,8 +118,9 @@ This allows the user to create separate NeoMutt and Mutt config files on the sam
 ### Location of System Config Files
 
 NeoMutt will search for a system config file in a `neomutt` directory in several places.
-First it searches the locations specified in the `XDG_CONFIG_DIRS` environment variable, which
-defaults to `/etc/xdg`. Next, it looks in `/etc`. Finally, it tries `/usr/share`.
+First it searches the locations specified in the `XDG_CONFIG_DIRS` environment variable, which defaults to `/etc/xdg`.
+Next, it looks in `/etc`.
+Finally, it tries `/usr/share`.
 
 The system config file will not be read if the "-n" option is used on the command line.
 
@@ -144,13 +137,12 @@ NeoMutt will read just one file, the first file it finds, from the list below.
 
 ### Location of User Config Files
 
-NeoMutt will search for a user config file in several places. First it looks in the directory
-specified in the `XDG_CONFIG_HOME` environment variable, which defaults to
-`~/.config/neomutt`. Next, it looks in `~` (your home directory). Finally, it tries
-`~/.neomutt`.
+NeoMutt will search for a user config file in several places.
+First it looks in the directory specified in the `XDG_CONFIG_HOME` environment variable, which defaults to `~/.config/neomutt`.
+Next, it looks in `~` (your home directory).
+Finally, it tries `~/.neomutt`.
 
-You may specify your own location for the user config file using the "-F" option on the
-command line.
+You may specify your own location for the user config file using the "-F" option on the command line.
 
 NeoMutt will read just one file, the first file it finds, from the list below.
 
@@ -169,18 +161,15 @@ NeoMutt will read just one file, the first file it finds, from the list below.
 
 ### Config Priority
 
-The majority of NeoMutt's config will be read from two files: the system config in `/etc` and
-the user config in, e.g. `~/.neomuttrc`.
+The majority of NeoMutt's config will be read from two files: the system config in `/etc` and the user config in, e.g. `~/.neomuttrc`.
 
-The last file that gets read will overwrite any settings from previous config files. This
-means that an administrator can set some defaults which the user can override.
+The last file that gets read will overwrite any settings from previous config files.
+This means that an administrator can set some defaults which the user can override.
 
-Additionally, there are a handful of config items which can be set using an environment
-variable. They have a lower priority than the NeoMutt config files: `$editor`, `$from`,
-`$mailcap_path`, `$news_server`, `$shell`, `$spool_file`, `$tmp_dir`.
+Additionally, there are a handful of config items which can be set using an environment variable.
+They have a lower priority than the NeoMutt config files: `$editor`, `$from`, `$mailcap_path`, `$news_server`, `$shell`, `$spool_file`, `$tmp_dir`.
 
-Finally, it's possible to set some variables directly on the command-line using the `-e`
-option.
+Finally, it's possible to set some variables directly on the command-line using the `-e` option.
 
 | Priority | Where         | Example                                               |
 |----------|---------------|-------------------------------------------------------|
@@ -202,9 +191,9 @@ option.
 
 ## Syntax of Initialization Files
 
-An initialization file consists of a series of commands. Each line of the file may contain one
-or more commands. When multiple commands are used, they must be separated by a semicolon
-(";").
+An initialization file consists of a series of commands.
+Each line of the file may contain one or more commands.
+When multiple commands are used, they must be separated by a semicolon (";").
 
 **Example: Multiple configuration commands per line**
 
@@ -212,9 +201,9 @@ or more commands. When multiple commands are used, they must be separated by a s
 set real_name='John Smith' ; ignore x-
 ```
 
-The hash mark, or pound sign ("#"), is used as a "comment" character. You can use it to
-annotate your initialization file. All text after the comment character to the end of the line
-is ignored.
+The hash mark, or pound sign ("#"), is used as a "comment" character.
+You can use it to annotate your initialization file.
+All text after the comment character to the end of the line is ignored.
 
 **Example: Commenting configuration files**
 
@@ -222,16 +211,12 @@ is ignored.
 my-header X-Disclaimer: Why are you listening to me?   # This is a comment
 ```
 
-Single quotes ("'") and double quotes (""") can be used to quote strings which contain spaces
-or other special characters. The difference between the two types of quotes is similar to that
-of many popular shell programs, namely that a single quote is used to specify a literal string
-(one that is not interpreted for shell variables or quoting with a backslash [see next
-paragraph]), while double quotes indicate a string for which should be evaluated. For example,
-backticks are evaluated inside of double quotes, but *not* for single quotes.
+Single quotes ("'") and double quotes (""") can be used to quote strings which contain spaces or other special characters.
+The difference between the two types of quotes is similar to that of many popular shell programs, namely that a single quote is used to specify a literal string (one that is not interpreted for shell variables or quoting with a backslash [see next paragraph]), while double quotes indicate a string for which should be evaluated.
+For example, backticks are evaluated inside of double quotes, but *not* for single quotes.
 
-"\\" quotes the next character, just like in a shell. For example, if want to put quotes """
-inside of a string, you can use "\\" to force the next character to be a literal instead of
-interpreted character.
+"\\" quotes the next character, just like in a shell.
+For example, if want to put quotes """ inside of a string, you can use "\\" to force the next character to be a literal instead of interpreted character.
 
 **Example: Escaping quotes in configuration files**
 
@@ -239,13 +224,11 @@ interpreted character.
 set real_name="John \"anonymous\" Doe"
 ```
 
-"\\\\" means to insert a literal "\\" into the line. "\\n" and "\\r" have their usual
-C meanings of linefeed and carriage-return, respectively.
+"\\\\" means to insert a literal "\\" into the line.
+"\\n" and "\\r" have their usual C meanings of linefeed and carriage-return, respectively.
 
-A "\\" at the end of a line can be used to split commands over multiple lines as it "escapes"
-the line end, provided that the split points don't appear in the middle of command names.
-Lines are first concatenated before interpretation so that a multi-line can be commented by
-commenting out the first line only.
+A "\\" at the end of a line can be used to split commands over multiple lines as it "escapes" the line end, provided that the split points don't appear in the middle of command names.
+Lines are first concatenated before interpretation so that a multi-line can be commented by commenting out the first line only.
 
 **Example: Splitting long configuration commands over several lines**
 
@@ -262,9 +245,9 @@ Any leading whitespace on the following lines will be part of the configuration.
 :::
 
 It is also possible to substitute the output of a Unix command in an initialization file.
-This is accomplished by enclosing the command in backticks (\`\`). The output of the Unix
-command will be substituted before the line is parsed. Since initialization files are line
-oriented, only the first line of output from the Unix command will be substituted.
+This is accomplished by enclosing the command in backticks (\`\`).
+The output of the Unix command will be substituted before the line is parsed.
+Since initialization files are line oriented, only the first line of output from the Unix command will be substituted.
 
 **Example: Using external command's output in configuration files**
 
@@ -272,10 +255,8 @@ oriented, only the first line of output from the Unix command will be substitute
 my-header X-Operating-System: `uname -a`
 ```
 
-To avoid the output of backticks being parsed, place them inside double quotes. For example,
-the output of the gpg decryption is assigned directly to $imap_pass, so that special
-characters in the password (e.g. "'", "#", "$") are not parsed and interpreted specially by
-neomutt.
+To avoid the output of backticks being parsed, place them inside double quotes.
+For example, the output of the gpg decryption is assigned directly to $imap_pass, so that special characters in the password (e.g. "'", "#", "$") are not parsed and interpreted specially by neomutt.
 
 **Example: Preventing the output of backticks from being parsed**
 
@@ -283,8 +264,8 @@ neomutt.
 set imap_pass="`gpg --batch -q --decrypt ~/.neomutt/account.gpg`"
 ```
 
-Both environment variables and NeoMutt variables can be accessed by prepending "$" to the name
-of the variable. For example,
+Both environment variables and NeoMutt variables can be accessed by prepending "$" to the name of the variable.
+For example,
 
 **Example: Using environment variables in configuration files**
 
@@ -292,35 +273,24 @@ of the variable. For example,
 set record = "+sent_on_$HOSTNAME"
 ```
 
-will cause NeoMutt to save outgoing messages to a folder named "sent\_on\_kremvax" if the
-environment variable `$HOSTNAME` is set to "kremvax." (See `$record` for details.)
+will cause NeoMutt to save outgoing messages to a folder named "sent\_on\_kremvax" if the environment variable `$HOSTNAME` is set to "kremvax." (See `$record` for details.)
 
-If NeoMutt can't find a matching *config* variable, it will try to find a matching
-*environment* variable.
+If NeoMutt can't find a matching *config* variable, it will try to find a matching *environment* variable.
 
-NeoMutt expands the variable when it is assigned, not when it is used. If the value of
-a variable on the right-hand side of an assignment changes after the assignment, the variable
-on the left-hand side will not be affected.
+NeoMutt expands the variable when it is assigned, not when it is used.
+If the value of a variable on the right-hand side of an assignment changes after the assignment, the variable on the left-hand side will not be affected.
 
-The commands understood by NeoMutt are explained in the next paragraphs. For a complete list,
-see the command reference.
+The commands understood by NeoMutt are explained in the next paragraphs.
+For a complete list, see the command reference.
 
-All configuration files are expected to be in the current locale as specified by the
-`$charset` variable which doesn't have a default value since it's determined by NeoMutt at
-startup. If a configuration file is not encoded in the same character set the
-`$config_charset` variable should be used: all lines starting with the next are recoded from
-`$config_charset` to `$charset`.
+All configuration files are expected to be in the current locale as specified by the `$charset` variable which doesn't have a default value since it's determined by NeoMutt at startup.
+If a configuration file is not encoded in the same character set the `$config_charset` variable should be used: all lines starting with the next are recoded from `$config_charset` to `$charset`.
 
 This mechanism should be avoided if possible as it has the following implications:
 
-- These variables should be set early in a configuration file with `$charset` preceding
-  `$config_charset` so NeoMutt knows what character set to convert to.
-- If `$config_charset` is set, it should be set in each configuration file because the value
-  is global and *not* per configuration file.
-- Because NeoMutt first recodes a line before it attempts to parse it, a conversion
-  introducing question marks or other characters as part of errors (unconvertible characters,
-  transliteration) may introduce syntax errors or silently change the meaning of certain
-  tokens (e.g. inserting question marks into regular expressions).
+- These variables should be set early in a configuration file with `$charset` preceding `$config_charset` so NeoMutt knows what character set to convert to.
+- If `$config_charset` is set, it should be set in each configuration file because the value is global and *not* per configuration file.
+- Because NeoMutt first recodes a line before it attempts to parse it, a conversion introducing question marks or other characters as part of errors (unconvertible characters, transliteration) may introduce syntax errors or silently change the meaning of certain tokens (e.g. inserting question marks into regular expressions).
 
 ## Next Steps
 
