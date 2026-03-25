@@ -1,14 +1,14 @@
 ---
-title: Configuration File Locations
-description: Reference for NeoMutt system and user configuration file locations and priority
-keywords: neomutt, config, configuration, neomuttrc, muttrc, XDG, location
+title: Config File Locations
+description: Reference for NeoMutt system and user config file locations and priority
+keywords: neomutt, config, config, neomuttrc, muttrc, XDG, location
 ---
 
-# Configuration File Locations
+# Config File Locations
 
-When NeoMutt starts up it looks for two configuration files — one "system" file and one "user" file.
+When NeoMutt starts up it looks for two config files — one "system" file and one "user" file.
 
-NeoMutt first reads the system configuration file, then the user configuration file. The two files are merged in the sense that "last setting wins". That is, if a setting is defined in both files, the user configuration file's value for that setting is the one that takes precedence and becomes effective.
+NeoMutt first reads the system config file, then the user config file. The two files are merged in the sense that "last setting wins". That is, if a setting is defined in both files, the user config file's value for that setting is the one that takes precedence and becomes effective.
 
 NeoMutt searches for several different file names when looking for config. It looks for NeoMutt config files before Mutt config files and versioned config before plain config.
 

@@ -527,10 +527,3 @@ TUI:
   -z, --check-any-mail              Check for any mail (exit if none)
 ```
 
----
-
-## See Also
-
-- Config files: <https://neomutt.org/guide/configuration>
-- NeoMutt manual: <https://neomutt.org/guide/>
-- Source: `cli/parse.c`, `cli/objects.h`, `usage.c`

@@ -27,6 +27,27 @@ maxdepth: 2
 about/index.md
 ```
 
+## Commands
+
+```{toctree}
+---
+maxdepth: 2
+---
+commands/index.md
+```
+
+## Config Options
+
+```{toctree}
+---
+maxdepth: 1
+---
+config/files
+config/overview
+config/syntax
+config/types
+```
+
 ## Features
 
 ```{toctree}
@@ -34,6 +55,15 @@ about/index.md
 maxdepth: 2
 ---
 features/index.md
+```
+
+## Functions
+
+```{toctree}
+---
+maxdepth: 2
+---
+functions/overview
 ```
 
 ## Releases
@@ -44,6 +74,8 @@ maxdepth: 2
 ---
 releases/index.md
 ```
+
+---
 
 ## Misc
 
@@ -61,8 +93,6 @@ colour-names
 maxdepth: 1
 ---
 commandline
-commands
-config/overview
 patterns
 regex
 ```
@@ -73,8 +103,6 @@ regex
 ---
 maxdepth: 1
 ---
-config-syntax
-config-locations
 url-syntax
 shortcuts
 ```
@@ -86,15 +114,6 @@ shortcuts
 maxdepth: 1
 ---
 mime-types
-```
-
-## Functions
-
-```{toctree}
----
-maxdepth: 2
----
-functions/overview
 ```
 
 ## NEW

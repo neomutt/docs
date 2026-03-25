@@ -21,9 +21,8 @@ This prints the NeoMutt version, compile-time definitions, and the list of optio
 features. Each feature is prefixed with `+` if enabled or `-` if disabled. For example,
 if NeoMutt was compiled with GnuTLS instead of OpenSSL:
 
-```diff
--openssl
-+gnutls
+```
+-openssl +gnutls
 ```
 
 Running `neomutt -vv` shows the full license and copyright information in addition to the
@@ -35,9 +34,8 @@ Common features you may see in `neomutt -v` output include:
 |------------------------|--------------------------------|
 | `+gnutls` / `+openssl` | TLS encryption support         |
 | `+sasl`                | SASL authentication            |
-| `+idn` / `+idn2`       | Internationalized domain names |
+| `+idn`                 | Internationalized domain names |
 | `+notmuch`             | Notmuch search integration     |
-| `+sidebar`             | Sidebar mailbox list           |
 | `+gpgme`               | GnuPG via GPGME                |
 | `+lua`                 | Lua scripting                  |
 
@@ -47,7 +45,7 @@ You can use the `ifdef` and `ifndef` commands in your config file to conditional
 settings based on whether a feature is compiled in:
 
 ```neomuttrc
-ifdef sidebar 'set sidebar_visible = yes'
+ifdef lua 'lua-source "style.lua"'
 ifndef notmuch finish
 ```
 
@@ -62,3 +60,4 @@ In addition to accepting a list of email addresses, NeoMutt also accepts a URL w
 ```sh
 neomutt mailto:some@one.org?subject=test&cc=other@one.org
 ```
+

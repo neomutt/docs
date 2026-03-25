@@ -82,7 +82,7 @@ sidebar
 | [`$attribution_intro`](attribution-intro)                         | Message to start a reply, "On DATE, PERSON wrote:"                              |
 | [`$attribution_locale`](attribution-locale)                       | Locale for dates in the `$attribution` message                                  |
 | [`$attribution_trailer`](attribution-trailer)                     | Suffix message to add after reply text                                          |
-| [`$autocrypt`](#autocrypt)                                        | Enables the Autocrypt feature                                                   |
+| [`$autocrypt`](autocrypt)                                         | Enables the Autocrypt feature                                                   |
 | [`$autocrypt_acct_format`](autocrypt-acct-format)                 | Format of the Autocrypt account menu                                            |
 | [`$autocrypt_dir`](autocrypt-dir)                                 | Location of Autocrypt files, including the GPG keyring and SQLite database      |
 | [`$autocrypt_reply`](autocrypt-reply)                             | Replying to an Autocrypt email automatically enables Autocrypt in the reply     |

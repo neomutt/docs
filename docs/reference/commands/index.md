@@ -9,25 +9,24 @@ keywords: neomutt, commands, configuration, neomuttrc, reference, index
 ```{toctree}
 ---
 maxdepth: 1
-hidden:
 ---
-commands/alias
-commands/color
-commands/compress
-commands/config
-commands/core
-commands/email
-commands/hooks
-commands/imap
-commands/keys
-commands/lists
-commands/lua
-commands/mailbox
-commands/mime
-commands/send
-commands/sidebar
-commands/spam
-commands/tags
+alias
+color
+compress
+config
+core
+email
+hooks
+imap
+keys
+lists
+lua
+mailbox
+mime
+send
+sidebar
+spam
+tags
 ```
 
 The following are the commands understood by NeoMutt.
