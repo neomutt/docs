@@ -6,22 +6,23 @@ keywords: sidebar, mailbox, navigation, sidebar_visible, sidebar_format
 
 # How to Use the Sidebar
 
-The Sidebar shows a list of all your mailboxes. The list can be turned on and off, it can be themed and the list style can be configured.
+The Sidebar shows a list of all your mailboxes.
+The list can be turned on and off, it can be themed and the list style can be configured.
 
 :::{admonition} 📷 Screenshot Needed
 :class: tip
 
 **Subject:** Sidebar overview with mailbox list
 
-**Description:** NeoMutt index view with the sidebar visible on the left side, showing a list of mailboxes (Inbox, Sent, Drafts, Trash, and several mstrstrailing list folders). 
-The sidebar shows mailbox names with unread/total message counts. 
-One mailbox is highlighted (the cursor), another is indicated (the currently open mailbox). 
+**Description:** NeoMutt index view with the sidebar visible on the left side, showing a list of mailboxes (Inbox, Sent, Drafts, Trash, and several mstrstrailing list folders).
+The sidebar shows mailbox names with unread/total message counts.
+One mailbox is highlighted (the cursor), another is indicated (the currently open mailbox).
 The divider character separates the sidebar from the index panel on the right.
 
 **Highlights:** The overall layout — sidebar panel on the left with the divider character, the highlight bar on one mailbox, the indicator on the open mailbox, and message counts displayed via `$sidebar_format`.
 :::
 
-If you want a simple introduction with examples see the Sidebar Howto. 
+If you want a simple introduction with examples see the Sidebar Howto.
 If you just want to get started, you could use the sample [neomuttrc](#sidebar-neomuttrc) below.
 
 ## Variables
@@ -57,7 +58,8 @@ For more details, and examples, about the `$sidebar_format`, see the Sidebar Int
 
 ## Functions
 
-Sidebar adds the following functions to NeoMutt. By default, none of them are bound to keys.
+Sidebar adds the following functions to NeoMutt.
+By default, none of them are bound to keys.
 
 | Menus       | Function                   | Description                                          |
 |-------------|----------------------------|------------------------------------------------------|
@@ -85,7 +87,8 @@ Before 2026-01-13, these commands were called `sidebar_pin` and `sidebar_unpin`.
 
 This command specifies mailboxes that will always be displayed in the sidebar, even if `$sidebar_new_mail_only` is set and the mailbox does not contain new mail.
 
-The `sidebar-unpin` command is used to remove a mailbox from the list of always displayed mailboxes. Use `sidebar-unpin *` to remove all mailboxes.
+The `sidebar-unpin` command is used to remove a mailbox from the list of always displayed mailboxes.
+Use `sidebar-unpin *` to remove all mailboxes.
 
 ## Colors
 
@@ -259,4 +262,5 @@ None
 
 ## Credits
 
-Justin Hibbits, Thomer M. Gil, David Sterba, Evgeni Golov, Fabian Groffen, Jason DeTiberus, Stefan Assmann, Steve Kemp, Terry Chan, Tyler Earnest, Richard Russon
+Justin Hibbits, Thomer M.
+Gil, David Sterba, Evgeni Golov, Fabian Groffen, Jason DeTiberus, Stefan Assmann, Steve Kemp, Terry Chan, Tyler Earnest, Richard Russon

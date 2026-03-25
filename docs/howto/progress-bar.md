@@ -24,19 +24,7 @@ color progress white red
 
 ## Screenshot
 
-<div class="term-window index-preview">
-  <div class="term-titlebar">
-    <span class="blob red"></span>
-    <span class="blob yellow"></span>
-    <span class="blob green"></span>
-    <span class="title">Progress</span>
-  </div>
-<pre class="terminal">
-<span class="normal">                                                                                                    </span>
-<span class="normal">                                                                                                    </span>
-<span class="normal progress2">Fetching message headers... 8806</span><span class="normal">/37928 (23%)                                                              </span>
-</pre>
-</div>
+<div class="term-window index-preview"> <div class="term-titlebar"> <span class="blob red"></span> <span class="blob yellow"></span> <span class="blob green"></span> <span class="title">Progress</span> </div> <pre class="terminal"> <span class="normal">                                                                                                    </span> <span class="normal">                                                                                                    </span> <span class="normal progress2">Fetching message headers... 8806</span><span class="normal">/37928 (23%)                                                              </span> </pre> </div>
 
 ## See Also
 

@@ -8,8 +8,7 @@ keywords: editor, line editor, emacs, keybindings, completion, history, input, e
 
 ## Overview
 
-NeoMutt has a built-in line editor for inputting text wherever you type at a prompt — for
-example, email addresses in header fields, filenames, search patterns, and command lines.
+NeoMutt has a built-in line editor for inputting text wherever you type at a prompt — for example, email addresses in header fields, filenames, search patterns, and command lines.
 The key bindings follow Emacs conventions.
 
 ## Key Bindings
@@ -54,7 +53,8 @@ The key bindings follow Emacs conventions.
 
 ## Tab Completion
 
-Press `<Tab>` to trigger completion. What gets completed depends on context:
+Press `<Tab>` to trigger completion.
+What gets completed depends on context:
 
 - **Filenames** — completes paths in the filesystem
 - **Aliases** — completes known address aliases
@@ -64,9 +64,8 @@ Press `^T` to run an address query (using `$query_command`) and complete from th
 
 ## History Navigation
 
-NeoMutt keeps a separate history list for each input category (addresses, filenames,
-patterns, shell commands, mailboxes, config commands, and everything else). The number
-of history entries is controlled by `$history`.
+NeoMutt keeps a separate history list for each input category (addresses, filenames, patterns, shell commands, mailboxes, config commands, and everything else).
+The number of history entries is controlled by `$history`.
 
 | Key      | Function           | Description                             |
 |----------|--------------------|-----------------------------------------|
@@ -74,8 +73,7 @@ of history entries is controlled by `$history`.
 | `<Down>` | `<history-down>`   | Recall the next string from history     |
 | `^R`     | `<history-search>` | Search history using the current input  |
 
-NeoMutt remembers what you were typing as you cycle through history, and wraps back to
-your original entry.
+NeoMutt remembers what you were typing as you cycle through history, and wraps back to your original entry.
 
 To make history persistent across sessions, set:
 
@@ -90,14 +88,12 @@ To remove all duplicate entries (not just consecutive ones):
 set history_remove_dups
 ```
 
-Entries starting with a space are silently ignored — useful in macros to avoid polluting
-history with transient values.
+Entries starting with a space are silently ignored — useful in macros to avoid polluting history with transient values.
 
 ## Remapping Editor Keys
 
-Use the `bind` command with the `editor` map to remap any function. For example, to make
-`<Delete>` behave like `<BackSpace>` (deleting the character *before* the cursor instead
-of *under* it):
+Use the `bind` command with the `editor` map to remap any function.
+For example, to make `<Delete>` behave like `<BackSpace>` (deleting the character *before* the cursor instead of *under* it):
 
 ```neomuttrc
 bind editor <delete> backspace

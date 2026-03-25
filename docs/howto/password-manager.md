@@ -53,7 +53,8 @@ Expected result: NeoMutt reads the password from Keychain.
 
 ## Configuring `account_command`
 
-`account_command` lets NeoMutt call a script that returns credentials for IMAP/POP/SMTP. This avoids storing secrets in config options.
+`account_command` lets NeoMutt call a script that returns credentials for IMAP/POP/SMTP.
+This avoids storing secrets in config options.
 
 1. Create a script that prints key/value pairs to stdout:
 
@@ -74,7 +75,8 @@ See the `account_command` section in the manual for the full interface.
 
 ## Using Backtick Commands for `imap_pass` and `smtp_pass`
 
-If you cannot use `account_command`, backticks are the next best option. Any command that prints the password to stdout can be used:
+If you cannot use `account_command`, backticks are the next best option.
+Any command that prints the password to stdout can be used:
 
 ```neomuttrc
 set imap_pass = "`your-command-here`"

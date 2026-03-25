@@ -6,15 +6,16 @@ keywords: compress, compressed folders, open-hook, close-hook, append-hook, gzip
 
 # How to Compress Mailboxes
 
-The Compressed Folder feature allows NeoMutt to read mailbox files that are compressed. 
-But it isn't limited to compressed files. 
-It works well with encrypted files, too. 
+The Compressed Folder feature allows NeoMutt to read mailbox files that are compressed.
+But it isn't limited to compressed files.
+It works well with encrypted files, too.
 In fact, if you can create a program/script to convert to and from your format, then NeoMutt can read it.
 
-The feature adds three hooks to NeoMutt: `open-hook`, `close-hook` and `append-hook`. 
+The feature adds three hooks to NeoMutt: `open-hook`, `close-hook` and `append-hook`.
 They define commands to: uncompress a file; compress a file; append messages to an already compressed file.
 
-There are some examples of both compressed and encrypted files, later. For now, the documentation will just concentrate on compressed files.
+There are some examples of both compressed and encrypted files, later.
+For now, the documentation will just concentrate on compressed files.
 
 ## Commands
 
@@ -24,8 +25,8 @@ close-hook  regex "shell-command"
 append-hook regex "shell-command"
 ```
 
-The shell-command must contain two placeholders for filenames: `%f` and `%t`. 
-These represent "from" and "to" filenames. 
+The shell-command must contain two placeholders for filenames: `%f` and `%t`.
+These represent "from" and "to" filenames.
 These placeholders should be placed inside single-quotes to prevent unintended shell expansions.
 
 If you need the exact string "%f" or "%t" in your command, simply double up the "%" character, e.g. "%%f" or "%%t".
@@ -71,7 +72,8 @@ open-hook '\.gz$' "gzip --stdout --decompress '%f' > '%t'"
 close-hook regex "shell-command"
 ```
 
-When NeoMutt has finished with a compressed mail folder, it will look for a matching `close-hook` to recompress the file. This hook is optional.
+When NeoMutt has finished with a compressed mail folder, it will look for a matching `close-hook` to recompress the file.
+This hook is optional.
 
 :::{note}
 If the folder has not been modified, the `close-hook` will not be called.
@@ -98,16 +100,20 @@ The `close-hook` can also include extra options, e.g. compression level: `--best
 append-hook regex "shell-command"
 ```
 
-When NeoMutt wants to append an email to a compressed mail folder, it will look for a matching `append-hook`. This hook is optional.
+When NeoMutt wants to append an email to a compressed mail folder, it will look for a matching `append-hook`.
+This hook is optional.
 
 Using the `append-hook` will save time, but NeoMutt won't be able to determine the type of the mail folder inside the compressed file.
 
-NeoMutt will *assume* the type to be that of the `$mbox_type` variable. NeoMutt also uses this type for temporary files.
+NeoMutt will *assume* the type to be that of the `$mbox_type` variable.
+NeoMutt also uses this type for temporary files.
 
-NeoMutt will only use the `append-hook` for existing files. The `close-hook` will be used for empty, or missing files.
+NeoMutt will only use the `append-hook` for existing files.
+The `close-hook` will be used for empty, or missing files.
 
 :::{note}
-If your command writes to stdout, it is vital that you use `>>` in the "append-hook". If not, data will be lost.
+If your command writes to stdout, it is vital that you use `>>` in the "append-hook".
+If not, data will be lost.
 :::
 
 **Example of `append-hook`:**
@@ -127,12 +133,13 @@ The `append-hook` can also include extra options, e.g. compression level: `--bes
 
 ### Empty Files
 
-NeoMutt assumes that an empty file is not compressed. 
+NeoMutt assumes that an empty file is not compressed.
 In this situation, unset `$save_empty`, so that the compressed file will be removed if you delete all of the messages.
 
 ### Security
 
-Encrypted files are decrypted into temporary files which are stored in the `$tmp_dir` directory. This could be a security risk.
+Encrypted files are decrypted into temporary files which are stored in the `$tmp_dir` directory.
+This could be a security risk.
 
 ## neomuttrc
 

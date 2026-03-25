@@ -6,8 +6,8 @@ keywords: compose, send, hooks, send-hook, reply-hook, fcc, message flow
 
 # How to Use the Compose Flow
 
-This is a brief overview of the steps NeoMutt takes during message composition. It also
-shows the order and timing of hook execution.
+This is a brief overview of the steps NeoMutt takes during message composition.
+It also shows the order and timing of hook execution.
 
 1. **Reply envelope settings.**
    `$reverse_name` processing. To, Cc, Subject, References header defaults.
@@ -44,28 +44,25 @@ shows the order and timing of hook execution.
 
 15. **fcc-hook.** Fcc setting.
 
-16. **Compose menu.** Note: **send2-hook** is evaluated
-    each time the headers are changed.
+16. **Compose menu.** Note: **send2-hook** is evaluated each time the headers are changed.
 
 :::{admonition} 📷 Screenshot Needed
 :class: tip
 
 **Subject:** Compose menu during message composition
 
-**Description:** The NeoMutt compose screen at step 16 of the flow, showing all header fields (From, To, Cc, Bcc, Subject, Reply-To, Fcc), the security/encryption settings, and the attachment list. 
+**Description:** The NeoMutt compose screen at step 16 of the flow, showing all header fields (From, To, Cc, Bcc, Subject, Reply-To, Fcc), the security/encryption settings, and the attachment list.
 The message has been edited and is ready for final review before sending.
 
-**Highlights:** The complete compose menu layout — header fields at the top, attachment list below, and the available key bindings (send, edit, attach, postpone, etc.) in the help bar. 
+**Highlights:** The complete compose menu layout — header fields at the top, attachment list below, and the available key bindings (send, edit, attach, postpone, etc.) in the help bar.
 This is the stage where `send2-hook` fires on each header change.
 :::
 
 17. **Message encryption and signing.** Key selection.
 
-18. **Fcc saving** if `$fcc_before_send` is set. (Note the variable
-    documentation for caveats of Fcc'ing before sending.)
+18. **Fcc saving** if `$fcc_before_send` is set. (Note the variable documentation for caveats of Fcc'ing before sending.)
 
 19. **Message sending.**
 
-20. **Fcc saving** if `$fcc_before_send` is unset (the default). The Fcc
-    used to be saved before sending the message. It is now by default saved afterwards, but if
-    the saving fails, the user is prompted.
+20. **Fcc saving** if `$fcc_before_send` is unset (the default).
+   The Fcc used to be saved before sending the message. It is now by default saved afterwards, but if the saving fails, the user is prompted.

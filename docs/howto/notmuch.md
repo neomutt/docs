@@ -23,7 +23,7 @@ Notmuch is an email fulltext indexing and tagging engine.
 
 **notmuch://[\<path\>][?\<item\>=\<name\>[& ...]]**
 
-The \<path\> is an absolute path to the directory where the notmuch database is found as returned by `notmuch config get database.path` command. 
+The \<path\> is an absolute path to the directory where the notmuch database is found as returned by `notmuch config get database.path` command.
 Note that the \<path\> should NOT include `.notmuch` directory name.
 
 If the "\<path\>" is not defined then `$nm_default_url` or `$folder` is used, for example:
@@ -37,13 +37,15 @@ named-mailboxes "My INBOX" "notmuch://?query=tag:inbox"
 
 **query=\<string\>**
 
-See SEARCH SYNTAX in notmuch man page. Don't forget to use operators ("and"/"or") in your queries.
+See SEARCH SYNTAX in notmuch man page.
+Don't forget to use operators ("and"/"or") in your queries.
 
 Note that proper URL should not contain blank space and all "bad" chars should be encoded, for example
 
 `tag:AAA and tag:BBB` – encoding -> `tag:AAA%20and%20tag:BBB`
 
-but NeoMutt config file parser is smart enough to accept space in quoted strings. It means that you can use
+but NeoMutt config file parser is smart enough to accept space in quoted strings.
+It means that you can use
 
 `notmuch:///foo?query=tag:AAA and tag:BBB`
 
@@ -53,14 +55,15 @@ For more details about Xapian queries, see: [https://xapian.org/docs/queryparser
 
 **limit=\<number\>**
 
-Restricts number of messages/threads in the result. The default limit is nm_db_limit.
+Restricts number of messages/threads in the result.
+The default limit is nm_db_limit.
 
-Due to a limitation with `libnotmuch`, unread and flagged message count may be inaccurate with limit statements. 
-`libnotmuch` cannot return a specific tag count within the first X messages of a query.
+Due to a limitation with `libnotmuch`, unread and flagged message count may be inaccurate with limit statements. `libnotmuch` cannot return a specific tag count within the first X messages of a query.
 
 **type=\<threads|messages\>**
 
-Reads all matching messages or whole-threads. The default is 'messages' or nm_query_type.
+Reads all matching messages or whole-threads.
+The default is 'messages' or nm_query_type.
 
 ## Variables
 
@@ -91,7 +94,7 @@ More variables about tags configuration can be found in **Custom backend Tags Fe
 
 **Subject:** Notmuch virtual mailbox view
 
-**Description:** The NeoMutt index showing a virtual folder created from a Notmuch query (e.g. `tag:inbox`), with the status bar displaying the Notmuch query URL. 
+**Description:** The NeoMutt index showing a virtual folder created from a Notmuch query (e.g. `tag:inbox`), with the status bar displaying the Notmuch query URL.
 Messages from different underlying Maildir folders should be visible together in one unified view.
 
 **Highlights:** How messages from multiple folders are merged into a single virtual view, the Notmuch query shown in the status bar, and the message count reflecting query results rather than a physical folder.
@@ -99,7 +102,8 @@ Messages from different underlying Maildir folders should be visible together in
 
 ## Functions
 
-Notmuch adds the following functions to NeoMutt. By default, none of them are bound to keys.
+Notmuch adds the following functions to NeoMutt.
+By default, none of them are bound to keys.
 
 | Menus       | Function                        | Description                                                                                                                                                             |
 |-------------|---------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -185,4 +189,6 @@ None
 
 ## Credits
 
-Karel Zak, Chris Mason, Christoph Rissner, David Riebenbauer, David Sterba, David Wilson, Don Zickus, Eric Davis, Jan Synacek, Jeremiah C. Foster, Josh Poimboeuf, Kirill A. Shutemov, Luke Macken, Mantas Mikulėnas, Patrick Brisbin, Philippe Le Brouster, Raghavendra D Prabhu, Sami Farin, Stefan Assmann, Stefan Kuhn, Tim Stoakes, Vladimir Marek, Víctor Manuel Jáquez Leal, Richard Russon, Bernard 'Guyzmo' Pratz
+Karel Zak, Chris Mason, Christoph Rissner, David Riebenbauer, David Sterba, David Wilson, Don Zickus, Eric Davis, Jan Synacek, Jeremiah C.
+Foster, Josh Poimboeuf, Kirill A.
+Shutemov, Luke Macken, Mantas Mikulėnas, Patrick Brisbin, Philippe Le Brouster, Raghavendra D Prabhu, Sami Farin, Stefan Assmann, Stefan Kuhn, Tim Stoakes, Vladimir Marek, Víctor Manuel Jáquez Leal, Richard Russon, Bernard 'Guyzmo' Pratz

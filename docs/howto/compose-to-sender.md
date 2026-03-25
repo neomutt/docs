@@ -8,14 +8,15 @@ keywords: compose, sender, new message, tagged messages
 
 ## Introduction
 
-The compose-to-sender feature adds a new command to start composing a new email to the sender
-of the current message. This is not a reply, but a new, separate, message.
+The compose-to-sender feature adds a new command to start composing a new email to the sender of the current message.
+This is not a reply, but a new, separate, message.
 
 It works on tagged messages too, sending one email to all of the senders of the tagged messages.
 
 ## Functions
 
-compose-to-sender adds the following function to NeoMutt. By default, it is not bound to a key.
+compose-to-sender adds the following function to NeoMutt.
+By default, it is not bound to a key.
 
 | Menus       | Function              | Description                                            |
 |-------------|-----------------------|--------------------------------------------------------|

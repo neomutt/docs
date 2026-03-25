@@ -8,12 +8,12 @@ keywords: tags, tagging, tag-pattern, tag-prefix, custom tags, notmuch, imap, hi
 
 ## Using Tags
 
-Sometimes it is desirable to perform an operation on a group of messages all at once rather than one at a time. 
-An example might be to save messages to a mailing list to a separate folder, or to delete all messages with a given subject. 
-To tag all messages matching a pattern, use the `<tag-pattern>` function, which is bound to "shift-T" by default. 
-Patterns are completable in the editor menu. 
-Invoke the `<complete>` function (by default bound to "Tab") after typing `~` to get a selectable list. 
-Or you can select individual messages by hand using the `<tag-message>` function, which is bound to "t" by default. 
+Sometimes it is desirable to perform an operation on a group of messages all at once rather than one at a time.
+An example might be to save messages to a mailing list to a separate folder, or to delete all messages with a given subject.
+To tag all messages matching a pattern, use the `<tag-pattern>` function, which is bound to "shift-T" by default.
+Patterns are completable in the editor menu.
+Invoke the `<complete>` function (by default bound to "Tab") after typing `~` to get a selectable list.
+Or you can select individual messages by hand using the `<tag-message>` function, which is bound to "t" by default.
 See [patterns](../reference/patterns.md) for NeoMutt's pattern matching syntax.
 
 Once you have tagged the desired messages, you can use the "tag-prefix" operator, which is the ";" (semicolon) key by default.
@@ -28,17 +28,17 @@ Once you have tagged the desired messages, you can use the "tag-prefix" operator
 **Highlights:** The `*` tag indicator in the flags column, how tagged messages are visually distinguished from untagged ones, and the status bar showing the count of tagged messages.
 :::
 
-When the "tag-prefix" operator is used, the *next* operation will be applied to all tagged messages if that operation can be used in that manner. 
+When the "tag-prefix" operator is used, the *next* operation will be applied to all tagged messages if that operation can be used in that manner.
 If the `$auto_tag` variable is set, the next operation applies to the tagged messages automatically, without requiring the "tag-prefix".
 
-In `macro` or `push` commands, you can use the `<tag-prefix-cond>` operator. 
-If there are no tagged messages, NeoMutt will "eat" the rest of the macro to abort its execution. 
+In `macro` or `push` commands, you can use the `<tag-prefix-cond>` operator.
+If there are no tagged messages, NeoMutt will "eat" the rest of the macro to abort its execution.
 NeoMutt will stop "eating" the macro when it encounters the `<end-cond>` operator; after this operator the rest of the macro will be executed as normal.
 
 ## Custom Backend-Based Tags
 
-Some backends allow to index and tag mail without storing the tags within the mail envelope. 
-Two backends are currently implementing this feature. 
+Some backends allow to index and tag mail without storing the tags within the mail envelope.
+Two backends are currently implementing this feature.
 Notmuch handles them natively and IMAP stores them in custom IMAP keywords.
 
 ### Variables
@@ -49,7 +49,8 @@ Notmuch handles them natively and IMAP stores them in custom IMAP keywords.
 
 ### Functions
 
-Notmuch adds the following functions to NeoMutt. By default, none of them are bound to keys.
+Notmuch adds the following functions to NeoMutt.
+By default, none of them are bound to keys.
 
 | Menus       | Function                    | Description                                                                                                                                                                                  |
 |-------------|-----------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -72,7 +73,8 @@ tag-formats    tag format-string      { tag format-string ...}
 
 ### Colors
 
-Adds the objects, below, to index-color feature. The objects can take an optional pattern.
+Adds the objects, below, to index-color feature.
+The objects can take an optional pattern.
 
 | Object       | Highlights                                   |
 |--------------|----------------------------------------------|
@@ -150,7 +152,7 @@ Mehdi Abaakouk, Richard Russon, Bernard 'Guyzmo' Pratz
 
 ## Marking Messages
 
-There are times when it is useful to ask NeoMutt to "remember" which message you are currently looking at while you move elsewhere in your mailbox. 
+There are times when it is useful to ask NeoMutt to "remember" which message you are currently looking at while you move elsewhere in your mailbox.
 You can do this with the `<mark-message>` function, which is bound to the `~` key by default.
 
 ### Workflow
@@ -159,7 +161,7 @@ You can do this with the `<mark-message>` function, which is bound to the `~` ke
 2. Navigate freely within your mailbox.
 3. Press `'a` to jump back to the marked message.
 
-Message marking is implemented as a shortcut for defining a macro that returns you to the current message by searching for its Message-ID. 
+Message marking is implemented as a shortcut for defining a macro that returns you to the current message by searching for its Message-ID.
 You can choose a different prefix key by setting the `$mark_macro_prefix` variable.
 
 ### Variables

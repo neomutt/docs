@@ -8,15 +8,17 @@ description: Practical directions to accomplish specific tasks with NeoMutt
 :::{admonition} Diátaxis: How-To Guide
 :class: note
 
-Write as **directions**. Assume the reader is competent and knows what they want to achieve.
-Be practical and goal-focused. Use numbered steps for procedures. Don't explain why — link
-to explanation pages instead. Keep it focused on the specific task. Start with prerequisites,
-give the steps, show the expected result.
+Write as **directions**.
+Assume the reader is competent and knows what they want to achieve.
+Be practical and goal-focused.
+Use numbered steps for procedures.
+Don't explain why — link to explanation pages instead.
+Keep it focused on the specific task.
+Start with prerequisites, give the steps, show the expected result.
 :::
 
-How-to guides are **goal-oriented** directions that help you accomplish specific
-tasks with NeoMutt. Each guide addresses a real-world problem and provides
-practical steps to solve it.
+How-to guides are **goal-oriented** directions that help you accomplish specific tasks with NeoMutt.
+Each guide addresses a real-world problem and provides practical steps to solve it.
 
 ## Mail Protocols & Authentication
 

@@ -8,9 +8,9 @@ keywords: [neomutt, encrypt-to-self, pgp, smime, fcc, self-encrypt, encryption-i
 
 ## The Problem
 
-Once you encrypt an email to someone you cannot read it. This is good for
-security, but bad for record-keeping. If you wanted to keep a copy of an
-encrypted email you could set `$fcc_clear`.
+Once you encrypt an email to someone you cannot read it.
+This is good for security, but bad for record-keeping.
+If you wanted to keep a copy of an encrypted email you could set `$fcc_clear`.
 
 A better option is to encrypt the saved copy to yourself.
 
@@ -98,9 +98,8 @@ Omen Wild, Richard Russon, Guillaume Brogi
 
 ### Introduction
 
-This feature shows a block of information that provides information about an
-encrypted message; mainly about its recipients. Here is an example of such a
-block:
+This feature shows a block of information that provides information about an encrypted message; mainly about its recipients.
+Here is an example of such a block:
 
 ```
 [-- Begin encryption information --]
@@ -114,7 +113,7 @@ Recipient: RSA key, ID 0000000000000000
 
 **Subject:** Encryption information block in pager
 
-**Description:** The NeoMutt pager displaying a decrypted email with the encryption information block visible. 
+**Description:** The NeoMutt pager displaying a decrypted email with the encryption information block visible.
 The block shows "[-- Begin encryption information --]" and "[-- End encryption information --]" markers with recipient key details (e.g., "Recipient: RSA key, ID 00C14A7DBBDD521C") between them.
 
 **Highlights:** The encryption information block integrated into the message display, showing how recipient key IDs appear when viewing an encrypted message with `$crypt_encryption_info` enabled.
@@ -122,8 +121,8 @@ The block shows "[-- Begin encryption information --]" and "[-- End encryption i
 
 ### Usage
 
-It's enabled by default. The variable to control it is
-`crypt_encryption_info`.
+It's enabled by default.
+The variable to control it is `crypt_encryption_info`.
 
 ### Credits
 

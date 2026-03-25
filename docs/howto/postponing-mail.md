@@ -7,38 +7,33 @@ keywords: postpone, draft, resume, recall, compose
 # How to Postpone Mail
 
 At times it is desirable to delay sending a message that you have already begun to compose.
-When the `<postpone-message>` function is used in the *compose* menu, the body of your message
-and attachments are stored in the mailbox specified by the {ref}`$postponed <postponed>`
-variable. This means that you can recall the message even if you exit NeoMutt and then restart
-it at a later time.
+When the `<postpone-message>` function is used in the *compose* menu, the body of your message and attachments are stored in the mailbox specified by the {ref}`$postponed <postponed>` variable.
+This means that you can recall the message even if you exit NeoMutt and then restart it at a later time.
 
 ## Resuming a Postponed Message
 
 Once a message is postponed, there are several ways to resume it:
 
 - From the command line you can use the `-p` option.
-- If you compose a new message from the *index* or *pager* you will be prompted if postponed
-  messages exist.
-- If multiple messages are currently postponed, the *postponed* menu will pop up and you can
-  select which message you would like to resume.
+- If you compose a new message from the *index* or *pager* you will be prompted if postponed messages exist.
+- If multiple messages are currently postponed, the *postponed* menu will pop up and you can select which message you would like to resume.
 
 :::{admonition} 📷 Screenshot Needed
 :class: tip
 
 **Subject:** Postponed messages selection menu
 
-**Description:** The NeoMutt postponed messages menu showing a list of previously postponed drafts. 
-Multiple entries are visible with their subjects, dates, and recipients. 
+**Description:** The NeoMutt postponed messages menu showing a list of previously postponed drafts.
+Multiple entries are visible with their subjects, dates, and recipients.
 The user is about to select which message to resume composing.
 
-**Highlights:** The postponed message list that appears when multiple drafts exist, allowing the user to choose which message to resume. 
+**Highlights:** The postponed message list that appears when multiple drafts exist, allowing the user to choose which message to resume.
 This menu pops up automatically when composing a new message while postponed messages exist.
 :::
 
 :::{note}
-If you postpone a reply to a message, the reply setting of the message is only updated when
-you actually finish the message and send it. Also, you must be in the same folder with the
-message you replied to for the status of the message to be updated.
+If you postpone a reply to a message, the reply setting of the message is only updated when you actually finish the message and send it.
+Also, you must be in the same folder with the message you replied to for the status of the message to be updated.
 :::
 
 See also the {ref}`$postpone <postpone>` quad-option.

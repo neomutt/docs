@@ -8,18 +8,15 @@ keywords: headers, ignore, unignore, header-order, my-header, display, weeding
 
 ## Header Display
 
-When displaying a message in the pager, NeoMutt folds long header lines at
-{ref}`$wrap <wrap>` columns. Though there are precise rules about where to
-break and how, NeoMutt always folds headers using a tab for readability.
+When displaying a message in the pager, NeoMutt folds long header lines at {ref}`$wrap <wrap>` columns.
+Though there are precise rules about where to break and how, NeoMutt always folds headers using a tab for readability.
 
 :::{note}
-The sending side is not affected by this — NeoMutt tries to implement
-standards-compliant folding.
+The sending side is not affected by this — NeoMutt tries to implement standards-compliant folding.
 :::
 
-Despite not being a real header, NeoMutt will also display an mbox "From\_"
-line in the pager along with other headers. This line can be manipulated with
-`ignore`/`unignore` and `header-order`/`unheader-order` commands.
+Despite not being a real header, NeoMutt will also display an mbox "From\_" line in the pager along with other headers.
+This line can be manipulated with `ignore`/`unignore` and `header-order`/`unheader-order` commands.
 
 ## Selecting Headers
 
@@ -30,17 +27,15 @@ ignore string [string ...]
 unignore { * | string ... }
 ```
 
-Messages often have many header fields added by automatic processing systems,
-or which may not seem useful to display on the screen. This command allows you
-to specify header fields which you don't normally want to see in the pager.
+Messages often have many header fields added by automatic processing systems, or which may not seem useful to display on the screen.
+This command allows you to specify header fields which you don't normally want to see in the pager.
 
-You do not need to specify the full header field name. For example,
-`ignore content-` will ignore all header fields that begin with the string
-"content-". `ignore *` will ignore all headers.
+You do not need to specify the full header field name.
+For example, `ignore content-` will ignore all header fields that begin with the string "content-". `ignore *` will ignore all headers.
 
 To remove a previously added token from the list, use the `unignore` command.
-The `unignore` command will make NeoMutt display headers matching the given
-string. For example, if you do `ignore x-` it is possible to `unignore x-mailer`.
+The `unignore` command will make NeoMutt display headers matching the given string.
+For example, if you do `ignore x-` it is possible to `unignore x-mailer`.
 
 `unignore *` will remove all tokens from the ignore list.
 
@@ -66,9 +61,8 @@ unignore posted-to:
 **Highlights:** The dramatic reduction in header clutter — the weeded view shows only the essential headers the user chose to keep.
 :::
 
-The above example will show "From:" headers as well as mbox "From\_" lines. To
-hide the latter, instead use `unignore from: date subject to cc` on the second
-line.
+The above example will show "From:" headers as well as mbox "From\_" lines.
+To hide the latter, instead use `unignore from: date subject to cc` on the second line.
 
 ## Ordering Displayed Headers
 
@@ -83,11 +77,9 @@ unheader-order { * | header ... }
 Before 2026-01-13, these commands were called `hdr_order` and `unhdr_order`.
 :::
 
-With the `header-order` command you can specify an order in which NeoMutt will
-attempt to present these headers to you when viewing messages.
+With the `header-order` command you can specify an order in which NeoMutt will attempt to present these headers to you when viewing messages.
 
-`unheader-order *` will clear all previous headers from the order list, thus
-removing the header order effects set by the system-wide startup file.
+`unheader-order *` will clear all previous headers from the order list, thus removing the header order effects set by the system-wide startup file.
 
 :::{admonition} Example: Configuring header display order
 :class: tip
@@ -120,13 +112,9 @@ unmy-header { * | field ... }
 Before 2026-01-13, these commands were called `my_hdr` and `unmy_hdr`.
 :::
 
-The `my-header` command allows you to create your own header fields which will
-be added to every message you send and appear in the editor if
-{ref}`$edit_headers <edit-headers>` is set.
+The `my-header` command allows you to create your own header fields which will be added to every message you send and appear in the editor if {ref}`$edit_headers <edit-headers>` is set.
 
-For example, if you would like to add an "Organization:" header field to all of
-your outgoing messages, you can put something like the following in your
-`.neomuttrc`:
+For example, if you would like to add an "Organization:" header field to all of your outgoing messages, you can put something like the following in your `.neomuttrc`:
 
 ```neomuttrc
 my-header Organization: A Really Big Company, Anytown, USA
@@ -134,17 +122,13 @@ my-header Organization: A Really Big Company, Anytown, USA
 
 :::{note}
 Space characters are *not* allowed between the keyword and the colon (":").
-The standard for electronic mail ([RFC2822](https://www.rfc-editor.org/rfc/rfc2822.html)) says that space is illegal there, so
-NeoMutt enforces the rule.
+The standard for electronic mail ([RFC2822](https://www.rfc-editor.org/rfc/rfc2822.html)) says that space is illegal there, so NeoMutt enforces the rule.
 :::
 
-If you would like to add a header field to a single message, you should either
-set the {ref}`$edit_headers <edit-headers>` variable, or use the
-`<edit-headers>` function (default: "E") in the compose menu so that you can
-edit the header of your message along with the body.
+If you would like to add a header field to a single message, you should either set the {ref}`$edit_headers <edit-headers>` variable, or use the `<edit-headers>` function (default: "E") in the compose menu so that you can edit the header of your message along with the body.
 
-To remove user defined header fields, use the `unmy-header` command. You may
-specify an asterisk ("*") to remove all header fields, or the fields to remove.
+To remove user defined header fields, use the `unmy-header` command.
+You may specify an asterisk ("*") to remove all header fields, or the fields to remove.
 For example, to remove all "To" and "Cc" header fields, you could use:
 
 ```neomuttrc
@@ -153,8 +137,7 @@ unmy-header to cc
 
 ## Editing Raw Messages
 
-NeoMutt provides four related functions for accessing the raw [RFC2822](https://www.rfc-editor.org/rfc/rfc2822.html) source
-of a message:
+NeoMutt provides four related functions for accessing the raw [RFC2822](https://www.rfc-editor.org/rfc/rfc2822.html) source of a message:
 
 | Function                     | Description                                                                                        |
 |------------------------------|----------------------------------------------------------------------------------------------------|
@@ -164,7 +147,6 @@ of a message:
 | `<edit-or-view-raw-message>` | Uses `<edit-raw-message>` if the folder is writable, otherwise falls back to `<view-raw-message>`. |
 
 :::{note}
-`<edit-raw-message>` modifies the message in place in the mailbox. Use
-`<view-raw-message>` if you only want to inspect the source without making
-changes.
+`<edit-raw-message>` modifies the message in place in the mailbox.
+Use `<view-raw-message>` if you only want to inspect the source without making changes.
 :::

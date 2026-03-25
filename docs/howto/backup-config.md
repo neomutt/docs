@@ -20,7 +20,8 @@ Expected result: all files you actively use in your configuration are captured.
 
 ## Where NeoMutt Stores Data
 
-Some data lives outside the main config file. Check the variables that define where it is stored:
+Some data lives outside the main config file.
+Check the variables that define where it is stored:
 
 - `$header_cache` and `$message_cachedir` (cache)
 - `$history_file` (command and prompt history)

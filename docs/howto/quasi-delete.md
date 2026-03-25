@@ -10,11 +10,11 @@ keywords: quasi-delete, hide, notmuch, index, sync-mailbox
 
 ## Introduction
 
-The "quasi-delete" function marks an email that should be hidden from the index, but NOT
-deleted. The email will disappear from the index when **\<sync-mailbox\>** is
-called.
+The "quasi-delete" function marks an email that should be hidden from the index, but NOT deleted.
+The email will disappear from the index when **\<sync-mailbox\>** is called.
 
-On its own, this feature isn't very useful. It forms a useful part of the notmuch plugin.
+On its own, this feature isn't very useful.
+It forms a useful part of the notmuch plugin.
 
 :::{admonition} 📷 Screenshot Needed
 :class: tip

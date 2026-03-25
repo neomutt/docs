@@ -8,8 +8,8 @@ keywords: query, address query, LDAP, address book, query_command, external cont
 
 ## Setting Up the Query Command
 
-NeoMutt supports connecting to external directory databases such as LDAP, ph/qi, bbdb, or NIS through a wrapper script which connects to NeoMutt using a simple interface. 
-Using the `$query_command` variable, you specify the wrapper command to use. 
+NeoMutt supports connecting to external directory databases such as LDAP, ph/qi, bbdb, or NIS through a wrapper script which connects to NeoMutt using a simple interface.
+Using the `$query_command` variable, you specify the wrapper command to use.
 For example:
 
 ```neomuttrc
@@ -18,8 +18,8 @@ set query_command = "mutt_ldap_query.pl %s"
 
 ## Wrapper Script Requirements
 
-The wrapper script should accept the query on the command-line. 
-It should return a one line message, then each matching response on a single line, each line containing a tab separated address then name then some other optional information. 
+The wrapper script should accept the query on the command-line.
+It should return a one line message, then each matching response on a single line, each line containing a tab separated address then name then some other optional information.
 On error, or if there are no matching addresses, return a non-zero exit code and a one line error message.
 
 An example multiple response output:
@@ -49,7 +49,7 @@ There are two mechanisms for accessing the query function of NeoMutt.
 
 **Subject:** Query results menu
 
-**Description:** The NeoMutt query menu after executing an address query, showing a list of matching contacts with columns for email address, real name, and optional extra information (e.g. organisation). 
+**Description:** The NeoMutt query menu after executing an address query, showing a list of matching contacts with columns for email address, real name, and optional extra information (e.g. organisation).
 One or more entries should be tagged with `*` to illustrate multi-selection.
 
 **Highlights:** The tabular layout of query results, how to tag entries for selection, and the status bar showing the query string used.
@@ -60,7 +60,7 @@ One or more entries should be tagged with `*` to illustrate multi-selection.
 1. In any prompt for address entry, use the `<complete-query>` function (default: ^T) to run a query based on the current address you have typed.
 2. Like aliases, NeoMutt will look for what you have typed back to the last space or comma.
 3. If there is a single response for that query, NeoMutt will expand the address in place.
-4. If there are multiple responses, NeoMutt will activate the query menu. 
+4. If there are multiple responses, NeoMutt will activate the query menu.
    At the query menu, you can select one or more addresses to be added to the prompt.
 
 :::{note}

@@ -6,8 +6,8 @@ keywords: hooks, folder-hook, send-hook, reply-hook, message-hook, crypt-hook, a
 
 # How to Use Hooks
 
-A *hook* is a concept found in many other programs which allows you to execute arbitrary commands before performing some operation. 
-For example, you may wish to tailor your configuration based upon which mailbox you are reading, or to whom you are sending mail. 
+A *hook* is a concept found in many other programs which allows you to execute arbitrary commands before performing some operation.
+For example, you may wish to tailor your configuration based upon which mailbox you are reading, or to whom you are sending mail.
 In the NeoMutt world, a *hook* consists of a regular expression or pattern along with a configuration option/command.
 
 NeoMutt supports the following hooks:
@@ -28,7 +28,7 @@ NeoMutt supports the following hooks:
 To show a list of all the current hooks, run the `hooks` command.
 
 :::{note}
-If a hook changes configuration settings, these changes remain effective until the end of the current NeoMutt session. 
+If a hook changes configuration settings, these changes remain effective until the end of the current NeoMutt session.
 As this is generally not desired, a "default" hook needs to be added before all other hooks of that type to restore configuration defaults.
 :::
 
@@ -39,16 +39,16 @@ send-hook . 'unmy-header From:'
 send-hook ~C'^b@b\.b$' my-header from: c@c.c
 ```
 
-In this example, by default the value of `$from` and `$real_name` is not overridden. 
+In this example, by default the value of `$from` and `$real_name` is not overridden.
 When sending messages either To: or Cc: to `<b@b.b>`, the From: header is changed to `<c@c.c>`.
 
 ## Message Matching in Hooks
 
-Hooks that act upon messages (`message-hook`, `reply-hook`, `send-hook`, `send2-hook`, `save-hook`, `fcc-hook`, `index-format-hook`) are evaluated in a slightly different manner. 
-For the other types of hooks, a regular expression is sufficient. 
+Hooks that act upon messages (`message-hook`, `reply-hook`, `send-hook`, `send2-hook`, `save-hook`, `fcc-hook`, `index-format-hook`) are evaluated in a slightly different manner.
+For the other types of hooks, a regular expression is sufficient.
 But in dealing with messages a finer grain of control is needed for matching since for different purposes you want to match different criteria.
 
-NeoMutt allows the use of the search pattern language for matching messages in hook commands. 
+NeoMutt allows the use of the search pattern language for matching messages in hook commands.
 This works in exactly the same way as it would when *limiting* or *searching* the mailbox, except that you are restricted to those operators which match information NeoMutt extracts from the header of the message (i.e., from, to, cc, date, subject, etc.).
 
 For example, if you wanted to set your return address based upon sending mail to a specific address, you could do something like:
@@ -57,7 +57,7 @@ For example, if you wanted to set your return address based upon sending mail to
 send-hook '~t ^user@work\.com$' 'my-header From: John Smith <user@host>'
 ```
 
-However, it is not required that you write the pattern to match using the full searching language. 
+However, it is not required that you write the pattern to match using the full searching language.
 You can still specify a simple *regular expression* like the other hooks, in which case NeoMutt will translate your pattern into the full language, using the translation specified by the `$default_hook` variable.
 
 The default value of `$default_hook` is `~f %s | (~b %s & ~A) | (~B %s)`, which means the regex is matched against: the **From** address, OR (**body** AND all messages), OR the **Subject**. 
@@ -65,7 +65,7 @@ You can change `$default_hook` to alter this implicit expansion behaviour.
 
 ## Mailbox Matching in Hooks
 
-Hooks that match against mailboxes (`folder-hook`, `mbox-hook`) apply both regular expression syntax as well as mailbox shortcut expansion on the regex parameter. 
+Hooks that match against mailboxes (`folder-hook`, `mbox-hook`) apply both regular expression syntax as well as mailbox shortcut expansion on the regex parameter.
 There is some overlap between these, so special attention should be paid to the first character of the regex.
 
 ```neomuttrc
@@ -82,7 +82,7 @@ folder-hook "(@imap\.example\.com)" "set sort=threads"
 folder-hook '\@imap\.example\.com' "set sort=threads"
 ```
 
-Keep in mind that mailbox shortcut expansion on the regex parameter takes place when the hook is initially parsed, not when the hook is matching against a mailbox. 
+Keep in mind that mailbox shortcut expansion on the regex parameter takes place when the hook is initially parsed, not when the hook is matching against a mailbox.
 When NeoMutt starts up and is reading the .neomuttrc, some mailbox shortcuts may not be usable.
 
 ---
@@ -95,10 +95,10 @@ When NeoMutt starts up and is reading the .neomuttrc, some mailbox shortcuts may
 folder-hook [-noregex] regex command
 ```
 
-It is often desirable to change settings based on which mailbox you are reading. 
-The `folder-hook` command provides a method by which you can execute any configuration command. 
-The *command* is executed before loading any mailboxes matching *regex*. 
-The `-noregex` switch controls whether *regex* is matched using a simple string comparison or a full regex match. 
+It is often desirable to change settings based on which mailbox you are reading.
+The `folder-hook` command provides a method by which you can execute any configuration command.
+The *command* is executed before loading any mailboxes matching *regex*.
+The `-noregex` switch controls whether *regex* is matched using a simple string comparison or a full regex match.
 If a mailbox matches multiple `folder-hook`s, they are executed in the order given in the `.neomuttrc`.
 
 The regex parameter has mailbox shortcut expansion performed on the first character.
@@ -108,14 +108,14 @@ If you use the `!` shortcut for `$spool_file` at the beginning of *regex*, you m
 :::
 
 :::{note}
-Settings are *not* restored when you leave the mailbox. 
+Settings are *not* restored when you leave the mailbox.
 For example, a common action to perform is to change the sorting method based upon the mailbox being read:
 
 ```neomuttrc
 folder-hook work "set sort=threads"
 ```
 
-However, the sorting method is not restored to its previous value when reading a different mailbox. 
+However, the sorting method is not restored to its previous value when reading a different mailbox.
 To specify a *default* command, use the regex `.` before other `folder-hook`s adjusting a value on a per-folder basis because `folder-hook`s are evaluated in the order given in the configuration file.
 :::
 
@@ -144,22 +144,18 @@ send-hook pattern command
 send2-hook pattern command
 ```
 
-These commands can be used to execute arbitrary configuration commands based upon recipients of the message. 
-*pattern* is used to match the message. 
-*command* is executed when *pattern* matches.
+These commands can be used to execute arbitrary configuration commands based upon recipients of the message. *pattern* is used to match the message. *command* is executed when *pattern* matches.
 
 If the pattern is a plain string, or a regex, it will be expanded to a pattern using `$default_hook`.
 
-`reply-hook` is matched against the message you are *replying to*, instead of the message you are *sending*. 
-`send-hook` is matched against all messages, both *new* and *replies*.
+`reply-hook` is matched against the message you are *replying to*, instead of the message you are *sending*. `send-hook` is matched against all messages, both *new* and *replies*.
 
 :::{note}
-`reply-hook`s are matched *before* the `send-hook`, *regardless* of the order specified in the user's configuration file. 
+`reply-hook`s are matched *before* the `send-hook`, *regardless* of the order specified in the user's configuration file.
 However, you can inhibit `send-hook` in the reply case by using the pattern `'! ~Q'` (*not replied*) in the `send-hook` to tell when `reply-hook` have been executed.
 :::
 
-`send2-hook` is matched every time a message is changed, either by editing it, or by using the compose menu to change its recipients or subject. 
-`send2-hook` is executed after `send-hook`, and can, e.g., be used to set parameters such as the `$sendmail` variable depending on the message's sender address.
+`send2-hook` is matched every time a message is changed, either by editing it, or by using the compose menu to change its recipients or subject. `send2-hook` is executed after `send-hook`, and can, e.g., be used to set parameters such as the `$sendmail` variable depending on the message's sender address.
 
 For each type of `send-hook` or `reply-hook`, when multiple matches occur, commands are executed in the order they are specified in the `.neomuttrc` (for that type of hook).
 
@@ -168,9 +164,9 @@ Example: `send-hook work "set mime_forward signature=''"`
 Another typical use for this command is to change the values of the `$attribution_intro`, `$attribution_locale`, and `$signature` variables in order to change the language of the attributions and signatures based upon the recipients.
 
 :::{note}
-`send-hook`'s are only executed once after getting the initial list of recipients. 
-They are not executed when resuming a postponed draft. 
-Adding a recipient after replying or editing the message will not cause any `send-hook` to be executed, similarly if `$auto_edit` is set (as then the initial list of recipients is empty). 
+`send-hook`'s are only executed once after getting the initial list of recipients.
+They are not executed when resuming a postponed draft.
+Adding a recipient after replying or editing the message will not cause any `send-hook` to be executed, similarly if `$auto_edit` is set (as then the initial list of recipients is empty).
 Also note that `my-header` commands which modify recipient headers, or the message's subject, don't have any effect on the current message when executed from a `send-hook`.
 :::
 
@@ -184,8 +180,7 @@ Also note that `my-header` commands which modify recipient headers, or the messa
 message-hook pattern command
 ```
 
-This command can be used to execute arbitrary configuration commands before viewing or formatting a message based upon information about the message. 
-*command* is executed if the *pattern* matches the message to be displayed. 
+This command can be used to execute arbitrary configuration commands before viewing or formatting a message based upon information about the message. *command* is executed if the *pattern* matches the message to be displayed.
 When multiple matches occur, commands are executed in the order they are specified in the `.neomuttrc`.
 
 If the pattern is a plain string, or a regex, it will be expanded to a pattern using `$default_hook`.
@@ -207,11 +202,11 @@ message-hook '~f freshmeat-news' 'set pager="less \"+/^  subject: .*\""'
 crypt-hook regex keyid
 ```
 
-When encrypting messages with PGP/GnuPG or OpenSSL, you may want to associate a certain key with a given e-mail address automatically, either because the recipient's public key can't be deduced from the destination address, or because, for some reasons, you need to override the key NeoMutt would normally use. 
-The `crypt-hook` command provides a method by which you can specify the ID of the public key to be used when encrypting messages to a certain recipient. 
+When encrypting messages with PGP/GnuPG or OpenSSL, you may want to associate a certain key with a given e-mail address automatically, either because the recipient's public key can't be deduced from the destination address, or because, for some reasons, you need to override the key NeoMutt would normally use.
+The `crypt-hook` command provides a method by which you can specify the ID of the public key to be used when encrypting messages to a certain recipient.
 You may use multiple crypt-hooks with the same regex; multiple matching crypt-hooks result in the use of multiple keyids for a recipient.
 
-During key selection, NeoMutt will confirm whether each crypt-hook is to be used (unless the `$crypt_confirm_hook` option is unset). 
+During key selection, NeoMutt will confirm whether each crypt-hook is to be used (unless the `$crypt_confirm_hook` option is unset).
 If all crypt-hooks for a recipient are declined, NeoMutt will use the original recipient address for key selection instead.
 
 The meaning of *keyid* is to be taken broadly in this context: You can either put a numerical key ID or fingerprint here, an e-mail address, or even just a real name.
@@ -226,10 +221,10 @@ The meaning of *keyid* is to be taken broadly in this context: You can either pu
 account-hook regex command
 ```
 
-If you happen to have accounts on multiple IMAP, POP and/or SMTP servers, you may find managing all the authentication settings inconvenient and error-prone. 
-The `account-hook` command may help. 
-This hook works like `folder-hook` but is invoked whenever NeoMutt needs to access a remote mailbox (including inside the folder browser), not just when you open the mailbox. 
-This includes (for example) polling for new mail, storing Fcc messages and saving messages to a folder. 
+If you happen to have accounts on multiple IMAP, POP and/or SMTP servers, you may find managing all the authentication settings inconvenient and error-prone.
+The `account-hook` command may help.
+This hook works like `folder-hook` but is invoked whenever NeoMutt needs to access a remote mailbox (including inside the folder browser), not just when you open the mailbox.
+This includes (for example) polling for new mail, storing Fcc messages and saving messages to a folder.
 As a consequence, `account-hook` should only be used to set connection-related settings such as passwords or tunnel commands but not settings such as sender address or name (because in general it should be considered unpredictable which `account-hook` was last used).
 
 ### Examples
@@ -252,10 +247,10 @@ mailboxes imap://user@host2/INBOX
 folder-hook imap://user@host2/ 'set folder=imap://host2/ ; set record=+INBOX/Sent'
 ```
 
-In this example the folders are defined using `mailboxes` so NeoMutt polls them for new mail. 
-Each `folder-hook` triggers when one mailbox below each IMAP account is opened and sets `$folder` to the account's root folder. 
-Next, it sets `$record` to the *INBOX/Sent* folder below the newly set `$folder`. 
-Please notice that the value the `+` mailbox shortcut refers to depends on the *current* value of `$folder` and therefore has to be set separately per account. 
+In this example the folders are defined using `mailboxes` so NeoMutt polls them for new mail.
+Each `folder-hook` triggers when one mailbox below each IMAP account is opened and sets `$folder` to the account's root folder.
+Next, it sets `$record` to the *INBOX/Sent* folder below the newly set `$folder`.
+Please notice that the value the `+` mailbox shortcut refers to depends on the *current* value of `$folder` and therefore has to be set separately per account.
 Setting other values like `$from` or `$signature` is analogous to setting `$record`.
 
 ---
@@ -276,13 +271,15 @@ startup-hook command
 shutdown-hook command
 ```
 
-The commands are NeoMutt commands. If you want to run an external shell command, you need to run them like this:
+The commands are NeoMutt commands.
+If you want to run an external shell command, you need to run them like this:
 
 ```neomuttrc
 startup-hook 'echo `action.sh ARGS`'
 ```
 
-The single quotes prevent the backticks from being expanded. The `echo` command prevents an empty command error.
+The single quotes prevent the backticks from being expanded.
+The `echo` command prevents an empty command error.
 
 ### Example Configuration
 
@@ -303,11 +300,12 @@ shutdown-hook 'exec sync-mailbox'
 
 This feature enables the `new_mail_command` setting, which can be used to execute a custom script (e.g. a notification handler) upon receiving a new mail.
 
-The command string can contain expandos, such as `%n` for the number of new messages. For a complete list, see: `$status_format`.
+The command string can contain expandos, such as `%n` for the number of new messages.
+For a complete list, see: `$status_format`.
 
 :::{note}
-When the notification is sent, the folder of the new mail is no longer known. 
-This is a limitation of NeoMutt. 
+When the notification is sent, the folder of the new mail is no longer known.
+This is a limitation of NeoMutt.
 The `%f` expando will show the open folder.
 
 When using Maildir local mailboxes, you must set `$check_new` config option for this feature to work.
@@ -345,14 +343,12 @@ set new_mail_command="terminal-notifier -title '%v' -subtitle 'New Mail' \
 index-format-hook name [!]pattern format-string
 ```
 
-`index-format-hook` injects format strings dynamically into `$index_format` based on pattern
-matching against the current message. The `name` argument is referenced inside `$index_format`
-as the expando `%@name@`.
+`index-format-hook` injects format strings dynamically into `$index_format` based on pattern matching against the current message.
+The `name` argument is referenced inside `$index_format` as the expando `%@name@`.
 
-Multiple hooks sharing the same `name` are tested in the order they are defined; the first
-matching *pattern* wins. If the pattern is a plain string or regex it is expanded via
-`$default_hook`. Best practice is to end the list with a catch-all `~A` pattern so the
-expando always resolves to something.
+Multiple hooks sharing the same `name` are tested in the order they are defined; the first matching *pattern* wins.
+If the pattern is a plain string or regex it is expanded via `$default_hook`.
+Best practice is to end the list with a catch-all `~A` pattern so the expando always resolves to something.
 
 ### Example: Dynamic date formatting
 
@@ -365,8 +361,7 @@ index-format-hook  date  "~d<1y"    "%[%b %d]"
 index-format-hook  date  "~A"       "%[%m/%y]"
 ```
 
-The `~d<1d` pattern matches messages less than one day old, `~d<1m` less than one month, etc.
-The final `~A` (match all) acts as a fallback.
+The `~d<1d` pattern matches messages less than one day old, `~d<1m` less than one month, etc. The final `~A` (match all) acts as a fallback.
 
 ### Example: Flagging messages by sender
 
@@ -377,8 +372,7 @@ index-format-hook  subj_flags  "~f boss@example.com"    "** BOSS ** "
 index-format-hook  subj_flags  "~f spouse@example.com"  ":-) "
 ```
 
-Without a catch-all `~A` hook, unmatched messages simply produce an empty string for that
-expando.
+Without a catch-all `~A` hook, unmatched messages simply produce an empty string for that expando.
 
 ---
 
@@ -390,14 +384,14 @@ expando.
 unhook {* | hook-type}
 ```
 
-This command permits you to flush hooks you have previously defined. 
+This command permits you to flush hooks you have previously defined.
 You can either remove all hooks by giving the `*` character as an argument, or you can remove all hooks of a specific type by saying something like `unhook send-hook`.
 
 ---
 
 ## Managing Environment Variables (setenv)
 
-NeoMutt lets you control the environment it passes to child processes using the `setenv` and `unsetenv` commands. 
+NeoMutt lets you control the environment it passes to child processes using the `setenv` and `unsetenv` commands.
 This is useful for setting variables like `BROWSER`, `EDITOR`, `MAILCAPS`, or any other environment variable that affects helper programs NeoMutt launches.
 
 ### Syntax

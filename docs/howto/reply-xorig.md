@@ -10,9 +10,8 @@ keywords: reply, x-original-to, from, header, reply_with_xorig
 
 ## Introduction
 
-Adds a `reply_with_xorig` for NeoMutt configuration files. If enabled, allows to reply to an
-email using the email address in the first `X-Original-To:` header of a mail as the `From:`
-header of the answer.
+Adds a `reply_with_xorig` for NeoMutt configuration files.
+If enabled, allows to reply to an email using the email address in the first `X-Original-To:` header of a mail as the `From:` header of the answer.
 
 ## Variables
 

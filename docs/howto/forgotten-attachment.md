@@ -8,18 +8,16 @@ keywords: forgotten attachment, abort_noattach, attachment reminder, regex
 
 ## Introduction
 
-The "forgotten-attachment" feature provides a new setting for NeoMutt that alerts the user if
-the message body contains a certain keyword but there are no attachments added. This is meant
-to ensure that the user does not forget to attach a file after promising to do so in the mail.
-The attachment keyword will not be scanned in text matched by
-`$quote_regex`.
+The "forgotten-attachment" feature provides a new setting for NeoMutt that alerts the user if the message body contains a certain keyword but there are no attachments added.
+This is meant to ensure that the user does not forget to attach a file after promising to do so in the mail.
+The attachment keyword will not be scanned in text matched by `$quote_regex`.
 
 :::{admonition} 📷 Screenshot Needed
 :class: tip
 
 **Subject:** Forgotten attachment warning prompt
 
-**Description:** The NeoMutt screen showing the abort prompt that appears when the user tries to send a message containing an attachment keyword (e.g., "see attached") but no files are attached. 
+**Description:** The NeoMutt screen showing the abort prompt that appears when the user tries to send a message containing an attachment keyword (e.g., "see attached") but no files are attached.
 The prompt at the bottom of the screen asks whether to abort sending.
 
 **Highlights:** The warning prompt triggered by `$abort_noattach`, showing the quadoption question that lets the user choose to abort or proceed with sending the message without an attachment.
