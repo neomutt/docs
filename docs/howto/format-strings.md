@@ -1,10 +1,10 @@
 ---
-title: How to Use Format Strings
+title: Use Format Strings
 description: Customise NeoMutt's display using format strings, conditionals, filters, padding, and date formatting
 keywords: format strings, index_format, status_format, expandos, conditionals, nested-if, cond-date, initials, index-format-hook, padding, filters
 ---
 
-# How to Use Format Strings
+# Use Format Strings
 
 ## Basic Usage
 

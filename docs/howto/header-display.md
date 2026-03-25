@@ -1,10 +1,10 @@
 ---
-title: How to Customise Header Display
+title: Customise Header Display
 description: Control which message headers are shown, their order, and add custom headers in NeoMutt
 keywords: headers, ignore, unignore, header-order, my-header, display, weeding
 ---
 
-# How to Customise Header Display
+# Customise Header Display
 
 ## Header Display
 

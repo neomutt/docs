@@ -1,10 +1,10 @@
 ---
-title: How to Filter Spam
+title: Filter Spam
 description: Configure NeoMutt to detect and handle spam using external filters
 keywords: spam, nospam, spam filtering, spam detection, spam tag, header matching
 ---
 
-# How to Filter Spam
+# Filter Spam
 
 ## Syntax
 

@@ -1,10 +1,10 @@
 ---
-title: How to Configure MIME Handling
+title: Configure MIME Handling
 description: Configure MIME types, mailcap viewers, auto-view, alternative ordering, and attachment searching in NeoMutt
 keywords: MIME, mailcap, auto-view, alternative-order, attachments, mime.types, content-type, multipart
 ---
 
-# How to Configure MIME Handling
+# Configure MIME Handling
 
 ## MIME Overview
 

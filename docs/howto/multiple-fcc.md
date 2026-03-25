@@ -1,10 +1,10 @@
 ---
-title: How to Use Multiple Fcc
+title: Use Multiple Fcc
 description: Save copies of outgoing mail to multiple folders in NeoMutt
 keywords: fcc, multiple copies, outgoing mail, record, fcc-hook
 ---
 
-# How to Use Multiple Fcc
+# Use Multiple Fcc
 
 ## Introduction
 

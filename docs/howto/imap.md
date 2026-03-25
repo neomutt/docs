@@ -1,10 +1,10 @@
 ---
-title: How to Set Up IMAP
+title: Set Up IMAP
 description: Configure NeoMutt to work with remote IMAP mailboxes
 keywords: imap, remote mailbox, imap_user, imap_pass, imap_authenticators, folder browser, subscriptions
 ---
 
-# How to Set Up IMAP
+# Set Up IMAP
 
 NeoMutt has IMAP support and has the ability to work with folders located on a remote IMAP server.
 

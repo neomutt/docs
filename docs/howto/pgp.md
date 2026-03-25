@@ -1,10 +1,10 @@
 ---
-title: "How to Use PGP Encryption"
+title: "Use PGP Encryption"
 description: Configure and use OpenPGP encryption for signing and encrypting email in NeoMutt
-keywords: [neomutt, pgp, openpgp, gpg, gpgme, encryption, signing, keys]
+keywords: neomutt, pgp, openpgp, gpg, gpgme, encryption, signing, keys
 ---
 
-# How to Use PGP Encryption
+# Use PGP Encryption
 
 ## Prerequisites
 

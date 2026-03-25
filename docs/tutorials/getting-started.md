@@ -1,7 +1,7 @@
 ---
 title: Getting Started with NeoMutt
 description: A first-steps tutorial introducing NeoMutt's core concepts, screens, and menus
-keywords: [neomutt, getting started, tutorial, index, pager, sidebar, menus]
+keywords: neomutt, getting started, tutorial, index, pager, sidebar, menus
 diataxis_type: tutorial
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: Start Here
 description: A beginner-friendly path to your first working NeoMutt setup
-keywords: [neomutt, start here, beginner, setup]
+keywords: neomutt, start here, beginner, setup
 ---
 
 # Start Here

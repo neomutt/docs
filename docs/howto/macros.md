@@ -1,10 +1,10 @@
 ---
-title: How to Create Keyboard Macros
+title: Create Keyboard Macros
 description: Create and manage keyboard macros to automate repeated actions in NeoMutt
 keywords: macro, unmacro, keyboard macros, automation, key sequences
 ---
 
-# How to Create Keyboard Macros
+# Create Keyboard Macros
 
 ## Syntax
 

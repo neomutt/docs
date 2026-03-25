@@ -1,10 +1,10 @@
 ---
-title: How to Organize Mailboxes with the Sidebar
+title: Organize Mailboxes with the Sidebar
 description: Build a mailbox navigation workflow using the NeoMutt sidebar
 keywords: sidebar, mailboxes, named-mailboxes, sidebar_format, sidebar-pin
 ---
 
-# How to Organize Mailboxes with the Sidebar
+# Organize Mailboxes with the Sidebar
 
 ## Prerequisites
 

@@ -1,10 +1,10 @@
 ---
-title: How to Use the Compose Flow
+title: Use the Compose Flow
 description: Understand the order of steps and hook execution during NeoMutt message composition
 keywords: compose, send, hooks, send-hook, reply-hook, fcc, message flow
 ---
 
-# How to Use the Compose Flow
+# Use the Compose Flow
 
 This is a brief overview of the steps NeoMutt takes during message composition.
 It also shows the order and timing of hook execution.

@@ -1,10 +1,10 @@
 ---
-title: How to Use Mailto-Allow
+title: Use Mailto-Allow
 description: Control which header fields NeoMutt accepts from mailto URLs for security
 keywords: mailto, mailto-allow, unmailto-allow, header, security, URL
 ---
 
-# How to Use Mailto-Allow
+# Use Mailto-Allow
 
 ## Usage
 

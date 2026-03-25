@@ -1,7 +1,7 @@
 ---
 title: About NeoMutt
 description: Introduction to NeoMutt, its community resources, and how to contribute
-keywords: [neomutt, introduction, mailing lists, contributing, copyright]
+keywords: neomutt, introduction, mailing lists, contributing, copyright
 diataxis_type: explanation
 ---
 

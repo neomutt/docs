@@ -17,7 +17,7 @@ The search is case sensitive if the regular expression contains at least one upp
 A regular expression is a pattern that describes a set of strings. Regular expressions are constructed analogously to arithmetic expressions, by using various operators to combine smaller expressions.
 
 :::{note}
-The regular expression can be enclosed/delimited by either `"` or `'` which is useful if the regular expression includes a white-space character. See [Configuration File Syntax](config-syntax.md) for more information on `"` and `'` delimiter processing. To match a literal `"` or `'` you must preface it with `\` (backslash).
+The regular expression can be enclosed/delimited by either `"` or `'` which is useful if the regular expression includes a white-space character. See [Configuration File Syntax](config/syntax.md) for more information on `"` and `'` delimiter processing. To match a literal `"` or `'` you must preface it with `\` (backslash).
 :::
 
 The fundamental building blocks are the regular expressions that match a single character. Most characters, including all letters and digits, are regular expressions that match themselves. Any metacharacter with special meaning may be quoted by preceding it with a backslash.

@@ -1,10 +1,10 @@
 ---
-title: "How to Set Up Autocrypt"
+title: "Set Up Autocrypt"
 description: Enable and configure Autocrypt for automatic opportunistic email encryption in NeoMutt
-keywords: [neomutt, autocrypt, encryption, gpgme, ecc, opportunistic, keys]
+keywords: neomutt, autocrypt, encryption, gpgme, ecc, opportunistic, keys
 ---
 
-# How to Set Up Autocrypt
+# Set Up Autocrypt
 
 ## Overview
 

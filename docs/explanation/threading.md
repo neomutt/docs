@@ -1,7 +1,7 @@
 ---
 title: Understanding Threading
 description: How NeoMutt organizes messages into threads and the available thread-related functions
-keywords: [threading, threads, tree, sort, collapse, subthread, index]
+keywords: threading, threads, tree, sort, collapse, subthread, index
 diataxis_type: explanation
 ---
 

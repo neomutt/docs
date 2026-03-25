@@ -1,10 +1,10 @@
 ---
-title: How to Use Different Mailbox Formats
+title: Use Different Mailbox Formats
 description: Choose and configure the right local mailbox format (mbox, MMDF, MH, Maildir) for your NeoMutt setup
 keywords: mailbox, mbox, mmdf, mh, maildir, format, mbox_type
 ---
 
-# How to Use Different Mailbox Formats
+# Use Different Mailbox Formats
 
 NeoMutt supports reading and writing of four different local mailbox formats: mbox, MMDF, MH and Maildir.
 The mailbox type is auto detected, so there is no need to use a flag for different mailbox types.

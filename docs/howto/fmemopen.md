@@ -1,10 +1,10 @@
 ---
-title: How to Use fmemopen
+title: Use fmemopen
 description: Enable the fmemopen feature to replace temporary files with memory buffers for faster searches
 keywords: fmemopen, open_memstream, glibc, performance, thorough_search, compile-time
 ---
 
-# How to Use fmemopen
+# Use fmemopen
 
 *Replace some temporary files with memory buffers*
 

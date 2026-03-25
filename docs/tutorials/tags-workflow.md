@@ -1,7 +1,7 @@
 ---
 title: Organising Email with Tags
 description: Step-by-step guide to using tags and virtual mailboxes for email organisation in NeoMutt
-keywords: [neomutt, tags, notmuch, virtual mailboxes, workflow, tutorial]
+keywords: neomutt, tags, notmuch, virtual mailboxes, workflow, tutorial
 ---
 
 # Organising Email with Tags

@@ -1,10 +1,10 @@
 ---
-title: How to Use OAuth Authentication
+title: Use OAuth Authentication
 description: Configure NeoMutt to use OAUTHBEARER or XOAUTH2 for IMAP, POP, and SMTP
 keywords: oauth, oauthbearer, xoauth2, gmail, office365, imap_oauth_refresh_command
 ---
 
-# How to Use OAuth Authentication
+# Use OAuth Authentication
 
 Preliminary OAUTH support for IMAP, POP, and SMTP is provided via external scripts.
 

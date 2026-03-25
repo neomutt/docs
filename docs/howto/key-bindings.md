@@ -1,10 +1,10 @@
 ---
-title: How to Customise Key Bindings
+title: Customise Key Bindings
 description: Change default key bindings, unbind keys, and manage terminal keybindings in NeoMutt
 keywords: bind, unbind, key bindings, keyboard, maps, menus, noop
 ---
 
-# How to Customise Key Bindings
+# Customise Key Bindings
 
 ## Syntax
 

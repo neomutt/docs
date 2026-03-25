@@ -1,10 +1,10 @@
 ---
-title: How to Troubleshoot IMAP Performance
+title: Troubleshoot IMAP Performance
 description: Diagnose slow IMAP connections and tune NeoMutt IMAP settings
 keywords: imap, performance, imap_keep_alive, imap_idle, imap_fetch_chunk_size, timeout
 ---
 
-# How to Troubleshoot IMAP Performance
+# Troubleshoot IMAP Performance
 
 ## Prerequisites
 

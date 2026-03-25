@@ -1,7 +1,7 @@
 ---
 title: Understanding Performance Tuning
 description: How to optimize NeoMutt performance for reading mailboxes, remote folders, and searching
-keywords: [performance, tuning, header cache, body cache, search, imap, maildir]
+keywords: performance, tuning, header cache, body cache, search, imap, maildir
 diataxis_type: explanation
 ---
 

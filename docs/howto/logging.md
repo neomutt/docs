@@ -1,10 +1,10 @@
 ---
-title: How to Use Logging and Debugging
+title: Use Logging and Debugging
 description: Configure and use NeoMutt's logging and debugging features to diagnose issues
 keywords: logging, debugging, debug, error, log messages, neomuttdebug
 ---
 
-# How to Use Logging and Debugging
+# Use Logging and Debugging
 
 ## Log Message Types
 

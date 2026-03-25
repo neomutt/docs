@@ -1,10 +1,10 @@
 ---
-title: How to Set Up POP3
+title: Set Up POP3
 description: Configure NeoMutt to access remote POP3 mailboxes and fetch mail
 keywords: pop3, remote mailbox, fetch mail, pop_host, pop_check_interval
 ---
 
-# How to Set Up POP3
+# Set Up POP3
 
 NeoMutt has POP3 support and has the ability to work with mailboxes located on a remote POP3 server and fetch mail for local browsing.
 

@@ -1,10 +1,10 @@
 ---
-title: How to Compress Mailboxes
+title: Compress Mailboxes
 description: Read from and write to compressed or encrypted mailbox files using open-hook, close-hook and append-hook
 keywords: compress, compressed folders, open-hook, close-hook, append-hook, gzip, bzip2, xz, pgp, gpg, encrypted
 ---
 
-# How to Compress Mailboxes
+# Compress Mailboxes
 
 The Compressed Folder feature allows NeoMutt to read mailbox files that are compressed.
 But it isn't limited to compressed files.

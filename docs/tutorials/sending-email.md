@@ -1,7 +1,7 @@
 ---
 title: Sending Your First Email
 description: Learn to compose, reply to, and send emails with NeoMutt, including the compose menu, header editing, and cryptographic signing
-keywords: [neomutt, sending, email, compose, reply, forward, pgp, smime, tutorial]
+keywords: neomutt, sending, email, compose, reply, forward, pgp, smime, tutorial
 diataxis_type: tutorial
 ---
 

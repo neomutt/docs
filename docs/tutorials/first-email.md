@@ -1,7 +1,7 @@
 ---
 title: Reading Your First Email
 description: Learn to navigate the message index, read messages in the pager, and work with threaded conversations
-keywords: [neomutt, reading, email, index, pager, threads, tutorial]
+keywords: neomutt, reading, email, index, pager, threads, tutorial
 diataxis_type: tutorial
 ---
 

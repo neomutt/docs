@@ -1,3 +1,9 @@
+---
+title: Glossary
+description: XXX
+keywords: XXX
+---
+
 # Glossary
 
 This glossary explains terms you may come across in the NeoMutt documentation,

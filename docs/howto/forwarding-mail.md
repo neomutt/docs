@@ -1,10 +1,10 @@
 ---
-title: How to Forward and Bounce Mail
+title: Forward and Bounce Mail
 description: Forward or bounce existing messages to new recipients in NeoMutt
 keywords: forward, bounce, resend, mime-forward, inline forward
 ---
 
-# How to Forward and Bounce Mail
+# Forward and Bounce Mail
 
 Bouncing and forwarding let you send an existing message to recipients that you specify.
 Bouncing a message sends a verbatim copy of a message to alternative addresses as if they were the message's original recipients specified in the Bcc header.

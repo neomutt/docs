@@ -1,10 +1,10 @@
 ---
-title: How to Edit and Navigate Threads
+title: Edit and Navigate Threads
 description: Link, break, and configure threaded message views in NeoMutt
 keywords: threads, link-threads, break-thread, use_threads, sort, sort_aux, threading
 ---
 
-# How to Edit and Navigate Threads
+# Edit and Navigate Threads
 
 ## Editing Threads
 

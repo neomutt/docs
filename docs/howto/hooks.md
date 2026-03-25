@@ -1,10 +1,10 @@
 ---
-title: How to Use Hooks
+title: Use Hooks
 description: Execute commands automatically based on events, mailboxes, and message properties
 keywords: hooks, folder-hook, send-hook, reply-hook, message-hook, crypt-hook, account-hook, timeout-hook, startup-hook, shutdown-hook, new-mail-hook
 ---
 
-# How to Use Hooks
+# Use Hooks
 
 A *hook* is a concept found in many other programs which allows you to execute arbitrary commands before performing some operation.
 For example, you may wish to tailor your configuration based upon which mailbox you are reading, or to whom you are sending mail.

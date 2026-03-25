@@ -1,10 +1,10 @@
 ---
-title: How to Send Format=Flowed Messages
+title: Send Format=Flowed Messages
 description: Compose and view format=flowed text/plain messages in NeoMutt
 keywords: format=flowed, f=f, text_flowed, reflow, RFC3676
 ---
 
-# How to Send Format=Flowed Messages
+# Send Format=Flowed Messages
 
 ## Concept
 

@@ -1,10 +1,10 @@
 ---
-title: "How to Use S/MIME"
+title: "Use S/MIME"
 description: Configure and use S/MIME encryption and signing for email in NeoMutt
-keywords: [neomutt, smime, certificates, gpgsm, encryption, signing, x509]
+keywords: neomutt, smime, certificates, gpgsm, encryption, signing, x509
 ---
 
-# How to Use S/MIME
+# Use S/MIME
 
 ## Prerequisites
 

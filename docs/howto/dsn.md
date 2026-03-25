@@ -1,10 +1,10 @@
 ---
-title: How to Use Delivery Status Notifications
+title: Use Delivery Status Notifications
 description: Configure NeoMutt to request Delivery Status Notifications (DSN) for return receipts on sent messages
 keywords: dsn, delivery status, notification, return receipt, sendmail, smtp
 ---
 
-# How to Use Delivery Status Notifications
+# Use Delivery Status Notifications
 
 [RFC1894](https://www.rfc-editor.org/rfc/rfc1894.html) defines a set of MIME content types for relaying information about the status of electronic mail messages.
 These can be thought of as "return receipts."

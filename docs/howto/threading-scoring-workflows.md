@@ -1,10 +1,10 @@
 ---
-title: How to Build Threading and Scoring Workflows
+title: Build Threading and Scoring Workflows
 description: Combine threading and scoring to prioritize conversations in the index
 keywords: threads, scoring, use_threads, sort, sort_aux, score
 ---
 
-# How to Build Threading and Scoring Workflows
+# Build Threading and Scoring Workflows
 
 ## Prerequisites
 

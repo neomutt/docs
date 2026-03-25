@@ -1,10 +1,10 @@
 ---
-title: How to Compose to Sender
+title: Compose to Sender
 description: Send new mail to the sender of the current message in NeoMutt
 keywords: compose, sender, new message, tagged messages
 ---
 
-# How to Compose to Sender
+# Compose to Sender
 
 ## Introduction
 

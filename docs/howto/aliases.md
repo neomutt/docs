@@ -1,10 +1,10 @@
 ---
-title: How to Manage Aliases
+title: Manage Aliases
 description: Create and use email address aliases in NeoMutt
 keywords: alias, unalias, address book, contacts, alias_file
 ---
 
-# How to Manage Aliases
+# Manage Aliases
 
 ## Syntax
 

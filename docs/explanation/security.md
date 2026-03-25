@@ -1,7 +1,7 @@
 ---
 title: Understanding Security
 description: Security considerations for NeoMutt including passwords, temporary files, and information leaks
-keywords: [security, passwords, temporary files, information leaks, mailto, external applications]
+keywords: security, passwords, temporary files, information leaks, mailto, external applications
 diataxis_type: explanation
 ---
 

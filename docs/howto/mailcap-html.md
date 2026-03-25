@@ -1,10 +1,10 @@
 ---
-title: How to Render HTML Email with Mailcap
+title: Render HTML Email with Mailcap
 description: Configure mailcap and text browsers to view HTML email safely in NeoMutt
 keywords: mailcap, html, w3m, lynx, elinks, auto-view, copiousoutput
 ---
 
-# How to Render HTML Email with Mailcap
+# Render HTML Email with Mailcap
 
 ## Prerequisites
 

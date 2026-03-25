@@ -1,10 +1,10 @@
 ---
-title: How to Use Address Groups
+title: Use Address Groups
 description: Group addresses logically for use in patterns and hooks
 keywords: address groups, group, ungroup, patterns, hooks
 ---
 
-# How to Use Address Groups
+# Use Address Groups
 
 ## Syntax
 

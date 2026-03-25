@@ -1,7 +1,7 @@
 ---
 title: Understanding MIME
 description: How NeoMutt handles MIME types, multipart/multilingual, and multipart/related emails
-keywords: [mime, multipart, multilingual, related, attachments, content-type]
+keywords: mime, multipart, multilingual, related, attachments, content-type
 diataxis_type: explanation
 ---
 

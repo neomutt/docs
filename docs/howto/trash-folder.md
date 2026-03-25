@@ -1,10 +1,10 @@
 ---
-title: How to Use the Trash Folder
+title: Use the Trash Folder
 description: Automatically move deleted emails to a trash bin instead of permanently removing them
 keywords: trash, delete, purge, purge-message, trash folder, undelete
 ---
 
-# How to Use the Trash Folder
+# Use the Trash Folder
 
 ## Introduction
 

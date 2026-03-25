@@ -1,10 +1,10 @@
 ---
-title: How to Use the Sidebar
+title: Use the Sidebar
 description: Set up and customise NeoMutt's Sidebar to get an overview of your mailboxes, navigate between them, and theme their display.
 keywords: sidebar, mailbox, navigation, sidebar_visible, sidebar_format
 ---
 
-# How to Use the Sidebar
+# Use the Sidebar
 
 The Sidebar shows a list of all your mailboxes.
 The list can be turned on and off, it can be themed and the list style can be configured.

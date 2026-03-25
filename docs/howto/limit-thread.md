@@ -1,10 +1,10 @@
 ---
-title: How to Limit to Current Thread
+title: Limit to Current Thread
 description: Use the limit-current-thread function to focus on a single email thread in NeoMutt
 keywords: limit, thread, limit-current-thread, focus, filter, index
 ---
 
-# How to Limit to Current Thread
+# Limit to Current Thread
 
 ## Introduction
 

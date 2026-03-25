@@ -1,7 +1,7 @@
 ---
 title: NeoMutt Guide
 description: The NeoMutt Email Client Documentation
-keywords: [neomutt, email, terminal, documentation]
+keywords: neomutt, email, terminal, documentation
 ---
 
 # NeoMutt Guide

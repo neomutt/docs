@@ -1,10 +1,10 @@
 ---
-title: How to Postpone Mail
+title: Postpone Mail
 description: Delay sending a message and resume it later in NeoMutt
 keywords: postpone, draft, resume, recall, compose
 ---
 
-# How to Postpone Mail
+# Postpone Mail
 
 At times it is desirable to delay sending a message that you have already begun to compose.
 When the `<postpone-message>` function is used in the *compose* menu, the body of your message and attachments are stored in the mailbox specified by the {ref}`$postponed <postponed>` variable.

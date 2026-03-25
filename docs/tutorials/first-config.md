@@ -1,7 +1,7 @@
 ---
 title: Writing Your First Configuration
 description: Learn where NeoMutt looks for config files and how to write your first neomuttrc
-keywords: [neomutt, configuration, neomuttrc, config, tutorial, setup]
+keywords: neomutt, configuration, neomuttrc, config, tutorial, setup
 diataxis_type: tutorial
 ---
 
@@ -297,4 +297,4 @@ This mechanism should be avoided if possible as it has the following implication
 - "I want to read mail." Continue with [Reading Your First Email](first-email).
 - "I want to send mail." Continue with [Sending Email](sending-email).
 - "I have multiple accounts." Continue with [Multiple Accounts](multiple-accounts).
-- "I want more details on config files." See [Config Locations](../reference/config-locations) and [Config Syntax](../reference/config-syntax).
+- "I want more details on config files." See [Config Locations](../reference/config/files) and [Config Syntax](../reference/config/syntax).

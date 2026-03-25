@@ -1,10 +1,10 @@
 ---
-title: How to Set Up Header/Body Caching
+title: Set Up Header/Body Caching
 description: Configure header caching and body caching to speed up opening large folders, plus header cache compression options
 keywords: header cache, body cache, caching, hcache, message cache, lz4, zlib, zstd, compression, performance
 ---
 
-# How to Set Up Header/Body Caching
+# Set Up Header/Body Caching
 
 NeoMutt contains two types of local caching: *(1)* the so-called "header caching" and *(2)* the so-called "body caching" which are both described in this section.
 

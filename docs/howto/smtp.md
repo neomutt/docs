@@ -1,10 +1,10 @@
 ---
-title: How to Set Up SMTP
+title: Set Up SMTP
 description: Configure NeoMutt to deliver messages through an SMTP server
 keywords: smtp, smtp_url, smtp_authenticators, sendmail, mail delivery
 ---
 
-# How to Set Up SMTP
+# Set Up SMTP
 
 Besides supporting traditional mail delivery through a sendmail-compatible program, NeoMutt supports delivery through SMTP.
 

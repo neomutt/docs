@@ -1,10 +1,10 @@
 ---
-title: How to Use Notmuch
+title: Use Notmuch
 description: Set up and use the Notmuch email search engine integration with NeoMutt for fulltext indexing, tagging and virtual folders
 keywords: notmuch, search, virtual folder, vfolder, tagging, index, query, nm_default_url, nm_query_type
 ---
 
-# How to Use Notmuch
+# Use Notmuch
 
 ## Support
 

@@ -1,10 +1,10 @@
 ---
-title: How to Tune the Header Cache
+title: Tune the Header Cache
 description: Optimize header and body cache settings for faster mailbox performance
 keywords: header cache, hcache, header_cache, message_cache_dir, performance
 ---
 
-# How to Tune the Header Cache
+# Tune the Header Cache
 
 ## Prerequisites
 

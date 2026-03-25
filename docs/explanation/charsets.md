@@ -1,7 +1,7 @@
 ---
 title: Understanding Character Sets
 description: How NeoMutt handles character sets, encodings, and locale configuration
-keywords: [charset, encoding, utf-8, unicode, locale, character set]
+keywords: charset, encoding, utf-8, unicode, locale, character set
 diataxis_type: explanation
 ---
 

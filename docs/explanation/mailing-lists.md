@@ -1,7 +1,7 @@
 ---
 title: Understanding Mailing Lists
 description: How NeoMutt handles mailing lists, alternative addresses, and list subscriptions
-keywords: [mailing lists, lists, subscribe, alternates, mail-followup-to, list-reply]
+keywords: mailing lists, lists, subscribe, alternates, mail-followup-to, list-reply
 diataxis_type: explanation
 ---
 

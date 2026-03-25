@@ -1,10 +1,10 @@
 ---
-title: How to Edit Input Fields
+title: Edit Input Fields
 description: Use NeoMutt's built-in line editor for prompts, header fields, and search
 keywords: editor, line editor, emacs, keybindings, completion, history, input, editing
 ---
 
-# How to Edit Input Fields
+# Edit Input Fields
 
 ## Overview
 

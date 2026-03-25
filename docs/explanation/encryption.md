@@ -1,7 +1,7 @@
 ---
 title: Understanding Encryption
 description: How NeoMutt handles email encryption and signing with OpenPGP and S/MIME
-keywords: [encryption, gpgme, pgp, smime, signing, crypto, security]
+keywords: encryption, gpgme, pgp, smime, signing, crypto, security
 diataxis_type: explanation
 ---
 

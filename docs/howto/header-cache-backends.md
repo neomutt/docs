@@ -1,10 +1,10 @@
 ---
-title: How to Use Kyoto Cabinet / LMDB
+title: Use Kyoto Cabinet / LMDB
 description: Configure Kyoto Cabinet or LMDB as header cache backends for NeoMutt
 keywords: kyoto cabinet, lmdb, header cache, hcache, backend, database, tokyocabinet
 ---
 
-# How to Use Kyoto Cabinet / LMDB
+# Use Kyoto Cabinet / LMDB
 
 ## Kyoto Cabinet
 

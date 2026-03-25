@@ -1,4 +1,10 @@
-# How to Migrate from Mutt to NeoMutt
+---
+title: Migrate from Mutt to NeoMutt
+description: XXX
+keywords: XXX
+---
+
+# Migrate from Mutt to NeoMutt
 
 ## Prerequisites
 
@@ -28,7 +34,7 @@ neomutt -F ~/.neomuttrc
 
 Expected result: NeoMutt starts using your existing configuration.
 
-See [Configuration File Locations](../reference/config-locations).
+See [Configuration File Locations](../reference/config/files).
 
 ## New Features in NeoMutt
 

@@ -1,4 +1,10 @@
-# How to Back Up Your Configuration
+---
+title: Back Up Your Configuration
+description: XXX
+keywords: XXX
+---
+
+# Back Up Your Configuration
 
 ## Prerequisites
 
@@ -7,7 +13,7 @@
 
 ## Which Files to Back Up
 
-1. Back up your main config file from the location NeoMutt is using. See [Configuration File Locations](../reference/config-locations).
+1. Back up your main config file from the location NeoMutt is using. See [Configuration File Locations](../reference/config/files).
 2. Back up any files referenced with `source`, such as separate alias or account files.
 3. Back up user-defined files pointed to by variables such as:
 

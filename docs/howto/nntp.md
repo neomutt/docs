@@ -1,10 +1,10 @@
 ---
-title: How to Use NNTP (Usenet)
+title: Use NNTP (Usenet)
 description: Configure NeoMutt to read and post to Usenet newsgroups via NNTP
 keywords: nntp, usenet, newsgroups, newsrc, news server, subscribe, catchup, post, followup
 ---
 
-# How to Use NNTP (Usenet)
+# Use NNTP (Usenet)
 
 ## Introduction
 

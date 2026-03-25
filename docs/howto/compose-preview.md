@@ -1,10 +1,10 @@
 ---
-title: How to Use Compose Message Preview
+title: Use Compose Message Preview
 description: Show a preview of the message in the Compose Dialog in NeoMutt
 keywords: compose, preview, message preview, compose dialog
 ---
 
-# How to Use Compose Message Preview
+# Use Compose Message Preview
 
 ## Support
 

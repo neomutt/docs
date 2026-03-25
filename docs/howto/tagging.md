@@ -1,10 +1,10 @@
 ---
-title: How to Use Message Tagging
+title: Use Message Tagging
 description: Tag messages for batch operations and use custom backend-based tags with Notmuch and IMAP
 keywords: tags, tagging, tag-pattern, tag-prefix, custom tags, notmuch, imap, hidden_tags, tag-transforms, tag-formats, modify-labels
 ---
 
-# How to Use Message Tagging
+# Use Message Tagging
 
 ## Using Tags
 

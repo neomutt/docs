@@ -1,7 +1,7 @@
 ---
 title: Setting Up NeoMutt with Office 365
 description: Step-by-step guide to configure NeoMutt for use with Microsoft 365
-keywords: [neomutt, office365, microsoft, imap, smtp, oauth2, tutorial]
+keywords: neomutt, office365, microsoft, imap, smtp, oauth2, tutorial
 ---
 
 # Setting Up NeoMutt with Office 365

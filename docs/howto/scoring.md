@@ -1,10 +1,10 @@
 ---
-title: How to Use Scoring
+title: Use Scoring
 description: Assign scores to messages using pattern matching for sorting and filtering
 keywords: score, unscore, scoring, patterns, message scoring
 ---
 
-# How to Use Scoring
+# Use Scoring
 
 ## Syntax
 

@@ -1,10 +1,10 @@
 ---
-title: How to Configure Mailboxes
+title: Configure Mailboxes
 description: Set up mailbox monitoring, multiple spool mailboxes, and the mbox-hook command in NeoMutt
 keywords: mailboxes, named-mailboxes, unmailboxes, mbox-hook, spool, new mail, monitoring, label, notify, poll
 ---
 
-# How to Configure Mailboxes
+# Configure Mailboxes
 
 ## Using Multiple Spool Mailboxes
 

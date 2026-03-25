@@ -1,10 +1,10 @@
 ---
-title: "How to Encrypt to Self"
+title: "Encrypt to Self"
 description: Save a self-encrypted copy of outgoing emails and view encryption information
-keywords: [neomutt, encrypt-to-self, pgp, smime, fcc, self-encrypt, encryption-info]
+keywords: neomutt, encrypt-to-self, pgp, smime, fcc, self-encrypt, encryption-info
 ---
 
-# How to Encrypt to Self
+# Encrypt to Self
 
 ## The Problem
 

@@ -1,10 +1,10 @@
 ---
-title: How to Use Quasi-Delete
+title: Use Quasi-Delete
 description: Mark emails that should be hidden from the index but not deleted using the quasi-delete feature
 keywords: quasi-delete, hide, notmuch, index, sync-mailbox
 ---
 
-# How to Use Quasi-Delete
+# Use Quasi-Delete
 
 *Mark emails that should be hidden, but not deleted*
 

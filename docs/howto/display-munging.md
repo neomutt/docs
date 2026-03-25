@@ -1,10 +1,10 @@
 ---
-title: How to Transform Message Display
+title: Transform Message Display
 description: Use subject-regex to modify how message subjects are displayed in NeoMutt
 keywords: subject-regex, display munging, subject, regex, replacement, unsubject-regex
 ---
 
-# How to Transform Message Display
+# Transform Message Display
 
 ## Display Munging
 

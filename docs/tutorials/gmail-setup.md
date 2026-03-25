@@ -1,7 +1,7 @@
 ---
 title: Setting Up NeoMutt with Gmail
 description: Step-by-step guide to configure NeoMutt for use with Gmail
-keywords: [neomutt, gmail, imap, smtp, oauth2, tutorial]
+keywords: neomutt, gmail, imap, smtp, oauth2, tutorial
 ---
 
 # Setting Up NeoMutt with Gmail

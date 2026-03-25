@@ -1,7 +1,7 @@
 ---
 title: Searching and Filtering Email
 description: Step-by-step guide to finding messages using NeoMutt's search and pattern matching
-keywords: [neomutt, search, filter, patterns, limit, notmuch, tutorial]
+keywords: neomutt, search, filter, patterns, limit, notmuch, tutorial
 ---
 
 # Searching and Filtering Email
