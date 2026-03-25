@@ -105,6 +105,7 @@ maxdepth: 1
 ---
 cli-syntax
 color-syntax
+colors
 conditional-expandos
 expando-conditional-guide
 expando-format-guide
