@@ -109,6 +109,7 @@ conditional-expandos
 expando-conditional-guide
 expando-format-guide
 expando-syntax
+glossary
 pattern-syntax
 sending-email
 ```
