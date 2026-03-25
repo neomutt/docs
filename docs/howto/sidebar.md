@@ -1,7 +1,7 @@
 ---
 title: Use the Sidebar
-description: Set up and customise NeoMutt's Sidebar to get an overview of your mailboxes, navigate between them, and theme their display.
-keywords: sidebar, mailbox, navigation, sidebar_visible, sidebar_format
+description: Set up and customise NeoMutt's Sidebar panel to list mailboxes, navigate between them, configure sorting, and apply colour themes.
+keywords: sidebar, mailbox, navigation, sidebar_visible, sidebar_format, sidebar_sort, sidebar_width, sidebar-pin, sidebar-open, sidebar-next, sidebar-toggle-visible, colors, mail_check_stats
 ---
 
 # Use the Sidebar

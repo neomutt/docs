@@ -1,7 +1,7 @@
 ---
 title: Credits
-description: Everyone who's helped create NeoMutt
-keywords: 
+description: Acknowledgements for the authors and contributors who have helped build NeoMutt
+keywords: neomutt, credits, authors, contributors, acknowledgements, team
 ---
 
 # Authors

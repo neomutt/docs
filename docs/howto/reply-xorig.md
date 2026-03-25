@@ -1,7 +1,7 @@
 ---
 title: Reply with Original Address
-description: Configure NeoMutt to reply using the X-Original-To header as the From address
-keywords: reply, x-original-to, from, header, reply_with_xorig
+description: Reply to email using the address from the X-Original-To header as the From address in NeoMutt.
+keywords: reply, x-original-to, from, header, reply_with_xorig, reverse, alternates, envelope, reply address, catch-all
 ---
 
 # Reply with Original Address

@@ -1,7 +1,7 @@
 ---
 title: "Notmuch Options"
-description: "Reference for NeoMutt Notmuch integration configuration variables."
-keywords: "notmuch, search, indexing, variables, neomutt"
+description: "Configuration variables for Notmuch integration, including database settings, tags, query windows, and virtual mailboxes."
+keywords: "notmuch, search, indexing, tagging, virtual mailbox, nm_default_url, nm_query_type, nm_exclude_tags, nm_unread_tag, vfolder, full-text search, email tags"
 ---
 
 # Notmuch Options

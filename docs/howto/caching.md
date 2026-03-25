@@ -1,7 +1,7 @@
 ---
 title: Set Up Header/Body Caching
-description: Configure header caching and body caching to speed up opening large folders, plus header cache compression options
-keywords: header cache, body cache, caching, hcache, message cache, lz4, zlib, zstd, compression, performance
+description: Configure header and body caching to speed up IMAP, POP, Maildir, and MH folders, including cache compression
+keywords: header cache, body cache, caching, hcache, message cache, lz4, zlib, zstd, compression, performance, header_cache, message_cache_dir, header_cache_backend, imap, pop, maildir, mh, maintenance
 ---
 
 # Set Up Header/Body Caching

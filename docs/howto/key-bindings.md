@@ -1,7 +1,7 @@
 ---
 title: Customise Key Bindings
-description: Change default key bindings, unbind keys, and manage terminal keybindings in NeoMutt
-keywords: bind, unbind, key bindings, keyboard, maps, menus, noop
+description: Assign functions to keys, unbind defaults, handle key sequences, and manage terminal key conflicts in NeoMutt
+keywords: bind, unbind, key bindings, keyboard, maps, menus, noop, key sequence, generic, index, pager, compose, attach, editor, browser, symbolic key names, what-key, terminal, stty, enter, return
 ---
 
 # Customise Key Bindings

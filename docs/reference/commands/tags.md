@@ -1,7 +1,7 @@
 ---
 title: Tags (Notmuch)
-description: XXX
-keywords: XXX
+description: Commands for defining display formats and visual transformations for Notmuch tags in the index view.
+keywords: tag-formats, tag-transforms, notmuch, tags, index_format, expandos, tag display, tag icons, labeling, virtual mailbox
 ---
 
 # Tags (Notmuch)

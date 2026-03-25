@@ -1,7 +1,7 @@
 ---
 title: Pattern Matching
-description: Complete reference for NeoMutt pattern modifiers, operators, date ranges, and search syntax
-keywords: neomutt, patterns, search, limit, tag, filter, matching
+description: Complete reference for NeoMutt pattern modifiers, boolean operators, date ranges, message ranges, and search syntax
+keywords: neomutt, patterns, search, limit, tag-pattern, filter, matching, regex, date range, message range, boolean, simple search, gmail, imap
 ---
 
 # Pattern Matching

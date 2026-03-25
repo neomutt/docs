@@ -1,7 +1,7 @@
 ---
 title: Generic Menu
-description: Default Keys bindings and functions for the NeoMutt Generic Menu.
-keywords: neomutt, functions, generic, menu, bindings, keys
+description: Common key bindings for scrolling, searching, tagging, and navigation inherited by all NeoMutt menus
+keywords: neomutt, functions, generic, menu, bindings, keys, scrolling, searching, tagging, navigation, inherited, select-entry, next-page, previous-page, enter-command, tag-entry
 ---
 
 (menu-generic)=

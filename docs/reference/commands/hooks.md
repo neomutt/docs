@@ -1,7 +1,7 @@
 ---
 title: Hooks
-description: XXX
-keywords: XXX
+description: Commands that trigger actions on events like entering a folder, sending mail, connecting to accounts, startup, shutdown, and timeouts.
+keywords: hooks, account-hook, folder-hook, send-hook, send2-hook, reply-hook, message-hook, save-hook, fcc-hook, fcc-save-hook, mbox-hook, charset-hook, iconv-hook, crypt-hook, index-format-hook, startup-hook, shutdown-hook, timeout-hook, unhook, event triggers
 ---
 
 # Hooks

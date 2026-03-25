@@ -1,7 +1,7 @@
 ---
 title: Back Up Your Configuration
-description: XXX
-keywords: XXX
+description: Back up, restore, and version-control your NeoMutt configuration files across machines
+keywords: backup, configuration, restore, config files, version control, git, alias_file, header_cache, source, dotfiles, secrets, multi-machine, neomuttrc
 ---
 
 # Back Up Your Configuration

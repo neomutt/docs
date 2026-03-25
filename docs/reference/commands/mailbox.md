@@ -1,7 +1,7 @@
 ---
 title: Mailboxes
-description: XXX
-keywords: XXX
+description: Commands for defining monitored mailboxes, adding labels, and controlling polling and notification for new mail.
+keywords: mailboxes, unmailboxes, named-mailboxes, new mail, polling, notifications, labels, mailbox monitoring, folder management, mail folders
 ---
 
 # Mailboxes

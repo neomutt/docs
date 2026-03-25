@@ -1,7 +1,7 @@
 ---
 title: About NeoMutt
-description: Background about NeoMutt
-keywords: 
+description: Background information about the NeoMutt project including history, credits, license, and how to get involved
+keywords: neomutt, about, project, overview, history, credits, license, bugs, contributing, contact
 ---
 
 # About NeoMutt

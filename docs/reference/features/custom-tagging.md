@@ -1,7 +1,7 @@
 ---
 title: Custom Tagging
-description: Tag messages for batch operations and use custom backend-based tags with Notmuch and IMAP
-keywords: tags, tagging, tag-pattern, tag-prefix, custom tags, notmuch, imap, hidden_tags, tag-transforms, tag-formats, modify-labels
+description: Add, remove, and display custom message tags using Notmuch or IMAP keywords in NeoMutt
+keywords: tags, tagging, custom tags, notmuch, imap, hidden_tags, tag-transforms, tag-formats, modify-labels, modify-labels-then-hide, index_tag, index_tags, labels, metadata
 since: 2017-10-13
 ---
 

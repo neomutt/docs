@@ -1,7 +1,7 @@
 ---
 title: Tune the Header Cache
-description: Optimize header and body cache settings for faster mailbox performance
-keywords: header cache, hcache, header_cache, message_cache_dir, performance
+description: Choose cache locations, select backends, enable compression, and clean body caches for faster mailbox access
+keywords: header cache, hcache, header_cache, message_cache_dir, performance, header_cache_backend, header_cache_compress_method, header_cache_compress_level, message_cache_clean, zstd, compression, tuning, optimization
 ---
 
 # Tune the Header Cache

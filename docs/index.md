@@ -1,7 +1,7 @@
 ---
 title: NeoMutt Guide
-description: The NeoMutt Email Client Documentation
-keywords: neomutt, email, terminal, documentation
+description: Official NeoMutt documentation — tutorials, how-to guides, explanations, and reference for the terminal email client
+keywords: neomutt, email client, terminal, documentation, tutorials, how-to, reference, explanation, mutt, command-line email, text-based email
 ---
 
 # NeoMutt Guide

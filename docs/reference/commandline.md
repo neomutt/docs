@@ -1,7 +1,7 @@
 ---
 title: Command-Line Options
-description: Complete reference of NeoMutt command-line options and usage syntax
-keywords: neomutt, command-line, options, arguments, flags
+description: Reference for NeoMutt command-line options including feature detection, ifdef, and mailto URL support
+keywords: neomutt, command-line, options, arguments, flags, features, ifdef, ifndef, mailto, version, compile
 ---
 
 # Command-Line Options

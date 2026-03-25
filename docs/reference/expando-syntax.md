@@ -1,6 +1,7 @@
 ---
 title: Expando Syntax
-description: XXX
+description: Technical reference for NeoMutt expando format string syntax including short and long names, format specifiers, and padding
+keywords: neomutt, expando, format string, syntax, short name, long name, format specifier, width, truncation, padding, justification, index_format, status_format
 ---
 
 # Expando Syntax — Format Strings

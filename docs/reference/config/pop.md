@@ -1,7 +1,7 @@
 ---
 title: POP3 Options
-description: POP3 protocol configuration variables for NeoMutt
-keywords: pop_auth_try_all, pop_authenticators, pop_check_interval, pop_delete, pop_host, pop_last, pop_oauth_refresh_command, pop_pass, pop_reconnect, pop_user
+description: "Configuration variables for POP3 server connections, authentication, polling, and message retrieval."
+keywords: neomutt, pop3, pop, pop_host, pop_user, pop_pass, pop_authenticators, pop_check_interval, pop_delete, oauth, remote mail, fetch mail
 ---
 
 # POP3 Options

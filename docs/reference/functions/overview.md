@@ -1,7 +1,7 @@
 ---
 title:
-description: Default key bindings and functions for the NeoMutt Index Menu.
-keywords: neomutt, functions, index, menu, bindings, keys, mail
+description: Overview of all NeoMutt functions grouped by menu, with default key bindings and descriptions
+keywords: neomutt, functions, overview, menus, bindings, keys, bind command, reference, alias, attach, compose, pager, index, sidebar, editor, generic
 ---
 
 (functions)=

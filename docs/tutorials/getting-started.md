@@ -1,7 +1,7 @@
 ---
 title: Getting Started with NeoMutt
-description: A first-steps tutorial introducing NeoMutt's core concepts, screens, and menus
-keywords: neomutt, getting started, tutorial, index, pager, sidebar, menus
+description: Tour NeoMutt's main screens, menus, sidebar, and navigation keys to build familiarity with the interface
+keywords: neomutt, getting started, tutorial, index, pager, sidebar, compose menu, alias menu, attachment menu, file browser, help screen, navigation keys, key bindings, sidebar_format, sidebar_visible
 diataxis_type: tutorial
 ---
 

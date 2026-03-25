@@ -1,7 +1,7 @@
 ---
 title: Migrate from Mutt to NeoMutt
-description: XXX
-keywords: XXX
+description: Migrate your Mutt configuration to NeoMutt, handle deprecated settings, and run both clients side by side
+keywords: mutt, migration, compatibility, neomuttrc, muttrc, config file, fork, sidebar, notmuch, deprecated settings, transition, upgrade, side by side
 ---
 
 # Migrate from Mutt to NeoMutt

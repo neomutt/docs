@@ -1,7 +1,7 @@
 ---
 title: Formatting Expandos
-description: How to control width, alignment, truncation, and padding in NeoMutt format strings
-keywords: neomutt, expando, format, width, padding, justification, alignment, truncation
+description: Guide to controlling column width, alignment, truncation, zero-padding, and fill padding in NeoMutt format strings
+keywords: neomutt, expando, format string, width, padding, justification, alignment, truncation, zero-padding, lowercase, hard-fill, soft-fill, index_format, status_format
 ---
 
 # Formatting Expandos

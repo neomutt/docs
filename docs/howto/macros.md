@@ -1,7 +1,7 @@
 ---
 title: Create Keyboard Macros
-description: Create and manage keyboard macros to automate repeated actions in NeoMutt
-keywords: macro, unmacro, keyboard macros, automation, key sequences
+description: Define and remove keyboard macros that replay key sequences to automate repeated actions in NeoMutt
+keywords: macro, unmacro, keyboard macros, automation, key sequences, key binding, function name, menu, compose, index, pager, shortcut, repeated actions
 ---
 
 # Create Keyboard Macros

@@ -1,7 +1,7 @@
 ---
 title: Browser Options
-description: NeoMutt configuration variables for the file browser display and sorting.
-keywords: neomutt, browser, browser_abbreviate_mailboxes, browser_sort, browser_sort_dirs_first, configuration
+description: "Configuration variables for the file and mailbox browser display, sorting, formatting, and newsgroup listing."
+keywords: neomutt, browser, file browser, folder_format, browser_sort, browser_sort_dirs_first, mask, group_index_format, mailbox_folder_format, directory listing, newsgroup browser
 ---
 
 # Browser Options

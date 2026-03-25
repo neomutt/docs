@@ -1,7 +1,7 @@
 ---
 title: Sidebar
-description: XXX
-keywords: XXX
+description: Commands for pinning and unpinning mailboxes in the sidebar so they remain always visible.
+keywords: sidebar-pin, sidebar-unpin, sidebar, pinned mailboxes, sidebar visibility, mailbox panel, folder list, navigation
 ---
 
 # Sidebar

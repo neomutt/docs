@@ -1,6 +1,7 @@
 ---
 title: About NeoMutt's History
-description: The origins, evolution, and community behind NeoMutt
+description: How NeoMutt evolved from the original Mutt project, why the fork was created, and key milestones in its development
+keywords: neomutt, history, mutt, fork, michael elkins, richard russon, flatcap, timeline, origins, community, open source, email client evolution, legacy
 ---
 
 # About NeoMutt's History

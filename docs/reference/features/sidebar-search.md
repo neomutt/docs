@@ -1,7 +1,7 @@
 ---
 title: Sidebar Search
-description: Quickly select a mailbox by typing a few characters using fuzzy matching in the NeoMutt Sidebar
-keywords: sidebar, search, fuzzy, sidebar-start-search, sidebar-abort-search, mailbox, filter
+description: Filter and jump to any sidebar mailbox by typing a few characters using real-time fuzzy matching
+keywords: sidebar, search, fuzzy, sidebar-start-search, sidebar-abort-search, mailbox, filter, smart case, ranking, navigation panel, folder list, sidebar_format, fuzzy-score
 since: 2026-03-01
 ---
 

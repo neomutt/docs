@@ -1,7 +1,7 @@
 ---
 title: Command-Line Options
-description: Complete reference of NeoMutt command-line options and usage syntax
-keywords: neomutt, command-line, options, arguments, flags
+description: Reference for all NeoMutt command-line options organized by mode — help, info, send, and TUI
+keywords: neomutt, command-line, options, arguments, flags, modes, help, info, send, tui, getopt, debug, config, dump-config, query
 ---
 
 # Command-Line Options

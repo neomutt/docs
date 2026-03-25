@@ -1,7 +1,7 @@
 ---
 title: Use External Address Queries
-description: Connect NeoMutt to external directory databases for address lookup
-keywords: query, address query, LDAP, address book, query_command, external contacts
+description: Look up addresses from external directory databases such as LDAP, ph/qi, bbdb, or NIS using query_command
+keywords: query, address query, ldap, address book, query_command, external contacts, complete-query, directory lookup, ph, qi, bbdb, nis, wrapper script, tab completion
 ---
 
 # Use External Address Queries

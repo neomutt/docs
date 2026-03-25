@@ -1,7 +1,7 @@
 ---
 title: Use NNTP (Usenet)
-description: Configure NeoMutt to read and post to Usenet newsgroups via NNTP
-keywords: nntp, usenet, newsgroups, newsrc, news server, subscribe, catchup, post, followup
+description: Configure NeoMutt to read, post, and manage Usenet newsgroups via NNTP with subscriptions, caching, and threading.
+keywords: nntp, usenet, newsgroups, newsrc, news server, subscribe, catchup, post, followup, news_cache_dir, nntp_poll, group_index_format, change-newsgroup, articles
 ---
 
 # Use NNTP (Usenet)

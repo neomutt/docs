@@ -1,7 +1,7 @@
 ---
 title: History Options
-description: NeoMutt configuration variables for command history buffer and persistence.
-keywords: neomutt, history, history_file, history_format, history_remove_dups, configuration
+description: "Configuration variables for command-line history size, persistence, formatting, and duplicate removal."
+keywords: neomutt, history, history_file, history_format, history_remove_dups, save_history, command history, input history, recall, buffer
 ---
 
 # History Options

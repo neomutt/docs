@@ -1,7 +1,7 @@
 ---
 title: Transform Message Display
-description: Use subject-regex to modify how message subjects are displayed in NeoMutt
-keywords: subject-regex, display munging, subject, regex, replacement, unsubject-regex
+description: Rewrite or strip unwanted prefixes and tags from message subjects using subject-regex without altering stored data
+keywords: subject-regex, display munging, subject, regex, replacement, unsubject-regex, subjectrx, list prefix, ticket tag, subject rewrite, non-destructive, pattern substitution
 ---
 
 # Transform Message Display

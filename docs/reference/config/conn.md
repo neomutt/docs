@@ -1,7 +1,7 @@
 ---
 title: "Conn Options"
-description: "Reference for NeoMutt compose mode configuration variables."
-keywords: "compose, editing, variables, neomutt"
+description: "Configuration variables for network connections, SSL/TLS certificates, tunnels, and socket settings."
+keywords: "connection, network, ssl, tls, starttls, certificate, tunnel, socket_timeout, ssl_force_tls, ssl_starttls, preconnect, ipv6, account_command, encryption"
 ---
 
 # Conn Options

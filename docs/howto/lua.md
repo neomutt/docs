@@ -1,7 +1,7 @@
 ---
 title: Use Lua Scripting
-description: Embed Lua scripts in NeoMutt to get/set config options and run commands
-keywords: lua, lua-source, scripting, embedded lua, automation
+description: Use embedded Lua scripting to get and set NeoMutt config options, run commands, and extend functionality
+keywords: lua, lua-source, scripting, embedded lua, automation, mutt.get, mutt.set, config, macro, sidebar_width, extension, programmable
 ---
 
 # Use Lua Scripting

@@ -1,7 +1,7 @@
 ---
 title: Bugs
-description: How to Report Bugs
-keywords: 
+description: How to report bugs and issues in NeoMutt to help developers fix problems
+keywords: neomutt, bugs, issues, reporting, troubleshooting, bug report
 ---
 
 # Reporting Bugs

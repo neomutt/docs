@@ -1,7 +1,7 @@
 ---
 title: Integrate External Tools
-description: XXX
-keywords: XXX
+description: Connect NeoMutt with external tools like urlview, msmtp, offlineimap, notmuch, and HTML renderers
+keywords: external tools, urlview, urlscan, msmtp, sendmail, offlineimap, mbsync, isync, notmuch, mailcap, w3m, lynx, pipe-message, macro, query_command, calendar, khal, calcurse
 ---
 
 # Integrate External Tools

@@ -1,7 +1,7 @@
 ---
 title: General Options
-description: Reference for NeoMutt general configuration variables
-keywords: neomutt, configuration, variables, general, settings
+description: "Core configuration variables for NeoMutt behavior, character sets, colors, sorting, threading, and folders."
+keywords: neomutt, general, abort_key, charset, color_directcolor, date_format, folder, hostname, mail_check, mbox_type, sort, use_threads, trash, timeout, wrap
 ---
 
 # General Options

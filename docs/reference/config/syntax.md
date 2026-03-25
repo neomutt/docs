@@ -1,7 +1,7 @@
 ---
 title: Configuration File Syntax
-description: Reference for NeoMutt configuration file syntax, quoting, variables, and commands
-keywords: neomutt, config, syntax, neomuttrc, quoting, variables, backticks
+description: "Syntax rules for NeoMutt configuration files, including comments, quoting, backtick substitution, and variable expansion."
+keywords: neomutt, config, syntax, neomuttrc, quoting, backticks, variable expansion, line continuation, comments, character set, config_charset, rc file
 ---
 
 # Configuration File Syntax

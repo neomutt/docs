@@ -1,7 +1,7 @@
 ---
 title: Fuzzy Search
-description: Find items quickly by typing approximate or abbreviated text using FZF-style subsequence matching
-keywords: fuzzy, fuzzy search, fzf, subsequence, matching, scoring, smart case, sidebar search
+description: Find mailboxes, aliases, or commands by typing a few characters using FZF-style subsequence matching and scoring
+keywords: fuzzy, fuzzy search, fzf, subsequence matching, scoring, smart case, sidebar search, ranking, case folding, utf-8, approximate search, pattern matching, interactive filter
 since: 2026-02-11
 ---
 

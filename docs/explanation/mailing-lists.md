@@ -1,7 +1,7 @@
 ---
 title: Understanding Mailing Lists
-description: How NeoMutt handles mailing lists, alternative addresses, and list subscriptions
-keywords: mailing lists, lists, subscribe, alternates, mail-followup-to, list-reply
+description: How NeoMutt recognizes mailing lists, handles list-reply and Mail-Followup-To headers, manages alternative addresses, and supports message labels
+keywords: mailing lists, lists, subscribe, alternates, mail-followup-to, list-reply, $followup_to, $reply_to, $auto_subscribe, x-label, edit-label, unalternates, $index_format, message labels, address groups
 diataxis_type: explanation
 ---
 

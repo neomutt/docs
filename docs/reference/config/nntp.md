@@ -1,7 +1,7 @@
 ---
 title: NNTP Options
-description: NNTP (Usenet) protocol configuration variables for NeoMutt
-keywords: nntp_authenticators, nntp_context, nntp_listgroup, nntp_load_description, nntp_pass, nntp_poll, nntp_user
+description: "Configuration variables for NNTP (Usenet) news server connections, newsgroup browsing, and article handling."
+keywords: neomutt, nntp, usenet, newsgroups, news_server, newsrc, nntp_authenticators, nntp_poll, catchup_newsgroup, followup_to_poster, news reader, articles
 ---
 
 # NNTP Options

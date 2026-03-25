@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot IMAP Performance
-description: Diagnose slow IMAP connections and tune NeoMutt IMAP settings
-keywords: imap, performance, imap_keep_alive, imap_idle, imap_fetch_chunk_size, timeout
+description: Diagnose and fix slow IMAP connections by tuning polling, keep-alive, IDLE, fetch size, compression, and passive settings
+keywords: imap, performance, slow, imap_keep_alive, imap_idle, imap_fetch_chunk_size, imap_deflate, imap_passive, timeout, mail_check, polling, bandwidth, connection, troubleshooting, remote mail
 ---
 
 # Troubleshoot IMAP Performance

@@ -1,7 +1,7 @@
 ---
 title: Color Objects
-description: Everything that can be colored in NeoMutt
-keywords: color, colour, theme, style, object
+description: Complete list of every colorable UI object in NeoMutt including index, sidebar, compose, and pager elements
+keywords: color, colour, theme, style, object, index, sidebar, compose, pager, quoted, status, indicator, attachment
 ---
 
 # Color Objects

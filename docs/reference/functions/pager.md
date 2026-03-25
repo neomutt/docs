@@ -1,7 +1,7 @@
 ---
 title: Pager Menu
-description: Default Keys bindings and functions for the NeoMutt Pager Menu.
-keywords: neomutt, functions, pager, menu, bindings, keys, reading
+description: Key bindings and functions for the NeoMutt pager — scrolling, searching, replying, and navigating within an email message
+keywords: neomutt, functions, pager, menu, bindings, keys, reading email, message viewer, scroll, search, reply, forward, skip-quoted, toggle-quoted, next-page, previous-page
 ---
 
 (menu-pager)=

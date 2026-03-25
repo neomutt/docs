@@ -1,7 +1,7 @@
 ---
 title: Menu Options
-description: NeoMutt configuration variables for Menu-format mailbox handling.
-keywords: neomutt, menu, menu_check_cur, menu_field_delimiter, menu_header_cache_verify, menu_trash, configuration
+description: "Configuration variables for menu navigation, cursor style, scrolling behavior, and context lines."
+keywords: neomutt, menu, arrow_cursor, arrow_string, menu_context, menu_move_off, menu_scroll, navigation, scrolling, cursor style, ui
 ---
 
 # Menu Options

@@ -1,7 +1,7 @@
 ---
 title: Manage Aliases
-description: Create and use email address aliases in NeoMutt
-keywords: alias, unalias, address book, contacts, alias_file
+description: Define, manage, and expand email address aliases and tags for quick addressing in NeoMutt
+keywords: alias, unalias, address book, contacts, alias_file, nicknames, shortcuts, create-alias, tags, tab completion, address expansion, source
 ---
 
 # Manage Aliases

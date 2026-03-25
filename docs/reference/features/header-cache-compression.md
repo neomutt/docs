@@ -1,7 +1,7 @@
 ---
 title: Header Cache Compression
-description: Configure header caching and body caching to speed up opening large folders, plus header cache compression options
-keywords: header cache, body cache, caching, hcache, message cache, lz4, zlib, zstd, compression, performance
+description: Compress the NeoMutt header cache with lz4, zlib, or zstd to reduce disk usage and speed up large mailboxes
+keywords: header cache, hcache, compression, lz4, zlib, zstd, header_cache_compress_method, header_cache_compress_level, performance, disk space, large mailbox
 since: 2020-03-01
 ---
 

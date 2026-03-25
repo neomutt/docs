@@ -1,6 +1,7 @@
 ---
 title: About OAuth2 in NeoMutt
-description: How OAuth2 authentication works in NeoMutt and why it is implemented via external helpers
+description: How NeoMutt authenticates with OAuth2 using OAUTHBEARER and XOAUTH2 SASL mechanisms and external helper scripts for token management
+keywords: neomutt, oauth2, oauthbearer, xoauth2, sasl, access token, refresh token, imap_oauth_refresh_command, smtp_oauth_refresh_command, imap_authenticators, authentication, gmail, office 365, token security
 ---
 
 # About OAuth2 in NeoMutt

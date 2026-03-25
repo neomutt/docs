@@ -1,7 +1,7 @@
 ---
 title: "Address Options"
-description: "Reference for NeoMutt address configuration variables."
-keywords: "address, contacts, address book, variables, neomutt"
+description: "Configuration variables for international domain name (IDN) encoding and decoding in email addresses."
+keywords: "address, idn, international domain name, idn_decode, idn_encode, encoding, utf-8, rfc6531, email address"
 ---
 
 # Address Options

@@ -1,7 +1,7 @@
 ---
 title: Customise Header Display
-description: Control which message headers are shown, their order, and add custom headers in NeoMutt
-keywords: headers, ignore, unignore, header-order, my-header, display, weeding
+description: Select, hide, reorder, and add custom message headers using ignore, header-order, and my-header commands
+keywords: headers, ignore, unignore, header-order, unheader-order, my-header, unmy-header, display, weeding, pager, edit-headers, view-raw-message, edit-raw-message, custom headers
 ---
 
 # Customise Header Display

@@ -1,7 +1,7 @@
 ---
 title: Setting Up NeoMutt with Gmail
-description: Step-by-step guide to configure NeoMutt for use with Gmail
-keywords: neomutt, gmail, imap, smtp, oauth2, tutorial
+description: Configure NeoMutt to read and send Gmail using IMAP, SMTP, and OAuth2 or app passwords
+keywords: neomutt, gmail, google mail, google account, imap, smtp, oauth2, app password, mutt_oauth2.py, imap_authenticators, xoauth2, oauthbearer, email setup
 ---
 
 # Setting Up NeoMutt with Gmail

@@ -1,7 +1,7 @@
 ---
 title: Hcache Options
-description: Reference for NeoMutt Hcache configuration variables
-keywords: neomutt, configuration, variables, Hcache, settings
+description: "Configuration variables for the header cache database, backend selection, and compression settings."
+keywords: neomutt, header cache, hcache, header_cache, header_cache_backend, compression, lz4, zstd, zlib, performance, caching, database
 ---
 
 # Hcache Options

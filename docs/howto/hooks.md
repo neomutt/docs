@@ -1,7 +1,7 @@
 ---
 title: Use Hooks
-description: Execute commands automatically based on events, mailboxes, and message properties
-keywords: hooks, folder-hook, send-hook, reply-hook, message-hook, crypt-hook, account-hook, timeout-hook, startup-hook, shutdown-hook, new-mail-hook
+description: Execute commands automatically based on mailbox, message, or event triggers using folder-hook, send-hook, and other hooks
+keywords: hooks, folder-hook, send-hook, reply-hook, send2-hook, message-hook, crypt-hook, account-hook, timeout-hook, startup-hook, shutdown-hook, new-mail-hook, index-format-hook, unhook, setenv, pattern matching, event triggers, automation
 ---
 
 # Use Hooks

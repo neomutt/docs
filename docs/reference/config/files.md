@@ -1,7 +1,7 @@
 ---
 title: Config File Locations
-description: Reference for NeoMutt system and user config file locations and priority
-keywords: neomutt, config, config, neomuttrc, muttrc, XDG, location
+description: "System and user configuration file search paths, naming conventions, and config priority order."
+keywords: neomutt, config file, neomuttrc, muttrc, xdg, location, search order, system config, user config, priority, startup
 ---
 
 # Config File Locations

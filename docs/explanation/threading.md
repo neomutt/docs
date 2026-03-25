@@ -1,7 +1,7 @@
 ---
 title: Understanding Threading
-description: How NeoMutt organizes messages into threads and the available thread-related functions
-keywords: threading, threads, tree, sort, collapse, subthread, index
+description: How NeoMutt groups messages into threaded conversations with tree display, collapsing, strict threading, and navigation key bindings
+keywords: threading, threads, tree, sort, collapse, subthread, index, conversation grouping, $strict_threads, $hide_thread_subject, $ascii_chars, $narrow_tree, delete-thread, next-thread, collapse-thread, parent-message
 diataxis_type: explanation
 ---
 

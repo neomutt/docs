@@ -1,6 +1,7 @@
 ---
 title: About NeoMutt's Architecture
-description: How NeoMutt's codebase is organized and why
+description: How NeoMutt's modular C codebase is organized into libraries, protocol backends, UI components, and feature directories
+keywords: neomutt, architecture, codebase, modular design, libmutt, libemail, libconn, libncrypt, libgui, mailbox backends, mime parser, pattern matching, curses, build system, source tree
 ---
 
 # About NeoMutt's Architecture

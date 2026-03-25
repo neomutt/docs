@@ -1,7 +1,7 @@
 ---
 title: Regular Expressions
-description: Reference for regular expression syntax used in NeoMutt pattern matching
-keywords: neomutt, regex, regular expressions, POSIX, pattern matching
+description: Reference for POSIX extended regular expression syntax used in NeoMutt patterns, hooks, and color rules
+keywords: neomutt, regex, regular expressions, posix, pattern matching, character classes, repetition, alternation, egrep, backslash, quoting
 ---
 
 # Regular Expressions

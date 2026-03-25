@@ -1,6 +1,7 @@
 ---
 title: Conditional Expandos
-description: XXX
+description: Step-by-step tutorial on using conditional expandos in NeoMutt format strings for if-else logic and date-based display
+keywords: neomutt, expando, conditional, format string, if-else, true, false, date, nesting, index_format, status_format
 ---
 
 # Conditional Expandos — Step by Step

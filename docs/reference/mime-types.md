@@ -1,7 +1,7 @@
 ---
 title: MIME Types
-description: Reference for NeoMutt MIME type configuration, mime.types file format, and MIME lookup
-keywords: neomutt, MIME, mime.types, mime-lookup, content-type, attachment
+description: Reference for NeoMutt MIME type mapping, mime.types file format, search locations, and the mime-lookup command
+keywords: neomutt, mime, mime.types, mime-lookup, content-type, attachment, file extension, application/octet-stream, mailcap, auto-view
 ---
 
 # MIME Types

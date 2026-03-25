@@ -1,7 +1,7 @@
 ---
 title: Configuration Variables
-description: XXX
-keywords: XXX
+description: Commands for setting, unsetting, resetting, toggling config variables and managing environment variables in NeoMutt.
+keywords: set, unset, reset, toggle, setenv, unsetenv, config variables, configuration options, boolean, environment variables, neomuttrc, settings
 ---
 
 # Configuration Variables

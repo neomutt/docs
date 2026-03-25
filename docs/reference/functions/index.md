@@ -1,7 +1,7 @@
 ---
 title: Index Menu
-description: Default Keys bindings and functions for the NeoMutt Index Menu.
-keywords: neomutt, functions, index, menu, bindings, keys, mail
+description: Key bindings and functions for the NeoMutt index — the main email list for reading, replying, deleting, and managing messages
+keywords: neomutt, functions, index, menu, bindings, keys, mail, message list, reply, forward, delete, sort, threads, tag, search, mailbox
 ---
 
 (menu-index)=

@@ -1,7 +1,7 @@
 ---
 title: IMAP
-description: XXX
-keywords: XXX
+description: Commands for subscribing to and unsubscribing from IMAP mailbox folders on the server.
+keywords: subscribe-to, unsubscribe-from, imap, imap folders, imap subscription, remote mailbox, server-side subscription, mail server
 ---
 
 # IMAP

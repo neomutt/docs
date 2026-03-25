@@ -1,7 +1,7 @@
 ---
 title: Query Menu
-description: Default Keys bindings and functions for the NeoMutt Query Menu.
-keywords: neomutt, functions, query, menu, bindings, keys, search
+description: Key bindings and functions for searching an external address book and selecting contacts in NeoMutt
+keywords: neomutt, functions, query, menu, bindings, keys, address book, external query, contacts, create-alias, query-append, search results, address lookup
 ---
 
 (menu-query)=

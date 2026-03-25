@@ -1,7 +1,7 @@
 ---
 title: Customise Colours
-description: Configure colours and video attributes in NeoMutt, including the index, status bar, attachment headers, and sidebar.
-keywords: color, colour, theme, index-color, status-color, attach_headers, mono
+description: Configure colours, attributes, and themes for the index, status bar, sidebar, compose menu, and attachment headers
+keywords: color, colour, theme, index-color, status-color, attach_headers, mono, directcolor, truecolor, 256 color, foreground, background, quoted, sidebar, compose, uncolor, bold, underline, reverse
 ---
 
 # Customise Colours

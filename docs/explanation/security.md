@@ -1,7 +1,7 @@
 ---
 title: Understanding Security
-description: Security considerations for NeoMutt including passwords, temporary files, and information leaks
-keywords: security, passwords, temporary files, information leaks, mailto, external applications
+description: Security considerations for NeoMutt including password handling, temporary file exposure, Message-Id privacy, mailto link risks, and external application trust
+keywords: security, passwords, temporary files, information leaks, mailto, external applications, mailcap, $tmp_dir, message-id, privacy, permissions, rfc1524, mailto-allow, secure configuration
 diataxis_type: explanation
 ---
 

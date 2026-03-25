@@ -1,7 +1,7 @@
 ---
 title: Set Up Address Book Integration
-description: XXX
-keywords: XXX
+description: Integrate NeoMutt with address books using aliases, abook, khard, LDAP, or custom query scripts
+keywords: address book, contacts, query_command, abook, khard, carddav, ldap, alias, tab completion, address lookup, pipe-message, external query
 ---
 
 # Set Up Address Book Integration

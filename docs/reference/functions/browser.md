@@ -1,7 +1,7 @@
 ---
 title: Browser Menu
-description: Default Keys bindings and functions for the NeoMutt Browser Menu.
-keywords: neomutt, functions, browser, menu, bindings, keys, files
+description: Key bindings and functions for browsing files, directories, and IMAP/NNTP mailboxes in NeoMutt
+keywords: neomutt, functions, browser, menu, bindings, keys, files, directories, imap, nntp, mailbox, subscribe, change-dir, create-mailbox, toggle-mailboxes, file browser
 ---
 
 (menu-browser)=

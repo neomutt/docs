@@ -1,7 +1,7 @@
 ---
 title: About NeoMutt
-description: Introduction to NeoMutt, its community resources, and how to contribute
-keywords: neomutt, introduction, mailing lists, contributing, copyright
+description: Overview of NeoMutt as a text-based MIME mail client, its community resources, contribution guidelines, and project copyright
+keywords: neomutt, introduction, text-based mail client, mime, mailing lists, contributing, irc, copyright, acknowledgements, typographical conventions, command-line email, terminal mua
 diataxis_type: explanation
 ---
 

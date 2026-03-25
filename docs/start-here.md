@@ -1,7 +1,7 @@
 ---
 title: Start Here
-description: A beginner-friendly path to your first working NeoMutt setup
-keywords: neomutt, start here, beginner, setup
+description: Answer a few quick questions to find the right setup path for your email provider and preferences
+keywords: neomutt, start here, beginner, setup, getting started, gmail, office 365, imap, password manager, first config, onboarding, new user
 ---
 
 # Start Here

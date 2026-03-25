@@ -1,7 +1,7 @@
 ---
 title: Sidebar Menu
-description: Default Keys bindings and functions for the NeoMutt Sidebar Menu.
-keywords: neomutt, functions, sidebar, menu, bindings, keys
+description: Key bindings and functions for navigating, opening, and searching mailboxes in the NeoMutt sidebar panel
+keywords: neomutt, functions, sidebar, menu, bindings, keys, folder list, navigation panel, sidebar-open, sidebar-next, sidebar-prev, sidebar-toggle-visible, sidebar-start-search, mailbox list
 ---
 
 (menu-sidebar)=

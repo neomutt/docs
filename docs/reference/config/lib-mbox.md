@@ -1,7 +1,7 @@
 ---
 title: Mbox Options
-description: NeoMutt configuration variables for Mbox-format mailbox handling.
-keywords: neomutt, mbox, mbox_check_cur, mbox_field_delimiter, mbox_header_cache_verify, mbox_trash, configuration
+description: "Configuration variable for mbox and mmdf mailbox new-mail detection using file size instead of access time."
+keywords: neomutt, mbox, mmdf, check_mbox_size, new mail detection, file size, mailbox format, mail storage
 ---
 
 # Mbox Options

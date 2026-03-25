@@ -1,7 +1,7 @@
 ---
 title: Hooks Options
-description: NeoMutt configuration variables for command hooks buffer and persistence.
-keywords: neomutt, hooks, configuration
+description: "Configuration variables for hook pattern defaults, outgoing message saving, and fcc behavior."
+keywords: neomutt, hooks, default_hook, save_name, force_name, fcc-hook, send-hook, reply-hook, save-hook, pattern matching, outgoing mail
 ---
 
 # Hooks Options

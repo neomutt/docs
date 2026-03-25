@@ -1,7 +1,7 @@
 ---
 title: Mailing Lists
-description: XXX
-keywords: XXX
+description: Commands for defining mailing list addresses and marking lists as subscribed for proper reply handling.
+keywords: lists, unlists, subscribe, unsubscribe, mailing lists, subscriptions, mailing list addresses, list-reply, mail groups, list management
 ---
 
 # Mailing Lists

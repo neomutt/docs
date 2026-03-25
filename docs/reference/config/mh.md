@@ -1,7 +1,7 @@
 ---
 title: MH Options
-description: NeoMutt configuration variables for MH-format mailbox handling.
-keywords: neomutt, mh, mh_purge, mh_seq_flagged, mh_seq_replied, mh_seq_unseen, configuration
+description: "Configuration variables for MH mailbox format, including message deletion, and sequence names for flags."
+keywords: neomutt, mh, mh_purge, mh_seq_flagged, mh_seq_replied, mh_seq_unseen, mailbox format, mail storage, message sequences
 ---
 
 # MH Options

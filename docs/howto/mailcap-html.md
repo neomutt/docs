@@ -1,7 +1,7 @@
 ---
 title: Render HTML Email with Mailcap
-description: Configure mailcap and text browsers to view HTML email safely in NeoMutt
-keywords: mailcap, html, w3m, lynx, elinks, auto-view, copiousoutput
+description: Set up mailcap entries and text-mode browsers to render HTML email as plain text in NeoMutt
+keywords: mailcap, html, text/html, w3m, lynx, elinks, auto-view, copiousoutput, mailcap_path, mailcap_sanitize, rendering, security, text browser
 ---
 
 # Render HTML Email with Mailcap

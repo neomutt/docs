@@ -1,7 +1,7 @@
 ---
 title: Sending Email from the Command Line
-description: How to compose and send email using NeoMutt's command-line options
-keywords: neomutt, send, email, command-line, attach, draft, pipe, encrypt, sign
+description: Guide to composing, attaching files, piping, encrypting, and sending email from the NeoMutt command line
+keywords: neomutt, send, email, command-line, attach, draft, pipe, encrypt, sign, batch mode, smtp, sendmail, subject, recipients, scripting
 ---
 
 # Sending Email from the Command Line

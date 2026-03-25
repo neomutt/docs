@@ -1,7 +1,7 @@
 ---
 title: Use Compose Message Preview
-description: Show a preview of the message in the Compose Dialog in NeoMutt
-keywords: compose, preview, message preview, compose dialog
+description: Enable and configure a live message body preview pane inside the compose dialog before sending
+keywords: compose, preview, message preview, compose dialog, compose_show_preview, compose_preview_min_rows, compose_preview_above_attachments, preview-page-down, preview-page-up, draft preview
 ---
 
 # Use Compose Message Preview

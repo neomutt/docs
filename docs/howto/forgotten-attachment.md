@@ -1,7 +1,7 @@
 ---
 title: Detect Forgotten Attachments
-description: Alert the user when they forget to attach a file to an outgoing email in NeoMutt
-keywords: forgotten attachment, abort_noattach, attachment reminder, regex
+description: Warn before sending when the message body mentions attachments but none are attached
+keywords: forgotten attachment, abort_noattach, abort_noattach_regex, attachment reminder, regex, missing attachment, attachment warning, quadoption, send guard, quote_regex
 ---
 
 # Detect Forgotten Attachments

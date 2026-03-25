@@ -1,7 +1,7 @@
 ---
 title: "Autocrypt Options"
-description: "Reference for NeoMutt autocrypt configuration variables."
-keywords: "autocrypt, encryption, variables, neomutt"
+description: "Configuration variables for the Autocrypt automatic key exchange and encryption feature."
+keywords: "autocrypt, encryption, automatic encryption, key exchange, autocrypt_dir, autocrypt_reply, autocrypt_acct_format, gpg, passive encryption, e2e"
 ---
 
 # Autocrypt Options

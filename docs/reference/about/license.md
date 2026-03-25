@@ -1,7 +1,7 @@
 ---
 title: License
-description: Copyright and License information
-keywords: 
+description: Copyright and license information for the NeoMutt project and its source code
+keywords: neomutt, license, copyright, gpl, open source, legal
 ---
 
 # Copyright and License information

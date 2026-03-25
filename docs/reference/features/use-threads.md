@@ -1,7 +1,7 @@
 ---
 title: Use Threads
-description: Link, break, and configure threaded message views in NeoMutt
-keywords: threads, link-threads, break-thread, use_threads, sort, sort_aux, threading
+description: Configure flat, threaded, or reverse-threaded message views independently from sort order in NeoMutt
+keywords: threads, threading, use_threads, sort, sort_aux, sort-mailbox, sort-reverse, flat view, reverse threads, thread tree, conversation view, message ordering, status_format
 since: 2021-08-01
 ---
 

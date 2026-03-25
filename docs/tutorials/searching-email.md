@@ -1,7 +1,7 @@
 ---
 title: Searching and Filtering Email
-description: Step-by-step guide to finding messages using NeoMutt's search and pattern matching
-keywords: neomutt, search, filter, patterns, limit, notmuch, tutorial
+description: Search for messages with /, filter the index with limit, combine patterns, and save searches as macros
+keywords: neomutt, search, filter, limit, patterns, pattern matching, notmuch, macro, find email, query, message search, ~f, ~s, ~d, ~b
 ---
 
 # Searching and Filtering Email

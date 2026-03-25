@@ -1,6 +1,6 @@
 ---
 title: How-To Guides
-description: Practical directions to accomplish specific tasks with NeoMutt
+description: Goal-oriented guides covering mail protocols, encryption, composing, display, MIME, sidebar, configuration, and storage in NeoMutt
 ---
 
 # How-To Guides

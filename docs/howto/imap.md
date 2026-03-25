@@ -1,7 +1,7 @@
 ---
 title: Set Up IMAP
-description: Configure NeoMutt to work with remote IMAP mailboxes
-keywords: imap, remote mailbox, imap_user, imap_pass, imap_authenticators, folder browser, subscriptions
+description: Configure NeoMutt for remote IMAP mailboxes including subscriptions, folder browsing, polling, and authentication
+keywords: imap, imaps, remote mailbox, mail server, imap_user, imap_pass, imap_authenticators, folder browser, subscriptions, subscribe-to, unsubscribe-from, imap_check_subscribed, mail_check, sasl, gssapi, cram-md5, authentication
 ---
 
 # Set Up IMAP

@@ -1,7 +1,7 @@
 ---
 title: Sending & Custom Headers
-description: XXX
-keywords: XXX
+description: Commands for adding and removing custom headers on outgoing messages using my-header and unmy-header.
+keywords: my-header, unmy-header, custom headers, outgoing mail, send headers, x-mailer, email headers, compose, message headers, sending
 ---
 
 # Sending & Custom Headers

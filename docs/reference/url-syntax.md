@@ -1,7 +1,7 @@
 ---
 title: URL Syntax
-description: Reference for URL syntax used in NeoMutt for IMAP, POP3, and SMTP
-keywords: neomutt, URL, IMAP, POP3, SMTP, protocol, syntax
+description: Reference for URL syntax used in NeoMutt for IMAP, POP3, and SMTP connections including authentication and port options
+keywords: neomutt, url, imap, pop3, smtp, protocol, syntax, ssl, tls, authentication, username, password, port, server
 ---
 
 # URL Syntax

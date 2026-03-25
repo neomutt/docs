@@ -1,7 +1,7 @@
 ---
 title: Edit Input Fields
-description: Use NeoMutt's built-in line editor for prompts, header fields, and search
-keywords: editor, line editor, emacs, keybindings, completion, history, input, editing
+description: Use NeoMutt's built-in line editor for prompts, with Emacs-style keys, tab completion, and persistent history
+keywords: editor, line editor, emacs, keybindings, completion, history, input, editing, tab completion, history_file, save_history, kill-line, bind editor, external editor, word case
 ---
 
 # Edit Input Fields

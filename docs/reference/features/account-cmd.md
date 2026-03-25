@@ -1,7 +1,7 @@
 ---
 title: How to Use the Account Command
-description: Populate account credentials via an external command in NeoMutt
-keywords: account_command, credentials, password manager, external command, imap_user, imap_pass
+description: Use an external script to supply login credentials for IMAP, POP, and SMTP accounts in NeoMutt
+keywords: account_command, credentials, password manager, external command, imap_user, imap_pass, smtp_user, smtp_pass, authentication, secrets, per-account, login, password
 since: 2022-05-16
 ---
 

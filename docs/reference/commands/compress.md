@@ -1,7 +1,7 @@
 ---
 title: Compressed Mailboxes
-description: XXX
-keywords: XXX
+description: Commands for opening, closing, and appending to compressed mailboxes using external tools like gzip, bzip2, and xz.
+keywords: open-hook, close-hook, append-hook, compressed mailbox, gzip, bzip2, xz, decompress, compression, mailbox hooks, compressed folders
 ---
 
 # Compressed Mailboxes

@@ -1,7 +1,7 @@
 ---
 title: Compose to Sender
-description: Send new mail to the sender of the current message in NeoMutt
-keywords: compose, sender, new message, tagged messages
+description: Start a new email to the sender of the current or tagged messages without replying
+keywords: compose, sender, new message, tagged messages, compose-to-sender, bind, index, pager, new email, contact sender
 ---
 
 # Compose to Sender

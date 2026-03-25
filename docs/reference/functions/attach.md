@@ -1,7 +1,7 @@
 ---
 title: Attach Menu
-description: Default Keys bindings and functions for the NeoMutt Attach Menu.
-keywords: neomutt, functions, attach, menu, bindings, keys
+description: Key bindings and functions for viewing, saving, printing, and replying from email attachments in NeoMutt
+keywords: neomutt, functions, attach, menu, bindings, keys, attachments, save-entry, view-attach, view-mailcap, pipe-message, forward-message, reply, mime
 ---
 
 (menu-attach)=

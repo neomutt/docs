@@ -1,7 +1,7 @@
 ---
 title: "Attach Options"
-description: "Reference for NeoMutt attach configuration variables."
-keywords: "attachment, mime, variables, neomutt"
+description: "Configuration variables for attachment handling, saving, forwarding, bouncing, and MIME multipart options."
+keywords: "attachment, mime, attach_save_dir, attach_split, bounce, mime_forward, count_alternatives, digest_collapse, message_format, save attachments, forwarding"
 ---
 
 # Attach Options

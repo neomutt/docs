@@ -1,7 +1,7 @@
 ---
-title: "Conn Options"
-description: "Reference for NeoMutt compose mode configuration variables."
-keywords: "compose, editing, variables, neomutt"
+title: "Email Options"
+description: "Configuration variables for email display, MIME handling, mailcap, scoring, text reflow, and reply threading."
+keywords: "email, mime, mailcap, scoring, reflow_text, reply_regex, reverse_alias, rfc2047, spam, auto_subscribe, multipart, format flowed"
 ---
 
 # Conn Options

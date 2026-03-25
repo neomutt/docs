@@ -1,7 +1,7 @@
 ---
 title: Use the Sensible Browser
-description: Configure NeoMutt's mailbox browser to behave predictably with fixed or variable sort orders.
-keywords: sensible browser, browser_sort, mailbox browser, file browser
+description: Make NeoMutt's mailbox browser behave predictably with fixed or variable sort orders and smart cursor positioning.
+keywords: sensible browser, browser_sort, mailbox browser, file browser, sort order, alpha, unsorted, reverse-count, reverse-size, folder navigation, change-folder
 ---
 
 # Use the Sensible Browser

@@ -1,7 +1,7 @@
 ---
 title: Aliases & Address Groups
-description: XXX
-keywords: XXX
+description: Commands for creating email aliases, defining alternate addresses, and organizing contacts into named address groups.
+keywords: alias, unalias, alternates, unalternates, group, ungroup, address book, contacts, email aliases, address groups, shortcuts, neomutt configuration
 ---
 
 # Aliases & Address Groups

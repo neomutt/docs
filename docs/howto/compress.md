@@ -1,7 +1,7 @@
 ---
 title: Compress Mailboxes
-description: Read from and write to compressed or encrypted mailbox files using open-hook, close-hook and append-hook
-keywords: compress, compressed folders, open-hook, close-hook, append-hook, gzip, bzip2, xz, pgp, gpg, encrypted
+description: Read, write, and append to compressed or encrypted mailbox files using open-hook, close-hook, and append-hook
+keywords: compress, compressed folders, open-hook, close-hook, append-hook, gzip, bzip2, xz, pgp, gpg, encrypted, mbox_type, save_empty, tmp_dir, archived mailboxes
 ---
 
 # Compress Mailboxes

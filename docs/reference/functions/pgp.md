@@ -1,7 +1,7 @@
 ---
 title: PGP Menu
-description: Default Keys bindings and functions for the NeoMutt PGP Menu.
-keywords: neomutt, functions, pgp, menu, bindings, keys, encryption
+description: Key bindings and functions for selecting and verifying PGP keys when encrypting or signing email in NeoMutt
+keywords: neomutt, functions, pgp, menu, bindings, keys, encryption, signing, verify-key, view-name, public key, openpgp, key selection
 ---
 
 (menu-pgp)=

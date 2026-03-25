@@ -1,7 +1,7 @@
 ---
 title: Spam & Scoring
-description: XXX
-keywords: XXX
+description: Commands for defining spam detection rules based on header patterns and assigning cumulative scores to messages.
+keywords: spam, nospam, score, unscore, spam detection, spam filtering, message scoring, header matching, spam label, bogofilter, scoring rules
 ---
 
 # Spam & Scoring

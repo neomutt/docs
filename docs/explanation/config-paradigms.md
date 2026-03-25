@@ -1,6 +1,7 @@
 ---
 title: About Configuration Paradigms in NeoMutt
-description: Understanding NeoMutt's layered configuration philosophy
+description: How NeoMutt's configuration system works through set/toggle/reset commands, hooks, format strings, key bindings, macros, and Lua scripting
+keywords: neomutt, configuration, set, toggle, reset, hooks, format strings, key bindings, macros, lua scripting, source, folder-hook, send-hook, config management, debugging
 ---
 
 # About Configuration Paradigms in NeoMutt

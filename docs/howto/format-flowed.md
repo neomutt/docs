@@ -1,7 +1,7 @@
 ---
 title: Send Format=Flowed Messages
-description: Compose and view format=flowed text/plain messages in NeoMutt
-keywords: format=flowed, f=f, text_flowed, reflow, RFC3676
+description: Compose and display format=flowed (f=f) text/plain messages with paragraph reflowing and space-stuffing
+keywords: format=flowed, f=f, text_flowed, reflow, rfc3676, space-stuffing, reflow_text, reflow_wrap, reflow_space_quotes, paragraph, line wrapping, plain text, vim formatoptions
 ---
 
 # Send Format=Flowed Messages

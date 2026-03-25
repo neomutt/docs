@@ -1,7 +1,7 @@
 ---
 title: Core Commands
-description: XXX
-keywords: XXX
+description: Essential commands for scripting, conditional execution, sourcing config files, and general NeoMutt control.
+keywords: cd, echo, finish, ifdef, ifndef, source, version, scripting, conditional, config files, neomuttrc, directives, configuration commands
 ---
 
 # Core Commands

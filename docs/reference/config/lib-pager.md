@@ -1,7 +1,7 @@
 ---
 title: "Pager Options"
-description: "Reference for NeoMutt pager configuration variables."
-keywords: "pager, reading, display, variables, neomutt"
+description: "Configuration variables for the built-in pager display, wrapping, filtering, search context, and quoting."
+keywords: "pager, display_filter, pager_context, pager_index_lines, pager_stop, smart_wrap, markers, allow_ansi, smileys, tilde, message viewer, reading"
 ---
 
 # Pager Options

@@ -1,7 +1,7 @@
 ---
 title: Color Command
-description: XXX
-keywords: XXX
+description: Syntax reference for the NeoMutt color command covering simple, regex, and pattern color objects
+keywords: neomutt, color, colour, command, syntax, theme, regex, pattern, uncolor, attributes, foreground, background, index, status, sidebar
 ---
 
 # NeoMutt Color Command — Syntax Reference

@@ -1,7 +1,7 @@
 ---
 title: Command-line Crypto
-description: How NeoMutt handles email encryption and signing with OpenPGP and S/MIME
-keywords: encryption, gpgme, pgp, smime, signing, crypto, security
+description: Enable PGP signing and encryption when sending email from the command line, batch mode, or git-send-email
+keywords: encryption, gpgme, pgp, smime, signing, crypto, security, batch mode, command line, cli-crypto, git-send-email, crypt_autosign, crypt_opportunistic_encrypt, -C flag
 since: 2024-01-21
 ---
 

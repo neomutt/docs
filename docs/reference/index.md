@@ -1,6 +1,7 @@
 ---
 title: Reference
-description: Technical descriptions of NeoMutt's commands, options, and functions
+description: Index of NeoMutt reference material covering commands, config options, functions, features, and syntax
+keywords: neomutt, reference, commands, config, functions, features, syntax, options, releases
 ---
 
 :::{admonition} Diátaxis: Reference

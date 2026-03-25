@@ -1,7 +1,7 @@
 ---
 title: S/MIME Menu
-description: Default Keys bindings and functions for the NeoMutt S/MIME Menu.
-keywords: neomutt, functions, smime, s/mime, menu, bindings, keys, encryption
+description: Key bindings and functions for selecting and verifying S/MIME certificates when encrypting or signing email in NeoMutt
+keywords: neomutt, functions, smime, s/mime, menu, bindings, keys, encryption, certificates, signing, verify-key, view-name, certificate selection, digital signature
 ---
 
 (menu-smime)=

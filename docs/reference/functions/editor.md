@@ -1,7 +1,7 @@
 ---
 title: Editor Menu
-description: Default Keys bindings and functions for the NeoMutt Editor Menu.
-keywords: neomutt, functions, editor, menu, bindings, keys, input
+description: Key bindings and functions for the NeoMutt command-line editor including cursor movement, word editing, and tab completion
+keywords: neomutt, functions, editor, menu, bindings, keys, text input, command line, cursor movement, tab completion, history, kill-word, backward-char, forward-char, line editing
 ---
 
 (menu-editor)=

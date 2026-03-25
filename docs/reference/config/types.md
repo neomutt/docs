@@ -1,7 +1,7 @@
 ---
 title: Config Types
-description: Config types, subtypes and restrictions
-keywords:
+description: "Reference for all NeoMutt configuration variable types, including boolean, number, string, path, regex, and sort order."
+keywords: neomutt, config types, boolean, number, string, path, regex, quad, expando, sort order, enumeration, mbtable, slist, myvar, data types
 ---
 
 # Config Types

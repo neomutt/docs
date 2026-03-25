@@ -1,7 +1,7 @@
 ---
 title: Compose Menu
-description: Default Keys bindings and functions for the NeoMutt Compose Menu.
-keywords: neomutt, functions, compose, menu, bindings, keys, email
+description: Key bindings and functions for editing recipients, attachments, encryption, and sending email in the NeoMutt compose screen
+keywords: neomutt, functions, compose, menu, bindings, keys, writing email, message editor, send-message, attach-file, edit-to, edit-subject, pgp-menu, smime-menu, postpone-message, attachments
 ---
 
 (menu-compose)=
@@ -10,7 +10,7 @@ keywords: neomutt, functions, compose, menu, bindings, keys, email
 Prepare an email before sending it.
 You can edit recipients, subject, and headers, attach files, configure encryption, and send or postpone the message.
 
-| Function                | Default Keys                           | Description                                          | Inhertied from                      |
+| Function                | Default Keys                           | Description                                          | Inherited From                      |
 |-------------------------|----------------------------------------|------------------------------------------------------|-------------------------------------|
 | `<attach-file>`         | `a`                                    | Attach files to this message                         |                                     |
 | `<attach-key>`          | `Esc k`                                | Attach a PGP public key                              |                                     |

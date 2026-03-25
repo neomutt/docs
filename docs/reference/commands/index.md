@@ -1,7 +1,7 @@
 ---
 title: Commands
-description: Index of all NeoMutt configuration commands with syntax and descriptions
-keywords: neomutt, commands, configuration, neomuttrc, reference, index
+description: Complete reference index of all NeoMutt configuration commands with syntax, descriptions, and links to details.
+keywords: neomutt, commands, configuration, neomuttrc, reference, index, directives, command list, config commands, syntax reference, command summary
 ---
 
 # Commands

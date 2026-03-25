@@ -1,7 +1,7 @@
 ---
 title: Encryption Information Block
-description: Save a self-encrypted copy of outgoing emails and view encryption information
-keywords: neomutt, encrypt-to-self, pgp, smime, fcc, self-encrypt, encryption-info
+description: Display a block showing encryption recipient key details when viewing an encrypted message in NeoMutt
+keywords: neomutt, encryption, pgp, smime, gpgme, crypt_encryption_info, recipient keys, encrypted message, pager, security, decryption
 since: 2024-04-10
 ---
 

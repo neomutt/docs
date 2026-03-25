@@ -1,7 +1,7 @@
 ---
 title: Understanding Character Sets
-description: How NeoMutt handles character sets, encodings, and locale configuration
-keywords: charset, encoding, utf-8, unicode, locale, character set
+description: How NeoMutt determines character sets from locale settings, converts encodings, and provides charset-hook and iconv-hook for non-standard names
+keywords: charset, encoding, utf-8, unicode, locale, character set, charset-hook, iconv-hook, text encoding, iconv, iso-8859, $charset, mojibake, internationalization
 diataxis_type: explanation
 ---
 

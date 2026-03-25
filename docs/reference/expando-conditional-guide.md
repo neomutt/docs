@@ -1,7 +1,7 @@
 ---
 title: Conditional Expandos
-description: How to use conditional logic in NeoMutt format strings to show different text based on message properties
-keywords: neomutt, expando, conditional, format, if-else, date, boolean
+description: Guide to conditional logic in NeoMutt format strings including if-else branches, date conditions, nesting, and practical examples
+keywords: neomutt, expando, conditional, format string, if-else, date, boolean, nesting, index_format, status_format, sidebar_format, branching
 ---
 
 # Conditional Expandos

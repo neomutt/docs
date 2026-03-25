@@ -1,7 +1,7 @@
 ---
 title: Managing Multiple Email Accounts
-description: Step-by-step guide to configuring and switching between multiple email accounts in NeoMutt
-keywords: neomutt, multiple accounts, folder-hook, account-hook, sidebar, tutorial
+description: Configure two or more IMAP accounts and switch between them using folder-hook, account-hook, and the sidebar
+keywords: neomutt, multiple accounts, folder-hook, account-hook, send-hook, sidebar, named-mailboxes, identity, credentials, imap, account switching, multi-account
 ---
 
 # Managing Multiple Email Accounts

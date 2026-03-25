@@ -1,7 +1,7 @@
 ---
 title: Forward and Bounce Mail
-description: Forward or bounce existing messages to new recipients in NeoMutt
-keywords: forward, bounce, resend, mime-forward, inline forward
+description: Forward messages inline or as MIME attachments, and bounce messages to new recipients
+keywords: forward, bounce, resend, mime_forward, inline forward, forward_decode, forward_attachments, forward_format, forward_references, bounce-message, forward-message, weed, forward_edit
 ---
 
 # Forward and Bounce Mail

@@ -1,6 +1,7 @@
 ---
 title: About the Message Processing Pipeline
-description: How NeoMutt fetches, parses, and displays email messages
+description: How NeoMutt's pipeline fetches messages from mailbox backends, parses MIME structures, converts charsets, processes headers, and renders in the index and pager
+keywords: neomutt, message pipeline, fetching, parsing, mime, charset conversion, header processing, indexing, threading, pager, index, mailbox backends, imap, maildir, display filtering
 ---
 
 # About the Message Processing Pipeline

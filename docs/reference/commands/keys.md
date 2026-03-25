@@ -1,7 +1,7 @@
 ---
 title: Key Bindings & Macros
-description: XXX
-keywords: XXX
+description: Commands for binding keys to functions, defining keyboard macros, executing functions, and pushing keystrokes.
+keywords: bind, unbind, macro, unmacro, exec, push, key bindings, keyboard macros, keymaps, shortcuts, hotkeys, input queue, function execution
 ---
 
 # Key Bindings & Macros

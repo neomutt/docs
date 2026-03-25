@@ -1,7 +1,7 @@
 ---
 title: MIME & Attachments
-description: XXX
-keywords: XXX
+description: Commands for MIME type handling, auto-view, attachment counting, alternative order, and mailto URL header control.
+keywords: alternative-order, auto-view, attachments, unattachments, mime-lookup, mailto-allow, mime types, mailcap, multipart, inline display, attachment rules, content type
 ---
 
 # MIME & Attachments

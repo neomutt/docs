@@ -1,7 +1,7 @@
 ---
 title: Ncrypt Options
-description: NeoMutt configuration variables for Ncrypt-format mailbox handling.
-keywords: neomutt, ncrypt, ncrypt_purge, ncrypt_seq_flagged, ncrypt_seq_replied, ncrypt_seq_unseen, configuration
+description: "Configuration variables for PGP and S/MIME cryptography, signing, encryption, GPGME, and protected headers."
+keywords: neomutt, ncrypt, pgp, smime, gpgme, encryption, signing, cryptography, crypt_opportunistic_encrypt, protected headers, certificates, security
 ---
 
 # Ncrypt Options

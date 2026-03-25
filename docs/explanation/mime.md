@@ -1,7 +1,7 @@
 ---
 title: Understanding MIME
-description: How NeoMutt handles MIME types, multipart/multilingual, and multipart/related emails
-keywords: mime, multipart, multilingual, related, attachments, content-type
+description: How NeoMutt handles MIME types, composes multipart/multilingual and multipart/related emails, and uses mime.types and mailcap for rendering
+keywords: mime, multipart, multilingual, related, attachments, content-type, mailcap, mime.types, $preferred_languages, content-id, rfc8255, rfc2387, group-multilingual, group-related, email attachments
 diataxis_type: explanation
 ---
 

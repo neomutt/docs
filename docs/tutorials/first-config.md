@@ -1,7 +1,7 @@
 ---
 title: Writing Your First Configuration
-description: Learn where NeoMutt looks for config files and how to write your first neomuttrc
-keywords: neomutt, configuration, neomuttrc, config, tutorial, setup
+description: Create a minimal neomuttrc, understand config file locations and search order, and learn initialization file syntax
+keywords: neomutt, configuration, neomuttrc, config file, setup, imap, smtp, folder, spoolfile, system config, user config, config priority, config syntax, initialization file
 diataxis_type: tutorial
 ---
 

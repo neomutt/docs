@@ -1,7 +1,7 @@
 ---
 title: Autocrypt Menu
-description: Default Keys bindings and functions for the NeoMutt Autocrypt Account Menu.
-keywords: neomutt, functions, autocrypt, menu, bindings, keys, encryption
+description: Key bindings and functions for creating, deleting, and managing Autocrypt encryption accounts in NeoMutt
+keywords: neomutt, functions, autocrypt, menu, bindings, keys, encryption, automatic encryption, create-account, delete-account, toggle-active, toggle-prefer-encrypt, key management
 ---
 
 (menu-autocrypt)=

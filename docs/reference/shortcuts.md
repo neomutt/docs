@@ -1,7 +1,7 @@
 ---
 title: Mailbox Shortcuts
-description: Reference for NeoMutt mailbox path shortcuts and special characters
-keywords: neomutt, shortcuts, mailbox, path, folder
+description: Reference for NeoMutt special characters that expand to mailbox paths like spool_file, mbox, record, and folder
+keywords: neomutt, shortcuts, mailbox, path, folder, spool_file, mbox, record, folder-hook, special characters, navigation
 ---
 
 # Mailbox Shortcuts

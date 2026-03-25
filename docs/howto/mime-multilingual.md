@@ -1,7 +1,7 @@
 ---
 title: Handle Multilingual Messages
-description: Read and compose multipart/multilingual and multipart/related emails in NeoMutt
-keywords: multipart, multilingual, related, preferred_languages, Content-Language, Content-ID, RFC8255, RFC2387
+description: Read and compose multipart/multilingual and multipart/related emails with language and content-ID support in NeoMutt
+keywords: multipart, multilingual, related, preferred_languages, content-language, content-id, rfc8255, rfc2387, group-multilingual, group-related, language selection, internationalization, compound objects, inline images
 ---
 
 # Handle Multilingual Messages

@@ -1,6 +1,7 @@
 ---
 title: Explanation
-description: Background, context, and understanding of NeoMutt concepts
+description: Understanding-oriented discussion of NeoMutt's design, concepts, history, and architecture for deeper insight into how and why it works
+keywords: neomutt, explanation, concepts, background, design, understanding, architecture, mime, encryption, security, threading, performance, configuration
 ---
 
 :::{admonition} Diátaxis: Explanation

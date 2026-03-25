@@ -1,7 +1,7 @@
 ---
 title: Use Address Groups
-description: Group addresses logically for use in patterns and hooks
-keywords: address groups, group, ungroup, patterns, hooks
+description: Create named address groups for use in patterns, hooks, and commands like alias, lists, and alternates
+keywords: address groups, group, ungroup, patterns, hooks, alias, lists, subscribe, alternates, regex, mailing list, named group, implicit group
 ---
 
 # Use Address Groups

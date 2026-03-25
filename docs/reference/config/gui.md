@@ -1,7 +1,7 @@
 ---
 title: GUI Options
-description: Reference for NeoMutt gui configuration variables
-keywords: neomutt, configuration, variables, gui, settings
+description: "Configuration variables for thread display, collapsing, duplicate detection, and thread tree appearance."
+keywords: neomutt, gui, threads, collapse_flagged, collapse_unread, duplicate_threads, hide_limited, hide_missing, narrow_tree, strict_threads, sort_re, thread tree
 ---
 
 # GUI Options

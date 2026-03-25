@@ -1,7 +1,7 @@
 ---
 title: Dialog Menu
-description: Default Keys bindings and functions for the NeoMutt Dialog Menu.
-keywords: neomutt, functions, dialog, menu, bindings, keys, input
+description: Key bindings for the NeoMutt dialog pop-up used for help screens and log messages
+keywords: neomutt, functions, dialog, menu, bindings, keys, pop-up, help screen, log messages, exit, quit, informational
 ---
 
 (menu-dialog)=

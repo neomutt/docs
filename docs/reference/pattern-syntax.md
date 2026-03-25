@@ -1,7 +1,7 @@
 ---
 title: Pattern Syntax
-description: XXX
-keywords: XXX
+description: Syntax reference for NeoMutt message and alias patterns including flag, address, date, range, and thread operators
+keywords: neomutt, pattern, syntax, message, alias, search, filter, limit, flag, address, date, range, thread, regex, imap, simple search, boolean operators
 ---
 
 # Pattern Syntax

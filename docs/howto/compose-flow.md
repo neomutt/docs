@@ -1,7 +1,7 @@
 ---
 title: Use the Compose Flow
-description: Understand the order of steps and hook execution during NeoMutt message composition
-keywords: compose, send, hooks, send-hook, reply-hook, fcc, message flow
+description: Understand the step-by-step order of header setting, hook execution, and encryption during message composition
+keywords: compose, send, hooks, send-hook, reply-hook, send2-hook, fcc-hook, fcc, message flow, compose menu, editor, encryption, signing, my-header, reverse_name, fcc_before_send
 ---
 
 # Use the Compose Flow

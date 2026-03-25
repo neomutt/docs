@@ -1,7 +1,7 @@
 ---
 title: Features
-description: Recent new features of NeoMutt
-keywords: 
+description: Index of NeoMutt features including encryption, threading, sidebar, caching, tagging, and scripting extensions
+keywords: neomutt, features, feature list, extensions, enhancements, patches, capabilities
 ---
 
 # Features

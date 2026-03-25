@@ -1,7 +1,7 @@
 ---
 title: Lua Scripting
-description: XXX
-keywords: XXX
+description: Commands for executing inline Lua expressions and sourcing Lua script files to extend NeoMutt.
+keywords: lua, lua-source, scripting, lua scripting, mutt.set, mutt.get, mutt.message, automation, extensibility, plugins
 ---
 
 # Lua Scripting

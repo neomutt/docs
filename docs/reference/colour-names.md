@@ -1,7 +1,7 @@
 ---
 title: Colour Names and Attributes
-description: Reference for NeoMutt colour names, attributes, syntax, and colorable objects
-keywords: neomutt, color, colour, attributes, theme, terminal
+description: Reference for NeoMutt colour names, modifiers, attributes, ANSI escape sequences, and colorable objects
+keywords: neomutt, color, colour, attributes, theme, terminal, names, modifiers, bright, default, palette, 256-color, rgb, ansi, escape sequences
 ---
 
 # Colour Names and Attributes

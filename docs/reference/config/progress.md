@@ -1,7 +1,7 @@
 ---
 title: Progress Options
-description: Progress protocol configuration variables for NeoMutt
-keywords: pop_auth_try_all, pop_authenticators, pop_check_interval, pop_delete, pop_host, pop_last, pop_oauth_refresh_command, pop_pass, pop_reconnect, pop_user
+description: "Configuration variables for progress indicators during network transfers, mailbox reading, and writing."
+keywords: neomutt, progress, net_inc, read_inc, write_inc, time_inc, progress bar, performance, tuning, status updates, transfer speed
 ---
 
 # Progress Options

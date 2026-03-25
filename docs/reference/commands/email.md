@@ -1,7 +1,7 @@
 ---
 title: Email Display & Headers
-description: XXX
-keywords: XXX
+description: Commands for controlling which message headers are shown, their display order, and subject line rewriting rules.
+keywords: ignore, unignore, header-order, unheader-order, subject-regex, unsubject-regex, headers, display, message view, subject rewrite, email headers, pager
 ---
 
 # Email Display & Headers

@@ -1,7 +1,7 @@
 ---
 title: NeoMutt Releases
-description: Packaged NeoMutt Versions
-keywords: 
+description: Index of all NeoMutt release notes with features, bug fixes, and changes for each packaged version.
+keywords: neomutt, releases, release notes, changelog, versions, updates, bug fixes, features, history, packaged versions
 ---
 
 # NeoMutt Releases

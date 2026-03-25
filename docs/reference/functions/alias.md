@@ -1,7 +1,7 @@
 ---
 title: Alias Menu
-description: Default Keys bindings and functions for the NeoMutt Alias Menu.
-keywords: neomutt, functions, alias, menu, bindings, keys, address book
+description: Key bindings and functions for browsing, sorting, and selecting email address aliases in NeoMutt
+keywords: neomutt, functions, alias, menu, bindings, keys, address book, contacts, delete-entry, sort-alias, tag-pattern, mail, email addresses
 ---
 
 (menu-alias)=

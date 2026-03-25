@@ -1,7 +1,7 @@
 ---
 title: Understanding Performance Tuning
-description: How to optimize NeoMutt performance for reading mailboxes, remote folders, and searching
-keywords: performance, tuning, header cache, body cache, search, imap, maildir
+description: How to optimize NeoMutt performance using header caching, body caching, progress counters, IMAP QRESYNC, deflate compression, and efficient search patterns
+keywords: performance, tuning, header cache, body cache, $read_inc, $write_inc, $time_inc, $imap_qresync, $imap_deflate, search, limit, string search, regex, imap, maildir, optimization, speed
 diataxis_type: explanation
 ---
 

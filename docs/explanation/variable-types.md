@@ -1,7 +1,7 @@
 ---
 title: Understanding Variable Types
-description: How NeoMutt configuration variables work, including types, commands, and user-defined variables
-keywords: variables, set, unset, reset, toggle, boolean, number, string, quadoption, configuration
+description: How NeoMutt's typed configuration variables work, including boolean, number, string, quadoption, path, and user-defined my_ variables with type conversion rules
+keywords: variables, set, unset, reset, toggle, boolean, number, string, quadoption, path, sort order, regular expression, my_ variables, user-defined variables, type conversion, configuration, $-expansion
 diataxis_type: explanation
 ---
 

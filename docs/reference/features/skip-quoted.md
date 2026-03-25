@@ -1,7 +1,7 @@
 ---
 title: How to Use Skip-Quoted
-description: Manage quoted text display in the NeoMutt pager with skip-quoted, toggle-quoted, and skip-headers
-keywords: skip-quoted, toggle-quoted, skip-headers, pager, quoted text, pager_skip_quoted_context, toggle_quoted_show_levels
+description: Control how the pager skips over quoted text, toggles quote visibility, and jumps past headers in NeoMutt
+keywords: skip-quoted, toggle-quoted, skip-headers, pager, quoted text, pager_skip_quoted_context, toggle_quoted_show_levels, skip_quoted_offset, quote levels, reply context, email reading
 since: 2021-02-05
 ---
 

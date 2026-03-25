@@ -1,7 +1,7 @@
 ---
 title: Use Conditional Config (ifdef)
-description: Use ifdef, ifndef, and finish commands to share config files across different NeoMutt versions
-keywords: ifdef, ifndef, finish, conditional config, feature detection, compile options
+description: Use ifdef, ifndef, and finish commands to share config files across NeoMutt builds with different compiled-in features
+keywords: ifdef, ifndef, finish, conditional config, feature detection, compile options, portable config, symbol testing, config variable, function, command, environment variable, shared configuration
 ---
 
 # Use Conditional Config (ifdef)

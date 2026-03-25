@@ -1,7 +1,7 @@
 ---
 title: Use Different Mailbox Formats
-description: Choose and configure the right local mailbox format (mbox, MMDF, MH, Maildir) for your NeoMutt setup
-keywords: mailbox, mbox, mmdf, mh, maildir, format, mbox_type
+description: Understand and choose between the four local mailbox formats — mbox, MMDF, MH, and Maildir — supported by NeoMutt
+keywords: mailbox, mbox, mmdf, mh, maildir, format, mbox_type, local storage, mail format, file locking, message store, qmail, from_ line, concurrency, header caching
 ---
 
 # Use Different Mailbox Formats

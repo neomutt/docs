@@ -1,7 +1,7 @@
 ---
 title: Set Up POP3
-description: Configure NeoMutt to access remote POP3 mailboxes and fetch mail
-keywords: pop3, remote mailbox, fetch mail, pop_host, pop_check_interval
+description: Configure NeoMutt to access remote POP3 mailboxes, poll for new messages, and fetch mail to a local spool file.
+keywords: pop3, remote mailbox, fetch mail, pop_host, pop_check_interval, pop_pass, fetch-mail, spool_file, pops, header caching, body caching, fetchmail
 ---
 
 # Set Up POP3

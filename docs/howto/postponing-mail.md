@@ -1,7 +1,7 @@
 ---
 title: Postpone Mail
-description: Delay sending a message and resume it later in NeoMutt
-keywords: postpone, draft, resume, recall, compose
+description: Save a message as a draft while composing and resume or recall it later in NeoMutt.
+keywords: postpone, draft, resume, recall, compose, postpone-message, postponed, drafts, delay sending, save draft, -p flag
 ---
 
 # Postpone Mail

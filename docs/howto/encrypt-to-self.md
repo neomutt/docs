@@ -1,7 +1,7 @@
 ---
 title: "Encrypt to Self"
-description: Save a self-encrypted copy of outgoing emails and view encryption information
-keywords: neomutt, encrypt-to-self, pgp, smime, fcc, self-encrypt, encryption-info
+description: Keep a readable copy of outgoing encrypted emails by encrypting the Fcc to yourself, plus view encryption info
+keywords: neomutt, encrypt-to-self, pgp, smime, fcc, self-encrypt, encryption-info, pgp_self_encrypt, smime_self_encrypt, pgp_default_key, smime_default_key, crypt_encryption_info, fcc_clear
 ---
 
 # Encrypt to Self

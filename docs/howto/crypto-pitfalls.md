@@ -1,7 +1,7 @@
 ---
 title: Avoid Common Crypto Pitfalls
-description: Fix the most common OpenPGP and S/MIME issues in NeoMutt
-keywords: gpgme, pgp, smime, pinentry, gpg-agent, crypto
+description: Troubleshoot common OpenPGP and S/MIME problems including pinentry, GPGME setup, key selection, and trust
+keywords: gpgme, pgp, smime, pinentry, gpg-agent, crypto, crypt_use_gpgme, pgp_default_key, smime_default_key, troubleshooting, encryption, signing, certificate trust
 ---
 
 # Avoid Common Crypto Pitfalls

@@ -1,7 +1,7 @@
 ---
 title: Postpone Menu
-description: Default Keys bindings and functions for the NeoMutt Postpone Menu.
-keywords: neomutt, functions, postpone, menu, bindings, keys, drafts
+description: Key bindings and functions for selecting, deleting, and resuming postponed draft emails in NeoMutt
+keywords: neomutt, functions, postpone, menu, bindings, keys, drafts, saved drafts, resume editing, delete-entry, undelete-entry, recall message
 ---
 
 (menu-postpone)=

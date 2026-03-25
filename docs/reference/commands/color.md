@@ -1,7 +1,7 @@
 ---
 title: Color / UI Appearance
-description: XXX
-keywords: XXX
+description: Commands for setting foreground and background colors, attributes, and mono-mode styles on UI elements and message patterns.
+keywords: color, uncolor, mono, unmono, theme, appearance, foreground, background, attributes, bold, underline, index color, body color, header color, ui styling
 ---
 
 # Color / UI Appearance

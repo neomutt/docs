@@ -1,6 +1,6 @@
 ---
 title: Tutorials
-description: Step-by-step lessons to get started with NeoMutt
+description: Learning-oriented tutorials that guide you step by step through configuring and using NeoMutt
 ---
 
 # Tutorials

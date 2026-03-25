@@ -1,7 +1,7 @@
 ---
 title: Use Notmuch Advanced Queries
-description: Build complex Notmuch queries and windowed virtual mailboxes in NeoMutt
-keywords: notmuch, query, virtual mailbox, nm_query_window, vfolder-from-query
+description: Build complex Notmuch queries, create virtual mailboxes on the fly, and use windowed time-based searches in NeoMutt.
+keywords: notmuch, query, virtual mailbox, nm_query_window_enable, nm_query_window_duration, nm_query_window_timebase, vfolder-from-query, boolean operators, full-text search, windowed queries, named-mailboxes
 ---
 
 # Use Notmuch Advanced Queries

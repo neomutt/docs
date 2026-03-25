@@ -1,7 +1,7 @@
 ---
 title: Use Quasi-Delete
-description: Mark emails that should be hidden from the index but not deleted using the quasi-delete feature
-keywords: quasi-delete, hide, notmuch, index, sync-mailbox
+description: Mark emails to be hidden from the index without deleting them from disk, useful with Notmuch virtual folders.
+keywords: quasi-delete, hide, notmuch, index, sync-mailbox, virtual folder, soft delete, hide message, modify-labels-then-hide
 ---
 
 # Use Quasi-Delete

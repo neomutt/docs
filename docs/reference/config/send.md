@@ -1,7 +1,7 @@
 ---
 title: Send Options
-description: Send protocol configuration variables for NeoMutt
-keywords: pop_auth_try_all, pop_authenticators, pop_check_interval, pop_delete, pop_host, pop_last, pop_oauth_refresh_command, pop_pass, pop_reconnect, pop_user
+description: "Configuration variables for composing and sending email, SMTP settings, signatures, encoding, and reply attribution."
+keywords: neomutt, send, smtp, sendmail, smtp_url, signature, attribution_intro, forward_format, abort_noattach, allow_8bit, encoding, outgoing mail, reply, compose
 ---
 
 # Send Options
