@@ -27,6 +27,19 @@
   flex: 0 0 250px !important;
 }
 
+/* ── Hide article footer ────────────────────────────────────── */
+footer.bd-footer-content { display:none; }
+
+/* ── Article body background ────────────────────────────────── */
+html[data-theme=light] .bd-article-container { background: #fff; }
+html[data-theme=dark]  .bd-article-container { background: #000; }
+@media (prefers-color-scheme: light) {
+  html[data-theme=auto] .bd-article-container { background: #fff; }
+}
+@media (prefers-color-scheme: dark) {
+  html[data-theme=auto] .bd-article-container { background: #000; }
+}
+
 /* ── Brand colours — light mode ─────────────────────────────── */
 html[data-theme=light] {
   --pst-color-primary: #005461;
