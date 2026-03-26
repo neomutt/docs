@@ -20,6 +20,26 @@ Start with prerequisites, give the steps, show the expected result.
 How-to guides are **goal-oriented** directions that help you accomplish specific tasks with NeoMutt.
 Each guide addresses a real-world problem and provides practical steps to solve it.
 
+## Recent
+
+```{toctree}
+---
+maxdepth: 1
+---
+account-cmd
+command-line-crypto
+compose-preview
+custom-tagging
+encryption-information-block
+fuzzy-search
+header-cache-compression
+lua-scripting
+pager-read-delay
+sidebar-search
+skip-quoted
+use-threads
+```
+
 ## Mail Protocols & Authentication
 
 ```{toctree}
@@ -32,7 +52,6 @@ imap-performance
 pop
 smtp
 oauth
-account-cmd
 tls-sni
 ```
 
@@ -64,7 +83,6 @@ postponing-mail
 format-flowed
 multiple-fcc
 compose-to-sender
-compose-preview
 forgotten-attachment
 ```
 
@@ -78,8 +96,6 @@ maxdepth: 1
 header-display
 threads
 threading-scoring-workflows
-skip-quoted
-pager-read-delay
 display-munging
 ```
 

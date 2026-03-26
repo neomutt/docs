@@ -1,11 +1,11 @@
 ---
-title: Compose Message Preview
+title: Compose Preview
 description: Display a live preview of the email body inside the compose dialog before sending in NeoMutt
 keywords: compose, preview, message preview, compose dialog, compose_show_preview, compose_preview_min_rows, compose_preview_above_attachments, preview-page-down, preview-page-up, email body, sending
 since: 2024-12-12
 ---
 
-# Compose Message Preview
+# Compose Preview
 
 ## Support
 

@@ -53,9 +53,9 @@ config/types
 
 ```{toctree}
 ---
-maxdepth: 2
+maxdepth: 1
 ---
-features/index.md
+features
 ```
 
 ## Functions
