@@ -1,10 +1,10 @@
 ---
-title: Use Notmuch
+title: Notmuch
 description: Set up Notmuch integration in NeoMutt for full-text email search, virtual folders, tagging, and windowed queries.
 keywords: notmuch, search, virtual folder, vfolder, tagging, indexing, full-text search, query, nm_default_url, nm_query_type, nm_query_window, change-vfolder, vfolder-from-query, xapian
 ---
 
-# Use Notmuch
+# Notmuch
 
 ## Support
 
@@ -183,12 +183,3 @@ bind index '>' vfolder-window-forward
 
 - **Compile-Time Features**
 
-## Known Bugs
-
-None
-
-## Credits
-
-Karel Zak, Chris Mason, Christoph Rissner, David Riebenbauer, David Sterba, David Wilson, Don Zickus, Eric Davis, Jan Synacek, Jeremiah C.
-Foster, Josh Poimboeuf, Kirill A.
-Shutemov, Luke Macken, Mantas Mikulėnas, Patrick Brisbin, Philippe Le Brouster, Raghavendra D Prabhu, Sami Farin, Stefan Assmann, Stefan Kuhn, Tim Stoakes, Vladimir Marek, Víctor Manuel Jáquez Leal, Richard Russon, Bernard 'Guyzmo' Pratz

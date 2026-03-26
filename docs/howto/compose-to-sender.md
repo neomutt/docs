@@ -36,10 +36,3 @@ bind index,pager @ compose-to-sender
 # vim: filetype=neomuttrc
 ```
 
-## Known Bugs
-
-None
-
-## Credits
-
-Brian Medley, Guillaume Brogi

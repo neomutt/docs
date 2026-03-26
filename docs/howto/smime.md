@@ -4,7 +4,7 @@ description: Configure and use S/MIME encryption and signing in NeoMutt with GPG
 keywords: neomutt, smime, s/mime, certificates, gpgsm, gpgme, encryption, signing, x509, crypt_use_gpgme, smime_default_key, smime_self_encrypt, smime_keys, pkcs12, digital signatures, certificate authority
 ---
 
-# Use S/MIME
+# S/MIME
 
 ## Prerequisites
 
@@ -25,7 +25,7 @@ If you have complex crypto needs, you can enable "classic mode" by disabling GPG
 For example config, see `smime.rc` in the [Contrib repository](https://github.com/neomutt/neomutt-contrib/).
 
 ```neomuttrc
-# Use manual crypto functions
+# Manual crypto functions
 unset crypt_use_gpgme
 set smime_decrypt_command = "..."
 # ...

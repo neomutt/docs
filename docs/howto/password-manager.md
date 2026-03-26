@@ -1,10 +1,10 @@
 ---
-title: Use a Password Manager
+title: Password Manager
 description: Store and retrieve mail account passwords securely using pass, GPG, GNOME Keyring, macOS Keychain, or account_command.
 keywords: password, password manager, pass, gpg, gnome keyring, keychain, account_command, imap_pass, smtp_pass, credentials, secret-tool, security, encryption
 ---
 
-# Use a Password Manager
+# Password Manager
 
 ## Prerequisites
 

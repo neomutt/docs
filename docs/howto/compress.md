@@ -187,6 +187,3 @@ close-hook  '\.gpg$' "gpg --encrypt --recipient YourGpgUserIdOrKeyId < '%t' > '%
 - `$save_empty`
 - **folder-hook**
 
-## Credits
-
-Roland Rosenfeld, Alain Penders, Christoph "Myon" Berg, Evgeni Golov, Richard Russon

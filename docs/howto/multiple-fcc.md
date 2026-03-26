@@ -1,10 +1,10 @@
 ---
-title: Use Multiple Fcc
+title: Multiple Fcc
 description: Save copies of outgoing messages to multiple folders using edit-fcc or fcc-hook in NeoMutt
 keywords: fcc, multiple copies, outgoing mail, record, fcc-hook, edit-fcc, compose menu, sent mail, folder, carbon copy
 ---
 
-# Use Multiple Fcc
+# Multiple Fcc
 
 ## Introduction
 
@@ -22,10 +22,3 @@ The "fcc" field of an email can be set in two ways:
 - {ref}`$record <record>`
 - **fcc-hook**
 
-## Known Bugs
-
-None
-
-## Credits
-
-Omen Wild, Richard Russon

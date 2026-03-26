@@ -1,10 +1,10 @@
 ---
-title: Use NNTP (Usenet)
+title: NNTP (Usenet)
 description: Configure NeoMutt to read, post, and manage Usenet newsgroups via NNTP with subscriptions, caching, and threading.
 keywords: nntp, usenet, newsgroups, newsrc, news server, subscribe, catchup, post, followup, news_cache_dir, nntp_poll, group_index_format, change-newsgroup, articles
 ---
 
-# Use NNTP (Usenet)
+# NNTP (Usenet)
 
 ## Introduction
 
@@ -177,10 +177,3 @@ bind index \CG get-message
 # vim: filetype=neomuttrc
 ```
 
-## Known Bugs
-
-None
-
-## Credits
-
-Vsevolod Volkov, Felix von Leitner, Richard Russon

@@ -99,10 +99,3 @@ set header_cache_compress_method = ""
 # vim: filetype=neomuttrc
 ```
 
-### Known Bugs
-
-None
-
-### Credits
-
-Tino Reichardt

@@ -1,10 +1,10 @@
 ---
-title: Use Format Strings
+title: Format Strings
 description: Customise index, status bar, and other displays using format strings, conditionals, filters, padding, and dynamic hooks
 keywords: format strings, index_format, status_format, expandos, conditionals, nested-if, cond-date, initials, index-format-hook, padding, filters, width, justification, centering, strftime, size_show_bytes, pager_format
 ---
 
-# Use Format Strings
+# Format Strings
 
 ## Basic Usage
 

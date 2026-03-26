@@ -1,10 +1,10 @@
 ---
-title: Use Kyoto Cabinet / LMDB
+title: Kyoto Cabinet / LMDB
 description: Set up Kyoto Cabinet or LMDB as storage backends for the NeoMutt header cache
 keywords: kyoto cabinet, lmdb, header cache, hcache, backend, database, tokyocabinet, storage, compile option, --with-kyotocabinet, --with-lmdb, caching, key-value store
 ---
 
-# Use Kyoto Cabinet / LMDB
+# Kyoto Cabinet / LMDB
 
 ## Kyoto Cabinet
 
@@ -30,10 +30,6 @@ It is enabled at configure time with the *--with-kyotocabinet=\<path\>* switch.
 - [Local Caching](caching.md)
 - [Kyoto Cabinet](https://dbmx.net/kyotocabinet/)
 
-### Known Bugs
-
-None
-
 ### Credits
 
 Clemens Lang
@@ -55,10 +51,3 @@ It is not recommended to store the lmdb database on a shared drive.
 
 - [Local Caching](caching.md)
 
-### Known Bugs
-
-None
-
-### Credits
-
-Pietro Cerutti, Jan-Piet Mens, Clemens Lang

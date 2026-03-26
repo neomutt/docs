@@ -1,11 +1,11 @@
 ---
-title: Use Pager Read Delay
+title: Pager Read Delay
 description: Configure the pager to preview messages without immediately marking them as read using a time-based delay.
 keywords: pager, read delay, preview, pager_read_delay, new message, mark read, unread, pager_index_lines, message status, new flag
 since: 2021-06-16
 ---
 
-# Use Pager Read Delay
+# Pager Read Delay
 
 ## Support
 

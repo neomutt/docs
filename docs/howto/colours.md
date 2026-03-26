@@ -407,10 +407,6 @@ color index_size cyan default
 - [Color command](#using-color-and-mono-video-attributes)
 - [Status-Color feature](#status-color-feature)
 
-### Index Color Known Bugs
-
-None
-
 ### Index Color Credits
 
 Christian Aichinger, Christoph "Myon" Berg, Elimar Riesebieter, Eric Davis, Vladimir Marek, Richard Russon
@@ -502,10 +498,6 @@ color status brightwhite default 'NeoMutt: ([^ ]+)' 1
 - [Index-Color feature](#index-color-feature)
 - [Color command](#using-color-and-mono-video-attributes)
 
-### Status Color Known Bugs
-
-None
-
 ### Status Color Credits
 
 David Sterba, Thomas Glanzmann, Kirill A.
@@ -569,10 +561,3 @@ color   attach_headers     brightmagenta   default    "invalid node with packet 
 - [Color command](#using-color-and-mono-video-attributes)
 - Regular Expressions
 
-### Attach Headers Color Known Bugs
-
-None
-
-### Attach Headers Color Credits
-
-Guillaume Brogi

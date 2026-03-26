@@ -485,14 +485,14 @@ application/x-tar; file-roller %s &; x-neomutt-keep
 # Some programs watch any files they have open.
 # If NeoMutt deleted the file, the program would close prematurely.
 
-# Use a custom script to manage the file's lifespan.
+# A custom script to manage the file's lifespan.
 application/pdf; my-pdf-script.sh %s; x-neomutt-keep
 ```
 
 This mailcap file shows quite a number of examples:
 
 ```
-# Use xanim to view all videos Xanim produces a header on startup,
+# Xanim to view all videos Xanim produces a header on startup,
 # send that to /dev/null so I don't see it
 video/*;        xanim %s > /dev/null
 # Send html to a running firefox by remote
@@ -508,7 +508,7 @@ text/html;      lynx -dump %s; copiousoutput
 text/*;         more %s; print=enscript -2Gr %s
 # Firefox adds a flag to tell itself to view jpegs internally
 image/jpeg;     xv %s; x-mozilla-flags=internal
-# Use xv to view images if I'm running X
+# Xv to view images if I'm running X
 # In addition, this uses the \ to extend the line and set my editor
 # for images
 image/*;        xv %s; test=RunningX; edit=xpaint %s

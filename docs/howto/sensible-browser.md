@@ -1,10 +1,10 @@
 ---
-title: Use the Sensible Browser
+title: Sensible Browser
 description: Make NeoMutt's mailbox browser behave predictably with fixed or variable sort orders and smart cursor positioning.
 keywords: sensible browser, browser_sort, mailbox browser, file browser, sort order, alpha, unsorted, reverse-count, reverse-size, folder navigation, change-folder
 ---
 
-# Use the Sensible Browser
+# Sensible Browser
 
 The "sensible browser" is a set of small changes to NeoMutt's mailbox browser which make the browser behave in a more predictable way.
 
@@ -58,10 +58,3 @@ The ".." entry always stays at the top regardless of sort.
 
 - `$folder_format`
 
-## Known Bugs
-
-None
-
-## Credits
-
-Pierre-Elliott Bécue, Haakon Riiser, Richard Russon

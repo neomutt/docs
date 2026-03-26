@@ -1,10 +1,10 @@
 ---
-title: Use the Trash Folder
+title: Trash Folder
 description: Automatically move deleted emails to a trash folder instead of permanently removing them, with purge-message for hard delete
 keywords: trash, delete, purge, purge-message, trash folder, undelete, sync-mailbox, $trash, recycle bin, soft delete, deleted messages, folder-hook
 ---
 
-# Use the Trash Folder
+# Trash Folder
 
 ## Introduction
 
@@ -71,10 +71,3 @@ bind index D purge-message
 
 - **folder-hook**
 
-## Known Bugs
-
-None
-
-## Credits
-
-Cedric Duval, Benjamin Kuperman, Paul Miller, Richard Russon

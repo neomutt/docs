@@ -1,10 +1,10 @@
 ---
-title: Use Conditional Config (ifdef)
+title: Conditional Config (ifdef)
 description: Use ifdef, ifndef, and finish commands to share config files across NeoMutt builds with different compiled-in features
 keywords: ifdef, ifndef, finish, conditional config, feature detection, compile options, portable config, symbol testing, config variable, function, command, environment variable, shared configuration
 ---
 
-# Use Conditional Config (ifdef)
+# Conditional Config (ifdef)
 
 ## Introduction
 
@@ -86,10 +86,3 @@ ifdef imap-fetch-mail 'source ~/.neomutt/imap.rc'
 ifndef sidebar finish
 ```
 
-## Known Bugs
-
-None
-
-## Credits
-
-Cedric Duval, Matteo F. Vescovi, Richard Russon

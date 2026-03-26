@@ -65,10 +65,3 @@ set abort_noattach_regex = "\\<attach(|ed|ments?)\\>"
 - **The Attachment Menu**
 - **The Attachment Menu key mappings**
 
-## Known Bugs
-
-None
-
-## Credits
-
-Darshit Shah, Richard Russon, Johannes Weißl, Steven Ragnarök

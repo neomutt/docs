@@ -1,83 +1,61 @@
 ---
-title: Edit and Navigate Threads
-description: Link broken threads, break off-topic subthreads, and configure flat, threaded, or reverse threading views in NeoMutt
-keywords: threads, link-threads, break-thread, use_threads, sort, sort_aux, threading, conversation view, tree display, flat view, reverse threads, last-date, sort-mailbox, status_format, %T
+title: Use Threads
+description: Configure flat, threaded, or reverse-threaded message views independently from sort order in NeoMutt
+keywords: threads, threading, use_threads, sort, sort_aux, sort-mailbox, sort-reverse, flat view, reverse threads, thread tree, conversation view, message ordering, status_format
+since: 2021-08-01
 ---
 
-# Edit and Navigate Threads
-
-## Editing Threads
-
-NeoMutt has the ability to dynamically restructure threads that are broken either by misconfigured software or bad behavior from some correspondents.
-This allows you to clean your mailboxes from these annoyances which make it hard to follow a discussion.
-
-### Linking Threads
-
-Some mailers tend to "forget" to correctly set the "In-Reply-To:" and "References:" headers when replying to a message.
-This results in broken discussions because NeoMutt has not enough information to guess the correct threading.
-
-1. Tag a number of replies that belong to the same thread.
-2. Move to the parent message.
-3. Use the `<link-threads>` function (bound to `&` by default).
-
-The replies will then be connected to this parent message.
-
-### Breaking Threads
-
-On mailing lists, some people are in the bad habit of starting a new discussion by hitting "reply" to any message from the list and changing the subject to a totally unrelated one.
-
-1. Navigate to the message where the off-topic subthread begins.
-2. Use the `<break-thread>` function (bound to `#` by default).
-
-This will turn the subthread starting from the current message into a whole different thread.
-
-:::{admonition} 📷 Screenshot Needed
-:class: tip
-
-**Subject:** Linked and broken threads in the index
-
-**Description:** NeoMutt index view showing a thread that has been repaired with `<link-threads>` — several replies are now correctly nested under a parent message with tree-drawing characters (`|->`, `` `-> ``) connecting them.
-
-**Highlights:** The tree structure showing parent-child relationships between messages, with the thread connector characters visible in the index.
-:::
-
-## Use Threads Feature
+# Use Threads
 
 **Since:** NeoMutt 2021-08-01
 
-### Introduction
+## Introduction
 
-The "Use Threads" feature adds a new config option to allow more precise control of how threads are displayed in the index.
-Whether threads are in use is now orthogonal from how messages are sorted.
+The "Use Threads" feature adds a new config option to allow more precise
+control of how threads are displayed in the index. Whether threads are in use
+is now orthogonal from how messages are sorted.
 
-### Functions
+## Functions
 
-The "Use Threads" feature adds no new functions to NeoMutt.
-The existing functions `<sort-mailbox>` and `<sort-reverse>` are updated to toggle the state of `$use_threads` once it has been set, while preserving backwards-compatible behavior on `$sort` if this feature is not used.
+The "Use Threads" feature adds no new functions to NeoMutt. The existing
+functions `<sort-mailbox>` and `<sort-reverse>` are updated to toggle the
+state of `$use_threads` once it has been set, while preserving
+backwards-compatible behavior on `$sort` if this feature is not used.
 
-### Variables
+## Variables
 
-The "Use Threads" feature adds one new config option, {ref}`$use_threads <use-threads>`, which is an enumeration of possible thread views.
-The variable defaults to unset for the original behavior of overloading {ref}`$sort=threads <sort>` to enable sorting.
-It can be set to `flat` (or `no`) for an unthreaded view based on `$sort`, to `threads` (or `yes`) for a threaded view where roots appear above children, or to `reverse` for a threaded view where children appear above roots.
+The "Use Threads" feature adds one new config option,
+{ref}`$use_threads <use-threads>`, which is an enumeration of possible thread
+views. The variable defaults to unset for the original behavior of overloading
+{ref}`$sort=threads <sort>` to enable sorting. It can be set to `flat` (or
+`no`) for an unthreaded view based on `$sort`, to `threads` (or `yes`) for a
+threaded view where roots appear above children, or to `reverse` for a threaded
+view where children appear above roots.
 
-When sorting by threads, the value of {ref}`$sort <sort>` determines which thread floats to the top.
-If `$sort` does not contain `reverse-`, the latest thread goes to the bottom for `use_threads=threads` and to the top for `use_threads=reverse`; the direction of float is swapped if `$sort` also uses `reverse-`.
-If `$sort` includes `last-`, the overall thread is sorted by its descendant at any depth which would sort last in a flat view; otherwise, the overall thread is sorted solely by the thread root.
-The `last-` prefix is ignored when `use_threads=flat`.
+When sorting by threads, the value of {ref}`$sort <sort>` determines which
+thread floats to the top. If `$sort` does not contain `reverse-`, the latest
+thread goes to the bottom for `use_threads=threads` and to the top for
+`use_threads=reverse`; the direction of float is swapped if `$sort` also uses
+`reverse-`. If `$sort` includes `last-`, the overall thread is sorted by its
+descendant at any depth which would sort last in a flat view; otherwise, the
+overall thread is sorted solely by the thread root. The `last-` prefix is
+ignored when `use_threads=flat`.
 
-Within a single thread, the value of `$sort_aux` determines how siblings are sorted.
-The same prefixes apply as for `$sort`, although it is less common to use the `last-` prefix.
+Within a single thread, the value of `$sort_aux` determines
+how siblings are sorted. The same prefixes apply as for `$sort`, although it is
+less common to use the `last-` prefix.
 
-The "Use Threads" feature also modifies the existing config option `$status_format`, adding the `%T` expando which shows the current threading method.
+The "Use Threads" feature also modifies the existing config option
+`$status_format`, adding the `%T` expando which shows the
+current threading method.
 
-### Use Threads Variable
+## Use Threads Variable
 
 | Name          | Type | Default |
 |---------------|------|---------|
 | `use_threads` | enum | `unset` |
 
-### neomuttrc
+## neomuttrc
 
 ```neomuttrc
 # Example NeoMutt config file for the use-threads feature.
@@ -169,8 +147,11 @@ set use_threads=threads sort=last-date sort_aux=date
 **Highlights:** The difference in message ordering and the tree-drawing characters (`|->`, `` `-> ``, `,->`) — particularly how the same messages appear in completely different positions depending on the threading mode.
 :::
 
-### Known Bugs
+## Known Bugs
 
 Even though `use_threads` accepts the values `yes` and `no`, it does not behave like a boolean or quad-option variable.
 A bare `set use_threads` performs a query rather than setting it to `yes`, and the variable is not usable with `toggle`.
 
+## Credits
+
+Eric Blake

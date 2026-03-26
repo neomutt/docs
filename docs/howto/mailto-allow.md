@@ -1,10 +1,10 @@
 ---
-title: Use Mailto-Allow
+title: Mailto-Allow
 description: Control which header fields NeoMutt accepts from mailto URLs to prevent unsafe header injection
 keywords: mailto, mailto-allow, unmailto-allow, header fields, security, URL, rfc2368, subject, body, cc, in-reply-to, references, approved headers, header injection
 ---
 
-# Use Mailto-Allow
+# Mailto-Allow
 
 ## Usage
 

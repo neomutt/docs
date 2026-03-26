@@ -1,10 +1,10 @@
 ---
-title: Use External Address Queries
+title: External Address Queries
 description: Look up addresses from external directory databases such as LDAP, ph/qi, bbdb, or NIS using query_command
 keywords: query, address query, ldap, address book, query_command, external contacts, complete-query, directory lookup, ph, qi, bbdb, nis, wrapper script, tab completion
 ---
 
-# Use External Address Queries
+# External Address Queries
 
 ## Setting Up the Query Command
 

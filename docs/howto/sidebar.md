@@ -1,10 +1,10 @@
 ---
-title: Use the Sidebar
+title: Sidebar
 description: Set up and customise NeoMutt's Sidebar panel to list mailboxes, navigate between them, configure sorting, and apply colour themes.
 keywords: sidebar, mailbox, navigation, sidebar_visible, sidebar_format, sidebar_sort, sidebar_width, sidebar-pin, sidebar-open, sidebar-next, sidebar-toggle-visible, colors, mail_check_stats
 ---
 
-# Use the Sidebar
+# Sidebar
 
 The Sidebar shows a list of all your mailboxes.
 The list can be turned on and off, it can be themed and the list style can be configured.
@@ -256,11 +256,3 @@ color sidebar_unread color136 default
 - [Color command](colours.md)
 - notmuch feature
 
-## Known Bugs
-
-None
-
-## Credits
-
-Justin Hibbits, Thomer M.
-Gil, David Sterba, Evgeni Golov, Fabian Groffen, Jason DeTiberus, Stefan Assmann, Steve Kemp, Terry Chan, Tyler Earnest, Richard Russon

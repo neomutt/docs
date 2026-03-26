@@ -58,10 +58,3 @@ To verify TLS SNI support by a server, you can use:
 openssl s_client -host <imap server> -port <port> -tls1 -servername <imap server>
 ```
 
-### Known Bugs
-
-None
-
-### Credits
-
-Jeremy Katz, Phil Pennock, Richard Russon

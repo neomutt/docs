@@ -43,10 +43,3 @@ bind index <esc>L limit-current-thread
 # vim: filetype=neomuttrc
 ```
 
-## Known Bugs
-
-None
-
-## Credits
-
-David Sterba, Richard Russon

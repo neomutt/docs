@@ -4,7 +4,7 @@ description: Configure and use OpenPGP encryption and signing in NeoMutt with GP
 keywords: neomutt, pgp, openpgp, gpg, gnupg, gpgme, encryption, signing, keys, pgp_default_key, crypt_use_gpgme, pinentry, pgp_self_encrypt, key selection, passphrase
 ---
 
-# Use PGP Encryption
+# PGP Encryption
 
 ## Prerequisites
 
@@ -35,7 +35,7 @@ If you have complex crypto needs, you can enable "classic mode" by disabling GPG
 For example config, see `gpg.rc` in the [Contrib repository](https://github.com/neomutt/neomutt-contrib/).
 
 ```neomuttrc
-# Use manual crypto functions
+# Manual crypto functions
 unset crypt_use_gpgme
 set pgp_clear_sign_command = "..."
 # ...

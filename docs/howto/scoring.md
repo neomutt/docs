@@ -1,10 +1,10 @@
 ---
-title: Use Scoring
+title: Scoring
 description: Assign numeric scores to messages using pattern-matching rules for prioritising, sorting, and colour-coding mail.
 keywords: score, unscore, scoring, patterns, message scoring, sort by score, color index, folder-hook, threading, prioritise, filtering
 ---
 
-# Use Scoring
+# Scoring
 
 ## Syntax
 

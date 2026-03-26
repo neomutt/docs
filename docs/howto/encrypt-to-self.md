@@ -76,14 +76,6 @@ set smime_default_key = "SMIME-KEY"
 # vim: filetype=neomuttrc
 ```
 
-## Known Bugs
-
-None
-
-## Credits
-
-Omen Wild, Richard Russon, Guillaume Brogi
-
 ---
 
 ## Encryption Information Block
@@ -124,6 +116,3 @@ The block shows "[-- Begin encryption information --]" and "[-- End encryption i
 It's enabled by default.
 The variable to control it is `crypt_encryption_info`.
 
-### Credits
-
-Alejandro Colomar, Richard Russon, наб

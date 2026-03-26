@@ -1,10 +1,10 @@
 ---
-title: Use fmemopen
+title: Fmemopen
 description: Enable the fmemopen compile-time option to replace temporary files with in-memory buffers for faster searches
 keywords: fmemopen, open_memstream, glibc, performance, thorough_search, compile-time, configure, memory buffer, temporary files, search speed, header search, body search
 ---
 
-# Use fmemopen
+# Fmemopen
 
 *Replace some temporary files with memory buffers*
 
@@ -37,6 +37,3 @@ Without them, NeoMutt will simply create temporary files.
 
 [debian bug 834408](https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=834408)
 
-## Credits
-
-Julius Plenz, Richard Russon

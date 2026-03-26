@@ -1,10 +1,10 @@
 ---
-title: Use Delivery Status Notifications
+title: Delivery Status Notifications
 description: Request Delivery Status Notifications (return receipts) for sent messages via sendmail or SMTP
 keywords: dsn, delivery status, notification, return receipt, sendmail, smtp, dsn_notify, dsn_return, rfc1894, receipt, message tracking, delivery confirmation
 ---
 
-# Use Delivery Status Notifications
+# Delivery Status Notifications
 
 [RFC1894](https://www.rfc-editor.org/rfc/rfc1894.html) defines a set of MIME content types for relaying information about the status of electronic mail messages.
 These can be thought of as "return receipts."

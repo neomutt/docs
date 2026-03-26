@@ -27,13 +27,10 @@ If enabled, allows to reply to an email using the email address in the first `X-
 # --------------------------------------------------------------------------
 # VARIABLES – shown with their default values
 # --------------------------------------------------------------------------
-# Use X-Original-To header to reply when reverse is disabled or no alternate
+# X-Original-To header to reply when reverse is disabled or no alternate
 # is found.
 set reply_with_xorig = "yes"
 
 # vim: filetype=neomuttrc
 ```
 
-## Credits
-
-Pierre-Elliott Bécue

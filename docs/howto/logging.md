@@ -1,10 +1,10 @@
 ---
-title: Use Logging and Debugging
+title: Logging and Debugging
 description: View log messages, enable debug logging with -d, and configure error and message colours in NeoMutt
 keywords: logging, debugging, debug, error, warning, log messages, neomuttdebug, show-log-messages, debug level, -d, color error, color message, troubleshooting, diagnostics
 ---
 
-# Use Logging and Debugging
+# Logging and Debugging
 
 ## Log Message Types
 

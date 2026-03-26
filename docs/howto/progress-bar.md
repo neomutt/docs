@@ -1,10 +1,10 @@
 ---
-title: Customise the Progress Bar
+title: Progress Bar
 description: Customise the colour of NeoMutt's visual progress bar that appears during slow operations like fetching headers or indexing.
 keywords: progress, progress bar, color, slow operations, indexing, fetching, color progress, theming, status indicator
 ---
 
-# Customise the Progress Bar
+# Progress Bar
 
 The "progress" feature shows a visual progress bar on slow tasks, such as indexing a large folder over the net.
 

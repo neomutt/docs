@@ -1,10 +1,10 @@
 ---
-title: Use Different Mailbox Formats
+title: Different Mailbox Formats
 description: Understand and choose between the four local mailbox formats — mbox, MMDF, MH, and Maildir — supported by NeoMutt
 keywords: mailbox, mbox, mmdf, mh, maildir, format, mbox_type, local storage, mail format, file locking, message store, qmail, from_ line, concurrency, header caching
 ---
 
-# Use Different Mailbox Formats
+# Different Mailbox Formats
 
 NeoMutt supports reading and writing of four different local mailbox formats: mbox, MMDF, MH and Maildir.
 The mailbox type is auto detected, so there is no need to use a flag for different mailbox types.

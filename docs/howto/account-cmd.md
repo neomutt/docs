@@ -1,11 +1,11 @@
 ---
-title: Use the Account Command
+title: Account Command
 description: Configure an external script to securely provide account credentials for IMAP, POP, and SMTP servers
 keywords: account_command, credentials, password manager, external command, imap_user, imap_pass, smtp_user, smtp_pass, authentication, secrets, security, password script, pop
 since: 2022-05-16
 ---
 
-# Use the Account Command
+# Account Command
 
 **Since:** NeoMutt 2022-05-16
 
@@ -44,10 +44,6 @@ The external command is called with a number of arguments indicating the known p
    - `password`
 
 Because password can contain any characters, including spaces, lines are expected to match the regex `^([[:alpha:]]+): (.*)$` exactly.
-
-## Known Bugs
-
-None
 
 ## Credits
 

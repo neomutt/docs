@@ -1,10 +1,10 @@
 ---
-title: Use OAuth Authentication
+title: OAuth Authentication
 description: Configure NeoMutt to authenticate with Gmail and Office365 using OAUTHBEARER or XOAUTH2 for IMAP, POP, and SMTP.
 keywords: oauth, oauthbearer, xoauth2, gmail, office365, imap_oauth_refresh_command, imap_authenticators, oauth2.py, mutt_oauth2.py, token, authentication, refresh token
 ---
 
-# Use OAuth Authentication
+# OAuth Authentication
 
 Preliminary OAUTH support for IMAP, POP, and SMTP is provided via external scripts.
 

@@ -1,11 +1,11 @@
 ---
-title: Use Skip-Quoted
+title: Skip-Quoted
 description: Manage quoted text display in the NeoMutt pager with skip-quoted, toggle-quoted, and skip-headers
 keywords: skip-quoted, toggle-quoted, skip-headers, pager, quoted text, pager_skip_quoted_context, toggle_quoted_show_levels
 since: 2021-02-05
 ---
 
-# Use Skip-Quoted
+# Skip-Quoted
 
 ## Support
 
@@ -67,10 +67,6 @@ The `pager_skip_quoted_context` is set to 3, so after pressing `S`, the pager sh
 
 **Highlights:** The coloured quote levels providing visual depth, and the context lines that remain visible after skip-quoted — showing how the reader retains just enough quoted context to follow the conversation.
 :::
-
-## Known Bugs
-
-None
 
 ## Credits
 
