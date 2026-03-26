@@ -9,8 +9,8 @@ keywords: neomutt, browser, file browser, folder_format, browser_sort, browser_s
 (browser-abbreviate-mailboxes)=
 ## `$browser_abbreviate_mailboxes`
 
-- **Type:** [Boolean](bool)
-- **Default:**
+:Type: [Boolean](bool)
+:Default:
     ```neomuttrc
     set browser_abbreviate_mailboxes = yes
     ```
@@ -26,9 +26,9 @@ In those cases, it may be desirable to _unset_ this variable.
 (browser-sort)=
 ## `$browser_sort`
 
-- **Type:** [Sort Order](sort-order)
-- **Notes:** [Reverse](sort-order)
-- **Default:**
+:Type: [Sort Order](sort-order)
+:Notes: [Reverse](sort-order)
+:Default:
     ```neomuttrc
     set browser_sort = "alpha"
     ```
@@ -54,8 +54,8 @@ Specifies how to sort entries in the file browser.
 (browser-sort-dirs-first)=
 ## `$browser_sort_dirs_first`
 
-- **Type:** [Boolean](bool)
-- **Default:**
+:Type: [Boolean](bool)
+:Default:
     ```neomuttrc
     set browser_sort_dirs_first = no
     ```
@@ -67,9 +67,9 @@ If this variable is _set_, the browser will group directories before files.
 (folder-format)=
 ## `$folder_format`
 
-- **Type:** [Expando](expando)
-- **Notes:** {ref}`Not Empty <general>`
-- **Default:**
+:Type: [Expando](expando)
+:Notes: {ref}`Not Empty <general>`
+:Default:
     ```neomuttrc
     set folder_format = "%2C %t %N %F %2l %-8.8u %-8.8g %8s %d %i"
     ```
@@ -115,9 +115,9 @@ For an explanation of "soft-fill", see the [$index_format](index-format) documen
 (group-index-format)=
 ## `$group_index_format`
 
-- **Type:** [Expando](expando)
-- **Notes:** {ref}`Not Empty <general>`
-- **Default:**
+:Type: [Expando](expando)
+:Notes: {ref}`Not Empty <general>`
+:Default:
     ```neomuttrc
     set group_index_format = "%4C %M%N %5s  %-45.45f %d"
     ```
@@ -145,9 +145,9 @@ This string is similar to "$index_format", but has its own set of printf()-like 
 (mailbox-folder-format)=
 ## `$mailbox_folder_format`
 
-- **Type:** [Expando](expando)
-- **Notes:** {ref}`Not Empty <general>`
-- **Default:**
+:Type: [Expando](expando)
+:Notes: {ref}`Not Empty <general>`
+:Default:
     ```neomuttrc
     set mailbox_folder_format = "%2C %<n?%6n&      > %6m %i"
     ```
@@ -161,9 +161,9 @@ This string is identical in formatting to the one used by "[$folder_format](fold
 (mask)=
 ## `$mask`
 
-- **Type:** [Regular Expression](regex)
-- **Notes:** [Match Case](regex), [Allow Not](regex), [No Sub](regex)
-- **Default:**
+:Type: [Regular Expression](regex)
+:Notes: [Match Case](regex), [Allow Not](regex), [No Sub](regex)
+:Default:
     ```neomuttrc
     set mask = "!^\\.[^.]"
     ```
@@ -176,8 +176,8 @@ The match is always case-sensitive.
 (show-only-unread)=
 ## `$show_only_unread`
 
-- **Type:** [Boolean](bool)
-- **Default:**
+:Type: [Boolean](bool)
+:Default:
     ```neomuttrc
     set show_only_unread = no
     ```

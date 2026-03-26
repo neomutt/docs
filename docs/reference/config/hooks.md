@@ -9,8 +9,8 @@ keywords: neomutt, hooks, default_hook, save_name, force_name, fcc-hook, send-ho
 (default-hook)=
 ## `$default_hook`
 
-- **Type:** [String](string)
-- **Default:**
+:Type: [String](string)
+:Default:
     ```neomuttrc
     set default_hook = "~f %s !~P | (~P ~C %s)"
     ```
@@ -28,8 +28,8 @@ The default value matches if the message is either from a user matching the regu
 (force-name)=
 ## `$force_name`
 
-- **Type:** [Boolean](bool)
-- **Default:**
+:Type: [Boolean](bool)
+:Default:
     ```neomuttrc
     set force_name = no
     ```
@@ -43,8 +43,8 @@ Also see the [$record](record) variable.
 (save-name)=
 ## `$save_name`
 
-- **Type:** [Boolean](bool)
-- **Default:**
+:Type: [Boolean](bool)
+:Default:
     ```neomuttrc
     set save_name = no
     ```

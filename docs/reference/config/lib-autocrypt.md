@@ -9,8 +9,8 @@ keywords: "autocrypt, encryption, automatic encryption, key exchange, autocrypt_
 (autocrypt)=
 ## `$autocrypt`
 
-- **Type:** [Boolean](bool)
-- **Default:**
+:Type: [Boolean](bool)
+:Default:
     ```neomuttrc
     set autocrypt = no
     ```
@@ -24,8 +24,8 @@ See "$autocryptdoc" for more details.
 (autocrypt-acct-format)=
 ## `$autocrypt_acct_format`
 
-- **Type:** [Expando](expando)
-- **Default:**
+:Type: [Expando](expando)
+:Default:
     ```neomuttrc
     set autocrypt_acct_format = "%4n %-30a %20p %10s"
     ```
@@ -50,9 +50,9 @@ The following `printf(3)`-style sequences are understood
 (autocrypt-dir)=
 ## `$autocrypt_dir`
 
-- **Type:** [Path (String)](path)
-- **Notes:** [Directory only](path)
-- **Default:**
+:Type: [Path (String)](path)
+:Notes: [Directory only](path)
+:Default:
     ```neomuttrc
     set autocrypt_dir = "~/.mutt/autocrypt"
     ```
@@ -66,8 +66,8 @@ See "$autocryptdoc" for more details.
 (autocrypt-reply)=
 ## `$autocrypt_reply`
 
-- **Type:** [Boolean](bool)
-- **Default:**
+:Type: [Boolean](bool)
+:Default:
     ```neomuttrc
     set autocrypt_reply = yes
     ```

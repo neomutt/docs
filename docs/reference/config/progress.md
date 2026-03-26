@@ -9,9 +9,9 @@ keywords: neomutt, progress, net_inc, read_inc, write_inc, time_inc, progress ba
 (net-inc)=
 ## `$net_inc`
 
-- **Type:** [Number](number)
-- **Notes:** {ref}`Not Negative <general>`
-- **Default:**
+:Type: [Number](number)
+:Notes: {ref}`Not Negative <general>`
+:Default:
     ```neomuttrc
     set net_inc = 10
     ```
@@ -26,9 +26,9 @@ See also [$read_inc](read-inc), [$write_inc](write-inc) and [$net_inc](net-inc).
 (read-inc)=
 ## `$read_inc`
 
-- **Type:** [Number](number)
-- **Notes:** {ref}`Not Negative <general>`
-- **Default:**
+:Type: [Number](number)
+:Notes: {ref}`Not Negative <general>`
+:Default:
     ```neomuttrc
     set read_inc = 10
     ```
@@ -45,9 +45,9 @@ Also see the [$write_inc](write-inc), [$net_inc](net-inc) and [$time_inc](time-i
 (time-inc)=
 ## `$time_inc`
 
-- **Type:** [Number](number)
-- **Notes:** {ref}`Not Negative <general>`
-- **Default:**
+:Type: [Number](number)
+:Notes: {ref}`Not Negative <general>`
+:Default:
     ```neomuttrc
     set time_inc = 0
     ```
@@ -63,9 +63,9 @@ Also see the "$tuning" section of the manual for performance considerations.
 (write-inc)=
 ## `$write_inc`
 
-- **Type:** [Number](number)
-- **Notes:** {ref}`Not Negative <general>`
-- **Default:**
+:Type: [Number](number)
+:Notes: {ref}`Not Negative <general>`
+:Default:
     ```neomuttrc
     set write_inc = 10
     ```

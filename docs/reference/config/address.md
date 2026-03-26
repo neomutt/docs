@@ -9,8 +9,8 @@ keywords: "address, idn, international domain name, idn_decode, idn_encode, enco
 (idn-decode)=
 ## `$idn_decode`
 
-- **Type:** [Boolean](bool)
-- **Default:**
+:Type: [Boolean](bool)
+:Default:
     ```neomuttrc
     set idn_decode = yes
     ```
@@ -25,8 +25,8 @@ This variable only affects decoding.
 (idn-encode)=
 ## `$idn_encode`
 
-- **Type:** [Boolean](bool)
-- **Default:**
+:Type: [Boolean](bool)
+:Default:
     ```neomuttrc
     set idn_encode = yes
     ```

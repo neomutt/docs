@@ -9,8 +9,8 @@ keywords: neomutt, ncrypt, pgp, smime, gpgme, encryption, signing, cryptography,
 (crypt-confirm-hook)=
 ## `$crypt_confirm_hook`
 
-- **Type:** [Boolean](bool)
-- **Default:**
+:Type: [Boolean](bool)
+:Default:
     ```neomuttrc
     set crypt_confirm_hook = yes
     ```
@@ -24,8 +24,8 @@ This is generally considered unsafe, especially where typos are concerned.
 (crypt-encryption-info)=
 ## `$crypt_encryption_info`
 
-- **Type:** [Boolean](bool)
-- **Default:**
+:Type: [Boolean](bool)
+:Default:
     ```neomuttrc
     set crypt_encryption_info = yes
     ```
@@ -38,8 +38,8 @@ If _set_, NeoMutt will include an informative block before an encrypted part, wi
 (crypt-opportunistic-encrypt)=
 ## `$crypt_opportunistic_encrypt`
 
-- **Type:** [Boolean](bool)
-- **Default:**
+:Type: [Boolean](bool)
+:Default:
     ```neomuttrc
     set crypt_opportunistic_encrypt = no
     ```
@@ -61,8 +61,8 @@ It can be manually re-enabled in the pgp or smime menus.
 (crypt-opportunistic-encrypt-strong-keys)=
 ## `$crypt_opportunistic_encrypt_strong_keys`
 
-- **Type:** [Boolean](bool)
-- **Default:**
+:Type: [Boolean](bool)
+:Default:
     ```neomuttrc
     set crypt_opportunistic_encrypt_strong_keys = no
     ```
@@ -79,8 +79,8 @@ The GPGME backend will use the same filters as with OpenPGP, and depends on GPGM
 (crypt-protected-headers-read)=
 ## `$crypt_protected_headers_read`
 
-- **Type:** [Boolean](bool)
-- **Default:**
+:Type: [Boolean](bool)
+:Default:
     ```neomuttrc
     set crypt_protected_headers_read = yes
     ```
@@ -100,8 +100,8 @@ If you reply to a message before opening it, NeoMutt will end up using the dummy
 (crypt-protected-headers-save)=
 ## `$crypt_protected_headers_save`
 
-- **Type:** [Boolean](bool)
-- **Default:**
+:Type: [Boolean](bool)
+:Default:
     ```neomuttrc
     set crypt_protected_headers_save = no
     ```
@@ -122,8 +122,8 @@ Please make sure you understand the consequences of this before you enable this 
 (crypt-protected-headers-subject)=
 ## `$crypt_protected_headers_subject`
 
-- **Type:** [String](string)
-- **Default:**
+:Type: [String](string)
+:Default:
     ```neomuttrc
     set crypt_protected_headers_subject = "..."
     ```
@@ -138,8 +138,8 @@ To prevent a subject from being substituted, unset this variable, or set it to t
 (crypt-protected-headers-weed)=
 ## `$crypt_protected_headers_weed`
 
-- **Type:** [Boolean](bool)
-- **Default:**
+:Type: [Boolean](bool)
+:Default:
     ```neomuttrc
     set crypt_protected_headers_weed = no
     ```
@@ -152,8 +152,8 @@ Controls whether NeoMutt will weed protected header fields.
 (crypt-protected-headers-write)=
 ## `$crypt_protected_headers_write`
 
-- **Type:** [Boolean](bool)
-- **Default:**
+:Type: [Boolean](bool)
+:Default:
     ```neomuttrc
     set crypt_protected_headers_write = yes
     ```
@@ -171,8 +171,8 @@ Currently NeoMutt only supports the Subject header.
 (crypt-timestamp)=
 ## `$crypt_timestamp`
 
-- **Type:** [Boolean](bool)
-- **Default:**
+:Type: [Boolean](bool)
+:Default:
     ```neomuttrc
     set crypt_timestamp = yes
     ```
@@ -186,9 +186,9 @@ If you are using colors to mark these lines, and rely on these, you may _unset_ 
 (crypt-use-gpgme)=
 ## `$crypt_use_gpgme`
 
-- **Type:** [Boolean](bool)
-- **Notes:** {ref}`On Startup <general>`
-- **Default:**
+:Type: [Boolean](bool)
+:Notes: {ref}`On Startup <general>`
+:Default:
     ```neomuttrc
     set crypt_use_gpgme = yes
     ```
@@ -204,8 +204,8 @@ Note that the GPGME backend does not support creating old-style inline (traditio
 (crypt-use-pka)=
 ## `$crypt_use_pka`
 
-- **Type:** [Boolean](bool)
-- **Default:**
+:Type: [Boolean](bool)
+:Default:
     ```neomuttrc
     set crypt_use_pka = no
     ```
@@ -218,8 +218,8 @@ See: http://www.g10code.de/docs/pka-intro.de.pdf
 (crypt-verify-sig)=
 ## `$crypt_verify_sig`
 
-- **Type:** [Quad-Option](quad)
-- **Default:**
+:Type: [Quad-Option](quad)
+:Default:
     ```neomuttrc
     set crypt_verify_sig = yes
     ```
@@ -234,8 +234,8 @@ If _"no"_, never attempt to verify cryptographic signatures.
 (envelope-from-address)=
 ## `$envelope_from_address`
 
-- **Type:** {ref}`Address <address>`
-- **Default:** (empty)
+:Type: {ref}`Address <address>`
+:Default: (empty)
     ```neomuttrc
     set envelope_from_address = ""
     ```
@@ -248,8 +248,8 @@ This value is ignored if [$use_envelope_from](use-envelope-from) is _unset_.
 (pgp-auto-decode)=
 ## `$pgp_auto_decode`
 
-- **Type:** [Boolean](bool)
-- **Default:**
+:Type: [Boolean](bool)
+:Default:
     ```neomuttrc
     set pgp_auto_decode = no
     ```
@@ -262,8 +262,8 @@ For example, if the user displays a pgp-traditional message which has not been m
 (pgp-auto-inline)=
 ## `$pgp_auto_inline`
 
-- **Type:** [Boolean](bool)
-- **Default:**
+:Type: [Boolean](bool)
+:Default:
     ```neomuttrc
     set pgp_auto_inline = no
     ```
@@ -285,8 +285,8 @@ Also note that using the old-style PGP message format is **strongly** **deprecat
 (pgp-check-exit)=
 ## `$pgp_check_exit`
 
-- **Type:** [Boolean](bool)
-- **Default:**
+:Type: [Boolean](bool)
+:Default:
     ```neomuttrc
     set pgp_check_exit = yes
     ```
@@ -300,8 +300,8 @@ A non-zero exit code means that the subprocess failed.
 (pgp-check-gpg-decrypt-status-fd)=
 ## `$pgp_check_gpg_decrypt_status_fd`
 
-- **Type:** [Boolean](bool)
-- **Default:**
+:Type: [Boolean](bool)
+:Default:
     ```neomuttrc
     set pgp_check_gpg_decrypt_status_fd = yes
     ```
@@ -317,8 +317,8 @@ If _unset_, NeoMutt will instead match the status fd output against [$pgp_decryp
 (pgp-clear-sign-command)=
 ## `$pgp_clear_sign_command`
 
-- **Type:** [Expando (Command String)](expando)
-- **Default:** (empty)
+:Type: [Expando (Command String)](expando)
+:Default: (empty)
     ```neomuttrc
     set pgp_clear_sign_command = ""
     ```
@@ -335,8 +335,8 @@ Note that in this case, %r expands to the search string, which is a list of one 
 (pgp-decode-command)=
 ## `$pgp_decode_command`
 
-- **Type:** [Expando (Command String)](expando)
-- **Default:** (empty)
+:Type: [Expando (Command String)](expando)
+:Default: (empty)
     ```neomuttrc
     set pgp_decode_command = ""
     ```
@@ -361,8 +361,8 @@ The PGP command formats have their own set of `printf(3)`-like sequences:
 (pgp-decryption-okay)=
 ## `$pgp_decryption_okay`
 
-- **Type:** [Regular Expression](regex)
-- **Default:** (empty)
+:Type: [Regular Expression](regex)
+:Default: (empty)
     ```neomuttrc
     set pgp_decryption_okay = ""
     ```
@@ -379,8 +379,8 @@ Note that if [$pgp_check_gpg_decrypt_status_fd](pgp-check-gpg-decrypt-status-fd)
 (pgp-decrypt-command)=
 ## `$pgp_decrypt_command`
 
-- **Type:** [Expando (Command String)](expando)
-- **Default:** (empty)
+:Type: [Expando (Command String)](expando)
+:Default: (empty)
     ```neomuttrc
     set pgp_decrypt_command = ""
     ```
@@ -401,8 +401,8 @@ See also: https://github.com/neomutt/neomutt/issues/1014
 (pgp-default-key)=
 ## `$pgp_default_key`
 
-- **Type:** [String](string)
-- **Default:** (empty)
+:Type: [String](string)
+:Default: (empty)
     ```neomuttrc
     set pgp_default_key = ""
     ```
@@ -418,8 +418,8 @@ It will also be used for signing unless [$pgp_sign_as](pgp-sign-as) is set.
 (pgp-encrypt-only-command)=
 ## `$pgp_encrypt_only_command`
 
-- **Type:** [Expando (Command String)](expando)
-- **Default:** (empty)
+:Type: [Expando (Command String)](expando)
+:Default: (empty)
     ```neomuttrc
     set pgp_encrypt_only_command = ""
     ```
@@ -435,8 +435,8 @@ Note that in this case, %r expands to the search string, which is a list of one 
 (pgp-encrypt-sign-command)=
 ## `$pgp_encrypt_sign_command`
 
-- **Type:** [Expando (Command String)](expando)
-- **Default:** (empty)
+:Type: [Expando (Command String)](expando)
+:Default: (empty)
     ```neomuttrc
     set pgp_encrypt_sign_command = ""
     ```
@@ -451,9 +451,9 @@ This is a format string, see the [$pgp_decode_command](pgp-decode-command) comma
 (pgp-entry-format)=
 ## `$pgp_entry_format`
 
-- **Type:** [Expando](expando)
-- **Notes:** {ref}`Not Empty <general>`
-- **Default:**
+:Type: [Expando](expando)
+:Notes: {ref}`Not Empty <general>`
+:Default:
     ```neomuttrc
     set pgp_entry_format = "%4n %t%f %4l/0x%k %-4a %2c %u"
     ```
@@ -493,8 +493,8 @@ See the section "Sending Cryptographically Signed/Encrypted Messages" of the use
 (pgp-export-command)=
 ## `$pgp_export_command`
 
-- **Type:** [Expando (Command String)](expando)
-- **Default:** (empty)
+:Type: [Expando (Command String)](expando)
+:Default: (empty)
     ```neomuttrc
     set pgp_export_command = ""
     ```
@@ -509,8 +509,8 @@ This is a format string, see the [$pgp_decode_command](pgp-decode-command) comma
 (pgp-get-keys-command)=
 ## `$pgp_get_keys_command`
 
-- **Type:** [Expando (Command String)](expando)
-- **Default:** (empty)
+:Type: [Expando (Command String)](expando)
+:Default: (empty)
     ```neomuttrc
     set pgp_get_keys_command = ""
     ```
@@ -525,8 +525,8 @@ Note that in this case, %r expands to the email address, not the public key ID (
 (pgp-good-sign)=
 ## `$pgp_good_sign`
 
-- **Type:** [Regular Expression](regex)
-- **Default:** (empty)
+:Type: [Regular Expression](regex)
+:Default: (empty)
     ```neomuttrc
     set pgp_good_sign = ""
     ```
@@ -540,8 +540,8 @@ Use this variable if the exit code from the command is 0 even for bad signatures
 (pgp-ignore-subkeys)=
 ## `$pgp_ignore_subkeys`
 
-- **Type:** [Boolean](bool)
-- **Default:**
+:Type: [Boolean](bool)
+:Default:
     ```neomuttrc
     set pgp_ignore_subkeys = yes
     ```
@@ -556,8 +556,8 @@ _Unset_ this if you want to play interesting key selection games.
 (pgp-import-command)=
 ## `$pgp_import_command`
 
-- **Type:** [Expando (Command String)](expando)
-- **Default:** (empty)
+:Type: [Expando (Command String)](expando)
+:Default: (empty)
     ```neomuttrc
     set pgp_import_command = ""
     ```
@@ -572,9 +572,9 @@ This is a format string, see the [$pgp_decode_command](pgp-decode-command) comma
 (pgp-key-sort)=
 ## `$pgp_key_sort`
 
-- **Type:** [Sort Order](sort-order)
-- **Notes:** [Reverse](sort-order)
-- **Default:**
+:Type: [Sort Order](sort-order)
+:Notes: [Reverse](sort-order)
+:Default:
     ```neomuttrc
     set pgp_key_sort = "address"
     ```
@@ -594,8 +594,8 @@ Specifies how the entries in the pgp menu are sorted.
 (pgp-list-pubring-command)=
 ## `$pgp_list_pubring_command`
 
-- **Type:** [Expando (Command String)](expando)
-- **Default:** (empty)
+:Type: [Expando (Command String)](expando)
+:Default: (empty)
     ```neomuttrc
     set pgp_list_pubring_command = ""
     ```
@@ -618,8 +618,8 @@ This is a format string, see the [$pgp_decode_command](pgp-decode-command) comma
 (pgp-list-secring-command)=
 ## `$pgp_list_secring_command`
 
-- **Type:** [Expando (Command String)](expando)
-- **Default:** (empty)
+:Type: [Expando (Command String)](expando)
+:Default: (empty)
     ```neomuttrc
     set pgp_list_secring_command = ""
     ```
@@ -642,8 +642,8 @@ This is a format string, see the [$pgp_decode_command](pgp-decode-command) comma
 (pgp-long-ids)=
 ## `$pgp_long_ids`
 
-- **Type:** [Boolean](bool)
-- **Default:**
+:Type: [Boolean](bool)
+:Default:
     ```neomuttrc
     set pgp_long_ids = yes
     ```
@@ -658,8 +658,8 @@ This option now only controls the display of key IDs in the key selection menu a
 (pgp-mime-auto)=
 ## `$pgp_mime_auto`
 
-- **Type:** [Quad-Option](quad)
-- **Default:**
+:Type: [Quad-Option](quad)
+:Default:
     ```neomuttrc
     set pgp_mime_auto = ask-yes
     ```
@@ -674,8 +674,8 @@ Also note that using the old-style PGP message format is **strongly** **deprecat
 (pgp-retainable-sigs)=
 ## `$pgp_retainable_sigs`
 
-- **Type:** [Boolean](bool)
-- **Default:**
+:Type: [Boolean](bool)
+:Default:
     ```neomuttrc
     set pgp_retainable_sigs = no
     ```
@@ -690,8 +690,8 @@ This is useful for applications like encrypted and signed mailing lists, where t
 (pgp-self-encrypt)=
 ## `$pgp_self_encrypt`
 
-- **Type:** [Boolean](bool)
-- **Default:**
+:Type: [Boolean](bool)
+:Default:
     ```neomuttrc
     set pgp_self_encrypt = yes
     ```
@@ -704,8 +704,8 @@ When _set_, PGP encrypted messages will also be encrypted using the key in [$pgp
 (pgp-show-unusable)=
 ## `$pgp_show_unusable`
 
-- **Type:** [Boolean](bool)
-- **Default:**
+:Type: [Boolean](bool)
+:Default:
     ```neomuttrc
     set pgp_show_unusable = yes
     ```
@@ -719,8 +719,8 @@ This includes keys which have been revoked, have expired, or have been marked as
 (pgp-sign-as)=
 ## `$pgp_sign_as`
 
-- **Type:** [String](string)
-- **Default:** (empty)
+:Type: [String](string)
+:Default: (empty)
     ```neomuttrc
     set pgp_sign_as = ""
     ```
@@ -736,8 +736,8 @@ It is recommended that you use the keyid form to specify your key (e.g.
 (pgp-sign-command)=
 ## `$pgp_sign_command`
 
-- **Type:** [Expando (Command String)](expando)
-- **Default:** (empty)
+:Type: [Expando (Command String)](expando)
+:Default: (empty)
     ```neomuttrc
     set pgp_sign_command = ""
     ```
@@ -752,8 +752,8 @@ This is a format string, see the [$pgp_decode_command](pgp-decode-command) comma
 (pgp-strict-enc)=
 ## `$pgp_strict_enc`
 
-- **Type:** [Boolean](bool)
-- **Default:**
+:Type: [Boolean](bool)
+:Default:
     ```neomuttrc
     set pgp_strict_enc = yes
     ```
@@ -767,9 +767,9 @@ Please note that unsetting this variable may lead to problems with non-verifyabl
 (pgp-timeout)=
 ## `$pgp_timeout`
 
-- **Type:** [Number (Long)](long)
-- **Notes:** {ref}`Not Negative <general>`
-- **Default:**
+:Type: [Number (Long)](long)
+:Notes: {ref}`Not Negative <general>`
+:Default:
     ```neomuttrc
     set pgp_timeout = 300
     ```
@@ -782,8 +782,8 @@ The number of seconds after which a cached passphrase will expire if not used.
 (pgp-use-gpg-agent)=
 ## `$pgp_use_gpg_agent`
 
-- **Type:** [Boolean](bool)
-- **Default:**
+:Type: [Boolean](bool)
+:Default:
     ```neomuttrc
     set pgp_use_gpg_agent = yes
     ```
@@ -805,8 +805,8 @@ If you are using an older version of GnuPG without an agent running, or another 
 (pgp-verify-command)=
 ## `$pgp_verify_command`
 
-- **Type:** [Expando (Command String)](expando)
-- **Default:** (empty)
+:Type: [Expando (Command String)](expando)
+:Default: (empty)
     ```neomuttrc
     set pgp_verify_command = ""
     ```
@@ -821,8 +821,8 @@ This is a format string, see the [$pgp_decode_command](pgp-decode-command) comma
 (pgp-verify-key-command)=
 ## `$pgp_verify_key_command`
 
-- **Type:** [Expando (Command String)](expando)
-- **Default:** (empty)
+:Type: [Expando (Command String)](expando)
+:Default: (empty)
     ```neomuttrc
     set pgp_verify_key_command = ""
     ```
@@ -837,8 +837,8 @@ This is a format string, see the [$pgp_decode_command](pgp-decode-command) comma
 (smime-ask-cert-label)=
 ## `$smime_ask_cert_label`
 
-- **Type:** [Boolean](bool)
-- **Default:**
+:Type: [Boolean](bool)
+:Default:
     ```neomuttrc
     set smime_ask_cert_label = yes
     ```
@@ -852,9 +852,9 @@ It is _set_ by default.
 (smime-ca-location)=
 ## `$smime_ca_location`
 
-- **Type:** [Path (String)](path)
-- **Notes:** [File only](path)
-- **Default:** (empty)
+:Type: [Path (String)](path)
+:Notes: [File only](path)
+:Default: (empty)
     ```neomuttrc
     set smime_ca_location = ""
     ```
@@ -867,9 +867,9 @@ This variable contains the name of either a directory, or a file which contains 
 (smime-certificates)=
 ## `$smime_certificates`
 
-- **Type:** [Path (String)](path)
-- **Notes:** [Directory only](path)
-- **Default:** (empty)
+:Type: [Path (String)](path)
+:Notes: [Directory only](path)
+:Default: (empty)
     ```neomuttrc
     set smime_certificates = ""
     ```
@@ -885,8 +885,8 @@ This option points to the location of the certificates.
 (smime-decrypt-command)=
 ## `$smime_decrypt_command`
 
-- **Type:** [Expando (Command String)](expando)
-- **Default:** (empty)
+:Type: [Expando (Command String)](expando)
+:Default: (empty)
     ```neomuttrc
     set smime_decrypt_command = ""
     ```
@@ -916,8 +916,8 @@ For examples on how to configure these formats, see the `smime.rc` in the `sampl
 (smime-decrypt-use-default-key)=
 ## `$smime_decrypt_use_default_key`
 
-- **Type:** [Boolean](bool)
-- **Default:**
+:Type: [Boolean](bool)
+:Default:
     ```neomuttrc
     set smime_decrypt_use_default_key = yes
     ```
@@ -932,8 +932,8 @@ It will ask you to supply a key, if it can't find one.
 (smime-default-key)=
 ## `$smime_default_key`
 
-- **Type:** [String](string)
-- **Default:** (empty)
+:Type: [String](string)
+:Default: (empty)
     ```neomuttrc
     set smime_default_key = ""
     ```
@@ -953,8 +953,8 @@ It will also be used for signing unless [$smime_sign_as](smime-sign-as) is set.
 (smime-encrypt-command)=
 ## `$smime_encrypt_command`
 
-- **Type:** [Expando (Command String)](expando)
-- **Default:** (empty)
+:Type: [Expando (Command String)](expando)
+:Default: (empty)
     ```neomuttrc
     set smime_encrypt_command = ""
     ```
@@ -971,8 +971,8 @@ Encrypt the message to [$smime_default_key](smime-default-key) too.
 (smime-encrypt-with)=
 ## `$smime_encrypt_with`
 
-- **Type:** [String](string)
-- **Default:**
+:Type: [String](string)
+:Default:
     ```neomuttrc
     set smime_encrypt_with = "aes256"
     ```
@@ -986,8 +986,8 @@ Valid choices are "aes128", "aes192", "aes256", "des", "des3", "rc2-40", "rc2-64
 (smime-get-cert-command)=
 ## `$smime_get_cert_command`
 
-- **Type:** [Expando (Command String)](expando)
-- **Default:** (empty)
+:Type: [Expando (Command String)](expando)
+:Default: (empty)
     ```neomuttrc
     set smime_get_cert_command = ""
     ```
@@ -1002,8 +1002,8 @@ This is a format string, see the [$smime_decrypt_command](smime-decrypt-command)
 (smime-get-cert-email-command)=
 ## `$smime_get_cert_email_command`
 
-- **Type:** [Expando (Command String)](expando)
-- **Default:** (empty)
+:Type: [Expando (Command String)](expando)
+:Default: (empty)
     ```neomuttrc
     set smime_get_cert_email_command = ""
     ```
@@ -1018,8 +1018,8 @@ This is a format string, see the [$smime_decrypt_command](smime-decrypt-command)
 (smime-get-signer-cert-command)=
 ## `$smime_get_signer_cert_command`
 
-- **Type:** [Expando (Command String)](expando)
-- **Default:** (empty)
+:Type: [Expando (Command String)](expando)
+:Default: (empty)
     ```neomuttrc
     set smime_get_signer_cert_command = ""
     ```
@@ -1034,8 +1034,8 @@ This is a format string, see the [$smime_decrypt_command](smime-decrypt-command)
 (smime-import-cert-command)=
 ## `$smime_import_cert_command`
 
-- **Type:** [Expando (Command String)](expando)
-- **Default:** (empty)
+:Type: [Expando (Command String)](expando)
+:Default: (empty)
     ```neomuttrc
     set smime_import_cert_command = ""
     ```
@@ -1051,8 +1051,8 @@ NOTE: %c and %k will default to [$smime_sign_as](smime-sign-as) if set, otherwis
 (smime-is-default)=
 ## `$smime_is_default`
 
-- **Type:** [Boolean](bool)
-- **Default:**
+:Type: [Boolean](bool)
+:Default:
     ```neomuttrc
     set smime_is_default = no
     ```
@@ -1068,9 +1068,9 @@ However, this has no effect while replying, since NeoMutt will automatically sel
 (smime-keys)=
 ## `$smime_keys`
 
-- **Type:** [Path (String)](path)
-- **Notes:** [Directory only](path)
-- **Default:** (empty)
+:Type: [Path (String)](path)
+:Notes: [Directory only](path)
+:Default: (empty)
     ```neomuttrc
     set smime_keys = ""
     ```
@@ -1086,8 +1086,8 @@ This option points to the location of the private keys.
 (smime-pk7out-command)=
 ## `$smime_pk7out_command`
 
-- **Type:** [Expando (Command String)](expando)
-- **Default:** (empty)
+:Type: [Expando (Command String)](expando)
+:Default: (empty)
     ```neomuttrc
     set smime_pk7out_command = ""
     ```
@@ -1102,8 +1102,8 @@ This is a format string, see the [$smime_decrypt_command](smime-decrypt-command)
 (smime-self-encrypt)=
 ## `$smime_self_encrypt`
 
-- **Type:** [Boolean](bool)
-- **Default:**
+:Type: [Boolean](bool)
+:Default:
     ```neomuttrc
     set smime_self_encrypt = yes
     ```
@@ -1116,8 +1116,8 @@ When _set_, S/MIME encrypted messages will also be encrypted using the certifica
 (smime-sign-as)=
 ## `$smime_sign_as`
 
-- **Type:** [String](string)
-- **Default:** (empty)
+:Type: [String](string)
+:Default: (empty)
     ```neomuttrc
     set smime_sign_as = ""
     ```
@@ -1131,8 +1131,8 @@ Most people will only need to set [$smime_default_key](smime-default-key).
 (smime-sign-command)=
 ## `$smime_sign_command`
 
-- **Type:** [Expando (Command String)](expando)
-- **Default:** (empty)
+:Type: [Expando (Command String)](expando)
+:Default: (empty)
     ```neomuttrc
     set smime_sign_command = ""
     ```
@@ -1147,8 +1147,8 @@ This is a format string, see the [$smime_decrypt_command](smime-decrypt-command)
 (smime-sign-digest-alg)=
 ## `$smime_sign_digest_alg`
 
-- **Type:** [String](string)
-- **Default:**
+:Type: [String](string)
+:Default:
     ```neomuttrc
     set smime_sign_digest_alg = "sha256"
     ```
@@ -1162,9 +1162,9 @@ Valid choices are "md5", "sha1", "sha224", "sha256", "sha384", "sha512".
 (smime-timeout)=
 ## `$smime_timeout`
 
-- **Type:** [Number](number)
-- **Notes:** {ref}`Not Negative <general>`
-- **Default:**
+:Type: [Number](number)
+:Notes: {ref}`Not Negative <general>`
+:Default:
     ```neomuttrc
     set smime_timeout = 300
     ```
@@ -1177,8 +1177,8 @@ The number of seconds after which a cached passphrase will expire if not used.
 (smime-verify-command)=
 ## `$smime_verify_command`
 
-- **Type:** [Expando (Command String)](expando)
-- **Default:** (empty)
+:Type: [Expando (Command String)](expando)
+:Default: (empty)
     ```neomuttrc
     set smime_verify_command = ""
     ```
@@ -1193,8 +1193,8 @@ This is a format string, see the [$smime_decrypt_command](smime-decrypt-command)
 (smime-verify-opaque-command)=
 ## `$smime_verify_opaque_command`
 
-- **Type:** [Expando (Command String)](expando)
-- **Default:** (empty)
+:Type: [Expando (Command String)](expando)
+:Default: (empty)
     ```neomuttrc
     set smime_verify_opaque_command = ""
     ```

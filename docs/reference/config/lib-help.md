@@ -9,8 +9,8 @@ keywords: neomutt, help, help line, key bindings, menu help, status line, beginn
 (help)=
 ## `$help`
 
-- **Type:** [Boolean](bool)
-- **Default:**
+:Type: [Boolean](bool)
+:Default:
     ```neomuttrc
     set help = yes
     ```

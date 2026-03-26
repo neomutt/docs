@@ -9,9 +9,9 @@ keywords: neomutt, history, history_file, history_format, history_remove_dups, s
 (history)=
 ## `$history`
 
-- **Type:** [Number](number)
-- **Notes:** {ref}`Not Negative <general>`
-- **Default:**
+:Type: [Number](number)
+:Notes: {ref}`Not Negative <general>`
+:Default:
     ```neomuttrc
     set history = 10
     ```
@@ -31,9 +31,9 @@ To prevent duplicates over all entries use [$history_remove_dups](history-remove
 (history-file)=
 ## `$history_file`
 
-- **Type:** [Path (String)](path)
-- **Notes:** [File only](path)
-- **Default:**
+:Type: [Path (String)](path)
+:Notes: [File only](path)
+:Default:
     ```neomuttrc
     set history_file = "~/.mutthistory"
     ```
@@ -47,8 +47,8 @@ Also see [$save_history](save-history).
 (history-format)=
 ## `$history_format`
 
-- **Type:** [Expando](expando)
-- **Default:**
+:Type: [Expando](expando)
+:Default:
     ```neomuttrc
     set history_format = "%s"
     ```
@@ -69,8 +69,8 @@ This string is similar to [$index_format](index-format), but has its own set of 
 (history-remove-dups)=
 ## `$history_remove_dups`
 
-- **Type:** [Boolean](bool)
-- **Default:**
+:Type: [Boolean](bool)
+:Default:
     ```neomuttrc
     set history_remove_dups = no
     ```
@@ -83,9 +83,9 @@ Duplicate entries in the [$history_file](history-file) will also be removed when
 (save-history)=
 ## `$save_history`
 
-- **Type:** [Number](number)
-- **Notes:** {ref}`Not Negative <general>`
-- **Default:**
+:Type: [Number](number)
+:Notes: {ref}`Not Negative <general>`
+:Default:
     ```neomuttrc
     set save_history = 0
     ```

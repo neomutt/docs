@@ -9,9 +9,9 @@ keywords: "alias, address book, contacts, alias_file, alias_format, alias_sort, 
 (alias-file)=
 ## `$alias_file`
 
-- **Type:** [Path (String)](path)
-- **Notes:** [File only](path)
-- **Default:**
+:Type: [Path (String)](path)
+:Notes: [File only](path)
+:Default:
     ```neomuttrc
     set alias_file = "~/.neomuttrc"
     ```
@@ -28,9 +28,9 @@ The default for this option is the currently used neomuttrc file, or "~/.neomutt
 (alias-format)=
 ## `$alias_format`
 
-- **Type:** [Expando](expando)
-- **Notes:** {ref}`Not Empty <general>`
-- **Default:**
+:Type: [Expando](expando)
+:Notes: {ref}`Not Empty <general>`
+:Default:
     ```neomuttrc
     set alias_format = "%3i %f%t %-15a %-56A | %C%> %Y"
     ```
@@ -68,9 +68,9 @@ The following sequences are deprecated; they will be removed in the future.
 (alias-sort)=
 ## `$alias_sort`
 
-- **Type:** [Sort Order](sort-order)
-- **Notes:** [Reverse](sort-order)
-- **Default:**
+:Type: [Sort Order](sort-order)
+:Notes: [Reverse](sort-order)
+:Default:
     ```neomuttrc
     set alias_sort = "alias"
     ```
@@ -98,8 +98,8 @@ Note: This also affects the entries of the address query menu, thus potentially 
 (query-command)=
 ## `$query_command`
 
-- **Type:** [Command (String)](string)
-- **Default:** (empty)
+:Type: [Command (String)](string)
+:Default: (empty)
     ```neomuttrc
     set query_command = ""
     ```
@@ -115,9 +115,9 @@ See "$query": https://neomutt.org/guide/advancedusage.html#query
 (query-format)=
 ## `$query_format`
 
-- **Type:** [Expando](expando)
-- **Notes:** {ref}`Not Empty <general>`
-- **Default:**
+:Type: [Expando](expando)
+:Notes: {ref}`Not Empty <general>`
+:Default:
     ```neomuttrc
     set query_format = "%3i %t %-25N %-25E | %C%> %Y"
     ```

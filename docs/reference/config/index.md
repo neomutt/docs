@@ -9,8 +9,8 @@ keywords: neomutt, index, index_format, status_format, flag_chars, crypt_chars, 
 (beep-new)=
 ## `$beep_new`
 
-- **Type:** [Boolean](bool)
-- **Default:**
+:Type: [Boolean](bool)
+:Default:
     ```neomuttrc
     set beep_new = no
     ```
@@ -23,8 +23,8 @@ This is independent of the setting of the [$beep](beep) variable.
 (change-folder-next)=
 ## `$change_folder_next`
 
-- **Type:** [Boolean](bool)
-- **Default:**
+:Type: [Boolean](bool)
+:Default:
     ```neomuttrc
     set change_folder_next = no
     ```
@@ -36,8 +36,8 @@ When this variable is _set_, the `<change-folder>` function mailbox suggestion w
 (collapse-all)=
 ## `$collapse_all`
 
-- **Type:** [Boolean](bool)
-- **Default:**
+:Type: [Boolean](bool)
+:Default:
     ```neomuttrc
     set collapse_all = no
     ```
@@ -49,8 +49,8 @@ When _set_, NeoMutt will collapse all threads when entering a folder.
 (crypt-chars)=
 ## `$crypt_chars`
 
-- **Type:** [Character String](mbtable)
-- **Default:**
+:Type: [Character String](mbtable)
+:Default:
     ```neomuttrc
     set crypt_chars = "SPsK "
     ```
@@ -70,8 +70,8 @@ Controls the characters used in cryptography flags.
 (flag-chars)=
 ## `$flag_chars`
 
-- **Type:** [Character String](mbtable)
-- **Default:**
+:Type: [Character String](mbtable)
+:Default:
     ```neomuttrc
     set flag_chars = "*!DdrONon- "
     ```
@@ -97,8 +97,8 @@ Controls the characters used in several flags.
 (from-chars)=
 ## `$from_chars`
 
-- **Type:** [Character String](mbtable)
-- **Default:** (empty)
+:Type: [Character String](mbtable)
+:Default: (empty)
     ```neomuttrc
     set from_chars = ""
     ```
@@ -124,9 +124,9 @@ This slightly odd interface is necessitated by NeoMutt's handling of string vari
 (index-format)=
 ## `$index_format`
 
-- **Type:** [Expando](expando)
-- **Notes:** {ref}`Not Empty <general>`
-- **Default:**
+:Type: [Expando](expando)
+:Notes: {ref}`Not Empty <general>`
+:Default:
     ```neomuttrc
     set index_format = "%4C %Z %{%b %d} %-15.15L (%<l?%4l&%4c>) %s"
     ```
@@ -228,8 +228,8 @@ Note that these expandos are supported in "$save-hook", "$fcc-hook" and "$fcc-sa
 (mark-macro-prefix)=
 ## `$mark_macro_prefix`
 
-- **Type:** [String](string)
-- **Default:**
+:Type: [String](string)
+:Default:
     ```neomuttrc
     set mark_macro_prefix = "'"
     ```
@@ -242,8 +242,8 @@ A new macro automatically generated with _<mark-message>a_ will be composed from
 (new-mail-command)=
 ## `$new_mail_command`
 
-- **Type:** [Expando (Command String)](expando)
-- **Default:** (empty)
+:Type: [Expando (Command String)](expando)
+:Default: (empty)
     ```neomuttrc
     set new_mail_command = ""
     ```
@@ -256,8 +256,8 @@ See the [$status_format](status-format) documentation for the values that can be
 (quit)=
 ## `$quit`
 
-- **Type:** [Quad-Option](quad)
-- **Default:**
+:Type: [Quad-Option](quad)
+:Default:
     ```neomuttrc
     set quit = yes
     ```
@@ -273,8 +273,8 @@ This can usually be achieved by pressing CTRL-C in the terminal.
 (read-only)=
 ## `$read_only`
 
-- **Type:** [Boolean](bool)
-- **Default:**
+:Type: [Boolean](bool)
+:Default:
     ```neomuttrc
     set read_only = no
     ```
@@ -286,8 +286,8 @@ If _set_, all folders are opened in read-only mode.
 (status-chars)=
 ## `$status_chars`
 
-- **Type:** [Character String](mbtable)
-- **Default:**
+:Type: [Character String](mbtable)
+:Default:
     ```neomuttrc
     set status_chars = "-*%A"
     ```
@@ -308,9 +308,9 @@ Controls the characters used by the "%r" indicator in [$status_format](status-fo
 (status-format)=
 ## `$status_format`
 
-- **Type:** [Expando](expando)
-- **Notes:** {ref}`Localised String <general>`
-- **Default:**
+:Type: [Expando](expando)
+:Notes: {ref}`Localised String <general>`
+:Default:
     ```neomuttrc
     set status_format = "-%r-NeoMutt: %D [Msgs:%<M?%M/>%m%<n? New:%n>%<o? Old:%o>%<d? Del:%d>%<F? Flag:%F>%<t? Tag:%t>%<p? Post:%p>%<b? Inc:%b>%<l? %l>]---(%<T?%T/>%s/%S)-%>-(%P)---"
     ```
@@ -384,8 +384,8 @@ This might be helpful with IMAP folders that don't like dots in folder names.
 (to-chars)=
 ## `$to_chars`
 
-- **Type:** [Character String](mbtable)
-- **Default:**
+:Type: [Character String](mbtable)
+:Default:
     ```neomuttrc
     set to_chars = " +TCFLR"
     ```
@@ -407,8 +407,8 @@ Controls the character used to indicate mail addressed to you.
 (ts-enabled)=
 ## `$ts_enabled`
 
-- **Type:** [Boolean](bool)
-- **Default:**
+:Type: [Boolean](bool)
+:Default:
     ```neomuttrc
     set ts_enabled = no
     ```
@@ -421,9 +421,9 @@ Most terminal emulators emulate the status line in the window title.
 (ts-icon-format)=
 ## `$ts_icon_format`
 
-- **Type:** [Expando](expando)
-- **Notes:** {ref}`Localised String <general>`
-- **Default:**
+:Type: [Expando](expando)
+:Notes: {ref}`Localised String <general>`
+:Default:
     ```neomuttrc
     set ts_icon_format = "M%<n?AIL&ail>"
     ```
@@ -436,9 +436,9 @@ This string is identical in formatting to the one used by "[$status_format](stat
 (ts-status-format)=
 ## `$ts_status_format`
 
-- **Type:** [Expando](expando)
-- **Notes:** {ref}`Localised String <general>`
-- **Default:**
+:Type: [Expando](expando)
+:Notes: {ref}`Localised String <general>`
+:Default:
     ```neomuttrc
     set ts_status_format = "NeoMutt with %<m?%m messages&no messages>%<n? [%n NEW]>"
     ```
@@ -451,8 +451,8 @@ This string is identical in formatting to the one used by "[$status_format](stat
 (uncollapse-jump)=
 ## `$uncollapse_jump`
 
-- **Type:** [Boolean](bool)
-- **Default:**
+:Type: [Boolean](bool)
+:Default:
     ```neomuttrc
     set uncollapse_jump = no
     ```
@@ -464,8 +464,8 @@ When _set_, NeoMutt will jump to the next unread message, if any, when the curre
 (uncollapse-new)=
 ## `$uncollapse_new`
 
-- **Type:** [Boolean](bool)
-- **Default:**
+:Type: [Boolean](bool)
+:Default:
     ```neomuttrc
     set uncollapse_new = yes
     ```

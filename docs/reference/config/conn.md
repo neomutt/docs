@@ -9,8 +9,8 @@ keywords: "connection, network, ssl, tls, starttls, certificate, tunnel, socket_
 (account-command)=
 ## `$account_command`
 
-- **Type:** [Command (String)](string)
-- **Default:** (empty)
+:Type: [Command (String)](string)
+:Default: (empty)
     ```neomuttrc
     set account_command = ""
     ```
@@ -26,9 +26,9 @@ Currently supported output lines are _login_, _username_, and _password_.
 (certificate-file)=
 ## `$certificate_file`
 
-- **Type:** [Path (String)](path)
-- **Notes:** [File only](path)
-- **Default:**
+:Type: [Path (String)](path)
+:Notes: [File only](path)
+:Default:
     ```neomuttrc
     set certificate_file = "~/.mutt_certificates"
     ```
@@ -46,9 +46,9 @@ Any server certificate that is signed with one of these CA certificates is also 
 (entropy-file)=
 ## `$entropy_file`
 
-- **Type:** [Path (String)](path)
-- **Notes:** [File only](path)
-- **Default:** (empty)
+:Type: [Path (String)](path)
+:Notes: [File only](path)
+:Default: (empty)
     ```neomuttrc
     set entropy_file = ""
     ```
@@ -61,8 +61,8 @@ The file which includes random data that is used to initialize SSL library funct
 (preconnect)=
 ## `$preconnect`
 
-- **Type:** [String](string)
-- **Default:** (empty)
+:Type: [String](string)
+:Default: (empty)
     ```neomuttrc
     set preconnect = ""
     ```
@@ -85,8 +85,8 @@ Note: For this example to work, you must be able to log in to the remote machine
 (socket-timeout)=
 ## `$socket_timeout`
 
-- **Type:** [Number](number)
-- **Default:**
+:Type: [Number](number)
+:Default:
     ```neomuttrc
     set socket_timeout = 30
     ```
@@ -99,9 +99,9 @@ A negative value causes NeoMutt to wait indefinitely.
 (ssl-ca-certificates-file)=
 ## `$ssl_ca_certificates_file`
 
-- **Type:** [Path (String)](path)
-- **Notes:** [File only](path)
-- **Default:** (empty)
+:Type: [Path (String)](path)
+:Notes: [File only](path)
+:Default: (empty)
     ```neomuttrc
     set ssl_ca_certificates_file = ""
     ```
@@ -120,8 +120,8 @@ set ssl_ca_certificates_file = /etc/ssl/certs/ca-certificates.crt
 (ssl-ciphers)=
 ## `$ssl_ciphers`
 
-- **Type:** [String](string)
-- **Default:** (empty)
+:Type: [String](string)
+:Default: (empty)
     ```neomuttrc
     set ssl_ciphers = ""
     ```
@@ -138,9 +138,9 @@ See `gnutls_priority_init(3)` for the syntax and more details.
 (ssl-client-cert)=
 ## `$ssl_client_cert`
 
-- **Type:** [Path (String)](path)
-- **Notes:** [File only](path)
-- **Default:** (empty)
+:Type: [Path (String)](path)
+:Notes: [File only](path)
+:Default: (empty)
     ```neomuttrc
     set ssl_client_cert = ""
     ```
@@ -152,8 +152,8 @@ The file containing a client certificate and its associated private key.
 (ssl-force-tls)=
 ## `$ssl_force_tls`
 
-- **Type:** [Boolean](bool)
-- **Default:**
+:Type: [Boolean](bool)
+:Default:
     ```neomuttrc
     set ssl_force_tls = yes
     ```
@@ -167,9 +167,9 @@ This option supersedes [$ssl_starttls](ssl-starttls).
 (ssl-min-dh-prime-bits)=
 ## `$ssl_min_dh_prime_bits`
 
-- **Type:** [Number](number)
-- **Notes:** {ref}`Not Negative <general>`
-- **Default:**
+:Type: [Number](number)
+:Notes: {ref}`Not Negative <general>`
+:Default:
     ```neomuttrc
     set ssl_min_dh_prime_bits = 0
     ```
@@ -184,8 +184,8 @@ A value of 0 will use the default from the GNUTLS library.
 (ssl-starttls)=
 ## `$ssl_starttls`
 
-- **Type:** [Quad-Option](quad)
-- **Default:**
+:Type: [Quad-Option](quad)
+:Default:
     ```neomuttrc
     set ssl_starttls = yes
     ```
@@ -201,8 +201,8 @@ Setting [$ssl_force_tls](ssl-force-tls) is recommended if you rely on `STARTTLS`
 (ssl-use-system-certs)=
 ## `$ssl_use_system_certs`
 
-- **Type:** [Boolean](bool)
-- **Default:**
+:Type: [Boolean](bool)
+:Default:
     ```neomuttrc
     set ssl_use_system_certs = yes
     ```
@@ -215,8 +215,8 @@ If set to _yes_, NeoMutt will use CA certificates in the system-wide certificate
 (ssl-use-tlsv1-2)=
 ## `$ssl_use_tlsv1_2`
 
-- **Type:** [Boolean](bool)
-- **Default:**
+:Type: [Boolean](bool)
+:Default:
     ```neomuttrc
     set ssl_use_tlsv1_2 = yes
     ```
@@ -228,8 +228,8 @@ If _set_ , NeoMutt will use TLSv1.2 when communicating with servers that request
 (ssl-use-tlsv1-3)=
 ## `$ssl_use_tlsv1_3`
 
-- **Type:** [Boolean](bool)
-- **Default:**
+:Type: [Boolean](bool)
+:Default:
     ```neomuttrc
     set ssl_use_tlsv1_3 = yes
     ```
@@ -241,8 +241,8 @@ If _set_ , NeoMutt will use TLSv1.3 when communicating with servers that request
 (ssl-verify-dates)=
 ## `$ssl_verify_dates`
 
-- **Type:** [Boolean](bool)
-- **Default:**
+:Type: [Boolean](bool)
+:Default:
     ```neomuttrc
     set ssl_verify_dates = yes
     ```
@@ -255,8 +255,8 @@ You should only unset this for particular known hosts, using the `$<account-hook
 (ssl-verify-host)=
 ## `$ssl_verify_host`
 
-- **Type:** [Boolean](bool)
-- **Default:**
+:Type: [Boolean](bool)
+:Default:
     ```neomuttrc
     set ssl_verify_host = yes
     ```
@@ -269,8 +269,8 @@ You should only unset this for particular known hosts, using the `$<account-hook
 (ssl-verify-partial-chains)=
 ## `$ssl_verify_partial_chains`
 
-- **Type:** [Boolean](bool)
-- **Default:**
+:Type: [Boolean](bool)
+:Default:
     ```neomuttrc
     set ssl_verify_partial_chains = no
     ```
@@ -286,8 +286,8 @@ a certificate chain where not the root, but an intermediate certificate CA, or t
 (tunnel)=
 ## `$tunnel`
 
-- **Type:** [Command (String)](string)
-- **Default:** (empty)
+:Type: [Command (String)](string)
+:Default: (empty)
     ```neomuttrc
     set tunnel = ""
     ```
@@ -310,8 +310,8 @@ Please see "$account-hook" in the manual for how to use different tunnel command
 (tunnel-is-secure)=
 ## `$tunnel_is_secure`
 
-- **Type:** [Boolean](bool)
-- **Default:**
+:Type: [Boolean](bool)
+:Default:
     ```neomuttrc
     set tunnel_is_secure = yes
     ```
@@ -329,8 +329,8 @@ This setting is appropriate if [$tunnel](tunnel) does not provide security and c
 (use-ipv6)=
 ## `$use_ipv6`
 
-- **Type:** [Boolean](bool)
-- **Default:**
+:Type: [Boolean](bool)
+:Default:
     ```neomuttrc
     set use_ipv6 = yes
     ```

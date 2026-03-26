@@ -9,8 +9,8 @@ keywords: "email, mime, mailcap, scoring, reflow_text, reply_regex, reverse_alia
 (auto-subscribe)=
 ## `$auto_subscribe`
 
-- **Type:** [Boolean](bool)
-- **Default:**
+:Type: [Boolean](bool)
+:Default:
     ```neomuttrc
     set auto_subscribe = no
     ```
@@ -24,8 +24,8 @@ Parsing and checking these things slows header reading down, so this option is d
 (honor-disposition)=
 ## `$honor_disposition`
 
-- **Type:** [Boolean](bool)
-- **Default:**
+:Type: [Boolean](bool)
+:Default:
     ```neomuttrc
     set honor_disposition = no
     ```
@@ -40,9 +40,9 @@ If _unset_, NeoMutt will render all MIME parts it can properly transform to plai
 (hidden-tags)=
 ## `$hidden_tags`
 
-- **Type:** [String List](slist)
-- **Notes:** [Comma-separated](slist)
-- **Default:**
+:Type: [String List](slist)
+:Notes: [Comma-separated](slist)
+:Default:
     ```neomuttrc
     set hidden_tags = "unread,draft,flagged,passed,replied,attachment,signed,encrypted"
     ```
@@ -54,8 +54,8 @@ This variable specifies a list of comma-separated private notmuch/imap tags whic
 (implicit-auto-view)=
 ## `$implicit_auto_view`
 
-- **Type:** [Boolean](bool)
-- **Default:**
+:Type: [Boolean](bool)
+:Default:
     ```neomuttrc
     set implicit_auto_view = no
     ```
@@ -68,8 +68,8 @@ If such an entry is found, NeoMutt will use the viewer defined in that entry to 
 (include-encrypted)=
 ## `$include_encrypted`
 
-- **Type:** [Boolean](bool)
-- **Default:**
+:Type: [Boolean](bool)
+:Default:
     ```neomuttrc
     set include_encrypted = no
     ```
@@ -84,8 +84,8 @@ If a previously encrypted message were attached by the attacker, they could tric
 (include-only-first)=
 ## `$include_only_first`
 
-- **Type:** [Boolean](bool)
-- **Default:**
+:Type: [Boolean](bool)
+:Default:
     ```neomuttrc
     set include_only_first = no
     ```
@@ -97,9 +97,9 @@ Controls whether or not NeoMutt includes only the first attachment of the messag
 (mailcap-path)=
 ## `$mailcap_path`
 
-- **Type:** [String List](slist)
-- **Notes:** [Colon-separated](slist)
-- **Default:**
+:Type: [String List](slist)
+:Notes: [Colon-separated](slist)
+:Default:
     ```neomuttrc
     set mailcap_path = "~/.mailcap:" PKGDATADIR "/mailcap:" SYSCONFDIR "/mailcap:/etc/mailcap:/usr/etc/mailcap:/usr/local/etc/mailcap"
     ```
@@ -116,8 +116,8 @@ The default search path is from [RFC1524](https://www.rfc-editor.org/rfc/rfc1524
 (mailcap-sanitize)=
 ## `$mailcap_sanitize`
 
-- **Type:** [Boolean](bool)
-- **Default:**
+:Type: [Boolean](bool)
+:Default:
     ```neomuttrc
     set mailcap_sanitize = yes
     ```
@@ -132,9 +132,9 @@ This is the safe setting, but we are not sure it doesn't break some more advance
 (preferred-languages)=
 ## `$preferred_languages`
 
-- **Type:** [String List](slist)
-- **Notes:** [Comma-separated](slist)
-- **Default:** (empty)
+:Type: [String List](slist)
+:Notes: [Comma-separated](slist)
+:Default: (empty)
     ```neomuttrc
     set preferred_languages = ""
     ```
@@ -152,8 +152,8 @@ set preferred_languages = "en,fr,de"
 (reflow-space-quotes)=
 ## `$reflow_space_quotes`
 
-- **Type:** [Boolean](bool)
-- **Default:**
+:Type: [Boolean](bool)
+:Default:
     ```neomuttrc
     set reflow_space_quotes = yes
     ```
@@ -169,8 +169,8 @@ Also, this option does not affect replies when [$text_flowed](text-flowed) is _s
 (reflow-text)=
 ## `$reflow_text`
 
-- **Type:** [Boolean](bool)
-- **Default:**
+:Type: [Boolean](bool)
+:Default:
     ```neomuttrc
     set reflow_text = yes
     ```
@@ -186,8 +186,8 @@ Also see [$reflow_wrap](reflow-wrap), and [$wrap](wrap).
 (reflow-wrap)=
 ## `$reflow_wrap`
 
-- **Type:** [Number](number)
-- **Default:**
+:Type: [Number](number)
+:Default:
     ```neomuttrc
     set reflow_wrap = 78
     ```
@@ -207,9 +207,9 @@ Also see [$wrap](wrap).
 (reply-regex)=
 ## `$reply_regex`
 
-- **Type:** [Regular Expression](regex)
-- **Notes:** {ref}`Localised String <general>`
-- **Default:**
+:Type: [Regular Expression](regex)
+:Notes: {ref}`Localised String <general>`
+:Default:
     ```neomuttrc
     set reply_regex = "^((re)(\\[[0-9]+\\])*:[ \t]*)*"
     ```
@@ -240,8 +240,8 @@ If that fixes the problem, then once the variable is set to your liking, remove 
 (reverse-alias)=
 ## `$reverse_alias`
 
-- **Type:** [Boolean](bool)
-- **Default:**
+:Type: [Boolean](bool)
+:Default:
     ```neomuttrc
     set reverse_alias = no
     ```
@@ -266,8 +266,8 @@ It would be displayed in the index menu as "Joe User" instead of "abd30425@somew
 (rfc2047-parameters)=
 ## `$rfc2047_parameters`
 
-- **Type:** [Boolean](bool)
-- **Default:**
+:Type: [Boolean](bool)
+:Default:
     ```neomuttrc
     set rfc2047_parameters = yes
     ```
@@ -292,8 +292,8 @@ Instead, NeoMutt will unconditionally use the encoding specified in [RFC2231](ht
 (score)=
 ## `$score`
 
-- **Type:** [Boolean](bool)
-- **Default:**
+:Type: [Boolean](bool)
+:Default:
     ```neomuttrc
     set score = yes
     ```
@@ -306,8 +306,8 @@ This can be useful to selectively disable scoring for certain folders when the [
 (score-threshold-delete)=
 ## `$score_threshold_delete`
 
-- **Type:** [Number](number)
-- **Default:**
+:Type: [Number](number)
+:Default:
     ```neomuttrc
     set score_threshold_delete = -1
     ```
@@ -320,8 +320,8 @@ Since NeoMutt scores are always greater than or equal to zero, the default setti
 (score-threshold-flag)=
 ## `$score_threshold_flag`
 
-- **Type:** [Number](number)
-- **Default:**
+:Type: [Number](number)
+:Default:
     ```neomuttrc
     set score_threshold_flag = 9999
     ```
@@ -333,8 +333,8 @@ Messages which have been assigned a score greater than or equal to this variable
 (score-threshold-read)=
 ## `$score_threshold_read`
 
-- **Type:** [Number](number)
-- **Default:**
+:Type: [Number](number)
+:Default:
     ```neomuttrc
     set score_threshold_read = -1
     ```
@@ -347,8 +347,8 @@ Since NeoMutt scores are always greater than or equal to zero, the default setti
 (show-multipart-alternative)=
 ## `$show_multipart_alternative`
 
-- **Type:** [String](string)
-- **Default:** (empty)
+:Type: [String](string)
+:Default: (empty)
     ```neomuttrc
     set show_multipart_alternative = ""
     ```
@@ -362,8 +362,8 @@ When not set, the default behavior is to show only the chosen alternative.
 (spam-separator)=
 ## `$spam_separator`
 
-- **Type:** [String](string)
-- **Default:**
+:Type: [String](string)
+:Default:
     ```neomuttrc
     set spam_separator = ","
     ```

@@ -9,8 +9,8 @@ keywords: neomutt, mbox, mmdf, check_mbox_size, new mail detection, file size, m
 (check-mbox-size)=
 ## `$check_mbox_size`
 
-- **Type:** [Boolean](bool)
-- **Default:**
+:Type: [Boolean](bool)
+:Default:
     ```neomuttrc
     set check_mbox_size = no
     ```

@@ -9,8 +9,8 @@ keywords: "attachment, mime, attach_save_dir, attach_split, bounce, mime_forward
 (attach-save-dir)=
 ## `$attach_save_dir`
 
-- **Type:** [Path (String)](path)
-- **Default:**
+:Type: [Path (String)](path)
+:Default:
     ```neomuttrc
     set attach_save_dir = "./"
     ```
@@ -22,8 +22,8 @@ The directory where attachments are saved.
 (attach-save-without-prompting)=
 ## `$attach_save_without_prompting`
 
-- **Type:** [Boolean](bool)
-- **Default:**
+:Type: [Boolean](bool)
+:Default:
     ```neomuttrc
     set attach_save_without_prompting = no
     ```
@@ -35,8 +35,8 @@ This variable, when set to true, will cause attachments to be saved to the 'atta
 (attach-sep)=
 ## `$attach_sep`
 
-- **Type:** [String](string)
-- **Default:**
+:Type: [String](string)
+:Default:
     ```neomuttrc
     set attach_sep = "\n"
     ```
@@ -48,8 +48,8 @@ The separator to add between attachments when operating (saving, printing, pipin
 (attach-split)=
 ## `$attach_split`
 
-- **Type:** [Boolean](bool)
-- **Default:**
+:Type: [Boolean](bool)
+:Default:
     ```neomuttrc
     set attach_split = yes
     ```
@@ -63,8 +63,8 @@ When _set_, NeoMutt will operate on the attachments one by one.
 (bounce)=
 ## `$bounce`
 
-- **Type:** [Quad-Option](quad)
-- **Default:**
+:Type: [Quad-Option](quad)
+:Default:
     ```neomuttrc
     set bounce = ask-yes
     ```
@@ -78,8 +78,8 @@ Setting this variable to _no_ is not generally useful, and thus not recommended,
 (count-alternatives)=
 ## `$count_alternatives`
 
-- **Type:** [Boolean](bool)
-- **Default:**
+:Type: [Boolean](bool)
+:Default:
     ```neomuttrc
     set count_alternatives = no
     ```
@@ -95,8 +95,8 @@ Setting this will allow NeoMutt to find and count matching attachments hidden th
 (digest-collapse)=
 ## `$digest_collapse`
 
-- **Type:** [Boolean](bool)
-- **Default:**
+:Type: [Boolean](bool)
+:Default:
     ```neomuttrc
     set digest_collapse = yes
     ```
@@ -109,8 +109,8 @@ To see these subparts, press "v" on that menu.
 (message-format)=
 ## `$message_format`
 
-- **Type:** [Expando](expando)
-- **Default:**
+:Type: [Expando](expando)
+:Default:
     ```neomuttrc
     set message_format = "%s"
     ```
@@ -123,8 +123,8 @@ For a full listing of defined `printf(3)`-like sequences see the section on [$in
 (mime-forward)=
 ## `$mime_forward`
 
-- **Type:** [Quad-Option](quad)
-- **Default:**
+:Type: [Quad-Option](quad)
+:Default:
     ```neomuttrc
     set mime_forward = no
     ```
@@ -140,8 +140,8 @@ Also see [$forward_decode](forward-decode) and [$mime_forward_decode](mime-forwa
 (mime-forward-rest)=
 ## `$mime_forward_rest`
 
-- **Type:** [Quad-Option](quad)
-- **Default:**
+:Type: [Quad-Option](quad)
+:Default:
     ```neomuttrc
     set mime_forward_rest = yes
     ```
