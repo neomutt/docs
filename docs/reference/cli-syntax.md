@@ -19,21 +19,22 @@ NeoMutt has **four modes** of operation:
 
 The default mode, when no arguments are given, is **tui**.
 
-In addition, there are **shared options** that apply to all modes.  These
-control config files, extra commands, mailbox type, and debug logging.
+In addition, there are **shared options** that apply to all modes.
+ These control config files, extra commands, mailbox type, and debug logging.
 
-All options have both short (`-X`) and long (`--name`) forms.  The two forms
-are interchangeable and may be freely mixed on the same command line.
+All options have both short (`-X`) and long (`--name`) forms.
+ The two forms are interchangeable and may be freely mixed on the same command line.
 
-> **Note:** The `=` syntax is **not** supported.  For example,
-> `--config=file` is invalid.  Use `--config file` instead.
+> **Note:** The `=` syntax is **not** supported.
+ For example, `--config=file` is invalid.
+ Use `--config file` instead.
 
 ---
 
 ## Shared Options
 
-Shared options may be combined with any mode.  They control which config
-files are loaded, allow extra config commands, and configure debug logging.
+Shared options may be combined with any mode.
+ They control which config files are loaded, allow extra config commands, and configure debug logging.
 
 | Short | Long                 | Argument    | Description                              |
 |-------|----------------------|-------------|------------------------------------------|
@@ -46,12 +47,13 @@ files are loaded, allow extra config commands, and configure debug logging.
 
 ### Config Files
 
-By default, NeoMutt loads one system config file (e.g. `/etc/neomuttrc`)
-and one user config file (e.g. `~/.neomuttrc`).
+By default, NeoMutt loads one system config file (e.g.
+`/etc/neomuttrc`) and one user config file (e.g.
+`~/.neomuttrc`).
 
 - `-n` prevents the system config file from being loaded.
-- `-F` replaces the default user config file.  It may be specified multiple
-  times; each file is loaded in order.
+`-F` replaces the default user config file.
+ It may be specified multiple times; each file is loaded in order.
 
 ```sh
 # Skip the system config
@@ -79,8 +81,8 @@ neomutt -e 'set sort = threads' -e 'set markers = no'
 
 ### Mailbox Type
 
-The `-m` option sets the default mailbox type.  Valid values are:
-`maildir`, `mbox`, `mh`, `mmdf`.
+The `-m` option sets the default mailbox type.
+ Valid values are: `maildir`, `mbox`, `mh`, `mmdf`.
 
 ```sh
 neomutt --mbox-type maildir
@@ -88,9 +90,8 @@ neomutt --mbox-type maildir
 
 ### Debug Logging
 
-The `-d` option sets the logging level: `0` (off), `1` (low) through `5`
-(high).  The `-l` option sets the log file; the default is
-`~/.neomuttdebug0`.
+The `-d` option sets the logging level: `0` (off), `1` (low) through `5` (high).
+ The `-l` option sets the log file; the default is `~/.neomuttdebug0`.
 
 ```sh
 # Enable moderate logging
@@ -104,8 +105,8 @@ neomutt --debug-level 5 --debug-file /tmp/neomutt.log
 
 ## Help Mode
 
-Help mode displays usage information, the NeoMutt version, or the license
-text.  NeoMutt prints the requested information and exits.
+Help mode displays usage information, the NeoMutt version, or the license text.
+ NeoMutt prints the requested information and exits.
 
 | Short | Long        | Argument | Description                          |
 |-------|-------------|----------|--------------------------------------|
@@ -132,8 +133,10 @@ neomutt --help all
 
 ### Version and License
 
-Using `-v` once prints the version.  Using `-v` twice (i.e. `-vv`) prints
-the license.  The long option `--license` is equivalent to `-vv`.
+Using `-v` once prints the version.
+ Using `-v` twice (i.e.
+`-vv`) prints the license.
+ The long option `--license` is equivalent to `-vv`.
 
 ```sh
 neomutt --version
@@ -145,8 +148,8 @@ neomutt --license
 
 ## Info Mode
 
-Info mode queries NeoMutt's configuration and exits.  It is useful for
-scripting and debugging config problems.
+Info mode queries NeoMutt's configuration and exits.
+ It is useful for scripting and debugging config problems.
 
 | Short | Long                    | Argument         | Description                         |
 |-------|-------------------------|------------------|-------------------------------------|
@@ -159,9 +162,9 @@ scripting and debugging config problems.
 
 ### Alias Lookup
 
-The `-A` option looks up one or more email aliases.  Multiple aliases can be
-specified as space-separated arguments.  The argument list is terminated by
-`--` or another option flag.
+The `-A` option looks up one or more email aliases.
+ Multiple aliases can be specified as space-separated arguments.
+ The argument list is terminated by `--` or another option flag.
 
 ```sh
 # Lookup a single alias
@@ -173,9 +176,10 @@ neomutt --alias flatcap gahr rocco
 
 ### Dump Config
 
-Using `-D` once dumps all config options.  Using `-D` twice (i.e. `-DD`)
-dumps only the options that differ from their defaults.  The long option
-`--dump-changed-config` is equivalent to `-DD`.
+Using `-D` once dumps all config options.
+ Using `-D` twice (i.e.
+`-DD`) dumps only the options that differ from their defaults.
+ The long option `--dump-changed-config` is equivalent to `-DD`.
 
 ```sh
 # Dump all config
@@ -188,9 +192,9 @@ neomutt --dump-changed-config
 
 ### Query Config
 
-The `-Q` option queries one or more specific config options.  Multiple
-option names can be specified as space-separated arguments.  The argument
-list is terminated by `--` or another option flag.
+The `-Q` option queries one or more specific config options.
+ Multiple option names can be specified as space-separated arguments.
+ The argument list is terminated by `--` or another option flag.
 
 ```sh
 # Query a single option
@@ -205,7 +209,8 @@ neomutt --query alias_format index_format
 The `-O` and `-S` options modify the output of `-D` and `-Q`.
 
 - `-O` adds a one-liner documentation comment above each option.
-- `-S` hides the values of sensitive options (e.g. passwords).
+`-S` hides the values of sensitive options (e.g.
+passwords).
 
 These modifiers may be combined.
 
@@ -224,9 +229,9 @@ neomutt --with-docs --query alias_format index_format
 
 ## Send Mode
 
-Send mode composes and sends an email from the command line.  If any
-required parts are missing (e.g. no recipients or no subject), NeoMutt will
-start the TUI to prompt for them.
+Send mode composes and sends an email from the command line.
+ If any required parts are missing (e.g.
+no recipients or no subject), NeoMutt will start the TUI to prompt for them.
 
 | Short | Long             | Argument       | Description                               |
 |-------|------------------|----------------|-------------------------------------------|
@@ -244,10 +249,10 @@ start the TUI to prompt for them.
 
 To: addresses may appear in **two** places on the command line:
 
-1. **Before any options** — leading non-option arguments are treated as
-   To: addresses.
-2. **After `--`** — trailing arguments after the `--` separator are treated
-   as To: addresses.
+1.
+**Before any options** — leading non-option arguments are treated as To: addresses.
+2.
+**After `--`** — trailing arguments after the `--` separator are treated as To: addresses.
 
 Aliases defined in the config may be used in place of email addresses.
 
@@ -264,8 +269,8 @@ neomutt --subject 'Team Update' -- alice@example.com bob@example.com
 
 ### Attachments
 
-The `-a` option accepts multiple space-separated file arguments.  The file
-list is terminated by `--` or another option flag.
+The `-a` option accepts multiple space-separated file arguments.
+ The file list is terminated by `--` or another option flag.
 
 ```sh
 # Attach a single file
@@ -280,8 +285,8 @@ neomutt --attach photo1.jpg photo2.jpg -- friends@example.com
 
 ### Drafts and Includes
 
-A **draft file** (`-H`) is a complete email with headers and body.  An
-**include file** (`-i`) provides only the body text.
+A **draft file** (`-H`) is a complete email with headers and body.
+ An **include file** (`-i`) provides only the body text.
 
 The `-E` option enables editing of the draft or include file in the
 composer before sending.
@@ -322,9 +327,9 @@ neomutt jim@example.com \
 
 ## TUI Mode
 
-TUI mode starts NeoMutt's Terminal User Interface.  This is the default
-when no command-line arguments are given.  By default, NeoMutt opens the
-Index Dialog with the `$spool_file` mailbox.
+TUI mode starts NeoMutt's Terminal User Interface.
+ This is the default when no command-line arguments are given.
+ By default, NeoMutt opens the Index Dialog with the `$spool_file` mailbox.
 
 | Short | Long               | Argument    | Description                       |
 |-------|--------------------|-------------|-----------------------------------|
@@ -382,8 +387,8 @@ neomutt --browser
 
 ### NNTP (Usenet)
 
-The `-G` option opens the NNTP newsgroup browser.  The `-g` option
-specifies an NNTP server to connect to.
+The `-G` option opens the NNTP newsgroup browser.
+ The `-g` option specifies an NNTP server to connect to.
 
 ```sh
 # Open the NNTP browser
@@ -401,13 +406,13 @@ This section describes how NeoMutt interprets the command line.
 
 ### Option Syntax
 
-NeoMutt uses `getopt_long` for command-line parsing.  All short options have
-equivalent long options.
+NeoMutt uses `getopt_long` for command-line parsing.
+ All short options have equivalent long options.
 
 - Short options use a single dash: `-s 'Hello'`
-- Long options use a double dash: `--subject 'Hello'`
-- **The `=` sign is not supported**.  `--subject='Hello'` is invalid and
-  will produce an error.
+  Long options use a double dash: `--subject 'Hello'`
+  **The `=` sign is not supported**.
+  `--subject='Hello'` is invalid and will produce an error.
 
 ### Leading Arguments
 

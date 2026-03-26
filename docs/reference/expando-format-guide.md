@@ -6,11 +6,8 @@ keywords: neomutt, expando, format string, width, padding, justification, alignm
 
 # Formatting Expandos
 
-NeoMutt uses **expandos** — short codes starting with `%` — to build the
-format strings that control how the message list, status bar, sidebar, and
-other parts of the interface look.  Each expando is replaced at runtime with
-a real value: a sender's name, a subject line, a date, a message count, and
-so on.
+NeoMutt uses **expandos** — short codes starting with `%` — to build the format strings that control how the message list, status bar, sidebar, and other parts of the interface look.
+Each expando is replaced at runtime with a real value: a sender's name, a subject line, a date, a message count, and so on.
 
 This guide explains how to format those expandos: how to set column widths,
 align text, truncate long values, and use padding to fill the screen.
@@ -19,11 +16,11 @@ align text, truncate long values, and use padding to fill the screen.
 
 ## What Is an Expando?
 
-An expando is a placeholder.  You write it in a format string, and NeoMutt
-replaces it with the appropriate value.
+An expando is a placeholder.
+You write it in a format string, and NeoMutt replaces it with the appropriate value.
 
-For example, in the index (message list), `%s` means "the subject" and `%n`
-means "the author's name".  So this format string:
+For example, in the index (message list), `%s` means "the subject" and `%n` means "the author's name".
+So this format string:
 
 ```neomuttrc
 set index_format = "%n — %s"
@@ -37,9 +34,9 @@ Alice — Lunch on Friday?
 
 ### Short Names and Long Names
 
-Every expando has a **short name** — one or two characters after `%`.  Most
-also have a **long name** enclosed in braces.  The two forms are
-interchangeable:
+Every expando has a **short name** — one or two characters after `%`.
+Most also have a **long name** enclosed in braces.
+The two forms are interchangeable:
 
 | Short Name | Long Name             | Meaning          |
 |------------|-----------------------|------------------|
@@ -60,8 +57,9 @@ set index_format = "%C %n %s"
 set index_format = "%{number} %{name} %{subject}"
 ```
 
-Long names are easier to read in complex format strings.  Short names are
-quicker to type.  Use whichever you prefer — or mix them freely.
+Long names are easier to read in complex format strings.
+Short names are quicker to type.
+Use whichever you prefer — or mix them freely.
 
 ### Literal Percent Sign
 
@@ -76,8 +74,8 @@ set status_format = "100%% complete"
 ## Column Width
 
 By default, an expando takes up exactly as much space as its value needs.
-A short subject uses fewer columns than a long one.  This makes columns
-ragged and hard to scan:
+A short subject uses fewer columns than a long one.
+This makes columns ragged and hard to scan:
 
 ```
   1 Alice — Hi
@@ -90,8 +88,8 @@ every value into the same number of columns.
 
 ### Minimum Width
 
-Put a number between `%` and the expando letter.  NeoMutt pads the value
-with spaces if it's shorter than the minimum:
+Put a number between `%` and the expando letter.
+NeoMutt pads the value with spaces if it's shorter than the minimum:
 
 ```neomuttrc
 # Give the subject at least 30 columns
@@ -110,8 +108,8 @@ set index_format = "%15{name}"
 
 ### Maximum Width (Truncation)
 
-Put a dot and a number to set a maximum.  NeoMutt truncates the value if
-it's longer:
+Put a dot and a number to set a maximum.
+NeoMutt truncates the value if it's longer:
 
 ```neomuttrc
 # Truncate the subject to at most 40 columns
@@ -123,8 +121,8 @@ set index_format = "%.20{name}"
 
 ### Both Together
 
-Combine minimum and maximum to create a fixed-width column.  This is the
-most common pattern — it makes every row line up neatly:
+Combine minimum and maximum to create a fixed-width column.
+This is the most common pattern — it makes every row line up neatly:
 
 ```neomuttrc
 # Name in exactly 20 columns (pad if short, truncate if long)
@@ -159,8 +157,8 @@ Result:
 
 ## Justification (Alignment)
 
-By default, values are **right-justified** — padded on the left side.  You
-can change this with a flag immediately after `%`:
+By default, values are **right-justified** — padded on the left side.
+You can change this with a flag immediately after `%`:
 
 | Flag     | Alignment | Padding goes… |
 |----------|-----------|---------------|
@@ -196,8 +194,8 @@ set index_format = "%5C"
 
 ### Left-Justified
 
-A `-` flag left-justifies the value — padding goes on the right.  This is
-the natural choice for names, addresses, and subjects:
+A `-` flag left-justifies the value — padding goes on the right.
+This is the natural choice for names, addresses, and subjects:
 
 ```neomuttrc
 # Left-justify the name in 20 columns
@@ -282,8 +280,8 @@ set index_format = "%05{number}"
 :::{admonition} Zero-padding and left justification
 :class: note
 
-Zero-padding is ignored when combined with left-justification (`-`).  A
-left-justified number is padded with spaces on the right, never with zeros.
+Zero-padding is ignored when combined with left-justification (`-`).
+A left-justified number is padded with spaces on the right, never with zeros.
 :::
 
 ---
@@ -325,14 +323,8 @@ name is:
 %[justification][zero][min_width][.max_width][lowercase]EXPANDO
 ```
 
-| Component     | Values                   | Default   |
-|---------------|--------------------------|-----------|
-| Justification | `-` (left), `=` (centre) | Right     |
-| Zero-padding  | `0`                      | Spaces    |
-| Minimum width | A number (e.g. `20`)     | 0 (none)  |
-| Maximum width | `.` then a number        | Unlimited |
-| Lowercase     | `_`                      | Off       |
-| Expando       | Letter or `{long-name}`  | —         |
+| Component     | Values                   | Default   | |---------------|--------------------------|-----------| | Justification | `-` (left), `=` (centre) | Right     | | Zero-padding  | `0`                      | Spaces    | | Minimum width | A number (e.g.
+`20`)     | 0 (none)  | | Maximum width | `.` then a number        | Unlimited | | Lowercase     | `_`                      | Off       | | Expando       | Letter or `{long-name}`  | —         |
 
 ### More Combined Examples
 
@@ -360,13 +352,11 @@ name is:
 
 ## Padding
 
-Padding expandos are special.  Instead of inserting a value, they fill
-space — they push content apart, draw separator lines, or ensure the right
-side of the screen is used.
+Padding expandos are special.
+Instead of inserting a value, they fill space — they push content apart, draw separator lines, or ensure the right side of the screen is used.
 
-Every format string is rendered within a fixed width (usually your terminal
-width).  A padding expando divides the format string into a **left side**
-and a **right side**, then fills the gap between them with a character.
+Every format string is rendered within a fixed width (usually your terminal width).
+A padding expando divides the format string into a **left side** and a **right side**, then fills the gap between them with a character.
 
 ### The Three Padding Types
 
@@ -376,13 +366,13 @@ and a **right side**, then fills the gap between them with a character.
 | `%>X`   | `%{padding-hard:X}` | Hard fill | Kept      | Truncated   |
 | `%*X`   | `%{padding-soft:X}` | Soft fill | Truncated | Kept        |
 
-The character `X` after the padding symbol is the **fill character**.  If
-you omit it (or use a space), the gap is filled with spaces.
+The character `X` after the padding symbol is the **fill character**.
+If you omit it (or use a space), the gap is filled with spaces.
 
 ### End-of-Line Padding (`%|X`)
 
-Renders the left side, then fills from there to the end of the screen with
-the fill character.  Nothing appears after the padding.
+Renders the left side, then fills from there to the end of the screen with the fill character.
+Nothing appears after the padding.
 
 ```
 [--- left content ---][XXXXXXXXXXXXXXXXXX]
@@ -410,22 +400,21 @@ Compose: 1234 bytes =============================
 
 ### Hard-Fill Padding (`%>X`)
 
-The left side is "hard" — it is always shown in full.  The right side gets
-whatever space remains.  If the screen is too narrow for both, the
-**right side is truncated**.
+The left side is "hard" — it is always shown in full.
+The right side gets whatever space remains.
+If the screen is too narrow for both, the **right side is truncated**.
 
 ```
 [--- left (kept) ---][XXXXX][--- right (truncated if needed) ---]
 ```
 
-This is the most common padding type.  Use it when the left side is more
-important:
+This is the most common padding type.
+Use it when the left side is more important:
 
-```neomuttrc
-# Left: flags, date, name.  Right: subject.
+```neomuttrc # Left: flags, date, name.
+Right: subject.
 # The subject is truncated if the screen is narrow.
-set index_format = "%4C %Z %d %-20.20n %> %s"
-```
+set index_format = "%4C %Z %d %-20.20n %> %s" ```
 
 On a wide screen:
 
@@ -453,9 +442,10 @@ Bob                  ..Re: Planning the team offsite
 
 ### Soft-Fill Padding (`%*X`)
 
-The opposite of hard fill.  The right side is "hard" — always shown in full.
-The left side gets whatever space remains.  If the screen is too narrow for
-both, the **left side is truncated**.
+The opposite of hard fill.
+The right side is "hard" — always shown in full.
+The left side gets whatever space remains.
+If the screen is too narrow for both, the **left side is truncated**.
 
 ```
 [--- left (truncated if needed) ---][XXXXX][--- right (kept) ---]
@@ -490,10 +480,9 @@ On a narrow screen (the folder path gets cut):
 
 ### Padding Rules
 
-- Only **one** padding expando per format string.  If you use more than one,
-  only the first takes effect.
-- Padding expandos **cannot** have format specifiers (no widths or
-  justification).
+- Only **one** padding expando per format string.
+  If you use more than one, only the first takes effect.
+- Padding expandos **cannot** have format specifiers (no widths or justification).
 - Padding expandos **cannot** be used inside conditions.
 
 ---
@@ -628,7 +617,6 @@ Where `X` is the fill character (space if omitted).
 
 ## See Also
 
-- [Conditional Expandos](expando-conditional-guide.md) — how to show different
-  text based on message properties
+- [Conditional Expandos](expando-conditional-guide.md) — how to show different text based on message properties
 - Expando Syntax Reference — technical reference
 - [NeoMutt Manual](https://neomutt.org/guide/) — full documentation

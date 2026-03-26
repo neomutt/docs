@@ -35,49 +35,36 @@ More information can be found at [https://autocrypt.org/](https://autocrypt.org/
    # set autocrypt_dir = "~/.local/share/autocrypt"
    ```
 
-2. The first time NeoMutt is run after that, you will be prompted to create
-   `$autocrypt_dir`. NeoMutt will then automatically create an sqlite3 database
-   and GPG keyring in that directory. Since these files should be considered
-   private, NeoMutt will create this directory with mode `700`. If you create
-   the directory manually, you should do the same.
+2. The first time NeoMutt is run after that, you will be prompted to create `$autocrypt_dir`.
+   NeoMutt will then automatically create an sqlite3 database and GPG keyring in that directory.
+   Since these files should be considered private, NeoMutt will create this directory with mode `700`.
+   If you create the directory manually, you should do the same.
 
-3. NeoMutt recommends keeping the `$autocrypt_dir` directory set differently
-   from your GnuPG keyring directory (e.g. `~/.gnupg`). Keys are automatically
-   imported into the keyring from `Autocrypt:` headers. Compared to standard
-   "web of trust" keys, Autocrypt keys are somewhat ephemeral, and the autocrypt
-   database is used to track when keys change or fall out of use. Having these
-   keys mixed in with your normal keyring will make it more difficult to use
-   features such as `$crypt_opportunistic_encrypt` and Autocrypt at the same
-   time.
+3. NeoMutt recommends keeping the `$autocrypt_dir` directory set differently from your GnuPG keyring directory (e.g. `~/.gnupg`).
+   Keys are automatically imported into the keyring from `Autocrypt:` headers.
+   Compared to standard "web of trust" keys, Autocrypt keys are somewhat ephemeral, and the autocrypt database is used to track when keys change or fall out of use.
+   Having these keys mixed in with your normal keyring will make it more difficult to use features such as `$crypt_opportunistic_encrypt` and Autocrypt at the same time.
 
-4. The `$autocrypt_dir` variable is not designed to be changed while NeoMutt is
-   running. The database is created (if necessary) and connected to during
-   startup. Changing the variable can result in a situation where NeoMutt is
-   looking in one place for the database and a different place for the GPG
-   keyring, resulting in strange behavior.
+4. The `$autocrypt_dir` variable is not designed to be changed while NeoMutt is running.
+   The database is created (if necessary) and connected to during startup.
+   Changing the variable can result in a situation where NeoMutt is looking in one place for the database and a different place for the GPG keyring, resulting in strange behavior.
 
-5. Once the directory, keyring, and database are created, NeoMutt will ask
-   whether you would like to create an account. In order to use Autocrypt, each
-   sending address needs an account. As a convenience you can create an account
-   during the first run. If you would like to add additional accounts later,
-   this can be done via the `<autocrypt-acct-menu>` function in the index, by
-   default bound to `A`.
+5. Once the directory, keyring, and database are created, NeoMutt will ask whether you would like to create an account.
+   In order to use Autocrypt, each sending address needs an account.
+   As a convenience you can create an account during the first run.
+   If you would like to add additional accounts later, this can be done via the `<autocrypt-acct-menu>` function in the index, by default bound to `A`.
 
-6. Account creation will first ask you for an email address. Next, it will ask
-   whether you want to create a new key or select an existing key. (Note key
-   selection takes place from the `$autocrypt_dir` keyring, which will normally
-   be empty during first run). Finally, it will ask whether this address should
-   prefer encryption or not. Autocrypt 1.1 allows automatically enabling
-   encryption if *both* sender and receiver have set "prefer encryption".
-   Otherwise, you will need to manually enable autocrypt encryption in the
-   compose menu.
+6. Account creation will first ask you for an email address.
+   Next, it will ask whether you want to create a new key or select an existing key.
+   (Note key selection takes place from the `$autocrypt_dir` keyring, which will normally be empty during first run).
+   Finally, it will ask whether this address should prefer encryption or not.
+   Autocrypt 1.1 allows automatically enabling encryption if *both* sender and receiver have set "prefer encryption".
+   Otherwise, you will need to manually enable autocrypt encryption in the compose menu.
 
-7. After optionally creating an account, NeoMutt will prompt you to scan
-   mailboxes for Autocrypt headers. This step occurs because header cached
-   messages are not re-scanned for Autocrypt headers. Scanning during this step
-   will temporarily disable the header cache while opening each mailbox. If you
-   wish to do this manually later, you can simulate the same thing by unsetting
-   `$header_cache` and opening a mailbox.
+7. After optionally creating an account, NeoMutt will prompt you to scan mailboxes for Autocrypt headers.
+   This step occurs because header cached messages are not re-scanned for Autocrypt headers.
+   Scanning during this step will temporarily disable the header cache while opening each mailbox.
+   If you wish to do this manually later, you can simulate the same thing by unsetting `$header_cache` and opening a mailbox.
 
 :::{note}
 The first run process takes place between reading the neomuttrc and opening the initial mailbox.
@@ -103,14 +90,16 @@ The `Autocrypt:` field displays "Off" and the `Recommendation:` field shows a va
 ### The Autocrypt Field
 
 The `Autocrypt:` field shows whether the message will be encrypted by Autocrypt when sent.
-It has two values: `Encrypt` and `Off`. `Encrypt` can be enabled using the `<autocrypt-menu>` function, by default bound to `o`.
+It has two values: `Encrypt` and `Off`.
+`Encrypt` can be enabled using the `<autocrypt-menu>` function, by default bound to `o`.
 
 ### The Recommendation Field
 
 The `Recommendation:` field shows the output of the Autocrypt recommendation engine.
 This can have one of five values:
 
-- **`Off`** — The engine is disabled. This can happen if the From address doesn't have an autocrypt account, or if the account has been manually disabled.
+- **`Off`** — The engine is disabled.
+   This can happen if the From address doesn't have an autocrypt account, or if the account has been manually disabled.
 - **`No`** — One or more recipients are missing an autocrypt key, or the key found is unusable (i.e. expired, revoked, disabled, invalid, or not usable for encryption).
 - **`Discouraged`** — A key was found for every recipient, but the engine is not confident the message will be decryptable by the recipient.
    This can happen if the key hasn't been used recently (compared to their last seen email).
@@ -147,7 +136,8 @@ The compose screen is visible in the background with the Autocrypt fields.
 
 ### Interaction with Normal Encryption
 
-Autocrypt encryption defers to normal encryption or signing. *Anything* that enables normal encryption or signing will cause autocrypt encryption to turn off.
+Autocrypt encryption defers to normal encryption or signing.
+*Anything* that enables normal encryption or signing will cause autocrypt encryption to turn off.
 The only exception is when replying to an autocrypt-encrypted email (i.e. an email decrypted from the `$autocrypt_dir` keyring).
 Then, if `$autocrypt_reply` is *set*, autocrypt mode will be forced on, overriding the settings `$crypt_auto_sign`, `$crypt_auto_encrypt`, `$crypt_reply_encrypt`, `$crypt_reply_sign`, `$crypt_reply_sign_encrypted`, and `$crypt_opportunistic_encrypt`.
 
@@ -218,7 +208,8 @@ Autocrypt header keys will be imported into your keyring, but if you don't want 
 ### Caveats for Both Methods
 
 - Replying to an Autocrypt decrypted message by default forces Autocrypt mode on.
-   By sharing the same key, all replies will then start in Autocrypt mode, even if a message wasn't sent by one of your Autocrypt peers. `$autocrypt_reply` can be *unset* to allow manual control of the mode when replying.
+   By sharing the same key, all replies will then start in Autocrypt mode, even if a message wasn't sent by one of your Autocrypt peers.
+   `$autocrypt_reply` can be *unset* to allow manual control of the mode when replying.
 
 - When NeoMutt creates an account from a GPG key, it exports the public key, base64 encodes it, and stores that value in the sqlite3 database.
    The value is then used in the Autocrypt header added to outgoing emails.

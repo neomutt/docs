@@ -6,16 +6,14 @@ keywords: neomutt, send, email, command-line, attach, draft, pipe, encrypt, sign
 
 # Sending Email from the Command Line
 
-NeoMutt can send email directly from the command line — no interactive
-interface required.  This guide walks through every way to compose, attach,
-sign, encrypt, and send messages without ever opening the full NeoMutt
-application.
+NeoMutt can send email directly from the command line — no interactive interface required.
+This guide walks through every way to compose, attach, sign, encrypt, and send messages without ever opening the full NeoMutt application.
 
 :::{admonition} Before You Start
 :class: tip
 
-NeoMutt must be configured with a working mail delivery method before you can
-send.  Check that one of the following is set in your `~/.neomuttrc`:
+NeoMutt must be configured with a working mail delivery method before you can send.
+Check that one of the following is set in your `~/.neomuttrc`:
 
 ```neomuttrc
 # Option A: Use a local sendmail program (the default)
@@ -44,15 +42,14 @@ subject:
 neomutt --subject 'Hello' -- alice@example.com
 ```
 
-NeoMutt opens your text editor so you can type the message body.  When you
-save and close the editor, NeoMutt presents the compose screen where you can
-review the message, then press `y` to send.
+NeoMutt opens your text editor so you can type the message body.
+When you save and close the editor, NeoMutt presents the compose screen where you can review the message, then press `y` to send.
 
 :::{admonition} Which editor?
 :class: note
 
-NeoMutt uses the editor set by `$editor` in your config, or the `VISUAL`
-or `EDITOR` environment variables.  If none is set, it defaults to `vi`.
+NeoMutt uses the editor set by `$editor` in your config, or the `VISUAL` or `EDITOR` environment variables.
+If none is set, it defaults to `vi`.
 :::
 
 ---
@@ -174,9 +171,8 @@ echo 'The nightly build succeeded.' | \
   neomutt --subject 'Build Report' -- dev@example.com
 ```
 
-When NeoMutt receives piped input, it enters **batch mode** — the message is
-sent without opening an editor or the compose screen.  This makes piping
-ideal for automated and scripted emails.
+When NeoMutt receives piped input, it enters **batch mode** — the message is sent without opening an editor or the compose screen.
+This makes piping ideal for automated and scripted emails.
 
 More realistic piping examples:
 
@@ -196,15 +192,16 @@ diff -u old-config.txt new-config.txt | \
 :::{admonition} Batch mode is non-interactive
 :class: important
 
-When you pipe input to NeoMutt, it runs silently.  There are no prompts, no
-editor, and no compose screen.  The message is sent immediately.  Make sure
-your subject and recipients are correct before running the command.
+When you pipe input to NeoMutt, it runs silently.
+There are no prompts, no editor, and no compose screen.
+The message is sent immediately.
+Make sure your subject and recipients are correct before running the command.
 :::
 
 ### Option 3: Use a Draft File
 
-A draft file is a complete email — headers and body together — in standard
-email format.  Use `--draft` (or `-H`) to load one:
+A draft file is a complete email — headers and body together — in standard email format.
+Use `--draft` (or `-H`) to load one:
 
 ```sh
 neomutt --draft ~/drafts/proposal.eml
@@ -278,14 +275,13 @@ neomutt --draft status-update.eml \
 
 ## Draft Files
 
-A draft file is the most powerful way to compose an email from the command
-line.  It lets you pre-fill every part of the message — recipients, subject,
-custom headers, and the body — in a single file.
+A draft file is the most powerful way to compose an email from the command line.
+It lets you pre-fill every part of the message — recipients, subject, custom headers, and the body — in a single file.
 
 ### Basic Format
 
-A draft file looks like a standard email.  Headers come first, followed by a
-blank line, then the message body:
+A draft file looks like a standard email.
+Headers come first, followed by a blank line, then the message body:
 
 ```email
 To: alice@example.com
@@ -328,15 +324,12 @@ This is the body of the email.
 Draft files can include special headers that NeoMutt understands but does
 not send to the recipient:
 
-| Header               | Purpose                                         |
-|----------------------|-------------------------------------------------|
-| `X-Mutt-Fcc:`        | Save a copy to this folder instead of `$record` |
-| `X-Mutt-PGP:`        | Set PGP options (e.g. `sign`, `encrypt`)        |
-| `X-Mutt-SMIME:`      | Set S/MIME options (e.g. `sign`, `encrypt`)     |
-| `X-Mutt-References:` | Message-ID to thread this as a reply            |
+| Header               | Purpose                                         | |----------------------|-------------------------------------------------| | `X-Mutt-Fcc:`        | Save a copy to this folder instead of `$record` | | `X-Mutt-PGP:`        | Set PGP options (e.g.
+`sign`, `encrypt`)        | | `X-Mutt-SMIME:`      | Set S/MIME options (e.g.
+`sign`, `encrypt`)     | | `X-Mutt-References:` | Message-ID to thread this as a reply            |
 
-These headers are stripped before sending.  They only control NeoMutt's
-behavior.
+These headers are stripped before sending.
+They only control NeoMutt's behavior.
 
 ### Example: Draft with Security and Filing
 
@@ -380,9 +373,9 @@ neomutt --draft proposal.eml \
   --cc manager@example.com
 ```
 
-The `--subject` replaces the draft's `Subject:` header.  The `--cc` address
-is added to any `Cc:` addresses already in the draft.  Addresses from `--`
-are added to the `To:` list.
+The `--subject` replaces the draft's `Subject:` header.
+The `--cc` address is added to any `Cc:` addresses already in the draft.
+Addresses from `--` are added to the `To:` list.
 
 ### Reading a Draft from Standard Input
 
@@ -400,18 +393,16 @@ EOF
 :::{admonition} Cannot edit piped drafts
 :class: warning
 
-You cannot use `--edit-message` with piped input (`--draft -`).  NeoMutt
-needs a real file on disk when editing is enabled.
+You cannot use `--edit-message` with piped input (`--draft -`).
+NeoMutt needs a real file on disk when editing is enabled.
 :::
 
 ---
 
 ## Editing Before Sending
 
-By default, NeoMutt opens the compose screen after loading a draft or
-include file.  The `--edit-message` (or `-E`) option goes further: it opens
-the **original file** in your editor, so your changes are saved back to that
-file.
+By default, NeoMutt opens the compose screen after loading a draft or include file.
+The `--edit-message` (or `-E`) option goes further: it opens the **original file** in your editor, so your changes are saved back to that file.
 
 This is useful when you want to refine a draft and keep the updated version
 on disk:
@@ -421,8 +412,8 @@ on disk:
 neomutt --edit-message --draft ~/drafts/proposal.eml
 ```
 
-Without `--edit-message`, NeoMutt works on a temporary copy and the original
-file is untouched.  With `--edit-message`, the original is edited directly.
+Without `--edit-message`, NeoMutt works on a temporary copy and the original file is untouched.
+With `--edit-message`, the original is edited directly.
 
 ### Editing an Include File
 
@@ -438,9 +429,8 @@ neomutt --edit-message \
 
 ### What Happens if You Don't Send?
 
-If you decide not to send (for example, you postpone the message), NeoMutt
-saves the current state back to the original file.  This means you can come
-back to it later:
+If you decide not to send (for example, you postpone the message), NeoMutt saves the current state back to the original file.
+This means you can come back to it later:
 
 ```sh
 # Start composing — decide to postpone
@@ -466,8 +456,8 @@ neomutt --crypto \
 
 ### What `--crypto` Does
 
-The `--crypto` flag activates whatever signing and encryption you have
-configured in your `~/.neomuttrc`.  The relevant settings are:
+The `--crypto` flag activates whatever signing and encryption you have configured in your `~/.neomuttrc`.
+The relevant settings are:
 
 ```neomuttrc
 # Automatically sign all outgoing messages
@@ -481,9 +471,8 @@ set crypt_auto_pgp = yes
 set crypt_auto_smime = yes
 ```
 
-Without `--crypto`, batch-mode messages (piped input) skip cryptographic
-processing.  With `--crypto`, your crypto settings are applied even in batch
-mode.
+Without `--crypto`, batch-mode messages (piped input) skip cryptographic processing.
+With `--crypto`, your crypto settings are applied even in batch mode.
 
 ### Signing Only
 
@@ -570,8 +559,8 @@ Please find my digitally signed confirmation below.
 
 ## Batch Mode and Automation
 
-When NeoMutt's standard input is not a terminal (i.e., you're piping data
-to it), it enters **batch mode** automatically.  In batch mode:
+When NeoMutt's standard input is not a terminal (i.e., you're piping data to it), it enters **batch mode** automatically.
+In batch mode:
 
 - No editor opens
 - No compose screen appears
@@ -695,9 +684,8 @@ neomutt \
   -- client@example.com
 ```
 
-NeoMutt opens the compose screen with the subject, Cc, and body already
-filled in.  You can edit the body, add more attachments, and adjust
-recipients before sending.
+NeoMutt opens the compose screen with the subject, Cc, and body already filled in.
+You can edit the body, add more attachments, and adjust recipients before sending.
 
 ### Script-Generated Draft
 
@@ -829,8 +817,8 @@ Useful Shared Options:
 
 ### "No recipients specified"
 
-You forgot to provide a To: address.  Add one after `--`:
-
+You forgot to provide a To: address.
+Add one after `--`:
 ```sh
 neomutt --subject 'Hello' -- someone@example.com
 ```
@@ -845,8 +833,8 @@ neomutt --query sendmail smtp_url
 
 ### Attachments not found
 
-NeoMutt looks for files relative to your current directory.  Use full
-paths to be safe:
+NeoMutt looks for files relative to your current directory.
+Use full paths to be safe:
 
 ```sh
 neomutt --attach /home/you/Documents/file.pdf -- recipient@example.com
@@ -854,8 +842,8 @@ neomutt --attach /home/you/Documents/file.pdf -- recipient@example.com
 
 ### Editor not opening
 
-If NeoMutt sends without opening an editor, you're likely in batch mode
-because something is connected to stdin.  Make sure stdin is a terminal:
+If NeoMutt sends without opening an editor, you're likely in batch mode because something is connected to stdin.
+Make sure stdin is a terminal:
 
 ```sh
 # This enters batch mode (stdin is a pipe)
@@ -867,8 +855,8 @@ neomutt --subject 'Hi' -- alice@example.com
 
 ### "Can't use -E flag with stdin"
 
-You cannot combine `--edit-message` with piped input.  Write the input
-to a file first:
+You cannot combine `--edit-message` with piped input.
+Write the input to a file first:
 
 ```sh
 # Instead of this (which fails):
