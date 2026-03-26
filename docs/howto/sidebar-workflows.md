@@ -1,7 +1,7 @@
 ---
 title: Organize Mailboxes with the Sidebar
-description: Build a mailbox navigation workflow using the NeoMutt sidebar
-keywords: sidebar, mailboxes, named-mailboxes, sidebar_format, sidebar-pin
+description: Build a mailbox navigation workflow with named mailboxes, pinning, filtering, and custom formatting in the NeoMutt sidebar
+keywords: sidebar, mailboxes, named-mailboxes, sidebar_format, sidebar-pin, sidebar_visible, sidebar_non_empty_mailbox_only, sidebar_new_mail_only, folder list, navigation panel, mailbox names, workflow
 ---
 
 # Organize Mailboxes with the Sidebar

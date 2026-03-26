@@ -1,7 +1,7 @@
 ---
 title: Edit and Navigate Threads
-description: Link, break, and configure threaded message views in NeoMutt
-keywords: threads, link-threads, break-thread, use_threads, sort, sort_aux, threading
+description: Link broken threads, break off-topic subthreads, and configure flat, threaded, or reverse threading views in NeoMutt
+keywords: threads, link-threads, break-thread, use_threads, sort, sort_aux, threading, conversation view, tree display, flat view, reverse threads, last-date, sort-mailbox, status_format, %T
 ---
 
 # Edit and Navigate Threads

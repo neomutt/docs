@@ -1,7 +1,7 @@
 ---
 title: Set Up SMTP
-description: Configure NeoMutt to deliver messages through an SMTP server
-keywords: smtp, smtp_url, smtp_authenticators, sendmail, mail delivery
+description: Configure NeoMutt to deliver outgoing messages through an SMTP server with SSL/TLS and SASL authentication
+keywords: smtp, smtp_url, smtp_authenticators, sendmail, mail delivery, smtps, sasl, ssl, tls, outgoing mail, message delivery, authentication, relay
 ---
 
 # Set Up SMTP

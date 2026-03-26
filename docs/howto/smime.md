@@ -1,7 +1,7 @@
 ---
 title: "Use S/MIME"
-description: Configure and use S/MIME encryption and signing for email in NeoMutt
-keywords: neomutt, smime, certificates, gpgsm, encryption, signing, x509
+description: Configure and use S/MIME encryption and signing in NeoMutt with GPGME or classic mode, including certificate import and key selection
+keywords: neomutt, smime, s/mime, certificates, gpgsm, gpgme, encryption, signing, x509, crypt_use_gpgme, smime_default_key, smime_self_encrypt, smime_keys, pkcs12, digital signatures, certificate authority
 ---
 
 # Use S/MIME

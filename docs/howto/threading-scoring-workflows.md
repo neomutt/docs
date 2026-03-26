@@ -1,7 +1,7 @@
 ---
 title: Build Threading and Scoring Workflows
-description: Combine threading and scoring to prioritize conversations in the index
-keywords: threads, scoring, use_threads, sort, sort_aux, score
+description: Combine threaded views with scoring rules to prioritise important conversations and senders in the NeoMutt index
+keywords: threads, scoring, use_threads, sort, sort_aux, score, folder-hook, prioritise, conversation grouping, sort by score, important messages, message ranking, workflow
 ---
 
 # Build Threading and Scoring Workflows

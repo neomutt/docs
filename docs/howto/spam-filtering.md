@@ -1,7 +1,7 @@
 ---
 title: Filter Spam
-description: Configure NeoMutt to detect and handle spam using external filters
-keywords: spam, nospam, spam filtering, spam detection, spam tag, header matching
+description: Configure NeoMutt to detect, tag, sort, and filter spam using external scoring filters and the spam/nospam commands
+keywords: spam, nospam, spam filtering, spam detection, spam tag, header matching, spam_separator, x-spam-status, junk mail, scoring, %H, ~H, index_format, imap_headers, sort by spam
 ---
 
 # Filter Spam

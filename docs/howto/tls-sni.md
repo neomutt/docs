@@ -1,7 +1,7 @@
 ---
 title: Configure TLS/SNI
-description: Set up SSL/TLS encryption and TLS-SNI virtual hosting in NeoMutt
-keywords: tls, ssl, starttls, sni, encryption, openssl, gnutls, tunnel, ssl_force_tls
+description: Set up SSL/TLS encryption, STARTTLS negotiation, secure tunnels, and TLS-SNI virtual hosting in NeoMutt
+keywords: tls, ssl, starttls, sni, encryption, openssl, gnutls, tunnel, ssl_force_tls, ssl_starttls, tunnel_is_secure, virtual hosting, secure connection, certificate, transport security
 ---
 
 # Configure TLS/SNI
