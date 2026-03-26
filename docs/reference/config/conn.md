@@ -193,8 +193,10 @@ A value of 0 will use the default from the GNUTLS library.
 If _set_ (the default), NeoMutt will attempt to use `STARTTLS` on servers advertising the capability.
 When _unset_, NeoMutt will not attempt to use `STARTTLS` regardless of the server's capabilities.
 
-**Note** that `STARTTLS` is subject to many kinds of attacks, including the ability of a machine-in-the-middle to suppress the advertising of support.
+:::{note}
+`STARTTLS` is subject to many kinds of attacks, including the ability of a machine-in-the-middle to suppress the advertising of support.
 Setting [$ssl_force_tls](ssl-force-tls) is recommended if you rely on `STARTTLS`.
+:::
 
 --------------------------------------------------------------------------------
 

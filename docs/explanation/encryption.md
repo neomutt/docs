@@ -96,11 +96,11 @@ To send an email from a file, enabling cryptographic operations as when sending 
 
 ```sh
 $ neomutt -C -H - < /mail/to/be/sent
-```neomuttrc
+```
 
 ### neomuttrc
 
-```
+```neomuttrc
 # Example NeoMutt config file for the cli-crypto feature.
 
 set pgp_default_key = "1111111111111111111111111111111111111111"

@@ -137,7 +137,9 @@ Although the compose menu may have localized header labels, the labels passed to
 Headers added in your editor must also be [RFC2822](https://www.rfc-editor.org/rfc/rfc2822.html) headers, or one of the pseudo headers listed in "$edit-header".
 NeoMutt will not understand localized header labels, just as it would not when parsing an actual email.
 
-**Note** that changes made to the References: and Date: headers are ignored for interoperability reasons.
+:::{note}
+Changes made to the References: and Date: headers are ignored for interoperability reasons.
+:::
 
 --------------------------------------------------------------------------------
 

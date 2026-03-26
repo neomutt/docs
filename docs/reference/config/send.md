@@ -342,7 +342,9 @@ If _set_, automatically PGP or OpenSSL encrypt replies to messages which are enc
 
 If _set_, automatically PGP or OpenSSL sign replies to messages which are signed.
 
-**Note:** this does not work on messages that are encrypted _and_ signed!
+:::{note}
+this does not work on messages that are encrypted _and_ signed!
+:::
 
 --------------------------------------------------------------------------------
 
@@ -379,8 +381,10 @@ Example:
 set dsn_notify = "failure,delay" 
 ```
 
-**Note:** when using [$sendmail](sendmail) for delivery, you should not enable this unless you are either using Sendmail 8.8.x or greater or a MTA providing a `sendmail(1)`-compatible interface supporting the `-N` option for DSN.
+:::{note}
+When using [$sendmail](sendmail) for delivery, you should not enable this unless you are either using Sendmail 8.8.x or greater or a MTA providing a `sendmail(1)`-compatible interface supporting the `-N` option for DSN.
 For SMTP delivery, DSN support is auto-detected so that it depends on the server whether DSN will be used or not.
+:::
 
 --------------------------------------------------------------------------------
 
@@ -401,8 +405,10 @@ Example:
 set dsn_return = "hdrs" 
 ```
 
-**Note:** when using [$sendmail](sendmail) for delivery, you should not enable this unless you are either using Sendmail 8.8.x or greater or a MTA providing a `sendmail(1)`-compatible interface supporting the `-R` option for DSN.
+:::{note}
+When using [$sendmail](sendmail) for delivery, you should not enable this unless you are either using Sendmail 8.8.x or greater or a MTA providing a `sendmail(1)`-compatible interface supporting the `-R` option for DSN.
 For SMTP delivery, DSN support is auto-detected so that it depends on the server whether DSN will be used or not.
+:::
 
 --------------------------------------------------------------------------------
 
@@ -447,7 +453,9 @@ When _set_, the initial prompt for recipients (to, cc, bcc) and subject are skip
 These cases include replying to messages and passing the relevant command line arguments.
 The initial prompt for recipients is also skipped when composing a new message to the current message sender, while the initial prompt for subject is also skipped when forwarding messages.
 
-**Note:** this variable has no effect when the [$auto_edit](auto-edit) variable is _set_.
+:::{note}
+this variable has no effect when the [$auto_edit](auto-edit) variable is _set_.
+:::
 
 See also: [$auto_edit](auto-edit), [$edit_headers](edit-headers), [$ask_cc](ask-cc), [$ask_bcc](ask-bcc).
 
@@ -1064,9 +1072,11 @@ NeoMutt expects that the specified program interprets additional arguments as re
 NeoMutt appends all recipients after adding a `--` delimiter (if not already present).  
 Additional flags, such as for [$use_8bit_mime](use-8bit-mime), [$use_envelope_from](use-envelope-from), [$dsn_notify](dsn-notify), or [$dsn_return](dsn-return) will be added before the delimiter.
 
-**Note:** This command is invoked differently from most other commands in NeoMutt.
+:::{note}
+This command is invoked differently from most other commands in NeoMutt.
 It is tokenized by space, and invoked directly via `execvp(3)` with an array of arguments - so commands or arguments with spaces in them are not supported.
 The shell is not used to run the command, so shell quoting is also not supported.
+:::
 
 **See also:** [$write_bcc](write-bcc).
 
@@ -1156,7 +1166,7 @@ Authentication methods are any SASL mechanism, e.g.
 "plain", "digest-md5", "gssapi" or "cram-md5".
 This option is case-insensitive.
 If it is "unset" (the default) NeoMutt will try all available methods, in order from most-secure to least-secure.
-Support for the "plain" mechanism is bundled; other mechanisms are provided by an external SASL library (look for '+sasl' in the output of neomutt -v).
+Support for the "plain" mechanism is bundled; other mechanisms are provided by an external SASL library (look for '+sasl' in the output of `neomutt -v`).
 
 Example:
 
@@ -1196,7 +1206,9 @@ Specifies the password for your SMTP account.
 If _unset_, NeoMutt will prompt you for your password when you first send mail via SMTP.
 See [$smtp_url](smtp-url) to configure NeoMutt to send mail via SMTP.
 
-**Warning**: you should only use this option when you are on a fairly secure machine, because the superuser can read your neomuttrc even if you are the only one who can read the file.
+:::{warning}
+You should only use this option when you are on a fairly secure machine, because the superuser can read your neomuttrc even if you are the only one who can read the file.
+:::
 
 --------------------------------------------------------------------------------
 
@@ -1262,7 +1274,9 @@ When _set_, NeoMutt will add a "User-Agent:" header to outgoing messages, indica
     set use_8bit_mime = no
     ```
 
-**Warning:** do not set this variable unless you are using a version of sendmail which supports the `-B8BITMIME` flag (such as sendmail 8.8.x) or you may not be able to send mail.
+:::{warning}
+Do not set this variable unless you are using a version of sendmail which supports the `-B8BITMIME` flag (such as sendmail 8.8.x) or you may not be able to send mail.
+:::
 
 When _set_, NeoMutt will invoke [$sendmail](sendmail) with the `-B8BITMIME`
 flag when sending 8-bit messages to enable ESMTP negotiation.
@@ -1314,8 +1328,10 @@ If _unset_, no "From:" header field will be generated unless the user explicitly
 This option specifies the number of characters to use for wrapping an outgoing message's headers.
 Allowed values are between 78 and 998 inclusive.
 
-**Note:** This option usually shouldn't be changed.
+:::{note}
+This option usually shouldn't be changed.
 [RFC5233](https://www.rfc-editor.org/rfc/rfc5233.html) recommends a line length of 78 (the default), so **please only change this setting when you know what you're doing**.
+:::
 
 --------------------------------------------------------------------------------
 

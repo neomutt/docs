@@ -27,8 +27,10 @@ Example:
 set imap_authenticators = "gssapi:cram-md5:login" 
 ```
 
-**Note:** NeoMutt will only fall back to other authentication methods if the previous methods are unavailable.
+:::{note}
+NeoMutt will only fall back to other authentication methods if the previous methods are unavailable.
 If a method is available but authentication fails, NeoMutt will not connect to the IMAP server.
+:::
 
 --------------------------------------------------------------------------------
 
@@ -120,8 +122,10 @@ If you have a very large mailbox, this might prevent a timeout and disconnect wh
 NeoMutt requests these header fields in addition to the default headers ("Date:", "From:", "Sender:", "Subject:", "To:", "Cc:", "Message-Id:", "References:", "Content-Type:", "Content-Description:", "In-Reply-To:", "Reply-To:", "Lines:", "List-Post:", "X-Label:") from IMAP servers before displaying the index menu.
 You may want to add more headers for spam detection.
 
-**Note:** This is a space separated list, items should be uppercase and not contain the colon, e.g.
+:::{note}
+This is a space separated list, items should be uppercase and not contain the colon, e.g.
 "X-BOGOSITY X-SPAM-STATUS" for the "X-Bogosity:" and "X-Spam-Status:" header fields.
+:::
 
 --------------------------------------------------------------------------------
 
@@ -216,7 +220,9 @@ Specifies the password for your IMAP account.
 If _unset_, NeoMutt will prompt you for your password when you invoke the `<imap-fetch-mail>`
 function or try to open an IMAP folder.
 
-**Warning**: you should only use this option when you are on a fairly secure machine, because the superuser can read your neomuttrc even if you are the only one who can read the file.
+:::{warning}
+You should only use this option when you are on a fairly secure machine, because the superuser can read your neomuttrc even if you are the only one who can read the file.
+:::
 
 --------------------------------------------------------------------------------
 
@@ -264,7 +270,9 @@ Controls the number of IMAP commands that may be queued up before they are sent 
 A deeper pipeline reduces the amount of time NeoMutt must wait for the server, and can make IMAP servers feel much more responsive.
 But not all servers correctly handle pipelined commands, so if you have problems you might want to try setting this variable to 0.
 
-**Note:** Changes to this variable have no effect on open connections.
+:::{note}
+Changes to this variable have no effect on open connections.
+:::
 
 --------------------------------------------------------------------------------
 

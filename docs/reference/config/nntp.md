@@ -123,8 +123,10 @@ Example:
 set nntp_authenticators = "digest-md5:user" 
 ```
 
-**Note:** NeoMutt will only fall back to other authentication methods if the previous methods are unavailable.
+:::{note}
+NeoMutt will only fall back to other authentication methods if the previous methods are unavailable.
 If a method is available but authentication fails, NeoMutt will not connect to the IMAP server.
+:::
 
 --------------------------------------------------------------------------------
 
@@ -224,7 +226,10 @@ If _unset_ and NNTP server requires authentication, NeoMutt will prompt you for 
     ```
 
 If set to _yes_, NeoMutt will post article to newsgroup that have not permissions to posting (e.g. moderated).
-**Note:** if news server does not support posting to that newsgroup or totally read-only, that posting will not have an effect.
+
+:::{note}
+If news server does not support posting to that newsgroup or totally read-only, that posting will not have an effect.
+:::
 
 --------------------------------------------------------------------------------
 

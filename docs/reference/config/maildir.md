@@ -15,7 +15,9 @@ keywords: neomutt, maildir, maildir_check_cur, maildir_field_delimiter, maildir_
     set check_new = yes
     ```
 
-**Note:** this option only affects _maildir_ and _MH_ style mailboxes.
+:::{note}
+This option only affects _maildir_ and _MH_ style mailboxes.
+:::
 
 When _set_, NeoMutt will check for new mail delivered while the mailbox is open.
 Especially with MH mailboxes, this operation can take quite some time since it involves scanning the directory and checking each file to see if it has already been looked at.
@@ -52,10 +54,15 @@ Use the value as maildir field delimiter.
 This is a single-character used to accommodate maildir mailboxes on platforms where `:` is not allowed in a filename.
 The recommended alternative on such platforms is `;`.
 NeoMutt supports all non-alphanumeric values except for `-`, `.`, `\`, `/`.
-**Note:** this only applies to maildir-style mailboxes.
-Setting it will have no effect on other mailbox types.
 
-**Note:** this only applies to maildir-style mailboxes. Setting it will have no effect on other mailbox types.
+:::{note}
+This only applies to maildir-style mailboxes.
+Setting it will have no effect on other mailbox types.
+:::
+
+:::{note}
+**This only applies to maildir-style mailboxes. Setting it will have no effect on other mailbox types.
+:::
 
 --------------------------------------------------------------------------------
 
@@ -83,6 +90,9 @@ This incurs one `stat(2)` per message every time the folder is opened (which can
     ```
 
 If _set_, messages marked as deleted will be saved with the maildir trashed flag instead of unlinked.
-**Note:** this only applies to maildir-style mailboxes.
+
+:::{note}
+This only applies to maildir-style mailboxes.
 Setting it will have no effect on other mailbox types.
+:::
 

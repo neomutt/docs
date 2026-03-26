@@ -161,7 +161,10 @@ set preferred_languages = "en,fr,de"
 This option controls how quotes from format=flowed messages are displayed in the pager and when replying (with [$text_flowed](text-flowed) _unset_).
 When set, this option adds spaces after each level of quote marks, turning ">>>foo" into "> > > foo".
 
-**Note:** If [$reflow_text](reflow-text) is _unset_, this option has no effect.
+:::{note}
+If [$reflow_text](reflow-text) is _unset_, this option has no effect.
+:::
+
 Also, this option does not affect replies when [$text_flowed](text-flowed) is _set_.
 
 --------------------------------------------------------------------------------

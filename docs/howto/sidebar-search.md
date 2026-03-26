@@ -41,7 +41,7 @@ so you don't need to type the exact name. For example, typing
 
 The search is started with the `sidebar-start-search`
 function. It has no default keybinding, so you must add one yourself.
-A natural choice is `Ctrl-S`.
+A natural choice is {kbd}`Ctrl-S`.
 
 ```neomuttrc
 bind sidebar \CS sidebar-start-search

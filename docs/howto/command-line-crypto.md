@@ -30,7 +30,7 @@ interactively, simply use the `-C` flag.
 
 ```sh
 $ neomutt -C -H - < /mail/to/be/sent
-```neomuttrc
+```
 
 ## neomuttrc
 

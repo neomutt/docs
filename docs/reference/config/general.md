@@ -143,7 +143,9 @@ For an explanation of "soft-fill", see the [$index_format](index-format) documen
 When _set_ along with [$edit_headers](edit-headers), NeoMutt will skip the initial send-menu (prompting for subject and recipients) and allow you to immediately begin editing the body of your message.
 The send-menu may still be accessed once you have finished editing the body of your message.
 
-**Note:** when this option is _set_, you can't use send-hooks that depend on the recipients when composing a new (non-reply) message, as the initial list of recipients is empty.
+:::{note}
+When this option is _set_, you can't use send-hooks that depend on the recipients when composing a new (non-reply) message, as the initial list of recipients is empty.
+:::
 
 Also see [$fast_reply](fast-reply).
 
@@ -192,7 +194,9 @@ It is also the fallback for [$send_charset](send-charset).
 
 Upon startup NeoMutt tries to derive this value from environment variables such as `$$$LC_CTYPE` or `$$$LANG`.
 
-**Note:** It should only be set in case NeoMutt isn't able to determine the character set used correctly.
+:::{note}
+It should only be set in case NeoMutt isn't able to determine the character set used correctly.
+:::
 
 --------------------------------------------------------------------------------
 
@@ -322,7 +326,10 @@ NeoMutt will add "0" to the end.
 Each time NeoMutt is run with logging enabled, the log files are rotated.
 A maximum of five log files are kept, numbered 0 (most recent) to 4 (oldest).
 
-This option can be enabled on the command line, `neomutt -l mylog`
+This option can be enabled on the command line,
+```sh
+neomutt -l mylog
+```
 
 See also: `[$debug_level](debug-level)`
 
@@ -344,11 +351,16 @@ If you have a problem with NeoMutt, then enabling logging may help find the caus
 Levels 1-3 will usually provide enough information for writing a bug report.
 Levels 4,5 will be extremely verbose.
 
-Warning: Logging at high levels may save private information to the file.
+:::{warning}
+Logging at high levels may save private information to the file.
+:::
 
-This option can be enabled on the command line, `neomutt -d 2`
+This option can be enabled on the command line,
+```sh
+neomutt -d 2
+```
 
-See also: `[$debug_file](debug-file)`
+See also: `[$debug_file](#debug-file)`
 
 --------------------------------------------------------------------------------
 
@@ -1031,7 +1043,9 @@ If [$save_name](save-name) or [$force_name](force-name) is _set_ too, the select
 When _unset_, mailboxes which contain no saved messages will be removed when closed (the exception is [$spool_file](spool-file) which is never removed).
 If _set_, mailboxes are never removed.
 
-**Note:** This only applies to mbox and MMDF folders, NeoMutt does not delete MH and Maildir directories.
+:::{note}
+This only applies to mbox and MMDF folders, NeoMutt does not delete MH and Maildir directories.
+:::
 
 --------------------------------------------------------------------------------
 

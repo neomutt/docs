@@ -135,7 +135,9 @@ See "$oauth" for details.
 Specifies the password for your POP account.
 If _unset_, NeoMutt will prompt you for your password when you open a POP mailbox.
 
-**Warning**: you should only use this option when you are on a fairly secure machine, because the superuser can read your neomuttrc even if you are the only one who can read the file.
+:::{warning}
+You should only use this option when you are on a fairly secure machine, because the superuser can read your neomuttrc even if you are the only one who can read the file.
+:::
 
 --------------------------------------------------------------------------------
 

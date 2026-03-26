@@ -19,9 +19,11 @@ keywords: "alias, address book, contacts, alias_file, alias_format, alias_sort, 
 The default file in which to save aliases created by the `$<create-alias>` function.
 Entries added to this file are encoded in the character set specified by [$config_charset](config-charset) if it is _set_ or the current character set otherwise.
 
-**Note:** NeoMutt will not automatically source this file; you must explicitly use the "$source" command for it to be executed in case this option points to a dedicated alias file.
-
 The default for this option is the currently used neomuttrc file, or "~/.neomuttrc" if no user neomuttrc was found.
+
+:::{note}
+NeoMutt will not automatically source this file; you must explicitly use the "$source" command for it to be executed in case this option points to a dedicated alias file.
+:::
 
 --------------------------------------------------------------------------------
 
