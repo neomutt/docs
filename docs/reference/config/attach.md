@@ -114,6 +114,10 @@ To see these subparts, press "v" on that menu.
     ```neomuttrc
     set message_format = "%s"
     ```
+:Alternative:
+    ```neomuttrc
+    set message_format = "%{subject}"
+    ```
 
 This is the string displayed in the "attachment" menu for attachments of type `message/rfc822`.  
 For a full listing of defined `printf(3)`-like sequences see the section on [$index_format](index-format).

@@ -93,6 +93,10 @@ Set this to indent mailboxes in the sidebar.
     ```neomuttrc
     set sidebar_format = "%D%*  %n"
     ```
+:Alternative:
+    ```neomuttrc
+    set sidebar_format = "%{description}%{padding-soft: } %{new-mail}"
+    ```
 
 This variable allows you to customize the sidebar display.
 This string is similar to [$index_format](index-format), but has its own set of `printf(3)`-like sequences:

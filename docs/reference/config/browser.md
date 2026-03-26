@@ -73,6 +73,11 @@ If this variable is _set_, the browser will group directories before files.
     ```neomuttrc
     set folder_format = "%2C %t %N %F %2l %-8.8u %-8.8g %8s %d %i"
     ```
+:Alternative:
+    ```neomuttrc
+    set folder_format = "%2{number} %{tagged} %{new-mail} %{file-mode} %2{hard-links} %-8.8{file-owner} \
+    %-8.8{file-group} %8{file-size} %{date} %{description}"
+    ```
 
 This variable allows you to customize the file browser display to your personal taste.
 This string is similar to [$index_format](index-format), but has its own set of `printf(3)`-like sequences:
@@ -121,6 +126,10 @@ For an explanation of "soft-fill", see the [$index_format](index-format) documen
     ```neomuttrc
     set group_index_format = "%4C %M%N %5s  %-45.45f %d"
     ```
+:Alternative:
+    ```neomuttrc
+    set group_index_format = "%4{number} %{flags}%{flags2} %5{unread-count}  %-45.45{newsgroup} %{description}"
+    ```
 
 This variable allows you to customize the newsgroup browser display to your personal taste.
 This string is similar to "$index_format", but has its own set of printf()-like sequences:
@@ -150,6 +159,10 @@ This string is similar to "$index_format", but has its own set of printf()-like 
 :Default:
     ```neomuttrc
     set mailbox_folder_format = "%2C %<n?%6n&      > %6m %i"
+    ```
+:Alternative:
+    ```neomuttrc
+    set mailbox_folder_format = "%2{number} %<n?%6{unread-count}&      > %6{message-count} %{description}"
     ```
 
 This variable allows you to customize the file browser display to your personal taste.

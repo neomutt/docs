@@ -127,6 +127,11 @@ If positive, this many lines will be given before a match, if 0, the match will 
     ```neomuttrc
     set pager_format = "-%Z- %C/%m: %-20.20n   %s%*  -- (%P)"
     ```
+:Alternative:
+    ```neomuttrc
+    set pager_format = "-%{combined-flags}- %{number}/%{message-count}: %-20.20{name}   \
+    %{subject}%{padding-soft: } -- (%{percentage})"
+    ```
 
 This variable controls the format of the one-line message "status" displayed before each message in either the internal or an external pager.
 The valid sequences are listed in the [$index_format](index-format) section.

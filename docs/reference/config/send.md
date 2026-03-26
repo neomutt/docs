@@ -168,6 +168,10 @@ Note: for Japanese users, "iso-2022-*" must be put at the head of the value as s
     ```neomuttrc
     set attribution_intro = "On %d, %n wrote:"
     ```
+:Alternative:
+    ```neomuttrc
+    set attribution_intro = "On %{date-format}, %{name} wrote:"
+    ```
 
 This is the string that will precede a replied-to message which is quoted in the main body of the reply (this is the case when [$include](include) is set).
 
@@ -543,6 +547,10 @@ When forwarding inline (i.e.
     ```neomuttrc
     set forward_attribution_intro = "----- Forwarded message from %f -----"
     ```
+:Alternative:
+    ```neomuttrc
+    set forward_attribution_intro = "----- Forwarded message from %{from-full} -----"
+    ```
 
 This is the string that will precede a message which has been forwarded in the main body of a message (when [$mime_forward](mime-forward) is unset).
 For a full listing of defined `printf(3)`-like sequences see the section on [$index_format](index-format).
@@ -603,6 +611,10 @@ For those who always want to forward with no modification, use a setting of "no"
 :Default:
     ```neomuttrc
     set forward_format = "[%a: %s]"
+    ```
+:Alternative:
+    ```neomuttrc
+    set forward_format = "[%{from}: %{subject}]"
     ```
 
 This variable controls the default subject when forwarding a message.
@@ -751,6 +763,10 @@ set inews_command = "/usr/local/bin/inews -hS"
 :Default:
     ```neomuttrc
     set message_id_format = "<%z@%f>"
+    ```
+:Alternative:
+    ```neomuttrc
+    set message_id_format = "<%{random_12}@%{hostname}>"
     ```
 
 This variable allows you to choose a custom format for the Message-Id when sending messages.

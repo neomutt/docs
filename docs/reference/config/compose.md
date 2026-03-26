@@ -32,6 +32,10 @@ It doesn't keep track of which message is the typed message if the entries are r
     ```neomuttrc
     set compose_format = "-- NeoMutt: Compose  [Approx. msg size: %l   Atts: %a]%>-"
     ```
+:Alternative:
+    ```neomuttrc
+    set compose_format = "-- NeoMutt: Compose  [Approx. msg size: %{attach-size}   Atts: %{attach-count}]%{padding-hard:-}"
+    ```
 
 Controls the format of the status line displayed in the "compose" menu.
 This string is similar to [$status_format](status-format), but has its own set of `printf(3)`-like sequences:

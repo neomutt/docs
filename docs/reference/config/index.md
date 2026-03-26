@@ -130,6 +130,10 @@ This slightly odd interface is necessitated by NeoMutt's handling of string vari
     ```neomuttrc
     set index_format = "%4C %Z %{%b %d} %-15.15L (%<l?%4l&%4c>) %s"
     ```
+:Alternative:
+    ```neomuttrc
+    set index_format = "%4{number} %{combined-flags} %{%b %d} %-15.15{from-list} (%<l?%4{lines}&%4{size}>) %{subject}"
+    ```
 
 This variable allows you to customize the message index display to your personal taste.
 
@@ -312,7 +316,23 @@ Controls the characters used by the "%r" indicator in [$status_format](status-fo
 :Notes: {ref}`Localised String <general>`
 :Default:
     ```neomuttrc
-    set status_format = "-%r-NeoMutt: %D [Msgs:%<M?%M/>%m%<n? New:%n>%<o? Old:%o>%<d? Del:%d>%<F? Flag:%F>%<t? Tag:%t>%<p? Post:%p>%<b? Inc:%b>%<l? %l>]---(%<T?%T/>%s/%S)-%>-(%P)---"
+    set status_format = "-%r-NeoMutt: %D [Msgs:%<M?%M/>%m%<n? New:%n>%<o? Old:%o>%<d? Del:%d>%<F? Flag:%F>\
+    %<t? Tag:%t>%<p? Post:%p>%<b? Inc:%b>%<l? %l>]---(%<T?%T/>%s/%S)-%>-(%P)---"
+    ```
+:Alternative:
+    ```neomuttrc
+    set status_format = "-%{readonly}-NeoMutt: %{description} \
+    [Msgs:%<M?%{limit-count}/>%{message-count}\
+    %<n? New:%{new-count}>\
+    %<o? Old:%{old-count}>\
+    %<d? Del:%{deleted-count}>\
+    %<F? Flag:%{flagged-count}>\
+    %<t? Tag:%{tagged-count}>\
+    %<p? Post:%{postponed-count}>\
+    %<n? Inc:%{unread-mailboxes}>\
+    %<l? %{mailbox-size}>]---\
+    (%<T?%{use-threads}/>%{sort}/%{sort-aux})-\
+    %{padding-hard:-}(%{percentage})---"
     ```
 
 Controls the format of the status line displayed in the "index" menu.
@@ -427,6 +447,10 @@ Most terminal emulators emulate the status line in the window title.
     ```neomuttrc
     set ts_icon_format = "M%<n?AIL&ail>"
     ```
+:Alternative:
+    ```neomuttrc
+    set ts_icon_format = "M%<{new-count}?AIL&ail>"
+    ```
 
 Controls the format of the icon title, as long as "[$ts_enabled](ts-enabled)" is set.
 This string is identical in formatting to the one used by "[$status_format](status-format)".
@@ -441,6 +465,10 @@ This string is identical in formatting to the one used by "[$status_format](stat
 :Default:
     ```neomuttrc
     set ts_status_format = "NeoMutt with %<m?%m messages&no messages>%<n? [%n NEW]>"
+    ```
+:Alternative:
+    ```neomuttrc
+    set ts_status_format = "NeoMutt with %<m?%{message-count} messages&no messages>%<n? [%{new-count} NEW]>"
     ```
 
 Controls the format of the terminal status line (or window title), provided that "[$ts_enabled](ts-enabled)" has been set.

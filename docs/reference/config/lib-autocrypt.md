@@ -29,6 +29,10 @@ See "$autocryptdoc" for more details.
     ```neomuttrc
     set autocrypt_acct_format = "%4n %-30a %20p %10s"
     ```
+:Alternative:
+    ```neomuttrc
+    set autocrypt_acct_format = "%4{number} %-30{address} %20{prefer-encrypt} %10{enabled}"
+    ```
 - **Scope:** Autocrypt only
 
 This variable describes the format of the "autocrypt account" menu.

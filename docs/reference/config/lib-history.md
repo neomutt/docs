@@ -52,6 +52,10 @@ Also see [$save_history](save-history).
     ```neomuttrc
     set history_format = "%s"
     ```
+:Alternative:
+    ```neomuttrc
+    set history_format = "%{match}"
+    ```
 
 Controls the format of the entries of the history list.
 This string is similar to [$index_format](index-format), but has its own set of `printf(3)`-like sequences:

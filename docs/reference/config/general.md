@@ -94,6 +94,11 @@ However, only the first content is valid for the message body.
     ```neomuttrc
     set attach_format = "%u%D%I %t%4n %T%d %> [%.7m/%.10M, %.6e%<C?, %C>, %s] "
     ```
+:Alternative:
+    ```neomuttrc
+    set attach_format = "%{unlink}%{deleted}%{disposition} %{tagged}%4{number} %{tree}%{description} \
+    %{padding-hard: }[%.7{mime-major}/%.10{mime-minor}, %.6{mime-encoding}%<C?, %{charset}>, %{file-size}] "
+    ```
 
 This variable describes the format of the "attachment" menu.
 The following `printf(3)`-style sequences are understood:

@@ -457,6 +457,11 @@ This is a format string, see the [$pgp_decode_command](pgp-decode-command) comma
     ```neomuttrc
     set pgp_entry_format = "%4n %t%f %4l/0x%k %-4a %2c %u"
     ```
+:Alternative:
+    ```neomuttrc
+    set pgp_entry_format = "%4{number} %{trust}%{key-flags} %4{key-length}/0x%{key-id} %-4{key-algorithm} \
+    %2{key-capabilities} %{user-id}"
+    ```
 - **Scope:** Crypto only or PGP only when GPGME disabled
 
 This variable allows you to customize the PGP key selection menu to your personal taste.

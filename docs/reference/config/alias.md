@@ -34,6 +34,10 @@ The default for this option is the currently used neomuttrc file, or "~/.neomutt
     ```neomuttrc
     set alias_format = "%3i %f%t %-15a %-56A | %C%> %Y"
     ```
+:Alternative:
+    ```neomuttrc
+    set alias_format = "%3{number} %{flags}%{tagged} %-15{alias} %-56{address} | %{comment}%{padding-hard: }%{tags}"
+    ```
 
 Specifies the format of the data displayed for the "$alias" menu.
 The following `printf(3)`-style sequences are available:
@@ -120,6 +124,10 @@ See "$query": https://neomutt.org/guide/advancedusage.html#query
 :Default:
     ```neomuttrc
     set query_format = "%3i %t %-25N %-25E | %C%> %Y"
+    ```
+:Alternative:
+    ```neomuttrc
+    set query_format = "%3{number} %{tagged} %-25{name} %-25{email} | %{comment}%{padding-hard: }%{tags}"
     ```
 
 This variable describes the format of the "query" menu.
