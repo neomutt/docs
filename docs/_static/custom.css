@@ -445,53 +445,53 @@ html[data-theme=dark] hr {
     border: 1px solid #fff;
 }
 
-html[data-theme=light] .dia-start {
-  background: #ffffcf;
+html[data-theme=light] .sd-card.dia-start {
+  background: #ffffcf !important;
   color: #000;
 }
 
-html[data-theme=light] .dia-tutorial {
-  background: #c7eeff;
+html[data-theme=light] .sd-card.dia-tutorial {
+  background: #c7eeff !important;
   color: #000;
 }
 
-html[data-theme=light] .dia-howto {
-  background: #d0ffd0;
+html[data-theme=light] .sd-card.dia-howto {
+  background: #d0ffd0 !important;
   color: #000;
 }
 
-html[data-theme=light] .dia-explanation {
-  background: #ffdfc0;
+html[data-theme=light] .sd-card.dia-explanation {
+  background: #ffdfc0 !important;
   color: #000;
 }
 
-html[data-theme=light] .dia-reference {
-  background: #dddddd;
+html[data-theme=light] .sd-card.dia-reference {
+  background: #dddddd !important;
   color: #000;
 }
 
-html[data-theme=dark] .dia-start {
-  background: #706a00;
+html[data-theme=dark] .sd-card.dia-start {
+  background: #706a00 !important;
   color: #fff;
 }
 
-html[data-theme=dark] .dia-tutorial {
-  background: #2b414f;
+html[data-theme=dark] .sd-card.dia-tutorial {
+  background: #2b414f !important;
   color: #fff;
 }
 
-html[data-theme=dark] .dia-howto {
-  background: #315531;
+html[data-theme=dark] .sd-card.dia-howto {
+  background: #315531 !important;
   color: #fff;
 }
 
-html[data-theme=dark] .dia-explanation {
-  background: #6b362a;
+html[data-theme=dark] .sd-card.dia-explanation {
+  background: #6b362a !important;
   color: #fff;
 }
 
-html[data-theme=dark] .dia-reference {
-  background: #444444;
+html[data-theme=dark] .sd-card.dia-reference {
+  background: #444444 !important;
   color: #fff;
 }
 
