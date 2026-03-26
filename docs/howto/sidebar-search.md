@@ -5,7 +5,7 @@ keywords: sidebar, search, fuzzy, sidebar-start-search, sidebar-abort-search, ma
 since: 2026-03-01
 ---
 
-# Sidebar Search
+# Sidebar Search 🔥
 
 ## Support
 

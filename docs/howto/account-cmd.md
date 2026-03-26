@@ -5,7 +5,7 @@ keywords: account_command, credentials, password manager, external command, imap
 since: 2022-05-16
 ---
 
-# Account Command
+# Account Command 🔥
 
 **Since:** NeoMutt 2022-05-16
 

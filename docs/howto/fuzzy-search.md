@@ -5,7 +5,7 @@ keywords: fuzzy, fuzzy search, fzf, subsequence matching, scoring, smart case, s
 since: 2026-02-11
 ---
 
-# Fuzzy Search
+# Fuzzy Search 🔥
 
 ## Support
 

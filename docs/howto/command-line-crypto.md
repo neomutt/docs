@@ -5,7 +5,7 @@ keywords: encryption, gpgme, pgp, smime, signing, crypto, security, batch mode, 
 since: 2024-01-21
 ---
 
-# Command-line Crypto
+# Command-line Crypto 🔥
 
 *Enable message security in modes that by default don't enable it*
 

@@ -5,7 +5,7 @@ keywords: pager, read delay, preview, pager_read_delay, new message, mark read, 
 since: 2021-06-16
 ---
 
-# Pager Read Delay
+# Pager Read Delay 🔥
 
 ## Support
 

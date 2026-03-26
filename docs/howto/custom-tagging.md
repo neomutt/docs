@@ -5,7 +5,7 @@ keywords: tags, tagging, custom tags, notmuch, imap, hidden_tags, tag-transforms
 since: 2017-10-13
 ---
 
-# Custom Tagging
+# Custom Tagging 🔥
 
 Some backends allow to index and tag mail without storing the tags within the mail envelope. Two backends are currently implementing this feature. Notmuch handles them natively and IMAP stores them in custom IMAP keywords.
 

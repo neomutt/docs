@@ -5,7 +5,7 @@ keywords: compose, preview, message preview, compose dialog, compose_show_previe
 since: 2024-12-12
 ---
 
-# Compose Preview
+# Compose Preview 🔥
 
 ## Support
 

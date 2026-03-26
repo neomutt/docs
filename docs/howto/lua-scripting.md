@@ -5,7 +5,7 @@ keywords: lua, lua-source, scripting, embedded lua, automation, mutt.get, mutt.s
 since: 2017-04-14
 ---
 
-# Lua Scripting
+# Lua Scripting 🔥
 
 ## Introduction
 

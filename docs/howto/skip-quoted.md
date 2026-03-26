@@ -5,7 +5,7 @@ keywords: skip-quoted, toggle-quoted, skip-headers, pager, quoted text, pager_sk
 since: 2021-02-05
 ---
 
-# Skip-Quoted
+# Skip-Quoted 🔥
 
 ## Support
 

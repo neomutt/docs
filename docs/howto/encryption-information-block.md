@@ -5,7 +5,7 @@ keywords: neomutt, encryption, pgp, smime, gpgme, crypt_encryption_info, recipie
 since: 2024-04-10
 ---
 
-# Encryption Information Block
+# Encryption Information Block 🔥
 
 *Show a block of encryption information about a message*
 

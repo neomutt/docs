@@ -5,7 +5,7 @@ keywords: header cache, hcache, compression, lz4, zlib, zstd, header_cache_compr
 since: 2020-03-01
 ---
 
-# Header Cache Compression
+# Header Cache Compression 🔥
 
 The Header Cache Compression feature can be used for speeding up the loading of large mailboxes. Also the space used on disk can be shrunk by about 50% — depending on the compression method being used.
 
