@@ -60,9 +60,11 @@ This is the stage where `send2-hook` fires on each header change.
 
 17. **Message encryption and signing.** Key selection.
 
-18. **Fcc saving** if `$fcc_before_send` is set. (Note the variable documentation for caveats of Fcc'ing before sending.)
+18. **Fcc saving** if `$fcc_before_send` is set.
+  (Note the variable documentation for caveats of Fcc'ing before sending.)
 
 19. **Message sending.**
 
 20. **Fcc saving** if `$fcc_before_send` is unset (the default).
-   The Fcc used to be saved before sending the message. It is now by default saved afterwards, but if the saving fails, the user is prompted.
+   The Fcc used to be saved before sending the message.
+   It is now by default saved afterwards, but if the saving fails, the user is prompted.

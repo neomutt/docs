@@ -7,7 +7,8 @@ since: 2020-03-01
 
 # Header Cache Compression 🔥
 
-The Header Cache Compression feature can be used for speeding up the loading of large mailboxes. Also the space used on disk can be shrunk by about 50% — depending on the compression method being used.
+The Header Cache Compression feature can be used for speeding up the loading of large mailboxes.
+Also the space used on disk can be shrunk by about 50% — depending on the compression method being used.
 
 The implementation sits on top of the header caching functions.
 So the header cache compression can be used together with all available database backends.
@@ -19,9 +20,11 @@ So the header cache compression can be used together with all available database
 | `header_cache_compress_method` | string | (empty) |
 | `header_cache_compress_level`  | number | `1`     |
 
-The `header_cache_compress_method` can be *(empty)* — which means that no header cache compression should be used. But when set to *lz4*, *zlib* or *zstd* — then the compression is turned on.
+The `header_cache_compress_method` can be *(empty)* — which means that no header cache compression should be used.
+But when set to *lz4*, *zlib* or *zstd* — then the compression is turned on.
 
-The `header_cache_compress_level` defines the compression level, which should be used together with the selected `header_cache_compress_method`. Here is an overview of the possible settings:
+The `header_cache_compress_level` defines the compression level, which should be used together with the selected `header_cache_compress_method`.
+Here is an overview of the possible settings:
 
 | Method Name | Min | Max |
 |-------------|-----|-----|

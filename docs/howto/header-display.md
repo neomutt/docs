@@ -31,7 +31,8 @@ Messages often have many header fields added by automatic processing systems, or
 This command allows you to specify header fields which you don't normally want to see in the pager.
 
 You do not need to specify the full header field name.
-For example, `ignore content-` will ignore all header fields that begin with the string "content-". `ignore *` will ignore all headers.
+For example, `ignore content-` will ignore all header fields that begin with the string "content-".
+`ignore *` will ignore all headers.
 
 To remove a previously added token from the list, use the `unignore` command.
 The `unignore` command will make NeoMutt display headers matching the given string.

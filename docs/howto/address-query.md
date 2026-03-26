@@ -49,7 +49,9 @@ There are two mechanisms for accessing the query function of NeoMutt.
 
 **Subject:** Query results menu
 
-**Description:** The NeoMutt query menu after executing an address query, showing a list of matching contacts with columns for email address, real name, and optional extra information (e.g. organisation).
+**Description:** The NeoMutt query menu after executing an address query,
+showing a list of matching contacts with columns for email address, real name,
+and optional extra information (e.g. organisation).
 One or more entries should be tagged with `*` to illustrate multi-selection.
 
 **Highlights:** The tabular layout of query results, how to tag entries for selection, and the status bar showing the query string used.

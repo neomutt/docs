@@ -80,7 +80,8 @@ The `index_label` colour object (see [colour objects](../reference/colour-names.
 ## Alternative Addresses
 
 With various functions, NeoMutt will treat messages differently, depending on whether you sent them or whether you received them from someone else.
-For instance, when replying to a message that you sent to a different party, NeoMutt will automatically suggest to send the response to the original message's recipients — responding to yourself won't make much sense in many cases. (See `$reply_to`.)
+For instance, when replying to a message that you sent to a different party, NeoMutt will automatically suggest to send the response to the original message's recipients — responding to yourself won't make much sense in many cases.
+(See `$reply_to`.)
 
 Many users receive e-mail under a number of different addresses.
 To fully use NeoMutt's features here, the program must be able to recognize what e-mail addresses you receive mail under.

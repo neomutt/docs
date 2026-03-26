@@ -36,10 +36,16 @@ set smime_decrypt_command = "..."
 
 **Subject:** Encrypted and signed message indicators
 
-**Description:** The NeoMutt index screen showing several messages with different security states: a PGP-signed message (showing the signature status flag), a PGP-encrypted message, and an unsigned/unencrypted message for contrast.
-Then the pager view of a signed message showing the signature verification status line (e.g. "Good signature from...").
+**Description:** The NeoMutt index screen showing several messages with
+different security states: a PGP-signed message (showing the signature status
+flag), a PGP-encrypted message, and an unsigned/unencrypted message for
+contrast. Then the pager view of a signed message showing the signature
+verification status line (e.g. "Good signature from...").
 
-**Highlights:** The reader should notice the security indicator flags in the index (e.g. "s" for signed, "S" for encrypted) and the signature verification output in the pager, showing how NeoMutt surfaces cryptographic status to the user.
+**Highlights:** The reader should notice the security indicator flags in the
+index (e.g. "s" for signed, "S" for encrypted) and the signature verification
+output in the pager, showing how NeoMutt surfaces cryptographic status to the
+user.
 :::
 
 ## OpenPGP Configuration
@@ -69,7 +75,8 @@ Note that in order to use the key for signing or encrypting, the root certificat
 Consult your documentation of GnuPG for details, in particular `gpgsm`.
 
 In "classic mode", keys and certificates are managed by the `smime_keys` program that comes with NeoMutt.
-By default they are stored under `~/.smime/`. (This is set by the `smime.rc` file with `$smime_certificates` and `$smime_keys`.) To initialize this directory, use the command `smime_keys init` from a shell prompt.
+By default they are stored under `~/.smime/`.
+(This is set by the `smime.rc` file with `$smime_certificates` and `$smime_keys`.) To initialize this directory, use the command `smime_keys init` from a shell prompt.
 The program can then be used to import and list certificates.
 You may also want to periodically run `smime_keys refresh` to update status flags for your certificates.
 

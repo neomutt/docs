@@ -12,25 +12,21 @@ since: 2026-03-01
 **Since:** NeoMutt 2026-03-01
 
 :::{note}
-This feature is under active development. Its behaviour and
-keybindings may change in future releases.
+This feature is under active development
+Its behaviour and keybindings may change in future releases.
 :::
 
 ## Introduction
 
-Sidebar Search lets you jump to any mailbox in the Sidebar by
-typing a few characters of its name. As you type, the Sidebar
-filters itself in real time, hiding entries that don't match and
-highlighting the best match. Pressing {kbd}`Enter`
-opens the highlighted mailbox; pressing {kbd}`Ctrl-G`
-cancels and restores the original view.
+Sidebar Search lets you jump to any mailbox in the Sidebar by typing a few characters of its name.
+As you type, the Sidebar filters itself in real time, hiding entries that don't match and highlighting the best match.
+Pressing {kbd}`Enter` opens the highlighted mailbox; pressing {kbd}`Ctrl-G` cancels and restores the original view.
 
 If the Sidebar is currently hidden, it will be shown temporarily
 during the search and hidden again afterwards.
 
-The search uses the [Fuzzy Search](fuzzy-search) engine,
-so you don't need to type the exact name. For example, typing
-"mlnd" is enough to reach "mailinglists/neomutt-dev".
+The search uses the [Fuzzy Search](fuzzy-search) engine, so you don't need to type the exact name.
+For example, typing "mlnd" is enough to reach "mailinglists/neomutt-dev".
 
 ## Functions
 
@@ -39,17 +35,16 @@ so you don't need to type the exact name. For example, typing
 | sidebar |             | `<sidebar-start-search>` | Fuzzy search the sidebar |
 | sidebar |             | `<sidebar-abort-search>` | Close the sidebar search |
 
-The search is started with the `sidebar-start-search`
-function. It has no default keybinding, so you must add one yourself.
+The search is started with the `sidebar-start-search` function.
+It has no default keybinding, so you must add one yourself.
 A natural choice is {kbd}`Ctrl-S`.
 
 ```neomuttrc
 bind sidebar \CS sidebar-start-search
 ```
 
-A prompt reading "Sidebar search:" will appear at the
-bottom of the screen. Type your search pattern and the Sidebar will
-filter as you type.
+A prompt reading "Sidebar search:" will appear at the bottom of the screen.
+Type your search pattern and the Sidebar will filter as you type.
 
 ## Keybindings During Search
 
@@ -67,8 +62,8 @@ closes the search prompt without making a selection.
 
 **Editor functions**
 
-The full set of line-editor keybindings is available for
-editing the search pattern. Examples include:
+The full set of line-editor keybindings is available for editing the search pattern.
+Examples include:
 
 - `<backward-char>`/`<forward-char>` — move the cursor left or right
 - `<bol>`/`<eol>` — jump to the start or end of the pattern
@@ -82,11 +77,10 @@ Any binding defined in the `editor` map can be used; use `:bind editor` to custo
 
 Sidebar Search uses *smart case* matching:
 
-- If every letter in your pattern is lowercase, the search is
-  *case-insensitive*. Typing "inbox" matches "INBOX", "Inbox", and "inbox".
-- If your pattern contains even one uppercase letter, the search
-  becomes *case-sensitive*. Typing "Inbox" will only match mailboxes
-  whose name contains a capital "I".
+- If every letter in your pattern is lowercase, the search is *case-insensitive*.
+  Typing "inbox" matches "INBOX", "Inbox", and "inbox".
+- If your pattern contains even one uppercase letter, the search becomes *case-sensitive*.
+  Typing "Inbox" will only match mailboxes whose name contains a capital "I".
 
 This lets you search without caring about case in everyday use,
 while still being able to narrow down precisely when you need to.
@@ -97,18 +91,15 @@ Mailbox names are matched as byte sequences, so UTF-8 mailbox names
 work correctly: multi-byte characters are never split, and
 non-ASCII characters are matched exactly as typed.
 
-Case folding applies only to the ASCII letters A–Z. Accented
-characters, CJK characters, and other non-ASCII text are always
-matched byte-for-byte. Smart case detection also considers only
-ASCII letters, so a pattern consisting entirely of non-ASCII
-characters is treated as case-insensitive.
+Case folding applies only to the ASCII letters A–Z.
+Accented characters, CJK characters, and other non-ASCII text are always matched byte-for-byte.
+Smart case detection also considers only ASCII letters, so a pattern consisting entirely of non-ASCII characters is treated as case-insensitive.
 
 ## How Matches Are Ranked
 
-Every mailbox that contains all the letters of your pattern (in
-order) is shown; the rest are hidden. Visible mailboxes are sorted
-so that the best match is highlighted automatically. The ranking
-rewards intuitive matches:
+Every mailbox that contains all the letters of your pattern (in order) is shown; the rest are hidden.
+Visible mailboxes are sorted so that the best match is highlighted automatically.
+The ranking rewards intuitive matches:
 
 - **Word boundaries score highest.**
   Matching the first letter of a path component (after `/`, `.`,

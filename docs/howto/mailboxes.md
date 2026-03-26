@@ -12,7 +12,8 @@ keywords: mailboxes, named-mailboxes, unmailboxes, mbox-hook, spool, new mail, m
 mbox-hook [-noregex] regex mailbox
 ```
 
-This command is used to move read messages from a specified mailbox to a different mailbox automatically when you quit or change folders. *regex* is used to specify the mailbox to treat as a "spool" mailbox and *mailbox* specifies where mail should be saved when read.
+This command is used to move read messages from a specified mailbox to a different mailbox automatically when you quit or change folders
+*regex* is used to specify the mailbox to treat as a "spool" mailbox and *mailbox* specifies where mail should be saved when read.
 The *-noregex* switch controls whether *regex* is matched using a simple string comparison or a full regex match.
 
 The regex parameter has **mailbox shortcut** expansion performed on the first character.
@@ -52,7 +53,8 @@ The URL syntax is described in **URL syntax**, POP and IMAP are described in [PO
 NeoMutt provides a number of advanced features for handling (possibly many) folders and new mail within them, please refer to **new mail** for details (including in what situations and how often NeoMutt checks for new mail).
 Additionally, `$new_mail_command` can be used to run a command when new mail is detected.
 
-The `unmailboxes` command is used to remove a token from the list of folders which receive mail. `unmailboxes` can be used on the mailbox path, `$folder`-abbreviated path, or description.
+The `unmailboxes` command is used to remove a token from the list of folders which receive mail.
+`unmailboxes` can be used on the mailbox path, `$folder`-abbreviated path, or description.
 Use `unmailboxes *` to remove all tokens.
 
 :::{admonition} 📷 Screenshot Needed
@@ -60,7 +62,11 @@ Use `unmailboxes *` to remove all tokens.
 
 **Subject:** Mailbox browser with named mailboxes
 
-**Description:** The NeoMutt mailbox browser (opened with `c?` or the `<browser>` function) showing a list of monitored mailboxes configured via `named-mailboxes`, displaying the custom label names (e.g. "My INBOX", "Work Mail") instead of raw folder paths, along with message counts and new mail indicators.
+**Description:** The NeoMutt mailbox browser (opened with `c?` or the
+`<browser>` function) showing a list of monitored mailboxes configured via
+`named-mailboxes`, displaying the custom label names (e.g. "My INBOX", "Work
+Mail") instead of raw folder paths, along with message counts and new mail
+indicators.
 
 **Highlights:** How `-label` / `named-mailboxes` labels replace raw paths in the browser, the new mail flag column, and the folder size or message count columns.
 :::

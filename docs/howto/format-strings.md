@@ -155,7 +155,10 @@ For example, using `%<[y?%<[d?%[%H:%M]&%[%m/%d]>&%[%y.%m]>` for the date in the 
 
 **Subject:** Conditional date formatting in the index
 
-**Description:** The NeoMutt index view showing messages with different date formats depending on age: today's messages showing time only (e.g. `12:17`), this month's messages showing day (e.g. `10/02`), and older messages showing year-month (e.g. `14.12`).
+**Description:** The NeoMutt index view showing messages with different date
+formats depending on age: today's messages showing time only (e.g. `12:17`),
+this month's messages showing day (e.g. `10/02`), and older messages showing
+year-month (e.g. `14.12`).
 
 **Highlights:** How the same date column automatically adapts its format based on message age, saving space while keeping recent dates precise.
 :::
@@ -282,7 +285,8 @@ set index_format='%4C %Z %<[y?%<[m?%<[d?%[%H:%M ]&%[%a %d]>&%[%b %d]>&%[%m/%y ]>
 
 ### Known Bugs
 
-Date parsing doesn't quite do what you expect. "1w" doesn't mean "in the last 7 days", but "*this* week".
+Date parsing doesn't quite do what you expect.
+"1w" doesn't mean "in the last 7 days", but "*this* week".
 This doesn't match the normal NeoMutt behavior: for example `~d>1w` means emails dated in the last 7 days.
 
 ---

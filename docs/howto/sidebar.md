@@ -51,7 +51,11 @@ For more details, and examples, about the `$sidebar_format`, see the Sidebar Int
 
 **Subject:** Sidebar with short paths and folder indentation
 
-**Description:** NeoMutt sidebar showing mailboxes with `sidebar_short_path=yes` and `sidebar_folder_indent=yes` enabled — nested IMAP folders or Maildir subfolders appear with abbreviated names and indentation showing their hierarchy (e.g. "lists" at the top level, then "  neomutt-devel" and "  neomutt-users" indented beneath it).
+**Description:** NeoMutt sidebar showing mailboxes with `sidebar_short_path=yes`
+and `sidebar_folder_indent=yes` enabled — nested IMAP folders or Maildir
+subfolders appear with abbreviated names and indentation showing their hierarchy
+(e.g. "lists" at the top level, then "  neomutt-devel" and "  neomutt-users"
+indented beneath it).
 
 **Highlights:** The indented folder hierarchy in the sidebar — how `sidebar_short_path` abbreviates long paths and `sidebar_folder_indent` with `sidebar_indent_string` creates a visual tree of nested mailboxes.
 :::

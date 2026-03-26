@@ -17,9 +17,8 @@ since: 2024-04-10
 
 ## Introduction
 
-This feature shows a block of information that provides information about an
-encrypted message; mainly about its recipients. Here is an example of such a
-block:
+This feature shows a block of information that provides information about an encrypted message; mainly about its recipients.
+Here is an example of such a block:
 
 ```
 [-- Begin encryption information --]
@@ -33,9 +32,14 @@ Recipient: RSA key, ID 0000000000000000
 
 **Subject:** Encryption information block in pager
 
-**Description:** The NeoMutt pager displaying a decrypted email with the encryption information block visible. The block shows "[-- Begin encryption information --]" and "[-- End encryption information --]" markers with recipient key details (e.g., "Recipient: RSA key, ID 00C14A7DBBDD521C") between them.
+**Description:** The NeoMutt pager displaying a decrypted email with the
+encryption information block visible. The block shows "[-- Begin encryption
+information --]" and "[-- End encryption information --]" markers with recipient
+key details (e.g., "Recipient: RSA key, ID 00C14A7DBBDD521C") between them.
 
-**Highlights:** The encryption information block integrated into the message display, showing how recipient key IDs appear when viewing an encrypted message with `$crypt_encryption_info` enabled.
+**Highlights:** The encryption information block integrated into the message
+display, showing how recipient key IDs appear when viewing an encrypted message
+with `$crypt_encryption_info` enabled.
 :::
 
 ## Usage

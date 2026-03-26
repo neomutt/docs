@@ -7,7 +7,9 @@ since: 2017-10-13
 
 # Custom Tagging 🔥
 
-Some backends allow to index and tag mail without storing the tags within the mail envelope. Two backends are currently implementing this feature. Notmuch handles them natively and IMAP stores them in custom IMAP keywords.
+Some backends allow to index and tag mail without storing the tags within the mail envelope.
+Two backends are currently implementing this feature.
+Notmuch handles them natively and IMAP stores them in custom IMAP keywords.
 
 ## Variables
 
@@ -17,7 +19,8 @@ Some backends allow to index and tag mail without storing the tags within the ma
 
 ## Functions
 
-Notmuch adds the following functions to NeoMutt. By default, none of them are bound to keys.
+Notmuch adds the following functions to NeoMutt.
+By default, none of them are bound to keys.
 
 | Menus       | Function                    | Description                                                                                                                                                                                  |
 |-------------|-----------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -40,7 +43,8 @@ tag-formats    tag format-string      { tag format-string ...}
 
 ## Colors
 
-Adds the objects, below, to index-color feature. The objects can take an optional pattern.
+Adds the objects, below, to index-color feature.
+The objects can take an optional pattern.
 
 | Object       | Highlights                                   |
 |--------------|----------------------------------------------|

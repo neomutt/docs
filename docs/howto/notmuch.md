@@ -58,7 +58,8 @@ For more details about Xapian queries, see: [https://xapian.org/docs/queryparser
 Restricts number of messages/threads in the result.
 The default limit is nm_db_limit.
 
-Due to a limitation with `libnotmuch`, unread and flagged message count may be inaccurate with limit statements. `libnotmuch` cannot return a specific tag count within the first X messages of a query.
+Due to a limitation with `libnotmuch`, unread and flagged message count may be inaccurate with limit statements
+`libnotmuch` cannot return a specific tag count within the first X messages of a query.
 
 **type=\<threads|messages\>**
 
@@ -94,7 +95,8 @@ More variables about tags configuration can be found in **Custom backend Tags Fe
 
 **Subject:** Notmuch virtual mailbox view
 
-**Description:** The NeoMutt index showing a virtual folder created from a Notmuch query (e.g. `tag:inbox`), with the status bar displaying the Notmuch query URL.
+**Description:** The NeoMutt index showing a virtual folder created from a
+Notmuch query (e.g. `tag:inbox`), with the status bar displaying the Notmuch query URL.
 Messages from different underlying Maildir folders should be visible together in one unified view.
 
 **Highlights:** How messages from multiple folders are merged into a single virtual view, the Notmuch query shown in the status bar, and the message count reflecting query results rather than a physical folder.

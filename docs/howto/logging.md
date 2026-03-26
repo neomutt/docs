@@ -45,7 +45,8 @@ To show the last 100 messages (this includes all types of messages from debug to
 
 ## Enabling Debug Logging
 
-1. Debug messages are not shown by default. Set the debug log level with the `-d` command line parameter at startup:
+1. Debug messages are not shown by default.
+   Set the debug log level with the `-d` command line parameter at startup:
 
    ```sh
    neomutt -d 2

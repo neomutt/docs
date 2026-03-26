@@ -223,7 +223,8 @@ A definition line consists of a content type, a view command, and any number of 
 Each field of a definition line is divided by a semicolon ";" character.
 
 The content type is specified in the MIME standard "type/subtype" notation.
-For example, `text/plain`, `text/html`, `image/gif`, etc. In addition, the mailcap format includes two formats for wildcards, one using the special `*` subtype, the other is the implicit wild, where you only include the major type.
+For example, `text/plain`, `text/html`, `image/gif`, etc.
+In addition, the mailcap format includes two formats for wildcards, one using the special `*` subtype, the other is the implicit wild, where you only include the major type.
 For example, `image/*`, or `video` will match all image types and video types, respectively.
 
 The view command is a Unix command for viewing the type specified.
@@ -581,7 +582,9 @@ You can read and write `multipart/alternative` emails in NeoMutt.
 
 NeoMutt has some heuristics for determining which attachment of a `multipart/alternative` type to display:
 
-1. First, NeoMutt will check the `alternative-order` list to determine if one of the available types is preferred. It consists of a number of MIME types in order, including support for implicit and explicit wildcards. For example:
+1. First, NeoMutt will check the `alternative-order` list to determine if one of the available types is preferred.
+   It consists of a number of MIME types in order, including support for implicit and explicit wildcards.
+   For example:
 
    ```neomuttrc
    alternative-order text/enriched text/plain text application/postscript image/*
@@ -657,7 +660,8 @@ There are examples below of how this is useful.
 
 *mime-type* is the MIME type of the attachment you want the command to affect.
 A MIME type is always of the format `major/minor`, where `major` describes the broad category of document you're looking at, and `minor` describes the specific type within that category.
-The major part of mime-type must be literal text (or the special token `*`), but the minor part may be a regular expression. (Therefore, `*/.*` matches any MIME type.)
+The major part of mime-type must be literal text (or the special token `*`), but the minor part may be a regular expression.
+(Therefore, `*/.*` matches any MIME type.)
 
 The MIME types you give to the `attachments` directive are a kind of pattern.
 When you use the `attachments` directive, the patterns you specify are added to a list.
@@ -672,15 +676,15 @@ Thus, it is not counted as an attachment if its disposition is `inline` and it i
 :class: tip
 
 ```neomuttrc
-# Removing a pattern from a list removes that pattern literally. It
-# does not remove any type matching the pattern.
+# Removing a pattern from a list removes that pattern literally.
+# It does not remove any type matching the pattern.
 #
 #  attachments   +A */.*
 #  attachments   +A image/jpeg
 #  unattachments +A */.*
 #
-# This leaves "attached" image/jpeg files on the allowed attachments
-# list. It does not remove all items, as you might expect, because the
+# This leaves "attached" image/jpeg files on the allowed attachments list.
+# It does not remove all items, as you might expect, because the
 # second */.* is not a matching expression at this time.
 #
 # Remember: "unattachments" only undoes what "attachments" has done!

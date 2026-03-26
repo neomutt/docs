@@ -65,7 +65,10 @@ Instead of getting joined *format* strings, you'll get only the last one to matc
 
 **Subject:** Spam-tagged messages in the index
 
-**Description:** The NeoMutt index view with `%H` included in `$index_format`, showing messages with visible spam tags (e.g. `90+/DCC-Fuz2`, `97/PM`) next to messages with no spam tag, demonstrating how external spam filter scores appear inline.
+**Description:** The NeoMutt index view with `%H` included in `$index_format`,
+showing messages with visible spam tags (e.g. `90+/DCC-Fuz2`, `97/PM`) next to
+messages with no spam tag, demonstrating how external spam filter scores appear
+inline.
 
 **Highlights:** The spam tag column rendered by `%H`, how different spam filters produce different tag formats, and how untagged (non-spam) messages show a blank in that column.
 :::

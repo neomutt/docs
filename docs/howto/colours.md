@@ -83,7 +83,8 @@ On startup NeoMutt tries to detect whether the terminal it is running in support
 If the terminal does, NeoMutt enables the config option `$color_directcolor` otherwise it disables it.
 Furthermore, NeoMutt allows to use the RGB colors syntax with the `color` command to colour elements with 24-bit colors.
 
-For the detection to work the *TERM* environment variable must be set up properly to advertise the terminals directcolor capability. *TERM*-values which do that usually end in `-direct`, e.g. `xterm-direct`.
+For the detection to work the *TERM* environment variable must be set up properly to advertise the terminals directcolor capability.
+*TERM*-values which do that usually end in `-direct`, e.g. `xterm-direct`.
 
 If NeoMutt does not detect directcolor color support, but you are sure your terminal supports it, you may try to explicitly set the *TERM* environment variable by starting NeoMutt from the terminal as follows:
 
@@ -551,7 +552,11 @@ color   attach_headers     brightmagenta   default    "invalid node with packet 
 
 **Subject:** Coloured attachment headers
 
-**Description:** NeoMutt pager or attachment view showing attachment headers with the attach-headers-color rules applied — "Autoview" text in bright green, bracket delimiters `[--` and `--]` in bright yellow, MIME type (e.g. "Type: text/html") and size in green, and a GPGME "Good signature from..." line in bright green (or "Bad signature" in bright red).
+**Description:** NeoMutt pager or attachment view showing attachment headers
+with the attach-headers-color rules applied — "Autoview" text in bright green,
+bracket delimiters `[--` and `--]` in bright yellow, MIME type (e.g. "Type:
+text/html") and size in green, and a GPGME "Good signature from..." line in
+bright green (or "Bad signature" in bright red).
 
 **Highlights:** How attachment header colouring brings attention to key metadata — MIME type, size, autoview status, and especially GPGME signature verification results (good/bad/problem) at a glance.
 :::

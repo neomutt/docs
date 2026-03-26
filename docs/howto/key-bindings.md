@@ -181,7 +181,8 @@ These terminal settings can be viewed and changed using the `stty` program.
 
 `stty -a` will list the bound characters (not all of them affect NeoMutt), and what actions they take when pressed.
 For example, you may see `intr = ^C` in its output.
-This means typing `^C` will send an interrupt signal. `quit = ^\` means typing `^\` (commonly also `^4`) will send a quit signal.
+This means typing `^C` will send an interrupt signal.
+`quit = ^\` means typing `^\` (commonly also `^4`) will send a quit signal.
 
 To unbind a key from an action, you invoke `stty action undef`.
 For example, `stty quit undef` will unbind `^\` (and `^4`) from sending the quit signal.

@@ -15,7 +15,8 @@ unscore {* | pattern ...}
 
 ## Adding Score Rules
 
-The `score` command adds *value* to a message's score if *pattern* matches it. *pattern* is a string in the format described in the patterns section (note: for efficiency reasons, patterns which scan information not available in the index, such as `~b`, `~B`, `~h`, `~M`, or `~X` may not be used). *value* is a positive or negative integer.
+The `score` command adds *value* to a message's score if *pattern* matches it
+*pattern* is a string in the format described in the patterns section (note: for efficiency reasons, patterns which scan information not available in the index, such as `~b`, `~B`, `~h`, `~M`, or `~X` may not be used). *value* is a positive or negative integer.
 A message's final score is the sum total of all matching `score` entries.
 However, you may optionally prefix *value* with an equal sign (`=`) to cause evaluation to stop at a particular entry if there is a match.
 Negative final scores are rounded up to 0.
@@ -31,9 +32,14 @@ The pattern `*` is a special token which means to clear the list of all score en
 
 **Subject:** Scored messages in the index
 
-**Description:** The NeoMutt index view with several messages that have been assigned different scores via `score` rules — some with high scores (e.g. flagged or colour-highlighted) and some with low or zero scores, showing how scoring affects message display or sort order.
+**Description:** The NeoMutt index view with several messages that have been
+assigned different scores via `score` rules — some with high scores (e.g.
+flagged or colour-highlighted) and some with low or zero scores, showing how
+scoring affects message display or sort order.
 
-**Highlights:** How scored messages can be visually distinguished using `color index` rules tied to score patterns (e.g. `~n 10-`), and how sort-by-score reorders the message list.
+**Highlights:** How scored messages can be visually distinguished using `color
+index` rules tied to score patterns (e.g. `~n 10-`), and how sort-by-score
+reorders the message list.
 :::
 
 ## Scoring and Threading

@@ -57,7 +57,8 @@ A simple example of running some Lua commands in NeoMutt:
 ## Limitations
 
 Currently, the Lua scripting is very limited.
-It doesn't have any way to interact with the objects within NeoMutt: the Mailboxes, the Emails, etc. Beyond that, there's almost zero documentation.
+It doesn't have any way to interact with the objects within NeoMutt: the Mailboxes, the Emails, etc.
+Beyond that, there's almost zero documentation.
 
 This state is changing.
 There is some new work coming to NeoMutt that exposes the Accounts, Mailboxes and Emails to Lua.

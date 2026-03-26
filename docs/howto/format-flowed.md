@@ -17,7 +17,8 @@ While for text-mode clients like NeoMutt it's best to assume only a standard 80Ã
 
 NeoMutt only supports setting the required `format=flowed` MIME parameter on outgoing messages if the {ref}`$text_flowed <text-flowed>` variable is set, specifically it does not add the trailing spaces.
 
-After editing, NeoMutt properly space-stuffs the message. *Space-stuffing* is required by [RFC3676](https://www.rfc-editor.org/rfc/rfc3676.html), defining `format=flowed`, and means to prepend a space to:
+After editing, NeoMutt properly space-stuffs the message.
+*Space-stuffing* is required by [RFC3676](https://www.rfc-editor.org/rfc/rfc3676.html), defining `format=flowed`, and means to prepend a space to:
 
 - all lines starting with a space
 - lines starting with the word `From` followed by space

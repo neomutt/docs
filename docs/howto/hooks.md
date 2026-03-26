@@ -144,18 +144,22 @@ send-hook pattern command
 send2-hook pattern command
 ```
 
-These commands can be used to execute arbitrary configuration commands based upon recipients of the message. *pattern* is used to match the message. *command* is executed when *pattern* matches.
+These commands can be used to execute arbitrary configuration commands based upon recipients of the message.
+*pattern* is used to match the message.
+*command* is executed when *pattern* matches.
 
 If the pattern is a plain string, or a regex, it will be expanded to a pattern using `$default_hook`.
 
-`reply-hook` is matched against the message you are *replying to*, instead of the message you are *sending*. `send-hook` is matched against all messages, both *new* and *replies*.
+`reply-hook` is matched against the message you are *replying to*, instead of the message you are *sending*.
+`send-hook` is matched against all messages, both *new* and *replies*.
 
 :::{note}
 `reply-hook`s are matched *before* the `send-hook`, *regardless* of the order specified in the user's configuration file.
 However, you can inhibit `send-hook` in the reply case by using the pattern `'! ~Q'` (*not replied*) in the `send-hook` to tell when `reply-hook` have been executed.
 :::
 
-`send2-hook` is matched every time a message is changed, either by editing it, or by using the compose menu to change its recipients or subject. `send2-hook` is executed after `send-hook`, and can, e.g., be used to set parameters such as the `$sendmail` variable depending on the message's sender address.
+`send2-hook` is matched every time a message is changed, either by editing it, or by using the compose menu to change its recipients or subject.
+`send2-hook` is executed after `send-hook`, and can, e.g., be used to set parameters such as the `$sendmail` variable depending on the message's sender address.
 
 For each type of `send-hook` or `reply-hook`, when multiple matches occur, commands are executed in the order they are specified in the `.neomuttrc` (for that type of hook).
 
@@ -180,7 +184,8 @@ Also note that `my-header` commands which modify recipient headers, or the messa
 message-hook pattern command
 ```
 
-This command can be used to execute arbitrary configuration commands before viewing or formatting a message based upon information about the message. *command* is executed if the *pattern* matches the message to be displayed.
+This command can be used to execute arbitrary configuration commands before viewing or formatting a message based upon information about the message.
+*command* is executed if the *pattern* matches the message to be displayed.
 When multiple matches occur, commands are executed in the order they are specified in the `.neomuttrc`.
 
 If the pattern is a plain string, or a regex, it will be expanded to a pattern using `$default_hook`.
@@ -361,7 +366,8 @@ index-format-hook  date  "~d<1y"    "%[%b %d]"
 index-format-hook  date  "~A"       "%[%m/%y]"
 ```
 
-The `~d<1d` pattern matches messages less than one day old, `~d<1m` less than one month, etc. The final `~A` (match all) acts as a fallback.
+The `~d<1d` pattern matches messages less than one day old, `~d<1m` less than one month, etc.
+The final `~A` (match all) acts as a fallback.
 
 ### Example: Flagging messages by sender
 

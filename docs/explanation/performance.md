@@ -11,25 +11,23 @@ diataxis_type: explanation
 
 NeoMutt's performance when reading mailboxes can be improved in two ways:
 
-1. For remote folders (IMAP and POP) as well as folders using one-file-per-message storage
-   (Maildir and MH), NeoMutt's performance can be greatly improved using header caching,
-   using a single database per folder.
+1. For remote folders (IMAP and POP) as well as folders using one-file-per-message storage (Maildir and MH),
+   NeoMutt's performance can be greatly improved using header caching, using a single database per folder.
 
-2. NeoMutt provides the `$read_inc` and `$write_inc` variables to specify at which rate to
-   update progress counters. If these values are too low, NeoMutt may spend more time on
-   updating the progress counter than it spends on actually reading/writing folders.
+2. NeoMutt provides the `$read_inc` and `$write_inc` variables to specify at which rate to update progress counters.
+   If these values are too low, NeoMutt may spend more time on updating the progress counter than it spends on actually reading/writing folders.
 
 For example, when opening a maildir folder with a few thousand messages, the default value for `$read_inc` may be too low.
 It can be tuned on a folder-basis using `folder-hook`s:
 
-   ```neomuttrc
-   # use very high $read_inc to speed up reading hcache'd maildirs
-   folder-hook . 'set read_inc=1000'
-   # use lower value for reading slower remote IMAP folders
-   folder-hook ^imap 'set read_inc=100'
-   # use even lower value for reading even slower remote POP folders
-   folder-hook ^pop 'set read_inc=1'
-   ```
+```neomuttrc
+# use very high $read_inc to speed up reading hcache'd maildirs
+folder-hook . 'set read_inc=1000'
+# use lower value for reading slower remote IMAP folders
+folder-hook ^imap 'set read_inc=100'
+# use even lower value for reading even slower remote POP folders
+folder-hook ^pop 'set read_inc=1'
+```
 
 These settings work on a per-message basis.
 However, as messages may greatly differ in size and certain operations are much faster than others, even per-folder settings of the increment variables may not be desirable as they produce either too few or too many progress updates.

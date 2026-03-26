@@ -33,7 +33,8 @@ You have to prepare every part manually or using some scripts, and then tag and 
 1. Prepare parts of the multilingual emails.
 2. Attach them as attachments.
 3. Tag them with `<tag-entry>`.
-4. Edit the `Content-Language` header of every attachment with command `<edit-language>` (default to `Ctrl-L`). This is important, otherwise the recipient of this email will not know the corresponding languages.
+4. Edit the `Content-Language` header of every attachment with command `<edit-language>` (default to `Ctrl-L`).
+   This is important, otherwise the recipient of this email will not know the corresponding languages.
    You can set arbitrary string as `Content-Language`, but it is recommended to set it as some common prefixes such as "en", "zh" and "fr".
 5. Group all the tagged messages together by `<group-multilingual>` (default to `^`).
 6. Send the email as usual.
@@ -48,7 +49,10 @@ Attachments can still be edited separately and reordered within the group, but m
 
 **Subject:** Compose menu with multilingual attachment group
 
-**Description:** NeoMutt compose menu showing a `multipart/multilingual` group after `<group-multilingual>` has been applied — the grouped language parts (e.g. English, French, German) are displayed in a tree structure under a single multipart/multilingual container, each with its Content-Language visible.
+**Description:** NeoMutt compose menu showing a `multipart/multilingual` group
+after `<group-multilingual>` has been applied — the grouped language parts (e.g.
+English, French, German) are displayed in a tree structure under a single
+multipart/multilingual container, each with its Content-Language visible.
 
 **Highlights:** The tree-structured grouping of language alternatives in the compose attachment list, showing how the separate language parts become children of the multilingual container.
 :::
@@ -67,9 +71,11 @@ You have to prepare every part manually or using some scripts, and then tag and 
 1. Prepare parts of the related email.
 2. Attach them as attachments.
 3. Tag them with `<tag-entry>`.
-4. One part can reference another using its `Content-ID` header. For example, an HTML part that includes an embedded image needs to contain: `<img src="cid:content-id">` where an attached image has a `Content-ID` header of `content-id`.
+4. One part can reference another using its `Content-ID` header.
+   For example, an HTML part that includes an embedded image needs to contain: `<img src="cid:content-id">` where an attached image has a `Content-ID` header of `content-id`.
    The `Content-ID` of an attachment can be set using `<edit-content-id>` (default key `Alt-i`).
-   `<edit-content-id>` sets a random ID which can then be changed if desired. Permitted characters for `Content-ID` are: `-.0-9@A-Z_a-z`.
+   `<edit-content-id>` sets a random ID which can then be changed if desired.
+   Permitted characters for `Content-ID` are: `-.0-9@A-Z_a-z`.
 
    If the `multipart/related` group is intended to be inline, members of the group should also have their `Content-Disposition` header set to `inline` which can be toggled using `<toggle-disposition>` (default key `Ctrl-D`).
 

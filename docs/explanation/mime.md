@@ -56,7 +56,9 @@ Attachments can still be edited separately and reordered within the group, but m
 
 **Subject:** MIME attachment tree in compose menu
 
-**Description:** The NeoMutt compose screen showing a multipart message with a nested MIME tree structure — e.g. a multipart/mixed containing a multipart/alternative with text/plain and text/html parts, plus a file attachment.
+**Description:** The NeoMutt compose screen showing a multipart message with a
+nested MIME tree structure — e.g. a multipart/mixed containing a
+multipart/alternative with text/plain and text/html parts, plus a file attachment.
 The tree indentation and part numbering should be visible.
 
 **Highlights:** The reader should notice how NeoMutt renders the hierarchical MIME structure as an indented tree with type annotations, showing the parent-child relationship between multipart containers and their leaf parts.
@@ -105,4 +107,5 @@ You have to prepare every part manually or using some scripts, and then tag and 
   A     6 attachment.pdf                                         [application/pdf, quoted, 7.1K]
 ```
 
-In the above email `/tmp/neomutt-alternative.html` would reference `image.png` using `<img src="cid:content-id">` and `image.png` has been given an explicit name of `image.png` using `<rename-attachment>` (regardless of its initial filename). `<group-related>` has set its `Content-ID` header to a random value.
+In the above email `/tmp/neomutt-alternative.html` would reference `image.png` using `<img src="cid:content-id">` and `image.png` has been given an explicit name of `image.png` using `<rename-attachment>` (regardless of its initial filename).
+`<group-related>` has set its `Content-ID` header to a random value.
