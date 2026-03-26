@@ -17,24 +17,31 @@ This helps catch mistakes early - like entering text where a number is needed or
 These flags can be applied to different config option types.  
 They can restrict the possible values or change the option's behaviour.
 
-- **Charset Single** - Only one character encoding is allowed.  
-  You can't provide a list of alternatives; you must pick exactly one.
+:Charset Single:
+    Only one character encoding is allowed.  
+    You can't provide a list of alternatives; you must pick exactly one.
 
-- **Charset Strict** - NeoMutt will be extra strict when checking the encoding name, rejecting anything that isn't a well-known, valid character set.
+:Charset Strict:
+    NeoMutt will be extra strict when checking the encoding name, rejecting anything that isn't a well-known, valid character set.
 
-- **Localised String** - The default value of this setting can be translated into your language, so it may appear differently depending on your locale.
+:Localised String:
+    The default value of this setting can be translated into your language, so it may appear differently depending on your locale.
 
-- **Not Empty** - The setting must have a value - you're not allowed to leave it blank.  
-  NeoMutt will reject an empty string.
+:Not Empty:
+    The setting must have a value - you're not allowed to leave it blank.  
+    NeoMutt will reject an empty string.
 
-- **Not Negative** - The number must be zero or positive.  
-  Negative values are not accepted.
+:Not Negative:
+    The number must be zero or positive.  
+    Negative values are not accepted.
 
-- **On Startup** - This setting can only be changed when NeoMutt first starts up.  
-  Once it's running, the value is locked and can't be modified.
+:On Startup:
+    This setting can only be changed when NeoMutt first starts up.  
+    Once it's running, the value is locked and can't be modified.
 
-- **Sensitive** - The value contains something private, like a password.  
-  NeoMutt takes care not to display or log it.
+:Sensitive:
+    The value contains something private, like a password.  
+    NeoMutt takes care not to display or log it.
 
 (address)=
 ## Address
