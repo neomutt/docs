@@ -1,0 +1,8 @@
+{% extends "!layout.html" %}
+
+{% block docs_body %}
+{% if pagename == "index" %}
+<script>document.body.classList.add("page-index");</script>
+{% endif %}
+{{ super() }}
+{% endblock %}

@@ -51,6 +51,8 @@ footer.bd-footer-content { display: none; }
 html[data-theme=light] .bd-article-container { background: #fff; }
 html[data-theme=dark]  .bd-article-container { background: #000; }
 
+.page-index .bd-article-container { background: transparent !important; }
+
 @media (prefers-color-scheme: light) {
   html[data-theme=auto] .bd-article-container { background: #fff; }
 }
@@ -121,32 +123,52 @@ html[data-theme=dark]  .sd-card { background: #000; color: #fff; }
    Colour-coded cards on index.md for the five doc categories.
    ──────────────────────────────────────────────────────────── */
 
-html[data-theme=light] .sd-card.dia-start       { background: #ffffcf !important; color: #000; }
-html[data-theme=light] .sd-card.dia-tutorial     { background: #c7eeff !important; color: #000; }
-html[data-theme=light] .sd-card.dia-howto        { background: #d0ffd0 !important; color: #000; }
-html[data-theme=light] .sd-card.dia-explanation  { background: #ffdfc0 !important; color: #000; }
-html[data-theme=light] .sd-card.dia-reference    { background: #dddddd !important; color: #000; }
+html[data-theme=light] .sd-card.dia-start,
+html[data-theme=light] .sd-card.dia-tutorial,
+html[data-theme=light] .sd-card.dia-howto,
+html[data-theme=light] .sd-card.dia-explanation,
+html[data-theme=light] .sd-card.dia-reference {
+  background: rgba(255, 255, 255, 0.4) !important;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  color: #000;
+}
 
-html[data-theme=dark] .sd-card.dia-start         { background: #706a00 !important; color: #fff; }
-html[data-theme=dark] .sd-card.dia-tutorial      { background: #2b414f !important; color: #fff; }
-html[data-theme=dark] .sd-card.dia-howto         { background: #315531 !important; color: #fff; }
-html[data-theme=dark] .sd-card.dia-explanation   { background: #6b362a !important; color: #fff; }
-html[data-theme=dark] .sd-card.dia-reference     { background: #444444 !important; color: #fff; }
+html[data-theme=dark] .sd-card.dia-start,
+html[data-theme=dark] .sd-card.dia-tutorial,
+html[data-theme=dark] .sd-card.dia-howto,
+html[data-theme=dark] .sd-card.dia-explanation,
+html[data-theme=dark] .sd-card.dia-reference {
+  background: rgba(0, 0, 0, 0.4) !important;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  color: #fff;
+}
 
 @media (prefers-color-scheme: light) {
-  html[data-theme=auto] .sd-card.dia-start       { background: #ffffcf !important; color: #000; }
-  html[data-theme=auto] .sd-card.dia-tutorial    { background: #c7eeff !important; color: #000; }
-  html[data-theme=auto] .sd-card.dia-howto       { background: #d0ffd0 !important; color: #000; }
-  html[data-theme=auto] .sd-card.dia-explanation { background: #ffdfc0 !important; color: #000; }
-  html[data-theme=auto] .sd-card.dia-reference   { background: #dddddd !important; color: #000; }
+  html[data-theme=auto] .sd-card.dia-start,
+  html[data-theme=auto] .sd-card.dia-tutorial,
+  html[data-theme=auto] .sd-card.dia-howto,
+  html[data-theme=auto] .sd-card.dia-explanation,
+  html[data-theme=auto] .sd-card.dia-reference {
+    background: rgba(255, 255, 255, 0.4) !important;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    color: #000;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
-  html[data-theme=auto] .sd-card.dia-start       { background: #706a00 !important; color: #fff; }
-  html[data-theme=auto] .sd-card.dia-tutorial    { background: #2b414f !important; color: #fff; }
-  html[data-theme=auto] .sd-card.dia-howto       { background: #315531 !important; color: #fff; }
-  html[data-theme=auto] .sd-card.dia-explanation { background: #6b362a !important; color: #fff; }
-  html[data-theme=auto] .sd-card.dia-reference   { background: #444444 !important; color: #fff; }
+  html[data-theme=auto] .sd-card.dia-start,
+  html[data-theme=auto] .sd-card.dia-tutorial,
+  html[data-theme=auto] .sd-card.dia-howto,
+  html[data-theme=auto] .sd-card.dia-explanation,
+  html[data-theme=auto] .sd-card.dia-reference {
+    background: rgba(0, 0, 0, 0.4) !important;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    color: #fff;
+  }
 }
 
 
@@ -254,6 +276,64 @@ html[data-theme=dark] .highlight .hll {
   }
 }
 
+
+/* ── Sidebar background image ───────────────────────────────── */
+
+html[data-theme=light] .bd-sidebar-primary {
+  background: url("light.png") no-repeat center center / auto 100%;
+  background-color: rgba(255, 255, 255, 0.65) !important;
+  background-blend-mode: overlay;
+}
+
+html[data-theme=dark] .bd-sidebar-primary {
+  background: url("dark.png") no-repeat center center / auto 100%;
+  background-color: rgba(0, 0, 0, 0.65) !important;
+  background-blend-mode: overlay;
+}
+
+@media (prefers-color-scheme: light) {
+  html[data-theme=auto] .bd-sidebar-primary {
+    background: url("light.png") no-repeat center center / auto 100%;
+    background-color: rgba(255, 255, 255, 0.65) !important;
+    background-blend-mode: overlay;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  html[data-theme=auto] .bd-sidebar-primary {
+    background: url("dark.png") no-repeat center center / auto 100%;
+    background-color: rgba(0, 0, 0, 0.65) !important;
+    background-blend-mode: overlay;
+  }
+}
+
+
+/* ── Front-page background image ────────────────────────────── */
+html[data-theme=light] body.page-index .bd-article-container {
+  background: url("light.png") no-repeat center center / cover !important;
+  background-color: rgba(255, 255, 255, 0.45) !important;
+  background-blend-mode: overlay;
+}
+
+html[data-theme=dark] body.page-index .bd-article-container {
+  background: url("dark.png") no-repeat center center / cover !important;
+  background-color: rgba(0, 0, 0, 0.45) !important;
+  background-blend-mode: overlay;
+}
+
+@media (prefers-color-scheme: light) {
+  html[data-theme=auto] body.page-index .bd-article-container {
+    background-color: rgba(255, 255, 255, 0.45) !important;
+    background-blend-mode: overlay;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  html[data-theme=auto] body.page-index .bd-article-container {
+    background-color: rgba(0, 0, 0, 0.45) !important;
+    background-blend-mode: overlay;
+  }
+}
 
 /* ─── Footer accent ───────────────────────────────────────── */
 
