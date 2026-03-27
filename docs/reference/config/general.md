@@ -4,6 +4,7 @@ description: Core configuration variables for NeoMutt behavior, character sets, 
 keywords: neomutt, general, abort_key, charset, color_directcolor, date_format, folder, hostname, mail_check, mbox_type, sort, use_threads, trash, timeout, wrap
 ---
 
+(cfg-general)=
 # General Options
 
 General configuration variables control NeoMutt's core behaviour. These variables

@@ -4,6 +4,7 @@ description: Configuration variables for PGP and S/MIME cryptography, signing, e
 keywords: neomutt, ncrypt, pgp, smime, gpgme, encryption, signing, cryptography, crypt_opportunistic_encrypt, protected headers, certificates, security
 ---
 
+(cfg-ncrypt)=
 # Ncrypt Options
 
 (crypt-confirm-hook)=

@@ -4,6 +4,7 @@ description: System and user configuration file search paths, naming conventions
 keywords: neomutt, config file, neomuttrc, muttrc, xdg, location, search order, system config, user config, priority, startup
 ---
 
+(cfg-files)=
 # Config File Locations
 
 When NeoMutt starts up it looks for two config files — one "system" file and one "user" file.

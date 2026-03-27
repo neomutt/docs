@@ -4,6 +4,7 @@ description: Configuration variables for command-line history size, persistence,
 keywords: neomutt, history, history_file, history_format, history_remove_dups, save_history, command history, input history, recall, buffer
 ---
 
+(cfg-history)=
 # History Options
 
 (history)=

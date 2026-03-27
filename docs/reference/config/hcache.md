@@ -4,6 +4,7 @@ description: Configuration variables for the header cache database, backend sele
 keywords: neomutt, header cache, hcache, header_cache, header_cache_backend, compression, lz4, zstd, zlib, performance, caching, database
 ---
 
+(cfg-hcache)=
 # Hcache Options
 
 (header-cache)=

@@ -4,6 +4,7 @@ description: Configuration variables for managing email aliases, address queries
 keywords: alias, address book, contacts, alias_file, alias_format, alias_sort, query_command, query_format, nicknames, address lookup
 ---
 
+(cfg-alias)=
 # Alias Options
 
 (alias-file)=
@@ -16,13 +17,13 @@ keywords: alias, address book, contacts, alias_file, alias_format, alias_sort, q
     set alias_file = "~/.neomuttrc"
     ```
 
-The default file in which to save aliases created by the `$<create-alias>` function.
-Entries added to this file are encoded in the character set specified by [$config_charset](config-charset) if it is _set_ or the current character set otherwise.
+The default file in which to save aliases created by [`<create-alias>`](fn-alias).
+Entries added to this file are encoded in the character set specified by [`$config_charset`](config-charset) if it is _set_ or the current character set otherwise.
 
-The default for this option is the currently used neomuttrc file, or "~/.neomuttrc" if no user neomuttrc was found.
+The default for this option is the currently used neomuttrc file, or `~/.neomuttrc` if no user neomuttrc was found.
 
 :::{note}
-NeoMutt will not automatically source this file; you must explicitly use the "$source" command for it to be executed in case this option points to a dedicated alias file.
+NeoMutt will not automatically source this file; you must explicitly use [`:source`](cmd-source) for it to be executed in case this option points to a dedicated alias file.
 :::
 
 --------------------------------------------------------------------------------
@@ -59,7 +60,11 @@ The following `printf(3)`-style sequences are available:
 | `%>X`  | `%{padding-hard:X}` | Right justify the rest of the string and pad with character `X` |
 | `%\|X` | `%{padding-eol:X}`  | Pad to the end of the line with character `X`                   |
 
-For an explanation of "soft-fill", see the [$index_format](index-format) documentation.
+:::{seealso}
+**Expandos:** [Tutorial Conditional](tut-cond-expando), [Howto Conditional](how-cond-expando), [Formatting](how-format-expando), [Reference](ref-expandos)
+
+**Alias:** [Functions](fn-alias)
+:::
 
 The following sequences are deprecated; they will be removed in the future.
 

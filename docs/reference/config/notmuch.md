@@ -4,6 +4,7 @@ description: Configuration variables for Notmuch integration, including database
 keywords: notmuch, search, indexing, tagging, virtual mailbox, nm_default_url, nm_query_type, nm_exclude_tags, nm_unread_tag, vfolder, full-text search, email tags
 ---
 
+(cfg-notmuch)=
 # Notmuch Options
 
 (nm-config-file)=

@@ -4,6 +4,7 @@ description: Configuration variables for POP3 server connections, authentication
 keywords: neomutt, pop3, pop, pop_host, pop_user, pop_pass, pop_authenticators, pop_check_interval, pop_delete, oauth, remote mail, fetch mail
 ---
 
+(cfg-pop)=
 # POP3 Options
 
 (pop-authenticators)=

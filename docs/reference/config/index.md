@@ -4,6 +4,7 @@ description: Configuration variables for the index menu display, status bar form
 keywords: neomutt, index, index_format, status_format, flag_chars, crypt_chars, from_chars, to_chars, ts_enabled, new_mail_command, status bar, message list
 ---
 
+(cfg-index)=
 # Index Options
 
 (beep-new)=

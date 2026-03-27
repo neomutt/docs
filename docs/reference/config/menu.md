@@ -4,6 +4,7 @@ description: Configuration variables for menu navigation, cursor style, scrollin
 keywords: neomutt, menu, arrow_cursor, arrow_string, menu_context, menu_move_off, menu_scroll, navigation, scrolling, cursor style, ui
 ---
 
+(cfg-menu)=
 # Menu Options
 
 (arrow-cursor)=

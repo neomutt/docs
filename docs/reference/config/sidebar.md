@@ -4,6 +4,7 @@ description: Configuration variables for the sidebar panel, including visibility
 keywords: sidebar, sidebar_visible, sidebar_width, sidebar_format, sidebar_sort, sidebar_short_path, sidebar_folder_indent, folder list, navigation panel, mailbox list
 ---
 
+(cfg-sidebar)=
 # Sidebar Options
 
 (sidebar-component-depth)=

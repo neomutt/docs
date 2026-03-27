@@ -4,6 +4,7 @@ description: Configuration variables for composing and sending email, SMTP setti
 keywords: neomutt, send, smtp, sendmail, smtp_url, signature, attribution_intro, forward_format, abort_noattach, allow_8bit, encoding, outgoing mail, reply, compose
 ---
 
+(cfg-send)=
 # Send Options
 
 (abort-noattach)=

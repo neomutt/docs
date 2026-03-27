@@ -4,6 +4,7 @@ description: Configuration variables for hook pattern defaults, outgoing message
 keywords: neomutt, hooks, default_hook, save_name, force_name, fcc-hook, send-hook, reply-hook, save-hook, pattern matching, outgoing mail
 ---
 
+(cfg-hooks)=
 # Hooks Options
 
 (default-hook)=

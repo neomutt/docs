@@ -4,6 +4,7 @@ description: Reference for all NeoMutt configuration variable types, including b
 keywords: neomutt, config types, boolean, number, string, path, regex, quad, expando, sort order, enumeration, mbtable, slist, myvar, data types
 ---
 
+(cfg-types)=
 # Config Types
 
 NeoMutt configuration options are settings that control how the program behaves, and each one has a defined type that determines what kind of value it can accept.

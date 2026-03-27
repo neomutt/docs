@@ -4,6 +4,7 @@ description: Configuration variables for the built-in pager display, wrapping, f
 keywords: pager, display_filter, pager_context, pager_index_lines, pager_stop, smart_wrap, markers, allow_ansi, smileys, tilde, message viewer, reading
 ---
 
+(cfg-pager)=
 # Pager Options
 
 (allow-ansi)=

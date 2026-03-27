@@ -4,6 +4,7 @@ description: Configuration variables for Maildir mailbox format, including new m
 keywords: neomutt, maildir, maildir_check_cur, maildir_field_delimiter, maildir_header_cache_verify, maildir_trash, check_new, mail storage, mailbox format
 ---
 
+(cfg-maildir)=
 # Maildir Options
 
 (check-new)=

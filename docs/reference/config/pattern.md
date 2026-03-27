@@ -4,6 +4,7 @@ description: Configuration variables for search patterns, external search comman
 keywords: pattern, search, simple_search, thorough_search, external_search_command, pattern_format, limit, filtering, regex, mairix, indexer
 ---
 
+(cfg-pattern)=
 # Pattern Options
 
 (external-search-command)=

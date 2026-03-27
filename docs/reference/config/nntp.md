@@ -4,6 +4,7 @@ description: Configuration variables for NNTP (Usenet) news server connections, 
 keywords: neomutt, nntp, usenet, newsgroups, news_server, newsrc, nntp_authenticators, nntp_poll, catchup_newsgroup, followup_to_poster, news reader, articles
 ---
 
+(cfg-nntp)=
 # NNTP Options
 
 (catchup-newsgroup)=

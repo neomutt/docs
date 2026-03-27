@@ -4,6 +4,7 @@ description: Configuration variables for IMAP server connections, authentication
 keywords: neomutt, imap, imap_authenticators, imap_idle, imap_condstore, imap_qresync, imap_deflate, imap_user, imap_pass, imap_keep_alive, oauth, remote mail, imap_pipeline_depth
 ---
 
+(cfg-imap)=
 # IMAP Options
 
 (imap-authenticators)=

@@ -4,6 +4,7 @@ description: Configuration variables for email display, MIME handling, mailcap, 
 keywords: email, mime, mailcap, scoring, reflow_text, reply_regex, reverse_alias, rfc2047, spam, auto_subscribe, multipart, format flowed
 ---
 
+(cfg-email)=
 # Conn Options
 
 (auto-subscribe)=
