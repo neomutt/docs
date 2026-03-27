@@ -573,3 +573,9 @@ html[data-theme=dark] .sd-card.dia-reference {
     border: 1px solid green;
     border-radius: 0.25rem;
 }
+
+/* ── Field-list code blocks: cap width so labels aren't crushed ── */
+dl.field-list dd .highlight {
+    max-width: 80ch;
+    overflow-x: auto;
+}
