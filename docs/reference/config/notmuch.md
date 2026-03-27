@@ -1,7 +1,7 @@
 ---
-title: "Notmuch Options"
-description: "Configuration variables for Notmuch integration, including database settings, tags, query windows, and virtual mailboxes."
-keywords: "notmuch, search, indexing, tagging, virtual mailbox, nm_default_url, nm_query_type, nm_exclude_tags, nm_unread_tag, vfolder, full-text search, email tags"
+title: Notmuch Options
+description: Configuration variables for Notmuch integration, including database settings, tags, query windows, and virtual mailboxes.
+keywords: notmuch, search, indexing, tagging, virtual mailbox, nm_default_url, nm_query_type, nm_exclude_tags, nm_unread_tag, vfolder, full-text search, email tags
 ---
 
 # Notmuch Options
@@ -201,7 +201,15 @@ notmuch://?query=tag:inbox and (date:... or (tag:flagged and tag:unread))
     ```
 
 This variable sets the time base of a windowed notmuch query.
-Accepted values are 'minute', 'hour', 'day', 'week', 'month', 'year'.
+
+| Accepted Values |
+|-----------------|
+| `minute`        |
+| `hour`          |
+| `day`           |
+| `week`          |
+| `month`         |
+| `year`          |
 
 --------------------------------------------------------------------------------
 

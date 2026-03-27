@@ -1,6 +1,6 @@
 ---
 title: Mbox Options
-description: "Configuration variable for mbox and mmdf mailbox new-mail detection using file size instead of access time."
+description: Configuration variable for mbox and mmdf mailbox new-mail detection using file size instead of access time.
 keywords: neomutt, mbox, mmdf, check_mbox_size, new mail detection, file size, mailbox format, mail storage
 ---
 

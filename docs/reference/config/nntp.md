@@ -1,6 +1,6 @@
 ---
 title: NNTP Options
-description: "Configuration variables for NNTP (Usenet) news server connections, newsgroup browsing, and article handling."
+description: Configuration variables for NNTP (Usenet) news server connections, newsgroup browsing, and article handling.
 keywords: neomutt, nntp, usenet, newsgroups, news_server, newsrc, nntp_authenticators, nntp_poll, catchup_newsgroup, followup_to_poster, news reader, articles
 ---
 

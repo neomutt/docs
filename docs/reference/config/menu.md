@@ -1,6 +1,6 @@
 ---
 title: Menu Options
-description: "Configuration variables for menu navigation, cursor style, scrolling behavior, and context lines."
+description: Configuration variables for menu navigation, cursor style, scrolling behavior, and context lines.
 keywords: neomutt, menu, arrow_cursor, arrow_string, menu_context, menu_move_off, menu_scroll, navigation, scrolling, cursor style, ui
 ---
 

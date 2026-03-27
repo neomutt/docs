@@ -1,6 +1,6 @@
 ---
 title: Send Options
-description: "Configuration variables for composing and sending email, SMTP settings, signatures, encoding, and reply attribution."
+description: Configuration variables for composing and sending email, SMTP settings, signatures, encoding, and reply attribution.
 keywords: neomutt, send, smtp, sendmail, smtp_url, signature, attribution_intro, forward_format, abort_noattach, allow_8bit, encoding, outgoing mail, reply, compose
 ---
 
@@ -259,11 +259,11 @@ Sets the default Content-Type for the body of newly composed messages.
 ## `$crypt_auto_encrypt`
 
 :Type: [Boolean](bool)
+:Scope: Crypto only
 :Default:
     ```neomuttrc
     set crypt_auto_encrypt = no
     ```
-- **Scope:** Crypto only
 
 Setting this variable will cause NeoMutt to always attempt to PGP encrypt outgoing messages.
 This is probably only useful in connection to the "$send-hook" command.
@@ -290,11 +290,11 @@ See also [$crypt_auto_encrypt](crypt-auto-encrypt), [$crypt_reply_encrypt](crypt
 ## `$crypt_auto_sign`
 
 :Type: [Boolean](bool)
+:Scope: Crypto only
 :Default:
     ```neomuttrc
     set crypt_auto_sign = no
     ```
-- **Scope:** Crypto only
 
 Setting this variable will cause NeoMutt to always attempt to cryptographically sign outgoing messages.
 This can be overridden by use of the pgp menu, when signing is not required or encryption is requested as well.
@@ -320,11 +320,11 @@ See also [$crypt_auto_encrypt](crypt-auto-encrypt), [$crypt_reply_encrypt](crypt
 ## `$crypt_reply_encrypt`
 
 :Type: [Boolean](bool)
+:Scope: Crypto only
 :Default:
     ```neomuttrc
     set crypt_reply_encrypt = yes
     ```
-- **Scope:** Crypto only
 
 If _set_, automatically PGP or OpenSSL encrypt replies to messages which are encrypted.
 
@@ -334,11 +334,11 @@ If _set_, automatically PGP or OpenSSL encrypt replies to messages which are enc
 ## `$crypt_reply_sign`
 
 :Type: [Boolean](bool)
+:Scope: Crypto only
 :Default:
     ```neomuttrc
     set crypt_reply_sign = no
     ```
-- **Scope:** Crypto only
 
 If _set_, automatically PGP or OpenSSL sign replies to messages which are signed.
 
@@ -352,11 +352,11 @@ this does not work on messages that are encrypted _and_ signed!
 ## `$crypt_reply_sign_encrypted`
 
 :Type: [Boolean](bool)
+:Scope: Crypto only
 :Default:
     ```neomuttrc
     set crypt_reply_sign_encrypted = no
     ```
-- **Scope:** Crypto only
 
 If _set_, automatically PGP or OpenSSL sign replies to messages which are encrypted.
 This makes sense in combination with [$crypt_reply_encrypt](crypt-reply-encrypt), because it allows you to sign all messages which are automatically encrypted.
@@ -498,11 +498,11 @@ Variables [$fcc_attach](fcc-attach) and [$fcc_clear](fcc-clear) will be respecte
 ## `$fcc_clear`
 
 :Type: [Boolean](bool)
+:Scope: PGP only
 :Default:
     ```neomuttrc
     set fcc_clear = no
     ```
-- **Scope:** PGP only
 
 When this variable is _set_, FCCs will be stored unencrypted and unsigned, even when the actual message is encrypted and/or signed.
 
@@ -894,11 +894,11 @@ See [$nm_record_tags](nm-record-tags) for how to modify the set of notmuch tags 
 ## `$pgp_reply_inline`
 
 :Type: [Boolean](bool)
+:Scope: PGP only
 :Default:
     ```neomuttrc
     set pgp_reply_inline = no
     ```
-- **Scope:** PGP only
 
 Setting this variable will cause NeoMutt to always attempt to create an inline (traditional) message when replying to a message which is PGP encrypted/signed inline.
 This can be overridden by use of the pgp menu, when inline is not required.
@@ -917,11 +917,11 @@ Also note that using the old-style PGP message format is **strongly** **deprecat
 ## `$postpone_encrypt`
 
 :Type: [Boolean](bool)
+:Scope: Crypto only
 :Default:
     ```neomuttrc
     set postpone_encrypt = no
     ```
-- **Scope:** Crypto only
 
 When _set_, postponed messages that are marked for encryption will be self-encrypted.
 NeoMutt will first try to encrypt using the value specified in [$pgp_default_key](pgp-default-key) or [$smime_default_key](smime-default-key).
@@ -1147,7 +1147,11 @@ For example, NeoMutt has the ability to highlight the signature in a different c
     ```
 
 If _set_, the signature will be included before any quoted or forwarded text.
-It is **strongly** recommended that you do not set this variable unless you really know what you are doing, and are prepared to take some heat from netiquette guardians.
+
+:::{warning}
+Do not set this variable unless you really know what you are doing,
+and are prepared to take some heat from netiquette guardians.
+:::
 
 --------------------------------------------------------------------------------
 
@@ -1207,7 +1211,7 @@ If _unset_, NeoMutt will prompt you for your password when you first send mail v
 See [$smtp_url](smtp-url) to configure NeoMutt to send mail via SMTP.
 
 :::{warning}
-You should only use this option when you are on a fairly secure machine, because the superuser can read your neomuttrc even if you are the only one who can read the file.
+Only use this option when you are on a fairly secure machine, because the superuser can read your neomuttrc even if you are the only one who can read the file.
 :::
 
 --------------------------------------------------------------------------------
@@ -1328,7 +1332,7 @@ If _unset_, no "From:" header field will be generated unless the user explicitly
 This option specifies the number of characters to use for wrapping an outgoing message's headers.
 Allowed values are between 78 and 998 inclusive.
 
-:::{note}
+:::{warning}
 This option usually shouldn't be changed.
 [RFC5233](https://www.rfc-editor.org/rfc/rfc5233.html) recommends a line length of 78 (the default), so **please only change this setting when you know what you're doing**.
 :::

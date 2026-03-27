@@ -1,7 +1,7 @@
 ---
-title: "Pattern Options"
-description: "Configuration variables for search patterns, external search commands, simple search expansion, and thorough search."
-keywords: "pattern, search, simple_search, thorough_search, external_search_command, pattern_format, limit, filtering, regex, mairix, indexer"
+title: Pattern Options
+description: Configuration variables for search patterns, external search commands, simple search expansion, and thorough search.
+keywords: pattern, search, simple_search, thorough_search, external_search_command, pattern_format, limit, filtering, regex, mairix, indexer
 ---
 
 # Pattern Options

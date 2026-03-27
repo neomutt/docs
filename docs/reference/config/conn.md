@@ -1,7 +1,7 @@
 ---
-title: "Conn Options"
-description: "Configuration variables for network connections, SSL/TLS certificates, tunnels, and socket settings."
-keywords: "connection, network, ssl, tls, starttls, certificate, tunnel, socket_timeout, ssl_force_tls, ssl_starttls, preconnect, ipv6, account_command, encryption"
+title: Conn Options
+description: Configuration variables for network connections, SSL/TLS certificates, tunnels, and socket settings.
+keywords: connection, network, ssl, tls, starttls, certificate, tunnel, socket_timeout, ssl_force_tls, ssl_starttls, preconnect, ipv6, account_command, encryption
 ---
 
 # Conn Options
@@ -16,10 +16,10 @@ keywords: "connection, network, ssl, tls, starttls, certificate, tunnel, socket_
     ```
 
 If set, this command is used to retrieve account credentials.
-The command is invoked passing a number of _--key value_ arguments with the specifics of the account to lookup.
-The command writes to standard output a number of _key: value_ lines.
-Currently supported arguments are _--hostname_, _--username_, and _--type_, where type can be any of _imap_, _imaps_, _pop_, _pops_, _smtp_, _smtps_, _nntp_, and _nntps_.
-Currently supported output lines are _login_, _username_, and _password_.
+The command is invoked passing a number of `--key value` arguments with the specifics of the account to lookup.
+The command writes to standard output a number of `key: value` lines.
+Currently supported arguments are `--hostname`, `--username`, and `--type`, where type can be any of `imap`, `imaps`, `pop`, `pops`, `smtp`, `smtps`, `nntp`, and `nntps`.
+Currently supported output lines are `login`, `username`, and `password`.
 
 --------------------------------------------------------------------------------
 
@@ -28,11 +28,11 @@ Currently supported output lines are _login_, _username_, and _password_.
 
 :Type: [Path (String)](path)
 :Notes: [File only](path)
+:Scope: OpenSSL and GnuTLS only
 :Default:
     ```neomuttrc
     set certificate_file = "~/.mutt_certificates"
     ```
-- **Scope:** OpenSSL and GnuTLS only
 
 This variable specifies the file where the certificates you trust are saved.
 When an unknown certificate is encountered, you are asked if you accept it or not.
@@ -48,11 +48,11 @@ Any server certificate that is signed with one of these CA certificates is also 
 
 :Type: [Path (String)](path)
 :Notes: [File only](path)
+:Scope: OpenSSL only
 :Default: (empty)
     ```neomuttrc
     set entropy_file = ""
     ```
-- **Scope:** OpenSSL only
 
 The file which includes random data that is used to initialize SSL library functions.
 
@@ -101,11 +101,11 @@ A negative value causes NeoMutt to wait indefinitely.
 
 :Type: [Path (String)](path)
 :Notes: [File only](path)
+:Scope: GnuTLS only
 :Default: (empty)
     ```neomuttrc
     set ssl_ca_certificates_file = ""
     ```
-- **Scope:** GnuTLS only
 
 This variable specifies a file containing trusted CA certificates.
 Any server certificate that is signed with one of these CA certificates is also automatically accepted.
@@ -169,11 +169,11 @@ This option supersedes [$ssl_starttls](ssl-starttls).
 
 :Type: [Number](number)
 :Notes: {ref}`Not Negative <general>`
+:Scope: GnuTLS only
 :Default:
     ```neomuttrc
     set ssl_min_dh_prime_bits = 0
     ```
-- **Scope:** GnuTLS only
 
 This variable specifies the minimum acceptable prime size (in bits)
 for use in any Diffie-Hellman key exchange.
@@ -204,11 +204,11 @@ Setting [$ssl_force_tls](ssl-force-tls) is recommended if you rely on `STARTTLS`
 ## `$ssl_use_system_certs`
 
 :Type: [Boolean](bool)
+:Scope: GnuTLS only
 :Default:
     ```neomuttrc
     set ssl_use_system_certs = yes
     ```
-- **Scope:** GnuTLS only
 
 If set to _yes_, NeoMutt will use CA certificates in the system-wide certificate store when checking if a server certificate is signed by a trusted CA.
 
@@ -272,11 +272,11 @@ You should only unset this for particular known hosts, using the `$<account-hook
 ## `$ssl_verify_partial_chains`
 
 :Type: [Boolean](bool)
+:Scope: OpenSSL 1.0.2b and newer only
 :Default:
     ```neomuttrc
     set ssl_verify_partial_chains = no
     ```
-- **Scope:** OpenSSL 1.0.2b and newer only
 
 This option should not be changed from the default unless you understand what you are doing.
 

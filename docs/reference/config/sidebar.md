@@ -1,7 +1,7 @@
 ---
-title: "Sidebar Options"
-description: "Configuration variables for the sidebar panel, including visibility, width, formatting, sorting, and indentation."
-keywords: "sidebar, sidebar_visible, sidebar_width, sidebar_format, sidebar_sort, sidebar_short_path, sidebar_folder_indent, folder list, navigation panel, mailbox list"
+title: Sidebar Options
+description: Configuration variables for the sidebar panel, including visibility, width, formatting, sorting, and indentation.
+keywords: sidebar, sidebar_visible, sidebar_width, sidebar_format, sidebar_sort, sidebar_short_path, sidebar_folder_indent, folder list, navigation panel, mailbox list
 ---
 
 # Sidebar Options

@@ -1,7 +1,7 @@
 ---
-title: "Pager Options"
-description: "Configuration variables for the built-in pager display, wrapping, filtering, search context, and quoting."
-keywords: "pager, display_filter, pager_context, pager_index_lines, pager_stop, smart_wrap, markers, allow_ansi, smileys, tilde, message viewer, reading"
+title: Pager Options
+description: Configuration variables for the built-in pager display, wrapping, filtering, search context, and quoting.
+keywords: pager, display_filter, pager_context, pager_index_lines, pager_stop, smart_wrap, markers, allow_ansi, smileys, tilde, message viewer, reading
 ---
 
 # Pager Options
@@ -284,6 +284,5 @@ When _set_, the internal-pager will pad blank lines to the bottom of the screen 
     ```
 
 Quoted text may be filtered out using the `<toggle-quoted>` command.
-If set to a number greater than 0, then the `<toggle-quoted>`
-command will only filter out quote levels above this number.
+If set to a number greater than 0, then the `<toggle-quoted>` command will only filter out quote levels above this number.
 

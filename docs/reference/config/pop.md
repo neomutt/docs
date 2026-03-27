@@ -1,6 +1,6 @@
 ---
 title: POP3 Options
-description: "Configuration variables for POP3 server connections, authentication, polling, and message retrieval."
+description: Configuration variables for POP3 server connections, authentication, polling, and message retrieval.
 keywords: neomutt, pop3, pop, pop_host, pop_user, pop_pass, pop_authenticators, pop_check_interval, pop_delete, oauth, remote mail, fetch mail
 ---
 
@@ -136,7 +136,7 @@ Specifies the password for your POP account.
 If _unset_, NeoMutt will prompt you for your password when you open a POP mailbox.
 
 :::{warning}
-You should only use this option when you are on a fairly secure machine, because the superuser can read your neomuttrc even if you are the only one who can read the file.
+Only use this option when you are on a fairly secure machine, because the superuser can read your neomuttrc even if you are the only one who can read the file.
 :::
 
 --------------------------------------------------------------------------------

@@ -1,6 +1,6 @@
 ---
 title: Maildir Options
-description: "Configuration variables for Maildir mailbox format, including new mail checks, field delimiters, caching, and trash handling."
+description: Configuration variables for Maildir mailbox format, including new mail checks, field delimiters, caching, and trash handling.
 keywords: neomutt, maildir, maildir_check_cur, maildir_field_delimiter, maildir_header_cache_verify, maildir_trash, check_new, mail storage, mailbox format
 ---
 
@@ -10,14 +10,11 @@ keywords: neomutt, maildir, maildir_check_cur, maildir_field_delimiter, maildir_
 ## `$check_new`
 
 :Type: [Boolean](bool)
+:Scope: Only maildir and mh mailboxes
 :Default:
     ```neomuttrc
     set check_new = yes
     ```
-
-:::{note}
-This option only affects _maildir_ and _MH_ style mailboxes.
-:::
 
 When _set_, NeoMutt will check for new mail delivered while the mailbox is open.
 Especially with MH mailboxes, this operation can take quite some time since it involves scanning the directory and checking each file to see if it has already been looked at.
@@ -45,6 +42,7 @@ Note that setting this option may slow down polling for new messages in large fo
 
 :Type: [String](string)
 :Notes: {ref}`Not Empty <general>`, {ref}`On Startup <general>`
+:Scope: Only maildir mailboxes
 :Default:
     ```neomuttrc
     set maildir_field_delimiter = ":"
@@ -54,15 +52,6 @@ Use the value as maildir field delimiter.
 This is a single-character used to accommodate maildir mailboxes on platforms where `:` is not allowed in a filename.
 The recommended alternative on such platforms is `;`.
 NeoMutt supports all non-alphanumeric values except for `-`, `.`, `\`, `/`.
-
-:::{note}
-This only applies to maildir-style mailboxes.
-Setting it will have no effect on other mailbox types.
-:::
-
-:::{note}
-**This only applies to maildir-style mailboxes. Setting it will have no effect on other mailbox types.
-:::
 
 --------------------------------------------------------------------------------
 
@@ -84,15 +73,11 @@ This incurs one `stat(2)` per message every time the folder is opened (which can
 ## `$maildir_trash`
 
 :Type: [Boolean](bool)
+:Scope: Only maildir mailboxes
 :Default:
     ```neomuttrc
     set maildir_trash = no
     ```
 
 If _set_, messages marked as deleted will be saved with the maildir trashed flag instead of unlinked.
-
-:::{note}
-This only applies to maildir-style mailboxes.
-Setting it will have no effect on other mailbox types.
-:::
 

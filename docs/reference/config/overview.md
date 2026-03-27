@@ -1,6 +1,6 @@
 ---
 title: Config Options
-description: "Complete alphabetical index of all NeoMutt configuration variables with brief descriptions and cross-references."
+description: Complete alphabetical index of all NeoMutt configuration variables with brief descriptions and cross-references.
 keywords: neomutt, configuration, options, settings, reference, alphabetical index, variable list, config overview, all options
 ---
 

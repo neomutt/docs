@@ -1,6 +1,6 @@
 ---
 title: Hcache Options
-description: "Configuration variables for the header cache database, backend selection, and compression settings."
+description: Configuration variables for the header cache database, backend selection, and compression settings.
 keywords: neomutt, header cache, hcache, header_cache, header_cache_backend, compression, lz4, zstd, zlib, performance, caching, database
 ---
 
@@ -35,7 +35,17 @@ Header caching can greatly improve speed when opening POP, IMAP MH or Maildir fo
 
 This variable specifies the header cache backend.
 If no backend is specified, the first available backend will be used in the following order:
-tokyocabinet, kyotocabinet, qdbm, rocksdb, gdbm, bdb, tdb, lmdb.
+
+| Order        |
+|--------------|
+| tokyocabinet |
+| kyotocabinet |
+| qdbm         |
+| rocksdb      |
+| gdbm         |
+| bdb          |
+| tdb          |
+| lmdb         |
 
 --------------------------------------------------------------------------------
 

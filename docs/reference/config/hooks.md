@@ -1,6 +1,6 @@
 ---
 title: Hooks Options
-description: "Configuration variables for hook pattern defaults, outgoing message saving, and fcc behavior."
+description: Configuration variables for hook pattern defaults, outgoing message saving, and fcc behavior.
 keywords: neomutt, hooks, default_hook, save_name, force_name, fcc-hook, send-hook, reply-hook, save-hook, pattern matching, outgoing mail
 ---
 
@@ -17,7 +17,16 @@ keywords: neomutt, hooks, default_hook, save_name, force_name, fcc-hook, send-ho
 
 This variable controls how some hooks are interpreted if their pattern is a plain string or a regex. i.e. they don't contain a pattern, like `~f`
 
-The hooks are: $fcc-hook, $fcc-save-hook, $index-format-hook, $message-hook, $reply-hook, $save-hook, $send-hook and $send2-hook.
+| Affected Hooks     |
+|--------------------|
+| $fcc-hook          |
+| $fcc-save-hook     |
+| $index-format-hook |
+| $message-hook      |
+| $reply-hook        |
+| $save-hook         |
+| $send-hook         |
+| $send2-hook        |
 
 The hooks are expanded when they are declared, so a hook will be interpreted according to the value of this variable at the time the hook is declared.
 

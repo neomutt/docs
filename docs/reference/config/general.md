@@ -1,6 +1,6 @@
 ---
 title: General Options
-description: "Core configuration variables for NeoMutt behavior, character sets, colors, sorting, threading, and folders."
+description: Core configuration variables for NeoMutt behavior, character sets, colors, sorting, threading, and folders.
 keywords: neomutt, general, abort_key, charset, color_directcolor, date_format, folder, hostname, mail_check, mbox_type, sort, use_threads, trash, timeout, wrap
 ---
 
@@ -222,7 +222,9 @@ You may also try to force a certain TERM environment variable by starting NeoMut
 TERM=xterm-direct neomutt
 ```
 
-Note: This variable must be set before using any `color` commands.
+:::{note}
+This variable must be set before using any `color` commands.
+:::
 
 --------------------------------------------------------------------------------
 
@@ -715,7 +717,7 @@ The default mailbox type used when creating new folders.
 | `mh`      |
 | `mmdf`    |
 
-This can also be set using the `-m` command-line option.
+This can also be set using the `neomutt -m` command-line option.
 
 --------------------------------------------------------------------------------
 
@@ -1035,6 +1037,7 @@ If [$save_name](save-name) or [$force_name](force-name) is _set_ too, the select
 ## `$save_empty`
 
 :Type: [Boolean](bool)
+:Scope: Only mbox and mmdf mailboxes
 :Default:
     ```neomuttrc
     set save_empty = yes
@@ -1044,7 +1047,7 @@ When _unset_, mailboxes which contain no saved messages will be removed when clo
 If _set_, mailboxes are never removed.
 
 :::{note}
-This only applies to mbox and MMDF folders, NeoMutt does not delete MH and Maildir directories.
+NeoMutt does not delete MH and Maildir directories.
 :::
 
 --------------------------------------------------------------------------------

@@ -1,6 +1,6 @@
 ---
 title: Config File Locations
-description: "System and user configuration file search paths, naming conventions, and config priority order."
+description: System and user configuration file search paths, naming conventions, and config priority order.
 keywords: neomutt, config file, neomuttrc, muttrc, xdg, location, search order, system config, user config, priority, startup
 ---
 
@@ -63,9 +63,11 @@ NeoMutt will read just one file, the first file it finds, from the list below.
 
 The majority of NeoMutt's config will be read from two files: the system config in `/etc` and the user config in, e.g. `~/.neomuttrc`.
 
-The last file that gets read will overwrite any settings from previous config files. This means that an administrator can set some defaults which the user can override.
+The last file that gets read will overwrite any settings from previous config files.
+This means that an administrator can set some defaults which the user can override.
 
-Additionally, there are a handful of config items which can be set using an environment variable. They have a lower priority than the NeoMutt config files: `$editor`, `$from`, `$mailcap_path`, `$news_server`, `$shell`, `$spool_file`, `$tmp_dir`.
+Additionally, there are a handful of config items which can be set using an environment variable.
+They have a lower priority than the NeoMutt config files: `$editor`, `$from`, `$mailcap_path`, `$news_server`, `$shell`, `$spool_file`, `$tmp_dir`.
 
 Finally, it's possible to set some variables directly on the command-line using the `-e` option.
 

@@ -1,6 +1,6 @@
 ---
 title: Progress Options
-description: "Configuration variables for progress indicators during network transfers, mailbox reading, and writing."
+description: Configuration variables for progress indicators during network transfers, mailbox reading, and writing.
 keywords: neomutt, progress, net_inc, read_inc, write_inc, time_inc, progress bar, performance, tuning, status updates, transfer speed
 ---
 

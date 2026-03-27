@@ -1,7 +1,7 @@
 ---
-title: "Email Options"
-description: "Configuration variables for email display, MIME handling, mailcap, scoring, text reflow, and reply threading."
-keywords: "email, mime, mailcap, scoring, reflow_text, reply_regex, reverse_alias, rfc2047, spam, auto_subscribe, multipart, format flowed"
+title: Email Options
+description: Configuration variables for email display, MIME handling, mailcap, scoring, text reflow, and reply threading.
+keywords: email, mime, mailcap, scoring, reflow_text, reply_regex, reverse_alias, rfc2047, spam, auto_subscribe, multipart, format flowed
 ---
 
 # Conn Options
@@ -125,7 +125,9 @@ The default search path is from [RFC1524](https://www.rfc-editor.org/rfc/rfc1524
 If _set_, NeoMutt will restrict possible characters in mailcap % expandos to a well-defined set of safe characters.
 This is the safe setting, but we are not sure it doesn't break some more advanced MIME stuff.
 
-**DON'T CHANGE THIS SETTING UNLESS YOU ARE REALLY SURE WHAT YOU ARE DOING!** 
+:::{danger}
+Don't change this setting unless you are really sure what you are doing! 
+:::
 
 --------------------------------------------------------------------------------
 

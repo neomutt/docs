@@ -1,6 +1,6 @@
 ---
 title: IMAP Options
-description: "Configuration variables for IMAP server connections, authentication, extensions, and mailbox polling."
+description: Configuration variables for IMAP server connections, authentication, extensions, and mailbox polling.
 keywords: neomutt, imap, imap_authenticators, imap_idle, imap_condstore, imap_qresync, imap_deflate, imap_user, imap_pass, imap_keep_alive, oauth, remote mail, imap_pipeline_depth
 ---
 
@@ -119,8 +119,26 @@ If you have a very large mailbox, this might prevent a timeout and disconnect wh
     set imap_headers = ""
     ```
 
-NeoMutt requests these header fields in addition to the default headers ("Date:", "From:", "Sender:", "Subject:", "To:", "Cc:", "Message-Id:", "References:", "Content-Type:", "Content-Description:", "In-Reply-To:", "Reply-To:", "Lines:", "List-Post:", "X-Label:") from IMAP servers before displaying the index menu.
+Below is a list of default headers that NeoMutt requests from IMAP servers before displaying the index menu.
 You may want to add more headers for spam detection.
+
+| Header                 |
+|------------------------|
+| `Date:`                |
+| `From:`                |
+| `Sender:`              |
+| `Subject:`             |
+| `To:`                  |
+| `Cc:`                  |
+| `Message-Id:`          |
+| `References:`          |
+| `Content-Type:`        |
+| `Content-Description:` |
+| `In-Reply-To:`         |
+| `Reply-To:`            |
+| `Lines:`               |
+| `List-Post:`           |
+| `X-Label:`             |
 
 :::{note}
 This is a space separated list, items should be uppercase and not contain the colon, e.g.

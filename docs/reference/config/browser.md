@@ -1,6 +1,6 @@
 ---
 title: Browser Options
-description: "Configuration variables for the file and mailbox browser display, sorting, formatting, and newsgroup listing."
+description: Configuration variables for the file and mailbox browser display, sorting, formatting, and newsgroup listing.
 keywords: neomutt, browser, file browser, folder_format, browser_sort, browser_sort_dirs_first, mask, group_index_format, mailbox_folder_format, directory listing, newsgroup browser
 ---
 
@@ -181,7 +181,8 @@ This string is identical in formatting to the one used by "[$folder_format](fold
     set mask = "!^\\.[^.]"
     ```
 
-A regular expression used in the file browser, optionally preceded by the _not_ operator "!".  Only files whose names match this mask will be shown.
+A regular expression used in the file browser, optionally preceded by the _not_ operator "!".
+Only files whose names match this mask will be shown.
 The match is always case-sensitive.
 
 --------------------------------------------------------------------------------

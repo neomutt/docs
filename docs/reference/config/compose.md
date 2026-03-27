@@ -1,7 +1,7 @@
 ---
-title: "Compose Options"
-description: "Configuration variables for the compose menu, message preview, header editing, spell checking, and draft handling."
-keywords: "compose, compose_format, edit_headers, compose_show_preview, copy, postpone, ispell, spell check, draft, outgoing messages, compose menu"
+title: Compose Options
+description: Configuration variables for the compose menu, message preview, header editing, spell checking, and draft handling.
+keywords: compose, compose_format, edit_headers, compose_show_preview, copy, postpone, ispell, spell check, draft, outgoing messages, compose menu
 ---
 
 # Compose Options

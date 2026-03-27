@@ -1,7 +1,7 @@
 ---
-title: "Attach Options"
-description: "Configuration variables for attachment handling, saving, forwarding, bouncing, and MIME multipart options."
-keywords: "attachment, mime, attach_save_dir, attach_split, bounce, mime_forward, count_alternatives, digest_collapse, message_format, save attachments, forwarding"
+title: Attach Options
+description: Configuration variables for attachment handling, saving, forwarding, bouncing, and MIME multipart options.
+keywords: attachment, mime, attach_save_dir, attach_split, bounce, mime_forward, count_alternatives, digest_collapse, message_format, save attachments, forwarding
 ---
 
 # Attach Options

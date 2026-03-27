@@ -1,6 +1,6 @@
 ---
 title: Index Options
-description: "Configuration variables for the index menu display, status bar formatting, flags, and terminal title."
+description: Configuration variables for the index menu display, status bar formatting, flags, and terminal title.
 keywords: neomutt, index, index_format, status_format, flag_chars, crypt_chars, from_chars, to_chars, ts_enabled, new_mail_command, status bar, message list
 ---
 

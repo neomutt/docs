@@ -1,6 +1,6 @@
 ---
 title: Help Options
-description: "Configuration variable controlling the display of the key binding help line at the top of the screen."
+description: Configuration variable controlling the display of the key binding help line at the top of the screen.
 keywords: neomutt, help, help line, key bindings, menu help, status line, beginner, onscreen help
 ---
 

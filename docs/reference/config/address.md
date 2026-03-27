@@ -1,7 +1,7 @@
 ---
-title: "Address Options"
-description: "Configuration variables for international domain name (IDN) encoding and decoding in email addresses."
-keywords: "address, idn, international domain name, idn_decode, idn_encode, encoding, utf-8, rfc6531, email address"
+title: Address Options
+description: Configuration variables for international domain name (IDN) encoding and decoding in email addresses.
+keywords: address, idn, international domain name, idn_decode, idn_encode, encoding, utf-8, rfc6531, email address
 ---
 
 # Address Options
@@ -10,11 +10,11 @@ keywords: "address, idn, international domain name, idn_decode, idn_encode, enco
 ## `$idn_decode`
 
 :Type: [Boolean](bool)
+:Scope: IDN only
 :Default:
     ```neomuttrc
     set idn_decode = yes
     ```
-- **Scope:** IDN only
 
 When _set_, NeoMutt will show you international domain names decoded.
 Note: You can use IDNs for addresses even if this is _unset_.
@@ -26,6 +26,7 @@ This variable only affects decoding.
 ## `$idn_encode`
 
 :Type: [Boolean](bool)
+:Scope: IDN only
 :Default:
     ```neomuttrc
     set idn_encode = yes
