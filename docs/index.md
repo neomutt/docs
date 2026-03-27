@@ -67,7 +67,7 @@ You’ll get precise, authoritative information you can rely on when you need ex
 ---
 ```{toctree}
 ---
-maxdepth: 2
+maxdepth: 1
 hidden: true
 ---
 start-here

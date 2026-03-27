@@ -1,10 +1,10 @@
 ---
-title: Configuration File Syntax
+title: Config File Syntax
 description: Syntax rules for NeoMutt configuration files, including comments, quoting, backtick substitution, and variable expansion.
 keywords: neomutt, config, syntax, neomuttrc, quoting, backticks, variable expansion, line continuation, comments, character set, config_charset, rc file
 ---
 
-# Configuration File Syntax
+# Config File Syntax
 
 An initialization file consists of a series of [commands](../commands/index.md).
 Each line of the file may contain one or more commands.

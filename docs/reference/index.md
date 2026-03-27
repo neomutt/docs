@@ -43,10 +43,7 @@ commands/index.md
 ---
 maxdepth: 1
 ---
-config/files
-config/overview
-config/syntax
-config/types
+config
 ```
 
 ## Features

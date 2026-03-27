@@ -4,44 +4,23 @@ description: Complete alphabetical index of all NeoMutt configuration variables 
 keywords: neomutt, configuration, options, settings, reference, alphabetical index, variable list, config overview, all options
 ---
 
+(ref-config)=
 # Config Options
+
+This section is a reference list of NeoMutt configuration options: what they are called, what they do.
+
+If you're new to configuration, you may find it helpful to first read about:
 
 ```{toctree}
 ---
 maxdepth: 1
-hidden:
 ---
-types
-address
-alias
-attach
-lib-autocrypt
-browser
-compose
-conn
-email
-general
-gui
-hcache
-lib-help
-lib-history
-hooks
-imap
-index
-maildir
-lib-mbox
-menu
-mh
-ncrypt
-nntp
-notmuch
-lib-pager
-pattern
-pop
-progress
-send
-sidebar
+config/files
+config/syntax
+config/types
 ```
+
+These pages explain how these settings work and how to apply them.
 
 ## A
 
@@ -712,4 +691,39 @@ sidebar
 | `$xterm_set_titles`             | {bdg-warning-line}`Renamed to:` [`$ts_enabled`](ts-enabled)             |
 | `$xterm_title`                  | {bdg-warning-line}`Renamed to:` [`$ts_status_format`](ts-status-format) |
 | [`$x_comment_to`](x-comment-to) | Add `X-Comment-To` header that contains article author                  |
+
+```{toctree}
+---
+maxdepth: 1
+hidden:
+---
+config/address
+config/alias
+config/attach
+config/autocrypt
+config/browser
+config/compose
+config/conn
+config/email
+config/general
+config/gui
+config/hcache
+config/history
+config/hooks
+config/imap
+config/index
+config/maildir
+config/mbox
+config/menu
+config/mh
+config/ncrypt
+config/nntp
+config/notmuch
+config/pager
+config/pattern
+config/pop
+config/progress
+config/send
+config/sidebar
+```
 
