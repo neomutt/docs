@@ -535,7 +535,7 @@ OLD STYLE (deprecated)
 
 ## See Also
 
-- [Formatting Expandos](expando-format-guide.md) — how to control width,
+- [Formatting Expandos](formatting-expandos.md) — how to control width,
   alignment, and padding
 - Expando Syntax Reference — technical reference
 - [NeoMutt Manual](https://neomutt.org/guide/) — full documentation

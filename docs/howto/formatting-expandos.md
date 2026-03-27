@@ -617,6 +617,6 @@ Where `X` is the fill character (space if omitted).
 
 ## See Also
 
-- [Conditional Expandos](expando-conditional-guide.md) — how to show different text based on message properties
+- [Conditional Expandos](conditional-expandos.md) — how to show different text based on message properties
 - Expando Syntax Reference — technical reference
 - [NeoMutt Manual](https://neomutt.org/guide/) — full documentation

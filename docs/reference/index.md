@@ -123,10 +123,7 @@ maxdepth: 1
 cli-syntax
 color-syntax
 colors
-conditional-expandos
 env-vars
-expando-conditional-guide
-expando-format-guide
 expando-syntax
 glossary
 pattern-syntax

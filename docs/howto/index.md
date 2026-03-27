@@ -138,6 +138,8 @@ editing
 aliases
 hooks
 format-strings
+formatting-expandos
+conditional-expandos
 scoring
 spam-filtering
 address-groups

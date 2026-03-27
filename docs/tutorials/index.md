@@ -55,6 +55,16 @@ office365-setup
 multiple-accounts
 ```
 
+## Format Strings
+
+```{toctree}
+---
+maxdepth: 1
+---
+
+conditional-expandos
+```
+
 ## Workflows
 
 ```{toctree}
