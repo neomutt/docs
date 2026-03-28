@@ -36,7 +36,7 @@ Start with [Start Here](../start-here) for a guided path, or pick the question t
 ---
 maxdepth: 1
 ---
-
+tour
 getting-started
 first-config
 first-email

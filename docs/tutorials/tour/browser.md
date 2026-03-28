@@ -1,0 +1,52 @@
+---
+title: Browser Dialog
+description: XXX
+keywords: XXX
+---
+
+(tour-browser)=
+# Browser Dialog
+
+overview...
+
+<div class="term-window">
+<div class="term-title">Browser Dialog</div>
+<pre class="terminal">
+<span> 1     drwxr-xr-x  1 mutt     mutt           0K Mar 27 11:50 ../                                    </span>
+<span> 2     drwxr-xr-x  1 mutt     mutt           0K Mar 28 13:46 address/                               </span>
+<span> 3     drwxr-xr-x  1 mutt     mutt           0K Mar 28 13:45 alias/                                 </span>
+<span> 4     drwxr-xr-x  1 mutt     mutt           0K Mar 28 13:46 attach/                                </span>
+<span> 5     -rw-r--r--  1 mutt     mutt          16K Mar 11 15:00 AUTHORS.md                             </span>
+<span> 6     drwxr-xr-x  1 mutt     mutt           0K Mar 28 13:45 autocrypt/                             </span>
+<span > 7     -rw-r--r--  1 mutt     mutt          40K Mar 28 10:33 auto.def                               </span>
+<span> 8     drwxr-xr-x  1 mutt     mutt           0K Mar 11 15:00 autosetup/                             </span>
+<span> 9     drwxr-xr-x  1 mutt     mutt           0K Mar 28 13:46 bcache/                                </span>
+<span>10     drwxr-xr-x  1 mutt     mutt           0K Mar 28 13:45 browser/                               </span>
+<span>11     -rw-------  1 mutt     mutt          10K Mar 28 14:02 browser-shot.log0                      </span>
+<span>12     -rw-r--r--  1 mutt     mutt         122K Mar 11 15:00 ChangeLog.md                           </span>
+<span>13     drwxr-xr-x  1 mutt     mutt           0K Mar 28 13:46 cli/                                   </span>
+<span>14     drwxr-xr-x  1 mutt     mutt           0K Mar 28 13:46 color/                                 </span>
+<span>15     drwxr-xr-x  1 mutt     mutt           0K Mar 28 13:46 commands/                              </span>
+<span>16     drwxr-xr-x  1 mutt     mutt           0K Mar 28 13:45 complete/                              </span>
+<span>17     drwxr-xr-x  1 mutt     mutt           0K Mar 28 13:45 compmbox/                              </span>
+<span>18     drwxr-xr-x  1 mutt     mutt           0K Mar 28 13:45 compose/                               </span>
+<span>19     drwxr-xr-x  1 mutt     mutt           0K Mar 28 13:46 compress/                              </span>
+<span>20     drwxr-xr-x  1 mutt     mutt           0K Mar 28 13:46 config/                                </span>
+<span>21     -rw-r--r--  1 mutt     mutt         4.6K Mar 28 13:45 config.h                               </span>
+<span>22     -rw-r--r--  1 mutt     mutt          16K Mar 28 13:45 config.log                             </span>
+<span class=" status">Directory [~/work/screenshot], File mask: !^\.[^.]                                                  </span>
+<span>                                                                                                    </span>
+</pre>
+</div>
+
+description...
+
+## See Also
+
+- [Browser Config](cfg-browser)
+- [Browser Functions](fn-browser)
+  - change dir, descend dir, goto parent, ...
+- [Generic Functions](fn-generic)
+  - **Menu:** page up/down, search, tagging, ...
+  - **Global:** enter command, show log message, ...
+

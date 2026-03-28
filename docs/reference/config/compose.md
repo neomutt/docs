@@ -4,6 +4,7 @@ description: Configuration variables for the compose menu, message preview, head
 keywords: compose, compose_format, edit_headers, compose_show_preview, copy, postpone, ispell, spell check, draft, outgoing messages, compose menu
 ---
 
+(opt-compose)=
 # Compose Options
 
 (compose-confirm-detach-first)=
