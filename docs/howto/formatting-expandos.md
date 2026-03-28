@@ -4,6 +4,7 @@ description: Guide to controlling column width, alignment, truncation, zero-padd
 keywords: neomutt, expando, format string, width, padding, justification, alignment, truncation, zero-padding, lowercase, hard-fill, soft-fill, index_format, status_format
 ---
 
+(how-format-expando)=
 # Formatting Expandos
 
 NeoMutt uses **expandos** — short codes starting with `%` — to build the format strings that control how the message list, status bar, sidebar, and other parts of the interface look.
@@ -23,13 +24,13 @@ For example, in the index (message list), `%s` means "the subject" and `%n` mean
 So this format string:
 
 ```neomuttrc
-set index_format = "%n — %s"
+set index_format = "%n - %s"
 ```
 
 might display as:
 
 ```
-Alice — Lunch on Friday?
+Alice - Lunch on Friday?
 ```
 
 ### Short Names and Long Names

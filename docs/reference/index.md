@@ -124,7 +124,7 @@ cli-syntax
 color-syntax
 colors
 env-vars
-expando-syntax
+expandos
 glossary
 pattern-syntax
 sending-email

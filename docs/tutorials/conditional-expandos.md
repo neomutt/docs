@@ -4,6 +4,7 @@ description: Step-by-step tutorial on using conditional expandos in NeoMutt form
 keywords: neomutt, expando, conditional, format string, if-else, true, false, date, nesting, index_format, status_format
 ---
 
+(tut-cond-expando)=
 # Conditional Expandos — Step by Step
 
 Conditional expandos let a format string display different text depending

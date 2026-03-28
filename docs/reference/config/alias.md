@@ -43,7 +43,8 @@ NeoMutt will not automatically source this file; you must explicitly use [`:sour
     ```
 
 Specifies the format of the data displayed for the "$alias" menu.
-The following `printf(3)`-style sequences are available:
+
+The following formatting sequences are available:
 
 | Short  | Long Name           | Description                                                     |
 |--------|---------------------|-----------------------------------------------------------------|

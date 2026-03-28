@@ -4,6 +4,7 @@ description: Guide to conditional logic in NeoMutt format strings including if-e
 keywords: neomutt, expando, conditional, format string, if-else, date, boolean, nesting, index_format, status_format, sidebar_format, branching
 ---
 
+(how-cond-expando)=
 # Conditional Expandos
 
 Conditional expandos let you show different text depending on the properties

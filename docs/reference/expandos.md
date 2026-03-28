@@ -1,26 +1,25 @@
 ---
-title: Expando Syntax
+title: Expando Syntax - Format Strings
 description: Technical reference for NeoMutt expando format string syntax including short and long names, format specifiers, and padding
 keywords: neomutt, expando, format string, syntax, short name, long name, format specifier, width, truncation, padding, justification, index_format, status_format
 ---
 
-# Expando Syntax — Format Strings
+(ref-expandos)=
+# Expandos — Format Strings
 
-NeoMutt uses printf()-style format strings called **expandos** to control
-the display of the index, status bar, sidebar, compose screen, and other
-UI elements.  Each expando is a `%` followed by a letter (or long name)
-that is replaced at runtime with a value from the current message,
-mailbox, or context.
+NeoMutt uses `printf()`-style format strings called **expandos** to control the display of the index, status bar, sidebar, compose screen, and other UI elements.
+
+Each expando is a `%` followed by a letter (or long name) that is replaced at runtime with a value from the current message, mailbox, or context.
 
 ---
 
 ## Basic Syntax
 
-```
-%X          short name  (one or two characters)
-%{long-name}  long name (lowercase, digits, hyphens, in braces)
-%%          literal percent sign
-```
+| Text           | Description                                       |
+|----------------|---------------------------------------------------|
+| `%X`           | Short name  (one or two characters)               |
+| `%{long-name}` | Long name (lowercase, digits, hyphens, in braces) |
+| `%%`           | Literal percent sign                              |
 
 The short name `%s` and long name `%{subject}` are interchangeable — they
 refer to the same expando.
@@ -31,34 +30,20 @@ refer to the same expando.
 
 Every expando has a short name.  Most also have a descriptive long name.
 
-| Short | Long | Meaning |
-|-------|------|---------|
-| `%a` | `%{from}` | From address |
-| `%A` | `%{reply-to}` | Reply-To address |
-| `%b` | `%{mailbox-name}` | Mailbox name |
-| `%c` | `%{size}` | Message size |
-| `%C` | `%{number}` | Message number |
-| `%d` | `%{date-format}` | Date (strftime via `$date_format`) |
-| `%e` | `%{thread-number}` | Thread number |
-| `%E` | `%{thread-count}` | Thread count |
-| `%f` | `%{from-full}` | From (full address) |
-| `%F` | `%{sender}` | Smart sender (uses Reply-To or From) |
-| `%g` | `%{tags}` | Tags |
-| `%i` | `%{message-id}` | Message-Id |
-| `%l` | `%{lines}` | Line count |
-| `%n` | `%{name}` | Author's real name |
-| `%s` | `%{subject}` | Subject |
-| `%S` | `%{flag-chars}` | Message flag characters |
-| `%t` | `%{to}` | To address |
-| `%X` | `%{attachment-count}` | Attachment count |
-| `%Z` | `%{combined-flags}` | Combined flag characters |
-| `%cr` | `%{body-characters}` | Body character count (two-char short name) |
-| `%zc` | `%{crypto-flags}` | Crypto flags |
-| `%zs` | `%{status-flags}` | Status flags |
-| `%zt` | `%{message-flags}` | Message flags |
+| Short | Long                  | Meaning                                    |
+|-------|-----------------------|--------------------------------------------|
+| `%A`  | `%{reply-to}`         | Reply-To address                           |
+| `%C`  | `%{number}`           | Message number                             |
+| `%d`  | `%{date-format}`      | Date (strftime via `$date_format`)         |
+| `%F`  | `%{sender}`           | Smart sender (uses Reply-To or From)       |
+| `%i`  | `%{message-id}`       | Message-Id                                 |
+| `%n`  | `%{name}`             | Author's real name                         |
+| `%s`  | `%{subject}`          | Subject                                    |
+| `%X`  | `%{attachment-count}` | Attachment count                           |
+| `%zc` | `%{crypto-flags}`     | Crypto flags                               |
+| `%zt` | `%{message-flags}`    | Message flags                              |
 
-Long names use only lowercase letters, digits, and hyphens, enclosed in
-braces: `%{long-name}`.
+Long names use only lowercase letters, digits, and hyphens, enclosed in braces: `%{long-name}`.
 
 ---
 
@@ -72,11 +57,11 @@ A format specifier goes between `%` and the expando name:
 
 ### Justification
 
-| Flag | Justification | Padding position |
-|------|---------------|------------------|
-| *(none)* | Right | Left side padded |
-| `-` | Left | Right side padded |
-| `=` | Center | Both sides padded |
+| Flag     | Justification | Padding position  |
+|----------|---------------|-------------------|
+| *(none)* | Right         | Left side padded  |
+| `-`      | Left          | Right side padded |
+| `=`      | Center        | Both sides padded |
 
 ### Minimum Width (`min_cols`)
 
@@ -154,11 +139,11 @@ screen.  They split the format string into a **left side** and a
 
 ### Three Padding Types
 
-| Expando | Long Name | Type | Description |
-|---------|-----------|------|-------------|
-| `%\|X` | `%{padding-eol:X}` | End-of-line | Fill from left content to the end of the line |
-| `%>X` | `%{padding-hard:X}` | Hard fill | Left side preserved; right side truncated if needed |
-| `%*X` | `%{padding-soft:X}` | Soft fill | Right side preserved; left side truncated if needed |
+| Expando | Long Name           | Type        | Description                                         |
+|---------|---------------------|-------------|-----------------------------------------------------|
+| `%\|X`  | `%{padding-eol:X}`  | End-of-line | Fill from left content to the end of the line       |
+| `%>X`   | `%{padding-hard:X}` | Hard fill   | Left side preserved; right side truncated if needed |
+| `%*X`   | `%{padding-soft:X}` | Soft fill   | Right side preserved; left side truncated if needed |
 
 The character `X` after the padding symbol is the **fill character**.
 If omitted, a space is used.
@@ -254,19 +239,19 @@ set status_format = "Folder=%f [Msgs:%m New:%n] %* (%P)"
 %[- | =][0][min_cols][.max_cols][_]{long-name}
 ```
 
-| Component | Values | Default | Description |
-|-----------|--------|---------|-------------|
-| Justification | `-`, `=`, *(none)* | Right | Left, Center, Right |
-| Leader | `0` | Space | Pad character |
-| `min_cols` | Number | 0 | Minimum column width |
-| `.max_cols` | `.Number` | Unlimited | Maximum column width |
-| `_` | `_` | Off | Force lowercase |
+| Component     | Values             | Default   | Description          |
+|---------------|--------------------|-----------|----------------------|
+| Justification | `-`, `=`, *(none)* | Right     | Left, Center, Right  |
+| Leader        | `0`                | Space     | Pad character        |
+| `min_cols`    | Number             | 0         | Minimum column width |
+| `.max_cols`   | `.Number`          | Unlimited | Maximum column width |
+| `_`           | `_`                | Off       | Force lowercase      |
 
 ### Padding
 
-| Expando | Name | Left side | Right side |
-|---------|------|-----------|------------|
-| `%\|X` | EOL fill | Kept | *(none)* |
-| `%>X` | Hard fill | Kept | Truncated |
-| `%*X` | Soft fill | Truncated | Kept |
+| Expando | Name      | Left side | Right side |
+|---------|-----------|-----------|------------|
+| `%\|X`  | EOL fill  | Kept      | *(none)*   |
+| `%>X`   | Hard fill | Kept      | Truncated  |
+| `%*X`   | Soft fill | Truncated | Kept       |
 
