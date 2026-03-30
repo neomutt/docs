@@ -1,11 +1,11 @@
 ---
-title: Attach Menu
+title: Attach Functions
 description: Key bindings and functions for viewing, saving, printing, and replying from email attachments in NeoMutt
 keywords: neomutt, functions, attach, menu, bindings, keys, attachments, save-entry, view-attach, view-mailcap, pipe-message, forward-message, reply, mime
 ---
 
-(menu-attach)=
-# Attach Menu
+(fn-attach)=
+# Attach Functions
 
 View and manage the attachments of a received email.
 You can save, print, pipe, delete, or open attachments, and reply or forward from this view.

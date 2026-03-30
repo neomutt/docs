@@ -1,11 +1,11 @@
 ---
-title: Browser Menu
+title: Browser Functions
 description: Key bindings and functions for browsing files, directories, and IMAP/NNTP mailboxes in NeoMutt
 keywords: neomutt, functions, browser, menu, bindings, keys, files, directories, imap, nntp, mailbox, subscribe, change-dir, create-mailbox, toggle-mailboxes, file browser
 ---
 
-(menu-browser)=
-# Browser Menu
+(fn-browser)=
+# Browser Functions
 
 Browse files on disk or mailboxes on a server.
 You can navigate directories, sort listings, subscribe to mailboxes, and select a mailbox to open.

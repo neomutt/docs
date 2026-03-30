@@ -1,11 +1,11 @@
 ---
-title: Sidebar Menu
+title: Sidebar Functions
 description: Key bindings and functions for navigating, opening, and searching mailboxes in the NeoMutt sidebar panel
 keywords: neomutt, functions, sidebar, menu, bindings, keys, folder list, navigation panel, sidebar-open, sidebar-next, sidebar-prev, sidebar-toggle-visible, sidebar-start-search, mailbox list
 ---
 
-(menu-sidebar)=
-# Sidebar Menu
+(fn-sidebar)=
+# Sidebar Functions
 
 Navigate the sidebar panel that lists your mailboxes.
 You can move between mailboxes, open them, and toggle the sidebar's visibility.
