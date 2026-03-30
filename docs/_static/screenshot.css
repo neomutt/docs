@@ -1,3 +1,21 @@
+/* ═══════════════════════════════════════════════════════════════
+   NeoMutt Docs — Terminal Screenshot Stylesheet
+   Fake terminal windows used in the Dialog Tour pages and
+   progress-bar howto.  Each <pre class="terminal"> is wrapped in a
+   <div class="term-window"> with a macOS-style title bar.
+
+   Colour theming uses 16 ANSI-style CSS variables (--c0 … --c15)
+   plus four surface variables (--s0 … --s3) set per data-theme.
+   ═══════════════════════════════════════════════════════════════ */
+
+
+/* ─── Colour palettes ─────────────────────────────────────────
+   --s0  foreground   --s1  background
+   --s2  cursor       --s3  status-bar / muted surface
+   --c0…--c7   normal ANSI colours
+   --c8…--c15  bright ANSI colours
+   ──────────────────────────────────────────────────────────── */
+
 /* Theme: Dayfox (light) */
 html[data-theme=light] .term-window {
   --s0: #3d2b5a; --s1: #f6f2ee; --s2: #3d2b5a; --s3: #e7d2be;
@@ -16,33 +34,13 @@ html[data-theme=dark] .term-window {
   --c12: #61abda; --c13: #cf86c1; --c14: #65b8c1; --c15: #c0ab86;
 }
 
-.term-window .terminal          { background-color: var(--s1); color: var(--s0); }
-/* .term-window .terminal .normal  { background-color: var(--s1); color: var(--s0); } */
-.term-window .terminal .status  { background-color: var(--s3); color: var(--s0); }
-.term-window .terminal .header  { background-color: var(--s1); color: var(--c4); }
-.term-window .terminal .sign    { background-color: var(--s1); color: var(--c5); }
 
-/* .term-window .terminal .index_author  { background-color: red;        color: white;   } */
-/* .term-window .terminal .index_subject { background-color: red;        color: white;   } */
-/* .term-window .terminal .index_size    { background-color: lightgreen; color: white;   } */
-/* .term-window .terminal .tree          { background-color: inherit;    color: magenta; } */
+/* ─── Terminal window chrome ──────────────────────────────────
+   Outer wrapper with rounded corners, drop shadow, and a
+   macOS-style title bar with three coloured "traffic light"
+   dots rendered via ::before + box-shadow.
+   ──────────────────────────────────────────────────────────── */
 
-.term-window .terminal .prompt    { background-color: lightgreen; color: magenta;   }
-.term-window .terminal .options   { background-color: lightyellow; color: red;   }
-
-.term-window .terminal .indicator     { background-color: var(--c4); color: var(--s3); }
-
-.term-window .terminal .sb_background { background-color: var(--s3);                   }
-.term-window .terminal .sb_divider    { background-color: var(--s3);                   }
-.term-window .terminal .sb_flagged    {                              color: var(--c9); }
-.term-window .terminal .sb_highlight  { background-color: var(--c8);                   }
-.term-window .terminal .sb_indicator  { background-color: var(--c4); color: var(--c9); }
-.term-window .terminal .sb_new        {                              color: var(--c3); }
-.term-window .terminal .sb_ordinary   {                              color: var(--c8); }
-
-.term-window .terminal .progress2      { background-color: #f00; color: #fff; }
-
-/* ── Terminal preview window ────────────────────────────────── */
 .term-window {
   display: inline-block;
   border-radius: 8px;
@@ -53,16 +51,15 @@ html[data-theme=dark] .term-window {
 
 .term-window .term-title {
   position: relative;
-  padding: 0.4rem 0.75rem 0.4rem 4.5rem; /* left space for blobs */
-  font-size: 0.9rem;
+  padding: 0.4rem 0.75rem 0.4rem 4.5rem;
+  font-size: 12px;
+  font-weight: bold;
   line-height: 1;
   background: #005461;
   color: #F4F4F4;
-  font-size: 12px;
-  font-weight: bold;
 }
 
-/* The three blobs */
+/* Traffic-light dots: red, yellow, green */
 .term-window .term-title::before {
   content: "";
   position: absolute;
@@ -72,12 +69,18 @@ html[data-theme=dark] .term-window {
   width: 0.7rem;
   height: 0.7rem;
   border-radius: 50%;
-
-  background: #ff5f56; /* red */
+  background: #ff5f56;
   box-shadow:
-    1.2rem 0 0 #ffbd2e,  /* yellow */
-    2.4rem 0 0 #27c93f;  /* green */
+    1.2rem 0 0 #ffbd2e,
+    2.4rem 0 0 #27c93f;
 }
+
+
+/* ─── Terminal body ───────────────────────────────────────────
+   The <pre class="terminal"> block.  Resets all spacing so the
+   character grid aligns perfectly.  Uses the palette variables
+   set on the parent .term-window.
+   ──────────────────────────────────────────────────────────── */
 
 .terminal {
   margin: 0;
@@ -94,6 +97,60 @@ html[data-theme=dark] .term-window {
   display: inline-block;
   line-height: inherit;
 }
+
+/* Themed base colours (override the #000/#fff fallback above) */
+.term-window .terminal { background-color: var(--s1); color: var(--s0); }
+
+
+/* ─── NeoMutt UI regions ──────────────────────────────────────
+   Each class maps to a NeoMutt colour object.  Foreground and
+   background are set via the ANSI palette variables.
+   ──────────────────────────────────────────────────────────── */
+
+/* Status bar — muted surface with foreground text */
+.term-window .terminal .status    { background-color: var(--s3); color: var(--s0); }
+
+/* Email / compose headers */
+.term-window .terminal .header    { background-color: var(--s1); color: var(--c4); }
+
+/* Non-primary header lines (Date, To, etc.) */
+.term-window .terminal .hdrdefault { background-color: var(--s1); color: var(--s0); }
+
+/* Langstroth/Security "Signed" marker */
+.term-window .terminal .sign      { background-color: var(--s1); color: var(--c5); }
+
+/* Highlighted / cursor row */
+.term-window .terminal .indicator { background-color: var(--c4); color: var(--s3); }
+
+/* Command-line prompt and interactive option highlights */
+.term-window .terminal .prompt    { background-color: lightgreen; color: magenta; }
+.term-window .terminal .options   { background-color: lightyellow; color: red; }
+
+/* Thread-tree arrow characters (└─>, ├─>) */
+.term-window .terminal .tree      { color: var(--c5); }
+
+/* Progress bar (white on red, used in howto/progress-bar) */
+.term-window .terminal .progress2 { background-color: #f00; color: #fff; }
+
+
+/* ─── Sidebar regions ─────────────────────────────────────────
+   Not yet used in any tour page, but ready for when a sidebar
+   screenshot is added.
+   ──────────────────────────────────────────────────────────── */
+
+.term-window .terminal .sb_background { background-color: var(--s3); }
+.term-window .terminal .sb_divider    { background-color: var(--s3); }
+.term-window .terminal .sb_flagged    { color: var(--c9); }
+.term-window .terminal .sb_highlight  { background-color: var(--c8); }
+.term-window .terminal .sb_indicator  { background-color: var(--c4); color: var(--c9); }
+.term-window .terminal .sb_new        { color: var(--c3); }
+.term-window .terminal .sb_ordinary   { color: var(--c8); }
+
+
+/* ─── Thumbnail variant ───────────────────────────────────────
+   Half-size preview floated right, used for inline mini-
+   screenshots (e.g. message.md sort dialog).
+   ──────────────────────────────────────────────────────────── */
 
 .thumbnail .term-window {
   zoom: 0.5;
