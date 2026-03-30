@@ -1,22 +1,20 @@
 /* ═══════════════════════════════════════════════════════════════
    NeoMutt Docs — Custom Stylesheet
+   Theme:   sphinx_book_theme (built on pydata-sphinx-theme)
    Palette: #005461  #018790  #00B7B5  #F4F4F4
    ═══════════════════════════════════════════════════════════════ */
 
-/* ── Sidebar logo spacing ───────────────────────────────────── */
+
+/* ─── Layout ──────────────────────────────────────────────────
+   Full-width content area; compact right-hand TOC sidebar.
+   ──────────────────────────────────────────────────────────── */
+
 .bd-sidebar-primary .navbar-brand {
   padding-top: 0;
 }
 
-/* ── Wider content panel ────────────────────────────────────── */
-.bd-article-container {
-  max-width: 100% !important;
-}
-
-.bd-page-width {
-  max-width: 100% !important;
-}
-
+.bd-article-container,
+.bd-page-width,
 .bd-content {
   max-width: 100% !important;
 }
@@ -27,12 +25,32 @@
   flex: 0 0 250px !important;
 }
 
-/* ── Hide article footer ────────────────────────────────────── */
-footer.bd-footer-content { display:none; }
+footer.bd-footer-content { display: none; }
 
-/* ── Article body background ────────────────────────────────── */
+/* Article header toolbar — force horizontal flex layout */
+.header-article-items__end,
+.header-article-items__start {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.header-article-items__end .header-article-item,
+.header-article-items__start .header-article-item {
+  display: flex !important;
+  align-items: center;
+}
+
+
+/* ─── Article body background ─────────────────────────────────
+   White in light mode, black in dark — keeps text crisp.
+   ──────────────────────────────────────────────────────────── */
+
 html[data-theme=light] .bd-article-container { background: #fff; }
 html[data-theme=dark]  .bd-article-container { background: #000; }
+
 @media (prefers-color-scheme: light) {
   html[data-theme=auto] .bd-article-container { background: #fff; }
 }
@@ -40,7 +58,12 @@ html[data-theme=dark]  .bd-article-container { background: #000; }
   html[data-theme=auto] .bd-article-container { background: #000; }
 }
 
-/* ── Brand colours — light mode ─────────────────────────────── */
+
+/* ─── Brand colours ───────────────────────────────────────────
+   Override pydata-sphinx-theme CSS variables to use the
+   NeoMutt teal palette across links, highlights and chrome.
+   ──────────────────────────────────────────────────────────── */
+
 html[data-theme=light] {
   --pst-color-primary: #005461;
   --pst-color-primary-highlight: #018790;
@@ -49,7 +72,6 @@ html[data-theme=light] {
   --pst-color-background: #e0f7f8;
 }
 
-/* ── Brand colours — dark mode ──────────────────────────────── */
 html[data-theme=dark] {
   --pst-color-primary: #00B7B5;
   --pst-color-primary-highlight: #018790;
@@ -58,7 +80,6 @@ html[data-theme=dark] {
   --pst-color-background: #0d1e22;
 }
 
-/* ── Brand colours — auto (follow system) ───────────────────── */
 @media (prefers-color-scheme: light) {
   html[data-theme=auto] {
     --pst-color-primary: #005461;
@@ -79,31 +100,61 @@ html[data-theme=dark] {
   }
 }
 
-html[data-theme=light] .sd-card {
-  background: #fff;
-  color: #000;
-}
 
-html[data-theme=dark] .sd-card {
-  background: #000;
-  color: #fff;
-}
+/* ─── Sphinx-design cards ─────────────────────────────────────
+   Match article background so cards don't float on the
+   default grey surface.
+   ──────────────────────────────────────────────────────────── */
+
+html[data-theme=light] .sd-card { background: #fff; color: #000; }
+html[data-theme=dark]  .sd-card { background: #000; color: #fff; }
 
 @media (prefers-color-scheme: light) {
-  html[data-theme=auto] .sd-card {
-    background: #fff;
-    color: #000;
-  }
+  html[data-theme=auto] .sd-card { background: #fff; color: #000; }
+}
+@media (prefers-color-scheme: dark) {
+  html[data-theme=auto] .sd-card { background: #000; color: #fff; }
+}
+
+
+/* ─── Diataxis landing-page cards ─────────────────────────────
+   Colour-coded cards on index.md for the five doc categories.
+   ──────────────────────────────────────────────────────────── */
+
+html[data-theme=light] .sd-card.dia-start       { background: #ffffcf !important; color: #000; }
+html[data-theme=light] .sd-card.dia-tutorial     { background: #c7eeff !important; color: #000; }
+html[data-theme=light] .sd-card.dia-howto        { background: #d0ffd0 !important; color: #000; }
+html[data-theme=light] .sd-card.dia-explanation  { background: #ffdfc0 !important; color: #000; }
+html[data-theme=light] .sd-card.dia-reference    { background: #dddddd !important; color: #000; }
+
+html[data-theme=dark] .sd-card.dia-start         { background: #706a00 !important; color: #fff; }
+html[data-theme=dark] .sd-card.dia-tutorial      { background: #2b414f !important; color: #fff; }
+html[data-theme=dark] .sd-card.dia-howto         { background: #315531 !important; color: #fff; }
+html[data-theme=dark] .sd-card.dia-explanation   { background: #6b362a !important; color: #fff; }
+html[data-theme=dark] .sd-card.dia-reference     { background: #444444 !important; color: #fff; }
+
+@media (prefers-color-scheme: light) {
+  html[data-theme=auto] .sd-card.dia-start       { background: #ffffcf !important; color: #000; }
+  html[data-theme=auto] .sd-card.dia-tutorial    { background: #c7eeff !important; color: #000; }
+  html[data-theme=auto] .sd-card.dia-howto       { background: #d0ffd0 !important; color: #000; }
+  html[data-theme=auto] .sd-card.dia-explanation { background: #ffdfc0 !important; color: #000; }
+  html[data-theme=auto] .sd-card.dia-reference   { background: #dddddd !important; color: #000; }
 }
 
 @media (prefers-color-scheme: dark) {
-  html[data-theme=auto] .sd-card {
-    background: #000;
-    color: #fff;
-  }
+  html[data-theme=auto] .sd-card.dia-start       { background: #706a00 !important; color: #fff; }
+  html[data-theme=auto] .sd-card.dia-tutorial    { background: #2b414f !important; color: #fff; }
+  html[data-theme=auto] .sd-card.dia-howto       { background: #315531 !important; color: #fff; }
+  html[data-theme=auto] .sd-card.dia-explanation { background: #6b362a !important; color: #fff; }
+  html[data-theme=auto] .sd-card.dia-reference   { background: #444444 !important; color: #fff; }
 }
 
-/* ── Tables ─────────────────────────────────────────────────── */
+
+/* ─── Tables ──────────────────────────────────────────────────
+   Left-aligned, auto-width tables with branded header row
+   and teal hover highlight.
+   ──────────────────────────────────────────────────────────── */
+
 table {
   width: auto !important;
   margin-left: 0 !important;
@@ -114,6 +165,8 @@ th {
   text-align: left;
   background-color: #005461;
   color: #F4F4F4;
+  padding: 0 0.5em 0 0.25em;
+  vertical-align: top;
 }
 
 html[data-theme=dark] th {
@@ -128,12 +181,7 @@ html[data-theme=dark] th {
   }
 }
 
-div.document table.docutils td {
-  padding: 0 0.5em 0 0.25em;
-  vertical-align: top;
-}
-
-div.document table.docutils th {
+table.docutils td {
   padding: 0 0.5em 0 0.25em;
   vertical-align: top;
 }
@@ -158,7 +206,26 @@ html[data-theme=dark] table tbody tr:hover {
   }
 }
 
-/* ── Terminal highlight ─────────────────────────────────────── */
+
+/* ─── Horizontal rules ────────────────────────────────────────
+   Visible border in both modes (theme default is very faint).
+   ──────────────────────────────────────────────────────────── */
+
+html[data-theme=light] hr { border: 1px solid #000; }
+html[data-theme=dark]  hr { border: 1px solid #fff; }
+
+@media (prefers-color-scheme: light) {
+  html[data-theme=auto] hr { border: 1px solid #000; }
+}
+@media (prefers-color-scheme: dark) {
+  html[data-theme=auto] hr { border: 1px solid #fff; }
+}
+
+
+/* ─── Highlighted lines in code blocks ────────────────────────
+   Branded background for :emphasize-lines: markers.
+   ──────────────────────────────────────────────────────────── */
+
 html[data-theme=light] .highlight .hll {
   background-color: #005461;
   color: #F4F4F4;
@@ -187,20 +254,24 @@ html[data-theme=dark] .highlight .hll {
   }
 }
 
-/* ── Footer accent ──────────────────────────────────────────── */
+
+/* ─── Footer accent ───────────────────────────────────────── */
+
 .bd-footer {
   border-top: 3px solid #018790 !important;
 }
 
 svg.fa-twitter {
-   color: #55acee;
+  color: #55acee;
 }
 
-svg.fa-heart {
-   color: #c00000;
-}
 
-/* ── Sponsor link in navbar ─────────────────────────────────── */
+/* ─── Sponsor link in navbar ──────────────────────────────────
+   Heart + "Sponsor NeoMutt" badge shown in the article header.
+   Hidden on narrow viewports (< 1500 px) alongside devel
+   warning and GitHub stars badge.
+   ──────────────────────────────────────────────────────────── */
+
 .sponsor-link {
   display: inline-flex;
   align-items: center;
@@ -283,8 +354,14 @@ html[data-theme=dark] .sponsor-link:hover .sponsor-heart {
   }
 }
 
+
+/* ─── Development warning & responsive hide ───────────────────
+   Orange "Under Development" badge; all three header extras
+   (devel, sponsor, stars) collapse on narrow screens.
+   ──────────────────────────────────────────────────────────── */
+
 .devel-warning {
-  padding: 0 0.5em 0 0.5em;
+  padding: 0 0.5em;
   border-radius: 6px;
   font-size: 1.2rem;
   background: #ffaf4d;
@@ -298,37 +375,12 @@ html[data-theme=dark] .sponsor-link:hover .sponsor-heart {
   }
 }
 
-/* ── Article header toolbar — force horizontal flex layout ─── */
-.header-article-items__end, .header-article-items__start {
-  display: flex !important;
-  flex-direction: row !important;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0.5rem;
-}
 
-.header-article-items__end .header-article-item,
-.header-article-items__start .header-article-item {
-  display: flex !important;
-  align-items: center;
-}
+/* ─── Read the Docs server-side search ────────────────────────
+   Styling for RTD search results injected via
+   rtd-server-search.js.
+   ──────────────────────────────────────────────────────────── */
 
-
-/* ── Terminal highlight ─────────────────────────────────────── */
-html[data-theme=light] .highlight .hll {
-  background-color: #005461;
-  color: #F4F4F4;
-  display: block;
-}
-
-html[data-theme=dark] .highlight .hll {
-  background-color: #018790;
-  color: #F4F4F4;
-  display: block;
-}
-
-
-/* ── Read the Docs server-side search ─────────────────────────── */
 .rtd-server-search-summary {
   margin: 1rem 0;
 }
@@ -364,133 +416,108 @@ html[data-theme=dark] .highlight .hll {
   border-radius: 0.15rem;
 }
 
-html[data-theme=light] hr {
-    border: 1px solid #000;
+
+/* ─── Force gruvbox-dark on shell code blocks ─────────────────
+   Always render .. code-block:: sh with a dark terminal look,
+   regardless of the page theme.  Token classes grouped by
+   colour to reduce repetition.
+   ──────────────────────────────────────────────────────────── */
+
+.highlight-sh pre                { background: #000; color: #fff; }
+.highlight-sh .highlight         { background: #000 !important; color: #DDD !important; }
+
+/* Comments — grey */
+.highlight-sh .highlight .c,
+.highlight-sh .highlight .ch,
+.highlight-sh .highlight .cm,
+.highlight-sh .highlight .cp,
+.highlight-sh .highlight .c1     { color: #928374 !important; }
+.highlight-sh .highlight .cs     { color: #EBDBB2 !important; }
+
+/* Keywords / operators — red */
+.highlight-sh .highlight .k,
+.highlight-sh .highlight .nd,
+.highlight-sh .highlight .ow     { color: #FB4934 !important; }
+
+/* Errors / deletions — inverted red */
+.highlight-sh .highlight .err,
+.highlight-sh .highlight .gd     { color: #282828 !important; background-color: #FB4934 !important; }
+
+/* Generic output / prompt */
+.highlight-sh .highlight .go     { color: #F2E5BC !important; }
+.highlight-sh .highlight .gp     { color: #A89984 !important; }
+
+/* Numbers — pink */
+.highlight-sh .highlight .m,
+.highlight-sh .highlight .mb,
+.highlight-sh .highlight .mf,
+.highlight-sh .highlight .mh,
+.highlight-sh .highlight .mi,
+.highlight-sh .highlight .mo,
+.highlight-sh .highlight .il,
+.highlight-sh .highlight .no     { color: #D3869B !important; }
+
+/* Strings — green */
+.highlight-sh .highlight .s,
+.highlight-sh .highlight .sa,
+.highlight-sh .highlight .sb,
+.highlight-sh .highlight .sc,
+.highlight-sh .highlight .dl,
+.highlight-sh .highlight .sd,
+.highlight-sh .highlight .s2,
+.highlight-sh .highlight .sh,
+.highlight-sh .highlight .si,
+.highlight-sh .highlight .sx,
+.highlight-sh .highlight .sr,
+.highlight-sh .highlight .s1,
+.highlight-sh .highlight .ss     { color: #B8BB26 !important; }
+
+/* Escape sequences / builtins — orange */
+.highlight-sh .highlight .se,
+.highlight-sh .highlight .nb,
+.highlight-sh .highlight .bp     { color: #FE8019 !important; }
+
+/* Names — attribute yellow */
+.highlight-sh .highlight .na     { color: #FABD2F !important; }
+
+/* Names — class / function / namespace / tag — aqua */
+.highlight-sh .highlight .nc,
+.highlight-sh .highlight .nf,
+.highlight-sh .highlight .nn,
+.highlight-sh .highlight .nt,
+.highlight-sh .highlight .fm     { color: #8EC07C !important; }
+
+/* Variables — blue */
+.highlight-sh .highlight .nv,
+.highlight-sh .highlight .vc,
+.highlight-sh .highlight .vg,
+.highlight-sh .highlight .vi,
+.highlight-sh .highlight .vm     { color: #83A598 !important; }
+
+/* Operators / punctuation / whitespace — default text */
+.highlight-sh .highlight .o,
+.highlight-sh .highlight .p,
+.highlight-sh .highlight .w      { color: #DDD !important; }
+
+/* Highlighted line inside sh blocks */
+.highlight-sh .highlight .hll    { background-color: #018790 !important; color: #F4F4F4 !important; }
+
+
+/* ─── NeoMutt config code blocks ──────────────────────────────
+   Green border to visually distinguish neomuttrc snippets.
+   ──────────────────────────────────────────────────────────── */
+
+.highlight-neomuttrc pre {
+  border: 1px solid green;
+  border-radius: 0.25rem;
 }
 
-html[data-theme=dark] hr {
-    border: 1px solid #fff;
-}
 
-html[data-theme=light] .sd-card.dia-start {
-  background: #ffffcf !important;
-  color: #000;
-}
+/* ─── Field-list code blocks ──────────────────────────────────
+   Cap width so labels aren't crushed by wide code samples.
+   ──────────────────────────────────────────────────────────── */
 
-html[data-theme=light] .sd-card.dia-tutorial {
-  background: #c7eeff !important;
-  color: #000;
-}
-
-html[data-theme=light] .sd-card.dia-howto {
-  background: #d0ffd0 !important;
-  color: #000;
-}
-
-html[data-theme=light] .sd-card.dia-explanation {
-  background: #ffdfc0 !important;
-  color: #000;
-}
-
-html[data-theme=light] .sd-card.dia-reference {
-  background: #dddddd !important;
-  color: #000;
-}
-
-html[data-theme=dark] .sd-card.dia-start {
-  background: #706a00 !important;
-  color: #fff;
-}
-
-html[data-theme=dark] .sd-card.dia-tutorial {
-  background: #2b414f !important;
-  color: #fff;
-}
-
-html[data-theme=dark] .sd-card.dia-howto {
-  background: #315531 !important;
-  color: #fff;
-}
-
-html[data-theme=dark] .sd-card.dia-explanation {
-  background: #6b362a !important;
-  color: #fff;
-}
-
-html[data-theme=dark] .sd-card.dia-reference {
-  background: #444444 !important;
-  color: #fff;
-}
-
-/* ── Force dark (gruvbox-dark) palette on sh code blocks ───── */
-.highlight-sh pre {
-    background: #000;
-    color: #fff;
-}
-
-.highlight-sh .highlight      { background: #000 !important; color: #DDD !important; }
-.highlight-sh .highlight .c   { color: #928374 !important; } /* Comment */
-.highlight-sh .highlight .err { color: #282828 !important; background-color: #FB4934 !important; }
-.highlight-sh .highlight .k   { color: #FB4934 !important; } /* Keyword */
-.highlight-sh .highlight .ch  { color: #928374 !important; } /* Comment.Hashbang */
-.highlight-sh .highlight .cm  { color: #928374 !important; } /* Comment.Multiline */
-.highlight-sh .highlight .cp  { color: #928374 !important; } /* Comment.Preproc */
-.highlight-sh .highlight .c1  { color: #928374 !important; } /* Comment.Single */
-.highlight-sh .highlight .cs  { color: #EBDBB2 !important; } /* Comment.Special */
-.highlight-sh .highlight .gd  { color: #282828 !important; background-color: #FB4934 !important; }
-.highlight-sh .highlight .go  { color: #F2E5BC !important; } /* Generic.Output */
-.highlight-sh .highlight .gp  { color: #A89984 !important; } /* Generic.Prompt */
-.highlight-sh .highlight .m   { color: #D3869B !important; } /* Literal.Number */
-.highlight-sh .highlight .s   { color: #B8BB26 !important; } /* Literal.String */
-.highlight-sh .highlight .na  { color: #FABD2F !important; } /* Name.Attribute */
-.highlight-sh .highlight .nb  { color: #FE8019 !important; } /* Name.Builtin */
-.highlight-sh .highlight .nc  { color: #8EC07C !important; } /* Name.Class */
-.highlight-sh .highlight .no  { color: #D3869B !important; } /* Name.Constant */
-.highlight-sh .highlight .nd  { color: #FB4934 !important; } /* Name.Decorator */
-.highlight-sh .highlight .nf  { color: #8EC07C !important; } /* Name.Function */
-.highlight-sh .highlight .nn  { color: #8EC07C !important; } /* Name.Namespace */
-.highlight-sh .highlight .nt  { color: #8EC07C !important; } /* Name.Tag */
-.highlight-sh .highlight .nv  { color: #83A598 !important; } /* Name.Variable */
-.highlight-sh .highlight .ow  { color: #FB4934 !important; } /* Operator.Word */
-.highlight-sh .highlight .o   { color: #DDD !important; }    /* Operator */
-.highlight-sh .highlight .p   { color: #DDD !important; }    /* Punctuation */
-.highlight-sh .highlight .w   { color: #DDD !important; }    /* Whitespace */
-.highlight-sh .highlight .mb  { color: #D3869B !important; }
-.highlight-sh .highlight .mf  { color: #D3869B !important; }
-.highlight-sh .highlight .mh  { color: #D3869B !important; }
-.highlight-sh .highlight .mi  { color: #D3869B !important; }
-.highlight-sh .highlight .mo  { color: #D3869B !important; }
-.highlight-sh .highlight .sa  { color: #B8BB26 !important; }
-.highlight-sh .highlight .sb  { color: #B8BB26 !important; }
-.highlight-sh .highlight .sc  { color: #B8BB26 !important; }
-.highlight-sh .highlight .dl  { color: #B8BB26 !important; }
-.highlight-sh .highlight .sd  { color: #B8BB26 !important; }
-.highlight-sh .highlight .s2  { color: #B8BB26 !important; }
-.highlight-sh .highlight .se  { color: #FE8019 !important; }
-.highlight-sh .highlight .sh  { color: #B8BB26 !important; }
-.highlight-sh .highlight .si  { color: #B8BB26 !important; }
-.highlight-sh .highlight .sx  { color: #B8BB26 !important; }
-.highlight-sh .highlight .sr  { color: #B8BB26 !important; }
-.highlight-sh .highlight .s1  { color: #B8BB26 !important; }
-.highlight-sh .highlight .ss  { color: #B8BB26 !important; }
-.highlight-sh .highlight .bp  { color: #FE8019 !important; }
-.highlight-sh .highlight .fm  { color: #8EC07C !important; }
-.highlight-sh .highlight .vc  { color: #83A598 !important; }
-.highlight-sh .highlight .vg  { color: #83A598 !important; }
-.highlight-sh .highlight .vi  { color: #83A598 !important; }
-.highlight-sh .highlight .vm  { color: #83A598 !important; }
-.highlight-sh .highlight .il  { color: #D3869B !important; }
-.highlight-sh .highlight .hll { background-color: #018790 !important; color: #F4F4F4 !important; }
-
-.highlight-neomuttrc pre
-{
-    border: 1px solid green;
-    border-radius: 0.25rem;
-}
-
-/* ── Field-list code blocks: cap width so labels aren't crushed ── */
 dl.field-list dd .highlight {
-    max-width: 80ch;
-    overflow-x: auto;
+  max-width: 80ch;
+  overflow-x: auto;
 }
-
