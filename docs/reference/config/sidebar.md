@@ -157,7 +157,7 @@ It defaults to two spaces.
 
 When set, the sidebar will only display mailboxes containing new, or flagged, mail.
 
-**See also:** $sidebar-pin, [$sidebar_non_empty_mailbox_only](sidebar-non-empty-mailbox-only).
+**See also:** [`sidebar-pin`](cmd-sidebar-pin), [$sidebar_non_empty_mailbox_only](sidebar-non-empty-mailbox-only).
 
 --------------------------------------------------------------------------------
 
@@ -170,8 +170,8 @@ When set, the sidebar will only display mailboxes containing new, or flagged, ma
     set sidebar_next_new_wrap = no
     ```
 
-When set, the `<sidebar-next-new>` command will not stop at the end of the list of mailboxes, but wrap around to the beginning.
-The `<sidebar-prev-new>` command is similarly affected, wrapping around to the end of the list.
+When set, the [`<sidebar-next-new>`](fn-sidebar) command will not stop at the end of the list of mailboxes, but wrap around to the beginning.
+The [`<sidebar-prev-new>`](fn-sidebar) command is similarly affected, wrapping around to the end of the list.
 
 --------------------------------------------------------------------------------
 
@@ -186,7 +186,7 @@ The `<sidebar-prev-new>` command is similarly affected, wrapping around to the e
 
 When set, the sidebar will only display mailboxes that contain one or more mails.
 
-**See also:** [$sidebar_new_mail_only](sidebar-new-mail-only), $sidebar-pin.
+**See also:** [$sidebar_new_mail_only](sidebar-new-mail-only), [`sidebar-pin`](cmd-sidebar-pin).
 
 --------------------------------------------------------------------------------
 

@@ -162,7 +162,7 @@ Also see [$fast_reply](fast-reply).
     ```
 
 When _set_, functions in the _index_ menu which affect a message will be applied to all tagged messages (if there are any).
-When unset, you must first use the `<tag-prefix>` function (bound to ";" by default) to make the next function apply to all tagged messages.
+When unset, you must first use the [`<tag-prefix>`](fn-generic) function (bound to ";" by default) to make the next function apply to all tagged messages.
 
 --------------------------------------------------------------------------------
 
@@ -281,7 +281,7 @@ When _set_, NeoMutt will prompt for confirmation when saving messages to a mailb
     set copy_decode_weed = no
     ```
 
-Controls whether NeoMutt will weed headers when invoking the `<decode-copy>` or `<decode-save>` functions.
+Controls whether NeoMutt will weed headers when invoking the [`<decode-copy>`](fn-index) or [`<decode-save>`](fn-index) functions.
 
 --------------------------------------------------------------------------------
 
@@ -363,7 +363,7 @@ This option can be enabled on the command line,
 neomutt -d 2
 ```
 
-See also: `[$debug_file](#debug-file)`
+See also: `[$debug_file](debug-file)`
 
 --------------------------------------------------------------------------------
 
@@ -461,7 +461,7 @@ If set, flagged messages can't be deleted.
 Specifies the default location of your mailboxes.
 A "+" or "=" at the beginning of a pathname will be expanded to the value of this variable.
 Note that if you change this variable (from the default)
-value you need to make sure that the assignment occurs _before_ you use "+" or "=" for any other variables since expansion takes place when handling the "$mailboxes" command.
+value you need to make sure that the assignment occurs _before_ you use "+" or "=" for any other variables since expansion takes place when handling the [`mailboxes`](cmd-mailboxes) command.
 
 --------------------------------------------------------------------------------
 
@@ -503,7 +503,7 @@ When _set_, forwarded messages included in the main body of the message (when [$
     ```
 
 When _set_, this variable contains a default "from" address.
-It can be overridden using "$my-header" (including from a "$send-hook") and [$reverse_name](reverse-name).
+It can be overridden using [`my-header`](cmd-my-header) (including from a [`send-hook`](cmd-send-hook)) and [$reverse_name](reverse-name).
 This variable is ignored if [$use_from](use-from) is _unset_.
 
 If not specified, then it may be read from the environment variable `$$$EMAIL`.
@@ -608,7 +608,7 @@ This option is a format string, please see the description of [$index_format](in
     set keep_flagged = no
     ```
 
-If _set_, read messages marked as flagged will not be moved from your spool mailbox to your [`$mbox`](#mbox) mailbox or to the "mbox" specified by a $mbox-hook command.
+If _set_, read messages marked as flagged will not be moved from your spool mailbox to your [`$mbox`](mbox) mailbox or to the "mbox" specified by a [`mbox-hook`](cmd-mbox-hook) command.
 
 Note that [$keep_flagged](keep-flagged) only has an effect if [$move](move) is set.
 
@@ -672,7 +672,7 @@ It will check for unread, flagged, and total message counts.
 
 Because this operation is more performance intensive, it defaults to _unset_, and has a separate option, [$mail_check_stats_interval](mail-check-stats-interval), to control how often to update these counts.
 
-Message statistics can also be explicitly calculated by invoking the `<check-stats>` function.
+Message statistics can also be explicitly calculated by invoking the [`<check-stats>`](fn-generic) function.
 
 --------------------------------------------------------------------------------
 
@@ -798,7 +798,7 @@ This is because the result of removing the high bit from `0xf8` is `0x78`, which
     set move = no
     ```
 
-If this variable is _set_, then NeoMutt will move read messages from your spool mailbox to your [`$mbox`](#mbox) mailbox or to the "mbox" specified by a $mbox-hook command.
+If this variable is _set_, then NeoMutt will move read messages from your spool mailbox to your [`$mbox`](mbox) mailbox or to the "mbox" specified by a [`mbox-hook`](cmd-mbox-hook) command.
 
 See also [$keep_flagged](keep-flagged).
 
@@ -813,7 +813,7 @@ See also [$keep_flagged](keep-flagged).
     set pipe_decode = no
     ```
 
-Used in connection with the `<pipe-message>` function.
+Used in connection with the [`<pipe-message>`](fn-attach) function.
 When _unset_, NeoMutt will pipe the messages without any preprocessing.
 When _set_, NeoMutt will attempt to decode the messages first.
 
@@ -830,7 +830,7 @@ Also see [$pipe_decode_weed](pipe-decode-weed), which controls whether headers w
     set pipe_decode_weed = yes
     ```
 
-For `<pipe-message>`, when [$pipe_decode](pipe-decode) is set, this further controls whether NeoMutt will weed headers.
+For [`<pipe-message>`](fn-attach), when [$pipe_decode](pipe-decode) is set, this further controls whether NeoMutt will weed headers.
 
 --------------------------------------------------------------------------------
 
@@ -856,7 +856,7 @@ The separator to add between messages when piping a list of tagged messages to a
     set pipe_split = no
     ```
 
-Used in connection with the `<pipe-message>` function following `<tag-prefix>`.  
+Used in connection with the [`<pipe-message>`](fn-attach) function following [`<tag-prefix>`](fn-generic).  
 If this variable is _unset_, when piping a list of tagged messages NeoMutt will concatenate the messages and will pipe them all concatenated.
 When _set_, NeoMutt will pipe the messages one by one.
 In both cases the messages are piped in the current sorted order, and the [$pipe_sep](pipe-sep) separator is added after each message.
@@ -915,7 +915,7 @@ This specifies the command pipe that should be used to print messages.
     set print_decode = yes
     ```
 
-Used in connection with the `<print-message>` function.
+Used in connection with the [`<print-message>`](fn-index) function.
 If this option is _set_, the message is decoded before it is passed to the external command specified by [$print_command](print-command).
 If this option is _unset_, no processing will be applied to the message when printing it.
 The latter setting may be useful if you are using some advanced printer filter which is able to properly format e-mail messages for printing.
@@ -933,7 +933,7 @@ Also see [$print_decode_weed](print-decode-weed), which controls whether headers
     set print_decode_weed = yes
     ```
 
-For `<print-message>`, when [$print_decode](print-decode) is set, this further controls whether NeoMutt will weed headers.
+For [`<print-message>`](fn-index), when [$print_decode](print-decode) is set, this further controls whether NeoMutt will weed headers.
 
 --------------------------------------------------------------------------------
 
@@ -946,7 +946,7 @@ For `<print-message>`, when [$print_decode](print-decode) is set, this further c
     set print_split = no
     ```
 
-Used in connection with the `<print-message>` function.
+Used in connection with the [`<print-message>`](fn-index) function.
 If this option is _set_, the command specified by [$print_command](print-command) is executed once for each message which is to be printed.
 If this option is _unset_, the command specified by [$print_command](print-command) is executed only once, and all the messages are concatenated, with a form feed as the message separator.
 
@@ -964,7 +964,7 @@ Those who use the `enscript(1)` program's mail-printing mode will most likely wa
     ```
 
 A regular expression used in the internal pager to determine quoted sections of text in the body of a message.
-Quoted text may be filtered out using the `<toggle-quoted>` command, or colored according to the "color quoted" family of directives.
+Quoted text may be filtered out using the [`<toggle-quoted>`](fn-pager) command, or colored according to the "color quoted" family of directives.
 
 Higher levels of quoting may be colored differently ("color quoted1", "color quoted2", etc.).
 The quoting level is determined by removing the last character from the matched text and recursively reapplying the regular expression until it fails to produce a match.
@@ -999,9 +999,9 @@ This option will not be used, if "[$from](from)" is set.
     ```
 
 This specifies the file into which your outgoing messages should be appended.
-(This is meant as the primary method for saving a copy of your messages, but another way to do this is using the "$my-header" command to create a "Bcc:" field with your email address in it.)
+(This is meant as the primary method for saving a copy of your messages, but another way to do this is using the [`my-header`](cmd-my-header) command to create a "Bcc:" field with your email address in it.)
 
-The value of [$record](record) is overridden by the [$force_name](force-name) and [$save_name](save-name) variables, and the "$fcc-hook" command.
+The value of [$record](record) is overridden by the [$force_name](force-name) and [$save_name](save-name) variables, and the [`fcc-hook`](cmd-fcc-hook) command.
 Also see [$copy](copy) and [$write_bcc](write-bcc).
 
 --------------------------------------------------------------------------------
@@ -1214,7 +1214,7 @@ When [$use_threads](use-threads) is "threads" or "reverse", [$sort](sort) contro
 
 The values of "threads" and "reverse-threads" are legacy options, which cause the value of `[$sort_aux](sort-aux)` to also control sorting between threads, and they may not be used with the "last-" prefix.
 The preferred way to enable a threaded view is via `[$use_threads](use-threads)`.  
-This variable can also be set via the `<sort-mailbox>` and `<sort-reverse>` functions.
+This variable can also be set via the [`<sort-mailbox>`](fn-index) and [`<sort-reverse>`](fn-browser) functions.
 
 Note: When [$use_threads](use-threads) is "threads", the last thread sorts to the bottom; when it is "reversed", the last thread sorts to the top.
 The use of "reverse-" in [$sort](sort) swaps which end the last thread will sort to.
@@ -1292,7 +1292,7 @@ When _unset_, NeoMutt won't stop when the user presses the terminal's _susp_ key
 This is useful if you run NeoMutt inside an xterm using a command like "`xterm -e neomutt`".
 
 On startup NeoMutt tries to detect if it is the process session leader.
-If so, the default of $suspend is "no" otherwise "yes".  This default covers the above mentioned use case of "`xterm -e neomutt`".
+If so, the default of [$suspend](suspend) is "no" otherwise "yes".  This default covers the above mentioned use case of "`xterm -e neomutt`".
 
 --------------------------------------------------------------------------------
 
@@ -1416,8 +1416,8 @@ The style of threading used in the index.
 | `yes`     | Synonym for `threads`                        |
 | `no`      | Synonym for `flat`                           |
 
-If this variable is never set, then `[$sort](sort)` controls whether threading is used, `[$sort_aux](sort-aux)` controls both the sorting of threads and subthreads, and using `<sort-mailbox>` to select threads affects only `[$sort](sort)`.
-Once this variable is set, attempting to set `[$sort](sort)` to a value using "threads" will warn, the value of `[$sort](sort)` controls the sorting between threads while `[$sort_aux](sort-aux)` controls sorting within a thread, and `<sort-mailbox>` toggles `[$use_threads](use-threads)`.
+If this variable is never set, then `[$sort](sort)` controls whether threading is used, `[$sort_aux](sort-aux)` controls both the sorting of threads and subthreads, and using [`<sort-mailbox>`](fn-index) to select threads affects only `[$sort](sort)`.
+Once this variable is set, attempting to set `[$sort](sort)` to a value using "threads" will warn, the value of `[$sort](sort)` controls the sorting between threads while `[$sort_aux](sort-aux)` controls sorting within a thread, and [`<sort-mailbox>`](fn-index) toggles `[$use_threads](use-threads)`.
 
 Example:
 ```neomuttrc
@@ -1437,9 +1437,9 @@ See the "Use Threads Feature" section for further explanation and examples.
     set wait_key = yes
     ```
 
-Controls whether NeoMutt will ask you to press a key after an external command has been invoked by these functions: `<shell-escape>`, `<pipe-message>`, `<pipe-entry>`, `<print-message>`, and `<print-entry>` commands.
+Controls whether NeoMutt will ask you to press a key after an external command has been invoked by these functions: [`<shell-escape>`](fn-generic), [`<pipe-message>`](fn-attach), [`<pipe-entry>`](fn-attach), [`<print-message>`](fn-index), and [`<print-entry>`](fn-attach) commands.
 
-It is also used when viewing attachments with "$auto-view", provided that the corresponding mailcap entry has a _needsterminal_ flag, and the external program is interactive.
+It is also used when viewing attachments with [`auto-view`](cmd-auto-view), provided that the corresponding mailcap entry has a _needsterminal_ flag, and the external program is interactive.
 
 When _set_, NeoMutt will always ask for a key.
 When _unset_, NeoMutt will wait for a key only if the external command returned a non-zero status.

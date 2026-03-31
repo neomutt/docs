@@ -30,7 +30,7 @@ This is independent of the setting of the [$beep](beep) variable.
     set change_folder_next = no
     ```
 
-When this variable is _set_, the `<change-folder>` function mailbox suggestion will start at the next folder in your "$mailboxes" list, instead of starting at the first folder in the list.
+When this variable is _set_, the [`<change-folder>`](fn-index) function mailbox suggestion will start at the next folder in your [`mailboxes`](cmd-mailboxes) list, instead of starting at the first folder in the list.
 
 --------------------------------------------------------------------------------
 
@@ -139,7 +139,7 @@ This slightly odd interface is necessitated by NeoMutt's handling of string vari
 This variable allows you to customize the message index display to your personal taste.
 
 "Format strings" are similar to the strings used in the C function `printf(3)` to format output (see the man page for more details).
-For an explanation of the %<...> construct, see the $status_format description.
+For an explanation of the %<...> construct, see the [$status_format](status-format) description.
 The following sequences are defined in NeoMutt:
 
 | Short     | Long Name                | Description                                                                                                                    |
@@ -151,10 +151,10 @@ The following sequences are defined in NeoMutt:
 | `%C`      | `%{number}`              | Current message number                                                                                                         |
 | `%c`      | `%{body-characters}`     | Number of characters (bytes) in the body of the message (see **Size Format**)                                                  |
 | `%cr`     | `%{size}`                | Number of characters (bytes) in the raw message, including the header (see **Size Format**)                                    |
-| `%D`      | `%{date-format-local}`   | Date and time of message using [$date_format](#date-format) and local timezone.                                                |
-|           |                          | It is recommended to use `%[fmt]` instead, where `fmt` is the value of [$date_format](#date-format).                           |
-| `%d`      | `%{date-format}`         | Date and time of message using [$date_format](#date-format) and sender's timezone.                                             |
-|           |                          | It is recommended to use `%{fmt}` instead, where `fmt` is the value of [$date_format](#date-format).                           |
+| `%D`      | `%{date-format-local}`   | Date and time of message using [$date_format](date-format) and local timezone.                                                |
+|           |                          | It is recommended to use `%[fmt]` instead, where `fmt` is the value of [$date_format](date-format).                           |
+| `%d`      | `%{date-format}`         | Date and time of message using [$date_format](date-format) and sender's timezone.                                             |
+|           |                          | It is recommended to use `%{fmt}` instead, where `fmt` is the value of [$date_format](date-format).                           |
 | `%E`      | `%{thread-count}`        | Number of messages in current thread                                                                                           |
 | `%e`      | `%{thread-number}`       | Current message number in thread                                                                                               |
 | `%F`      | `%{sender}`              | Author name, or recipient name if the message is from you                                                                      |
@@ -182,7 +182,7 @@ The following sequences are defined in NeoMutt:
 | `%r`      | `%{to-all}`              | Comma separated list of `To:` recipients                                                                                       |
 | `%S`      | `%{flag-chars}`          | Single character status of the message (`N`/`O`/`D`/`d`/`!`/`r`/`*`)                                                           |
 | `%s`      | `%{subject}`             | Subject of the message                                                                                                         |
-| `%T`      | `%{to-chars}`            | Appropriate character from the [$to_chars](#to-chars) string                                                                   |
+| `%T`      | `%{to-chars}`            | Appropriate character from the [$to_chars](to-chars) string                                                                   |
 | `%t`      | `%{to}`                  | `%{To:}` field (recipients)                                                                                                    |
 | `%u`      | `%{username}`            | User (login) name of the author                                                                                                |
 | `%v`      | `%{first-name}`          | First name of the author, or the recipient if the message is from you                                                          |
@@ -198,7 +198,7 @@ The following sequences are defined in NeoMutt:
 |           |                          | The first character is new/read/replied flags (`n`/`o`/`r`/`O`/`N`).                                                           |
 |           |                          | The second is deleted or encryption flags (`D`/`d`/`S`/`P`/`s`/`K`).                                                           |
 |           |                          | The third is either tagged/flagged (`*`/`!`), or one of the characters.                                                        |
-|           |                          | Listed in [$to_chars](#to-chars).                                                                                              |
+|           |                          | Listed in [$to_chars](to-chars).                                                                                              |
 | `%zc`     | `%{crypto-flags}`        | Message crypto flags                                                                                                           |
 | `%zs`     | `%{status-flags}`        | Message status flags                                                                                                           |
 | `%zt`     | `%{message-flags}`       | Message tag flags                                                                                                              |
@@ -226,7 +226,7 @@ Thus the value depends on the encodings used in the different parts of the messa
 By contrast, soft-fill gives priority to the right-hand side, guaranteeing space to display it and showing padding only if there's still room.
 If necessary, soft-fill will eat text leftwards to make room for rightward text.
 
-Note that these expandos are supported in "$save-hook", "$fcc-hook" and "$fcc-save-hook", too.
+Note that these expandos are supported in [`save-hook`](cmd-save-hook), [`fcc-hook`](cmd-fcc-hook) and [`fcc-save-hook`](cmd-fcc-save-hook), too.
 
 --------------------------------------------------------------------------------
 
@@ -304,7 +304,7 @@ Controls the characters used by the "%r" indicator in [$status_format](status-fo
 | 1         | `-`     | Mailbox is unchanged                                                                                              |
 | 2         | `*`     | Mailbox has been changed and needs to be resynchronized                                                           |
 | 3         | `%`     | Mailbox is read-only, or will not be written when exiting.                                                        |
-|           |         | You can toggle whether to write changes to a mailbox with the `<toggle-write>` operation, bound by default to "%" |
+|           |         | You can toggle whether to write changes to a mailbox with the [`<toggle-write>`](fn-index) operation, bound by default to "%" |
 | 4         | `A`     | Folder opened in attach-message mode.                                                                             |
 |           |         | Certain operations like composing a new mail, replying, forwarding, etc. are not permitted in this mode           |
 
@@ -355,7 +355,7 @@ This string is similar to [$index_format](index-format), but has its own set of 
 | `%o`   | `%{old-count}`        | Number of old messages in the mailbox (unread, seen)                                                   |
 | `%P`   | `%{percentage}`       | Percentage of the way through the index                                                                |
 | `%p`   | `%{postponed-count}`  | Number of postponed messages                                                                           |
-| `%r`   | `%{read-count}`       | Modified/read-only/won't-write/attach-message indicator, according to [`$status_chars`](#status-chars) |
+| `%r`   | `%{read-count}`       | Modified/read-only/won't-write/attach-message indicator, according to [`$status_chars`](status-chars) |
 | `%R`   | `%{readonly}`         | Number of read messages in the mailbox (read, seen)                                                    |
 | `%S`   | `%{sort-aux}`         | Current aux sorting method (`$sort_aux`)                                                               |
 | `%s`   | `%{sort}`             | Current sorting mode (`$sort`)                                                                         |

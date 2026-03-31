@@ -42,7 +42,7 @@ NeoMutt will not automatically source this file; you must explicitly use [`:sour
     set alias_format = "%3{number} %{flags}%{tagged} %-15{alias} %-56{address} | %{comment}%{padding-hard: }%{tags}"
     ```
 
-Specifies the format of the data displayed for the "$alias" menu.
+Specifies the format of the data displayed for the [`alias`](cmd-alias) menu.
 
 The following formatting sequences are available:
 

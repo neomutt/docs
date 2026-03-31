@@ -20,18 +20,18 @@ This variable controls how some hooks are interpreted if their pattern is a plai
 
 | Affected Hooks     |
 |--------------------|
-| $fcc-hook          |
-| $fcc-save-hook     |
-| $index-format-hook |
-| $message-hook      |
-| $reply-hook        |
-| $save-hook         |
-| $send-hook         |
-| $send2-hook        |
+| [`fcc-hook`](cmd-fcc-hook)          |
+| [`fcc-save-hook`](cmd-fcc-save-hook)     |
+| [`index-format-hook`](cmd-index-format-hook) |
+| [`message-hook`](cmd-message-hook)      |
+| [`reply-hook`](cmd-reply-hook)        |
+| [`save-hook`](cmd-save-hook)         |
+| [`send-hook`](cmd-send-hook)         |
+| [`send2-hook`](cmd-send2-hook)        |
 
 The hooks are expanded when they are declared, so a hook will be interpreted according to the value of this variable at the time the hook is declared.
 
-The default value matches if the message is either from a user matching the regular expression given, or if it is from you (if the from address matches "$alternates") and is to or cc'ed to a user matching the given regular expression.
+The default value matches if the message is either from a user matching the regular expression given, or if it is from you (if the from address matches [`alternates`](cmd-alternates)) and is to or cc'ed to a user matching the given regular expression.
 
 --------------------------------------------------------------------------------
 

@@ -93,7 +93,7 @@ Protected headers are stored inside the encrypted or signed part of an email, to
 For more information see https://github.com/autocrypt/protected-headers Currently NeoMutt only supports the Subject header.
 
 Encrypted messages using protected headers often substitute the exposed Subject header with a dummy value (see [$crypt_protected_headers_subject](crypt-protected-headers-subject)).
-NeoMutt will update its concept of the correct subject **after** the message is opened, i.e. via the `<display-message>` function.
+NeoMutt will update its concept of the correct subject **after** the message is opened, i.e. via the [`<display-message>`](fn-index) function.
 If you reply to a message before opening it, NeoMutt will end up using the dummy Subject header, so be sure to open such a message first.
 
 --------------------------------------------------------------------------------
@@ -256,7 +256,7 @@ This value is ignored if [$use_envelope_from](use-envelope-from) is _unset_.
     ```
 
 If _set_, NeoMutt will automatically attempt to decrypt traditional PGP messages whenever the user performs an operation which ordinarily would result in the contents of the message being operated on.
-For example, if the user displays a pgp-traditional message which has not been manually checked with the `$<check-traditional-pgp>` function, NeoMutt will automatically check the message for traditional pgp.
+For example, if the user displays a pgp-traditional message which has not been manually checked with the [`<check-traditional-pgp>`](fn-attach) function, NeoMutt will automatically check the message for traditional pgp.
 
 --------------------------------------------------------------------------------
 
@@ -349,7 +349,7 @@ The PGP command formats have their own set of `printf(3)`-like sequences:
 
 | Short | Long Name           | Description                                                                                               |
 |-------|---------------------|-----------------------------------------------------------------------------------------------------------|
-| `%a`  | `%{sign-as}`        | Value of [$pgp_sign_as](#pgp-sign-as) if set, otherwise the value of [$pgp_default_key](#pgp-default-key) |
+| `%a`  | `%{sign-as}`        | Value of [$pgp_sign_as](pgp-sign-as) if set, otherwise the value of [$pgp_default_key](pgp-default-key) |
 | `%f`  | `%{file-message}`   | Expands to the name of a file containing a message                                                        |
 | `%p`  | `%{need-pass}`      | Expands to `PGPPASSFD=0` when a pass phrase is needed, to an empty string otherwise.                      |
 |       |                     | Note: This may be used with a `%<...>` construct.                                                         |
@@ -905,13 +905,13 @@ The OpenSSL command formats have their own set of `printf(3)`-like sequences sim
 | Short | Long Name             | Description                                                                                                              |
 |-------|-----------------------|--------------------------------------------------------------------------------------------------------------------------|
 | `%a`  | `%{algorithm}`        | Algorithm used for encryption                                                                                            |
-| `%C`  | `%{certificate-path}` | CA location:  Depending on whether [$smime_ca_location](#smime-ca-location) points to a directory or file,               |
-|       |                       | this expands to "-CApath [$smime_ca_location](#smime-ca-location)" or "-CAfile [$smime_ca_location](#smime-ca-location)" |
+| `%C`  | `%{certificate-path}` | CA location:  Depending on whether [$smime_ca_location](smime-ca-location) points to a directory or file,               |
+|       |                       | this expands to "-CApath [$smime_ca_location](smime-ca-location)" or "-CAfile [$smime_ca_location](smime-ca-location)" |
 | `%c`  | `%{certificate-ids}`  | One or more certificate IDs                                                                                              |
-| `%d`  | `%{digest-algorithm}` | Message digest algorithm specified with [$smime_sign_digest_alg](#smime-sign-digest-alg)                                 |
+| `%d`  | `%{digest-algorithm}` | Message digest algorithm specified with [$smime_sign_digest_alg](smime-sign-digest-alg)                                 |
 | `%f`  | `%{message-file}`     | Expands to the name of a file containing a message                                                                       |
 | `%i`  | `%{intermediate-ids}` | Intermediate certificates                                                                                                |
-| `%k`  | `%{key}`              | Key-pair specified with [$smime_default_key](#smime-default-key)                                                         |
+| `%k`  | `%{key}`              | Key-pair specified with [$smime_default_key](smime-default-key)                                                         |
 | `%s`  | `%{signature-file}`   | Expands to the name of a file containing the signature part                                                              |
 |       |                       | of a `multipart/signed` attachment when verifying it                                                                     |
 

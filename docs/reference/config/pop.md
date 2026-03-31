@@ -69,7 +69,7 @@ This variable configures how often (in seconds) NeoMutt should look for new mail
     set pop_delete = ask-no
     ```
 
-If _set_, NeoMutt will delete successfully downloaded messages from the POP server when using the `$<fetch-mail>` function.
+If _set_, NeoMutt will delete successfully downloaded messages from the POP server when using the [`<fetch-mail>`](fn-index) function.
 When _unset_, NeoMutt will download messages but also leave them on the POP server.
 
 --------------------------------------------------------------------------------
@@ -83,7 +83,7 @@ When _unset_, NeoMutt will download messages but also leave them on the POP serv
     set pop_host = ""
     ```
 
-The name of your POP server for the `$<fetch-mail>` function.
+The name of your POP server for the [`<fetch-mail>`](fn-index) function.
 You can also specify an alternative port, username and password, i.e.:
 
 ```
@@ -103,7 +103,7 @@ where "[...]" denotes an optional part.
     set pop_last = no
     ```
 
-If this variable is _set_, NeoMutt will try to use the "`LAST`" POP command for retrieving only unread messages from the POP server when using the `$<fetch-mail>` function.
+If this variable is _set_, NeoMutt will try to use the "`LAST`" POP command for retrieving only unread messages from the POP server when using the [`<fetch-mail>`](fn-index) function.
 
 --------------------------------------------------------------------------------
 

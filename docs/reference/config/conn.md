@@ -251,7 +251,7 @@ If _set_ , NeoMutt will use TLSv1.3 when communicating with servers that request
     ```
 
 If _set_ (the default), NeoMutt will not automatically accept a server certificate that is either not yet valid or already expired.
-You should only unset this for particular known hosts, using the `$<account-hook>` function.
+You should only unset this for particular known hosts, using the [`account-hook`](cmd-account-hook) function.
 
 --------------------------------------------------------------------------------
 
@@ -265,7 +265,7 @@ You should only unset this for particular known hosts, using the `$<account-hook
     ```
 
 If _set_ (the default), NeoMutt will not automatically accept a server certificate whose host name does not match the host used in your folder URL.
-You should only unset this for particular known hosts, using the `$<account-hook>` function.
+You should only unset this for particular known hosts, using the [`account-hook`](cmd-account-hook) function.
 
 --------------------------------------------------------------------------------
 
@@ -306,7 +306,7 @@ set tunnel = "ssh -q mailhost.net /usr/local/libexec/imapd"
 Note: For this example to work you must be able to log in to the remote machine without having to enter a password.
 
 When set, NeoMutt uses the tunnel for all remote connections.
-Please see "$account-hook" in the manual for how to use different tunnel commands per connection.
+Please see [`account-hook`](cmd-account-hook) in the manual for how to use different tunnel commands per connection.
 
 --------------------------------------------------------------------------------
 
@@ -320,11 +320,11 @@ Please see "$account-hook" in the manual for how to use different tunnel command
     ```
 
 When _set_, NeoMutt will assume the [$tunnel](tunnel) connection does not need STARTTLS to be enabled.
-It will also allow IMAP PREAUTH server responses inside a $tunnel to proceed.
+It will also allow IMAP PREAUTH server responses inside a [$tunnel](tunnel) to proceed.
 This is appropriate if [$tunnel](tunnel) uses ssh or directly invokes the server locally.
 
-When _unset_, NeoMutt will negotiate STARTTLS according to the $ssl_starttls and $ssl_force_tls variables.
-If $ssl_force_tls is set, NeoMutt will abort connecting if an IMAP server responds with PREAUTH.
+When _unset_, NeoMutt will negotiate STARTTLS according to the [$ssl_starttls](ssl-starttls) and [$ssl_force_tls](ssl-force-tls) variables.
+If [$ssl_force_tls](ssl-force-tls) is set, NeoMutt will abort connecting if an IMAP server responds with PREAUTH.
 This setting is appropriate if [$tunnel](tunnel) does not provide security and could be tampered with by attackers.
 
 --------------------------------------------------------------------------------

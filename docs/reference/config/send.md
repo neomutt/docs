@@ -267,7 +267,7 @@ Sets the default Content-Type for the body of newly composed messages.
     ```
 
 Setting this variable will cause NeoMutt to always attempt to PGP encrypt outgoing messages.
-This is probably only useful in connection to the "$send-hook" command.
+This is probably only useful in connection to the [`send-hook`](cmd-send-hook) command.
 It can be overridden by use of the pgp menu, when encryption is not required or signing is requested as well.
 If [$smime_is_default](smime-is-default) is _set_, then OpenSSL is used instead to create S/MIME messages and settings can be overridden by use of the smime menu instead.
 
@@ -523,7 +523,7 @@ See also [$pgp_self_encrypt](pgp-self-encrypt), [$smime_self_encrypt](smime-self
     ```
 
 Controls whether or not the "Mail-Followup-To:" header field is generated when sending mail.
-When _set_, NeoMutt will generate this field when you are replying to a known mailing list, specified with the "$subscribe" or "$lists" commands.
+When _set_, NeoMutt will generate this field when you are replying to a known mailing list, specified with the [`subscribe`](cmd-subscribe) or [`lists`](cmd-lists) commands.
 
 This field has two purposes.
 First, preventing you from receiving duplicate copies of replies to messages which you send to mailing lists, and second, ensuring that you do get a reply separately for any messages sent to known lists to which you are not subscribed.
@@ -676,7 +676,7 @@ The following sequences are defined in NeoMutt:
     set hdrs = yes
     ```
 
-When _unset_, the header fields normally added by the "$my-header" command are not created.
+When _unset_, the header fields normally added by the [`my-header`](cmd-my-header) command are not created.
 This variable _must_ be unset before composing a new message or replying in order to take effect.
 If _set_, the user defined header fields are added to every new message.
 
@@ -717,9 +717,9 @@ This variable controls whether or not a Mail-Followup-To header is honored when 
     set ignore_list_reply_to = no
     ```
 
-Affects the behavior of the `<reply>` function when replying to messages from mailing lists (as defined by the "$subscribe" or "$lists" commands).  
+Affects the behavior of the [`<reply>`](fn-attach) function when replying to messages from mailing lists (as defined by the [`subscribe`](cmd-subscribe) or [`lists`](cmd-lists) commands).  
 When _set_, if the "Reply-To:" field is set to the same value as the "To:" field, NeoMutt assumes that the "Reply-To:" field was set by the mailing list to automate responses to the list, and will ignore this field.
-To direct a response to the mailing list when this option is _set_, use the `$<list-reply>` function; `<group-reply>` will reply to both the sender and the list.
+To direct a response to the mailing list when this option is _set_, use the [`<list-reply>`](fn-attach) function; [`<group-reply>`](fn-attach) will reply to both the sender and the list.
 
 --------------------------------------------------------------------------------
 
@@ -799,7 +799,7 @@ The following `printf(3)`-style sequences are understood:
 |-------|----------------|--------------------------------------------------------------------|
 | %c    | `%{counter}`   | Step counter looping from `A` to `Z`                               |
 | %d    | `%{day}`       | Current day of the month (GMT)                                     |
-| %f    | `%{hostname}`  | [$hostname](#hostname)                                             |
+| %f    | `%{hostname}`  | [$hostname](hostname)                                             |
 | %H    | `%{hour}`      | Current hour using a 24-hour clock (GMT)                           |
 | %m    | `%{minute}`    | Current month number (GMT)                                         |
 | %M    | `%{month}`     | Current minute of the hour (GMT)                                   |
@@ -823,7 +823,7 @@ See also: Base64Url: https://datatracker.ietf.org/doc/html/rfc4648#section-5
     set me_too = no
     ```
 
-If _unset_, NeoMutt will remove your address (see the "$alternates" command) from the list of recipients when replying to a message.
+If _unset_, NeoMutt will remove your address (see the [`alternates`](cmd-alternates) command) from the list of recipients when replying to a message.
 
 --------------------------------------------------------------------------------
 
@@ -954,7 +954,7 @@ When _set_, NeoMutt will use this as a fallback encryption key for postponed mes
 Controls whether or not NeoMutt recalls postponed messages when composing a new message.
 
 Setting this variable to _yes_ is not generally useful, and thus not recommended.
-Note that the `<recall-message>` function can be used to manually recall postponed messages.
+Note that the [`<recall-message>`](fn-index) function can be used to manually recall postponed messages.
 
 Also see [$postponed](postponed) variable.
 
@@ -971,7 +971,7 @@ Also see [$postponed](postponed) variable.
 
 If _unset_ and you are replying to a message sent by you, NeoMutt will assume that you want to reply to the recipients of that message rather than to yourself.
 
-Also see the "$alternates" command.
+Also see the [`alternates`](cmd-alternates) command.
 
 --------------------------------------------------------------------------------
 
@@ -1002,7 +1002,7 @@ header field to the list address and you want to send a private message to the a
 
 This variable provides a toggle.
 When active, the From: header will be extracted from the current mail's 'X-Original-To:' header.
-This setting does not have precedence over "$reverse_real_name".
+This setting does not have precedence over [$reverse_real_name](reverse-real-name).
 
 Assuming 'fast_reply' is disabled, this option will prompt the user with a prefilled From: header.
 
@@ -1032,10 +1032,10 @@ Recipients are not prompted for; send-hooks are not evaluated; no alias expansio
     ```
 
 It may sometimes arrive that you receive mail to a certain machine, move the messages to another machine, and reply to some the messages from there.
-If this variable is _set_, the default _From:_ line of the reply messages is built using the address where you received the messages you are replying to **if** that address matches your "$alternates".  
-If the variable is _unset_, or the address that would be used doesn't match your "$alternates", the _From:_ line will use your address on the current machine.
+If this variable is _set_, the default _From:_ line of the reply messages is built using the address where you received the messages you are replying to **if** that address matches your [`alternates`](cmd-alternates).  
+If the variable is _unset_, or the address that would be used doesn't match your [`alternates`](cmd-alternates), the _From:_ line will use your address on the current machine.
 
-Also see the "$alternates" command and [$reverse_real_name](reverse-real-name).
+Also see the [`alternates`](cmd-alternates) command and [$reverse_real_name](reverse-real-name).
 
 --------------------------------------------------------------------------------
 
@@ -1316,7 +1316,7 @@ Therefore setting this option is not useful if the [$sendmail](sendmail) variabl
     ```
 
 When _set_, NeoMutt will generate the "From:" header field when sending messages.
-If _unset_, no "From:" header field will be generated unless the user explicitly sets one using the "$my-header" command.
+If _unset_, no "From:" header field will be generated unless the user explicitly sets one using the [`my-header`](cmd-my-header) command.
 
 --------------------------------------------------------------------------------
 

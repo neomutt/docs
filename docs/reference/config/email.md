@@ -17,7 +17,7 @@ keywords: email, mime, mailcap, scoring, reflow_text, reply_regex, reverse_alias
     ```
 
 When _set_, NeoMutt assumes the presence of a List-Post header means the recipient is subscribed to the list.
-Unless the mailing list is in the "unsubscribe" or "unlist" lists, it will be added to the "$subscribe" list.
+Unless the mailing list is in the "unsubscribe" or "unlist" lists, it will be added to the [`subscribe`](cmd-subscribe) list.
 Parsing and checking these things slows header reading down, so this option is disabled by default.
 
 --------------------------------------------------------------------------------

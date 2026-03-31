@@ -66,7 +66,7 @@ When _unset_, color is applied to the entire header.
 
 One use of this option might be to apply color to just the header labels.
 
-See "$color" for more details.
+See [`color`](cmd-color) for more details.
 
 --------------------------------------------------------------------------------
 
@@ -168,7 +168,7 @@ A value of 0 results in no index being shown.
 
 Determines the number of seconds that must elapse after first opening a new message in the pager before that message will be marked as read.
 A value of 0 results in the message being marked read unconditionally; for other values, navigating to another message or exiting the pager before the timeout will leave the message marked unread.
-This setting is ignored if [`$pager`](#pager) is set.
+This setting is ignored if [`$pager`](pager) is set.
 
 --------------------------------------------------------------------------------
 
@@ -182,7 +182,7 @@ This setting is ignored if [`$pager`](#pager) is set.
     set pager_skip_quoted_context = 0
     ```
 
-Determines the number of lines of context to show before the unquoted text when using the `<skip-quoted>` function.
+Determines the number of lines of context to show before the unquoted text when using the [`<skip-quoted>`](fn-pager) function.
 When set to a positive number at most that many lines of the previous quote are displayed.
 If the previous quote is shorter the whole quote is displayed.
 
@@ -197,7 +197,7 @@ If the previous quote is shorter the whole quote is displayed.
     set pager_stop = no
     ```
 
-When _set_, the internal-pager will **not** move to the next message when you are at the end of a message and invoke the `<next-page>`
+When _set_, the internal-pager will **not** move to the next message when you are at the end of a message and invoke the [`<next-page>`](fn-generic)
 function.
 
 --------------------------------------------------------------------------------
@@ -211,7 +211,7 @@ function.
     set prompt_after = yes
     ```
 
-If you use an _external_ [`$pager`](#pager), setting this variable will cause NeoMutt to prompt you for a command when the pager exits rather than returning to the index menu.
+If you use an _external_ [`$pager`](pager), setting this variable will cause NeoMutt to prompt you for a command when the pager exits rather than returning to the index menu.
 If _unset_, NeoMutt will return to the index menu when the external pager exits.
 
 --------------------------------------------------------------------------------
@@ -284,6 +284,6 @@ When _set_, the internal-pager will pad blank lines to the bottom of the screen 
     set toggle_quoted_show_levels = 0
     ```
 
-Quoted text may be filtered out using the `<toggle-quoted>` command.
-If set to a number greater than 0, then the `<toggle-quoted>` command will only filter out quote levels above this number.
+Quoted text may be filtered out using the [`<toggle-quoted>`](fn-pager) command.
+If set to a number greater than 0, then the [`<toggle-quoted>`](fn-pager) command will only filter out quote levels above this number.
 

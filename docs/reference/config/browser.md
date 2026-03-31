@@ -87,8 +87,8 @@ This string is similar to [$index_format](index-format), but has its own set of 
 |----------|---------------------|------------------------------------------------------------------------------------------------------|
 | `%a`     | `%{notify}`         | Alert: 1 if user is notified of new mail                                                             |
 | `%C`     | `%{number}`         | Current file number                                                                                  |
-| `%D`     | `%{date}`           | Date/time folder was last modified using [$date_format](#date-format).                               |
-|          |                     | It is recommended to use `%[fmt]` instead, where `fmt` is the value of [$date_format](#date-format). |
+| `%D`     | `%{date}`           | Date/time folder was last modified using [$date_format](date-format).                               |
+|          |                     | It is recommended to use `%[fmt]` instead, where `fmt` is the value of [$date_format](date-format). |
 | `%d`     | `%{date-format}`    | Date/time folder was last modified                                                                   |
 | `%F`     | `%{file-mode}`      | File permissions                                                                                     |
 | `%f`     | `%{filename}`       | Filename (`/` is appended to directory names,                                                        |
@@ -111,8 +111,8 @@ This string is similar to [$index_format](index-format), but has its own set of 
 For an explanation of "soft-fill", see the [$index_format](index-format) documentation.
 
 %m, %n, and %N only work for monitored mailboxes.
-%m requires [$mail_check_stats](#mail-check-stats) to be set.
-%n requires [$mail_check_stats](#mail-check-stats) to be set (except for IMAP mailboxes).
+%m requires [$mail_check_stats](mail-check-stats) to be set.
+%n requires [$mail_check_stats](mail-check-stats) to be set (except for IMAP mailboxes).
 
 --------------------------------------------------------------------------------
 
@@ -131,7 +131,7 @@ For an explanation of "soft-fill", see the [$index_format](index-format) documen
     ```
 
 This variable allows you to customize the newsgroup browser display to your personal taste.
-This string is similar to "$index_format", but has its own set of printf()-like sequences:
+This string is similar to [$index_format](index-format), but has its own set of printf()-like sequences:
 
 | Short  | Long Name           | Description                                                          |
 |--------|---------------------|----------------------------------------------------------------------|

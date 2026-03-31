@@ -85,7 +85,7 @@ Setting this variable to _no_ is not generally useful, and thus not recommended,
     set count_alternatives = no
     ```
 
-When _set_, NeoMutt will recurse inside multipart/alternatives while performing attachment searching and counting(see $attachments).
+When _set_, NeoMutt will recurse inside multipart/alternatives while performing attachment searching and counting (see [`attachments`](cmd-attachments)).
 
 Traditionally, multipart/alternative parts have simply represented different encodings of the main content of the email.
 Unfortunately, some mail clients have started to place email attachments inside one of alternatives.

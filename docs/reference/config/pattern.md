@@ -73,7 +73,7 @@ Specifies how NeoMutt should expand a simple search into a real search pattern.
 A simple search is one that does not contain any of the "~" pattern operators.
 See "$patterns" for more information on search patterns.
 
-simple_search applies to several functions, e.g. `<delete-pattern>`, `<limit>`, searching in the index, and all of the index colors.
+simple_search applies to several functions, e.g. [`<delete-pattern>`](fn-index), [`<limit>`](fn-alias), searching in the index, and all of the index colors.
 
 For example, if you simply type "joe" at a search or limit prompt, NeoMutt will automatically expand it to the value specified by this variable by replacing "%s" with the supplied string.
 For the default value, "joe" would be expanded to: "~f joe | ~s joe".

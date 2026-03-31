@@ -44,7 +44,7 @@ If a method is available but authentication fails, NeoMutt will not connect to t
     set imap_check_subscribed = no
     ```
 
-When _set_, NeoMutt will fetch the set of subscribed folders from your server whenever a mailbox is **selected**, and add them to the set of mailboxes it polls for new mail just as if you had issued individual "$mailboxes" commands.
+When _set_, NeoMutt will fetch the set of subscribed folders from your server whenever a mailbox is **selected**, and add them to the set of mailboxes it polls for new mail just as if you had issued individual [`mailboxes`](cmd-mailboxes) commands.
 
 --------------------------------------------------------------------------------
 
@@ -189,7 +189,7 @@ Reduce this number if you find yourself getting disconnected from your IMAP serv
     ```
 
 This variable configures whether IMAP folder browsing will look for only subscribed folders or all folders.
-This can be toggled in the IMAP browser with the `<toggle-subscribed>` function.
+This can be toggled in the IMAP browser with the [`<toggle-subscribed>`](fn-browser) function.
 
 --------------------------------------------------------------------------------
 
@@ -236,7 +236,7 @@ See "$oauth" for details.
     ```
 
 Specifies the password for your IMAP account.
-If _unset_, NeoMutt will prompt you for your password when you invoke the `<imap-fetch-mail>`
+If _unset_, NeoMutt will prompt you for your password when you invoke the [`<imap-fetch-mail>`](fn-index)
 function or try to open an IMAP folder.
 
 :::{warning}

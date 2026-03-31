@@ -16,7 +16,7 @@ keywords: compose, compose_format, edit_headers, compose_show_preview, copy, pos
     set compose_confirm_detach_first = yes
     ```
 
-When _set_, NeoMutt will prompt for confirmation when trying to use `<detach-file>` on the first entry in the compose menu.
+When _set_, NeoMutt will prompt for confirmation when trying to use [`<detach-file>`](fn-compose) on the first entry in the compose menu.
 This is to help prevent irreversible loss of the typed message by accidentally hitting 'D' in the menu.
 
 Note: NeoMutt only prompts for the first entry.
@@ -105,7 +105,7 @@ When _set_, NeoMutt will display a preview of message in the compose view.
     set compose_show_user_headers = yes
     ```
 
-When _set_, NeoMutt will display user-defined headers (set via $my-header or from editing with edit-headers).
+When _set_, NeoMutt will display user-defined headers (set via [`my-header`](cmd-my-header) or from editing with edit-headers).
 
 --------------------------------------------------------------------------------
 
@@ -119,7 +119,7 @@ When _set_, NeoMutt will display user-defined headers (set via $my-header or fro
     ```
 
 This variable controls whether or not copies of your outgoing messages will be saved for later references.
-Also see [$record](record), [$save_name](save-name), [$force_name](force-name) and "$fcc-hook".
+Also see [$record](record), [$save_name](save-name), [$force_name](force-name) and [`fcc-hook`](cmd-fcc-hook).
 
 --------------------------------------------------------------------------------
 
