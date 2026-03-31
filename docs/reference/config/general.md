@@ -334,7 +334,9 @@ This option can be enabled on the command line,
 neomutt -l mylog
 ```
 
-See also: [`$debug_level`](debug-level)
+:::{seealso}
+[`$debug_level`](debug-level)
+:::
 
 --------------------------------------------------------------------------------
 
@@ -363,7 +365,9 @@ This option can be enabled on the command line,
 neomutt -d 2
 ```
 
-See also: [`$debug_file`](debug-file)
+:::{seealso}
+[`$debug_file`](debug-file)
+:::
 
 --------------------------------------------------------------------------------
 
@@ -406,7 +410,9 @@ This applies when you either explicitly delete a message, or when you save it to
     ```
 
 If this option is _set_, NeoMutt will enable the **Security** development features.
-See: https://github.com/neomutt/neomutt/discussions/4251
+:::{seealso}
+<https://github.com/neomutt/neomutt/discussions/4251>
+:::
 
 --------------------------------------------------------------------------------
 
@@ -800,7 +806,9 @@ This is because the result of removing the high bit from `0xf8` is `0x78`, which
 
 If this variable is _set_, then NeoMutt will move read messages from your spool mailbox to your [`$mbox`](mbox) mailbox or to the "mbox" specified by a [`mbox-hook`](cmd-mbox-hook) command.
 
-See also [`$keep_flagged`](keep-flagged).
+:::{seealso}
+[`$keep_flagged`](keep-flagged)
+:::
 
 --------------------------------------------------------------------------------
 
@@ -1217,10 +1225,12 @@ The values of "threads" and "reverse-threads" are legacy options, which cause th
 The preferred way to enable a threaded view is via [`$use_threads`](use-threads).  
 This variable can also be set via the [`<sort-mailbox>`](fn-index) and [`<sort-reverse>`](fn-browser) functions.
 
-Note: When [`$use_threads`](use-threads) is "threads", the last thread sorts to the bottom; when it is "reversed", the last thread sorts to the top.
+:::{note}
+When [`$use_threads`](use-threads) is "threads", the last thread sorts to the bottom; when it is "reversed", the last thread sorts to the top.
+:::
 The use of "reverse-" in [`$sort`](sort) swaps which end the last thread will sort to.
 
-See the "Use Threads Feature" section for further explanation and examples, https://neomutt.org/feature/use-threads
+See the "Use Threads Feature" section for further explanation and examples, <https://neomutt.org/feature/use-threads>
 
 --------------------------------------------------------------------------------
 
@@ -1246,7 +1256,7 @@ set sort_aux = last-date-received
 
 would mean that if a new message is received in a thread, that subthread becomes the last one displayed (or the first, if you have `set use_threads = reverse`)  When using [`$use_threads`](use-threads), it is more common to use "last-" with [`$sort`](sort) and not with [`$sort_aux`](sort-aux).
 
-See the "Use Threads Feature" section for further explanation and examples, https://neomutt.org/feature/use-threads
+See the "Use Threads Feature" section for further explanation and examples, <https://neomutt.org/feature/use-threads>
 
 --------------------------------------------------------------------------------
 
@@ -1381,7 +1391,9 @@ It is recommended that this be set to a directory whose contents won't be remove
 
 If set, this variable specifies the path of the trash folder where the mails marked for deletion will be moved, instead of being irremediably purged.
 
-NOTE: When you delete a message in the trash folder, it is really deleted, so that you have a way to clean the trash.
+:::{note}
+When you delete a message in the trash folder, it is really deleted, so that you have a way to clean the trash.
+:::
 
 --------------------------------------------------------------------------------
 

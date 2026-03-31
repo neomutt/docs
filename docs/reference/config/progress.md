@@ -20,7 +20,9 @@ keywords: neomutt, progress, net_inc, read_inc, write_inc, time_inc, progress ba
 Operations that expect to transfer a large amount of data over the network will update their progress every [`$net_inc`](net-inc) kilobytes.
 If set to 0, no progress messages will be displayed.
 
-See also [`$read_inc`](read-inc), [`$write_inc`](write-inc) and [`$net_inc`](net-inc).
+:::{seealso}
+[`$read_inc`](read-inc), [`$write_inc`](write-inc) and [`$net_inc`](net-inc)
+:::
 
 --------------------------------------------------------------------------------
 

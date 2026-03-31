@@ -323,7 +323,9 @@ When _set_, NeoMutt will use the QRESYNC extension ([RFC7162](https://www.rfc-ed
 if advertised by the server.
 NeoMutt's current implementation is basic, used only for initial message fetching and flag updates.
 
-Note: this feature is currently experimental.
+:::{note}
+this feature is currently experimental.
+:::
 If you experience strange behavior, such as duplicate or missing messages please file a bug report to let us know.
 
 --------------------------------------------------------------------------------
@@ -340,7 +342,9 @@ If you experience strange behavior, such as duplicate or missing messages please
 When _set_, NeoMutt will use the IMAP ENABLE extension ([RFC5161](https://www.rfc-editor.org/rfc/rfc5161.html)) to select CAPABILITIES.
 Some servers (notably Coremail System IMap Server) do not properly respond to ENABLE commands, which might cause NeoMutt to hang.
 If your connection seems to freeze at login, try unsetting this.
-See also https://github.com/neomutt/neomutt/issues/1689
+:::{seealso}
+<https://github.com/neomutt/neomutt/issues/1689>
+:::
 
 --------------------------------------------------------------------------------
 

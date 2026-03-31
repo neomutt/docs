@@ -156,7 +156,9 @@ For example, the following configuration would work for Japanese text handling:
 set attach_charset = "iso-2022-jp:euc-jp:shift_jis:utf-8"
 ```
 
-Note: for Japanese users, "iso-2022-*" must be put at the head of the value as shown above if included.
+:::{note}
+for Japanese users, "iso-2022-*" must be put at the head of the value as shown above if included.
+:::
 
 --------------------------------------------------------------------------------
 
@@ -177,7 +179,9 @@ Note: for Japanese users, "iso-2022-*" must be put at the head of the value as s
 This is the string that will precede a replied-to message which is quoted in the main body of the reply (this is the case when [`$include`](include) is set).
 
 For a full listing of defined `printf(3)`-like sequences see the section on [`$index_format`](index-format).
-See also [`$attribution_locale`](attribution-locale).
+:::{seealso}
+[`$attribution_locale`](attribution-locale)
+:::
 
 --------------------------------------------------------------------------------
 
@@ -212,7 +216,9 @@ Affected variables are: [`$attribution_intro`](attribution-intro), [`$attributio
 Similar to the [`$attribution_intro`](attribution-intro) variable, this is the string that will come after a replied-to message which is quoted in the main body of the reply (this is the case when [`$include`](include) is set).
 
 For a full listing of defined `printf(3)`-like sequences see the section on [`$index_format`](index-format).
-See also [`$attribution_locale`](attribution-locale).
+:::{seealso}
+[`$attribution_locale`](attribution-locale)
+:::
 
 --------------------------------------------------------------------------------
 
@@ -283,7 +289,9 @@ If [`$smime_is_default`](smime-is-default) is _set_, then OpenSSL is used instea
     ```
 
 This variable controls whether or not NeoMutt may automatically enable PGP encryption/signing for messages.
-See also [`$crypt_auto_encrypt`](crypt-auto-encrypt), [`$crypt_reply_encrypt`](crypt-reply-encrypt), [`$crypt_auto_sign`](crypt-auto-sign), [`$crypt_reply_sign`](crypt-reply-sign) and [`$smime_is_default`](smime-is-default).
+:::{seealso}
+[`$crypt_auto_encrypt`](crypt-auto-encrypt), [`$crypt_reply_encrypt`](crypt-reply-encrypt), [`$crypt_auto_sign`](crypt-auto-sign), [`$crypt_reply_sign`](crypt-reply-sign) and [`$smime_is_default`](smime-is-default)
+:::
 
 --------------------------------------------------------------------------------
 
@@ -313,7 +321,9 @@ If [`$smime_is_default`](smime-is-default) is _set_, then OpenSSL is used instea
     ```
 
 This variable controls whether or not NeoMutt may automatically enable S/MIME encryption/signing for messages.
-See also [`$crypt_auto_encrypt`](crypt-auto-encrypt), [`$crypt_reply_encrypt`](crypt-reply-encrypt), [`$crypt_auto_sign`](crypt-auto-sign), [`$crypt_reply_sign`](crypt-reply-sign) and [`$smime_is_default`](smime-is-default).
+:::{seealso}
+[`$crypt_auto_encrypt`](crypt-auto-encrypt), [`$crypt_reply_encrypt`](crypt-reply-encrypt), [`$crypt_auto_sign`](crypt-auto-sign), [`$crypt_reply_sign`](crypt-reply-sign) and [`$smime_is_default`](smime-is-default)
+:::
 
 --------------------------------------------------------------------------------
 
@@ -458,7 +468,9 @@ The initial prompt for recipients is also skipped when composing a new message t
 this variable has no effect when the [`$auto_edit`](auto-edit) variable is _set_.
 :::
 
-See also: [`$auto_edit`](auto-edit), [`$edit_headers`](edit-headers), [`$ask_cc`](ask-cc), [`$ask_bcc`](ask-bcc).
+:::{seealso}
+[`$auto_edit`](auto-edit), [`$edit_headers`](edit-headers), [`$ask_cc`](ask-cc), [`$ask_bcc`](ask-bcc)
+:::
 
 --------------------------------------------------------------------------------
 
@@ -473,7 +485,9 @@ See also: [`$auto_edit`](auto-edit), [`$edit_headers`](edit-headers), [`$ask_cc`
 
 This variable controls whether or not attachments on outgoing messages are saved along with the main body of your message.
 
-Note: [`$fcc_before_send`](fcc-before-send) forces the default (set) behavior of this option.
+:::{note}
+[`$fcc_before_send`](fcc-before-send) forces the default (set) behavior of this option.
+:::
 
 --------------------------------------------------------------------------------
 
@@ -507,9 +521,13 @@ Variables [`$fcc_attach`](fcc-attach) and [`$fcc_clear`](fcc-clear) will be resp
 
 When this variable is _set_, FCCs will be stored unencrypted and unsigned, even when the actual message is encrypted and/or signed.
 
-Note: [`$fcc_before_send`](fcc-before-send) forces the default (unset) behavior of this option.
+:::{note}
+[`$fcc_before_send`](fcc-before-send) forces the default (unset) behavior of this option.
+:::
 
-See also [`$pgp_self_encrypt`](pgp-self-encrypt), [`$smime_self_encrypt`](smime-self-encrypt).
+:::{seealso}
+[`$pgp_self_encrypt`](pgp-self-encrypt), [`$smime_self_encrypt`](smime-self-encrypt)
+:::
 
 --------------------------------------------------------------------------------
 
@@ -563,7 +581,9 @@ When forwarding inline (i.e.
 
 This is the string that will precede a message which has been forwarded in the main body of a message (when [`$mime_forward`](mime-forward) is unset).
 For a full listing of defined `printf(3)`-like sequences see the section on [`$index_format`](index-format).
-See also [`$attribution_locale`](attribution-locale).
+:::{seealso}
+[`$attribution_locale`](attribution-locale)
+:::
 
 --------------------------------------------------------------------------------
 
@@ -579,7 +599,9 @@ See also [`$attribution_locale`](attribution-locale).
 
 This is the string that will follow a message which has been forwarded in the main body of a message (when [`$mime_forward`](mime-forward) is unset).
 For a full listing of defined `printf(3)`-like sequences see the section on [`$index_format`](index-format).
-See also [`$attribution_locale`](attribution-locale).
+:::{seealso}
+[`$attribution_locale`](attribution-locale)
+:::
 
 --------------------------------------------------------------------------------
 
@@ -810,7 +832,9 @@ The following `printf(3)`-style sequences are understood:
 | %Y    | `%{year}`      | Current year using 4 digits (GMT)                                  |
 | %z    | `%{random_12}` | 4 byte timestamp + 8 bytes of pseudo-random data encoded in Base64 |
 
-See also: Base64Url: https://datatracker.ietf.org/doc/html/rfc4648#section-5
+:::{seealso}
+Base64Url: <https://datatracker.ietf.org/doc/html/rfc4648#section-5>
+:::
 
 --------------------------------------------------------------------------------
 
@@ -1079,7 +1103,9 @@ It is tokenized by space, and invoked directly via `execvp(3)` with an array of 
 The shell is not used to run the command, so shell quoting is also not supported.
 :::
 
-**See also:** [`$write_bcc`](write-bcc).
+:::{seealso}
+[`$write_bcc`](write-bcc)
+:::
 
 --------------------------------------------------------------------------------
 

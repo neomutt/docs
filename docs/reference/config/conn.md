@@ -79,7 +79,9 @@ set preconnect = "ssh -f -q -L 1234:mailhost.net:143 mailhost.net \(rs sleep 20 
 
 Mailbox "foo" on "mailhost.net" can now be reached as "{localhost:1234}foo".
 
-Note: For this example to work, you must be able to log in to the remote machine without having to enter a password.
+:::{note}
+For this example to work, you must be able to log in to the remote machine without having to enter a password.
+:::
 
 --------------------------------------------------------------------------------
 
@@ -302,7 +304,9 @@ Example:
 set tunnel = "ssh -q mailhost.net /usr/local/libexec/imapd"
 ```
 
-Note: For this example to work you must be able to log in to the remote machine without having to enter a password.
+:::{note}
+For this example to work you must be able to log in to the remote machine without having to enter a password.
+:::
 
 When set, NeoMutt uses the tunnel for all remote connections.
 Please see [`account-hook`](cmd-account-hook) in the manual for how to use different tunnel commands per connection.

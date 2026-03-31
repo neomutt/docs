@@ -241,7 +241,9 @@ The last part matches a colon followed by an optional space or tab.
 Note `"\t"` is converted to a literal tab inside a double quoted string.
 If you use a single quoted string, you would have to type an actual tab character, and would need to convert the double-backslashes to single backslashes.
 
-Note: the result of this regex match against the subject is stored in the header cache.
+:::{note}
+the result of this regex match against the subject is stored in the header cache.
+:::
 Mutt isn't smart enough to invalidate a header cache entry based on changing [`$reply_regex`](reply-regex), so if you aren't seeing correct values in the index, try temporarily turning off the header cache.
 If that fixes the problem, then once the variable is set to your liking, remove your stale header cache files and turn the header cache back on.
 

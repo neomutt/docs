@@ -168,7 +168,9 @@ With [`$sort_re`](sort-re) _unset_, neomutt will attach the message whether or n
 If _set_, threading will only make use of the "In-Reply-To" and "References:" fields when you [`$sort`](sort) by message threads.
 By default, messages with the same subject are grouped together in "pseudo threads.".
 This may not always be desirable, such as in a personal mailbox where you might have several unrelated messages with the subjects like "hi" which will get grouped together.
-See also [`$sort_re`](sort-re) for a less drastic way of controlling this behavior.
+:::{seealso}
+[`$sort_re`](sort-re) for a less drastic way of controlling this behavior
+:::
 
 --------------------------------------------------------------------------------
 
@@ -188,5 +190,7 @@ To determine the ancestry between messages grouped by subject, NeoMutt uses thei
 
 When [`$thread_received`](thread-received) is _set_, NeoMutt uses the date received rather than the date sent when comparing messages for the date.
 
-See also [`$strict_threads`](strict-threads), and [`$sort_re`](sort-re).
+:::{seealso}
+[`$strict_threads`](strict-threads), and [`$sort_re`](sort-re)
+:::
 

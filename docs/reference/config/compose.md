@@ -19,7 +19,9 @@ keywords: compose, compose_format, edit_headers, compose_show_preview, copy, pos
 When _set_, NeoMutt will prompt for confirmation when trying to use [`<detach-file>`](fn-compose) on the first entry in the compose menu.
 This is to help prevent irreversible loss of the typed message by accidentally hitting 'D' in the menu.
 
-Note: NeoMutt only prompts for the first entry.
+:::{note}
+NeoMutt only prompts for the first entry.
+:::
 It doesn't keep track of which message is the typed message if the entries are reordered, or if the first entry was already deleted.
 
 --------------------------------------------------------------------------------

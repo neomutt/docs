@@ -90,7 +90,7 @@ The GPGME backend will use the same filters as with OpenPGP, and depends on GPGM
 When set, NeoMutt will display protected headers ("Memory Hole") in the pager, When set, NeoMutt will display protected headers in the pager, and will update the index and header cache with revised headers.
 
 Protected headers are stored inside the encrypted or signed part of an email, to prevent disclosure or tampering.
-For more information see https://github.com/autocrypt/protected-headers Currently NeoMutt only supports the Subject header.
+For more information see <https://github.com/autocrypt/protected-headers> Currently NeoMutt only supports the Subject header.
 
 Encrypted messages using protected headers often substitute the exposed Subject header with a dummy value (see [`$crypt_protected_headers_subject`](crypt-protected-headers-subject)).
 NeoMutt will update its concept of the correct subject **after** the message is opened, i.e. via the [`<display-message>`](fn-index) function.
@@ -163,7 +163,7 @@ Controls whether NeoMutt will weed protected header fields.
 When set, NeoMutt will generate protected headers for signed and encrypted emails.
 
 Protected headers are stored inside the encrypted or signed part of an email, to prevent disclosure or tampering.
-For more information see https://github.com/autocrypt/protected-headers
+For more information see <https://github.com/autocrypt/protected-headers>
 
 Currently NeoMutt only supports the Subject header.
 
@@ -212,7 +212,9 @@ Note that the GPGME backend does not support creating old-style inline (traditio
     ```
 
 Controls whether NeoMutt uses PKA during signature verification (only supported by the GPGME backend).
-See: http://www.g10code.de/docs/pka-intro.de.pdf
+:::{seealso}
+<http://www.g10code.de/docs/pka-intro.de.pdf>
+:::
 
 --------------------------------------------------------------------------------
 
@@ -391,11 +393,15 @@ This command is used to decrypt a PGP encrypted message.
 
 This is a format string, see the [`$pgp_decode_command`](pgp-decode-command) command for possible `printf(3)`-like sequences.
 
-Note: When decrypting messages using `gpg`, a pinentry program needs to be invoked unless the password is cached within `gpg-agent`.
+:::{note}
+When decrypting messages using `gpg`, a pinentry program needs to be invoked unless the password is cached within `gpg-agent`.
+:::
 Currently, the `pinentry-tty` program (usually distributed with `gpg`) isn't suitable for being invoked by NeoMutt.
 You are encouraged to use a different pinentry-program when running NeoMutt in order to avoid problems.
 
-See also: https://github.com/neomutt/neomutt/issues/1014
+:::{seealso}
+<https://github.com/neomutt/neomutt/issues/1014>
+:::
 
 --------------------------------------------------------------------------------
 
@@ -614,7 +620,9 @@ The output format must be analogous to the one used by:
 gpg --list-keys --with-colons --with-fingerprint
 ```
 
-Note: gpg's `fixed-list-mode` option should not be used.
+:::{note}
+gpg's `fixed-list-mode` option should not be used.
+:::
 It produces a different date format which may result in NeoMutt showing incorrect key generation dates.
 
 This is a format string, see the [`$pgp_decode_command`](pgp-decode-command) command for possible `printf(3)`-like sequences.
@@ -638,7 +646,9 @@ The output format must be analogous to the one used by:
 gpg --list-keys --with-colons --with-fingerprint
 ```
 
-Note: gpg's `fixed-list-mode` option should not be used.
+:::{note}
+gpg's `fixed-list-mode` option should not be used.
+:::
 It produces a different date format which may result in NeoMutt showing incorrect key generation dates.
 
 This is a format string, see the [`$pgp_decode_command`](pgp-decode-command) command for possible `printf(3)`-like sequences.
@@ -656,7 +666,9 @@ This is a format string, see the [`$pgp_decode_command`](pgp-decode-command) com
     ```
 
 If _set_, use 64-bit PGP key IDs, if _unset_ use the normal 32-bit key IDs.
-NOTE: Internally, NeoMutt has transitioned to using fingerprints (or long key IDs as a fallback).
+:::{note}
+Internally, NeoMutt has transitioned to using fingerprints (or long key IDs as a fallback).
+:::
 This option now only controls the display of key IDs in the key selection menu and a few other places.
 
 --------------------------------------------------------------------------------
@@ -1060,7 +1072,9 @@ This is a format string, see the [`$smime_decrypt_command`](smime-decrypt-comman
 This command is used to import a certificate via smime_keys.
 
 This is a format string, see the [`$smime_decrypt_command`](smime-decrypt-command) command for possible `printf(3)`-like sequences.
-NOTE: %c and %k will default to [`$smime_sign_as`](smime-sign-as) if set, otherwise [`$smime_default_key`](smime-default-key).
+:::{note}
+%c and %k will default to [`$smime_sign_as`](smime-sign-as) if set, otherwise [`$smime_default_key`](smime-default-key).
+:::
 
 --------------------------------------------------------------------------------
 
