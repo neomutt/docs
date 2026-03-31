@@ -180,6 +180,8 @@ This is the string that will precede a replied-to message which is quoted in the
 
 For a full listing of defined `printf(3)`-like sequences see the section on [`$index_format`](index-format).
 :::{seealso}
+**Expandos:** [Tutorial Conditional](tut-cond-expando), [Howto Conditional](how-cond-expando), [Formatting](how-format-expando), [Reference](ref-expandos)
+
 [`$attribution_locale`](attribution-locale)
 :::
 
@@ -217,6 +219,8 @@ Similar to the [`$attribution_intro`](attribution-intro) variable, this is the s
 
 For a full listing of defined `printf(3)`-like sequences see the section on [`$index_format`](index-format).
 :::{seealso}
+**Expandos:** [Tutorial Conditional](tut-cond-expando), [Howto Conditional](how-cond-expando), [Formatting](how-format-expando), [Reference](ref-expandos)
+
 [`$attribution_locale`](attribution-locale)
 :::
 
@@ -582,6 +586,8 @@ When forwarding inline (i.e.
 This is the string that will precede a message which has been forwarded in the main body of a message (when [`$mime_forward`](mime-forward) is unset).
 For a full listing of defined `printf(3)`-like sequences see the section on [`$index_format`](index-format).
 :::{seealso}
+**Expandos:** [Tutorial Conditional](tut-cond-expando), [Howto Conditional](how-cond-expando), [Formatting](how-format-expando), [Reference](ref-expandos)
+
 [`$attribution_locale`](attribution-locale)
 :::
 
@@ -600,6 +606,8 @@ For a full listing of defined `printf(3)`-like sequences see the section on [`$i
 This is the string that will follow a message which has been forwarded in the main body of a message (when [`$mime_forward`](mime-forward) is unset).
 For a full listing of defined `printf(3)`-like sequences see the section on [`$index_format`](index-format).
 :::{seealso}
+**Expandos:** [Tutorial Conditional](tut-cond-expando), [Howto Conditional](how-cond-expando), [Formatting](how-format-expando), [Reference](ref-expandos)
+
 [`$attribution_locale`](attribution-locale)
 :::
 
@@ -651,6 +659,10 @@ For those who always want to forward with no modification, use a setting of "no"
 This variable controls the default subject when forwarding a message.
 It uses the same format sequences as the [`$index_format`](index-format) variable.
 
+:::{seealso}
+**Expandos:** [Tutorial Conditional](tut-cond-expando), [Howto Conditional](how-cond-expando), [Formatting](how-format-expando), [Reference](ref-expandos)
+:::
+
 --------------------------------------------------------------------------------
 
 (forward-references)=
@@ -686,6 +698,10 @@ The following sequences are defined in NeoMutt:
 | `%n`  | `%{real-name}`  | Recipient's real name          |
 | `%u`  | `%{user-name}`  | User (login) name of recipient |
 | `%v`  | `%{first-name}` | First name of recipient        |
+
+:::{seealso}
+**Expandos:** [Tutorial Conditional](tut-cond-expando), [Howto Conditional](how-cond-expando), [Formatting](how-format-expando), [Reference](ref-expandos)
+:::
 
 --------------------------------------------------------------------------------
 
@@ -785,6 +801,10 @@ Example:
 set inews_command = "/usr/local/bin/inews -hS"
 ```
 
+:::{seealso}
+**Expandos:** [Tutorial Conditional](tut-cond-expando), [Howto Conditional](how-cond-expando), [Formatting](how-format-expando), [Reference](ref-expandos)
+:::
+
 --------------------------------------------------------------------------------
 
 (message-id-format)=
@@ -833,6 +853,8 @@ The following `printf(3)`-style sequences are understood:
 | %z    | `%{random_12}` | 4 byte timestamp + 8 bytes of pseudo-random data encoded in Base64 |
 
 :::{seealso}
+**Expandos:** [Tutorial Conditional](tut-cond-expando), [Howto Conditional](how-cond-expando), [Formatting](how-format-expando), [Reference](ref-expandos)
+
 Base64Url: <https://datatracker.ietf.org/doc/html/rfc4648#section-5>
 :::
 

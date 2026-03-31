@@ -123,6 +123,10 @@ To see these subparts, press "v" on that menu.
 This is the string displayed in the "attachment" menu for attachments of type `message/rfc822`.  
 For a full listing of defined `printf(3)`-like sequences see the section on [`$index_format`](index-format).
 
+:::{seealso}
+**Expandos:** [Tutorial Conditional](tut-cond-expando), [Howto Conditional](how-cond-expando), [Formatting](how-format-expando), [Reference](ref-expandos)
+:::
+
 --------------------------------------------------------------------------------
 
 (mime-forward)=

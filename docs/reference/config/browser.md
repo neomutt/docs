@@ -114,6 +114,10 @@ For an explanation of "soft-fill", see the [`$index_format`](index-format) docum
 %m requires [`$mail_check_stats`](mail-check-stats) to be set.
 %n requires [`$mail_check_stats`](mail-check-stats) to be set (except for IMAP mailboxes).
 
+:::{seealso}
+**Expandos:** [Tutorial Conditional](tut-cond-expando), [Howto Conditional](how-cond-expando), [Formatting](how-format-expando), [Reference](ref-expandos)
+:::
+
 --------------------------------------------------------------------------------
 
 (group-index-format)=
@@ -148,6 +152,10 @@ This string is similar to [`$index_format`](index-format), but has its own set o
 | `%>X`  | `%{padding-hard:X}` | Right justify the rest of the string and pad with character `X`      |
 | `%\|X` | `%{padding-eol:X}`  | Pad to the end of the line with character `X`                        |
 
+:::{seealso}
+**Expandos:** [Tutorial Conditional](tut-cond-expando), [Howto Conditional](how-cond-expando), [Formatting](how-format-expando), [Reference](ref-expandos)
+:::
+
 --------------------------------------------------------------------------------
 
 (mailbox-folder-format)=
@@ -167,6 +175,10 @@ This string is similar to [`$index_format`](index-format), but has its own set o
 This variable allows you to customize the file browser display to your personal taste.
 It's only used to customize network mailboxes (e.g. imap).
 This string is identical in formatting to the one used by "[`$folder_format`](folder-format)".
+
+:::{seealso}
+**Expandos:** [Tutorial Conditional](tut-cond-expando), [Howto Conditional](how-cond-expando), [Formatting](how-format-expando), [Reference](ref-expandos)
+:::
 
 --------------------------------------------------------------------------------
 

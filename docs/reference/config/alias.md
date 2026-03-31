@@ -169,3 +169,7 @@ The following sequences are deprecated; they will be removed in the future.
 | `%e` | Use `%C` instead |
 | `%n` | Use `%N` instead |
 
+:::{seealso}
+**Expandos:** [Tutorial Conditional](tut-cond-expando), [Howto Conditional](how-cond-expando), [Formatting](how-format-expando), [Reference](ref-expandos)
+:::
+

@@ -69,6 +69,10 @@ The following printf-style sequence is understood:
 | `%s`  | `%{server}`   | News server name  |
 | `%u`  | `%{username}` | Username          |
 
+:::{seealso}
+**Expandos:** [Tutorial Conditional](tut-cond-expando), [Howto Conditional](how-cond-expando), [Formatting](how-format-expando), [Reference](ref-expandos)
+:::
+
 --------------------------------------------------------------------------------
 
 (news-cache-dir)=

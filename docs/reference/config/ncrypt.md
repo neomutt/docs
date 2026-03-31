@@ -333,6 +333,10 @@ Note that the use of this format is **strongly** **deprecated**.
 This is a format string, see the [`$pgp_decode_command`](pgp-decode-command) command for possible `printf(3)`-like sequences.
 Note that in this case, %r expands to the search string, which is a list of one or more quoted values such as email address, name, or keyid.
 
+:::{seealso}
+**Expandos:** [Tutorial Conditional](tut-cond-expando), [Howto Conditional](how-cond-expando), [Formatting](how-format-expando), [Reference](ref-expandos)
+:::
+
 --------------------------------------------------------------------------------
 
 (pgp-decode-command)=
@@ -358,6 +362,10 @@ The PGP command formats have their own set of `printf(3)`-like sequences:
 | `%r`  | `%{key-ids}`        | One or more key IDs (or fingerprints if available)                                                        |
 | `%s`  | `%{file-signature}` | Expands to the name of a file containing the signature part                                               |
 |       |                     | of a `multipart/signed` attachment when verifying it                                                      |
+
+:::{seealso}
+**Expandos:** [Tutorial Conditional](tut-cond-expando), [Howto Conditional](how-cond-expando), [Formatting](how-format-expando), [Reference](ref-expandos)
+:::
 
 --------------------------------------------------------------------------------
 
@@ -400,6 +408,8 @@ Currently, the `pinentry-tty` program (usually distributed with `gpg`) isn't sui
 You are encouraged to use a different pinentry-program when running NeoMutt in order to avoid problems.
 
 :::{seealso}
+**Expandos:** [Tutorial Conditional](tut-cond-expando), [Howto Conditional](how-cond-expando), [Formatting](how-format-expando), [Reference](ref-expandos)
+
 <https://github.com/neomutt/neomutt/issues/1014>
 :::
 
@@ -437,6 +447,10 @@ This command is used to encrypt a body part without signing it.
 This is a format string, see the [`$pgp_decode_command`](pgp-decode-command) command for possible `printf(3)`-like sequences.
 Note that in this case, %r expands to the search string, which is a list of one or more quoted values such as email address, name, or keyid.
 
+:::{seealso}
+**Expandos:** [Tutorial Conditional](tut-cond-expando), [Howto Conditional](how-cond-expando), [Formatting](how-format-expando), [Reference](ref-expandos)
+:::
+
 --------------------------------------------------------------------------------
 
 (pgp-encrypt-sign-command)=
@@ -452,6 +466,10 @@ Note that in this case, %r expands to the search string, which is a list of one 
 This command is used to both sign and encrypt a body part.
 
 This is a format string, see the [`$pgp_decode_command`](pgp-decode-command) command for possible `printf(3)`-like sequences.
+
+:::{seealso}
+**Expandos:** [Tutorial Conditional](tut-cond-expando), [Howto Conditional](how-cond-expando), [Formatting](how-format-expando), [Reference](ref-expandos)
+:::
 
 --------------------------------------------------------------------------------
 
@@ -500,6 +518,10 @@ This string is similar to [`$index_format`](index-format), but has its own set o
 
 See the section "Sending Cryptographically Signed/Encrypted Messages" of the user manual for the meaning of the letters some of these sequences expand to.
 
+:::{seealso}
+**Expandos:** [Tutorial Conditional](tut-cond-expando), [Howto Conditional](how-cond-expando), [Formatting](how-format-expando), [Reference](ref-expandos)
+:::
+
 --------------------------------------------------------------------------------
 
 (pgp-export-command)=
@@ -516,6 +538,10 @@ This command is used to export a public key from the user's key ring.
 
 This is a format string, see the [`$pgp_decode_command`](pgp-decode-command) command for possible `printf(3)`-like sequences.
 
+:::{seealso}
+**Expandos:** [Tutorial Conditional](tut-cond-expando), [Howto Conditional](how-cond-expando), [Formatting](how-format-expando), [Reference](ref-expandos)
+:::
+
 --------------------------------------------------------------------------------
 
 (pgp-get-keys-command)=
@@ -531,6 +557,10 @@ This is a format string, see the [`$pgp_decode_command`](pgp-decode-command) com
 This command is invoked whenever NeoMutt needs to fetch the public key associated with an email address.
 Of the sequences supported by [`$pgp_decode_command`](pgp-decode-command), %r is the only `printf(3)`-like sequence used with this format.
 Note that in this case, %r expands to the email address, not the public key ID (the key ID is unknown, which is why NeoMutt is invoking this command).
+
+:::{seealso}
+**Expandos:** [Tutorial Conditional](tut-cond-expando), [Howto Conditional](how-cond-expando), [Formatting](how-format-expando), [Reference](ref-expandos)
+:::
 
 --------------------------------------------------------------------------------
 
@@ -578,6 +608,10 @@ _Unset_ this if you want to play interesting key selection games.
 This command is used to import a key from a message into the user's public key ring.
 
 This is a format string, see the [`$pgp_decode_command`](pgp-decode-command) command for possible `printf(3)`-like sequences.
+
+:::{seealso}
+**Expandos:** [Tutorial Conditional](tut-cond-expando), [Howto Conditional](how-cond-expando), [Formatting](how-format-expando), [Reference](ref-expandos)
+:::
 
 --------------------------------------------------------------------------------
 
@@ -627,6 +661,10 @@ It produces a different date format which may result in NeoMutt showing incorrec
 
 This is a format string, see the [`$pgp_decode_command`](pgp-decode-command) command for possible `printf(3)`-like sequences.
 
+:::{seealso}
+**Expandos:** [Tutorial Conditional](tut-cond-expando), [Howto Conditional](how-cond-expando), [Formatting](how-format-expando), [Reference](ref-expandos)
+:::
+
 --------------------------------------------------------------------------------
 
 (pgp-list-secring-command)=
@@ -652,6 +690,10 @@ gpg's `fixed-list-mode` option should not be used.
 It produces a different date format which may result in NeoMutt showing incorrect key generation dates.
 
 This is a format string, see the [`$pgp_decode_command`](pgp-decode-command) command for possible `printf(3)`-like sequences.
+
+:::{seealso}
+**Expandos:** [Tutorial Conditional](tut-cond-expando), [Howto Conditional](how-cond-expando), [Formatting](how-format-expando), [Reference](ref-expandos)
+:::
 
 --------------------------------------------------------------------------------
 
@@ -765,6 +807,10 @@ This command is used to create the detached PGP signature for a `multipart/signe
 
 This is a format string, see the [`$pgp_decode_command`](pgp-decode-command) command for possible `printf(3)`-like sequences.
 
+:::{seealso}
+**Expandos:** [Tutorial Conditional](tut-cond-expando), [Howto Conditional](how-cond-expando), [Formatting](how-format-expando), [Reference](ref-expandos)
+:::
+
 --------------------------------------------------------------------------------
 
 (pgp-strict-enc)=
@@ -834,6 +880,10 @@ This command is used to verify PGP signatures.
 
 This is a format string, see the [`$pgp_decode_command`](pgp-decode-command) command for possible `printf(3)`-like sequences.
 
+:::{seealso}
+**Expandos:** [Tutorial Conditional](tut-cond-expando), [Howto Conditional](how-cond-expando), [Formatting](how-format-expando), [Reference](ref-expandos)
+:::
+
 --------------------------------------------------------------------------------
 
 (pgp-verify-key-command)=
@@ -849,6 +899,10 @@ This is a format string, see the [`$pgp_decode_command`](pgp-decode-command) com
 This command is used to verify key information from the key selection menu.
 
 This is a format string, see the [`$pgp_decode_command`](pgp-decode-command) command for possible `printf(3)`-like sequences.
+
+:::{seealso}
+**Expandos:** [Tutorial Conditional](tut-cond-expando), [Howto Conditional](how-cond-expando), [Formatting](how-format-expando), [Reference](ref-expandos)
+:::
 
 --------------------------------------------------------------------------------
 
@@ -929,6 +983,10 @@ The OpenSSL command formats have their own set of `printf(3)`-like sequences sim
 
 For examples on how to configure these formats, see the `smime.rc` in the `samples/` subdirectory which has been installed on your system alongside the documentation.
 
+:::{seealso}
+**Expandos:** [Tutorial Conditional](tut-cond-expando), [Howto Conditional](how-cond-expando), [Formatting](how-format-expando), [Reference](ref-expandos)
+:::
+
 --------------------------------------------------------------------------------
 
 (smime-decrypt-use-default-key)=
@@ -984,6 +1042,10 @@ This is a format string, see the [`$smime_decrypt_command`](smime-decrypt-comman
 
 Encrypt the message to [`$smime_default_key`](smime-default-key) too.
 
+:::{seealso}
+**Expandos:** [Tutorial Conditional](tut-cond-expando), [Howto Conditional](how-cond-expando), [Formatting](how-format-expando), [Reference](ref-expandos)
+:::
+
 --------------------------------------------------------------------------------
 
 (smime-encrypt-with)=
@@ -1025,6 +1087,10 @@ This command is used to extract X509 certificates from a PKCS7 structure.
 
 This is a format string, see the [`$smime_decrypt_command`](smime-decrypt-command) command for possible `printf(3)`-like sequences.
 
+:::{seealso}
+**Expandos:** [Tutorial Conditional](tut-cond-expando), [Howto Conditional](how-cond-expando), [Formatting](how-format-expando), [Reference](ref-expandos)
+:::
+
 --------------------------------------------------------------------------------
 
 (smime-get-cert-email-command)=
@@ -1041,6 +1107,10 @@ This command is used to extract the mail address(es) used for storing X509 certi
 
 This is a format string, see the [`$smime_decrypt_command`](smime-decrypt-command) command for possible `printf(3)`-like sequences.
 
+:::{seealso}
+**Expandos:** [Tutorial Conditional](tut-cond-expando), [Howto Conditional](how-cond-expando), [Formatting](how-format-expando), [Reference](ref-expandos)
+:::
+
 --------------------------------------------------------------------------------
 
 (smime-get-signer-cert-command)=
@@ -1056,6 +1126,10 @@ This is a format string, see the [`$smime_decrypt_command`](smime-decrypt-comman
 This command is used to extract only the signers X509 certificate from a S/MIME signature, so that the certificate's owner may get compared to the email's "From:" field.
 
 This is a format string, see the [`$smime_decrypt_command`](smime-decrypt-command) command for possible `printf(3)`-like sequences.
+
+:::{seealso}
+**Expandos:** [Tutorial Conditional](tut-cond-expando), [Howto Conditional](how-cond-expando), [Formatting](how-format-expando), [Reference](ref-expandos)
+:::
 
 --------------------------------------------------------------------------------
 
@@ -1074,6 +1148,10 @@ This command is used to import a certificate via smime_keys.
 This is a format string, see the [`$smime_decrypt_command`](smime-decrypt-command) command for possible `printf(3)`-like sequences.
 :::{note}
 %c and %k will default to [`$smime_sign_as`](smime-sign-as) if set, otherwise [`$smime_default_key`](smime-default-key).
+:::
+
+:::{seealso}
+**Expandos:** [Tutorial Conditional](tut-cond-expando), [Howto Conditional](how-cond-expando), [Formatting](how-format-expando), [Reference](ref-expandos)
 :::
 
 --------------------------------------------------------------------------------
@@ -1127,6 +1205,10 @@ This command is used to extract PKCS7 structures of S/MIME signatures, in order 
 
 This is a format string, see the [`$smime_decrypt_command`](smime-decrypt-command) command for possible `printf(3)`-like sequences.
 
+:::{seealso}
+**Expandos:** [Tutorial Conditional](tut-cond-expando), [Howto Conditional](how-cond-expando), [Formatting](how-format-expando), [Reference](ref-expandos)
+:::
+
 --------------------------------------------------------------------------------
 
 (smime-self-encrypt)=
@@ -1171,6 +1253,10 @@ Most people will only need to set [`$smime_default_key`](smime-default-key).
 This command is used to created S/MIME signatures of type `multipart/signed`, which can be read by all mail clients.
 
 This is a format string, see the [`$smime_decrypt_command`](smime-decrypt-command) command for possible `printf(3)`-like sequences.
+
+:::{seealso}
+**Expandos:** [Tutorial Conditional](tut-cond-expando), [Howto Conditional](how-cond-expando), [Formatting](how-format-expando), [Reference](ref-expandos)
+:::
 
 --------------------------------------------------------------------------------
 
@@ -1226,6 +1312,10 @@ This command is used to verify S/MIME signatures of type `multipart/signed`.
 
 This is a format string, see the [`$smime_decrypt_command`](smime-decrypt-command) command for possible `printf(3)`-like sequences.
 
+:::{seealso}
+**Expandos:** [Tutorial Conditional](tut-cond-expando), [Howto Conditional](how-cond-expando), [Formatting](how-format-expando), [Reference](ref-expandos)
+:::
+
 --------------------------------------------------------------------------------
 
 (smime-verify-opaque-command)=
@@ -1241,4 +1331,8 @@ This is a format string, see the [`$smime_decrypt_command`](smime-decrypt-comman
 This command is used to verify S/MIME signatures of type `application/pkcs7-mime`.
 
 This is a format string, see the [`$smime_decrypt_command`](smime-decrypt-command) command for possible `printf(3)`-like sequences.
+
+:::{seealso}
+**Expandos:** [Tutorial Conditional](tut-cond-expando), [Howto Conditional](how-cond-expando), [Formatting](how-format-expando), [Reference](ref-expandos)
+:::
 

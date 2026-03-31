@@ -55,6 +55,10 @@ This string is similar to [`$status_format`](status-format), but has its own set
 
 See the text describing the [`$status_format`](status-format) option for more information on how to set [`$compose_format`](compose-format).
 
+:::{seealso}
+**Expandos:** [Tutorial Conditional](tut-cond-expando), [Howto Conditional](how-cond-expando), [Formatting](how-format-expando), [Reference](ref-expandos)
+:::
+
 --------------------------------------------------------------------------------
 
 (compose-preview-above-attachments)=

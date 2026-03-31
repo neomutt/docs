@@ -134,6 +134,12 @@ This string is similar to [`$index_format`](index-format), but has its own set o
 In order to use %S, %N, %F, and %!, [`$mail_check_stats`](mail-check-stats) must be _set_.
 When thus set, a suggested value for this option is "%B%<F? [%F]>%* %<N?%N/>%S".
 
+:::{seealso}
+**Expandos:** [Tutorial Conditional](tut-cond-expando), [Howto Conditional](how-cond-expando), [Formatting](how-format-expando), [Reference](ref-expandos)
+
+[`$sidebar_short_path`](sidebar-short-path)
+:::
+
 --------------------------------------------------------------------------------
 
 (sidebar-indent-string)=

@@ -228,6 +228,10 @@ If necessary, soft-fill will eat text leftwards to make room for rightward text.
 
 Note that these expandos are supported in [`save-hook`](cmd-save-hook), [`fcc-hook`](cmd-fcc-hook) and [`fcc-save-hook`](cmd-fcc-save-hook), too.
 
+:::{seealso}
+**Expandos:** [Tutorial Conditional](tut-cond-expando), [Howto Conditional](how-cond-expando), [Formatting](how-format-expando), [Reference](ref-expandos)
+:::
+
 --------------------------------------------------------------------------------
 
 (mark-macro-prefix)=
@@ -255,6 +259,10 @@ A new macro automatically generated with _<mark-message>a_ will be composed from
 
 If _set_, NeoMutt will call this command after a new message is received.
 See the [`$status_format`](status-format) documentation for the values that can be formatted into this command.
+
+:::{seealso}
+**Expandos:** [Tutorial Conditional](tut-cond-expando), [Howto Conditional](how-cond-expando), [Formatting](how-format-expando), [Reference](ref-expandos)
+:::
 
 --------------------------------------------------------------------------------
 
@@ -400,6 +408,10 @@ For example, if you want to display the local hostname in lowercase, you would u
 If you prefix the sequence character with a colon (":") character, NeoMutt will replace any dots in the expansion by underscores.
 This might be helpful with IMAP folders that don't like dots in folder names.
 
+:::{seealso}
+**Expandos:** [Tutorial Conditional](tut-cond-expando), [Howto Conditional](how-cond-expando), [Formatting](how-format-expando), [Reference](ref-expandos)
+:::
+
 (to-chars)=
 ## `$to_chars`
 
@@ -454,6 +466,10 @@ Most terminal emulators emulate the status line in the window title.
 Controls the format of the icon title, as long as "[`$ts_enabled`](ts-enabled)" is set.
 This string is identical in formatting to the one used by "[`$status_format`](status-format)".
 
+:::{seealso}
+**Expandos:** [Tutorial Conditional](tut-cond-expando), [Howto Conditional](how-cond-expando), [Formatting](how-format-expando), [Reference](ref-expandos)
+:::
+
 --------------------------------------------------------------------------------
 
 (ts-status-format)=
@@ -472,6 +488,10 @@ This string is identical in formatting to the one used by "[`$status_format`](st
 
 Controls the format of the terminal status line (or window title), provided that "[`$ts_enabled`](ts-enabled)" has been set.
 This string is identical in formatting to the one used by "[`$status_format`](status-format)".
+
+:::{seealso}
+**Expandos:** [Tutorial Conditional](tut-cond-expando), [Howto Conditional](how-cond-expando), [Formatting](how-format-expando), [Reference](ref-expandos)
+:::
 
 --------------------------------------------------------------------------------
 

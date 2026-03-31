@@ -130,6 +130,10 @@ The following `printf(3)`-style sequences are understood:
 
 For an explanation of "soft-fill", see the [`$index_format`](index-format) documentation.
 
+:::{seealso}
+**Expandos:** [Tutorial Conditional](tut-cond-expando), [Howto Conditional](how-cond-expando), [Formatting](how-format-expando), [Reference](ref-expandos)
+:::
+
 --------------------------------------------------------------------------------
 
 (auto-edit)=
@@ -602,6 +606,10 @@ You are strongly encouraged not to change this value, as it tends to agitate the
 The value of this option is ignored if [`$text_flowed`](text-flowed) is set, because the quoting mechanism is strictly defined for format=flowed.
 
 This option is a format string, please see the description of [`$index_format`](index-format) for supported `printf(3)`-style sequences.
+
+:::{seealso}
+**Expandos:** [Tutorial Conditional](tut-cond-expando), [Howto Conditional](how-cond-expando), [Formatting](how-format-expando), [Reference](ref-expandos)
+:::
 
 --------------------------------------------------------------------------------
 

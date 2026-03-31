@@ -137,6 +137,10 @@ If positive, this many lines will be given before a match, if 0, the match will 
 This variable controls the format of the one-line message "status" displayed before each message in either the internal or an external pager.
 The valid sequences are listed in the [`$index_format`](index-format) section.
 
+:::{seealso}
+**Expandos:** [Tutorial Conditional](tut-cond-expando), [Howto Conditional](how-cond-expando), [Formatting](how-format-expando), [Reference](ref-expandos)
+:::
+
 --------------------------------------------------------------------------------
 
 (pager-index-lines)=
