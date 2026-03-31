@@ -79,100 +79,124 @@ The "Use Threads" feature also modifies the existing config option `$status_form
 
 ### neomuttrc
 
+**Flat View**
+
+<div class="term-window">
+<div class="term-title">Flat View</div>
+<pre class="terminal">
+<span class="index index_date">12:01</span><span class="index">  </span><span class="index index_author">Anne     </span><span class="index">  </span><span class="index index_subject">cover letter for thread 1</span><span class="index">                                                         </span>
+<span class="index index_date">12:02</span><span class="index">  </span><span class="index index_author">Anne     </span><span class="index">  </span><span class="index index_subject">part 1 of thread 1</span><span class="index">                                                                </span>
+<span class="index index_date">12:03</span><span class="index">  </span><span class="index index_author">Anne     </span><span class="index">  </span><span class="index index_subject">part 2 of thread 1</span><span class="index">                                                                </span>
+<span class="index index_date">12:04</span><span class="index">  </span><span class="index index_author">Anne     </span><span class="index">  </span><span class="index index_subject">part 3 of thread 1</span><span class="index">                                                                </span>
+<span class="index index_date">12:05</span><span class="index">  </span><span class="index index_author">Barbara  </span><span class="index">  </span><span class="index index_subject">thread 2</span><span class="index">                                                                          </span>
+<span class="index index_date">12:06</span><span class="index">  </span><span class="index index_author">Claire   </span><span class="index">  </span><span class="index index_subject">thread 3</span><span class="index">                                                                          </span>
+<span class="index index_date">12:07</span><span class="index">  </span><span class="index index_author">Diane    </span><span class="index">  </span><span class="index index_subject">re: part 2 of thread 1</span><span class="index">                                                            </span>
+<span class="index index_date">12:08</span><span class="index">  </span><span class="index index_author">Erica    </span><span class="index">  </span><span class="index index_subject">re: thread 2</span><span class="index">                                                                      </span>
+</pre>
+</div>
+
 ```neomuttrc
 # Default configuration: flat view sorted by date
 # selecting threads with <sort-mailbox> changes $sort
-#set use_threads=unset sort=date sort_aux=date
+# set use_threads=unset sort=date sort_aux=date
 # Modern configuration: explicit flat view sorted by date
 # selecting threads with <sort-mailbox> changes $use_threads
 set use_threads=no sort=date sort_aux=date
 ```
 
+---
+
+**Threaded View**
+
 <div class="term-window">
-<div class="term-title">Flat view: use_threads=no sort=date sort_aux=date</div>
+<div class="term-title">Threaded View</div>
 <pre class="terminal">
-<span class="index index_date">12:01</span><span class="index"> </span><span class="index index_flags">   </span><span class="index"> </span><span class="index index_author">Anne     </span><span class="index">  </span><span class="index index_subject">cover letter for thread 1</span>
-<span class="index index_date">12:02</span><span class="index"> </span><span class="index index_flags">   </span><span class="index"> </span><span class="index index_author">Anne     </span><span class="index">  </span><span class="index index_subject">part 1 of thread 1</span>
-<span class="index index_date">12:03</span><span class="index"> </span><span class="index index_flags">   </span><span class="index"> </span><span class="index index_author">Anne     </span><span class="index">  </span><span class="index index_subject">part 2 of thread 1</span>
-<span class="index index_date">12:04</span><span class="index"> </span><span class="index index_flags">   </span><span class="index"> </span><span class="index index_author">Anne     </span><span class="index">  </span><span class="index index_subject">part 3 of thread 1</span>
-<span class="index index_date">12:05</span><span class="index"> </span><span class="index index_flags">   </span><span class="index"> </span><span class="index index_author">Barbara  </span><span class="index">  </span><span class="index index_subject">thread 2</span>
-<span class="index index_date">12:06</span><span class="index"> </span><span class="index index_flags">   </span><span class="index"> </span><span class="index index_author">Claire   </span><span class="index">  </span><span class="index index_subject">thread 3</span>
-<span class="index index_date">12:07</span><span class="index"> </span><span class="index index_flags">   </span><span class="index"> </span><span class="index index_author">Diane    </span><span class="index">  </span><span class="index index_subject">re: part 2 of thread 1</span>
-<span class="index index_date">12:08</span><span class="index"> </span><span class="index index_flags">   </span><span class="index"> </span><span class="index index_author">Erica    </span><span class="index">  </span><span class="index index_subject">re: thread 2</span>
-<span class="status">-- ~/mail/inbox [Msgs:8]   (flat/date/date)                                                 (100%)  </span>
-<span>                                                                                                    </span>
+<span class="index index_date">12:01</span><span class="index">  </span><span class="index index_author">Anne     </span><span class="index">  </span><span class="index index_subject">cover letter for thread 1</span><span class="index">                                                         </span>
+<span class="index index_date">12:02</span><span class="index">  </span><span class="index index_author">Anne     </span><span class="index">  </span><span class="index tree">├─&gt;</span><span class="index index_subject">part 1 of thread 1</span><span class="index">                                                             </span>
+<span class="index index_date">12:03</span><span class="index">  </span><span class="index index_author">Anne     </span><span class="index">  </span><span class="index tree">├─&gt;</span><span class="index index_subject">part 2 of thread 1</span><span class="index">                                                             </span>
+<span class="index index_date">12:07</span><span class="index">  </span><span class="index index_author">Diane    </span><span class="index">  </span><span class="index tree">│ └─&gt;</span><span class="index">                                                                             </span>
+<span class="index index_date">12:04</span><span class="index">  </span><span class="index index_author">Anne     </span><span class="index">  </span><span class="index tree">└─&gt;</span><span class="index index_subject">part 3 of thread 1</span><span class="index">                                                             </span>
+<span class="index index_date">12:05</span><span class="index">  </span><span class="index index_author">Barbara  </span><span class="index">  </span><span class="index index_subject">thread 2</span><span class="index">                                                                          </span>
+<span class="index index_date">12:08</span><span class="index">  </span><span class="index index_author">Erica    </span><span class="index">  </span><span class="index tree">└─&gt;</span><span class="index">                                                                               </span>
+<span class="index index_date">12:06</span><span class="index">  </span><span class="index index_author">Claire   </span><span class="index">  </span><span class="index index_subject">thread 3</span><span class="index">                                                                          </span>
 </pre>
 </div>
 
 ```neomuttrc
 # Legacy configuration: sorting threads by date started
-#set sort=threads sort_aux=date
+# set sort=threads sort_aux=date
 # Modern configuration for the same
 # Latest root message sorts last
 set use_threads=yes sort=date sort_aux=date
 ```
 
+---
+
+**Reverse Threaded View**
+
 <div class="term-window">
-<div class="term-title">Threaded view: use_threads=yes sort=date sort_aux=date</div>
+<div class="term-title">Reverse Threaded View</div>
 <pre class="terminal">
-<span class="index index_date">12:01</span><span class="index"> </span><span class="index index_flags">   </span><span class="index"> </span><span class="index index_author">Anne     </span><span class="index">  </span><span class="index index_subject">cover letter for thread 1</span>
-<span class="index index_date">12:02</span><span class="index"> </span><span class="index index_flags">   </span><span class="index"> </span><span class="index index_author">Anne     </span><span class="index">  </span><span class="index tree">├─&gt;</span><span class="index index_subject">part 1 of thread 1</span>
-<span class="index index_date">12:03</span><span class="index"> </span><span class="index index_flags">   </span><span class="index"> </span><span class="index index_author">Anne     </span><span class="index">  </span><span class="index tree">├─&gt;</span><span class="index index_subject">part 2 of thread 1</span>
-<span class="index index_date">12:07</span><span class="index"> </span><span class="index index_flags">   </span><span class="index"> </span><span class="index index_author">Diane    </span><span class="index">  </span><span class="index tree">│ └─&gt;</span><span class="index index_subject">re: part 2 of thread 1</span>
-<span class="index index_date">12:04</span><span class="index"> </span><span class="index index_flags">   </span><span class="index"> </span><span class="index index_author">Anne     </span><span class="index">  </span><span class="index tree">└─&gt;</span><span class="index index_subject">part 3 of thread 1</span>
-<span class="index index_date">12:05</span><span class="index"> </span><span class="index index_flags">   </span><span class="index"> </span><span class="index index_author">Barbara  </span><span class="index">  </span><span class="index index_subject">thread 2</span>
-<span class="index index_date">12:08</span><span class="index"> </span><span class="index index_flags">   </span><span class="index"> </span><span class="index index_author">Erica    </span><span class="index">  </span><span class="index tree">└─&gt;</span><span class="index index_subject">re: thread 2</span>
-<span class="index index_date">12:06</span><span class="index"> </span><span class="index index_flags">   </span><span class="index"> </span><span class="index index_author">Claire   </span><span class="index">  </span><span class="index index_subject">thread 3</span>
-<span class="status">-- ~/mail/inbox [Msgs:8]   (threads/date/date)                                              (100%)  </span>
-<span>                                                                                                    </span>
+<span class="index index_date">12:06</span><span class="index">  </span><span class="index index_author">Claire   </span><span class="index">  </span><span class="index index_subject">thread 3</span><span class="index">                                                                          </span>
+<span class="index index_date">12:08</span><span class="index">  </span><span class="index index_author">Erica    </span><span class="index">  </span><span class="index tree">┌─&gt;</span><span class="index">                                                                               </span>
+<span class="index index_date">12:05</span><span class="index">  </span><span class="index index_author">Barbara  </span><span class="index">  </span><span class="index index_subject">thread 2</span><span class="index">                                                                          </span>
+<span class="index index_date">12:04</span><span class="index">  </span><span class="index index_author">Anne     </span><span class="index">  </span><span class="index tree">┌─&gt;</span><span class="index index_subject">part 3 of thread 1</span><span class="index">                                                             </span>
+<span class="index index_date">12:07</span><span class="index">  </span><span class="index index_author">Diane    </span><span class="index">  </span><span class="index tree">│ ┌─&gt;</span><span class="index">                                                                             </span>
+<span class="index index_date">12:03</span><span class="index">  </span><span class="index index_author">Anne     </span><span class="index">  </span><span class="index tree">├─&gt;</span><span class="index index_subject">part 2 of thread 1</span><span class="index">                                                             </span>
+<span class="index index_date">12:02</span><span class="index">  </span><span class="index index_author">Anne     </span><span class="index">  </span><span class="index tree">├─&gt;</span><span class="index index_subject">part 1 of thread 1</span><span class="index">                                                             </span>
+<span class="index index_date">12:01</span><span class="index">  </span><span class="index index_author">Anne     </span><span class="index">  </span><span class="index index_subject">cover letter for thread 1</span><span class="index">                                                         </span>
 </pre>
 </div>
 
 ```neomuttrc
 # Legacy configuration: display threads upside-down
-#set sort=reverse-threads sort_aux=date
+# set sort=reverse-threads sort_aux=date
 # Modern configuration for the same
 # Latest root message sorts first
 set use_threads=reverse sort=date sort_aux=date
 ```
 
+---
+
+**Recently Active First**
+
 <div class="term-window">
-<div class="term-title">Reverse threaded view: use_threads=reverse sort=date sort_aux=date</div>
+<div class="term-title">Recently Active First</div>
 <pre class="terminal">
-<span class="index index_date">12:06</span><span class="index"> </span><span class="index index_flags">   </span><span class="index"> </span><span class="index index_author">Claire   </span><span class="index">  </span><span class="index index_subject">thread 3</span>
-<span class="index index_date">12:08</span><span class="index"> </span><span class="index index_flags">   </span><span class="index"> </span><span class="index index_author">Erica    </span><span class="index">  </span><span class="index tree">┌─&gt;</span><span class="index index_subject">re: thread 2</span>
-<span class="index index_date">12:05</span><span class="index"> </span><span class="index index_flags">   </span><span class="index"> </span><span class="index index_author">Barbara  </span><span class="index">  </span><span class="index index_subject">thread 2</span>
-<span class="index index_date">12:04</span><span class="index"> </span><span class="index index_flags">   </span><span class="index"> </span><span class="index index_author">Anne     </span><span class="index">  </span><span class="index tree">┌─&gt;</span><span class="index index_subject">part 3 of thread 1</span>
-<span class="index index_date">12:07</span><span class="index"> </span><span class="index index_flags">   </span><span class="index"> </span><span class="index index_author">Diane    </span><span class="index">  </span><span class="index tree">│ ┌─&gt;</span><span class="index index_subject">re: part 2 of thread 1</span>
-<span class="index index_date">12:03</span><span class="index"> </span><span class="index index_flags">   </span><span class="index"> </span><span class="index index_author">Anne     </span><span class="index">  </span><span class="index tree">├─&gt;</span><span class="index index_subject">part 2 of thread 1</span>
-<span class="index index_date">12:02</span><span class="index"> </span><span class="index index_flags">   </span><span class="index"> </span><span class="index index_author">Anne     </span><span class="index">  </span><span class="index tree">├─&gt;</span><span class="index index_subject">part 1 of thread 1</span>
-<span class="index index_date">12:01</span><span class="index"> </span><span class="index index_flags">   </span><span class="index"> </span><span class="index index_author">Anne     </span><span class="index">  </span><span class="index index_subject">cover letter for thread 1</span>
-<span class="status">-- ~/mail/inbox [Msgs:8]   (reverse/date/date)                                              (100%)  </span>
-<span>                                                                                                    </span>
+<span class="index index_date">12:05</span><span class="index">  </span><span class="index index_author">Barbara  </span><span class="index">  </span><span class="index index_subject">thread 2</span><span class="index">                                                                          </span>
+<span class="index index_date">12:08</span><span class="index">  </span><span class="index index_author">Erica    </span><span class="index">  </span><span class="index tree">└─&gt;</span><span class="index">                                                                               </span>
+<span class="index index_date">12:01</span><span class="index">  </span><span class="index index_author">Anne     </span><span class="index">  </span><span class="index index_subject">cover letter for thread 1</span><span class="index">                                                         </span>
+<span class="index index_date">12:03</span><span class="index">  </span><span class="index index_author">Anne     </span><span class="index">  </span><span class="index tree">├─&gt;</span><span class="index index_subject">part 2 of thread 1</span><span class="index">                                                             </span>
+<span class="index index_date">12:07</span><span class="index">  </span><span class="index index_author">Diane    </span><span class="index">  </span><span class="index tree">│ └─&gt;</span><span class="index">                                                                             </span>
+<span class="index index_date">12:04</span><span class="index">  </span><span class="index index_author">Anne     </span><span class="index">  </span><span class="index tree">├─&gt;</span><span class="index index_subject">part 3 of thread 1</span><span class="index">                                                             </span>
+<span class="index index_date">12:02</span><span class="index">  </span><span class="index index_author">Anne     </span><span class="index">  </span><span class="index tree">└─&gt;</span><span class="index index_subject">part 1 of thread 1</span><span class="index">                                                             </span>
+<span class="index index_date">12:06</span><span class="index">  </span><span class="index index_author">Claire   </span><span class="index">  </span><span class="index index_subject">thread 3</span><span class="index">                                                                          </span>
 </pre>
 </div>
 
 ```neomuttrc
 # Legacy configuration: recently active thread/subthread first
-#set sort=threads sort_aux=reverse-last-date
+# set sort=threads sort_aux=reverse-last-date
 # Modern configuration for the same
 # Note that subthreads are also rearranged
 set use_threads=threads sort=reverse-last-date sort_aux=reverse-last-date
 ```
 
+---
+
+**Recently Active Last**
+
 <div class="term-window">
-<div class="term-title">Recently active first: use_threads=threads sort=reverse-last-date sort_aux=reverse-last-date</div>
+<div class="term-title">Recently Active Last</div>
 <pre class="terminal">
-<span class="index index_date">12:05</span><span class="index"> </span><span class="index index_flags">   </span><span class="index"> </span><span class="index index_author">Barbara  </span><span class="index">  </span><span class="index index_subject">thread 2</span>
-<span class="index index_date">12:08</span><span class="index"> </span><span class="index index_flags">   </span><span class="index"> </span><span class="index index_author">Erica    </span><span class="index">  </span><span class="index tree">└─&gt;</span><span class="index index_subject">re: thread 2</span>
-<span class="index index_date">12:01</span><span class="index"> </span><span class="index index_flags">   </span><span class="index"> </span><span class="index index_author">Anne     </span><span class="index">  </span><span class="index index_subject">cover letter for thread 1</span>
-<span class="index index_date">12:03</span><span class="index"> </span><span class="index index_flags">   </span><span class="index"> </span><span class="index index_author">Anne     </span><span class="index">  </span><span class="index tree">├─&gt;</span><span class="index index_subject">part 2 of thread 1</span>
-<span class="index index_date">12:07</span><span class="index"> </span><span class="index index_flags">   </span><span class="index"> </span><span class="index index_author">Diane    </span><span class="index">  </span><span class="index tree">│ └─&gt;</span><span class="index index_subject">re: part 2 of thread 1</span>
-<span class="index index_date">12:04</span><span class="index"> </span><span class="index index_flags">   </span><span class="index"> </span><span class="index index_author">Anne     </span><span class="index">  </span><span class="index tree">├─&gt;</span><span class="index index_subject">part 3 of thread 1</span>
-<span class="index index_date">12:02</span><span class="index"> </span><span class="index index_flags">   </span><span class="index"> </span><span class="index index_author">Anne     </span><span class="index">  </span><span class="index tree">└─&gt;</span><span class="index index_subject">part 1 of thread 1</span>
-<span class="index index_date">12:06</span><span class="index"> </span><span class="index index_flags">   </span><span class="index"> </span><span class="index index_author">Claire   </span><span class="index">  </span><span class="index index_subject">thread 3</span>
-<span class="status">-- ~/mail/inbox [Msgs:8]   (threads/reverse-last-date/reverse-last-date)                    (100%)  </span>
-<span>                                                                                                    </span>
+<span class="index index_date">12:06</span><span class="index">  </span><span class="index index_author">Claire   </span><span class="index">  </span><span class="index index_subject">thread 3</span><span class="index">                                                                          </span>
+<span class="index index_date">12:01</span><span class="index">  </span><span class="index index_author">Anne     </span><span class="index">  </span><span class="index index_subject">cover letter for thread 1</span><span class="index">                                                         </span>
+<span class="index index_date">12:02</span><span class="index">  </span><span class="index index_author">Anne     </span><span class="index">  </span><span class="index tree">├─&gt;</span><span class="index index_subject">part 1 of thread 1</span><span class="index">                                                             </span>
+<span class="index index_date">12:03</span><span class="index">  </span><span class="index index_author">Anne     </span><span class="index">  </span><span class="index tree">├─&gt;</span><span class="index index_subject">part 2 of thread 1</span><span class="index">                                                             </span>
+<span class="index index_date">12:07</span><span class="index">  </span><span class="index index_author">Diane    </span><span class="index">  </span><span class="index tree">│ └─&gt;</span><span class="index">                                                                             </span>
+<span class="index index_date">12:04</span><span class="index">  </span><span class="index index_author">Anne     </span><span class="index">  </span><span class="index tree">└─&gt;</span><span class="index index_subject">part 3 of thread 1</span><span class="index">                                                             </span>
+<span class="index index_date">12:05</span><span class="index">  </span><span class="index index_author">Barbara  </span><span class="index">  </span><span class="index index_subject">thread 2</span><span class="index">                                                                          </span>
+<span class="index index_date">12:08</span><span class="index">  </span><span class="index index_author">Erica    </span><span class="index">  </span><span class="index tree">└─&gt;</span><span class="index">                                                                               </span>
 </pre>
 </div>
 
@@ -181,22 +205,6 @@ set use_threads=threads sort=reverse-last-date sort_aux=reverse-last-date
 # (not possible with legacy configuration)
 set use_threads=threads sort=last-date sort_aux=date
 ```
-
-<div class="term-window">
-<div class="term-title">Recently active last: use_threads=threads sort=last-date sort_aux=date</div>
-<pre class="terminal">
-<span class="index index_date">12:06</span><span class="index"> </span><span class="index index_flags">   </span><span class="index"> </span><span class="index index_author">Claire   </span><span class="index">  </span><span class="index index_subject">thread 3</span>
-<span class="index index_date">12:01</span><span class="index"> </span><span class="index index_flags">   </span><span class="index"> </span><span class="index index_author">Anne     </span><span class="index">  </span><span class="index index_subject">cover letter for thread 1</span>
-<span class="index index_date">12:02</span><span class="index"> </span><span class="index index_flags">   </span><span class="index"> </span><span class="index index_author">Anne     </span><span class="index">  </span><span class="index tree">├─&gt;</span><span class="index index_subject">part 1 of thread 1</span>
-<span class="index index_date">12:03</span><span class="index"> </span><span class="index index_flags">   </span><span class="index"> </span><span class="index index_author">Anne     </span><span class="index">  </span><span class="index tree">├─&gt;</span><span class="index index_subject">part 2 of thread 1</span>
-<span class="index index_date">12:07</span><span class="index"> </span><span class="index index_flags">   </span><span class="index"> </span><span class="index index_author">Diane    </span><span class="index">  </span><span class="index tree">│ └─&gt;</span><span class="index index_subject">re: part 2 of thread 1</span>
-<span class="index index_date">12:04</span><span class="index"> </span><span class="index index_flags">   </span><span class="index"> </span><span class="index index_author">Anne     </span><span class="index">  </span><span class="index tree">└─&gt;</span><span class="index index_subject">part 3 of thread 1</span>
-<span class="index index_date">12:05</span><span class="index"> </span><span class="index index_flags">   </span><span class="index"> </span><span class="index index_author">Barbara  </span><span class="index">  </span><span class="index index_subject">thread 2</span>
-<span class="index index_date">12:08</span><span class="index"> </span><span class="index index_flags">   </span><span class="index"> </span><span class="index index_author">Erica    </span><span class="index">  </span><span class="index tree">└─&gt;</span><span class="index index_subject">re: thread 2</span>
-<span class="status">-- ~/mail/inbox [Msgs:8]   (threads/last-date/date)                                         (100%)  </span>
-<span>                                                                                                    </span>
-</pre>
-</div>
 
 ### Known Bugs
 
