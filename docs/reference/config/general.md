@@ -323,8 +323,8 @@ Composing: [$attribution_intro](attribution-intro), [$forward_attribution_intro]
     set debug_file = "~/.neomuttdebug"
     ```
 
-Debug logging is controlled by the variables `[$debug_file](debug-file)` and `[$debug_level](debug-level)`.
-`[$debug_file](debug-file)` specifies the root of the filename.
+Debug logging is controlled by the variables [`$debug_file`](debug-file) and [`$debug_level`](debug-level).
+[`$debug_file`](debug-file) specifies the root of the filename.
 NeoMutt will add "0" to the end.
 Each time NeoMutt is run with logging enabled, the log files are rotated.
 A maximum of five log files are kept, numbered 0 (most recent) to 4 (oldest).
@@ -334,7 +334,7 @@ This option can be enabled on the command line,
 neomutt -l mylog
 ```
 
-See also: `[$debug_level](debug-level)`
+See also: [`$debug_level`](debug-level)
 
 --------------------------------------------------------------------------------
 
@@ -347,7 +347,7 @@ See also: `[$debug_level](debug-level)`
     set debug_level = 0
     ```
 
-Debug logging is controlled by the variables `[$debug_file](debug-file)` and `[$debug_level](debug-level)`.
+Debug logging is controlled by the variables [`$debug_file`](debug-file) and [`$debug_level`](debug-level).
 
 The debug level controls how much information is saved to the log file.
 If you have a problem with NeoMutt, then enabling logging may help find the cause.
@@ -363,7 +363,7 @@ This option can be enabled on the command line,
 neomutt -d 2
 ```
 
-See also: `[$debug_file](debug-file)`
+See also: [`$debug_file`](debug-file)
 
 --------------------------------------------------------------------------------
 
@@ -423,8 +423,8 @@ See: https://github.com/neomutt/neomutt/discussions/4251
 This variable specifies which editor is used by NeoMutt.
 It defaults to the value of the [`$VISUAL`](ref-env), or [`$EDITOR`](ref-env), environment variable, or to the string "vi" if neither of those are set.
 
-The `[$editor](editor)` string may contain a _%s_ escape, which will be replaced by the name of the file to be edited.
-If the _%s_ escape does not appear in `[$editor](editor)`, a space and the name to be edited are appended.
+The [`$editor`](editor) string may contain a _%s_ escape, which will be replaced by the name of the file to be edited.
+If the _%s_ escape does not appear in [`$editor`](editor), a space and the name to be edited are appended.
 
 The resulting string is then executed by running:
 
@@ -432,7 +432,7 @@ The resulting string is then executed by running:
 sh -c 'string'
 ```
 
-where _string_ is the expansion of `[$editor](editor)` described above.
+where _string_ is the expansion of [`$editor`](editor) described above.
 
 --------------------------------------------------------------------------------
 
@@ -1213,8 +1213,8 @@ If both prefixes are in use, "reverse-" must come before "last-".  The "last-" p
 Any ties in the primary sort are broken by [$sort_aux](sort-aux).
 When [$use_threads](use-threads) is "threads" or "reverse", [$sort](sort) controls the sorting between threads, and [$sort_aux](sort-aux) controls the sorting within a thread.
 
-The values of "threads" and "reverse-threads" are legacy options, which cause the value of `[$sort_aux](sort-aux)` to also control sorting between threads, and they may not be used with the "last-" prefix.
-The preferred way to enable a threaded view is via `[$use_threads](use-threads)`.  
+The values of "threads" and "reverse-threads" are legacy options, which cause the value of [`$sort_aux`](sort-aux) to also control sorting between threads, and they may not be used with the "last-" prefix.
+The preferred way to enable a threaded view is via [`$use_threads`](use-threads).  
 This variable can also be set via the [`<sort-mailbox>`](fn-index) and [`<sort-reverse>`](fn-browser) functions.
 
 Note: When [$use_threads](use-threads) is "threads", the last thread sorts to the bottom; when it is "reversed", the last thread sorts to the top.
@@ -1417,8 +1417,8 @@ The style of threading used in the index.
 | `yes`     | Synonym for `threads`                        |
 | `no`      | Synonym for `flat`                           |
 
-If this variable is never set, then `[$sort](sort)` controls whether threading is used, `[$sort_aux](sort-aux)` controls both the sorting of threads and subthreads, and using [`<sort-mailbox>`](fn-index) to select threads affects only `[$sort](sort)`.
-Once this variable is set, attempting to set `[$sort](sort)` to a value using "threads" will warn, the value of `[$sort](sort)` controls the sorting between threads while `[$sort_aux](sort-aux)` controls sorting within a thread, and [`<sort-mailbox>`](fn-index) toggles `[$use_threads](use-threads)`.
+If this variable is never set, then [`$sort`](sort) controls whether threading is used, [`$sort_aux`](sort-aux) controls both the sorting of threads and subthreads, and using [`<sort-mailbox>`](fn-index) to select threads affects only [`$sort`](sort).
+Once this variable is set, attempting to set [`$sort`](sort) to a value using "threads" will warn, the value of [`$sort`](sort) controls the sorting between threads while [`$sort_aux`](sort-aux) controls sorting within a thread, and [`<sort-mailbox>`](fn-index) toggles [`$use_threads`](use-threads).
 
 Example:
 ```neomuttrc
