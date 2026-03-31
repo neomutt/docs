@@ -98,6 +98,16 @@ maxdepth: 1
 address-book
 ```
 
+## Notmuch Virtual Mailboxes
+
+```{toctree}
+---
+maxdepth: 1
+---
+
+notmuch-virtual-mailboxes
+```
+
 ## Workflows
 
 ```{toctree}
