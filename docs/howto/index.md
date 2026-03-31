@@ -40,6 +40,21 @@ skip-quoted
 use-threads
 ```
 
+## Offline Email Pipeline
+
+```{toctree}
+---
+maxdepth: 1
+---
+
+mbsync-filtering
+msmtp-accounts
+periodic-sync
+mailbox-discovery
+urlview
+xdg-layout
+```
+
 ## Mail Protocols & Authentication
 
 ```{toctree}
