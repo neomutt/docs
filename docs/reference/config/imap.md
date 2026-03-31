@@ -205,7 +205,7 @@ This can be toggled in the IMAP browser with the [`<toggle-subscribed>`](fn-brow
 
 Your login name on the IMAP server.
 
-This variable defaults to the value of [$imap_user](imap-user).
+This variable defaults to the value of [`$imap_user`](imap-user).
 
 --------------------------------------------------------------------------------
 

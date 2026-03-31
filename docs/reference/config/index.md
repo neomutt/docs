@@ -17,7 +17,7 @@ keywords: neomutt, index, index_format, status_format, flag_chars, crypt_chars, 
     ```
 
 When this variable is _set_, NeoMutt will beep whenever it prints a message notifying you of new mail.
-This is independent of the setting of the [$beep](beep) variable.
+This is independent of the setting of the [`$beep`](beep) variable.
 
 --------------------------------------------------------------------------------
 
@@ -139,7 +139,7 @@ This slightly odd interface is necessitated by NeoMutt's handling of string vari
 This variable allows you to customize the message index display to your personal taste.
 
 "Format strings" are similar to the strings used in the C function `printf(3)` to format output (see the man page for more details).
-For an explanation of the %<...> construct, see the [$status_format](status-format) description.
+For an explanation of the %<...> construct, see the [`$status_format`](status-format) description.
 The following sequences are defined in NeoMutt:
 
 | Short     | Long Name                | Description                                                                                                                    |
@@ -151,10 +151,10 @@ The following sequences are defined in NeoMutt:
 | `%C`      | `%{number}`              | Current message number                                                                                                         |
 | `%c`      | `%{body-characters}`     | Number of characters (bytes) in the body of the message (see **Size Format**)                                                  |
 | `%cr`     | `%{size}`                | Number of characters (bytes) in the raw message, including the header (see **Size Format**)                                    |
-| `%D`      | `%{date-format-local}`   | Date and time of message using [$date_format](date-format) and local timezone.                                                |
-|           |                          | It is recommended to use `%[fmt]` instead, where `fmt` is the value of [$date_format](date-format).                           |
-| `%d`      | `%{date-format}`         | Date and time of message using [$date_format](date-format) and sender's timezone.                                             |
-|           |                          | It is recommended to use `%{fmt}` instead, where `fmt` is the value of [$date_format](date-format).                           |
+| `%D`      | `%{date-format-local}`   | Date and time of message using [`$date_format`](date-format) and local timezone.                                                |
+|           |                          | It is recommended to use `%[fmt]` instead, where `fmt` is the value of [`$date_format`](date-format).                           |
+| `%d`      | `%{date-format}`         | Date and time of message using [`$date_format`](date-format) and sender's timezone.                                             |
+|           |                          | It is recommended to use `%{fmt}` instead, where `fmt` is the value of [`$date_format`](date-format).                           |
 | `%E`      | `%{thread-count}`        | Number of messages in current thread                                                                                           |
 | `%e`      | `%{thread-number}`       | Current message number in thread                                                                                               |
 | `%F`      | `%{sender}`              | Author name, or recipient name if the message is from you                                                                      |
@@ -182,7 +182,7 @@ The following sequences are defined in NeoMutt:
 | `%r`      | `%{to-all}`              | Comma separated list of `To:` recipients                                                                                       |
 | `%S`      | `%{flag-chars}`          | Single character status of the message (`N`/`O`/`D`/`d`/`!`/`r`/`*`)                                                           |
 | `%s`      | `%{subject}`             | Subject of the message                                                                                                         |
-| `%T`      | `%{to-chars}`            | Appropriate character from the [$to_chars](to-chars) string                                                                   |
+| `%T`      | `%{to-chars}`            | Appropriate character from the [`$to_chars`](to-chars) string                                                                   |
 | `%t`      | `%{to}`                  | `%{To:}` field (recipients)                                                                                                    |
 | `%u`      | `%{username}`            | User (login) name of the author                                                                                                |
 | `%v`      | `%{first-name}`          | First name of the author, or the recipient if the message is from you                                                          |
@@ -198,7 +198,7 @@ The following sequences are defined in NeoMutt:
 |           |                          | The first character is new/read/replied flags (`n`/`o`/`r`/`O`/`N`).                                                           |
 |           |                          | The second is deleted or encryption flags (`D`/`d`/`S`/`P`/`s`/`K`).                                                           |
 |           |                          | The third is either tagged/flagged (`*`/`!`), or one of the characters.                                                        |
-|           |                          | Listed in [$to_chars](to-chars).                                                                                              |
+|           |                          | Listed in [`$to_chars`](to-chars).                                                                                              |
 | `%zc`     | `%{crypto-flags}`        | Message crypto flags                                                                                                           |
 | `%zs`     | `%{status-flags}`        | Message status flags                                                                                                           |
 | `%zt`     | `%{message-flags}`       | Message tag flags                                                                                                              |
@@ -254,7 +254,7 @@ A new macro automatically generated with _<mark-message>a_ will be composed from
     ```
 
 If _set_, NeoMutt will call this command after a new message is received.
-See the [$status_format](status-format) documentation for the values that can be formatted into this command.
+See the [`$status_format`](status-format) documentation for the values that can be formatted into this command.
 
 --------------------------------------------------------------------------------
 
@@ -297,7 +297,7 @@ If _set_, all folders are opened in read-only mode.
     set status_chars = "-*%A"
     ```
 
-Controls the characters used by the "%r" indicator in [$status_format](status-format).
+Controls the characters used by the "%r" indicator in [`$status_format`](status-format).
 
 | Character | Default | Description                                                                                                       |
 |-----------|---------|-------------------------------------------------------------------------------------------------------------------|
@@ -337,7 +337,7 @@ Controls the characters used by the "%r" indicator in [$status_format](status-fo
     ```
 
 Controls the format of the status line displayed in the "index" menu.
-This string is similar to [$index_format](index-format), but has its own set of `printf(3)`-like sequences:
+This string is similar to [`$index_format`](index-format), but has its own set of `printf(3)`-like sequences:
 
 | Short  | Long Name             | Description                                                                                            |
 |--------|-----------------------|--------------------------------------------------------------------------------------------------------|
@@ -368,7 +368,7 @@ This string is similar to [$index_format](index-format), but has its own set of 
 | `%>X`  | `%{padding-hard:X}`   | Right justify the rest of the string and pad with character `X`                                        |
 | `%\|X` | `%{padding-eol:X}`    | Pad to the end of the line with character `X`                                                          |
 
-For an explanation of "soft-fill", see the [$index_format](index-format) documentation.
+For an explanation of "soft-fill", see the [`$index_format`](index-format) documentation.
 
 Some of the above sequences can be used to optionally print a string if their value is nonzero.
 For example, you may only want to see the number of flagged messages if such messages exist, since zero is not particularly meaningful.
@@ -389,7 +389,7 @@ You can also switch between two strings using the following construct:
 
 If the value of _sequence_char_ is non-zero, _if_string_ will be expanded, otherwise _else_string_ will be expanded.
 
-As another example, here is how to show either [$sort](sort) and [$sort_aux](sort-aux) or [$use_threads](use-threads) and [$sort](sort), based on whether threads are enabled with [$use_threads](use-threads):
+As another example, here is how to show either [`$sort`](sort) and [`$sort_aux`](sort-aux) or [`$use_threads`](use-threads) and [`$sort`](sort), based on whether threads are enabled with [`$use_threads`](use-threads):
 
 `%<T?%s/%S&%T/%s>`
 
@@ -451,8 +451,8 @@ Most terminal emulators emulate the status line in the window title.
     set ts_icon_format = "M%<{new-count}?AIL&ail>"
     ```
 
-Controls the format of the icon title, as long as "[$ts_enabled](ts-enabled)" is set.
-This string is identical in formatting to the one used by "[$status_format](status-format)".
+Controls the format of the icon title, as long as "[`$ts_enabled`](ts-enabled)" is set.
+This string is identical in formatting to the one used by "[`$status_format`](status-format)".
 
 --------------------------------------------------------------------------------
 
@@ -470,8 +470,8 @@ This string is identical in formatting to the one used by "[$status_format](stat
     set ts_status_format = "NeoMutt with %<m?%{message-count} messages&no messages>%<n? [%{new-count} NEW]>"
     ```
 
-Controls the format of the terminal status line (or window title), provided that "[$ts_enabled](ts-enabled)" has been set.
-This string is identical in formatting to the one used by "[$status_format](status-format)".
+Controls the format of the terminal status line (or window title), provided that "[`$ts_enabled`](ts-enabled)" has been set.
+This string is identical in formatting to the one used by "[`$status_format`](status-format)".
 
 --------------------------------------------------------------------------------
 

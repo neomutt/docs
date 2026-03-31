@@ -18,7 +18,7 @@ keywords: neomutt, browser, file browser, folder_format, browser_sort, browser_s
 
 When this variable is _set_, NeoMutt will abbreviate mailbox names in the browser mailbox list, using '~' and '=' shortcuts.
 
-The default `alpha` setting of [$browser_sort](browser-sort) uses locale-based sorting (using `strcoll(3)`), which ignores some punctuation.
+The default `alpha` setting of [`$browser_sort`](browser-sort) uses locale-based sorting (using `strcoll(3)`), which ignores some punctuation.
 This can lead to some situations where the order doesn't make intuitive sense.
 In those cases, it may be desirable to _unset_ this variable.
 
@@ -81,14 +81,14 @@ If this variable is _set_, the browser will group directories before files.
     ```
 
 This variable allows you to customize the file browser display to your personal taste.
-This string is similar to [$index_format](index-format), but has its own set of `printf(3)`-like sequences:
+This string is similar to [`$index_format`](index-format), but has its own set of `printf(3)`-like sequences:
 
 | Short    | Long Name           | Description                                                                                          |
 |----------|---------------------|------------------------------------------------------------------------------------------------------|
 | `%a`     | `%{notify}`         | Alert: 1 if user is notified of new mail                                                             |
 | `%C`     | `%{number}`         | Current file number                                                                                  |
-| `%D`     | `%{date}`           | Date/time folder was last modified using [$date_format](date-format).                               |
-|          |                     | It is recommended to use `%[fmt]` instead, where `fmt` is the value of [$date_format](date-format). |
+| `%D`     | `%{date}`           | Date/time folder was last modified using [`$date_format`](date-format).                               |
+|          |                     | It is recommended to use `%[fmt]` instead, where `fmt` is the value of [`$date_format`](date-format). |
 | `%d`     | `%{date-format}`    | Date/time folder was last modified                                                                   |
 | `%F`     | `%{file-mode}`      | File permissions                                                                                     |
 | `%f`     | `%{filename}`       | Filename (`/` is appended to directory names,                                                        |
@@ -108,11 +108,11 @@ This string is similar to [$index_format](index-format), but has its own set of 
 | `%>X`    | `%{padding-hard:X}` | Right justify the rest of the string and pad with character `X`                                      |
 | `%\|X`   | `%{padding-eol:X}`  | Pad to the end of the line with character `X`                                                        |
 
-For an explanation of "soft-fill", see the [$index_format](index-format) documentation.
+For an explanation of "soft-fill", see the [`$index_format`](index-format) documentation.
 
 %m, %n, and %N only work for monitored mailboxes.
-%m requires [$mail_check_stats](mail-check-stats) to be set.
-%n requires [$mail_check_stats](mail-check-stats) to be set (except for IMAP mailboxes).
+%m requires [`$mail_check_stats`](mail-check-stats) to be set.
+%n requires [`$mail_check_stats`](mail-check-stats) to be set (except for IMAP mailboxes).
 
 --------------------------------------------------------------------------------
 
@@ -131,7 +131,7 @@ For an explanation of "soft-fill", see the [$index_format](index-format) documen
     ```
 
 This variable allows you to customize the newsgroup browser display to your personal taste.
-This string is similar to [$index_format](index-format), but has its own set of printf()-like sequences:
+This string is similar to [`$index_format`](index-format), but has its own set of printf()-like sequences:
 
 | Short  | Long Name           | Description                                                          |
 |--------|---------------------|----------------------------------------------------------------------|
@@ -166,7 +166,7 @@ This string is similar to [$index_format](index-format), but has its own set of 
 
 This variable allows you to customize the file browser display to your personal taste.
 It's only used to customize network mailboxes (e.g. imap).
-This string is identical in formatting to the one used by "[$folder_format](folder-format)".
+This string is identical in formatting to the one used by "[`$folder_format`](folder-format)".
 
 --------------------------------------------------------------------------------
 

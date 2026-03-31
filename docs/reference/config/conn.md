@@ -161,7 +161,7 @@ The file containing a client certificate and its associated private key.
 
 If this variable is _set_, NeoMutt will require that all connections to remote servers be encrypted.
 Furthermore it will attempt to negotiate TLS even if the server does not advertise the capability, since it would otherwise have to abort the connection anyway.
-This option supersedes [$ssl_starttls](ssl-starttls).
+This option supersedes [`$ssl_starttls`](ssl-starttls).
 
 --------------------------------------------------------------------------------
 
@@ -196,7 +196,7 @@ When _unset_, NeoMutt will not attempt to use `STARTTLS` regardless of the serve
 
 :::{note}
 `STARTTLS` is subject to many kinds of attacks, including the ability of a machine-in-the-middle to suppress the advertising of support.
-Setting [$ssl_force_tls](ssl-force-tls) is recommended if you rely on `STARTTLS`.
+Setting [`$ssl_force_tls`](ssl-force-tls) is recommended if you rely on `STARTTLS`.
 :::
 
 --------------------------------------------------------------------------------
@@ -281,7 +281,7 @@ You should only unset this for particular known hosts, using the [`account-hook`
 
 This option should not be changed from the default unless you understand what you are doing.
 
-Setting this variable to _yes_ will permit verifying partial certification chains, i.e. a certificate chain where not the root, but an intermediate certificate CA, or the host certificate, are marked trusted (in [$certificate_file](certificate-file)), without marking the root signing CA as trusted.
+Setting this variable to _yes_ will permit verifying partial certification chains, i.e. a certificate chain where not the root, but an intermediate certificate CA, or the host certificate, are marked trusted (in [`$certificate_file`](certificate-file)), without marking the root signing CA as trusted.
 
 --------------------------------------------------------------------------------
 
@@ -318,13 +318,13 @@ Please see [`account-hook`](cmd-account-hook) in the manual for how to use diffe
     set tunnel_is_secure = yes
     ```
 
-When _set_, NeoMutt will assume the [$tunnel](tunnel) connection does not need STARTTLS to be enabled.
-It will also allow IMAP PREAUTH server responses inside a [$tunnel](tunnel) to proceed.
-This is appropriate if [$tunnel](tunnel) uses ssh or directly invokes the server locally.
+When _set_, NeoMutt will assume the [`$tunnel`](tunnel) connection does not need STARTTLS to be enabled.
+It will also allow IMAP PREAUTH server responses inside a [`$tunnel`](tunnel) to proceed.
+This is appropriate if [`$tunnel`](tunnel) uses ssh or directly invokes the server locally.
 
-When _unset_, NeoMutt will negotiate STARTTLS according to the [$ssl_starttls](ssl-starttls) and [$ssl_force_tls](ssl-force-tls) variables.
-If [$ssl_force_tls](ssl-force-tls) is set, NeoMutt will abort connecting if an IMAP server responds with PREAUTH.
-This setting is appropriate if [$tunnel](tunnel) does not provide security and could be tampered with by attackers.
+When _unset_, NeoMutt will negotiate STARTTLS according to the [`$ssl_starttls`](ssl-starttls) and [`$ssl_force_tls`](ssl-force-tls) variables.
+If [`$ssl_force_tls`](ssl-force-tls) is set, NeoMutt will abort connecting if an IMAP server responds with PREAUTH.
+This setting is appropriate if [`$tunnel`](tunnel) does not provide security and could be tampered with by attackers.
 
 --------------------------------------------------------------------------------
 

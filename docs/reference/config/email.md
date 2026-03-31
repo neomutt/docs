@@ -112,7 +112,7 @@ Controls whether or not NeoMutt includes only the first attachment of the messag
 This variable specifies a list of colon-separated files to consult when attempting to display MIME bodies not directly supported by NeoMutt.
 The default value is generated during startup: see the "$mailcap" section of the manual.
 
-[$mailcap_path](mailcap-path) is overridden by the environment variable `$MAILCAPS`.
+[`$mailcap_path`](mailcap-path) is overridden by the environment variable `$MAILCAPS`.
 
 The default search path is from [RFC1524](https://www.rfc-editor.org/rfc/rfc1524.html).
 
@@ -165,14 +165,14 @@ set preferred_languages = "en,fr,de"
     set reflow_space_quotes = yes
     ```
 
-This option controls how quotes from format=flowed messages are displayed in the pager and when replying (with [$text_flowed](text-flowed) _unset_).
+This option controls how quotes from format=flowed messages are displayed in the pager and when replying (with [`$text_flowed`](text-flowed) _unset_).
 When set, this option adds spaces after each level of quote marks, turning ">>>foo" into "> > > foo".
 
 :::{note}
-If [$reflow_text](reflow-text) is _unset_, this option has no effect.
+If [`$reflow_text`](reflow-text) is _unset_, this option has no effect.
 :::
 
-Also, this option does not affect replies when [$text_flowed](text-flowed) is _set_.
+Also, this option does not affect replies when [`$text_flowed`](text-flowed) is _set_.
 
 --------------------------------------------------------------------------------
 
@@ -189,7 +189,7 @@ When _set_, NeoMutt will reformat paragraphs in text/plain parts marked format=f
 If _unset_, NeoMutt will display paragraphs unaltered from how they appear in the message body.
 See [RFC3676](https://www.rfc-editor.org/rfc/rfc3676.html) for details on the _format=flowed_ format.
 
-Also see [$reflow_wrap](reflow-wrap), and [$wrap](wrap).
+Also see [`$reflow_wrap`](reflow-wrap), and [`$wrap`](wrap).
 
 --------------------------------------------------------------------------------
 
@@ -202,15 +202,15 @@ Also see [$reflow_wrap](reflow-wrap), and [$wrap](wrap).
     set reflow_wrap = 78
     ```
 
-This variable controls the maximum paragraph width when reformatting text/plain parts when [$reflow_text](reflow-text) is _set_.
+This variable controls the maximum paragraph width when reformatting text/plain parts when [`$reflow_text`](reflow-text) is _set_.
 When the value is 0, paragraphs will be wrapped at the terminal's right margin.
 A positive value sets the paragraph width relative to the left margin.
 A negative value set the paragraph width relative to the right margin.
 
-Be aware that the reformatted lines of a paragraph are still subject to [$wrap](wrap).
-This means if [$reflow_wrap](reflow-wrap) is 40 and [$wrap](wrap) is 30, then the paragraph gets reformatted to 40 characters a line (due to [$reflow_wrap](reflow-wrap)) and afterwards each 40-character-line is split at 30 characters (due to [$wrap](wrap)), resulting in alternating line lengths of 30 and 10 characters.
+Be aware that the reformatted lines of a paragraph are still subject to [`$wrap`](wrap).
+This means if [`$reflow_wrap`](reflow-wrap) is 40 and [`$wrap`](wrap) is 30, then the paragraph gets reformatted to 40 characters a line (due to [`$reflow_wrap`](reflow-wrap)) and afterwards each 40-character-line is split at 30 characters (due to [`$wrap`](wrap)), resulting in alternating line lengths of 30 and 10 characters.
 
-Also see [$wrap](wrap).
+Also see [`$wrap`](wrap).
 
 --------------------------------------------------------------------------------
 
@@ -242,7 +242,7 @@ Note `"\t"` is converted to a literal tab inside a double quoted string.
 If you use a single quoted string, you would have to type an actual tab character, and would need to convert the double-backslashes to single backslashes.
 
 Note: the result of this regex match against the subject is stored in the header cache.
-Mutt isn't smart enough to invalidate a header cache entry based on changing [$reply_regex](reply-regex), so if you aren't seeing correct values in the index, try temporarily turning off the header cache.
+Mutt isn't smart enough to invalidate a header cache entry based on changing [`$reply_regex`](reply-regex), so if you aren't seeing correct values in the index, try temporarily turning off the header cache.
 If that fixes the problem, then once the variable is set to your liking, remove your stale header cache files and turn the header cache back on.
 
 --------------------------------------------------------------------------------
@@ -309,7 +309,7 @@ Instead, NeoMutt will unconditionally use the encoding specified in [RFC2231](ht
     ```
 
 When this variable is _unset_, scoring is turned off.
-This can be useful to selectively disable scoring for certain folders when the [$score_threshold_delete](score-threshold-delete) variable and related are used.
+This can be useful to selectively disable scoring for certain folders when the [`$score_threshold_delete`](score-threshold-delete) variable and related are used.
 
 --------------------------------------------------------------------------------
 

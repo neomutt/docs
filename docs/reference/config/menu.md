@@ -46,7 +46,7 @@ Specifies the string of arrow_cursor when arrow_cursor enabled.
     ```
 
 This variable controls the number of lines of context that are given when scrolling through menus.
-(Similar to [$pager_context](pager-context).)
+(Similar to [`$pager_context`](pager-context).)
 
 --------------------------------------------------------------------------------
 

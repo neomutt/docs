@@ -17,10 +17,10 @@ keywords: neomutt, progress, net_inc, read_inc, write_inc, time_inc, progress ba
     set net_inc = 10
     ```
 
-Operations that expect to transfer a large amount of data over the network will update their progress every [$net_inc](net-inc) kilobytes.
+Operations that expect to transfer a large amount of data over the network will update their progress every [`$net_inc`](net-inc) kilobytes.
 If set to 0, no progress messages will be displayed.
 
-See also [$read_inc](read-inc), [$write_inc](write-inc) and [$net_inc](net-inc).
+See also [`$read_inc`](read-inc), [`$write_inc`](write-inc) and [`$net_inc`](net-inc).
 
 --------------------------------------------------------------------------------
 
@@ -39,7 +39,7 @@ The message is printed after this many messages have been read or searched (e.g.
 This variable is meant to indicate progress when reading or searching large mailboxes which may take some time.
 When set to 0, only a single message will appear before the reading the mailbox.
 
-Also see the [$write_inc](write-inc), [$net_inc](net-inc) and [$time_inc](time-inc) variables and the "$tuning" section of the manual for performance considerations.
+Also see the [`$write_inc`](write-inc), [`$net_inc`](net-inc) and [`$time_inc`](time-inc) variables and the "$tuning" section of the manual for performance considerations.
 
 --------------------------------------------------------------------------------
 
@@ -53,8 +53,8 @@ Also see the [$write_inc](write-inc), [$net_inc](net-inc) and [$time_inc](time-i
     set time_inc = 0
     ```
 
-Along with [$read_inc](read-inc), [$write_inc](write-inc), and [$net_inc](net-inc), this variable controls the frequency with which progress updates are displayed.
-It suppresses updates less than [$time_inc](time-inc) milliseconds apart.
+Along with [`$read_inc`](read-inc), [`$write_inc`](write-inc), and [`$net_inc`](net-inc), this variable controls the frequency with which progress updates are displayed.
+It suppresses updates less than [`$time_inc`](time-inc) milliseconds apart.
 This can improve throughput on systems with slow terminals, or when running NeoMutt on a remote system.
 
 Also see the "$tuning" section of the manual for performance considerations.
@@ -71,8 +71,8 @@ Also see the "$tuning" section of the manual for performance considerations.
     set write_inc = 10
     ```
 
-When writing a mailbox, a message will be printed every [$write_inc](write-inc) messages to indicate progress.
+When writing a mailbox, a message will be printed every [`$write_inc`](write-inc) messages to indicate progress.
 If set to 0, only a single message will be displayed before writing a mailbox.
 
-Also see the [$read_inc](read-inc), [$net_inc](net-inc) and [$time_inc](time-inc) variables and the "$tuning" section of the manual for performance considerations.
+Also see the [`$read_inc`](read-inc), [`$net_inc`](net-inc) and [`$time_inc`](time-inc) variables and the "$tuning" section of the manual for performance considerations.
 

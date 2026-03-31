@@ -56,7 +56,7 @@ The separator to add between attachments when operating (saving, printing, pipin
     ```
 
 If this variable is _unset_, when operating (saving, printing, piping, etc) on a list of tagged attachments, NeoMutt will concatenate the attachments and will operate on them as a single attachment.
-The [$attach_sep](attach-sep) separator is added after each attachment.
+The [`$attach_sep`](attach-sep) separator is added after each attachment.
 When _set_, NeoMutt will operate on the attachments one by one.
 
 --------------------------------------------------------------------------------
@@ -121,7 +121,7 @@ To see these subparts, press "v" on that menu.
     ```
 
 This is the string displayed in the "attachment" menu for attachments of type `message/rfc822`.  
-For a full listing of defined `printf(3)`-like sequences see the section on [$index_format](index-format).
+For a full listing of defined `printf(3)`-like sequences see the section on [`$index_format`](index-format).
 
 --------------------------------------------------------------------------------
 
@@ -138,7 +138,7 @@ When _set_, the message you are forwarding will be attached as a separate `messa
 This is useful for forwarding MIME messages so the receiver can properly view the message as it was delivered to you.
 If you like to switch between MIME and not MIME from mail to mail, set this variable to "ask-no" or "ask-yes".
 
-Also see [$forward_decode](forward-decode) and [$mime_forward_decode](mime-forward-decode).
+Also see [`$forward_decode`](forward-decode) and [`$mime_forward_decode`](mime-forward-decode).
 
 --------------------------------------------------------------------------------
 

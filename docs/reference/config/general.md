@@ -128,7 +128,7 @@ The following `printf(3)`-style sequences are understood:
 | `%>X`  | `%{padding-hard:X}`   | Right justify the rest of the string and pad with character `X`                                   |
 | `%\|X` | `%{padding-eol:X}`    | Pad to the end of the line with character `X`                                                     |
 
-For an explanation of "soft-fill", see the [$index_format](index-format) documentation.
+For an explanation of "soft-fill", see the [`$index_format`](index-format) documentation.
 
 --------------------------------------------------------------------------------
 
@@ -141,14 +141,14 @@ For an explanation of "soft-fill", see the [$index_format](index-format) documen
     set auto_edit = no
     ```
 
-When _set_ along with [$edit_headers](edit-headers), NeoMutt will skip the initial send-menu (prompting for subject and recipients) and allow you to immediately begin editing the body of your message.
+When _set_ along with [`$edit_headers`](edit-headers), NeoMutt will skip the initial send-menu (prompting for subject and recipients) and allow you to immediately begin editing the body of your message.
 The send-menu may still be accessed once you have finished editing the body of your message.
 
 :::{note}
 When this option is _set_, you can't use send-hooks that depend on the recipients when composing a new (non-reply) message, as the initial list of recipients is empty.
 :::
 
-Also see [$fast_reply](fast-reply).
+Also see [`$fast_reply`](fast-reply).
 
 --------------------------------------------------------------------------------
 
@@ -175,7 +175,7 @@ When unset, you must first use the [`<tag-prefix>`](fn-generic) function (bound 
     set braille_friendly = no
     ```
 
-When this variable is _set_, NeoMutt will place the cursor at the beginning of the current line in menus, even when the [$arrow_cursor](arrow-cursor) variable is _unset_, making it easier for blind persons using Braille displays to follow these menus.
+When this variable is _set_, NeoMutt will place the cursor at the beginning of the current line in menus, even when the [`$arrow_cursor`](arrow-cursor) variable is _unset_, making it easier for blind persons using Braille displays to follow these menus.
 The option is _unset_ by default because many visual terminals don't permit making the cursor invisible.
 
 --------------------------------------------------------------------------------
@@ -191,7 +191,7 @@ The option is _unset_ by default because many visual terminals don't permit maki
     ```
 
 Character set your terminal uses to display and enter textual data.
-It is also the fallback for [$send_charset](send-charset).
+It is also the fallback for [`$send_charset`](send-charset).
 
 Upon startup NeoMutt tries to derive this value from environment variables such as [`$LC_CTYPE`](ref-env) or [`$LANG`](ref-env).
 
@@ -238,9 +238,9 @@ This variable must be set before using any `color` commands.
     set config_charset = ""
     ```
 
-When defined, NeoMutt will recode commands in rc files from this encoding to the current character set as specified by [$charset](charset) and aliases written to [$alias_file](alias-file) from the current character set.
+When defined, NeoMutt will recode commands in rc files from this encoding to the current character set as specified by [`$charset`](charset) and aliases written to [`$alias_file`](alias-file) from the current character set.
 
-Please note that if setting [$charset](charset) it must be done before setting [$config_charset](config-charset).
+Please note that if setting [`$charset`](charset) it must be done before setting [`$config_charset`](config-charset).
 
 Recoding should be avoided as it may render unconvertible characters as question marks which can lead to undesired side effects (for example in regular expressions).
 
@@ -295,10 +295,10 @@ Controls whether NeoMutt will weed headers when invoking the [`<decode-copy>`](f
     set date_format = "!%a, %b %d, %Y at %I:%M:%S%p %Z"
     ```
 
-Instead of using [$date_format](date-format) it is encouraged to use "%[fmt]" directly in the corresponding format strings, where "fmt" is the value of [$date_format](date-format).
+Instead of using [`$date_format`](date-format) it is encouraged to use "%[fmt]" directly in the corresponding format strings, where "fmt" is the value of [`$date_format`](date-format).
 This allows for a more fine grained control of the different menu needs.
 
-This variable controls the format of the date printed by the "%d" sequence in [$index_format](index-format).
+This variable controls the format of the date printed by the "%d" sequence in [`$index_format`](index-format).
 This is passed to the `strftime(3)`
 function to process the date, see the man page for the proper syntax.
 
@@ -307,9 +307,9 @@ If the first character in the string is a bang, the bang is discarded, and the m
 
 Format strings using this variable are:
 
-UI: [$folder_format](folder-format), [$index_format](index-format), [$mailbox_folder_format](mailbox-folder-format), [$message_format](message-format).
+UI: [`$folder_format`](folder-format), [`$index_format`](index-format), [`$mailbox_folder_format`](mailbox-folder-format), [`$message_format`](message-format).
 
-Composing: [$attribution_intro](attribution-intro), [$forward_attribution_intro](forward-attribution-intro), [$forward_attribution_trailer](forward-attribution-trailer), [$forward_format](forward-format), [$indent_string](indent-string).
+Composing: [`$attribution_intro`](attribution-intro), [`$forward_attribution_intro`](forward-attribution-intro), [`$forward_attribution_trailer`](forward-attribution-trailer), [`$forward_format`](forward-format), [`$indent_string`](indent-string).
 
 --------------------------------------------------------------------------------
 
@@ -476,7 +476,7 @@ value you need to make sure that the assignment occurs _before_ you use "+" or "
 
 Controls the decoding of complex MIME messages into `text/plain` when forwarding a message.
 The message header is also [RFC2047](https://www.rfc-editor.org/rfc/rfc2047.html) decoded.
-This variable is only used, if [$mime_forward](mime-forward) is _unset_, otherwise [$mime_forward_decode](mime-forward-decode) is used instead.
+This variable is only used, if [`$mime_forward`](mime-forward) is _unset_, otherwise [`$mime_forward_decode`](mime-forward-decode) is used instead.
 
 --------------------------------------------------------------------------------
 
@@ -489,7 +489,7 @@ This variable is only used, if [$mime_forward](mime-forward) is _unset_, otherwi
     set forward_quote = no
     ```
 
-When _set_, forwarded messages included in the main body of the message (when [$mime_forward](mime-forward) is _unset_) will be quoted using [$indent_string](indent-string).
+When _set_, forwarded messages included in the main body of the message (when [`$mime_forward`](mime-forward) is _unset_) will be quoted using [`$indent_string`](indent-string).
 
 --------------------------------------------------------------------------------
 
@@ -503,8 +503,8 @@ When _set_, forwarded messages included in the main body of the message (when [$
     ```
 
 When _set_, this variable contains a default "from" address.
-It can be overridden using [`my-header`](cmd-my-header) (including from a [`send-hook`](cmd-send-hook)) and [$reverse_name](reverse-name).
-This variable is ignored if [$use_from](use-from) is _unset_.
+It can be overridden using [`my-header`](cmd-my-header) (including from a [`send-hook`](cmd-send-hook)) and [`$reverse_name`](reverse-name).
+This variable is ignored if [`$use_from`](use-from) is _unset_.
 
 If not specified, then it may be read from the environment variable [`$EMAIL`](ref-env).
 
@@ -524,7 +524,7 @@ The default value will return the string up to the first "," encountered.
 If the GECOS field contains a string like "lastname, firstname" then you should set it to "`.*`".
 
 This can be useful if you see the following behavior: you address an e-mail to user ID "stevef" whose full name is "Steve Franklin".
-If NeoMutt expands "stevef" to '"Franklin" stevef@foo.bar' then you should set the [$gecos_mask](gecos-mask) to a regular expression that will match the whole name so NeoMutt will expand "Franklin" to "Franklin, Steve".
+If NeoMutt expands "stevef" to '"Franklin" stevef@foo.bar' then you should set the [`$gecos_mask`](gecos-mask) to a regular expression that will match the whole name so NeoMutt will expand "Franklin" to "Franklin, Steve".
 
 --------------------------------------------------------------------------------
 
@@ -538,7 +538,7 @@ If NeoMutt expands "stevef" to '"Franklin" stevef@foo.bar' then you should set t
     ```
 
 When _set_, this variable causes NeoMutt to include the header of the message you are replying to into the edit buffer.
-The [$weed](weed) setting applies.
+The [`$weed`](weed) setting applies.
 
 --------------------------------------------------------------------------------
 
@@ -577,7 +577,7 @@ If not specified in a config file, then NeoMutt will try to determine the hostna
 
 Optionally, NeoMutt can be compiled with a fixed domain name.
 
-Also see [$use_domain](use-domain) and [$hidden_host](hidden-host).
+Also see [`$use_domain`](use-domain) and [`$hidden_host`](hidden-host).
 
 --------------------------------------------------------------------------------
 
@@ -593,9 +593,9 @@ Also see [$use_domain](use-domain) and [$hidden_host](hidden-host).
 Specifies the string to prepend to each line of text quoted in a message to which you are replying.
 You are strongly encouraged not to change this value, as it tends to agitate the more fanatical netizens.
 
-The value of this option is ignored if [$text_flowed](text-flowed) is set, because the quoting mechanism is strictly defined for format=flowed.
+The value of this option is ignored if [`$text_flowed`](text-flowed) is set, because the quoting mechanism is strictly defined for format=flowed.
 
-This option is a format string, please see the description of [$index_format](index-format) for supported `printf(3)`-style sequences.
+This option is a format string, please see the description of [`$index_format`](index-format) for supported `printf(3)`-style sequences.
 
 --------------------------------------------------------------------------------
 
@@ -610,7 +610,7 @@ This option is a format string, please see the description of [$index_format](in
 
 If _set_, read messages marked as flagged will not be moved from your spool mailbox to your [`$mbox`](mbox) mailbox or to the "mbox" specified by a [`mbox-hook`](cmd-mbox-hook) command.
 
-Note that [$keep_flagged](keep-flagged) only has an effect if [$move](move) is set.
+Note that [`$keep_flagged`](keep-flagged) only has an effect if [`$move`](move) is set.
 
 --------------------------------------------------------------------------------
 
@@ -639,7 +639,7 @@ If unset a UTC date will be used instead to avoid leaking information about your
     ```
 
 This variable configures how often (in seconds) NeoMutt should look for new mail.
-Also see the [$timeout](timeout) variable.
+Also see the [`$timeout`](timeout) variable.
 
 --------------------------------------------------------------------------------
 
@@ -670,7 +670,7 @@ When _set_, NeoMutt will periodically calculate message statistics of a mailbox 
 It will check for unread, flagged, and total message counts.
 (Note: IMAP mailboxes only support unread and total counts).
 
-Because this operation is more performance intensive, it defaults to _unset_, and has a separate option, [$mail_check_stats_interval](mail-check-stats-interval), to control how often to update these counts.
+Because this operation is more performance intensive, it defaults to _unset_, and has a separate option, [`$mail_check_stats_interval`](mail-check-stats-interval), to control how often to update these counts.
 
 Message statistics can also be explicitly calculated by invoking the [`<check-stats>`](fn-generic) function.
 
@@ -686,7 +686,7 @@ Message statistics can also be explicitly calculated by invoking the [`<check-st
     set mail_check_stats_interval = 60
     ```
 
-When [$mail_check_stats](mail-check-stats) is _set_, this variable configures how often (in seconds) NeoMutt will update message counts.
+When [`$mail_check_stats`](mail-check-stats) is _set_, this variable configures how often (in seconds) NeoMutt will update message counts.
 
 --------------------------------------------------------------------------------
 
@@ -713,9 +713,9 @@ With this option _set_, the next time you start NeoMutt, the messages will show 
     set mbox = "~/mbox"
     ```
 
-This specifies the folder into which read mail in your [$spool_file](spool-file) folder will be appended.
+This specifies the folder into which read mail in your [`$spool_file`](spool-file) folder will be appended.
 
-Also see the [$move](move) variable.
+Also see the [`$move`](move) variable.
 
 --------------------------------------------------------------------------------
 
@@ -770,7 +770,7 @@ You are free to remove entries at any time.
 
 When setting this variable to a directory, NeoMutt needs to fetch every remote message only once and can perform regular expression searches as fast as for local folders.
 
-Also see the [$message_cache_clean](message-cache-clean) variable.
+Also see the [`$message_cache_clean`](message-cache-clean) variable.
 
 --------------------------------------------------------------------------------
 
@@ -800,7 +800,7 @@ This is because the result of removing the high bit from `0xf8` is `0x78`, which
 
 If this variable is _set_, then NeoMutt will move read messages from your spool mailbox to your [`$mbox`](mbox) mailbox or to the "mbox" specified by a [`mbox-hook`](cmd-mbox-hook) command.
 
-See also [$keep_flagged](keep-flagged).
+See also [`$keep_flagged`](keep-flagged).
 
 --------------------------------------------------------------------------------
 
@@ -817,7 +817,7 @@ Used in connection with the [`<pipe-message>`](fn-attach) function.
 When _unset_, NeoMutt will pipe the messages without any preprocessing.
 When _set_, NeoMutt will attempt to decode the messages first.
 
-Also see [$pipe_decode_weed](pipe-decode-weed), which controls whether headers will be weeded when this is _set_.
+Also see [`$pipe_decode_weed`](pipe-decode-weed), which controls whether headers will be weeded when this is _set_.
 
 --------------------------------------------------------------------------------
 
@@ -830,7 +830,7 @@ Also see [$pipe_decode_weed](pipe-decode-weed), which controls whether headers w
     set pipe_decode_weed = yes
     ```
 
-For [`<pipe-message>`](fn-attach), when [$pipe_decode](pipe-decode) is set, this further controls whether NeoMutt will weed headers.
+For [`<pipe-message>`](fn-attach), when [`$pipe_decode`](pipe-decode) is set, this further controls whether NeoMutt will weed headers.
 
 --------------------------------------------------------------------------------
 
@@ -860,7 +860,7 @@ Used in connection with the [`<pipe-message>`](fn-attach) function following [`<
 
 If this variable is _unset_, when piping a list of tagged messages NeoMutt will concatenate the messages and will pipe them all concatenated.
 When _set_, NeoMutt will pipe the messages one by one.
-In both cases the messages are piped in the current sorted order, and the [$pipe_sep](pipe-sep) separator is added after each message.
+In both cases the messages are piped in the current sorted order, and the [`$pipe_sep`](pipe-sep) separator is added after each message.
 
 --------------------------------------------------------------------------------
 
@@ -876,7 +876,7 @@ In both cases the messages are piped in the current sorted order, and the [$pipe
 NeoMutt allows you to indefinitely "$postpone sending a message" which you are editing.
 When you choose to postpone a message, NeoMutt saves it in the mailbox specified by this variable.
 
-Also see the [$postpone](postpone) variable.
+Also see the [`$postpone`](postpone) variable.
 
 --------------------------------------------------------------------------------
 
@@ -917,11 +917,11 @@ This specifies the command pipe that should be used to print messages.
     ```
 
 Used in connection with the [`<print-message>`](fn-index) function.
-If this option is _set_, the message is decoded before it is passed to the external command specified by [$print_command](print-command).
+If this option is _set_, the message is decoded before it is passed to the external command specified by [`$print_command`](print-command).
 If this option is _unset_, no processing will be applied to the message when printing it.
 The latter setting may be useful if you are using some advanced printer filter which is able to properly format e-mail messages for printing.
 
-Also see [$print_decode_weed](print-decode-weed), which controls whether headers will be weeded when this is _set_.
+Also see [`$print_decode_weed`](print-decode-weed), which controls whether headers will be weeded when this is _set_.
 
 --------------------------------------------------------------------------------
 
@@ -934,7 +934,7 @@ Also see [$print_decode_weed](print-decode-weed), which controls whether headers
     set print_decode_weed = yes
     ```
 
-For [`<print-message>`](fn-index), when [$print_decode](print-decode) is set, this further controls whether NeoMutt will weed headers.
+For [`<print-message>`](fn-index), when [`$print_decode`](print-decode) is set, this further controls whether NeoMutt will weed headers.
 
 --------------------------------------------------------------------------------
 
@@ -948,8 +948,8 @@ For [`<print-message>`](fn-index), when [$print_decode](print-decode) is set, th
     ```
 
 Used in connection with the [`<print-message>`](fn-index) function.
-If this option is _set_, the command specified by [$print_command](print-command) is executed once for each message which is to be printed.
-If this option is _unset_, the command specified by [$print_command](print-command) is executed only once, and all the messages are concatenated, with a form feed as the message separator.
+If this option is _set_, the command specified by [`$print_command`](print-command) is executed once for each message which is to be printed.
+If this option is _unset_, the command specified by [`$print_command`](print-command) is executed only once, and all the messages are concatenated, with a form feed as the message separator.
 
 Those who use the `enscript(1)` program's mail-printing mode will most likely want to _set_ this option.
 
@@ -970,7 +970,7 @@ Quoted text may be filtered out using the [`<toggle-quoted>`](fn-pager) command,
 Higher levels of quoting may be colored differently ("color quoted1", "color quoted2", etc.).
 The quoting level is determined by removing the last character from the matched text and recursively reapplying the regular expression until it fails to produce a match.
 
-Match detection may be overridden by the [$smileys](smileys) regular expression.
+Match detection may be overridden by the [`$smileys`](smileys) regular expression.
 
 --------------------------------------------------------------------------------
 
@@ -986,7 +986,7 @@ Match detection may be overridden by the [$smileys](smileys) regular expression.
 This variable specifies what "real" or "personal" name should be used when sending messages.
 
 If not specified, then the user's "real name" will be read from `/etc/passwd`.
-This option will not be used, if "[$from](from)" is set.
+This option will not be used, if "[`$from`](from)" is set.
 
 --------------------------------------------------------------------------------
 
@@ -1002,8 +1002,8 @@ This option will not be used, if "[$from](from)" is set.
 This specifies the file into which your outgoing messages should be appended.
 (This is meant as the primary method for saving a copy of your messages, but another way to do this is using the [`my-header`](cmd-my-header) command to create a "Bcc:" field with your email address in it.)
 
-The value of [$record](record) is overridden by the [$force_name](force-name) and [$save_name](save-name) variables, and the [`fcc-hook`](cmd-fcc-hook) command.
-Also see [$copy](copy) and [$write_bcc](write-bcc).
+The value of [`$record`](record) is overridden by the [`$force_name`](force-name) and [`$save_name`](save-name) variables, and the [`fcc-hook`](cmd-fcc-hook) command.
+Also see [`$copy`](copy) and [`$write_bcc`](write-bcc).
 
 --------------------------------------------------------------------------------
 
@@ -1031,10 +1031,10 @@ Examples of such commands are tagging a message, deleting an entry, or saving an
     set resume_edited_draft_files = yes
     ```
 
-If _set_, draft files previously edited (via `-E -H` on the command line) will have [$resume_draft_files](resume-draft-files) automatically set when they are used as a draft file again.
+If _set_, draft files previously edited (via `-E -H` on the command line) will have [`$resume_draft_files`](resume-draft-files) automatically set when they are used as a draft file again.
 
 The first time a draft file is saved, NeoMutt will add a header, X-Mutt-Resume-Draft to the saved file.
-The next time the draft file is read in, if NeoMutt sees the header, it will set [$resume_draft_files](resume-draft-files).
+The next time the draft file is read in, if NeoMutt sees the header, it will set [`$resume_draft_files`](resume-draft-files).
 
 This option is designed to prevent multiple signatures, user-defined headers, and other processing effects from being made multiple times to the draft file.
 
@@ -1050,7 +1050,7 @@ This option is designed to prevent multiple signatures, user-defined headers, an
     ```
 
 If _set_, NeoMutt will take the sender's full address when choosing a default folder for saving a mail.
-If [$save_name](save-name) or [$force_name](force-name) is _set_ too, the selection of the Fcc folder will be changed as well.
+If [`$save_name`](save-name) or [`$force_name`](force-name) is _set_ too, the selection of the Fcc folder will be changed as well.
 
 --------------------------------------------------------------------------------
 
@@ -1064,7 +1064,7 @@ If [$save_name](save-name) or [$force_name](force-name) is _set_ too, the select
     set save_empty = yes
     ```
 
-When _unset_, mailboxes which contain no saved messages will be removed when closed (the exception is [$spool_file](spool-file) which is never removed).
+When _unset_, mailboxes which contain no saved messages will be removed when closed (the exception is [`$spool_file`](spool-file) which is never removed).
 If _set_, mailboxes are never removed.
 
 :::{note}
@@ -1085,9 +1085,9 @@ NeoMutt does not delete MH and Maildir directories.
 
 A colon-delimited list of character sets for outgoing messages.
 NeoMutt will use the first character set into which the text can be converted exactly.
-If your [$charset](charset) is not "iso-8859-1" and recipients may not understand "UTF-8", it is advisable to include in the list an appropriate widely used standard character set (such as "iso-8859-2", "koi8-r" or "iso-2022-jp") either instead of or after "iso-8859-1".
+If your [`$charset`](charset) is not "iso-8859-1" and recipients may not understand "UTF-8", it is advisable to include in the list an appropriate widely used standard character set (such as "iso-8859-2", "koi8-r" or "iso-2022-jp") either instead of or after "iso-8859-1".
 
-In case the text can't be converted into one of these exactly, NeoMutt uses [$charset](charset) as a fallback.
+In case the text can't be converted into one of these exactly, NeoMutt uses [`$charset`](charset) as a fallback.
 
 --------------------------------------------------------------------------------
 
@@ -1210,15 +1210,15 @@ Specifies how to sort messages in the "index" menu.
 You may optionally use the "reverse-" prefix to specify reverse sorting order, or the "last-" prefix to sort threads based on the corresponding attribute of the last descendant rather than the thread root.
 If both prefixes are in use, "reverse-" must come before "last-".  The "last-" prefix has no effect on a flat view.
 
-Any ties in the primary sort are broken by [$sort_aux](sort-aux).
-When [$use_threads](use-threads) is "threads" or "reverse", [$sort](sort) controls the sorting between threads, and [$sort_aux](sort-aux) controls the sorting within a thread.
+Any ties in the primary sort are broken by [`$sort_aux`](sort-aux).
+When [`$use_threads`](use-threads) is "threads" or "reverse", [`$sort`](sort) controls the sorting between threads, and [`$sort_aux`](sort-aux) controls the sorting within a thread.
 
 The values of "threads" and "reverse-threads" are legacy options, which cause the value of [`$sort_aux`](sort-aux) to also control sorting between threads, and they may not be used with the "last-" prefix.
 The preferred way to enable a threaded view is via [`$use_threads`](use-threads).  
 This variable can also be set via the [`<sort-mailbox>`](fn-index) and [`<sort-reverse>`](fn-browser) functions.
 
-Note: When [$use_threads](use-threads) is "threads", the last thread sorts to the bottom; when it is "reversed", the last thread sorts to the top.
-The use of "reverse-" in [$sort](sort) swaps which end the last thread will sort to.
+Note: When [`$use_threads`](use-threads) is "threads", the last thread sorts to the bottom; when it is "reversed", the last thread sorts to the top.
+The use of "reverse-" in [`$sort`](sort) swaps which end the last thread will sort to.
 
 See the "Use Threads Feature" section for further explanation and examples, https://neomutt.org/feature/use-threads
 
@@ -1234,17 +1234,17 @@ See the "Use Threads Feature" section for further explanation and examples, http
     set sort_aux = "date"
     ```
 
-This provides a secondary sort for messages in the "index" menu, used when the [$sort](sort) value is equal for two messages.
+This provides a secondary sort for messages in the "index" menu, used when the [`$sort`](sort) value is equal for two messages.
 
-When sorting by threads, this variable controls how subthreads are sorted within a single thread (for the order between threads, see [$sort](sort)).
-This can be set to any value that [$sort](sort) can, including with the use of "reverse-" and "last-" prefixes, except for variations using "threads" (in that case, NeoMutt will just use "date").
+When sorting by threads, this variable controls how subthreads are sorted within a single thread (for the order between threads, see [`$sort`](sort)).
+This can be set to any value that [`$sort`](sort) can, including with the use of "reverse-" and "last-" prefixes, except for variations using "threads" (in that case, NeoMutt will just use "date").
 
 For instance,
 ```neomuttrc
 set sort_aux = last-date-received
 ```
 
-would mean that if a new message is received in a thread, that subthread becomes the last one displayed (or the first, if you have "`set use_threads = reverse`".)  When using [$use_threads](use-threads), it is more common to use "last-" with [$sort](sort) and not with [$sort_aux](sort-aux).
+would mean that if a new message is received in a thread, that subthread becomes the last one displayed (or the first, if you have "`set use_threads = reverse`".)  When using [`$use_threads`](use-threads), it is more common to use "last-" with [`$sort`](sort) and not with [`$sort_aux`](sort-aux).
 
 See the "Use Threads Feature" section for further explanation and examples, https://neomutt.org/feature/use-threads
 
@@ -1293,7 +1293,7 @@ When _unset_, NeoMutt won't stop when the user presses the terminal's _susp_ key
 This is useful if you run NeoMutt inside an xterm using a command like "`xterm -e neomutt`".
 
 On startup NeoMutt tries to detect if it is the process session leader.
-If so, the default of [$suspend](suspend) is "no" otherwise "yes".  This default covers the above mentioned use case of "`xterm -e neomutt`".
+If so, the default of [`$suspend`](suspend) is "no" otherwise "yes".  This default covers the above mentioned use case of "`xterm -e neomutt`".
 
 --------------------------------------------------------------------------------
 
@@ -1313,7 +1313,7 @@ To actually make use of this format's features, you'll need support in your edit
 The option only controls newly composed messages.
 Postponed messages, resent messages, and draft messages (via -H on the command line) will use the content-type of the source message.
 
-Note that [$indent_string](indent-string) is ignored when this option is _set_.
+Note that [`$indent_string`](indent-string) is ignored when this option is _set_.
 
 --------------------------------------------------------------------------------
 
@@ -1393,7 +1393,7 @@ NOTE: When you delete a message in the trash folder, it is really deleted, so th
     set use_domain = yes
     ```
 
-When _set_, NeoMutt will qualify all local addresses (ones without the "@host" portion) with the value of [$hostname](hostname).
+When _set_, NeoMutt will qualify all local addresses (ones without the "@host" portion) with the value of [`$hostname`](hostname).
 If _unset_, no addresses will be qualified.
 
 --------------------------------------------------------------------------------
@@ -1458,7 +1458,7 @@ When _unset_, NeoMutt will wait for a key only if the external command returned 
 
 When _set_, NeoMutt will weed headers when displaying, forwarding, or replying to messages.
 
-Also see [$copy_decode_weed](copy-decode-weed), [$pipe_decode_weed](pipe-decode-weed), [$print_decode_weed](print-decode-weed).
+Also see [`$copy_decode_weed`](copy-decode-weed), [`$pipe_decode_weed`](pipe-decode-weed), [`$print_decode_weed`](print-decode-weed).
 
 --------------------------------------------------------------------------------
 
@@ -1471,11 +1471,11 @@ Also see [$copy_decode_weed](copy-decode-weed), [$pipe_decode_weed](pipe-decode-
     set wrap = 0
     ```
 
-When set to a positive value, NeoMutt will wrap text at [$wrap](wrap) characters.
-When set to a negative value, NeoMutt will wrap text so that there are [$wrap](wrap) characters of empty space on the right side of the terminal.
+When set to a positive value, NeoMutt will wrap text at [`$wrap`](wrap) characters.
+When set to a negative value, NeoMutt will wrap text so that there are [`$wrap`](wrap) characters of empty space on the right side of the terminal.
 Setting it to zero makes NeoMutt wrap at the terminal width.
 
-Also see [$reflow_wrap](reflow-wrap).
+Also see [`$reflow_wrap`](reflow-wrap).
 
 --------------------------------------------------------------------------------
 

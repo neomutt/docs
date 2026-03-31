@@ -20,7 +20,7 @@ If set, contains the name of the external program used by "~I" patterns.
 This will usually be a wrapper script around mairix, mu, or similar indexers other than notmuch (for which there is optional special support).
 
 Here is an example how it works.
-Let's assume [$external_search_command](external-search-command) is set to "mairix_filter", and mairix_filter is a script which runs the old but well loved mairix indexer with the arguments given to mairix_filter, in the "raw" mode of mairix, producing on the standard output a list of Message-IDs, one per line.
+Let's assume [`$external_search_command`](external-search-command) is set to "mairix_filter", and mairix_filter is a script which runs the old but well loved mairix indexer with the arguments given to mairix_filter, in the "raw" mode of mairix, producing on the standard output a list of Message-IDs, one per line.
 
 If possible, it also filters down the results coming from mairix such that only messages in the current folder remain.
 It can do this because it gets a hidden first argument which is the path to the folder.
