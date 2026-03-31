@@ -47,7 +47,7 @@ If these escape sequences interfere with your filter, they can be removed using 
 
 If they are removed, then PGP and MIME headers will no longer be coloured.
 This can be fixed by adding this to your config:
-`color body magenta default '^\[-- .* --\]$$$'`.
+`color body magenta default '^\[-- .* --\]$'`.
 
 --------------------------------------------------------------------------------
 

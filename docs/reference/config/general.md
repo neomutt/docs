@@ -193,7 +193,7 @@ The option is _unset_ by default because many visual terminals don't permit maki
 Character set your terminal uses to display and enter textual data.
 It is also the fallback for [$send_charset](send-charset).
 
-Upon startup NeoMutt tries to derive this value from environment variables such as `$$$LC_CTYPE` or `$$$LANG`.
+Upon startup NeoMutt tries to derive this value from environment variables such as [`$LC_CTYPE`](ref-env) or [`$LANG`](ref-env).
 
 :::{note}
 It should only be set in case NeoMutt isn't able to determine the character set used correctly.
@@ -421,7 +421,7 @@ See: https://github.com/neomutt/neomutt/discussions/4251
     ```
 
 This variable specifies which editor is used by NeoMutt.
-It defaults to the value of the `$$$VISUAL`, or `$$$EDITOR`, environment variable, or to the string "vi" if neither of those are set.
+It defaults to the value of the [`$VISUAL`](ref-env), or [`$EDITOR`](ref-env), environment variable, or to the string "vi" if neither of those are set.
 
 The `[$editor](editor)` string may contain a _%s_ escape, which will be replaced by the name of the file to be edited.
 If the _%s_ escape does not appear in `[$editor](editor)`, a space and the name to be edited are appended.
@@ -506,7 +506,7 @@ When _set_, this variable contains a default "from" address.
 It can be overridden using [`my-header`](cmd-my-header) (including from a [`send-hook`](cmd-send-hook)) and [$reverse_name](reverse-name).
 This variable is ignored if [$use_from](use-from) is _unset_.
 
-If not specified, then it may be read from the environment variable `$$$EMAIL`.
+If not specified, then it may be read from the environment variable [`$EMAIL`](ref-env).
 
 --------------------------------------------------------------------------------
 
@@ -1261,7 +1261,7 @@ See the "Use Threads Feature" section for further explanation and examples, http
 If your spool mailbox is in a non-default place where NeoMutt can't find it, you can specify its location with this variable.
 The description from "named-mailboxes" may be used for the spool_file.
 
-If not specified, then the environment variables `$$$MAIL` and `$$$MAILDIR` will be checked.
+If not specified, then the environment variables [`$MAIL`](ref-env) and [`$MAILDIR`](ref-env) will be checked.
 
 --------------------------------------------------------------------------------
 
@@ -1344,7 +1344,7 @@ A value of zero disables timeout hooks.
 
 This variable allows you to specify where NeoMutt will place its temporary files needed for displaying messages.
 
-If this variable is not set, the environment variable `$$$TMPDIR` is used.
+If this variable is not set, the environment variable [`$TMPDIR`](ref-env) is used.
 Failing that, then "`/tmp`" is used.
 
 --------------------------------------------------------------------------------
@@ -1361,7 +1361,7 @@ Failing that, then "`/tmp`" is used.
 
 This variable allows you to specify where NeoMutt will place its temporary files when composing messages.
 
-If this variable is not set, the environment variable `$$$TMPDIR` is used.
+If this variable is not set, the environment variable [`$TMPDIR`](ref-env) is used.
 Failing that, then "`/var/tmp`" is used.
 
 It is recommended that this be set to a directory whose contents won't be removed during an unanticipated reboot, so that draft files will survive a crash or other unplanned computer shutdown.
