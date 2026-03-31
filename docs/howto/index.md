@@ -204,6 +204,22 @@ maxdepth: 1
 nntp
 ```
 
+## Address Book
+
+```{toctree}
+---
+maxdepth: 1
+---
+
+address-book
+alias-management
+alias-search
+alias-display
+alias-multiple-files
+alias-keybindings
+alias-troubleshooting
+```
+
 ## Miscellaneous
 
 ```{toctree}
@@ -218,5 +234,4 @@ fmemopen
 mailto-allow
 external-tools
 mutt-migration
-address-book
 ```
