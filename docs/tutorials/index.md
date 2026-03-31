@@ -88,6 +88,16 @@ maxdepth: 1
 html-and-urls
 ```
 
+## Address Book
+
+```{toctree}
+---
+maxdepth: 1
+---
+
+address-book
+```
+
 ## Workflows
 
 ```{toctree}
