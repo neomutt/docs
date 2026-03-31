@@ -22,7 +22,7 @@ It may already be too late before you notice your mistake.
 
 ## Temporary Files
 
-NeoMutt uses many temporary files for viewing messages, verifying digital signatures, etc
+NeoMutt uses many temporary files for viewing messages, verifying digital signatures, etc.
 As long as being used, these files are visible by other users and maybe even readable in case of misconfiguration.
 Also, a different location for these files may be desired which can be changed via the `$tmp_dir` variable.
 

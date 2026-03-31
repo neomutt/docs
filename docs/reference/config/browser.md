@@ -42,8 +42,8 @@ Specifies how to sort entries in the file browser.
 | `count`    | Total message count   |
 | `date`     | Date                  |
 | `desc`     | Description           |
-| `size`     | Count of new messages |
-| `new`      | Size                  |
+| `size`     | Size                  |
+| `new`      | Count of new messages |
 | `unsorted` | Unsorted              |
 
 | Deprecated Value | Use this instead |

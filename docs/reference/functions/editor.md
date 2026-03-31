@@ -30,7 +30,7 @@ It supports cursor movement, word editing, tab-completion, and command history.
 | `<history-up>`      | `<Up>`, `^P`              | Scroll up through the history list                  |
 | `<kill-eol>`        | `^K`                      | Delete chars from cursor to end of line             |
 | `<kill-eow>`        | `Esc d`                   | Delete chars from the cursor to the end of the word |
-| `<kill-line>`       | `^U`                      | Delete chars from cursor to beginning the line      |
+| `<kill-line>`       | `^U`                      | Delete chars from cursor to beginning of the line   |
 | `<kill-whole-line>` |                           | Delete all chars on the line                        |
 | `<kill-word>`       | `^W`                      | Delete the word in front of the cursor              |
 | `<mailbox-cycle>`   | `<Space>`                 | Cycle among incoming mailboxes                      |

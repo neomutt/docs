@@ -462,7 +462,7 @@ set status_format = "%f — %m messages %* (%P)"
 On a wide screen:
 
 ```
-inbox — 42 messages                           (strstr100%)
+inbox — 42 messages                           (100%)
 ```
 
 On a narrow screen (the folder path gets cut):
@@ -523,7 +523,7 @@ set status_format = "-%r-NeoMutt: %D [Msgs:%m%<n? New:%n>%<d? Del:%d>%<t? Tag:%t
 ```
 
 ```
---NeoMutt: inbox [Msgs:42 New:3 Del:1]--------------------(strstr100%)---
+--NeoMutt: inbox [Msgs:42 New:3 Del:1]--------------------(100%)---
 ```
 
 A simpler alternative:

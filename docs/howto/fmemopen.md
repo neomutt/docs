@@ -10,7 +10,7 @@ keywords: fmemopen, open_memstream, glibc, performance, thorough_search, compile
 
 ## Support
 
-**Dependencies:** : `open_memstream()`, `fmemopen()` from glibc
+**Dependencies:** `open_memstream()`, `fmemopen()` from glibc
 
 This feature can be enabled by running `configure` with the option `--fmemopen`
 

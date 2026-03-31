@@ -4,6 +4,6 @@ description: How to contribute code, documentation, translations, and bug report
 keywords: neomutt, contributing, development, pull request, patches, documentation, open source
 ---
 
-# How to Contribute to Neomutt
+# How to Contribute to NeoMutt
 
 blah

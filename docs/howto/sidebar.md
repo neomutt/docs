@@ -14,7 +14,7 @@ The list can be turned on and off, it can be themed and the list style can be co
 
 **Subject:** Sidebar overview with mailbox list
 
-**Description:** NeoMutt index view with the sidebar visible on the left side, showing a list of mailboxes (Inbox, Sent, Drafts, Trash, and several mstrstrailing list folders).
+**Description:** NeoMutt index view with the sidebar visible on the left side, showing a list of mailboxes (Inbox, Sent, Drafts, Trash, and several mailing list folders).
 The sidebar shows mailbox names with unread/total message counts.
 One mailbox is highlighted (the cursor), another is indicated (the currently open mailbox).
 The divider character separates the sidebar from the index panel on the right.

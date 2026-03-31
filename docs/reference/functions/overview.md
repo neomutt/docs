@@ -240,7 +240,7 @@ It supports cursor movement, word editing, tab-completion, and command history.
 | `<history-up>`      | Scroll up through the history list                  |
 | `<kill-eol>`        | Delete chars from cursor to end of line             |
 | `<kill-eow>`        | Delete chars from the cursor to the end of the word |
-| `<kill-line>`       | Delete chars from cursor to beginning the line      |
+| `<kill-line>`       | Delete chars from cursor to beginning of the line   |
 | `<kill-whole-line>` | Delete all chars on the line                        |
 | `<kill-word>`       | Delete the word in front of the cursor              |
 | `<mailbox-cycle>`   | Cycle among incoming mailboxes                      |

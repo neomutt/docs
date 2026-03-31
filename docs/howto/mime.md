@@ -24,7 +24,7 @@ MIME also defines a set of encoding schemes for transporting MIME content over t
 There are some rules when to choose what for encoding headers and/or body (if needed), and NeoMutt will in general make a good choice.
 
 NeoMutt does most of MIME encoding/decoding behind the scenes to form messages conforming to MIME on the sending side.
-On reception, it can be flexibly configured as to how what MIME structure is displayed (and if it's displayed): these decisions are based on the content's MIME type.
+On reception, it can be flexibly configured as to what MIME structure is displayed (and if it's displayed): these decisions are based on the content's MIME type.
 There are three areas/menus in dealing with MIME: the pager (while viewing a message), the attachment menu and the compose menu.
 
 ## Viewing MIME Messages in the Pager

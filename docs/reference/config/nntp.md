@@ -271,5 +271,5 @@ Also controls whether or not number of new articles of subscribed newsgroups wil
     set x_comment_to = no
     ```
 
-If _set_, NeoMutt will add "X-Comment-To:" field (that contains full name of original article author) to article that followuped to newsgroup.
+If _set_, NeoMutt will add "X-Comment-To:" field (that contains full name of original article author) to an article that followed up to a newsgroup.
 

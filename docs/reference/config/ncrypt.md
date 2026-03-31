@@ -87,7 +87,7 @@ The GPGME backend will use the same filters as with OpenPGP, and depends on GPGM
     set crypt_protected_headers_read = yes
     ```
 
-When set, NeoMutt will display protected headers ("Memory Hole") in the pager, When set, NeoMutt will display protected headers in the pager, and will update the index and header cache with revised headers.
+When set, NeoMutt will display protected headers ("Memory Hole") in the pager, and will update the index and header cache with revised headers.
 
 Protected headers are stored inside the encrypted or signed part of an email, to prevent disclosure or tampering.
 For more information see <https://github.com/autocrypt/protected-headers> Currently NeoMutt only supports the Subject header.

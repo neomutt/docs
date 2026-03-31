@@ -212,11 +212,11 @@ my-header X-Disclaimer: Why are you listening to me?   # This is a comment
 ```
 
 Single quotes ("'") and double quotes (""") can be used to quote strings which contain spaces or other special characters.
-The difference between the two types of quotes is similar to that of many popular shell programs, namely that a single quote is used to specify a literal string (one that is not interpreted for shell variables or quoting with a backslash [see next paragraph]), while double quotes indicate a string for which should be evaluated.
+The difference between the two types of quotes is similar to that of many popular shell programs, namely that a single quote is used to specify a literal string (one that is not interpreted for shell variables or quoting with a backslash [see next paragraph]), while double quotes indicate a string which should be evaluated.
 For example, backticks are evaluated inside of double quotes, but *not* for single quotes.
 
 "\\" quotes the next character, just like in a shell.
-For example, if want to put quotes """ inside of a string, you can use "\\" to force the next character to be a literal instead of interpreted character.
+For example, if you want to put quotes """ inside of a string, you can use "\\" to force the next character to be a literal instead of interpreted character.
 
 **Example: Escaping quotes in configuration files**
 

@@ -226,7 +226,7 @@ If set to _yes_, NeoMutt will use CA certificates in the system-wide certificate
     set ssl_use_tlsv1_2 = yes
     ```
 
-If _set_ , NeoMutt will use TLSv1.2 when communicating with servers that request it.
+If _set_, NeoMutt will use TLSv1.2 when communicating with servers that request it.
 
 --------------------------------------------------------------------------------
 
@@ -239,7 +239,7 @@ If _set_ , NeoMutt will use TLSv1.2 when communicating with servers that request
     set ssl_use_tlsv1_3 = yes
     ```
 
-If _set_ , NeoMutt will use TLSv1.3 when communicating with servers that request it.
+If _set_, NeoMutt will use TLSv1.3 when communicating with servers that request it.
 
 --------------------------------------------------------------------------------
 
