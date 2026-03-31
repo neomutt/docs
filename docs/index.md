@@ -33,6 +33,8 @@ This guide will help you get a working NeoMutt setup quickly, then show you how 
 
 Step-by-step guides that walk you through real tasks from start to finish.
 You’ll build confidence by doing—learning NeoMutt in a practical, hands-on way, with clear outcomes at each stage.
++++
+[Getting Started](tutorials/getting-started) · [First Config](tutorials/first-config) · [Gmail Setup](tutorials/gmail-setup) · [Interface Tour](tutorials/tour)
 :::
 
 :::{grid-item-card} 🔧 How-To Guides - Goal-oriented
@@ -42,6 +44,8 @@ You’ll build confidence by doing—learning NeoMutt in a practical, hands-on w
 
 Focused instructions for solving specific problems or achieving particular goals.
 You’ll find direct, task-oriented answers—helping you get things done quickly without unnecessary background detail.
++++
+[Colours](howto/colours) · [Key Bindings](howto/key-bindings) · [Hooks](howto/hooks) · [Sidebar](howto/sidebar) · [IMAP](howto/imap) · [SMTP](howto/smtp)
 :::
 
 :::{grid-item-card} 💡 Explanation - Understanding-oriented
@@ -51,6 +55,8 @@ You’ll find direct, task-oriented answers—helping you get things done quickl
 
 In-depth discussions that explain how and why NeoMutt works the way it does.
 You’ll gain a deeper understanding of concepts, design decisions, and underlying mechanisms—so you can make better-informed choices.
++++
+[Config Paradigms](explanation/config-paradigms) · [Threading](explanation/threading) · [Encryption](explanation/encryption) · [MIME](explanation/mime)
 :::
 
 :::{grid-item-card} 📋 Reference - Information-oriented
@@ -60,6 +66,8 @@ You’ll gain a deeper understanding of concepts, design decisions, and underlyi
 
 A complete, factual catalogue of NeoMutt’s commands, variables, and configuration options.
 You’ll get precise, authoritative information you can rely on when you need exact syntax, valid values, or detailed behaviour.
++++
+[Config](reference/config) · [Functions](reference/functions/overview) · [Commands](reference/commands/index) · [Colours](reference/colors) · [Glossary](reference/glossary)
 :::
 
 ::::
