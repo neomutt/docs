@@ -110,8 +110,6 @@ This string is similar to [$index_format](index-format), but has its own set of 
 
 For an explanation of "soft-fill", see the [$index_format](index-format) documentation.
 
-* = can be optionally printed if nonzero
-
 %m, %n, and %N only work for monitored mailboxes.
 %m requires [$mail_check_stats](#mail-check-stats) to be set.
 %n requires [$mail_check_stats](#mail-check-stats) to be set (except for IMAP mailboxes).
