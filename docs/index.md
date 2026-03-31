@@ -17,53 +17,58 @@ This guide will help you get a working NeoMutt setup quickly, then show you how 
 ::::{grid} 2
 :gutter: 3
 
-:::{grid-item-card} ✅ Start Here
+:::{grid-item-card}
 :link: start-here
 :link-type: doc
 :class-card: dia-start
 :columns: 12
-
+✅ **Start Here**
+^^^
 **Beginner-friendly** — A few questions that route you to the right setup steps.
 :::
 
-:::{grid-item-card} 📖 Tutorials - Learning-oriented
+:::{grid-item-card}
 :link: tutorials/index
 :link-type: doc
 :class-card: dia-tutorial
-
+📖 **Tutorials** - Learning-oriented
+^^^
 Step-by-step guides that walk you through real tasks from start to finish.
 You'll build confidence by doing—learning NeoMutt in a practical, hands-on way, with clear outcomes at each stage.
 +++
 [Getting Started](tutorials/getting-started) · [First Config](tutorials/first-config) · [Gmail Setup](tutorials/gmail-setup) · [Interface Tour](tutorials/tour)
 :::
 
-:::{grid-item-card} 🔧 How-To Guides - Goal-oriented
+:::{grid-item-card}
 :link: howto/index
 :link-type: doc
 :class-card: dia-howto
-
+🔧 **How-To Guides** - Goal-oriented
+^^^
 Focused instructions for solving specific problems or achieving particular goals.
 You'll find direct, task-oriented answers—helping you get things done quickly without unnecessary background detail.
 +++
 [Colours](howto/colours) · [Key Bindings](howto/key-bindings) · [Hooks](howto/hooks) · [Sidebar](howto/sidebar) · [IMAP](howto/imap) · [SMTP](howto/smtp)
 :::
 
-:::{grid-item-card} 💡 Explanation - Understanding-oriented
+:::{grid-item-card}
 :link: explanation/index
 :link-type: doc
 :class-card: dia-explanation
-
+💡 **Explanation** - Understanding-oriented
+^^^
 In-depth discussions that explain how and why NeoMutt works the way it does.
 You'll gain a deeper understanding of concepts, design decisions, and underlying mechanisms—so you can make better-informed choices.
 +++
 [Config Paradigms](explanation/config-paradigms) · [Threading](explanation/threading) · [Encryption](explanation/encryption) · [MIME](explanation/mime)
 :::
 
-:::{grid-item-card} 📋 Reference - Information-oriented
+:::{grid-item-card}
 :link: reference/index
 :link-type: doc
 :class-card: dia-reference
-
+📋 **Reference** - Information-oriented
+^^^
 A complete, factual catalogue of NeoMutt's commands, variables, and configuration options.
 You'll get precise, authoritative information you can rely on when you need exact syntax, valid values, or detailed behaviour.
 +++
