@@ -37,7 +37,7 @@ See "$autocryptdoc" for more details.
     ```
 
 This variable describes the format of the "autocrypt account" menu.
-The following `printf(3)`-style sequences are understood 
+The following `printf(3)`-style sequences are understood:
 
 | Short  | Long Name           | Description                                                     |
 |--------|---------------------|-----------------------------------------------------------------|

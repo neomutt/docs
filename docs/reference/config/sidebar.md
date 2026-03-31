@@ -20,7 +20,7 @@ By default the sidebar will show the mailbox's path, relative to the [$folder](f
 This specifies the number of parent directories to hide from display in the sidebar.
 For example: If a maildir is normally displayed in the sidebar as dir1/dir2/dir3/maildir, setting `set sidebar_component_depth = 2` will display it as dir3/maildir, having truncated the 2 highest directories.
 
-**See also:** [$sidebar_short_path](sidebar-short-path) 
+**See also:** [$sidebar_short_path](sidebar-short-path)
 
 --------------------------------------------------------------------------------
 
@@ -38,7 +38,7 @@ This contains the list of characters which you would like to treat as folder sep
 Local mail is often arranged in directories: 'dir1/dir2/mailbox'.
 
 ```neomuttrc
-set sidebar_delim_chars = '/' 
+set sidebar_delim_chars = '/'
 ```
 
 IMAP mailboxes are often named: 'folder1.folder2.mailbox'.
@@ -123,7 +123,7 @@ This string is similar to [$index_format](index-format), but has its own set of 
 | `%>X`  | `%{padding-hard:X}` |     | Right justify the rest of the string and pad with character `X`                            |
 | `%\|X` | `%{padding-eol:X}`  |     | Pad to the end of the line with character `X`                                              |
 
-**Cur** = Only applicable to the current folder 
+**Cur** = Only applicable to the current folder
 
 In order to use %S, %N, %F, and %!, [$mail_check_stats](mail-check-stats) must be _set_.
 When thus set, a suggested value for this option is "%B%<F? [%F]>%* %<N?%N/>%S".
@@ -268,7 +268,7 @@ Specifies how to sort mailbox entries in the sidebar.
 This specifies whether or not to show sidebar.
 The sidebar shows a list of all your mailboxes.
 
-**See also:** [$sidebar_format](sidebar-format), [$sidebar_width](sidebar-width) 
+**See also:** [$sidebar_format](sidebar-format), [$sidebar_width](sidebar-width)
 
 --------------------------------------------------------------------------------
 

@@ -856,7 +856,8 @@ The separator to add between messages when piping a list of tagged messages to a
     set pipe_split = no
     ```
 
-Used in connection with the [`<pipe-message>`](fn-attach) function following [`<tag-prefix>`](fn-generic).  
+Used in connection with the [`<pipe-message>`](fn-attach) function following [`<tag-prefix>`](fn-generic).
+
 If this variable is _unset_, when piping a list of tagged messages NeoMutt will concatenate the messages and will pipe them all concatenated.
 When _set_, NeoMutt will pipe the messages one by one.
 In both cases the messages are piped in the current sorted order, and the [$pipe_sep](pipe-sep) separator is added after each message.

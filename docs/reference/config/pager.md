@@ -18,7 +18,7 @@ keywords: pager, display_filter, pager_context, pager_index_lines, pager_stop, s
 
 Controls whether ANSI color codes in messages (and color tags in rich text messages) are to be interpreted.
 Messages containing these codes are rare, but if this option is _set_, their text will be colored accordingly.
-Note that this may override your color choices, and even present a security problem, since a message could include a line like 
+Note that this may override your color choices, and even present a security problem, since a message could include a line like:
 
 ```
 [-- PGP output follows ...

@@ -153,7 +153,7 @@ If _unset_, the value of [$charset](charset) will be used instead.
 
 For example, the following configuration would work for Japanese text handling:
 ```neomuttrc
-set attach_charset = "iso-2022-jp:euc-jp:shift_jis:utf-8" 
+set attach_charset = "iso-2022-jp:euc-jp:shift_jis:utf-8"
 ```
 
 Note: for Japanese users, "iso-2022-*" must be put at the head of the value as shown above if included.
@@ -379,7 +379,7 @@ The string consists of a comma separated list (no spaces!) of one or more of the
 
 Example:
 ```neomuttrc
-set dsn_notify = "failure,delay" 
+set dsn_notify = "failure,delay"
 ```
 
 :::{note}
@@ -403,7 +403,7 @@ It may be set to either _hdrs_ to return just the message header, or _full_ to r
 
 Example:
 ```neomuttrc
-set dsn_return = "hdrs" 
+set dsn_return = "hdrs"
 ```
 
 :::{note}
@@ -760,7 +760,7 @@ The following printf-style sequence is understood:
 
 Example:
 ```neomuttrc
-set inews_command = "/usr/local/bin/inews -hS" 
+set inews_command = "/usr/local/bin/inews -hS"
 ```
 
 --------------------------------------------------------------------------------
@@ -779,19 +779,19 @@ set inews_command = "/usr/local/bin/inews -hS"
     ```
 
 This variable allows you to choose a custom format for the Message-Id when sending messages.
-The value may end in ``|'' to invoke an external filter.
+The value may end in `|` to invoke an external filter.
 See $formatstrings-filters.
 
 Please note that the Message-ID value follows a strict syntax, and you are responsible for ensuring correctness if you change this from the default.
-In particular, the value must follow the syntax in RFC 5322:
-```"<" id-left "@" id-right ">"`''.  No spaces are allowed, and `id-left` should follow the dot-atom-text syntax in the RFC.
-The `id-right` should generally be left as ```%f`''.
+In particular, the value must follow the syntax in RFC 5322: `"<" id-left "@" id-right ">"`.
+No spaces are allowed, and `id-left` should follow the dot-atom-text syntax in the RFC.
+The `id-right` should generally be left as `%f`.
 
 If unset, NeoMutt will use a long random format.
 
-If the format doesn't begin/end with ``<'', ``>'' they will be added.
+If the format doesn't begin/end with `<`, `>` they will be added.
 
-The old Message-ID format can be used by setting this to: ```<%Y%02m%02d%02H%02M%02S.G%c%p@%f>`'' 
+The old Message-ID format can be used by setting this to: `<%Y%02m%02d%02H%02M%02S.G%c%p@%f>`
 
 The following `printf(3)`-style sequences are understood:
 
@@ -799,7 +799,7 @@ The following `printf(3)`-style sequences are understood:
 |-------|----------------|--------------------------------------------------------------------|
 | %c    | `%{counter}`   | Step counter looping from `A` to `Z`                               |
 | %d    | `%{day}`       | Current day of the month (GMT)                                     |
-| %f    | `%{hostname}`  | [$hostname](hostname)                                             |
+| %f    | `%{hostname}`  | [$hostname](hostname)                                              |
 | %H    | `%{hour}`      | Current hour using a 24-hour clock (GMT)                           |
 | %m    | `%{minute}`    | Current month number (GMT)                                         |
 | %M    | `%{month}`     | Current minute of the hour (GMT)                                   |
@@ -810,7 +810,7 @@ The following `printf(3)`-style sequences are understood:
 | %Y    | `%{year}`      | Current year using 4 digits (GMT)                                  |
 | %z    | `%{random_12}` | 4 byte timestamp + 8 bytes of pseudo-random data encoded in Base64 |
 
-See also: Base64Url: https://datatracker.ietf.org/doc/html/rfc4648#section-5 
+See also: Base64Url: https://datatracker.ietf.org/doc/html/rfc4648#section-5
 
 --------------------------------------------------------------------------------
 

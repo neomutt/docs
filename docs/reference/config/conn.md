@@ -74,7 +74,7 @@ If the command returns a  nonzero status, NeoMutt gives up opening the server.
 
 Example:
 ```neomuttrc
-set preconnect = "ssh -f -q -L 1234:mailhost.net:143 mailhost.net \(rs sleep 20 < /dev/null > /dev/null" 
+set preconnect = "ssh -f -q -L 1234:mailhost.net:143 mailhost.net \(rs sleep 20 < /dev/null > /dev/null"
 ```
 
 Mailbox "foo" on "mailhost.net" can now be reached as "{localhost:1234}foo".
@@ -113,7 +113,7 @@ Any server certificate that is signed with one of these CA certificates is also 
 
 Example:
 ```neomuttrc
-set ssl_ca_certificates_file = /etc/ssl/certs/ca-certificates.crt 
+set ssl_ca_certificates_file = /etc/ssl/certs/ca-certificates.crt
 ```
 
 --------------------------------------------------------------------------------
@@ -281,8 +281,7 @@ You should only unset this for particular known hosts, using the [`account-hook`
 
 This option should not be changed from the default unless you understand what you are doing.
 
-Setting this variable to _yes_ will permit verifying partial certification chains, i.e. 
-a certificate chain where not the root, but an intermediate certificate CA, or the host certificate, are marked trusted (in [$certificate_file](certificate-file)), without marking the root signing CA as trusted.
+Setting this variable to _yes_ will permit verifying partial certification chains, i.e. a certificate chain where not the root, but an intermediate certificate CA, or the host certificate, are marked trusted (in [$certificate_file](certificate-file)), without marking the root signing CA as trusted.
 
 --------------------------------------------------------------------------------
 
@@ -300,7 +299,7 @@ You may be able to use this to set up preauthenticated connections to your IMAP/
 
 Example:
 ```neomuttrc
-set tunnel = "ssh -q mailhost.net /usr/local/libexec/imapd" 
+set tunnel = "ssh -q mailhost.net /usr/local/libexec/imapd"
 ```
 
 Note: For this example to work you must be able to log in to the remote machine without having to enter a password.

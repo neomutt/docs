@@ -121,7 +121,7 @@ NeoMutt will try all available methods, in order from most-secure to least-secur
 
 Example:
 ```neomuttrc
-set nntp_authenticators = "digest-md5:user" 
+set nntp_authenticators = "digest-md5:user"
 ```
 
 :::{note}

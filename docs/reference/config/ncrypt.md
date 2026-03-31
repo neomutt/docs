@@ -163,7 +163,7 @@ Controls whether NeoMutt will weed protected header fields.
 When set, NeoMutt will generate protected headers for signed and encrypted emails.
 
 Protected headers are stored inside the encrypted or signed part of an email, to prevent disclosure or tampering.
-For more information see https://github.com/autocrypt/protected-headers 
+For more information see https://github.com/autocrypt/protected-headers
 
 Currently NeoMutt only supports the Subject header.
 
@@ -212,7 +212,7 @@ Note that the GPGME backend does not support creating old-style inline (traditio
     ```
 
 Controls whether NeoMutt uses PKA during signature verification (only supported by the GPGME backend).
-See: http://www.g10code.de/docs/pka-intro.de.pdf 
+See: http://www.g10code.de/docs/pka-intro.de.pdf
 
 --------------------------------------------------------------------------------
 
@@ -395,7 +395,7 @@ Note: When decrypting messages using `gpg`, a pinentry program needs to be invok
 Currently, the `pinentry-tty` program (usually distributed with `gpg`) isn't suitable for being invoked by NeoMutt.
 You are encouraged to use a different pinentry-program when running NeoMutt in order to avoid problems.
 
-See also: https://github.com/neomutt/neomutt/issues/1014 
+See also: https://github.com/neomutt/neomutt/issues/1014
 
 --------------------------------------------------------------------------------
 
@@ -611,7 +611,7 @@ This command is used to list the public key ring's contents.
 The output format must be analogous to the one used by:
 
 ```sh
-gpg --list-keys --with-colons --with-fingerprint 
+gpg --list-keys --with-colons --with-fingerprint
 ```
 
 Note: gpg's `fixed-list-mode` option should not be used.
@@ -635,7 +635,7 @@ This command is used to list the secret key ring's contents.
 The output format must be analogous to the one used by:
 
 ```sh
-gpg --list-keys --with-colons --with-fingerprint 
+gpg --list-keys --with-colons --with-fingerprint
 ```
 
 Note: gpg's `fixed-list-mode` option should not be used.

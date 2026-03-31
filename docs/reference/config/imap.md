@@ -25,7 +25,7 @@ If it's _unset_ (the default) NeoMutt will try all available methods, in order f
 
 Example:
 ```neomuttrc
-set imap_authenticators = "gssapi:cram-md5:login" 
+set imap_authenticators = "gssapi:cram-md5:login"
 ```
 
 :::{note}
@@ -340,7 +340,7 @@ If you experience strange behavior, such as duplicate or missing messages please
 When _set_, NeoMutt will use the IMAP ENABLE extension ([RFC5161](https://www.rfc-editor.org/rfc/rfc5161.html)) to select CAPABILITIES.
 Some servers (notably Coremail System IMap Server) do not properly respond to ENABLE commands, which might cause NeoMutt to hang.
 If your connection seems to freeze at login, try unsetting this.
-See also https://github.com/neomutt/neomutt/issues/1689 
+See also https://github.com/neomutt/neomutt/issues/1689
 
 --------------------------------------------------------------------------------
 

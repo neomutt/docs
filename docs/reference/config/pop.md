@@ -87,7 +87,7 @@ The name of your POP server for the [`<fetch-mail>`](fn-index) function.
 You can also specify an alternative port, username and password, i.e.:
 
 ```
-[pop[s]://][username[:password]@]popserver[:port] 
+[pop[s]://][username[:password]@]popserver[:port]
 ```
 
 where "[...]" denotes an optional part.

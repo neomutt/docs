@@ -127,7 +127,7 @@ If _set_, NeoMutt will restrict possible characters in mailcap % expandos to a w
 This is the safe setting, but we are not sure it doesn't break some more advanced MIME stuff.
 
 :::{danger}
-Don't change this setting unless you are really sure what you are doing! 
+Don't change this setting unless you are really sure what you are doing!
 :::
 
 --------------------------------------------------------------------------------
@@ -147,7 +147,7 @@ This variable specifies a list of comma-separated languages.
 
 Example:
 ```neomuttrc
-set preferred_languages = "en,fr,de" 
+set preferred_languages = "en,fr,de"
 ```
 
 --------------------------------------------------------------------------------
@@ -262,7 +262,7 @@ alias juser abd30425@somewhere.net (Joe User)
 and then you receive mail which contains the following header:
 
 ```email
-From: abd30425@somewhere.net 
+From: abd30425@somewhere.net
 ```
 
 It would be displayed in the index menu as "Joe User" instead of "abd30425@somewhere.net."  This is useful when the person's e-mail address is not human friendly.
@@ -282,8 +282,8 @@ When this variable is _set_, NeoMutt will decode [RFC2047](https://www.rfc-edito
 You want to set this variable when NeoMutt suggests you to save attachments to files named like:
 
 ```
-=?iso-8859-1?Q?file=5F=E4=5F991116=2Ezip?= 
-=?utf-8?Q?z=C4=99ta.png?= 
+=?iso-8859-1?Q?file=5F=E4=5F991116=2Ezip?=
+=?utf-8?Q?z=C4=99ta.png?=
 ```
 
 When this variable is _set_ interactively, the change won't be active until you change folders.

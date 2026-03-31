@@ -370,8 +370,6 @@ This string is similar to [$index_format](index-format), but has its own set of 
 
 For an explanation of "soft-fill", see the [$index_format](index-format) documentation.
 
-* = can be optionally printed if nonzero 
-
 Some of the above sequences can be used to optionally print a string if their value is nonzero.
 For example, you may only want to see the number of flagged messages if such messages exist, since zero is not particularly meaningful.
 To optionally print a string based upon one of the above sequences, the following construct is used:
