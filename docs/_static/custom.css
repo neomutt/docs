@@ -521,3 +521,14 @@ dl.field-list dd .highlight {
   max-width: 80ch;
   overflow-x: auto;
 }
+
+
+/* ─── Card footer quicklinks ──────────────────────────────────
+   sd-stretched-link::after has z-index:1 and covers the whole
+   card. Raise the footer above it so the quicklinks are clickable.
+   ──────────────────────────────────────────────────────────── */
+
+.sd-card-footer {
+  position: relative;
+  z-index: 2;
+}
