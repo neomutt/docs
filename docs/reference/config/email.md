@@ -31,10 +31,14 @@ Parsing and checking these things slows header reading down, so this option is d
     set honor_disposition = no
     ```
 
-When _set_, NeoMutt will not display attachments with a disposition of "attachment" inline even if it could render the part to plain text.
+**Set**
+
+NeoMutt will not display attachments with a disposition of "attachment" inline even if it could render the part to plain text.
 These MIME parts can only be viewed from the attachment menu.
 
-If _unset_, NeoMutt will render all MIME parts it can properly transform to plain text.
+**Unset**
+
+NeoMutt will render all MIME parts it can properly transform to plain text.
 
 --------------------------------------------------------------------------------
 
@@ -61,7 +65,7 @@ This variable specifies a list of comma-separated private notmuch/imap tags whic
     set implicit_auto_view = no
     ```
 
-If set to "yes", NeoMutt will look for a mailcap entry with the "`copiousoutput`" flag set for _every_ MIME attachment it doesn't have an internal viewer defined for.
+If set to "yes", NeoMutt will look for a mailcap entry with the `copiousoutput` flag set for _every_ MIME attachment it doesn't have an internal viewer defined for.
 If such an entry is found, NeoMutt will use the viewer defined in that entry to convert the body part to text form.
 
 --------------------------------------------------------------------------------
@@ -359,9 +363,11 @@ Since NeoMutt scores are always greater than or equal to zero, the default setti
     set show_multipart_alternative = ""
     ```
 
-When _set_ to `info`, the multipart/alternative information is shown.
-When _set_ to `inline`, all of the alternatives are displayed.
-When not set, the default behavior is to show only the chosen alternative.
+| Setting  | Action                                     |
+|----------|--------------------------------------------|
+| unset    | Only show the chosen alternative           |
+| `info`   | Show the multipart/alternative information |
+| `inline` | All of the alternatives are displayed      |
 
 --------------------------------------------------------------------------------
 
