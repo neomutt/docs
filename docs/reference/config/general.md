@@ -521,7 +521,7 @@ If not specified, then it may be read from the environment variable [`$EMAIL`](r
 
 A regular expression used by NeoMutt to parse the GECOS field of a password entry when expanding the alias.
 The default value will return the string up to the first "," encountered.
-If the GECOS field contains a string like "lastname, firstname" then you should set it to "`.*`".
+If the GECOS field contains a string like "lastname, firstname" then you should set it to `.*`.
 
 This can be useful if you see the following behavior: you address an e-mail to user ID "stevef" whose full name is "Steve Franklin".
 If NeoMutt expands "stevef" to '"Franklin" stevef@foo.bar' then you should set the [`$gecos_mask`](gecos-mask) to a regular expression that will match the whole name so NeoMutt will expand "Franklin" to "Franklin, Steve".
@@ -1244,7 +1244,7 @@ For instance,
 set sort_aux = last-date-received
 ```
 
-would mean that if a new message is received in a thread, that subthread becomes the last one displayed (or the first, if you have "`set use_threads = reverse`".)  When using [`$use_threads`](use-threads), it is more common to use "last-" with [`$sort`](sort) and not with [`$sort_aux`](sort-aux).
+would mean that if a new message is received in a thread, that subthread becomes the last one displayed (or the first, if you have `set use_threads = reverse`)  When using [`$use_threads`](use-threads), it is more common to use "last-" with [`$sort`](sort) and not with [`$sort_aux`](sort-aux).
 
 See the "Use Threads Feature" section for further explanation and examples, https://neomutt.org/feature/use-threads
 
@@ -1290,10 +1290,10 @@ If [`$help`](help) is _set_ too, it'll be placed at the bottom.
     ```
 
 When _unset_, NeoMutt won't stop when the user presses the terminal's _susp_ key, usually "^Z".
-This is useful if you run NeoMutt inside an xterm using a command like "`xterm -e neomutt`".
+This is useful if you run NeoMutt inside an xterm using a command like `xterm -e neomutt`
 
 On startup NeoMutt tries to detect if it is the process session leader.
-If so, the default of [`$suspend`](suspend) is "no" otherwise "yes".  This default covers the above mentioned use case of "`xterm -e neomutt`".
+If so, the default of [`$suspend`](suspend) is "no" otherwise "yes".  This default covers the above mentioned use case of `xterm -e neomutt`
 
 --------------------------------------------------------------------------------
 
@@ -1306,7 +1306,8 @@ If so, the default of [`$suspend`](suspend) is "no" otherwise "yes".  This defau
     set text_flowed = no
     ```
 
-When _set_, NeoMutt will generate "format=flowed" bodies with a content type of "`text/plain; format=flowed`".
+When _set_, NeoMutt will generate "format=flowed" bodies with a content type of `text/plain; format=flowed`
+
 This format is easier to handle for some mailing software, and generally just looks like ordinary text.
 To actually make use of this format's features, you'll need support in your editor.
 
@@ -1346,7 +1347,7 @@ A value of zero disables timeout hooks.
 This variable allows you to specify where NeoMutt will place its temporary files needed for displaying messages.
 
 If this variable is not set, the environment variable [`$TMPDIR`](ref-env) is used.
-Failing that, then "`/tmp`" is used.
+Failing that, then `/tmp` is used.
 
 --------------------------------------------------------------------------------
 
@@ -1363,7 +1364,7 @@ Failing that, then "`/tmp`" is used.
 This variable allows you to specify where NeoMutt will place its temporary files when composing messages.
 
 If this variable is not set, the environment variable [`$TMPDIR`](ref-env) is used.
-Failing that, then "`/var/tmp`" is used.
+Failing that, then `/var/tmp` is used.
 
 It is recommended that this be set to a directory whose contents won't be removed during an unanticipated reboot, so that draft files will survive a crash or other unplanned computer shutdown.
 
