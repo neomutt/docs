@@ -9,7 +9,7 @@ keywords: neomutt, config types, boolean, number, string, path, regex, quad, exp
 
 NeoMutt configuration options are settings that control how the program behaves, and each one has a defined type that determines what kind of value it can accept.
 For example, some options are simple on/off switches, some expect numbers, and others require text or file paths.
-Because NeoMutt knows the expected type of each option, it can check your input when you set it and warn you if something isn’t valid.
+Because NeoMutt knows the expected type of each option, it can check your input when you set it and warn you if something isn't valid.
 This helps catch mistakes early - like entering text where a number is needed or using an unsupported value - so your configuration works as intended and is easier to troubleshoot.
 
 (general)=

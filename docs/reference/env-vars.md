@@ -4,6 +4,7 @@ description: Reference for environment variables read and set by NeoMutt includi
 keywords: neomutt, environment, variables, env, setenv, unsetenv, XDG, EDITOR, VISUAL, HOME, TMPDIR, MAIL, MAILDIR
 ---
 
+(ref-env)=
 # Environment Variables
 
 NeoMutt reads and uses a number of environment variables.

@@ -13,7 +13,7 @@ Assume the reader is new to the topic and needs a clear path to build understand
 Teach by doing: introduce a small, concrete goal and walk through it step by step, explaining just enough along the way to support the task.
 Structure content as a sequence of progressive steps, where each builds on the last and leads to a meaningful outcome.
 
-Focus on the learner’s experience: what they will do, see, and achieve at each stage.
+Focus on the learner's experience: what they will do, see, and achieve at each stage.
 Keep the scope narrow and self-contained, with minimal prerequisites.
 Avoid deep dives into theory or exhaustive detail — link to explanation and reference material for that.
 By the end, the reader should have completed something real and gained confidence to continue.

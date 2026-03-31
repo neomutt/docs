@@ -32,7 +32,7 @@ This guide will help you get a working NeoMutt setup quickly, then show you how 
 :class-card: dia-tutorial
 
 Step-by-step guides that walk you through real tasks from start to finish.
-You’ll build confidence by doing—learning NeoMutt in a practical, hands-on way, with clear outcomes at each stage.
+You'll build confidence by doing—learning NeoMutt in a practical, hands-on way, with clear outcomes at each stage.
 +++
 [Getting Started](tutorials/getting-started) · [First Config](tutorials/first-config) · [Gmail Setup](tutorials/gmail-setup) · [Interface Tour](tutorials/tour)
 :::
@@ -43,7 +43,7 @@ You’ll build confidence by doing—learning NeoMutt in a practical, hands-on w
 :class-card: dia-howto
 
 Focused instructions for solving specific problems or achieving particular goals.
-You’ll find direct, task-oriented answers—helping you get things done quickly without unnecessary background detail.
+You'll find direct, task-oriented answers—helping you get things done quickly without unnecessary background detail.
 +++
 [Colours](howto/colours) · [Key Bindings](howto/key-bindings) · [Hooks](howto/hooks) · [Sidebar](howto/sidebar) · [IMAP](howto/imap) · [SMTP](howto/smtp)
 :::
@@ -54,7 +54,7 @@ You’ll find direct, task-oriented answers—helping you get things done quickl
 :class-card: dia-explanation
 
 In-depth discussions that explain how and why NeoMutt works the way it does.
-You’ll gain a deeper understanding of concepts, design decisions, and underlying mechanisms—so you can make better-informed choices.
+You'll gain a deeper understanding of concepts, design decisions, and underlying mechanisms—so you can make better-informed choices.
 +++
 [Config Paradigms](explanation/config-paradigms) · [Threading](explanation/threading) · [Encryption](explanation/encryption) · [MIME](explanation/mime)
 :::
@@ -64,8 +64,8 @@ You’ll gain a deeper understanding of concepts, design decisions, and underlyi
 :link-type: doc
 :class-card: dia-reference
 
-A complete, factual catalogue of NeoMutt’s commands, variables, and configuration options.
-You’ll get precise, authoritative information you can rely on when you need exact syntax, valid values, or detailed behaviour.
+A complete, factual catalogue of NeoMutt's commands, variables, and configuration options.
+You'll get precise, authoritative information you can rely on when you need exact syntax, valid values, or detailed behaviour.
 +++
 [Config](reference/config) · [Functions](reference/functions/overview) · [Commands](reference/commands/index) · [Colours](reference/colors) · [Glossary](reference/glossary)
 :::

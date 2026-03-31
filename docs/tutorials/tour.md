@@ -33,7 +33,7 @@ tour/message
 % Pager Dialog
 %     pager
 %     - Pager (pager/menu)
-%       - Shows a single message’s headers and body (page-based). Used to read messages, follow threads, view attachments, and invoke message-level commands (reply, forward, save).
+%       - Shows a single message's headers and body (page-based). Used to read messages, follow threads, view attachments, and invoke message-level commands (reply, forward, save).
 % 
 % Browser Dialog
 %     browser

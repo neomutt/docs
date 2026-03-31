@@ -194,6 +194,24 @@ tagging
 limit-thread
 ```
 
+## Notmuch Virtual Mailboxes
+
+```{toctree}
+---
+maxdepth: 1
+---
+
+nm-vfolder-unread
+nm-vfolder-sender
+nm-vfolder-recent
+nm-vfolder-combine
+nm-vfolder-organise
+nm-vfolder-refresh
+nm-vfolder-empty
+nm-vfolder-tag-workflow
+nm-vfolder-jump
+```
+
 ## Newsgroups
 
 ```{toctree}
