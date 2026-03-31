@@ -65,6 +65,29 @@ maxdepth: 1
 conditional-expandos
 ```
 
+## Offline Email Pipeline
+
+```{toctree}
+---
+maxdepth: 1
+---
+
+pass-setup
+mbsync-setup
+msmtp-setup
+notmuch-setup
+```
+
+## HTML & Links
+
+```{toctree}
+---
+maxdepth: 1
+---
+
+html-and-urls
+```
+
 ## Workflows
 
 ```{toctree}
