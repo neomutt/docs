@@ -5,7 +5,7 @@ keywords: email, mime, mailcap, scoring, reflow_text, reply_regex, reverse_alias
 ---
 
 (cfg-email)=
-# Conn Options
+# Email Options
 
 (auto-subscribe)=
 ## `$auto_subscribe`
