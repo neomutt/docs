@@ -325,8 +325,7 @@ Controls the characters used by the "%r" indicator in [`$status_format`](status-
 :Notes: {ref}`Localised String <general>`
 :Default:
     ```neomuttrc
-    set status_format = "-%r-NeoMutt: %D [Msgs:%<M?%M/>%m%<n? New:%n>%<o? Old:%o>%<d? Del:%d>%<F? Flag:%F>\
-    %<t? Tag:%t>%<p? Post:%p>%<b? Inc:%b>%<l? %l>]---(%<T?%T/>%s/%S)-%>-(%P)---"
+    set status_format = "-%r-NeoMutt: %D [Msgs:%<M?%M/>%m%<n? New:%n>%<o? Old:%o> %<d? Del:%d>%<F? Flag:%F> %<t? Tag:%t>%<p? Post:%p>%<b? Inc:%b> %<l? %l>]---(%<T?%T/>%s/%S)-%>-(%P)---"
     ```
 :Alternative:
     ```neomuttrc
@@ -352,31 +351,29 @@ This string is similar to [`$index_format`](index-format), but has its own set o
 | `%b`   | `%{unread-mailboxes}` | Number of mailboxes with new mail                                                                      |
 | `%D`   | `%{description}`      | Description of the mailbox                                                                             |
 | `%d`   | `%{deleted-count}`    | Number of deleted messages                                                                             |
-| `%f`   | `%{flagged-count}`    | Full pathname of the current mailbox                                                                   |
-| `%F`   | `%{mailbox-path}`     | Number of flagged messages                                                                             |
+| `%f`   | `%{flagged-count}`    | Number of flagged messages                                                                             |
+| `%F`   | `%{mailbox-path}`     | Full pathname of the current mailbox                                                                   |
 | `%h`   | `%{hostname}`         | Local hostname                                                                                         |
-| `%l`   | `%{limit-size}`       | Size (in bytes) of the current mailbox (see formatstrings-size)                                        |
-| `%L`   | `%{mailbox-size}`     | Size (in bytes) of the messages shown (i.e., which match the current limit) (see formatstrings-size)   |
-| `%m`   | `%{limit-count}`      | Number of messages in the mailbox                                                                      |
-| `%M`   | `%{message-count}`    | Number of messages shown (i.e., which match the current limit)                                         |
+| `%l`   | `%{limit-size}`       | Size (in bytes) of the messages shown (i.e., which match the current limit) (see formatstrings-size)   |
+| `%L`   | `%{mailbox-size}`     | Size (in bytes) of the current mailbox (see formatstrings-size)                                        |
+| `%m`   | `%{limit-count}`      | Number of messages shown (i.e., which match the current limit)                                         |
+| `%M`   | `%{message-count}`    | Number of messages in the mailbox                                                                      |
 | `%n`   | `%{new-count}`        | Number of new messages in the mailbox (unread, unseen)                                                 |
 | `%o`   | `%{old-count}`        | Number of old messages in the mailbox (unread, seen)                                                   |
-| `%P`   | `%{percentage}`       | Percentage of the way through the index                                                                |
 | `%p`   | `%{postponed-count}`  | Number of postponed messages                                                                           |
-| `%r`   | `%{read-count}`       | Modified/read-only/won't-write/attach-message indicator, according to [`$status_chars`](status-chars) |
-| `%R`   | `%{readonly}`         | Number of read messages in the mailbox (read, seen)                                                    |
-| `%S`   | `%{sort-aux}`         | Current aux sorting method (`$sort_aux`)                                                               |
+| `%P`   | `%{percentage}`       | Percentage of the way through the index                                                                |
+| `%r`   | `%{read-count}`       | Number of read messages in the mailbox (read, seen)                                                    |
+| `%R`   | `%{readonly}`         | Modified/read-only/won't-write/attach-message indicator, according to [`$status_chars`](status-chars)  |
 | `%s`   | `%{sort}`             | Current sorting mode (`$sort`)                                                                         |
-| `%T`   | `%{use-threads}`      | Current threading mode (`$use_threads`)                                                                |
+| `%S`   | `%{sort-aux}`         | Current aux sorting method (`$sort_aux`)                                                               |
 | `%t`   | `%{tagged-count}`     | Number of tagged messages in the mailbox                                                               |
+| `%T`   | `%{use-threads}`      | Current threading mode (`$use_threads`)                                                                |
 | `%u`   | `%{unread-count}`     | Number of unread messages in the mailbox (seen or unseen)                                              |
-| `%v`   | `%{limit-pattern}`    | NeoMutt version string                                                                                 |
-| `%V`   | `%{version}`          | Currently active limit pattern, if any                                                                 |
+| `%v`   | `%{limit-pattern}`    | Currently active limit pattern, if any                                                                 |
+| `%V`   | `%{version}`          | NeoMutt version string                                                                                 |
 | `%*X`  | `%{padding-soft:X}`   | Soft-fill with character `X` as pad                                                                    |
 | `%>X`  | `%{padding-hard:X}`   | Right justify the rest of the string and pad with character `X`                                        |
 | `%\|X` | `%{padding-eol:X}`    | Pad to the end of the line with character `X`                                                          |
-
-For an explanation of "soft-fill", see the [`$index_format`](index-format) documentation.
 
 Some of the above sequences can be used to optionally print a string if their value is nonzero.
 For example, you may only want to see the number of flagged messages if such messages exist, since zero is not particularly meaningful.

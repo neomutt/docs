@@ -69,11 +69,11 @@ The following formatting sequences are available:
 
 The following sequences are deprecated; they will be removed in the future.
 
-| Old  | Action           |
-|------|------------------|
-| `%c` | Use `%C` instead |
-| `%n` | Use `%i` instead |
-| `%r` | Use `%A` instead |
+| Deprecated | Action           |
+|------------|------------------|
+| `%c`       | Use `%C` instead |
+| `%n`       | Use `%i` instead |
+| `%r`       | Use `%A` instead |
 
 --------------------------------------------------------------------------------
 
@@ -162,12 +162,12 @@ For an explanation of "soft-fill", see the [`$index_format`](index-format) docum
 
 The following sequences are deprecated; they will be removed in the future.
 
-| Old  | Action           |
-|------|------------------|
-| `%a` | Use `%E` instead |
-| `%c` | Use `%i` instead |
-| `%e` | Use `%C` instead |
-| `%n` | Use `%N` instead |
+| Deprecated | Action           |
+|------------|------------------|
+| `%a`       | Use `%E` instead |
+| `%c`       | Use `%i` instead |
+| `%e`       | Use `%C` instead |
+| `%n`       | Use `%N` instead |
 
 :::{seealso}
 **Expandos:** [Tutorial Conditional](tut-cond-expando), [Howto Conditional](how-cond-expando), [Formatting](how-format-expando), [Reference](ref-expandos)

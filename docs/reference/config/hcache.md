@@ -31,22 +31,24 @@ Header caching can greatly improve speed when opening POP, IMAP MH or Maildir fo
 :Type: [String](string)
 :Default: (empty)
     ```neomuttrc
-    set header_cache_backend = ""
+    set header_cache_backend = "lmdb"
     ```
 
 This variable specifies the header cache backend.
 If no backend is specified, the first available backend will be used in the following order:
 
-| Order        |
-|--------------|
-| tokyocabinet |
-| kyotocabinet |
-| qdbm         |
-| rocksdb      |
-| gdbm         |
-| bdb          |
-| tdb          |
-| lmdb         |
+| Backend      | Notes                          |
+|--------------|--------------------------------|
+| lmdb         | Strongly recommended (default) |
+| gdbm         | Good fallback option           |
+| rocksdb      |                                |
+| tdb          |                                |
+| bdb          | {bdg-danger-line}`Deprecated`  |
+| kyotocabinet | {bdg-danger-line}`Deprecated`  |
+| qdbm         | {bdg-danger-line}`Deprecated`  |
+| tokyocabinet | {bdg-danger-line}`Deprecated`  |
+
+The deprecated backends will soon be removed from NeoMutt.
 
 --------------------------------------------------------------------------------
 
