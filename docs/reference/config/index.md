@@ -7,24 +7,24 @@ keywords: neomutt, index, index_format, status_format, flag_chars, crypt_chars, 
 (cfg-index)=
 # Index Options
 
-(beep-new)=
+(cfg-beep-new)=
 ## `$beep_new`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
     set beep_new = no
     ```
 
 When this variable is _set_, NeoMutt will beep whenever it prints a message notifying you of new mail.
-This is independent of the setting of the [`$beep`](beep) variable.
+This is independent of the setting of the [`$beep`](cfg-beep) variable.
 
 --------------------------------------------------------------------------------
 
-(change-folder-next)=
+(cfg-change-folder-next)=
 ## `$change_folder_next`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
     set change_folder_next = no
@@ -34,10 +34,10 @@ When this variable is _set_, the [`<change-folder>`](fn-index) function mailbox 
 
 --------------------------------------------------------------------------------
 
-(collapse-all)=
+(cfg-collapse-all)=
 ## `$collapse_all`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
     set collapse_all = no
@@ -47,10 +47,10 @@ When _set_, NeoMutt will collapse all threads when entering a folder.
 
 --------------------------------------------------------------------------------
 
-(crypt-chars)=
+(cfg-crypt-chars)=
 ## `$crypt_chars`
 
-:Type: [Character String](mbtable)
+:Type: [Character String](type-mbtable)
 :Default:
     ```neomuttrc
     set crypt_chars = "SPsK "
@@ -68,10 +68,10 @@ Controls the characters used in cryptography flags.
 
 --------------------------------------------------------------------------------
 
-(flag-chars)=
+(cfg-flag-chars)=
 ## `$flag_chars`
 
-:Type: [Character String](mbtable)
+:Type: [Character String](type-mbtable)
 :Default:
     ```neomuttrc
     set flag_chars = "*!DdrONon- "
@@ -95,10 +95,10 @@ Controls the characters used in several flags.
 
 --------------------------------------------------------------------------------
 
-(from-chars)=
+(cfg-from-chars)=
 ## `$from_chars`
 
-:Type: [Character String](mbtable)
+:Type: [Character String](type-mbtable)
 :Default: (empty)
     ```neomuttrc
     set from_chars = ""
@@ -122,11 +122,11 @@ This slightly odd interface is necessitated by NeoMutt's handling of string vari
 
 --------------------------------------------------------------------------------
 
-(index-format)=
+(cfg-index-format)=
 ## `$index_format`
 
-:Type: [Expando](expando)
-:Notes: {ref}`Not Empty <general>`
+:Type: [Expando](type-expando)
+:Notes: {ref}`Not Empty <type-general>`
 :Default:
     ```neomuttrc
     set index_format = "%4C %Z %{%b %d} %-15.15L (%<l?%4l&%4c>) %s"
@@ -139,7 +139,7 @@ This slightly odd interface is necessitated by NeoMutt's handling of string vari
 This variable allows you to customize the message index display to your personal taste.
 
 "Format strings" are similar to the strings used in the C function `printf(3)` to format output (see the man page for more details).
-For an explanation of the %<...> construct, see the [`$status_format`](status-format) description.
+For an explanation of the %<...> construct, see the [`$status_format`](cfg-status-format) description.
 The following sequences are defined in NeoMutt:
 
 | Short     | Long Name                | Description                                                                                                                    |
@@ -151,10 +151,10 @@ The following sequences are defined in NeoMutt:
 | `%C`      | `%{number}`              | Current message number                                                                                                         |
 | `%c`      | `%{body-characters}`     | Number of characters (bytes) in the body of the message (see **Size Format**)                                                  |
 | `%cr`     | `%{size}`                | Number of characters (bytes) in the raw message, including the header (see **Size Format**)                                    |
-| `%D`      | `%{date-format-local}`   | Date and time of message using [`$date_format`](date-format) and local timezone.                                                |
-|           |                          | It is recommended to use `%[fmt]` instead, where `fmt` is the value of [`$date_format`](date-format).                           |
-| `%d`      | `%{date-format}`         | Date and time of message using [`$date_format`](date-format) and sender's timezone.                                             |
-|           |                          | It is recommended to use `%{fmt}` instead, where `fmt` is the value of [`$date_format`](date-format).                           |
+| `%D`      | `%{date-format-local}`   | Date and time of message using [`$date_format`](cfg-date-format) and local timezone.                                                |
+|           |                          | It is recommended to use `%[fmt]` instead, where `fmt` is the value of [`$date_format`](cfg-date-format).                           |
+| `%d`      | `%{date-format}`         | Date and time of message using [`$date_format`](cfg-date-format) and sender's timezone.                                             |
+|           |                          | It is recommended to use `%{fmt}` instead, where `fmt` is the value of [`$date_format`](cfg-date-format).                           |
 | `%E`      | `%{thread-count}`        | Number of messages in current thread                                                                                           |
 | `%e`      | `%{thread-number}`       | Current message number in thread                                                                                               |
 | `%F`      | `%{sender}`              | Author name, or recipient name if the message is from you                                                                      |
@@ -182,7 +182,7 @@ The following sequences are defined in NeoMutt:
 | `%r`      | `%{to-all}`              | Comma separated list of `To:` recipients                                                                                       |
 | `%S`      | `%{flag-chars}`          | Single character status of the message (`N`/`O`/`D`/`d`/`!`/`r`/`*`)                                                           |
 | `%s`      | `%{subject}`             | Subject of the message                                                                                                         |
-| `%T`      | `%{to-chars}`            | Appropriate character from the [`$to_chars`](to-chars) string                                                                   |
+| `%T`      | `%{to-chars}`            | Appropriate character from the [`$to_chars`](cfg-to-chars) string                                                                   |
 | `%t`      | `%{to}`                  | `%{To:}` field (recipients)                                                                                                    |
 | `%u`      | `%{username}`            | User (login) name of the author                                                                                                |
 | `%v`      | `%{first-name}`          | First name of the author, or the recipient if the message is from you                                                          |
@@ -198,7 +198,7 @@ The following sequences are defined in NeoMutt:
 |           |                          | The first character is new/read/replied flags (`n`/`o`/`r`/`O`/`N`).                                                           |
 |           |                          | The second is deleted or encryption flags (`D`/`d`/`S`/`P`/`s`/`K`).                                                           |
 |           |                          | The third is either tagged/flagged (`*`/`!`), or one of the characters.                                                        |
-|           |                          | Listed in [`$to_chars`](to-chars).                                                                                              |
+|           |                          | Listed in [`$to_chars`](cfg-to-chars).                                                                                              |
 | `%zc`     | `%{crypto-flags}`        | Message crypto flags                                                                                                           |
 | `%zs`     | `%{status-flags}`        | Message status flags                                                                                                           |
 | `%zt`     | `%{message-flags}`       | Message tag flags                                                                                                              |
@@ -234,10 +234,10 @@ Note that these expandos are supported in [`save-hook`](cmd-save-hook), [`fcc-ho
 
 --------------------------------------------------------------------------------
 
-(mark-macro-prefix)=
+(cfg-mark-macro-prefix)=
 ## `$mark_macro_prefix`
 
-:Type: [String](string)
+:Type: [String](type-string)
 :Default:
     ```neomuttrc
     set mark_macro_prefix = "'"
@@ -248,17 +248,17 @@ A new macro automatically generated with _<mark-message>a_ will be composed from
 
 --------------------------------------------------------------------------------
 
-(new-mail-command)=
+(cfg-new-mail-command)=
 ## `$new_mail_command`
 
-:Type: [Expando (Command String)](expando)
+:Type: [Expando (Command String)](type-expando)
 :Default: (empty)
     ```neomuttrc
     set new_mail_command = ""
     ```
 
 If _set_, NeoMutt will call this command after a new message is received.
-See the [`$status_format`](status-format) documentation for the values that can be formatted into this command.
+See the [`$status_format`](cfg-status-format) documentation for the values that can be formatted into this command.
 
 :::{seealso}
 **Expandos:** [Tutorial Conditional](tut-cond-expando), [Howto Conditional](how-cond-expando), [Formatting](how-format-expando), [Reference](ref-expandos)
@@ -266,10 +266,10 @@ See the [`$status_format`](status-format) documentation for the values that can 
 
 --------------------------------------------------------------------------------
 
-(quit)=
+(cfg-quit)=
 ## `$quit`
 
-:Type: [Quad-Option](quad)
+:Type: [Quad-Option](type-quad)
 :Default:
     ```neomuttrc
     set quit = yes
@@ -283,10 +283,10 @@ This can usually be achieved by pressing CTRL-C in the terminal.
 
 --------------------------------------------------------------------------------
 
-(read-only)=
+(cfg-read-only)=
 ## `$read_only`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
     set read_only = no
@@ -296,16 +296,16 @@ If _set_, all folders are opened in read-only mode.
 
 --------------------------------------------------------------------------------
 
-(status-chars)=
+(cfg-status-chars)=
 ## `$status_chars`
 
-:Type: [Character String](mbtable)
+:Type: [Character String](type-mbtable)
 :Default:
     ```neomuttrc
     set status_chars = "-*%A"
     ```
 
-Controls the characters used by the "%r" indicator in [`$status_format`](status-format).
+Controls the characters used by the "%r" indicator in [`$status_format`](cfg-status-format).
 
 | Character | Default | Description                                                                                                       |
 |-----------|---------|-------------------------------------------------------------------------------------------------------------------|
@@ -318,11 +318,11 @@ Controls the characters used by the "%r" indicator in [`$status_format`](status-
 
 --------------------------------------------------------------------------------
 
-(status-format)=
+(cfg-status-format)=
 ## `$status_format`
 
-:Type: [Expando](expando)
-:Notes: {ref}`Localised String <general>`
+:Type: [Expando](type-expando)
+:Notes: {ref}`Localised String <type-general>`
 :Default:
     ```neomuttrc
     set status_format = "-%r-NeoMutt: %D [Msgs:%<M?%M/>%m%<n? New:%n>%<o? Old:%o> %<d? Del:%d>%<F? Flag:%F> %<t? Tag:%t>%<p? Post:%p>%<b? Inc:%b> %<l? %l>]---(%<T?%T/>%s/%S)-%>-(%P)---"
@@ -344,7 +344,7 @@ Controls the characters used by the "%r" indicator in [`$status_format`](status-
     ```
 
 Controls the format of the status line displayed in the "index" menu.
-This string is similar to [`$index_format`](index-format), but has its own set of `printf(3)`-like sequences:
+This string is similar to [`$index_format`](cfg-index-format), but has its own set of `printf(3)`-like sequences:
 
 | Short  | Long Name             | Description                                                                                            |
 |--------|-----------------------|--------------------------------------------------------------------------------------------------------|
@@ -363,7 +363,7 @@ This string is similar to [`$index_format`](index-format), but has its own set o
 | `%p`   | `%{postponed-count}`  | Number of postponed messages                                                                           |
 | `%P`   | `%{percentage}`       | Percentage of the way through the index                                                                |
 | `%r`   | `%{read-count}`       | Number of read messages in the mailbox (read, seen)                                                    |
-| `%R`   | `%{readonly}`         | Modified/read-only/won't-write/attach-message indicator, according to [`$status_chars`](status-chars)  |
+| `%R`   | `%{readonly}`         | Modified/read-only/won't-write/attach-message indicator, according to [`$status_chars`](cfg-status-chars)  |
 | `%s`   | `%{sort}`             | Current sorting mode (`$sort`)                                                                         |
 | `%S`   | `%{sort-aux}`         | Current aux sorting method (`$sort_aux`)                                                               |
 | `%t`   | `%{tagged-count}`     | Number of tagged messages in the mailbox                                                               |
@@ -394,7 +394,7 @@ You can also switch between two strings using the following construct:
 
 If the value of _sequence_char_ is non-zero, _if_string_ will be expanded, otherwise _else_string_ will be expanded.
 
-As another example, here is how to show either [`$sort`](sort) and [`$sort_aux`](sort-aux) or [`$use_threads`](use-threads) and [`$sort`](sort), based on whether threads are enabled with [`$use_threads`](use-threads):
+As another example, here is how to show either [`$sort`](cfg-sort) and [`$sort_aux`](cfg-sort-aux) or [`$use_threads`](cfg-use-threads) and [`$sort`](cfg-sort), based on whether threads are enabled with [`$use_threads`](cfg-use-threads):
 
 `%<T?%s/%S&%T/%s>`
 
@@ -409,10 +409,10 @@ This might be helpful with IMAP folders that don't like dots in folder names.
 **Expandos:** [Tutorial Conditional](tut-cond-expando), [Howto Conditional](how-cond-expando), [Formatting](how-format-expando), [Reference](ref-expandos)
 :::
 
-(to-chars)=
+(cfg-to-chars)=
 ## `$to_chars`
 
-:Type: [Character String](mbtable)
+:Type: [Character String](type-mbtable)
 :Default:
     ```neomuttrc
     set to_chars = " +TCFLR"
@@ -432,10 +432,10 @@ Controls the character used to indicate mail addressed to you.
 
 --------------------------------------------------------------------------------
 
-(ts-enabled)=
+(cfg-ts-enabled)=
 ## `$ts_enabled`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
     set ts_enabled = no
@@ -446,11 +446,11 @@ Most terminal emulators emulate the status line in the window title.
 
 --------------------------------------------------------------------------------
 
-(ts-icon-format)=
+(cfg-ts-icon-format)=
 ## `$ts_icon_format`
 
-:Type: [Expando](expando)
-:Notes: {ref}`Localised String <general>`
+:Type: [Expando](type-expando)
+:Notes: {ref}`Localised String <type-general>`
 :Default:
     ```neomuttrc
     set ts_icon_format = "M%<n?AIL&ail>"
@@ -460,8 +460,8 @@ Most terminal emulators emulate the status line in the window title.
     set ts_icon_format = "M%<{new-count}?AIL&ail>"
     ```
 
-Controls the format of the icon title, as long as "[`$ts_enabled`](ts-enabled)" is set.
-This string is identical in formatting to the one used by "[`$status_format`](status-format)".
+Controls the format of the icon title, as long as "[`$ts_enabled`](cfg-ts-enabled)" is set.
+This string is identical in formatting to the one used by "[`$status_format`](cfg-status-format)".
 
 :::{seealso}
 **Expandos:** [Tutorial Conditional](tut-cond-expando), [Howto Conditional](how-cond-expando), [Formatting](how-format-expando), [Reference](ref-expandos)
@@ -469,11 +469,11 @@ This string is identical in formatting to the one used by "[`$status_format`](st
 
 --------------------------------------------------------------------------------
 
-(ts-status-format)=
+(cfg-ts-status-format)=
 ## `$ts_status_format`
 
-:Type: [Expando](expando)
-:Notes: {ref}`Localised String <general>`
+:Type: [Expando](type-expando)
+:Notes: {ref}`Localised String <type-general>`
 :Default:
     ```neomuttrc
     set ts_status_format = "NeoMutt with %<m?%m messages&no messages>%<n? [%n NEW]>"
@@ -483,8 +483,8 @@ This string is identical in formatting to the one used by "[`$status_format`](st
     set ts_status_format = "NeoMutt with %<m?%{message-count} messages&no messages>%<n? [%{new-count} NEW]>"
     ```
 
-Controls the format of the terminal status line (or window title), provided that "[`$ts_enabled`](ts-enabled)" has been set.
-This string is identical in formatting to the one used by "[`$status_format`](status-format)".
+Controls the format of the terminal status line (or window title), provided that "[`$ts_enabled`](cfg-ts-enabled)" has been set.
+This string is identical in formatting to the one used by "[`$status_format`](cfg-status-format)".
 
 :::{seealso}
 **Expandos:** [Tutorial Conditional](tut-cond-expando), [Howto Conditional](how-cond-expando), [Formatting](how-format-expando), [Reference](ref-expandos)
@@ -492,10 +492,10 @@ This string is identical in formatting to the one used by "[`$status_format`](st
 
 --------------------------------------------------------------------------------
 
-(uncollapse-jump)=
+(cfg-uncollapse-jump)=
 ## `$uncollapse_jump`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
     set uncollapse_jump = no
@@ -505,10 +505,10 @@ When _set_, NeoMutt will jump to the next unread message, if any, when the curre
 
 --------------------------------------------------------------------------------
 
-(uncollapse-new)=
+(cfg-uncollapse-new)=
 ## `$uncollapse_new`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
     set uncollapse_new = yes

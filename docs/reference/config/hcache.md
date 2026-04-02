@@ -7,10 +7,10 @@ keywords: neomutt, header cache, hcache, header_cache, header_cache_backend, com
 (cfg-hcache)=
 # Hcache Options
 
-(header-cache)=
+(cfg-header-cache)=
 ## `$header_cache`
 
-:Type: [Path (String)](path)
+:Type: [Path (String)](type-path)
 :Default: (empty)
     ```neomuttrc
     set header_cache = ""
@@ -25,10 +25,10 @@ Header caching can greatly improve speed when opening POP, IMAP MH or Maildir fo
 
 --------------------------------------------------------------------------------
 
-(header-cache-backend)=
+(cfg-header-cache-backend)=
 ## `$header_cache_backend`
 
-:Type: [String](string)
+:Type: [String](type-string)
 :Default: (empty)
     ```neomuttrc
     set header_cache_backend = "lmdb"
@@ -52,11 +52,11 @@ The deprecated backends will soon be removed from NeoMutt.
 
 --------------------------------------------------------------------------------
 
-(header-cache-compress-level)=
+(cfg-header-cache-compress-level)=
 ## `$header_cache_compress_level`
 
-:Type: [Number](number)
-:Notes: {ref}`Not Negative <general>`
+:Type: [Number](type-number)
+:Notes: {ref}`Not Negative <type-general>`
 :Default:
     ```neomuttrc
     set header_cache_compress_level = 1
@@ -66,10 +66,10 @@ When NeoMutt is compiled with lz4, zstd or zlib, this option can be used to setu
 
 --------------------------------------------------------------------------------
 
-(header-cache-compress-method)=
+(cfg-header-cache-compress-method)=
 ## `$header_cache_compress_method`
 
-:Type: [String](string)
+:Type: [String](type-string)
 :Default: (empty)
     ```neomuttrc
     set header_cache_compress_method = ""

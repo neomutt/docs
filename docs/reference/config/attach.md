@@ -7,10 +7,10 @@ keywords: attachment, mime, attach_save_dir, attach_split, bounce, mime_forward,
 (cfg-attach)=
 # Attach Options
 
-(attach-save-dir)=
+(cfg-attach-save-dir)=
 ## `$attach_save_dir`
 
-:Type: [Path (String)](path)
+:Type: [Path (String)](type-path)
 :Default:
     ```neomuttrc
     set attach_save_dir = "./"
@@ -20,10 +20,10 @@ The directory where attachments are saved.
 
 --------------------------------------------------------------------------------
 
-(attach-save-without-prompting)=
+(cfg-attach-save-without-prompting)=
 ## `$attach_save_without_prompting`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
     set attach_save_without_prompting = no
@@ -33,10 +33,10 @@ This variable, when set to true, will cause attachments to be saved to the 'atta
 
 --------------------------------------------------------------------------------
 
-(attach-sep)=
+(cfg-attach-sep)=
 ## `$attach_sep`
 
-:Type: [String](string)
+:Type: [String](type-string)
 :Default:
     ```neomuttrc
     set attach_sep = "\n"
@@ -46,25 +46,25 @@ The separator to add between attachments when operating (saving, printing, pipin
 
 --------------------------------------------------------------------------------
 
-(attach-split)=
+(cfg-attach-split)=
 ## `$attach_split`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
     set attach_split = yes
     ```
 
 If this variable is _unset_, when operating (saving, printing, piping, etc) on a list of tagged attachments, NeoMutt will concatenate the attachments and will operate on them as a single attachment.
-The [`$attach_sep`](attach-sep) separator is added after each attachment.
+The [`$attach_sep`](cfg-attach-sep) separator is added after each attachment.
 When _set_, NeoMutt will operate on the attachments one by one.
 
 --------------------------------------------------------------------------------
 
-(bounce)=
+(cfg-bounce)=
 ## `$bounce`
 
-:Type: [Quad-Option](quad)
+:Type: [Quad-Option](type-quad)
 :Default:
     ```neomuttrc
     set bounce = ask-yes
@@ -76,10 +76,10 @@ Setting this variable to _no_ is not generally useful, and thus not recommended,
 
 --------------------------------------------------------------------------------
 
-(count-alternatives)=
+(cfg-count-alternatives)=
 ## `$count_alternatives`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
     set count_alternatives = no
@@ -93,10 +93,10 @@ Setting this will allow NeoMutt to find and count matching attachments hidden th
 
 --------------------------------------------------------------------------------
 
-(digest-collapse)=
+(cfg-digest-collapse)=
 ## `$digest_collapse`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
     set digest_collapse = yes
@@ -107,10 +107,10 @@ To see these subparts, press "v" on that menu.
 
 --------------------------------------------------------------------------------
 
-(message-format)=
+(cfg-message-format)=
 ## `$message_format`
 
-:Type: [Expando](expando)
+:Type: [Expando](type-expando)
 :Default:
     ```neomuttrc
     set message_format = "%s"
@@ -121,7 +121,7 @@ To see these subparts, press "v" on that menu.
     ```
 
 This is the string displayed in the "attachment" menu for attachments of type `message/rfc822`.  
-For a full listing of defined `printf(3)`-like sequences see the section on [`$index_format`](index-format).
+For a full listing of defined `printf(3)`-like sequences see the section on [`$index_format`](cfg-index-format).
 
 :::{seealso}
 **Expandos:** [Tutorial Conditional](tut-cond-expando), [Howto Conditional](how-cond-expando), [Formatting](how-format-expando), [Reference](ref-expandos)
@@ -129,10 +129,10 @@ For a full listing of defined `printf(3)`-like sequences see the section on [`$i
 
 --------------------------------------------------------------------------------
 
-(mime-forward)=
+(cfg-mime-forward)=
 ## `$mime_forward`
 
-:Type: [Quad-Option](quad)
+:Type: [Quad-Option](type-quad)
 :Default:
     ```neomuttrc
     set mime_forward = no
@@ -142,14 +142,14 @@ When _set_, the message you are forwarding will be attached as a separate `messa
 This is useful for forwarding MIME messages so the receiver can properly view the message as it was delivered to you.
 If you like to switch between MIME and not MIME from mail to mail, set this variable to "ask-no" or "ask-yes".
 
-Also see [`$forward_decode`](forward-decode) and [`$mime_forward_decode`](mime-forward-decode).
+Also see [`$forward_decode`](cfg-forward-decode) and [`$mime_forward_decode`](cfg-mime-forward-decode).
 
 --------------------------------------------------------------------------------
 
-(mime-forward-rest)=
+(cfg-mime-forward-rest)=
 ## `$mime_forward_rest`
 
-:Type: [Quad-Option](quad)
+:Type: [Quad-Option](type-quad)
 :Default:
     ```neomuttrc
     set mime_forward_rest = yes

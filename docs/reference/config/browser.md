@@ -7,10 +7,10 @@ keywords: neomutt, browser, file browser, folder_format, browser_sort, browser_s
 (cfg-browser)=
 # Browser Options
 
-(browser-abbreviate-mailboxes)=
+(cfg-browser-abbreviate-mailboxes)=
 ## `$browser_abbreviate_mailboxes`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
     set browser_abbreviate_mailboxes = yes
@@ -18,17 +18,17 @@ keywords: neomutt, browser, file browser, folder_format, browser_sort, browser_s
 
 When this variable is _set_, NeoMutt will abbreviate mailbox names in the browser mailbox list, using '~' and '=' shortcuts.
 
-The default `alpha` setting of [`$browser_sort`](browser-sort) uses locale-based sorting (using `strcoll(3)`), which ignores some punctuation.
+The default `alpha` setting of [`$browser_sort`](cfg-browser-sort) uses locale-based sorting (using `strcoll(3)`), which ignores some punctuation.
 This can lead to some situations where the order doesn't make intuitive sense.
 In those cases, it may be desirable to _unset_ this variable.
 
 --------------------------------------------------------------------------------
 
-(browser-sort)=
+(cfg-browser-sort)=
 ## `$browser_sort`
 
-:Type: [Sort Order](sort-order)
-:Notes: [Reverse](sort-order)
+:Type: [Sort Order](type-sort-order)
+:Notes: [Reverse](type-sort-order)
 :Default:
     ```neomuttrc
     set browser_sort = "alpha"
@@ -52,10 +52,10 @@ Specifies how to sort entries in the file browser.
 
 --------------------------------------------------------------------------------
 
-(browser-sort-dirs-first)=
+(cfg-browser-sort-dirs-first)=
 ## `$browser_sort_dirs_first`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
     set browser_sort_dirs_first = no
@@ -65,11 +65,11 @@ If this variable is _set_, the browser will group directories before files.
 
 --------------------------------------------------------------------------------
 
-(folder-format)=
+(cfg-folder-format)=
 ## `$folder_format`
 
-:Type: [Expando](expando)
-:Notes: {ref}`Not Empty <general>`
+:Type: [Expando](type-expando)
+:Notes: {ref}`Not Empty <type-general>`
 :Default:
     ```neomuttrc
     set folder_format = "%2C %t %N %F %2l %-8.8u %-8.8g %8s %d %i"
@@ -81,14 +81,14 @@ If this variable is _set_, the browser will group directories before files.
     ```
 
 This variable allows you to customize the file browser display to your personal taste.
-This string is similar to [`$index_format`](index-format), but has its own set of `printf(3)`-like sequences:
+This string is similar to [`$index_format`](cfg-index-format), but has its own set of `printf(3)`-like sequences:
 
 | Short    | Long Name           | Description                                                                                          |
 |----------|---------------------|------------------------------------------------------------------------------------------------------|
 | `%a`     | `%{notify}`         | Alert: 1 if user is notified of new mail                                                             |
 | `%C`     | `%{number}`         | Current file number                                                                                  |
-| `%D`     | `%{date}`           | Date/time folder was last modified using [`$date_format`](date-format).                               |
-|          |                     | It is recommended to use `%[fmt]` instead, where `fmt` is the value of [`$date_format`](date-format). |
+| `%D`     | `%{date}`           | Date/time folder was last modified using [`$date_format`](cfg-date-format).                               |
+|          |                     | It is recommended to use `%[fmt]` instead, where `fmt` is the value of [`$date_format`](cfg-date-format). |
 | `%d`     | `%{date-format}`    | Date/time folder was last modified                                                                   |
 | `%F`     | `%{file-mode}`      | File permissions                                                                                     |
 | `%f`     | `%{filename}`       | Filename (`/` is appended to directory names,                                                        |
@@ -108,11 +108,11 @@ This string is similar to [`$index_format`](index-format), but has its own set o
 | `%>X`    | `%{padding-hard:X}` | Right justify the rest of the string and pad with character `X`                                      |
 | `%\|X`   | `%{padding-eol:X}`  | Pad to the end of the line with character `X`                                                        |
 
-For an explanation of "soft-fill", see the [`$index_format`](index-format) documentation.
+For an explanation of "soft-fill", see the [`$index_format`](cfg-index-format) documentation.
 
 %m, %n, and %N only work for monitored mailboxes.
-%m requires [`$mail_check_stats`](mail-check-stats) to be set.
-%n requires [`$mail_check_stats`](mail-check-stats) to be set (except for IMAP mailboxes).
+%m requires [`$mail_check_stats`](cfg-mail-check-stats) to be set.
+%n requires [`$mail_check_stats`](cfg-mail-check-stats) to be set (except for IMAP mailboxes).
 
 :::{seealso}
 **Expandos:** [Tutorial Conditional](tut-cond-expando), [Howto Conditional](how-cond-expando), [Formatting](how-format-expando), [Reference](ref-expandos)
@@ -120,11 +120,11 @@ For an explanation of "soft-fill", see the [`$index_format`](index-format) docum
 
 --------------------------------------------------------------------------------
 
-(group-index-format)=
+(cfg-group-index-format)=
 ## `$group_index_format`
 
-:Type: [Expando](expando)
-:Notes: {ref}`Not Empty <general>`
+:Type: [Expando](type-expando)
+:Notes: {ref}`Not Empty <type-general>`
 :Default:
     ```neomuttrc
     set group_index_format = "%4C %M%N %5s  %-45.45f %d"
@@ -135,7 +135,7 @@ For an explanation of "soft-fill", see the [`$index_format`](index-format) docum
     ```
 
 This variable allows you to customize the newsgroup browser display to your personal taste.
-This string is similar to [`$index_format`](index-format), but has its own set of printf()-like sequences:
+This string is similar to [`$index_format`](cfg-index-format), but has its own set of printf()-like sequences:
 
 | Short  | Long Name           | Description                                                          |
 |--------|---------------------|----------------------------------------------------------------------|
@@ -158,11 +158,11 @@ This string is similar to [`$index_format`](index-format), but has its own set o
 
 --------------------------------------------------------------------------------
 
-(mailbox-folder-format)=
+(cfg-mailbox-folder-format)=
 ## `$mailbox_folder_format`
 
-:Type: [Expando](expando)
-:Notes: {ref}`Not Empty <general>`
+:Type: [Expando](type-expando)
+:Notes: {ref}`Not Empty <type-general>`
 :Default:
     ```neomuttrc
     set mailbox_folder_format = "%2C %<n?%6n&      > %6m %i"
@@ -174,7 +174,7 @@ This string is similar to [`$index_format`](index-format), but has its own set o
 
 This variable allows you to customize the file browser display to your personal taste.
 It's only used to customize network mailboxes (e.g. imap).
-This string is identical in formatting to the one used by "[`$folder_format`](folder-format)".
+This string is identical in formatting to the one used by "[`$folder_format`](cfg-folder-format)".
 
 :::{seealso}
 **Expandos:** [Tutorial Conditional](tut-cond-expando), [Howto Conditional](how-cond-expando), [Formatting](how-format-expando), [Reference](ref-expandos)
@@ -182,11 +182,11 @@ This string is identical in formatting to the one used by "[`$folder_format`](fo
 
 --------------------------------------------------------------------------------
 
-(mask)=
+(cfg-mask)=
 ## `$mask`
 
-:Type: [Regular Expression](regex)
-:Notes: [Match Case](regex), [Allow Not](regex), [No Sub](regex)
+:Type: [Regular Expression](type-regex)
+:Notes: [Match Case](type-regex), [Allow Not](type-regex), [No Sub](type-regex)
 :Default:
     ```neomuttrc
     set mask = "!^\\.[^.]"
@@ -198,10 +198,10 @@ The match is always case-sensitive.
 
 --------------------------------------------------------------------------------
 
-(show-only-unread)=
+(cfg-show-only-unread)=
 ## `$show_only_unread`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
     set show_only_unread = no

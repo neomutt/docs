@@ -12,7 +12,7 @@ For example, some options are simple on/off switches, some expect numbers, and o
 Because NeoMutt knows the expected type of each option, it can check your input when you set it and warn you if something isn't valid.
 This helps catch mistakes early - like entering text where a number is needed or using an unsupported value - so your configuration works as intended and is easier to troubleshoot.
 
-(general)=
+(type-general)=
 ## General Flags
 
 These flags can be applied to different config option types.  
@@ -44,7 +44,7 @@ They can restrict the possible values or change the option's behaviour.
     The value contains something private, like a password.  
     NeoMutt takes care not to display or log it.
 
-(address)=
+(type-address)=
 ## Address
 
 - Address - An email address, like `user@example.com`.  
@@ -55,7 +55,7 @@ They can restrict the possible values or change the option's behaviour.
 set from = "John Smith <js@example.com>"
 ```
 
-(bool)=
+(type-bool)=
 ## Boolean
 
 - Boolean - A simple on/off switch.  
@@ -76,7 +76,7 @@ Allowed values:
 set sidebar_visible = yes
 ```
 
-(enum)=
+(type-enum)=
 ## Enumeration
 
 - Enum - A choice from a fixed list of named options.  
@@ -90,7 +90,7 @@ The values for an enumeration depend on the config option.
 set mbox_type = maildir
 ```
 
-(expando)=
+(type-expando)=
 ## Expando String
 
 - Expando - A formatting template that uses special placeholders (like `%s` or `%d`) which NeoMutt fills in with real information.  
@@ -102,7 +102,7 @@ The expandos available depend on the config option.
 set alias_format = "%3i %f%t %-15a %-56A | %C%> %Y"
 ```
 
-(long)=
+(type-long)=
 ## Long Number
 
 - Long - A large number.  
@@ -113,7 +113,7 @@ set alias_format = "%3i %f%t %-15a %-56A | %C%> %Y"
 set pgp_timeout = 86400 # 1 day
 ```
 
-(mbtable)=
+(type-mbtable)=
 ## Multi-Byte Character String
 
 - MBTable - A table of characters used to customise the display.
@@ -125,7 +125,7 @@ The number of characters in the string depends on the config option.
 set flag_chars = "*!DdrONon- "
 ```
 
-(myvar)=
+(type-myvar)=
 ## MyVar Custom String
 
 - MyVar - A user-defined variable (always starting with `my_`).  
@@ -136,7 +136,7 @@ set flag_chars = "*!DdrONon- "
 set my_name = "Rich"
 ```
 
-(number)=
+(type-number)=
 ## Number
 
 - Number - A whole number.
@@ -147,7 +147,7 @@ set my_name = "Rich"
 set wrap = 80
 ```
 
-(path)=
+(type-path)=
 ## Path String
 
 - Path - A location of a file or folder on your computer, like `/home/you/Mail`.  
@@ -163,7 +163,7 @@ set wrap = 80
 set signature = "~/.signature"
 ```
 
-(quad)=
+(type-quad)=
 ## Quadoption
 
 - Quad - A four-way choice, for enabling features.  
@@ -184,7 +184,7 @@ Allowed values:
 set quit = ask-yes
 ```
 
-(regex)=
+(type-regex)=
 ## Regular Expression
 
 - Regex - A search pattern used to match text.  
@@ -203,7 +203,7 @@ set quit = ask-yes
 set quote_regex = "^([ \t]*[|>:}#])+"
 ```
 
-(slist)=
+(type-slist)=
 ## String list
 
 - String List - A list of text values separated by commas, spaces or colons.  
@@ -228,7 +228,7 @@ set quote_regex = "^([ \t]*[|>:}#])+"
 set hidden_tags = "unread,draft,flagged,passed,replied,attachment,signed,encrypted"
 ```
 
-(sort-order)=
+(type-sort-order)=
 ## Sort Order
 
 - Sort - A sorting method that controls the order things appear in, such as sorting messages by date, subject, or sender.  
@@ -246,7 +246,7 @@ The values for a sort depend on the config option.
 set sort = reverse-date
 ```
 
-(string)=
+(type-string)=
 ## String
 
 - String - A free-form piece of text.

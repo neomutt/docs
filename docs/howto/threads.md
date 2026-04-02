@@ -57,11 +57,11 @@ The existing functions `<sort-mailbox>` and `<sort-reverse>` are updated to togg
 
 ### Variables
 
-The "Use Threads" feature adds one new config option, {ref}`$use_threads <use-threads>`, which is an enumeration of possible thread views.
-The variable defaults to unset for the original behavior of overloading {ref}`$sort=threads <sort>` to enable sorting.
+The "Use Threads" feature adds one new config option, {ref}`$use_threads <cfg-use-threads>`, which is an enumeration of possible thread views.
+The variable defaults to unset for the original behavior of overloading {ref}`$sort=threads <cfg-sort>` to enable sorting.
 It can be set to `flat` (or `no`) for an unthreaded view based on `$sort`, to `threads` (or `yes`) for a threaded view where roots appear above children, or to `reverse` for a threaded view where children appear above roots.
 
-When sorting by threads, the value of {ref}`$sort <sort>` determines which thread floats to the top.
+When sorting by threads, the value of {ref}`$sort <cfg-sort>` determines which thread floats to the top.
 If `$sort` does not contain `reverse-`, the latest thread goes to the bottom for `use_threads=threads` and to the top for `use_threads=reverse`; the direction of float is swapped if `$sort` also uses `reverse-`.
 If `$sort` includes `last-`, the overall thread is sorted by its descendant at any depth which would sort last in a flat view; otherwise, the overall thread is sorted solely by the thread root.
 The `last-` prefix is ignored when `use_threads=flat`.

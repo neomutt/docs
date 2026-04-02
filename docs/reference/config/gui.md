@@ -7,10 +7,10 @@ keywords: neomutt, gui, threads, collapse_flagged, collapse_unread, duplicate_th
 (cfg-gui)=
 # GUI Options
 
-(beep)=
+(cfg-beep)=
 ## `$beep`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
     set beep = yes
@@ -20,10 +20,10 @@ When this variable is _set_, NeoMutt will beep when an error occurs.
 
 --------------------------------------------------------------------------------
 
-(collapse-flagged)=
+(cfg-collapse-flagged)=
 ## `$collapse_flagged`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
     set collapse_flagged = yes
@@ -33,10 +33,10 @@ When _unset_, NeoMutt will not collapse a thread if it contains any flagged mess
 
 --------------------------------------------------------------------------------
 
-(collapse-unread)=
+(cfg-collapse-unread)=
 ## `$collapse_unread`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
     set collapse_unread = yes
@@ -46,24 +46,24 @@ When _unset_, NeoMutt will not collapse a thread if it contains any unread messa
 
 --------------------------------------------------------------------------------
 
-(duplicate-threads)=
+(cfg-duplicate-threads)=
 ## `$duplicate_threads`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
     set duplicate_threads = yes
     ```
 
-This variable controls whether NeoMutt, when [`$sort`](sort) is set to _threads_, threads messages with the same Message-Id together.
+This variable controls whether NeoMutt, when [`$sort`](cfg-sort) is set to _threads_, threads messages with the same Message-Id together.
 If it is _set_, it will indicate that it thinks they are duplicates of each other with an equals sign in the thread tree.
 
 --------------------------------------------------------------------------------
 
-(hide-limited)=
+(cfg-hide-limited)=
 ## `$hide_limited`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
     set hide_limited = no
@@ -73,10 +73,10 @@ When _set_, NeoMutt will not show the presence of messages that are hidden by li
 
 --------------------------------------------------------------------------------
 
-(hide-missing)=
+(cfg-hide-missing)=
 ## `$hide_missing`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
     set hide_missing = yes
@@ -86,10 +86,10 @@ When _set_, NeoMutt will not show the presence of missing messages in the thread
 
 --------------------------------------------------------------------------------
 
-(hide-thread-subject)=
+(cfg-hide-thread-subject)=
 ## `$hide_thread_subject`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
     set hide_thread_subject = yes
@@ -99,38 +99,38 @@ When _set_, NeoMutt will not show the subject of messages in the thread tree tha
 
 --------------------------------------------------------------------------------
 
-(hide-top-limited)=
+(cfg-hide-top-limited)=
 ## `$hide_top_limited`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
     set hide_top_limited = no
     ```
 
 When _set_, NeoMutt will not show the presence of messages that are hidden by limiting, at the top of threads in the thread tree.
-Note that when [`$hide_limited`](hide-limited) is _set_, this option will have no effect.
+Note that when [`$hide_limited`](cfg-hide-limited) is _set_, this option will have no effect.
 
 --------------------------------------------------------------------------------
 
-(hide-top-missing)=
+(cfg-hide-top-missing)=
 ## `$hide_top_missing`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
     set hide_top_missing = yes
     ```
 
 When _set_, NeoMutt will not show the presence of missing messages at the top of threads in the thread tree.
-Note that when [`$hide_missing`](hide-missing) is _set_, this option will have no effect.
+Note that when [`$hide_missing`](cfg-hide-missing) is _set_, this option will have no effect.
 
 --------------------------------------------------------------------------------
 
-(narrow-tree)=
+(cfg-narrow-tree)=
 ## `$narrow_tree`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
     set narrow_tree = no
@@ -140,57 +140,57 @@ This variable, when _set_, makes the thread tree narrower, allowing deeper threa
 
 --------------------------------------------------------------------------------
 
-(sort-re)=
+(cfg-sort-re)=
 ## `$sort_re`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
     set sort_re = yes
     ```
 
-This variable is only useful when sorting by threads with [`$strict_threads`](strict-threads) _unset_.
+This variable is only useful when sorting by threads with [`$strict_threads`](cfg-strict-threads) _unset_.
 In that case, it changes the heuristic NeoMutt uses to thread messages by subject.
-With [`$sort_re`](sort-re) _set_, NeoMutt will only attach a message as the child of another message by subject if the subject of the child message starts with a substring matching the setting of [`$reply_regex`](reply-regex).
-With [`$sort_re`](sort-re) _unset_, NeoMutt will attach the message whether or not this is the case, as long as the non-[`$reply_regex`](reply-regex) parts of both messages are identical.
+With [`$sort_re`](cfg-sort-re) _set_, NeoMutt will only attach a message as the child of another message by subject if the subject of the child message starts with a substring matching the setting of [`$reply_regex`](cfg-reply-regex).
+With [`$sort_re`](cfg-sort-re) _unset_, NeoMutt will attach the message whether or not this is the case, as long as the non-[`$reply_regex`](cfg-reply-regex) parts of both messages are identical.
 
 --------------------------------------------------------------------------------
 
-(strict-threads)=
+(cfg-strict-threads)=
 ## `$strict_threads`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
     set strict_threads = no
     ```
 
-If _set_, threading will only make use of the "In-Reply-To" and "References:" fields when you [`$sort`](sort) by message threads.
+If _set_, threading will only make use of the "In-Reply-To" and "References:" fields when you [`$sort`](cfg-sort) by message threads.
 By default, messages with the same subject are grouped together in "pseudo threads".
 This may not always be desirable, such as in a personal mailbox where you might have several unrelated messages with the subjects like "hi" which will get grouped together.
 :::{seealso}
-[`$sort_re`](sort-re) for a less drastic way of controlling this behavior
+[`$sort_re`](cfg-sort-re) for a less drastic way of controlling this behavior
 :::
 
 --------------------------------------------------------------------------------
 
-(thread-received)=
+(cfg-thread-received)=
 ## `$thread_received`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
     set thread_received = no
     ```
 
-If [`$strict_threads`](strict-threads) is _unset_, then messages may also be grouped by subject.
+If [`$strict_threads`](cfg-strict-threads) is _unset_, then messages may also be grouped by subject.
 Unlike threading by "In-Reply-To:" and "References:" header, grouping by subject does not imply a parent-child relation between two messages.
 
 To determine the ancestry between messages grouped by subject, NeoMutt uses their date: only newer messages can be descendants of older ones.
 
-When [`$thread_received`](thread-received) is _set_, NeoMutt uses the date received rather than the date sent when comparing messages for the date.
+When [`$thread_received`](cfg-thread-received) is _set_, NeoMutt uses the date received rather than the date sent when comparing messages for the date.
 
 :::{seealso}
-[`$strict_threads`](strict-threads), and [`$sort_re`](sort-re)
+[`$strict_threads`](cfg-strict-threads), and [`$sort_re`](cfg-sort-re)
 :::
 

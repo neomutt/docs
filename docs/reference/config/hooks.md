@@ -7,10 +7,10 @@ keywords: neomutt, hooks, default_hook, save_name, force_name, fcc-hook, send-ho
 (cfg-hooks)=
 # Hooks Options
 
-(default-hook)=
+(cfg-default-hook)=
 ## `$default_hook`
 
-:Type: [String](string)
+:Type: [String](type-string)
 :Default:
     ```neomuttrc
     set default_hook = "~f %s !~P | (~P ~C %s)"
@@ -35,33 +35,33 @@ The default value matches if the message is either from a user matching the regu
 
 --------------------------------------------------------------------------------
 
-(force-name)=
+(cfg-force-name)=
 ## `$force_name`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
     set force_name = no
     ```
 
-This variable is similar to [`$save_name`](save-name), except that NeoMutt will store a copy of your outgoing message by the username of the address you are sending to even if that mailbox does not exist.
+This variable is similar to [`$save_name`](cfg-save-name), except that NeoMutt will store a copy of your outgoing message by the username of the address you are sending to even if that mailbox does not exist.
 
-Also see the [`$record`](record) variable.
+Also see the [`$record`](cfg-record) variable.
 
 --------------------------------------------------------------------------------
 
-(save-name)=
+(cfg-save-name)=
 ## `$save_name`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
     set save_name = no
     ```
 
 This variable controls how copies of outgoing messages are saved.
-When _set_, a check is made to see if a mailbox specified by the recipient address exists (this is done by searching for a mailbox in the [`$folder`](folder) directory with the _username_ part of the recipient address).  
-If the mailbox exists, the outgoing message will be saved to that mailbox, otherwise the message is saved to the [`$record`](record) mailbox.
+When _set_, a check is made to see if a mailbox specified by the recipient address exists (this is done by searching for a mailbox in the [`$folder`](cfg-folder) directory with the _username_ part of the recipient address).  
+If the mailbox exists, the outgoing message will be saved to that mailbox, otherwise the message is saved to the [`$record`](cfg-record) mailbox.
 
-Also see the [`$force_name`](force-name) variable.
+Also see the [`$force_name`](cfg-force-name) variable.
 

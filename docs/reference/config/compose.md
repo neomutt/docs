@@ -7,10 +7,10 @@ keywords: compose, compose_format, edit_headers, compose_show_preview, copy, pos
 (cfg-compose)=
 # Compose Options
 
-(compose-confirm-detach-first)=
+(cfg-compose-confirm-detach-first)=
 ## `$compose_confirm_detach_first`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
     set compose_confirm_detach_first = yes
@@ -26,11 +26,11 @@ It doesn't keep track of which message is the typed message if the entries are r
 
 --------------------------------------------------------------------------------
 
-(compose-format)=
+(cfg-compose-format)=
 ## `$compose_format`
 
-:Type: [Expando](expando)
-:Notes: {ref}`Localised String <general>`
+:Type: [Expando](type-expando)
+:Notes: {ref}`Localised String <type-general>`
 :Default:
     ```neomuttrc
     set compose_format = "-- NeoMutt: Compose  [Approx. msg size: %l   Atts: %a]%>-"
@@ -41,7 +41,7 @@ It doesn't keep track of which message is the typed message if the entries are r
     ```
 
 Controls the format of the status line displayed in the "compose" menu.
-This string is similar to [`$status_format`](status-format), but has its own set of `printf(3)`-like sequences:
+This string is similar to [`$status_format`](cfg-status-format), but has its own set of `printf(3)`-like sequences:
 
 | Short  | Long Name           | Description                                                              |
 |--------|---------------------|--------------------------------------------------------------------------|
@@ -53,7 +53,7 @@ This string is similar to [`$status_format`](status-format), but has its own set
 | `%>X`  | `%{padding-hard:X}` | Right justify the rest of the string and pad with character `X`          |
 | `%\|X` | `%{padding-eol:X}`  | Pad to the end of the line with character `X`                            |
 
-See the text describing the [`$status_format`](status-format) option for more information on how to set [`$compose_format`](compose-format).
+See the text describing the [`$status_format`](cfg-status-format) option for more information on how to set [`$compose_format`](cfg-compose-format).
 
 :::{seealso}
 **Expandos:** [Tutorial Conditional](tut-cond-expando), [Howto Conditional](how-cond-expando), [Formatting](how-format-expando), [Reference](ref-expandos)
@@ -61,10 +61,10 @@ See the text describing the [`$status_format`](status-format) option for more in
 
 --------------------------------------------------------------------------------
 
-(compose-preview-above-attachments)=
+(cfg-compose-preview-above-attachments)=
 ## `$compose_preview_above_attachments`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
     set compose_preview_above_attachments = no
@@ -75,11 +75,11 @@ By default it is shown below it.
 
 --------------------------------------------------------------------------------
 
-(compose-preview-min-rows)=
+(cfg-compose-preview-min-rows)=
 ## `$compose_preview_min_rows`
 
-:Type: [Number](number)
-:Notes: {ref}`Not Negative <general>`
+:Type: [Number](type-number)
+:Notes: {ref}`Not Negative <type-general>`
 :Default:
     ```neomuttrc
     set compose_preview_min_rows = 5
@@ -89,10 +89,10 @@ This variable specifies the minimum number of rows that have to be available for
 
 --------------------------------------------------------------------------------
 
-(compose-show-preview)=
+(cfg-compose-show-preview)=
 ## `$compose_show_preview`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
     set compose_show_preview = yes
@@ -102,10 +102,10 @@ When _set_, NeoMutt will display a preview of message in the compose view.
 
 --------------------------------------------------------------------------------
 
-(compose-show-user-headers)=
+(cfg-compose-show-user-headers)=
 ## `$compose_show_user_headers`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
     set compose_show_user_headers = yes
@@ -115,24 +115,24 @@ When _set_, NeoMutt will display user-defined headers (set via [`my-header`](cmd
 
 --------------------------------------------------------------------------------
 
-(copy)=
+(cfg-copy)=
 ## `$copy`
 
-:Type: [Quad-Option](quad)
+:Type: [Quad-Option](type-quad)
 :Default:
     ```neomuttrc
     set copy = yes
     ```
 
 This variable controls whether or not copies of your outgoing messages will be saved for later references.
-Also see [`$record`](record), [`$save_name`](save-name), [`$force_name`](force-name) and [`fcc-hook`](cmd-fcc-hook).
+Also see [`$record`](cfg-record), [`$save_name`](cfg-save-name), [`$force_name`](cfg-force-name) and [`fcc-hook`](cmd-fcc-hook).
 
 --------------------------------------------------------------------------------
 
-(edit-headers)=
+(cfg-edit-headers)=
 ## `$edit_headers`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
     set edit_headers = no
@@ -150,10 +150,10 @@ Changes made to the References: and Date: headers are ignored for interoperabili
 
 --------------------------------------------------------------------------------
 
-(ispell)=
+(cfg-ispell)=
 ## `$ispell`
 
-:Type: [Command (String)](string)
+:Type: [Command (String)](type-string)
 :Default:
     ```neomuttrc
     set ispell = "ispell"
@@ -163,17 +163,17 @@ How to invoke ispell (GNU's spell-checking software).
 
 --------------------------------------------------------------------------------
 
-(postpone)=
+(cfg-postpone)=
 ## `$postpone`
 
-:Type: [Quad-Option](quad)
+:Type: [Quad-Option](type-quad)
 :Default:
     ```neomuttrc
     set postpone = ask-yes
     ```
 
-Controls whether or not messages are saved in the [`$postponed`](postponed) mailbox when you elect not to send immediately.
+Controls whether or not messages are saved in the [`$postponed`](cfg-postponed) mailbox when you elect not to send immediately.
 If set to _ask-yes_ or _ask-no_, you will be prompted with "Save (postpone) draft message?" when quitting from the "compose" screen.
 
-Also see the [`$recall`](recall) variable.
+Also see the [`$recall`](cfg-recall) variable.
 

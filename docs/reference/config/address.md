@@ -7,10 +7,10 @@ keywords: address, idn, international domain name, idn_decode, idn_encode, encod
 (cfg-address)=
 # Address Options
 
-(idn-decode)=
+(cfg-idn-decode)=
 ## `$idn_decode`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Scope: IDN only
 :Default:
     ```neomuttrc
@@ -27,10 +27,10 @@ You can use IDNs for addresses even if this is _unset_.
 
 --------------------------------------------------------------------------------
 
-(idn-encode)=
+(cfg-idn-encode)=
 ## `$idn_encode`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Scope: IDN only
 :Default:
     ```neomuttrc

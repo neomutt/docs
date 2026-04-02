@@ -8,7 +8,7 @@ keywords: headers, ignore, unignore, header-order, unheader-order, my-header, un
 
 ## Header Display
 
-When displaying a message in the pager, NeoMutt folds long header lines at {ref}`$wrap <wrap>` columns.
+When displaying a message in the pager, NeoMutt folds long header lines at {ref}`$wrap <cfg-wrap>` columns.
 Though there are precise rules about where to break and how, NeoMutt always folds headers using a tab for readability.
 
 :::{note}
@@ -113,7 +113,7 @@ unmy-header { * | field ... }
 Before 2026-01-13, these commands were called `my_hdr` and `unmy_hdr`.
 :::
 
-The `my-header` command allows you to create your own header fields which will be added to every message you send and appear in the editor if {ref}`$edit_headers <edit-headers>` is set.
+The `my-header` command allows you to create your own header fields which will be added to every message you send and appear in the editor if {ref}`$edit_headers <cfg-edit-headers>` is set.
 
 For example, if you would like to add an "Organization:" header field to all of your outgoing messages, you can put something like the following in your `.neomuttrc`:
 
@@ -126,7 +126,7 @@ Space characters are *not* allowed between the keyword and the colon (":").
 The standard for electronic mail ([RFC2822](https://www.rfc-editor.org/rfc/rfc2822.html)) says that space is illegal there, so NeoMutt enforces the rule.
 :::
 
-If you would like to add a header field to a single message, you should either set the {ref}`$edit_headers <edit-headers>` variable, or use the `<edit-headers>` function (default: "E") in the compose menu so that you can edit the header of your message along with the body.
+If you would like to add a header field to a single message, you should either set the {ref}`$edit_headers <cfg-edit-headers>` variable, or use the `<edit-headers>` function (default: "E") in the compose menu so that you can edit the header of your message along with the body.
 
 To remove user defined header fields, use the `unmy-header` command.
 You may specify an asterisk ("*") to remove all header fields, or the fields to remove.

@@ -15,7 +15,7 @@ While for text-mode clients like NeoMutt it's best to assume only a standard 80Ã
 
 ## NeoMutt Support
 
-NeoMutt only supports setting the required `format=flowed` MIME parameter on outgoing messages if the {ref}`$text_flowed <text-flowed>` variable is set, specifically it does not add the trailing spaces.
+NeoMutt only supports setting the required `format=flowed` MIME parameter on outgoing messages if the {ref}`$text_flowed <cfg-text-flowed>` variable is set, specifically it does not add the trailing spaces.
 
 After editing, NeoMutt properly space-stuffs the message.
 *Space-stuffing* is required by [RFC3676](https://www.rfc-editor.org/rfc/rfc3676.html), defining `format=flowed`, and means to prepend a space to:
@@ -40,12 +40,12 @@ For example, *vim* provides the `w` flag for its `formatoptions` setting to assi
 ## Reformatting
 
 NeoMutt has some support for reformatting when viewing and replying to `format=flowed` messages.
-In order to take advantage of these, {ref}`$reflow_text <reflow-text>` must be set.
+In order to take advantage of these, {ref}`$reflow_text <cfg-reflow-text>` must be set.
 
-- Paragraphs are automatically reflowed and wrapped at a width specified by {ref}`$reflow_wrap <reflow-wrap>`.
+- Paragraphs are automatically reflowed and wrapped at a width specified by {ref}`$reflow_wrap <cfg-reflow-wrap>`.
 - In its original format, the quoting style of `format=flowed` messages can be difficult to read, and doesn't intermix well with non-flowed replies.
-   Setting {ref}`$reflow_space_quotes <reflow-space-quotes>` adds spaces after each level of quoting when in the pager and replying in a non-flowed format (i.e. with {ref}`$text_flowed <text-flowed>` unset).
-- If {ref}`$reflow_space_quotes <reflow-space-quotes>` is unset, NeoMutt will still add one trailing space after all the quotes in the pager (but not when replying).
+   Setting {ref}`$reflow_space_quotes <cfg-reflow-space-quotes>` adds spaces after each level of quoting when in the pager and replying in a non-flowed format (i.e. with {ref}`$text_flowed <cfg-text-flowed>` unset).
+- If {ref}`$reflow_space_quotes <cfg-reflow-space-quotes>` is unset, NeoMutt will still add one trailing space after all the quotes in the pager (but not when replying).
 
 :::{admonition} ðŸ“· Screenshot Needed
 :class: tip

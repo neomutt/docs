@@ -4,13 +4,13 @@ description: Configuration variables for the Autocrypt automatic key exchange an
 keywords: autocrypt, encryption, automatic encryption, key exchange, autocrypt_dir, autocrypt_reply, autocrypt_acct_format, gpg, passive encryption, e2e
 ---
 
-(cfg-autocrypt)=
+(cfg-autocrypt-options)=
 # Autocrypt Options
 
-(autocrypt)=
+(cfg-autocrypt)=
 ## `$autocrypt`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Scope: Autocrypt only
 :Default:
     ```neomuttrc
@@ -22,10 +22,10 @@ See "$autocryptdoc" for more details.
 
 --------------------------------------------------------------------------------
 
-(autocrypt-acct-format)=
+(cfg-autocrypt-acct-format)=
 ## `$autocrypt_acct_format`
 
-:Type: [Expando](expando)
+:Type: [Expando](type-expando)
 :Scope: Autocrypt only
 :Default:
     ```neomuttrc
@@ -56,11 +56,11 @@ The following `printf(3)`-style sequences are understood:
 
 --------------------------------------------------------------------------------
 
-(autocrypt-dir)=
+(cfg-autocrypt-dir)=
 ## `$autocrypt_dir`
 
-:Type: [Path (String)](path)
-:Notes: [Directory only](path)
+:Type: [Path (String)](type-path)
+:Notes: [Directory only](type-path)
 :Scope: Autocrypt only
 :Default:
     ```neomuttrc
@@ -72,10 +72,10 @@ See "$autocryptdoc" for more details.
 
 --------------------------------------------------------------------------------
 
-(autocrypt-reply)=
+(cfg-autocrypt-reply)=
 ## `$autocrypt_reply`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Scope: Autocrypt only
 :Default:
     ```neomuttrc

@@ -4,13 +4,13 @@ description: Configuration variable for mbox and mmdf mailbox new-mail detection
 keywords: neomutt, mbox, mmdf, check_mbox_size, new mail detection, file size, mailbox format, mail storage
 ---
 
-(cfg-mbox)=
+(cfg-mbox-options)=
 # Mbox Options
 
-(check-mbox-size)=
+(cfg-check-mbox-size)=
 ## `$check_mbox_size`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
     set check_mbox_size = no

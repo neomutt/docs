@@ -19,6 +19,6 @@ The "fcc" field of an email can be set in two ways:
 
 ## See Also
 
-- {ref}`$record <record>`
+- {ref}`$record <cfg-record>`
 - **fcc-hook**
 

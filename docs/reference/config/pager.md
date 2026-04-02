@@ -4,13 +4,13 @@ description: Configuration variables for the built-in pager display, wrapping, f
 keywords: pager, display_filter, pager_context, pager_index_lines, pager_stop, smart_wrap, markers, allow_ansi, smileys, tilde, message viewer, reading
 ---
 
-(cfg-pager)=
+(cfg-pager-options)=
 # Pager Options
 
-(allow-ansi)=
+(cfg-allow-ansi)=
 ## `$allow_ansi`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
     set allow_ansi = no
@@ -24,21 +24,21 @@ Note that this may override your color choices, and even present a security prob
 [-- PGP output follows ...
 ```
 
-and give it the same color as your attachment color (see also [`$crypt_timestamp`](crypt-timestamp)).
+and give it the same color as your attachment color (see also [`$crypt_timestamp`](cfg-crypt-timestamp)).
 
 --------------------------------------------------------------------------------
 
-(display-filter)=
+(cfg-display-filter)=
 ## `$display_filter`
 
-:Type: [Command (String)](string)
+:Type: [Command (String)](type-string)
 :Default: (empty)
     ```neomuttrc
     set display_filter = ""
     ```
 
 When set, specifies a command used to filter messages.
-When a message is viewed it is passed as standard input to [`$display_filter`](display-filter), and the filtered message is read from the standard output.
+When a message is viewed it is passed as standard input to [`$display_filter`](cfg-display-filter), and the filtered message is read from the standard output.
 
 When preparing the message, NeoMutt inserts some escape sequences into the text.
 They are of the form: `<esc>]9;XXX<bel>` where "XXX" is a random 64-bit number.
@@ -51,10 +51,10 @@ This can be fixed by adding this to your config:
 
 --------------------------------------------------------------------------------
 
-(header-color-partial)=
+(cfg-header-color-partial)=
 ## `$header_color_partial`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
     set header_color_partial = no
@@ -70,10 +70,10 @@ See [`color`](cmd-color) for more details.
 
 --------------------------------------------------------------------------------
 
-(markers)=
+(cfg-markers)=
 ## `$markers`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
     set markers = yes
@@ -82,14 +82,14 @@ See [`color`](cmd-color) for more details.
 Controls the display of wrapped lines in the internal pager.
 If set, a "+" marker is displayed at the beginning of wrapped lines.
 
-Also see the [`$smart_wrap`](smart-wrap) variable.
+Also see the [`$smart_wrap`](cfg-smart-wrap) variable.
 
 --------------------------------------------------------------------------------
 
-(pager)=
+(cfg-pager)=
 ## `$pager`
 
-:Type: [Command (String)](string)
+:Type: [Command (String)](type-string)
 :Default: (empty)
     ```neomuttrc
     set pager = ""
@@ -102,11 +102,11 @@ Using an external pager may have some disadvantages: Additional keystrokes are n
 
 --------------------------------------------------------------------------------
 
-(pager-context)=
+(cfg-pager-context)=
 ## `$pager_context`
 
-:Type: [Number](number)
-:Notes: {ref}`Not Negative <general>`
+:Type: [Number](type-number)
+:Notes: {ref}`Not Negative <type-general>`
 :Default:
     ```neomuttrc
     set pager_context = 0
@@ -120,10 +120,10 @@ If positive, this many lines will be given before a match, if 0, the match will 
 
 --------------------------------------------------------------------------------
 
-(pager-format)=
+(cfg-pager-format)=
 ## `$pager_format`
 
-:Type: [Expando](expando)
+:Type: [Expando](type-expando)
 :Default:
     ```neomuttrc
     set pager_format = "-%Z- %C/%m: %-20.20n   %s%*  -- (%P)"
@@ -135,7 +135,7 @@ If positive, this many lines will be given before a match, if 0, the match will 
     ```
 
 This variable controls the format of the one-line message "status" displayed before each message in either the internal or an external pager.
-The valid sequences are listed in the [`$index_format`](index-format) section.
+The valid sequences are listed in the [`$index_format`](cfg-index-format) section.
 
 :::{seealso}
 **Expandos:** [Tutorial Conditional](tut-cond-expando), [Howto Conditional](how-cond-expando), [Formatting](how-format-expando), [Reference](ref-expandos)
@@ -143,11 +143,11 @@ The valid sequences are listed in the [`$index_format`](index-format) section.
 
 --------------------------------------------------------------------------------
 
-(pager-index-lines)=
+(cfg-pager-index-lines)=
 ## `$pager_index_lines`
 
-:Type: [Number](number)
-:Notes: {ref}`Not Negative <general>`
+:Type: [Number](type-number)
+:Notes: {ref}`Not Negative <type-general>`
 :Default:
     ```neomuttrc
     set pager_index_lines = 0
@@ -160,11 +160,11 @@ A value of 0 results in no index being shown.
 
 --------------------------------------------------------------------------------
 
-(pager-read-delay)=
+(cfg-pager-read-delay)=
 ## `$pager_read_delay`
 
-:Type: [Number](number)
-:Notes: {ref}`Not Negative <general>`
+:Type: [Number](type-number)
+:Notes: {ref}`Not Negative <type-general>`
 :Default:
     ```neomuttrc
     set pager_read_delay = 0
@@ -172,15 +172,15 @@ A value of 0 results in no index being shown.
 
 Determines the number of seconds that must elapse after first opening a new message in the pager before that message will be marked as read.
 A value of 0 results in the message being marked read unconditionally; for other values, navigating to another message or exiting the pager before the timeout will leave the message marked unread.
-This setting is ignored if [`$pager`](pager) is set.
+This setting is ignored if [`$pager`](cfg-pager) is set.
 
 --------------------------------------------------------------------------------
 
-(pager-skip-quoted-context)=
+(cfg-pager-skip-quoted-context)=
 ## `$pager_skip_quoted_context`
 
-:Type: [Number](number)
-:Notes: {ref}`Not Negative <general>`
+:Type: [Number](type-number)
+:Notes: {ref}`Not Negative <type-general>`
 :Default:
     ```neomuttrc
     set pager_skip_quoted_context = 0
@@ -192,10 +192,10 @@ If the previous quote is shorter the whole quote is displayed.
 
 --------------------------------------------------------------------------------
 
-(pager-stop)=
+(cfg-pager-stop)=
 ## `$pager_stop`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
     set pager_stop = no
@@ -206,25 +206,25 @@ function.
 
 --------------------------------------------------------------------------------
 
-(prompt-after)=
+(cfg-prompt-after)=
 ## `$prompt_after`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
     set prompt_after = yes
     ```
 
-If you use an _external_ [`$pager`](pager), setting this variable will cause NeoMutt to prompt you for a command when the pager exits rather than returning to the index menu.
+If you use an _external_ [`$pager`](cfg-pager), setting this variable will cause NeoMutt to prompt you for a command when the pager exits rather than returning to the index menu.
 If _unset_, NeoMutt will return to the index menu when the external pager exits.
 
 --------------------------------------------------------------------------------
 
-(search-context)=
+(cfg-search-context)=
 ## `$search_context`
 
-:Type: [Number](number)
-:Notes: {ref}`Not Negative <general>`
+:Type: [Number](type-number)
+:Notes: {ref}`Not Negative <type-general>`
 :Default:
     ```neomuttrc
     set search_context = 0
@@ -235,10 +235,10 @@ By default, search results will be top-aligned.
 
 --------------------------------------------------------------------------------
 
-(smart-wrap)=
+(cfg-smart-wrap)=
 ## `$smart_wrap`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
     set smart_wrap = yes
@@ -247,28 +247,28 @@ By default, search results will be top-aligned.
 Controls the display of lines longer than the screen width in the internal pager.
 If _set_, long lines are wrapped at a word boundary.
 If _unset_, lines are simply wrapped at the screen edge.
-Also see the [`$markers`](markers) variable.
+Also see the [`$markers`](cfg-markers) variable.
 
 --------------------------------------------------------------------------------
 
-(smileys)=
+(cfg-smileys)=
 ## `$smileys`
 
-:Type: [Regular Expression](regex)
+:Type: [Regular Expression](type-regex)
 :Default:
     ```neomuttrc
     set smileys = "(>From )|(:[-^]?[][)(><}{|/DP])"
     ```
 
-The _pager_ uses this variable to catch some common false positives of [`$quote_regex`](quote-regex), most notably smileys and not consider a line quoted text if it also matches [`$smileys`](smileys).
+The _pager_ uses this variable to catch some common false positives of [`$quote_regex`](cfg-quote-regex), most notably smileys and not consider a line quoted text if it also matches [`$smileys`](cfg-smileys).
 This mostly happens at the beginning of a line.
 
 --------------------------------------------------------------------------------
 
-(tilde)=
+(cfg-tilde)=
 ## `$tilde`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
     set tilde = no
@@ -278,11 +278,11 @@ When _set_, the internal-pager will pad blank lines to the bottom of the screen 
 
 --------------------------------------------------------------------------------
 
-(toggle-quoted-show-levels)=
+(cfg-toggle-quoted-show-levels)=
 ## `$toggle_quoted_show_levels`
 
-:Type: [Number](number)
-:Notes: {ref}`Not Negative <general>`
+:Type: [Number](type-number)
+:Notes: {ref}`Not Negative <type-general>`
 :Default:
     ```neomuttrc
     set toggle_quoted_show_levels = 0

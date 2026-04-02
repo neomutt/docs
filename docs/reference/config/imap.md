@@ -7,11 +7,11 @@ keywords: neomutt, imap, imap_authenticators, imap_idle, imap_condstore, imap_qr
 (cfg-imap)=
 # IMAP Options
 
-(imap-authenticators)=
+(cfg-imap-authenticators)=
 ## `$imap_authenticators`
 
-:Type: [String List](slist)
-:Notes: [Colon-separated](slist)
+:Type: [String List](type-slist)
+:Notes: [Colon-separated](type-slist)
 :Default: (empty)
     ```neomuttrc
     set imap_authenticators = ""
@@ -35,10 +35,10 @@ If a method is available but authentication fails, NeoMutt will not connect to t
 
 --------------------------------------------------------------------------------
 
-(imap-check-subscribed)=
+(cfg-imap-check-subscribed)=
 ## `$imap_check_subscribed`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
     set imap_check_subscribed = no
@@ -48,10 +48,10 @@ When _set_, NeoMutt will fetch the set of subscribed folders from your server wh
 
 --------------------------------------------------------------------------------
 
-(imap-condstore)=
+(cfg-imap-condstore)=
 ## `$imap_condstore`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
     set imap_condstore = no
@@ -67,10 +67,10 @@ Your mileage may vary.
 
 --------------------------------------------------------------------------------
 
-(imap-deflate)=
+(cfg-imap-deflate)=
 ## `$imap_deflate`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
     set imap_deflate = yes
@@ -83,10 +83,10 @@ In general a good compression efficiency can be achieved, which speeds up readin
 
 --------------------------------------------------------------------------------
 
-(imap-delim-chars)=
+(cfg-imap-delim-chars)=
 ## `$imap_delim_chars`
 
-:Type: [String](string)
+:Type: [String](type-string)
 :Default:
     ```neomuttrc
     set imap_delim_chars = "/."
@@ -96,11 +96,11 @@ This contains the list of characters that NeoMutt will use as folder separators 
 
 --------------------------------------------------------------------------------
 
-(imap-fetch-chunk-size)=
+(cfg-imap-fetch-chunk-size)=
 ## `$imap_fetch_chunk_size`
 
-:Type: [Number (Long)](long)
-:Notes: {ref}`Not Negative <general>`
+:Type: [Number (Long)](type-long)
+:Notes: {ref}`Not Negative <type-general>`
 :Default:
     ```neomuttrc
     set imap_fetch_chunk_size = 0
@@ -111,10 +111,10 @@ If you have a very large mailbox, this might prevent a timeout and disconnect wh
 
 --------------------------------------------------------------------------------
 
-(imap-headers)=
+(cfg-imap-headers)=
 ## `$imap_headers`
 
-:Type: [String](string)
+:Type: [String](type-string)
 :Default: (empty)
     ```neomuttrc
     set imap_headers = ""
@@ -148,10 +148,10 @@ This is a space separated list, items should be uppercase and not contain the co
 
 --------------------------------------------------------------------------------
 
-(imap-idle)=
+(cfg-imap-idle)=
 ## `$imap_idle`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
     set imap_idle = no
@@ -163,11 +163,11 @@ If your connection seems to freeze up periodically, try unsetting this.
 
 --------------------------------------------------------------------------------
 
-(imap-keep-alive)=
+(cfg-imap-keep-alive)=
 ## `$imap_keep_alive`
 
-:Type: [Number](number)
-:Notes: {ref}`Not Negative <general>`
+:Type: [Number](type-number)
+:Notes: {ref}`Not Negative <type-general>`
 :Default:
     ```neomuttrc
     set imap_keep_alive = 300
@@ -179,10 +179,10 @@ Reduce this number if you find yourself getting disconnected from your IMAP serv
 
 --------------------------------------------------------------------------------
 
-(imap-list-subscribed)=
+(cfg-imap-list-subscribed)=
 ## `$imap_list_subscribed`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
     set imap_list_subscribed = no
@@ -193,11 +193,11 @@ This can be toggled in the IMAP browser with the [`<toggle-subscribed>`](fn-brow
 
 --------------------------------------------------------------------------------
 
-(imap-login)=
+(cfg-imap-login)=
 ## `$imap_login`
 
-:Type: [String](string)
-:Notes: {ref}`Sensitive <general>`
+:Type: [String](type-string)
+:Notes: {ref}`Sensitive <type-general>`
 :Default: (empty)
     ```neomuttrc
     set imap_login = ""
@@ -205,15 +205,15 @@ This can be toggled in the IMAP browser with the [`<toggle-subscribed>`](fn-brow
 
 Your login name on the IMAP server.
 
-This variable defaults to the value of [`$imap_user`](imap-user).
+This variable defaults to the value of [`$imap_user`](cfg-imap-user).
 
 --------------------------------------------------------------------------------
 
-(imap-oauth-refresh-command)=
+(cfg-imap-oauth-refresh-command)=
 ## `$imap_oauth_refresh_command`
 
-:Type: [Command (String)](string)
-:Notes: {ref}`Sensitive <general>`
+:Type: [Command (String)](type-string)
+:Notes: {ref}`Sensitive <type-general>`
 :Default: (empty)
     ```neomuttrc
     set imap_oauth_refresh_command = ""
@@ -225,11 +225,11 @@ See "$oauth" for details.
 
 --------------------------------------------------------------------------------
 
-(imap-pass)=
+(cfg-imap-pass)=
 ## `$imap_pass`
 
-:Type: [String](string)
-:Notes: {ref}`Sensitive <general>`
+:Type: [String](type-string)
+:Notes: {ref}`Sensitive <type-general>`
 :Default: (empty)
     ```neomuttrc
     set imap_pass = ""
@@ -245,10 +245,10 @@ You should only use this option when you are on a fairly secure machine, because
 
 --------------------------------------------------------------------------------
 
-(imap-passive)=
+(cfg-imap-passive)=
 ## `$imap_passive`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
     set imap_passive = yes
@@ -260,10 +260,10 @@ This is useful if you don't want to be prompted for user/password pairs on NeoMu
 
 --------------------------------------------------------------------------------
 
-(imap-peek)=
+(cfg-imap-peek)=
 ## `$imap_peek`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
     set imap_peek = yes
@@ -275,11 +275,11 @@ This option exists to appease speed freaks.
 
 --------------------------------------------------------------------------------
 
-(imap-pipeline-depth)=
+(cfg-imap-pipeline-depth)=
 ## `$imap_pipeline_depth`
 
-:Type: [Number](number)
-:Notes: {ref}`Not Negative <general>`
+:Type: [Number](type-number)
+:Notes: {ref}`Not Negative <type-general>`
 :Default:
     ```neomuttrc
     set imap_pipeline_depth = 15
@@ -295,11 +295,11 @@ Changes to this variable have no effect on open connections.
 
 --------------------------------------------------------------------------------
 
-(imap-poll-timeout)=
+(cfg-imap-poll-timeout)=
 ## `$imap_poll_timeout`
 
-:Type: [Number](number)
-:Notes: {ref}`Not Negative <general>`
+:Type: [Number](type-number)
+:Notes: {ref}`Not Negative <type-general>`
 :Default:
     ```neomuttrc
     set imap_poll_timeout = 15
@@ -310,10 +310,10 @@ Set to 0 to disable timing out.
 
 --------------------------------------------------------------------------------
 
-(imap-qresync)=
+(cfg-imap-qresync)=
 ## `$imap_qresync`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
     set imap_qresync = no
@@ -330,10 +330,10 @@ If you experience strange behavior, such as duplicate or missing messages please
 
 --------------------------------------------------------------------------------
 
-(imap-rfc5161)=
+(cfg-imap-rfc5161)=
 ## `$imap_rfc5161`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
     set imap_rfc5161 = yes
@@ -348,10 +348,10 @@ If your connection seems to freeze at login, try unsetting this.
 
 --------------------------------------------------------------------------------
 
-(imap-send-id)=
+(cfg-imap-send-id)=
 ## `$imap_send_id`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
     set imap_send_id = no
@@ -362,10 +362,10 @@ This command provides information about the IMAP client, such as "NeoMutt" and t
 
 --------------------------------------------------------------------------------
 
-(imap-server-noise)=
+(cfg-imap-server-noise)=
 ## `$imap_server_noise`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
     set imap_server_noise = yes
@@ -376,11 +376,11 @@ Since these messages are often harmless, or generated due to configuration probl
 
 --------------------------------------------------------------------------------
 
-(imap-user)=
+(cfg-imap-user)=
 ## `$imap_user`
 
-:Type: [String](string)
-:Notes: {ref}`Sensitive <general>`
+:Type: [String](type-string)
+:Notes: {ref}`Sensitive <type-general>`
 :Default: (empty)
     ```neomuttrc
     set imap_user = ""

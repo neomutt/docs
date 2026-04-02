@@ -7,29 +7,29 @@ keywords: sidebar, sidebar_visible, sidebar_width, sidebar_format, sidebar_sort,
 (cfg-sidebar)=
 # Sidebar Options
 
-(sidebar-component-depth)=
+(cfg-sidebar-component-depth)=
 ## `$sidebar_component_depth`
 
-:Type: [Number](number)
+:Type: [Number](type-number)
 :Default:
     ```neomuttrc
     set sidebar_component_depth = 0
     ```
 
-By default the sidebar will show the mailbox's path, relative to the [`$folder`](folder) variable.
+By default the sidebar will show the mailbox's path, relative to the [`$folder`](cfg-folder) variable.
 This specifies the number of parent directories to hide from display in the sidebar.
 For example: If a maildir is normally displayed in the sidebar as dir1/dir2/dir3/maildir, setting `set sidebar_component_depth = 2` will display it as dir3/maildir, having truncated the 2 highest directories.
 
 :::{seealso}
-[`$sidebar_short_path`](sidebar-short-path)
+[`$sidebar_short_path`](cfg-sidebar-short-path)
 :::
 
 --------------------------------------------------------------------------------
 
-(sidebar-delim-chars)=
+(cfg-sidebar-delim-chars)=
 ## `$sidebar_delim_chars`
 
-:Type: [String](string)
+:Type: [String](type-string)
 :Default:
     ```neomuttrc
     set sidebar_delim_chars = "/."
@@ -50,15 +50,15 @@ set sidebar_delim_chars = '.'
 ```
 
 :::{seealso}
-[`$sidebar_short_path`](sidebar-short-path), [`$sidebar_folder_indent`](sidebar-folder-indent), [`$sidebar_indent_string`](sidebar-indent-string)
+[`$sidebar_short_path`](cfg-sidebar-short-path), [`$sidebar_folder_indent`](cfg-sidebar-folder-indent), [`$sidebar_indent_string`](cfg-sidebar-indent-string)
 :::
 
 --------------------------------------------------------------------------------
 
-(sidebar-divider-char)=
+(cfg-sidebar-divider-char)=
 ## `$sidebar_divider_char`
 
-:Type: [String](string)
+:Type: [String](type-string)
 :Default:
     ```neomuttrc
     set sidebar_divider_char = "\342\224\202"
@@ -74,10 +74,10 @@ If empty, setting the sidebar_background color may help distinguish the sidebar 
 
 --------------------------------------------------------------------------------
 
-(sidebar-folder-indent)=
+(cfg-sidebar-folder-indent)=
 ## `$sidebar_folder_indent`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
     set sidebar_folder_indent = no
@@ -86,16 +86,16 @@ If empty, setting the sidebar_background color may help distinguish the sidebar 
 Set this to indent mailboxes in the sidebar.
 
 :::{seealso}
-[`$sidebar_short_path`](sidebar-short-path), [`$sidebar_indent_string`](sidebar-indent-string), [`$sidebar_delim_chars`](sidebar-delim-chars)
+[`$sidebar_short_path`](cfg-sidebar-short-path), [`$sidebar_indent_string`](cfg-sidebar-indent-string), [`$sidebar_delim_chars`](cfg-sidebar-delim-chars)
 :::
 
 --------------------------------------------------------------------------------
 
-(sidebar-format)=
+(cfg-sidebar-format)=
 ## `$sidebar_format`
 
-:Type: [Expando](expando)
-:Notes: {ref}`Not Empty <general>`
+:Type: [Expando](type-expando)
+:Notes: {ref}`Not Empty <type-general>`
 :Default:
     ```neomuttrc
     set sidebar_format = "%D%*  %n"
@@ -106,7 +106,7 @@ Set this to indent mailboxes in the sidebar.
     ```
 
 This variable allows you to customize the sidebar display.
-This string is similar to [`$index_format`](index-format), but has its own set of `printf(3)`-like sequences:
+This string is similar to [`$index_format`](cfg-index-format), but has its own set of `printf(3)`-like sequences:
 
 | Short  | Long Name           | Cur | Description                                                                                |
 |--------|---------------------|-----|--------------------------------------------------------------------------------------------|
@@ -131,21 +131,21 @@ This string is similar to [`$index_format`](index-format), but has its own set o
 
 **Cur** = Only applicable to the current folder
 
-In order to use %S, %N, %F, and %!, [`$mail_check_stats`](mail-check-stats) must be _set_.
+In order to use %S, %N, %F, and %!, [`$mail_check_stats`](cfg-mail-check-stats) must be _set_.
 When thus set, a suggested value for this option is "%B%<F? [%F]>%* %<N?%N/>%S".
 
 :::{seealso}
 **Expandos:** [Tutorial Conditional](tut-cond-expando), [Howto Conditional](how-cond-expando), [Formatting](how-format-expando), [Reference](ref-expandos)
 
-[`$sidebar_short_path`](sidebar-short-path)
+[`$sidebar_short_path`](cfg-sidebar-short-path)
 :::
 
 --------------------------------------------------------------------------------
 
-(sidebar-indent-string)=
+(cfg-sidebar-indent-string)=
 ## `$sidebar_indent_string`
 
-:Type: [String](string)
+:Type: [String](type-string)
 :Default:
     ```neomuttrc
     set sidebar_indent_string = "  "
@@ -155,15 +155,15 @@ This specifies the string that is used to indent mailboxes in the sidebar.
 It defaults to two spaces.
 
 :::{seealso}
-[`$sidebar_short_path`](sidebar-short-path), [`$sidebar_folder_indent`](sidebar-folder-indent), [`$sidebar_delim_chars`](sidebar-delim-chars)
+[`$sidebar_short_path`](cfg-sidebar-short-path), [`$sidebar_folder_indent`](cfg-sidebar-folder-indent), [`$sidebar_delim_chars`](cfg-sidebar-delim-chars)
 :::
 
 --------------------------------------------------------------------------------
 
-(sidebar-new-mail-only)=
+(cfg-sidebar-new-mail-only)=
 ## `$sidebar_new_mail_only`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
     set sidebar_new_mail_only = no
@@ -172,15 +172,15 @@ It defaults to two spaces.
 When set, the sidebar will only display mailboxes containing new, or flagged, mail.
 
 :::{seealso}
-[`sidebar-pin`](cmd-sidebar-pin), [`$sidebar_non_empty_mailbox_only`](sidebar-non-empty-mailbox-only)
+[`sidebar-pin`](cmd-sidebar-pin), [`$sidebar_non_empty_mailbox_only`](cfg-sidebar-non-empty-mailbox-only)
 :::
 
 --------------------------------------------------------------------------------
 
-(sidebar-next-new-wrap)=
+(cfg-sidebar-next-new-wrap)=
 ## `$sidebar_next_new_wrap`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
     set sidebar_next_new_wrap = no
@@ -191,10 +191,10 @@ The [`<sidebar-prev-new>`](fn-sidebar) command is similarly affected, wrapping a
 
 --------------------------------------------------------------------------------
 
-(sidebar-non-empty-mailbox-only)=
+(cfg-sidebar-non-empty-mailbox-only)=
 ## `$sidebar_non_empty_mailbox_only`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
     set sidebar_non_empty_mailbox_only = no
@@ -203,15 +203,15 @@ The [`<sidebar-prev-new>`](fn-sidebar) command is similarly affected, wrapping a
 When set, the sidebar will only display mailboxes that contain one or more mails.
 
 :::{seealso}
-[`$sidebar_new_mail_only`](sidebar-new-mail-only), [`sidebar-pin`](cmd-sidebar-pin)
+[`$sidebar_new_mail_only`](cfg-sidebar-new-mail-only), [`sidebar-pin`](cmd-sidebar-pin)
 :::
 
 --------------------------------------------------------------------------------
 
-(sidebar-on-right)=
+(cfg-sidebar-on-right)=
 ## `$sidebar_on_right`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
     set sidebar_on_right = no
@@ -221,16 +221,16 @@ When set, the sidebar will appear on the right-hand side of the screen.
 
 --------------------------------------------------------------------------------
 
-(sidebar-short-path)=
+(cfg-sidebar-short-path)=
 ## `$sidebar_short_path`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
     set sidebar_short_path = no
     ```
 
-By default the sidebar will show the mailbox's path, relative to the [`$folder`](folder) variable.
+By default the sidebar will show the mailbox's path, relative to the [`$folder`](cfg-folder) variable.
 Setting `set sidebar_shortpath = yes` will shorten the names relative to the previous name.
 Here's an example:
 
@@ -242,15 +242,15 @@ Here's an example:
 | `fruit.cherry` | `cherry`      | `..cherry`                                      |
 
 :::{seealso}
-[`$sidebar_delim_chars`](sidebar-delim-chars), [`$sidebar_folder_indent`](sidebar-folder-indent), [`$sidebar_indent_string`](sidebar-indent-string), [`$sidebar_component_depth`](sidebar-component-depth)
+[`$sidebar_delim_chars`](cfg-sidebar-delim-chars), [`$sidebar_folder_indent`](cfg-sidebar-folder-indent), [`$sidebar_indent_string`](cfg-sidebar-indent-string), [`$sidebar_component_depth`](cfg-sidebar-component-depth)
 :::
 
 --------------------------------------------------------------------------------
 
-(sidebar-sort)=
+(cfg-sidebar-sort)=
 ## `$sidebar_sort`
 
-:Type: [Sort Order](sort-order)
+:Type: [Sort Order](type-sort-order)
 :Default:
     ```neomuttrc
     set sidebar_sort = "unsorted"
@@ -276,10 +276,10 @@ Specifies how to sort mailbox entries in the sidebar.
 
 --------------------------------------------------------------------------------
 
-(sidebar-visible)=
+(cfg-sidebar-visible)=
 ## `$sidebar_visible`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
     set sidebar_visible = no
@@ -289,16 +289,16 @@ This specifies whether or not to show sidebar.
 The sidebar shows a list of all your mailboxes.
 
 :::{seealso}
-[`$sidebar_format`](sidebar-format), [`$sidebar_width`](sidebar-width)
+[`$sidebar_format`](cfg-sidebar-format), [`$sidebar_width`](cfg-sidebar-width)
 :::
 
 --------------------------------------------------------------------------------
 
-(sidebar-width)=
+(cfg-sidebar-width)=
 ## `$sidebar_width`
 
-:Type: [Number](number)
-:Notes: {ref}`Not Negative <general>`
+:Type: [Number](type-number)
+:Notes: {ref}`Not Negative <type-general>`
 :Default:
     ```neomuttrc
     set sidebar_width = 30

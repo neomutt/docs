@@ -7,10 +7,10 @@ keywords: neomutt, nntp, usenet, newsgroups, news_server, newsrc, nntp_authentic
 (cfg-nntp)=
 # NNTP Options
 
-(catchup-newsgroup)=
+(cfg-catchup-newsgroup)=
 ## `$catchup_newsgroup`
 
-:Type: [Quad-Option](quad)
+:Type: [Quad-Option](type-quad)
 :Default:
     ```neomuttrc
     set catchup_newsgroup = ask-yes
@@ -20,10 +20,10 @@ If this variable is _set_, NeoMutt will mark all articles in newsgroup as read w
 
 --------------------------------------------------------------------------------
 
-(followup-to-poster)=
+(cfg-followup-to-poster)=
 ## `$followup_to_poster`
 
-:Type: [Quad-Option](quad)
+:Type: [Quad-Option](type-quad)
 :Default:
     ```neomuttrc
     set followup_to_poster = ask-yes
@@ -34,10 +34,10 @@ The message will be mailed to the submitter of the message via mail.
 
 --------------------------------------------------------------------------------
 
-(newsgroups-charset)=
+(cfg-newsgroups-charset)=
 ## `$newsgroups_charset`
 
-:Type: [String](string)
+:Type: [String](type-string)
 :Default:
     ```neomuttrc
     set newsgroups_charset = "utf-8"
@@ -47,11 +47,11 @@ Character set of newsgroups descriptions.
 
 --------------------------------------------------------------------------------
 
-(newsrc)=
+(cfg-newsrc)=
 ## `$newsrc`
 
-:Type: [Expando](expando)
-:Notes: [File only](path)
+:Type: [Expando](type-expando)
+:Notes: [File only](type-path)
 :Default:
     ```neomuttrc
     set newsrc = "~/.newsrc"
@@ -75,11 +75,11 @@ The following printf-style sequence is understood:
 
 --------------------------------------------------------------------------------
 
-(news-cache-dir)=
+(cfg-news-cache-dir)=
 ## `$news_cache_dir`
 
-:Type: [Path (String)](path)
-:Notes: [Directory only](path)
+:Type: [Path (String)](type-path)
+:Notes: [Directory only](type-path)
 :Default:
     ```neomuttrc
     set news_cache_dir = "~/.neomutt"
@@ -90,10 +90,10 @@ If _unset_, articles and headers will not be saved at all and will be reloaded f
 
 --------------------------------------------------------------------------------
 
-(news-server)=
+(cfg-news-server)=
 ## `$news_server`
 
-:Type: [String](string)
+:Type: [String](type-string)
 :Default: (empty)
     ```neomuttrc
     set news_server = ""
@@ -107,10 +107,10 @@ This option can also be set using the command line option "-g", the environment 
 
 --------------------------------------------------------------------------------
 
-(nntp-authenticators)=
+(cfg-nntp-authenticators)=
 ## `$nntp_authenticators`
 
-:Type: [String](string)
+:Type: [String](type-string)
 :Default: (empty)
     ```neomuttrc
     set nntp_authenticators = ""
@@ -135,11 +135,11 @@ If a method is available but authentication fails, NeoMutt will not connect to t
 
 --------------------------------------------------------------------------------
 
-(nntp-context)=
+(cfg-nntp-context)=
 ## `$nntp_context`
 
-:Type: [Number (Long)](long)
-:Notes: {ref}`Not Negative <general>`
+:Type: [Number (Long)](type-long)
+:Notes: {ref}`Not Negative <type-general>`
 :Default:
     ```neomuttrc
     set nntp_context = 1000
@@ -151,10 +151,10 @@ Also controls how many articles headers will be saved in cache when you quit new
 
 --------------------------------------------------------------------------------
 
-(nntp-listgroup)=
+(cfg-nntp-listgroup)=
 ## `$nntp_listgroup`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
     set nntp_listgroup = yes
@@ -164,10 +164,10 @@ This variable controls whether or not existence of each article is checked when 
 
 --------------------------------------------------------------------------------
 
-(nntp-load-description)=
+(cfg-nntp-load-description)=
 ## `$nntp_load_description`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
     set nntp_load_description = yes
@@ -177,11 +177,11 @@ This variable controls whether or not descriptions for each newsgroup must be lo
 
 --------------------------------------------------------------------------------
 
-(nntp-pass)=
+(cfg-nntp-pass)=
 ## `$nntp_pass`
 
-:Type: [String](string)
-:Notes: {ref}`Sensitive <general>`
+:Type: [String](type-string)
+:Notes: {ref}`Sensitive <type-general>`
 :Default: (empty)
     ```neomuttrc
     set nntp_pass = ""
@@ -191,11 +191,11 @@ Your password for NNTP account.
 
 --------------------------------------------------------------------------------
 
-(nntp-poll)=
+(cfg-nntp-poll)=
 ## `$nntp_poll`
 
-:Type: [Number](number)
-:Notes: {ref}`Not Negative <general>`
+:Type: [Number](type-number)
+:Notes: {ref}`Not Negative <type-general>`
 :Default:
     ```neomuttrc
     set nntp_poll = 60
@@ -206,11 +206,11 @@ If set to 0, NeoMutt will recheck newsgroup on each operation in index (stepping
 
 --------------------------------------------------------------------------------
 
-(nntp-user)=
+(cfg-nntp-user)=
 ## `$nntp_user`
 
-:Type: [String](string)
-:Notes: {ref}`Sensitive <general>`
+:Type: [String](type-string)
+:Notes: {ref}`Sensitive <type-general>`
 :Default: (empty)
     ```neomuttrc
     set nntp_user = ""
@@ -221,10 +221,10 @@ If _unset_ and NNTP server requires authentication, NeoMutt will prompt you for 
 
 --------------------------------------------------------------------------------
 
-(post-moderated)=
+(cfg-post-moderated)=
 ## `$post_moderated`
 
-:Type: [Quad-Option](quad)
+:Type: [Quad-Option](type-quad)
 :Default:
     ```neomuttrc
     set post_moderated = ask-yes
@@ -238,10 +238,10 @@ If news server does not support posting to that newsgroup or totally read-only, 
 
 --------------------------------------------------------------------------------
 
-(save-unsubscribed)=
+(cfg-save-unsubscribed)=
 ## `$save_unsubscribed`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
     set save_unsubscribed = no
@@ -251,10 +251,10 @@ When _set_, info about unsubscribed newsgroups will be saved into "newsrc" file 
 
 --------------------------------------------------------------------------------
 
-(show-new-news)=
+(cfg-show-new-news)=
 ## `$show_new_news`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
     set show_new_news = yes
@@ -266,10 +266,10 @@ Also controls whether or not number of new articles of subscribed newsgroups wil
 
 --------------------------------------------------------------------------------
 
-(x-comment-to)=
+(cfg-x-comment-to)=
 ## `$x_comment_to`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
     set x_comment_to = no

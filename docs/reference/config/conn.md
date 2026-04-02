@@ -7,10 +7,10 @@ keywords: connection, network, ssl, tls, starttls, certificate, tunnel, socket_t
 (cfg-conn)=
 # Conn Options
 
-(account-command)=
+(cfg-account-command)=
 ## `$account_command`
 
-:Type: [Command (String)](string)
+:Type: [Command (String)](type-string)
 :Default: (empty)
     ```neomuttrc
     set account_command = ""
@@ -24,11 +24,11 @@ Currently supported output lines are `login`, `username`, and `password`.
 
 --------------------------------------------------------------------------------
 
-(certificate-file)=
+(cfg-certificate-file)=
 ## `$certificate_file`
 
-:Type: [Path (String)](path)
-:Notes: [File only](path)
+:Type: [Path (String)](type-path)
+:Notes: [File only](type-path)
 :Scope: OpenSSL and GnuTLS only
 :Default:
     ```neomuttrc
@@ -44,11 +44,11 @@ Any server certificate that is signed with one of these CA certificates is also 
 
 --------------------------------------------------------------------------------
 
-(entropy-file)=
+(cfg-entropy-file)=
 ## `$entropy_file`
 
-:Type: [Path (String)](path)
-:Notes: [File only](path)
+:Type: [Path (String)](type-path)
+:Notes: [File only](type-path)
 :Scope: OpenSSL only
 :Default: (empty)
     ```neomuttrc
@@ -59,10 +59,10 @@ The file which includes random data that is used to initialize SSL library funct
 
 --------------------------------------------------------------------------------
 
-(preconnect)=
+(cfg-preconnect)=
 ## `$preconnect`
 
-:Type: [String](string)
+:Type: [String](type-string)
 :Default: (empty)
     ```neomuttrc
     set preconnect = ""
@@ -85,10 +85,10 @@ For this example to work, you must be able to log in to the remote machine witho
 
 --------------------------------------------------------------------------------
 
-(socket-timeout)=
+(cfg-socket-timeout)=
 ## `$socket_timeout`
 
-:Type: [Number](number)
+:Type: [Number](type-number)
 :Default:
     ```neomuttrc
     set socket_timeout = 30
@@ -99,11 +99,11 @@ A negative value causes NeoMutt to wait indefinitely.
 
 --------------------------------------------------------------------------------
 
-(ssl-ca-certificates-file)=
+(cfg-ssl-ca-certificates-file)=
 ## `$ssl_ca_certificates_file`
 
-:Type: [Path (String)](path)
-:Notes: [File only](path)
+:Type: [Path (String)](type-path)
+:Notes: [File only](type-path)
 :Scope: GnuTLS only
 :Default: (empty)
     ```neomuttrc
@@ -120,10 +120,10 @@ set ssl_ca_certificates_file = /etc/ssl/certs/ca-certificates.crt
 
 --------------------------------------------------------------------------------
 
-(ssl-ciphers)=
+(cfg-ssl-ciphers)=
 ## `$ssl_ciphers`
 
-:Type: [String](string)
+:Type: [String](type-string)
 :Default: (empty)
     ```neomuttrc
     set ssl_ciphers = ""
@@ -138,11 +138,11 @@ See `gnutls_priority_init(3)` for the syntax and more details.
 
 --------------------------------------------------------------------------------
 
-(ssl-client-cert)=
+(cfg-ssl-client-cert)=
 ## `$ssl_client_cert`
 
-:Type: [Path (String)](path)
-:Notes: [File only](path)
+:Type: [Path (String)](type-path)
+:Notes: [File only](type-path)
 :Default: (empty)
     ```neomuttrc
     set ssl_client_cert = ""
@@ -152,10 +152,10 @@ The file containing a client certificate and its associated private key.
 
 --------------------------------------------------------------------------------
 
-(ssl-force-tls)=
+(cfg-ssl-force-tls)=
 ## `$ssl_force_tls`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
     set ssl_force_tls = yes
@@ -163,15 +163,15 @@ The file containing a client certificate and its associated private key.
 
 If this variable is _set_, NeoMutt will require that all connections to remote servers be encrypted.
 Furthermore it will attempt to negotiate TLS even if the server does not advertise the capability, since it would otherwise have to abort the connection anyway.
-This option supersedes [`$ssl_starttls`](ssl-starttls).
+This option supersedes [`$ssl_starttls`](cfg-ssl-starttls).
 
 --------------------------------------------------------------------------------
 
-(ssl-min-dh-prime-bits)=
+(cfg-ssl-min-dh-prime-bits)=
 ## `$ssl_min_dh_prime_bits`
 
-:Type: [Number](number)
-:Notes: {ref}`Not Negative <general>`
+:Type: [Number](type-number)
+:Notes: {ref}`Not Negative <type-general>`
 :Scope: GnuTLS only
 :Default:
     ```neomuttrc
@@ -184,10 +184,10 @@ A value of 0 will use the default from the GNUTLS library.
 
 --------------------------------------------------------------------------------
 
-(ssl-starttls)=
+(cfg-ssl-starttls)=
 ## `$ssl_starttls`
 
-:Type: [Quad-Option](quad)
+:Type: [Quad-Option](type-quad)
 :Default:
     ```neomuttrc
     set ssl_starttls = yes
@@ -198,15 +198,15 @@ When _unset_, NeoMutt will not attempt to use `STARTTLS` regardless of the serve
 
 :::{note}
 `STARTTLS` is subject to many kinds of attacks, including the ability of a machine-in-the-middle to suppress the advertising of support.
-Setting [`$ssl_force_tls`](ssl-force-tls) is recommended if you rely on `STARTTLS`.
+Setting [`$ssl_force_tls`](cfg-ssl-force-tls) is recommended if you rely on `STARTTLS`.
 :::
 
 --------------------------------------------------------------------------------
 
-(ssl-use-system-certs)=
+(cfg-ssl-use-system-certs)=
 ## `$ssl_use_system_certs`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Scope: GnuTLS only
 :Default:
     ```neomuttrc
@@ -217,10 +217,10 @@ If set to _yes_, NeoMutt will use CA certificates in the system-wide certificate
 
 --------------------------------------------------------------------------------
 
-(ssl-use-tlsv1-2)=
+(cfg-ssl-use-tlsv1-2)=
 ## `$ssl_use_tlsv1_2`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
     set ssl_use_tlsv1_2 = yes
@@ -230,10 +230,10 @@ If _set_, NeoMutt will use TLSv1.2 when communicating with servers that request 
 
 --------------------------------------------------------------------------------
 
-(ssl-use-tlsv1-3)=
+(cfg-ssl-use-tlsv1-3)=
 ## `$ssl_use_tlsv1_3`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
     set ssl_use_tlsv1_3 = yes
@@ -243,10 +243,10 @@ If _set_, NeoMutt will use TLSv1.3 when communicating with servers that request 
 
 --------------------------------------------------------------------------------
 
-(ssl-verify-dates)=
+(cfg-ssl-verify-dates)=
 ## `$ssl_verify_dates`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
     set ssl_verify_dates = yes
@@ -257,10 +257,10 @@ You should only unset this for particular known hosts, using the [`account-hook`
 
 --------------------------------------------------------------------------------
 
-(ssl-verify-host)=
+(cfg-ssl-verify-host)=
 ## `$ssl_verify_host`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
     set ssl_verify_host = yes
@@ -271,10 +271,10 @@ You should only unset this for particular known hosts, using the [`account-hook`
 
 --------------------------------------------------------------------------------
 
-(ssl-verify-partial-chains)=
+(cfg-ssl-verify-partial-chains)=
 ## `$ssl_verify_partial_chains`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Scope: OpenSSL 1.0.2b and newer only
 :Default:
     ```neomuttrc
@@ -283,14 +283,14 @@ You should only unset this for particular known hosts, using the [`account-hook`
 
 This option should not be changed from the default unless you understand what you are doing.
 
-Setting this variable to _yes_ will permit verifying partial certification chains, i.e. a certificate chain where not the root, but an intermediate certificate CA, or the host certificate, are marked trusted (in [`$certificate_file`](certificate-file)), without marking the root signing CA as trusted.
+Setting this variable to _yes_ will permit verifying partial certification chains, i.e. a certificate chain where not the root, but an intermediate certificate CA, or the host certificate, are marked trusted (in [`$certificate_file`](cfg-certificate-file)), without marking the root signing CA as trusted.
 
 --------------------------------------------------------------------------------
 
-(tunnel)=
+(cfg-tunnel)=
 ## `$tunnel`
 
-:Type: [Command (String)](string)
+:Type: [Command (String)](type-string)
 :Default: (empty)
     ```neomuttrc
     set tunnel = ""
@@ -313,29 +313,29 @@ Please see [`account-hook`](cmd-account-hook) in the manual for how to use diffe
 
 --------------------------------------------------------------------------------
 
-(tunnel-is-secure)=
+(cfg-tunnel-is-secure)=
 ## `$tunnel_is_secure`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
     set tunnel_is_secure = yes
     ```
 
-When _set_, NeoMutt will assume the [`$tunnel`](tunnel) connection does not need STARTTLS to be enabled.
-It will also allow IMAP PREAUTH server responses inside a [`$tunnel`](tunnel) to proceed.
-This is appropriate if [`$tunnel`](tunnel) uses ssh or directly invokes the server locally.
+When _set_, NeoMutt will assume the [`$tunnel`](cfg-tunnel) connection does not need STARTTLS to be enabled.
+It will also allow IMAP PREAUTH server responses inside a [`$tunnel`](cfg-tunnel) to proceed.
+This is appropriate if [`$tunnel`](cfg-tunnel) uses ssh or directly invokes the server locally.
 
-When _unset_, NeoMutt will negotiate STARTTLS according to the [`$ssl_starttls`](ssl-starttls) and [`$ssl_force_tls`](ssl-force-tls) variables.
-If [`$ssl_force_tls`](ssl-force-tls) is set, NeoMutt will abort connecting if an IMAP server responds with PREAUTH.
-This setting is appropriate if [`$tunnel`](tunnel) does not provide security and could be tampered with by attackers.
+When _unset_, NeoMutt will negotiate STARTTLS according to the [`$ssl_starttls`](cfg-ssl-starttls) and [`$ssl_force_tls`](cfg-ssl-force-tls) variables.
+If [`$ssl_force_tls`](cfg-ssl-force-tls) is set, NeoMutt will abort connecting if an IMAP server responds with PREAUTH.
+This setting is appropriate if [`$tunnel`](cfg-tunnel) does not provide security and could be tampered with by attackers.
 
 --------------------------------------------------------------------------------
 
-(use-ipv6)=
+(cfg-use-ipv6)=
 ## `$use_ipv6`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
     set use_ipv6 = yes

@@ -7,10 +7,10 @@ keywords: neomutt, maildir, maildir_check_cur, maildir_field_delimiter, maildir_
 (cfg-maildir)=
 # Maildir Options
 
-(check-new)=
+(cfg-check-new)=
 ## `$check_new`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Scope: Only maildir and mh mailboxes
 :Default:
     ```neomuttrc
@@ -23,10 +23,10 @@ If this variable is _unset_, no check for new mail is performed while the mailbo
 
 --------------------------------------------------------------------------------
 
-(maildir-check-cur)=
+(cfg-maildir-check-cur)=
 ## `$maildir_check_cur`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
     set maildir_check_cur = no
@@ -38,11 +38,11 @@ Note that setting this option may slow down polling for new messages in large fo
 
 --------------------------------------------------------------------------------
 
-(maildir-field-delimiter)=
+(cfg-maildir-field-delimiter)=
 ## `$maildir_field_delimiter`
 
-:Type: [String](string)
-:Notes: {ref}`Not Empty <general>`, {ref}`On Startup <general>`
+:Type: [String](type-string)
+:Notes: {ref}`Not Empty <type-general>`, {ref}`On Startup <type-general>`
 :Scope: Only maildir mailboxes
 :Default:
     ```neomuttrc
@@ -56,10 +56,10 @@ NeoMutt supports all non-alphanumeric values except for `-`, `.`, `\`, `/`.
 
 --------------------------------------------------------------------------------
 
-(maildir-header-cache-verify)=
+(cfg-maildir-header-cache-verify)=
 ## `$maildir_header_cache_verify`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
     set maildir_header_cache_verify = yes
@@ -70,10 +70,10 @@ This incurs one `stat(2)` per message every time the folder is opened (which can
 
 --------------------------------------------------------------------------------
 
-(maildir-trash)=
+(cfg-maildir-trash)=
 ## `$maildir_trash`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Scope: Only maildir mailboxes
 :Default:
     ```neomuttrc

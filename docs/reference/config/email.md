@@ -7,10 +7,10 @@ keywords: email, mime, mailcap, scoring, reflow_text, reply_regex, reverse_alias
 (cfg-email)=
 # Email Options
 
-(auto-subscribe)=
+(cfg-auto-subscribe)=
 ## `$auto_subscribe`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
     set auto_subscribe = no
@@ -22,10 +22,10 @@ Parsing and checking these things slows header reading down, so this option is d
 
 --------------------------------------------------------------------------------
 
-(honor-disposition)=
+(cfg-honor-disposition)=
 ## `$honor_disposition`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
     set honor_disposition = no
@@ -42,11 +42,11 @@ NeoMutt will render all MIME parts it can properly transform to plain text.
 
 --------------------------------------------------------------------------------
 
-(hidden-tags)=
+(cfg-hidden-tags)=
 ## `$hidden_tags`
 
-:Type: [String List](slist)
-:Notes: [Comma-separated](slist)
+:Type: [String List](type-slist)
+:Notes: [Comma-separated](type-slist)
 :Default:
     ```neomuttrc
     set hidden_tags = "unread,draft,flagged,passed,replied,attachment,signed,encrypted"
@@ -56,10 +56,10 @@ This variable specifies a list of comma-separated private notmuch/imap tags whic
 
 --------------------------------------------------------------------------------
 
-(implicit-auto-view)=
+(cfg-implicit-auto-view)=
 ## `$implicit_auto_view`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
     set implicit_auto_view = no
@@ -70,10 +70,10 @@ If such an entry is found, NeoMutt will use the viewer defined in that entry to 
 
 --------------------------------------------------------------------------------
 
-(include-encrypted)=
+(cfg-include-encrypted)=
 ## `$include_encrypted`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
     set include_encrypted = no
@@ -86,10 +86,10 @@ If a previously encrypted message were attached by the attacker, they could tric
 
 --------------------------------------------------------------------------------
 
-(include-only-first)=
+(cfg-include-only-first)=
 ## `$include_only_first`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
     set include_only_first = no
@@ -99,11 +99,11 @@ Controls whether or not NeoMutt includes only the first attachment of the messag
 
 --------------------------------------------------------------------------------
 
-(mailcap-path)=
+(cfg-mailcap-path)=
 ## `$mailcap_path`
 
-:Type: [String List](slist)
-:Notes: [Colon-separated](slist)
+:Type: [String List](type-slist)
+:Notes: [Colon-separated](type-slist)
 :Default:
     ```neomuttrc
     set mailcap_path = "~/.mailcap:" PKGDATADIR "/mailcap:" SYSCONFDIR "/mailcap:/etc/mailcap:/usr/etc/mailcap:/usr/local/etc/mailcap"
@@ -112,16 +112,16 @@ Controls whether or not NeoMutt includes only the first attachment of the messag
 This variable specifies a list of colon-separated files to consult when attempting to display MIME bodies not directly supported by NeoMutt.
 The default value is generated during startup: see the "$mailcap" section of the manual.
 
-[`$mailcap_path`](mailcap-path) is overridden by the environment variable `$MAILCAPS`.
+[`$mailcap_path`](cfg-mailcap-path) is overridden by the environment variable `$MAILCAPS`.
 
 The default search path is from [RFC1524](https://www.rfc-editor.org/rfc/rfc1524.html).
 
 --------------------------------------------------------------------------------
 
-(mailcap-sanitize)=
+(cfg-mailcap-sanitize)=
 ## `$mailcap_sanitize`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
     set mailcap_sanitize = yes
@@ -136,11 +136,11 @@ Don't change this setting unless you are really sure what you are doing!
 
 --------------------------------------------------------------------------------
 
-(preferred-languages)=
+(cfg-preferred-languages)=
 ## `$preferred_languages`
 
-:Type: [String List](slist)
-:Notes: [Comma-separated](slist)
+:Type: [String List](type-slist)
+:Notes: [Comma-separated](type-slist)
 :Default: (empty)
     ```neomuttrc
     set preferred_languages = ""
@@ -156,30 +156,30 @@ set preferred_languages = "en,fr,de"
 
 --------------------------------------------------------------------------------
 
-(reflow-space-quotes)=
+(cfg-reflow-space-quotes)=
 ## `$reflow_space_quotes`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
     set reflow_space_quotes = yes
     ```
 
-This option controls how quotes from format=flowed messages are displayed in the pager and when replying (with [`$text_flowed`](text-flowed) _unset_).
+This option controls how quotes from format=flowed messages are displayed in the pager and when replying (with [`$text_flowed`](cfg-text-flowed) _unset_).
 When set, this option adds spaces after each level of quote marks, turning ">>>foo" into "> > > foo".
 
 :::{note}
-If [`$reflow_text`](reflow-text) is _unset_, this option has no effect.
+If [`$reflow_text`](cfg-reflow-text) is _unset_, this option has no effect.
 :::
 
-Also, this option does not affect replies when [`$text_flowed`](text-flowed) is _set_.
+Also, this option does not affect replies when [`$text_flowed`](cfg-text-flowed) is _set_.
 
 --------------------------------------------------------------------------------
 
-(reflow-text)=
+(cfg-reflow-text)=
 ## `$reflow_text`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
     set reflow_text = yes
@@ -189,36 +189,36 @@ When _set_, NeoMutt will reformat paragraphs in text/plain parts marked format=f
 If _unset_, NeoMutt will display paragraphs unaltered from how they appear in the message body.
 See [RFC3676](https://www.rfc-editor.org/rfc/rfc3676.html) for details on the _format=flowed_ format.
 
-Also see [`$reflow_wrap`](reflow-wrap), and [`$wrap`](wrap).
+Also see [`$reflow_wrap`](cfg-reflow-wrap), and [`$wrap`](cfg-wrap).
 
 --------------------------------------------------------------------------------
 
-(reflow-wrap)=
+(cfg-reflow-wrap)=
 ## `$reflow_wrap`
 
-:Type: [Number](number)
+:Type: [Number](type-number)
 :Default:
     ```neomuttrc
     set reflow_wrap = 78
     ```
 
-This variable controls the maximum paragraph width when reformatting text/plain parts when [`$reflow_text`](reflow-text) is _set_.
+This variable controls the maximum paragraph width when reformatting text/plain parts when [`$reflow_text`](cfg-reflow-text) is _set_.
 When the value is 0, paragraphs will be wrapped at the terminal's right margin.
 A positive value sets the paragraph width relative to the left margin.
 A negative value set the paragraph width relative to the right margin.
 
-Be aware that the reformatted lines of a paragraph are still subject to [`$wrap`](wrap).
-This means if [`$reflow_wrap`](reflow-wrap) is 40 and [`$wrap`](wrap) is 30, then the paragraph gets reformatted to 40 characters a line (due to [`$reflow_wrap`](reflow-wrap)) and afterwards each 40-character-line is split at 30 characters (due to [`$wrap`](wrap)), resulting in alternating line lengths of 30 and 10 characters.
+Be aware that the reformatted lines of a paragraph are still subject to [`$wrap`](cfg-wrap).
+This means if [`$reflow_wrap`](cfg-reflow-wrap) is 40 and [`$wrap`](cfg-wrap) is 30, then the paragraph gets reformatted to 40 characters a line (due to [`$reflow_wrap`](cfg-reflow-wrap)) and afterwards each 40-character-line is split at 30 characters (due to [`$wrap`](cfg-wrap)), resulting in alternating line lengths of 30 and 10 characters.
 
-Also see [`$wrap`](wrap).
+Also see [`$wrap`](cfg-wrap).
 
 --------------------------------------------------------------------------------
 
-(reply-regex)=
+(cfg-reply-regex)=
 ## `$reply_regex`
 
-:Type: [Regular Expression](regex)
-:Notes: {ref}`Localised String <general>`
+:Type: [Regular Expression](type-regex)
+:Notes: {ref}`Localised String <type-general>`
 :Default:
     ```neomuttrc
     set reply_regex = "^((re)(\\[[0-9]+\\])*:[ \t]*)*"
@@ -244,15 +244,15 @@ If you use a single quoted string, you would have to type an actual tab characte
 :::{note}
 the result of this regex match against the subject is stored in the header cache.
 :::
-Mutt isn't smart enough to invalidate a header cache entry based on changing [`$reply_regex`](reply-regex), so if you aren't seeing correct values in the index, try temporarily turning off the header cache.
+Mutt isn't smart enough to invalidate a header cache entry based on changing [`$reply_regex`](cfg-reply-regex), so if you aren't seeing correct values in the index, try temporarily turning off the header cache.
 If that fixes the problem, then once the variable is set to your liking, remove your stale header cache files and turn the header cache back on.
 
 --------------------------------------------------------------------------------
 
-(reverse-alias)=
+(cfg-reverse-alias)=
 ## `$reverse_alias`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
     set reverse_alias = no
@@ -275,10 +275,10 @@ It would be displayed in the index menu as "Joe User" instead of "abd30425@somew
 
 --------------------------------------------------------------------------------
 
-(rfc2047-parameters)=
+(cfg-rfc2047-parameters)=
 ## `$rfc2047_parameters`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
     set rfc2047_parameters = yes
@@ -301,24 +301,24 @@ Instead, NeoMutt will unconditionally use the encoding specified in [RFC2231](ht
 
 --------------------------------------------------------------------------------
 
-(score)=
+(cfg-score)=
 ## `$score`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
     set score = yes
     ```
 
 When this variable is _unset_, scoring is turned off.
-This can be useful to selectively disable scoring for certain folders when the [`$score_threshold_delete`](score-threshold-delete) variable and related are used.
+This can be useful to selectively disable scoring for certain folders when the [`$score_threshold_delete`](cfg-score-threshold-delete) variable and related are used.
 
 --------------------------------------------------------------------------------
 
-(score-threshold-delete)=
+(cfg-score-threshold-delete)=
 ## `$score_threshold_delete`
 
-:Type: [Number](number)
+:Type: [Number](type-number)
 :Default:
     ```neomuttrc
     set score_threshold_delete = -1
@@ -329,10 +329,10 @@ Since NeoMutt scores are always greater than or equal to zero, the default setti
 
 --------------------------------------------------------------------------------
 
-(score-threshold-flag)=
+(cfg-score-threshold-flag)=
 ## `$score_threshold_flag`
 
-:Type: [Number](number)
+:Type: [Number](type-number)
 :Default:
     ```neomuttrc
     set score_threshold_flag = 9999
@@ -342,10 +342,10 @@ Messages which have been assigned a score greater than or equal to this variable
 
 --------------------------------------------------------------------------------
 
-(score-threshold-read)=
+(cfg-score-threshold-read)=
 ## `$score_threshold_read`
 
-:Type: [Number](number)
+:Type: [Number](type-number)
 :Default:
     ```neomuttrc
     set score_threshold_read = -1
@@ -356,10 +356,10 @@ Since NeoMutt scores are always greater than or equal to zero, the default setti
 
 --------------------------------------------------------------------------------
 
-(show-multipart-alternative)=
+(cfg-show-multipart-alternative)=
 ## `$show_multipart_alternative`
 
-:Type: [String](string)
+:Type: [String](type-string)
 :Default: (empty)
     ```neomuttrc
     set show_multipart_alternative = ""
@@ -373,10 +373,10 @@ Since NeoMutt scores are always greater than or equal to zero, the default setti
 
 --------------------------------------------------------------------------------
 
-(spam-separator)=
+(cfg-spam-separator)=
 ## `$spam_separator`
 
-:Type: [String](string)
+:Type: [String](type-string)
 :Default:
     ```neomuttrc
     set spam_separator = ","

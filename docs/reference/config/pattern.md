@@ -7,10 +7,10 @@ keywords: pattern, search, simple_search, thorough_search, external_search_comma
 (cfg-pattern)=
 # Pattern Options
 
-(external-search-command)=
+(cfg-external-search-command)=
 ## `$external_search_command`
 
-:Type: [Command (String)](string)
+:Type: [Command (String)](type-string)
 :Default: (empty)
     ```neomuttrc
     set external_search_command = ""
@@ -20,7 +20,7 @@ If set, contains the name of the external program used by "~I" patterns.
 This will usually be a wrapper script around mairix, mu, or similar indexers other than notmuch (for which there is optional special support).
 
 Here is an example how it works.
-Let's assume [`$external_search_command`](external-search-command) is set to "mairix_filter", and mairix_filter is a script which runs the old but well loved mairix indexer with the arguments given to mairix_filter, in the "raw" mode of mairix, producing on the standard output a list of Message-IDs, one per line.
+Let's assume [`$external_search_command`](cfg-external-search-command) is set to "mairix_filter", and mairix_filter is a script which runs the old but well loved mairix indexer with the arguments given to mairix_filter, in the "raw" mode of mairix, producing on the standard output a list of Message-IDs, one per line.
 
 If possible, it also filters down the results coming from mairix such that only messages in the current folder remain.
 It can do this because it gets a hidden first argument which is the path to the folder.
@@ -33,10 +33,10 @@ You, the user, still have to rewrite the mairix_filter script to match the behav
 
 --------------------------------------------------------------------------------
 
-(pattern-format)=
+(cfg-pattern-format)=
 ## `$pattern_format`
 
-:Type: [Expando](expando)
+:Type: [Expando](type-expando)
 :Default:
     ```neomuttrc
     set pattern_format = "%2n %-15e  %d"
@@ -64,10 +64,10 @@ The following `printf(3)`-style sequences are understood:
 
 --------------------------------------------------------------------------------
 
-(simple-search)=
+(cfg-simple-search)=
 ## `$simple_search`
 
-:Type: [String](string)
+:Type: [String](type-string)
 :Default:
     ```neomuttrc
     set simple_search = "~f %s | ~s %s"
@@ -84,10 +84,10 @@ For the default value, "joe" would be expanded to: "~f joe | ~s joe".
 
 --------------------------------------------------------------------------------
 
-(thorough-search)=
+(cfg-thorough-search)=
 ## `$thorough_search`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
     set thorough_search = yes

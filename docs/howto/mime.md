@@ -278,7 +278,7 @@ text/*; more
 ### Secure Use of Mailcap
 
 The interpretation of shell meta-characters embedded in MIME parameters can lead to security problems in general.
-NeoMutt tries to quote parameters in expansion of `%s` syntaxes properly, and avoids risky characters by substituting them, see the {ref}`$mailcap_sanitize <mailcap-sanitize>` variable.
+NeoMutt tries to quote parameters in expansion of `%s` syntaxes properly, and avoids risky characters by substituting them, see the {ref}`$mailcap_sanitize <cfg-mailcap-sanitize>` variable.
 
 Although NeoMutt's procedures to invoke programs with mailcap seem to be safe, there are other applications parsing mailcap, maybe taking less care of it.
 Therefore you should pay attention to the following rules:
@@ -324,8 +324,8 @@ NeoMutt recognizes the following optional fields:
 
    Note that when using the built-in pager, *only* entries with this flag will be considered a handler for a MIME type — all other entries will be ignored.
 
-- **needsterminal** — NeoMutt uses this flag when viewing attachments with **auto-view**, in order to decide whether it should honor the setting of the {ref}`$wait_key <wait-key>` variable or not.
-   When an attachment is viewed using an interactive program, and the corresponding mailcap entry has a *needsterminal* flag, NeoMutt will use {ref}`$wait_key <wait-key>` and the exit status of the program to decide if it will ask you to press a key after the external program has exited.
+- **needsterminal** — NeoMutt uses this flag when viewing attachments with **auto-view**, in order to decide whether it should honor the setting of the {ref}`$wait_key <cfg-wait-key>` variable or not.
+   When an attachment is viewed using an interactive program, and the corresponding mailcap entry has a *needsterminal* flag, NeoMutt will use {ref}`$wait_key <cfg-wait-key>` and the exit status of the program to decide if it will ask you to press a key after the external program has exited.
    In all other situations it will not prompt you for a key.
 
 - **compose=\<command\>** — This flag specifies the command to use to create a new attachment of a specific MIME type.
@@ -341,7 +341,7 @@ NeoMutt recognizes the following optional fields:
 
 - **edit=\<command\>** — This flag specifies the command to use to edit a specific MIME type.
    NeoMutt supports this from the compose menu, and also uses it to compose new attachments.
-   NeoMutt will default to the defined {ref}`$editor <editor>` for text attachments.
+   NeoMutt will default to the defined {ref}`$editor <cfg-editor>` for text attachments.
 
 - **nametemplate=\<template\>** — This field specifies the format for the file denoted by `%s` in the command fields.
    Certain programs will require a certain file extension, for instance, to correctly view a file.
@@ -370,13 +370,13 @@ NeoMutt recognizes the following optional fields:
 
 - **x-neomutt-keep** — `x-neomutt-keep` tells NeoMutt to *not* delete the temporary file after the program has been run.
    Using it allows you to control the lifespan of the temporary file.
-   Without this option, the file will be deleted after {ref}`$timeout <timeout>` seconds.
+   Without this option, the file will be deleted after {ref}`$timeout <cfg-timeout>` seconds.
 
   ```
   text/html; firefox %s & x-neomutt-keep
   ```
 
-- **x-neomutt-nowrap** — `x-neomutt-nowrap` tells the NeoMutt pager to ignore the {ref}`$wrap <wrap>` parameter and to assume the output from the mailcap command to already be correctly wrapped.
+- **x-neomutt-nowrap** — `x-neomutt-nowrap` tells the NeoMutt pager to ignore the {ref}`$wrap <cfg-wrap>` parameter and to assume the output from the mailcap command to already be correctly wrapped.
 
   ```
   text/html; /usr/local/bin/w3m -s -T text/html -o display_link_number=1 %s; nametemplate=%s.html; copiousoutput; x-neomutt-nowrap;
@@ -639,7 +639,7 @@ In order to provide this information, NeoMutt needs to fully MIME-parse all mess
 This can slow down operation especially for remote mail folders such as IMAP because all messages have to be downloaded first regardless whether the user really wants to view them or not though using body caching usually means to download the message just once.
 
 By default, NeoMutt will not search inside `multipart/alternative` containers.
-This can be changed via the {ref}`$count_alternatives <count-alternatives>` configuration variable.
+This can be changed via the {ref}`$count_alternatives <cfg-count-alternatives>` configuration variable.
 
 **Usage:**
 

@@ -7,10 +7,10 @@ keywords: neomutt, menu, arrow_cursor, arrow_string, menu_context, menu_move_off
 (cfg-menu)=
 # Menu Options
 
-(arrow-cursor)=
+(cfg-arrow-cursor)=
 ## `$arrow_cursor`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
     set arrow_cursor = no
@@ -21,11 +21,11 @@ On slow network or modem links this will make response faster because there is l
 
 --------------------------------------------------------------------------------
 
-(arrow-string)=
+(cfg-arrow-string)=
 ## `$arrow_string`
 
-:Type: [String](string)
-:Notes: {ref}`Not Empty <general>`
+:Type: [String](type-string)
+:Notes: {ref}`Not Empty <type-general>`
 :Default:
     ```neomuttrc
     set arrow_string = "->"
@@ -35,25 +35,25 @@ Specifies the string of arrow_cursor when arrow_cursor enabled.
 
 --------------------------------------------------------------------------------
 
-(menu-context)=
+(cfg-menu-context)=
 ## `$menu_context`
 
-:Type: [Number](number)
-:Notes: {ref}`Not Negative <general>`
+:Type: [Number](type-number)
+:Notes: {ref}`Not Negative <type-general>`
 :Default:
     ```neomuttrc
     set menu_context = 0
     ```
 
 This variable controls the number of lines of context that are given when scrolling through menus.
-(Similar to [`$pager_context`](pager-context).)
+(Similar to [`$pager_context`](cfg-pager-context).)
 
 --------------------------------------------------------------------------------
 
-(menu-move-off)=
+(cfg-menu-move-off)=
 ## `$menu_move_off`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
     set menu_move_off = yes
@@ -64,10 +64,10 @@ When _set_, the bottom entry may move off the bottom.
 
 --------------------------------------------------------------------------------
 
-(menu-scroll)=
+(cfg-menu-scroll)=
 ## `$menu_scroll`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
     set menu_scroll = no

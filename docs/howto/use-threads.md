@@ -25,14 +25,14 @@ backwards-compatible behavior on `$sort` if this feature is not used.
 ## Variables
 
 The "Use Threads" feature adds one new config option,
-{ref}`$use_threads <use-threads>`, which is an enumeration of possible thread
+{ref}`$use_threads <cfg-use-threads>`, which is an enumeration of possible thread
 views. The variable defaults to unset for the original behavior of overloading
-{ref}`$sort=threads <sort>` to enable sorting. It can be set to `flat` (or
+{ref}`$sort=threads <cfg-sort>` to enable sorting. It can be set to `flat` (or
 `no`) for an unthreaded view based on `$sort`, to `threads` (or `yes`) for a
 threaded view where roots appear above children, or to `reverse` for a threaded
 view where children appear above roots.
 
-When sorting by threads, the value of {ref}`$sort <sort>` determines which
+When sorting by threads, the value of {ref}`$sort <cfg-sort>` determines which
 thread floats to the top. If `$sort` does not contain `reverse-`, the latest
 thread goes to the bottom for `use_threads=threads` and to the top for
 `use_threads=reverse`; the direction of float is swapped if `$sort` also uses

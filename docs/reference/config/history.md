@@ -4,14 +4,14 @@ description: Configuration variables for command-line history size, persistence,
 keywords: neomutt, history, history_file, history_format, history_remove_dups, save_history, command history, input history, recall, buffer
 ---
 
-(cfg-history)=
+(cfg-history-options)=
 # History Options
 
-(history)=
+(cfg-history)=
 ## `$history`
 
-:Type: [Number](number)
-:Notes: {ref}`Not Negative <general>`
+:Type: [Number](type-number)
+:Notes: {ref}`Not Negative <type-general>`
 :Default:
     ```neomuttrc
     set history = 10
@@ -24,15 +24,15 @@ Note that strings (e.g. commands) starting with a space are never recorded in th
 This is for example useful to prevent leaking sensitive information into the history file or for one off tests.
 
 Also note that a string is not added to the history if it exactly matches its immediate predecessor, e.g. executing the same command twice in a row results in only one copy being added to the history.
-To prevent duplicates over all entries use [`$history_remove_dups`](history-remove-dups).
+To prevent duplicates over all entries use [`$history_remove_dups`](cfg-history-remove-dups).
 
 --------------------------------------------------------------------------------
 
-(history-file)=
+(cfg-history-file)=
 ## `$history_file`
 
-:Type: [Path (String)](path)
-:Notes: [File only](path)
+:Type: [Path (String)](type-path)
+:Notes: [File only](type-path)
 :Default:
     ```neomuttrc
     set history_file = "~/.mutthistory"
@@ -40,14 +40,14 @@ To prevent duplicates over all entries use [`$history_remove_dups`](history-remo
 
 The file in which NeoMutt will save its history.
 
-Also see [`$save_history`](save-history).
+Also see [`$save_history`](cfg-save-history).
 
 --------------------------------------------------------------------------------
 
-(history-format)=
+(cfg-history-format)=
 ## `$history_format`
 
-:Type: [Expando](expando)
+:Type: [Expando](type-expando)
 :Default:
     ```neomuttrc
     set history_format = "%s"
@@ -58,7 +58,7 @@ Also see [`$save_history`](save-history).
     ```
 
 Controls the format of the entries of the history list.
-This string is similar to [`$index_format`](index-format), but has its own set of `printf(3)`-like sequences:
+This string is similar to [`$index_format`](cfg-index-format), but has its own set of `printf(3)`-like sequences:
 
 | Short  | Long Name           | Description                                                     |
 |--------|---------------------|-----------------------------------------------------------------|
@@ -74,32 +74,32 @@ This string is similar to [`$index_format`](index-format), but has its own set o
 
 --------------------------------------------------------------------------------
 
-(history-remove-dups)=
+(cfg-history-remove-dups)=
 ## `$history_remove_dups`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
     set history_remove_dups = no
     ```
 
 When _set_, all of the string history will be scanned for duplicates when a new entry is added.
-Duplicate entries in the [`$history_file`](history-file) will also be removed when it is periodically compacted.
+Duplicate entries in the [`$history_file`](cfg-history-file) will also be removed when it is periodically compacted.
 
 --------------------------------------------------------------------------------
 
-(save-history)=
+(cfg-save-history)=
 ## `$save_history`
 
-:Type: [Number](number)
-:Notes: {ref}`Not Negative <general>`
+:Type: [Number](type-number)
+:Notes: {ref}`Not Negative <type-general>`
 :Default:
     ```neomuttrc
     set save_history = 0
     ```
 
-This variable controls the size of the history (per category) saved in the [`$history_file`](history-file) file.
+This variable controls the size of the history (per category) saved in the [`$history_file`](cfg-history-file) file.
 
-Setting this to a value greater than [`$history`](history) is possible.
-However, there will never be more than [`$history`](history) entries to select from even if more are recorded in the history file.
+Setting this to a value greater than [`$history`](cfg-history) is possible.
+However, there will never be more than [`$history`](cfg-history) entries to select from even if more are recorded in the history file.
 

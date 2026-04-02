@@ -7,10 +7,10 @@ keywords: neomutt, ncrypt, pgp, smime, gpgme, encryption, signing, cryptography,
 (cfg-ncrypt)=
 # Ncrypt Options
 
-(crypt-confirm-hook)=
+(cfg-crypt-confirm-hook)=
 ## `$crypt_confirm_hook`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
     set crypt_confirm_hook = yes
@@ -22,10 +22,10 @@ This is generally considered unsafe, especially where typos are concerned.
 
 --------------------------------------------------------------------------------
 
-(crypt-encryption-info)=
+(cfg-crypt-encryption-info)=
 ## `$crypt_encryption_info`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Scope: Crypto only
 :Default:
     ```neomuttrc
@@ -36,10 +36,10 @@ If _set_, NeoMutt will include an informative block before an encrypted part, wi
 
 --------------------------------------------------------------------------------
 
-(crypt-opportunistic-encrypt)=
+(cfg-crypt-opportunistic-encrypt)=
 ## `$crypt_opportunistic_encrypt`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Scope: Crypto only
 :Default:
     ```neomuttrc
@@ -49,26 +49,26 @@ If _set_, NeoMutt will include an informative block before an encrypted part, wi
 Setting this variable will cause NeoMutt to automatically enable and disable encryption, based on whether all message recipient keys can be located by NeoMutt.
 
 When this option is enabled, NeoMutt will enable/disable encryption each time the TO, CC, and BCC lists are edited.
-If [`$edit_headers`](edit-headers) is set, NeoMutt will also do so each time the message is edited.
+If [`$edit_headers`](cfg-edit-headers) is set, NeoMutt will also do so each time the message is edited.
 
 While this is set, encryption can't be manually enabled/disabled.
 The pgp or smime menus provide a selection to temporarily disable this option for the current message.
 
-If [`$crypt_auto_encrypt`](crypt-auto-encrypt) or [`$crypt_reply_encrypt`](crypt-reply-encrypt) enable encryption for a message, this option will be disabled for that message.
+If [`$crypt_auto_encrypt`](cfg-crypt-auto-encrypt) or [`$crypt_reply_encrypt`](cfg-crypt-reply-encrypt) enable encryption for a message, this option will be disabled for that message.
 It can be manually re-enabled in the pgp or smime menus.
 
 --------------------------------------------------------------------------------
 
-(crypt-opportunistic-encrypt-strong-keys)=
+(cfg-crypt-opportunistic-encrypt-strong-keys)=
 ## `$crypt_opportunistic_encrypt_strong_keys`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
     set crypt_opportunistic_encrypt_strong_keys = no
     ```
 
-When set, this modifies the behavior of [`$crypt_opportunistic_encrypt`](crypt-opportunistic-encrypt) to only search for "strong keys", that is, keys with full validity according to the web-of-trust algorithm.
+When set, this modifies the behavior of [`$crypt_opportunistic_encrypt`](cfg-crypt-opportunistic-encrypt) to only search for "strong keys", that is, keys with full validity according to the web-of-trust algorithm.
 A key with marginal or no validity will not enable opportunistic encryption.
 
 For S/MIME, the behavior depends on the backend.
@@ -77,10 +77,10 @@ The GPGME backend will use the same filters as with OpenPGP, and depends on GPGM
 
 --------------------------------------------------------------------------------
 
-(crypt-protected-headers-read)=
+(cfg-crypt-protected-headers-read)=
 ## `$crypt_protected_headers_read`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Scope: Crypto only
 :Default:
     ```neomuttrc
@@ -92,23 +92,23 @@ When set, NeoMutt will display protected headers ("Memory Hole") in the pager, a
 Protected headers are stored inside the encrypted or signed part of an email, to prevent disclosure or tampering.
 For more information see <https://github.com/autocrypt/protected-headers> Currently NeoMutt only supports the Subject header.
 
-Encrypted messages using protected headers often substitute the exposed Subject header with a dummy value (see [`$crypt_protected_headers_subject`](crypt-protected-headers-subject)).
+Encrypted messages using protected headers often substitute the exposed Subject header with a dummy value (see [`$crypt_protected_headers_subject`](cfg-crypt-protected-headers-subject)).
 NeoMutt will update its concept of the correct subject **after** the message is opened, i.e. via the [`<display-message>`](fn-index) function.
 If you reply to a message before opening it, NeoMutt will end up using the dummy Subject header, so be sure to open such a message first.
 
 --------------------------------------------------------------------------------
 
-(crypt-protected-headers-save)=
+(cfg-crypt-protected-headers-save)=
 ## `$crypt_protected_headers_save`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Scope: Crypto only
 :Default:
     ```neomuttrc
     set crypt_protected_headers_save = no
     ```
 
-When [`$crypt_protected_headers_read`](crypt-protected-headers-read) is set, and a message with a protected Subject is opened, NeoMutt will save the updated Subject into the header cache by default.
+When [`$crypt_protected_headers_read`](cfg-crypt-protected-headers-read) is set, and a message with a protected Subject is opened, NeoMutt will save the updated Subject into the header cache by default.
 This allows searching/limiting based on the protected Subject header if the mailbox is re-opened, without having to re-open the message each time.
 However, for mbox/mh mailbox types, or if header caching is not set up, you would need to re-open the message each time the mailbox was reopened before you could see or search/limit on the protected subject again.
 
@@ -120,26 +120,26 @@ Please make sure you understand the consequences of this before you enable this 
 
 --------------------------------------------------------------------------------
 
-(crypt-protected-headers-subject)=
+(cfg-crypt-protected-headers-subject)=
 ## `$crypt_protected_headers_subject`
 
-:Type: [String](string)
+:Type: [String](type-string)
 :Scope: Crypto only
 :Default:
     ```neomuttrc
     set crypt_protected_headers_subject = "..."
     ```
 
-When [`$crypt_protected_headers_write`](crypt-protected-headers-write) is set, and the message is marked for encryption, this will be substituted into the Subject field in the message headers.
+When [`$crypt_protected_headers_write`](cfg-crypt-protected-headers-write) is set, and the message is marked for encryption, this will be substituted into the Subject field in the message headers.
 
 To prevent a subject from being substituted, unset this variable, or set it to the empty string.
 
 --------------------------------------------------------------------------------
 
-(crypt-protected-headers-weed)=
+(cfg-crypt-protected-headers-weed)=
 ## `$crypt_protected_headers_weed`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Scope: Crypto only
 :Default:
     ```neomuttrc
@@ -150,10 +150,10 @@ Controls whether NeoMutt will weed protected header fields.
 
 --------------------------------------------------------------------------------
 
-(crypt-protected-headers-write)=
+(cfg-crypt-protected-headers-write)=
 ## `$crypt_protected_headers_write`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Scope: Crypto only
 :Default:
     ```neomuttrc
@@ -169,10 +169,10 @@ Currently NeoMutt only supports the Subject header.
 
 --------------------------------------------------------------------------------
 
-(crypt-timestamp)=
+(cfg-crypt-timestamp)=
 ## `$crypt_timestamp`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Scope: Crypto only
 :Default:
     ```neomuttrc
@@ -184,11 +184,11 @@ If you are using colors to mark these lines, and rely on these, you may _unset_ 
 
 --------------------------------------------------------------------------------
 
-(crypt-use-gpgme)=
+(cfg-crypt-use-gpgme)=
 ## `$crypt_use_gpgme`
 
-:Type: [Boolean](bool)
-:Notes: {ref}`On Startup <general>`
+:Type: [Boolean](type-bool)
+:Notes: {ref}`On Startup <type-general>`
 :Default:
     ```neomuttrc
     set crypt_use_gpgme = yes
@@ -198,14 +198,14 @@ This variable controls the use of the GPGME-enabled crypto backends.
 If it is _set_ and NeoMutt was built with GPGME support, the gpgme code for S/MIME and PGP will be used instead of the classic code.
 Note that you need to set this option in .neomuttrc; it won't have any effect when used interactively.
 
-Note that the GPGME backend does not support creating old-style inline (traditional) PGP encrypted or signed messages (see [`$pgp_auto_inline`](pgp-auto-inline)).
+Note that the GPGME backend does not support creating old-style inline (traditional) PGP encrypted or signed messages (see [`$pgp_auto_inline`](cfg-pgp-auto-inline)).
 
 --------------------------------------------------------------------------------
 
-(crypt-use-pka)=
+(cfg-crypt-use-pka)=
 ## `$crypt_use_pka`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
     set crypt_use_pka = no
@@ -218,10 +218,10 @@ Controls whether NeoMutt uses PKA during signature verification (only supported 
 
 --------------------------------------------------------------------------------
 
-(crypt-verify-sig)=
+(cfg-crypt-verify-sig)=
 ## `$crypt_verify_sig`
 
-:Type: [Quad-Option](quad)
+:Type: [Quad-Option](type-quad)
 :Scope: Crypto only
 :Default:
     ```neomuttrc
@@ -234,24 +234,24 @@ If _"no"_, never attempt to verify cryptographic signatures.
 
 --------------------------------------------------------------------------------
 
-(envelope-from-address)=
+(cfg-envelope-from-address)=
 ## `$envelope_from_address`
 
-:Type: {ref}`Address <address>`
+:Type: {ref}`Address <type-address>`
 :Default: (empty)
     ```neomuttrc
     set envelope_from_address = ""
     ```
 
 Manually sets the _envelope_ sender for outgoing messages.
-This value is ignored if [`$use_envelope_from`](use-envelope-from) is _unset_.
+This value is ignored if [`$use_envelope_from`](cfg-use-envelope-from) is _unset_.
 
 --------------------------------------------------------------------------------
 
-(pgp-auto-decode)=
+(cfg-pgp-auto-decode)=
 ## `$pgp_auto_decode`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
     set pgp_auto_decode = no
@@ -262,10 +262,10 @@ For example, if the user displays a pgp-traditional message which has not been m
 
 --------------------------------------------------------------------------------
 
-(pgp-auto-inline)=
+(cfg-pgp-auto-inline)=
 ## `$pgp_auto_inline`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Scope: PGP only
 :Default:
     ```neomuttrc
@@ -279,16 +279,16 @@ The GPGME backend does not support this option.
 Note that NeoMutt might automatically use PGP/MIME for messages which consist of more than a single MIME part.
 NeoMutt can be configured to ask before sending PGP/MIME messages when inline (traditional) would not work.
 
-Also see the [`$pgp_mime_auto`](pgp-mime-auto) variable.
+Also see the [`$pgp_mime_auto`](cfg-pgp-mime-auto) variable.
 
 Also note that using the old-style PGP message format is **strongly** **deprecated**.
 
 --------------------------------------------------------------------------------
 
-(pgp-check-exit)=
+(cfg-pgp-check-exit)=
 ## `$pgp_check_exit`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Scope: PGP only
 :Default:
     ```neomuttrc
@@ -300,27 +300,27 @@ A non-zero exit code means that the subprocess failed.
 
 --------------------------------------------------------------------------------
 
-(pgp-check-gpg-decrypt-status-fd)=
+(cfg-pgp-check-gpg-decrypt-status-fd)=
 ## `$pgp_check_gpg_decrypt_status_fd`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Scope: PGP only
 :Default:
     ```neomuttrc
     set pgp_check_gpg_decrypt_status_fd = yes
     ```
 
-If _set_, NeoMutt will check the status file descriptor output of [`$pgp_decrypt_command`](pgp-decrypt-command) and [`$pgp_decode_command`](pgp-decode-command) for GnuPG status codes indicating successful decryption.
+If _set_, NeoMutt will check the status file descriptor output of [`$pgp_decrypt_command`](cfg-pgp-decrypt-command) and [`$pgp_decode_command`](cfg-pgp-decode-command) for GnuPG status codes indicating successful decryption.
 This will check for the presence of DECRYPTION_OKAY, absence of DECRYPTION_FAILED, and that all PLAINTEXT occurs between the BEGIN_DECRYPTION and END_DECRYPTION status codes.
 
-If _unset_, NeoMutt will instead match the status fd output against [`$pgp_decryption_okay`](pgp-decryption-okay).
+If _unset_, NeoMutt will instead match the status fd output against [`$pgp_decryption_okay`](cfg-pgp-decryption-okay).
 
 --------------------------------------------------------------------------------
 
-(pgp-clear-sign-command)=
+(cfg-pgp-clear-sign-command)=
 ## `$pgp_clear_sign_command`
 
-:Type: [Expando (Command String)](expando)
+:Type: [Expando (Command String)](type-expando)
 :Scope: PGP only
 :Default: (empty)
     ```neomuttrc
@@ -330,7 +330,7 @@ If _unset_, NeoMutt will instead match the status fd output against [`$pgp_decry
 This format is used to create an old-style "clearsigned" PGP message.
 Note that the use of this format is **strongly** **deprecated**.
 
-This is a format string, see the [`$pgp_decode_command`](pgp-decode-command) command for possible `printf(3)`-like sequences.
+This is a format string, see the [`$pgp_decode_command`](cfg-pgp-decode-command) command for possible `printf(3)`-like sequences.
 Note that in this case, %r expands to the search string, which is a list of one or more quoted values such as email address, name, or keyid.
 
 :::{seealso}
@@ -339,10 +339,10 @@ Note that in this case, %r expands to the search string, which is a list of one 
 
 --------------------------------------------------------------------------------
 
-(pgp-decode-command)=
+(cfg-pgp-decode-command)=
 ## `$pgp_decode_command`
 
-:Type: [Expando (Command String)](expando)
+:Type: [Expando (Command String)](type-expando)
 :Scope: PGP only
 :Default: (empty)
     ```neomuttrc
@@ -355,7 +355,7 @@ The PGP command formats have their own set of `printf(3)`-like sequences:
 
 | Short | Long Name           | Description                                                                                               |
 |-------|---------------------|-----------------------------------------------------------------------------------------------------------|
-| `%a`  | `%{sign-as}`        | Value of [`$pgp_sign_as`](pgp-sign-as) if set, otherwise the value of [`$pgp_default_key`](pgp-default-key) |
+| `%a`  | `%{sign-as}`        | Value of [`$pgp_sign_as`](cfg-pgp-sign-as) if set, otherwise the value of [`$pgp_default_key`](cfg-pgp-default-key) |
 | `%f`  | `%{file-message}`   | Expands to the name of a file containing a message                                                        |
 | `%p`  | `%{need-pass}`      | Expands to `PGPPASSFD=0` when a pass phrase is needed, to an empty string otherwise.                      |
 |       |                     | Note: This may be used with a `%<...>` construct.                                                         |
@@ -369,28 +369,28 @@ The PGP command formats have their own set of `printf(3)`-like sequences:
 
 --------------------------------------------------------------------------------
 
-(pgp-decryption-okay)=
+(cfg-pgp-decryption-okay)=
 ## `$pgp_decryption_okay`
 
-:Type: [Regular Expression](regex)
+:Type: [Regular Expression](type-regex)
 :Scope: PGP only
 :Default: (empty)
     ```neomuttrc
     set pgp_decryption_okay = ""
     ```
 
-If you assign text to this variable, then an encrypted PGP message is only considered successfully decrypted if the output from [`$pgp_decrypt_command`](pgp-decrypt-command) contains the text.
+If you assign text to this variable, then an encrypted PGP message is only considered successfully decrypted if the output from [`$pgp_decrypt_command`](cfg-pgp-decrypt-command) contains the text.
 This is used to protect against a spoofed encrypted message, with multipart/encrypted headers but containing a block that is not actually encrypted.
 (e.g. simply signed and ascii armored text).
 
-Note that if [`$pgp_check_gpg_decrypt_status_fd`](pgp-check-gpg-decrypt-status-fd) is set, this variable is ignored.
+Note that if [`$pgp_check_gpg_decrypt_status_fd`](cfg-pgp-check-gpg-decrypt-status-fd) is set, this variable is ignored.
 
 --------------------------------------------------------------------------------
 
-(pgp-decrypt-command)=
+(cfg-pgp-decrypt-command)=
 ## `$pgp_decrypt_command`
 
-:Type: [Expando (Command String)](expando)
+:Type: [Expando (Command String)](type-expando)
 :Scope: PGP only
 :Default: (empty)
     ```neomuttrc
@@ -399,7 +399,7 @@ Note that if [`$pgp_check_gpg_decrypt_status_fd`](pgp-check-gpg-decrypt-status-f
 
 This command is used to decrypt a PGP encrypted message.
 
-This is a format string, see the [`$pgp_decode_command`](pgp-decode-command) command for possible `printf(3)`-like sequences.
+This is a format string, see the [`$pgp_decode_command`](cfg-pgp-decode-command) command for possible `printf(3)`-like sequences.
 
 :::{note}
 When decrypting messages using `gpg`, a pinentry program needs to be invoked unless the password is cached within `gpg-agent`.
@@ -415,10 +415,10 @@ You are encouraged to use a different pinentry-program when running NeoMutt in o
 
 --------------------------------------------------------------------------------
 
-(pgp-default-key)=
+(cfg-pgp-default-key)=
 ## `$pgp_default_key`
 
-:Type: [String](string)
+:Type: [String](type-string)
 :Scope: PGP only
 :Default: (empty)
     ```neomuttrc
@@ -426,16 +426,16 @@ You are encouraged to use a different pinentry-program when running NeoMutt in o
     ```
 
 This is the default key-pair to use for PGP operations.
-It will be used for encryption (see [`$postpone_encrypt`](postpone-encrypt) and [`$pgp_self_encrypt`](pgp-self-encrypt)).
+It will be used for encryption (see [`$postpone_encrypt`](cfg-postpone-encrypt) and [`$pgp_self_encrypt`](cfg-pgp-self-encrypt)).
 
-It will also be used for signing unless [`$pgp_sign_as`](pgp-sign-as) is set.
+It will also be used for signing unless [`$pgp_sign_as`](cfg-pgp-sign-as) is set.
 
 --------------------------------------------------------------------------------
 
-(pgp-encrypt-only-command)=
+(cfg-pgp-encrypt-only-command)=
 ## `$pgp_encrypt_only_command`
 
-:Type: [Expando (Command String)](expando)
+:Type: [Expando (Command String)](type-expando)
 :Scope: PGP only
 :Default: (empty)
     ```neomuttrc
@@ -444,7 +444,7 @@ It will also be used for signing unless [`$pgp_sign_as`](pgp-sign-as) is set.
 
 This command is used to encrypt a body part without signing it.
 
-This is a format string, see the [`$pgp_decode_command`](pgp-decode-command) command for possible `printf(3)`-like sequences.
+This is a format string, see the [`$pgp_decode_command`](cfg-pgp-decode-command) command for possible `printf(3)`-like sequences.
 Note that in this case, %r expands to the search string, which is a list of one or more quoted values such as email address, name, or keyid.
 
 :::{seealso}
@@ -453,10 +453,10 @@ Note that in this case, %r expands to the search string, which is a list of one 
 
 --------------------------------------------------------------------------------
 
-(pgp-encrypt-sign-command)=
+(cfg-pgp-encrypt-sign-command)=
 ## `$pgp_encrypt_sign_command`
 
-:Type: [Expando (Command String)](expando)
+:Type: [Expando (Command String)](type-expando)
 :Scope: PGP only
 :Default: (empty)
     ```neomuttrc
@@ -465,7 +465,7 @@ Note that in this case, %r expands to the search string, which is a list of one 
 
 This command is used to both sign and encrypt a body part.
 
-This is a format string, see the [`$pgp_decode_command`](pgp-decode-command) command for possible `printf(3)`-like sequences.
+This is a format string, see the [`$pgp_decode_command`](cfg-pgp-decode-command) command for possible `printf(3)`-like sequences.
 
 :::{seealso}
 **Expandos:** [Tutorial Conditional](tut-cond-expando), [Howto Conditional](how-cond-expando), [Formatting](how-format-expando), [Reference](ref-expandos)
@@ -473,11 +473,11 @@ This is a format string, see the [`$pgp_decode_command`](pgp-decode-command) com
 
 --------------------------------------------------------------------------------
 
-(pgp-entry-format)=
+(cfg-pgp-entry-format)=
 ## `$pgp_entry_format`
 
-:Type: [Expando](expando)
-:Notes: {ref}`Not Empty <general>`
+:Type: [Expando](type-expando)
+:Notes: {ref}`Not Empty <type-general>`
 :Scope: Crypto only or PGP only when GPGME disabled
 :Default:
     ```neomuttrc
@@ -490,8 +490,8 @@ This is a format string, see the [`$pgp_decode_command`](pgp-decode-command) com
     ```
 
 This variable allows you to customize the PGP key selection menu to your personal taste.
-If [`$crypt_use_gpgme`](crypt-use-gpgme) is _set_, then it applies to S/MIME key selection menu also.
-This string is similar to [`$index_format`](index-format), but has its own set of `printf(3)`-like sequences:
+If [`$crypt_use_gpgme`](cfg-crypt-use-gpgme) is _set_, then it applies to S/MIME key selection menu also.
+This string is similar to [`$index_format`](cfg-index-format), but has its own set of `printf(3)`-like sequences:
 
 | Short    | Long Name              | Description                                                     |
 |----------|------------------------|-----------------------------------------------------------------|
@@ -524,10 +524,10 @@ See the section "Sending Cryptographically Signed/Encrypted Messages" of the use
 
 --------------------------------------------------------------------------------
 
-(pgp-export-command)=
+(cfg-pgp-export-command)=
 ## `$pgp_export_command`
 
-:Type: [Expando (Command String)](expando)
+:Type: [Expando (Command String)](type-expando)
 :Scope: PGP only
 :Default: (empty)
     ```neomuttrc
@@ -536,7 +536,7 @@ See the section "Sending Cryptographically Signed/Encrypted Messages" of the use
 
 This command is used to export a public key from the user's key ring.
 
-This is a format string, see the [`$pgp_decode_command`](pgp-decode-command) command for possible `printf(3)`-like sequences.
+This is a format string, see the [`$pgp_decode_command`](cfg-pgp-decode-command) command for possible `printf(3)`-like sequences.
 
 :::{seealso}
 **Expandos:** [Tutorial Conditional](tut-cond-expando), [Howto Conditional](how-cond-expando), [Formatting](how-format-expando), [Reference](ref-expandos)
@@ -544,10 +544,10 @@ This is a format string, see the [`$pgp_decode_command`](pgp-decode-command) com
 
 --------------------------------------------------------------------------------
 
-(pgp-get-keys-command)=
+(cfg-pgp-get-keys-command)=
 ## `$pgp_get_keys_command`
 
-:Type: [Expando (Command String)](expando)
+:Type: [Expando (Command String)](type-expando)
 :Scope: PGP only
 :Default: (empty)
     ```neomuttrc
@@ -555,7 +555,7 @@ This is a format string, see the [`$pgp_decode_command`](pgp-decode-command) com
     ```
 
 This command is invoked whenever NeoMutt needs to fetch the public key associated with an email address.
-Of the sequences supported by [`$pgp_decode_command`](pgp-decode-command), %r is the only `printf(3)`-like sequence used with this format.
+Of the sequences supported by [`$pgp_decode_command`](cfg-pgp-decode-command), %r is the only `printf(3)`-like sequence used with this format.
 Note that in this case, %r expands to the email address, not the public key ID (the key ID is unknown, which is why NeoMutt is invoking this command).
 
 :::{seealso}
@@ -564,25 +564,25 @@ Note that in this case, %r expands to the email address, not the public key ID (
 
 --------------------------------------------------------------------------------
 
-(pgp-good-sign)=
+(cfg-pgp-good-sign)=
 ## `$pgp_good_sign`
 
-:Type: [Regular Expression](regex)
+:Type: [Regular Expression](type-regex)
 :Scope: PGP only
 :Default: (empty)
     ```neomuttrc
     set pgp_good_sign = ""
     ```
 
-If you assign a text to this variable, then a PGP signature is only considered verified if the output from [`$pgp_verify_command`](pgp-verify-command) contains the text.
+If you assign a text to this variable, then a PGP signature is only considered verified if the output from [`$pgp_verify_command`](cfg-pgp-verify-command) contains the text.
 Use this variable if the exit code from the command is 0 even for bad signatures.
 
 --------------------------------------------------------------------------------
 
-(pgp-ignore-subkeys)=
+(cfg-pgp-ignore-subkeys)=
 ## `$pgp_ignore_subkeys`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Scope: PGP only
 :Default:
     ```neomuttrc
@@ -595,10 +595,10 @@ _Unset_ this if you want to play interesting key selection games.
 
 --------------------------------------------------------------------------------
 
-(pgp-import-command)=
+(cfg-pgp-import-command)=
 ## `$pgp_import_command`
 
-:Type: [Expando (Command String)](expando)
+:Type: [Expando (Command String)](type-expando)
 :Scope: PGP only
 :Default: (empty)
     ```neomuttrc
@@ -607,7 +607,7 @@ _Unset_ this if you want to play interesting key selection games.
 
 This command is used to import a key from a message into the user's public key ring.
 
-This is a format string, see the [`$pgp_decode_command`](pgp-decode-command) command for possible `printf(3)`-like sequences.
+This is a format string, see the [`$pgp_decode_command`](cfg-pgp-decode-command) command for possible `printf(3)`-like sequences.
 
 :::{seealso}
 **Expandos:** [Tutorial Conditional](tut-cond-expando), [Howto Conditional](how-cond-expando), [Formatting](how-format-expando), [Reference](ref-expandos)
@@ -615,11 +615,11 @@ This is a format string, see the [`$pgp_decode_command`](pgp-decode-command) com
 
 --------------------------------------------------------------------------------
 
-(pgp-key-sort)=
+(cfg-pgp-key-sort)=
 ## `$pgp_key_sort`
 
-:Type: [Sort Order](sort-order)
-:Notes: [Reverse](sort-order)
+:Type: [Sort Order](type-sort-order)
+:Notes: [Reverse](type-sort-order)
 :Scope: PGP only
 :Default:
     ```neomuttrc
@@ -637,10 +637,10 @@ Specifies how the entries in the pgp menu are sorted.
 
 --------------------------------------------------------------------------------
 
-(pgp-list-pubring-command)=
+(cfg-pgp-list-pubring-command)=
 ## `$pgp_list_pubring_command`
 
-:Type: [Expando (Command String)](expando)
+:Type: [Expando (Command String)](type-expando)
 :Scope: PGP only
 :Default: (empty)
     ```neomuttrc
@@ -659,7 +659,7 @@ gpg's `fixed-list-mode` option should not be used.
 :::
 It produces a different date format which may result in NeoMutt showing incorrect key generation dates.
 
-This is a format string, see the [`$pgp_decode_command`](pgp-decode-command) command for possible `printf(3)`-like sequences.
+This is a format string, see the [`$pgp_decode_command`](cfg-pgp-decode-command) command for possible `printf(3)`-like sequences.
 
 :::{seealso}
 **Expandos:** [Tutorial Conditional](tut-cond-expando), [Howto Conditional](how-cond-expando), [Formatting](how-format-expando), [Reference](ref-expandos)
@@ -667,10 +667,10 @@ This is a format string, see the [`$pgp_decode_command`](pgp-decode-command) com
 
 --------------------------------------------------------------------------------
 
-(pgp-list-secring-command)=
+(cfg-pgp-list-secring-command)=
 ## `$pgp_list_secring_command`
 
-:Type: [Expando (Command String)](expando)
+:Type: [Expando (Command String)](type-expando)
 :Scope: PGP only
 :Default: (empty)
     ```neomuttrc
@@ -689,7 +689,7 @@ gpg's `fixed-list-mode` option should not be used.
 :::
 It produces a different date format which may result in NeoMutt showing incorrect key generation dates.
 
-This is a format string, see the [`$pgp_decode_command`](pgp-decode-command) command for possible `printf(3)`-like sequences.
+This is a format string, see the [`$pgp_decode_command`](cfg-pgp-decode-command) command for possible `printf(3)`-like sequences.
 
 :::{seealso}
 **Expandos:** [Tutorial Conditional](tut-cond-expando), [Howto Conditional](how-cond-expando), [Formatting](how-format-expando), [Reference](ref-expandos)
@@ -697,10 +697,10 @@ This is a format string, see the [`$pgp_decode_command`](pgp-decode-command) com
 
 --------------------------------------------------------------------------------
 
-(pgp-long-ids)=
+(cfg-pgp-long-ids)=
 ## `$pgp_long_ids`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Scope: PGP only
 :Default:
     ```neomuttrc
@@ -715,10 +715,10 @@ This option now only controls the display of key IDs in the key selection menu a
 
 --------------------------------------------------------------------------------
 
-(pgp-mime-auto)=
+(cfg-pgp-mime-auto)=
 ## `$pgp_mime_auto`
 
-:Type: [Quad-Option](quad)
+:Type: [Quad-Option](type-quad)
 :Scope: PGP only
 :Default:
     ```neomuttrc
@@ -731,10 +731,10 @@ Also note that using the old-style PGP message format is **strongly** **deprecat
 
 --------------------------------------------------------------------------------
 
-(pgp-retainable-sigs)=
+(cfg-pgp-retainable-sigs)=
 ## `$pgp_retainable_sigs`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Scope: PGP only
 :Default:
     ```neomuttrc
@@ -747,24 +747,24 @@ This is useful for applications like encrypted and signed mailing lists, where t
 
 --------------------------------------------------------------------------------
 
-(pgp-self-encrypt)=
+(cfg-pgp-self-encrypt)=
 ## `$pgp_self_encrypt`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Scope: PGP only
 :Default:
     ```neomuttrc
     set pgp_self_encrypt = yes
     ```
 
-When _set_, PGP encrypted messages will also be encrypted using the key in [`$pgp_default_key`](pgp-default-key).
+When _set_, PGP encrypted messages will also be encrypted using the key in [`$pgp_default_key`](cfg-pgp-default-key).
 
 --------------------------------------------------------------------------------
 
-(pgp-show-unusable)=
+(cfg-pgp-show-unusable)=
 ## `$pgp_show_unusable`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Scope: PGP only
 :Default:
     ```neomuttrc
@@ -776,10 +776,10 @@ This includes keys which have been revoked, have expired, or have been marked as
 
 --------------------------------------------------------------------------------
 
-(pgp-sign-as)=
+(cfg-pgp-sign-as)=
 ## `$pgp_sign_as`
 
-:Type: [String](string)
+:Type: [String](type-string)
 :Scope: PGP only
 :Default: (empty)
     ```neomuttrc
@@ -787,16 +787,16 @@ This includes keys which have been revoked, have expired, or have been marked as
     ```
 
 If you have a different key pair to use for signing, you should set this to the signing key.
-Most people will only need to set [`$pgp_default_key`](pgp-default-key).
+Most people will only need to set [`$pgp_default_key`](cfg-pgp-default-key).
 It is recommended that you use the keyid form to specify your key (e.g.
 `0x00112233`).
 
 --------------------------------------------------------------------------------
 
-(pgp-sign-command)=
+(cfg-pgp-sign-command)=
 ## `$pgp_sign_command`
 
-:Type: [Expando (Command String)](expando)
+:Type: [Expando (Command String)](type-expando)
 :Scope: PGP only
 :Default: (empty)
     ```neomuttrc
@@ -805,7 +805,7 @@ It is recommended that you use the keyid form to specify your key (e.g.
 
 This command is used to create the detached PGP signature for a `multipart/signed` PGP/MIME body part.
 
-This is a format string, see the [`$pgp_decode_command`](pgp-decode-command) command for possible `printf(3)`-like sequences.
+This is a format string, see the [`$pgp_decode_command`](cfg-pgp-decode-command) command for possible `printf(3)`-like sequences.
 
 :::{seealso}
 **Expandos:** [Tutorial Conditional](tut-cond-expando), [Howto Conditional](how-cond-expando), [Formatting](how-format-expando), [Reference](ref-expandos)
@@ -813,10 +813,10 @@ This is a format string, see the [`$pgp_decode_command`](pgp-decode-command) com
 
 --------------------------------------------------------------------------------
 
-(pgp-strict-enc)=
+(cfg-pgp-strict-enc)=
 ## `$pgp_strict_enc`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Scope: PGP only
 :Default:
     ```neomuttrc
@@ -828,11 +828,11 @@ Please note that unsetting this variable may lead to problems with non-verifyabl
 
 --------------------------------------------------------------------------------
 
-(pgp-timeout)=
+(cfg-pgp-timeout)=
 ## `$pgp_timeout`
 
-:Type: [Number (Long)](long)
-:Notes: {ref}`Not Negative <general>`
+:Type: [Number (Long)](type-long)
+:Notes: {ref}`Not Negative <type-general>`
 :Scope: PGP only
 :Default:
     ```neomuttrc
@@ -843,10 +843,10 @@ The number of seconds after which a cached passphrase will expire if not used.
 
 --------------------------------------------------------------------------------
 
-(pgp-use-gpg-agent)=
+(cfg-pgp-use-gpg-agent)=
 ## `$pgp_use_gpg_agent`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Scope: PGP only
 :Default:
     ```neomuttrc
@@ -866,10 +866,10 @@ If you are using an older version of GnuPG without an agent running, or another 
 
 --------------------------------------------------------------------------------
 
-(pgp-verify-command)=
+(cfg-pgp-verify-command)=
 ## `$pgp_verify_command`
 
-:Type: [Expando (Command String)](expando)
+:Type: [Expando (Command String)](type-expando)
 :Scope: PGP only
 :Default: (empty)
     ```neomuttrc
@@ -878,7 +878,7 @@ If you are using an older version of GnuPG without an agent running, or another 
 
 This command is used to verify PGP signatures.
 
-This is a format string, see the [`$pgp_decode_command`](pgp-decode-command) command for possible `printf(3)`-like sequences.
+This is a format string, see the [`$pgp_decode_command`](cfg-pgp-decode-command) command for possible `printf(3)`-like sequences.
 
 :::{seealso}
 **Expandos:** [Tutorial Conditional](tut-cond-expando), [Howto Conditional](how-cond-expando), [Formatting](how-format-expando), [Reference](ref-expandos)
@@ -886,10 +886,10 @@ This is a format string, see the [`$pgp_decode_command`](pgp-decode-command) com
 
 --------------------------------------------------------------------------------
 
-(pgp-verify-key-command)=
+(cfg-pgp-verify-key-command)=
 ## `$pgp_verify_key_command`
 
-:Type: [Expando (Command String)](expando)
+:Type: [Expando (Command String)](type-expando)
 :Scope: PGP only
 :Default: (empty)
     ```neomuttrc
@@ -898,7 +898,7 @@ This is a format string, see the [`$pgp_decode_command`](pgp-decode-command) com
 
 This command is used to verify key information from the key selection menu.
 
-This is a format string, see the [`$pgp_decode_command`](pgp-decode-command) command for possible `printf(3)`-like sequences.
+This is a format string, see the [`$pgp_decode_command`](cfg-pgp-decode-command) command for possible `printf(3)`-like sequences.
 
 :::{seealso}
 **Expandos:** [Tutorial Conditional](tut-cond-expando), [Howto Conditional](how-cond-expando), [Formatting](how-format-expando), [Reference](ref-expandos)
@@ -906,10 +906,10 @@ This is a format string, see the [`$pgp_decode_command`](pgp-decode-command) com
 
 --------------------------------------------------------------------------------
 
-(smime-ask-cert-label)=
+(cfg-smime-ask-cert-label)=
 ## `$smime_ask_cert_label`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Scope: S/MIME only
 :Default:
     ```neomuttrc
@@ -921,11 +921,11 @@ It is _set_ by default.
 
 --------------------------------------------------------------------------------
 
-(smime-ca-location)=
+(cfg-smime-ca-location)=
 ## `$smime_ca_location`
 
-:Type: [Path (String)](path)
-:Notes: [File only](path)
+:Type: [Path (String)](type-path)
+:Notes: [File only](type-path)
 :Scope: S/MIME only
 :Default: (empty)
     ```neomuttrc
@@ -936,11 +936,11 @@ This variable contains the name of either a directory, or a file which contains 
 
 --------------------------------------------------------------------------------
 
-(smime-certificates)=
+(cfg-smime-certificates)=
 ## `$smime_certificates`
 
-:Type: [Path (String)](path)
-:Notes: [Directory only](path)
+:Type: [Path (String)](type-path)
+:Notes: [Directory only](type-path)
 :Scope: S/MIME only
 :Default: (empty)
     ```neomuttrc
@@ -954,10 +954,10 @@ This option points to the location of the certificates.
 
 --------------------------------------------------------------------------------
 
-(smime-decrypt-command)=
+(cfg-smime-decrypt-command)=
 ## `$smime_decrypt_command`
 
-:Type: [Expando (Command String)](expando)
+:Type: [Expando (Command String)](type-expando)
 :Scope: S/MIME only
 :Default: (empty)
     ```neomuttrc
@@ -971,13 +971,13 @@ The OpenSSL command formats have their own set of `printf(3)`-like sequences sim
 | Short | Long Name             | Description                                                                                                              |
 |-------|-----------------------|--------------------------------------------------------------------------------------------------------------------------|
 | `%a`  | `%{algorithm}`        | Algorithm used for encryption                                                                                            |
-| `%C`  | `%{certificate-path}` | CA location:  Depending on whether [`$smime_ca_location`](smime-ca-location) points to a directory or file,               |
-|       |                       | this expands to "-CApath [`$smime_ca_location`](smime-ca-location)" or "-CAfile [`$smime_ca_location`](smime-ca-location)" |
+| `%C`  | `%{certificate-path}` | CA location:  Depending on whether [`$smime_ca_location`](cfg-smime-ca-location) points to a directory or file,               |
+|       |                       | this expands to "-CApath [`$smime_ca_location`](cfg-smime-ca-location)" or "-CAfile [`$smime_ca_location`](cfg-smime-ca-location)" |
 | `%c`  | `%{certificate-ids}`  | One or more certificate IDs                                                                                              |
-| `%d`  | `%{digest-algorithm}` | Message digest algorithm specified with [`$smime_sign_digest_alg`](smime-sign-digest-alg)                                 |
+| `%d`  | `%{digest-algorithm}` | Message digest algorithm specified with [`$smime_sign_digest_alg`](cfg-smime-sign-digest-alg)                                 |
 | `%f`  | `%{message-file}`     | Expands to the name of a file containing a message                                                                       |
 | `%i`  | `%{intermediate-ids}` | Intermediate certificates                                                                                                |
-| `%k`  | `%{key}`              | Key-pair specified with [`$smime_default_key`](smime-default-key)                                                         |
+| `%k`  | `%{key}`              | Key-pair specified with [`$smime_default_key`](cfg-smime-default-key)                                                         |
 | `%s`  | `%{signature-file}`   | Expands to the name of a file containing the signature part                                                              |
 |       |                       | of a `multipart/signed` attachment when verifying it                                                                     |
 
@@ -989,10 +989,10 @@ For examples on how to configure these formats, see the `smime.rc` in the `sampl
 
 --------------------------------------------------------------------------------
 
-(smime-decrypt-use-default-key)=
+(cfg-smime-decrypt-use-default-key)=
 ## `$smime_decrypt_use_default_key`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Scope: S/MIME only
 :Default:
     ```neomuttrc
@@ -1005,10 +1005,10 @@ It will ask you to supply a key, if it can't find one.
 
 --------------------------------------------------------------------------------
 
-(smime-default-key)=
+(cfg-smime-default-key)=
 ## `$smime_default_key`
 
-:Type: [String](string)
+:Type: [String](type-string)
 :Scope: S/MIME only
 :Default: (empty)
     ```neomuttrc
@@ -1017,19 +1017,19 @@ It will ask you to supply a key, if it can't find one.
 
 This is the default key-pair to use for S/MIME operations, and must be set to the keyid (the hash-value that OpenSSL generates) to work properly.
 
-It will be used for encryption (see [`$postpone_encrypt`](postpone-encrypt) and [`$smime_self_encrypt`](smime-self-encrypt)).
+It will be used for encryption (see [`$postpone_encrypt`](cfg-postpone-encrypt) and [`$smime_self_encrypt`](cfg-smime-self-encrypt)).
 If GPGME is enabled, this is the key id displayed by gpgsm.
 
-It will be used for decryption unless [`$smime_decrypt_use_default_key`](smime-decrypt-use-default-key) is _unset_.
+It will be used for decryption unless [`$smime_decrypt_use_default_key`](cfg-smime-decrypt-use-default-key) is _unset_.
 
-It will also be used for signing unless [`$smime_sign_as`](smime-sign-as) is set.
+It will also be used for signing unless [`$smime_sign_as`](cfg-smime-sign-as) is set.
 
 --------------------------------------------------------------------------------
 
-(smime-encrypt-command)=
+(cfg-smime-encrypt-command)=
 ## `$smime_encrypt_command`
 
-:Type: [Expando (Command String)](expando)
+:Type: [Expando (Command String)](type-expando)
 :Scope: S/MIME only
 :Default: (empty)
     ```neomuttrc
@@ -1038,9 +1038,9 @@ It will also be used for signing unless [`$smime_sign_as`](smime-sign-as) is set
 
 This command is used to create encrypted S/MIME messages.
 
-This is a format string, see the [`$smime_decrypt_command`](smime-decrypt-command) command for possible `printf(3)`-like sequences.
+This is a format string, see the [`$smime_decrypt_command`](cfg-smime-decrypt-command) command for possible `printf(3)`-like sequences.
 
-Encrypt the message to [`$smime_default_key`](smime-default-key) too.
+Encrypt the message to [`$smime_default_key`](cfg-smime-default-key) too.
 
 :::{seealso}
 **Expandos:** [Tutorial Conditional](tut-cond-expando), [Howto Conditional](how-cond-expando), [Formatting](how-format-expando), [Reference](ref-expandos)
@@ -1048,10 +1048,10 @@ Encrypt the message to [`$smime_default_key`](smime-default-key) too.
 
 --------------------------------------------------------------------------------
 
-(smime-encrypt-with)=
+(cfg-smime-encrypt-with)=
 ## `$smime_encrypt_with`
 
-:Type: [String](string)
+:Type: [String](type-string)
 :Scope: S/MIME only
 :Default:
     ```neomuttrc
@@ -1073,10 +1073,10 @@ This sets the algorithm that should be used for encryption.
 
 --------------------------------------------------------------------------------
 
-(smime-get-cert-command)=
+(cfg-smime-get-cert-command)=
 ## `$smime_get_cert_command`
 
-:Type: [Expando (Command String)](expando)
+:Type: [Expando (Command String)](type-expando)
 :Scope: S/MIME only
 :Default: (empty)
     ```neomuttrc
@@ -1085,7 +1085,7 @@ This sets the algorithm that should be used for encryption.
 
 This command is used to extract X509 certificates from a PKCS7 structure.
 
-This is a format string, see the [`$smime_decrypt_command`](smime-decrypt-command) command for possible `printf(3)`-like sequences.
+This is a format string, see the [`$smime_decrypt_command`](cfg-smime-decrypt-command) command for possible `printf(3)`-like sequences.
 
 :::{seealso}
 **Expandos:** [Tutorial Conditional](tut-cond-expando), [Howto Conditional](how-cond-expando), [Formatting](how-format-expando), [Reference](ref-expandos)
@@ -1093,10 +1093,10 @@ This is a format string, see the [`$smime_decrypt_command`](smime-decrypt-comman
 
 --------------------------------------------------------------------------------
 
-(smime-get-cert-email-command)=
+(cfg-smime-get-cert-email-command)=
 ## `$smime_get_cert_email_command`
 
-:Type: [Expando (Command String)](expando)
+:Type: [Expando (Command String)](type-expando)
 :Scope: S/MIME only
 :Default: (empty)
     ```neomuttrc
@@ -1105,7 +1105,7 @@ This is a format string, see the [`$smime_decrypt_command`](smime-decrypt-comman
 
 This command is used to extract the mail address(es) used for storing X509 certificates, and for verification purposes (to check whether the certificate was issued for the sender's mailbox).
 
-This is a format string, see the [`$smime_decrypt_command`](smime-decrypt-command) command for possible `printf(3)`-like sequences.
+This is a format string, see the [`$smime_decrypt_command`](cfg-smime-decrypt-command) command for possible `printf(3)`-like sequences.
 
 :::{seealso}
 **Expandos:** [Tutorial Conditional](tut-cond-expando), [Howto Conditional](how-cond-expando), [Formatting](how-format-expando), [Reference](ref-expandos)
@@ -1113,10 +1113,10 @@ This is a format string, see the [`$smime_decrypt_command`](smime-decrypt-comman
 
 --------------------------------------------------------------------------------
 
-(smime-get-signer-cert-command)=
+(cfg-smime-get-signer-cert-command)=
 ## `$smime_get_signer_cert_command`
 
-:Type: [Expando (Command String)](expando)
+:Type: [Expando (Command String)](type-expando)
 :Scope: S/MIME only
 :Default: (empty)
     ```neomuttrc
@@ -1125,7 +1125,7 @@ This is a format string, see the [`$smime_decrypt_command`](smime-decrypt-comman
 
 This command is used to extract only the signers X509 certificate from a S/MIME signature, so that the certificate's owner may get compared to the email's "From:" field.
 
-This is a format string, see the [`$smime_decrypt_command`](smime-decrypt-command) command for possible `printf(3)`-like sequences.
+This is a format string, see the [`$smime_decrypt_command`](cfg-smime-decrypt-command) command for possible `printf(3)`-like sequences.
 
 :::{seealso}
 **Expandos:** [Tutorial Conditional](tut-cond-expando), [Howto Conditional](how-cond-expando), [Formatting](how-format-expando), [Reference](ref-expandos)
@@ -1133,10 +1133,10 @@ This is a format string, see the [`$smime_decrypt_command`](smime-decrypt-comman
 
 --------------------------------------------------------------------------------
 
-(smime-import-cert-command)=
+(cfg-smime-import-cert-command)=
 ## `$smime_import_cert_command`
 
-:Type: [Expando (Command String)](expando)
+:Type: [Expando (Command String)](type-expando)
 :Scope: S/MIME only
 :Default: (empty)
     ```neomuttrc
@@ -1145,9 +1145,9 @@ This is a format string, see the [`$smime_decrypt_command`](smime-decrypt-comman
 
 This command is used to import a certificate via smime_keys.
 
-This is a format string, see the [`$smime_decrypt_command`](smime-decrypt-command) command for possible `printf(3)`-like sequences.
+This is a format string, see the [`$smime_decrypt_command`](cfg-smime-decrypt-command) command for possible `printf(3)`-like sequences.
 :::{note}
-%c and %k will default to [`$smime_sign_as`](smime-sign-as) if set, otherwise [`$smime_default_key`](smime-default-key).
+%c and %k will default to [`$smime_sign_as`](cfg-smime-sign-as) if set, otherwise [`$smime_default_key`](cfg-smime-default-key).
 :::
 
 :::{seealso}
@@ -1156,10 +1156,10 @@ This is a format string, see the [`$smime_decrypt_command`](smime-decrypt-comman
 
 --------------------------------------------------------------------------------
 
-(smime-is-default)=
+(cfg-smime-is-default)=
 ## `$smime_is_default`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Scope: S/MIME only
 :Default:
     ```neomuttrc
@@ -1169,15 +1169,15 @@ This is a format string, see the [`$smime_decrypt_command`](smime-decrypt-comman
 The default behavior of NeoMutt is to use PGP on all auto-sign/encryption operations.
 To override and to use OpenSSL instead this must be _set_.
 However, this has no effect while replying, since NeoMutt will automatically select the same application that was used to sign/encrypt the original message.
-(Note that this variable can be overridden by unsetting [`$crypt_auto_smime`](crypt-auto-smime).)
+(Note that this variable can be overridden by unsetting [`$crypt_auto_smime`](cfg-crypt-auto-smime).)
 
 --------------------------------------------------------------------------------
 
-(smime-keys)=
+(cfg-smime-keys)=
 ## `$smime_keys`
 
-:Type: [Path (String)](path)
-:Notes: [Directory only](path)
+:Type: [Path (String)](type-path)
+:Notes: [Directory only](type-path)
 :Scope: S/MIME only
 :Default: (empty)
     ```neomuttrc
@@ -1191,10 +1191,10 @@ This option points to the location of the private keys.
 
 --------------------------------------------------------------------------------
 
-(smime-pk7out-command)=
+(cfg-smime-pk7out-command)=
 ## `$smime_pk7out_command`
 
-:Type: [Expando (Command String)](expando)
+:Type: [Expando (Command String)](type-expando)
 :Scope: S/MIME only
 :Default: (empty)
     ```neomuttrc
@@ -1203,7 +1203,7 @@ This option points to the location of the private keys.
 
 This command is used to extract PKCS7 structures of S/MIME signatures, in order to extract the public X509 certificate(s).
 
-This is a format string, see the [`$smime_decrypt_command`](smime-decrypt-command) command for possible `printf(3)`-like sequences.
+This is a format string, see the [`$smime_decrypt_command`](cfg-smime-decrypt-command) command for possible `printf(3)`-like sequences.
 
 :::{seealso}
 **Expandos:** [Tutorial Conditional](tut-cond-expando), [Howto Conditional](how-cond-expando), [Formatting](how-format-expando), [Reference](ref-expandos)
@@ -1211,24 +1211,24 @@ This is a format string, see the [`$smime_decrypt_command`](smime-decrypt-comman
 
 --------------------------------------------------------------------------------
 
-(smime-self-encrypt)=
+(cfg-smime-self-encrypt)=
 ## `$smime_self_encrypt`
 
-:Type: [Boolean](bool)
+:Type: [Boolean](type-bool)
 :Scope: S/MIME only
 :Default:
     ```neomuttrc
     set smime_self_encrypt = yes
     ```
 
-When _set_, S/MIME encrypted messages will also be encrypted using the certificate in [`$smime_default_key`](smime-default-key).
+When _set_, S/MIME encrypted messages will also be encrypted using the certificate in [`$smime_default_key`](cfg-smime-default-key).
 
 --------------------------------------------------------------------------------
 
-(smime-sign-as)=
+(cfg-smime-sign-as)=
 ## `$smime_sign_as`
 
-:Type: [String](string)
+:Type: [String](type-string)
 :Scope: S/MIME only
 :Default: (empty)
     ```neomuttrc
@@ -1236,14 +1236,14 @@ When _set_, S/MIME encrypted messages will also be encrypted using the certifica
     ```
 
 If you have a separate key to use for signing, you should set this to the signing key.
-Most people will only need to set [`$smime_default_key`](smime-default-key).
+Most people will only need to set [`$smime_default_key`](cfg-smime-default-key).
 
 --------------------------------------------------------------------------------
 
-(smime-sign-command)=
+(cfg-smime-sign-command)=
 ## `$smime_sign_command`
 
-:Type: [Expando (Command String)](expando)
+:Type: [Expando (Command String)](type-expando)
 :Scope: S/MIME only
 :Default: (empty)
     ```neomuttrc
@@ -1252,7 +1252,7 @@ Most people will only need to set [`$smime_default_key`](smime-default-key).
 
 This command is used to created S/MIME signatures of type `multipart/signed`, which can be read by all mail clients.
 
-This is a format string, see the [`$smime_decrypt_command`](smime-decrypt-command) command for possible `printf(3)`-like sequences.
+This is a format string, see the [`$smime_decrypt_command`](cfg-smime-decrypt-command) command for possible `printf(3)`-like sequences.
 
 :::{seealso}
 **Expandos:** [Tutorial Conditional](tut-cond-expando), [Howto Conditional](how-cond-expando), [Formatting](how-format-expando), [Reference](ref-expandos)
@@ -1260,10 +1260,10 @@ This is a format string, see the [`$smime_decrypt_command`](smime-decrypt-comman
 
 --------------------------------------------------------------------------------
 
-(smime-sign-digest-alg)=
+(cfg-smime-sign-digest-alg)=
 ## `$smime_sign_digest_alg`
 
-:Type: [String](string)
+:Type: [String](type-string)
 :Scope: S/MIME only
 :Default:
     ```neomuttrc
@@ -1283,11 +1283,11 @@ This sets the algorithm that should be used for the signature message digest.
 
 --------------------------------------------------------------------------------
 
-(smime-timeout)=
+(cfg-smime-timeout)=
 ## `$smime_timeout`
 
-:Type: [Number](number)
-:Notes: {ref}`Not Negative <general>`
+:Type: [Number](type-number)
+:Notes: {ref}`Not Negative <type-general>`
 :Scope: S/MIME only
 :Default:
     ```neomuttrc
@@ -1298,10 +1298,10 @@ The number of seconds after which a cached passphrase will expire if not used.
 
 --------------------------------------------------------------------------------
 
-(smime-verify-command)=
+(cfg-smime-verify-command)=
 ## `$smime_verify_command`
 
-:Type: [Expando (Command String)](expando)
+:Type: [Expando (Command String)](type-expando)
 :Scope: S/MIME only
 :Default: (empty)
     ```neomuttrc
@@ -1310,7 +1310,7 @@ The number of seconds after which a cached passphrase will expire if not used.
 
 This command is used to verify S/MIME signatures of type `multipart/signed`.
 
-This is a format string, see the [`$smime_decrypt_command`](smime-decrypt-command) command for possible `printf(3)`-like sequences.
+This is a format string, see the [`$smime_decrypt_command`](cfg-smime-decrypt-command) command for possible `printf(3)`-like sequences.
 
 :::{seealso}
 **Expandos:** [Tutorial Conditional](tut-cond-expando), [Howto Conditional](how-cond-expando), [Formatting](how-format-expando), [Reference](ref-expandos)
@@ -1318,10 +1318,10 @@ This is a format string, see the [`$smime_decrypt_command`](smime-decrypt-comman
 
 --------------------------------------------------------------------------------
 
-(smime-verify-opaque-command)=
+(cfg-smime-verify-opaque-command)=
 ## `$smime_verify_opaque_command`
 
-:Type: [Expando (Command String)](expando)
+:Type: [Expando (Command String)](type-expando)
 :Scope: S/MIME only
 :Default: (empty)
     ```neomuttrc
@@ -1330,7 +1330,7 @@ This is a format string, see the [`$smime_decrypt_command`](smime-decrypt-comman
 
 This command is used to verify S/MIME signatures of type `application/pkcs7-mime`.
 
-This is a format string, see the [`$smime_decrypt_command`](smime-decrypt-command) command for possible `printf(3)`-like sequences.
+This is a format string, see the [`$smime_decrypt_command`](cfg-smime-decrypt-command) command for possible `printf(3)`-like sequences.
 
 :::{seealso}
 **Expandos:** [Tutorial Conditional](tut-cond-expando), [Howto Conditional](how-cond-expando), [Formatting](how-format-expando), [Reference](ref-expandos)
