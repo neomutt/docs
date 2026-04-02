@@ -39,7 +39,8 @@ html_title = "NeoMutt Docs"
 html_favicon = "_static/favicon.png"
 
 html_theme_options = {
-    "max_navbar_depth": 2,
+    "show_navbar_depth": 1,
+    "max_navbar_depth": 4,
     "pygments_light_style": "gruvbox-light",
     "pygments_dark_style": "gruvbox-dark",
     "use_download_button": False,
