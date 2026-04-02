@@ -171,6 +171,24 @@ html[data-theme=dark] .sd-card.dia-reference {
   }
 }
 
+.sd-card.dia-start .sd-card-header,
+.sd-card.dia-start .sd-card-body,
+.sd-card.dia-start .sd-card-footer,
+.sd-card.dia-tutorial .sd-card-header,
+.sd-card.dia-tutorial .sd-card-body,
+.sd-card.dia-tutorial .sd-card-footer,
+.sd-card.dia-howto .sd-card-header,
+.sd-card.dia-howto .sd-card-body,
+.sd-card.dia-howto .sd-card-footer,
+.sd-card.dia-explanation .sd-card-header,
+.sd-card.dia-explanation .sd-card-body,
+.sd-card.dia-explanation .sd-card-footer,
+.sd-card.dia-reference .sd-card-header,
+.sd-card.dia-reference .sd-card-body,
+.sd-card.dia-reference .sd-card-footer {
+  background-color: transparent !important;
+}
+
 
 /* ─── Tables ──────────────────────────────────────────────────
    Left-aligned, auto-width tables with branded header row
