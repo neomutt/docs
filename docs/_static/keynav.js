@@ -23,15 +23,12 @@ document.addEventListener("keydown", (e) => {
     const link = document.querySelector('a[rel="next"], a.next-page') || document.querySelector('link[rel="next"]');
     if (link) window.location.href = link.href;
 
-  // Parent page
+  // Parent page (via breadcrumbs)
   } else if (key === "u") {
     if (pagename === "index") return;
-    const isIndex = pagename.endsWith("/index");
-    if (isIndex) {
-      go("../index.html");
-    } else {
-      go("./index.html");
-    }
+    const crumbs = document.querySelectorAll(".bd-breadcrumbs .breadcrumb-item:not(.active) a.nav-link");
+    const parent = crumbs.length ? crumbs[crumbs.length - 1] : null;
+    if (parent) window.location.href = parent.href;
 
   // Section root
   } else if (key === "U" && docRoot) {

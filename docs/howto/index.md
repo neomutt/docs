@@ -17,6 +17,10 @@ Keep it focused on the specific task.
 Start with prerequisites, give the steps, show the expected result.
 :::
 
+:::{tip}
+Keyboard: {kbd}`H` jumps here from anywhere · {kbd}`U` returns here from any how-to page
+:::
+
 How-to guides are **goal-oriented** directions that help you accomplish specific tasks with NeoMutt.
 Each guide addresses a real-world problem and provides practical steps to solve it.
 

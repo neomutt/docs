@@ -16,6 +16,10 @@ how-to guides and explanation pages instead.
 (ref)=
 # Reference
 
+:::{tip}
+Keyboard: {kbd}`R` jumps here from anywhere · {kbd}`U` returns here from any reference page
+:::
+
 Reference material provides **information-oriented** technical descriptions of
 NeoMutt's machinery. Use these pages to look up specific details about commands,
 options, functions, and syntax.

@@ -19,6 +19,10 @@ Avoid deep dives into theory or exhaustive detail — link to explanation and re
 By the end, the reader should have completed something real and gained confidence to continue.
 :::
 
+:::{tip}
+Keyboard: {kbd}`T` jumps here from anywhere · {kbd}`U` returns here from any tutorial page
+:::
+
 Tutorials are **learning-oriented** lessons that guide you step by step through using NeoMutt.
 Start here if you're new to NeoMutt.
 

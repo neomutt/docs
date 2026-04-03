@@ -75,9 +75,21 @@ You'll get precise, authoritative information you can rely on when you need exac
 [Config](ref-config) · [Functions](ref-functions) · [Commands](ref-commands) · [Colours](ref-colors) · [Glossary](ref-glossary)
 :::
 
+:::{grid-item-card}
+:class-card: dia-start
+:columns: 12
+⌨️ **Keyboard Navigation**
+^^^
+| Key      | Action        |  | Key                        | Action               |
+|----------|---------------|--|----------------------------|----------------------|
+| {kbd}`T` | Tutorials     |  | {kbd}`←` {kbd}`h` {kbd}`[` | Previous page        |
+| {kbd}`H` | How-To Guides |  | {kbd}`→` {kbd}`l` {kbd}`]` | Next page            |
+| {kbd}`E` | Explanation   |  | {kbd}`u`                   | Go up to parent page |
+| {kbd}`R` | Reference     |  | {kbd}`U`                   | Section root         |
+:::
+
 ::::
 
----
 ```{toctree}
 ---
 maxdepth: 1

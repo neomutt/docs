@@ -19,6 +19,10 @@ The reader should come away with deeper understanding.
 
 # Explanation
 
+:::{tip}
+Keyboard: {kbd}`E` jumps here from anywhere · {kbd}`U` returns here from any explanation page
+:::
+
 Explanation pages provide **understanding-oriented** discussion of NeoMutt's concepts, design, and background.
 Read these to deepen your understanding of how and why NeoMutt works the way it does.
 
