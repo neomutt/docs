@@ -93,6 +93,7 @@ maxdepth: 1
 ---
 
 compose-flow
+email-template
 forwarding-mail
 postponing-mail
 format-flowed
