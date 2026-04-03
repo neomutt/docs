@@ -4,5 +4,7 @@
 {% if pagename == "index" %}
 <script>document.body.classList.add("page-index");</script>
 {% endif %}
+<meta name="doc-pagename" content="{{ pagename }}">
+<meta name="doc-root" content="{{ pathto('', 1) }}">
 {{ super() }}
 {% endblock %}
