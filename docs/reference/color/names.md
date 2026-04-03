@@ -4,6 +4,7 @@ description: Reference for NeoMutt colour names, modifiers, attributes, ANSI esc
 keywords: neomutt, color, colour, attributes, theme, terminal, names, modifiers, bright, default, palette, 256-color, rgb, ansi, escape sequences
 ---
 
+(ref-color-names)=
 # Colour Names and Attributes
 
 ## Colour Specification

@@ -67,13 +67,13 @@ releases/index.md
 
 ---
 
-## Misc
+## Color
 
 ```{toctree}
 ---
-maxdepth: 1
+maxdepth: 2
 ---
-colour-names
+color/index.md
 ```
 
 ## Core Reference
@@ -113,8 +113,6 @@ mime-types
 maxdepth: 1
 ---
 cli-syntax
-color-syntax
-colors
 env-vars
 expandos
 glossary

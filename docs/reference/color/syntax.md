@@ -4,7 +4,8 @@ description: Syntax reference for the NeoMutt color command covering simple, reg
 keywords: neomutt, color, colour, command, syntax, theme, regex, pattern, uncolor, attributes, foreground, background, index, status, sidebar
 ---
 
-# NeoMutt Color Command — Syntax Reference
+(ref-color-syntax)=
+# Color Command — Syntax Reference
 
 ## Overview
 
