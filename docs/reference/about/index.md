@@ -4,6 +4,7 @@ description: Background information about the NeoMutt project including history,
 keywords: neomutt, about, project, overview, history, credits, license, bugs, contributing, contact
 ---
 
+(ref-about)=
 # About NeoMutt
 
 ```{toctree}

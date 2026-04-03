@@ -4,6 +4,7 @@ description: Definitions of email and NeoMutt terms from aliases and MIME to thr
 keywords: neomutt, glossary, definitions, terminology, email, imap, smtp, pop3, mime, alias, thread, hook, pattern, encryption, gpg, sidebar
 ---
 
+(ref-glossary)=
 # Glossary
 
 This glossary explains terms you may come across in the NeoMutt documentation,

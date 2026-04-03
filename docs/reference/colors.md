@@ -4,6 +4,7 @@ description: Complete list of every colorable UI object in NeoMutt including ind
 keywords: color, colour, theme, style, object, index, sidebar, compose, pager, quoted, status, indicator, attachment
 ---
 
+(ref-colors)=
 # Color Objects
 
 | Colour                             | Description                                                             |

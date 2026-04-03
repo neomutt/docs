@@ -4,6 +4,7 @@ description: Complete reference index of all NeoMutt configuration commands with
 keywords: neomutt, commands, configuration, neomuttrc, reference, index, directives, command list, config commands, syntax reference, command summary
 ---
 
+(ref-commands)=
 # Commands
 
 ```{toctree}

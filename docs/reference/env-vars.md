@@ -276,7 +276,7 @@ Takes precedence over `EDITOR`.  If neither is set, NeoMutt defaults to
 `vi`.
 
 :::{seealso}
-[EDITOR](#editor), `$editor`
+[EDITOR](ref-env), [`$editor`](cfg-editor)
 :::
 
 ---

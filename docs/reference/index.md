@@ -62,7 +62,7 @@ features
 ---
 maxdepth: 2
 ---
-functions/overview
+functions/index.md
 ```
 
 ## Releases

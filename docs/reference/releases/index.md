@@ -4,6 +4,7 @@ description: Index of all NeoMutt release notes with features, bug fixes, and ch
 keywords: neomutt, releases, release notes, changelog, versions, updates, bug fixes, features, history, packaged versions
 ---
 
+(ref-releases)=
 # NeoMutt Releases
 
 ```{toctree}

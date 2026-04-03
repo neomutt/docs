@@ -43,7 +43,7 @@ description...
 
 ## See Also
 
-- [Index Config](cfg-index-dlg)
+- [Index Config](cfg-index)
 - [Index Functions](fn-index)
   - display message, reply, ...
 - [Sidebar Functions](fn-sidebar)
