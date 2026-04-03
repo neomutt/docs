@@ -4,6 +4,7 @@ description: Commands for executing inline Lua expressions and sourcing Lua scri
 keywords: lua, lua-source, scripting, lua scripting, mutt.set, mutt.get, mutt.message, automation, extensibility, plugins
 ---
 
+(ref-cmd-lua)=
 # Lua Scripting
 
 Commands for executing Lua code and scripts.

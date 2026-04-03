@@ -4,7 +4,7 @@ description: Configuration variables for thread display, collapsing, duplicate d
 keywords: neomutt, gui, threads, collapse_flagged, collapse_unread, duplicate_threads, hide_limited, hide_missing, narrow_tree, strict_threads, sort_re, thread tree
 ---
 
-(cfg-gui)=
+(ref-cfg-gui)=
 # GUI Options
 
 (cfg-beep)=

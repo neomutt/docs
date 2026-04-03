@@ -4,7 +4,7 @@ description: Configuration variables for IMAP server connections, authentication
 keywords: neomutt, imap, imap_authenticators, imap_idle, imap_condstore, imap_qresync, imap_deflate, imap_user, imap_pass, imap_keep_alive, oauth, remote mail, imap_pipeline_depth
 ---
 
-(cfg-imap)=
+(ref-cfg-imap)=
 # IMAP Options
 
 (cfg-imap-authenticators)=
@@ -189,7 +189,7 @@ Reduce this number if you find yourself getting disconnected from your IMAP serv
     ```
 
 This variable configures whether IMAP folder browsing will look for only subscribed folders or all folders.
-This can be toggled in the IMAP browser with the [`<toggle-subscribed>`](fn-browser) function.
+This can be toggled in the IMAP browser with the [`<toggle-subscribed>`](ref-fn-browser) function.
 
 --------------------------------------------------------------------------------
 
@@ -236,7 +236,7 @@ See "$oauth" for details.
     ```
 
 Specifies the password for your IMAP account.
-If _unset_, NeoMutt will prompt you for your password when you invoke the [`<imap-fetch-mail>`](fn-index)
+If _unset_, NeoMutt will prompt you for your password when you invoke the [`<imap-fetch-mail>`](ref-fn-index)
 function or try to open an IMAP folder.
 
 :::{warning}

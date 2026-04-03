@@ -4,6 +4,7 @@ description: Commands for defining spam detection rules based on header patterns
 keywords: spam, nospam, score, unscore, spam detection, spam filtering, message scoring, header matching, spam label, bogofilter, scoring rules
 ---
 
+(ref-cmd-spam)=
 # Spam & Scoring
 
 Commands for spam detection rules and message scoring.

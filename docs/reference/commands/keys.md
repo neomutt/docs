@@ -4,6 +4,7 @@ description: Commands for binding keys to functions, defining keyboard macros, e
 keywords: bind, unbind, macro, unmacro, exec, push, key bindings, keyboard macros, keymaps, shortcuts, hotkeys, input queue, function execution
 ---
 
+(ref-cmd-keys)=
 # Key Bindings & Macros
 
 Commands for binding keys to functions and defining keyboard macros.

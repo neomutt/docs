@@ -4,6 +4,7 @@ description: Commands for defining monitored mailboxes, adding labels, and contr
 keywords: mailboxes, unmailboxes, named-mailboxes, new mail, polling, notifications, labels, mailbox monitoring, folder management, mail folders
 ---
 
+(ref-cmd-mailbox)=
 # Mailboxes
 
 Commands for defining and managing monitored mailboxes.

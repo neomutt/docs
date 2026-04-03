@@ -47,15 +47,6 @@ maxdepth: 1
 config/index.md
 ```
 
-## Features
-
-```{toctree}
----
-maxdepth: 1
----
-features
-```
-
 ## Functions
 
 ```{toctree}

@@ -4,7 +4,7 @@ description: Configuration variable for mbox and mmdf mailbox new-mail detection
 keywords: neomutt, mbox, mmdf, check_mbox_size, new mail detection, file size, mailbox format, mail storage
 ---
 
-(cfg-mbox-options)=
+(ref-cfg-mbox)=
 # Mbox Options
 
 (cfg-check-mbox-size)=

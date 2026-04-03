@@ -4,6 +4,7 @@ description: Commands that trigger actions on events like entering a folder, sen
 keywords: hooks, account-hook, folder-hook, send-hook, send2-hook, reply-hook, message-hook, save-hook, fcc-hook, fcc-save-hook, mbox-hook, charset-hook, iconv-hook, crypt-hook, index-format-hook, startup-hook, shutdown-hook, timeout-hook, unhook, event triggers
 ---
 
+(ref-cmd-hooks)=
 # Hooks
 
 Commands that trigger actions on specific events, patterns, or conditions.

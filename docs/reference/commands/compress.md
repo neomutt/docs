@@ -4,6 +4,7 @@ description: Commands for opening, closing, and appending to compressed mailboxe
 keywords: open-hook, close-hook, append-hook, compressed mailbox, gzip, bzip2, xz, decompress, compression, mailbox hooks, compressed folders
 ---
 
+(ref-cmd-compress)=
 # Compressed Mailboxes
 
 Commands for defining how to open, close, and append to compressed mailboxes.

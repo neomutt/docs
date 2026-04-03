@@ -4,7 +4,7 @@ description: Configuration variables for the Autocrypt automatic key exchange an
 keywords: autocrypt, encryption, automatic encryption, key exchange, autocrypt_dir, autocrypt_reply, autocrypt_acct_format, gpg, passive encryption, e2e
 ---
 
-(cfg-autocrypt-options)=
+(ref-cfg-autocrypt)=
 # Autocrypt Options
 
 (cfg-autocrypt)=

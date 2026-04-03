@@ -4,7 +4,7 @@ description: Configuration variables for the compose menu, message preview, head
 keywords: compose, compose_format, edit_headers, compose_show_preview, copy, postpone, ispell, spell check, draft, outgoing messages, compose menu
 ---
 
-(cfg-compose)=
+(ref-cfg-compose)=
 # Compose Options
 
 (cfg-compose-confirm-detach-first)=
@@ -16,7 +16,7 @@ keywords: compose, compose_format, edit_headers, compose_show_preview, copy, pos
     set compose_confirm_detach_first = yes
     ```
 
-When _set_, NeoMutt will prompt for confirmation when trying to use [`<detach-file>`](fn-compose) on the first entry in the compose menu.
+When _set_, NeoMutt will prompt for confirmation when trying to use [`<detach-file>`](ref-fn-compose) on the first entry in the compose menu.
 This is to help prevent irreversible loss of the typed message by accidentally hitting 'D' in the menu.
 
 :::{note}

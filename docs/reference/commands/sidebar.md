@@ -4,6 +4,7 @@ description: Commands for pinning and unpinning mailboxes in the sidebar so they
 keywords: sidebar-pin, sidebar-unpin, sidebar, pinned mailboxes, sidebar visibility, mailbox panel, folder list, navigation
 ---
 
+(ref-cmd-sidebar)=
 # Sidebar
 
 Commands for pinning/unpinning mailboxes in the sidebar.

@@ -4,6 +4,7 @@ description: Commands for controlling which message headers are shown, their dis
 keywords: ignore, unignore, header-order, unheader-order, subject-regex, unsubject-regex, headers, display, message view, subject rewrite, email headers, pager
 ---
 
+(ref-cmd-email)=
 # Email Display & Headers
 
 Commands that control how message headers and subjects are displayed.

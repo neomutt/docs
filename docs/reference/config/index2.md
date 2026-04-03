@@ -4,7 +4,7 @@ description: Configuration variables for the index menu display, status bar form
 keywords: neomutt, index, index_format, status_format, flag_chars, crypt_chars, from_chars, to_chars, ts_enabled, new_mail_command, status bar, message list
 ---
 
-(cfg-index)=
+(ref-cfg-index)=
 # Index Options
 
 (cfg-beep-new)=
@@ -30,7 +30,7 @@ This is independent of the setting of the [`$beep`](cfg-beep) variable.
     set change_folder_next = no
     ```
 
-When this variable is _set_, the [`<change-folder>`](fn-index) function mailbox suggestion will start at the next folder in your [`mailboxes`](cmd-mailboxes) list, instead of starting at the first folder in the list.
+When this variable is _set_, the [`<change-folder>`](ref-fn-index) function mailbox suggestion will start at the next folder in your [`mailboxes`](cmd-mailboxes) list, instead of starting at the first folder in the list.
 
 --------------------------------------------------------------------------------
 
@@ -312,7 +312,7 @@ Controls the characters used by the "%r" indicator in [`$status_format`](cfg-sta
 | 1         | `-`     | Mailbox is unchanged                                                                                              |
 | 2         | `*`     | Mailbox has been changed and needs to be resynchronized                                                           |
 | 3         | `%`     | Mailbox is read-only, or will not be written when exiting.                                                        |
-|           |         | You can toggle whether to write changes to a mailbox with the [`<toggle-write>`](fn-index) operation, bound by default to "%" |
+|           |         | You can toggle whether to write changes to a mailbox with the [`<toggle-write>`](ref-fn-index) operation, bound by default to "%" |
 | 4         | `A`     | Folder opened in attach-message mode.                                                                             |
 |           |         | Certain operations like composing a new mail, replying, forwarding, etc. are not permitted in this mode           |
 

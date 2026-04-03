@@ -4,7 +4,7 @@ description: Configuration variables for network connections, SSL/TLS certificat
 keywords: connection, network, ssl, tls, starttls, certificate, tunnel, socket_timeout, ssl_force_tls, ssl_starttls, preconnect, ipv6, account_command, encryption
 ---
 
-(cfg-conn)=
+(ref-cfg-conn)=
 # Conn Options
 
 (cfg-account-command)=

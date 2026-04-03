@@ -4,6 +4,7 @@ description: Commands for subscribing to and unsubscribing from IMAP mailbox fol
 keywords: subscribe-to, unsubscribe-from, imap, imap folders, imap subscription, remote mailbox, server-side subscription, mail server
 ---
 
+(ref-cmd-imap)=
 # IMAP
 
 Commands for managing IMAP mailbox subscriptions on the server.

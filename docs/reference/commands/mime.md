@@ -4,6 +4,7 @@ description: Commands for MIME type handling, auto-view, attachment counting, al
 keywords: alternative-order, auto-view, attachments, unattachments, mime-lookup, mailto-allow, mime types, mailcap, multipart, inline display, attachment rules, content type
 ---
 
+(ref-cmd-mime)=
 # MIME & Attachments
 
 Commands for MIME type handling, auto-view, attachment counting, and content preferences.

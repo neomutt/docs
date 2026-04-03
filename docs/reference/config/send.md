@@ -4,7 +4,7 @@ description: Configuration variables for composing and sending email, SMTP setti
 keywords: neomutt, send, smtp, sendmail, smtp_url, signature, attribution_intro, forward_format, abort_noattach, allow_8bit, encoding, outgoing mail, reply, compose
 ---
 
-(cfg-send)=
+(ref-cfg-send)=
 # Send Options
 
 (cfg-abort-noattach)=
@@ -755,9 +755,9 @@ This variable controls whether or not a Mail-Followup-To header is honored when 
     set ignore_list_reply_to = no
     ```
 
-Affects the behavior of the [`<reply>`](fn-attach) function when replying to messages from mailing lists (as defined by the [`subscribe`](cmd-subscribe) or [`lists`](cmd-lists) commands).  
+Affects the behavior of the [`<reply>`](ref-fn-attach) function when replying to messages from mailing lists (as defined by the [`subscribe`](cmd-subscribe) or [`lists`](cmd-lists) commands).  
 When _set_, if the "Reply-To:" field is set to the same value as the "To:" field, NeoMutt assumes that the "Reply-To:" field was set by the mailing list to automate responses to the list, and will ignore this field.
-To direct a response to the mailing list when this option is _set_, use the [`<list-reply>`](fn-attach) function; [`<group-reply>`](fn-attach) will reply to both the sender and the list.
+To direct a response to the mailing list when this option is _set_, use the [`<list-reply>`](ref-fn-attach) function; [`<group-reply>`](ref-fn-attach) will reply to both the sender and the list.
 
 --------------------------------------------------------------------------------
 
@@ -1000,7 +1000,7 @@ When _set_, NeoMutt will use this as a fallback encryption key for postponed mes
 Controls whether or not NeoMutt recalls postponed messages when composing a new message.
 
 Setting this variable to _yes_ is not generally useful, and thus not recommended.
-Note that the [`<recall-message>`](fn-index) function can be used to manually recall postponed messages.
+Note that the [`<recall-message>`](ref-fn-index) function can be used to manually recall postponed messages.
 
 Also see [`$postponed`](cfg-postponed) variable.
 

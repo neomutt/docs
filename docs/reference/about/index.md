@@ -13,10 +13,9 @@ maxdepth: 2
 ---
 bugs.md
 contact.md
-contributing.md
+contribute.md
 credits.md
 history.md
 license.md
 ```
-
 

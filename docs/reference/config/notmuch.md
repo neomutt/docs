@@ -4,7 +4,7 @@ description: Configuration variables for Notmuch integration, including database
 keywords: notmuch, search, indexing, tagging, virtual mailbox, nm_default_url, nm_query_type, nm_exclude_tags, nm_unread_tag, vfolder, full-text search, email tags
 ---
 
-(cfg-notmuch)=
+(ref-cfg-notmuch)=
 # Notmuch Options
 
 (cfg-nm-config-file)=
@@ -224,7 +224,7 @@ This variable sets the time base of a windowed notmuch query.
     ```
 
 This variable specifies the notmuch tag modifications (addition, removal, toggling) applied to messages added to the NeoMutt record when [`$nm_record`](cfg-nm-record) is true.
-See the description of the [`<modify-labels>`](fn-index) function for the syntax.
+See the description of the [`<modify-labels>`](ref-fn-index) function for the syntax.
 
 --------------------------------------------------------------------------------
 

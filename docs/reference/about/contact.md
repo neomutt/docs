@@ -4,6 +4,7 @@ description: How to get in touch with the NeoMutt developers for questions, supp
 keywords: neomutt, contact, developers, support, mailing list, irc, community
 ---
 
+(ref-about-contact)=
 # How to Contact the NeoMutt Developers
 
 blah

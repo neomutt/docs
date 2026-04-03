@@ -4,7 +4,7 @@ description: Configuration variables for POP3 server connections, authentication
 keywords: neomutt, pop3, pop, pop_host, pop_user, pop_pass, pop_authenticators, pop_check_interval, pop_delete, oauth, remote mail, fetch mail
 ---
 
-(cfg-pop)=
+(ref-cfg-pop)=
 # POP3 Options
 
 (cfg-pop-authenticators)=
@@ -69,7 +69,7 @@ This variable configures how often (in seconds) NeoMutt should look for new mail
     set pop_delete = ask-no
     ```
 
-If _set_, NeoMutt will delete successfully downloaded messages from the POP server when using the [`<fetch-mail>`](fn-index) function.
+If _set_, NeoMutt will delete successfully downloaded messages from the POP server when using the [`<fetch-mail>`](ref-fn-index) function.
 When _unset_, NeoMutt will download messages but also leave them on the POP server.
 
 --------------------------------------------------------------------------------
@@ -83,7 +83,7 @@ When _unset_, NeoMutt will download messages but also leave them on the POP serv
     set pop_host = ""
     ```
 
-The name of your POP server for the [`<fetch-mail>`](fn-index) function.
+The name of your POP server for the [`<fetch-mail>`](ref-fn-index) function.
 You can also specify an alternative port, username and password, i.e.:
 
 ```
@@ -103,7 +103,7 @@ where "[...]" denotes an optional part.
     set pop_last = no
     ```
 
-If this variable is _set_, NeoMutt will try to use the "`LAST`" POP command for retrieving only unread messages from the POP server when using the [`<fetch-mail>`](fn-index) function.
+If this variable is _set_, NeoMutt will try to use the "`LAST`" POP command for retrieving only unread messages from the POP server when using the [`<fetch-mail>`](ref-fn-index) function.
 
 --------------------------------------------------------------------------------
 

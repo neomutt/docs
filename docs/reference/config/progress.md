@@ -4,7 +4,7 @@ description: Configuration variables for progress indicators during network tran
 keywords: neomutt, progress, net_inc, read_inc, write_inc, time_inc, progress bar, performance, tuning, status updates, transfer speed
 ---
 
-(cfg-progress)=
+(ref-cfg-progress)=
 # Progress Options
 
 (cfg-net-inc)=

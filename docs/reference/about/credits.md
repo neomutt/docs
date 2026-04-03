@@ -4,6 +4,7 @@ description: Acknowledgements for the authors and contributors who have helped b
 keywords: neomutt, credits, authors, contributors, acknowledgements, team
 ---
 
+(ref-about-credits)=
 # Authors
 
 blah

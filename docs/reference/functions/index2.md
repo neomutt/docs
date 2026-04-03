@@ -4,7 +4,7 @@ description: Key bindings and functions for the NeoMutt index — the main email
 keywords: neomutt, functions, index, menu, bindings, keys, mail, message list, reply, forward, delete, sort, threads, tag, search, mailbox
 ---
 
-(fn-index)=
+(ref-fn-index)=
 # Index Functions
 
 The main screen showing the list of emails in a mailbox.
@@ -77,7 +77,7 @@ You can read, reply, forward, delete, tag, sort, search, and manage messages.
 | `<modify-labels>`               |                                                   | Modify (notmuch/imap) tags                                              |                                   |
 | `<modify-tags-then-hide>`       |                                                   | Modify (notmuch/imap) tags and then hide message                        |                                   |
 | `<modify-tags>`                 |                                                   | Modify (notmuch/imap) tags                                              |                                   |
-| `<next-entry>`                  | `J`                                               | Move to the next entry                                                  | [{bdg-info}`generic`](fn-generic) |
+| `<next-entry>`                  | `J`                                               | Move to the next entry                                                  | [{bdg-info}`generic`](ref-fn-generic) |
 | `<next-new-then-unread>`        | `<Tab>`                                           | Jump to the next new or unread message                                  |                                   |
 | `<next-new>`                    |                                                   | Jump to the next new message                                            |                                   |
 | `<next-subthread>`              | `Esc n`                                           | Jump to the next subthread                                              |                                   |
@@ -91,7 +91,7 @@ You can read, reply, forward, delete, tag, sort, search, and manage messages.
 | `<pipe-entry>`                  |                                                   | Pipe message/attachment to a shell command                              |                                   |
 | `<pipe-message>`                | `\|`                                              | Pipe message/attachment to a shell command                              |                                   |
 | `<post-message>`                |                                                   | Post message to newsgroup                                               |                                   |
-| `<previous-entry>`              | `K`                                               | Move to the previous entry                                              | [{bdg-info}`generic`](fn-generic) |
+| `<previous-entry>`              | `K`                                               | Move to the previous entry                                              | [{bdg-info}`generic`](ref-fn-generic) |
 | `<previous-new-then-unread>`    | `Esc <Tab>`                                       | Jump to the previous new or unread message                              |                                   |
 | `<previous-new>`                |                                                   | Jump to the previous new message                                        |                                   |
 | `<previous-subthread>`          | `Esc p`                                           | Jump to previous subthread                                              |                                   |
@@ -114,7 +114,7 @@ You can read, reply, forward, delete, tag, sort, search, and manage messages.
 | `<save-message>`                | `s`                                               | Save message/attachment to a mailbox/file                               |                                   |
 | `<set-flag>`                    | `w`                                               | Set a status flag on a message                                          |                                   |
 | `<show-limit>`                  | `Esc l`                                           | Show currently active limit pattern                                     |                                   |
-| `<show-log-messages>`           | `M`                                               | Show log (and debug) messages                                           | [{bdg-info}`generic`](fn-generic) |
+| `<show-log-messages>`           | `M`                                               | Show log (and debug) messages                                           | [{bdg-info}`generic`](ref-fn-generic) |
 | `<sort-mailbox>`                | `o`                                               | Sort messages                                                           |                                   |
 | `<sort-reverse>`                | `O`                                               | Sort messages in reverse order                                          |                                   |
 | `<sync-mailbox>`                | `$`                                               | Save changes to mailbox                                                 |                                   |

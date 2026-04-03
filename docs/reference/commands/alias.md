@@ -4,6 +4,7 @@ description: Commands for creating email aliases, defining alternate addresses, 
 keywords: alias, unalias, alternates, unalternates, group, ungroup, address book, contacts, email aliases, address groups, shortcuts, neomutt configuration
 ---
 
+(ref-cmd-alias)=
 # Aliases & Address Groups
 
 Commands for defining email address aliases, alternate addresses, and address groups.

@@ -4,6 +4,7 @@ description: Commands for defining display formats and visual transformations fo
 keywords: tag-formats, tag-transforms, notmuch, tags, index_format, expandos, tag display, tag icons, labeling, virtual mailbox
 ---
 
+(ref-cmd-tags)=
 # Tags (Notmuch)
 
 Commands for defining tag display formats and transformations.

@@ -4,6 +4,7 @@ description: Commands for defining mailing list addresses and marking lists as s
 keywords: lists, unlists, subscribe, unsubscribe, mailing lists, subscriptions, mailing list addresses, list-reply, mail groups, list management
 ---
 
+(ref-cmd-lists)=
 # Mailing Lists
 
 Commands for managing mailing list addresses and subscriptions.

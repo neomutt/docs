@@ -4,7 +4,7 @@ description: Configuration variables for international domain name (IDN) encodin
 keywords: address, idn, international domain name, idn_decode, idn_encode, encoding, utf-8, rfc6531, email address
 ---
 
-(cfg-address)=
+(ref-cfg-address)=
 # Address Options
 
 (cfg-idn-decode)=

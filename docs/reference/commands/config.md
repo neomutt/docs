@@ -4,6 +4,7 @@ description: Commands for setting, unsetting, resetting, toggling config variabl
 keywords: set, unset, reset, toggle, setenv, unsetenv, config variables, configuration options, boolean, environment variables, neomuttrc, settings
 ---
 
+(ref-cmd-config)=
 # Configuration Variables
 
 Commands for setting, unsetting, and resetting config options and environment variables.

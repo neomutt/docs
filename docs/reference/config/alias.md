@@ -4,7 +4,7 @@ description: Configuration variables for managing email aliases, address queries
 keywords: alias, address book, contacts, alias_file, alias_format, alias_sort, query_command, query_format, nicknames, address lookup
 ---
 
-(cfg-alias)=
+(ref-cfg-alias)=
 # Alias Options
 
 (cfg-alias-file)=
@@ -17,7 +17,7 @@ keywords: alias, address book, contacts, alias_file, alias_format, alias_sort, q
     set alias_file = "~/.neomuttrc"
     ```
 
-The default file in which to save aliases created by [`<create-alias>`](fn-alias).
+The default file in which to save aliases created by [`<create-alias>`](ref-fn-alias).
 Entries added to this file are encoded in the character set specified by [`$config_charset`](cfg-config-charset) if it is _set_ or the current character set otherwise.
 
 The default for this option is the currently used neomuttrc file, or `~/.neomuttrc` if no user neomuttrc was found.
@@ -64,7 +64,7 @@ The following formatting sequences are available:
 :::{seealso}
 **Expandos:** [Tutorial Conditional](tut-cond-expando), [Howto Conditional](how-cond-expando), [Formatting](how-format-expando), [Reference](ref-expandos)
 
-**Alias:** [Functions](fn-alias)
+**Alias:** [Functions](ref-fn-alias)
 :::
 
 The following sequences are deprecated; they will be removed in the future.

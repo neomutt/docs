@@ -4,6 +4,7 @@ description: Commands for setting foreground and background colors, attributes, 
 keywords: color, uncolor, mono, unmono, theme, appearance, foreground, background, attributes, bold, underline, index color, body color, header color, ui styling
 ---
 
+(ref-cmd-color)=
 # Color / UI Appearance
 
 Commands for defining and removing colors and mono-mode attributes.

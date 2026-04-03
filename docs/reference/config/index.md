@@ -15,9 +15,9 @@ If you're new to configuration, you may find it helpful to first read about:
 ---
 maxdepth: 1
 ---
-files
-syntax
-types
+files.md
+syntax.md
+types.md
 ```
 
 These pages explain how these settings work and how to apply them.
@@ -697,33 +697,33 @@ These pages explain how these settings work and how to apply them.
 maxdepth: 1
 hidden:
 ---
-address
-alias
-attach
-autocrypt
-browser
-compose
-conn
-email
-general
-gui
-hcache
-history
-hooks
-imap
-index2
-maildir
-mbox
-menu
-mh
-ncrypt
-nntp
-notmuch
-pager
-pattern
-pop
-progress
-send
-sidebar
+address.md
+alias.md
+attach.md
+autocrypt.md
+browser.md
+compose.md
+conn.md
+email.md
+general.md
+gui.md
+hcache.md
+history.md
+hooks.md
+imap.md
+index2.md
+maildir.md
+mbox.md
+menu.md
+mh.md
+ncrypt.md
+nntp.md
+notmuch.md
+pager.md
+pattern.md
+pop.md
+progress.md
+send.md
+sidebar.md
 ```
 

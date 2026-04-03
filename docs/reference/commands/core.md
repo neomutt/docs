@@ -4,6 +4,7 @@ description: Essential commands for scripting, conditional execution, sourcing c
 keywords: cd, echo, finish, ifdef, ifndef, source, version, scripting, conditional, config files, neomuttrc, directives, configuration commands
 ---
 
+(ref-cmd-core)=
 # Core Commands
 
 Commands for configuration, scripting, and general NeoMutt control.

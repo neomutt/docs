@@ -4,6 +4,7 @@ description: The history and origin story of the NeoMutt project and its evoluti
 keywords: neomutt, history, origin, mutt, fork, evolution, project, background
 ---
 
+(ref-about-history)=
 # History of NeoMutt
 
 blah

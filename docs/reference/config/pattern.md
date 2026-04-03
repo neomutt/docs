@@ -4,7 +4,7 @@ description: Configuration variables for search patterns, external search comman
 keywords: pattern, search, simple_search, thorough_search, external_search_command, pattern_format, limit, filtering, regex, mairix, indexer
 ---
 
-(cfg-pattern)=
+(ref-cfg-pattern)=
 # Pattern Options
 
 (cfg-external-search-command)=
@@ -77,7 +77,7 @@ Specifies how NeoMutt should expand a simple search into a real search pattern.
 A simple search is one that does not contain any of the "~" pattern operators.
 See "$patterns" for more information on search patterns.
 
-simple_search applies to several functions, e.g. [`<delete-pattern>`](fn-index), [`<limit>`](fn-alias), searching in the index, and all of the index colors.
+simple_search applies to several functions, e.g. [`<delete-pattern>`](ref-fn-index), [`<limit>`](ref-fn-alias), searching in the index, and all of the index colors.
 
 For example, if you simply type "joe" at a search or limit prompt, NeoMutt will automatically expand it to the value specified by this variable by replacing "%s" with the supplied string.
 For the default value, "joe" would be expanded to: "~f joe | ~s joe".

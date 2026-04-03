@@ -4,7 +4,7 @@ description: Configuration variables for attachment handling, saving, forwarding
 keywords: attachment, mime, attach_save_dir, attach_split, bounce, mime_forward, count_alternatives, digest_collapse, message_format, save attachments, forwarding
 ---
 
-(cfg-attach)=
+(ref-cfg-attach)=
 # Attach Options
 
 (cfg-attach-save-dir)=

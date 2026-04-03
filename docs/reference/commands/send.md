@@ -4,6 +4,7 @@ description: Commands for adding and removing custom headers on outgoing message
 keywords: my-header, unmy-header, custom headers, outgoing mail, send headers, x-mailer, email headers, compose, message headers, sending
 ---
 
+(ref-cmd-send)=
 # Sending & Custom Headers
 
 Commands for adding custom headers to outgoing messages.

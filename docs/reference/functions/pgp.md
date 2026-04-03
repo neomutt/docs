@@ -4,7 +4,7 @@ description: Key bindings and functions for selecting and verifying PGP keys whe
 keywords: neomutt, functions, pgp, menu, bindings, keys, encryption, signing, verify-key, view-name, public key, openpgp, key selection
 ---
 
-(fn-pgp)=
+(ref-fn-pgp)=
 # PGP Functions
 
 Select a PGP key when encrypting or signing an email.
