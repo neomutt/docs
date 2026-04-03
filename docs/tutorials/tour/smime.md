@@ -30,10 +30,10 @@ description...
 
 ## See Also
 
-- [Encryption Config](cfg-ncrypt)
-- [Smime Functions](fn-smime)
+- [Encryption Config](ref-cfg-ncrypt)
+- [Smime Functions](ref-fn-smime)
   - verify key, view name
-- [Generic Functions](fn-generic)
+- [Generic Functions](ref-fn-generic)
   - **Menu:** page up/down, search, tagging, ...
   - **Global:** enter command, show log message, ...
 

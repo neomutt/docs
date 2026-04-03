@@ -19,7 +19,7 @@ overview...
 </pre>
 </div>
 
-- [Editor Functions](fn-editor)
+- [Editor Functions](ref-fn-editor)
   - backspace, forward word, ...
 
 ## Enter Command

@@ -43,10 +43,10 @@ description...
 
 ## See Also
 
-- [Browser Config](cfg-browser)
-- [Browser Functions](fn-browser)
+- [Browser Config](ref-cfg-browser)
+- [Browser Functions](ref-fn-browser)
   - change dir, descend dir, goto parent, ...
-- [Generic Functions](fn-generic)
+- [Generic Functions](ref-fn-generic)
   - **Menu:** page up/down, search, tagging, ...
   - **Global:** enter command, show log message, ...
 

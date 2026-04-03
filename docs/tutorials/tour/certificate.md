@@ -37,9 +37,9 @@ description...
 
 ## See Also
 
-- [Dialog Functions](fn-dialog)
+- [Dialog Functions](ref-fn-dialog)
   - quit, exit
-- [Generic Functions](fn-generic)
+- [Generic Functions](ref-fn-generic)
   - **Menu:** page up/down, search, tagging, ...
   - **Global:** enter command, show log message, ...
 

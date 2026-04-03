@@ -43,13 +43,13 @@ description...
 
 ## See Also
 
-- [Pager Config](cfg-pager)
-- [Pager Functions](fn-pager)
+- [Pager Config](ref-cfg-pager)
+- [Pager Functions](ref-fn-pager)
   - page down, save message, ...
-- [Index Functions](fn-index)
+- [Index Functions](ref-fn-index)
   - edit label, reply, ...
-- [Sidebar Functions](fn-sidebar)
+- [Sidebar Functions](ref-fn-sidebar)
   - next, previous new, ...
-- [Generic Functions](fn-generic)
+- [Generic Functions](ref-fn-generic)
   - **Global:** enter command, show log message, ...
 

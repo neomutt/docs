@@ -43,12 +43,12 @@ description...
 
 ## See Also
 
-- [Index Config](cfg-index)
-- [Index Functions](fn-index)
+- [Index Config](ref-cfg-index)
+- [Index Functions](ref-fn-index)
   - display message, reply, ...
-- [Sidebar Functions](fn-sidebar)
+- [Sidebar Functions](ref-fn-sidebar)
   - next, previous new, ...
-- [Generic Functions](fn-generic)
+- [Generic Functions](ref-fn-generic)
   - **Menu:** page up/down, search, tagging, ...
   - **Global:** enter command, show log message, ...
 

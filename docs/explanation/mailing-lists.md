@@ -75,7 +75,7 @@ While at the prompt, pressing the `<complete>` key (TAB by default) performs com
 
 Labels can be used in patterns with `~y label` to match messages whose label contains the given string, and in limit commands (`<limit>`) to narrow the index view.
 In `$index_format`, the `%y` expando displays the label, and `%Y` displays it only when its first character differs from the previous message's label — useful for visual grouping.
-The `index_label` colour object (see [colour objects](../reference/colour-names.md)) can be used to highlight label fields in the index.
+The `index_label` colour object (see [colour objects](ref-color-names)) can be used to highlight label fields in the index.
 
 ## Alternative Addresses
 

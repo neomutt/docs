@@ -21,7 +21,7 @@ overview...
 <span>  7    billyt          Billy Bob Thornton &lt;billyt@apple.com&gt;                    | emmy,oscar        </span>
 <span>  8    denzelw         Denzel Washington &lt;denzelw@ziziphus.com&gt;                 | oscar,tony        </span>
 <span>  9    dianew          Diane Wiest &lt;dianew@apple.com&gt;                           | emmy,oscar        </span>
-<span > 10    eddier          Eddie Redmayne &lt;eddier@wolfberry.com&gt;                    | oscar,tony        </span>
+<span> 10    eddier          Eddie Redmayne &lt;eddier@wolfberry.com&gt;                    | oscar,tony        </span>
 <span> 11    edh             Ed Harris &lt;edh@fig.com&gt;                                  | emmy,oscar        </span>
 <span> 12    ellenb          Ellen Burstyn &lt;ellenb@kumquat.com&gt;                       | emmy,oscar        </span>
 <span> 13    forestw         Forest Whitaker &lt;forestw@elderberry.com&gt;                 | oscar,tony        </span>
@@ -43,10 +43,10 @@ description...
 
 ## See Also
 
-- [Alias Config](cfg-alias)
-- [Alias Functions](fn-alias)
+- [Alias Config](ref-cfg-alias)
+- [Alias Functions](ref-fn-alias)
   - mail, sort, limit, ...
-- [Generic Functions](fn-generic)
+- [Generic Functions](ref-fn-generic)
   - **Menu:** page up/down, search, tagging, ...
   - **Global:** enter command, show log message, ...
 

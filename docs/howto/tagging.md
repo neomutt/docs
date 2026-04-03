@@ -14,7 +14,7 @@ To tag all messages matching a pattern, use the `<tag-pattern>` function, which 
 Patterns are completable in the editor menu.
 Invoke the `<complete>` function (by default bound to "Tab") after typing `~` to get a selectable list.
 Or you can select individual messages by hand using the `<tag-message>` function, which is bound to "t" by default.
-See [patterns](../reference/patterns.md) for NeoMutt's pattern matching syntax.
+See [patterns](ref-patterns) for NeoMutt's pattern matching syntax.
 
 Once you have tagged the desired messages, you can use the "tag-prefix" operator, which is the ";" (semicolon) key by default.
 

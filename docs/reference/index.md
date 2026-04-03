@@ -84,8 +84,6 @@ env-vars.md
 expandos.md
 glossary.md
 mime-types.md
-pattern-syntax.md
-patterns.md
 regex.md
 ```
 
@@ -106,5 +104,14 @@ shortcuts
 maxdepth: 2
 ---
 cli/index.md
+```
+
+## Patterns
+
+```{toctree}
+---
+maxdepth: 2
+---
+patterns/index.md
 ```
 

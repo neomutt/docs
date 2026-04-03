@@ -4,7 +4,15 @@ description: Syntax reference for NeoMutt message and alias patterns including f
 keywords: neomutt, pattern, syntax, message, alias, search, filter, limit, flag, address, date, range, thread, regex, imap, simple search, boolean operators
 ---
 
+(ref-patterns)=
 # Pattern Syntax
+
+```{toctree}
+---
+maxdepth: 1
+---
+patterns.md
+```
 
 NeoMutt uses patterns to select messages and aliases. This document covers both
 pattern systems: **message patterns** (used throughout NeoMutt for filtering,

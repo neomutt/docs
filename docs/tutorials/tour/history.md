@@ -33,10 +33,10 @@ description...
 
 ## See Also
 
-- [History Config](cfg-history)
-- [Dialog Functions](fn-dialog)
+- [History Config](ref-cfg-history)
+- [Dialog Functions](ref-fn-dialog)
   - quit, exit
-- [Generic Functions](fn-generic)
+- [Generic Functions](ref-fn-generic)
   - **Menu:** page up/down, search, tagging, ...
   - **Global:** enter command, show log message, ...
 

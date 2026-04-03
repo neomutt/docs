@@ -91,4 +91,4 @@ See [How to Use Notmuch](../howto/notmuch).
 ## Next Steps
 
 - "I want to organize with tags." Continue with [Organising Email with Tags](tags-workflow).
-- "I want to build saved searches." See [Macros](../howto/macros) and [Patterns](../reference/patterns).
+- "I want to build saved searches." See [Macros](../howto/macros) and [Patterns](ref-patterns).

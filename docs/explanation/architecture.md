@@ -60,7 +60,7 @@ See [MIME Types](../reference/mime-types) and [MIME](mime).
 
 Patterns are the backbone of search, limit, tagging, and many hooks.
 This shared engine is reused across the UI and configuration system so the same language drives selection, filtering, and automation.
-See [Patterns](../reference/patterns), [Regex](../reference/regex), and the [Searching Email tutorial](../tutorials/searching-email).
+See [Patterns](ref-patterns), [Regex](../reference/regex), and the [Searching Email tutorial](../tutorials/searching-email).
 
 ## The GUI and Curses Layer
 

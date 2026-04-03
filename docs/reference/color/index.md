@@ -7,6 +7,15 @@ keywords: color, colour, theme, style, object, index, sidebar, compose, pager, q
 (ref-colors)=
 # Color Objects
 
+```{toctree}
+---
+maxdepth: 2
+hidden:
+---
+names.md
+syntax.md
+```
+
 | Colour                             | Description                                                             |
 |------------------------------------|-------------------------------------------------------------------------|
 | `attachment`                       | MIME attachments text (entire line)                                     |

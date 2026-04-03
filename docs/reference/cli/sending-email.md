@@ -875,6 +875,6 @@ neomutt --edit-message --include /tmp/body.txt -- alice@example.com
 
 ## See Also
 
-- [Command-Line Options](cli-syntax.md) — complete reference of all NeoMutt options
+- [Command-Line Options](ref-cli) — complete reference of all NeoMutt options
 - [NeoMutt Manual](https://neomutt.org/guide/) — full documentation
 - [Configuration Guide](https://neomutt.org/guide/configuration) — setting up your `~/.neomuttrc`

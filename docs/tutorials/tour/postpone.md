@@ -31,10 +31,10 @@ description...
 
 ## See Also
 
-- [Postpone Config](cfg-general)
-- [Postpone Functions](fn-postpone)
+- [Postpone Config](ref-cfg-general)
+- [Postpone Functions](ref-fn-postpone)
   - delete message, undelete message, ...
-- [Generic Functions](fn-generic)
+- [Generic Functions](ref-fn-generic)
   - **Menu:** page up/down, search, tagging, ...
   - **Global:** enter command, show log message, ...
 

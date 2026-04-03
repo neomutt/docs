@@ -74,4 +74,4 @@ When debugging, reduce variables and isolate changes:
 - Use `-n` to skip system-wide config while you test.
 - Keep changes small and verify behavior in the UI after each change.
 
-See [Command Line](../reference/commandline) for more details.
+See [Command Line](ref-cli-commandline) for more details.

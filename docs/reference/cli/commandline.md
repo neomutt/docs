@@ -51,7 +51,7 @@ ifndef notmuch finish
 ```
 
 The `finish` command stops reading the current config file, making it easy to guard an
-entire file behind a feature check. See the [ifdef how-to guide](../howto/ifdef.md) for
+entire file behind a feature check. See the [ifdef how-to guide](../../howto/ifdef.md) for
 full details and examples.
 
 ## Mailto URLs

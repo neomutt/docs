@@ -31,10 +31,10 @@ description...
 
 ## See Also
 
-- [Attach Config](cfg-attach)
-- [Attach Functions](fn-attach)
+- [Attach Config](ref-cfg-attach)
+- [Attach Functions](ref-fn-attach)
   - edit type, extract keys, ...
-- [Generic Functions](fn-generic)
+- [Generic Functions](ref-fn-generic)
   - **Menu:** page up/down, search, tagging, ...
   - **Global:** enter command, show log message, ...
 

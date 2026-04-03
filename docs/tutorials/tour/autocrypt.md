@@ -25,10 +25,10 @@ description...
 
 ## See Also
 
-- [Autocrypt Config](cfg-autocrypt)
-- [Autocrypt Functions](fn-autocrypt)
+- [Autocrypt Config](ref-cfg-autocrypt)
+- [Autocrypt Functions](ref-fn-autocrypt)
   - create account, toggle active, ...
-- [Generic Functions](fn-generic)
+- [Generic Functions](ref-fn-generic)
   - **Menu:** page up/down, search, tagging, ...
   - **Global:** enter command, show log message, ...
 

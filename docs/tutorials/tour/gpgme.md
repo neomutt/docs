@@ -27,12 +27,12 @@ description...
 
 ## See Also
 
-- [Encryption Config](cfg-ncrypt)
-- [Pgp Functions](fn-pgp)
+- [Encryption Config](ref-cfg-ncrypt)
+- [Pgp Functions](ref-fn-pgp)
   - verify key, view name
-- [Smime Functions](fn-smime)
+- [Smime Functions](ref-fn-smime)
   - verify key, view name
-- [Generic Functions](fn-generic)
+- [Generic Functions](ref-fn-generic)
   - **Menu:** page up/down, search, tagging, ...
   - **Global:** enter command, show log message, ...
 

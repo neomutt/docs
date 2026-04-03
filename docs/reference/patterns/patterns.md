@@ -4,6 +4,7 @@ description: Complete reference for NeoMutt pattern modifiers, boolean operators
 keywords: neomutt, patterns, search, limit, tag-pattern, filter, matching, regex, date range, message range, boolean, simple search, gmail, imap
 ---
 
+(ref-patterns-patterns)=
 # Pattern Matching
 
 Many of NeoMutt's commands allow you to specify a pattern to match (`limit`, `tag-pattern`, `delete-pattern`, etc.).
@@ -86,7 +87,7 @@ Many of NeoMutt's commands allow you to specify a pattern to match (`limit`, `ta
 
 | Type      | Description                                                                                     |
 |-----------|-------------------------------------------------------------------------------------------------|
-| REGEX     | Regular expression, see [Regular Expressions](regex.md)                                         |
+| REGEX     | Regular expression, see [Regular Expressions](../regex.md)                                      |
 | STRING    | Plain text string (for IMAP server-side search)                                                 |
 | GROUP     | Address group name (defined via `group` command)                                                |
 | DATERANGE | Date or date range (see [Searching by Date](#searching-by-date))                                |

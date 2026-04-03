@@ -43,10 +43,10 @@ description...
 
 ## See Also
 
-- [Alias Config](cfg-alias)
-- [Query Functions](fn-query)
+- [Alias Config](ref-cfg-alias)
+- [Query Functions](ref-fn-query)
   - mail, sort, limit, ...
-- [Generic Functions](fn-generic)
+- [Generic Functions](ref-fn-generic)
   - **Menu:** page up/down, search, tagging, ...
   - **Global:** enter command, show log message, ...
 
