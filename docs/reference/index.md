@@ -13,6 +13,7 @@ Mirror the structure of the software itself. Avoid instruction or explanation â€
 how-to guides and explanation pages instead.
 :::
 
+(ref)=
 # Reference
 
 Reference material provides **information-oriented** technical descriptions of
@@ -43,7 +44,7 @@ commands/index.md
 ---
 maxdepth: 1
 ---
-config
+config/index.md
 ```
 
 ## Features

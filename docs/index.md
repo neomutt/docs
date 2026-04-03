@@ -72,7 +72,7 @@ You'll gain a deeper understanding of concepts, design decisions, and underlying
 A complete, factual catalogue of NeoMutt's commands, variables, and configuration options.
 You'll get precise, authoritative information you can rely on when you need exact syntax, valid values, or detailed behaviour.
 +++
-[Config](reference/config) · [Functions](reference/functions/overview) · [Commands](reference/commands/index) · [Colours](reference/colors) · [Glossary](reference/glossary)
+[Config](ref-config) · [Functions](reference/functions/overview) · [Commands](reference/commands/index) · [Colours](reference/colors) · [Glossary](reference/glossary)
 :::
 
 ::::
