@@ -4,6 +4,7 @@ description: Reference for NeoMutt command-line options including feature detect
 keywords: neomutt, command-line, options, arguments, flags, features, ifdef, ifndef, mailto, version, compile
 ---
 
+(ref-cli-commandline)=
 # Command-Line Options
 
 Running `neomutt` with no arguments will make NeoMutt attempt to read your spool mailbox. However, it is possible to read other mailboxes and to send messages from the command line as well.

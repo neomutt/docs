@@ -4,6 +4,7 @@ description: Reference for all NeoMutt command-line options organized by mode â€
 keywords: neomutt, command-line, options, arguments, flags, modes, help, info, send, tui, getopt, debug, config, dump-config, query
 ---
 
+(ref-cli-syntax)=
 # Command-Line Options
 
 ## Overview

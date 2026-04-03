@@ -4,6 +4,7 @@ description: Guide to composing, attaching files, piping, encrypting, and sendin
 keywords: neomutt, send, email, command-line, attach, draft, pipe, encrypt, sign, batch mode, smtp, sendmail, subject, recipients, scripting
 ---
 
+(ref-cli-sending)=
 # Sending Email from the Command Line
 
 NeoMutt can send email directly from the command line — no interactive interface required.

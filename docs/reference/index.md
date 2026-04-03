@@ -65,8 +65,6 @@ maxdepth: 2
 releases/index.md
 ```
 
----
-
 ## Color
 
 ```{toctree}
@@ -82,9 +80,13 @@ color/index.md
 ---
 maxdepth: 1
 ---
-commandline
-patterns
-regex
+env-vars.md
+expandos.md
+glossary.md
+mime-types.md
+pattern-syntax.md
+patterns.md
+regex.md
 ```
 
 ## Configuration
@@ -97,25 +99,12 @@ url-syntax
 shortcuts
 ```
 
-## Display & MIME
+## Command Line
 
 ```{toctree}
 ---
-maxdepth: 1
+maxdepth: 2
 ---
-mime-types
+cli/index.md
 ```
 
-## NEW
-
-```{toctree}
----
-maxdepth: 1
----
-cli-syntax
-env-vars
-expandos
-glossary
-pattern-syntax
-sending-email
-```
