@@ -35,12 +35,12 @@ These pages explain how these settings work and how to apply them.
 | [`$abort_unmodified`](cfg-abort-unmodified)                           | Abort the sending if the message hasn't been edited                                 |
 | [`$account_command`](cfg-account-command)                             | Shell command to retrieve account credentials                                       |
 | [`$alias_file`](cfg-alias-file)                                       | Save new aliases to this file                                                       |
-| [`$alias_format`](cfg-alias-format)                                   | printf-like format string for the alias menu                                        |
-| [`$alias_sort`](cfg-alias-sort)                                       | Sort method for the alias menu                                                      |
+| [`$alias_format`](cfg-alias-format)                                   | Format string for the [Alias Dialog](tour-alias)                                    |
+| [`$alias_sort`](cfg-alias-sort)                                       | Sort method for the [Alias Dialog](tour-alias)                                      |
 | [`$allow_8bit`](cfg-allow-8bit)                                       | Allow 8-bit messages, don't use quoted-printable or base64                          |
 | [`$allow_ansi`](cfg-allow-ansi)                                       | Allow ANSI color codes in rich text messages                                        |
 | [`$arrow_cursor`](cfg-arrow-cursor)                                   | Use an arrow `->` instead of highlighting in the index                              |
-| [`$arrow_string`](cfg-arrow-string)                                   | Use a custom string for `arrow_cursor`                                              |
+| [`$arrow_string`](cfg-arrow-string)                                   | Use a custom string for [`$arrow_cursor`](cfg-arrow-cursor)                         |
 | [`$ascii_chars`](cfg-ascii-chars)                                     | Use plain ASCII characters, when drawing email threads                              |
 | `$askbcc`                                                             | {bdg-warning-line}`Renamed to:` [`$ask_bcc`](cfg-ask-bcc)                           |
 | `$askcc`                                                              | {bdg-warning-line}`Renamed to:` [`$ask_cc`](cfg-ask-cc)                             |
@@ -51,7 +51,7 @@ These pages explain how these settings work and how to apply them.
 | [`$ask_x_comment_to`](cfg-ask-x-comment-to)                           | Ask the user for the `X-Comment-To` field before editing                            |
 | [`$assumed_charset`](cfg-assumed-charset)                             | If a message is missing a character set, assume this character set                  |
 | [`$attach_charset`](cfg-attach-charset)                               | When attaching files, use one of these character sets                               |
-| [`$attach_format`](cfg-attach-format)                                 | printf-like format string for the attachment menu                                   |
+| [`$attach_format`](cfg-attach-format)                                 | Format string for the [Attach Dialog](tour-attach)                                  |
 | `$attach_keyword`                                                     | {bdg-warning-line}`Renamed to:` [`$abort_noattach_regex`](cfg-abort-noattach-regex) |
 | [`$attach_save_dir`](cfg-attach-save-dir)                             | Default directory where attachments are saved                                       |
 | [`$attach_save_without_prompting`](cfg-attach-save-without-prompting) | If true, then don't prompt to save                                                  |
@@ -62,7 +62,7 @@ These pages explain how these settings work and how to apply them.
 | [`$attribution_locale`](cfg-attribution-locale)                       | Locale for dates in the `$attribution` message                                      |
 | [`$attribution_trailer`](cfg-attribution-trailer)                     | Suffix message to add after reply text                                              |
 | [`$autocrypt`](cfg-autocrypt)                                         | Enables the Autocrypt feature                                                       |
-| [`$autocrypt_acct_format`](cfg-autocrypt-acct-format)                 | Format of the Autocrypt account menu                                                |
+| [`$autocrypt_acct_format`](cfg-autocrypt-acct-format)                 | Format string for the [Autocrypt Account Dialog](tour-autocrypt)                    |
 | [`$autocrypt_dir`](cfg-autocrypt-dir)                                 | Location of Autocrypt files, including the GPG keyring and SQLite database          |
 | [`$autocrypt_reply`](cfg-autocrypt-reply)                             | Replying to an Autocrypt email automatically enables Autocrypt in the reply         |
 | `$autoedit`                                                           | {bdg-warning-line}`Renamed to:` [`$auto_edit`](cfg-auto-edit)                       |
@@ -96,24 +96,24 @@ These pages explain how these settings work and how to apply them.
 | [`$collapse_all`](cfg-collapse-all)                                                       | Collapse all threads when entering a folder                                                     |
 | [`$collapse_flagged`](cfg-collapse-flagged)                                               | Prevent the collapse of threads with flagged emails                                             |
 | [`$collapse_unread`](cfg-collapse-unread)                                                 | Prevent the collapse of threads with unread emails                                              |
-| [`$color_directcolor`](cfg-color-directcolor)                                             | Use 24bit colors (aka truecolor aka directcolor)                                                |
+| [`$color_directcolor`](cfg-color-directcolor)                                             | Use 24bit colors (aka truecolor or directcolor)                                                 |
 | [`$compose_confirm_detach_first`](cfg-compose-confirm-detach-first)                       | Prevent the accidental deletion of the composed message                                         |
-| [`$compose_format`](cfg-compose-format)                                                   | printf-like format string for the Compose panel's status bar                                    |
+| [`$compose_format`](cfg-compose-format)                                                   | Format string for the [Compose Dialog](tour-compose)'s status bar                               |
 | [`$compose_preview_above_attachments`](cfg-compose-preview-above-attachments)             | Show the message preview above the attachments list. By default it is shown below it.           |
 | [`$compose_preview_min_rows`](cfg-compose-preview-min-rows)                               | Hide the preview if it has fewer than this number of rows                                       |
-| [`$compose_show_preview`](cfg-compose-show-preview)                                       | Display a preview of the message body in the Compose window                                     |
+| [`$compose_show_preview`](cfg-compose-show-preview)                                       | Display a preview of the message body in the [Compose Dialog](tour-compose)                     |
 | [`$compose_show_user_headers`](cfg-compose-show-user-headers)                             | Controls whether or not custom headers are shown in the compose envelope                        |
 | [`$config_charset`](cfg-config-charset)                                                   | Character set that the config files are in                                                      |
 | `$confirmappend`                                                                          | {bdg-warning-line}`Renamed to:` [`$confirm_append`](cfg-confirm-append)                         |
 | `$confirmcreate`                                                                          | {bdg-warning-line}`Renamed to:` [`$confirm_create`](cfg-confirm-create)                         |
 | [`$confirm_append`](cfg-confirm-append)                                                   | Confirm before appending emails to a mailbox                                                    |
 | [`$confirm_create`](cfg-confirm-create)                                                   | Confirm before creating a new mailbox                                                           |
-| [`$confirm_empty_to`](cfg-confirm-empty-to)                                               | Ask for a confirmation before sending an email with an empty To recipients list                 |
+| [`$confirm_empty_to`](cfg-confirm-empty-to)                                               | Ask for a confirmation before sending an email with an empty `To:` recipients list              |
 | `$connect_timeout`                                                                        | {bdg-warning-line}`Renamed to:` [`$socket_timeout`](cfg-socket-timeout)                         |
 | [`$content_type`](cfg-content-type)                                                       | Default `Content-Type` for newly composed messages                                              |
 | [`$copy`](cfg-copy)                                                                       | Save outgoing emails to [`$record`](cfg-record)                                                 |
 | [`$copy_decode_weed`](cfg-copy-decode-weed)                                               | Controls whether to weed headers when copying or saving emails                                  |
-| [`$count_alternatives`](cfg-count-alternatives)                                           | Recurse inside multipart/alternatives while counting attachments                                |
+| [`$count_alternatives`](cfg-count-alternatives)                                           | Recurse inside `multipart/alternatives` while counting attachments                                |
 | `$crypt_autoencrypt`                                                                      | {bdg-warning-line}`Renamed to:` [`$crypt_auto_encrypt`](cfg-crypt-auto-encrypt)                 |
 | `$crypt_autopgp`                                                                          | {bdg-warning-line}`Renamed to:` [`$crypt_auto_pgp`](cfg-crypt-auto-pgp)                         |
 | `$crypt_autosign`                                                                         | {bdg-warning-line}`Renamed to:` [`$crypt_auto_sign`](cfg-crypt-auto-sign)                       |
@@ -129,7 +129,7 @@ These pages explain how these settings work and how to apply them.
 | [`$crypt_opportunistic_encrypt`](cfg-crypt-opportunistic-encrypt)                         | Enable encryption when the recipient's key is available                                         |
 | [`$crypt_opportunistic_encrypt_strong_keys`](cfg-crypt-opportunistic-encrypt-strong-keys) | Enable encryption only when strong a key is available                                           |
 | [`$crypt_protected_headers_read`](cfg-crypt-protected-headers-read)                       | Display protected headers (Memory Hole) in the pager                                            |
-| [`$crypt_protected_headers_save`](cfg-crypt-protected-headers-save)                       | Save the cleartext Subject with the headers                                                     |
+| [`$crypt_protected_headers_save`](cfg-crypt-protected-headers-save)                       | Save the cleartext `Subject:` with the headers                                                     |
 | [`$crypt_protected_headers_subject`](cfg-crypt-protected-headers-subject)                 | Use this as the subject for encrypted emails                                                    |
 | [`$crypt_protected_headers_weed`](cfg-crypt-protected-headers-weed)                       | Controls whether NeoMutt will weed protected header fields                                      |
 | [`$crypt_protected_headers_write`](cfg-crypt-protected-headers-write)                     | Generate protected header (Memory Hole) for signed and encrypted emails                         |
@@ -147,20 +147,20 @@ These pages explain how these settings work and how to apply them.
 
 ## D
 
-| Config Option                                 | Description                                                                    |
-|-----------------------------------------------|--------------------------------------------------------------------------------|
-| [`$date_format`](cfg-date-format)             | [`strftime(3)`](exp-strftime) format string for the `%d` expando               |
-| [`$debug_file`](cfg-debug-file)               | File to save debug logs                                                        |
-| [`$debug_level`](cfg-debug-level)             | Logging level for debug logs                                                   |
-| [`$default_hook`](cfg-default-hook)           | Pattern to use for hooks that only have a simple regex                         |
-| [`$delete`](cfg-delete)                       | Really delete messages, when the mailbox is closed                             |
-| [`$delete_untag`](cfg-delete-untag)           | Untag messages when they are marked for deletion                               |
-| [`$devel_security`](cfg-devel-security)       | Devel feature: Security -- https://github.com/neomutt/neomutt/discussions/4251 |
-| [`$digest_collapse`](cfg-digest-collapse)     | Hide the subparts of a multipart/digest                                        |
-| [`$display_filter`](cfg-display-filter)       | External command to pre-process an email before display                        |
-| [`$dsn_notify`](cfg-dsn-notify)               | Request notification for message delivery or delay                             |
-| [`$dsn_return`](cfg-dsn-return)               | What to send as a notification of message delivery or delay                    |
-| [`$duplicate_threads`](cfg-duplicate-threads) | Highlight messages with duplicated message IDs                                 |
+| Config Option                                 | Description                                                                                   |
+|-----------------------------------------------|-----------------------------------------------------------------------------------------------|
+| [`$date_format`](cfg-date-format)             | [`strftime(3)`](exp-strftime) format string for the `%d` expando                              |
+| [`$debug_file`](cfg-debug-file)               | File to save debug logs                                                                       |
+| [`$debug_level`](cfg-debug-level)             | Logging level for debug logs                                                                  |
+| [`$default_hook`](cfg-default-hook)           | Pattern to use for hooks that only have a simple regex                                        |
+| [`$delete`](cfg-delete)                       | Really delete messages, when the mailbox is closed                                            |
+| [`$delete_untag`](cfg-delete-untag)           | Untag messages when they are marked for deletion                                              |
+| [`$devel_security`](cfg-devel-security)       | Devel feature: Security -- [Issue #4251](https://github.com/neomutt/neomutt/discussions/4251) |
+| [`$digest_collapse`](cfg-digest-collapse)     | Hide the subparts of a multipart/digest                                                       |
+| [`$display_filter`](cfg-display-filter)       | External command to pre-process an email before display                                       |
+| [`$dsn_notify`](cfg-dsn-notify)               | Request notification for message delivery or delay                                            |
+| [`$dsn_return`](cfg-dsn-return)               | What to send as a notification of message delivery or delay                                   |
+| [`$duplicate_threads`](cfg-duplicate-threads) | Highlight messages with duplicated message IDs                                                |
 
 ## E
 
@@ -188,7 +188,7 @@ These pages explain how these settings work and how to apply them.
 | [`$flag_chars`](cfg-flag-chars)                                   | User-configurable index flags: tagged, new, etc                                     |
 | [`$flag_safe`](cfg-flag-safe)                                     | Protect flagged messages from deletion                                              |
 | [`$folder`](cfg-folder)                                           | Base folder for a set of mailboxes                                                  |
-| [`$folder_format`](cfg-folder-format)                             | printf-like format string for the browser's display of folders                      |
+| [`$folder_format`](cfg-folder-format)                             | Format string for the [Browser Dialog](tour-browser)'s display of folders           |
 | [`$followup_to`](cfg-followup-to)                                 | Add the `Mail-Followup-To` header is generated when sending mail                    |
 | [`$followup_to_poster`](cfg-followup-to-poster)                   | Reply to the poster if "poster" is in the `Followup-To` header                      |
 | [`$force_name`](cfg-force-name)                                   | Save outgoing mail in a folder of their name                                        |
@@ -198,7 +198,7 @@ These pages explain how these settings work and how to apply them.
 | [`$forward_decode`](cfg-forward-decode)                           | Decode the message when forwarding it                                               |
 | [`$forward_decrypt`](cfg-forward-decrypt)                         | Decrypt the message when forwarding it                                              |
 | [`$forward_edit`](cfg-forward-edit)                               | Automatically start the editor when forwarding a message                            |
-| [`$forward_format`](cfg-forward-format)                           | printf-like format string to control the subject when forwarding a message          |
+| [`$forward_format`](cfg-forward-format)                           | Format string to control the subject when forwarding a message                      |
 | [`$forward_quote`](cfg-forward-quote)                             | Automatically quote a forwarded message using [`$indent_string`](cfg-indent-string) |
 | [`$forward_references`](cfg-forward-references)                   | Set the `In-Reply-To` and `References` headers when forwarding a message            |
 | `$forw_decode`                                                    | {bdg-warning-line}`Renamed to:` [`$forward_decode`](cfg-forward-decode)             |
@@ -210,11 +210,11 @@ These pages explain how these settings work and how to apply them.
 
 ## G
 
-| Config Option                                   | Description                                                       |
-|-------------------------------------------------|-------------------------------------------------------------------|
-| [`$gecos_mask`](cfg-gecos-mask)                 | Regex for parsing GECOS field of /etc/passwd                      |
-| [`$greeting`](cfg-greeting)                     | Greeting string added to the top of all messages                  |
-| [`$group_index_format`](cfg-group-index-format) | printf-like format string for the browser's display of newsgroups |
+| Config Option                                   | Description                                                                  |
+|-------------------------------------------------|------------------------------------------------------------------------------|
+| [`$gecos_mask`](cfg-gecos-mask)                 | Regex for parsing GECOS field of `/etc/passwd`                               |
+| [`$greeting`](cfg-greeting)                     | Greeting string added to the top of all messages                             |
+| [`$group_index_format`](cfg-group-index-format) | Format string for the [Browser Dialog](tour-browser)'s display of newsgroups |
 
 ## H
 
@@ -240,7 +240,7 @@ These pages explain how these settings work and how to apply them.
 | [`$hide_top_missing`](cfg-hide-top-missing)                         | Don't indicate missing top message, in the thread tree                     |
 | [`$history`](cfg-history)                                           | Number of history entries to keep in memory per category                   |
 | [`$history_file`](cfg-history-file)                                 | File to save history in                                                    |
-| [`$history_format`](cfg-history-format)                             | printf-like format string for the history menu                             |
+| [`$history_format`](cfg-history-format)                             | Format string for the [History Dialog](tour-history)                       |
 | [`$history_remove_dups`](cfg-history-remove-dups)                   | Remove duplicate entries from the history                                  |
 | [`$honor_disposition`](cfg-honor-disposition)                       | Don't display MIME parts inline if they have a disposition of "attachment" |
 | [`$honor_followup_to`](cfg-honor-followup-to)                       | Honour the `Mail-Followup-To` header when group replying                   |
@@ -286,7 +286,7 @@ These pages explain how these settings work and how to apply them.
 | [`$include_only_first`](cfg-include-only-first)                 | Only include the first attachment when replying                                 |
 | `$indent_str`                                                   | {bdg-warning-line}`Renamed to:` [`$indent_string`](cfg-indent-string)           |
 | [`$indent_string`](cfg-indent-string)                           | String used to indent "reply" text                                              |
-| [`$index_format`](cfg-index-format)                             | printf-like format string for the index menu (emails)                           |
+| [`$index_format`](cfg-index-format)                             | Format string for the [Index Dialog](tour-index) (emails)                       |
 | [`$inews_command`](cfg-inews-command)                           | External command to post news articles                                          |
 | [`$ispell`](cfg-ispell)                                         | External command to perform spell-checking                                      |
 
@@ -306,7 +306,7 @@ These pages explain how these settings work and how to apply them.
 
 | Config Option                                                     | Description                                                                                                  |
 |-------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------|
-| [`$mailbox_folder_format`](cfg-mailbox-folder-format)             | printf-like format string for the browser's display of mailbox folders                                       |
+| [`$mailbox_folder_format`](cfg-mailbox-folder-format)             | Format string for the [Browser Dialog](tour-browser)'s display of mailbox folders                            |
 | [`$mailcap_path`](cfg-mailcap-path)                               | List of mailcap files (colon-separated)                                                                      |
 | [`$mailcap_sanitize`](cfg-mailcap-sanitize)                       | Restrict the possible characters in mailcap expandos                                                         |
 | [`$maildir_check_cur`](cfg-maildir-check-cur)                     | Check both `new` and `cur` directories for new mail                                                          |
@@ -321,7 +321,7 @@ These pages explain how these settings work and how to apply them.
 | [`$mark_macro_prefix`](cfg-mark-macro-prefix)                     | Prefix for macros using `<mark-message>`                                                                     |
 | [`$mark_old`](cfg-mark-old)                                       | Mark new emails as old when leaving the mailbox                                                              |
 | [`$mask`](cfg-mask)                                               | Only display files/dirs matching this regex in the browser                                                   |
-| [`$mbox`](cfg-mbox)                                               | Folder that receives read emails (see Move)                                                                  |
+| [`$mbox`](cfg-mbox)                                               | Folder that receives read emails                                                                             |
 | [`$mbox_type`](cfg-mbox-type)                                     | Default type for creating new mailboxes                                                                      |
 | [`$menu_context`](cfg-menu-context)                               | Number of lines of overlap when changing pages in the index                                                  |
 | [`$menu_move_off`](cfg-menu-move-off)                             | Allow the last menu item to move off the bottom of the screen                                                |
@@ -329,8 +329,8 @@ These pages explain how these settings work and how to apply them.
 | `$message_cachedir`                                               | {bdg-warning-line}`Renamed to:` [`$message_cache_dir`](cfg-message-cache-dir)                                |
 | [`$message_cache_clean`](cfg-message-cache-clean)                 | Clean out obsolete entries from the message cache                                                            |
 | [`$message_cache_dir`](cfg-message-cache-dir)                     | Directory for the message cache                                                                              |
-| [`$message_format`](cfg-message-format)                           | printf-like format string for listing attached messages                                                      |
-| [`$message_id_format`](cfg-message-id-format)                     | printf-like format string for customising the `Message-Id`                                                   |
+| [`$message_format`](cfg-message-format)                           | Format string for listing attached messages                                                                  |
+| [`$message_id_format`](cfg-message-id-format)                     | Format string for customising the `Message-Id`                                                               |
 | [`$meta_key`](cfg-meta-key)                                       | Interpret 'ALT-x' as 'ESC-x'                                                                                 |
 | `$metoo`                                                          | {bdg-warning-line}`Renamed to:` [`$me_too`](cfg-me-too)                                                      |
 | [`$me_too`](cfg-me-too)                                           | Remove the user's address from the list of recipients                                                        |
@@ -359,7 +359,7 @@ These pages explain how these settings work and how to apply them.
 | [`$newsgroups_charset`](cfg-newsgroups-charset)                             | Character set of newsgroups' descriptions                                   |
 | [`$newsrc`](cfg-newsrc)                                                     | File containing list of subscribed newsgroups                               |
 | [`$news_cache_dir`](cfg-news-cache-dir)                                     | Directory for cached news articles                                          |
-| [`$news_server`](cfg-news-server)                                           | Url of the news server                                                      |
+| [`$news_server`](cfg-news-server)                                           | URL of the news server                                                      |
 | [`$new_mail_command`](cfg-new-mail-command)                                 | External command to run when new mail arrives                               |
 | [`$nm_config_file`](cfg-nm-config-file)                                     | Configuration file for notmuch. Use `auto` to detect configuration.         |
 | [`$nm_config_profile`](cfg-nm-config-profile)                               | Configuration profile for notmuch.                                          |
@@ -394,12 +394,12 @@ These pages explain how these settings work and how to apply them.
 |---------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|
 | [`$pager`](cfg-pager)                                                     | External command for viewing messages, or empty to use NeoMutt's                                |
 | [`$pager_context`](cfg-pager-context)                                     | Number of lines of overlap when changing pages in the pager                                     |
-| [`$pager_format`](cfg-pager-format)                                       | printf-like format string for the pager's status bar                                            |
+| [`$pager_format`](cfg-pager-format)                                       | Format string for the [Pager Dialog](tour-pager)'s status bar                                   |
 | [`$pager_index_lines`](cfg-pager-index-lines)                             | Number of index lines to display above the pager                                                |
 | [`$pager_read_delay`](cfg-pager-read-delay)                               | Number of seconds to wait before marking a message read                                         |
 | [`$pager_skip_quoted_context`](cfg-pager-skip-quoted-context)             | Lines of context to show when skipping quoted text                                              |
 | [`$pager_stop`](cfg-pager-stop)                                           | Don't automatically open the next message when at the end of a message                          |
-| [`$pattern_format`](cfg-pattern-format)                                   | printf-like format string for the pattern completion menu                                       |
+| [`$pattern_format`](cfg-pattern-format)                                   | Format string for the [Pattern Completion Dialog](tour-pattern)                                 |
 | `$pgp_autoencrypt`                                                        | {bdg-warning-line}`Renamed to:` [`$crypt_auto_encrypt`](cfg-crypt-auto-encrypt)                 |
 | `$pgp_autoinline`                                                         | {bdg-warning-line}`Renamed to:` [`$pgp_auto_inline`](cfg-pgp-auto-inline)                       |
 | `$pgp_autosign`                                                           | {bdg-warning-line}`Renamed to:` [`$crypt_auto_sign`](cfg-crypt-auto-sign)                       |
@@ -418,7 +418,7 @@ These pages explain how these settings work and how to apply them.
 | [`$pgp_encrypt_only_command`](cfg-pgp-encrypt-only-command)               | External command to encrypt, but not sign a message                                             |
 | `$pgp_encrypt_self`                                                       | {bdg-danger-line}`Deprecated`                                                                   |
 | [`$pgp_encrypt_sign_command`](cfg-pgp-encrypt-sign-command)               | External command to encrypt and sign a message                                                  |
-| [`$pgp_entry_format`](cfg-pgp-entry-format)                               | printf-like format string for the PGP key selection menu                                        |
+| [`$pgp_entry_format`](cfg-pgp-entry-format)                               | Format string for the [PGP Key Dialog](tour-pgp)                                                |
 | [`$pgp_export_command`](cfg-pgp-export-command)                           | External command to export a public key from the user's keyring                                 |
 | `$pgp_getkeys_command`                                                    | {bdg-warning-line}`Renamed to:` [`$pgp_get_keys_command`](cfg-pgp-get-keys-command)             |
 | [`$pgp_get_keys_command`](cfg-pgp-get-keys-command)                       | External command to download a key for an email address                                         |
@@ -457,7 +457,7 @@ These pages explain how these settings work and how to apply them.
 | `$pop_checkinterval`                                                      | {bdg-warning-line}`Renamed to:` [`$pop_check_interval`](cfg-pop-check-interval)                 |
 | [`$pop_check_interval`](cfg-pop-check-interval)                           | Interval between checks for new mail                                                            |
 | [`$pop_delete`](cfg-pop-delete)                                           | After downloading POP messages, delete them on the server                                       |
-| [`$pop_host`](cfg-pop-host)                                               | Url of the POP server                                                                           |
+| [`$pop_host`](cfg-pop-host)                                               | URL of the POP server                                                                           |
 | [`$pop_last`](cfg-pop-last)                                               | Use the `LAST` command to fetch new mail                                                        |
 | [`$pop_oauth_refresh_command`](cfg-pop-oauth-refresh-command)             | External command to generate OAUTH refresh token                                                |
 | [`$pop_pass`](cfg-pop-pass)                                               | Password of the POP server                                                                      |
@@ -484,38 +484,38 @@ These pages explain how these settings work and how to apply them.
 
 | Config Option                         | Description                                                       |
 |---------------------------------------|-------------------------------------------------------------------|
-| [`$query_command`](cfg-query-command) | External command to query and external address book               |
-| [`$query_format`](cfg-query-format)   | printf-like format string for the query menu (address book)       |
+| [`$query_command`](cfg-query-command) | External command to query an external address book                |
+| [`$query_format`](cfg-query-format)   | Format string for the [Query Dialog](tour-query) (address book)   |
 | [`$quit`](cfg-quit)                   | Prompt before exiting NeoMutt                                     |
 | [`$quote_regex`](cfg-quote-regex)     | Regex to match quoted text in a reply                             |
 | `$quote_regexp`                       | {bdg-warning-line}`Renamed to:` [`$quote_regex`](cfg-quote-regex) |
 
 ## R
 
-| Config Option                                                 | Description                                                                   |
-|---------------------------------------------------------------|-------------------------------------------------------------------------------|
-| [`$read_inc`](cfg-read-inc)                                   | Update the progress bar after this many records read (0 to disable)           |
-| [`$read_only`](cfg-read-only)                                 | Open folders in read-only mode                                                |
-| `$realname`                                                   | {bdg-warning-line}`Renamed to:` [`$real_name`](cfg-real-name)                 |
-| [`$real_name`](cfg-real-name)                                 | Real name of the user                                                         |
-| [`$recall`](cfg-recall)                                       | Recall postponed mesaages when asked to compose a message                     |
-| [`$record`](cfg-record)                                       | Folder to save 'sent' messages                                                |
-| [`$reflow_space_quotes`](cfg-reflow-space-quotes)             | Insert spaces into reply quotes for `format=flowed` messages                  |
-| [`$reflow_text`](cfg-reflow-text)                             | Reformat paragraphs of `format=flowed` text                                   |
-| [`$reflow_wrap`](cfg-reflow-wrap)                             | Maximum paragraph width for reformatting `format=flowed` text                 |
-| [`$reply_regex`](cfg-reply-regex)                             | Regex to match message reply subjects like `re: `                             |
-| `$reply_regexp`                                               | {bdg-warning-line}`Renamed to:` [`$reply_regex`](cfg-reply-regex)             |
-| [`$reply_self`](cfg-reply-self)                               | Really reply to yourself, when replying to your own email                     |
-| [`$reply_to`](cfg-reply-to)                                   | Address to use as a `Reply-To` header                                         |
-| [`$reply_with_xorig`](cfg-reply-with-xorig)                   | Create `From` header from `X-Original-To` header                              |
-| [`$resolve`](cfg-resolve)                                     | Move to the next email whenever a command modifies an email                   |
-| [`$resume_draft_files`](cfg-resume-draft-files)               | Process draft files like postponed messages                                   |
-| [`$resume_edited_draft_files`](cfg-resume-edited-draft-files) | Resume editing previously saved draft files                                   |
-| [`$reverse_alias`](cfg-reverse-alias)                         | Display the alias in the index, rather than the message's sender              |
-| [`$reverse_name`](cfg-reverse-name)                           | Set the `From` from the address the email was sent to                         |
-| `$reverse_realname`                                           | {bdg-warning-line}`Renamed to:` [`$reverse_real_name`](cfg-reverse-real-name) |
-| [`$reverse_real_name`](cfg-reverse-real-name)                 | Set the `From` from the full `To` address the email was sent to               |
-| [`$rfc2047_parameters`](cfg-rfc2047-parameters)               | Decode RFC2047-encoded MIME parameters                                        |
+| Config Option                                                 | Description                                                                           |
+|---------------------------------------------------------------|---------------------------------------------------------------------------------------|
+| [`$read_inc`](cfg-read-inc)                                   | Update the progress bar after this many records read (0 to disable)                   |
+| [`$read_only`](cfg-read-only)                                 | Open folders in read-only mode                                                        |
+| `$realname`                                                   | {bdg-warning-line}`Renamed to:` [`$real_name`](cfg-real-name)                         |
+| [`$real_name`](cfg-real-name)                                 | Real name of the user                                                                 |
+| [`$recall`](cfg-recall)                                       | Recall postponed mesaages when asked to compose a message                             |
+| [`$record`](cfg-record)                                       | Folder to save 'sent' messages                                                        |
+| [`$reflow_space_quotes`](cfg-reflow-space-quotes)             | Insert spaces into reply quotes for `format=flowed` messages                          |
+| [`$reflow_text`](cfg-reflow-text)                             | Reformat paragraphs of `format=flowed` text                                           |
+| [`$reflow_wrap`](cfg-reflow-wrap)                             | Maximum paragraph width for reformatting `format=flowed` text                         |
+| [`$reply_regex`](cfg-reply-regex)                             | Regex to match message reply subjects like `re: `                                     |
+| `$reply_regexp`                                               | {bdg-warning-line}`Renamed to:` [`$reply_regex`](cfg-reply-regex)                     |
+| [`$reply_self`](cfg-reply-self)                               | Really reply to yourself, when replying to your own email                             |
+| [`$reply_to`](cfg-reply-to)                                   | Address to use as a `Reply-To` header                                                 |
+| [`$reply_with_xorig`](cfg-reply-with-xorig)                   | Create `From` header from `X-Original-To` header                                      |
+| [`$resolve`](cfg-resolve)                                     | Move to the next email whenever a command modifies an email                           |
+| [`$resume_draft_files`](cfg-resume-draft-files)               | Process draft files like postponed messages                                           |
+| [`$resume_edited_draft_files`](cfg-resume-edited-draft-files) | Resume editing previously saved draft files                                           |
+| [`$reverse_alias`](cfg-reverse-alias)                         | Display the alias in the index, rather than the message's sender                      |
+| [`$reverse_name`](cfg-reverse-name)                           | Set the `From` from the address the email was sent to                                 |
+| `$reverse_realname`                                           | {bdg-warning-line}`Renamed to:` [`$reverse_real_name`](cfg-reverse-real-name)         |
+| [`$reverse_real_name`](cfg-reverse-real-name)                 | Set the `From` from the full `To` address the email was sent to                       |
+| [`$rfc2047_parameters`](cfg-rfc2047-parameters)               | Decode [RFC2047](https://www.rfc-editor.org/rfc/rfc2047.html)-encoded MIME parameters |
 
 ## S
 
@@ -542,16 +542,16 @@ These pages explain how these settings work and how to apply them.
 | [`$sidebar_delim_chars`](cfg-sidebar-delim-chars)                       | Characters that separate nested folders                                                                    |
 | [`$sidebar_divider_char`](cfg-sidebar-divider-char)                     | Character to draw between the sidebar and index                                                            |
 | [`$sidebar_folder_indent`](cfg-sidebar-folder-indent)                   | Indent nested folders                                                                                      |
-| [`$sidebar_format`](cfg-sidebar-format)                                 | printf-like format string for the sidebar panel                                                            |
+| [`$sidebar_format`](cfg-sidebar-format)                                 | Format string for the [Sidebar](tour-sidebar)                                                              |
 | [`$sidebar_indent_string`](cfg-sidebar-indent-string)                   | Indent nested folders using this string                                                                    |
-| [`$sidebar_new_mail_only`](cfg-sidebar-new-mail-only)                   | Only show folders with new/flagged mail                                                                    |
-| [`$sidebar_next_new_wrap`](cfg-sidebar-next-new-wrap)                   | Wrap around when searching for the next mailbox with new mail                                              |
-| [`$sidebar_non_empty_mailbox_only`](cfg-sidebar-non-empty-mailbox-only) | Only show folders with a non-zero number of mail                                                           |
+| [`$sidebar_new_mail_only`](cfg-sidebar-new-mail-only)                   | Only show folders with new/flagged email                                                                   |
+| [`$sidebar_next_new_wrap`](cfg-sidebar-next-new-wrap)                   | Wrap around when searching for the next mailbox with new email                                             |
+| [`$sidebar_non_empty_mailbox_only`](cfg-sidebar-non-empty-mailbox-only) | Only show folders with a non-zero number of emails                                                         |
 | [`$sidebar_on_right`](cfg-sidebar-on-right)                             | Display the sidebar on the right                                                                           |
 | [`$sidebar_short_path`](cfg-sidebar-short-path)                         | Abbreviate the paths using the [`$folder`](cfg-folder) variable                                            |
-| [`$sidebar_sort`](cfg-sidebar-sort)                                     | Method to sort the sidebar                                                                                 |
+| [`$sidebar_sort`](cfg-sidebar-sort)                                     | Sort method for the [Sidebar](tour-sidebar)                                                                |
 | `$sidebar_sort_method`                                                  | {bdg-warning-line}`Renamed to:` [`$sidebar_sort`](cfg-sidebar-sort)                                        |
-| [`$sidebar_visible`](cfg-sidebar-visible)                               | Show the sidebar                                                                                           |
+| [`$sidebar_visible`](cfg-sidebar-visible)                               | Show the [Sidebar](tour-sidebar)                                                                           |
 | [`$sidebar_width`](cfg-sidebar-width)                                   | Width of the sidebar                                                                                       |
 | [`$signature`](cfg-signature)                                           | File containing a signature to append to all mail                                                          |
 | [`$sig_dashes`](cfg-sig-dashes)                                         | Insert `-- ` before the signature                                                                          |
@@ -592,12 +592,12 @@ These pages explain how these settings work and how to apply them.
 | [`$smtp_authenticators`](cfg-smtp-authenticators)                       | List of allowed authentication methods (colon-separated)                                                   |
 | [`$smtp_oauth_refresh_command`](cfg-smtp-oauth-refresh-command)         | External command to generate OAUTH refresh token                                                           |
 | [`$smtp_pass`](cfg-smtp-pass)                                           | Password for the SMTP server                                                                               |
-| [`$smtp_url`](cfg-smtp-url)                                             | Url of the SMTP server                                                                                     |
+| [`$smtp_url`](cfg-smtp-url)                                             | URL of the SMTP server                                                                                     |
 | [`$smtp_user`](cfg-smtp-user)                                           | Username for the SMTP server                                                                               |
 | [`$socket_timeout`](cfg-socket-timeout)                                 | Timeout for socket connect/read/write operations (-1 to wait indefinitely)                                 |
-| [`$sort`](cfg-sort)                                                     | Sort method for the index                                                                                  |
+| [`$sort`](cfg-sort)                                                     | Sort method for the [Index Dialog](tour-index)                                                             |
 | `$sort_alias`                                                           | {bdg-warning-line}`Renamed to:` [`$alias_sort`](cfg-alias-sort)                                            |
-| [`$sort_aux`](cfg-sort-aux)                                             | Secondary sort method for the index                                                                        |
+| [`$sort_aux`](cfg-sort-aux)                                             | Secondary sort method for the Index                                                                        |
 | `$sort_browser`                                                         | {bdg-warning-line}`Renamed to:` [`$browser_sort`](cfg-browser-sort)                                        |
 | [`$sort_re`](cfg-sort-re)                                               | Whether [`$reply_regex`](cfg-reply-regex) must be matched when not [`$strict_threads`](cfg-strict-threads) |
 | [`$spam_separator`](cfg-spam-separator)                                 | Separator for multiple spam headers                                                                        |
@@ -621,31 +621,31 @@ These pages explain how these settings work and how to apply them.
 | [`$ssl_verify_host`](cfg-ssl-verify-host)                               | Verify the server's hostname against the certificate                                                       |
 | [`$ssl_verify_partial_chains`](cfg-ssl-verify-partial-chains)           | Allow verification using partial certificate chains                                                        |
 | [`$status_chars`](cfg-status-chars)                                     | Indicator characters for the status bar                                                                    |
-| [`$status_format`](cfg-status-format)                                   | printf-like format string for the index's status line                                                      |
+| [`$status_format`](cfg-status-format)                                   | Format string for the [Index Dialog](tour-index)'s status bar                                              |
 | [`$status_on_top`](cfg-status-on-top)                                   | Display the status bar at the top                                                                          |
 | [`$strict_threads`](cfg-strict-threads)                                 | Thread messages using `In-Reply-To` and `References` headers                                               |
 | [`$suspend`](cfg-suspend)                                               | Allow the user to suspend NeoMutt using `^Z`                                                               |
 
 ## T
 
-| Config Option                                                 | Description                                                        |
-|---------------------------------------------------------------|--------------------------------------------------------------------|
-| [`$text_flowed`](cfg-text-flowed)                             | Generate `format=flowed` messages                                  |
-| [`$thorough_search`](cfg-thorough-search)                     | Decode headers and messages before searching them                  |
-| [`$thread_received`](cfg-thread-received)                     | Sort threaded messages by their received date                      |
-| [`$tilde`](cfg-tilde)                                         | Display `~` in the pager after the end of the email                |
-| [`$timeout`](cfg-timeout)                                     | Time to wait for user input in menus                               |
-| [`$time_inc`](cfg-time-inc)                                   | Frequency of progress bar updates (milliseconds)                   |
-| `$tmpdir`                                                     | {bdg-warning-line}`Renamed to:` [`$tmp_dir`](cfg-tmp-dir)          |
-| [`$tmp_dir`](cfg-tmp-dir)                                     | Directory for temporary files                                      |
-| [`$toggle_quoted_show_levels`](cfg-toggle-quoted-show-levels) | Number of quote levels to show with toggle-quoted                  |
-| [`$to_chars`](cfg-to-chars)                                   | Indicator characters for the `To` field in the index               |
-| [`$trash`](cfg-trash)                                         | Folder to put deleted emails                                       |
-| [`$ts_enabled`](cfg-ts-enabled)                               | Allow NeoMutt to set the terminal status line and icon             |
-| [`$ts_icon_format`](cfg-ts-icon-format)                       | printf-like format string for the terminal's icon title            |
-| [`$ts_status_format`](cfg-ts-status-format)                   | printf-like format string for the terminal's status (window title) |
-| [`$tunnel`](cfg-tunnel)                                       | Shell command to establish a tunnel                                |
-| [`$tunnel_is_secure`](cfg-tunnel-is-secure)                   | Assume a tunneled connection is secure                             |
+| Config Option                                                 | Description                                               |
+|---------------------------------------------------------------|-----------------------------------------------------------|
+| [`$text_flowed`](cfg-text-flowed)                             | Generate `format=flowed` messages                         |
+| [`$thorough_search`](cfg-thorough-search)                     | Decode headers and messages before searching them         |
+| [`$thread_received`](cfg-thread-received)                     | Sort threaded messages by their received date             |
+| [`$tilde`](cfg-tilde)                                         | Display `~` in the pager after the end of the email       |
+| [`$timeout`](cfg-timeout)                                     | Time to wait for user input in menus                      |
+| [`$time_inc`](cfg-time-inc)                                   | Frequency of progress bar updates (milliseconds)          |
+| `$tmpdir`                                                     | {bdg-warning-line}`Renamed to:` [`$tmp_dir`](cfg-tmp-dir) |
+| [`$tmp_dir`](cfg-tmp-dir)                                     | Directory for temporary files                             |
+| [`$toggle_quoted_show_levels`](cfg-toggle-quoted-show-levels) | Number of quote levels to show with toggle-quoted         |
+| [`$to_chars`](cfg-to-chars)                                   | Indicator characters for the `To` field in the index      |
+| [`$trash`](cfg-trash)                                         | Folder to put deleted emails                              |
+| [`$ts_enabled`](cfg-ts-enabled)                               | Allow NeoMutt to set the terminal status line and icon    |
+| [`$ts_icon_format`](cfg-ts-icon-format)                       | Format string for the Terminal's icon title               |
+| [`$ts_status_format`](cfg-ts-status-format)                   | Format string for the Terminal's status (window title)    |
+| [`$tunnel`](cfg-tunnel)                                       | Shell command to establish a tunnel                       |
+| [`$tunnel_is_secure`](cfg-tunnel-is-secure)                   | Assume a tunneled connection is secure                    |
 
 ## U
 
@@ -680,7 +680,7 @@ These pages explain how these settings work and how to apply them.
 | [`$wrap`](cfg-wrap)                 | Width to wrap text in the pager                                        |
 | [`$wrap_headers`](cfg-wrap-headers) | Width to wrap headers in outgoing messages                             |
 | [`$wrap_search`](cfg-wrap-search)   | Wrap around when the search hits the end                               |
-| [`$write_bcc`](cfg-write-bcc)       | Write out the `Bcc` field when preparing to send a mail                |
+| [`$write_bcc`](cfg-write-bcc)       | Write out the `Bcc:` field when preparing to send a mail               |
 | [`$write_inc`](cfg-write-inc)       | Update the progress bar after this many records written (0 to disable) |
 
 ## X
