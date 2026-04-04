@@ -5,6 +5,7 @@ keywords: threading, threads, tree, sort, collapse, subthread, index, conversati
 diataxis_type: explanation
 ---
 
+(exp-threading)=
 # Understanding Threading
 
 ## Threaded Mode

@@ -5,6 +5,7 @@ keywords: mailing lists, lists, subscribe, alternates, mail-followup-to, list-re
 diataxis_type: explanation
 ---
 
+(exp-mailing-lists)=
 # Understanding Mailing Lists
 
 ## Handling Mailing Lists

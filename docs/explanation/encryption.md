@@ -5,6 +5,7 @@ keywords: encryption, gpgme, pgp, smime, signing, cryptography, security, $pgp_d
 diataxis_type: explanation
 ---
 
+(exp-encryption)=
 # Understanding Encryption
 
 NeoMutt supports encrypting and signing emails when used interactively.

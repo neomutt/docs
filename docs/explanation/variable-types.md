@@ -5,6 +5,7 @@ keywords: variables, set, unset, reset, toggle, boolean, number, string, quadopt
 diataxis_type: explanation
 ---
 
+(exp-variable-types)=
 # Understanding Variable Types
 
 ## Variable Types

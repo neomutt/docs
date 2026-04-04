@@ -5,6 +5,7 @@ keywords: neomutt, introduction, text-based mail client, mime, mailing lists, co
 diataxis_type: explanation
 ---
 
+(exp-about)=
 # About NeoMutt
 
 **NeoMutt** is a small but very powerful text-based MIME mail client.

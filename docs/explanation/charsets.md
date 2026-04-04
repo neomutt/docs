@@ -5,6 +5,7 @@ keywords: charset, encoding, utf-8, unicode, locale, character set, charset-hook
 diataxis_type: explanation
 ---
 
+(exp-charsets)=
 # Understanding Character Sets
 
 A "character set" is basically a mapping between bytes and glyphs and implies a certain character encoding scheme.

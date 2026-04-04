@@ -4,6 +4,7 @@ description: How NeoMutt's modular C codebase is organized into libraries, proto
 keywords: neomutt, architecture, codebase, modular design, libmutt, libemail, libconn, libncrypt, libgui, mailbox backends, mime parser, pattern matching, curses, build system, source tree
 ---
 
+(exp-architecture)=
 # About NeoMutt's Architecture
 
 NeoMutt is a large C codebase that stays intentionally modular.

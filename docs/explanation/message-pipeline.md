@@ -4,6 +4,7 @@ description: How NeoMutt's pipeline fetches messages from mailbox backends, pars
 keywords: neomutt, message pipeline, fetching, parsing, mime, charset conversion, header processing, indexing, threading, pager, index, mailbox backends, imap, maildir, display filtering
 ---
 
+(exp-message-pipeline)=
 # About the Message Processing Pipeline
 
 NeoMutt's message pipeline is designed for reliability and speed.

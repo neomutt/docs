@@ -5,6 +5,7 @@ keywords: security, passwords, temporary files, information leaks, mailto, exter
 diataxis_type: explanation
 ---
 
+(exp-security)=
 # Understanding Security
 
 First of all, NeoMutt contains no security holes included by intention but may contain unknown security holes.

@@ -5,6 +5,7 @@ keywords: mime, multipart, multilingual, related, attachments, content-type, mai
 diataxis_type: explanation
 ---
 
+(exp-mime)=
 # Understanding MIME
 
 Quite a bit of effort has been made to make NeoMutt the premier text-mode MIME MUA.

@@ -4,6 +4,7 @@ description: How NeoMutt evolved from the original Mutt project, why the fork wa
 keywords: neomutt, history, mutt, fork, michael elkins, richard russon, flatcap, timeline, origins, community, open source, email client evolution, legacy
 ---
 
+(exp-history)=
 # About NeoMutt's History
 
 NeoMutt grew out of a long-lived Mutt ecosystem.
