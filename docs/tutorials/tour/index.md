@@ -18,6 +18,7 @@ compose.md
 index2.md
 pager.md
 message.md
+sidebar.md
 ```
 
 % Compose Dialog
