@@ -30,18 +30,18 @@ refer to the same expando.
 
 Every expando has a short name.  Most also have a descriptive long name.
 
-| Short | Long                  | Meaning                                    |
-|-------|-----------------------|--------------------------------------------|
-| `%A`  | `%{reply-to}`         | Reply-To address                           |
-| `%C`  | `%{number}`           | Message number                             |
-| `%d`  | `%{date-format}`      | Date (strftime via `$date_format`)         |
-| `%F`  | `%{sender}`           | Smart sender (uses Reply-To or From)       |
-| `%i`  | `%{message-id}`       | Message-Id                                 |
-| `%n`  | `%{name}`             | Author's real name                         |
-| `%s`  | `%{subject}`          | Subject                                    |
-| `%X`  | `%{attachment-count}` | Attachment count                           |
-| `%zc` | `%{crypto-flags}`     | Crypto flags                               |
-| `%zt` | `%{message-flags}`    | Message flags                              |
+| Short | Long                  | Meaning                                                 |
+|-------|-----------------------|---------------------------------------------------------|
+| `%A`  | `%{reply-to}`         | Reply-To address                                        |
+| `%C`  | `%{number}`           | Message number                                          |
+| `%d`  | `%{date-format}`      | Date ([`strftime(3)`](exp-strftime) via `$date_format`) |
+| `%F`  | `%{sender}`           | Smart sender (uses Reply-To or From)                    |
+| `%i`  | `%{message-id}`       | Message-Id                                              |
+| `%n`  | `%{name}`             | Author's real name                                      |
+| `%s`  | `%{subject}`          | Subject                                                 |
+| `%X`  | `%{attachment-count}` | Attachment count                                        |
+| `%zc` | `%{crypto-flags}`     | Crypto flags                                            |
+| `%zt` | `%{message-flags}`    | Message flags                                           |
 
 Long names use only lowercase letters, digits, and hyphens, enclosed in braces: `%{long-name}`.
 

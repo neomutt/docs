@@ -149,7 +149,7 @@ These pages explain how these settings work and how to apply them.
 
 | Config Option                                 | Description                                                                    |
 |-----------------------------------------------|--------------------------------------------------------------------------------|
-| [`$date_format`](cfg-date-format)             | strftime format string for the `%d` expando                                    |
+| [`$date_format`](cfg-date-format)             | [`strftime(3)`](exp-strftime) format string for the `%d` expando               |
 | [`$debug_file`](cfg-debug-file)               | File to save debug logs                                                        |
 | [`$debug_level`](cfg-debug-level)             | Logging level for debug logs                                                   |
 | [`$default_hook`](cfg-default-hook)           | Pattern to use for hooks that only have a simple regex                         |

@@ -494,28 +494,28 @@ This variable allows you to customize the PGP key selection menu to your persona
 If [`$crypt_use_gpgme`](cfg-crypt-use-gpgme) is _set_, then it applies to S/MIME key selection menu also.
 This string is similar to [`$index_format`](cfg-index-format), but has its own set of `printf(3)`-like sequences:
 
-| Short    | Long Name              | Description                                                     |
-|----------|------------------------|-----------------------------------------------------------------|
-| `%a`     | `%{key-algorithm}`     | Algorithm                                                       |
-| `%c`     | `%{key-capabilities}`  | Capabilities                                                    |
-| `%f`     | `%{key-flags}`         | Flags                                                           |
-| `%i`     | `%{key-fingerprint}`   | Key fingerprint (or long key id if non-existent)                |
-| `%k`     | `%{key-id}`            | Key id                                                          |
-| `%l`     | `%{key-length}`        | Key length                                                      |
-| `%n`     | `%{number}`            | Number                                                          |
-| `%p`     | `%{protocol}`          | Protocol                                                        |
-| `%t`     | `%{trust}`             | Trust/validity of the key-uid association                       |
-| `%u`     | `%{user-id}`           | User id                                                         |
-| `%A`     | `%{pkey-algorithm}`    | Primary Key Algorithm                                           |
-| `%C`     | `%{pkey-capabilities}` | Primary Key Capabilities                                        |
-| `%F`     | `%{pkey-flags}`        | Primary Key Flags                                               |
-| `%I`     | `%{pkey-fingerprint}`  | Primary Key fingerprint (or long key id if non-existent)        |
-| `%K`     | `%{pkey-id}`           | Primary Key id                                                  |
-| `%L`     | `%{pkey-length}`       | Primary Key length                                              |
-| `%[<s>]` | `%{date}`              | Date of the key where `<s>` is an `strftime(3)` expression      |
-| `%*X`    | `%{padding-soft:X}`    | Soft-fill with character `X` as pad                             |
-| `%>X`    | `%{padding-hard:X}`    | Right justify the rest of the string and pad with character `X` |
-| `%\|X`   | `%{padding-eol:X}`     | Pad to the end of the line with character `X`                   |
+| Short    | Long Name              | Description                                                                |
+|----------|------------------------|----------------------------------------------------------------------------|
+| `%a`     | `%{key-algorithm}`     | Algorithm                                                                  |
+| `%c`     | `%{key-capabilities}`  | Capabilities                                                               |
+| `%f`     | `%{key-flags}`         | Flags                                                                      |
+| `%i`     | `%{key-fingerprint}`   | Key fingerprint (or long key id if non-existent)                           |
+| `%k`     | `%{key-id}`            | Key id                                                                     |
+| `%l`     | `%{key-length}`        | Key length                                                                 |
+| `%n`     | `%{number}`            | Number                                                                     |
+| `%p`     | `%{protocol}`          | Protocol                                                                   |
+| `%t`     | `%{trust}`             | Trust/validity of the key-uid association                                  |
+| `%u`     | `%{user-id}`           | User id                                                                    |
+| `%A`     | `%{pkey-algorithm}`    | Primary Key Algorithm                                                      |
+| `%C`     | `%{pkey-capabilities}` | Primary Key Capabilities                                                   |
+| `%F`     | `%{pkey-flags}`        | Primary Key Flags                                                          |
+| `%I`     | `%{pkey-fingerprint}`  | Primary Key fingerprint (or long key id if non-existent)                   |
+| `%K`     | `%{pkey-id}`           | Primary Key id                                                             |
+| `%L`     | `%{pkey-length}`       | Primary Key length                                                         |
+| `%[fmt]` | `%{date}`              | Date of the key where `fmt` is an [`strftime(3)`](exp-strftime) expression |
+| `%*X`    | `%{padding-soft:X}`    | Soft-fill with character `X` as pad                                        |
+| `%>X`    | `%{padding-hard:X}`    | Right justify the rest of the string and pad with character `X`            |
+| `%\|X`   | `%{padding-eol:X}`     | Pad to the end of the line with character `X`                              |
 
 See the section "Sending Cryptographically Signed/Encrypted Messages" of the user manual for the meaning of the letters some of these sequences expand to.
 

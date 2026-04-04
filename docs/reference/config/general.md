@@ -303,8 +303,7 @@ Instead of using [`$date_format`](cfg-date-format) it is encouraged to use "%[fm
 This allows for a more fine grained control of the different menu needs.
 
 This variable controls the format of the date printed by the "%d" sequence in [`$index_format`](cfg-index-format).
-This is passed to the `strftime(3)`
-function to process the date, see the man page for the proper syntax.
+This is passed to the [`strftime(3)`](exp-strftime) function to process the date, see the man page for the proper syntax.
 
 Unless the first character in the string is a bang ("!"), the month and week day names are expanded according to the locale.
 If the first character in the string is a bang, the bang is discarded, and the month and week day names in the rest of the string are expanded in the _C_ locale (that is in US English).

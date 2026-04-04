@@ -195,7 +195,7 @@ For a full listing of defined `printf(3)`-like sequences see the section on [`$i
     set attribution_locale = ""
     ```
 
-The locale used by `strftime(3)` to format dates in the attribution strings.
+The locale used by [`strftime(3)`](exp-strftime) to format dates in the attribution strings.
 Valid values are the strings your system accepts for the locale environment variable [`$LC_TIME`](ref-env).
 
 This variable is to allow the attribution date format to be customized by recipient or folder using hooks.

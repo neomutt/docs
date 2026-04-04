@@ -17,6 +17,7 @@ Don't include step-by-step instructions — link to tutorials and how-to guides 
 The reader should come away with deeper understanding.
 :::
 
+(exp)=
 # Explanation
 
 :::{tip}

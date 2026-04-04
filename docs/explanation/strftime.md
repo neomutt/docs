@@ -5,6 +5,7 @@ keywords: strftime, date format, time format, date_format, index_format, cond-da
 diataxis_type: explanation
 ---
 
+(exp-strftime)=
 # Understanding strftime()
 
 NeoMutt uses the C library function `strftime()` to format dates and times wherever a date format string is expected — most commonly in `$index_format`, `$date_format`, and conditional date expressions.

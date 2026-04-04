@@ -172,7 +172,7 @@ year-month (e.g. `14.12`).
 | This Year         | `%b %d` | Dec 10  |
 | Older than 1 Year | `%m/%y` | 06/14   |
 
-For an explanation of the date formatting strings, see `strftime(3)`.
+For an explanation of the date formatting strings, see [`strftime(3)`](exp-strftime).
 
 NeoMutt's conditional format strings have the form (whitespace introduced for clarity):
 

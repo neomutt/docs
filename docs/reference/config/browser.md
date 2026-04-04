@@ -83,30 +83,30 @@ If this variable is _set_, the browser will group directories before files.
 This variable allows you to customize the file browser display to your personal taste.
 This string is similar to [`$index_format`](cfg-index-format), but has its own set of `printf(3)`-like sequences:
 
-| Short    | Long Name           | Description                                                                                          |
-|----------|---------------------|------------------------------------------------------------------------------------------------------|
-| `%a`     | `%{notify}`         | Alert: 1 if user is notified of new mail                                                             |
-| `%C`     | `%{number}`         | Current file number                                                                                  |
+| Short    | Long Name           | Description                                                                                               |
+|----------|---------------------|-----------------------------------------------------------------------------------------------------------|
+| `%a`     | `%{notify}`         | Alert: 1 if user is notified of new mail                                                                  |
+| `%C`     | `%{number}`         | Current file number                                                                                       |
 | `%D`     | `%{date}`           | Date/time folder was last modified using [`$date_format`](cfg-date-format).                               |
 |          |                     | It is recommended to use `%[fmt]` instead, where `fmt` is the value of [`$date_format`](cfg-date-format). |
-| `%d`     | `%{date-format}`    | Date/time folder was last modified                                                                   |
-| `%F`     | `%{file-mode}`      | File permissions                                                                                     |
-| `%f`     | `%{filename}`       | Filename (`/` is appended to directory names,                                                        |
-|          |                     | `@` to symbolic links and `*` to executable files)                                                   |
-| `%g`     | `%{file-group}`     | Group name (or numeric gid, if missing)                                                              |
-| `%i`     | `%{description}`    | Description of the folder                                                                            |
-| `%l`     | `%{hard-links}`     | Number of hard links                                                                                 |
-| `%m`     | `%{message-count}`  | Number of messages in the mailbox                                                                    |
-| `%N`     | `%{new-mail}`       | `N` if mailbox has new mail, ` ` (space) otherwise                                                   |
-| `%n`     | `%{unread-count}`   | Number of unread messages in the mailbox                                                             |
-| `%p`     | `%{poll}`           | Poll: 1 if Mailbox is checked for new mail                                                           |
-| `%s`     | `%{file-size}`      | Size in bytes (see **Size Format**)                                                                  |
-| `%t`     | `%{tagged}`         | `*` if the file is tagged, blank otherwise                                                           |
-| `%u`     | `%{file-owner}`     | Owner name (or numeric uid, if missing)                                                              |
-| `%[fmt]` |                     | Date/time folder was last modified using an `strftime(3)` expression                                 |
-| `%*X`    | `%{padding-soft:X}` | Soft-fill with character `X` as pad                                                                  |
-| `%>X`    | `%{padding-hard:X}` | Right justify the rest of the string and pad with character `X`                                      |
-| `%\|X`   | `%{padding-eol:X}`  | Pad to the end of the line with character `X`                                                        |
+| `%d`     | `%{date-format}`    | Date/time folder was last modified                                                                        |
+| `%F`     | `%{file-mode}`      | File permissions                                                                                          |
+| `%f`     | `%{filename}`       | Filename (`/` is appended to directory names,                                                             |
+|          |                     | `@` to symbolic links and `*` to executable files)                                                        |
+| `%g`     | `%{file-group}`     | Group name (or numeric gid, if missing)                                                                   |
+| `%i`     | `%{description}`    | Description of the folder                                                                                 |
+| `%l`     | `%{hard-links}`     | Number of hard links                                                                                      |
+| `%m`     | `%{message-count}`  | Number of messages in the mailbox                                                                         |
+| `%N`     | `%{new-mail}`       | `N` if mailbox has new mail, ` ` (space) otherwise                                                        |
+| `%n`     | `%{unread-count}`   | Number of unread messages in the mailbox                                                                  |
+| `%p`     | `%{poll}`           | Poll: 1 if Mailbox is checked for new mail                                                                |
+| `%s`     | `%{file-size}`      | Size in bytes (see **Size Format**)                                                                       |
+| `%t`     | `%{tagged}`         | `*` if the file is tagged, blank otherwise                                                                |
+| `%u`     | `%{file-owner}`     | Owner name (or numeric uid, if missing)                                                                   |
+| `%[fmt]` |                     | Date/time folder was last modified using an [`strftime(3)`](exp-strftime) expression                      |
+| `%*X`    | `%{padding-soft:X}` | Soft-fill with character `X` as pad                                                                       |
+| `%>X`    | `%{padding-hard:X}` | Right justify the rest of the string and pad with character `X`                                           |
+| `%\|X`   | `%{padding-eol:X}`  | Pad to the end of the line with character `X`                                                             |
 
 For an explanation of "soft-fill", see the [`$index_format`](cfg-index-format) documentation.
 
