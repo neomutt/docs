@@ -43,6 +43,7 @@ performance
 mailing-lists
 threading
 variable-types
+strftime
 ```
 
 ## Background
