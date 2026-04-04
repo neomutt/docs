@@ -1,54 +1,143 @@
 ---
-title: Index Dialog
+title: Tour of NeoMutt
 description: XXX
 keywords: XXX
 ---
 
-(tour-index)=
-# Index Dialog
+(tut-tour)=
+# Tour of NeoMutt
 
-overview...
+## Complex Dialogs
 
-<div class="term-window">
-<div class="term-title">Index Dialog</div>
-<pre class="terminal">
-<span class="index index_date">12-Jan</span><span class="index"> </span><span class="index index_flags">   </span><span class="index"> </span><span class="index index_author">Meryl Streep             </span><span class="index">  </span><span class="index index_subject">The Devil Wears Prada</span><span class="index">                                   (</span><span class="index index_size">0.3K</span><span class="index">)</span>
-<span class="index index_date">14-Jan</span><span class="index"> </span><span class="index index_flags">   </span><span class="index"> </span><span class="index index_author">Al Pacino                </span><span class="index">  </span><span class="index tree">└─&gt;</span><span class="index">                                                     (</span><span class="index index_size">0.3K</span><span class="index">)</span>
-<span class="index index_date">14-Jan</span><span class="index"> </span><span class="index index_flags">   </span><span class="index"> </span><span class="index index_author">Glenn Close              </span><span class="index">  </span><span class="index tree">  └─&gt;</span><span class="index">                                                   (</span><span class="index index_size">0.5K</span><span class="index">)</span>
-<span class="index index_date">18-Jan</span><span class="index"> </span><span class="index index_flags">   </span><span class="index"> </span><span class="index index_author">Meryl Streep             </span><span class="index">  </span><span class="index tree">    └─&gt;</span><span class="index">                                                 (</span><span class="index index_size">0.7K</span><span class="index">)</span>
-<span class="index index_date">18-Jan</span><span class="index"> </span><span class="index index_flags">   </span><span class="index"> </span><span class="index index_author">Al Pacino                </span><span class="index">  </span><span class="index tree">      └─&gt;</span><span class="index">                                               (</span><span class="index index_size">0.5K</span><span class="index">)</span>
-<span class="index index_date">19-Jan</span><span class="index"> </span><span class="index index_flags">   </span><span class="index"> </span><span class="index index_author">Tom Hanks                </span><span class="index">  </span><span class="index index_subject">Les Miserables</span><span class="index">                                          (</span><span class="index index_size">0.4K</span><span class="index">)</span>
-<span class="index index_date">20-Jan</span><span class="index"> </span><span class="index index_flags">   </span><span class="index"> </span><span class="index index_author">Hugh Jackman             </span><span class="index">  </span><span class="index tree">└─&gt;</span><span class="index">                                                     (</span><span class="index index_size">0.6K</span><span class="index">)</span>
-<span class="index index_date">21-Jan</span><span class="index"> </span><span class="index index_flags">   </span><span class="index"> </span><span class="index index_author">Tom Hanks                </span><span class="index">  </span><span class="index tree">  └─&gt;</span><span class="index">                                                   (</span><span class="index index_size">0.6K</span><span class="index">)</span>
-<span class="index index_date">21-Jan</span><span class="index"> </span><span class="index index_flags">   </span><span class="index"> </span><span class="index index_author">Hugh Jackman             </span><span class="index">  </span><span class="index tree">    └─&gt;</span><span class="index">                                                 (</span><span class="index index_size">0.7K</span><span class="index">)</span>
-<span class="index index_date">26-Jan</span><span class="index"> </span><span class="index index_flags">   </span><span class="index"> </span><span class="index index_author">Denzel Washington        </span><span class="index">  </span><span class="index index_subject">Fences</span><span class="index">                                                  (</span><span class="index index_size">0.4K</span><span class="index">)</span>
-<span class="index index_date">28-Jan</span><span class="index"> </span><span class="index index_flags">   </span><span class="index"> </span><span class="index index_author">Viola Davis              </span><span class="index">  </span><span class="index tree">└─&gt;</span><span class="index">                                                     (</span><span class="index index_size">0.6K</span><span class="index">)</span>
-<span class="index index_date">29-Jan</span><span class="index"> </span><span class="index index_flags">   </span><span class="index"> </span><span class="index index_author">Angela Bassett           </span><span class="index">  </span><span class="index tree">  └─&gt;</span><span class="index">                                                   (</span><span class="index index_size">0.8K</span><span class="index">)</span>
-<span class="index index_date">31-Jan</span><span class="index"> </span><span class="index index_flags">   </span><span class="index"> </span><span class="index index_author">Denzel Washington        </span><span class="index">  </span><span class="index tree">    └─&gt;</span><span class="index">                                                 (</span><span class="index index_size">0.7K</span><span class="index">)</span>
-<span class="index index_date">03-Feb</span><span class="index"> </span><span class="index index_flags">   </span><span class="index"> </span><span class="index index_author">Viola Davis              </span><span class="index">  </span><span class="index tree">      └─&gt;</span><span class="index">                                               (</span><span class="index index_size">0.3K</span><span class="index">)</span>
-<span class="index index_date">02-Feb</span><span class="index"> </span><span class="index index_flags">   </span><span class="index"> </span><span class="index index_author">Bryan Cranston           </span><span class="index">  </span><span class="index index_subject">Breaking Bad</span><span class="index">                                            (</span><span class="index index_size">0.4K</span><span class="index">)</span>
-<span class="index index_date">03-Feb</span><span class="index"> </span><span class="index index_flags">   </span><span class="index"> </span><span class="index index_author">Bob Odenkirk             </span><span class="index">  </span><span class="index tree">└─&gt;</span><span class="index">                                                     (</span><span class="index index_size">0.5K</span><span class="index">)</span>
-<span class="index index_date">06-Feb</span><span class="index"> </span><span class="index index_flags">   </span><span class="index"> </span><span class="index index_author">Anna Kendrick            </span><span class="index">  </span><span class="index tree">  └─&gt;</span><span class="index">                                                   (</span><span class="index index_size">0.6K</span><span class="index">)</span>
-<span class="index index_date">06-Feb</span><span class="index"> </span><span class="index index_flags">   </span><span class="index"> </span><span class="index index_author">Jon Hamm                 </span><span class="index">  </span><span class="index tree">    └─&gt;</span><span class="index">                                                 (</span><span class="index index_size">0.6K</span><span class="index">)</span>
-<span class="index index_date">08-Feb</span><span class="index"> </span><span class="index index_flags">   </span><span class="index"> </span><span class="index index_author">Bryan Cranston           </span><span class="index">  </span><span class="index tree">      └─&gt;</span><span class="index">                                               (</span><span class="index index_size">0.7K</span><span class="index">)</span>
-<span class="index index_date">04-Feb</span><span class="index"> </span><span class="index index_flags">   </span><span class="index"> </span><span class="index index_author">Bob Odenkirk             </span><span class="index">  </span><span class="index tree">        └─&gt;</span><span class="index">                                             (</span><span class="index index_size">0.2K</span><span class="index">)</span>
-<span class="index index_date">09-Feb</span><span class="index"> </span><span class="index index_flags">   </span><span class="index"> </span><span class="index index_author">Jamie Lee Curtis         </span><span class="index">  </span><span class="index index_subject">Knives Out</span><span class="index">                                              (</span><span class="index index_size">0.5K</span><span class="index">)</span>
-<span class="index index_date">10-Feb</span><span class="index"> </span><span class="index index_flags">   </span><span class="index"> </span><span class="index index_author">Kate Winslet             </span><span class="index">  </span><span class="index tree">└─&gt;</span><span class="index">                                                     (</span><span class="index index_size">0.6K</span><span class="index">)</span>
-<span class="status">-- ~/work/actors/conversation [Msgs:48/48 50K]   (last-date/date)                            (45%)  </span>
-<span>                                                                                                    </span>
-</pre>
-</div>
+```{toctree}
+---
+maxdepth: 1
+---
+browser.md
+compose.md
+index2.md
+pager.md
+message.md
+```
 
-description...
+% Compose Dialog
+%     compose
+%     - Compose/Compose-Message dialog
+%       - Screen for composing new messages or replies. Provides header-entry prompts (To, Cc, Subject), editor invocation, and send/cancel prompts.
+% 
+% Index Dialog
+%     index
+%     - Index (index menu)
+%       - Lists messages in the current folder (one-line per message). Used for selecting, tagging, sorting, limiting, and opening messages. Shows flags, number, date, sender, subject.
+% 
+% Pager Dialog
+%     pager
+%     - Pager (pager/menu)
+%       - Shows a single message's headers and body (page-based). Used to read messages, follow threads, view attachments, and invoke message-level commands (reply, forward, save).
+% 
+% Browser Dialog
+%     browser
+% 
+% Message window
+%     message
+%     - Command-line prompt (command prompt)
+%       - Single-line prompt at bottom used to type NeoMutt commands, functions, or to show status/errors.
+%     - Status line / Status dialog
+%       - Context-sensitive single-line area showing mode, mailbox status, message counts; sometimes expanded into a status screen for details (e.g., pager status).
+%   - Progress/Transfer dialogs
+%     - Small progress displays when performing long operations (fetching messages, sending large attachments).
 
-## See Also
+## Simple Dialogs
 
-- [Index Config](ref-cfg-index)
-- [Index Functions](ref-fn-index)
-  - display message, reply, ...
-- [Sidebar Functions](ref-fn-sidebar)
-  - next, previous new, ...
-- [Generic Functions](ref-fn-generic)
-  - **Menu:** page up/down, search, tagging, ...
-  - **Global:** enter command, show log message, ...
+```{toctree}
+---
+maxdepth: 1
+---
+alias.md
+attach.md
+autocrypt.md
+browser.md
+certificate.md
+gpgme.md
+history.md
+pattern.md
+pgp.md
+postpone.md
+query.md
+smime.md
+```
+
+% Alias Dialog
+%     alias
+%     - Alias menu
+%       - Line-based menu to select addresses from configured aliases when composing recipients.
+%     - Address-book (from third-party/addressbook integrations)
+%       - If configured, a menu to browse/address entries (NeoMutt itself provides alias menu; GUI addressbooks come from helpers).
+% 
+% Attach Dialog
+%     attach
+%     - Attachment menu / View Attachment dialog
+%       - Lists attachments for the current message and lets you view, save, pipe, or open them with external programs.
+% 
+% Autocrypt Dialog
+%     autocrypt
+% 
+% Certificate Dialog
+%     certificate
+%     - Certificate/SSL prompt
+%       - Prompt to accept/reject TLS/SSL certificates when fetching or sending via misconfigured/unknown certs.
+% 
+% Gpgme Dialog
+%     gpgme
+% 
+% History Dialog
+%     history
+%     - History / Command history menu
+%       - Presents past commands/addresses for selection (invoked in prompts with history support).
+% 
+% Pattern Dialog
+%     pattern
+% 
+% Pgp Dialog
+%     pgp
+% 
+% Postpone Dialog
+%     postpone
+% 
+% Query Dialog
+%     query
+% 
+% Smime Dialog
+%     smime
+
+## Simple Pager
+
+```{toctree}
+---
+maxdepth: 1
+---
+simple.md
+```
+
+% color_dump
+%     :color
+% dump_bind_macro
+%     :bind
+%     :macro
+%     - Key binding help (help menu)
+%       - Page-based listing of current key bindings and functions for the current menu/context.
+% mutt_help
+%     <help>
+% mutt_invoke_sendmail
+%     sendmail
+% mutt_view_attachment
+% op_show_log_messages
+%     <show-log-messages>
+% parse_setenv
+%     :setenv
+% parse_version
+%     :version
+% set_dump
+%     :set
+% verify_key
 

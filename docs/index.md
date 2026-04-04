@@ -36,7 +36,7 @@ This guide will help you get a working NeoMutt setup quickly, then show you how 
 Step-by-step guides that walk you through real tasks from start to finish.
 You'll build confidence by doing—learning NeoMutt in a practical, hands-on way, with clear outcomes at each stage.
 +++
-[Getting Started](tutorials/getting-started) · [First Config](tutorials/first-config) · [Gmail Setup](tutorials/gmail-setup) · [Interface Tour](tutorials/tour)
+[Getting Started](tutorials/getting-started) · [First Config](tutorials/first-config) · [Gmail Setup](tutorials/gmail-setup) · [Interface Tour](tut-tour)
 :::
 
 :::{grid-item-card}
