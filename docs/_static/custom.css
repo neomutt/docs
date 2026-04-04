@@ -611,13 +611,42 @@ html[data-theme=dark] .sponsor-link:hover .sponsor-heart {
 }
 
 
-/* ─── Field-list code blocks ──────────────────────────────────
-   Cap width so labels aren't crushed by wide code samples.
+/* ─── Field-list layout ──────────────────────────────────────
+   Fix two-column grid so labels aren't crushed by wide code
+   samples.  On narrow screens, stack label above value.
    ──────────────────────────────────────────────────────────── */
 
+dl.field-list {
+  grid-template-columns: max-content minmax(0, 1fr);
+}
+
+dl.field-list > dt {
+  white-space: nowrap;
+  word-break: normal;
+  overflow-wrap: normal;
+}
+
+dl.field-list > dd {
+  min-width: 0;
+}
+
 dl.field-list dd .highlight {
-  max-width: 80ch;
+  max-width: 100%;
   overflow-x: auto;
+}
+
+@media (max-width: 48rem) {
+  dl.field-list {
+    grid-template-columns: 1fr;
+  }
+
+  dl.field-list > dt {
+    margin-top: 0.75rem;
+  }
+
+  dl.field-list > dd {
+    margin-bottom: 0.75rem;
+  }
 }
 
 
