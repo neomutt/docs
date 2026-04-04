@@ -84,7 +84,7 @@ The following sequences are deprecated; they will be removed in the future.
 :Notes: [Reverse](type-sort-order)
 :Default:
     ```neomuttrc
-    set alias_sort = "alias"
+    set alias_sort = alias
     ```
 
 Specifies how the entries in the "alias" and "query" menus are sorted.

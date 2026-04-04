@@ -31,6 +31,7 @@ set abort_noattach_regex = "\\<attach(|ed|ments?)\\>"
 ## `$abort_noattach_regex`
 
 :Type: [Regular Expression](type-regex)
+:Notes: [Smart Case](type-general)
 :Default:
     ```neomuttrc
     set abort_noattach_regex = "\\<(attach|attached|attachments?)\\>"
@@ -294,7 +295,7 @@ If [`$smime_is_default`](cfg-smime-is-default) is _set_, then OpenSSL is used in
 
 This variable controls whether or not NeoMutt may automatically enable PGP encryption/signing for messages.
 :::{seealso}
-[`$crypt_auto_encrypt`](cfg-crypt-auto-encrypt), [`$crypt_reply_encrypt`](cfg-crypt-reply-encrypt), [`$crypt_auto_sign`](cfg-crypt-auto-sign), [`$crypt_reply_sign`](cfg-crypt-reply-sign) and [`$smime_is_default`](cfg-smime-is-default)
+[`$crypt_auto_encrypt`](cfg-crypt-auto-encrypt), [`$crypt_reply_encrypt`](cfg-crypt-reply-encrypt), [`$crypt_auto_sign`](cfg-crypt-auto-sign), [`$crypt_reply_sign`](cfg-crypt-reply-sign), attribution_locale [`$smime_is_default`](cfg-smime-is-default)
 :::
 
 --------------------------------------------------------------------------------
@@ -326,7 +327,7 @@ If [`$smime_is_default`](cfg-smime-is-default) is _set_, then OpenSSL is used in
 
 This variable controls whether or not NeoMutt may automatically enable S/MIME encryption/signing for messages.
 :::{seealso}
-[`$crypt_auto_encrypt`](cfg-crypt-auto-encrypt), [`$crypt_reply_encrypt`](cfg-crypt-reply-encrypt), [`$crypt_auto_sign`](cfg-crypt-auto-sign), [`$crypt_reply_sign`](cfg-crypt-reply-sign) and [`$smime_is_default`](cfg-smime-is-default)
+[`$crypt_auto_encrypt`](cfg-crypt-auto-encrypt), [`$crypt_reply_encrypt`](cfg-crypt-reply-encrypt), [`$crypt_auto_sign`](cfg-crypt-auto-sign), [`$crypt_reply_sign`](cfg-crypt-reply-sign), [`$smime_is_default`](cfg-smime-is-default)
 :::
 
 --------------------------------------------------------------------------------

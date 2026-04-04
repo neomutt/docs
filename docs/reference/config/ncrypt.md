@@ -373,6 +373,7 @@ The PGP command formats have their own set of `printf(3)`-like sequences:
 ## `$pgp_decryption_okay`
 
 :Type: [Regular Expression](type-regex)
+:Notes: [Smart Case](type-general)
 :Scope: PGP only
 :Default: (empty)
     ```neomuttrc
@@ -568,6 +569,7 @@ Note that in this case, %r expands to the email address, not the public key ID (
 ## `$pgp_good_sign`
 
 :Type: [Regular Expression](type-regex)
+:Notes: [Smart Case](type-general)
 :Scope: PGP only
 :Default: (empty)
     ```neomuttrc
@@ -623,7 +625,7 @@ This is a format string, see the [`$pgp_decode_command`](cfg-pgp-decode-command)
 :Scope: PGP only
 :Default:
     ```neomuttrc
-    set pgp_key_sort = "address"
+    set pgp_key_sort = address
     ```
 
 Specifies how the entries in the pgp menu are sorted.
@@ -968,18 +970,18 @@ This format string specifies a command which is used to decrypt `application/pkc
 
 The OpenSSL command formats have their own set of `printf(3)`-like sequences similar to PGP's:
 
-| Short | Long Name             | Description                                                                                                              |
-|-------|-----------------------|--------------------------------------------------------------------------------------------------------------------------|
-| `%a`  | `%{algorithm}`        | Algorithm used for encryption                                                                                            |
-| `%C`  | `%{certificate-path}` | CA location:  Depending on whether [`$smime_ca_location`](cfg-smime-ca-location) points to a directory or file,               |
+| Short | Long Name             | Description                                                                                                                        |
+|-------|-----------------------|------------------------------------------------------------------------------------------------------------------------------------|
+| `%a`  | `%{algorithm}`        | Algorithm used for encryption                                                                                                      |
+| `%C`  | `%{certificate-path}` | CA location:  Depending on whether [`$smime_ca_location`](cfg-smime-ca-location) points to a directory or file,                    |
 |       |                       | this expands to "-CApath [`$smime_ca_location`](cfg-smime-ca-location)" or "-CAfile [`$smime_ca_location`](cfg-smime-ca-location)" |
-| `%c`  | `%{certificate-ids}`  | One or more certificate IDs                                                                                              |
-| `%d`  | `%{digest-algorithm}` | Message digest algorithm specified with [`$smime_sign_digest_alg`](cfg-smime-sign-digest-alg)                                 |
-| `%f`  | `%{message-file}`     | Expands to the name of a file containing a message                                                                       |
-| `%i`  | `%{intermediate-ids}` | Intermediate certificates                                                                                                |
-| `%k`  | `%{key}`              | Key-pair specified with [`$smime_default_key`](cfg-smime-default-key)                                                         |
-| `%s`  | `%{signature-file}`   | Expands to the name of a file containing the signature part                                                              |
-|       |                       | of a `multipart/signed` attachment when verifying it                                                                     |
+| `%c`  | `%{certificate-ids}`  | One or more certificate IDs                                                                                                        |
+| `%d`  | `%{digest-algorithm}` | Message digest algorithm specified with [`$smime_sign_digest_alg`](cfg-smime-sign-digest-alg)                                      |
+| `%f`  | `%{message-file}`     | Expands to the name of a file containing a message                                                                                 |
+| `%i`  | `%{intermediate-ids}` | Intermediate certificates                                                                                                          |
+| `%k`  | `%{key}`              | Key-pair specified with [`$smime_default_key`](cfg-smime-default-key)                                                              |
+| `%s`  | `%{signature-file}`   | Expands to the name of a file containing the signature part                                                                        |
+|       |                       | of a `multipart/signed` attachment when verifying it                                                                               |
 
 For examples on how to configure these formats, see the `smime.rc` in the `samples/` subdirectory which has been installed on your system alongside the documentation.
 

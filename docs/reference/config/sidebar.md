@@ -61,10 +61,8 @@ set sidebar_delim_chars = '.'
 :Type: [String](type-string)
 :Default:
     ```neomuttrc
-    set sidebar_divider_char = "\342\224\202"
+    set sidebar_divider_char = "│" # Unicode: Box Drawings Light Vertical, U+2502
     ```
-
-The default is a Unicode vertical line.
 
 This specifies the characters to be drawn between the sidebar (when visible) and the other NeoMutt panels.
 ASCII and Unicode line-drawing characters are supported.
@@ -148,7 +146,7 @@ When thus set, a suggested value for this option is "%B%<F? [%F]>%* %<N?%N/>%S".
 :Type: [String](type-string)
 :Default:
     ```neomuttrc
-    set sidebar_indent_string = "  "
+    set sidebar_indent_string = "  " # Two spaces
     ```
 
 This specifies the string that is used to indent mailboxes in the sidebar.
@@ -253,7 +251,7 @@ Here's an example:
 :Type: [Sort Order](type-sort-order)
 :Default:
     ```neomuttrc
-    set sidebar_sort = "unsorted"
+    set sidebar_sort = unsorted
     ```
 
 Specifies how to sort mailbox entries in the sidebar.

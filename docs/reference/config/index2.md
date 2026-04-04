@@ -151,10 +151,10 @@ The following sequences are defined in NeoMutt:
 | `%C`      | `%{number}`              | Current message number                                                                                                         |
 | `%c`      | `%{body-characters}`     | Number of characters (bytes) in the body of the message (see **Size Format**)                                                  |
 | `%cr`     | `%{size}`                | Number of characters (bytes) in the raw message, including the header (see **Size Format**)                                    |
-| `%D`      | `%{date-format-local}`   | Date and time of message using [`$date_format`](cfg-date-format) and local timezone.                                                |
-|           |                          | It is recommended to use `%[fmt]` instead, where `fmt` is the value of [`$date_format`](cfg-date-format).                           |
-| `%d`      | `%{date-format}`         | Date and time of message using [`$date_format`](cfg-date-format) and sender's timezone.                                             |
-|           |                          | It is recommended to use `%{fmt}` instead, where `fmt` is the value of [`$date_format`](cfg-date-format).                           |
+| `%D`      | `%{date-format-local}`   | Date and time of message using [`$date_format`](cfg-date-format) and local timezone.                                           |
+|           |                          | It is recommended to use `%[fmt]` instead, where `fmt` is the value of [`$date_format`](cfg-date-format).                      |
+| `%d`      | `%{date-format}`         | Date and time of message using [`$date_format`](cfg-date-format) and sender's timezone.                                        |
+|           |                          | It is recommended to use `%{fmt}` instead, where `fmt` is the value of [`$date_format`](cfg-date-format).                      |
 | `%E`      | `%{thread-count}`        | Number of messages in current thread                                                                                           |
 | `%e`      | `%{thread-number}`       | Current message number in thread                                                                                               |
 | `%F`      | `%{sender}`              | Author name, or recipient name if the message is from you                                                                      |
@@ -182,7 +182,7 @@ The following sequences are defined in NeoMutt:
 | `%r`      | `%{to-all}`              | Comma separated list of `To:` recipients                                                                                       |
 | `%S`      | `%{flag-chars}`          | Single character status of the message (`N`/`O`/`D`/`d`/`!`/`r`/`*`)                                                           |
 | `%s`      | `%{subject}`             | Subject of the message                                                                                                         |
-| `%T`      | `%{to-chars}`            | Appropriate character from the [`$to_chars`](cfg-to-chars) string                                                                   |
+| `%T`      | `%{to-chars}`            | Appropriate character from the [`$to_chars`](cfg-to-chars) string                                                              |
 | `%t`      | `%{to}`                  | `%{To:}` field (recipients)                                                                                                    |
 | `%u`      | `%{username}`            | User (login) name of the author                                                                                                |
 | `%v`      | `%{first-name}`          | First name of the author, or the recipient if the message is from you                                                          |
@@ -198,7 +198,7 @@ The following sequences are defined in NeoMutt:
 |           |                          | The first character is new/read/replied flags (`n`/`o`/`r`/`O`/`N`).                                                           |
 |           |                          | The second is deleted or encryption flags (`D`/`d`/`S`/`P`/`s`/`K`).                                                           |
 |           |                          | The third is either tagged/flagged (`*`/`!`), or one of the characters.                                                        |
-|           |                          | Listed in [`$to_chars`](cfg-to-chars).                                                                                              |
+|           |                          | Listed in [`$to_chars`](cfg-to-chars).                                                                                         |
 | `%zc`     | `%{crypto-flags}`        | Message crypto flags                                                                                                           |
 | `%zs`     | `%{status-flags}`        | Message status flags                                                                                                           |
 | `%zt`     | `%{message-flags}`       | Message tag flags                                                                                                              |
@@ -346,34 +346,34 @@ Controls the characters used by the "%r" indicator in [`$status_format`](cfg-sta
 Controls the format of the status line displayed in the "index" menu.
 This string is similar to [`$index_format`](cfg-index-format), but has its own set of `printf(3)`-like sequences:
 
-| Short  | Long Name             | Description                                                                                            |
-|--------|-----------------------|--------------------------------------------------------------------------------------------------------|
-| `%b`   | `%{unread-mailboxes}` | Number of mailboxes with new mail                                                                      |
-| `%D`   | `%{description}`      | Description of the mailbox                                                                             |
-| `%d`   | `%{deleted-count}`    | Number of deleted messages                                                                             |
-| `%f`   | `%{flagged-count}`    | Number of flagged messages                                                                             |
-| `%F`   | `%{mailbox-path}`     | Full pathname of the current mailbox                                                                   |
-| `%h`   | `%{hostname}`         | Local hostname                                                                                         |
-| `%l`   | `%{limit-size}`       | Size (in bytes) of the messages shown (i.e., which match the current limit) (see formatstrings-size)   |
-| `%L`   | `%{mailbox-size}`     | Size (in bytes) of the current mailbox (see formatstrings-size)                                        |
-| `%m`   | `%{limit-count}`      | Number of messages shown (i.e., which match the current limit)                                         |
-| `%M`   | `%{message-count}`    | Number of messages in the mailbox                                                                      |
-| `%n`   | `%{new-count}`        | Number of new messages in the mailbox (unread, unseen)                                                 |
-| `%o`   | `%{old-count}`        | Number of old messages in the mailbox (unread, seen)                                                   |
-| `%p`   | `%{postponed-count}`  | Number of postponed messages                                                                           |
-| `%P`   | `%{percentage}`       | Percentage of the way through the index                                                                |
-| `%r`   | `%{read-count}`       | Number of read messages in the mailbox (read, seen)                                                    |
-| `%R`   | `%{readonly}`         | Modified/read-only/won't-write/attach-message indicator, according to [`$status_chars`](cfg-status-chars)  |
-| `%s`   | `%{sort}`             | Current sorting mode (`$sort`)                                                                         |
-| `%S`   | `%{sort-aux}`         | Current aux sorting method (`$sort_aux`)                                                               |
-| `%t`   | `%{tagged-count}`     | Number of tagged messages in the mailbox                                                               |
-| `%T`   | `%{use-threads}`      | Current threading mode (`$use_threads`)                                                                |
-| `%u`   | `%{unread-count}`     | Number of unread messages in the mailbox (seen or unseen)                                              |
-| `%v`   | `%{limit-pattern}`    | Currently active limit pattern, if any                                                                 |
-| `%V`   | `%{version}`          | NeoMutt version string                                                                                 |
-| `%*X`  | `%{padding-soft:X}`   | Soft-fill with character `X` as pad                                                                    |
-| `%>X`  | `%{padding-hard:X}`   | Right justify the rest of the string and pad with character `X`                                        |
-| `%\|X` | `%{padding-eol:X}`    | Pad to the end of the line with character `X`                                                          |
+| Short  | Long Name             | Description                                                                                               |
+|--------|-----------------------|-----------------------------------------------------------------------------------------------------------|
+| `%b`   | `%{unread-mailboxes}` | Number of mailboxes with new mail                                                                         |
+| `%D`   | `%{description}`      | Description of the mailbox                                                                                |
+| `%d`   | `%{deleted-count}`    | Number of deleted messages                                                                                |
+| `%f`   | `%{flagged-count}`    | Number of flagged messages                                                                                |
+| `%F`   | `%{mailbox-path}`     | Full pathname of the current mailbox                                                                      |
+| `%h`   | `%{hostname}`         | Local hostname                                                                                            |
+| `%l`   | `%{limit-size}`       | Size (in bytes) of the messages shown (i.e., which match the current limit) (see formatstrings-size)      |
+| `%L`   | `%{mailbox-size}`     | Size (in bytes) of the current mailbox (see formatstrings-size)                                           |
+| `%m`   | `%{limit-count}`      | Number of messages shown (i.e., which match the current limit)                                            |
+| `%M`   | `%{message-count}`    | Number of messages in the mailbox                                                                         |
+| `%n`   | `%{new-count}`        | Number of new messages in the mailbox (unread, unseen)                                                    |
+| `%o`   | `%{old-count}`        | Number of old messages in the mailbox (unread, seen)                                                      |
+| `%p`   | `%{postponed-count}`  | Number of postponed messages                                                                              |
+| `%P`   | `%{percentage}`       | Percentage of the way through the index                                                                   |
+| `%r`   | `%{read-count}`       | Number of read messages in the mailbox (read, seen)                                                       |
+| `%R`   | `%{readonly}`         | Modified/read-only/won't-write/attach-message indicator, according to [`$status_chars`](cfg-status-chars) |
+| `%s`   | `%{sort}`             | Current sorting mode (`$sort`)                                                                            |
+| `%S`   | `%{sort-aux}`         | Current aux sorting method (`$sort_aux`)                                                                  |
+| `%t`   | `%{tagged-count}`     | Number of tagged messages in the mailbox                                                                  |
+| `%T`   | `%{use-threads}`      | Current threading mode (`$use_threads`)                                                                   |
+| `%u`   | `%{unread-count}`     | Number of unread messages in the mailbox (seen or unseen)                                                 |
+| `%v`   | `%{limit-pattern}`    | Currently active limit pattern, if any                                                                    |
+| `%V`   | `%{version}`          | NeoMutt version string                                                                                    |
+| `%*X`  | `%{padding-soft:X}`   | Soft-fill with character `X` as pad                                                                       |
+| `%>X`  | `%{padding-hard:X}`   | Right justify the rest of the string and pad with character `X`                                           |
+| `%\|X` | `%{padding-eol:X}`    | Pad to the end of the line with character `X`                                                             |
 
 Some of the above sequences can be used to optionally print a string if their value is nonzero.
 For example, you may only want to see the number of flagged messages if such messages exist, since zero is not particularly meaningful.

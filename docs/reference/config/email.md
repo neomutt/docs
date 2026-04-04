@@ -218,6 +218,7 @@ Also see [`$wrap`](cfg-wrap).
 ## `$reply_regex`
 
 :Type: [Regular Expression](type-regex)
+:Notes: [Smart Case](type-general)
 :Notes: {ref}`Localised String <type-general>`
 :Default:
     ```neomuttrc

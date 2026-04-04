@@ -195,17 +195,16 @@ notmuch://?query=tag:inbox and (date:... or (tag:flagged and tag:unread))
 (cfg-nm-query-window-timebase)=
 ## `$nm_query_window_timebase`
 
-:Type: [String](type-string)
+:Type: [Enumeration](type-enum)
 :Default:
     ```neomuttrc
-    set nm_query_window_timebase = "week"
+    set nm_query_window_timebase = week
     ```
 
 This variable sets the time base of a windowed notmuch query.
 
 | Accepted Values |
 |-----------------|
-| `minute`        |
 | `hour`          |
 | `day`           |
 | `week`          |

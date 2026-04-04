@@ -524,6 +524,7 @@ If not specified, then it may be read from the environment variable [`$EMAIL`](r
 ## `$gecos_mask`
 
 :Type: [Regular Expression](type-regex)
+:Notes: [Smart Case](type-general)
 :Default:
     ```neomuttrc
     set gecos_mask = "^[^,]*"
@@ -739,7 +740,7 @@ Also see the [`$move`](cfg-move) variable.
 :Type: [Enumeration](type-enum)
 :Default:
     ```neomuttrc
-    set mbox_type = "mbox"
+    set mbox_type = mbox
     ```
 
 The default mailbox type used when creating new folders.
@@ -975,6 +976,7 @@ Those who use the `enscript(1)` program's mail-printing mode will most likely wa
 ## `$quote_regex`
 
 :Type: [Regular Expression](type-regex)
+:Notes: [Smart Case](type-general)
 :Default:
     ```neomuttrc
     set quote_regex = "^([ \t]*[|>:}#])+"
@@ -1199,7 +1201,7 @@ The default is to pause one second, so a value of zero for this option suppresse
 :Notes: [Reverse](type-sort-order), [Last](type-sort-order)
 :Default:
     ```neomuttrc
-    set sort = "date"
+    set sort = date
     ```
 
 Specifies how to sort messages in the "index" menu.
@@ -1249,7 +1251,7 @@ See the "Use Threads Feature" section for further explanation and examples, <htt
 :Notes: [Reverse](type-sort-order), [Last](type-sort-order)
 :Default:
     ```neomuttrc
-    set sort_aux = "date"
+    set sort_aux = date
     ```
 
 This provides a secondary sort for messages in the "index" menu, used when the [`$sort`](cfg-sort) value is equal for two messages.
@@ -1425,7 +1427,7 @@ If _unset_, no addresses will be qualified.
 :Type: [Enumeration](type-enum)
 :Default:
     ```neomuttrc
-    set use_threads = "unset"
+    set use_threads = unset
     ```
 
 The style of threading used in the index.

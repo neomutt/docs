@@ -18,6 +18,12 @@ This helps catch mistakes early - like entering text where a number is needed or
 These flags can be applied to different config option types.  
 They can restrict the possible values or change the option's behaviour.
 
+:Case Sensitive:
+    The case of the string matters.
+
+:Case Insensitive:
+    The case of the string does not matter.
+
 :Charset Single:
     Only one character encoding is allowed.  
     You can't provide a list of alternatives; you must pick exactly one.
@@ -43,6 +49,10 @@ They can restrict the possible values or change the option's behaviour.
 :Sensitive:
     The value contains something private, like a password.  
     NeoMutt takes care not to display or log it.
+
+:Smart Case:
+    Case-sensitive, if the string contains any upper-case letters.  
+    Case-insensitive, if the string is entirely lowercase.
 
 (type-address)=
 ## Address

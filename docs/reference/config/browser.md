@@ -31,7 +31,7 @@ In those cases, it may be desirable to _unset_ this variable.
 :Notes: [Reverse](type-sort-order)
 :Default:
     ```neomuttrc
-    set browser_sort = "alpha"
+    set browser_sort = alpha
     ```
 
 Specifies how to sort entries in the file browser.

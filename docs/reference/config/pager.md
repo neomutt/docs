@@ -255,6 +255,7 @@ Also see the [`$markers`](cfg-markers) variable.
 ## `$smileys`
 
 :Type: [Regular Expression](type-regex)
+:Notes: [Smart Case](type-general)
 :Default:
     ```neomuttrc
     set smileys = "(>From )|(:[-^]?[][)(><}{|/DP])"
