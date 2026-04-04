@@ -11,7 +11,7 @@ keywords: neomutt, progress, net_inc, read_inc, write_inc, time_inc, progress ba
 ## `$net_inc`
 
 :Type: [Number](type-number)
-:Notes: {ref}`Not Negative <type-general>`
+:Notes: [Not Negative](type-general)
 :Default:
     ```neomuttrc
     set net_inc = 10
@@ -30,7 +30,7 @@ If set to 0, no progress messages will be displayed.
 ## `$read_inc`
 
 :Type: [Number](type-number)
-:Notes: {ref}`Not Negative <type-general>`
+:Notes: [Not Negative](type-general)
 :Default:
     ```neomuttrc
     set read_inc = 10
@@ -49,7 +49,7 @@ Also see the [`$write_inc`](cfg-write-inc), [`$net_inc`](cfg-net-inc) and [`$tim
 ## `$time_inc`
 
 :Type: [Number](type-number)
-:Notes: {ref}`Not Negative <type-general>`
+:Notes: [Not Negative](type-general)
 :Default:
     ```neomuttrc
     set time_inc = 0
@@ -67,7 +67,7 @@ Also see the "$tuning" section of the manual for performance considerations.
 ## `$write_inc`
 
 :Type: [Number](type-number)
-:Notes: {ref}`Not Negative <type-general>`
+:Notes: [Not Negative](type-general)
 :Default:
     ```neomuttrc
     set write_inc = 10

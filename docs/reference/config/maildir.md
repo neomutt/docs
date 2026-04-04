@@ -42,7 +42,7 @@ Note that setting this option may slow down polling for new messages in large fo
 ## `$maildir_field_delimiter`
 
 :Type: [String](type-string)
-:Notes: {ref}`Not Empty <type-general>`, {ref}`On Startup <type-general>`
+:Notes: [Not Empty](type-general), {ref}`On Startup <type-general>`
 :Scope: Only maildir mailboxes
 :Default:
     ```neomuttrc

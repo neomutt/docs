@@ -126,7 +126,7 @@ This slightly odd interface is necessitated by NeoMutt's handling of string vari
 ## `$index_format`
 
 :Type: [Expando](type-expando)
-:Notes: {ref}`Not Empty <type-general>`
+:Notes: [Not Empty](type-general)
 :Default:
     ```neomuttrc
     set index_format = "%4C %Z %{%b %d} %-15.15L (%<l?%4l&%4c>) %s"
@@ -322,7 +322,7 @@ Controls the characters used by the "%r" indicator in [`$status_format`](cfg-sta
 ## `$status_format`
 
 :Type: [Expando](type-expando)
-:Notes: {ref}`Localised String <type-general>`
+:Notes: [Localised String](type-general)
 :Default:
     ```neomuttrc
     set status_format = "-%r-NeoMutt: %D [Msgs:%<M?%M/>%m%<n? New:%n>%<o? Old:%o> %<d? Del:%d>%<F? Flag:%F> %<t? Tag:%t>%<p? Post:%p>%<b? Inc:%b> %<l? %l>]---(%<T?%T/>%s/%S)-%>-(%P)---"
@@ -450,7 +450,7 @@ Most terminal emulators emulate the status line in the window title.
 ## `$ts_icon_format`
 
 :Type: [Expando](type-expando)
-:Notes: {ref}`Localised String <type-general>`
+:Notes: [Localised String](type-general)
 :Default:
     ```neomuttrc
     set ts_icon_format = "M%<n?AIL&ail>"
@@ -473,7 +473,7 @@ This string is identical in formatting to the one used by "[`$status_format`](cf
 ## `$ts_status_format`
 
 :Type: [Expando](type-expando)
-:Notes: {ref}`Localised String <type-general>`
+:Notes: [Localised String](type-general)
 :Default:
     ```neomuttrc
     set ts_status_format = "NeoMutt with %<m?%m messages&no messages>%<n? [%n NEW]>"

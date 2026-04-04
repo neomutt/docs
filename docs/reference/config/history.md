@@ -11,7 +11,7 @@ keywords: neomutt, history, history_file, history_format, history_remove_dups, s
 ## `$history`
 
 :Type: [Number](type-number)
-:Notes: {ref}`Not Negative <type-general>`
+:Notes: [Not Negative](type-general)
 :Default:
     ```neomuttrc
     set history = 10
@@ -92,7 +92,7 @@ Duplicate entries in the [`$history_file`](cfg-history-file) will also be remove
 ## `$save_history`
 
 :Type: [Number](type-number)
-:Notes: {ref}`Not Negative <type-general>`
+:Notes: [Not Negative](type-general)
 :Default:
     ```neomuttrc
     set save_history = 0

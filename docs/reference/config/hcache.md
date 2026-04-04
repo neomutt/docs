@@ -56,7 +56,7 @@ The deprecated backends will soon be removed from NeoMutt.
 ## `$header_cache_compress_level`
 
 :Type: [Number](type-number)
-:Notes: {ref}`Not Negative <type-general>`
+:Notes: [Not Negative](type-general)
 :Default:
     ```neomuttrc
     set header_cache_compress_level = 1

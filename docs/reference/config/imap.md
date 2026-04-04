@@ -100,7 +100,7 @@ This contains the list of characters that NeoMutt will use as folder separators 
 ## `$imap_fetch_chunk_size`
 
 :Type: [Number (Long)](type-long)
-:Notes: {ref}`Not Negative <type-general>`
+:Notes: [Not Negative](type-general)
 :Default:
     ```neomuttrc
     set imap_fetch_chunk_size = 0
@@ -167,7 +167,7 @@ If your connection seems to freeze up periodically, try unsetting this.
 ## `$imap_keep_alive`
 
 :Type: [Number](type-number)
-:Notes: {ref}`Not Negative <type-general>`
+:Notes: [Not Negative](type-general)
 :Default:
     ```neomuttrc
     set imap_keep_alive = 300
@@ -197,7 +197,7 @@ This can be toggled in the IMAP browser with the [`<toggle-subscribed>`](ref-fn-
 ## `$imap_login`
 
 :Type: [String](type-string)
-:Notes: {ref}`Sensitive <type-general>`
+:Notes: [Sensitive](type-general)
 :Default: (empty)
     ```neomuttrc
     set imap_login = ""
@@ -213,7 +213,7 @@ This variable defaults to the value of [`$imap_user`](cfg-imap-user).
 ## `$imap_oauth_refresh_command`
 
 :Type: [Command (String)](type-string)
-:Notes: {ref}`Sensitive <type-general>`
+:Notes: [Sensitive](type-general)
 :Default: (empty)
     ```neomuttrc
     set imap_oauth_refresh_command = ""
@@ -229,7 +229,7 @@ See "$oauth" for details.
 ## `$imap_pass`
 
 :Type: [String](type-string)
-:Notes: {ref}`Sensitive <type-general>`
+:Notes: [Sensitive](type-general)
 :Default: (empty)
     ```neomuttrc
     set imap_pass = ""
@@ -279,7 +279,7 @@ This option exists to appease speed freaks.
 ## `$imap_pipeline_depth`
 
 :Type: [Number](type-number)
-:Notes: {ref}`Not Negative <type-general>`
+:Notes: [Not Negative](type-general)
 :Default:
     ```neomuttrc
     set imap_pipeline_depth = 15
@@ -299,7 +299,7 @@ Changes to this variable have no effect on open connections.
 ## `$imap_poll_timeout`
 
 :Type: [Number](type-number)
-:Notes: {ref}`Not Negative <type-general>`
+:Notes: [Not Negative](type-general)
 :Default:
     ```neomuttrc
     set imap_poll_timeout = 15
@@ -380,7 +380,7 @@ Since these messages are often harmless, or generated due to configuration probl
 ## `$imap_user`
 
 :Type: [String](type-string)
-:Notes: {ref}`Sensitive <type-general>`
+:Notes: [Sensitive](type-general)
 :Default: (empty)
     ```neomuttrc
     set imap_user = ""

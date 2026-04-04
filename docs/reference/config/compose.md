@@ -30,7 +30,7 @@ It doesn't keep track of which message is the typed message if the entries are r
 ## `$compose_format`
 
 :Type: [Expando](type-expando)
-:Notes: {ref}`Localised String <type-general>`
+:Notes: [Localised String](type-general)
 :Default:
     ```neomuttrc
     set compose_format = "-- NeoMutt: Compose  [Approx. msg size: %l   Atts: %a]%>-"
@@ -79,7 +79,7 @@ By default it is shown below it.
 ## `$compose_preview_min_rows`
 
 :Type: [Number](type-number)
-:Notes: {ref}`Not Negative <type-general>`
+:Notes: [Not Negative](type-general)
 :Default:
     ```neomuttrc
     set compose_preview_min_rows = 5

@@ -171,7 +171,7 @@ This option supersedes [`$ssl_starttls`](cfg-ssl-starttls).
 ## `$ssl_min_dh_prime_bits`
 
 :Type: [Number](type-number)
-:Notes: {ref}`Not Negative <type-general>`
+:Notes: [Not Negative](type-general)
 :Scope: GnuTLS only
 :Default:
     ```neomuttrc

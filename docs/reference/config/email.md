@@ -219,7 +219,7 @@ Also see [`$wrap`](cfg-wrap).
 
 :Type: [Regular Expression](type-regex)
 :Notes: [Smart Case](type-general)
-:Notes: {ref}`Localised String <type-general>`
+:Notes: [Localised String](type-general)
 :Default:
     ```neomuttrc
     set reply_regex = "^((re)(\\[[0-9]+\\])*:[ \t]*)*"

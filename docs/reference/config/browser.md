@@ -69,7 +69,7 @@ If this variable is _set_, the browser will group directories before files.
 ## `$folder_format`
 
 :Type: [Expando](type-expando)
-:Notes: {ref}`Not Empty <type-general>`
+:Notes: [Not Empty](type-general)
 :Default:
     ```neomuttrc
     set folder_format = "%2C %t %N %F %2l %-8.8u %-8.8g %8s %d %i"
@@ -124,7 +124,7 @@ For an explanation of "soft-fill", see the [`$index_format`](cfg-index-format) d
 ## `$group_index_format`
 
 :Type: [Expando](type-expando)
-:Notes: {ref}`Not Empty <type-general>`
+:Notes: [Not Empty](type-general)
 :Default:
     ```neomuttrc
     set group_index_format = "%4C %M%N %5s  %-45.45f %d"
@@ -162,7 +162,7 @@ This string is similar to [`$index_format`](cfg-index-format), but has its own s
 ## `$mailbox_folder_format`
 
 :Type: [Expando](type-expando)
-:Notes: {ref}`Not Empty <type-general>`
+:Notes: [Not Empty](type-general)
 :Default:
     ```neomuttrc
     set mailbox_folder_format = "%2C %<n?%6n&      > %6m %i"

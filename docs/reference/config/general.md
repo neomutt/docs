@@ -29,7 +29,7 @@ If _set_, hitting backspace against an empty prompt aborts the prompt.
 ## `$abort_key`
 
 :Type: [String](type-string)
-:Notes: {ref}`Not Empty <type-general>`, {ref}`On Startup <type-general>`
+:Notes: [Not Empty](type-general), {ref}`On Startup <type-general>`
 :Default:
     ```neomuttrc
     set abort_key = "\007"
@@ -90,7 +90,7 @@ However, only the first content is valid for the message body.
 ## `$attach_format`
 
 :Type: [Expando](type-expando)
-:Notes: {ref}`Not Empty <type-general>`
+:Notes: [Not Empty](type-general)
 :Default:
     ```neomuttrc
     set attach_format = "%u%D%I %t%4n %T%d %> [%.7m/%.10M, %.6e%<C?, %C>, %s] "
@@ -188,7 +188,7 @@ The option is _unset_ by default because many visual terminals don't permit maki
 ## `$charset`
 
 :Type: [String](type-string)
-:Notes: {ref}`Not Empty <type-general>`, {ref}`Charset Single <type-general>`
+:Notes: [Not Empty](type-general), {ref}`Charset Single <type-general>`
 :Default: (empty)
     ```neomuttrc
     set charset = ""
@@ -209,7 +209,7 @@ It should only be set in case NeoMutt isn't able to determine the character set 
 ## `$color_directcolor`
 
 :Type: [Boolean](type-bool)
-:Notes: {ref}`On Startup <type-general>`
+:Notes: [On Startup](type-general)
 :Default:
     ```neomuttrc
     set color_directcolor = no
@@ -293,7 +293,7 @@ Controls whether NeoMutt will weed headers when invoking the [`<decode-copy>`](r
 ## `$date_format`
 
 :Type: [String](type-string)
-:Notes: {ref}`Not Empty <type-general>`
+:Notes: [Not Empty](type-general)
 :Default:
     ```neomuttrc
     set date_format = "!%a, %b %d, %Y at %I:%M:%S%p %Z"
@@ -424,7 +424,7 @@ If this option is _set_, NeoMutt will enable the **Security** development featur
 ## `$editor`
 
 :Type: [Command (String)](type-string)
-:Notes: {ref}`Not Empty <type-general>`
+:Notes: [Not Empty](type-general)
 :Default: (empty)
     ```neomuttrc
     set editor = ""
@@ -506,7 +506,7 @@ When _set_, forwarded messages included in the main body of the message (when [`
 (cfg-from)=
 ## `$from`
 
-:Type: {ref}`Address <type-address>`
+:Type: [Address](type-address)
 :Default: (empty)
     ```neomuttrc
     set from = ""
@@ -647,7 +647,7 @@ If unset a UTC date will be used instead to avoid leaking information about your
 ## `$mail_check`
 
 :Type: [Number](type-number)
-:Notes: {ref}`Not Negative <type-general>`
+:Notes: [Not Negative](type-general)
 :Default:
     ```neomuttrc
     set mail_check = 5
@@ -695,7 +695,7 @@ Message statistics can also be explicitly calculated by invoking the [`<check-st
 ## `$mail_check_stats_interval`
 
 :Type: [Number](type-number)
-:Notes: {ref}`Not Negative <type-general>`
+:Notes: [Not Negative](type-general)
 :Default:
     ```neomuttrc
     set mail_check_stats_interval = 60
@@ -1095,7 +1095,7 @@ NeoMutt does not delete MH and Maildir directories.
 ## `$send_charset`
 
 :Type: [String List](type-slist)
-:Notes: [Colon-separated](type-slist), [Allow Empty](type-slist), {ref}`Charset Strict <type-general>`
+:Notes: [Colon-separated](type-slist), [Allow Empty](type-slist), [Charset Strict](type-general)
 :Default:
     ```neomuttrc
     set send_charset = "us-ascii:iso-8859-1:utf-8"
@@ -1183,7 +1183,7 @@ See $formatstrings-size.
 ## `$sleep_time`
 
 :Type: [Number](type-number)
-:Notes: {ref}`Not Negative <type-general>`
+:Notes: [Not Negative](type-general)
 :Default:
     ```neomuttrc
     set sleep_time = 1
@@ -1342,7 +1342,7 @@ Note that [`$indent_string`](cfg-indent-string) is ignored when this option is _
 ## `$timeout`
 
 :Type: [Number](type-number)
-:Notes: {ref}`Not Negative <type-general>`
+:Notes: [Not Negative](type-general)
 :Default:
     ```neomuttrc
     set timeout = 600
@@ -1358,7 +1358,7 @@ A value of zero disables timeout hooks.
 ## `$tmp_dir`
 
 :Type: [Path (String)](type-path)
-:Notes: [Directory only](type-path), {ref}`Not Empty <type-general>`
+:Notes: [Directory only](type-path), [Not Empty](type-general)
 :Default:
     ```neomuttrc
     set tmp_dir = "/tmp"
@@ -1375,7 +1375,7 @@ Failing that, then `/tmp` is used.
 ## `$tmp_draft_dir`
 
 :Type: [Path (String)](type-path)
-:Notes: [Directory only](type-path), {ref}`Not Empty <type-general>`
+:Notes: [Directory only](type-path), [Not Empty](type-general)
 :Default:
     ```neomuttrc
     set tmp_draft_dir = "/var/tmp"

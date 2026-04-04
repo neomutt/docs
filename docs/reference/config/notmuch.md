@@ -39,7 +39,7 @@ Configuration profile for notmuch.
 ## `$nm_db_limit`
 
 :Type: [Number](type-number)
-:Notes: {ref}`Not Negative <type-general>`
+:Notes: [Not Negative](type-general)
 :Default:
     ```neomuttrc
     set nm_db_limit = 0
@@ -95,7 +95,7 @@ flags.
 ## `$nm_open_timeout`
 
 :Type: [Number](type-number)
-:Notes: {ref}`Not Negative <type-general>`
+:Notes: [Not Negative](type-general)
 :Default:
     ```neomuttrc
     set nm_open_timeout = 5
@@ -148,7 +148,7 @@ This variable contains the currently setup notmuch search for window based vfold
 ## `$nm_query_window_duration`
 
 :Type: [Number](type-number)
-:Notes: {ref}`Not Negative <type-general>`
+:Notes: [Not Negative](type-general)
 :Default:
     ```neomuttrc
     set nm_query_window_duration = 0

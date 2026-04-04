@@ -25,7 +25,7 @@ On slow network or modem links this will make response faster because there is l
 ## `$arrow_string`
 
 :Type: [String](type-string)
-:Notes: {ref}`Not Empty <type-general>`
+:Notes: [Not Empty](type-general)
 :Default:
     ```neomuttrc
     set arrow_string = "->"
@@ -39,7 +39,7 @@ Specifies the string of arrow_cursor when arrow_cursor enabled.
 ## `$menu_context`
 
 :Type: [Number](type-number)
-:Notes: {ref}`Not Negative <type-general>`
+:Notes: [Not Negative](type-general)
 :Default:
     ```neomuttrc
     set menu_context = 0

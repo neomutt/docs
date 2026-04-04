@@ -188,7 +188,7 @@ If you are using colors to mark these lines, and rely on these, you may _unset_ 
 ## `$crypt_use_gpgme`
 
 :Type: [Boolean](type-bool)
-:Notes: {ref}`On Startup <type-general>`
+:Notes: [On Startup](type-general)
 :Default:
     ```neomuttrc
     set crypt_use_gpgme = yes
@@ -237,7 +237,7 @@ If _"no"_, never attempt to verify cryptographic signatures.
 (cfg-envelope-from-address)=
 ## `$envelope_from_address`
 
-:Type: {ref}`Address <type-address>`
+:Type: [Address](type-address)
 :Default: (empty)
     ```neomuttrc
     set envelope_from_address = ""
@@ -478,7 +478,7 @@ This is a format string, see the [`$pgp_decode_command`](cfg-pgp-decode-command)
 ## `$pgp_entry_format`
 
 :Type: [Expando](type-expando)
-:Notes: {ref}`Not Empty <type-general>`
+:Notes: [Not Empty](type-general)
 :Scope: Crypto only or PGP only when GPGME disabled
 :Default:
     ```neomuttrc
@@ -834,7 +834,7 @@ Please note that unsetting this variable may lead to problems with non-verifyabl
 ## `$pgp_timeout`
 
 :Type: [Number (Long)](type-long)
-:Notes: {ref}`Not Negative <type-general>`
+:Notes: [Not Negative](type-general)
 :Scope: PGP only
 :Default:
     ```neomuttrc
@@ -1289,7 +1289,7 @@ This sets the algorithm that should be used for the signature message digest.
 ## `$smime_timeout`
 
 :Type: [Number](type-number)
-:Notes: {ref}`Not Negative <type-general>`
+:Notes: [Not Negative](type-general)
 :Scope: S/MIME only
 :Default:
     ```neomuttrc

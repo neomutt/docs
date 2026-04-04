@@ -32,7 +32,7 @@ NeoMutt will not automatically source this file; you must explicitly use [`:sour
 ## `$alias_format`
 
 :Type: [Expando](type-expando)
-:Notes: {ref}`Not Empty <type-general>`
+:Notes: [Not Empty](type-general)
 :Default:
     ```neomuttrc
     set alias_format = "%3i %f%t %-15a %-56A | %C%> %Y"
@@ -132,7 +132,7 @@ If no "%s" is found in the string, NeoMutt will append the user's query to the e
 ## `$query_format`
 
 :Type: [Expando](type-expando)
-:Notes: {ref}`Not Empty <type-general>`
+:Notes: [Not Empty](type-general)
 :Default:
     ```neomuttrc
     set query_format = "%3i %t %-25N %-25E | %C%> %Y"

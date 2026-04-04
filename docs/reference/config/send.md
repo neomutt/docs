@@ -167,7 +167,7 @@ for Japanese users, "iso-2022-*" must be put at the head of the value as shown a
 ## `$attribution_intro`
 
 :Type: [Expando](type-expando)
-:Notes: {ref}`Localised String <type-general>`
+:Notes: [Localised String](type-general)
 :Default:
     ```neomuttrc
     set attribution_intro = "On %d, %n wrote:"
@@ -574,7 +574,7 @@ When forwarding inline (i.e.
 ## `$forward_attribution_intro`
 
 :Type: [Expando](type-expando)
-:Notes: {ref}`Localised String <type-general>`
+:Notes: [Localised String](type-general)
 :Default:
     ```neomuttrc
     set forward_attribution_intro = "----- Forwarded message from %f -----"
@@ -598,7 +598,7 @@ For a full listing of defined `printf(3)`-like sequences see the section on [`$i
 ## `$forward_attribution_trailer`
 
 :Type: [Expando](type-expando)
-:Notes: {ref}`Localised String <type-general>`
+:Notes: [Localised String](type-general)
 :Default:
     ```neomuttrc
     set forward_attribution_trailer = "----- End forwarded message -----"
@@ -647,7 +647,7 @@ For those who always want to forward with no modification, use a setting of "no"
 ## `$forward_format`
 
 :Type: [Expando](type-expando)
-:Notes: {ref}`Not Empty <type-general>`
+:Notes: [Not Empty](type-general)
 :Default:
     ```neomuttrc
     set forward_format = "[%a: %s]"
@@ -1234,7 +1234,7 @@ set smtp_authenticators = "digest-md5:cram-md5"
 ## `$smtp_oauth_refresh_command`
 
 :Type: [Command (String)](type-string)
-:Notes: {ref}`Sensitive <type-general>`
+:Notes: [Sensitive](type-general)
 :Default: (empty)
     ```neomuttrc
     set smtp_oauth_refresh_command = ""
@@ -1250,7 +1250,7 @@ See "$oauth" for details.
 ## `$smtp_pass`
 
 :Type: [String](type-string)
-:Notes: {ref}`Sensitive <type-general>`
+:Notes: [Sensitive](type-general)
 :Default: (empty)
     ```neomuttrc
     set smtp_pass = ""
@@ -1270,7 +1270,7 @@ Only use this option when you are on a fairly secure machine, because the superu
 ## `$smtp_url`
 
 :Type: [String](type-string)
-:Notes: {ref}`Sensitive <type-general>`
+:Notes: [Sensitive](type-general)
 :Default: (empty)
     ```neomuttrc
     set smtp_url = ""
@@ -1294,7 +1294,7 @@ Also see [`$write_bcc`](cfg-write-bcc).
 ## `$smtp_user`
 
 :Type: [String](type-string)
-:Notes: {ref}`Sensitive <type-general>`
+:Notes: [Sensitive](type-general)
 :Default: (empty)
     ```neomuttrc
     set smtp_user = ""
@@ -1373,7 +1373,7 @@ If _unset_, no "From:" header field will be generated unless the user explicitly
 ## `$wrap_headers`
 
 :Type: [Number](type-number)
-:Notes: {ref}`Not Negative <type-general>`
+:Notes: [Not Negative](type-general)
 :Default:
     ```neomuttrc
     set wrap_headers = 78

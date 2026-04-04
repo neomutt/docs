@@ -139,7 +139,7 @@ If a method is available but authentication fails, NeoMutt will not connect to t
 ## `$nntp_context`
 
 :Type: [Number (Long)](type-long)
-:Notes: {ref}`Not Negative <type-general>`
+:Notes: [Not Negative](type-general)
 :Default:
     ```neomuttrc
     set nntp_context = 1000
@@ -181,7 +181,7 @@ This variable controls whether or not descriptions for each newsgroup must be lo
 ## `$nntp_pass`
 
 :Type: [String](type-string)
-:Notes: {ref}`Sensitive <type-general>`
+:Notes: [Sensitive](type-general)
 :Default: (empty)
     ```neomuttrc
     set nntp_pass = ""
@@ -195,7 +195,7 @@ Your password for NNTP account.
 ## `$nntp_poll`
 
 :Type: [Number](type-number)
-:Notes: {ref}`Not Negative <type-general>`
+:Notes: [Not Negative](type-general)
 :Default:
     ```neomuttrc
     set nntp_poll = 60
@@ -210,7 +210,7 @@ If set to 0, NeoMutt will recheck newsgroup on each operation in index (stepping
 ## `$nntp_user`
 
 :Type: [String](type-string)
-:Notes: {ref}`Sensitive <type-general>`
+:Notes: [Sensitive](type-general)
 :Default: (empty)
     ```neomuttrc
     set nntp_user = ""
