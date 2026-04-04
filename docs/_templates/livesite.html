@@ -1,5 +1,10 @@
 {% if is_local_build %}
-<a class="sponsor-link" href="https://docs.neomutt.org/" target="_blank" rel="noopener" data-search-exclude>
+<a class="sponsor-link" id="livesite-link" href="https://docs.neomutt.org/{{ pagename }}.html" target="_blank" rel="noopener" data-search-exclude>
   <i class="fa-solid fa-globe"></i> Live Site
 </a>
+<script>
+document.getElementById("livesite-link").addEventListener("click", function () {
+  if (location.hash) this.href = this.href.replace(/#.*/, "") + location.hash;
+});
+</script>
 {% endif %}
