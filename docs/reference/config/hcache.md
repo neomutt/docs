@@ -29,6 +29,7 @@ Header caching can greatly improve speed when opening POP, IMAP MH or Maildir fo
 ## `$header_cache_backend`
 
 :Type: [String](type-string)
+:Notes: [Case Sensitive](type-general)
 :Default: (empty)
     ```neomuttrc
     set header_cache_backend = "lmdb"
@@ -70,6 +71,7 @@ When NeoMutt is compiled with lz4, zstd or zlib, this option can be used to setu
 ## `$header_cache_compress_method`
 
 :Type: [String](type-string)
+:Notes: [Case Sensitive](type-general)
 :Default: (empty)
     ```neomuttrc
     set header_cache_compress_method = ""

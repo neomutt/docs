@@ -30,6 +30,7 @@ For example: If a maildir is normally displayed in the sidebar as dir1/dir2/dir3
 ## `$sidebar_delim_chars`
 
 :Type: [String](type-string)
+:Notes: [Case Sensitive](type-general)
 :Default:
     ```neomuttrc
     set sidebar_delim_chars = "/."

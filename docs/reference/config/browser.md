@@ -186,7 +186,7 @@ This string is identical in formatting to the one used by "[`$folder_format`](cf
 ## `$mask`
 
 :Type: [Regular Expression](type-regex)
-:Notes: [Match Case](type-regex), [Allow Not](type-regex), [No Sub](type-regex)
+:Notes: [Case Sensitive](type-general), [Match Case](type-regex), [Allow Not](type-regex), [No Sub](type-regex)
 :Default:
     ```neomuttrc
     set mask = "!^\\.[^.]"

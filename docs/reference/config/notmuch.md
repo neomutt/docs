@@ -79,6 +79,7 @@ The messages tagged with these tags are excluded and not loaded from notmuch DB 
 ## `$nm_flagged_tag`
 
 :Type: [String](type-string)
+:Notes: [Case Sensitive](type-general)
 :Default:
     ```neomuttrc
     set nm_flagged_tag = "flagged"
@@ -108,13 +109,19 @@ This variable specifies the timeout for database open in seconds.
 (cfg-nm-query-type)=
 ## `$nm_query_type`
 
-:Type: [String](type-string)
+:Type: [Enumeration](type-enum)
+:Notes: [Case Sensitive](type-general)
 :Default:
     ```neomuttrc
-    set nm_query_type = "messages"
+    set nm_query_type = messages
     ```
 
-This variable specifies the default query type (threads or messages) used in notmuch queries.
+Default query type used in notmuch queries.
+
+| Value      | Description                                    |
+|------------|------------------------------------------------|
+| `messages` | Only return matching messages                  |
+| `threads`  | Return entire thread of every matching message |
 
 --------------------------------------------------------------------------------
 
@@ -196,6 +203,7 @@ notmuch://?query=tag:inbox and (date:... or (tag:flagged and tag:unread))
 ## `$nm_query_window_timebase`
 
 :Type: [Enumeration](type-enum)
+:Notes: [Case Sensitive](type-general)
 :Default:
     ```neomuttrc
     set nm_query_window_timebase = week
@@ -231,6 +239,7 @@ See the description of the [`<modify-labels>`](ref-fn-index) function for the sy
 ## `$nm_replied_tag`
 
 :Type: [String](type-string)
+:Notes: [Case Sensitive](type-general)
 :Default:
     ```neomuttrc
     set nm_replied_tag = "replied"
@@ -246,6 +255,7 @@ All other NeoMutt commands use standard (e.g. maildir) flags.
 ## `$nm_unread_tag`
 
 :Type: [String](type-string)
+:Notes: [Case Sensitive](type-general)
 :Default:
     ```neomuttrc
     set nm_unread_tag = "unread"

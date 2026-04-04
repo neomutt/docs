@@ -29,7 +29,7 @@ If _set_, hitting backspace against an empty prompt aborts the prompt.
 ## `$abort_key`
 
 :Type: [String](type-string)
-:Notes: [Not Empty](type-general), {ref}`On Startup <type-general>`
+:Notes: [Not Empty](type-general), [On Startup](type-general)
 :Default:
     ```neomuttrc
     set abort_key = "\007"
@@ -188,7 +188,7 @@ The option is _unset_ by default because many visual terminals don't permit maki
 ## `$charset`
 
 :Type: [String](type-string)
-:Notes: [Not Empty](type-general), {ref}`Charset Single <type-general>`
+:Notes: [Not Empty](type-general), [Charset Single](type-general)
 :Default: (empty)
     ```neomuttrc
     set charset = ""
@@ -1434,6 +1434,7 @@ The style of threading used in the index.
 
 | Value     | Meaning                                      |
 |-----------|----------------------------------------------|
+| `unset`   | Not set (no threading)
 | `flat`    | No threading                                 |
 | `threads` | Threaded, with subthreads below root message |
 | `reverse` | Threaded, with subthreads above root message |

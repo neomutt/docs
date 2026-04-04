@@ -218,8 +218,7 @@ Also see [`$wrap`](cfg-wrap).
 ## `$reply_regex`
 
 :Type: [Regular Expression](type-regex)
-:Notes: [Smart Case](type-general)
-:Notes: [Localised String](type-general)
+:Notes: [Localised String](type-general), [Smart Case](type-general)
 :Default:
     ```neomuttrc
     set reply_regex = "^((re)(\\[[0-9]+\\])*:[ \t]*)*"
@@ -361,6 +360,7 @@ Since NeoMutt scores are always greater than or equal to zero, the default setti
 ## `$show_multipart_alternative`
 
 :Type: [String](type-string)
+:Notes: [Case Sensitive](type-general)
 :Default: (empty)
     ```neomuttrc
     set show_multipart_alternative = ""

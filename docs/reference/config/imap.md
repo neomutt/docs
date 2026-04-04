@@ -87,6 +87,7 @@ In general a good compression efficiency can be achieved, which speeds up readin
 ## `$imap_delim_chars`
 
 :Type: [String](type-string)
+:Notes: [Case Sensitive](type-general)
 :Default:
     ```neomuttrc
     set imap_delim_chars = "/."
