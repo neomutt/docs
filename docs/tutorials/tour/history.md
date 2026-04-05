@@ -7,7 +7,7 @@ keywords: XXX
 (tour-history)=
 # History Dialog
 
-overview...
+The History Selection Dialog lets you browse and re-use previously entered strings, such as past commands or search queries.
 
 <div class="term-window">
 <div class="term-title">History Dialog</div>
@@ -29,7 +29,9 @@ overview...
 </pre>
 </div>
 
-description...
+NeoMutt remembers what you have typed in various input prompts — commands, search patterns, filenames, and more.
+When you press the history key at any input prompt, this dialog displays a scrollable list of matching past entries filtered by what you have already typed.
+Selecting an entry inserts it back into the prompt, saving you from retyping complex commands or search expressions.
 
 ## See Also
 

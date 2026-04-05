@@ -7,7 +7,7 @@ keywords: XXX
 (tour-autocrypt)=
 # Autocrypt Dialog
 
-overview...
+The Autocrypt Account Dialog lets you manage your Autocrypt accounts for automatic end-to-end encryption.
 
 <div class="term-window">
 <div class="term-title">Autocrypt Dialog</div>
@@ -21,7 +21,9 @@ overview...
 </pre>
 </div>
 
-description...
+Autocrypt is a standard for opportunistic email encryption that works by exchanging keys automatically in message headers.
+This dialog shows your configured Autocrypt accounts with their email address, encryption preference (prefer-encrypt or mutual), and active status.
+From here you can create new accounts, toggle an account's active state, change the encryption preference, and delete accounts you no longer need.
 
 ## See Also
 

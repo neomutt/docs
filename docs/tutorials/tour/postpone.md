@@ -7,7 +7,7 @@ keywords: XXX
 (tour-postpone)=
 # Postpone Dialog
 
-overview...
+The Postponed Email Selection Dialog lets you recall a draft message that was previously saved for later editing.
 
 <div class="term-window">
 <div class="term-title">Postpone Dialog</div>
@@ -27,7 +27,10 @@ overview...
 </pre>
 </div>
 
-description...
+When you postpone composing an email, NeoMutt saves it to your postponed mailbox.
+This dialog lists all those saved drafts, showing the date, flags, recipient, and subject of each one.
+Selecting a draft reopens it in the Compose Dialog so you can continue editing and eventually send it.
+You can also delete drafts you no longer need.
 
 ## See Also
 

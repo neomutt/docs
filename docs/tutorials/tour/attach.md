@@ -7,7 +7,7 @@ keywords: XXX
 (tour-attach)=
 # Attach Dialog
 
-overview...
+The Attachment Selection Dialog lets you view and interact with the attachments of a received email.
 
 <div class="term-window">
 <div class="term-title">Attach Dialog</div>
@@ -27,7 +27,9 @@ overview...
 </pre>
 </div>
 
-description...
+When reading a message that contains attachments, this dialog presents them in a hierarchical tree showing each part's MIME type, encoding, size, and filename.
+You can view individual attachments using the configured mailcap handler, save them to disk, pipe them to an external command, or extract cryptographic keys.
+For multipart messages, the tree structure clearly shows how the parts are nested, making it easy to navigate complex emails with many attachments.
 
 ## See Also
 

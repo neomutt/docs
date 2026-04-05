@@ -7,7 +7,7 @@ keywords: XXX
 (tour-gpgme)=
 # Gpgme Dialog
 
-overview...
+The GPGME Key Selection Dialog lets you choose a PGP or S/MIME key when encrypting or signing a message using the GPGME library.
 
 <div class="term-window">
 <div class="term-title">Gpgme Dialog</div>
@@ -23,7 +23,9 @@ overview...
 </pre>
 </div>
 
-description...
+When you compose a message with encryption or signing enabled and GPGME is configured as the cryptographic backend, this dialog appears to let you pick the right key.
+It lists matching keys with their trust level, key ID, algorithm, capabilities (encrypt/sign), and the associated user IDs.
+You can verify a key's details or view its user name before making your selection, ensuring you encrypt to the correct recipient or sign with the intended identity.
 
 ## See Also
 

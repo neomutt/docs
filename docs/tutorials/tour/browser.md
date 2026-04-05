@@ -7,7 +7,7 @@ keywords: XXX
 (tour-browser)=
 # Browser Dialog
 
-overview...
+The Browser Dialog lets you navigate the file system or IMAP server to select a mailbox or file.
 
 <div class="term-window">
 <div class="term-title">Browser Dialog</div>
@@ -39,7 +39,9 @@ overview...
 </pre>
 </div>
 
-description...
+This dialog is used whenever NeoMutt needs you to choose a file or mailbox — for example, when opening a different mailbox, saving an attachment, or selecting a file to attach to a message.
+It shows a directory listing with file permissions, owner, size, and modification date, and supports navigating into subdirectories, going to the parent directory, and filtering entries with a file mask.
+When used with IMAP, it displays the folder hierarchy on the remote server, letting you subscribe or unsubscribe to folders.
 
 ## See Also
 

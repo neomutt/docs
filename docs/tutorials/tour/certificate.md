@@ -7,7 +7,7 @@ keywords: XXX
 (tour-certificate)=
 # Certificate Dialog
 
-overview...
+The Certificate Verification Dialog lets you inspect and accept or reject an SSL/TLS certificate.
 
 <div class="term-window">
 <div class="term-title">Certificate Dialog</div>
@@ -33,7 +33,9 @@ overview...
 </pre>
 </div>
 
-description...
+When NeoMutt connects to a mail server over an encrypted connection and encounters a certificate it cannot automatically verify, this dialog is displayed.
+It shows the certificate's owner, issuer, validity period, and fingerprints (SHA1 and SHA256) so you can confirm the server's identity.
+You can reject the certificate, accept it for the current session only, or accept it permanently so you won't be prompted again for the same certificate.
 
 ## See Also
 

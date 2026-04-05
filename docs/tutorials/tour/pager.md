@@ -7,7 +7,7 @@ keywords: XXX
 (tour-pager)=
 # Pager Dialog
 
-overview...
+The Pager Dialog displays the contents of an email, letting you read and scroll through the message body.
 
 <div class="term-window">
 <div class="term-title">Index / Pager Dialog</div>
@@ -39,7 +39,9 @@ overview...
 </pre>
 </div>
 
-description...
+When you open a message from the Index, the Pager shows the email headers and body text.
+It supports scrolling, searching within the message, and performing actions on the message such as replying, forwarding, saving, or deleting — all without returning to the Index.
+When displayed alongside the Index (as shown here), you can see the message list at the top and the current message below, making it easy to move between messages while reading.
 
 ## See Also
 

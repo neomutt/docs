@@ -7,7 +7,7 @@ keywords: XXX
 (tour-pattern)=
 # Pattern Dialog
 
-overview...
+The Pattern Selection Dialog is a reference helper that lists all the available search patterns for building queries.
 
 <div class="term-window">
 <div class="term-title">Pattern Dialog</div>
@@ -39,7 +39,9 @@ overview...
 </pre>
 </div>
 
-description...
+NeoMutt uses a powerful pattern language for searching and limiting messages — for example, `~f` matches the From header and `~s` matches the Subject.
+When you are entering a pattern at a prompt (such as limit or search), this dialog shows every available pattern with its short code and description.
+Selecting a pattern inserts it into the prompt, making it easy to build complex queries without memorising the full pattern syntax.
 
 ## See Also
 

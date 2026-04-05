@@ -7,7 +7,7 @@ keywords: XXX
 (tour-pgp)=
 # Pgp Dialog
 
-overview...
+The PGP Key Selection Dialog lets you choose a PGP key when encrypting or signing a message using NeoMutt's classic (non-GPGME) PGP backend.
 
 <div class="term-window">
 <div class="term-title">Pgp Dialog</div>
@@ -29,7 +29,9 @@ overview...
 </pre>
 </div>
 
-description...
+When you send an encrypted or signed message and NeoMutt's built-in PGP support finds multiple matching keys for a recipient, this dialog appears so you can pick the correct one.
+Each entry shows the key's trust level, key ID, algorithm, and capabilities (encrypt/sign), along with the associated user ID when available.
+You can verify a key's details before selecting it, ensuring the message is secured with the right key.
 
 ## See Also
 

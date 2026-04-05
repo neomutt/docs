@@ -7,7 +7,7 @@ keywords: XXX
 (tour-query)=
 # Query Dialog
 
-overview...
+The Query Dialog shows results from an external address book lookup, letting you select recipients for your message.
 
 <div class="term-window">
 <div class="term-title">Query Dialog</div>
@@ -39,7 +39,9 @@ overview...
 </pre>
 </div>
 
-description...
+Unlike the Alias Dialog which uses NeoMutt's local alias file, the Query Dialog calls an external command (configured via `$query_command`) to search an address book — such as an LDAP directory, a contacts database, or a custom script.
+The results are displayed with each contact's name, email address, and any extra information returned by the query command.
+You can select one or more entries to add to the message's recipient fields, making it easy to find and address people who aren't in your local alias list.
 
 ## See Also
 

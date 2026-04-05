@@ -7,7 +7,7 @@ keywords: XXX
 (tour-smime)=
 # Smime Dialog
 
-overview...
+The S/MIME Key Selection Dialog lets you choose an S/MIME certificate when encrypting or signing a message.
 
 <div class="term-window">
 <div class="term-title">Smime Dialog</div>
@@ -26,7 +26,9 @@ overview...
 </pre>
 </div>
 
-description...
+When you send a message with S/MIME security enabled and multiple certificates match a recipient's address, this dialog lists them so you can pick the right one.
+Each entry shows the certificate's key ID, capabilities (encrypt/sign), verification status (Verified, Trusted, Expired, Revoked, etc.), email address, and a label.
+This lets you confirm the certificate's validity and choose the correct identity before securing your message.
 
 ## See Also
 

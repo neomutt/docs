@@ -7,7 +7,7 @@ keywords: XXX
 (tour-index)=
 # Index Dialog
 
-overview...
+The Index Dialog is the main screen of NeoMutt, displaying the list of emails in the current mailbox.
 
 <div class="term-window">
 <div class="term-title">Index Dialog</div>
@@ -39,7 +39,10 @@ overview...
 </pre>
 </div>
 
-description...
+This is where you spend most of your time — scanning, sorting, and acting on messages.
+Each line shows a message's date, flags, author, subject, and size, and related messages are grouped together with thread trees.
+From here you can read messages (opening the Pager), reply, forward, delete, tag, search, and limit the view to a subset of messages.
+The Index can optionally include the Sidebar panel for quick mailbox navigation and the Pager for reading messages without leaving the list.
 
 ## See Also
 
