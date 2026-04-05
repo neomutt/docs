@@ -11,11 +11,16 @@ version = '0.1.0'
 
 # -- General configuration
 
+import os
+import sys
+sys.path.insert(0, os.path.abspath("_ext"))
+
 extensions = [
     'myst_parser',
     'sphinx_design',
     'sphinx_copybutton',
     'notfound.extension',
+    'redirects',
 ]
 
 myst_enable_extensions = [
@@ -59,7 +64,6 @@ html_theme_options = {
 # -- Options for EPUB output
 epub_show_urls = 'footnote'
 
-import os
 html_context = {
     "display_github": True,
     "github_user": "neomutt",
