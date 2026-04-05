@@ -57,8 +57,9 @@ Character set of newsgroups descriptions.
     set newsrc = "~/.newsrc"
     ```
 
-The file, containing info about subscribed newsgroups - names and indexes of read articles.
-The following printf-style sequence is understood:
+Specify the format of the filename containing info about subscribed newsgroups - names and indexes of read articles.
+
+**Format Sequences**
 
 | Short | Long Name     | Description       |
 |-------|---------------|-------------------|

@@ -40,8 +40,9 @@ It doesn't keep track of which message is the typed message if the entries are r
     set compose_format = "-- NeoMutt: Compose  [Approx. msg size: %{attach-size}   Atts: %{attach-count}]%{padding-hard:-}"
     ```
 
-Controls the format of the status line displayed in the "compose" menu.
-This string is similar to [`$status_format`](cfg-status-format), but has its own set of `printf(3)`-like sequences:
+Specify the format of the data displayed in the [`Compose Dialog`](tour-compose)'s status bar.
+
+**Format Sequences**
 
 | Short  | Long Name           | Description                                                              |
 |--------|---------------------|--------------------------------------------------------------------------|
@@ -52,8 +53,6 @@ This string is similar to [`$status_format`](cfg-status-format), but has its own
 | `%*X`  | `%{padding-soft:X}` | Soft-fill with character `X` as pad                                      |
 | `%>X`  | `%{padding-hard:X}` | Right justify the rest of the string and pad with character `X`          |
 | `%\|X` | `%{padding-eol:X}`  | Pad to the end of the line with character `X`                            |
-
-See the text describing the [`$status_format`](cfg-status-format) option for more information on how to set [`$compose_format`](cfg-compose-format).
 
 :::{seealso}
 **Expandos:** [Tutorial Conditional](tut-cond-expando), [Howto Conditional](how-cond-expando), [Formatting](how-format-expando), [Reference](ref-expandos)

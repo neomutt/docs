@@ -104,8 +104,9 @@ Set this to indent mailboxes in the sidebar.
     set sidebar_format = "%{description}%{padding-soft: } %{new-mail}"
     ```
 
-This variable allows you to customize the sidebar display.
-This string is similar to [`$index_format`](cfg-index-format), but has its own set of `printf(3)`-like sequences:
+Specify the format of the data displayed in the [`Sidebar Panel`](tour-sidebar).
+
+**Format Sequences**
 
 | Short  | Long Name           | Cur | Description                                                                                |
 |--------|---------------------|-----|--------------------------------------------------------------------------------------------|

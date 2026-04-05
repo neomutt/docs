@@ -36,8 +36,9 @@ See "$autocryptdoc" for more details.
     set autocrypt_acct_format = "%4{number} %-30{address} %20{prefer-encrypt} %10{enabled}"
     ```
 
-This variable describes the format of the "autocrypt account" menu.
-The following `printf(3)`-style sequences are understood:
+Specify the format of the data displayed in the [`Autocrypt Dialog`](tour-autocrypt).
+
+**Format Sequences**
 
 | Short  | Long Name           | Description                                                     |
 |--------|---------------------|-----------------------------------------------------------------|

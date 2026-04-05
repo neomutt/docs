@@ -76,12 +76,12 @@ If this variable is _set_, the browser will group directories before files.
     ```
 :Alternative:
     ```neomuttrc
-    set folder_format = "%2{number} %{tagged} %{new-mail} %{file-mode} %2{hard-links} %-8.8{file-owner} \
-    %-8.8{file-group} %8{file-size} %{date} %{description}"
+    set folder_format = "%2{number} %{tagged} %{new-mail} %{file-mode} %2{hard-links} %-8.8{file-owner} %-8.8{file-group} %8{file-size} %{date} %{description}"
     ```
 
-This variable allows you to customize the file browser display to your personal taste.
-This string is similar to [`$index_format`](cfg-index-format), but has its own set of `printf(3)`-like sequences:
+Specify the format of local files/dirs displayed in the [`Browser Dialog`](tour-browser).
+
+**Format Sequences**
 
 | Short    | Long Name           | Description                                                                                               |
 |----------|---------------------|-----------------------------------------------------------------------------------------------------------|
@@ -91,8 +91,7 @@ This string is similar to [`$index_format`](cfg-index-format), but has its own s
 |          |                     | It is recommended to use `%[fmt]` instead, where `fmt` is the value of [`$date_format`](cfg-date-format). |
 | `%d`     | `%{date-format}`    | Date/time folder was last modified                                                                        |
 | `%F`     | `%{file-mode}`      | File permissions                                                                                          |
-| `%f`     | `%{filename}`       | Filename (`/` is appended to directory names,                                                             |
-|          |                     | `@` to symbolic links and `*` to executable files)                                                        |
+| `%f`     | `%{filename}`       | Filename (`/` is appended to directory names, `@` to symbolic links and `*` to executable files)          |
 | `%g`     | `%{file-group}`     | Group name (or numeric gid, if missing)                                                                   |
 | `%i`     | `%{description}`    | Description of the folder                                                                                 |
 | `%l`     | `%{hard-links}`     | Number of hard links                                                                                      |
@@ -108,11 +107,9 @@ This string is similar to [`$index_format`](cfg-index-format), but has its own s
 | `%>X`    | `%{padding-hard:X}` | Right justify the rest of the string and pad with character `X`                                           |
 | `%\|X`   | `%{padding-eol:X}`  | Pad to the end of the line with character `X`                                                             |
 
-For an explanation of "soft-fill", see the [`$index_format`](cfg-index-format) documentation.
-
-%m, %n, and %N only work for monitored mailboxes.
-%m requires [`$mail_check_stats`](cfg-mail-check-stats) to be set.
-%n requires [`$mail_check_stats`](cfg-mail-check-stats) to be set (except for IMAP mailboxes).
+`%m`, `%n`, and `%N` only work for monitored mailboxes.
+`%m` requires [`$mail_check_stats`](cfg-mail-check-stats) to be set.
+`%n` requires [`$mail_check_stats`](cfg-mail-check-stats) to be set (except for IMAP mailboxes).
 
 :::{seealso}
 **Expandos:** [Tutorial Conditional](tut-cond-expando), [Howto Conditional](how-cond-expando), [Formatting](how-format-expando), [Reference](ref-expandos)
@@ -134,8 +131,9 @@ For an explanation of "soft-fill", see the [`$index_format`](cfg-index-format) d
     set group_index_format = "%4{number} %{flags}%{flags2} %5{unread-count}  %-45.45{newsgroup} %{description}"
     ```
 
-This variable allows you to customize the newsgroup browser display to your personal taste.
-This string is similar to [`$index_format`](cfg-index-format), but has its own set of printf()-like sequences:
+Specify the format of newsgroups displayed in the [`Browser Dialog`](tour-browser).
+
+**Format Sequences**
 
 | Short  | Long Name           | Description                                                          |
 |--------|---------------------|----------------------------------------------------------------------|
@@ -172,12 +170,11 @@ This string is similar to [`$index_format`](cfg-index-format), but has its own s
     set mailbox_folder_format = "%2{number} %<n?%6{unread-count}&      > %6{message-count} %{description}"
     ```
 
-This variable allows you to customize the file browser display to your personal taste.
-It's only used to customize network mailboxes (e.g. imap).
-This string is identical in formatting to the one used by "[`$folder_format`](cfg-folder-format)".
+Specify the format of network mailboxes, e.g. IMAP, displayed in the [`Browser Dialog`](tour-browser).
 
 :::{seealso}
-**Expandos:** [Tutorial Conditional](tut-cond-expando), [Howto Conditional](how-cond-expando), [Formatting](how-format-expando), [Reference](ref-expandos)
+- [`$folder_format`](cfg-folder-format) for a full list of expandos
+- **Expandos:** [Tutorial Conditional](tut-cond-expando), [Howto Conditional](how-cond-expando), [Formatting](how-format-expando), [Reference](ref-expandos)
 :::
 
 --------------------------------------------------------------------------------

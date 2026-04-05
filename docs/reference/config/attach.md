@@ -120,11 +120,11 @@ To see these subparts, press "v" on that menu.
     set message_format = "%{subject}"
     ```
 
-This is the string displayed in the "attachment" menu for attachments of type `message/rfc822`.  
-For a full listing of defined `printf(3)`-like sequences see the section on [`$index_format`](cfg-index-format).
+Specify the format of attached messages displayed in the [`Attach Dialog`](tour-attach).
 
 :::{seealso}
-**Expandos:** [Tutorial Conditional](tut-cond-expando), [Howto Conditional](how-cond-expando), [Formatting](how-format-expando), [Reference](ref-expandos)
+- [`$index_format`](cfg-index-format) for a full list of expandos
+- **Expandos:** [Tutorial Conditional](tut-cond-expando), [Howto Conditional](how-cond-expando), [Formatting](how-format-expando), [Reference](ref-expandos)
 :::
 
 --------------------------------------------------------------------------------

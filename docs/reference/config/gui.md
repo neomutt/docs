@@ -55,7 +55,7 @@ When _unset_, NeoMutt will not collapse a thread if it contains any unread messa
     set duplicate_threads = yes
     ```
 
-This variable controls whether NeoMutt, when [`$sort`](cfg-sort) is set to _threads_, threads messages with the same Message-Id together.
+This variable controls whether NeoMutt, when [`$sort`](cfg-sort) is set to _threads_, threads messages with the same Message-ID together.
 If it is _set_, it will indicate that it thinks they are duplicates of each other with an equals sign in the thread tree.
 
 --------------------------------------------------------------------------------

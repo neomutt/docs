@@ -42,9 +42,9 @@ NeoMutt will not automatically source this file; you must explicitly use [`:sour
     set alias_format = "%3{number} %{flags}%{tagged} %-15{alias} %-56{address} | %{comment}%{padding-hard: }%{tags}"
     ```
 
-Specifies the format of the data displayed for the [`alias`](cmd-alias) menu.
+Specify the format of the data displayed in the [`Alias Dialog`](tour-alias).
 
-The following formatting sequences are available:
+**Format Sequences**
 
 | Short  | Long Name           | Description                                                     |
 |--------|---------------------|-----------------------------------------------------------------|
@@ -63,8 +63,6 @@ The following formatting sequences are available:
 
 :::{seealso}
 **Expandos:** [Tutorial Conditional](tut-cond-expando), [Howto Conditional](how-cond-expando), [Formatting](how-format-expando), [Reference](ref-expandos)
-
-**Alias:** [Functions](ref-fn-alias)
 :::
 
 The following sequences are deprecated; they will be removed in the future.
@@ -142,8 +140,9 @@ If no "%s" is found in the string, NeoMutt will append the user's query to the e
     set query_format = "%3{number} %{tagged} %-25{name} %-25{email} | %{comment}%{padding-hard: }%{tags}"
     ```
 
-This variable describes the format of the "query" menu.
-The following `printf(3)`-style sequences are understood:
+Specify the format of the data displayed in the [`Query Dialog`](tour-query).
+
+**Format Sequences**
 
 | Short  | Long Name           | Description                                                     |
 |--------|---------------------|-----------------------------------------------------------------|
@@ -157,8 +156,6 @@ The following `printf(3)`-style sequences are understood:
 | `%*X`  | `%{padding-soft:X}` | Soft-fill with character `X` as pad                             |
 | `%>X`  | `%{padding-hard:X}` | Right justify the rest of the string and pad with character `X` |
 | `%\|X` | `%{padding-eol:X}`  | Pad to the end of the line with character `X`                   |
-
-For an explanation of "soft-fill", see the [`$index_format`](cfg-index-format) documentation.
 
 The following sequences are deprecated; they will be removed in the future.
 

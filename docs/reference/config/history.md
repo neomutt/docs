@@ -57,8 +57,9 @@ Also see [`$save_history`](cfg-save-history).
     set history_format = "%{match}"
     ```
 
-Controls the format of the entries of the history list.
-This string is similar to [`$index_format`](cfg-index-format), but has its own set of `printf(3)`-like sequences:
+Specify the format of the data displayed in the [`History Dialog`](tour-history).
+
+**Format Sequences**
 
 | Short  | Long Name           | Description                                                     |
 |--------|---------------------|-----------------------------------------------------------------|

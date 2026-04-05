@@ -132,7 +132,7 @@ You may want to add more headers for spam detection.
 | `Subject:`             |
 | `To:`                  |
 | `Cc:`                  |
-| `Message-Id:`          |
+| `Message-ID:`          |
 | `References:`          |
 | `Content-Type:`        |
 | `Content-Description:` |

@@ -130,15 +130,14 @@ If positive, this many lines will be given before a match, if 0, the match will 
     ```
 :Alternative:
     ```neomuttrc
-    set pager_format = "-%{combined-flags}- %{number}/%{message-count}: %-20.20{name}   \
-    %{subject}%{padding-soft: } -- (%{percentage})"
+    set pager_format = "-%{combined-flags}- %{number}/%{message-count}: %-20.20{name}   %{subject}%{padding-soft: } -- (%{percentage})"
     ```
 
-This variable controls the format of the one-line message "status" displayed before each message in either the internal or an external pager.
-The valid sequences are listed in the [`$index_format`](cfg-index-format) section.
+Specify the format of the data displayed in the [`Pager Dialog`](tour-pager)'s status bar.
 
 :::{seealso}
-**Expandos:** [Tutorial Conditional](tut-cond-expando), [Howto Conditional](how-cond-expando), [Formatting](how-format-expando), [Reference](ref-expandos)
+- [`$index_format`](cfg-index-format) for a full list of expandos
+- **Expandos:** [Tutorial Conditional](tut-cond-expando), [Howto Conditional](how-cond-expando), [Formatting](how-format-expando), [Reference](ref-expandos)
 :::
 
 --------------------------------------------------------------------------------

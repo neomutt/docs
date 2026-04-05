@@ -46,8 +46,9 @@ You, the user, still have to rewrite the mairix_filter script to match the behav
     set pattern_format = "%2{number} %-15{expression}  %{description}"
     ```
 
-This variable describes the format of the "pattern completion" menu.
-The following `printf(3)`-style sequences are understood:
+Specify the format of the data displayed in the [`Pattern Dialog`](tour-pattern).
+
+**Format Sequences**
 
 | Short  | Long Name           | Description                                                     |
 |--------|---------------------|-----------------------------------------------------------------|

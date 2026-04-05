@@ -136,11 +136,9 @@ This slightly odd interface is necessitated by NeoMutt's handling of string vari
     set index_format = "%4{number} %{combined-flags} %{%b %d} %-15.15{from-list} (%<l?%4{lines}&%4{size}>) %{subject}"
     ```
 
-This variable allows you to customize the message index display to your personal taste.
+Specify the format of the data displayed in the [`Index Dialog`](tour-index).
 
-"Format strings" are similar to the strings used in the C function `printf(3)` to format output (see the man page for more details).
-For an explanation of the %<...> construct, see the [`$status_format`](cfg-status-format) description.
-The following sequences are defined in NeoMutt:
+**Format Sequences**
 
 | Short     | Long Name                | Description                                                                                                                                    |
 |-----------|--------------------------|------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -164,7 +162,7 @@ The following sequences are defined in NeoMutt:
 | `%g`      | `%{tags}`                | Message tags (e.g. Notmuch tags/imap flags)                                                                                                    |
 | `%H`      | `%{spam}`                | Spam attribute(s) of this message                                                                                                              |
 | `%I`      | `%{initials}`            | Initials of author                                                                                                                             |
-| `%i`      | `%{message-id}`          | Message-id of the current message                                                                                                              |
+| `%i`      | `%{message-id}`          | Message-ID of the current message                                                                                                              |
 | `%J`      | `%{thread-tags}`         | Message tags (if present, tree unfolded, and != parent's tags)                                                                                 |
 | `%K`      | `%{list-empty}`          | List to which the email was sent (if any; otherwise: empty)                                                                                    |
 | `%L`      | `%{from-list}`           | If an address in the `To:` or `Cc:` header field matches an address                                                                            |
@@ -222,10 +220,6 @@ See the section on "Conditional Dates" for an explanation and examples.
 Note that for mbox/mmdf, "%l" applies to the unprocessed message, and for maildir/mh, the value comes from the "Lines:" header field when present (the meaning is normally the same).
 Thus the value depends on the encodings used in the different parts of the message and has little meaning in practice.
 
-"Soft-fill" deserves some explanation: Normal right-justification will print everything to the left of the "%>", displaying padding and whatever lies to the right only if there's room.
-By contrast, soft-fill gives priority to the right-hand side, guaranteeing space to display it and showing padding only if there's still room.
-If necessary, soft-fill will eat text leftwards to make room for rightward text.
-
 Note that these expandos are supported in [`save-hook`](cmd-save-hook), [`fcc-hook`](cmd-fcc-hook) and [`fcc-save-hook`](cmd-fcc-save-hook), too.
 
 :::{seealso}
@@ -258,10 +252,10 @@ A new macro automatically generated with _<mark-message>a_ will be composed from
     ```
 
 If _set_, NeoMutt will call this command after a new message is received.
-See the [`$status_format`](cfg-status-format) documentation for the values that can be formatted into this command.
 
 :::{seealso}
-**Expandos:** [Tutorial Conditional](tut-cond-expando), [Howto Conditional](how-cond-expando), [Formatting](how-format-expando), [Reference](ref-expandos)
+- [`$status_format`](cfg-status-format) for a full list of expandos
+- **Expandos:** [Tutorial Conditional](tut-cond-expando), [Howto Conditional](how-cond-expando), [Formatting](how-format-expando), [Reference](ref-expandos)
 :::
 
 --------------------------------------------------------------------------------
@@ -329,22 +323,12 @@ Controls the characters used by the "%r" indicator in [`$status_format`](cfg-sta
     ```
 :Alternative:
     ```neomuttrc
-    set status_format = "-%{readonly}-NeoMutt: %{description} \
-    [Msgs:%<M?%{limit-count}/>%{message-count}\
-    %<n? New:%{new-count}>\
-    %<o? Old:%{old-count}>\
-    %<d? Del:%{deleted-count}>\
-    %<F? Flag:%{flagged-count}>\
-    %<t? Tag:%{tagged-count}>\
-    %<p? Post:%{postponed-count}>\
-    %<n? Inc:%{unread-mailboxes}>\
-    %<l? %{mailbox-size}>]---\
-    (%<T?%{use-threads}/>%{sort}/%{sort-aux})-\
-    %{padding-hard:-}(%{percentage})---"
+    set status_format = "-%{readonly}-NeoMutt: %{description} [Msgs:%<M?%{limit-count}/>%{message-count}%<n? New:%{new-count}>%<o? Old:%{old-count}>%<d? Del:%{deleted-count}>%<F? Flag:%{flagged-count}>%<t? Tag:%{tagged-count}>%<p? Post:%{postponed-count}>%<n? Inc:%{unread-mailboxes}>%<l? %{mailbox-size}>]---(%<T?%{use-threads}/>%{sort}/%{sort-aux})-%{padding-hard:-}(%{percentage})---"
     ```
 
-Controls the format of the status line displayed in the "index" menu.
-This string is similar to [`$index_format`](cfg-index-format), but has its own set of `printf(3)`-like sequences:
+Specify the format of the data displayed in the [`Index Dialog`](tour-index)'s status bar.
+
+**Format Sequences**
 
 | Short  | Long Name             | Description                                                                                               |
 |--------|-----------------------|-----------------------------------------------------------------------------------------------------------|
@@ -374,36 +358,6 @@ This string is similar to [`$index_format`](cfg-index-format), but has its own s
 | `%*X`  | `%{padding-soft:X}`   | Soft-fill with character `X` as pad                                                                       |
 | `%>X`  | `%{padding-hard:X}`   | Right justify the rest of the string and pad with character `X`                                           |
 | `%\|X` | `%{padding-eol:X}`    | Pad to the end of the line with character `X`                                                             |
-
-Some of the above sequences can be used to optionally print a string if their value is nonzero.
-For example, you may only want to see the number of flagged messages if such messages exist, since zero is not particularly meaningful.
-To optionally print a string based upon one of the above sequences, the following construct is used:
-
-`%<sequence_char?optional_string>`
-
-where _sequence_char_ is a character from the table above, and _optional_string_ is the string you would like printed if _sequence_char_ is nonzero.
-_optional_string_ **may** contain other sequences as well as normal text.
-
-Here is an example illustrating how to optionally print the number of new messages in a mailbox:
-
-`%<n?%n new messages>`
-
-You can also switch between two strings using the following construct:
-
-`%<sequence_char?if_string&else_string>`
-
-If the value of _sequence_char_ is non-zero, _if_string_ will be expanded, otherwise _else_string_ will be expanded.
-
-As another example, here is how to show either [`$sort`](cfg-sort) and [`$sort_aux`](cfg-sort-aux) or [`$use_threads`](cfg-use-threads) and [`$sort`](cfg-sort), based on whether threads are enabled with [`$use_threads`](cfg-use-threads):
-
-`%<T?%s/%S&%T/%s>`
-
-You can force the result of any `printf(3)`-like sequence to be lowercase by prefixing the sequence character with an underscore ("_")
-sign.
-For example, if you want to display the local hostname in lowercase, you would use: "`%_h`".
-
-If you prefix the sequence character with a colon (":") character, NeoMutt will replace any dots in the expansion by underscores.
-This might be helpful with IMAP folders that don't like dots in folder names.
 
 :::{seealso}
 **Expandos:** [Tutorial Conditional](tut-cond-expando), [Howto Conditional](how-cond-expando), [Formatting](how-format-expando), [Reference](ref-expandos)
@@ -460,11 +414,11 @@ Most terminal emulators emulate the status line in the window title.
     set ts_icon_format = "M%<{new-count}?AIL&ail>"
     ```
 
-Controls the format of the icon title, as long as "[`$ts_enabled`](cfg-ts-enabled)" is set.
-This string is identical in formatting to the one used by "[`$status_format`](cfg-status-format)".
+Controls the format of the icon title, as long as [`$ts_enabled`](cfg-ts-enabled) is set.
 
 :::{seealso}
-**Expandos:** [Tutorial Conditional](tut-cond-expando), [Howto Conditional](how-cond-expando), [Formatting](how-format-expando), [Reference](ref-expandos)
+- [`$status_format`](cfg-status-format) for a full list of expandos
+- **Expandos:** [Tutorial Conditional](tut-cond-expando), [Howto Conditional](how-cond-expando), [Formatting](how-format-expando), [Reference](ref-expandos)
 :::
 
 --------------------------------------------------------------------------------
@@ -483,11 +437,11 @@ This string is identical in formatting to the one used by "[`$status_format`](cf
     set ts_status_format = "NeoMutt with %<m?%{message-count} messages&no messages>%<n? [%{new-count} NEW]>"
     ```
 
-Controls the format of the terminal status line (or window title), provided that "[`$ts_enabled`](cfg-ts-enabled)" has been set.
-This string is identical in formatting to the one used by "[`$status_format`](cfg-status-format)".
+Controls the format of the terminal status line (or window title), provided that [`$ts_enabled`](cfg-ts-enabled) has been set.
 
 :::{seealso}
-**Expandos:** [Tutorial Conditional](tut-cond-expando), [Howto Conditional](how-cond-expando), [Formatting](how-format-expando), [Reference](ref-expandos)
+- [`$status_format`](cfg-status-format) for a full list of expandos
+- **Expandos:** [Tutorial Conditional](tut-cond-expando), [Howto Conditional](how-cond-expando), [Formatting](how-format-expando), [Reference](ref-expandos)
 :::
 
 --------------------------------------------------------------------------------

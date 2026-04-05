@@ -97,12 +97,12 @@ However, only the first content is valid for the message body.
     ```
 :Alternative:
     ```neomuttrc
-    set attach_format = "%{unlink}%{deleted}%{disposition} %{tagged}%4{number} %{tree}%{description} \
-    %{padding-hard: }[%.7{mime-major}/%.10{mime-minor}, %.6{mime-encoding}%<C?, %{charset}>, %{file-size}] "
+    set attach_format = "%{unlink}%{deleted}%{disposition} %{tagged}%4{number} %{tree}%{description} %{padding-hard: }[%.7{mime-major}/%.10{mime-minor}, %.6{mime-encoding}%<C?, %{charset}>, %{file-size}] "
     ```
 
-This variable describes the format of the "attachment" menu.
-The following `printf(3)`-style sequences are understood:
+Specify the format of the data displayed in the [`Attach Dialog`](tour-attach).
+
+**Format Sequences**
 
 | Short  | Long Name             | Description                                                                                       |
 |--------|-----------------------|---------------------------------------------------------------------------------------------------|
@@ -127,8 +127,6 @@ The following `printf(3)`-style sequences are understood:
 | `%*X`  | `%{padding-soft:X}`   | Soft-fill with character `X` as pad                                                               |
 | `%>X`  | `%{padding-hard:X}`   | Right justify the rest of the string and pad with character `X`                                   |
 | `%\|X` | `%{padding-eol:X}`    | Pad to the end of the line with character `X`                                                     |
-
-For an explanation of "soft-fill", see the [`$index_format`](cfg-index-format) documentation.
 
 :::{seealso}
 **Expandos:** [Tutorial Conditional](tut-cond-expando), [Howto Conditional](how-cond-expando), [Formatting](how-format-expando), [Reference](ref-expandos)
@@ -605,10 +603,9 @@ You are strongly encouraged not to change this value, as it tends to agitate the
 
 The value of this option is ignored if [`$text_flowed`](cfg-text-flowed) is set, because the quoting mechanism is strictly defined for format=flowed.
 
-This option is a format string, please see the description of [`$index_format`](cfg-index-format) for supported `printf(3)`-style sequences.
-
 :::{seealso}
-**Expandos:** [Tutorial Conditional](tut-cond-expando), [Howto Conditional](how-cond-expando), [Formatting](how-format-expando), [Reference](ref-expandos)
+- [`$index_format`](cfg-index-format) for a full list of expandos
+- **Expandos:** [Tutorial Conditional](tut-cond-expando), [Howto Conditional](how-cond-expando), [Formatting](how-format-expando), [Reference](ref-expandos)
 :::
 
 --------------------------------------------------------------------------------
@@ -1003,7 +1000,7 @@ Match detection may be overridden by the [`$smileys`](cfg-smileys) regular expre
 This variable specifies what "real" or "personal" name should be used when sending messages.
 
 If not specified, then the user's "real name" will be read from `/etc/passwd`.
-This option will not be used, if "[`$from`](cfg-from)" is set.
+This option will not be used, if [`$from`](cfg-from) is set.
 
 --------------------------------------------------------------------------------
 

@@ -330,7 +330,7 @@ These pages explain how these settings work and how to apply them.
 | [`$message_cache_clean`](cfg-message-cache-clean)                 | Clean out obsolete entries from the message cache                                                            |
 | [`$message_cache_dir`](cfg-message-cache-dir)                     | Directory for the message cache                                                                              |
 | [`$message_format`](cfg-message-format)                           | Format string for listing attached messages                                                                  |
-| [`$message_id_format`](cfg-message-id-format)                     | Format string for customising the `Message-Id`                                                               |
+| [`$message_id_format`](cfg-message-id-format)                     | Format string for customising the `Message-ID`                                                               |
 | [`$meta_key`](cfg-meta-key)                                       | Interpret 'ALT-x' as 'ESC-x'                                                                                 |
 | `$metoo`                                                          | {bdg-warning-line}`Renamed to:` [`$me_too`](cfg-me-too)                                                      |
 | [`$me_too`](cfg-me-too)                                           | Remove the user's address from the list of recipients                                                        |

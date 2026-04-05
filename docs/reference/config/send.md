@@ -175,13 +175,12 @@ for Japanese users, "iso-2022-*" must be put at the head of the value as shown a
     set attribution_intro = "On %{date-format}, %{name} wrote:"
     ```
 
-This is the string that will precede a replied-to message which is quoted in the main body of the reply (this is the case when [`$include`](cfg-include) is set).
+This string will precede a replied-to message which is quoted in the main body of the reply (this is the case when [`$include`](cfg-include) is set).
 
-For a full listing of defined `printf(3)`-like sequences see the section on [`$index_format`](cfg-index-format).
 :::{seealso}
-**Expandos:** [Tutorial Conditional](tut-cond-expando), [Howto Conditional](how-cond-expando), [Formatting](how-format-expando), [Reference](ref-expandos)
-
-[`$attribution_locale`](cfg-attribution-locale)
+- [`$index_format`](cfg-index-format) for a full list of expandos
+- **Expandos:** [Tutorial Conditional](tut-cond-expando), [Howto Conditional](how-cond-expando), [Formatting](how-format-expando), [Reference](ref-expandos)
+- [`$attribution_locale`](cfg-attribution-locale)
 :::
 
 --------------------------------------------------------------------------------
@@ -216,11 +215,10 @@ Affected variables are: [`$attribution_intro`](cfg-attribution-intro), [`$attrib
 
 Similar to the [`$attribution_intro`](cfg-attribution-intro) variable, this is the string that will come after a replied-to message which is quoted in the main body of the reply (this is the case when [`$include`](cfg-include) is set).
 
-For a full listing of defined `printf(3)`-like sequences see the section on [`$index_format`](cfg-index-format).
 :::{seealso}
-**Expandos:** [Tutorial Conditional](tut-cond-expando), [Howto Conditional](how-cond-expando), [Formatting](how-format-expando), [Reference](ref-expandos)
-
-[`$attribution_locale`](cfg-attribution-locale)
+- [`$index_format`](cfg-index-format) for a full list of expandos
+- **Expandos:** [Tutorial Conditional](tut-cond-expando), [Howto Conditional](how-cond-expando), [Formatting](how-format-expando), [Reference](ref-expandos)
+- [`$attribution_locale`](cfg-attribution-locale)
 :::
 
 --------------------------------------------------------------------------------
@@ -583,11 +581,11 @@ When forwarding inline (i.e.
     ```
 
 This is the string that will precede a message which has been forwarded in the main body of a message (when [`$mime_forward`](cfg-mime-forward) is unset).
-For a full listing of defined `printf(3)`-like sequences see the section on [`$index_format`](cfg-index-format).
-:::{seealso}
-**Expandos:** [Tutorial Conditional](tut-cond-expando), [Howto Conditional](how-cond-expando), [Formatting](how-format-expando), [Reference](ref-expandos)
 
-[`$attribution_locale`](cfg-attribution-locale)
+:::{seealso}
+- [`$index_format`](cfg-index-format) for a full list of expandos
+- **Expandos:** [Tutorial Conditional](tut-cond-expando), [Howto Conditional](how-cond-expando), [Formatting](how-format-expando), [Reference](ref-expandos)
+- [`$attribution_locale`](cfg-attribution-locale)
 :::
 
 --------------------------------------------------------------------------------
@@ -603,11 +601,11 @@ For a full listing of defined `printf(3)`-like sequences see the section on [`$i
     ```
 
 This is the string that will follow a message which has been forwarded in the main body of a message (when [`$mime_forward`](cfg-mime-forward) is unset).
-For a full listing of defined `printf(3)`-like sequences see the section on [`$index_format`](cfg-index-format).
-:::{seealso}
-**Expandos:** [Tutorial Conditional](tut-cond-expando), [Howto Conditional](how-cond-expando), [Formatting](how-format-expando), [Reference](ref-expandos)
 
-[`$attribution_locale`](cfg-attribution-locale)
+:::{seealso}
+- [`$index_format`](cfg-index-format) for a full list of expandos
+- **Expandos:** [Tutorial Conditional](tut-cond-expando), [Howto Conditional](how-cond-expando), [Formatting](how-format-expando), [Reference](ref-expandos)
+- [`$attribution_locale`](cfg-attribution-locale)
 :::
 
 --------------------------------------------------------------------------------
@@ -656,10 +654,10 @@ For those who always want to forward with no modification, use a setting of "no"
     ```
 
 This variable controls the default subject when forwarding a message.
-It uses the same format sequences as the [`$index_format`](cfg-index-format) variable.
 
 :::{seealso}
-**Expandos:** [Tutorial Conditional](tut-cond-expando), [Howto Conditional](how-cond-expando), [Formatting](how-format-expando), [Reference](ref-expandos)
+- [`$index_format`](cfg-index-format) for a full list of expandos
+- **Expandos:** [Tutorial Conditional](tut-cond-expando), [Howto Conditional](how-cond-expando), [Formatting](how-format-expando), [Reference](ref-expandos)
 :::
 
 --------------------------------------------------------------------------------
@@ -687,10 +685,10 @@ Hence the forwarded message becomes part of the original thread instead of start
     set greeting = ""
     ```
 
-When set, this is the string that will precede every message as a greeting phrase to the recipients.
+Specify the format of the greeting string.
+This string is added to the top of every outgoing message.
 
-"Format strings" are similar to the strings used in the "C" function printf to format output (see the man page for more detail).
-The following sequences are defined in NeoMutt:
+**Format Sequences**
 
 | Short | Long Name       | Description                    |
 |-------|-----------------|--------------------------------|
@@ -782,9 +780,10 @@ Controls whether or not a copy of the message(s) you are replying to is included
     set inews_command = ""
     ```
 
-If set, specifies the program and arguments used to deliver news posted by NeoMutt.
-Otherwise, NeoMutt posts article using current connection to news server.
-The following printf-style sequence is understood:
+Specify the format of a command used to deliver news posts.
+If _unset_, NeoMutt posts article using current connection to news server.
+
+**Format Sequences**
 
 | Short | Description       |
 |-------|-------------------|
@@ -819,9 +818,7 @@ set inews_command = "/usr/local/bin/inews -hS"
     set message_id_format = "<%{random_12}@%{hostname}>"
     ```
 
-This variable allows you to choose a custom format for the Message-Id when sending messages.
-The value may end in `|` to invoke an external filter.
-See $formatstrings-filters.
+Specify the format of the `Message-ID` email header.
 
 Please note that the Message-ID value follows a strict syntax, and you are responsible for ensuring correctness if you change this from the default.
 In particular, the value must follow the syntax in RFC 5322: `"<" id-left "@" id-right ">"`.
@@ -834,7 +831,7 @@ If the format doesn't begin/end with `<`, `>` they will be added.
 
 The old Message-ID format can be used by setting this to: `<%Y%02m%02d%02H%02M%02S.G%c%p@%f>`
 
-The following `printf(3)`-style sequences are understood:
+**Format Sequences**
 
 | Short | Long Name      | Description                                                        |
 |-------|----------------|--------------------------------------------------------------------|
@@ -1180,7 +1177,7 @@ If the filename ends with a pipe ("|"), it is assumed that filename is a shell c
 
 If _set_, a line containing "-- " (note the trailing space) will be inserted before your [`$signature`](cfg-signature).
 It is **strongly** recommended that you not _unset_ this variable unless your signature contains just your name.
-The reason for this is because many software packages use "-- \n" to detect your signature.
+The reason for this is because many software packages use `-- \n` to detect your signature.
 For example, NeoMutt has the ability to highlight the signature in a different color in the built-in pager.
 
 --------------------------------------------------------------------------------
