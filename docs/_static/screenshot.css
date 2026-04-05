@@ -153,7 +153,11 @@ html[data-theme=dark] .term-window {
    ──────────────────────────────────────────────────────────── */
 
 .thumbnail .term-window {
-  zoom: 0.5;
-  float: right;
-  margin: 0 0 1em 3em;
+  zoom: 0.7;
+  /* float: right; */
+  /* margin: 0 0 1em 3em; */
+}
+
+.sd-card .thumbnail {
+  overflow: hidden;
 }
