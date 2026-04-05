@@ -498,6 +498,10 @@ This variable is only used, if [`$mime_forward`](cfg-mime-forward) is _unset_, o
 
 When _set_, forwarded messages included in the main body of the message (when [`$mime_forward`](cfg-mime-forward) is _unset_) will be quoted using [`$indent_string`](cfg-indent-string).
 
+:::{seealso}
+- {doc}`/howto/email-template`
+:::
+
 --------------------------------------------------------------------------------
 
 (cfg-from)=
@@ -601,9 +605,10 @@ Also see [`$use_domain`](cfg-use-domain) and [`$hidden_host`](cfg-hidden-host).
 Specifies the string to prepend to each line of text quoted in a message to which you are replying.
 You are strongly encouraged not to change this value, as it tends to agitate the more fanatical netizens.
 
-The value of this option is ignored if [`$text_flowed`](cfg-text-flowed) is set, because the quoting mechanism is strictly defined for format=flowed.
+The value of this option is ignored if [`$text_flowed`](cfg-text-flowed) is set, because the quoting mechanism is strictly defined for `format=flowed`.
 
 :::{seealso}
+- {doc}`/howto/email-template`
 - [`$index_format`](cfg-index-format) for a full list of expandos
 - **Expandos:** [Tutorial Conditional](tut-cond-expando), [Howto Conditional](how-cond-expando), [Formatting](how-format-expando), [Reference](ref-expandos)
 :::

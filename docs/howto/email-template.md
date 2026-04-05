@@ -32,7 +32,7 @@ Their order depends on the action you're performing and your settings.
 ┕Signature
 ```
 
-### Reply (`$sig_on_top` enabled)
+### Reply ([`$sig_on_top`](cfg-sig-on-top) enabled)
 
 ```
 ┍Greeting
@@ -52,7 +52,7 @@ Their order depends on the action you're performing and your settings.
 ┕Signature
 ```
 
-### Forward (inline, `$forward_quote` enabled)
+### Forward (inline, [`$forward_quote`](cfg-forward-quote) enabled)
 
 ```
 ┍Greeting
@@ -64,7 +64,7 @@ Their order depends on the action you're performing and your settings.
 
 ## Greeting
 
-The `$greeting` line is placed at the very top of every message — new, reply, or forward.
+The [`$greeting`](cfg-greeting) line is placed at the very top of every message — new, reply, or forward.
 It supports expandos that reference the recipient, so you can personalise it.
 
 ```neomuttrc
@@ -83,7 +83,7 @@ When you reply to a message, NeoMutt wraps the quoted original text between two 
 
 ### Attribution Intro
 
-`$attribution_intro` is placed **before** the quoted text.
+[`$attribution_intro`](cfg-attribution-intro) is placed **before** the quoted text.
 The default is:
 
 ```neomuttrc
@@ -98,7 +98,7 @@ On Mon, 31 Mar 2025, Alice wrote:
 
 ### Attribution Trailer
 
-`$attribution_trailer` is placed **after** the quoted text.
+[`$attribution_trailer`](cfg-attribution-trailer) is placed **after** the quoted text.
 By default it is empty.
 Set it if you'd like closing text after the quoted block:
 
@@ -108,7 +108,7 @@ set attribution_trailer = "-- end of quoted message from %n --"
 
 ### Attribution Locale
 
-`$attribution_locale` controls the locale used when formatting dates in `$attribution_intro` and `$attribution_trailer`.
+[`$attribution_locale`](cfg-attribution-locale) controls the locale used when formatting dates in [`$attribution_intro`](cfg-attribution-intro) and [`$attribution_trailer`](cfg-attribution-trailer).
 This affects how the `%d` expando renders:
 
 ```neomuttrc
@@ -119,8 +119,8 @@ With this setting, the date in the attribution intro would be formatted accordin
 
 ## Quoting (Indent String)
 
-`$indent_string` is the prefix added to each line of the original message when quoting it in a reply.
-The default is `"> "`:
+[`$indent_string`](cfg-indent-string) is the prefix added to each line of the original message when quoting it in a reply.
+The default is `> `:
 
 ```neomuttrc
 set indent_string = "> "
@@ -138,7 +138,7 @@ On Mon, 31 Mar 2025, Alice wrote:
 
 ### Forward Subject
 
-`$forward_format` controls the **Subject** line of forwarded messages.
+[`$forward_format`](cfg-forward-format) controls the **Subject** line of forwarded messages.
 It does not affect the message body:
 
 ```neomuttrc
@@ -149,7 +149,7 @@ This produces a subject like `[alice@example.com: Meeting notes]`.
 
 ### Forward Intro and Trailer
 
-`$forward_attribution_intro` and `$forward_attribution_trailer` wrap the forwarded message body, similar to how attribution lines wrap replies:
+[`$forward_attribution_intro`](cfg-forward-attribution-intro) and [`$forward_attribution_trailer`](cfg-forward-attribution-trailer) wrap the forwarded message body, similar to how attribution lines wrap replies:
 
 ```neomuttrc
 set forward_attribution_intro = "----- Forwarded message from %f -----"
@@ -166,12 +166,12 @@ The result:
 ----- End forwarded message -----
 ```
 
-Both expandos also honour `$attribution_locale` for date formatting.
+Both expandos also honour [`$attribution_locale`](cfg-attribution-locale) for date formatting.
 
 ### Forward Quoting
 
 By default, forwarded text is included verbatim.
-Set `$forward_quote` to prefix each line with `$indent_string`, just like a reply:
+Set [`$forward_quote`](cfg-forward-quote) to prefix each line with [`$indent_string`](cfg-indent-string), just like a reply:
 
 ```neomuttrc
 set forward_quote = yes
@@ -179,7 +179,7 @@ set forward_quote = yes
 
 ## Signature
 
-`$signature` points to a file (or a command) whose contents are appended to the message:
+[`$signature`](cfg-signature) points to a file (or a command) whose contents are appended to the message:
 
 ```neomuttrc
 set signature = "~/.signature"
@@ -187,7 +187,7 @@ set signature = "~/.signature"
 
 ### Signature Separator
 
-`$sig_dashes` (enabled by default) inserts the standard `-- ` separator line before your signature.
+[`$sig_dashes`](cfg-sig-dashes) (enabled by default) inserts the standard `-- ` separator line before your signature.
 Disable it if your signature file already contains the separator or you don't want one:
 
 ```neomuttrc
@@ -197,7 +197,7 @@ set sig_dashes = no
 ### Signature Placement
 
 By default the signature goes **below** the quoted text.
-Enable `$sig_on_top` to place it **above** the quoted text, between the greeting and the attribution — this is the "top-posting" style:
+Enable [`$sig_on_top`](cfg-sig-on-top) to place it **above** the quoted text, between the greeting and the attribution — this is the "top-posting" style:
 
 ```neomuttrc
 set sig_on_top = yes
@@ -246,23 +246,20 @@ On Mon, 31 Mar 2025, Alice wrote:
 
 ## Which Options Apply Where
 
-| Config Variable                 | New Email | Reply | Forward |
-|---------------------------------|:---------:|:-----:|:-------:|
-| `$greeting`                     | ✓         | ✓     | ✓       |
-| `$attribution_intro`            |           | ✓     |         |
-| `$attribution_trailer`          |           | ✓     |         |
-| `$attribution_locale`           |           | ✓     | ✓       |
-| `$indent_string`                |           | ✓     | ✓ ^1^   |
-| `$forward_attribution_intro`    |           |       | ✓       |
-| `$forward_attribution_trailer`  |           |       | ✓       |
-| `$forward_format`               |           |       | ✓ ^2^   |
-| `$forward_quote`                |           |       | ✓       |
-| `$signature`                    | ✓         | ✓     | ✓       |
-| `$sig_dashes`                   | ✓         | ✓     | ✓       |
-| `$sig_on_top`                   | ✓         | ✓     | ✓       |
-
-^1^ Only when `$forward_quote` is enabled.
-^2^ Controls the Subject line, not the body.
+| Config Variable                                                   | New Email | Reply | Forward | Notes                                                      |
+|-------------------------------------------------------------------|:---------:|:-----:|:-------:|------------------------------------------------------------|
+| [`$greeting`](cfg-greeting)                                       |     ✓     |   ✓   |    ✓    |                                                            |
+| [`$attribution_intro`](cfg-attribution-intro)                     |           |   ✓   |         |                                                            |
+| [`$attribution_trailer`](cfg-attribution-trailer)                 |           |   ✓   |         |                                                            |
+| [`$attribution_locale`](cfg-attribution-locale)                   |           |   ✓   |    ✓    |                                                            |
+| [`$indent_string`](cfg-indent-string)                             |           |   ✓   |   ✓ 1   | Only when [`$forward_quote`](cfg-forward-quote) is enabled |
+| [`$forward_attribution_intro`](cfg-forward-attribution-intro)     |           |       |    ✓    |                                                            |
+| [`$forward_attribution_trailer`](cfg-forward-attribution-trailer) |           |       |    ✓    |                                                            |
+| [`$forward_format`](cfg-forward-format)                           |           |       |   ✓ 2   | Controls the Subject line, not the body                    |
+| [`$forward_quote`](cfg-forward-quote)                             |           |       |    ✓    |                                                            |
+| [`$signature`](cfg-signature)                                     |     ✓     |   ✓   |    ✓    |                                                            |
+| [`$sig_dashes`](cfg-sig-dashes)                                   |     ✓     |   ✓   |    ✓    |                                                            |
+| [`$sig_on_top`](cfg-sig-on-top)                                   |     ✓     |   ✓   |    ✓    |                                                            |
 
 :::{admonition} 📷 Screenshot Needed
 :class: tip
@@ -291,7 +288,7 @@ the original message body, the forward attribution trailer
 
 **Highlights:** The difference from a reply — forward intro/trailer
 instead of attribution intro/trailer, and unquoted body text (with
-`$forward_quote` disabled).
+[`$forward_quote`](cfg-forward-quote) disabled).
 :::
 
 :::{admonition} 📷 Screenshot Needed

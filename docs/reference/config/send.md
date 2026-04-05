@@ -178,6 +178,7 @@ for Japanese users, "iso-2022-*" must be put at the head of the value as shown a
 This string will precede a replied-to message which is quoted in the main body of the reply (this is the case when [`$include`](cfg-include) is set).
 
 :::{seealso}
+- {doc}`/howto/email-template`
 - [`$index_format`](cfg-index-format) for a full list of expandos
 - **Expandos:** [Tutorial Conditional](tut-cond-expando), [Howto Conditional](how-cond-expando), [Formatting](how-format-expando), [Reference](ref-expandos)
 - [`$attribution_locale`](cfg-attribution-locale)
@@ -200,7 +201,11 @@ Valid values are the strings your system accepts for the locale environment vari
 This variable is to allow the attribution date format to be customized by recipient or folder using hooks.
 By default, NeoMutt will use your locale environment, so there is no need to set this except to override that default.
 
-Affected variables are: [`$attribution_intro`](cfg-attribution-intro), [`$attribution_trailer`](cfg-attribution-trailer), [`$forward_attribution_intro`](cfg-forward-attribution-intro), [`$forward_attribution_trailer`](cfg-forward-attribution-trailer), [`$indent_string`](cfg-indent-string).
+
+:::{seealso}
+- {doc}`/howto/email-template`
+- Affected variables: [`$attribution_intro`](cfg-attribution-intro), [`$attribution_trailer`](cfg-attribution-trailer), [`$forward_attribution_intro`](cfg-forward-attribution-intro), [`$forward_attribution_trailer`](cfg-forward-attribution-trailer), [`$indent_string`](cfg-indent-string).
+:::
 
 --------------------------------------------------------------------------------
 
@@ -216,6 +221,7 @@ Affected variables are: [`$attribution_intro`](cfg-attribution-intro), [`$attrib
 Similar to the [`$attribution_intro`](cfg-attribution-intro) variable, this is the string that will come after a replied-to message which is quoted in the main body of the reply (this is the case when [`$include`](cfg-include) is set).
 
 :::{seealso}
+- {doc}`/howto/email-template`
 - [`$index_format`](cfg-index-format) for a full list of expandos
 - **Expandos:** [Tutorial Conditional](tut-cond-expando), [Howto Conditional](how-cond-expando), [Formatting](how-format-expando), [Reference](ref-expandos)
 - [`$attribution_locale`](cfg-attribution-locale)
@@ -583,6 +589,7 @@ When forwarding inline (i.e.
 This is the string that will precede a message which has been forwarded in the main body of a message (when [`$mime_forward`](cfg-mime-forward) is unset).
 
 :::{seealso}
+- {doc}`/howto/email-template`
 - [`$index_format`](cfg-index-format) for a full list of expandos
 - **Expandos:** [Tutorial Conditional](tut-cond-expando), [Howto Conditional](how-cond-expando), [Formatting](how-format-expando), [Reference](ref-expandos)
 - [`$attribution_locale`](cfg-attribution-locale)
@@ -603,6 +610,7 @@ This is the string that will precede a message which has been forwarded in the m
 This is the string that will follow a message which has been forwarded in the main body of a message (when [`$mime_forward`](cfg-mime-forward) is unset).
 
 :::{seealso}
+- {doc}`/howto/email-template`
 - [`$index_format`](cfg-index-format) for a full list of expandos
 - **Expandos:** [Tutorial Conditional](tut-cond-expando), [Howto Conditional](how-cond-expando), [Formatting](how-format-expando), [Reference](ref-expandos)
 - [`$attribution_locale`](cfg-attribution-locale)
@@ -656,6 +664,7 @@ For those who always want to forward with no modification, use a setting of "no"
 This variable controls the default subject when forwarding a message.
 
 :::{seealso}
+- {doc}`/howto/email-template`
 - [`$index_format`](cfg-index-format) for a full list of expandos
 - **Expandos:** [Tutorial Conditional](tut-cond-expando), [Howto Conditional](how-cond-expando), [Formatting](how-format-expando), [Reference](ref-expandos)
 :::
@@ -697,6 +706,7 @@ This string is added to the top of every outgoing message.
 | `%v`  | `%{first-name}` | First name of recipient        |
 
 :::{seealso}
+- {doc}`/howto/email-template`
 **Expandos:** [Tutorial Conditional](tut-cond-expando), [Howto Conditional](how-cond-expando), [Formatting](how-format-expando), [Reference](ref-expandos)
 :::
 
@@ -1164,6 +1174,10 @@ If there is some error, you will be informed as to where to find the output.
 Specifies the filename of your signature, which is appended to all outgoing messages.
 If the filename ends with a pipe ("|"), it is assumed that filename is a shell command and input should be read from its standard output.
 
+:::{seealso}
+- {doc}`/howto/email-template`
+:::
+
 --------------------------------------------------------------------------------
 
 (cfg-sig-dashes)=
@@ -1180,6 +1194,10 @@ It is **strongly** recommended that you not _unset_ this variable unless your si
 The reason for this is because many software packages use `-- \n` to detect your signature.
 For example, NeoMutt has the ability to highlight the signature in a different color in the built-in pager.
 
+:::{seealso}
+- {doc}`/howto/email-template`
+:::
+
 --------------------------------------------------------------------------------
 
 (cfg-sig-on-top)=
@@ -1194,8 +1212,11 @@ For example, NeoMutt has the ability to highlight the signature in a different c
 If _set_, the signature will be included before any quoted or forwarded text.
 
 :::{warning}
-Do not set this variable unless you really know what you are doing,
-and are prepared to take some heat from netiquette guardians.
+Do not set this variable unless you really know what you are doing, and are prepared to take some heat from netiquette guardians.
+:::
+
+:::{seealso}
+- {doc}`/howto/email-template`
 :::
 
 --------------------------------------------------------------------------------
