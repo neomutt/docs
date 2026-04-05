@@ -1,6 +1,6 @@
 ---
 title: Understanding Security
-description: Security considerations for NeoMutt including password handling, temporary file exposure, Message-Id privacy, mailto link risks, and external application trust
+description: Security considerations for NeoMutt including password handling, temporary file exposure, Message-ID privacy, mailto link risks, and external application trust
 keywords: security, passwords, temporary files, information leaks, mailto, external applications, mailcap, $tmp_dir, message-id, privacy, permissions, rfc1524, mailto-allow, secure configuration
 diataxis_type: explanation
 ---
@@ -29,9 +29,9 @@ Also, a different location for these files may be desired which can be changed v
 
 ## Information Leaks
 
-### Message-Id: Headers
+### Message-ID: Headers
 
-Since 2023-02-18 NeoMutt generates random Message-Id: headers, which do not leak any information beyond their randomness.
+Since 2023-02-18 NeoMutt generates random Message-ID: headers, which do not leak any information beyond their randomness.
 
 ### `mailto:`-style Links
 

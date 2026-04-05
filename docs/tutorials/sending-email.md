@@ -178,7 +178,7 @@ The selection can later be changed in the compose menu.
 
 ### In-Reply-To: Header
 
-When replying to messages, the *In-Reply-To:* header contains the Message-Id of the message(s) you reply to.
+When replying to messages, the *In-Reply-To:* header contains the Message-ID of the message(s) you reply to.
 If you remove or modify its value, NeoMutt will not generate a *References:* field, which allows you to create a new message thread, for example to create a new message to a mailing list without having to enter the mailing list's address.
 
 If you intend to start a new thread by replying, please make really sure you remove the *In-Reply-To:* header in your editor.

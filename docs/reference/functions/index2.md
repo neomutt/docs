@@ -57,7 +57,7 @@ You can read, reply, forward, delete, tag, sort, search, and manage messages.
 | `<forward-message>`             | `f`                                               | Forward a message with comments                                         |                                   |
 | `<forward-to-group>`            |                                                   | Forward to newsgroup                                                    |                                   |
 | `<get-children>`                |                                                   | Get all children of the current message                                 |                                   |
-| `<get-message>`                 |                                                   | Get message with Message-Id                                             |                                   |
+| `<get-message>`                 |                                                   | Get message with Message-ID                                             |                                   |
 | `<get-parent>`                  |                                                   | Get parent of the current message                                       |                                   |
 | `<group-chat-reply>`            |                                                   | Reply to all recipients preserving To/Cc                                |                                   |
 | `<group-reply>`                 | `g`                                               | Reply to all recipients                                                 |                                   |

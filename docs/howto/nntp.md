@@ -99,7 +99,7 @@ By default, none of them are bound to keys.
 | index              | `<get-children>`              | Get all children of the current message        |
 | index              | `<get-parent>`                | Get parent of the current message              |
 | index              | `<reconstruct-thread>`        | Reconstruct thread containing current message  |
-| index              | `<get-message>`               | Get message with Message-Id                    |
+| index              | `<get-message>`               | Get message with Message-ID                    |
 
 ## neomuttrc
 
@@ -170,7 +170,7 @@ bind attach,index,pager \eF forward-to-group
 bind index \eG get-parent
 # Reconstruct thread containing current message
 # bind index ??? reconstruct-thread
-# Get message with Message-Id
+# Get message with Message-ID
 bind index \CG get-message
 # --------------------------------------------------------------------------
 

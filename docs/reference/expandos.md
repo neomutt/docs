@@ -36,7 +36,7 @@ Every expando has a short name.  Most also have a descriptive long name.
 | `%C`  | `%{number}`           | Message number                                          |
 | `%d`  | `%{date-format}`      | Date ([`strftime(3)`](exp-strftime) via `$date_format`) |
 | `%F`  | `%{sender}`           | Smart sender (uses Reply-To or From)                    |
-| `%i`  | `%{message-id}`       | Message-Id                                              |
+| `%i`  | `%{message-id}`       | Message-ID                                              |
 | `%n`  | `%{name}`             | Author's real name                                      |
 | `%s`  | `%{subject}`          | Subject                                                 |
 | `%X`  | `%{attachment-count}` | Attachment count                                        |

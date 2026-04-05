@@ -35,8 +35,8 @@ Many of NeoMutt's commands allow you to specify a pattern to match (`limit`, `ta
 | `~h` *REGEX*      | d)     | messages whose header matches *REGEX*                                                                              |
 | `=h` *STRING*     |        | IMAP: messages whose header contains *STRING* (searches on the server)                                             |
 | `~H` *REGEX*      |        | messages whose spam header matches *REGEX*                                                                         |
-| `~i` *REGEX*      |        | messages whose "Message-Id:" header matches *REGEX*                                                                |
-| `~I` *QUERY*      |        | messages whose "Message-Id:" is included in results from `$external_search_command`                                |
+| `~i` *REGEX*      |        | messages whose "Message-ID:" header matches *REGEX*                                                                |
+| `~I` *QUERY*      |        | messages whose "Message-ID:" is included in results from `$external_search_command`                                |
 | `~k`              |        | messages which contain a PGP key                                                                                   |
 | `~K` *REGEX*      |        | messages whose "Bcc:" header matches *REGEX*                                                                       |
 | `~l`              |        | messages addressed to known mailing lists                                                                          |

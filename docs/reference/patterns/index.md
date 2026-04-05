@@ -127,7 +127,7 @@ These patterns match on message flags and properties. They take no argument.
 | `~V`    | Cryptographically verified messages                      |
 | `~#`    | Broken threads (missing parent)                          |
 | `~$`    | Unreferenced messages (not referenced by other messages) |
-| `~=`    | Duplicated messages (same Message-Id)                    |
+| `~=`    | Duplicated messages (same Message-ID)                    |
 
 Examples:
 
@@ -167,7 +167,7 @@ string for `=` prefix, or an address group name for `%` prefix.
 | `~f REGEX` |             | `%f GROUP`  | From: header                              |
 | `~h REGEX` | `=h STRING` |             | All headers (raw)                         |
 | `~H REGEX` |             |             | Spam header (X-Spam-Status, etc.)         |
-| `~i REGEX` |             |             | Message-Id header                         |
+| `~i REGEX` |             |             | Message-ID header                         |
 | `~K REGEX` |             |             | Bcc: header                               |
 | `~L REGEX` |             | `%L GROUP`  | From:, Sender:, To:, or Cc: (any address) |
 | `~M REGEX` |             |             | Content-Type header (MIME type)           |
@@ -199,7 +199,7 @@ color index blue default "~C @dev\\.example\\.org"
 # Find messages with PDF attachments
 limit "~M application/pdf"
 
-# Color messages referencing a specific Message-Id
+# Color messages referencing a specific Message-ID
 color index cyan default "~x 20240315\\.abc123@mail\\.example\\.com"
 
 # Match messages tagged with "important"
@@ -598,7 +598,7 @@ example, entering `john` in the alias dialog limit prompt is equivalent to:
 | `~G`    | —        | Cryptographically encrypted         |
 | `~h`    | REGEX    | Headers match                       |
 | `~H`    | REGEX    | Spam header matches                 |
-| `~i`    | REGEX    | Message-Id matches                  |
+| `~i`    | REGEX    | Message-ID matches                  |
 | `~I`    | QUERY    | External search query               |
 | `~k`    | —        | Contains PGP key                    |
 | `~K`    | REGEX    | Bcc: matches                        |
@@ -630,7 +630,7 @@ example, entering `john` in the alias dialog limit prompt is equivalent to:
 | `~z`    | RANGE    | Message size                        |
 | `~#`    | —        | Broken thread                       |
 | `~$`    | —        | Unreferenced message                |
-| `~=`    | —        | Duplicate (same Message-Id)         |
+| `~=`    | —        | Duplicate (same Message-ID)         |
 | `~()`   | PATTERN  | Thread contains match               |
 | `~<()`  | PATTERN  | Parent matches                      |
 | `~>()`  | PATTERN  | Child matches                       |
