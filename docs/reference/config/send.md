@@ -165,7 +165,7 @@ for Japanese users, "iso-2022-*" must be put at the head of the value as shown a
 ## `$attribution_intro`
 
 :Type: [Expando](type-expando)
-:Notes: [Localised String](type-general)
+:Notes: [Localised String](type-general), [Pipe Support](type-pipe)
 :Default:
     ```neomuttrc
     set attribution_intro = "On %d, %n wrote:"
@@ -213,6 +213,7 @@ By default, NeoMutt will use your locale environment, so there is no need to set
 ## `$attribution_trailer`
 
 :Type: [Expando](type-expando)
+:Notes: [Pipe Support](type-pipe)
 :Default: (empty)
     ```neomuttrc
     set attribution_trailer = ""
@@ -576,7 +577,7 @@ When forwarding inline (i.e.
 ## `$forward_attribution_intro`
 
 :Type: [Expando](type-expando)
-:Notes: [Localised String](type-general)
+:Notes: [Localised String](type-general), [Pipe Support](type-pipe)
 :Default:
     ```neomuttrc
     set forward_attribution_intro = "----- Forwarded message from %f -----"
@@ -601,7 +602,7 @@ This is the string that will precede a message which has been forwarded in the m
 ## `$forward_attribution_trailer`
 
 :Type: [Expando](type-expando)
-:Notes: [Localised String](type-general)
+:Notes: [Localised String](type-general), [Pipe Support](type-pipe)
 :Default:
     ```neomuttrc
     set forward_attribution_trailer = "----- End forwarded message -----"
@@ -651,7 +652,7 @@ For those who always want to forward with no modification, use a setting of "no"
 ## `$forward_format`
 
 :Type: [Expando](type-expando)
-:Notes: [Not Empty](type-general)
+:Notes: [Not Empty](type-general), [Pipe Support](type-pipe)
 :Default:
     ```neomuttrc
     set forward_format = "[%a: %s]"
@@ -689,6 +690,7 @@ Hence the forwarded message becomes part of the original thread instead of start
 ## `$greeting`
 
 :Type: [Expando](type-expando)
+:Notes: [Pipe Support](type-pipe)
 :Default: (empty)
     ```neomuttrc
     set greeting = ""
@@ -785,6 +787,7 @@ Controls whether or not a copy of the message(s) you are replying to is included
 ## `$inews_command`
 
 :Type: [Expando (Command String)](type-expando)
+:Notes: [Pipe Support](type-pipe)
 :Default: (empty)
     ```neomuttrc
     set inews_command = ""
@@ -819,6 +822,7 @@ set inews_command = "/usr/local/bin/inews -hS"
 ## `$message_id_format`
 
 :Type: [Expando](type-expando)
+:Notes: [Pipe Support](type-pipe)
 :Default:
     ```neomuttrc
     set message_id_format = "<%z@%f>"
@@ -1165,7 +1169,7 @@ If there is some error, you will be informed as to where to find the output.
 ## `$signature`
 
 :Type: [Path (String)](type-path)
-:Notes: [File only](type-path)
+:Notes: [File only](type-path), [Pipe Support](type-pipe)
 :Default:
     ```neomuttrc
     set signature = "~/.signature"

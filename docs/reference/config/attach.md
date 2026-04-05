@@ -111,6 +111,7 @@ To see these subparts, press "v" on that menu.
 ## `$message_format`
 
 :Type: [Expando](type-expando)
+:Notes: [Pipe Support](type-pipe)
 :Default:
     ```neomuttrc
     set message_format = "%s"

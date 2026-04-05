@@ -474,7 +474,7 @@ This command is used to both sign and encrypt a body part.
 ## `$pgp_entry_format`
 
 :Type: [Expando](type-expando)
-:Notes: [Not Empty](type-general)
+:Notes: [Not Empty](type-general), [Pipe Support](type-pipe)
 :Scope: Crypto only or PGP only when GPGME disabled
 :Default:
     ```neomuttrc

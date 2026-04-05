@@ -90,7 +90,7 @@ However, only the first content is valid for the message body.
 ## `$attach_format`
 
 :Type: [Expando](type-expando)
-:Notes: [Not Empty](type-general)
+:Notes: [Not Empty](type-general), [Pipe Support](type-pipe)
 :Default:
     ```neomuttrc
     set attach_format = "%u%D%I %t%4n %T%d %> [%.7m/%.10M, %.6e%<C?, %C>, %s] "

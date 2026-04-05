@@ -37,6 +37,7 @@ You, the user, still have to rewrite the mairix_filter script to match the behav
 ## `$pattern_format`
 
 :Type: [Expando](type-expando)
+:Notes: [Pipe Support](type-pipe)
 :Default:
     ```neomuttrc
     set pattern_format = "%2n %-15e  %d"

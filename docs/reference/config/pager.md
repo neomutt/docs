@@ -124,6 +124,7 @@ If positive, this many lines will be given before a match, if 0, the match will 
 ## `$pager_format`
 
 :Type: [Expando](type-expando)
+:Notes: [Pipe Support](type-pipe)
 :Default:
     ```neomuttrc
     set pager_format = "-%Z- %C/%m: %-20.20n   %s%*  -- (%P)"

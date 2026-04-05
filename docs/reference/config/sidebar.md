@@ -94,7 +94,7 @@ Set this to indent mailboxes in the sidebar.
 ## `$sidebar_format`
 
 :Type: [Expando](type-expando)
-:Notes: [Not Empty](type-general)
+:Notes: [Not Empty](type-general), [Pipe Support](type-pipe)
 :Default:
     ```neomuttrc
     set sidebar_format = "%D%*  %n"

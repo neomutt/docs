@@ -51,7 +51,7 @@ Character set of newsgroups descriptions.
 ## `$newsrc`
 
 :Type: [Expando](type-expando)
-:Notes: [File only](type-path)
+:Notes: [File only](type-path), [Pipe Support](type-pipe)
 :Default:
     ```neomuttrc
     set newsrc = "~/.newsrc"

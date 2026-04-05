@@ -67,6 +67,7 @@ maxdepth: 1
 ---
 
 conditional-expandos
+pipe-command
 ```
 
 ## Offline Email Pipeline

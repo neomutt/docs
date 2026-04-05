@@ -157,6 +157,30 @@ set my_name = "Rich"
 set wrap = 80
 ```
 
+(type-pipe)=
+## Pipe Support
+
+Some config options allow their value to end with a `|` (pipe) character.
+When NeoMutt sees a trailing pipe, it treats the value as a shell command: it runs the command and uses its output in place of the literal value.
+
+There are two mechanisms, depending on the option type:
+
+- **Path options** — If a [Path](type-path) value ends with `|`, the path (minus the pipe) is executed as a shell command and the output is read as if it were a file.
+
+- **Expando options** — If an [Expando](type-expando) value ends with `|` after expansion, the entire rendered string (minus the pipe) is executed as a shell command and the first line of output replaces the string.
+
+```neomuttrc
+# Path example: generate a signature dynamically
+set signature = "~/.mutt/gen-sig.sh|"
+
+# Expando example: use an external command for the status bar
+set status_format = "my-status-command %m messages|"
+```
+
+:::{seealso}
+[Pipe Command Tutorial](tut-pipe-command)
+:::
+
 (type-path)=
 ## Path String
 

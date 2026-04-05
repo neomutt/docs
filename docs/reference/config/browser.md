@@ -69,7 +69,7 @@ If this variable is _set_, the browser will group directories before files.
 ## `$folder_format`
 
 :Type: [Expando](type-expando)
-:Notes: [Not Empty](type-general)
+:Notes: [Not Empty](type-general), [Pipe Support](type-pipe)
 :Default:
     ```neomuttrc
     set folder_format = "%2C %t %N %F %2l %-8.8u %-8.8g %8s %d %i"
@@ -121,7 +121,7 @@ Specify the format of local files/dirs displayed in the [`Browser Dialog`](tour-
 ## `$group_index_format`
 
 :Type: [Expando](type-expando)
-:Notes: [Not Empty](type-general)
+:Notes: [Not Empty](type-general), [Pipe Support](type-pipe)
 :Default:
     ```neomuttrc
     set group_index_format = "%4C %M%N %5s  %-45.45f %d"
@@ -160,7 +160,7 @@ Specify the format of newsgroups displayed in the [`Browser Dialog`](tour-browse
 ## `$mailbox_folder_format`
 
 :Type: [Expando](type-expando)
-:Notes: [Not Empty](type-general)
+:Notes: [Not Empty](type-general), [Pipe Support](type-pipe)
 :Default:
     ```neomuttrc
     set mailbox_folder_format = "%2C %<n?%6n&      > %6m %i"

@@ -48,6 +48,7 @@ Also see [`$save_history`](cfg-save-history).
 ## `$history_format`
 
 :Type: [Expando](type-expando)
+:Notes: [Pipe Support](type-pipe)
 :Default:
     ```neomuttrc
     set history_format = "%s"

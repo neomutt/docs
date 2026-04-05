@@ -26,6 +26,7 @@ See "$autocryptdoc" for more details.
 ## `$autocrypt_acct_format`
 
 :Type: [Expando](type-expando)
+:Notes: [Pipe Support](type-pipe)
 :Scope: Autocrypt only
 :Default:
     ```neomuttrc

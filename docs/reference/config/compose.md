@@ -30,7 +30,7 @@ It doesn't keep track of which message is the typed message if the entries are r
 ## `$compose_format`
 
 :Type: [Expando](type-expando)
-:Notes: [Localised String](type-general)
+:Notes: [Localised String](type-general), [Pipe Support](type-pipe)
 :Default:
     ```neomuttrc
     set compose_format = "-- NeoMutt: Compose  [Approx. msg size: %l   Atts: %a]%>-"
