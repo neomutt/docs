@@ -156,7 +156,9 @@ When _set_, the message you are forwarding will be attached as a separate `messa
 This is useful for forwarding MIME messages so the receiver can properly view the message as it was delivered to you.
 If you like to switch between MIME and not MIME from mail to mail, set this variable to "ask-no" or "ask-yes".
 
-Also see [`$forward_decode`](cfg-forward-decode) and [`$mime_forward_decode`](cfg-mime-forward-decode).
+:::{seealso}
+[`$forward_decode`](cfg-forward-decode), [`$mime_forward_decode`](cfg-mime-forward-decode)
+:::
 
 --------------------------------------------------------------------------------
 

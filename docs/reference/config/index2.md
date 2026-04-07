@@ -147,8 +147,8 @@ Specify the format of the data displayed in the [`Index Dialog`](tour-index).
 | `%B`      | `%{list-address}`        | List to which the email was sent (if any; otherwise: Mailbox name)                                                                             |
 | `%b`      | `%{mailbox-name}`        | Filename of the original message folder (think mailbox)                                                                                        |
 | `%C`      | `%{number}`              | Current message number                                                                                                                         |
-| `%c`      | `%{body-characters}`     | Number of characters (bytes) in the body of the message (see **Size Format**)                                                                  |
-| `%cr`     | `%{size}`                | Number of characters (bytes) in the raw message, including the header (see **Size Format**)                                                    |
+| `%c`      | `%{body-characters}`     | Number of characters (bytes) in the body of the message (see {ref}`how-bytes-size`)                                                            |
+| `%cr`     | `%{size}`                | Number of characters (bytes) in the raw message, including the header (see {ref}`how-bytes-size`)                                              |
 | `%D`      | `%{date-format-local}`   | Date and time of message using [`$date_format`](cfg-date-format) and local timezone.                                                           |
 |           |                          | It is recommended to use `%[fmt]` instead, where `fmt` is the value of [`$date_format`](cfg-date-format).                                      |
 | `%d`      | `%{date-format}`         | Date and time of message using [`$date_format`](cfg-date-format) and sender's timezone.                                                        |

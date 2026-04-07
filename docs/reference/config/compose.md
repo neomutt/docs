@@ -46,15 +46,15 @@ Specify the format of the data displayed in the [`Compose Dialog`](tour-compose)
 
 **Format Sequences**
 
-| Short  | Long Name           | Description                                                              |
-|--------|---------------------|--------------------------------------------------------------------------|
-| `%a`   | `%{attach-count}`   | Total number of attachments                                              |
-| `%h`   | `%{hostname}`       | Local hostname                                                           |
-| `%l`   | `%{attach-size}`    | Approximate size (in bytes) of the current message (see **Size Format**) |
-| `%v`   | `%{version}`        | NeoMutt version string                                                   |
-| `%*X`  | `%{padding-soft:X}` | Soft-fill with character `X` as pad                                      |
-| `%>X`  | `%{padding-hard:X}` | Right justify the rest of the string and pad with character `X`          |
-| `%\|X` | `%{padding-eol:X}`  | Pad to the end of the line with character `X`                            |
+| Short  | Long Name           | Description                                                                    |
+|--------|---------------------|--------------------------------------------------------------------------------|
+| `%a`   | `%{attach-count}`   | Total number of attachments                                                    |
+| `%h`   | `%{hostname}`       | Local hostname                                                                 |
+| `%l`   | `%{attach-size}`    | Approximate size (in bytes) of the current message (see {ref}`how-bytes-size`) |
+| `%v`   | `%{version}`        | NeoMutt version string                                                         |
+| `%*X`  | `%{padding-soft:X}` | Soft-fill with character `X` as pad                                            |
+| `%>X`  | `%{padding-hard:X}` | Right justify the rest of the string and pad with character `X`                |
+| `%\|X` | `%{padding-eol:X}`  | Pad to the end of the line with character `X`                                  |
 
 :::{seealso}
 **Expandos:** [Tutorial Conditional](tut-cond-expando), [Howto Conditional](how-cond-expando), [Formatting](how-format-expando), [Reference](ref-expandos)
@@ -131,7 +131,10 @@ When _set_, NeoMutt will display user-defined headers (set via [`:my-header`](cm
     ```
 
 This variable controls whether or not copies of your outgoing messages will be saved for later references.
-Also see [`$record`](cfg-record), [`$save_name`](cfg-save-name), [`$force_name`](cfg-force-name) and [`:fcc-hook`](cmd-fcc-hook).
+
+:::{seealso}
+[`$record`](cfg-record), [`$save_name`](cfg-save-name), [`$force_name`](cfg-force-name) and [`:fcc-hook`](cmd-fcc-hook)
+:::
 
 --------------------------------------------------------------------------------
 
@@ -184,5 +187,7 @@ How to invoke `ispell` (GNU's spell-checking software).
 Controls whether or not messages are saved in the [`$postponed`](cfg-postponed) mailbox when you elect not to send immediately.
 If set to `ask-yes` or `ask-no`, you will be prompted with "Save (postpone) draft message?" when quitting from the [Compose Dialog](tour-compose).
 
-Also see the [`$recall`](cfg-recall) variable.
+:::{seealso}
+[`$recall`](cfg-recall)
+:::
 

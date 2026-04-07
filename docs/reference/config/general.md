@@ -123,7 +123,7 @@ Specify the format of the data displayed in the [`Attach Dialog`](tour-attach).
 | `%m`   | `%{mime-major}`       | Major MIME type                                                                                   |
 | `%n`   | `%{number}`           | Attachment number                                                                                 |
 | `%Q`   | `%{attach-qualifies}` | `Q`, if MIME part qualifies for attachment counting                                               |
-| `%s`   | `%{file-size}`        | Size (see **Size Format**)                                                                        |
+| `%s`   | `%{file-size}`        | Size (see {ref}`how-bytes-size`)                                                                  |
 | `%T`   | `%{tree}`             | Graphic tree characters                                                                           |
 | `%t`   | `%{tagged}`           | Tagged flag                                                                                       |
 | `%u`   | `%{unlink}`           | Unlink (=to delete) flag                                                                          |

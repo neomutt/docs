@@ -103,7 +103,7 @@ Specify the format of local files/dirs displayed in the [`Browser Dialog`](tour-
 | `%N`     | `%{new-mail}`       | `N` if mailbox has new mail, ` ` (space) otherwise                                                        |
 | `%n`     | `%{unread-count}`   | Number of unread messages in the mailbox                                                                  |
 | `%p`     | `%{poll}`           | Poll: 1 if Mailbox is checked for new mail                                                                |
-| `%s`     | `%{file-size}`      | Size in bytes (see **Size Format**)                                                                       |
+| `%s`     | `%{file-size}`      | Size in bytes (see {ref}`how-bytes-size`)                                                                 |
 | `%t`     | `%{tagged}`         | `*` if the file is tagged, blank otherwise                                                                |
 | `%u`     | `%{file-owner}`     | Owner name (or numeric uid, if missing)                                                                   |
 | `%[fmt]` |                     | Date/time folder was last modified using an [`strftime(3)`](exp-strftime) expression                      |
