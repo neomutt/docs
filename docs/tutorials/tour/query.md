@@ -1,13 +1,17 @@
 ---
 title: Query Dialog
-description: XXX
-keywords: XXX
+description: The external address-book results view used to search for recipients outside your local aliases.
+keywords: query, address book, ldap, contacts, recipient lookup, create alias
 ---
 
 (tour-query)=
 # Query Dialog
 
-The Query Dialog shows results from an external address book lookup, letting you select recipients for your message.
+## Introduction -- Where am I?
+
+The Query Dialog shows matches from an external address-book query.
+Unlike the [Alias Dialog](alias.md), which reads NeoMutt's local aliases, this dialog is filled by an external command such as an LDAP lookup, contacts script, or directory search.
+Its job is to help you find recipients who are not already stored in your alias list.
 
 <div class="term-window">
 <div class="term-title">Query Dialog</div>
@@ -39,24 +43,38 @@ The Query Dialog shows results from an external address book lookup, letting you
 </pre>
 </div>
 
-Unlike the Alias Dialog which uses NeoMutt's local alias file, the Query Dialog calls an external command (configured via `$query_command`) to search an address book — such as an LDAP directory, a contacts database, or a custom script.
-The results are displayed with each contact's name, email address, and any extra information returned by the query command.
-You can select one or more entries to add to the message's recipient fields, making it easy to find and address people who aren't in your local alias list.
+## What am I looking at?
 
-## See Also
+- Each result row shows the display name, email address, and any extra text returned by the query backend.
+- The highlighted row is the address that will be inserted, mailed to, or turned into an alias.
+- The status line records the current query string.
+- The prompt line shows the live recipient or search text that produced these results.
 
-- [Alias Config](ref-cfg-alias)
-- [Query Functions](ref-fn-query)
-  - mail, sort, limit, ...
-- [Generic Functions](ref-fn-generic)
-  - **Menu:** page up/down, search, tagging, ...
-  - **Global:** enter command, show log message, ...
+## What can I do?
 
-## And...
+- Select one or more addresses to insert into the current recipient field.
+- Run a new query or append more results to the current list.
+- Sort, limit, and tag results to narrow large address-book searches.
+- Create a local alias from a selected query result.
+- Compose a new message directly to the selected address.
+- Full reference: [Query Functions](ref-fn-query), [Generic Functions](ref-fn-generic).
 
-- alias dialog
-- tutorial: address book
-- tutorial: sending mail
-- tutorial: tagging
-- tutorial: searching
+## Where can I go next?
 
+- Selecting entries usually returns you to the [Compose Dialog](compose.md) or the [Message Window](message.md) prompt that asked for recipients.
+- `<mail>` opens the [Compose Dialog](compose.md) directly.
+- Creating an alias affects what you will later see in the [Alias Dialog](alias.md).
+- `q` cancels and returns to the caller.
+
+## Where did I come from?
+
+- `<query>` from the [Index Dialog](index2.md) opens this dialog explicitly.
+- Address completion from the [Message Window](message.md) can open it when you use query completion.
+- Editing recipient fields in the [Compose Dialog](compose.md) is a common path into this dialog.
+
+## How do I configure this?
+
+- Start with [Alias Config](ref-cfg-alias).
+- Common options include [`$query_command`](cfg-query-command), [`$query_format`](cfg-query-format), and, for local aliases alongside query results, [`$alias_file`](cfg-alias-file) and [`$alias_format`](cfg-alias-format).
+- Query results often become persistent local data via [`:alias`](cmd-alias), [`:group`](cmd-group), and related alias commands.
+- Colours come from [Colour Objects](ref-colors), especially `indicator`, `status`, `prompt`, `message`, and `normal`.

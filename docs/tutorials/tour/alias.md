@@ -1,13 +1,17 @@
 ---
 title: Alias Dialog
-description: XXX
-keywords: XXX
+description: NeoMutt's personal address book view for browsing, selecting, and mailing saved aliases.
+keywords: alias, address book, contacts, compose, recipient completion, groups
 ---
 
 (tour-alias)=
 # Alias Dialog
 
-The Address Book Dialog lets you browse, select, and manage your saved email aliases.
+## Introduction -- Where am I?
+
+The Alias Dialog is NeoMutt's built-in address book.
+It lists the aliases you have defined in your configuration and lets you choose one or more recipients when addressing a message.
+You may also hear it described as the alias menu or contact list.
 
 <div class="term-window">
 <div class="term-title">Alias Dialog</div>
@@ -39,27 +43,36 @@ The Address Book Dialog lets you browse, select, and manage your saved email ali
 </pre>
 </div>
 
-When you need to address an email, NeoMutt can look up recipients from your personal address book.
-The Alias Dialog displays all the aliases defined in your [`$alias_file`](cfg-alias-file), showing each alias's short name, the real name, the email address, and any tags.
-You can search, sort, and filter the list to quickly find contacts, then select one or more to insert into the `To:`, `Cc:`, or `Bcc:` fields of your message.
+## What am I looking at?
 
-New aliases can be added from this dialog and will be saved to [`$alias_file`](cfg-alias-file).
-Aliases can also be deleted, though deletions only take effect in memory for the current session.
+- The main list shows each alias key, the expanded real name and address, and any tags or groups.
+- The highlighted row is the alias that will be inserted or acted on.
+- The status line shows the current limit or sort state.
+- The prompt line at the bottom reminds you which field is currently being completed.
 
-## See Also
+## What can I do?
 
-- [Alias Config](ref-cfg-alias)
-- [Alias Functions](ref-fn-alias)
-  - mail, sort, limit, ...
-- [Generic Functions](ref-fn-generic)
-  - **Menu:** page up/down, search, tagging, ...
-  - **Global:** enter command, show log message, ...
+- Select one or more aliases to insert into a `To:`, `Cc:`, or `Bcc:` field.
+- Compose a new message directly to the currently selected alias with `<mail>`.
+- Limit, sort, tag, delete, and undelete alias entries while you browse.
+- Use the dialog as a quick way to inspect how an alias expands before sending mail.
+- Full reference: [Alias Functions](ref-fn-alias), [Generic Functions](ref-fn-generic).
 
-## And...
+## Where can I go next?
 
-- query dialog
-- tutorial: address book
-- tutorial: sending mail
-- tutorial: tagging
-- tutorial: searching
+- Selecting entries usually returns you to the [Compose Dialog](compose.md) or the [Message Window](message.md) prompt that asked for recipients.
+- `<mail>` opens the [Compose Dialog](compose.md) directly.
+- `q` cancels and returns to the caller without inserting anything.
 
+## Where did I come from?
+
+- Address completion in the [Message Window](message.md) can open this dialog when NeoMutt finds multiple alias matches.
+- Editing recipient fields in the [Compose Dialog](compose.md) can lead here through completion.
+- Some setups also bind `<alias-dialog>` from the [Index Dialog](index2.md) so you can browse aliases explicitly.
+
+## How do I configure this?
+
+- Start with [Alias Config](ref-cfg-alias).
+- Common options include [`$alias_file`](cfg-alias-file), [`$alias_format`](cfg-alias-format), and [`$alias_sort`](cfg-alias-sort).
+- Alias data is maintained with [`:alias`](cmd-alias), [`:unalias`](cmd-unalias), [`:group`](cmd-group), [`:ungroup`](cmd-ungroup), [`:alternates`](cmd-alternates), and [`:unalternates`](cmd-unalternates).
+- Colours come from [Colour Objects](ref-colors), especially `indicator`, `status`, `prompt`, `message`, and `normal`.

@@ -1,13 +1,17 @@
 ---
 title: Attach Dialog
-description: XXX
-keywords: XXX
+description: The attachment browser for viewing, saving, printing, and extracting parts from a message.
+keywords: attachments, mime, save, view, mailcap, extract keys, reply
 ---
 
 (tour-attach)=
 # Attach Dialog
 
-The Attachment Selection Dialog lets you view and interact with the attachments of a received email.
+## Introduction -- Where am I?
+
+The Attach Dialog is NeoMutt's MIME part browser.
+It lists the attachments and multipart structure of the current message so you can inspect, save, view, print, or pipe individual parts.
+It is sometimes called the attachment menu or attachment tree.
 
 <div class="term-window">
 <div class="term-title">Attach Dialog</div>
@@ -27,17 +31,38 @@ The Attachment Selection Dialog lets you view and interact with the attachments 
 </pre>
 </div>
 
-When reading a message that contains attachments, this dialog presents them in a hierarchical tree showing each part's MIME type, encoding, size, and filename.
-You can view individual attachments using the configured mailcap handler, save them to disk, pipe them to an external command, or extract cryptographic keys.
-For multipart messages, the tree structure clearly shows how the parts are nested, making it easy to navigate complex emails with many attachments.
+## What am I looking at?
 
-## See Also
+- The main list shows one MIME part per row, including nesting, flags, filename, content type, encoding, character set, and size.
+- Tree characters show the structure of multipart messages, so you can tell which parts belong together.
+- The highlighted row is the attachment or MIME container NeoMutt will act on.
+- The status line identifies the dialog and keeps orientation while you move through a complex message.
 
-- [Attach Config](ref-cfg-attach)
-- [Attach Functions](ref-fn-attach)
-  - edit type, extract keys, ...
-- [Generic Functions](ref-fn-generic)
-  - **Menu:** page up/down, search, tagging, ...
-  - **Global:** enter command, show log message, ...
+## What can I do?
 
+- View an attachment with the internal pager, as plain text, or through a mailcap viewer.
+- Save or print the selected part, or pipe it to an external command.
+- Reply, forward, group-reply, or bounce while staying focused on the current message's attachments.
+- Extract supported public keys from a message and inspect encrypted or signed content.
+- Collapse multipart branches to simplify very large attachment trees.
+- Full reference: [Attach Functions](ref-fn-attach), [Generic Functions](ref-fn-generic).
+
+## Where can I go next?
+
+- `q` returns to the [Index Dialog](index2.md) or [Pager Dialog](pager.md) that opened the attachment tree.
+- Viewing text or copious-output attachments can open one of the [Simple Pagers](simple.md).
+- Replying or forwarding opens the [Compose Dialog](compose.md).
+- Saving or piping an attachment may briefly use the [Browser Dialog](browser.md) or the [Message Window](message.md) for filenames and commands.
+
+## Where did I come from?
+
+- You usually arrive from the [Index Dialog](index2.md) or [Pager Dialog](pager.md) via `<view-attachments>`.
+- The current message context comes with you, so all actions still refer to the message you were reading.
+
+## How do I configure this?
+
+- Start with [Attach Config](ref-cfg-attach), [Send Config](ref-cfg-send), and [MIME Commands](../../reference/commands/mime.md).
+- Common options include [`$attach_save_dir`](cfg-attach-save-dir), [`$attach_save_without_prompting`](cfg-attach-save-without-prompting), [`$attach_sep`](cfg-attach-sep), [`$attach_split`](cfg-attach-split), [`$message_format`](cfg-message-format), [`$mime_forward`](cfg-mime-forward), and [`$mime_forward_rest`](cfg-mime-forward-rest).
+- Useful commands include [`:attachments`](cmd-attachments), [`:unattachments`](cmd-unattachments), [`:auto-view`](cmd-auto-view), [`:unauto-view`](cmd-unauto-view), [`:alternative-order`](cmd-alternative-order), and [`:mime-lookup`](cmd-mime-lookup).
+- Colours come from [Colour Objects](ref-colors), especially `attachment`, `tree`, `indicator`, `status`, and `message`.
 

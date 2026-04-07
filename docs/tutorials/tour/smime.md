@@ -1,16 +1,20 @@
 ---
-title: Smime Dialog
-description: XXX
-keywords: XXX
+title: S/MIME Dialog
+description: The S/MIME certificate-selection dialog used when NeoMutt needs a certificate for signing or encryption.
+keywords: smime, certificate selection, signing, encryption, verify key, x509
 ---
 
 (tour-smime)=
-# Smime Dialog
+# S/MIME Dialog
 
-The S/MIME Key Selection Dialog lets you choose an S/MIME certificate when encrypting or signing a message.
+## Introduction -- Where am I?
+
+The S/MIME Dialog is the certificate chooser for S/MIME mail.
+It appears when NeoMutt needs you to choose a certificate for encryption or signing and multiple candidates are available.
+Unlike the [PGP Dialog](pgp.md), the entries here are X.509-style certificates rather than OpenPGP keys.
 
 <div class="term-window">
-<div class="term-title">Smime Dialog</div>
+<div class="term-title">S/MIME Dialog</div>
 <pre class="terminal">
 <span >0x1A2B3C4D5E6F es Verified   langstroth@langstroth.com           Personal 2025                      </span>
 <span>0x2B3C4D5E6F7A es Trusted    l.langstroth@hivemail.org           Work Certificate                   </span>
@@ -26,16 +30,34 @@ The S/MIME Key Selection Dialog lets you choose an S/MIME certificate when encry
 </pre>
 </div>
 
-When you send a message with S/MIME security enabled and multiple certificates match a recipient's address, this dialog lists them so you can pick the right one.
-Each entry shows the certificate's key ID, capabilities (encrypt/sign), verification status (Verified, Trusted, Expired, Revoked, etc.), email address, and a label.
-This lets you confirm the certificate's validity and choose the correct identity before securing your message.
+## What am I looking at?
 
-## See Also
+- Each row is a candidate certificate with key ID, capabilities, validity state, email address, and label.
+- The highlighted row is the certificate NeoMutt will use if you select it.
+- The status line shows which recipient address the certificate list is matching.
 
-- [Encryption Config](ref-cfg-ncrypt)
-- [Smime Functions](ref-fn-smime)
-  - verify key, view name
-- [Generic Functions](ref-fn-generic)
-  - **Menu:** page up/down, search, tagging, ...
-  - **Global:** enter command, show log message, ...
+## What can I do?
 
+- Choose the right certificate for encryption or signing.
+- Verify the selected certificate before using it.
+- View the certificate's user name or label in more detail.
+- Cancel and return to the send workflow.
+- Full reference: [Smime Functions](ref-fn-smime).
+
+## Where can I go next?
+
+- Selecting a certificate returns you to the [Compose Dialog](compose.md) so sending can continue.
+- Verifying a certificate can open one of the [Simple Pagers](simple.md).
+- Cancelling returns you to the send flow.
+
+## Where did I come from?
+
+- You typically arrive from the [Compose Dialog](compose.md) when sending with S/MIME enabled.
+- If GPGME is the active backend, NeoMutt may show the [GPGME Dialog](gpgme.md) instead of this one.
+
+## How do I configure this?
+
+- Start with [Encryption Config](ref-cfg-ncrypt) and [Send Config](ref-cfg-send).
+- Common options include [`$smime_default_key`](cfg-smime-default-key), [`$smime_certificates`](cfg-smime-certificates), [`$smime_keys`](cfg-smime-keys), [`$smime_ask_cert_label`](cfg-smime-ask-cert-label), [`$smime_is_default`](cfg-smime-is-default), and [`$smime_ca_location`](cfg-smime-ca-location).
+- Related commands include [`:crypt-hook`](cmd-crypt-hook) and generic [`:set`](cmd-set) configuration.
+- Colours come from [Colour Objects](ref-colors), especially `indicator`, `status`, `message`, and `normal`.

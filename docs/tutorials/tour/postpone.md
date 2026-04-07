@@ -1,13 +1,17 @@
 ---
 title: Postpone Dialog
-description: XXX
-keywords: XXX
+description: The draft picker used when recalling postponed messages in NeoMutt.
+keywords: postpone, drafts, recall, postponed mailbox, resume compose
 ---
 
 (tour-postpone)=
 # Postpone Dialog
 
-The Postponed Email Selection Dialog lets you recall a draft message that was previously saved for later editing.
+## Introduction -- Where am I?
+
+The Postpone Dialog appears when you recall a postponed message and there is more than one saved draft to choose from.
+It lets you browse the postponed mailbox, find the right draft, and reopen it for editing.
+You can think of it as NeoMutt's draft picker.
 
 <div class="term-window">
 <div class="term-title">Postpone Dialog</div>
@@ -27,17 +31,32 @@ The Postponed Email Selection Dialog lets you recall a draft message that was pr
 </pre>
 </div>
 
-When you postpone composing an email, NeoMutt saves it to your postponed mailbox.
-This dialog lists all those saved drafts, showing the date, flags, recipient, and subject of each one.
-Selecting a draft reopens it in the Compose Dialog so you can continue editing and eventually send it.
-You can also delete drafts you no longer need.
+## What am I looking at?
 
-## See Also
+- Each line is a postponed draft, shown with familiar index-style fields such as date, flags, recipient, subject, and size.
+- The highlighted row is the draft that will be resumed or deleted.
+- The status line identifies the postponed mailbox.
 
-- [Postpone Config](ref-cfg-general)
-- [Postpone Functions](ref-fn-postpone)
-  - delete message, undelete message, ...
-- [Generic Functions](ref-fn-generic)
-  - **Menu:** page up/down, search, tagging, ...
-  - **Global:** enter command, show log message, ...
+## What can I do?
 
+- Select a postponed draft and reopen it for editing.
+- Delete or undelete drafts you no longer want.
+- Use the list as a quick overview of which drafts are waiting to be finished.
+- Full reference: [Postpone Functions](ref-fn-postpone), [Generic Functions](ref-fn-generic).
+
+## Where can I go next?
+
+- Selecting a draft opens the [Compose Dialog](compose.md).
+- Cancelling returns you to the [Index Dialog](index2.md) or [Pager Dialog](pager.md) that initiated recall.
+
+## Where did I come from?
+
+- You arrive from the [Index Dialog](index2.md) or [Pager Dialog](pager.md) after `<recall-message>` when NeoMutt finds multiple postponed drafts.
+- If there is only one postponed draft, NeoMutt usually skips this dialog and goes straight to [Compose Dialog](compose.md).
+
+## How do I configure this?
+
+- Start with [Compose Config](ref-cfg-compose), [Send Config](ref-cfg-send), and [General Config](ref-cfg-general).
+- Common options include [`$postpone`](cfg-postpone), [`$postponed`](cfg-postponed), [`$recall`](cfg-recall), [`$postpone_encrypt`](cfg-postpone-encrypt), and [`$postpone_encrypt_as`](cfg-postpone-encrypt-as).
+- Draft handling is usually tuned through generic configuration commands such as [`:set`](cmd-set), along with hooks such as [`:fcc-hook`](cmd-fcc-hook) when you care about saved copies.
+- Colours come from [Colour Objects](ref-colors), especially `index`, `index_date`, `index_flags`, `index_author`, `index_subject`, `index_size`, `indicator`, and `status`.

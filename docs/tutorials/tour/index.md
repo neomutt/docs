@@ -1,11 +1,17 @@
 ---
 title: Tour of NeoMutt
-description: XXX
-keywords: XXX
+description: A guided hub for NeoMutt's dialogs, panels, prompts, and short-lived support screens.
+keywords: tour, dialogs, pager, index, compose, browser, sidebar, message window, navigation
 ---
 
 (tut-tour)=
 # Tour of NeoMutt
+
+## Introduction -- Where am I?
+
+This is the tour hub for NeoMutt's user interface.
+Each page below is a jump point into one dialog, panel, or support screen, with links out to the deeper reference material for functions, configuration, commands, and colours.
+Use it when you want either a quick orientation or a map into the full manual.
 
 ::::{grid} 3
 :gutter: 3
@@ -233,6 +239,35 @@ maxdepth: 1
 simple.md
 ```
 
+## What am I looking at?
+
+- The cards at the top show the biggest day-to-day screens: the index, pager, and compose views.
+- The toctrees below group the rest of the tour into complex dialogs, simple dialogs, panels, prompts, and simple pagers.
+- Together, these pages mirror NeoMutt's high-level dialog navigation.
+
+## What can I do?
+
+- Start with the [Index Dialog](index2.md) if you want the main workflow hub.
+- Jump to [Pager Dialog](pager.md) and [Compose Dialog](compose.md) for the two other screens most users spend time in.
+- Explore specialist screens such as [Attach Dialog](attach.md), [Browser Dialog](browser.md), [Alias Dialog](alias.md), and [Query Dialog](query.md).
+- Use [Message Window](message.md) and [Simple Pagers](simple.md) to understand the short-lived support UI that appears everywhere.
+
+## Where can I go next?
+
+- The [Index Dialog](index2.md) page is the best starting point for understanding overall navigation.
+- The [Browser Dialog](browser.md), [Compose Dialog](compose.md), and [Pager Dialog](pager.md) pages cover the major branch points in normal use.
+- The [Sidebar Panel](sidebar.md) and [Message Window](message.md) pages explain the embedded UI components that appear in many screenshots.
+
+## Where did I come from?
+
+- If you arrived from the rest of the documentation, this page is the high-level bridge between tutorials and the detailed reference chapters.
+- If you arrived from a specific dialog page, this hub is the place to branch out to neighbouring screens.
+
+## How do I configure this?
+
+- The tour itself is explanatory, but each dialog page links directly to the relevant [Config Reference](../../reference/config/index.md), [Functions Reference](../../reference/functions/index.md), [Commands Reference](ref-commands), and [Colour Objects](ref-colors).
+- For global UI customisation, start with [General Config](ref-cfg-general), [Index Config](ref-cfg-index), [Pager Config](ref-cfg-pager), [Compose Config](ref-cfg-compose), and [Sidebar Config](ref-cfg-sidebar).
+
 % color_dump
 %     :color
 % dump_bind_macro
@@ -254,4 +289,3 @@ simple.md
 % set_dump
 %     :set
 % verify_key
-
