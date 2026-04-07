@@ -35,7 +35,7 @@ sidebar
 smime
 ```
 
-## [Alias Menu](ref-fn-alias)
+## [Alias Functions](ref-fn-alias)
 
 Browse and select from your saved email address aliases.
 You can sort, search, delete, and compose messages to your contacts.
@@ -52,7 +52,7 @@ You can sort, search, delete, and compose messages to your contacts.
 | `<undelete-entry>`     | Undelete the current entry                   |
 | `<untag-pattern>`      | Untag non-hidden messages matching a pattern |
 
-## [Attach Menu](ref-fn-attach)
+## [Attach Functions](ref-fn-attach)
 
 View and manage the attachments of a received email.
 You can save, print, pipe, delete, or open attachments, and reply or forward from this view.
@@ -89,7 +89,7 @@ You can save, print, pipe, delete, or open attachments, and reply or forward fro
 | `<view-pager>`            | View attachment in pager using copiousoutput mailcap |
 | `<view-text>`             | View attachment as text                              |
 
-## [Autocrypt Menu](ref-fn-autocrypt)
+## [Autocrypt Functions](ref-fn-autocrypt)
 
 Manage your Autocrypt encryption accounts.
 You can create, delete, toggle, and set preferences for automatic email encryption keys.
@@ -102,7 +102,7 @@ You can create, delete, toggle, and set preferences for automatic email encrypti
 | `<toggle-active>`         | Toggle the current account active/inactive     |
 | `<toggle-prefer-encrypt>` | Toggle the current account prefer-encrypt flag |
 
-## [Browser Menu](ref-fn-browser)
+## [Browser Functions](ref-fn-browser)
 
 Browse files on disk or mailboxes on a server.
 You can navigate directories, sort listings, subscribe to mailboxes, and select a mailbox to open.
@@ -136,7 +136,7 @@ You can navigate directories, sort listings, subscribe to mailboxes, and select 
 | `<unsubscribe>`         | Unsubscribe from current mbox (IMAP/NNTP only)             |
 | `<view-file>`           | View file                                                  |
 
-## [Compose Menu](ref-fn-compose)
+## [Compose Functions](ref-fn-compose)
 
 Prepare an email before sending it.
 You can edit recipients, subject, and headers, attach files, configure encryption, and send or postpone the message.
@@ -203,7 +203,7 @@ You can edit recipients, subject, and headers, attach files, configure encryptio
 | `<view-text>`           | View attachment as text                              |
 | `<write-fcc>`           | Write the message to a folder                        |
 
-## [Dialog Menu](ref-fn-dialog)
+## [Dialog Functions](ref-fn-dialog)
 
 A simple informational pop-up, such as the help screen or log messages.
 It only supports quitting.
@@ -213,7 +213,7 @@ It only supports quitting.
 | `<exit>` | Exit this menu                   |
 | `<quit>` | Save changes to mailbox and quit |
 
-## [Editor Menu](ref-fn-editor)
+## [Editor Functions](ref-fn-editor)
 
 The text input line where you type responses to prompts.
 It supports cursor movement, word editing, tab-completion, and command history.
@@ -248,7 +248,7 @@ It supports cursor movement, word editing, tab-completion, and command history.
 | `<transpose-chars>` | Transpose character under cursor with previous      |
 | `<upcase-word>`     | Convert the word to upper case                      |
 
-## [Generic Menu](ref-fn-generic)
+## [Generic Functions](ref-fn-generic)
 
 Not a menu itself, but provides common functions — such as scrolling, searching, and tagging — that are inherited by all other menus (except pager and editor).
 
@@ -292,7 +292,7 @@ Not a menu itself, but provides common functions — such as scrolling, searchin
 | `<top-page>`          | Move to the top of the page                         |
 | `<what-key>`          | Display the keycode for a key press                 |
 
-## [Index Menu](ref-fn-index)
+## [Index Functions](ref-fn-index)
 
 The main screen showing the list of emails in a mailbox.
 You can read, reply, forward, delete, tag, sort, search, and manage messages.
@@ -422,7 +422,7 @@ You can read, reply, forward, delete, tag, sort, search, and manage messages.
 | `<view-attachments>`            | Show MIME attachments                                                   |
 | `<view-raw-message>`            | Show the raw message                                                    |
 
-## [Pager Menu](ref-fn-pager)
+## [Pager Functions](ref-fn-pager)
 
 The email reading view that displays a message's contents.
 You can scroll, search within the text, and perform many of the same actions as the index.
@@ -554,7 +554,7 @@ You can scroll, search within the text, and perform many of the same actions as 
 | `<view-raw-message>`            | Show the raw message                                                    |
 | `<what-key>`                    | Display the keycode for a key press                                     |
 
-## [PGP Menu](ref-fn-pgp)
+## [PGP Functions](ref-fn-pgp)
 
 Select a PGP key when encrypting or signing an email.
 You can verify key details before choosing which key to use.
@@ -565,7 +565,7 @@ You can verify key details before choosing which key to use.
 | `<verify-key>` | Verify a public key    |
 | `<view-name>`  | View the key's user id |
 
-## [Postpone Menu](ref-fn-postpone)
+## [Postpone Functions](ref-fn-postpone)
 
 Select from your saved draft emails to resume editing.
 You can pick a previously postponed message to continue composing it.
@@ -576,7 +576,7 @@ You can pick a previously postponed message to continue composing it.
 | `<exit>`           | Exit this menu             |
 | `<undelete-entry>` | Undelete the current entry |
 
-## [Query Menu](ref-fn-query)
+## [Query Functions](ref-fn-query)
 
 Display results from an external address-book query.
 You can search for contacts, create aliases from the results, and compose messages to selected addresses.
@@ -594,7 +594,7 @@ You can search for contacts, create aliases from the results, and compose messag
 | `<tag-pattern>`   | Tag non-hidden messages matching a pattern   |
 | `<untag-pattern>` | Untag non-hidden messages matching a pattern |
 
-## [Sidebar Menu](ref-fn-sidebar)
+## [Sidebar Functions](ref-fn-sidebar)
 
 Navigate the sidebar panel that lists your mailboxes.
 You can move between mailboxes, open them, and toggle the sidebar's visibility.
@@ -615,7 +615,7 @@ You can move between mailboxes, open them, and toggle the sidebar's visibility.
 | `<sidebar-toggle-virtual>` | Toggle between mailboxes and virtual mailboxes       |
 | `<sidebar-toggle-visible>` | Make the sidebar (in)visible                         |
 
-## [S/MIME Menu](ref-fn-smime)
+## [S/MIME Functions](ref-fn-smime)
 
 Select an S/MIME certificate when encrypting or signing an email.
 You can verify certificate details before choosing which one to use.

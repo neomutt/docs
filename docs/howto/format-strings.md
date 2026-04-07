@@ -122,6 +122,7 @@ For example (note two spaces after `%*`):
 set index_format="%4C %Z %{%b %d} %-15.15L (%<l?%4l&%4c>)%*  %s"
 ```
 
+(how-bytes-size)=
 ## Bytes Size Display
 
 Various format strings contain expandos that display the size of messages in bytes.

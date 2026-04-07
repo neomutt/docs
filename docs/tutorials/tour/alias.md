@@ -40,10 +40,10 @@ The Address Book Dialog lets you browse, select, and manage your saved email ali
 </div>
 
 When you need to address an email, NeoMutt can look up recipients from your personal address book.
-The Alias Dialog displays all the aliases defined in your `alias_file`, showing each alias's short name, the real name, the email address, and any tags.
-You can search, sort, and filter the list to quickly find contacts, then select one or more to insert into the To, Cc, or Bcc fields of your message.
+The Alias Dialog displays all the aliases defined in your [`$alias_file`](cfg-alias-file), showing each alias's short name, the real name, the email address, and any tags.
+You can search, sort, and filter the list to quickly find contacts, then select one or more to insert into the `To:`, `Cc:`, or `Bcc:` fields of your message.
 
-New aliases can be added from this dialog and will be saved to `$alias_file`.
+New aliases can be added from this dialog and will be saved to [`$alias_file`](cfg-alias-file).
 Aliases can also be deleted, though deletions only take effect in memory for the current session.
 
 ## See Also

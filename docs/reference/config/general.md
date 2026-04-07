@@ -1135,7 +1135,10 @@ If not specified, then the user's login shell from `/etc/passwd` is used.
     ```
 
 If _set_, message sizes will display bytes for values less than 1 kilobyte.
-See $formatstrings-size.
+
+:::{seealso}
+{ref}`how-bytes-size`
+:::
 
 --------------------------------------------------------------------------------
 
@@ -1149,7 +1152,10 @@ See $formatstrings-size.
     ```
 
 If _set_, message sizes will be displayed with a single decimal value for sizes from 0 to 10 kilobytes and 1 to 10 megabytes.
-See $formatstrings-size.
+
+:::{seealso}
+{ref}`how-bytes-size`
+:::
 
 --------------------------------------------------------------------------------
 
@@ -1163,7 +1169,10 @@ See $formatstrings-size.
     ```
 
 If _set_, message sizes will display megabytes for values greater than or equal to 1 megabyte.
-See $formatstrings-size.
+
+:::{seealso}
+{ref}`how-bytes-size`
+:::
 
 --------------------------------------------------------------------------------
 
@@ -1177,7 +1186,10 @@ See $formatstrings-size.
     ```
 
 If _set_, message sizes units will be displayed to the left of the number.
-See $formatstrings-size.
+
+:::{seealso}
+{ref}`how-bytes-size`
+:::
 
 --------------------------------------------------------------------------------
 

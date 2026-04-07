@@ -339,8 +339,8 @@ Specify the format of the data displayed in the [`Index Dialog`](tour-index)'s s
 | `%f`   | `%{flagged-count}`    | Number of flagged messages                                                                                |
 | `%F`   | `%{mailbox-path}`     | Full pathname of the current mailbox                                                                      |
 | `%h`   | `%{hostname}`         | Local hostname                                                                                            |
-| `%l`   | `%{limit-size}`       | Size (in bytes) of the messages shown (i.e., which match the current limit) (see formatstrings-size)      |
-| `%L`   | `%{mailbox-size}`     | Size (in bytes) of the current mailbox (see formatstrings-size)                                           |
+| `%l`   | `%{limit-size}`       | Size (in bytes) of the **limited** messages shown (see {ref}`how-bytes-size`)                             |
+| `%L`   | `%{mailbox-size}`     | Size (in bytes) of the current mailbox (see {ref}`how-bytes-size`)                                        |
 | `%m`   | `%{limit-count}`      | Number of messages shown (i.e., which match the current limit)                                            |
 | `%M`   | `%{message-count}`    | Number of messages in the mailbox                                                                         |
 | `%n`   | `%{new-count}`        | Number of new messages in the mailbox (unread, unseen)                                                    |

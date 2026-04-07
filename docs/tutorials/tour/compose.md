@@ -38,7 +38,7 @@ The Compose Dialog is the final review screen before sending an email.
 </pre>
 </div>
 
-This is where you edit the message envelope — the From, To, Cc, Bcc, Subject, Reply-To, and Fcc fields — and manage the list of attachments.
+This is where you edit the message envelope — the `From:`, `To:`, `Cc:`, `Bcc:`, `Subject:`, `Reply-To:`, and `Fcc:` fields — and manage the list of attachments.
 You can add, remove, and reorder attachments, edit the message body, and configure security settings such as PGP or S/MIME signing and encryption.
 A preview pane at the bottom shows the message body, and a status bar displays the approximate message size and attachment count.
 When everything looks right, you send the message from this dialog.
