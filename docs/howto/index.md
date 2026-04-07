@@ -114,6 +114,7 @@ maxdepth: 1
 ---
 
 header-display
+text-wrapping
 threads
 threading-scoring-workflows
 display-munging
