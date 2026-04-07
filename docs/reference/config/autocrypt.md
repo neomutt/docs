@@ -75,7 +75,7 @@ Specify the format of the data displayed in the [`Autocrypt Dialog`](tour-autocr
     set autocrypt_dir = "~/.neomutt/autocrypt"
     ```
 
-This option sets where autocrypt files are stored, including the GPG keyring and SQLite database.
+Set where Autocrypt files are stored, including the GPG keyring and SQLite database.
 
 --------------------------------------------------------------------------------
 

@@ -273,7 +273,7 @@ If _set_, NeoMutt will call this command after a new message is received.
     set quit = yes
     ```
 
-This option controls whether "quit" and "exit" actually quit from NeoMutt.
+Control whether "quit" and "exit" actually quit from NeoMutt.
 If this option is _set_, they do quit, if it is _unset_, they have no effect, and if it is set to `ask-yes` or `ask-no`, you are prompted for confirmation when you try to quit.
 
 In order to quit from NeoMutt if this option is _unset_, you must send the signal `SIGINT` to NeoMutt.

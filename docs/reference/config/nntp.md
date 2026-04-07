@@ -91,7 +91,7 @@ Specify the format of the filename containing info about subscribed newsgroups -
     set news_cache_dir = "~/.neomutt"
     ```
 
-This option pointing to directory where NeoMutt will save cached news articles and headers in.
+Point to the directory where NeoMutt saves cached news articles and headers.
 If _unset_, articles and headers will not be saved at all and will be reloaded from the server each time.
 
 --------------------------------------------------------------------------------
@@ -106,11 +106,11 @@ If _unset_, articles and headers will not be saved at all and will be reloaded f
     set news_server = ""
     ```
 
-This option specifies domain name or address of NNTP server.
+Specify the domain name or address of the NNTP server.
 
 You can also specify username and an alternative port for each news server, e.g. `[[s]news://][username[:password]@]server[:port]`
 
-This option can also be set using the command line option `-g`, the environment variable [`$NNTPSERVER`](ref-env), or putting the server name in the file `/etc/nntpserver`.
+Can also be set using the command line option `-g`, the environment variable [`$NNTPSERVER`](ref-env), or putting the server name in the file `/etc/nntpserver`.
 
 --------------------------------------------------------------------------------
 
@@ -153,7 +153,7 @@ If a method is available but authentication fails, NeoMutt will not connect to t
     set nntp_context = 1000
     ```
 
-This option defines number of articles which will be in index when newsgroup entered.
+Define the number of articles listed in the index when a newsgroup is entered.
 If active newsgroup have more articles than this number, oldest articles will be ignored.
 Also controls how many articles headers will be saved in cache when you quit newsgroup.
 
@@ -169,7 +169,7 @@ Also controls how many articles headers will be saved in cache when you quit new
     set nntp_listgroup = yes
     ```
 
-This option controls whether or not existence of each article is checked when newsgroup is entered.
+Control whether the existence of each article is checked when a newsgroup is entered.
 
 --------------------------------------------------------------------------------
 
@@ -183,7 +183,7 @@ This option controls whether or not existence of each article is checked when ne
     set nntp_load_description = yes
     ```
 
-This option controls whether or not descriptions for each newsgroup must be loaded when newsgroup is added to list (first time list loading or new newsgroup adding).
+Control whether descriptions for each newsgroup are loaded when a newsgroup is added to the list (first time list loading or new newsgroup adding).
 
 --------------------------------------------------------------------------------
 

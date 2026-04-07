@@ -59,7 +59,7 @@ When _unset_, NeoMutt will not collapse a thread if it contains any unread messa
     set duplicate_threads = yes
     ```
 
-This option controls whether NeoMutt, when [`$sort`](cfg-sort) is set to `threads`, threads messages with the same `Message-ID:` together.
+Control whether NeoMutt, when [`$sort`](cfg-sort) is set to `threads`, threads messages with the same `Message-ID:` together.
 If it is _set_, it will indicate that it thinks they are duplicates of each other with an equals sign in the thread tree.
 
 --------------------------------------------------------------------------------
@@ -152,7 +152,7 @@ When [`$hide_missing`](cfg-hide-missing) is _set_, this option will have no effe
     set narrow_tree = no
     ```
 
-This option, when _set_, makes the thread tree narrower, allowing deeper threads to fit on the screen.
+When _set_, make the thread tree narrower, allowing deeper threads to fit on the screen.
 
 --------------------------------------------------------------------------------
 
@@ -166,7 +166,7 @@ This option, when _set_, makes the thread tree narrower, allowing deeper threads
     set sort_re = yes
     ```
 
-This option is only useful when sorting by threads with [`$strict_threads`](cfg-strict-threads) _unset_.
+Only useful when sorting by threads with [`$strict_threads`](cfg-strict-threads) _unset_.
 In that case, it changes the heuristic NeoMutt uses to thread messages by subject.
 With [`$sort_re`](cfg-sort-re) _set_, NeoMutt will only attach a message as the child of another message by subject if the subject of the child message starts with a substring matching the setting of [`$reply_regex`](cfg-reply-regex).
 With [`$sort_re`](cfg-sort-re) _unset_, NeoMutt will attach the message whether or not this is the case, as long as the non-[`$reply_regex`](cfg-reply-regex) parts of both messages are identical.

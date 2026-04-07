@@ -31,7 +31,7 @@ The directory where attachments are saved.
     set attach_save_without_prompting = no
     ```
 
-This option, when set to true, will cause attachments to be saved to the [`$attach_save_dir`](cfg-attach-save-dir) location without prompting the user for the filename.
+When _set_, attachments are saved to the [`$attach_save_dir`](cfg-attach-save-dir) location without prompting the user for the filename.
 
 --------------------------------------------------------------------------------
 

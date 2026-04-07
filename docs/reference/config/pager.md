@@ -108,7 +108,7 @@ If set, a `+` marker is displayed at the beginning of wrapped lines.
     set pager = ""
     ```
 
-This option specifies which pager you would like to use to view messages.
+Specify which pager to use for viewing messages.
 When empty, NeoMutt will use the built-in pager, otherwise this option should specify the pathname of the external pager you would like to use.
 
 Using an external pager may have some disadvantages: Additional keystrokes are necessary because you can't call NeoMutt functions directly from the pager, and screen resizes cause lines longer than the screen width to be badly formatted in the help menu.
@@ -126,10 +126,10 @@ Using an external pager may have some disadvantages: Additional keystrokes are n
     set pager_context = 0
     ```
 
-This option controls the number of lines of context that are given when displaying the next or previous page in the internal pager.
+Control the number of lines of context given when displaying the next or previous page in the internal pager.
 By default, NeoMutt will display the line after the last one on the screen at the top of the next page (0 lines of context).
 
-This option also specifies the amount of context given for search results.
+Also specify the amount of context given for search results.
 If positive, this many lines will be given before a match, if 0, the match will be top-aligned.
 
 --------------------------------------------------------------------------------

@@ -17,7 +17,7 @@ keywords: neomutt, hooks, default_hook, save_name, force_name, fcc-hook, send-ho
     set default_hook = "~f %s !~P | (~P ~C %s)"
     ```
 
-This option controls how some hooks are interpreted if their pattern is a plain string or a regex. i.e. they don't contain a pattern, like `~f`
+Control how some hooks are interpreted if their pattern is a plain string or a regex, i.e. they don't contain a pattern like `~f`.
 
 | Affected Hooks                                |
 |-----------------------------------------------|
@@ -46,7 +46,7 @@ The default value matches if the message is either from a user matching the regu
     set force_name = no
     ```
 
-This option is similar to [`$save_name`](cfg-save-name), except that NeoMutt will store a copy of your outgoing message by the username of the address you are sending to even if that mailbox does not exist.
+Similar to [`$save_name`](cfg-save-name), except that NeoMutt will store a copy of your outgoing message by the username of the address you are sending to even if that mailbox does not exist.
 
 :::{seealso}
 [`$record`](cfg-record)
@@ -64,7 +64,7 @@ This option is similar to [`$save_name`](cfg-save-name), except that NeoMutt wil
     set save_name = no
     ```
 
-This option controls how copies of outgoing messages are saved.
+Control how copies of outgoing messages are saved.
 When _set_, a check is made to see if a mailbox specified by the recipient address exists (this is done by searching for a mailbox in the [`$folder`](cfg-folder) directory with the _username_ part of the recipient address).  
 If the mailbox exists, the outgoing message will be saved to that mailbox, otherwise the message is saved to the [`$record`](cfg-record) mailbox.
 

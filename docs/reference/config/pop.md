@@ -57,7 +57,7 @@ If a method is available but authentication fails, NeoMutt will not connect to t
     set pop_check_interval = 60
     ```
 
-This option configures how often (in seconds) NeoMutt should look for new mail in the currently selected mailbox if it is a POP mailbox.
+Configure how often (in seconds) NeoMutt looks for new mail in the currently selected mailbox if it is a POP mailbox.
 
 --------------------------------------------------------------------------------
 
@@ -178,5 +178,5 @@ Controls whether or not NeoMutt will try to reconnect to the POP server if the c
 
 Your login name on the POP server.
 
-This option defaults to your user name on the local machine.
+Defaults to your user name on the local machine.
 

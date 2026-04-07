@@ -20,7 +20,7 @@ keywords: address, idn, international domain name, idn_decode, idn_encode, encod
 
 When _set_, NeoMutt will show you international domain names decoded.
 
-This option only affects decoding.
+Only affects decoding.
 
 :::{note}
 You can use IDNs for addresses even if this is _unset_.

@@ -37,7 +37,7 @@ Currently supported output lines are `login`, `username`, and `password`.
     set certificate_file = "~/.mutt_certificates"
     ```
 
-This option specifies the file where the certificates you trust are saved.
+Specify the file where trusted certificates are saved.
 When an unknown certificate is encountered, you are asked if you accept it or not.
 If you accept it, the certificate can also be saved in this file and further connections are automatically accepted.
 
@@ -116,7 +116,7 @@ A negative value causes NeoMutt to wait indefinitely.
     set ssl_ca_certificates_file = ""
     ```
 
-This option specifies a file containing trusted CA certificates.
+Specify a file containing trusted CA certificates.
 Any server certificate that is signed with one of these CA certificates is also automatically accepted.
 
 Example:
@@ -172,7 +172,7 @@ The file containing a client certificate and its associated private key.
 
 If this option is _set_, NeoMutt will require that all connections to remote servers be encrypted.
 Furthermore it will attempt to negotiate TLS even if the server does not advertise the capability, since it would otherwise have to abort the connection anyway.
-This option supersedes [`$ssl_starttls`](cfg-ssl-starttls).
+Supersedes [`$ssl_starttls`](cfg-ssl-starttls).
 
 --------------------------------------------------------------------------------
 
@@ -188,7 +188,7 @@ This option supersedes [`$ssl_starttls`](cfg-ssl-starttls).
     set ssl_min_dh_prime_bits = 0
     ```
 
-This option specifies the minimum acceptable prime size (in bits)
+Specify the minimum acceptable prime size (in bits)
 for use in any Diffie-Hellman key exchange.
 A value of 0 will use the default from the GNUTLS library.
 
@@ -298,7 +298,7 @@ You should only unset this for particular known hosts, using the [`:account-hook
     set ssl_verify_partial_chains = no
     ```
 
-This option should not be changed from the default unless you understand what you are doing.
+Do not change from the default unless you understand what you are doing.
 
 Setting this option to _yes_ will permit verifying partial certification chains, i.e. a certificate chain where not the root, but an intermediate certificate CA, or the host certificate, are marked trusted (in [`$certificate_file`](cfg-certificate-file)), without marking the root signing CA as trusted.
 

@@ -178,7 +178,7 @@ If your connection seems to freeze up periodically, try unsetting this.
     set imap_keep_alive = 300
     ```
 
-This option specifies the maximum amount of time in seconds that NeoMutt will wait before polling open IMAP connections, to prevent the server from closing them before NeoMutt has finished with them.
+Specify the maximum time in seconds NeoMutt waits before polling open IMAP connections, to prevent the server from closing them before NeoMutt has finished with them.
 The default is well within the RFC-specified minimum amount of time (30 minutes) before a server is allowed to do this, but in practice the RFC does get violated every now and then.
 Reduce this number if you find yourself getting disconnected from your IMAP server due to inactivity.
 
@@ -194,7 +194,7 @@ Reduce this number if you find yourself getting disconnected from your IMAP serv
     set imap_list_subscribed = no
     ```
 
-This option configures whether IMAP folder browsing will look for only subscribed folders or all folders.
+Configure whether IMAP folder browsing shows only subscribed folders or all folders.
 This can be toggled in the IMAP browser with the [`<toggle-subscribed>`](ref-fn-browser) function.
 
 --------------------------------------------------------------------------------
@@ -212,7 +212,7 @@ This can be toggled in the IMAP browser with the [`<toggle-subscribed>`](ref-fn-
 
 Your login name on the IMAP server.
 
-This option defaults to the value of [`$imap_user`](cfg-imap-user).
+Defaults to the value of [`$imap_user`](cfg-imap-user).
 
 --------------------------------------------------------------------------------
 
@@ -285,7 +285,7 @@ This is useful if you don't want to be prompted for user/password pairs on NeoMu
 
 When _set_, NeoMutt will avoid implicitly marking your mail as read whenever you fetch a message from the server.
 This is generally a good thing, but can make closing an IMAP folder somewhat slower.
-This option exists to appease speed freaks.
+Exists to appease speed freaks.
 
 --------------------------------------------------------------------------------
 
@@ -321,7 +321,7 @@ Changes to this option have no effect on open connections.
     set imap_poll_timeout = 15
     ```
 
-This option specifies the maximum amount of time in seconds that NeoMutt will wait for a response when polling IMAP connections for new mail, before timing out and closing the connection.
+Specify the maximum time in seconds NeoMutt waits for a response when polling IMAP connections for new mail, before timing out and closing the connection.
 Set to 0 to disable timing out.
 
 --------------------------------------------------------------------------------
@@ -410,5 +410,5 @@ Since these messages are often harmless, or generated due to configuration probl
 
 The name of the user whose mail you intend to access on the IMAP server.
 
-This option defaults to your user name on the local machine.
+Defaults to your user name on the local machine.
 

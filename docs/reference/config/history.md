@@ -18,7 +18,7 @@ keywords: neomutt, history, history_file, history_format, history_remove_dups, s
     set history = 10
     ```
 
-This option controls the size (in number of strings remembered) of the string history buffer per category.
+Control the size (in number of strings remembered) of the string history buffer per category.
 The buffer is cleared each time the option is set.
 
 :::{note}
@@ -111,7 +111,7 @@ Duplicate entries in the [`$history_file`](cfg-history-file) will also be remove
     set save_history = 0
     ```
 
-This option controls the size of the history (per category) saved in the [`$history_file`](cfg-history-file) file.
+Control the size of the history (per category) saved in the [`$history_file`](cfg-history-file) file.
 
 Setting this to a value greater than [`$history`](cfg-history) is possible.
 However, there will never be more than [`$history`](cfg-history) entries to select from even if more are recorded in the history file.

@@ -88,7 +88,7 @@ By default it is shown below it.
     set compose_preview_min_rows = 5
     ```
 
-This option specifies the minimum number of rows that have to be available for the message preview window to shown.
+Specify the minimum number of rows that must be available for the message preview window to be shown.
 
 --------------------------------------------------------------------------------
 
@@ -130,7 +130,7 @@ When _set_, NeoMutt will display user-defined headers (set via [`:my-header`](cm
     set copy = yes
     ```
 
-This option controls whether or not copies of your outgoing messages will be saved for later references.
+Control whether copies of your outgoing messages are saved for later reference.
 
 :::{seealso}
 [`$record`](cfg-record), [`$save_name`](cfg-save-name), [`$force_name`](cfg-force-name) and [`:fcc-hook`](cmd-fcc-hook)
@@ -148,7 +148,7 @@ This option controls whether or not copies of your outgoing messages will be sav
     set edit_headers = no
     ```
 
-This option allows you to edit the header of your outgoing messages along with the body of your message.
+Allow editing the header of your outgoing messages along with the body of your message.
 
 Although the compose menu may have localized header labels, the labels passed to your editor will be standard [RFC2822](https://www.rfc-editor.org/rfc/rfc2822.html) headers, (e.g. `To:`, `Cc:`, `Subject:`).
 Headers added in your editor must also be [RFC2822](https://www.rfc-editor.org/rfc/rfc2822.html) headers, or one of the pseudo headers listed in "$edit-header".

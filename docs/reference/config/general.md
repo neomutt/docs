@@ -82,7 +82,7 @@ If _set_, NeoMutt will use plain ASCII characters when displaying thread and att
     set assumed_charset = ""
     ```
 
-This option is a colon-separated list of character encoding schemes for messages without character encoding indication.
+A colon-separated list of character encoding schemes for messages without character encoding indication.
 Header field values and message body content without character encoding indication would be assumed that they are written in one of this list.
 By default, all the header fields and message body without any charset indication are assumed to be in "us-ascii".
 
@@ -243,7 +243,7 @@ TERM=xterm-direct neomutt
 ```
 
 :::{note}
-This option must be set before using any `color` commands.
+Must be set before using any `color` commands.
 :::
 
 --------------------------------------------------------------------------------
@@ -324,7 +324,7 @@ Controls whether NeoMutt will weed headers when invoking the [`<decode-copy>`](r
 Instead of using [`$date_format`](cfg-date-format) it is encouraged to use "%[fmt]" directly in the corresponding format strings, where "fmt" is the value of [`$date_format`](cfg-date-format).
 This allows for a more fine grained control of the different menu needs.
 
-This option controls the format of the date printed by the `%d` sequence in [`$index_format`](cfg-index-format).
+Control the format of the date printed by the `%d` sequence in [`$index_format`](cfg-index-format).
 This is passed to the [`strftime(3)`](exp-strftime) function to process the date.
 
 Unless the first character in the string is a bang (`!`), the month and week day names are expanded according to the locale.
@@ -355,7 +355,7 @@ NeoMutt will add `0` to the end.
 Each time NeoMutt is run with logging enabled, the log files are rotated.
 A maximum of five log files are kept, numbered 0 (most recent) to 4 (oldest).
 
-This option can be enabled on the command line,
+Can also be enabled on the command line,
 ```sh
 neomutt -l mylog
 ```
@@ -387,7 +387,7 @@ Levels 4,5 will be extremely verbose.
 Logging at high levels may save private information to the file.
 :::
 
-This option can be enabled on the command line,
+Can also be enabled on the command line,
 ```sh
 neomutt -d 2
 ```
@@ -458,7 +458,7 @@ If this option is _set_, NeoMutt will enable the **Security** development featur
     set editor = ""
     ```
 
-This option specifies which editor is used by NeoMutt.
+Specify which editor NeoMutt uses.
 It defaults to the value of the [`$VISUAL`](ref-env), or [`$EDITOR`](ref-env), environment variable, or to the string `vi` if neither of those are set.
 
 The [`$editor`](cfg-editor) string may contain a _%s_ escape, which will be replaced by the name of the file to be edited.
@@ -519,7 +519,7 @@ If you change this option value you need to make sure that the assignment occurs
 
 Controls the decoding of complex MIME messages into `text/plain` when forwarding a message.
 The message header is also [RFC2047](https://www.rfc-editor.org/rfc/rfc2047.html) decoded.
-This option is only used, if [`$mime_forward`](cfg-mime-forward) is _unset_, otherwise [`$mime_forward_decode`](cfg-mime-forward-decode) is used instead.
+Only used if [`$mime_forward`](cfg-mime-forward) is _unset_, otherwise [`$mime_forward_decode`](cfg-mime-forward-decode) is used instead.
 
 --------------------------------------------------------------------------------
 
@@ -553,7 +553,7 @@ When _set_, forwarded messages included in the main body of the message (when [`
 
 When _set_, this option contains a default "from" address.
 It can be overridden using [`:my-header`](cmd-my-header) (including from a [`:send-hook`](cmd-send-hook)) and [`$reverse_name`](cfg-reverse-name).
-This option is ignored if [`$use_from`](cfg-use-from) is _unset_.
+Ignored if [`$use_from`](cfg-use-from) is _unset_.
 
 If not specified, then it may be read from the environment variable [`$EMAIL`](ref-env).
 
@@ -704,7 +704,7 @@ If unset a UTC date will be used instead to avoid leaking information about your
     set mail_check = 5
     ```
 
-This option configures how often (in seconds) NeoMutt should look for new mail.
+Configure how often (in seconds) NeoMutt looks for new mail.
 
 :::{seealso}
 [`$timeout`](cfg-timeout)
@@ -1090,10 +1090,10 @@ Match detection may be overridden by the [`$smileys`](cfg-smileys) regular expre
     set real_name = ""
     ```
 
-This option specifies what "real" or "personal" name should be used when sending messages.
+Specify what "real" or "personal" name to use when sending messages.
 
 If not specified, then the user's "real name" will be read from `/etc/passwd`.
-This option will not be used, if [`$from`](cfg-from) is set.
+Not used if [`$from`](cfg-from) is set.
 
 --------------------------------------------------------------------------------
 
@@ -1149,7 +1149,7 @@ If _set_, draft files previously edited (via `-E -H` on the command line) will h
 The first time a draft file is saved, NeoMutt will add a header, `X-Mutt-Resume-Draft` to the saved file.
 The next time the draft file is read in, if NeoMutt sees the header, it will set [`$resume_draft_files`](cfg-resume-draft-files).
 
-This option is designed to prevent multiple signatures, user-defined headers, and other processing effects from being made multiple times to the draft file.
+Prevent multiple signatures, user-defined headers, and other processing effects from being applied multiple times to the draft file.
 
 --------------------------------------------------------------------------------
 
@@ -1350,7 +1350,7 @@ When [`$use_threads`](cfg-use-threads) is "threads" or "reverse", [`$sort`](cfg-
 
 The values of "threads" and "reverse-threads" are legacy options, which cause the value of [`$sort_aux`](cfg-sort-aux) to also control sorting between threads, and they may not be used with the "last-" prefix.
 The preferred way to enable a threaded view is via [`$use_threads`](cfg-use-threads).  
-This option can also be set via the [`<sort-mailbox>`](ref-fn-index) and [`<sort-reverse>`](ref-fn-browser) functions.
+Can also be set via the [`<sort-mailbox>`](ref-fn-index) and [`<sort-reverse>`](ref-fn-browser) functions.
 
 :::{note}
 When [`$use_threads`](cfg-use-threads) is "threads", the last thread sorts to the bottom; when it is "reversed", the last thread sorts to the top.
@@ -1477,7 +1477,7 @@ Postponed messages, resent messages, and draft messages (via `-H` on the command
     set timeout = 600
     ```
 
-This option sets the time interval in seconds in which [`:timeout-hook`](cmd-timeout-hook) commands get executed while waiting for user input either idling in menus or in an interactive prompt.
+Set the time interval in seconds at which [`:timeout-hook`](cmd-timeout-hook) commands are executed while waiting for user input, either idling in menus or in an interactive prompt.
 
 A value of zero disables timeout hooks.
 
@@ -1494,7 +1494,7 @@ A value of zero disables timeout hooks.
     set tmp_dir = "/tmp"
     ```
 
-This option allows you to specify where NeoMutt will place its temporary files needed for displaying messages.
+Specify where NeoMutt places its temporary files needed for displaying messages.
 
 If this option is not set, the environment variable [`$TMPDIR`](ref-env) is used.
 Failing that, then `/tmp` is used.
@@ -1512,7 +1512,7 @@ Failing that, then `/tmp` is used.
     set tmp_draft_dir = "/var/tmp"
     ```
 
-This option allows you to specify where NeoMutt will place its temporary files when composing messages.
+Specify where NeoMutt places its temporary files when composing messages.
 
 If this option is not set, the environment variable [`$TMPDIR`](ref-env) is used.
 Failing that, then `/var/tmp` is used.

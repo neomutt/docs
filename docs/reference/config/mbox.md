@@ -19,7 +19,7 @@ keywords: neomutt, mbox, mmdf, check_mbox_size, new mail detection, file size, m
 
 When this option is _set_, NeoMutt will use file size attribute instead of access time when checking for new mail in mbox and mmdf folders.
 
-This option is _unset_ by default and should only be enabled when new mail detection for these folder types is unreliable or doesn't work.
+Unset by default and should only be enabled when new mail detection for these folder types is unreliable or doesn't work.
 
 :::{note}
 Enabling this option should happen before any [`:mailboxes`](cmd-mailboxes) directives occur in configuration files regarding mbox or mmdf folders because NeoMutt needs to determine the initial new mail status of such a mailbox by performing a fast mailbox scan when it is defined.

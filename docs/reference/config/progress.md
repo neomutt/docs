@@ -40,7 +40,7 @@ If set to 0, no progress messages will be displayed.
 
 If set to a value greater than 0, NeoMutt will display which message it is currently on when reading a mailbox or when performing search actions such as search and limit.
 The message is printed after this many messages have been read or searched (e.g., if set to 25, NeoMutt will print a message when it is at message 25, and then again when it gets to message 50).
-This option is meant to indicate progress when reading or searching large mailboxes which may take some time.
+Indicate progress when reading or searching large mailboxes which may take some time.
 When set to 0, only a single message will appear before the reading the mailbox.
 
 :::{seealso}

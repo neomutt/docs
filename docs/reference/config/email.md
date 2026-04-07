@@ -55,7 +55,7 @@ NeoMutt will render all MIME parts it can properly transform to plain text.
     set hidden_tags = "unread,draft,flagged,passed,replied,attachment,signed,encrypted"
     ```
 
-This option specifies a list of comma-separated private notmuch/imap tags which should not be printed on screen.
+Specify a list of comma-separated private notmuch/imap tags which should not be printed on screen.
 
 --------------------------------------------------------------------------------
 
@@ -86,7 +86,7 @@ If such an entry is found, NeoMutt will use the viewer defined in that entry to 
 
 Controls whether or not NeoMutt includes separately encrypted attachment contents when replying.
 
-This option was added to prevent accidental exposure of encrypted contents when replying to an attacker.
+Prevent accidental exposure of encrypted contents when replying to an attacker.
 If a previously encrypted message were attached by the attacker, they could trick an unwary recipient into decrypting and including the message in their reply.
 
 --------------------------------------------------------------------------------
@@ -116,7 +116,7 @@ Controls whether or not NeoMutt includes only the first attachment of the messag
     set mailcap_path = "~/.mailcap:/usr/share/neomutt/mailcap:/etc/mailcap:/usr/etc/mailcap:/usr/local/etc/mailcap"
     ```
 
-This option specifies a list files to consult when attempting to display MIME bodies not directly supported by NeoMutt.
+Specify a list of files to consult when attempting to display MIME bodies not directly supported by NeoMutt.
 The default value is generated during startup: see the "$mailcap" section of the manual.
 
 It is overridden by the environment variable [`$MAILCAPS`](ref-env).
@@ -155,7 +155,7 @@ Don't change this setting unless you are really sure what you are doing!
     set preferred_languages = ""
     ```
 
-This option specifies a list of comma-separated languages.
+Specify a list of comma-separated languages.
 [RFC8255](https://www.rfc-editor.org/rfc/rfc8255.html) : user preferred languages to be searched in parts and display.
 
 Example:
@@ -175,7 +175,7 @@ set preferred_languages = "en,fr,de"
     set reflow_space_quotes = yes
     ```
 
-This option controls how quotes from format=flowed messages are displayed in the pager and when replying (with [`$text_flowed`](cfg-text-flowed) _unset_).
+Control how quotes from format=flowed messages are displayed in the pager and when replying (with [`$text_flowed`](cfg-text-flowed) _unset_).
 When set, this option adds spaces after each level of quote marks, turning ">>>foo" into "> > > foo".
 
 :::{note}
@@ -215,7 +215,7 @@ See [RFC3676](https://www.rfc-editor.org/rfc/rfc3676.html) for details on the _f
     set reflow_wrap = 78
     ```
 
-This option controls the maximum paragraph width when reformatting text/plain parts when [`$reflow_text`](cfg-reflow-text) is _set_.
+Control the maximum paragraph width when reformatting text/plain parts when [`$reflow_text`](cfg-reflow-text) is _set_.
 When the value is 0, paragraphs will be wrapped at the terminal's right margin.
 A positive value sets the paragraph width relative to the left margin.
 A negative value set the paragraph width relative to the right margin.
@@ -275,7 +275,7 @@ If that fixes the problem, then once the option is set to your liking, remove yo
     set reverse_alias = no
     ```
 
-This option controls whether or not NeoMutt will display the "personal" name from your aliases in the index menu if it finds an alias that matches the message's sender.
+Control whether NeoMutt displays the "personal" name from your aliases in the index menu if it finds an alias that matches the message's sender.
 For example, if you have the following alias:
 
 ```neomuttrc
@@ -412,6 +412,6 @@ Since NeoMutt scores are always greater than or equal to zero, the default setti
     set spam_separator = ","
     ```
 
-This option controls what happens when multiple spam headers are matched: if _unset_, each successive header will overwrite any previous matches value for the spam label.
+Control what happens when multiple spam headers are matched: if _unset_, each successive header will overwrite any previous matches value for the spam label.
 If _set_, each successive match will append to the previous, using this option's value as a separator.
 

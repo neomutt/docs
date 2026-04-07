@@ -48,7 +48,7 @@ Specifies the string of [`$arrow_cursor`](cfg-arrow-cursor) when it's enabled.
     set menu_context = 0
     ```
 
-This option controls the number of lines of context that are given when scrolling through menus.
+Control the number of lines of context given when scrolling through menus.
 (Similar to [`$pager_context`](cfg-pager-context).)
 
 --------------------------------------------------------------------------------

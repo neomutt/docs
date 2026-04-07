@@ -17,7 +17,7 @@ keywords: neomutt, header cache, hcache, header_cache, header_cache_backend, com
     set header_cache = ""
     ```
 
-This option points to the header cache database.
+Point to the header cache database.
 If the path points to an existing directory, NeoMutt will create a dedicated header cache database per folder.
 Otherwise, the path points to a regular file, which will be created as needed and used as a shared global header cache for all folders.
 By default it is _unset_ so no header caching will be used.
@@ -37,7 +37,7 @@ Header caching can greatly improve speed when opening POP, IMAP MH or Maildir fo
     set header_cache_backend = "lmdb"
     ```
 
-This option specifies the header cache backend.
+Specify the header cache backend.
 If no backend is specified, the first available backend will be used in the following order:
 
 | Backend      | Notes                          |

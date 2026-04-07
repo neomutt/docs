@@ -205,7 +205,7 @@ If you are using colors to mark these lines, and rely on these, you may _unset_ 
     set crypt_use_gpgme = yes
     ```
 
-This option controls the use of the GPGME-enabled crypto backends.
+Control the use of the GPGME-enabled crypto backends.
 If it is _set_ and NeoMutt was built with GPGME support, the gpgme code for S/MIME and PGP will be used instead of the classic code.
 
 :::{note}
@@ -296,7 +296,7 @@ For example, if the user displays a pgp-traditional message which has not been m
     set pgp_auto_inline = no
     ```
 
-This option controls whether NeoMutt generates old-style inline (traditional) PGP encrypted or signed messages under certain circumstances.
+Control whether NeoMutt generates old-style inline (traditional) PGP encrypted or signed messages under certain circumstances.
 This can be overridden by use of the pgp menu, when inline is not required.
 The GPGME backend does not support this option.
 
@@ -766,7 +766,7 @@ If _set_, use 64-bit PGP key IDs, if _unset_ use the normal 32-bit key IDs.
 
 :::{note}
 Internally, NeoMutt has transitioned to using fingerprints (or long key IDs as a fallback).
-This option now only controls the display of key IDs in the key selection menu and a few other places.
+Now only controls the display of key IDs in the key selection menu and a few other places.
 :::
 
 --------------------------------------------------------------------------------
@@ -782,7 +782,7 @@ This option now only controls the display of key IDs in the key selection menu a
     set pgp_mime_auto = ask-yes
     ```
 
-This option controls whether NeoMutt will prompt you for automatically sending a (signed/encrypted) message using PGP/MIME when inline (traditional) fails (for any reason).
+Control whether NeoMutt prompts to automatically send a (signed/encrypted) message using PGP/MIME when inline (traditional) fails (for any reason).
 
 :::{warning}
 Using the old-style PGP message format is **strongly** **deprecated**
@@ -1004,7 +1004,7 @@ It is _set_ by default.
     set smime_ca_location = ""
     ```
 
-This option contains the name of either a directory, or a file which contains trusted certificates for use with OpenSSL.
+Specify either a directory or a file containing trusted certificates for use with OpenSSL.
 
 --------------------------------------------------------------------------------
 
@@ -1023,7 +1023,7 @@ This option contains the name of either a directory, or a file which contains tr
 Since for S/MIME there is no pubring/secring as with PGP, NeoMutt has to handle storage and retrieval of keys by itself.
 This is very basic right now, and keys and certificates are stored in two different directories, both named as the hash-value retrieved from OpenSSL.
 There is an index file which contains mailbox-address keyid pairs, and which can be manually edited.
-This option points to the location of the certificates.
+Point to the location of the certificates.
 
 --------------------------------------------------------------------------------
 
@@ -1250,7 +1250,7 @@ To override and to use OpenSSL instead this must be _set_.
 However, this has no effect while replying, since NeoMutt will automatically select the same application that was used to sign/encrypt the original message.
 
 :::{note}
-This option can be overridden by unsetting [`$crypt_auto_smime`](cfg-crypt-auto-smime)
+Can be overridden by unsetting [`$crypt_auto_smime`](cfg-crypt-auto-smime)
 :::
 
 --------------------------------------------------------------------------------
@@ -1270,7 +1270,7 @@ This option can be overridden by unsetting [`$crypt_auto_smime`](cfg-crypt-auto-
 Since for S/MIME there is no pubring/secring as with PGP, NeoMutt has to handle storage and retrieval of keys/certs by itself.
 This is very basic right now, and stores keys and certificates in two different directories, both named as the hash-value retrieved from OpenSSL.
 There is an index file which contains mailbox-address keyid pair, and which can be manually edited.
-This option points to the location of the private keys.
+Point to the location of the private keys.
 
 --------------------------------------------------------------------------------
 

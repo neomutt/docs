@@ -155,7 +155,7 @@ If set, NeoMutt will prompt you for `X-Comment-To:` field before editing the bod
     set attach_charset = ""
     ```
 
-This option is a colon-separated list of character encoding schemes for text file attachments.
+A colon-separated list of character encoding schemes for text file attachments.
 NeoMutt uses this setting to guess which encoding files being attached are encoded in to convert them to a proper character set given in [`$send_charset`](cfg-send-charset).
 
 If _unset_, the value of [`$charset`](cfg-charset) will be used instead.
@@ -210,7 +210,7 @@ This string will precede a replied-to message which is quoted in the main body o
 The locale used by [`strftime(3)`](exp-strftime) to format dates in the attribution strings.
 Valid values are the strings your system accepts for the locale environment variable [`$LC_TIME`](ref-env).
 
-This option is to allow the attribution date format to be customized by recipient or folder using hooks.
+Allow the attribution date format to be customized by recipient or folder using hooks.
 By default, NeoMutt will use your locale environment, so there is no need to set this except to override that default.
 
 
@@ -314,7 +314,7 @@ If [`$smime_is_default`](cfg-smime-is-default) is _set_, then OpenSSL is used in
     set crypt_auto_pgp = yes
     ```
 
-This option controls whether or not NeoMutt may automatically enable PGP encryption/signing for messages.
+Control whether NeoMutt may automatically enable PGP encryption/signing for messages.
 
 :::{seealso}
 [`$crypt_auto_encrypt`](cfg-crypt-auto-encrypt), [`$crypt_reply_encrypt`](cfg-crypt-reply-encrypt), [`$crypt_auto_sign`](cfg-crypt-auto-sign), [`$crypt_reply_sign`](cfg-crypt-reply-sign), attribution_locale [`$smime_is_default`](cfg-smime-is-default)
@@ -349,7 +349,7 @@ If [`$smime_is_default`](cfg-smime-is-default) is _set_, then OpenSSL is used in
     set crypt_auto_smime = yes
     ```
 
-This option controls whether or not NeoMutt may automatically enable S/MIME encryption/signing for messages.
+Control whether NeoMutt may automatically enable S/MIME encryption/signing for messages.
 
 :::{seealso}
 [`$crypt_auto_encrypt`](cfg-crypt-auto-encrypt), [`$crypt_reply_encrypt`](cfg-crypt-reply-encrypt), [`$crypt_auto_sign`](cfg-crypt-auto-sign), [`$crypt_reply_sign`](cfg-crypt-reply-sign), [`$smime_is_default`](cfg-smime-is-default)
@@ -418,7 +418,7 @@ This works around the problem noted in [`$crypt_reply_sign`](cfg-crypt-reply-sig
     set dsn_notify = ""
     ```
 
-This option sets the request for when notification is returned.
+Set the request for when notification is returned.
 The string consists of a comma separated list (no spaces!) of one or more of the following: _never_, to never request notification, _failure_, to request notification on transmission failure, _delay_, to be notified of message delays, _success_, to be notified of successful transmission.
 
 Example:
@@ -443,7 +443,7 @@ For SMTP delivery, DSN support is auto-detected so that it depends on the server
     set dsn_return = ""
     ```
 
-This option controls how much of your message is returned in DSN messages.
+Control how much of your message is returned in DSN messages.
 It may be set to either _hdrs_ to return just the message header, or _full_ to return the full message.
 
 Example:
@@ -468,7 +468,7 @@ For SMTP delivery, DSN support is auto-detected so that it depends on the server
     set empty_subject = "Re: your mail"
     ```
 
-This option specifies the subject to be used when replying to an email with an empty `Subject:`.
+Specify the subject to use when replying to an email with an empty `Subject:`.
 It defaults to "Re: your mail".
 
 --------------------------------------------------------------------------------
@@ -522,7 +522,7 @@ this option has no effect when the [`$auto_edit`](cfg-auto-edit) option is _set_
     set fcc_attach = yes
     ```
 
-This option controls whether or not attachments on outgoing messages are saved along with the main body of your message.
+Control whether attachments on outgoing messages are saved along with the main body of your message.
 
 :::{note}
 [`$fcc_before_send`](cfg-fcc-before-send) forces the default (set) behavior of this option.
@@ -668,7 +668,7 @@ This is the string that will follow a message which has been forwarded in the ma
 
 Controls the handling of encrypted messages when forwarding a message.
 When _set_, the outer layer of encryption is stripped off.
-This option is only used if [`$mime_forward`](cfg-mime-forward) is _set_ and [`$mime_forward_decode`](cfg-mime-forward-decode) is _unset_.
+Only used if [`$mime_forward`](cfg-mime-forward) is _set_ and [`$mime_forward_decode`](cfg-mime-forward-decode) is _unset_.
 
 --------------------------------------------------------------------------------
 
@@ -702,7 +702,7 @@ For those who always want to forward with no modification, use a setting of "no"
     set forward_format = "[%{from}: %{subject}]"
     ```
 
-This option controls the default subject when forwarding a message.
+Control the default subject when forwarding a message.
 
 :::{seealso}
 - {doc}`/howto/email-template`
@@ -767,7 +767,7 @@ This string is added to the top of every outgoing message.
     ```
 
 When _unset_, the header fields normally added by the [`:my-header`](cmd-my-header) command are not created.
-This option _must_ be unset before composing a new message or replying in order to take effect.
+_Must_ be unset before composing a new message or replying in order to take effect.
 If _set_, the user defined header fields are added to every new message.
 
 --------------------------------------------------------------------------------
@@ -796,7 +796,7 @@ When _set_, NeoMutt will skip the host name part of [`$hostname`](cfg-hostname) 
     set honor_followup_to = yes
     ```
 
-This option controls whether or not a `Mail-Followup-To:` header is honored when group-replying to a message.
+Control whether a `Mail-Followup-To:` header is honored when group-replying to a message.
 
 --------------------------------------------------------------------------------
 
@@ -998,7 +998,7 @@ When _set_, the [`$mime_type_query_command`](cfg-mime-type-query-command) will b
     set nm_record = no
     ```
 
-This option specifies whether, when writing a just-sent message to the [`$record`](cfg-record), the message should also be added to the notmuch DB.
+Specify whether, when writing a just-sent message to the [`$record`](cfg-record), the message should also be added to the notmuch DB.
 Replies inherit the notmuch tags from the original message.
 
 :::{seealso}
@@ -1020,7 +1020,7 @@ Replies inherit the notmuch tags from the original message.
 
 Setting this option will cause NeoMutt to always attempt to create an inline (traditional) message when replying to a message which is PGP encrypted/signed inline.
 This can be overridden by use of the pgp menu, when inline is not required.
-This option does not automatically detect if the (replied-to) message is inline; instead it relies on NeoMutt internals for previously checked/flagged messages.
+Does not automatically detect if the (replied-to) message is inline; instead it relies on NeoMutt internals for previously checked/flagged messages.
 
 :::{note}
 NeoMutt might automatically use PGP/MIME for messages which consist of more than a single MIME part.
@@ -1121,7 +1121,7 @@ If _unset_ and you are replying to a message sent by you, NeoMutt will assume th
 
 If _set_, when replying to a message, NeoMutt will use the address listed in the Reply-to: header as the recipient of the reply.
 If _unset_, it will use the address in the From: header field instead.
-This option is useful for reading a mailing list that sets the Reply-To:
+Useful for reading a mailing list that sets the Reply-To:
 header field to the list address and you want to send a private message to the author of a message.
 
 --------------------------------------------------------------------------------
@@ -1136,7 +1136,7 @@ header field to the list address and you want to send a private message to the a
     set reply_with_xorig = no
     ```
 
-This option provides a toggle.
+Provide a toggle.
 When active, the From: header will be extracted from the current mail's 'X-Original-To:' header.
 This setting does not have precedence over [`$reverse_real_name`](cfg-reverse-real-name).
 
@@ -1189,7 +1189,7 @@ If the option is _unset_, or the address that would be used doesn't match your [
     set reverse_real_name = yes
     ```
 
-This option fine-tunes the behavior of the [`$reverse_name`](cfg-reverse-name) feature.
+Fine-tune the behavior of the [`$reverse_name`](cfg-reverse-name) feature.
 
 When it is _unset_, NeoMutt will remove the real name part of a matching address.
 This allows the use of the email address without having to also use what the sender put in the real name field.
@@ -1422,7 +1422,7 @@ Setting this option overrides the value of the [`$sendmail`](cfg-sendmail) optio
 
 The username for the SMTP server.
 
-This option defaults to your user name on the local machine.
+Defaults to your user name on the local machine.
 --------------------------------------------------------------------------------
 
 (cfg-user-agent)=
@@ -1503,11 +1503,11 @@ If _unset_, no `From:` header field will be generated unless the user explicitly
     set wrap_headers = 78
     ```
 
-This option specifies the number of characters to use for wrapping an outgoing message's headers.
+Specify the number of characters to use for wrapping an outgoing message's headers.
 Allowed values are between 78 and 998 inclusive.
 
 :::{warning}
-This option usually shouldn't be changed.
+Usually shouldn't be changed.
 [RFC5233](https://www.rfc-editor.org/rfc/rfc5233.html) recommends a line length of 78 (the default), so **please only change this setting when you know what you're doing**.
 :::
 
@@ -1529,7 +1529,7 @@ Some MTAs, such as Exim and Courier, do not strip the `Bcc:` header; so it is ad
 If NeoMutt is set to deliver directly via SMTP(see [`$smtp_url`](cfg-smtp-url)), this option does nothing: NeoMutt will never write out the `Bcc:` header in this case.
 
 :::{note}
-This option only affects the sending of messages.
+Only affects the sending of messages.
 Fcc'ed copies of a message will always contain the `Bcc:` header if one exists.
 :::
 
