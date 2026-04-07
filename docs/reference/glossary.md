@@ -31,7 +31,7 @@ It is written for people who are new to NeoMutt or to email technology in genera
 
 **Alias File**
 :  The file where NeoMutt saves your aliases.
-   Set with `$alias_file`.
+   Set with [`$alias_file`](cfg-alias-file).
 
 **Alternates**
 :  A list of your own email addresses.
@@ -47,7 +47,7 @@ It is written for people who are new to NeoMutt or to email technology in genera
 
 **Auto-view**
 :  A feature that tells NeoMutt to automatically convert certain attachment types (for example HTML) into plain text so you can read them directly in the pager.
-   Controlled by the `auto_view` command and the *mailcap* file.
+   Controlled by the [`:auto-view`](cmd-auto-view) command and the *mailcap* file.
 
 ---
 
@@ -97,7 +97,7 @@ It is written for people who are new to NeoMutt or to email technology in genera
 
 **Compose Menu**
 :  The screen you see when you are writing a new message (or a reply or a forward).
-   From here you can edit the To, CC, BCC and Subject fields, add or remove attachments, choose encryption, and send or postpone the message.
+   From here you can edit the `To:`, `Cc:`, `Bcc:` and `Subject:` fields, add or remove attachments, choose encryption, and send or postpone the message.
 
 **Config File (neomuttrc)**
 :  A text file that contains your personal NeoMutt settings — colours, key bindings, account details, and so on.
@@ -134,7 +134,7 @@ It is written for people who are new to NeoMutt or to email technology in genera
 
 **Editor**
 :  The external text-editing program (for example `vim`, `nano`, or `emacs`) that NeoMutt opens when you compose a message.
-   Set with the `$editor` variable.
+   Set with the [`$editor`](cfg-editor) variable.
 
 **Envelope**
 :  The set of header fields that describe a message — From, To, Subject, Date, CC, BCC, and others.
@@ -143,7 +143,7 @@ It is written for people who are new to NeoMutt or to email technology in genera
 **Expando (Format String)**
 :  A short code starting with `%` that NeoMutt replaces with a piece of information.
    For example, `%s` might stand for the subject and `%f` for the sender.
-   Expandos are used in options such as `$index_format` and `$sidebar_format` to control what you see on screen.
+   Expandos are used in options such as [`$index_format`](cfg-index-format) and [`$sidebar_format`](cfg-sidebar-format) to control what you see on screen.
 
 **Expunge**
 :  Permanently removing messages that have been marked for deletion.
@@ -155,7 +155,7 @@ It is written for people who are new to NeoMutt or to email technology in genera
 
 **Fcc (File Carbon Copy)**
 :  A copy of a sent message saved to a local mailbox.
-   By default NeoMutt stores these in the folder set by `$record`.
+   By default NeoMutt stores these in the folder set by [`$record`](cfg-record).
 
 **Flag**
 :  A marker on a message that records its state.
@@ -168,14 +168,14 @@ It is written for people who are new to NeoMutt or to email technology in genera
 
 **Format=Flowed (f=f)**
 :  A special way of sending plain-text email that allows the receiver's mail program to re-wrap lines to fit their screen width.
-   Enabled with `$text_flowed`.
+   Enabled with [`$text_flowed`](cfg-text-flowed).
 
 **Forward**
 :  Sending a copy of a received message to someone else.
    Unlike *bouncing*, forwarding lets you add your own comments or modify the message.
 
 **Function**
-:  A named action that NeoMutt can perform — for example `<next-entry>`, `<delete-message>`, or `<sync-mailbox>`.
+:  A named action that NeoMutt can perform — for example [`<next-entry>`](ref-fn-index), [`<delete-message>`](ref-fn-index), or [`<sync-mailbox>`](ref-fn-index).
    Functions can be bound to keys or used inside macros.
 
 ---
@@ -189,7 +189,7 @@ It is written for people who are new to NeoMutt or to email technology in genera
 
 **GPGME (GnuPG Made Easy)**
 :  A helper library that makes it simpler for programs like NeoMutt to use GnuPG.
-   When `$crypt_use_gpgme` is set, NeoMutt uses GPGME for all encryption and signing operations.
+   When [`$crypt_use_gpgme`](cfg-crypt-use-gpgme) is set, NeoMutt uses GPGME for all encryption and signing operations.
 
 ---
 
@@ -229,7 +229,7 @@ It is written for people who are new to NeoMutt or to email technology in genera
 **Index**
 :  The main list of messages inside a mailbox.
    Each line shows information about one message (sender, subject, date, flags, and so on).
-   The layout is controlled by `$index_format`.
+   The layout is controlled by [`$index_format`](cfg-index-format).
 
 **In-Reply-To**
 :  A header field that contains the Message-ID of the message being replied to.
@@ -241,7 +241,7 @@ It is written for people who are new to NeoMutt or to email technology in genera
 
 **Key Binding**
 :  A mapping between a key (or key sequence) and a NeoMutt function.
-   Almost every key can be rebound to suit your workflow using the `bind` command.
+   Almost every key can be rebound to suit your workflow using the [`:bind`](cmd-bind) command.
 
 ---
 
@@ -262,7 +262,7 @@ It is written for people who are new to NeoMutt or to email technology in genera
 
 **Macro**
 :  A shortcut that runs a sequence of commands when you press a key.
-   Macros are defined with the `macro` command and are very useful for automating repetitive tasks.
+   Macros are defined with the [`:macro`](cmd-macro) command and are very useful for automating repetitive tasks.
 
 **Mailbox**
 :  A place where email messages are stored.
@@ -349,7 +349,7 @@ It is written for people who are new to NeoMutt or to email technology in genera
    - `~s vacation` — subject contains "vacation"
    - `~f alice` — from someone named "alice"
 
-   Patterns are used with the search command, the `limit` function,
+   Patterns are used with the search command, the [`<limit>`](ref-fn-index) function,
    hooks, colour rules, and more.
 
 **POP3 (Post Office Protocol)**
@@ -358,7 +358,7 @@ It is written for people who are new to NeoMutt or to email technology in genera
 
 **Postpone (Draft)**
 :  Saving an unfinished message so you can return to it later.
-   Postponed messages are stored in the mailbox set by `$postponed`.
+   Postponed messages are stored in the mailbox set by [`$postponed`](cfg-postponed).
    When you start a new message, NeoMutt will ask if you want to resume a postponed message.
 
 ---
@@ -367,21 +367,21 @@ It is written for people who are new to NeoMutt or to email technology in genera
 
 **Quoted Text**
 :  Lines in an email body that come from an earlier message in the conversation.
-   They are usually prefixed with `>`.
+   They are usually prefixed with `> `.
    NeoMutt can colour quoted text differently and let you skip past it when reading.
 
 **Query Command**
 :  An external program that NeoMutt calls to look up email addresses.
    For example, you might use an address-book tool so that when you type part of a name, NeoMutt can suggest matches.
-   Set with `$query_command`.
+   Set with [`$query_command`](cfg-query-command).
 
 ---
 
 ## R
 
 **References**
-:  A header field listing the Message-IDs of all earlier messages in a conversation.
-   Together with *In-Reply-To*, it lets NeoMutt build threads.
+:  A header field listing the `Message-ID:`s of all earlier messages in a conversation.
+   Together with `In-Reply-To:`, it lets NeoMutt build threads.
 
 **Regex (Regular Expression)**
 :  A text pattern used for searching and matching.
@@ -406,7 +406,7 @@ It is written for people who are new to NeoMutt or to email technology in genera
    See also *OpenPGP*.
 
 **SASL (Simple Authentication and Security Layer)**
-:  A framework that allows different authentication methods (LOGIN, PLAIN, CRAM-MD5, and others) to be used when connecting to IMAP, POP, or SMTP servers.
+:  A framework that allows different authentication methods (`LOGIN`, `PLAIN`, `CRAM-MD5`, and others) to be used when connecting to IMAP, POP, or SMTP servers.
 
 **Score**
 :  A number that NeoMutt assigns to each message based on rules you define.
@@ -420,16 +420,16 @@ It is written for people who are new to NeoMutt or to email technology in genera
 **Signature**
 :  A block of text automatically added to the end of every outgoing message.
    Typically it contains your name, title, or contact information.
-   Set with `$signature`.
+   Set with [`$signature`](cfg-signature).
 
 **SMTP (Simple Mail Transfer Protocol)**
 :  The protocol used to send outgoing email.
-   NeoMutt can send mail directly via an SMTP server (set with `$smtp_url`) or hand it off to a local program like `sendmail` or `msmtp`.
+   NeoMutt can send mail directly via an SMTP server (set with [`$smtp_url`](cfg-smtp-url)) or hand it off to a local program like `sendmail` or `msmtp`.
 
 **Sort Order**
 :  The rule that controls the order of messages in the index.
    Messages can be sorted by date, sender, subject, size, score, or by threads.
-   Set with `$sort`.
+   Set with [`$sort`](cfg-sort).
 
 **Source**
 :  A configuration command that reads and runs another config file.
@@ -441,7 +441,7 @@ It is written for people who are new to NeoMutt or to email technology in genera
 
 **Status Bar**
 :  The line at the bottom of the index (or top, depending on configuration) that shows information about the current mailbox — its name, the number of messages, your position in the list, and more.
-   Controlled by `$status_format`.
+   Controlled by [`$status_format`](cfg-status-format).
 
 **Sync**
 :  Writing your changes (deleted messages, flag changes, new mail) back to the mailbox file or remote server.
@@ -487,8 +487,8 @@ It is written for people who are new to NeoMutt or to email technology in genera
 
 **Weed (Weeding)**
 :  Filtering out header lines you do not want to see.
-   NeoMutt's `ignore` command hides headers, and `unignore` lets specific ones through.
-   For example, the default configuration hides most headers and only shows From, To, CC, Subject, and Date.
+   NeoMutt's [`:ignore`](cmd-ignore) command hides headers, and [`:unignore`](cmd-unignore) lets specific ones through.
+   For example, the default configuration hides most headers and only shows `From:`, `To:`, `Cc:`, `Subject:` and `Date:`.
 
 ---
 

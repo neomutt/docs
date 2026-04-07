@@ -154,7 +154,7 @@ color compose_security_both     brightgreen default
 | `sidebar_unread`     | Mailboxes with unread mail                                   |
 | `sidebar_flagged`    | Mailboxes with flagged messages                              |
 | `sidebar_ordinary`   | Mailboxes with no new/flagged messages                       |
-| `sidebar_spool_file` | The primary incoming mailbox [`$spool_file`](cfg-spool_file) |
+| `sidebar_spool_file` | The primary incoming mailbox [`$spool_file`](cfg-spool-file) |
 
 ```neomuttrc
 color sidebar_background  default       default

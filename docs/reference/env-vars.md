@@ -10,12 +10,9 @@ keywords: neomutt, environment, variables, env, setenv, unsetenv, XDG, EDITOR, V
 NeoMutt reads and uses a number of environment variables.
 Some are standard Unix variables; others are specific to NeoMutt or related tools.
 
-Environment variables can be referenced in NeoMutt configuration files using
-the `$NAME` syntax and will be expanded when parsing config tokens
-(see [Config-File Expansion](#config-file-expansion)).  The `ifdef` / `ifndef` commands can also
-test whether an environment variable is set.  Finally, the `setenv` and
-`unsetenv` commands allow you to modify the environment that is passed to
-child processes.
+Environment variables can be referenced in NeoMutt configuration files using the `$NAME` syntax and will be expanded when parsing config tokens (see [Config-File Expansion](#config-file-expansion)).
+The [`:ifdef`](cmd-ifdef) / [`:ifndef`](cmd-ifndef) commands can also test whether an environment variable is set.
+Finally, the [`:setenv`](cmd-setenv) and [`:unsetenv`](cmd-unsetenv) commands allow you to modify the environment that is passed to child processes.
 
 ---
 
@@ -28,7 +25,7 @@ child processes.
 Indicates the terminal's colour capability.
 When set to `truecolor` or `24bit` (case-sensitive) **and** ncurses reports
 2{sup}`24` colours, NeoMutt enables direct-colour support by setting the
-`$color_directcolor` config variable to `yes`.
+[`$color_directcolor`](cfg-color-directcolor) config variable to `yes`.
 
 :::{seealso}
 [Configuration], `$color_directcolor`
@@ -38,12 +35,10 @@ When set to `truecolor` or `24bit` (case-sensitive) **and** ncurses reports
 
 **Source:** `gui/resize.c`, `attach/mutt_attach.c`
 
-Fallback number of terminal columns used when the `TIOCGWINSZ` ioctl returns
-zero.  Defaults to **80** if unset or unparsable.
+Fallback number of terminal columns used when the `TIOCGWINSZ` ioctl returns zero.
+Defaults to **80** if unset or unparsable.
 
-NeoMutt also temporarily injects `COLUMNS` into its private environment list
-(`NeoMutt->env`) before invoking mailcap commands so that external programs
-can format their output to the available width.
+NeoMutt also temporarily injects `COLUMNS` into its private environment list (`NeoMutt->env`) before invoking mailcap commands so that external programs can format their output to the available width.
 
 :::{seealso}
 [LINES]
@@ -64,13 +59,10 @@ If neither `VISUAL` nor `EDITOR` is set, NeoMutt falls back to `vi`.
 
 **Source:** ncurses
 
-Specifies the time (in milliseconds) that ncurses waits after receiving an
-{kbd}`Escape` character to determine whether it is the beginning of a terminal
-escape sequence.  The default is **1000 ms**.
+Specifies the time (in milliseconds) that ncurses waits after receiving an {kbd}`Escape` character to determine whether it is the beginning of a terminal escape sequence.
+The default is **1000 ms**.
 
-Setting this to a low value (e.g. `25`) or `0` is recommended when
-[`$abort_key`](cfg-abort-key) is set to `<Esc>`, so that single
-{kbd}`Escape` presses are recognised immediately.
+Setting this to a low value (e.g. `25`) or `0` is recommended when [`$abort_key`](cfg-abort-key) is set to `<Esc>`, so that single {kbd}`Escape` presses are recognised immediately.
 
 ```sh
 export ESCDELAY=25
@@ -84,9 +76,8 @@ export ESCDELAY=25
 
 **Source:** `conn/openssl.c`
 
-Path to an Entropy Gathering Daemon (EGD) socket used by OpenSSL (≥ 0.9.5) to
-seed the random number generator.  Only used when NeoMutt is compiled with
-OpenSSL support and `HAVE_RAND_EGD` is defined.
+Path to an Entropy Gathering Daemon (EGD) socket used by OpenSSL (≥ 0.9.5) to seed the random number generator.
+Only used when NeoMutt is compiled with OpenSSL support and `HAVE_RAND_EGD` is defined.
 
 If unset, NeoMutt also checks `~/.entropy` and `/tmp/entropy`.
 
@@ -102,7 +93,7 @@ The user's email address.
 If set, it is used as the initial value for the `$from` config variable.
 
 :::{seealso}
-`$from`
+[`$from`](cfg-from)
 :::
 
 ### HOME
@@ -123,9 +114,8 @@ files, and constructing default paths.
 **Source:** `core/neomutt.c`
 
 Standard locale variable.
-Checked (together with `LC_ALL` and `LC_CTYPE`) to determine whether a
-locale definition exists.  If any of these is set, NeoMutt enables
-locale-aware string handling (`OptLocales`).
+Checked (together with `LC_ALL` and `LC_CTYPE`) to determine whether a locale definition exists.
+If any of these is set, NeoMutt enables locale-aware string handling (`OptLocales`).
 
 :::{seealso}
 [LC_ALL], [LC_CTYPE], `$charset`
@@ -149,8 +139,8 @@ See [LANG] above.
 
 **Source:** `gui/resize.c`
 
-Fallback number of terminal rows used when the `TIOCGWINSZ` ioctl returns
-zero.  Defaults to **24** if unset or unparsable.
+Fallback number of terminal rows used when the `TIOCGWINSZ` ioctl returns zero.
+Defaults to **24** if unset or unparsable.
 
 :::{seealso}
 [COLUMNS]
@@ -192,7 +182,7 @@ Full path to the user's spool mailbox when `MAIL` is unset.
 Commonly used when the spool mailbox is a Maildir folder.
 
 :::{seealso}
-[MAIL], `$spool_file`
+[MAIL], [`$spool_file`](cfg-spool-file)
 :::
 
 ### MM_NOASK
@@ -214,7 +204,7 @@ Controls automatic use of mailcap entries.
 **Source:** `main.c`
 
 Domain name or address of the default NNTP (Usenet) server.
-Precedence: command line `-g`, config `$news_server`, `NNTPSERVER`,
+Precedence: command line `-g`, config [`$news_server`](cfg-news-server), `NNTPSERVER`,
 then `<sysconfdir>/nntpserver`.
 
 :::{seealso}
@@ -225,12 +215,12 @@ then `<sysconfdir>/nntpserver`.
 
 **Source:** `conn/openssl.c` (via OpenSSL's `RAND_file_name()`)
 
-Path to a file containing random data used to seed the SSL random number
-generator.  If unset, `~/.rnd` is used.  **Do not** store important data
-in this file.
+Path to a file containing random data used to seed the SSL random number generator.
+If unset, `~/.rnd` is used.
+**Do not** store important data in this file.
 
 :::{seealso}
-[EGDSOCKET], `$entropy_file`
+[EGDSOCKET], [`$entropy_file`](cfg-entropy-file)
 :::
 
 ### REPLYTO
@@ -238,10 +228,10 @@ in this file.
 **Source:** `main.c`
 
 When set, its value is used as a default `Reply-To:` header added via
-NeoMutt's `my_hdr` mechanism.
+NeoMutt's [`:my-header`](cmd-my-header) mechanism.
 
 :::{seealso}
-`$from`
+[`$from`](cfg-from)
 :::
 
 ### TERM
@@ -249,33 +239,30 @@ NeoMutt's `my_hdr` mechanism.
 **Source:** `gui/terminal.c`
 
 The terminal type.
-Used to determine whether the terminal supports the title-bar escape
-sequence.  NeoMutt checks `TERM` against a list of known terminal types
-(e.g. `xterm`, `screen`, `rxvt`).
+Used to determine whether the terminal supports the title-bar escape sequence.
+NeoMutt checks `TERM` against a list of known terminal types (e.g. `xterm`, `screen`, `rxvt`).
 
 :::{seealso}
-`$ts_enabled`, `$ts_status_format`
+[`$ts_enabled`](cfg-ts-enabled), [`$ts_status_format`](cfg-ts-status-format)
 :::
 
 ### TEXTDOMAINDIR
 
 **Source:** `core/neomutt.c`
 
-Overrides the compiled-in path for GNU `gettext` message catalogues used
-for Native Language Support (NLS).  If unset, the default `MUTTLOCALEDIR`
-compile-time path is used.
+Overrides the compiled-in path for GNU `gettext` message catalogues used for Native Language Support (NLS).
+If unset, the default `MUTTLOCALEDIR` compile-time path is used.
 
 ### TMPDIR
 
 **Source:** `main.c`
 
 Directory in which temporary files are created.
-If set, it overrides the compiled-in defaults for both `$tmp_dir` and
-`$tmp_draft_dir`.  If unset, `/tmp` is used for `$tmp_dir` and
-`/var/tmp` for `$tmp_draft_dir`.
+If set, it overrides the compiled-in defaults for both [`$tmp_dir`](cfg-tmp-dir) and [`$tmp_draft_dir`](cfg-tmp-draft-dir).
+If unset, `/tmp` is used for [`$tmp_dir`](cfg-tmp-dir) and `/var/tmp` for [`$tmp_draft_dir`](cfg-tmp-draft-dir).
 
 :::{seealso}
-`$tmp_dir`, `$tmp_draft_dir`
+[`$tmp_dir`](cfg-tmp-dir), [`$tmp_draft_dir`](cfg-tmp-draft-dir)
 :::
 
 ### USER
@@ -292,8 +279,8 @@ identity-related operations.
 **Source:** `main.c`
 
 Specifies the preferred editor for composing messages.
-Takes precedence over `EDITOR`.  If neither is set, NeoMutt defaults to
-`vi`.
+Takes precedence over `EDITOR`.
+If neither is set, NeoMutt defaults to `vi`.
 
 :::{seealso}
 [EDITOR](ref-env), [`$editor`](cfg-editor)
@@ -309,7 +296,8 @@ Takes precedence over `EDITOR`.  If neither is set, NeoMutt defaults to
 
 Specifies the XDG Base Directory for user-specific configuration.
 NeoMutt searches `$XDG_CONFIG_HOME/neomutt/neomuttrc` when no config file
-is given on the command line.  Defaults to `$HOME/.config` if unset.
+is given on the command line.
+Defaults to `$HOME/.config` if unset.
 
 Can be overridden by the `-F` command-line option.
 
@@ -335,9 +323,7 @@ Bypass loading with the `-n` command-line option.
 
 ## Variables Set by NeoMutt
 
-These variables are **set** by NeoMutt in its private environment
-(`NeoMutt->env`) for child processes rather than being read from the
-user's environment.
+These variables are **set** by NeoMutt in its private environment (`NeoMutt->env`) for child processes rather than being read from the user's environment.
 
 ### COLUMNS {#columns-set}
 
@@ -350,12 +336,10 @@ See [COLUMNS] above.
 
 **Source:** `ncrypt/pgp.c`
 
-Set to the name of the controlling terminal (from [`ttyname(3)`](https://man7.org/linux/man-pages/man3/ttyname.3.html)) when
-`$pgp_use_gpg_agent` is enabled.  This allows `gpg-agent` to prompt for
-passphrases on the correct terminal.
+Set to the name of the controlling terminal (from [`ttyname(3)`](https://man7.org/linux/man-pages/man3/ttyname.3.html)) when `$pgp_use_gpg_agent` is enabled.
+This allows `gpg-agent` to prompt for passphrases on the correct terminal.
 
-Set in both the real process environment (`setenv`) and NeoMutt's private
-environment list.
+Set in both the real process environment (`setenv`) and NeoMutt's private environment list.
 
 :::{seealso}
 `$pgp_use_gpg_agent`
@@ -365,8 +349,7 @@ environment list.
 
 ## Configuration Commands
 
-NeoMutt provides built-in commands to manage environment variables from
-within configuration files or the command line:
+NeoMutt provides built-in commands to manage environment variables from within configuration files or the command line:
 
 **`setenv`**
 : Set an environment variable in NeoMutt's private environment:
@@ -399,10 +382,8 @@ within configuration files or the command line:
 (config-file-expansion)=
 ## Config-File Expansion
 
-Any environment variable can be referenced in NeoMutt configuration files
-using the `$NAME` syntax.  When parsing a config token, NeoMutt first
-checks for a matching config variable; if none is found, it falls back to
-the environment (via `mutt_str_getenv`).
+Any environment variable can be referenced in NeoMutt configuration files using the `$NAME` syntax.
+When parsing a config token, NeoMutt first checks for a matching config variable; if none is found, it falls back to the environment (via `mutt_str_getenv`).
 
 Example:
 

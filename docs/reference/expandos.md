@@ -21,8 +21,7 @@ Each expando is a `%` followed by a letter (or long name) that is replaced at ru
 | `%{long-name}` | Long name (lowercase, digits, hyphens, in braces) |
 | `%%`           | Literal percent sign                              |
 
-The short name `%s` and long name `%{subject}` are interchangeable — they
-refer to the same expando.
+The short name `%s` and long name `%{subject}` are interchangeable — they refer to the same expando.
 
 ---
 
@@ -65,8 +64,7 @@ A format specifier goes between `%` and the expando name:
 
 ### Minimum Width (`min_cols`)
 
-If the value is shorter than `min_cols`, it is padded (with spaces by
-default) to fill the minimum width.
+If the value is shorter than `min_cols`, it is padded (with spaces by default) to fill the minimum width.
 
 ```neomuttrc
 # Right-justify subject in 30 columns (pad on the left)
@@ -133,9 +131,8 @@ set index_format = "%-30{subject}"
 
 ## Padding
 
-Padding expandos control how a format string fills the full width of the
-screen.  They split the format string into a **left side** and a
-**right side**, with padding filling the gap between them.
+Padding expandos control how a format string fills the full width of the screen.
+They split the format string into a **left side** and a **right side**, with padding filling the gap between them.
 
 ### Three Padding Types
 
@@ -148,13 +145,13 @@ screen.  They split the format string into a **left side** and a
 The character `X` after the padding symbol is the **fill character**.
 If omitted, a space is used.
 
-> **Note:** Padding expandos cannot have format specifiers (no widths or
-> justification) and cannot be used as conditions.
+> **Note:** Padding expandos cannot have format specifiers
+> (no widths or justification) and cannot be used as conditions.
 
 ### End-of-Line Padding (`%|X`)
 
-Renders the left side, then fills the remaining screen width with the
-pad character.  Nothing appears after the padding.
+Renders the left side, then fills the remaining screen width with the pad character.
+Nothing appears after the padding.
 
 ```
 [---- left content ----][XXXXXXXXXXXXXXXX]
@@ -167,9 +164,9 @@ set status_format = "Subject: %s %|-"
 
 ### Hard-Fill Padding (`%>X`)
 
-The left side is "hard" — it is rendered first and preserved.  The right
-side gets whatever space remains.  If the screen is too narrow, the
-right side is truncated.
+The left side is "hard" — it is rendered first and preserved.
+The right side gets whatever space remains.
+If the screen is too narrow, the right side is truncated.
 
 ```
 [---- left (preserved) ----][XXX][---- right (truncated) ----]
@@ -182,9 +179,9 @@ set index_format = "%Z %d %-20.20n %> %s"
 
 ### Soft-Fill Padding (`%*X`)
 
-The right side is "hard" — it is rendered first and preserved.  The left
-side gets whatever space remains.  If the screen is too narrow, the
-left side is truncated.
+The right side is "hard" — it is rendered first and preserved.
+The left side gets whatever space remains.
+If the screen is too narrow, the left side is truncated.
 
 ```
 [---- left (truncated) ----][XXX][---- right (preserved) ----]
