@@ -93,7 +93,7 @@ Controls the display of wrapped lines in the internal pager.
 If set, a `+` marker is displayed at the beginning of wrapped lines.
 
 :::{seealso}
-[`$smart_wrap`](cfg-smart-wrap)
+{ref}`how-text-wrapping`, [`$smart_wrap`](cfg-smart-wrap)
 :::
 
 --------------------------------------------------------------------------------
@@ -270,7 +270,7 @@ If _set_, long lines are wrapped at a word boundary.
 If _unset_, lines are simply wrapped at the screen edge.
 
 :::{seealso}
-[`$markers`](cfg-markers)
+{ref}`how-text-wrapping`, [`$markers`](cfg-markers)
 :::
 
 --------------------------------------------------------------------------------
@@ -303,6 +303,9 @@ This mostly happens at the beginning of a line.
 
 When _set_, the internal-pager will pad blank lines to the bottom of the screen with a tilde (`~`).
 
+:::{seealso}
+{ref}`how-text-wrapping`
+:::
 --------------------------------------------------------------------------------
 
 (cfg-toggle-quoted-show-levels)=

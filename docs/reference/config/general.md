@@ -1641,7 +1641,7 @@ When set to a negative value, NeoMutt will wrap text so that there are [`$wrap`]
 Setting it to zero makes NeoMutt wrap at the terminal width.
 
 :::{seealso}
-[`$reflow_wrap`](cfg-reflow-wrap)
+{ref}`how-text-wrapping`, [`$reflow_wrap`](cfg-reflow-wrap)
 :::
 
 --------------------------------------------------------------------------------

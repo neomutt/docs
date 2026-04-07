@@ -200,7 +200,7 @@ If _unset_, NeoMutt will display paragraphs unaltered from how they appear in th
 See [RFC3676](https://www.rfc-editor.org/rfc/rfc3676.html) for details on the _format=flowed_ format.
 
 :::{seealso}
-[`$reflow_wrap`](cfg-reflow-wrap), [`$wrap`](cfg-wrap).
+{ref}`how-text-wrapping`, [`$reflow_wrap`](cfg-reflow-wrap), [`$wrap`](cfg-wrap)
 :::
 
 --------------------------------------------------------------------------------
@@ -224,7 +224,7 @@ Be aware that the reformatted lines of a paragraph are still subject to [`$wrap`
 This means if [`$reflow_wrap`](cfg-reflow-wrap) is 40 and [`$wrap`](cfg-wrap) is 30, then the paragraph gets reformatted to 40 characters a line (due to [`$reflow_wrap`](cfg-reflow-wrap)) and afterwards each 40-character-line is split at 30 characters (due to [`$wrap`](cfg-wrap)), resulting in alternating line lengths of 30 and 10 characters.
 
 :::{seealso}
-[`$wrap`](cfg-wrap)
+{ref}`how-text-wrapping`, [`$wrap`](cfg-wrap)
 :::
 
 --------------------------------------------------------------------------------
