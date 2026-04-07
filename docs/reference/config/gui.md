@@ -55,7 +55,7 @@ When _unset_, NeoMutt will not collapse a thread if it contains any unread messa
     set duplicate_threads = yes
     ```
 
-This variable controls whether NeoMutt, when [`$sort`](cfg-sort) is set to _threads_, threads messages with the same Message-ID together.
+This variable controls whether NeoMutt, when [`$sort`](cfg-sort) is set to `threads`, threads messages with the same `Message-ID:` together.
 If it is _set_, it will indicate that it thinks they are duplicates of each other with an equals sign in the thread tree.
 
 --------------------------------------------------------------------------------
@@ -165,9 +165,10 @@ With [`$sort_re`](cfg-sort-re) _unset_, NeoMutt will attach the message whether 
     set strict_threads = no
     ```
 
-If _set_, threading will only make use of the "In-Reply-To" and "References:" fields when you [`$sort`](cfg-sort) by message threads.
+If _set_, threading will only make use of the `In-Reply-To:` and `References:` fields when you [`$sort`](cfg-sort) by message threads.
 By default, messages with the same subject are grouped together in "pseudo threads".
 This may not always be desirable, such as in a personal mailbox where you might have several unrelated messages with the subjects like "hi" which will get grouped together.
+
 :::{seealso}
 [`$sort_re`](cfg-sort-re) for a less drastic way of controlling this behavior
 :::
@@ -184,7 +185,7 @@ This may not always be desirable, such as in a personal mailbox where you might 
     ```
 
 If [`$strict_threads`](cfg-strict-threads) is _unset_, then messages may also be grouped by subject.
-Unlike threading by "In-Reply-To:" and "References:" header, grouping by subject does not imply a parent-child relation between two messages.
+Unlike threading by `In-Reply-To:` and `References:` header, grouping by subject does not imply a parent-child relation between two messages.
 
 To determine the ancestry between messages grouped by subject, NeoMutt uses their date: only newer messages can be descendants of older ones.
 

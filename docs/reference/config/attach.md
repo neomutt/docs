@@ -29,7 +29,7 @@ The directory where attachments are saved.
     set attach_save_without_prompting = no
     ```
 
-This variable, when set to true, will cause attachments to be saved to the 'attach_save_dir' location without prompting the user for the filename.
+This variable, when set to true, will cause attachments to be saved to the [`$attach_save_dir`](cfg-attach-save-dir) location without prompting the user for the filename.
 
 --------------------------------------------------------------------------------
 
@@ -85,11 +85,11 @@ Setting this variable to _no_ is not generally useful, and thus not recommended,
     set count_alternatives = no
     ```
 
-When _set_, NeoMutt will recurse inside multipart/alternatives while performing attachment searching and counting (see [`attachments`](cmd-attachments)).
+When _set_, NeoMutt will recurse inside multipart/alternatives while performing attachment searching and counting (see [`:attachments`](cmd-attachments)).
 
 Traditionally, multipart/alternative parts have simply represented different encodings of the main content of the email.
 Unfortunately, some mail clients have started to place email attachments inside one of alternatives.
-Setting this will allow NeoMutt to find and count matching attachments hidden there, and include them in the index via %X or through ~X pattern matching.
+Setting this will allow NeoMutt to find and count matching attachments hidden there, and include them in the index via `%X` or through `~X` pattern matching.
 
 --------------------------------------------------------------------------------
 
@@ -103,7 +103,7 @@ Setting this will allow NeoMutt to find and count matching attachments hidden th
     ```
 
 If this option is _set_, NeoMutt's received-attachments menu will not show the subparts of individual messages in a multipart/digest.
-To see these subparts, press "v" on that menu.
+To see these subparts, press {kbd}`v` on that menu.
 
 --------------------------------------------------------------------------------
 

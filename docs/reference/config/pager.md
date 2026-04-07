@@ -66,7 +66,7 @@ When _unset_, color is applied to the entire header.
 
 One use of this option might be to apply color to just the header labels.
 
-See [`color`](cmd-color) for more details.
+See [`:color`](cmd-color) for more details.
 
 --------------------------------------------------------------------------------
 
@@ -80,7 +80,7 @@ See [`color`](cmd-color) for more details.
     ```
 
 Controls the display of wrapped lines in the internal pager.
-If set, a "+" marker is displayed at the beginning of wrapped lines.
+If set, a `+` marker is displayed at the beginning of wrapped lines.
 
 Also see the [`$smart_wrap`](cfg-smart-wrap) variable.
 
@@ -186,7 +186,7 @@ This setting is ignored if [`$pager`](cfg-pager) is set.
     set pager_skip_quoted_context = 0
     ```
 
-Determines the number of lines of context to show before the unquoted text when using the [`<skip-quoted>`](ref-fn-pager) function.
+Determines the number of lines of context to show before the unquoted text when using [`<skip-quoted>`](ref-fn-pager).
 When set to a positive number at most that many lines of the previous quote are displayed.
 If the previous quote is shorter the whole quote is displayed.
 
@@ -201,8 +201,7 @@ If the previous quote is shorter the whole quote is displayed.
     set pager_stop = no
     ```
 
-When _set_, the internal-pager will **not** move to the next message when you are at the end of a message and invoke the [`<next-page>`](ref-fn-generic)
-function.
+When _set_, the internal-pager will **not** move to the next message when you are at the end of a message and invoke [`<next-page>`](ref-fn-generic).
 
 --------------------------------------------------------------------------------
 
@@ -275,7 +274,7 @@ This mostly happens at the beginning of a line.
     set tilde = no
     ```
 
-When _set_, the internal-pager will pad blank lines to the bottom of the screen with a tilde ("~").
+When _set_, the internal-pager will pad blank lines to the bottom of the screen with a tilde (`~`).
 
 --------------------------------------------------------------------------------
 

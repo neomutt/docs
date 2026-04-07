@@ -358,7 +358,7 @@ They show the number of (F)lagged, (N)ew and (S)ize.
 ##### Abbreviating Mailbox Names
 
 `$sidebar_delim_chars` tells Sidebar how to split up mailbox paths.
-For local directories use "/"; for IMAP folders use "."
+For local directories use `/`; for IMAP folders use `.`
 
 **Example 1**
 

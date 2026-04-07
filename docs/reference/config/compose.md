@@ -21,8 +21,8 @@ This is to help prevent irreversible loss of the typed message by accidentally h
 
 :::{note}
 NeoMutt only prompts for the first entry.
-:::
 It doesn't keep track of which message is the typed message if the entries are reordered, or if the first entry was already deleted.
+:::
 
 --------------------------------------------------------------------------------
 
@@ -110,7 +110,7 @@ When _set_, NeoMutt will display a preview of message in the compose view.
     set compose_show_user_headers = yes
     ```
 
-When _set_, NeoMutt will display user-defined headers (set via [`my-header`](cmd-my-header) or from editing with edit-headers).
+When _set_, NeoMutt will display user-defined headers (set via [`:my-header`](cmd-my-header) or from editing with edit-headers).
 
 --------------------------------------------------------------------------------
 
@@ -124,7 +124,7 @@ When _set_, NeoMutt will display user-defined headers (set via [`my-header`](cmd
     ```
 
 This variable controls whether or not copies of your outgoing messages will be saved for later references.
-Also see [`$record`](cfg-record), [`$save_name`](cfg-save-name), [`$force_name`](cfg-force-name) and [`fcc-hook`](cmd-fcc-hook).
+Also see [`$record`](cfg-record), [`$save_name`](cfg-save-name), [`$force_name`](cfg-force-name) and [`:fcc-hook`](cmd-fcc-hook).
 
 --------------------------------------------------------------------------------
 
@@ -139,7 +139,7 @@ Also see [`$record`](cfg-record), [`$save_name`](cfg-save-name), [`$force_name`]
 
 This option allows you to edit the header of your outgoing messages along with the body of your message.
 
-Although the compose menu may have localized header labels, the labels passed to your editor will be standard [RFC2822](https://www.rfc-editor.org/rfc/rfc2822.html) headers, (e.g. To:, Cc:, Subject:).
+Although the compose menu may have localized header labels, the labels passed to your editor will be standard [RFC2822](https://www.rfc-editor.org/rfc/rfc2822.html) headers, (e.g. `To:`, `Cc:`, `Subject:`).
 Headers added in your editor must also be [RFC2822](https://www.rfc-editor.org/rfc/rfc2822.html) headers, or one of the pseudo headers listed in "$edit-header".
 NeoMutt will not understand localized header labels, just as it would not when parsing an actual email.
 
@@ -158,7 +158,7 @@ Changes made to the References: and Date: headers are ignored for interoperabili
     set ispell = "ispell"
     ```
 
-How to invoke ispell (GNU's spell-checking software).
+How to invoke `ispell` (GNU's spell-checking software).
 
 --------------------------------------------------------------------------------
 
@@ -172,7 +172,7 @@ How to invoke ispell (GNU's spell-checking software).
     ```
 
 Controls whether or not messages are saved in the [`$postponed`](cfg-postponed) mailbox when you elect not to send immediately.
-If set to _ask-yes_ or _ask-no_, you will be prompted with "Save (postpone) draft message?" when quitting from the "compose" screen.
+If set to `ask-yes` or `ask-no`, you will be prompted with "Save (postpone) draft message?" when quitting from the [Compose Dialog](tour-compose).
 
 Also see the [`$recall`](cfg-recall) variable.
 

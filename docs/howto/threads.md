@@ -13,7 +13,7 @@ This allows you to clean your mailboxes from these annoyances which make it hard
 
 ### Linking Threads
 
-Some mailers tend to "forget" to correctly set the "In-Reply-To:" and "References:" headers when replying to a message.
+Some mailers tend to "forget" to correctly set the `In-Reply-To:` and `References:` headers when replying to a message.
 This results in broken discussions because NeoMutt has not enough information to guess the correct threading.
 
 1. Tag a number of replies that belong to the same thread.

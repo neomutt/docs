@@ -16,7 +16,7 @@ keywords: neomutt, browser, file browser, folder_format, browser_sort, browser_s
     set browser_abbreviate_mailboxes = yes
     ```
 
-When this variable is _set_, NeoMutt will abbreviate mailbox names in the browser mailbox list, using '~' and '=' shortcuts.
+When this variable is _set_, NeoMutt will abbreviate mailbox names in the browser mailbox list, using `~` and `=` shortcuts.
 
 The default `alpha` setting of [`$browser_sort`](cfg-browser-sort) uses locale-based sorting (using `strcoll(3)`), which ignores some punctuation.
 This can lead to some situations where the order doesn't make intuitive sense.
@@ -189,7 +189,7 @@ Specify the format of network mailboxes, e.g. IMAP, displayed in the [`Browser D
     set mask = "!^\\.[^.]"
     ```
 
-A regular expression used in the file browser, optionally preceded by the _not_ operator "!".
+A regular expression used in the file browser, optionally preceded by the _not_ operator `!`.
 Only files whose names match this mask will be shown.
 The match is always case-sensitive.
 

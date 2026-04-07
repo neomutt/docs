@@ -253,7 +253,7 @@ If _set_, NeoMutt will use TLSv1.3 when communicating with servers that request 
     ```
 
 If _set_ (the default), NeoMutt will not automatically accept a server certificate that is either not yet valid or already expired.
-You should only unset this for particular known hosts, using the [`account-hook`](cmd-account-hook) function.
+You should only unset this for particular known hosts, using the [`:account-hook`](cmd-account-hook) function.
 
 --------------------------------------------------------------------------------
 
@@ -267,7 +267,7 @@ You should only unset this for particular known hosts, using the [`account-hook`
     ```
 
 If _set_ (the default), NeoMutt will not automatically accept a server certificate whose host name does not match the host used in your folder URL.
-You should only unset this for particular known hosts, using the [`account-hook`](cmd-account-hook) function.
+You should only unset this for particular known hosts, using the [`:account-hook`](cmd-account-hook) function.
 
 --------------------------------------------------------------------------------
 
@@ -309,7 +309,7 @@ For this example to work you must be able to log in to the remote machine withou
 :::
 
 When set, NeoMutt uses the tunnel for all remote connections.
-Please see [`account-hook`](cmd-account-hook) in the manual for how to use different tunnel commands per connection.
+Please see [`:account-hook`](cmd-account-hook) in the manual for how to use different tunnel commands per connection.
 
 --------------------------------------------------------------------------------
 

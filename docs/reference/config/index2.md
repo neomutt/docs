@@ -30,7 +30,7 @@ This is independent of the setting of the [`$beep`](cfg-beep) variable.
     set change_folder_next = no
     ```
 
-When this variable is _set_, the [`<change-folder>`](ref-fn-index) function mailbox suggestion will start at the next folder in your [`mailboxes`](cmd-mailboxes) list, instead of starting at the first folder in the list.
+When this variable is _set_, the [`<change-folder>`](ref-fn-index) function mailbox suggestion will start at the next folder in your [`:mailboxes`](cmd-mailboxes) list, instead of starting at the first folder in the list.
 
 --------------------------------------------------------------------------------
 
@@ -104,16 +104,16 @@ Controls the characters used in several flags.
     set from_chars = ""
     ```
 
-Controls the character used to prefix the %F and %L fields in the index.
+Controls the character used to prefix the `%F` and `%L` fields in the index.
 
-| Character | Description                                                                                 |
-|-----------|---------------------------------------------------------------------------------------------|
-| 1         | Mail is written by you and has a To address, or has a known mailing list in the To address. |
-| 2         | Mail is written by you and has a Cc address, or has a known mailing list in the Cc address. |
-| 3         | Mail is written by you and has a Bcc address.                                               |
-| 4         | All remaining cases.                                                                        |
+| Character | Description                                                                                       |
+|-----------|---------------------------------------------------------------------------------------------------|
+| 1         | Mail is written by you and has a `To:` address, or has a known mailing list in the `To:` address. |
+| 2         | Mail is written by you and has a `Cc:` address, or has a known mailing list in the `Cc:` address. |
+| 3         | Mail is written by you and has a `Bcc:` address.                                                  |
+| 4         | All remaining cases.                                                                              |
 
-If this is empty or unset (default), the traditional long "To ", "Cc " and "Bcc " prefixes are used.
+If this is empty or unset (default), the traditional long `To `, `Cc ` and `Bcc ` prefixes are used.
 If set but too short to include a character for a particular case, a single space will be prepended to the field.
 To prevent any prefix at all from being added in a particular case, use the special value CR (aka ^M)
 for the corresponding character.
@@ -181,17 +181,17 @@ Specify the format of the data displayed in the [`Index Dialog`](tour-index).
 | `%S`      | `%{flag-chars}`          | Single character status of the message (`N`/`O`/`D`/`d`/`!`/`r`/`*`)                                                                           |
 | `%s`      | `%{subject}`             | Subject of the message                                                                                                                         |
 | `%T`      | `%{to-chars}`            | Appropriate character from the [`$to_chars`](cfg-to-chars) string                                                                              |
-| `%t`      | `%{to}`                  | `%{To:}` field (recipients)                                                                                                                    |
+| `%t`      | `%{to}`                  | `To:` field (recipients)                                                                                                                       |
 | `%u`      | `%{username}`            | User (login) name of the author                                                                                                                |
 | `%v`      | `%{first-name}`          | First name of the author, or the recipient if the message is from you                                                                          |
 | `%W`      | `%{organization}`        | Name of organization of author (`Organization:` field)                                                                                         |
 | `%X`      | `%{attachment-count}`    | Number of MIME attachments (see the `$attachments` section for possible speed effects)                                                         |
-| `%x`      | `%{x-comment-to}`        | `%{X-Comment-To:}` field (if present)                                                                                                          |
-| `%Y`      | `%{thread-x-label}`      | `%{X-Label:}` field, if present, and                                                                                                           |
+| `%x`      | `%{x-comment-to}`        | `X-Comment-To:` field (if present)                                                                                                             |
+| `%Y`      | `%{thread-x-label}`      | `X-Label:` field, if present, and                                                                                                              |
 |           |                          | 1. not at part of a thread tree                                                                                                                |
 |           |                          | 2. at the top of a thread, or                                                                                                                  |
 |           |                          | 3. `X-Label:` is different from Preceding message's `X-Label:`                                                                                 |
-| `%y`      | `%{x-label}`             | `%{X-Label:}` field, if present                                                                                                                |
+| `%y`      | `%{x-label}`             | `X-Label:` field, if present                                                                                                                   |
 | `%Z`      | `%{combined-flags}`      | A three character set of message status flags.                                                                                                 |
 |           |                          | The first character is new/read/replied flags (`n`/`o`/`r`/`O`/`N`).                                                                           |
 |           |                          | The second is deleted or encryption flags (`D`/`d`/`S`/`P`/`s`/`K`).                                                                           |
@@ -217,10 +217,10 @@ Date format expressions can be constructed based on relative dates.
 Using the date formatting operators along with nested conditionals, the date format can be modified based on how old a message is.
 See the section on "Conditional Dates" for an explanation and examples.
 
-Note that for mbox/mmdf, "%l" applies to the unprocessed message, and for maildir/mh, the value comes from the "Lines:" header field when present (the meaning is normally the same).
+Note that for mbox/mmdf, `%l` applies to the unprocessed message, and for maildir/mh, the value comes from the `Lines:` header field when present (the meaning is normally the same).
 Thus the value depends on the encodings used in the different parts of the message and has little meaning in practice.
 
-Note that these expandos are supported in [`save-hook`](cmd-save-hook), [`fcc-hook`](cmd-fcc-hook) and [`fcc-save-hook`](cmd-fcc-save-hook), too.
+Note that these expandos are supported in [`:save-hook`](cmd-save-hook), [`:fcc-hook`](cmd-fcc-hook) and [`:fcc-save-hook`](cmd-fcc-save-hook), too.
 
 :::{seealso}
 **Expandos:** [Tutorial Conditional](tut-cond-expando), [Howto Conditional](how-cond-expando), [Formatting](how-format-expando), [Reference](ref-expandos)
@@ -238,7 +238,7 @@ Note that these expandos are supported in [`save-hook`](cmd-save-hook), [`fcc-ho
     ```
 
 Prefix for macros created using mark-message.
-A new macro automatically generated with _<mark-message>a_ will be composed from this prefix and the letter _a_.
+A new macro automatically generated with `<mark-message>a` will be composed from this prefix and the letter `a`.
 
 --------------------------------------------------------------------------------
 
@@ -271,10 +271,10 @@ If _set_, NeoMutt will call this command after a new message is received.
     ```
 
 This variable controls whether "quit" and "exit" actually quit from NeoMutt.
-If this option is _set_, they do quit, if it is _unset_, they have no effect, and if it is set to _ask-yes_ or _ask-no_, you are prompted for confirmation when you try to quit.
+If this option is _set_, they do quit, if it is _unset_, they have no effect, and if it is set to `ask-yes` or `ask-no`, you are prompted for confirmation when you try to quit.
 
-In order to quit from NeoMutt if this variable is _unset_, you must send the signal SIGINT to NeoMutt.
-This can usually be achieved by pressing CTRL-C in the terminal.
+In order to quit from NeoMutt if this variable is _unset_, you must send the signal `SIGINT` to NeoMutt.
+This can usually be achieved by pressing {kbd}`Ctrl-C` in the terminal.
 
 --------------------------------------------------------------------------------
 
@@ -300,16 +300,16 @@ If _set_, all folders are opened in read-only mode.
     set status_chars = "-*%A"
     ```
 
-Controls the characters used by the "%r" indicator in [`$status_format`](cfg-status-format).
+Controls the characters used by the `%r` indicator in [`$status_format`](cfg-status-format).
 
-| Character | Default | Description                                                                                                       |
-|-----------|---------|-------------------------------------------------------------------------------------------------------------------|
-| 1         | `-`     | Mailbox is unchanged                                                                                              |
-| 2         | `*`     | Mailbox has been changed and needs to be resynchronized                                                           |
-| 3         | `%`     | Mailbox is read-only, or will not be written when exiting.                                                        |
-|           |         | You can toggle whether to write changes to a mailbox with the [`<toggle-write>`](ref-fn-index) operation, bound by default to "%" |
-| 4         | `A`     | Folder opened in attach-message mode.                                                                             |
-|           |         | Certain operations like composing a new mail, replying, forwarding, etc. are not permitted in this mode           |
+| Character | Default | Description                                                                                                                            |
+|-----------|---------|----------------------------------------------------------------------------------------------------------------------------------------|
+| 1         | `-`     | Mailbox is unchanged                                                                                                                   |
+| 2         | `*`     | Mailbox has been changed and needs to be resynchronized                                                                                |
+| 3         | `%`     | Mailbox is read-only, or will not be written when exiting.                                                                             |
+|           |         | You can toggle whether to write changes to a mailbox with the [`<toggle-write>`](ref-fn-index) operation, bound by default to {kbd}`%` |
+| 4         | `A`     | Folder opened in attach-message mode.                                                                                                  |
+|           |         | Certain operations like composing a new mail, replying, forwarding, etc. are not permitted in this mode                                |
 
 --------------------------------------------------------------------------------
 
@@ -379,11 +379,11 @@ Controls the character used to indicate mail addressed to you.
 |-----------|-------------|---------------------------------------------------------------------------------------------------|
 | 1         | ` ` (space) | The mail is *not* addressed to your address                                                       |
 | 2         | `+`         | You are the only recipient of the message                                                         |
-| 3         | `T`         | Your address appears in the "To:" header field, but you are not the only recipient of the message |
-| 4         | `C`         | Your address is specified in the "Cc:" header field, but you are not the only recipient           |
+| 3         | `T`         | Your address appears in the `To:` header field, but you are not the only recipient of the message |
+| 4         | `C`         | Your address is specified in the `Cc:` header field, but you are not the only recipient           |
 | 5         | `F`         | Indicates the mail that was sent by *you*                                                         |
 | 6         | `L`         | Indicates the mail was sent to a mailing-list you subscribe to                                    |
-| 7         | `R`         | Your address appears in the "Reply-To:" header field but none of the above applies                |
+| 7         | `R`         | Your address appears in the `Reply-To:` header field but none of the above applies                |
 
 --------------------------------------------------------------------------------
 

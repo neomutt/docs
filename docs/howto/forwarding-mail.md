@@ -41,7 +41,7 @@ The subject of the email is controlled by `$forward_format`.
 ## Threading Forwarded Messages
 
 By default a forwarded message does not reference the messages it contains.
-When `$forward_references` is set, a forwarded message includes the "In-Reply-To:" and "References:" headers, just like a reply would.
+When `$forward_references` is set, a forwarded message includes the `In-Reply-To:` and `References:` headers, just like a reply would.
 Hence the forwarded message becomes part of the original thread instead of starting a new one.
 
 ## Editing the Forwarded Message

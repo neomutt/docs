@@ -29,7 +29,7 @@ The shell-command must contain two placeholders for filenames: `%f` and `%t`.
 These represent "from" and "to" filenames.
 These placeholders should be placed inside single-quotes to prevent unintended shell expansions.
 
-If you need the exact string "%f" or "%t" in your command, simply double up the "%" character, e.g. "%%f" or "%%t".
+If you need the exact string `%f` or `%t` in your command, simply double up the `%` character, e.g. `%%f` or `%%t`.
 
 ### Not all Hooks are Required
 

@@ -16,7 +16,7 @@ keywords: neomutt, menu, arrow_cursor, arrow_string, menu_context, menu_move_off
     set arrow_cursor = no
     ```
 
-When _set_, an arrow ("->") will be used to indicate the current entry in menus instead of highlighting the whole line.
+When _set_, an arrow (`->`) will be used to indicate the current entry in menus instead of highlighting the whole line.
 On slow network or modem links this will make response faster because there is less that has to be redrawn on the screen when moving to the next or previous entries in the menu.
 
 --------------------------------------------------------------------------------
@@ -31,7 +31,7 @@ On slow network or modem links this will make response faster because there is l
     set arrow_string = "->"
     ```
 
-Specifies the string of arrow_cursor when arrow_cursor enabled.
+Specifies the string of [`$arrow_cursor`](cfg-arrow-cursor) when it's enabled.
 
 --------------------------------------------------------------------------------
 

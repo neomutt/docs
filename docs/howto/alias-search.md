@@ -55,6 +55,6 @@ If you have `$query_command` configured (abook, khard, LDAP):
 
 Expected result: results from the external source appear and you can select one.
 
-See [External Address Queries](address-query) for setup details.
+See [External Address Queries](how-address-query) for setup details.
 
 See [Manage Aliases](aliases) for the full alias syntax and [Alias Options](../reference/config/alias) for `$alias_format` and `$alias_sort`.

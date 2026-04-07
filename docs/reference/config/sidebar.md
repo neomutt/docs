@@ -38,7 +38,7 @@ For example: If a maildir is normally displayed in the sidebar as dir1/dir2/dir3
 
 This contains the list of characters which you would like to treat as folder separators for displaying paths in the sidebar.
 
-Local mail is often arranged in directories: 'dir1/dir2/mailbox'.
+Local mail is often arranged in directories: `dir1/dir2/mailbox`.
 
 ```neomuttrc
 set sidebar_delim_chars = '/'
@@ -69,7 +69,7 @@ This specifies the characters to be drawn between the sidebar (when visible) and
 ASCII and Unicode line-drawing characters are supported.
 
 The divider char can be set to an empty string for some extra space.
-If empty, setting the sidebar_background color may help distinguish the sidebar from other panels.
+If empty, setting the `sidebar_background` color may help distinguish the sidebar from other panels.
 
 --------------------------------------------------------------------------------
 
@@ -132,7 +132,7 @@ Specify the format of the data displayed in the [`Sidebar Panel`](tour-sidebar).
 **Cur** = Only applicable to the current folder
 
 In order to use %S, %N, %F, and %!, [`$mail_check_stats`](cfg-mail-check-stats) must be _set_.
-When thus set, a suggested value for this option is "%B%<F? [%F]>%* %<N?%N/>%S".
+When thus set, a suggested value for this option is `%B%<F? [%F]>%* %<N?%N/>%S`.
 
 :::{seealso}
 **Expandos:** [Tutorial Conditional](tut-cond-expando), [Howto Conditional](how-cond-expando), [Formatting](how-format-expando), [Reference](ref-expandos)
@@ -172,7 +172,7 @@ It defaults to two spaces.
 When set, the sidebar will only display mailboxes containing new, or flagged, mail.
 
 :::{seealso}
-[`sidebar-pin`](cmd-sidebar-pin), [`$sidebar_non_empty_mailbox_only`](cfg-sidebar-non-empty-mailbox-only)
+[`:sidebar-pin`](cmd-sidebar-pin), [`$sidebar_non_empty_mailbox_only`](cfg-sidebar-non-empty-mailbox-only)
 :::
 
 --------------------------------------------------------------------------------
@@ -203,7 +203,7 @@ The [`<sidebar-prev-new>`](ref-fn-sidebar) command is similarly affected, wrappi
 When set, the sidebar will only display mailboxes that contain one or more mails.
 
 :::{seealso}
-[`$sidebar_new_mail_only`](cfg-sidebar-new-mail-only), [`sidebar-pin`](cmd-sidebar-pin)
+[`$sidebar_new_mail_only`](cfg-sidebar-new-mail-only), [`:sidebar-pin`](cmd-sidebar-pin)
 :::
 
 --------------------------------------------------------------------------------

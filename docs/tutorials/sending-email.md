@@ -41,8 +41,8 @@ The following bindings are available in the *index* and *pager* to start a new m
 *Forwarding* a message allows you to add comments or modify the message you are forwarding.
 These items are discussed in greater detail in the section "Forwarding and Bouncing Mail".
 
-NeoMutt will then enter the *compose* menu and prompt you for the recipients to place on the "To:" header field when you hit `m` to start a new message.
-Next, it will ask you for the "Subject:" field for the message, providing a default if you are replying to or forwarding a message.
+NeoMutt will then enter the *compose* menu and prompt you for the recipients to place on the `To:` header field when you hit `m` to start a new message.
+Next, it will ask you for the `Subject:` field for the message, providing a default if you are replying to or forwarding a message.
 You again have the chance to adjust recipients, subject, and security settings right before actually sending the message.
 See also `$ask_cc`, `$ask_bcc`, `$auto_edit`, `$bounce`, `$fast_reply`, and `$include` for changing how and if NeoMutt asks these questions.
 
@@ -212,7 +212,7 @@ To ensure you can view encrypted messages you have sent, you may wish to set `$p
 Most fields of the entries in the key selection menu (see also `$pgp_entry_format`) have obvious meanings.
 But some explanations on the capabilities, flags, and validity fields are in order.
 
-The flags sequence ("%f") will expand to one of the following flags:
+The flags sequence (`%f`) will expand to one of the following flags:
 
 ### PGP Key Menu Flags
 
@@ -223,7 +223,7 @@ The flags sequence ("%f") will expand to one of the following flags:
 | d    | You have marked the key as disabled.               |
 | c    | There are unknown critical self-signature packets. |
 
-The capabilities field ("%c") expands to a two-character sequence representing a key's capabilities.
+The capabilities field (`%c`) expands to a two-character sequence representing a key's capabilities.
 The first character gives the key's encryption capabilities: A minus sign ("-") means that the key cannot be used for encryption.
 A dot (".") means that it's marked as a signature key in one of the user IDs, but may also be used for encryption.
 The letter "e" indicates that this key can be used for encryption.
@@ -231,7 +231,7 @@ The letter "e" indicates that this key can be used for encryption.
 The second character indicates the key's signing capabilities.
 Once again, a "-" implies "not for signing", "." implies that the key is marked as an encryption key in one of the user-ids, and "s" denotes a key which can be used for signing.
 
-Finally, the validity field ("%t") indicates how well-certified a user-id is.
+Finally, the validity field (`%t`) indicates how well-certified a user-id is.
 Its values depend on the backend used.
 Note that S/MIME (which uses X509 certificates) has no concept of validity, so this field simply shows `x`.
 

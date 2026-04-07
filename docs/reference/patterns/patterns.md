@@ -18,30 +18,30 @@ Many of NeoMutt's commands allow you to specify a pattern to match (`limit`, `ta
 | `=b` *STRING*     |        | IMAP: messages whose body contains *STRING* (searches on the server)                                               |
 | `~B` *REGEX*      | d)     | messages whose body or headers match *REGEX*                                                                       |
 | `=B` *STRING*     |        | IMAP: messages whose body or headers contain *STRING* (searches on the server)                                     |
-| `~c` *REGEX*      |        | messages whose "Cc:" header matches *REGEX*                                                                        |
-| `%c` *GROUP*      |        | messages whose "Cc:" is a member of *GROUP*                                                                        |
-| `~C` *REGEX*      |        | messages whose "To:", "Cc:" or "Bcc:" header matches *REGEX*                                                       |
-| `%C` *GROUP*      |        | messages whose "To:", "Cc:" or "Bcc:" is a member of *GROUP*                                                       |
+| `~c` *REGEX*      |        | messages whose `Cc:` header matches *REGEX*                                                                        |
+| `%c` *GROUP*      |        | messages whose `Cc:` is a member of *GROUP*                                                                        |
+| `~C` *REGEX*      |        | messages whose `To:`, `Cc:` or `Bcc:` header matches *REGEX*                                                       |
+| `%C` *GROUP*      |        | messages whose `To:`, `Cc:` or `Bcc:` is a member of *GROUP*                                                       |
 | `~d` *DATERANGE*  |        | messages sent in *DATERANGE*                                                                                       |
 | `~D`              |        | deleted messages                                                                                                   |
-| `~e` *REGEX*      |        | messages whose "Sender:" header matches *REGEX*                                                                    |
-| `%e` *GROUP*      |        | messages whose "Sender:" is a member of *GROUP*                                                                    |
+| `~e` *REGEX*      |        | messages whose `Sender:` header matches *REGEX*                                                                    |
+| `%e` *GROUP*      |        | messages whose `Sender:` is a member of *GROUP*                                                                    |
 | `~E`              |        | expired messages                                                                                                   |
-| `~f` *REGEX*      |        | messages whose "From:" header matches *REGEX*                                                                      |
-| `%f` *GROUP*      |        | messages whose "From:" is a member of *GROUP*                                                                      |
+| `~f` *REGEX*      |        | messages whose `From:` header matches *REGEX*                                                                      |
+| `%f` *GROUP*      |        | messages whose `From:` is a member of *GROUP*                                                                      |
 | `~F`              |        | flagged messages                                                                                                   |
 | `~g`              |        | cryptographically signed messages                                                                                  |
 | `~G`              |        | cryptographically encrypted messages                                                                               |
 | `~h` *REGEX*      | d)     | messages whose header matches *REGEX*                                                                              |
 | `=h` *STRING*     |        | IMAP: messages whose header contains *STRING* (searches on the server)                                             |
 | `~H` *REGEX*      |        | messages whose spam header matches *REGEX*                                                                         |
-| `~i` *REGEX*      |        | messages whose "Message-ID:" header matches *REGEX*                                                                |
-| `~I` *QUERY*      |        | messages whose "Message-ID:" is included in results from `$external_search_command`                                |
+| `~i` *REGEX*      |        | messages whose `Message-ID:` header matches *REGEX*                                                                |
+| `~I` *QUERY*      |        | messages whose `Message-ID:` is included in results from `$external_search_command`                                |
 | `~k`              |        | messages which contain a PGP key                                                                                   |
-| `~K` *REGEX*      |        | messages whose "Bcc:" header matches *REGEX*                                                                       |
+| `~K` *REGEX*      |        | messages whose `Bcc:` header matches *REGEX*                                                                       |
 | `~l`              |        | messages addressed to known mailing lists                                                                          |
-| `~L` *REGEX*      |        | messages whose "From:", "Sender:", "To:" or "Cc:" header matches *REGEX*                                           |
-| `%L` *GROUP*      |        | messages whose "From:", "Sender:", "To:" or "Cc:" is a member of *GROUP*                                           |
+| `~L` *REGEX*      |        | messages whose `From:`, `Sender:`, `To:` or `Cc:` header matches *REGEX*                                           |
+| `%L` *GROUP*      |        | messages whose `From:`, `Sender:`, `To:` or `Cc:` is a member of *GROUP*                                           |
 | `~m` *RANGE*      | c)     | messages whose number is in *RANGE*                                                                                |
 | `~M` *REGEX*      | d)     | messages with a Content-Type matching *REGEX*                                                                      |
 | `~n` *RANGE*      | a)     | messages whose score is in *RANGE*                                                                                 |
@@ -52,18 +52,18 @@ Many of NeoMutt's commands allow you to specify a pattern to match (`limit`, `ta
 | `~Q`              |        | messages which have been replied to                                                                                |
 | `~r` *DATERANGE*  |        | messages received in *DATERANGE*                                                                                   |
 | `~R`              |        | read messages                                                                                                      |
-| `~s` *REGEX*      |        | messages whose "Subject:" header matches *REGEX*                                                                   |
+| `~s` *REGEX*      |        | messages whose `Subject:` header matches *REGEX*                                                                   |
 | `~S`              |        | superseded messages                                                                                                |
-| `~t` *REGEX*      |        | messages whose "To:" header matches *REGEX*                                                                        |
+| `~t` *REGEX*      |        | messages whose `To:` header matches *REGEX*                                                                        |
 | `~T`              |        | tagged messages                                                                                                    |
 | `~u`              |        | messages addressed to subscribed mailing lists                                                                     |
 | `~U`              |        | unread messages                                                                                                    |
 | `~v`              |        | messages in collapsed threads                                                                                      |
 | `~V`              |        | cryptographically verified messages                                                                                |
 | `~w` *REGEX*      |        | newsgroups matching *REGEX*                                                                                        |
-| `~x` *REGEX*      |        | messages whose "References:" or "In-Reply-To" headers matches *REGEX*                                              |
+| `~x` *REGEX*      |        | messages whose `References:` or "In-Reply-To" headers matches *REGEX*                                              |
 | `~X` *RANGE*      | a), d) | messages with *RANGE* attachments                                                                                  |
-| `~y` *REGEX*      |        | messages whose "X-Label:" header matches *REGEX*                                                                   |
+| `~y` *REGEX*      |        | messages whose `X-Label:` header matches *REGEX*                                                                   |
 | `~Y` *REGEX*      |        | messages whose tags match *REGEX*                                                                                  |
 | `~z` *RANGE*      | a), b) | messages whose size is in *RANGE*                                                                                  |
 | `~#`              |        | broken threads (see `$strict_threads`)                                                                             |

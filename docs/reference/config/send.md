@@ -79,7 +79,7 @@ When set to _no_, composition will never be aborted.
     set allow_8bit = yes
     ```
 
-Controls whether 8-bit data is converted to 7-bit using either Quoted-Printable or Base64 encoding when sending mail.
+Controls whether 8-bit data is converted to 7-bit using either **Quoted-Printable** or **Base64** encoding when sending mail.
 
 --------------------------------------------------------------------------------
 
@@ -92,7 +92,7 @@ Controls whether 8-bit data is converted to 7-bit using either Quoted-Printable 
     set ask_bcc = no
     ```
 
-If _set_, NeoMutt will prompt you for blind-carbon-copy (Bcc) recipients before editing an outgoing message.
+If _set_, NeoMutt will prompt you for blind-carbon-copy, `Bcc:`, recipients before editing an outgoing message.
 
 --------------------------------------------------------------------------------
 
@@ -105,7 +105,7 @@ If _set_, NeoMutt will prompt you for blind-carbon-copy (Bcc) recipients before 
     set ask_cc = no
     ```
 
-If _set_, NeoMutt will prompt you for carbon-copy (Cc) recipients before editing the body of an outgoing message.
+If _set_, NeoMutt will prompt you for carbon-copy, `Cc:`, recipients before editing the body of an outgoing message.
 
 --------------------------------------------------------------------------------
 
@@ -131,7 +131,7 @@ If set, NeoMutt will prompt you for follow-up groups before editing the body of 
     set ask_x_comment_to = no
     ```
 
-If set, NeoMutt will prompt you for x-comment-to field before editing the body of an outgoing message.
+If set, NeoMutt will prompt you for `X-Comment-To:` field before editing the body of an outgoing message.
 
 --------------------------------------------------------------------------------
 
@@ -239,7 +239,7 @@ Similar to the [`$attribution_intro`](cfg-attribution-intro) variable, this is t
     set bounce_delivered = yes
     ```
 
-When this variable is _set_, NeoMutt will include Delivered-To headers when bouncing messages.
+When this variable is _set_, NeoMutt will include `Delivered-To:` headers when bouncing messages.
 Postfix users may wish to _unset_ this variable.
 
 --------------------------------------------------------------------------------
@@ -253,7 +253,7 @@ Postfix users may wish to _unset_ this variable.
     set confirm_empty_to = no
     ```
 
-When _set_, NeoMutt will prompt for confirmation when sending an e-mail with an empty To recipients list.
+When _set_, NeoMutt will prompt for confirmation when sending an e-mail with an empty `To:` recipients list.
 
 --------------------------------------------------------------------------------
 
@@ -266,7 +266,7 @@ When _set_, NeoMutt will prompt for confirmation when sending an e-mail with an 
     set content_type = "text/plain"
     ```
 
-Sets the default Content-Type for the body of newly composed messages.
+Sets the default `Content-Type:` for the body of newly composed messages.
 
 --------------------------------------------------------------------------------
 
@@ -281,7 +281,7 @@ Sets the default Content-Type for the body of newly composed messages.
     ```
 
 Setting this variable will cause NeoMutt to always attempt to PGP encrypt outgoing messages.
-This is probably only useful in connection to the [`send-hook`](cmd-send-hook) command.
+This is probably only useful in connection to the [`:send-hook`](cmd-send-hook) command.
 It can be overridden by use of the pgp menu, when encryption is not required or signing is requested as well.
 If [`$smime_is_default`](cfg-smime-is-default) is _set_, then OpenSSL is used instead to create S/MIME messages and settings can be overridden by use of the smime menu instead.
 
@@ -297,6 +297,7 @@ If [`$smime_is_default`](cfg-smime-is-default) is _set_, then OpenSSL is used in
     ```
 
 This variable controls whether or not NeoMutt may automatically enable PGP encryption/signing for messages.
+
 :::{seealso}
 [`$crypt_auto_encrypt`](cfg-crypt-auto-encrypt), [`$crypt_reply_encrypt`](cfg-crypt-reply-encrypt), [`$crypt_auto_sign`](cfg-crypt-auto-sign), [`$crypt_reply_sign`](cfg-crypt-reply-sign), attribution_locale [`$smime_is_default`](cfg-smime-is-default)
 :::
@@ -329,6 +330,7 @@ If [`$smime_is_default`](cfg-smime-is-default) is _set_, then OpenSSL is used in
     ```
 
 This variable controls whether or not NeoMutt may automatically enable S/MIME encryption/signing for messages.
+
 :::{seealso}
 [`$crypt_auto_encrypt`](cfg-crypt-auto-encrypt), [`$crypt_reply_encrypt`](cfg-crypt-reply-encrypt), [`$crypt_auto_sign`](cfg-crypt-auto-sign), [`$crypt_reply_sign`](cfg-crypt-reply-sign), [`$smime_is_default`](cfg-smime-is-default)
 :::
@@ -440,7 +442,7 @@ For SMTP delivery, DSN support is auto-detected so that it depends on the server
     set empty_subject = "Re: your mail"
     ```
 
-This variable specifies the subject to be used when replying to an email with an empty subject.
+This variable specifies the subject to be used when replying to an email with an empty `Subject:`.
 It defaults to "Re: your mail".
 
 --------------------------------------------------------------------------------
@@ -468,7 +470,7 @@ This is useful to avoid the tampering certain mail delivery and transport agents
     set fast_reply = no
     ```
 
-When _set_, the initial prompt for recipients (to, cc, bcc) and subject are skipped when the relevant information is already provided.
+When _set_, the initial prompt for recipients (`To:`, `Cc:`, `Bcc:`) and subject are skipped when the relevant information is already provided.
 These cases include replying to messages and passing the relevant command line arguments.
 The initial prompt for recipients is also skipped when composing a new message to the current message sender, while the initial prompt for subject is also skipped when forwarding messages.
 
@@ -548,8 +550,8 @@ When this variable is _set_, FCCs will be stored unencrypted and unsigned, even 
     set followup_to = yes
     ```
 
-Controls whether or not the "Mail-Followup-To:" header field is generated when sending mail.
-When _set_, NeoMutt will generate this field when you are replying to a known mailing list, specified with the [`subscribe`](cmd-subscribe) or [`lists`](cmd-lists) commands.
+Controls whether or not the `Mail-Followup-To:` header field is generated when sending mail.
+When _set_, NeoMutt will generate this field when you are replying to a known mailing list, specified with the [`:subscribe`](cmd-subscribe) or [`:lists`](cmd-lists) commands.
 
 This field has two purposes.
 First, preventing you from receiving duplicate copies of replies to messages which you send to mailing lists, and second, ensuring that you do get a reply separately for any messages sent to known lists to which you are not subscribed.
@@ -681,7 +683,7 @@ This variable controls the default subject when forwarding a message.
     set forward_references = no
     ```
 
-When _set_, forwarded messages set the "In-Reply-To:" and "References:" headers in the same way as normal replies would.
+When _set_, forwarded messages set the `In-Reply-To:` and `References:` headers in the same way as normal replies would.
 Hence the forwarded message becomes part of the original thread instead of starting a new one.
 
 --------------------------------------------------------------------------------
@@ -723,7 +725,7 @@ This string is added to the top of every outgoing message.
     set hdrs = yes
     ```
 
-When _unset_, the header fields normally added by the [`my-header`](cmd-my-header) command are not created.
+When _unset_, the header fields normally added by the [`:my-header`](cmd-my-header) command are not created.
 This variable _must_ be unset before composing a new message or replying in order to take effect.
 If _set_, the user defined header fields are added to every new message.
 
@@ -751,7 +753,7 @@ When _set_, NeoMutt will skip the host name part of [`$hostname`](cfg-hostname) 
     set honor_followup_to = yes
     ```
 
-This variable controls whether or not a Mail-Followup-To header is honored when group-replying to a message.
+This variable controls whether or not a `Mail-Followup-To:` header is honored when group-replying to a message.
 
 --------------------------------------------------------------------------------
 
@@ -764,8 +766,8 @@ This variable controls whether or not a Mail-Followup-To header is honored when 
     set ignore_list_reply_to = no
     ```
 
-Affects the behavior of the [`<reply>`](ref-fn-attach) function when replying to messages from mailing lists (as defined by the [`subscribe`](cmd-subscribe) or [`lists`](cmd-lists) commands).  
-When _set_, if the "Reply-To:" field is set to the same value as the "To:" field, NeoMutt assumes that the "Reply-To:" field was set by the mailing list to automate responses to the list, and will ignore this field.
+Affects the behavior of the [`<reply>`](ref-fn-attach) function when replying to messages from mailing lists (as defined by the [`:subscribe`](cmd-subscribe) or [`:lists`](cmd-lists) commands).  
+When _set_, if the `Reply-To:` field is set to the same value as the `To:` field, NeoMutt assumes that the `Reply-To:` field was set by the mailing list to automate responses to the list, and will ignore this field.
 To direct a response to the mailing list when this option is _set_, use the [`<list-reply>`](ref-fn-attach) function; [`<group-reply>`](ref-fn-attach) will reply to both the sender and the list.
 
 --------------------------------------------------------------------------------
@@ -832,7 +834,7 @@ set inews_command = "/usr/local/bin/inews -hS"
     set message_id_format = "<%{random_12}@%{hostname}>"
     ```
 
-Specify the format of the `Message-ID` email header.
+Specify the format of the `Message-ID:` email header.
 
 Please note that the Message-ID value follows a strict syntax, and you are responsible for ensuring correctness if you change this from the default.
 In particular, the value must follow the syntax in RFC 5322: `"<" id-left "@" id-right ">"`.
@@ -851,11 +853,11 @@ The old Message-ID format can be used by setting this to: `<%Y%02m%02d%02H%02M%0
 |-------|----------------|--------------------------------------------------------------------|
 | %c    | `%{counter}`   | Step counter looping from `A` to `Z`                               |
 | %d    | `%{day}`       | Current day of the month (GMT)                                     |
-| %f    | `%{hostname}`  | [`$hostname`](cfg-hostname)                                              |
+| %f    | `%{hostname}`  | [`$hostname`](cfg-hostname)                                        |
 | %H    | `%{hour}`      | Current hour using a 24-hour clock (GMT)                           |
 | %m    | `%{minute}`    | Current month number (GMT)                                         |
 | %M    | `%{month}`     | Current minute of the hour (GMT)                                   |
-| %p    | `%{pid}`       | Pid of the running mutt process                                    |
+| %p    | `%{pid}`       | Pid of the running neomutt process                                 |
 | %r    | `%{random_3}`  | 3 bytes of pseudo-random data encoded in Base64                    |
 | %S    | `%{second}`    | Current second of the minute (GMT)                                 |
 | %x    | `%{random_1}`  | 1 byte of pseudo-random data hex encoded (example: `1b`)           |
@@ -879,7 +881,7 @@ Base64Url: <https://datatracker.ietf.org/doc/html/rfc4648#section-5>
     set me_too = no
     ```
 
-If _unset_, NeoMutt will remove your address (see the [`alternates`](cmd-alternates) command) from the list of recipients when replying to a message.
+If _unset_, NeoMutt will remove your address (see the [`:alternates`](cmd-alternates) command) from the list of recipients when replying to a message.
 
 --------------------------------------------------------------------------------
 
@@ -909,13 +911,13 @@ Otherwise [`$forward_decode`](cfg-forward-decode) is used instead.
 This specifies a command to run, to determine the mime type of a new attachment when composing a message.
 Unless [`$mime_type_query_first`](cfg-mime-type-query-first) is set, this will only be run if the attachment's extension is not found in the mime.types file.
 
-The string may contain a "%s", which will be substituted with the attachment filename.
-NeoMutt will add quotes around the string substituted for "%s" automatically according to shell quoting rules, so you should avoid adding your own.
-If no "%s" is found in the string, NeoMutt will append the attachment filename to the end of the string.
+The string may contain a `%s`, which will be substituted with the attachment filename.
+NeoMutt will add quotes around the string substituted for `%s` automatically according to shell quoting rules, so you should avoid adding your own.
+If no `%s` is found in the string, NeoMutt will append the attachment filename to the end of the string.
 
 The command should output a single line containing the attachment's mime type.
 
-Suggested values are "xdg-mime query filetype" or "file -bi".
+Suggested values are `xdg-mime query filetype` or `file -bi`.
 
 --------------------------------------------------------------------------------
 
@@ -1027,7 +1029,7 @@ Also see [`$postponed`](cfg-postponed) variable.
 
 If _unset_ and you are replying to a message sent by you, NeoMutt will assume that you want to reply to the recipients of that message rather than to yourself.
 
-Also see the [`alternates`](cmd-alternates) command.
+Also see the [`:alternates`](cmd-alternates) command.
 
 --------------------------------------------------------------------------------
 
@@ -1060,7 +1062,7 @@ This variable provides a toggle.
 When active, the From: header will be extracted from the current mail's 'X-Original-To:' header.
 This setting does not have precedence over [`$reverse_real_name`](cfg-reverse-real-name).
 
-Assuming 'fast_reply' is disabled, this option will prompt the user with a prefilled From: header.
+Assuming [`$fast_reply`](cfg-fast-reply) is disabled, this option will prompt the user with a prefilled From: header.
 
 --------------------------------------------------------------------------------
 
@@ -1088,10 +1090,10 @@ Recipients are not prompted for; send-hooks are not evaluated; no alias expansio
     ```
 
 It may sometimes arrive that you receive mail to a certain machine, move the messages to another machine, and reply to some the messages from there.
-If this variable is _set_, the default _From:_ line of the reply messages is built using the address where you received the messages you are replying to **if** that address matches your [`alternates`](cmd-alternates).  
-If the variable is _unset_, or the address that would be used doesn't match your [`alternates`](cmd-alternates), the _From:_ line will use your address on the current machine.
+If this variable is _set_, the default `From:` line of the reply messages is built using the address where you received the messages you are replying to **if** that address matches your [`:alternates`](cmd-alternates).  
+If the variable is _unset_, or the address that would be used doesn't match your [`:alternates`](cmd-alternates), the `From:` line will use your address on the current machine.
 
-Also see the [`alternates`](cmd-alternates) command and [`$reverse_real_name`](cfg-reverse-real-name).
+Also see the [`:alternates`](cmd-alternates) command and [`$reverse_real_name`](cfg-reverse-real-name).
 
 --------------------------------------------------------------------------------
 
@@ -1176,7 +1178,6 @@ If there is some error, you will be informed as to where to find the output.
     ```
 
 Specifies the filename of your signature, which is appended to all outgoing messages.
-If the filename ends with a pipe ("|"), it is assumed that filename is a shell command and input should be read from its standard output.
 
 :::{seealso}
 - {doc}`/howto/email-template`
@@ -1193,7 +1194,7 @@ If the filename ends with a pipe ("|"), it is assumed that filename is a shell c
     set sig_dashes = yes
     ```
 
-If _set_, a line containing "-- " (note the trailing space) will be inserted before your [`$signature`](cfg-signature).
+If _set_, a line containing `-- ` (note the trailing space) will be inserted before your [`$signature`](cfg-signature).
 It is **strongly** recommended that you not _unset_ this variable unless your signature contains just your name.
 The reason for this is because many software packages use `-- \n` to detect your signature.
 For example, NeoMutt has the ability to highlight the signature in a different color in the built-in pager.
@@ -1236,11 +1237,10 @@ Do not set this variable unless you really know what you are doing, and are prep
     ```
 
 This is a colon-separated list of authentication methods NeoMutt may attempt to use to log in to an SMTP server, in the order NeoMutt should try them.
-Authentication methods are any SASL mechanism, e.g.
-"plain", "digest-md5", "gssapi" or "cram-md5".
+Authentication methods are any SASL mechanism, e.g. `plain`, `digest-md5`, `gssapi` or `cram-md5`.
 This option is case-insensitive.
-If it is "unset" (the default) NeoMutt will try all available methods, in order from most-secure to least-secure.
-Support for the "plain" mechanism is bundled; other mechanisms are provided by an external SASL library (look for '+sasl' in the output of `neomutt -v`).
+If it is unset (the default) NeoMutt will try all available methods, in order from most-secure to least-secure.
+Support for the `plain` mechanism is bundled; other mechanisms are provided by an external SASL library (look for '+sasl' in the output of `neomutt -v`).
 
 Example:
 
@@ -1335,7 +1335,7 @@ This variable defaults to your user name on the local machine.
     set user_agent = no
     ```
 
-When _set_, NeoMutt will add a "User-Agent:" header to outgoing messages, indicating which version of NeoMutt was used for composing them.
+When _set_, NeoMutt will add a `User-Agent:` header to outgoing messages, indicating which version of NeoMutt was used for composing them.
 
 --------------------------------------------------------------------------------
 
@@ -1368,7 +1368,7 @@ flag when sending 8-bit messages to enable ESMTP negotiation.
 
 When _set_, NeoMutt will set the _envelope_ sender of the message.
 If [`$envelope_from_address`](cfg-envelope-from-address) is _set_, it will be used as the sender address.
-If _unset_, NeoMutt will attempt to derive the sender from the "From:" header.
+If _unset_, NeoMutt will attempt to derive the sender from the `From:` header.
 
 Note that this information is passed to sendmail command using the `-f` command line switch.
 Therefore setting this option is not useful if the [`$sendmail`](cfg-sendmail) variable already contains `-f` or if the executable pointed to by [`$sendmail`](cfg-sendmail) doesn't support the `-f` switch.
@@ -1384,8 +1384,8 @@ Therefore setting this option is not useful if the [`$sendmail`](cfg-sendmail) v
     set use_from = yes
     ```
 
-When _set_, NeoMutt will generate the "From:" header field when sending messages.
-If _unset_, no "From:" header field will be generated unless the user explicitly sets one using the [`my-header`](cmd-my-header) command.
+When _set_, NeoMutt will generate the `From:` header field when sending messages.
+If _unset_, no `From:` header field will be generated unless the user explicitly sets one using the [`:my-header`](cmd-my-header) command.
 
 --------------------------------------------------------------------------------
 
@@ -1418,11 +1418,11 @@ This option usually shouldn't be changed.
     set write_bcc = no
     ```
 
-Controls whether NeoMutt writes out the "Bcc:" header when preparing messages to be sent.
-Some MTAs, such as Exim and Courier, do not strip the "Bcc:" header; so it is advisable to leave this unset unless you have a particular need for the header to be in the sent message.
+Controls whether NeoMutt writes out the `Bcc:` header when preparing messages to be sent.
+Some MTAs, such as Exim and Courier, do not strip the `Bcc:` header; so it is advisable to leave this unset unless you have a particular need for the header to be in the sent message.
 
-If NeoMutt is set to deliver directly via SMTP(see [`$smtp_url`](cfg-smtp-url)), this option does nothing: NeoMutt will never write out the "Bcc:" header in this case.
+If NeoMutt is set to deliver directly via SMTP(see [`$smtp_url`](cfg-smtp-url)), this option does nothing: NeoMutt will never write out the `Bcc:` header in this case.
 
 Note this option only affects the sending of messages.
-Fcc'ed copies of a message will always contain the "Bcc:" header if one exists.
+Fcc'ed copies of a message will always contain the `Bcc:` header if one exists.
 

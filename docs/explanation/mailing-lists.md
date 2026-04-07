@@ -17,7 +17,7 @@ Alternatively or additionally, you can set `$auto_subscribe` to automatically su
 
 Now that NeoMutt knows what your mailing lists are, it can do several things, the first of which is the ability to show the name of a list through which you received a message (i.e., of a subscribed list) in the *index* menu display.
 This is useful to distinguish between personal and list mail in the same mailbox.
-In the `$index_format` variable, the expando "%L" will print the string "To \<list\>" when "list" appears in the "To" field, and "Cc \<list\>" when it appears in the "Cc" field (otherwise it prints the name of the author).
+In the `$index_format` variable, the expando `%L` will print the string "To \<list\>" when "list" appears in the "To" field, and "Cc \<list\>" when it appears in the "Cc" field (otherwise it prints the name of the author).
 
 :::{admonition} 📷 Screenshot Needed
 :class: tip
@@ -55,7 +55,7 @@ NeoMutt uses the `$reply_to` variable to help decide which address to use.
 If set to *ask-yes* or *ask-no*, you will be prompted as to whether or not you would like to use the address given in the "Reply-To" field, or reply directly to the address given in the "From" field.
 When set to *yes*, the "Reply-To" field will be used when present.
 
-You can change or delete the "X-Label:" field within NeoMutt using the "edit-label" command, bound to the "y" key by default.
+You can change or delete the `X-Label:` field within NeoMutt using the "edit-label" command, bound to the "y" key by default.
 This works for tagged messages, too.
 While in the edit-label function, pressing the \<complete\> binding (TAB, by default) will perform completion against all labels currently in use.
 

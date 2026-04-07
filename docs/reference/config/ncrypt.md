@@ -48,7 +48,7 @@ If _set_, NeoMutt will include an informative block before an encrypted part, wi
 
 Setting this variable will cause NeoMutt to automatically enable and disable encryption, based on whether all message recipient keys can be located by NeoMutt.
 
-When this option is enabled, NeoMutt will enable/disable encryption each time the TO, CC, and BCC lists are edited.
+When this option is enabled, NeoMutt will enable/disable encryption each time the `To:`, `Cc:`, and `Bcc:` lists are edited.
 If [`$edit_headers`](cfg-edit-headers) is set, NeoMutt will also do so each time the message is edited.
 
 While this is set, encryption can't be manually enabled/disabled.
@@ -72,7 +72,7 @@ When set, this modifies the behavior of [`$crypt_opportunistic_encrypt`](cfg-cry
 A key with marginal or no validity will not enable opportunistic encryption.
 
 For S/MIME, the behavior depends on the backend.
-Classic S/MIME will filter for certificates with the 't'(trusted) flag in the .index file.
+Classic S/MIME will filter for certificates with the `t` (trusted) flag in the .index file.
 The GPGME backend will use the same filters as with OpenPGP, and depends on GPGME's logic for assigning the GPGME_VALIDITY_FULL and GPGME_VALIDITY_ULTIMATE validity flag.
 
 --------------------------------------------------------------------------------
@@ -212,6 +212,7 @@ Note that the GPGME backend does not support creating old-style inline (traditio
     ```
 
 Controls whether NeoMutt uses PKA during signature verification (only supported by the GPGME backend).
+
 :::{seealso}
 <http://www.g10code.de/docs/pka-intro.de.pdf>
 :::
@@ -228,9 +229,11 @@ Controls whether NeoMutt uses PKA during signature verification (only supported 
     set crypt_verify_sig = yes
     ```
 
-If _"yes"_, always attempt to verify PGP or S/MIME signatures.
-If _"ask-*"_, ask whether or not to verify the signature.
-If _"no"_, never attempt to verify cryptographic signatures.
+| Value   | Meaning                                           |
+|---------|---------------------------------------------------|
+| `yes`   | Always attempt to verify PGP or S/MIME signatures |
+| `ask-*` | Ask whether or not to verify the signature        |
+| `no`    | Never attempt to verify cryptographic signatures  |
 
 --------------------------------------------------------------------------------
 
@@ -705,10 +708,11 @@ It produces a different date format which may result in NeoMutt showing incorrec
     ```
 
 If _set_, use 64-bit PGP key IDs, if _unset_ use the normal 32-bit key IDs.
+
 :::{note}
 Internally, NeoMutt has transitioned to using fingerprints (or long key IDs as a fallback).
-:::
 This option now only controls the display of key IDs in the key selection menu and a few other places.
+:::
 
 --------------------------------------------------------------------------------
 
@@ -785,8 +789,7 @@ This includes keys which have been revoked, have expired, or have been marked as
 
 If you have a different key pair to use for signing, you should set this to the signing key.
 Most people will only need to set [`$pgp_default_key`](cfg-pgp-default-key).
-It is recommended that you use the keyid form to specify your key (e.g.
-`0x00112233`).
+It is recommended that you use the keyid form to specify your key (e.g. `0x00112233`).
 
 --------------------------------------------------------------------------------
 
@@ -1053,16 +1056,16 @@ Encrypt the message to [`$smime_default_key`](cfg-smime-default-key) too.
 
 This sets the algorithm that should be used for encryption.
 
-| Algorithms |
-|------------|
-| `aes128`   |
-| `aes192`   |
-| `aes256`   |
-| `des`      |
-| `des3`     |
-| `rc2-40`   |
-| `rc2-64`   |
-| `rc2-128`  |
+| Algorithms | Notes                  |
+|------------|------------------------|
+| `aes256`   | Recommended            |
+| `aes192`   |                        |
+| `aes128`   | Still strong           |
+| `des3`     | Legacy fallback        |
+| `des`      | Unsafe: **Do not use** |
+| `rc2-40`   | Unsafe: **Do not use** |
+| `rc2-64`   | Unsafe: **Do not use** |
+| `rc2-128`  | Unsafe: **Do not use** |
 
 --------------------------------------------------------------------------------
 
@@ -1114,7 +1117,7 @@ This command is used to extract the mail address(es) used for storing X509 certi
     set smime_get_signer_cert_command = ""
     ```
 
-This command is used to extract only the signers X509 certificate from a S/MIME signature, so that the certificate's owner may get compared to the email's "From:" field.
+This command is used to extract only the signers X509 certificate from a S/MIME signature, so that the certificate's owner may get compared to the email's `From:` field.
 
 :::{seealso}
 - [`$smime_decrypt_command`](cfg-smime-decrypt-command) for a full list of expandos
@@ -1260,14 +1263,14 @@ This command is used to created S/MIME signatures of type `multipart/signed`, wh
 
 This sets the algorithm that should be used for the signature message digest.
 
-| Algorithms |
-|------------|
-| `md5`      |
-| `sha1`     |
-| `sha224`   |
-| `sha256`   |
-| `sha384`   |
-| `sha512`   |
+| Algorithms | Notes                  |
+|------------|------------------------|
+| `sha512`   |                        |
+| `sha384`   |                        |
+| `sha256`   | Recommended default    |
+| `sha224`   |                        |
+| `sha1`     | Unsafe: **Do not use** |
+| `md5`      | Unsafe: **Do not use** |
 
 --------------------------------------------------------------------------------
 

@@ -29,7 +29,7 @@ If this variable is _set_, NeoMutt will mark all articles in newsgroup as read w
     set followup_to_poster = ask-yes
     ```
 
-If this variable is _set_ and the keyword "poster" is present in _Followup-To_ header, follow-up to newsgroup function is not permitted.
+If this variable is _set_ and the keyword "poster" is present in `Followup-To:` header, follow-up to newsgroup function is not permitted.
 The message will be mailed to the submitter of the message via mail.
 
 --------------------------------------------------------------------------------
@@ -104,7 +104,7 @@ This variable specifies domain name or address of NNTP server.
 
 You can also specify username and an alternative port for each news server, e.g. `[[s]news://][username[:password]@]server[:port]`
 
-This option can also be set using the command line option "-g", the environment variable [`$NNTPSERVER`](ref-env), or putting the server name in the file "/etc/nntpserver".
+This option can also be set using the command line option `-g`, the environment variable [`$NNTPSERVER`](ref-env), or putting the server name in the file `/etc/nntpserver`.
 
 --------------------------------------------------------------------------------
 
@@ -118,8 +118,7 @@ This option can also be set using the command line option "-g", the environment 
     ```
 
 This is a colon-delimited list of authentication methods NeoMutt may attempt to use to log in to a news server, in the order NeoMutt should try them.
-Authentication methods are either "user" or any SASL mechanism, e.g.
-"digest-md5", "gssapi" or "cram-md5".
+Authentication methods are either `user` or any SASL mechanism, e.g. `digest-md5`, `gssapi` or `cram-md5`.
 This option is case-insensitive.
 If it's _unset_ (the default)
 NeoMutt will try all available methods, in order from most-secure to least-secure.
@@ -248,7 +247,7 @@ If news server does not support posting to that newsgroup or totally read-only, 
     set save_unsubscribed = no
     ```
 
-When _set_, info about unsubscribed newsgroups will be saved into "newsrc" file and into cache.
+When _set_, info about unsubscribed newsgroups will be saved into [`$newsrc`](cfg-newsrc) file and into cache.
 
 --------------------------------------------------------------------------------
 
@@ -276,5 +275,5 @@ Also controls whether or not number of new articles of subscribed newsgroups wil
     set x_comment_to = no
     ```
 
-If _set_, NeoMutt will add "X-Comment-To:" field (that contains full name of original article author) to an article that followed up to a newsgroup.
+If _set_, NeoMutt will add `X-Comment-To:` field (that contains full name of original article author) to an article that followed up to a newsgroup.
 

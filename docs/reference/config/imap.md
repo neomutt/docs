@@ -18,8 +18,7 @@ keywords: neomutt, imap, imap_authenticators, imap_idle, imap_condstore, imap_qr
     ```
 
 This is a colon-separated list of authentication methods NeoMutt may attempt to use to log in to an IMAP server, in the order NeoMutt should try them.
-Authentication methods are either "login" or the right side of an IMAP "AUTH=xxx" capability string, e.g.
-"digest-md5", "gssapi" or "cram-md5".
+Authentication methods are either `login` or the right side of an IMAP `AUTH=xxx` capability string, e.g. `digest-md5`, `gssapi` or `cram-md5`.
 This option is case-insensitive.
 If it's _unset_ (the default) NeoMutt will try all available methods, in order from most-secure to least-secure.
 
@@ -44,7 +43,7 @@ If a method is available but authentication fails, NeoMutt will not connect to t
     set imap_check_subscribed = no
     ```
 
-When _set_, NeoMutt will fetch the set of subscribed folders from your server whenever a mailbox is **selected**, and add them to the set of mailboxes it polls for new mail just as if you had issued individual [`mailboxes`](cmd-mailboxes) commands.
+When _set_, NeoMutt will fetch the set of subscribed folders from your server whenever a mailbox is **selected**, and add them to the set of mailboxes it polls for new mail just as if you had issued individual [`:mailboxes`](cmd-mailboxes) commands.
 
 --------------------------------------------------------------------------------
 
@@ -57,8 +56,7 @@ When _set_, NeoMutt will fetch the set of subscribed folders from your server wh
     set imap_condstore = no
     ```
 
-When _set_, NeoMutt will use the CONDSTORE extension ([RFC7162](https://www.rfc-editor.org/rfc/rfc7162.html))
-if advertised by the server.
+When _set_, NeoMutt will use the `CONDSTORE` extension ([RFC7162](https://www.rfc-editor.org/rfc/rfc7162.html)) if advertised by the server.
 NeoMutt's current implementation is basic, used only for initial message fetching and flag updates.
 
 For some IMAP servers, enabling this will slightly speed up downloading initial messages.
@@ -76,8 +74,7 @@ Your mileage may vary.
     set imap_deflate = yes
     ```
 
-When _set_, NeoMutt will use the COMPRESS=DEFLATE extension ([RFC4978](https://www.rfc-editor.org/rfc/rfc4978.html))
-if advertised by the server.
+When _set_, NeoMutt will use the `COMPRESS=DEFLATE` extension ([RFC4978](https://www.rfc-editor.org/rfc/rfc4978.html)) if advertised by the server.
 
 In general a good compression efficiency can be achieved, which speeds up reading large mailboxes also on fairly good connections.
 
@@ -108,7 +105,7 @@ This contains the list of characters that NeoMutt will use as folder separators 
     ```
 
 When set to a value greater than 0, new headers will be downloaded in groups of this many headers per request.
-If you have a very large mailbox, this might prevent a timeout and disconnect when opening the mailbox, by sending a FETCH per set of this many headers, instead of a single FETCH for all new headers.
+If you have a very large mailbox, this might prevent a timeout and disconnect when opening the mailbox, by sending a FETCH per set of this many headers, instead of a single `FETCH` for all new headers.
 
 --------------------------------------------------------------------------------
 
@@ -143,8 +140,7 @@ You may want to add more headers for spam detection.
 | `X-Label:`             |
 
 :::{note}
-This is a space separated list, items should be uppercase and not contain the colon, e.g.
-"X-BOGOSITY X-SPAM-STATUS" for the "X-Bogosity:" and "X-Spam-Status:" header fields.
+This is a space separated list, items should be uppercase and not contain the colon, e.g. `X-BOGOSITY X-SPAM-STATUS` for the `X-Bogosity:` and `X-Spam-Status:` header fields.
 :::
 
 --------------------------------------------------------------------------------
@@ -326,8 +322,8 @@ NeoMutt's current implementation is basic, used only for initial message fetchin
 
 :::{note}
 this feature is currently experimental.
-:::
 If you experience strange behavior, such as duplicate or missing messages please file a bug report to let us know.
+:::
 
 --------------------------------------------------------------------------------
 
@@ -340,9 +336,10 @@ If you experience strange behavior, such as duplicate or missing messages please
     set imap_rfc5161 = yes
     ```
 
-When _set_, NeoMutt will use the IMAP ENABLE extension ([RFC5161](https://www.rfc-editor.org/rfc/rfc5161.html)) to select CAPABILITIES.
-Some servers (notably Coremail System IMap Server) do not properly respond to ENABLE commands, which might cause NeoMutt to hang.
+When _set_, NeoMutt will use the IMAP ENABLE extension ([RFC5161](https://www.rfc-editor.org/rfc/rfc5161.html)) to select `CAPABILITIES`.
+Some servers (notably Coremail System IMap Server) do not properly respond to `ENABLE` commands, which might cause NeoMutt to hang.
 If your connection seems to freeze at login, try unsetting this.
+
 :::{seealso}
 <https://github.com/neomutt/neomutt/issues/1689>
 :::
@@ -358,7 +355,7 @@ If your connection seems to freeze at login, try unsetting this.
     set imap_send_id = no
     ```
 
-When _set_, NeoMutt will send an IMAP ID command ([RFC2971](https://www.rfc-editor.org/rfc/rfc2971.html)) to the server when logging in if advertised by the server.
+When _set_, NeoMutt will send an IMAP `ID` command ([RFC2971](https://www.rfc-editor.org/rfc/rfc2971.html)) to the server when logging in if advertised by the server.
 This command provides information about the IMAP client, such as "NeoMutt" and the current version.
 
 --------------------------------------------------------------------------------

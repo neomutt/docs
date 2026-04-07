@@ -60,5 +60,5 @@ The project maintains compatibility where possible, which keeps migration low-fr
 Sources and further reading:
 
 - Mutt history: https://mutt.org, https://en.wikipedia.org/wiki/Mutt_(email_client)
-- NeoMutt project overview: https://github.com/neomutt/neomutt/blob/main/README.md
-- NeoMutt home and releases: https://neomutt.org, https://neomutt.org/2024/
+- NeoMutt project overview: <https://github.com/neomutt/neomutt/blob/main/README.md>
+- NeoMutt home and releases: <https://neomutt.org>, <https://github.com/neomutt/neomutt/releases>

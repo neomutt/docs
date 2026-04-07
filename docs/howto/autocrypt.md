@@ -4,6 +4,7 @@ description: Enable and configure Autocrypt for automatic opportunistic email en
 keywords: neomutt, autocrypt, encryption, gpgme, ecc, opportunistic, keys, automatic encryption, end-to-end, autocrypt_dir, sqlite, key management, compose menu, autocrypt-acct-menu, prefer encryption
 ---
 
+(how-autocrypt)=
 # Set Up Autocrypt
 
 ## Overview

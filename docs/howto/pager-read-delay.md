@@ -39,7 +39,7 @@ set pager_read_delay = 5
 
 ## Known Bugs
 
-When `$pager_index_lines` is non-zero, the "N" status indicator from the "%Z" expando of {ref}`$index_format <cfg-index-format>` does not actively reflect the current new/read status of the message.
+When `$pager_index_lines` is non-zero, the "N" status indicator from the `%Z` expando of {ref}`$index_format <cfg-index-format>` does not actively reflect the current new/read status of the message.
 
 ## Credits
 

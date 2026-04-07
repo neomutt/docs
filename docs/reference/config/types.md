@@ -171,7 +171,7 @@ There are two mechanisms, depending on the option type:
 
 ```neomuttrc
 # Path example: generate a signature dynamically
-set signature = "~/.mutt/gen-sig.sh|"
+set signature = "~/.neomutt/gen-sig.sh|"
 
 # Expando example: use an external command for the status bar
 set status_format = "my-status-command %m messages|"

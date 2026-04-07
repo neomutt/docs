@@ -58,7 +58,7 @@ This variable specifies the default limit used in notmuch queries.
     set nm_default_url = ""
     ```
 
-This variable specifies the default Notmuch database in format notmuch://<absolute path>.
+This variable specifies the default Notmuch database in format `notmuch://<absolute path>`
 
 --------------------------------------------------------------------------------
 
@@ -87,8 +87,7 @@ The messages tagged with these tags are excluded and not loaded from notmuch DB 
 
 This variable specifies notmuch tag which is used for flagged messages.
 The variable is used to count flagged messages in DB and set the flagged flag when modifying tags.
-All other NeoMutt commands use standard (e.g. maildir)
-flags.
+All other NeoMutt commands use standard (e.g. maildir) flags.
 
 --------------------------------------------------------------------------------
 
@@ -193,9 +192,8 @@ This variable contains additional notmuch search terms for messages to be shown 
 
 Example:
 
-Using "notmuch://?query=tag:inbox" as the mailbox and "tag:flagged and tag:unread" as the or terms, NeoMutt will produce a query window such as:
-
-notmuch://?query=tag:inbox and (date:... or (tag:flagged and tag:unread))
+Using `notmuch://?query=tag:inbox` as the mailbox and `tag:flagged and tag:unread` as the or terms,
+NeoMutt will produce a query window such as: `notmuch://?query=tag:inbox and (date:... or (tag:flagged and tag:unread))`
 
 --------------------------------------------------------------------------------
 

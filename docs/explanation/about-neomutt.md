@@ -48,7 +48,7 @@ Especially for new users it may be helpful to meet other new and experienced use
 
 Since translations of NeoMutt into other languages are highly appreciated, the NeoMutt developers always look for skilled translators that help improve and continue to maintain stale translations.
 
-For contributing code patches for new features and bug fixes, please refer to the developer pages at [https://neomutt.org/dev.html](https://neomutt.org/dev.html) for more details.
+For contributing code patches for new features and bug fixes, please refer to the developer pages at <https://neomutt.org/dev.html> for more details.
 
 ## Typographical Conventions
 

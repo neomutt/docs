@@ -17,7 +17,7 @@ keywords: email, mime, mailcap, scoring, reflow_text, reply_regex, reverse_alias
     ```
 
 When _set_, NeoMutt assumes the presence of a List-Post header means the recipient is subscribed to the list.
-Unless the mailing list is in the "unsubscribe" or "unlist" lists, it will be added to the [`subscribe`](cmd-subscribe) list.
+Unless the mailing list is in the "unsubscribe" or "unlist" lists, it will be added to the [`:subscribe`](cmd-subscribe) list.
 Parsing and checking these things slows header reading down, so this option is disabled by default.
 
 --------------------------------------------------------------------------------
@@ -65,7 +65,7 @@ This variable specifies a list of comma-separated private notmuch/imap tags whic
     set implicit_auto_view = no
     ```
 
-If set to "yes", NeoMutt will look for a mailcap entry with the `copiousoutput` flag set for _every_ MIME attachment it doesn't have an internal viewer defined for.
+If set to `yes`, NeoMutt will look for a mailcap entry with the `copiousoutput` flag set for _every_ MIME attachment it doesn't have an internal viewer defined for.
 If such an entry is found, NeoMutt will use the viewer defined in that entry to convert the body part to text form.
 
 --------------------------------------------------------------------------------
@@ -225,27 +225,27 @@ Also see [`$wrap`](cfg-wrap).
     ```
 
 A regular expression used to recognize reply messages when threading and replying.
-The default value corresponds to the standard Latin "Re:" prefix.
+The default value corresponds to the standard Latin `Re:` prefix.
 
 This value may have been localized by the translator for your locale, adding other prefixes that are common in the locale.
-You can add your own prefixes by appending inside `"^(re)"`.  For example: `"^(re|sv)"` or `"^(re|aw|sv)"`.
+You can add your own prefixes by appending inside `^(re)`.  For example: `^(re|sv)` or `^(re|aw|sv)`.
 
-The second parenthesized expression matches zero or more bracketed numbers following the prefix, such as `"Re[1]: "`.
-The initial `"\\["` means a literal left-bracket character.
+The second parenthesized expression matches zero or more bracketed numbers following the prefix, such as `Re[1]: `.
+The initial `\\[` means a literal left-bracket character.
 Note the backslash must be doubled when used inside a double quoted string in the neomuttrc.
-`"[0-9]+"` means one or more numbers.
-`"\\]"` means a literal right-bracket.
-Finally the whole parenthesized expression has a `"*"` suffix, meaning it can occur zero or more times.
+`[0-9]+` means one or more numbers.
+`\\]` means a literal right-bracket.
+Finally the whole parenthesized expression has a `*` suffix, meaning it can occur zero or more times.
 
 The last part matches a colon followed by an optional space or tab.
-Note `"\t"` is converted to a literal tab inside a double quoted string.
+Note `\t` is converted to a literal tab inside a double quoted string.
 If you use a single quoted string, you would have to type an actual tab character, and would need to convert the double-backslashes to single backslashes.
 
 :::{note}
 the result of this regex match against the subject is stored in the header cache.
-:::
-Mutt isn't smart enough to invalidate a header cache entry based on changing [`$reply_regex`](cfg-reply-regex), so if you aren't seeing correct values in the index, try temporarily turning off the header cache.
+NeoMutt isn't smart enough to invalidate a header cache entry based on changing [`$reply_regex`](cfg-reply-regex), so if you aren't seeing correct values in the index, try temporarily turning off the header cache.
 If that fixes the problem, then once the variable is set to your liking, remove your stale header cache files and turn the header cache back on.
+:::
 
 --------------------------------------------------------------------------------
 

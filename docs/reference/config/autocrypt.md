@@ -7,6 +7,10 @@ keywords: autocrypt, encryption, automatic encryption, key exchange, autocrypt_d
 (ref-cfg-autocrypt)=
 # Autocrypt Options
 
+:::{seealso}
+{ref}`how-autocrypt`
+:::
+
 (cfg-autocrypt)=
 ## `$autocrypt`
 
@@ -18,7 +22,6 @@ keywords: autocrypt, encryption, automatic encryption, key exchange, autocrypt_d
     ```
 
 When _set_, enables autocrypt, which provides passive encryption protection with keys exchanged via headers.
-See "$autocryptdoc" for more details.
 
 --------------------------------------------------------------------------------
 
@@ -66,11 +69,10 @@ Specify the format of the data displayed in the [`Autocrypt Dialog`](tour-autocr
 :Scope: Autocrypt only
 :Default:
     ```neomuttrc
-    set autocrypt_dir = "~/.mutt/autocrypt"
+    set autocrypt_dir = "~/.neomutt/autocrypt"
     ```
 
 This variable sets where autocrypt files are stored, including the GPG keyring and SQLite database.
-See "$autocryptdoc" for more details.
 
 --------------------------------------------------------------------------------
 

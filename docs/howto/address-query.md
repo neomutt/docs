@@ -4,6 +4,7 @@ description: Look up addresses from external directory databases such as LDAP, p
 keywords: query, address query, ldap, address book, query_command, external contacts, complete-query, directory lookup, ph, qi, bbdb, nis, wrapper script, tab completion
 ---
 
+(how-address-query)=
 # External Address Queries
 
 ## Setting Up the Query Command

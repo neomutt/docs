@@ -37,7 +37,7 @@ If _set_, hitting backspace against an empty prompt aborts the prompt.
 
 Specifies the key that can be used to abort prompts.
 The format is the same as used in "bind" commands.
-The default is equivalent to "Ctrl-G".
+The default is equivalent to {kbd}`Ctrl-G`.
 Note that the specified key should not be used in other bindings, as the abort operation has higher precedence and the binding will not have the desired effect.
 
 Example:
@@ -45,7 +45,7 @@ Example:
 set abort_key = "<Esc>"
 ```
 
-Please note that when using <Esc> as the abort key, you may also want to set the environment variable ESCDELAY to a low value or even 0 which will reduce the time that ncurses waits to distinguish singular <Esc> key presses from the start of a terminal escape sequence.
+Please note that when using {kbd}`<Esc>` as the abort key, you may also want to set the environment variable ESCDELAY to a low value or even 0 which will reduce the time that ncurses waits to distinguish singular {kbd}`<Esc>` key presses from the start of a terminal escape sequence.
 The default time is 1000 milliseconds and thus quite noticeable.
 
 --------------------------------------------------------------------------------
@@ -164,7 +164,7 @@ Also see [`$fast_reply`](cfg-fast-reply).
     ```
 
 When _set_, functions in the _index_ menu which affect a message will be applied to all tagged messages (if there are any).
-When unset, you must first use the [`<tag-prefix>`](ref-fn-generic) function (bound to ";" by default) to make the next function apply to all tagged messages.
+When unset, you must first use the [`<tag-prefix>`](ref-fn-generic) function (bound to {kbd}`;` by default) to make the next function apply to all tagged messages.
 
 --------------------------------------------------------------------------------
 
@@ -215,7 +215,7 @@ It should only be set in case NeoMutt isn't able to determine the character set 
 
 When _set_, NeoMutt will use and allow 24-bit colours (aka truecolor aka directcolor).
 For colours to work properly support from the terminal is required as well as a properly set TERM environment variable advertising the terminals directcolor capability, e.g.
-"TERM=xterm-direct".
+`TERM=xterm-direct`.
 
 NeoMutt tries to detect whether the terminal supports 24-bit colours and enables this variable if it does.
 If this fails for some reason, you can force 24-bit colours by setting this variable manually.
@@ -300,10 +300,10 @@ Controls whether NeoMutt will weed headers when invoking the [`<decode-copy>`](r
 Instead of using [`$date_format`](cfg-date-format) it is encouraged to use "%[fmt]" directly in the corresponding format strings, where "fmt" is the value of [`$date_format`](cfg-date-format).
 This allows for a more fine grained control of the different menu needs.
 
-This variable controls the format of the date printed by the "%d" sequence in [`$index_format`](cfg-index-format).
+This variable controls the format of the date printed by the `%d` sequence in [`$index_format`](cfg-index-format).
 This is passed to the [`strftime(3)`](exp-strftime) function to process the date, see the man page for the proper syntax.
 
-Unless the first character in the string is a bang ("!"), the month and week day names are expanded according to the locale.
+Unless the first character in the string is a bang (`!`), the month and week day names are expanded according to the locale.
 If the first character in the string is a bang, the bang is discarded, and the month and week day names in the rest of the string are expanded in the _C_ locale (that is in US English).
 
 Format strings using this variable are:
@@ -326,7 +326,7 @@ Composing: [`$attribution_intro`](cfg-attribution-intro), [`$forward_attribution
 
 Debug logging is controlled by the variables [`$debug_file`](cfg-debug-file) and [`$debug_level`](cfg-debug-level).
 [`$debug_file`](cfg-debug-file) specifies the root of the filename.
-NeoMutt will add "0" to the end.
+NeoMutt will add `0` to the end.
 Each time NeoMutt is run with logging enabled, the log files are rotated.
 A maximum of five log files are kept, numbered 0 (most recent) to 4 (oldest).
 
@@ -411,6 +411,7 @@ This applies when you either explicitly delete a message, or when you save it to
     ```
 
 If this option is _set_, NeoMutt will enable the **Security** development features.
+
 :::{seealso}
 <https://github.com/neomutt/neomutt/discussions/4251>
 :::
@@ -428,10 +429,10 @@ If this option is _set_, NeoMutt will enable the **Security** development featur
     ```
 
 This variable specifies which editor is used by NeoMutt.
-It defaults to the value of the [`$VISUAL`](ref-env), or [`$EDITOR`](ref-env), environment variable, or to the string "vi" if neither of those are set.
+It defaults to the value of the [`$VISUAL`](ref-env), or [`$EDITOR`](ref-env), environment variable, or to the string `vi` if neither of those are set.
 
 The [`$editor`](cfg-editor) string may contain a _%s_ escape, which will be replaced by the name of the file to be edited.
-If the _%s_ escape does not appear in [`$editor`](cfg-editor), a space and the name to be edited are appended.
+If the `%s` escape does not appear in [`$editor`](cfg-editor), a space and the name to be edited are appended.
 
 The resulting string is then executed by running:
 
@@ -466,9 +467,9 @@ If set, flagged messages can't be deleted.
     ```
 
 Specifies the default location of your mailboxes.
-A "+" or "=" at the beginning of a pathname will be expanded to the value of this variable.
+A `+` or `=` at the beginning of a pathname will be expanded to the value of this variable.
 Note that if you change this variable (from the default)
-value you need to make sure that the assignment occurs _before_ you use "+" or "=" for any other variables since expansion takes place when handling the [`mailboxes`](cmd-mailboxes) command.
+value you need to make sure that the assignment occurs _before_ you use `+` or `=` for any other variables since expansion takes place when handling the [`:mailboxes`](cmd-mailboxes) command.
 
 --------------------------------------------------------------------------------
 
@@ -514,7 +515,7 @@ When _set_, forwarded messages included in the main body of the message (when [`
     ```
 
 When _set_, this variable contains a default "from" address.
-It can be overridden using [`my-header`](cmd-my-header) (including from a [`send-hook`](cmd-send-hook)) and [`$reverse_name`](cfg-reverse-name).
+It can be overridden using [`:my-header`](cmd-my-header) (including from a [`:send-hook`](cmd-send-hook)) and [`$reverse_name`](cfg-reverse-name).
 This variable is ignored if [`$use_from`](cfg-use-from) is _unset_.
 
 If not specified, then it may be read from the environment variable [`$EMAIL`](ref-env).
@@ -532,7 +533,7 @@ If not specified, then it may be read from the environment variable [`$EMAIL`](r
     ```
 
 A regular expression used by NeoMutt to parse the GECOS field of a password entry when expanding the alias.
-The default value will return the string up to the first "," encountered.
+The default value will return the string up to the first `,` encountered.
 If the GECOS field contains a string like "lastname, firstname" then you should set it to `.*`.
 
 This can be useful if you see the following behavior: you address an e-mail to user ID "stevef" whose full name is "Steve Franklin".
@@ -583,7 +584,7 @@ Since this variable is primarily aimed at new users, neither of these should pre
     ```
 
 Specifies the fully-qualified hostname of the system NeoMutt is running on containing the host's name and the DNS domain it belongs to.
-It is used as the domain part (after "@") for local email addresses.
+It is used as the domain part (after `@`) for local email addresses.
 
 If not specified in a config file, then NeoMutt will try to determine the hostname itself.
 
@@ -624,7 +625,7 @@ The value of this option is ignored if [`$text_flowed`](cfg-text-flowed) is set,
     set keep_flagged = no
     ```
 
-If _set_, read messages marked as flagged will not be moved from your spool mailbox to your [`$mbox`](cfg-mbox) mailbox or to the "mbox" specified by a [`mbox-hook`](cmd-mbox-hook) command.
+If _set_, read messages marked as flagged will not be moved from your spool mailbox to your [`$mbox`](cfg-mbox) mailbox or to the "mbox" specified by a [`:mbox-hook`](cmd-mbox-hook) command.
 
 Note that [`$keep_flagged`](cfg-keep-flagged) only has an effect if [`$move`](cfg-move) is set.
 
@@ -716,7 +717,7 @@ When [`$mail_check_stats`](cfg-mail-check-stats) is _set_, this variable configu
     ```
 
 Controls whether or not NeoMutt marks _new_ **unread** messages as _old_ if you exit a mailbox without reading them.
-With this option _set_, the next time you start NeoMutt, the messages will show up with an "O" next to them in the index menu, indicating that they are old.
+With this option _set_, the next time you start NeoMutt, the messages will show up with an `O` next to them in the index menu, indicating that they are old.
 
 --------------------------------------------------------------------------------
 
@@ -800,8 +801,8 @@ Also see the [`$message_cache_clean`](cfg-message-cache-clean) variable.
     ```
 
 If _set_, forces NeoMutt to interpret keystrokes with the high bit (bit 8) set as if the user had pressed the Esc key and whatever key remains after having the high bit removed.
-For example, if the key pressed has an ASCII value of `0xf8`, then this is treated as if the user had pressed Esc then "x".
-This is because the result of removing the high bit from `0xf8` is `0x78`, which is the ASCII character "x".
+For example, if the key pressed has an ASCII value of `0xf8`, then this is treated as if the user had pressed Esc then `x`.
+This is because the result of removing the high bit from `0xf8` is `0x78`, which is the ASCII character `x`.
 
 --------------------------------------------------------------------------------
 
@@ -814,7 +815,7 @@ This is because the result of removing the high bit from `0xf8` is `0x78`, which
     set move = no
     ```
 
-If this variable is _set_, then NeoMutt will move read messages from your spool mailbox to your [`$mbox`](cfg-mbox) mailbox or to the "mbox" specified by a [`mbox-hook`](cmd-mbox-hook) command.
+If this variable is _set_, then NeoMutt will move read messages from your spool mailbox to your [`$mbox`](cfg-mbox) mailbox or to the "mbox" specified by a [`:mbox-hook`](cmd-mbox-hook) command.
 
 :::{seealso}
 [`$keep_flagged`](cfg-keep-flagged)
@@ -908,7 +909,7 @@ Also see the [`$postpone`](cfg-postpone) variable.
     ```
 
 Controls whether or not NeoMutt really prints messages.
-This is set to "ask-no" by default, because some people accidentally hit "p" often.
+This is set to `ask-no` by default, because some people accidentally hit {kbd}`p` often.
 
 --------------------------------------------------------------------------------
 
@@ -984,9 +985,9 @@ Those who use the `enscript(1)` program's mail-printing mode will most likely wa
     ```
 
 A regular expression used in the internal pager to determine quoted sections of text in the body of a message.
-Quoted text may be filtered out using the [`<toggle-quoted>`](ref-fn-pager) command, or colored according to the "color quoted" family of directives.
+Quoted text may be filtered out using the [`<toggle-quoted>`](ref-fn-pager) command, or colored according to the `color quotedN` family of directives.
 
-Higher levels of quoting may be colored differently ("color quoted1", "color quoted2", etc.).
+Higher levels of quoting may be colored differently (`color quoted1`, `color quoted2`, etc.).
 The quoting level is determined by removing the last character from the matched text and recursively reapplying the regular expression until it fails to produce a match.
 
 Match detection may be overridden by the [`$smileys`](cfg-smileys) regular expression.
@@ -1019,9 +1020,9 @@ This option will not be used, if [`$from`](cfg-from) is set.
     ```
 
 This specifies the file into which your outgoing messages should be appended.
-(This is meant as the primary method for saving a copy of your messages, but another way to do this is using the [`my-header`](cmd-my-header) command to create a "Bcc:" field with your email address in it.)
+(This is meant as the primary method for saving a copy of your messages, but another way to do this is using the [`:my-header`](cmd-my-header) command to create a `Bcc:` field with your email address in it.)
 
-The value of [`$record`](cfg-record) is overridden by the [`$force_name`](cfg-force-name) and [`$save_name`](cfg-save-name) variables, and the [`fcc-hook`](cmd-fcc-hook) command.
+The value of [`$record`](cfg-record) is overridden by the [`$force_name`](cfg-force-name) and [`$save_name`](cfg-save-name) variables, and the [`:fcc-hook`](cmd-fcc-hook) command.
 Also see [`$copy`](cfg-copy) and [`$write_bcc`](cfg-write-bcc).
 
 --------------------------------------------------------------------------------
@@ -1052,7 +1053,7 @@ Examples of such commands are tagging a message, deleting an entry, or saving an
 
 If _set_, draft files previously edited (via `-E -H` on the command line) will have [`$resume_draft_files`](cfg-resume-draft-files) automatically set when they are used as a draft file again.
 
-The first time a draft file is saved, NeoMutt will add a header, X-Mutt-Resume-Draft to the saved file.
+The first time a draft file is saved, NeoMutt will add a header, `X-Mutt-Resume-Draft` to the saved file.
 The next time the draft file is read in, if NeoMutt sees the header, it will set [`$resume_draft_files`](cfg-resume-draft-files).
 
 This option is designed to prevent multiple signatures, user-defined headers, and other processing effects from being made multiple times to the draft file.
@@ -1238,8 +1239,8 @@ This variable can also be set via the [`<sort-mailbox>`](ref-fn-index) and [`<so
 
 :::{note}
 When [`$use_threads`](cfg-use-threads) is "threads", the last thread sorts to the bottom; when it is "reversed", the last thread sorts to the top.
-:::
 The use of "reverse-" in [`$sort`](cfg-sort) swaps which end the last thread will sort to.
+:::
 
 See the "Use Threads Feature" section for further explanation and examples, <https://neomutt.org/feature/use-threads>
 
@@ -1310,11 +1311,11 @@ If [`$help`](cfg-help) is _set_ too, it'll be placed at the bottom.
     set suspend = yes
     ```
 
-When _unset_, NeoMutt won't stop when the user presses the terminal's _susp_ key, usually "^Z".
+When _unset_, NeoMutt won't stop when the user presses the terminal's _susp_ key, usually {kbd}`^Z`.
 This is useful if you run NeoMutt inside an xterm using a command like `xterm -e neomutt`
 
 On startup NeoMutt tries to detect if it is the process session leader.
-If so, the default of [`$suspend`](cfg-suspend) is "no" otherwise "yes".  This default covers the above mentioned use case of `xterm -e neomutt`
+If so, the default of [`$suspend`](cfg-suspend) is `no` otherwise `yes`.  This default covers the above mentioned use case of `xterm -e neomutt`
 
 --------------------------------------------------------------------------------
 
@@ -1333,7 +1334,7 @@ This format is easier to handle for some mailing software, and generally just lo
 To actually make use of this format's features, you'll need support in your editor.
 
 The option only controls newly composed messages.
-Postponed messages, resent messages, and draft messages (via -H on the command line) will use the content-type of the source message.
+Postponed messages, resent messages, and draft messages (via `-H` on the command line) will use the content-type of the source message.
 
 Note that [`$indent_string`](cfg-indent-string) is ignored when this option is _set_.
 
@@ -1349,7 +1350,7 @@ Note that [`$indent_string`](cfg-indent-string) is ignored when this option is _
     set timeout = 600
     ```
 
-This variable sets the time interval in seconds in which _timeout-hook_ commands get executed while waiting for user input either idling in menus or in an interactive prompt.
+This variable sets the time interval in seconds in which [`:timeout-hook`](cmd-timeout-hook) commands get executed while waiting for user input either idling in menus or in an interactive prompt.
 
 A value of zero disables timeout hooks.
 
@@ -1465,7 +1466,7 @@ See the "Use Threads Feature" section for further explanation and examples.
 
 Controls whether NeoMutt will ask you to press a key after an external command has been invoked by these functions: [`<shell-escape>`](ref-fn-generic), [`<pipe-message>`](ref-fn-attach), [`<pipe-entry>`](ref-fn-attach), [`<print-message>`](ref-fn-index), and [`<print-entry>`](ref-fn-attach) commands.
 
-It is also used when viewing attachments with [`auto-view`](cmd-auto-view), provided that the corresponding mailcap entry has a _needsterminal_ flag, and the external program is interactive.
+It is also used when viewing attachments with [`:auto-view`](cmd-auto-view), provided that the corresponding mailcap entry has a `needsterminal` flag, and the external program is interactive.
 
 When _set_, NeoMutt will always ask for a key.
 When _unset_, NeoMutt will wait for a key only if the external command returned a non-zero status.

@@ -62,7 +62,7 @@ unignore posted-to:
 **Highlights:** The dramatic reduction in header clutter — the weeded view shows only the essential headers the user chose to keep.
 :::
 
-The above example will show "From:" headers as well as mbox "From\_" lines.
+The above example will show `From:` headers as well as mbox "From\_" lines.
 To hide the latter, instead use `unignore from: date subject to cc` on the second line.
 
 ## Ordering Displayed Headers
@@ -115,7 +115,7 @@ Before 2026-01-13, these commands were called `my_hdr` and `unmy_hdr`.
 
 The `my-header` command allows you to create your own header fields which will be added to every message you send and appear in the editor if {ref}`$edit_headers <cfg-edit-headers>` is set.
 
-For example, if you would like to add an "Organization:" header field to all of your outgoing messages, you can put something like the following in your `.neomuttrc`:
+For example, if you would like to add an `Organization:` header field to all of your outgoing messages, you can put something like the following in your `.neomuttrc`:
 
 ```neomuttrc
 my-header Organization: A Really Big Company, Anytown, USA

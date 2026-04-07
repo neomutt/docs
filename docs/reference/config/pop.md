@@ -18,8 +18,7 @@ keywords: neomutt, pop3, pop, pop_host, pop_user, pop_pass, pop_authenticators, 
     ```
 
 This is a colon-separated list of authentication methods NeoMutt may attempt to use to log in to an POP server, in the order NeoMutt should try them.
-Authentication methods are either "user", "apop" or any SASL mechanism, e.g.
-"digest-md5", "gssapi" or "cram-md5".
+Authentication methods are either `user`, `apop` or any SASL mechanism, e.g. `digest-md5`, `gssapi` or `cram-md5`.
 This option is case-insensitive.
 If this option is _unset_ (the default) NeoMutt will try all available methods, in order from most-secure to least-secure.
 
