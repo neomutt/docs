@@ -417,7 +417,7 @@ Therefore, if not specified last, all following entries without this tag would n
 
 #### Command Expansion
 
-The various commands defined in the mailcap files are passed to the `/bin/sh` shell using the `system(3)` function.
+The various commands defined in the mailcap files are passed to the `/bin/sh` shell using the [`system(3)`](https://man7.org/linux/man-pages/man3/system.3.html) function.
 Before the command is passed to `/bin/sh -c`, it is parsed to expand various special parameters with information from NeoMutt.
 The keywords NeoMutt expands are:
 

@@ -31,7 +31,7 @@ Without them, NeoMutt will simply create temporary files.
 ## See Also
 
 - **Compile-Time Features**
-- `fmemopen(3)`
+- [`fmemopen(3)`](https://man7.org/linux/man-pages/man3/fmemopen.3.html)
 
 ## Known Bugs
 

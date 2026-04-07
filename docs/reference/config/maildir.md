@@ -70,7 +70,7 @@ NeoMutt supports all non-alphanumeric values except for `-`, `.`, `\`, `/`.
     ```
 
 Check for Maildir unaware programs other than NeoMutt having modified maildir files when the header cache is in use.
-This incurs one `stat(2)` per message every time the folder is opened (which can be very slow for NFS folders).
+This incurs one [`stat(2)`](https://man7.org/linux/man-pages/man2/stat.2.html) per message every time the folder is opened (which can be very slow for NFS folders).
 
 --------------------------------------------------------------------------------
 

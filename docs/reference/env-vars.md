@@ -330,7 +330,7 @@ See [COLUMNS] above.
 
 **Source:** `ncrypt/pgp.c`
 
-Set to the name of the controlling terminal (from `ttyname(0)`) when
+Set to the name of the controlling terminal (from [`ttyname(3)`](https://man7.org/linux/man-pages/man3/ttyname.3.html)) when
 `$pgp_use_gpg_agent` is enabled.  This allows `gpg-agent` to prompt for
 passphrases on the correct terminal.
 

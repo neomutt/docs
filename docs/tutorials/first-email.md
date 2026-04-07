@@ -115,8 +115,8 @@ They can be customized with the `$to_chars` variable.
 
 ## The Pager
 
-By default, NeoMutt uses its built-in pager to display the contents of messages (an external pager such as `less(1)` can be configured, see `$pager` variable).
-The pager is very similar to the Unix program `less(1)` though not nearly as featureful.
+By default, NeoMutt uses its built-in pager to display the contents of messages (an external pager such as [`less(1)`](https://man7.org/linux/man-pages/man1/less.1.html) can be configured, see `$pager` variable).
+The pager is very similar to the Unix program [`less(1)`](https://man7.org/linux/man-pages/man1/less.1.html) though not nearly as featureful.
 
 :::{admonition} 📷 Screenshot Needed
 :class: tip

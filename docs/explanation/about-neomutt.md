@@ -57,7 +57,7 @@ See the table below for typographical conventions for special terms.
 
 | Item             | Refers to...                              |
 |------------------|-------------------------------------------|
-| `printf(3)`      | UNIX manual pages, execute `man 3 printf` |
+| [`printf(3)`](https://man7.org/linux/man-pages/man3/printf.3.html)      | UNIX manual pages, execute `man 3 printf` |
 | `<PageUp>`       | named keys                                |
 | `<create-alias>` | named NeoMutt function                    |
 | `^G`             | Control+G key combination                 |

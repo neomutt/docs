@@ -427,7 +427,7 @@ set dsn_notify = "failure,delay"
 ```
 
 :::{note}
-When using [`$sendmail`](cfg-sendmail) for delivery, you should not enable this unless you are either using Sendmail 8.8.x or greater or a MTA providing a `sendmail(1)`-compatible interface supporting the `-N` option for DSN.
+When using [`$sendmail`](cfg-sendmail) for delivery, you should not enable this unless you are either using Sendmail 8.8.x or greater or a MTA providing a [`sendmail(1)`](https://man7.org/linux/man-pages/man8/sendmail.8.html)-compatible interface supporting the `-N` option for DSN.
 For SMTP delivery, DSN support is auto-detected so that it depends on the server whether DSN will be used or not.
 :::
 
@@ -452,7 +452,7 @@ set dsn_return = "hdrs"
 ```
 
 :::{note}
-When using [`$sendmail`](cfg-sendmail) for delivery, you should not enable this unless you are either using Sendmail 8.8.x or greater or a MTA providing a `sendmail(1)`-compatible interface supporting the `-R` option for DSN.
+When using [`$sendmail`](cfg-sendmail) for delivery, you should not enable this unless you are either using Sendmail 8.8.x or greater or a MTA providing a [`sendmail(1)`](https://man7.org/linux/man-pages/man8/sendmail.8.html)-compatible interface supporting the `-R` option for DSN.
 For SMTP delivery, DSN support is auto-detected so that it depends on the server whether DSN will be used or not.
 :::
 
@@ -1196,7 +1196,7 @@ Additional flags, such as for [`$use_8bit_mime`](cfg-use-8bit-mime), [`$use_enve
 
 :::{note}
 This command is invoked differently from most other commands in NeoMutt.
-It is tokenized by space, and invoked directly via `execvp(3)` with an array of arguments - so commands or arguments with spaces in them are not supported.
+It is tokenized by space, and invoked directly via [`execvp(3)`](https://man7.org/linux/man-pages/man3/execvp.3.html) with an array of arguments - so commands or arguments with spaces in them are not supported.
 The shell is not used to run the command, so shell quoting is also not supported.
 :::
 

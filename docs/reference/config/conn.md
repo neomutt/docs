@@ -73,7 +73,7 @@ The file which includes random data that is used to initialize SSL library funct
     ```
 
 If _set_, a shell command to be executed if NeoMutt fails to establish a connection to the server.
-This is useful for setting up secure connections, e.g. with `ssh(1)`.
+This is useful for setting up secure connections, e.g. with [`ssh(1)`](https://man7.org/linux/man-pages/man1/ssh.1.html).
 If the command returns a  nonzero status, NeoMutt gives up opening the server.
 
 Example:
@@ -140,7 +140,7 @@ Contains a colon-separated list of ciphers to use when using SSL.
 For OpenSSL, see `ciphers(1)` for the syntax of the string.
 
 For GnuTLS, this option will be used in place of "NORMAL" at the start of the priority string.
-See `gnutls_priority_init(3)` for the syntax and more details.
+See [`gnutls_priority_init(3)`](https://man7.org/linux/man-pages/man3/gnutls_priority_init.3.html) for the syntax and more details.
 (Note: GnuTLS version 2.1.7 or higher is required.)
 
 --------------------------------------------------------------------------------

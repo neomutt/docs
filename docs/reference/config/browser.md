@@ -19,7 +19,7 @@ keywords: neomutt, browser, file browser, folder_format, browser_sort, browser_s
 
 When this variable is _set_, NeoMutt will abbreviate mailbox names in the browser mailbox list, using `~` and `=` shortcuts.
 
-The default `alpha` setting of [`$browser_sort`](cfg-browser-sort) uses locale-based sorting (using `strcoll(3)`), which ignores some punctuation.
+The default `alpha` setting of [`$browser_sort`](cfg-browser-sort) uses locale-based sorting (using [`strcoll(3)`](https://man7.org/linux/man-pages/man3/strcoll.3.html)), which ignores some punctuation.
 This can lead to some situations where the order doesn't make intuitive sense.
 In those cases, it may be desirable to _unset_ this variable.
 
