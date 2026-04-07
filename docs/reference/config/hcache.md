@@ -10,6 +10,7 @@ keywords: neomutt, header cache, hcache, header_cache, header_cache_backend, com
 (cfg-header-cache)=
 ## `$header_cache`
 
+:Description: Directory/file for the header cache database
 :Type: [Path (String)](type-path)
 :Default: (empty)
     ```neomuttrc
@@ -28,6 +29,7 @@ Header caching can greatly improve speed when opening POP, IMAP MH or Maildir fo
 (cfg-header-cache-backend)=
 ## `$header_cache_backend`
 
+:Description: Header cache backend to use
 :Type: [String](type-string)
 :Notes: [Case Sensitive](type-general)
 :Default: (empty)
@@ -56,6 +58,7 @@ The deprecated backends will soon be removed from NeoMutt.
 (cfg-header-cache-compress-level)=
 ## `$header_cache_compress_level`
 
+:Description: Level of compression for method
 :Type: [Number](type-number)
 :Notes: [Not Negative](type-general)
 :Default:
@@ -70,6 +73,7 @@ When NeoMutt is compiled with lz4, zstd or zlib, this option can be used to setu
 (cfg-header-cache-compress-method)=
 ## `$header_cache_compress_method`
 
+:Description: Enable generic hcache database compression
 :Type: [String](type-string)
 :Notes: [Case Sensitive](type-general)
 :Default: (empty)

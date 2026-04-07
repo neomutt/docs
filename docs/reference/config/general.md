@@ -15,6 +15,7 @@ do not belong to a specific feature domain (such as IMAP, PGP, or Sidebar).
 (cfg-abort-backspace)=
 ## `$abort_backspace`
 
+:Description: Hitting backspace against an empty prompt aborts the prompt
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -28,6 +29,7 @@ If _set_, hitting backspace against an empty prompt aborts the prompt.
 (cfg-abort-key)=
 ## `$abort_key`
 
+:Description: String representation of key to abort prompts
 :Type: [String](type-string)
 :Notes: [Not Empty](type-general), [On Startup](type-general)
 :Default:
@@ -53,6 +55,7 @@ The default time is 1000 milliseconds and thus quite noticeable.
 (cfg-ascii-chars)=
 ## `$ascii_chars`
 
+:Description: Use plain ASCII characters, when drawing email threads
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -66,6 +69,7 @@ If _set_, NeoMutt will use plain ASCII characters when displaying thread and att
 (cfg-assumed-charset)=
 ## `$assumed_charset`
 
+:Description: If a message is missing a character set, assume this character set
 :Type: [String List](type-slist)
 :Notes: [Colon-separated](type-slist), [Allow Empty](type-slist)
 :Default: (empty)
@@ -89,6 +93,7 @@ However, only the first content is valid for the message body.
 (cfg-attach-format)=
 ## `$attach_format`
 
+:Description: Format string for the [Attach Dialog](tour-attach)
 :Type: [Expando](type-expando)
 :Notes: [Not Empty](type-general), [Pipe Support](type-pipe)
 :Default:
@@ -137,6 +142,7 @@ Specify the format of the data displayed in the [`Attach Dialog`](tour-attach).
 (cfg-auto-edit)=
 ## `$auto_edit`
 
+:Description: Skip the initial compose menu and edit the email
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -157,6 +163,7 @@ Also see [`$fast_reply`](cfg-fast-reply).
 (cfg-auto-tag)=
 ## `$auto_tag`
 
+:Description: Automatically apply actions to all tagged messages
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -171,6 +178,7 @@ When unset, you must first use the [`<tag-prefix>`](ref-fn-generic) function (bo
 (cfg-braille-friendly)=
 ## `$braille_friendly`
 
+:Description: Move the cursor to the beginning of the line
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -185,6 +193,7 @@ The option is _unset_ by default because many visual terminals don't permit maki
 (cfg-charset)=
 ## `$charset`
 
+:Description: Default character set for displaying text on screen
 :Type: [String](type-string)
 :Notes: [Not Empty](type-general), [Charset Single](type-general)
 :Default: (empty)
@@ -206,6 +215,7 @@ It should only be set in case NeoMutt isn't able to determine the character set 
 (cfg-color-directcolor)=
 ## `$color_directcolor`
 
+:Description: Use 24bit colors (aka truecolor or directcolor)
 :Type: [Boolean](type-bool)
 :Notes: [On Startup](type-general)
 :Default:
@@ -234,6 +244,7 @@ This variable must be set before using any `color` commands.
 (cfg-config-charset)=
 ## `$config_charset`
 
+:Description: Character set that the config files are in
 :Type: [String](type-string)
 :Default: (empty)
     ```neomuttrc
@@ -251,6 +262,7 @@ Recoding should be avoided as it may render unconvertible characters as question
 (cfg-confirm-append)=
 ## `$confirm_append`
 
+:Description: Confirm before appending emails to a mailbox
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -264,6 +276,7 @@ When _set_, NeoMutt will prompt for confirmation when appending messages to an e
 (cfg-confirm-create)=
 ## `$confirm_create`
 
+:Description: Confirm before creating a new mailbox
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -277,6 +290,7 @@ When _set_, NeoMutt will prompt for confirmation when saving messages to a mailb
 (cfg-copy-decode-weed)=
 ## `$copy_decode_weed`
 
+:Description: Controls whether to weed headers when copying or saving emails
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -290,6 +304,7 @@ Controls whether NeoMutt will weed headers when invoking the [`<decode-copy>`](r
 (cfg-date-format)=
 ## `$date_format`
 
+:Description: [`strftime(3)`](exp-strftime) format string for the `%d` expando
 :Type: [String](type-string)
 :Notes: [Not Empty](type-general)
 :Default:
@@ -317,6 +332,7 @@ Composing: [`$attribution_intro`](cfg-attribution-intro), [`$forward_attribution
 (cfg-debug-file)=
 ## `$debug_file`
 
+:Description: File to save debug logs
 :Type: [Path (String)](type-path)
 :Notes: [File only](type-path)
 :Default:
@@ -344,6 +360,7 @@ neomutt -l mylog
 (cfg-debug-level)=
 ## `$debug_level`
 
+:Description: Logging level for debug logs
 :Type: [Number](type-number)
 :Default:
     ```neomuttrc
@@ -375,6 +392,7 @@ neomutt -d 2
 (cfg-delete)=
 ## `$delete`
 
+:Description: Really delete messages, when the mailbox is closed
 :Type: [Quad-Option](type-quad)
 :Default:
     ```neomuttrc
@@ -390,6 +408,7 @@ If set to _no_, messages marked for deletion will be kept in the mailbox.
 (cfg-delete-untag)=
 ## `$delete_untag`
 
+:Description: Untag messages when they are marked for deletion
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -404,6 +423,7 @@ This applies when you either explicitly delete a message, or when you save it to
 (cfg-devel-security)=
 ## `$devel_security`
 
+:Description: Devel feature: Security -- [Issue #4251](https://github.com/neomutt/neomutt/discussions/4251)
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -421,6 +441,7 @@ If this option is _set_, NeoMutt will enable the **Security** development featur
 (cfg-editor)=
 ## `$editor`
 
+:Description: External command to use as an email editor
 :Type: [Command (String)](type-string)
 :Notes: [Not Empty](type-general)
 :Default: (empty)
@@ -447,6 +468,7 @@ where _string_ is the expansion of [`$editor`](cfg-editor) described above.
 (cfg-flag-safe)=
 ## `$flag_safe`
 
+:Description: Protect flagged messages from deletion
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -460,6 +482,7 @@ If set, flagged messages can't be deleted.
 (cfg-folder)=
 ## `$folder`
 
+:Description: Base folder for a set of mailboxes
 :Type: [Mailbox (String)](type-string)
 :Default:
     ```neomuttrc
@@ -476,6 +499,7 @@ value you need to make sure that the assignment occurs _before_ you use `+` or `
 (cfg-forward-decode)=
 ## `$forward_decode`
 
+:Description: Decode the message when forwarding it
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -491,6 +515,7 @@ This variable is only used, if [`$mime_forward`](cfg-mime-forward) is _unset_, o
 (cfg-forward-quote)=
 ## `$forward_quote`
 
+:Description: Automatically quote a forwarded message using [`$indent_string`](cfg-indent-string)
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -508,6 +533,7 @@ When _set_, forwarded messages included in the main body of the message (when [`
 (cfg-from)=
 ## `$from`
 
+:Description: Default `From` address to use, if isn't otherwise set
 :Type: [Address](type-address)
 :Default: (empty)
     ```neomuttrc
@@ -525,6 +551,7 @@ If not specified, then it may be read from the environment variable [`$EMAIL`](r
 (cfg-gecos-mask)=
 ## `$gecos_mask`
 
+:Description: Regex for parsing GECOS field of `/etc/passwd`
 :Type: [Regular Expression](type-regex)
 :Notes: [Smart Case](type-general)
 :Default:
@@ -544,6 +571,7 @@ If NeoMutt expands "stevef" to '"Franklin" stevef@foo.bar' then you should set t
 (cfg-header)=
 ## `$header`
 
+:Description: Include the message headers in the reply email (Weed applies)
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -558,6 +586,7 @@ The [`$weed`](cfg-weed) setting applies.
 (cfg-help)=
 ## `$help`
 
+:Description: Display a help line with common key bindings
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -577,6 +606,7 @@ Since this variable is primarily aimed at new users, neither of these should pre
 (cfg-hostname)=
 ## `$hostname`
 
+:Description: Fully-qualified domain name of this machine
 :Type: [String](type-string)
 :Default: (empty)
     ```neomuttrc
@@ -597,6 +627,7 @@ Also see [`$use_domain`](cfg-use-domain) and [`$hidden_host`](cfg-hidden-host).
 (cfg-indent-string)=
 ## `$indent_string`
 
+:Description: String used to indent "reply" text
 :Type: [Expando](type-expando)
 :Default:
     ```neomuttrc
@@ -619,6 +650,7 @@ The value of this option is ignored if [`$text_flowed`](cfg-text-flowed) is set,
 (cfg-keep-flagged)=
 ## `$keep_flagged`
 
+:Description: Don't move flagged messages from [`$spool_file`](cfg-spool-file) to [`$mbox`](cfg-mbox)
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -634,6 +666,7 @@ Note that [`$keep_flagged`](cfg-keep-flagged) only has an effect if [`$move`](cf
 (cfg-local-date-header)=
 ## `$local_date_header`
 
+:Description: Convert the date in the Date header of sent emails into local timezone, UTC otherwise
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -648,6 +681,7 @@ If unset a UTC date will be used instead to avoid leaking information about your
 (cfg-mail-check)=
 ## `$mail_check`
 
+:Description: Number of seconds before NeoMutt checks for new mail
 :Type: [Number](type-number)
 :Notes: [Not Negative](type-general)
 :Default:
@@ -663,6 +697,7 @@ Also see the [`$timeout`](cfg-timeout) variable.
 (cfg-mail-check-recent)=
 ## `$mail_check_recent`
 
+:Description: Notify the user about new mail since the last time the mailbox was opened
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -677,6 +712,7 @@ When _unset_, NeoMutt will notify you if any new mail exists in the mailbox, reg
 (cfg-mail-check-stats)=
 ## `$mail_check_stats`
 
+:Description: Periodically check for new mail
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -696,6 +732,7 @@ Message statistics can also be explicitly calculated by invoking the [`<check-st
 (cfg-mail-check-stats-interval)=
 ## `$mail_check_stats_interval`
 
+:Description: How often to check for new mail
 :Type: [Number](type-number)
 :Notes: [Not Negative](type-general)
 :Default:
@@ -710,6 +747,7 @@ When [`$mail_check_stats`](cfg-mail-check-stats) is _set_, this variable configu
 (cfg-mark-old)=
 ## `$mark_old`
 
+:Description: Mark new emails as old when leaving the mailbox
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -724,6 +762,7 @@ With this option _set_, the next time you start NeoMutt, the messages will show 
 (cfg-mbox)=
 ## `$mbox`
 
+:Description: Folder that receives read emails
 :Type: [Mailbox (String)](type-string)
 :Default:
     ```neomuttrc
@@ -739,6 +778,7 @@ Also see the [`$move`](cfg-move) variable.
 (cfg-mbox-type)=
 ## `$mbox_type`
 
+:Description: Default type for creating new mailboxes
 :Type: [Enumeration](type-enum)
 :Default:
     ```neomuttrc
@@ -761,6 +801,7 @@ This can also be set using the `neomutt -m` command-line option.
 (cfg-message-cache-clean)=
 ## `$message_cache_clean`
 
+:Description: Clean out obsolete entries from the message cache
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -775,6 +816,7 @@ You probably only want to set it every once in a while, since it can be a little
 (cfg-message-cache-dir)=
 ## `$message_cache_dir`
 
+:Description: Directory for the message cache
 :Type: [Path (String)](type-path)
 :Notes: [Directory only](type-path)
 :Default: (empty)
@@ -794,6 +836,7 @@ Also see the [`$message_cache_clean`](cfg-message-cache-clean) variable.
 (cfg-meta-key)=
 ## `$meta_key`
 
+:Description: Interpret 'ALT-x' as 'ESC-x'
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -809,6 +852,7 @@ This is because the result of removing the high bit from `0xf8` is `0x78`, which
 (cfg-move)=
 ## `$move`
 
+:Description: Move emails from [`$spool_file`](cfg-spool-file) to [`$mbox`](cfg-mbox) when read
 :Type: [Quad-Option](type-quad)
 :Default:
     ```neomuttrc
@@ -826,6 +870,7 @@ If this variable is _set_, then NeoMutt will move read messages from your spool 
 (cfg-pipe-decode)=
 ## `$pipe_decode`
 
+:Description: Decode the message when piping it
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -843,6 +888,7 @@ Also see [`$pipe_decode_weed`](cfg-pipe-decode-weed), which controls whether hea
 (cfg-pipe-decode-weed)=
 ## `$pipe_decode_weed`
 
+:Description: Control whether to weed headers when piping an email
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -856,6 +902,7 @@ For [`<pipe-message>`](ref-fn-attach), when [`$pipe_decode`](cfg-pipe-decode) is
 (cfg-pipe-sep)=
 ## `$pipe_sep`
 
+:Description: Separator to add between multiple piped messages
 :Type: [String](type-string)
 :Default:
     ```neomuttrc
@@ -869,6 +916,7 @@ The separator to add between messages when piping a list of tagged messages to a
 (cfg-pipe-split)=
 ## `$pipe_split`
 
+:Description: Run the pipe command on each message separately
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -886,6 +934,7 @@ In both cases the messages are piped in the current sorted order, and the [`$pip
 (cfg-postponed)=
 ## `$postponed`
 
+:Description: Folder to store postponed messages
 :Type: [Mailbox (String)](type-string)
 :Default:
     ```neomuttrc
@@ -902,6 +951,7 @@ Also see the [`$postpone`](cfg-postpone) variable.
 (cfg-print)=
 ## `$print`
 
+:Description: Confirm before printing a message
 :Type: [Quad-Option](type-quad)
 :Default:
     ```neomuttrc
@@ -916,6 +966,7 @@ This is set to `ask-no` by default, because some people accidentally hit {kbd}`p
 (cfg-print-command)=
 ## `$print_command`
 
+:Description: External command to print a message
 :Type: [Command (String)](type-string)
 :Default:
     ```neomuttrc
@@ -929,6 +980,7 @@ This specifies the command pipe that should be used to print messages.
 (cfg-print-decode)=
 ## `$print_decode`
 
+:Description: Decode message before printing it
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -947,6 +999,7 @@ Also see [`$print_decode_weed`](cfg-print-decode-weed), which controls whether h
 (cfg-print-decode-weed)=
 ## `$print_decode_weed`
 
+:Description: Control whether to weed headers when printing an email
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -960,6 +1013,7 @@ For [`<print-message>`](ref-fn-index), when [`$print_decode`](cfg-print-decode) 
 (cfg-print-split)=
 ## `$print_split`
 
+:Description: Print multiple messages separately
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -977,6 +1031,7 @@ Those who use the `enscript(1)` program's mail-printing mode will most likely wa
 (cfg-quote-regex)=
 ## `$quote_regex`
 
+:Description: Regex to match quoted text in a reply
 :Type: [Regular Expression](type-regex)
 :Notes: [Smart Case](type-general)
 :Default:
@@ -997,6 +1052,7 @@ Match detection may be overridden by the [`$smileys`](cfg-smileys) regular expre
 (cfg-real-name)=
 ## `$real_name`
 
+:Description: Real name of the user
 :Type: [String](type-string)
 :Default: (empty)
     ```neomuttrc
@@ -1013,6 +1069,7 @@ This option will not be used, if [`$from`](cfg-from) is set.
 (cfg-record)=
 ## `$record`
 
+:Description: Folder to save 'sent' messages
 :Type: [Mailbox (String)](type-string)
 :Default:
     ```neomuttrc
@@ -1030,6 +1087,7 @@ Also see [`$copy`](cfg-copy) and [`$write_bcc`](cfg-write-bcc).
 (cfg-resolve)=
 ## `$resolve`
 
+:Description: Move to the next email whenever a command modifies an email
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -1045,6 +1103,7 @@ Examples of such commands are tagging a message, deleting an entry, or saving an
 (cfg-resume-edited-draft-files)=
 ## `$resume_edited_draft_files`
 
+:Description: Resume editing previously saved draft files
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -1063,6 +1122,7 @@ This option is designed to prevent multiple signatures, user-defined headers, an
 (cfg-save-address)=
 ## `$save_address`
 
+:Description: Use sender's full address as a default save folder
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -1077,6 +1137,7 @@ If [`$save_name`](cfg-save-name) or [`$force_name`](cfg-force-name) is _set_ too
 (cfg-save-empty)=
 ## `$save_empty`
 
+:Description: Preserve empty mailboxes
 :Type: [Boolean](type-bool)
 :Scope: Only mbox and mmdf mailboxes
 :Default:
@@ -1096,6 +1157,7 @@ NeoMutt does not delete MH and Maildir directories.
 (cfg-send-charset)=
 ## `$send_charset`
 
+:Description: Character sets for outgoing mail
 :Type: [String List](type-slist)
 :Notes: [Colon-separated](type-slist), [Allow Empty](type-slist), [Charset Strict](type-general)
 :Default:
@@ -1114,6 +1176,7 @@ In case the text can't be converted into one of these exactly, NeoMutt uses [`$c
 (cfg-shell)=
 ## `$shell`
 
+:Description: External command to run subshells in
 :Type: [Command (String)](type-string)
 :Default:
     ```neomuttrc
@@ -1128,6 +1191,7 @@ If not specified, then the user's login shell from `/etc/passwd` is used.
 (cfg-size-show-bytes)=
 ## `$size_show_bytes`
 
+:Description: Show smaller sizes in bytes
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -1145,6 +1209,7 @@ If _set_, message sizes will display bytes for values less than 1 kilobyte.
 (cfg-size-show-fractions)=
 ## `$size_show_fractions`
 
+:Description: Show size fractions with a single decimal place
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -1162,6 +1227,7 @@ If _set_, message sizes will be displayed with a single decimal value for sizes 
 (cfg-size-show-mb)=
 ## `$size_show_mb`
 
+:Description: Show sizes in megabytes for sizes greater than 1 megabyte
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -1179,6 +1245,7 @@ If _set_, message sizes will display megabytes for values greater than or equal 
 (cfg-size-units-on-left)=
 ## `$size_units_on_left`
 
+:Description: Show the units as a prefix to the size
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -1196,6 +1263,7 @@ If _set_, message sizes units will be displayed to the left of the number.
 (cfg-sleep-time)=
 ## `$sleep_time`
 
+:Description: Time to pause after certain info messages
 :Type: [Number](type-number)
 :Notes: [Not Negative](type-general)
 :Default:
@@ -1211,6 +1279,7 @@ The default is to pause one second, so a value of zero for this option suppresse
 (cfg-sort)=
 ## `$sort`
 
+:Description: Sort method for the [Index Dialog](tour-index)
 :Type: [Sort Order](type-sort-order)
 :Notes: [Reverse](type-sort-order), [Last](type-sort-order)
 :Default:
@@ -1261,6 +1330,7 @@ See the "Use Threads Feature" section for further explanation and examples, <htt
 (cfg-sort-aux)=
 ## `$sort_aux`
 
+:Description: Secondary sort method for the Index
 :Type: [Sort Order](type-sort-order)
 :Notes: [Reverse](type-sort-order), [Last](type-sort-order)
 :Default:
@@ -1287,6 +1357,7 @@ See the "Use Threads Feature" section for further explanation and examples, <htt
 (cfg-spool-file)=
 ## `$spool_file`
 
+:Description: Inbox
 :Type: [Mailbox (String)](type-string)
 :Default: (empty)
     ```neomuttrc
@@ -1303,6 +1374,7 @@ If not specified, then the environment variables [`$MAIL`](ref-env) and [`$MAILD
 (cfg-status-on-top)=
 ## `$status_on_top`
 
+:Description: Display the status bar at the top
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -1317,6 +1389,7 @@ If [`$help`](cfg-help) is _set_ too, it'll be placed at the bottom.
 (cfg-suspend)=
 ## `$suspend`
 
+:Description: Allow the user to suspend NeoMutt using `^Z`
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -1334,6 +1407,7 @@ If so, the default of [`$suspend`](cfg-suspend) is `no` otherwise `yes`.  This d
 (cfg-text-flowed)=
 ## `$text_flowed`
 
+:Description: Generate `format=flowed` messages
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -1355,6 +1429,7 @@ Note that [`$indent_string`](cfg-indent-string) is ignored when this option is _
 (cfg-timeout)=
 ## `$timeout`
 
+:Description: Time to wait for user input in menus
 :Type: [Number](type-number)
 :Notes: [Not Negative](type-general)
 :Default:
@@ -1371,6 +1446,7 @@ A value of zero disables timeout hooks.
 (cfg-tmp-dir)=
 ## `$tmp_dir`
 
+:Description: Directory for temporary files
 :Type: [Path (String)](type-path)
 :Notes: [Directory only](type-path), [Not Empty](type-general)
 :Default:
@@ -1388,6 +1464,7 @@ Failing that, then `/tmp` is used.
 (cfg-tmp-draft-dir)=
 ## `$tmp_draft_dir`
 
+:Description: Directory for Compose temporary files
 :Type: [Path (String)](type-path)
 :Notes: [Directory only](type-path), [Not Empty](type-general)
 :Default:
@@ -1407,6 +1484,7 @@ It is recommended that this be set to a directory whose contents won't be remove
 (cfg-trash)=
 ## `$trash`
 
+:Description: Folder to put deleted emails
 :Type: [Mailbox (String)](type-string)
 :Default: (empty)
     ```neomuttrc
@@ -1424,6 +1502,7 @@ When you delete a message in the trash folder, it is really deleted, so that you
 (cfg-use-domain)=
 ## `$use_domain`
 
+:Description: Qualify local addresses using this domain
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -1438,6 +1517,7 @@ If _unset_, no addresses will be qualified.
 (cfg-use-threads)=
 ## `$use_threads`
 
+:Description: Whether to use threads for the index
 :Type: [Enumeration](type-enum)
 :Default:
     ```neomuttrc
@@ -1470,6 +1550,7 @@ See the "Use Threads Feature" section for further explanation and examples.
 (cfg-wait-key)=
 ## `$wait_key`
 
+:Description: Prompt to press a key after running external commands
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -1488,6 +1569,7 @@ When _unset_, NeoMutt will wait for a key only if the external command returned 
 (cfg-weed)=
 ## `$weed`
 
+:Description: Filter headers when displaying/forwarding/printing/replying
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -1503,6 +1585,7 @@ Also see [`$copy_decode_weed`](cfg-copy-decode-weed), [`$pipe_decode_weed`](cfg-
 (cfg-wrap)=
 ## `$wrap`
 
+:Description: Width to wrap text in the pager
 :Type: [Number](type-number)
 :Default:
     ```neomuttrc
@@ -1520,6 +1603,7 @@ Also see [`$reflow_wrap`](cfg-reflow-wrap).
 (cfg-wrap-search)=
 ## `$wrap_search`
 
+:Description: Wrap around when the search hits the end
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc

@@ -10,6 +10,7 @@ keywords: compose, compose_format, edit_headers, compose_show_preview, copy, pos
 (cfg-compose-confirm-detach-first)=
 ## `$compose_confirm_detach_first`
 
+:Description: Prevent the accidental deletion of the composed message
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -29,6 +30,7 @@ It doesn't keep track of which message is the typed message if the entries are r
 (cfg-compose-format)=
 ## `$compose_format`
 
+:Description: Format string for the [Compose Dialog](tour-compose)'s status bar
 :Type: [Expando](type-expando)
 :Notes: [Localised String](type-general), [Pipe Support](type-pipe)
 :Default:
@@ -63,6 +65,7 @@ Specify the format of the data displayed in the [`Compose Dialog`](tour-compose)
 (cfg-compose-preview-above-attachments)=
 ## `$compose_preview_above_attachments`
 
+:Description: Show the message preview above the attachments list. By default it is shown below it.
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -77,6 +80,7 @@ By default it is shown below it.
 (cfg-compose-preview-min-rows)=
 ## `$compose_preview_min_rows`
 
+:Description: Hide the preview if it has fewer than this number of rows
 :Type: [Number](type-number)
 :Notes: [Not Negative](type-general)
 :Default:
@@ -91,6 +95,7 @@ This variable specifies the minimum number of rows that have to be available for
 (cfg-compose-show-preview)=
 ## `$compose_show_preview`
 
+:Description: Display a preview of the message body in the [Compose Dialog](tour-compose)
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -104,6 +109,7 @@ When _set_, NeoMutt will display a preview of message in the compose view.
 (cfg-compose-show-user-headers)=
 ## `$compose_show_user_headers`
 
+:Description: Controls whether or not custom headers are shown in the compose envelope
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -117,6 +123,7 @@ When _set_, NeoMutt will display user-defined headers (set via [`:my-header`](cm
 (cfg-copy)=
 ## `$copy`
 
+:Description: Save outgoing emails to [`$record`](cfg-record)
 :Type: [Quad-Option](type-quad)
 :Default:
     ```neomuttrc
@@ -131,6 +138,7 @@ Also see [`$record`](cfg-record), [`$save_name`](cfg-save-name), [`$force_name`]
 (cfg-edit-headers)=
 ## `$edit_headers`
 
+:Description: Let the user edit the email headers whilst editing an email
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -152,6 +160,7 @@ Changes made to the References: and Date: headers are ignored for interoperabili
 (cfg-ispell)=
 ## `$ispell`
 
+:Description: External command to perform spell-checking
 :Type: [Command (String)](type-string)
 :Default:
     ```neomuttrc
@@ -165,6 +174,7 @@ How to invoke `ispell` (GNU's spell-checking software).
 (cfg-postpone)=
 ## `$postpone`
 
+:Description: Save messages to the [`$postponed`](cfg-postponed) folder
 :Type: [Quad-Option](type-quad)
 :Default:
     ```neomuttrc

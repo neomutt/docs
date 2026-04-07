@@ -10,6 +10,7 @@ keywords: pattern, search, simple_search, thorough_search, external_search_comma
 (cfg-external-search-command)=
 ## `$external_search_command`
 
+:Description: External search command
 :Type: [Command (String)](type-string)
 :Default: (empty)
     ```neomuttrc
@@ -36,6 +37,7 @@ You, the user, still have to rewrite the mairix_filter script to match the behav
 (cfg-pattern-format)=
 ## `$pattern_format`
 
+:Description: Format string for the [Pattern Completion Dialog](tour-pattern)
 :Type: [Expando](type-expando)
 :Notes: [Pipe Support](type-pipe)
 :Default:
@@ -69,6 +71,7 @@ Specify the format of the data displayed in the [`Pattern Dialog`](tour-pattern)
 (cfg-simple-search)=
 ## `$simple_search`
 
+:Description: Pattern to search for when search doesn't contain `~`s
 :Type: [String](type-string)
 :Default:
     ```neomuttrc
@@ -89,6 +92,7 @@ For the default value, "joe" would be expanded to: "~f joe | ~s joe".
 (cfg-thorough-search)=
 ## `$thorough_search`
 
+:Description: Decode headers and messages before searching them
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc

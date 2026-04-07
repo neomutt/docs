@@ -68,7 +68,8 @@ unalternates jane@example.com
 (cmd-group)=
 ## `:group`
 
-Add addresses to a named address group.  Groups can be used in hook patterns.
+Add addresses to a named address group.
+Groups can be used in hook patterns.
 
 - `group -group <name> -addr <address>` — add a single address
 - `group -group <name> -rx <regex>` — add addresses matching a pattern

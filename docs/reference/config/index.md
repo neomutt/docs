@@ -22,6 +22,37 @@ types.md
 
 These pages explain how these settings work and how to apply them.
 
+---
+
+[Address](ref-cfg-address)
+[Alias](ref-cfg-alias)
+[Attach](ref-cfg-attach)
+[Autocrypt](ref-cfg-autocrypt)
+[Browser](ref-cfg-browser)
+[Compose](ref-cfg-compose)
+[Conn](ref-cfg-conn)
+[Email](ref-cfg-email)
+[General](ref-cfg-general)
+[Gui](ref-cfg-gui)
+[Hcache](ref-cfg-hcache)
+[History](ref-cfg-history)
+[Hooks](ref-cfg-hooks)
+[Imap](ref-cfg-imap)
+[Index](ref-cfg-index)
+[Maildir](ref-cfg-maildir)
+[Mbox](ref-cfg-mbox)
+[Menu](ref-cfg-menu)
+[Mh](ref-cfg-mh)
+[Ncrypt](ref-cfg-ncrypt)
+[Nntp](ref-cfg-nntp)
+[Notmuch](ref-cfg-notmuch)
+[Pager](ref-cfg-pager)
+[Pattern](ref-cfg-pattern)
+[Pop](ref-cfg-pop)
+[Progress](ref-cfg-progress)
+[Send](ref-cfg-send)
+[Sidebar](ref-cfg-sidebar)
+
 ## A
 
 | Config Option                                                         | Description                                                                         |
@@ -638,6 +669,7 @@ These pages explain how these settings work and how to apply them.
 | [`$time_inc`](cfg-time-inc)                                   | Frequency of progress bar updates (milliseconds)          |
 | `$tmpdir`                                                     | {bdg-warning-line}`Renamed to:` [`$tmp_dir`](cfg-tmp-dir) |
 | [`$tmp_dir`](cfg-tmp-dir)                                     | Directory for temporary files                             |
+| [`$tmp_draft_dir`](cfg-tmp-draft-dir)                         | Directory for Compose temporary files                     |
 | [`$toggle_quoted_show_levels`](cfg-toggle-quoted-show-levels) | Number of quote levels to show with toggle-quoted         |
 | [`$to_chars`](cfg-to-chars)                                   | Indicator characters for the `To` field in the index      |
 | [`$trash`](cfg-trash)                                         | Folder to put deleted emails                              |

@@ -10,6 +10,7 @@ keywords: neomutt, history, history_file, history_format, history_remove_dups, s
 (cfg-history)=
 ## `$history`
 
+:Description: Number of history entries to keep in memory per category
 :Type: [Number](type-number)
 :Notes: [Not Negative](type-general)
 :Default:
@@ -31,6 +32,7 @@ To prevent duplicates over all entries use [`$history_remove_dups`](cfg-history-
 (cfg-history-file)=
 ## `$history_file`
 
+:Description: File to save history in
 :Type: [Path (String)](type-path)
 :Notes: [File only](type-path)
 :Default:
@@ -47,6 +49,7 @@ Also see [`$save_history`](cfg-save-history).
 (cfg-history-format)=
 ## `$history_format`
 
+:Description: Format string for the [History Dialog](tour-history)
 :Type: [Expando](type-expando)
 :Notes: [Pipe Support](type-pipe)
 :Default:
@@ -79,6 +82,7 @@ Specify the format of the data displayed in the [`History Dialog`](tour-history)
 (cfg-history-remove-dups)=
 ## `$history_remove_dups`
 
+:Description: Remove duplicate entries from the history
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -93,6 +97,7 @@ Duplicate entries in the [`$history_file`](cfg-history-file) will also be remove
 (cfg-save-history)=
 ## `$save_history`
 
+:Description: Number of history entries to save per category
 :Type: [Number](type-number)
 :Notes: [Not Negative](type-general)
 :Default:

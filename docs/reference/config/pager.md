@@ -10,6 +10,7 @@ keywords: pager, display_filter, pager_context, pager_index_lines, pager_stop, s
 (cfg-allow-ansi)=
 ## `$allow_ansi`
 
+:Description: Allow ANSI color codes in rich text messages
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -31,6 +32,7 @@ and give it the same color as your attachment color (see also [`$crypt_timestamp
 (cfg-display-filter)=
 ## `$display_filter`
 
+:Description: External command to pre-process an email before display
 :Type: [Command (String)](type-string)
 :Default: (empty)
     ```neomuttrc
@@ -54,6 +56,7 @@ This can be fixed by adding this to your config:
 (cfg-header-color-partial)=
 ## `$header_color_partial`
 
+:Description: Only color the part of the header matching the regex
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -73,6 +76,7 @@ See [`:color`](cmd-color) for more details.
 (cfg-markers)=
 ## `$markers`
 
+:Description: Display a `+` at the beginning of wrapped lines in the pager
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -89,6 +93,7 @@ Also see the [`$smart_wrap`](cfg-smart-wrap) variable.
 (cfg-pager)=
 ## `$pager`
 
+:Description: External command for viewing messages, or empty to use NeoMutt's
 :Type: [Command (String)](type-string)
 :Default: (empty)
     ```neomuttrc
@@ -105,6 +110,7 @@ Using an external pager may have some disadvantages: Additional keystrokes are n
 (cfg-pager-context)=
 ## `$pager_context`
 
+:Description: Number of lines of overlap when changing pages in the pager
 :Type: [Number](type-number)
 :Notes: [Not Negative](type-general)
 :Default:
@@ -123,6 +129,7 @@ If positive, this many lines will be given before a match, if 0, the match will 
 (cfg-pager-format)=
 ## `$pager_format`
 
+:Description: Format string for the [Pager Dialog](tour-pager)'s status bar
 :Type: [Expando](type-expando)
 :Notes: [Pipe Support](type-pipe)
 :Default:
@@ -146,6 +153,7 @@ Specify the format of the data displayed in the [`Pager Dialog`](tour-pager)'s s
 (cfg-pager-index-lines)=
 ## `$pager_index_lines`
 
+:Description: Number of index lines to display above the pager
 :Type: [Number](type-number)
 :Notes: [Not Negative](type-general)
 :Default:
@@ -163,6 +171,7 @@ A value of 0 results in no index being shown.
 (cfg-pager-read-delay)=
 ## `$pager_read_delay`
 
+:Description: Number of seconds to wait before marking a message read
 :Type: [Number](type-number)
 :Notes: [Not Negative](type-general)
 :Default:
@@ -179,6 +188,7 @@ This setting is ignored if [`$pager`](cfg-pager) is set.
 (cfg-pager-skip-quoted-context)=
 ## `$pager_skip_quoted_context`
 
+:Description: Lines of context to show when skipping quoted text
 :Type: [Number](type-number)
 :Notes: [Not Negative](type-general)
 :Default:
@@ -195,6 +205,7 @@ If the previous quote is shorter the whole quote is displayed.
 (cfg-pager-stop)=
 ## `$pager_stop`
 
+:Description: Don't automatically open the next message when at the end of a message
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -208,6 +219,7 @@ When _set_, the internal-pager will **not** move to the next message when you ar
 (cfg-prompt-after)=
 ## `$prompt_after`
 
+:Description: Pause after running an external pager
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -222,6 +234,7 @@ If _unset_, NeoMutt will return to the index menu when the external pager exits.
 (cfg-search-context)=
 ## `$search_context`
 
+:Description: Context to display around search matches
 :Type: [Number](type-number)
 :Notes: [Not Negative](type-general)
 :Default:
@@ -237,6 +250,7 @@ By default, search results will be top-aligned.
 (cfg-smart-wrap)=
 ## `$smart_wrap`
 
+:Description: Wrap text at word boundaries
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -253,6 +267,7 @@ Also see the [`$markers`](cfg-markers) variable.
 (cfg-smileys)=
 ## `$smileys`
 
+:Description: Regex to match smileys to prevent mistakes when quoting text
 :Type: [Regular Expression](type-regex)
 :Notes: [Smart Case](type-general)
 :Default:
@@ -268,6 +283,7 @@ This mostly happens at the beginning of a line.
 (cfg-tilde)=
 ## `$tilde`
 
+:Description: Display `~` in the pager after the end of the email
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -281,6 +297,7 @@ When _set_, the internal-pager will pad blank lines to the bottom of the screen 
 (cfg-toggle-quoted-show-levels)=
 ## `$toggle_quoted_show_levels`
 
+:Description: Number of quote levels to show with toggle-quoted
 :Type: [Number](type-number)
 :Notes: [Not Negative](type-general)
 :Default:

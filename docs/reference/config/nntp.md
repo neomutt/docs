@@ -10,6 +10,7 @@ keywords: neomutt, nntp, usenet, newsgroups, news_server, newsrc, nntp_authentic
 (cfg-catchup-newsgroup)=
 ## `$catchup_newsgroup`
 
+:Description: Mark all articles as read when leaving a newsgroup
 :Type: [Quad-Option](type-quad)
 :Default:
     ```neomuttrc
@@ -23,6 +24,7 @@ If this variable is _set_, NeoMutt will mark all articles in newsgroup as read w
 (cfg-followup-to-poster)=
 ## `$followup_to_poster`
 
+:Description: Reply to the poster if "poster" is in the `Followup-To` header
 :Type: [Quad-Option](type-quad)
 :Default:
     ```neomuttrc
@@ -37,6 +39,7 @@ The message will be mailed to the submitter of the message via mail.
 (cfg-newsgroups-charset)=
 ## `$newsgroups_charset`
 
+:Description: Character set of newsgroups' descriptions
 :Type: [String](type-string)
 :Default:
     ```neomuttrc
@@ -50,6 +53,7 @@ Character set of newsgroups descriptions.
 (cfg-newsrc)=
 ## `$newsrc`
 
+:Description: File containing list of subscribed newsgroups
 :Type: [Expando](type-expando)
 :Notes: [File only](type-path), [Pipe Support](type-pipe)
 :Default:
@@ -79,6 +83,7 @@ Specify the format of the filename containing info about subscribed newsgroups -
 (cfg-news-cache-dir)=
 ## `$news_cache_dir`
 
+:Description: Directory for cached news articles
 :Type: [Path (String)](type-path)
 :Notes: [Directory only](type-path)
 :Default:
@@ -94,6 +99,7 @@ If _unset_, articles and headers will not be saved at all and will be reloaded f
 (cfg-news-server)=
 ## `$news_server`
 
+:Description: URL of the news server
 :Type: [String](type-string)
 :Default: (empty)
     ```neomuttrc
@@ -111,6 +117,7 @@ This option can also be set using the command line option `-g`, the environment 
 (cfg-nntp-authenticators)=
 ## `$nntp_authenticators`
 
+:Description: Allowed authentication methods
 :Type: [String](type-string)
 :Default: (empty)
     ```neomuttrc
@@ -138,6 +145,7 @@ If a method is available but authentication fails, NeoMutt will not connect to t
 (cfg-nntp-context)=
 ## `$nntp_context`
 
+:Description: Maximum number of articles to list (0 for all articles)
 :Type: [Number (Long)](type-long)
 :Notes: [Not Negative](type-general)
 :Default:
@@ -154,6 +162,7 @@ Also controls how many articles headers will be saved in cache when you quit new
 (cfg-nntp-listgroup)=
 ## `$nntp_listgroup`
 
+:Description: Check all articles when opening a newsgroup
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -167,6 +176,7 @@ This variable controls whether or not existence of each article is checked when 
 (cfg-nntp-load-description)=
 ## `$nntp_load_description`
 
+:Description: Load descriptions for newsgroups when adding to the list
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -180,6 +190,7 @@ This variable controls whether or not descriptions for each newsgroup must be lo
 (cfg-nntp-pass)=
 ## `$nntp_pass`
 
+:Description: Password for the news server
 :Type: [String](type-string)
 :Notes: [Sensitive](type-general)
 :Default: (empty)
@@ -194,6 +205,7 @@ Your password for NNTP account.
 (cfg-nntp-poll)=
 ## `$nntp_poll`
 
+:Description: Interval between checks for new posts
 :Type: [Number](type-number)
 :Notes: [Not Negative](type-general)
 :Default:
@@ -209,6 +221,7 @@ If set to 0, NeoMutt will recheck newsgroup on each operation in index (stepping
 (cfg-nntp-user)=
 ## `$nntp_user`
 
+:Description: Username for the news server
 :Type: [String](type-string)
 :Notes: [Sensitive](type-general)
 :Default: (empty)
@@ -224,6 +237,7 @@ If _unset_ and NNTP server requires authentication, NeoMutt will prompt you for 
 (cfg-post-moderated)=
 ## `$post_moderated`
 
+:Description: Allow posting to moderated newsgroups
 :Type: [Quad-Option](type-quad)
 :Default:
     ```neomuttrc
@@ -241,6 +255,7 @@ If news server does not support posting to that newsgroup or totally read-only, 
 (cfg-save-unsubscribed)=
 ## `$save_unsubscribed`
 
+:Description: Save a list of unsubscribed newsgroups to the `newsrc`
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -254,6 +269,7 @@ When _set_, info about unsubscribed newsgroups will be saved into [`$newsrc`](cf
 (cfg-show-new-news)=
 ## `$show_new_news`
 
+:Description: Check for new newsgroups when entering the browser
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -269,6 +285,7 @@ Also controls whether or not number of new articles of subscribed newsgroups wil
 (cfg-x-comment-to)=
 ## `$x_comment_to`
 
+:Description: Add `X-Comment-To` header that contains article author
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc

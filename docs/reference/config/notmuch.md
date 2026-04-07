@@ -10,6 +10,7 @@ keywords: notmuch, search, indexing, tagging, virtual mailbox, nm_default_url, n
 (cfg-nm-config-file)=
 ## `$nm_config_file`
 
+:Description: Configuration file for notmuch. Use `auto` to detect configuration.
 :Type: [Path (String)](type-path)
 :Notes: [File only](type-path)
 :Default:
@@ -25,6 +26,7 @@ Use 'auto' to detect configuration.
 (cfg-nm-config-profile)=
 ## `$nm_config_profile`
 
+:Description: Configuration profile for notmuch.
 :Type: [String](type-string)
 :Default: (empty)
     ```neomuttrc
@@ -38,6 +40,7 @@ Configuration profile for notmuch.
 (cfg-nm-db-limit)=
 ## `$nm_db_limit`
 
+:Description: Default limit for Notmuch queries
 :Type: [Number](type-number)
 :Notes: [Not Negative](type-general)
 :Default:
@@ -52,6 +55,7 @@ This variable specifies the default limit used in notmuch queries.
 (cfg-nm-default-url)=
 ## `$nm_default_url`
 
+:Description: Path to the Notmuch database
 :Type: [String](type-string)
 :Default: (empty)
     ```neomuttrc
@@ -65,6 +69,7 @@ This variable specifies the default Notmuch database in format `notmuch://<absol
 (cfg-nm-exclude-tags)=
 ## `$nm_exclude_tags`
 
+:Description: Exclude messages with these tags
 :Type: [String](type-string)
 :Default: (empty)
     ```neomuttrc
@@ -78,6 +83,7 @@ The messages tagged with these tags are excluded and not loaded from notmuch DB 
 (cfg-nm-flagged-tag)=
 ## `$nm_flagged_tag`
 
+:Description: Tag to use for flagged messages
 :Type: [String](type-string)
 :Notes: [Case Sensitive](type-general)
 :Default:
@@ -94,6 +100,7 @@ All other NeoMutt commands use standard (e.g. maildir) flags.
 (cfg-nm-open-timeout)=
 ## `$nm_open_timeout`
 
+:Description: Database timeout
 :Type: [Number](type-number)
 :Notes: [Not Negative](type-general)
 :Default:
@@ -108,6 +115,7 @@ This variable specifies the timeout for database open in seconds.
 (cfg-nm-query-type)=
 ## `$nm_query_type`
 
+:Description: Default query type: `threads` or `messages`
 :Type: [Enumeration](type-enum)
 :Notes: [Case Sensitive](type-general)
 :Default:
@@ -127,6 +135,7 @@ Default query type used in notmuch queries.
 (cfg-nm-query-window-current-position)=
 ## `$nm_query_window_current_position`
 
+:Description: Position of current search window
 :Type: [Number](type-number)
 :Default:
     ```neomuttrc
@@ -140,6 +149,7 @@ This variable contains the position of the current search for window based vfold
 (cfg-nm-query-window-current-search)=
 ## `$nm_query_window_current_search`
 
+:Description: Current search parameters
 :Type: [String](type-string)
 :Default: (empty)
     ```neomuttrc
@@ -153,6 +163,7 @@ This variable contains the currently setup notmuch search for window based vfold
 (cfg-nm-query-window-duration)=
 ## `$nm_query_window_duration`
 
+:Description: Time duration of the current search window
 :Type: [Number](type-number)
 :Notes: [Not Negative](type-general)
 :Default:
@@ -169,6 +180,7 @@ A value of 0 disables the feature.
 (cfg-nm-query-window-enable)=
 ## `$nm_query_window_enable`
 
+:Description: Enable query windows
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -182,6 +194,7 @@ This variable enables windowed notmuch queries even if window duration is 0.
 (cfg-nm-query-window-or-terms)=
 ## `$nm_query_window_or_terms`
 
+:Description: Additional notmuch search terms for messages to be shown regardless of date
 :Type: [String](type-string)
 :Default: (empty)
     ```neomuttrc
@@ -200,6 +213,7 @@ NeoMutt will produce a query window such as: `notmuch://?query=tag:inbox and (da
 (cfg-nm-query-window-timebase)=
 ## `$nm_query_window_timebase`
 
+:Description: Units for the time duration
 :Type: [Enumeration](type-enum)
 :Notes: [Case Sensitive](type-general)
 :Default:
@@ -222,6 +236,7 @@ This variable sets the time base of a windowed notmuch query.
 (cfg-nm-record-tags)=
 ## `$nm_record_tags`
 
+:Description: Tags to apply to the [`$record`](cfg-record) mailbox (sent mail)
 :Type: [String](type-string)
 :Default: (empty)
     ```neomuttrc
@@ -236,6 +251,7 @@ See the description of the [`<modify-labels>`](ref-fn-index) function for the sy
 (cfg-nm-replied-tag)=
 ## `$nm_replied_tag`
 
+:Description: Tag to use for replied messages
 :Type: [String](type-string)
 :Notes: [Case Sensitive](type-general)
 :Default:
@@ -252,6 +268,7 @@ All other NeoMutt commands use standard (e.g. maildir) flags.
 (cfg-nm-unread-tag)=
 ## `$nm_unread_tag`
 
+:Description: Tag to use for unread messages
 :Type: [String](type-string)
 :Notes: [Case Sensitive](type-general)
 :Default:
@@ -268,6 +285,7 @@ All other NeoMutt commands use standard (e.g. maildir) flags.
 (cfg-virtual-spool-file)=
 ## `$virtual_spool_file`
 
+:Description: Use the first virtual mailbox as a spool file
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc

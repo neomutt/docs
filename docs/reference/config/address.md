@@ -10,6 +10,7 @@ keywords: address, idn, international domain name, idn_decode, idn_encode, encod
 (cfg-idn-decode)=
 ## `$idn_decode`
 
+:Description: Decode international domain names
 :Type: [Boolean](type-bool)
 :Scope: IDN only
 :Default:
@@ -30,6 +31,7 @@ You can use IDNs for addresses even if this is _unset_.
 (cfg-idn-encode)=
 ## `$idn_encode`
 
+:Description: Encode international domain names
 :Type: [Boolean](type-bool)
 :Scope: IDN only
 :Default:

@@ -10,6 +10,7 @@ keywords: neomutt, send, smtp, sendmail, smtp_url, signature, attribution_intro,
 (cfg-abort-noattach)=
 ## `$abort_noattach`
 
+:Description: Abort sending the email if attachments are missing
 :Type: [Quad-Option](type-quad)
 :Default:
     ```neomuttrc
@@ -30,6 +31,7 @@ set abort_noattach_regex = "\\<attach(|ed|ments?)\\>"
 (cfg-abort-noattach-regex)=
 ## `$abort_noattach_regex`
 
+:Description: Regex to match text indicating attachments are expected
 :Type: [Regular Expression](type-regex)
 :Notes: [Localised String](type-general), [Smart Case](type-general)
 :Default:
@@ -45,6 +47,7 @@ If it matches, [`$abort_noattach`](cfg-abort-noattach) will be consulted to dete
 (cfg-abort-nosubject)=
 ## `$abort_nosubject`
 
+:Description: Abort creating the email if subject is missing
 :Type: [Quad-Option](type-quad)
 :Default:
     ```neomuttrc
@@ -59,6 +62,7 @@ If set to _no_, composing messages with no subject given at the subject prompt w
 (cfg-abort-unmodified)=
 ## `$abort_unmodified`
 
+:Description: Abort the sending if the message hasn't been edited
 :Type: [Quad-Option](type-quad)
 :Default:
     ```neomuttrc
@@ -73,6 +77,7 @@ When set to _no_, composition will never be aborted.
 (cfg-allow-8bit)=
 ## `$allow_8bit`
 
+:Description: Allow 8-bit messages, don't use quoted-printable or base64
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -86,6 +91,7 @@ Controls whether 8-bit data is converted to 7-bit using either **Quoted-Printabl
 (cfg-ask-bcc)=
 ## `$ask_bcc`
 
+:Description: Ask the user for the blind-carbon-copy recipients
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -99,6 +105,7 @@ If _set_, NeoMutt will prompt you for blind-carbon-copy, `Bcc:`, recipients befo
 (cfg-ask-cc)=
 ## `$ask_cc`
 
+:Description: Ask the user for the carbon-copy recipients
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -112,6 +119,7 @@ If _set_, NeoMutt will prompt you for carbon-copy, `Cc:`, recipients before edit
 (cfg-ask-followup-to)=
 ## `$ask_followup_to`
 
+:Description: Ask the user for follow-up groups before editing
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -125,6 +133,7 @@ If set, NeoMutt will prompt you for follow-up groups before editing the body of 
 (cfg-ask-x-comment-to)=
 ## `$ask_x_comment_to`
 
+:Description: Ask the user for the `X-Comment-To` field before editing
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -138,6 +147,7 @@ If set, NeoMutt will prompt you for `X-Comment-To:` field before editing the bod
 (cfg-attach-charset)=
 ## `$attach_charset`
 
+:Description: When attaching files, use one of these character sets
 :Type: [String List](type-slist)
 :Notes: [Colon-separated](type-slist), [Allow Empty](type-slist)
 :Default: (empty)
@@ -164,6 +174,7 @@ for Japanese users, "iso-2022-*" must be put at the head of the value as shown a
 (cfg-attribution-intro)=
 ## `$attribution_intro`
 
+:Description: Message to start a reply, "On DATE, PERSON wrote:"
 :Type: [Expando](type-expando)
 :Notes: [Localised String](type-general), [Pipe Support](type-pipe)
 :Default:
@@ -189,6 +200,7 @@ This string will precede a replied-to message which is quoted in the main body o
 (cfg-attribution-locale)=
 ## `$attribution_locale`
 
+:Description: Locale for dates in the `$attribution` message
 :Type: [String](type-string)
 :Default: (empty)
     ```neomuttrc
@@ -212,6 +224,7 @@ By default, NeoMutt will use your locale environment, so there is no need to set
 (cfg-attribution-trailer)=
 ## `$attribution_trailer`
 
+:Description: Suffix message to add after reply text
 :Type: [Expando](type-expando)
 :Notes: [Pipe Support](type-pipe)
 :Default: (empty)
@@ -233,6 +246,7 @@ Similar to the [`$attribution_intro`](cfg-attribution-intro) variable, this is t
 (cfg-bounce-delivered)=
 ## `$bounce_delivered`
 
+:Description: Add `Delivered-To` to bounced messages
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -247,6 +261,7 @@ Postfix users may wish to _unset_ this variable.
 (cfg-confirm-empty-to)=
 ## `$confirm_empty_to`
 
+:Description: Ask for a confirmation before sending an email with an empty `To:` recipients list
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -260,6 +275,7 @@ When _set_, NeoMutt will prompt for confirmation when sending an e-mail with an 
 (cfg-content-type)=
 ## `$content_type`
 
+:Description: Default `Content-Type` for newly composed messages
 :Type: [String](type-string)
 :Default:
     ```neomuttrc
@@ -273,6 +289,7 @@ Sets the default `Content-Type:` for the body of newly composed messages.
 (cfg-crypt-auto-encrypt)=
 ## `$crypt_auto_encrypt`
 
+:Description: Automatically PGP encrypt all outgoing mail
 :Type: [Boolean](type-bool)
 :Scope: Crypto only
 :Default:
@@ -290,6 +307,7 @@ If [`$smime_is_default`](cfg-smime-is-default) is _set_, then OpenSSL is used in
 (cfg-crypt-auto-pgp)=
 ## `$crypt_auto_pgp`
 
+:Description: Allow automatic PGP functions
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -307,6 +325,7 @@ This variable controls whether or not NeoMutt may automatically enable PGP encry
 (cfg-crypt-auto-sign)=
 ## `$crypt_auto_sign`
 
+:Description: Automatically PGP sign all outgoing mail
 :Type: [Boolean](type-bool)
 :Scope: Crypto only
 :Default:
@@ -323,6 +342,7 @@ If [`$smime_is_default`](cfg-smime-is-default) is _set_, then OpenSSL is used in
 (cfg-crypt-auto-smime)=
 ## `$crypt_auto_smime`
 
+:Description: Allow automatic SMIME functions
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -340,6 +360,7 @@ This variable controls whether or not NeoMutt may automatically enable S/MIME en
 (cfg-crypt-reply-encrypt)=
 ## `$crypt_reply_encrypt`
 
+:Description: Encrypt replies to encrypted messages
 :Type: [Boolean](type-bool)
 :Scope: Crypto only
 :Default:
@@ -354,6 +375,7 @@ If _set_, automatically PGP or OpenSSL encrypt replies to messages which are enc
 (cfg-crypt-reply-sign)=
 ## `$crypt_reply_sign`
 
+:Description: Sign replies to signed messages
 :Type: [Boolean](type-bool)
 :Scope: Crypto only
 :Default:
@@ -372,6 +394,7 @@ this does not work on messages that are encrypted _and_ signed!
 (cfg-crypt-reply-sign-encrypted)=
 ## `$crypt_reply_sign_encrypted`
 
+:Description: Sign replies to encrypted messages
 :Type: [Boolean](type-bool)
 :Scope: Crypto only
 :Default:
@@ -388,6 +411,7 @@ This works around the problem noted in [`$crypt_reply_sign`](cfg-crypt-reply-sig
 (cfg-dsn-notify)=
 ## `$dsn_notify`
 
+:Description: Request notification for message delivery or delay
 :Type: [String](type-string)
 :Default: (empty)
     ```neomuttrc
@@ -412,6 +436,7 @@ For SMTP delivery, DSN support is auto-detected so that it depends on the server
 (cfg-dsn-return)=
 ## `$dsn_return`
 
+:Description: What to send as a notification of message delivery or delay
 :Type: [String](type-string)
 :Default: (empty)
     ```neomuttrc
@@ -436,6 +461,7 @@ For SMTP delivery, DSN support is auto-detected so that it depends on the server
 (cfg-empty-subject)=
 ## `$empty_subject`
 
+:Description: Subject to use when replying to an email with none
 :Type: [String](type-string)
 :Default:
     ```neomuttrc
@@ -450,6 +476,7 @@ It defaults to "Re: your mail".
 (cfg-encode-from)=
 ## `$encode_from`
 
+:Description: Encode `From ` as "quote-printable" at the beginning of lines
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -464,6 +491,7 @@ This is useful to avoid the tampering certain mail delivery and transport agents
 (cfg-fast-reply)=
 ## `$fast_reply`
 
+:Description: Don't prompt for the recipients and subject when replying/forwarding
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -487,6 +515,7 @@ this variable has no effect when the [`$auto_edit`](cfg-auto-edit) variable is _
 (cfg-fcc-attach)=
 ## `$fcc_attach`
 
+:Description: Save sent message with all their attachments
 :Type: [Quad-Option](type-quad)
 :Default:
     ```neomuttrc
@@ -504,6 +533,7 @@ This variable controls whether or not attachments on outgoing messages are saved
 (cfg-fcc-before-send)=
 ## `$fcc_before_send`
 
+:Description: Save FCCs before sending the message
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -522,6 +552,7 @@ Variables [`$fcc_attach`](cfg-fcc-attach) and [`$fcc_clear`](cfg-fcc-clear) will
 (cfg-fcc-clear)=
 ## `$fcc_clear`
 
+:Description: Save sent messages unencrypted and unsigned
 :Type: [Boolean](type-bool)
 :Scope: PGP only
 :Default:
@@ -544,6 +575,7 @@ When this variable is _set_, FCCs will be stored unencrypted and unsigned, even 
 (cfg-followup-to)=
 ## `$followup_to`
 
+:Description: Add the `Mail-Followup-To` header is generated when sending mail
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -564,6 +596,7 @@ Without this header, a group reply to your message sent to a subscribed list wil
 (cfg-forward-attachments)=
 ## `$forward_attachments`
 
+:Description: Forward attachments when forwarding a message
 :Type: [Quad-Option](type-quad)
 :Default:
     ```neomuttrc
@@ -578,6 +611,7 @@ When forwarding inline (i.e.
 (cfg-forward-attribution-intro)=
 ## `$forward_attribution_intro`
 
+:Description: Prefix message for forwarded messages
 :Type: [Expando](type-expando)
 :Notes: [Localised String](type-general), [Pipe Support](type-pipe)
 :Default:
@@ -603,6 +637,7 @@ This is the string that will precede a message which has been forwarded in the m
 (cfg-forward-attribution-trailer)=
 ## `$forward_attribution_trailer`
 
+:Description: Suffix message for forwarded messages
 :Type: [Expando](type-expando)
 :Notes: [Localised String](type-general), [Pipe Support](type-pipe)
 :Default:
@@ -624,6 +659,7 @@ This is the string that will follow a message which has been forwarded in the ma
 (cfg-forward-decrypt)=
 ## `$forward_decrypt`
 
+:Description: Decrypt the message when forwarding it
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -639,6 +675,7 @@ This variable is only used if [`$mime_forward`](cfg-mime-forward) is _set_ and [
 (cfg-forward-edit)=
 ## `$forward_edit`
 
+:Description: Automatically start the editor when forwarding a message
 :Type: [Quad-Option](type-quad)
 :Default:
     ```neomuttrc
@@ -653,6 +690,7 @@ For those who always want to forward with no modification, use a setting of "no"
 (cfg-forward-format)=
 ## `$forward_format`
 
+:Description: Format string to control the subject when forwarding a message
 :Type: [Expando](type-expando)
 :Notes: [Not Empty](type-general), [Pipe Support](type-pipe)
 :Default:
@@ -677,6 +715,7 @@ This variable controls the default subject when forwarding a message.
 (cfg-forward-references)=
 ## `$forward_references`
 
+:Description: Set the `In-Reply-To` and `References` headers when forwarding a message
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -691,6 +730,7 @@ Hence the forwarded message becomes part of the original thread instead of start
 (cfg-greeting)=
 ## `$greeting`
 
+:Description: Greeting string added to the top of all messages
 :Type: [Expando](type-expando)
 :Notes: [Pipe Support](type-pipe)
 :Default: (empty)
@@ -719,6 +759,7 @@ This string is added to the top of every outgoing message.
 (cfg-hdrs)=
 ## `$hdrs`
 
+:Description: Add custom headers to outgoing mail
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -734,6 +775,7 @@ If _set_, the user defined header fields are added to every new message.
 (cfg-hidden-host)=
 ## `$hidden_host`
 
+:Description: Don't use the hostname, just the domain, when generating the message id
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -747,6 +789,7 @@ When _set_, NeoMutt will skip the host name part of [`$hostname`](cfg-hostname) 
 (cfg-honor-followup-to)=
 ## `$honor_followup_to`
 
+:Description: Honour the `Mail-Followup-To` header when group replying
 :Type: [Quad-Option](type-quad)
 :Default:
     ```neomuttrc
@@ -760,6 +803,7 @@ This variable controls whether or not a `Mail-Followup-To:` header is honored wh
 (cfg-ignore-list-reply-to)=
 ## `$ignore_list_reply_to`
 
+:Description: Ignore the `Reply-To` header when using `<reply>` on a mailing list
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -775,6 +819,7 @@ To direct a response to the mailing list when this option is _set_, use the [`<l
 (cfg-include)=
 ## `$include`
 
+:Description: Include a copy of the email that's being replied to
 :Type: [Quad-Option](type-quad)
 :Default:
     ```neomuttrc
@@ -788,6 +833,7 @@ Controls whether or not a copy of the message(s) you are replying to is included
 (cfg-inews-command)=
 ## `$inews_command`
 
+:Description: External command to post news articles
 :Type: [Expando (Command String)](type-expando)
 :Notes: [Pipe Support](type-pipe)
 :Default: (empty)
@@ -823,6 +869,7 @@ set inews_command = "/usr/local/bin/inews -hS"
 (cfg-message-id-format)=
 ## `$message_id_format`
 
+:Description: Format string for customising the `Message-ID`
 :Type: [Expando](type-expando)
 :Notes: [Pipe Support](type-pipe)
 :Default:
@@ -875,6 +922,7 @@ Base64Url: <https://datatracker.ietf.org/doc/html/rfc4648#section-5>
 (cfg-me-too)=
 ## `$me_too`
 
+:Description: Remove the user's address from the list of recipients
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -888,6 +936,7 @@ If _unset_, NeoMutt will remove your address (see the [`:alternates`](cmd-altern
 (cfg-mime-forward-decode)=
 ## `$mime_forward_decode`
 
+:Description: Decode the forwarded message before attaching it
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -902,6 +951,7 @@ Otherwise [`$forward_decode`](cfg-forward-decode) is used instead.
 (cfg-mime-type-query-command)=
 ## `$mime_type_query_command`
 
+:Description: External command to determine the MIME type of an attachment
 :Type: [Command (String)](type-string)
 :Default: (empty)
     ```neomuttrc
@@ -924,6 +974,7 @@ Suggested values are `xdg-mime query filetype` or `file -bi`.
 (cfg-mime-type-query-first)=
 ## `$mime_type_query_first`
 
+:Description: Run the [`$mime_type_query_command`](cfg-mime-type-query-command) before the mime.types lookup
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -937,6 +988,7 @@ When _set_, the [`$mime_type_query_command`](cfg-mime-type-query-command) will b
 (cfg-nm-record)=
 ## `$nm_record`
 
+:Description: If the [`$record`](cfg-record) mailbox (sent mail) should be indexed
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -952,6 +1004,7 @@ See [`$nm_record_tags`](cfg-nm-record-tags) for how to modify the set of notmuch
 (cfg-pgp-reply-inline)=
 ## `$pgp_reply_inline`
 
+:Description: Reply using old-style inline PGP messages (not recommended)
 :Type: [Boolean](type-bool)
 :Scope: PGP only
 :Default:
@@ -975,6 +1028,7 @@ Also note that using the old-style PGP message format is **strongly** **deprecat
 (cfg-postpone-encrypt)=
 ## `$postpone_encrypt`
 
+:Description: Self-encrypt postponed messages
 :Type: [Boolean](type-bool)
 :Scope: Crypto only
 :Default:
@@ -990,6 +1044,7 @@ NeoMutt will first try to encrypt using the value specified in [`$pgp_default_ke
 (cfg-postpone-encrypt-as)=
 ## `$postpone_encrypt_as`
 
+:Description: Fallback encryption key for postponed messages
 :Type: [String](type-string)
 :Default: (empty)
     ```neomuttrc
@@ -1003,6 +1058,7 @@ When _set_, NeoMutt will use this as a fallback encryption key for postponed mes
 (cfg-recall)=
 ## `$recall`
 
+:Description: Recall postponed mesaages when asked to compose a message
 :Type: [Quad-Option](type-quad)
 :Default:
     ```neomuttrc
@@ -1021,6 +1077,7 @@ Also see [`$postponed`](cfg-postponed) variable.
 (cfg-reply-self)=
 ## `$reply_self`
 
+:Description: Really reply to yourself, when replying to your own email
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -1036,6 +1093,7 @@ Also see the [`:alternates`](cmd-alternates) command.
 (cfg-reply-to)=
 ## `$reply_to`
 
+:Description: Address to use as a `Reply-To` header
 :Type: [Quad-Option](type-quad)
 :Default:
     ```neomuttrc
@@ -1052,6 +1110,7 @@ header field to the list address and you want to send a private message to the a
 (cfg-reply-with-xorig)=
 ## `$reply_with_xorig`
 
+:Description: Create `From` header from `X-Original-To` header
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -1069,6 +1128,7 @@ Assuming [`$fast_reply`](cfg-fast-reply) is disabled, this option will prompt th
 (cfg-resume-draft-files)=
 ## `$resume_draft_files`
 
+:Description: Process draft files like postponed messages
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -1083,6 +1143,7 @@ Recipients are not prompted for; send-hooks are not evaluated; no alias expansio
 (cfg-reverse-name)=
 ## `$reverse_name`
 
+:Description: Set the `From` from the address the email was sent to
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -1100,6 +1161,7 @@ Also see the [`:alternates`](cmd-alternates) command and [`$reverse_real_name`](
 (cfg-reverse-real-name)=
 ## `$reverse_real_name`
 
+:Description: Set the `From` from the full `To` address the email was sent to
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -1120,6 +1182,7 @@ In either case, a missing real name will be filled in afterwards using the value
 (cfg-sendmail)=
 ## `$sendmail`
 
+:Description: External command to send email
 :Type: [Command (String)](type-string)
 :Default:
     ```neomuttrc
@@ -1146,6 +1209,7 @@ The shell is not used to run the command, so shell quoting is also not supported
 (cfg-sendmail-wait)=
 ## `$sendmail_wait`
 
+:Description: Time to wait for sendmail to finish
 :Type: [Number](type-number)
 :Default:
     ```neomuttrc
@@ -1170,6 +1234,7 @@ If there is some error, you will be informed as to where to find the output.
 (cfg-signature)=
 ## `$signature`
 
+:Description: File containing a signature to append to all mail
 :Type: [Path (String)](type-path)
 :Notes: [File only](type-path), [Pipe Support](type-pipe)
 :Default:
@@ -1188,6 +1253,7 @@ Specifies the filename of your signature, which is appended to all outgoing mess
 (cfg-sig-dashes)=
 ## `$sig_dashes`
 
+:Description: Insert `-- ` before the signature
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -1208,6 +1274,7 @@ For example, NeoMutt has the ability to highlight the signature in a different c
 (cfg-sig-on-top)=
 ## `$sig_on_top`
 
+:Description: Insert the signature before the quoted text
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -1229,6 +1296,7 @@ Do not set this variable unless you really know what you are doing, and are prep
 (cfg-smtp-authenticators)=
 ## `$smtp_authenticators`
 
+:Description: List of allowed authentication methods (colon-separated)
 :Type: [String List](type-slist)
 :Notes: [Colon-separated](type-slist)
 :Default: (empty)
@@ -1253,6 +1321,7 @@ set smtp_authenticators = "digest-md5:cram-md5"
 (cfg-smtp-oauth-refresh-command)=
 ## `$smtp_oauth_refresh_command`
 
+:Description: External command to generate OAUTH refresh token
 :Type: [Command (String)](type-string)
 :Notes: [Sensitive](type-general)
 :Default: (empty)
@@ -1269,6 +1338,7 @@ See "$oauth" for details.
 (cfg-smtp-pass)=
 ## `$smtp_pass`
 
+:Description: Password for the SMTP server
 :Type: [String](type-string)
 :Notes: [Sensitive](type-general)
 :Default: (empty)
@@ -1289,6 +1359,7 @@ Only use this option when you are on a fairly secure machine, because the superu
 (cfg-smtp-url)=
 ## `$smtp_url`
 
+:Description: URL of the SMTP server
 :Type: [String](type-string)
 :Notes: [Sensitive](type-general)
 :Default: (empty)
@@ -1313,6 +1384,7 @@ Also see [`$write_bcc`](cfg-write-bcc).
 (cfg-smtp-user)=
 ## `$smtp_user`
 
+:Description: Username for the SMTP server
 :Type: [String](type-string)
 :Notes: [Sensitive](type-general)
 :Default: (empty)
@@ -1329,6 +1401,7 @@ This variable defaults to your user name on the local machine.
 (cfg-user-agent)=
 ## `$user_agent`
 
+:Description: Add a `User-Agent` header to outgoing mail
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -1342,6 +1415,7 @@ When _set_, NeoMutt will add a `User-Agent:` header to outgoing messages, indica
 (cfg-use-8bit-mime)=
 ## `$use_8bit_mime`
 
+:Description: Use 8-bit messages and ESMTP to send messages
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -1360,6 +1434,7 @@ flag when sending 8-bit messages to enable ESMTP negotiation.
 (cfg-use-envelope-from)=
 ## `$use_envelope_from`
 
+:Description: Set the envelope sender of the message
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -1378,6 +1453,7 @@ Therefore setting this option is not useful if the [`$sendmail`](cfg-sendmail) v
 (cfg-use-from)=
 ## `$use_from`
 
+:Description: Set the `From` header for outgoing mail
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -1392,6 +1468,7 @@ If _unset_, no `From:` header field will be generated unless the user explicitly
 (cfg-wrap-headers)=
 ## `$wrap_headers`
 
+:Description: Width to wrap headers in outgoing messages
 :Type: [Number](type-number)
 :Notes: [Not Negative](type-general)
 :Default:
@@ -1412,6 +1489,7 @@ This option usually shouldn't be changed.
 (cfg-write-bcc)=
 ## `$write_bcc`
 
+:Description: Write out the `Bcc:` field when preparing to send a mail
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc

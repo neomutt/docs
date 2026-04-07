@@ -10,6 +10,7 @@ keywords: neomutt, hooks, default_hook, save_name, force_name, fcc-hook, send-ho
 (cfg-default-hook)=
 ## `$default_hook`
 
+:Description: Pattern to use for hooks that only have a simple regex
 :Type: [String](type-string)
 :Default:
     ```neomuttrc
@@ -38,6 +39,7 @@ The default value matches if the message is either from a user matching the regu
 (cfg-force-name)=
 ## `$force_name`
 
+:Description: Save outgoing mail in a folder of their name
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -53,6 +55,7 @@ Also see the [`$record`](cfg-record) variable.
 (cfg-save-name)=
 ## `$save_name`
 
+:Description: Save outgoing message to mailbox of recipient's name if it exists
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc

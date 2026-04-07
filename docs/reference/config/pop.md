@@ -10,6 +10,7 @@ keywords: neomutt, pop3, pop, pop_host, pop_user, pop_pass, pop_authenticators, 
 (cfg-pop-authenticators)=
 ## `$pop_authenticators`
 
+:Description: List of allowed authentication methods (colon-separated)
 :Type: [String List](type-slist)
 :Notes: [Colon-separated](type-slist)
 :Default: (empty)
@@ -33,6 +34,7 @@ set pop_authenticators = "digest-md5:apop:user"
 (cfg-pop-auth-try-all)=
 ## `$pop_auth_try_all`
 
+:Description: Try all available authentication methods
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -48,6 +50,7 @@ If a method is available but authentication fails, NeoMutt will not connect to t
 (cfg-pop-check-interval)=
 ## `$pop_check_interval`
 
+:Description: Interval between checks for new mail
 :Type: [Number](type-number)
 :Notes: [Not Negative](type-general)
 :Default:
@@ -62,6 +65,7 @@ This variable configures how often (in seconds) NeoMutt should look for new mail
 (cfg-pop-delete)=
 ## `$pop_delete`
 
+:Description: After downloading POP messages, delete them on the server
 :Type: [Quad-Option](type-quad)
 :Default:
     ```neomuttrc
@@ -76,6 +80,7 @@ When _unset_, NeoMutt will download messages but also leave them on the POP serv
 (cfg-pop-host)=
 ## `$pop_host`
 
+:Description: URL of the POP server
 :Type: [String](type-string)
 :Default: (empty)
     ```neomuttrc
@@ -96,6 +101,7 @@ where "[...]" denotes an optional part.
 (cfg-pop-last)=
 ## `$pop_last`
 
+:Description: Use the `LAST` command to fetch new mail
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -109,6 +115,7 @@ If this variable is _set_, NeoMutt will try to use the "`LAST`" POP command for 
 (cfg-pop-oauth-refresh-command)=
 ## `$pop_oauth_refresh_command`
 
+:Description: External command to generate OAUTH refresh token
 :Type: [Command (String)](type-string)
 :Notes: [Sensitive](type-general)
 :Default: (empty)
@@ -125,6 +132,7 @@ See "$oauth" for details.
 (cfg-pop-pass)=
 ## `$pop_pass`
 
+:Description: Password of the POP server
 :Type: [String](type-string)
 :Notes: [Sensitive](type-general)
 :Default: (empty)
@@ -144,6 +152,7 @@ Only use this option when you are on a fairly secure machine, because the superu
 (cfg-pop-reconnect)=
 ## `$pop_reconnect`
 
+:Description: Reconnect to the server is the connection is lost
 :Type: [Quad-Option](type-quad)
 :Default:
     ```neomuttrc
@@ -157,6 +166,7 @@ Controls whether or not NeoMutt will try to reconnect to the POP server if the c
 (cfg-pop-user)=
 ## `$pop_user`
 
+:Description: Username of the POP server
 :Type: [String](type-string)
 :Notes: [Sensitive](type-general)
 :Default: (empty)

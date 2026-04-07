@@ -10,6 +10,7 @@ keywords: neomutt, gui, threads, collapse_flagged, collapse_unread, duplicate_th
 (cfg-beep)=
 ## `$beep`
 
+:Description: Make a noise when an error occurs
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -23,6 +24,7 @@ When this variable is _set_, NeoMutt will beep when an error occurs.
 (cfg-collapse-flagged)=
 ## `$collapse_flagged`
 
+:Description: Prevent the collapse of threads with flagged emails
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -36,6 +38,7 @@ When _unset_, NeoMutt will not collapse a thread if it contains any flagged mess
 (cfg-collapse-unread)=
 ## `$collapse_unread`
 
+:Description: Prevent the collapse of threads with unread emails
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -49,6 +52,7 @@ When _unset_, NeoMutt will not collapse a thread if it contains any unread messa
 (cfg-duplicate-threads)=
 ## `$duplicate_threads`
 
+:Description: Highlight messages with duplicated message IDs
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -63,6 +67,7 @@ If it is _set_, it will indicate that it thinks they are duplicates of each othe
 (cfg-hide-limited)=
 ## `$hide_limited`
 
+:Description: Don't indicate hidden messages, in the thread tree
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -76,6 +81,7 @@ When _set_, NeoMutt will not show the presence of messages that are hidden by li
 (cfg-hide-missing)=
 ## `$hide_missing`
 
+:Description: Don't indicate missing messages, in the thread tree
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -89,6 +95,7 @@ When _set_, NeoMutt will not show the presence of missing messages in the thread
 (cfg-hide-thread-subject)=
 ## `$hide_thread_subject`
 
+:Description: Hide subjects that are similar to that of the parent message
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -102,6 +109,7 @@ When _set_, NeoMutt will not show the subject of messages in the thread tree tha
 (cfg-hide-top-limited)=
 ## `$hide_top_limited`
 
+:Description: Don't indicate hidden top message, in the thread tree
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -116,6 +124,7 @@ Note that when [`$hide_limited`](cfg-hide-limited) is _set_, this option will ha
 (cfg-hide-top-missing)=
 ## `$hide_top_missing`
 
+:Description: Don't indicate missing top message, in the thread tree
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -130,6 +139,7 @@ Note that when [`$hide_missing`](cfg-hide-missing) is _set_, this option will ha
 (cfg-narrow-tree)=
 ## `$narrow_tree`
 
+:Description: Draw a narrower thread tree in the index
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -143,6 +153,7 @@ This variable, when _set_, makes the thread tree narrower, allowing deeper threa
 (cfg-sort-re)=
 ## `$sort_re`
 
+:Description: Whether [`$reply_regex`](cfg-reply-regex) must be matched when not [`$strict_threads`](cfg-strict-threads)
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -159,6 +170,7 @@ With [`$sort_re`](cfg-sort-re) _unset_, NeoMutt will attach the message whether 
 (cfg-strict-threads)=
 ## `$strict_threads`
 
+:Description: Thread messages using `In-Reply-To` and `References` headers
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -178,6 +190,7 @@ This may not always be desirable, such as in a personal mailbox where you might 
 (cfg-thread-received)=
 ## `$thread_received`
 
+:Description: Sort threaded messages by their received date
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc

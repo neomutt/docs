@@ -14,6 +14,7 @@ keywords: autocrypt, encryption, automatic encryption, key exchange, autocrypt_d
 (cfg-autocrypt)=
 ## `$autocrypt`
 
+:Description: Enables the Autocrypt feature
 :Type: [Boolean](type-bool)
 :Scope: Autocrypt only
 :Default:
@@ -28,6 +29,7 @@ When _set_, enables autocrypt, which provides passive encryption protection with
 (cfg-autocrypt-acct-format)=
 ## `$autocrypt_acct_format`
 
+:Description: Format string for the [Autocrypt Account Dialog](tour-autocrypt)
 :Type: [Expando](type-expando)
 :Notes: [Pipe Support](type-pipe)
 :Scope: Autocrypt only
@@ -64,6 +66,7 @@ Specify the format of the data displayed in the [`Autocrypt Dialog`](tour-autocr
 (cfg-autocrypt-dir)=
 ## `$autocrypt_dir`
 
+:Description: Location of Autocrypt files, including the GPG keyring and SQLite database
 :Type: [Path (String)](type-path)
 :Notes: [Directory only](type-path)
 :Scope: Autocrypt only
@@ -79,6 +82,7 @@ This variable sets where autocrypt files are stored, including the GPG keyring a
 (cfg-autocrypt-reply)=
 ## `$autocrypt_reply`
 
+:Description: Replying to an Autocrypt email automatically enables Autocrypt in the reply
 :Type: [Boolean](type-bool)
 :Scope: Autocrypt only
 :Default:

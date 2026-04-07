@@ -10,6 +10,7 @@ keywords: alias, address book, contacts, alias_file, alias_format, alias_sort, q
 (cfg-alias-file)=
 ## `$alias_file`
 
+:Description: Save new aliases to this file
 :Type: [Path (String)](type-path)
 :Notes: [File only](type-path)
 :Default:
@@ -31,6 +32,7 @@ NeoMutt will not automatically source this file; you must explicitly use [`:sour
 (cfg-alias-format)=
 ## `$alias_format`
 
+:Description: Format string for the [Alias Dialog](tour-alias)
 :Type: [Expando](type-expando)
 :Notes: [Not Empty](type-general), [Pipe Support](type-pipe)
 :Default:
@@ -78,6 +80,7 @@ The following sequences are deprecated; they will be removed in the future.
 (cfg-alias-sort)=
 ## `$alias_sort`
 
+:Description: Sort method for the [Alias Dialog](tour-alias)
 :Type: [Sort Order](type-sort-order)
 :Notes: [Reverse](type-sort-order)
 :Default:
@@ -107,6 +110,7 @@ If _set_, this overrides the order of entries returned by the [`$query_command`]
 (cfg-query-command)=
 ## `$query_command`
 
+:Description: External command to query an external address book
 :Type: [Command (String)](type-string)
 :Default: (empty)
     ```neomuttrc
@@ -127,6 +131,7 @@ If no `%s` is found in the string, NeoMutt will append the user's query to the e
 (cfg-query-format)=
 ## `$query_format`
 
+:Description: Format string for the [Query Dialog](tour-query) (address book)
 :Type: [Expando](type-expando)
 :Notes: [Not Empty](type-general), [Pipe Support](type-pipe)
 :Default:

@@ -10,6 +10,7 @@ keywords: email, mime, mailcap, scoring, reflow_text, reply_regex, reverse_alias
 (cfg-auto-subscribe)=
 ## `$auto_subscribe`
 
+:Description: Automatically check if the user is subscribed to a mailing list
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -25,6 +26,7 @@ Parsing and checking these things slows header reading down, so this option is d
 (cfg-honor-disposition)=
 ## `$honor_disposition`
 
+:Description: Don't display MIME parts inline if they have a disposition of "attachment"
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -45,6 +47,7 @@ NeoMutt will render all MIME parts it can properly transform to plain text.
 (cfg-hidden-tags)=
 ## `$hidden_tags`
 
+:Description: List of tags that shouldn't be displayed on screen (comma-separated)
 :Type: [String List](type-slist)
 :Notes: [Comma-separated](type-slist)
 :Default:
@@ -59,6 +62,7 @@ This variable specifies a list of comma-separated private notmuch/imap tags whic
 (cfg-implicit-auto-view)=
 ## `$implicit_auto_view`
 
+:Description: Display MIME attachments inline if a `copiousoutput` mailcap entry exists
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -73,6 +77,7 @@ If such an entry is found, NeoMutt will use the viewer defined in that entry to 
 (cfg-include-encrypted)=
 ## `$include_encrypted`
 
+:Description: Whether to include encrypted content when replying
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -89,6 +94,7 @@ If a previously encrypted message were attached by the attacker, they could tric
 (cfg-include-only-first)=
 ## `$include_only_first`
 
+:Description: Only include the first attachment when replying
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -102,6 +108,7 @@ Controls whether or not NeoMutt includes only the first attachment of the messag
 (cfg-mailcap-path)=
 ## `$mailcap_path`
 
+:Description: List of mailcap files (colon-separated)
 :Type: [String List](type-slist)
 :Notes: [Colon-separated](type-slist)
 :Default:
@@ -121,6 +128,7 @@ The default search path is from [RFC1524](https://www.rfc-editor.org/rfc/rfc1524
 (cfg-mailcap-sanitize)=
 ## `$mailcap_sanitize`
 
+:Description: Restrict the possible characters in mailcap expandos
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -139,6 +147,7 @@ Don't change this setting unless you are really sure what you are doing!
 (cfg-preferred-languages)=
 ## `$preferred_languages`
 
+:Description: List of Preferred Languages for multilingual MIME (comma-separated)
 :Type: [String List](type-slist)
 :Notes: [Comma-separated](type-slist)
 :Default: (empty)
@@ -159,6 +168,7 @@ set preferred_languages = "en,fr,de"
 (cfg-reflow-space-quotes)=
 ## `$reflow_space_quotes`
 
+:Description: Insert spaces into reply quotes for `format=flowed` messages
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -179,6 +189,7 @@ Also, this option does not affect replies when [`$text_flowed`](cfg-text-flowed)
 (cfg-reflow-text)=
 ## `$reflow_text`
 
+:Description: Reformat paragraphs of `format=flowed` text
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -196,6 +207,7 @@ Also see [`$reflow_wrap`](cfg-reflow-wrap), and [`$wrap`](cfg-wrap).
 (cfg-reflow-wrap)=
 ## `$reflow_wrap`
 
+:Description: Maximum paragraph width for reformatting `format=flowed` text
 :Type: [Number](type-number)
 :Default:
     ```neomuttrc
@@ -217,6 +229,7 @@ Also see [`$wrap`](cfg-wrap).
 (cfg-reply-regex)=
 ## `$reply_regex`
 
+:Description: Regex to match message reply subjects like `re: `
 :Type: [Regular Expression](type-regex)
 :Notes: [Localised String](type-general), [Smart Case](type-general)
 :Default:
@@ -252,6 +265,7 @@ If that fixes the problem, then once the variable is set to your liking, remove 
 (cfg-reverse-alias)=
 ## `$reverse_alias`
 
+:Description: Display the alias in the index, rather than the message's sender
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -278,6 +292,7 @@ It would be displayed in the index menu as "Joe User" instead of "abd30425@somew
 (cfg-rfc2047-parameters)=
 ## `$rfc2047_parameters`
 
+:Description: Decode [RFC2047](https://www.rfc-editor.org/rfc/rfc2047.html)-encoded MIME parameters
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -304,6 +319,7 @@ Instead, NeoMutt will unconditionally use the encoding specified in [RFC2231](ht
 (cfg-score)=
 ## `$score`
 
+:Description: Use message scoring
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -318,6 +334,7 @@ This can be useful to selectively disable scoring for certain folders when the [
 (cfg-score-threshold-delete)=
 ## `$score_threshold_delete`
 
+:Description: Messages with a lower score will be automatically deleted
 :Type: [Number](type-number)
 :Default:
     ```neomuttrc
@@ -332,6 +349,7 @@ Since NeoMutt scores are always greater than or equal to zero, the default setti
 (cfg-score-threshold-flag)=
 ## `$score_threshold_flag`
 
+:Description: Messages with a greater score will be automatically flagged
 :Type: [Number](type-number)
 :Default:
     ```neomuttrc
@@ -345,6 +363,7 @@ Messages which have been assigned a score greater than or equal to this variable
 (cfg-score-threshold-read)=
 ## `$score_threshold_read`
 
+:Description: Messages with a lower score will be automatically marked read
 :Type: [Number](type-number)
 :Default:
     ```neomuttrc
@@ -359,6 +378,7 @@ Since NeoMutt scores are always greater than or equal to zero, the default setti
 (cfg-show-multipart-alternative)=
 ## `$show_multipart_alternative`
 
+:Description: How to display `multipart/alternative` MIME parts
 :Type: [String](type-string)
 :Notes: [Case Sensitive](type-general)
 :Default: (empty)
@@ -377,6 +397,7 @@ Since NeoMutt scores are always greater than or equal to zero, the default setti
 (cfg-spam-separator)=
 ## `$spam_separator`
 
+:Description: Separator for multiple spam headers
 :Type: [String](type-string)
 :Default:
     ```neomuttrc

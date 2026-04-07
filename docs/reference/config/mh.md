@@ -10,6 +10,7 @@ keywords: neomutt, mh, mh_purge, mh_seq_flagged, mh_seq_replied, mh_seq_unseen, 
 (cfg-mh-purge)=
 ## `$mh_purge`
 
+:Description: Really delete files in MH mailboxes
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -27,6 +28,7 @@ This option is similar to [`$maildir_trash`](cfg-maildir-trash) for Maildir fold
 (cfg-mh-seq-flagged)=
 ## `$mh_seq_flagged`
 
+:Description: MH sequence for flagged message
 :Type: [String](type-string)
 :Notes: [Case Sensitive](type-general)
 :Default:
@@ -41,6 +43,7 @@ The name of the MH sequence used for flagged messages.
 (cfg-mh-seq-replied)=
 ## `$mh_seq_replied`
 
+:Description: MH sequence to tag replied messages
 :Type: [String](type-string)
 :Notes: [Case Sensitive](type-general)
 :Default:
@@ -55,6 +58,7 @@ The name of the MH sequence used to tag replied messages.
 (cfg-mh-seq-unseen)=
 ## `$mh_seq_unseen`
 
+:Description: MH sequence for unseen messages
 :Type: [String](type-string)
 :Notes: [Case Sensitive](type-general)
 :Default:

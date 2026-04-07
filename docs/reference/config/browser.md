@@ -10,6 +10,7 @@ keywords: neomutt, browser, file browser, folder_format, browser_sort, browser_s
 (cfg-browser-abbreviate-mailboxes)=
 ## `$browser_abbreviate_mailboxes`
 
+:Description: Abbreviate mailboxes using `~` and `=` in the browser
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -27,6 +28,7 @@ In those cases, it may be desirable to _unset_ this variable.
 (cfg-browser-sort)=
 ## `$browser_sort`
 
+:Description: Sort method for the browser
 :Type: [Sort Order](type-sort-order)
 :Notes: [Reverse](type-sort-order)
 :Default:
@@ -55,6 +57,7 @@ Specifies how to sort entries in the file browser.
 (cfg-browser-sort-dirs-first)=
 ## `$browser_sort_dirs_first`
 
+:Description: Group directories before files in the browser
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -68,6 +71,7 @@ If this variable is _set_, the browser will group directories before files.
 (cfg-folder-format)=
 ## `$folder_format`
 
+:Description: Format string for the [Browser Dialog](tour-browser)'s display of folders
 :Type: [Expando](type-expando)
 :Notes: [Not Empty](type-general), [Pipe Support](type-pipe)
 :Default:
@@ -120,6 +124,7 @@ Specify the format of local files/dirs displayed in the [`Browser Dialog`](tour-
 (cfg-group-index-format)=
 ## `$group_index_format`
 
+:Description: Format string for the [Browser Dialog](tour-browser)'s display of newsgroups
 :Type: [Expando](type-expando)
 :Notes: [Not Empty](type-general), [Pipe Support](type-pipe)
 :Default:
@@ -159,6 +164,7 @@ Specify the format of newsgroups displayed in the [`Browser Dialog`](tour-browse
 (cfg-mailbox-folder-format)=
 ## `$mailbox_folder_format`
 
+:Description: Format string for the [Browser Dialog](tour-browser)'s display of mailbox folders
 :Type: [Expando](type-expando)
 :Notes: [Not Empty](type-general), [Pipe Support](type-pipe)
 :Default:
@@ -182,6 +188,7 @@ Specify the format of network mailboxes, e.g. IMAP, displayed in the [`Browser D
 (cfg-mask)=
 ## `$mask`
 
+:Description: Only display files/dirs matching this regex in the browser
 :Type: [Regular Expression](type-regex)
 :Notes: [Case Sensitive](type-general), [Match Case](type-regex), [Allow Not](type-regex), [No Sub](type-regex)
 :Default:
@@ -198,6 +205,7 @@ The match is always case-sensitive.
 (cfg-show-only-unread)=
 ## `$show_only_unread`
 
+:Description: Only show subscribed newsgroups with unread articles
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc

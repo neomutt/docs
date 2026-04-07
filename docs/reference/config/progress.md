@@ -10,6 +10,7 @@ keywords: neomutt, progress, net_inc, read_inc, write_inc, time_inc, progress ba
 (cfg-net-inc)=
 ## `$net_inc`
 
+:Description: Update the progress bar after this many KB sent/received (0 to disable)
 :Type: [Number](type-number)
 :Notes: [Not Negative](type-general)
 :Default:
@@ -29,6 +30,7 @@ If set to 0, no progress messages will be displayed.
 (cfg-read-inc)=
 ## `$read_inc`
 
+:Description: Update the progress bar after this many records read (0 to disable)
 :Type: [Number](type-number)
 :Notes: [Not Negative](type-general)
 :Default:
@@ -48,6 +50,7 @@ Also see the [`$write_inc`](cfg-write-inc), [`$net_inc`](cfg-net-inc) and [`$tim
 (cfg-time-inc)=
 ## `$time_inc`
 
+:Description: Frequency of progress bar updates (milliseconds)
 :Type: [Number](type-number)
 :Notes: [Not Negative](type-general)
 :Default:
@@ -66,6 +69,7 @@ Also see the "$tuning" section of the manual for performance considerations.
 (cfg-write-inc)=
 ## `$write_inc`
 
+:Description: Update the progress bar after this many records written (0 to disable)
 :Type: [Number](type-number)
 :Notes: [Not Negative](type-general)
 :Default:

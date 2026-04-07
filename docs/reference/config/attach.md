@@ -10,6 +10,7 @@ keywords: attachment, mime, attach_save_dir, attach_split, bounce, mime_forward,
 (cfg-attach-save-dir)=
 ## `$attach_save_dir`
 
+:Description: Default directory where attachments are saved
 :Type: [Path (String)](type-path)
 :Default:
     ```neomuttrc
@@ -23,6 +24,7 @@ The directory where attachments are saved.
 (cfg-attach-save-without-prompting)=
 ## `$attach_save_without_prompting`
 
+:Description: If true, then don't prompt to save
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -36,6 +38,7 @@ This variable, when set to true, will cause attachments to be saved to the [`$at
 (cfg-attach-sep)=
 ## `$attach_sep`
 
+:Description: Separator to add between saved/printed/piped attachments
 :Type: [String](type-string)
 :Default:
     ```neomuttrc
@@ -49,6 +52,7 @@ The separator to add between attachments when operating (saving, printing, pipin
 (cfg-attach-split)=
 ## `$attach_split`
 
+:Description: Save/print/pipe tagged messages individually
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -64,6 +68,7 @@ When _set_, NeoMutt will operate on the attachments one by one.
 (cfg-bounce)=
 ## `$bounce`
 
+:Description: Confirm before bouncing a message
 :Type: [Quad-Option](type-quad)
 :Default:
     ```neomuttrc
@@ -79,23 +84,29 @@ Setting this variable to _no_ is not generally useful, and thus not recommended,
 (cfg-count-alternatives)=
 ## `$count_alternatives`
 
+:Description: Recurse inside `multipart/alternatives` while counting attachments
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
     set count_alternatives = no
     ```
 
-When _set_, NeoMutt will recurse inside multipart/alternatives while performing attachment searching and counting (see [`:attachments`](cmd-attachments)).
+When _set_, NeoMutt will recurse inside multipart/alternatives while performing attachment searching and counting.
 
 Traditionally, multipart/alternative parts have simply represented different encodings of the main content of the email.
 Unfortunately, some mail clients have started to place email attachments inside one of alternatives.
 Setting this will allow NeoMutt to find and count matching attachments hidden there, and include them in the index via `%X` or through `~X` pattern matching.
+
+:::{seealso}
+{ref}`cmd-attachments`
+:::
 
 --------------------------------------------------------------------------------
 
 (cfg-digest-collapse)=
 ## `$digest_collapse`
 
+:Description: Hide the subparts of a multipart/digest
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -110,6 +121,7 @@ To see these subparts, press {kbd}`v` on that menu.
 (cfg-message-format)=
 ## `$message_format`
 
+:Description: Format string for listing attached messages
 :Type: [Expando](type-expando)
 :Notes: [Pipe Support](type-pipe)
 :Default:
@@ -133,6 +145,7 @@ Specify the format of attached messages displayed in the [`Attach Dialog`](tour-
 (cfg-mime-forward)=
 ## `$mime_forward`
 
+:Description: Forward a message as a `message/RFC822` MIME part
 :Type: [Quad-Option](type-quad)
 :Default:
     ```neomuttrc
@@ -150,6 +163,7 @@ Also see [`$forward_decode`](cfg-forward-decode) and [`$mime_forward_decode`](cf
 (cfg-mime-forward-rest)=
 ## `$mime_forward_rest`
 
+:Description: Forward all attachments, even if they can't be decoded
 :Type: [Quad-Option](type-quad)
 :Default:
     ```neomuttrc

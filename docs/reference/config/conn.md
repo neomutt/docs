@@ -10,6 +10,7 @@ keywords: connection, network, ssl, tls, starttls, certificate, tunnel, socket_t
 (cfg-account-command)=
 ## `$account_command`
 
+:Description: Shell command to retrieve account credentials
 :Type: [Command (String)](type-string)
 :Default: (empty)
     ```neomuttrc
@@ -27,6 +28,7 @@ Currently supported output lines are `login`, `username`, and `password`.
 (cfg-certificate-file)=
 ## `$certificate_file`
 
+:Description: File containing trusted certificates
 :Type: [Path (String)](type-path)
 :Notes: [File only](type-path)
 :Scope: OpenSSL and GnuTLS only
@@ -47,6 +49,7 @@ Any server certificate that is signed with one of these CA certificates is also 
 (cfg-entropy-file)=
 ## `$entropy_file`
 
+:Description: File/device containing random data to initialise SSL
 :Type: [Path (String)](type-path)
 :Notes: [File only](type-path)
 :Scope: OpenSSL only
@@ -62,6 +65,7 @@ The file which includes random data that is used to initialize SSL library funct
 (cfg-preconnect)=
 ## `$preconnect`
 
+:Description: External command to run prior to opening a socket
 :Type: [String](type-string)
 :Default: (empty)
     ```neomuttrc
@@ -88,6 +92,7 @@ For this example to work, you must be able to log in to the remote machine witho
 (cfg-socket-timeout)=
 ## `$socket_timeout`
 
+:Description: Timeout for socket connect/read/write operations (-1 to wait indefinitely)
 :Type: [Number](type-number)
 :Default:
     ```neomuttrc
@@ -102,6 +107,7 @@ A negative value causes NeoMutt to wait indefinitely.
 (cfg-ssl-ca-certificates-file)=
 ## `$ssl_ca_certificates_file`
 
+:Description: File containing trusted CA certificates
 :Type: [Path (String)](type-path)
 :Notes: [File only](type-path)
 :Scope: GnuTLS only
@@ -123,6 +129,7 @@ set ssl_ca_certificates_file = /etc/ssl/certs/ca-certificates.crt
 (cfg-ssl-ciphers)=
 ## `$ssl_ciphers`
 
+:Description: Ciphers to use when using SSL
 :Type: [String](type-string)
 :Default: (empty)
     ```neomuttrc
@@ -141,6 +148,7 @@ See `gnutls_priority_init(3)` for the syntax and more details.
 (cfg-ssl-client-cert)=
 ## `$ssl_client_cert`
 
+:Description: File containing client certificates
 :Type: [Path (String)](type-path)
 :Notes: [File only](type-path)
 :Default: (empty)
@@ -155,6 +163,7 @@ The file containing a client certificate and its associated private key.
 (cfg-ssl-force-tls)=
 ## `$ssl_force_tls`
 
+:Description: Require TLS encryption for all connections
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -170,6 +179,7 @@ This option supersedes [`$ssl_starttls`](cfg-ssl-starttls).
 (cfg-ssl-min-dh-prime-bits)=
 ## `$ssl_min_dh_prime_bits`
 
+:Description: Minimum keysize for Diffie-Hellman key exchange
 :Type: [Number](type-number)
 :Notes: [Not Negative](type-general)
 :Scope: GnuTLS only
@@ -187,6 +197,7 @@ A value of 0 will use the default from the GNUTLS library.
 (cfg-ssl-starttls)=
 ## `$ssl_starttls`
 
+:Description: Use STARTTLS on servers advertising the capability
 :Type: [Quad-Option](type-quad)
 :Default:
     ```neomuttrc
@@ -206,6 +217,7 @@ Setting [`$ssl_force_tls`](cfg-ssl-force-tls) is recommended if you rely on `STA
 (cfg-ssl-use-system-certs)=
 ## `$ssl_use_system_certs`
 
+:Description: Use CA certificates in the system-wide store
 :Type: [Boolean](type-bool)
 :Scope: GnuTLS only
 :Default:
@@ -220,6 +232,7 @@ If set to _yes_, NeoMutt will use CA certificates in the system-wide certificate
 (cfg-ssl-use-tlsv1-2)=
 ## `$ssl_use_tlsv1_2`
 
+:Description: Use TLSv1.2 for authentication
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -233,6 +246,7 @@ If _set_, NeoMutt will use TLSv1.2 when communicating with servers that request 
 (cfg-ssl-use-tlsv1-3)=
 ## `$ssl_use_tlsv1_3`
 
+:Description: Use TLSv1.3 for authentication
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -246,6 +260,7 @@ If _set_, NeoMutt will use TLSv1.3 when communicating with servers that request 
 (cfg-ssl-verify-dates)=
 ## `$ssl_verify_dates`
 
+:Description: Verify the dates on the server certificate
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -260,6 +275,7 @@ You should only unset this for particular known hosts, using the [`:account-hook
 (cfg-ssl-verify-host)=
 ## `$ssl_verify_host`
 
+:Description: Verify the server's hostname against the certificate
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -274,6 +290,7 @@ You should only unset this for particular known hosts, using the [`:account-hook
 (cfg-ssl-verify-partial-chains)=
 ## `$ssl_verify_partial_chains`
 
+:Description: Allow verification using partial certificate chains
 :Type: [Boolean](type-bool)
 :Scope: OpenSSL 1.0.2b and newer only
 :Default:
@@ -290,6 +307,7 @@ Setting this variable to _yes_ will permit verifying partial certification chain
 (cfg-tunnel)=
 ## `$tunnel`
 
+:Description: Shell command to establish a tunnel
 :Type: [Command (String)](type-string)
 :Default: (empty)
     ```neomuttrc
@@ -316,6 +334,7 @@ Please see [`:account-hook`](cmd-account-hook) in the manual for how to use diff
 (cfg-tunnel-is-secure)=
 ## `$tunnel_is_secure`
 
+:Description: Assume a tunneled connection is secure
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -335,6 +354,7 @@ This setting is appropriate if [`$tunnel`](cfg-tunnel) does not provide security
 (cfg-use-ipv6)=
 ## `$use_ipv6`
 
+:Description: Lookup IPv6 addresses when making connections
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc

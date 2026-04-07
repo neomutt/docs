@@ -10,6 +10,7 @@ keywords: neomutt, ncrypt, pgp, smime, gpgme, encryption, signing, cryptography,
 (cfg-crypt-confirm-hook)=
 ## `$crypt_confirm_hook`
 
+:Description: Prompt the user to confirm keys before use
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -25,6 +26,7 @@ This is generally considered unsafe, especially where typos are concerned.
 (cfg-crypt-encryption-info)=
 ## `$crypt_encryption_info`
 
+:Description: Add an informative block with details about the encryption
 :Type: [Boolean](type-bool)
 :Scope: Crypto only
 :Default:
@@ -39,6 +41,7 @@ If _set_, NeoMutt will include an informative block before an encrypted part, wi
 (cfg-crypt-opportunistic-encrypt)=
 ## `$crypt_opportunistic_encrypt`
 
+:Description: Enable encryption when the recipient's key is available
 :Type: [Boolean](type-bool)
 :Scope: Crypto only
 :Default:
@@ -62,6 +65,7 @@ It can be manually re-enabled in the pgp or smime menus.
 (cfg-crypt-opportunistic-encrypt-strong-keys)=
 ## `$crypt_opportunistic_encrypt_strong_keys`
 
+:Description: Enable encryption only when strong a key is available
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -80,6 +84,7 @@ The GPGME backend will use the same filters as with OpenPGP, and depends on GPGM
 (cfg-crypt-protected-headers-read)=
 ## `$crypt_protected_headers_read`
 
+:Description: Display protected headers (Memory Hole) in the pager
 :Type: [Boolean](type-bool)
 :Scope: Crypto only
 :Default:
@@ -101,6 +106,7 @@ If you reply to a message before opening it, NeoMutt will end up using the dummy
 (cfg-crypt-protected-headers-save)=
 ## `$crypt_protected_headers_save`
 
+:Description: Save the cleartext `Subject:` with the headers
 :Type: [Boolean](type-bool)
 :Scope: Crypto only
 :Default:
@@ -123,6 +129,7 @@ Please make sure you understand the consequences of this before you enable this 
 (cfg-crypt-protected-headers-subject)=
 ## `$crypt_protected_headers_subject`
 
+:Description: Use this as the subject for encrypted emails
 :Type: [String](type-string)
 :Scope: Crypto only
 :Default:
@@ -139,6 +146,7 @@ To prevent a subject from being substituted, unset this variable, or set it to t
 (cfg-crypt-protected-headers-weed)=
 ## `$crypt_protected_headers_weed`
 
+:Description: Controls whether NeoMutt will weed protected header fields
 :Type: [Boolean](type-bool)
 :Scope: Crypto only
 :Default:
@@ -153,6 +161,7 @@ Controls whether NeoMutt will weed protected header fields.
 (cfg-crypt-protected-headers-write)=
 ## `$crypt_protected_headers_write`
 
+:Description: Generate protected header (Memory Hole) for signed and encrypted emails
 :Type: [Boolean](type-bool)
 :Scope: Crypto only
 :Default:
@@ -172,6 +181,7 @@ Currently NeoMutt only supports the Subject header.
 (cfg-crypt-timestamp)=
 ## `$crypt_timestamp`
 
+:Description: Add a timestamp to PGP or SMIME output to prevent spoofing
 :Type: [Boolean](type-bool)
 :Scope: Crypto only
 :Default:
@@ -187,6 +197,7 @@ If you are using colors to mark these lines, and rely on these, you may _unset_ 
 (cfg-crypt-use-gpgme)=
 ## `$crypt_use_gpgme`
 
+:Description: Use GPGME crypto backend
 :Type: [Boolean](type-bool)
 :Notes: [On Startup](type-general)
 :Default:
@@ -205,6 +216,7 @@ Note that the GPGME backend does not support creating old-style inline (traditio
 (cfg-crypt-use-pka)=
 ## `$crypt_use_pka`
 
+:Description: Use GPGME to use PKA (lookup PGP keys using DNS)
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -222,6 +234,7 @@ Controls whether NeoMutt uses PKA during signature verification (only supported 
 (cfg-crypt-verify-sig)=
 ## `$crypt_verify_sig`
 
+:Description: Verify PGP or SMIME signatures
 :Type: [Quad-Option](type-quad)
 :Scope: Crypto only
 :Default:
@@ -240,6 +253,7 @@ Controls whether NeoMutt uses PKA during signature verification (only supported 
 (cfg-envelope-from-address)=
 ## `$envelope_from_address`
 
+:Description: Manually set the sender for outgoing messages
 :Type: [Address](type-address)
 :Default: (empty)
     ```neomuttrc
@@ -254,6 +268,7 @@ This value is ignored if [`$use_envelope_from`](cfg-use-envelope-from) is _unset
 (cfg-pgp-auto-decode)=
 ## `$pgp_auto_decode`
 
+:Description: Automatically decrypt PGP messages
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -268,6 +283,7 @@ For example, if the user displays a pgp-traditional message which has not been m
 (cfg-pgp-auto-inline)=
 ## `$pgp_auto_inline`
 
+:Description: Use old-style inline PGP messages (not recommended)
 :Type: [Boolean](type-bool)
 :Scope: PGP only
 :Default:
@@ -291,6 +307,7 @@ Also note that using the old-style PGP message format is **strongly** **deprecat
 (cfg-pgp-check-exit)=
 ## `$pgp_check_exit`
 
+:Description: Check the exit code of PGP subprocess
 :Type: [Boolean](type-bool)
 :Scope: PGP only
 :Default:
@@ -306,6 +323,7 @@ A non-zero exit code means that the subprocess failed.
 (cfg-pgp-check-gpg-decrypt-status-fd)=
 ## `$pgp_check_gpg_decrypt_status_fd`
 
+:Description: File descriptor used for status info
 :Type: [Boolean](type-bool)
 :Scope: PGP only
 :Default:
@@ -323,6 +341,7 @@ If _unset_, NeoMutt will instead match the status fd output against [`$pgp_decry
 (cfg-pgp-clear-sign-command)=
 ## `$pgp_clear_sign_command`
 
+:Description: External command to inline-sign a message
 :Type: [Expando (Command String)](type-expando)
 :Scope: PGP only
 :Default: (empty)
@@ -345,6 +364,7 @@ Note that in this case, `%r` expands to the search string, which is a list of on
 (cfg-pgp-decode-command)=
 ## `$pgp_decode_command`
 
+:Description: External command to decode a PGP attachment
 :Type: [Expando (Command String)](type-expando)
 :Scope: PGP only
 :Default: (empty)
@@ -373,6 +393,7 @@ Specify the format of a command used to decode application/pgp attachments.
 (cfg-pgp-decryption-okay)=
 ## `$pgp_decryption_okay`
 
+:Description: Text indicating a successful decryption
 :Type: [Regular Expression](type-regex)
 :Notes: [Smart Case](type-general)
 :Scope: PGP only
@@ -392,6 +413,7 @@ Note that if [`$pgp_check_gpg_decrypt_status_fd`](cfg-pgp-check-gpg-decrypt-stat
 (cfg-pgp-decrypt-command)=
 ## `$pgp_decrypt_command`
 
+:Description: External command to decrypt a PGP message
 :Type: [Expando (Command String)](type-expando)
 :Scope: PGP only
 :Default: (empty)
@@ -419,6 +441,7 @@ You are encouraged to use a different pinentry-program when running NeoMutt in o
 (cfg-pgp-default-key)=
 ## `$pgp_default_key`
 
+:Description: Default key to use for PGP operations
 :Type: [String](type-string)
 :Scope: PGP only
 :Default: (empty)
@@ -436,6 +459,7 @@ It will also be used for signing unless [`$pgp_sign_as`](cfg-pgp-sign-as) is set
 (cfg-pgp-encrypt-only-command)=
 ## `$pgp_encrypt_only_command`
 
+:Description: External command to encrypt, but not sign a message
 :Type: [Expando (Command String)](type-expando)
 :Scope: PGP only
 :Default: (empty)
@@ -457,6 +481,7 @@ Note that in this case, %r expands to the search string, which is a list of one 
 (cfg-pgp-encrypt-sign-command)=
 ## `$pgp_encrypt_sign_command`
 
+:Description: External command to encrypt and sign a message
 :Type: [Expando (Command String)](type-expando)
 :Scope: PGP only
 :Default: (empty)
@@ -476,6 +501,7 @@ This command is used to both sign and encrypt a body part.
 (cfg-pgp-entry-format)=
 ## `$pgp_entry_format`
 
+:Description: Format string for the [PGP Key Dialog](tour-pgp)
 :Type: [Expando](type-expando)
 :Notes: [Not Empty](type-general), [Pipe Support](type-pipe)
 :Scope: Crypto only or PGP only when GPGME disabled
@@ -528,6 +554,7 @@ See the section "Sending Cryptographically Signed/Encrypted Messages" of the use
 (cfg-pgp-export-command)=
 ## `$pgp_export_command`
 
+:Description: External command to export a public key from the user's keyring
 :Type: [Expando (Command String)](type-expando)
 :Scope: PGP only
 :Default: (empty)
@@ -547,6 +574,7 @@ This command is used to export a public key from the user's key ring.
 (cfg-pgp-get-keys-command)=
 ## `$pgp_get_keys_command`
 
+:Description: External command to download a key for an email address
 :Type: [Expando (Command String)](type-expando)
 :Scope: PGP only
 :Default: (empty)
@@ -569,6 +597,7 @@ Note that in this case, %r expands to the email address, not the public key ID (
 (cfg-pgp-good-sign)=
 ## `$pgp_good_sign`
 
+:Description: Text indicating a good signature
 :Type: [Regular Expression](type-regex)
 :Notes: [Smart Case](type-general)
 :Scope: PGP only
@@ -585,6 +614,7 @@ Use this variable if the exit code from the command is 0 even for bad signatures
 (cfg-pgp-ignore-subkeys)=
 ## `$pgp_ignore_subkeys`
 
+:Description: Only use the principal PGP key
 :Type: [Boolean](type-bool)
 :Scope: PGP only
 :Default:
@@ -601,6 +631,7 @@ _Unset_ this if you want to play interesting key selection games.
 (cfg-pgp-import-command)=
 ## `$pgp_import_command`
 
+:Description: External command to import a key into the user's keyring
 :Type: [Expando (Command String)](type-expando)
 :Scope: PGP only
 :Default: (empty)
@@ -620,6 +651,7 @@ This command is used to import a key from a message into the user's public key r
 (cfg-pgp-key-sort)=
 ## `$pgp_key_sort`
 
+:Description: Sort order for PGP keys
 :Type: [Sort Order](type-sort-order)
 :Notes: [Reverse](type-sort-order)
 :Scope: PGP only
@@ -642,6 +674,7 @@ Specifies how the entries in the pgp menu are sorted.
 (cfg-pgp-list-pubring-command)=
 ## `$pgp_list_pubring_command`
 
+:Description: External command to list the public keys in a user's keyring
 :Type: [Expando (Command String)](type-expando)
 :Scope: PGP only
 :Default: (empty)
@@ -671,6 +704,7 @@ It produces a different date format which may result in NeoMutt showing incorrec
 (cfg-pgp-list-secring-command)=
 ## `$pgp_list_secring_command`
 
+:Description: External command to list the private keys in a user's keyring
 :Type: [Expando (Command String)](type-expando)
 :Scope: PGP only
 :Default: (empty)
@@ -700,6 +734,7 @@ It produces a different date format which may result in NeoMutt showing incorrec
 (cfg-pgp-long-ids)=
 ## `$pgp_long_ids`
 
+:Description: Display long PGP key IDs to the user
 :Type: [Boolean](type-bool)
 :Scope: PGP only
 :Default:
@@ -719,6 +754,7 @@ This option now only controls the display of key IDs in the key selection menu a
 (cfg-pgp-mime-auto)=
 ## `$pgp_mime_auto`
 
+:Description: Prompt the user to use MIME if inline PGP fails
 :Type: [Quad-Option](type-quad)
 :Scope: PGP only
 :Default:
@@ -735,6 +771,7 @@ Also note that using the old-style PGP message format is **strongly** **deprecat
 (cfg-pgp-retainable-sigs)=
 ## `$pgp_retainable_sigs`
 
+:Description: Create nested multipart/signed or encrypted messages
 :Type: [Boolean](type-bool)
 :Scope: PGP only
 :Default:
@@ -751,6 +788,7 @@ This is useful for applications like encrypted and signed mailing lists, where t
 (cfg-pgp-self-encrypt)=
 ## `$pgp_self_encrypt`
 
+:Description: Encrypted messages will also be encrypted to [`$pgp_default_key`](cfg-pgp-default-key) too
 :Type: [Boolean](type-bool)
 :Scope: PGP only
 :Default:
@@ -765,6 +803,7 @@ When _set_, PGP encrypted messages will also be encrypted using the key in [`$pg
 (cfg-pgp-show-unusable)=
 ## `$pgp_show_unusable`
 
+:Description: Show non-usable keys in the key selection
 :Type: [Boolean](type-bool)
 :Scope: PGP only
 :Default:
@@ -780,6 +819,7 @@ This includes keys which have been revoked, have expired, or have been marked as
 (cfg-pgp-sign-as)=
 ## `$pgp_sign_as`
 
+:Description: Use this alternative key for signing messages
 :Type: [String](type-string)
 :Scope: PGP only
 :Default: (empty)
@@ -796,6 +836,7 @@ It is recommended that you use the keyid form to specify your key (e.g. `0x00112
 (cfg-pgp-sign-command)=
 ## `$pgp_sign_command`
 
+:Description: External command to create a detached PGP signature
 :Type: [Expando (Command String)](type-expando)
 :Scope: PGP only
 :Default: (empty)
@@ -815,6 +856,7 @@ This command is used to create the detached PGP signature for a `multipart/signe
 (cfg-pgp-strict-enc)=
 ## `$pgp_strict_enc`
 
+:Description: Encode PGP signed messages with quoted-printable (don't unset)
 :Type: [Boolean](type-bool)
 :Scope: PGP only
 :Default:
@@ -830,6 +872,7 @@ Please note that unsetting this variable may lead to problems with non-verifyabl
 (cfg-pgp-timeout)=
 ## `$pgp_timeout`
 
+:Description: Time in seconds to cache a passphrase
 :Type: [Number (Long)](type-long)
 :Notes: [Not Negative](type-general)
 :Scope: PGP only
@@ -845,6 +888,7 @@ The number of seconds after which a cached passphrase will expire if not used.
 (cfg-pgp-use-gpg-agent)=
 ## `$pgp_use_gpg_agent`
 
+:Description: Use a PGP agent for caching passwords
 :Type: [Boolean](type-bool)
 :Scope: PGP only
 :Default:
@@ -868,6 +912,7 @@ If you are using an older version of GnuPG without an agent running, or another 
 (cfg-pgp-verify-command)=
 ## `$pgp_verify_command`
 
+:Description: External command to verify PGP signatures
 :Type: [Expando (Command String)](type-expando)
 :Scope: PGP only
 :Default: (empty)
@@ -887,6 +932,7 @@ This command is used to verify PGP signatures.
 (cfg-pgp-verify-key-command)=
 ## `$pgp_verify_key_command`
 
+:Description: External command to verify key information
 :Type: [Expando (Command String)](type-expando)
 :Scope: PGP only
 :Default: (empty)
@@ -906,6 +952,7 @@ This command is used to verify key information from the key selection menu.
 (cfg-smime-ask-cert-label)=
 ## `$smime_ask_cert_label`
 
+:Description: Prompt the user for a label for SMIME certificates
 :Type: [Boolean](type-bool)
 :Scope: S/MIME only
 :Default:
@@ -921,6 +968,7 @@ It is _set_ by default.
 (cfg-smime-ca-location)=
 ## `$smime_ca_location`
 
+:Description: File containing trusted certificates
 :Type: [Path (String)](type-path)
 :Notes: [File only](type-path)
 :Scope: S/MIME only
@@ -936,6 +984,7 @@ This variable contains the name of either a directory, or a file which contains 
 (cfg-smime-certificates)=
 ## `$smime_certificates`
 
+:Description: File containing user's public certificates
 :Type: [Path (String)](type-path)
 :Notes: [Directory only](type-path)
 :Scope: S/MIME only
@@ -954,6 +1003,7 @@ This option points to the location of the certificates.
 (cfg-smime-decrypt-command)=
 ## `$smime_decrypt_command`
 
+:Description: External command to decrypt an SMIME message
 :Type: [Expando (Command String)](type-expando)
 :Scope: S/MIME only
 :Default: (empty)
@@ -989,6 +1039,7 @@ For examples on how to configure these formats, see the `smime.rc` in the `sampl
 (cfg-smime-decrypt-use-default-key)=
 ## `$smime_decrypt_use_default_key`
 
+:Description: Use the default key for decryption
 :Type: [Boolean](type-bool)
 :Scope: S/MIME only
 :Default:
@@ -1005,6 +1056,7 @@ It will ask you to supply a key, if it can't find one.
 (cfg-smime-default-key)=
 ## `$smime_default_key`
 
+:Description: Default key for SMIME operations
 :Type: [String](type-string)
 :Scope: S/MIME only
 :Default: (empty)
@@ -1026,6 +1078,7 @@ It will also be used for signing unless [`$smime_sign_as`](cfg-smime-sign-as) is
 (cfg-smime-encrypt-command)=
 ## `$smime_encrypt_command`
 
+:Description: External command to encrypt a message
 :Type: [Expando (Command String)](type-expando)
 :Scope: S/MIME only
 :Default: (empty)
@@ -1047,6 +1100,7 @@ Encrypt the message to [`$smime_default_key`](cfg-smime-default-key) too.
 (cfg-smime-encrypt-with)=
 ## `$smime_encrypt_with`
 
+:Description: Algorithm for encryption
 :Type: [String](type-string)
 :Scope: S/MIME only
 :Default:
@@ -1072,6 +1126,7 @@ This sets the algorithm that should be used for encryption.
 (cfg-smime-get-cert-command)=
 ## `$smime_get_cert_command`
 
+:Description: External command to extract a certificate from a message
 :Type: [Expando (Command String)](type-expando)
 :Scope: S/MIME only
 :Default: (empty)
@@ -1091,6 +1146,7 @@ This command is used to extract X509 certificates from a PKCS7 structure.
 (cfg-smime-get-cert-email-command)=
 ## `$smime_get_cert_email_command`
 
+:Description: External command to get a certificate for an email
 :Type: [Expando (Command String)](type-expando)
 :Scope: S/MIME only
 :Default: (empty)
@@ -1110,6 +1166,7 @@ This command is used to extract the mail address(es) used for storing X509 certi
 (cfg-smime-get-signer-cert-command)=
 ## `$smime_get_signer_cert_command`
 
+:Description: External command to extract a certificate from an email
 :Type: [Expando (Command String)](type-expando)
 :Scope: S/MIME only
 :Default: (empty)
@@ -1129,6 +1186,7 @@ This command is used to extract only the signers X509 certificate from a S/MIME 
 (cfg-smime-import-cert-command)=
 ## `$smime_import_cert_command`
 
+:Description: External command to import a certificate
 :Type: [Expando (Command String)](type-expando)
 :Scope: S/MIME only
 :Default: (empty)
@@ -1152,6 +1210,7 @@ This command is used to import a certificate via smime_keys.
 (cfg-smime-is-default)=
 ## `$smime_is_default`
 
+:Description: Use SMIME rather than PGP by default
 :Type: [Boolean](type-bool)
 :Scope: S/MIME only
 :Default:
@@ -1169,6 +1228,7 @@ However, this has no effect while replying, since NeoMutt will automatically sel
 (cfg-smime-keys)=
 ## `$smime_keys`
 
+:Description: File containing user's private certificates
 :Type: [Path (String)](type-path)
 :Notes: [Directory only](type-path)
 :Scope: S/MIME only
@@ -1187,6 +1247,7 @@ This option points to the location of the private keys.
 (cfg-smime-pk7out-command)=
 ## `$smime_pk7out_command`
 
+:Description: External command to extract a public certificate
 :Type: [Expando (Command String)](type-expando)
 :Scope: S/MIME only
 :Default: (empty)
@@ -1206,6 +1267,7 @@ This command is used to extract PKCS7 structures of S/MIME signatures, in order 
 (cfg-smime-self-encrypt)=
 ## `$smime_self_encrypt`
 
+:Description: Encrypted messages will also be encrypt to [`$smime_default_key`](cfg-smime-default-key) too
 :Type: [Boolean](type-bool)
 :Scope: S/MIME only
 :Default:
@@ -1220,6 +1282,7 @@ When _set_, S/MIME encrypted messages will also be encrypted using the certifica
 (cfg-smime-sign-as)=
 ## `$smime_sign_as`
 
+:Description: Use this alternative key for signing messages
 :Type: [String](type-string)
 :Scope: S/MIME only
 :Default: (empty)
@@ -1235,6 +1298,7 @@ Most people will only need to set [`$smime_default_key`](cfg-smime-default-key).
 (cfg-smime-sign-command)=
 ## `$smime_sign_command`
 
+:Description: External command to sign a message
 :Type: [Expando (Command String)](type-expando)
 :Scope: S/MIME only
 :Default: (empty)
@@ -1254,6 +1318,7 @@ This command is used to created S/MIME signatures of type `multipart/signed`, wh
 (cfg-smime-sign-digest-alg)=
 ## `$smime_sign_digest_alg`
 
+:Description: Digest algorithm
 :Type: [String](type-string)
 :Scope: S/MIME only
 :Default:
@@ -1277,6 +1342,7 @@ This sets the algorithm that should be used for the signature message digest.
 (cfg-smime-timeout)=
 ## `$smime_timeout`
 
+:Description: Time in seconds to cache a passphrase
 :Type: [Number](type-number)
 :Notes: [Not Negative](type-general)
 :Scope: S/MIME only
@@ -1292,6 +1358,7 @@ The number of seconds after which a cached passphrase will expire if not used.
 (cfg-smime-verify-command)=
 ## `$smime_verify_command`
 
+:Description: External command to verify a signed message
 :Type: [Expando (Command String)](type-expando)
 :Scope: S/MIME only
 :Default: (empty)
@@ -1311,6 +1378,7 @@ This command is used to verify S/MIME signatures of type `multipart/signed`.
 (cfg-smime-verify-opaque-command)=
 ## `$smime_verify_opaque_command`
 
+:Description: External command to verify a signature
 :Type: [Expando (Command String)](type-expando)
 :Scope: S/MIME only
 :Default: (empty)

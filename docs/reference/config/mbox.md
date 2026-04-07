@@ -10,6 +10,7 @@ keywords: neomutt, mbox, mmdf, check_mbox_size, new mail detection, file size, m
 (cfg-check-mbox-size)=
 ## `$check_mbox_size`
 
+:Description: Use mailbox size as an indicator of new mail
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc

@@ -10,6 +10,7 @@ keywords: neomutt, imap, imap_authenticators, imap_idle, imap_condstore, imap_qr
 (cfg-imap-authenticators)=
 ## `$imap_authenticators`
 
+:Description: List of allowed IMAP authentication methods (colon-separated)
 :Type: [String List](type-slist)
 :Notes: [Colon-separated](type-slist)
 :Default: (empty)
@@ -37,6 +38,7 @@ If a method is available but authentication fails, NeoMutt will not connect to t
 (cfg-imap-check-subscribed)=
 ## `$imap_check_subscribed`
 
+:Description: When opening a mailbox, ask the server for a list of subscribed folders
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -50,6 +52,7 @@ When _set_, NeoMutt will fetch the set of subscribed folders from your server wh
 (cfg-imap-condstore)=
 ## `$imap_condstore`
 
+:Description: Enable the CONDSTORE extension
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -68,6 +71,7 @@ Your mileage may vary.
 (cfg-imap-deflate)=
 ## `$imap_deflate`
 
+:Description: Compress network traffic
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -83,6 +87,7 @@ In general a good compression efficiency can be achieved, which speeds up readin
 (cfg-imap-delim-chars)=
 ## `$imap_delim_chars`
 
+:Description: Characters that denote separators in IMAP folders
 :Type: [String](type-string)
 :Notes: [Case Sensitive](type-general)
 :Default:
@@ -97,6 +102,7 @@ This contains the list of characters that NeoMutt will use as folder separators 
 (cfg-imap-fetch-chunk-size)=
 ## `$imap_fetch_chunk_size`
 
+:Description: Download headers in blocks of this size
 :Type: [Number (Long)](type-long)
 :Notes: [Not Negative](type-general)
 :Default:
@@ -112,6 +118,7 @@ If you have a very large mailbox, this might prevent a timeout and disconnect wh
 (cfg-imap-headers)=
 ## `$imap_headers`
 
+:Description: Additional email headers to download when getting index
 :Type: [String](type-string)
 :Default: (empty)
     ```neomuttrc
@@ -148,6 +155,7 @@ This is a space separated list, items should be uppercase and not contain the co
 (cfg-imap-idle)=
 ## `$imap_idle`
 
+:Description: Use the IMAP IDLE extension to check for new mail
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -163,6 +171,7 @@ If your connection seems to freeze up periodically, try unsetting this.
 (cfg-imap-keep-alive)=
 ## `$imap_keep_alive`
 
+:Description: Time to wait before polling an open IMAP connection
 :Type: [Number](type-number)
 :Notes: [Not Negative](type-general)
 :Default:
@@ -179,6 +188,7 @@ Reduce this number if you find yourself getting disconnected from your IMAP serv
 (cfg-imap-list-subscribed)=
 ## `$imap_list_subscribed`
 
+:Description: When browsing a mailbox, only display subscribed folders
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -193,6 +203,7 @@ This can be toggled in the IMAP browser with the [`<toggle-subscribed>`](ref-fn-
 (cfg-imap-login)=
 ## `$imap_login`
 
+:Description: Login name for the IMAP server (defaults to [`$imap_user`](cfg-imap-user))
 :Type: [String](type-string)
 :Notes: [Sensitive](type-general)
 :Default: (empty)
@@ -209,6 +220,7 @@ This variable defaults to the value of [`$imap_user`](cfg-imap-user).
 (cfg-imap-oauth-refresh-command)=
 ## `$imap_oauth_refresh_command`
 
+:Description: External command to generate OAUTH refresh token
 :Type: [Command (String)](type-string)
 :Notes: [Sensitive](type-general)
 :Default: (empty)
@@ -225,6 +237,7 @@ See "$oauth" for details.
 (cfg-imap-pass)=
 ## `$imap_pass`
 
+:Description: Password for the IMAP server
 :Type: [String](type-string)
 :Notes: [Sensitive](type-general)
 :Default: (empty)
@@ -245,6 +258,7 @@ You should only use this option when you are on a fairly secure machine, because
 (cfg-imap-passive)=
 ## `$imap_passive`
 
+:Description: Reuse an existing IMAP connection to check for new mail
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -260,6 +274,7 @@ This is useful if you don't want to be prompted for user/password pairs on NeoMu
 (cfg-imap-peek)=
 ## `$imap_peek`
 
+:Description: Don't mark messages as read when fetching them from the server
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -275,6 +290,7 @@ This option exists to appease speed freaks.
 (cfg-imap-pipeline-depth)=
 ## `$imap_pipeline_depth`
 
+:Description: Number of IMAP commands that may be queued up
 :Type: [Number](type-number)
 :Notes: [Not Negative](type-general)
 :Default:
@@ -295,6 +311,7 @@ Changes to this variable have no effect on open connections.
 (cfg-imap-poll-timeout)=
 ## `$imap_poll_timeout`
 
+:Description: Maximum time to wait for a server response
 :Type: [Number](type-number)
 :Notes: [Not Negative](type-general)
 :Default:
@@ -310,6 +327,7 @@ Set to 0 to disable timing out.
 (cfg-imap-qresync)=
 ## `$imap_qresync`
 
+:Description: Enable the QRESYNC extension
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -330,6 +348,7 @@ If you experience strange behavior, such as duplicate or missing messages please
 (cfg-imap-rfc5161)=
 ## `$imap_rfc5161`
 
+:Description: Use the IMAP ENABLE extension to select capabilities
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -349,6 +368,7 @@ If your connection seems to freeze at login, try unsetting this.
 (cfg-imap-send-id)=
 ## `$imap_send_id`
 
+:Description: Send ID command when logging in
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -363,6 +383,7 @@ This command provides information about the IMAP client, such as "NeoMutt" and t
 (cfg-imap-server-noise)=
 ## `$imap_server_noise`
 
+:Description: Display server warnings as error messages
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -377,6 +398,7 @@ Since these messages are often harmless, or generated due to configuration probl
 (cfg-imap-user)=
 ## `$imap_user`
 
+:Description: Username for the IMAP server
 :Type: [String](type-string)
 :Notes: [Sensitive](type-general)
 :Default: (empty)

@@ -10,6 +10,7 @@ keywords: neomutt, menu, arrow_cursor, arrow_string, menu_context, menu_move_off
 (cfg-arrow-cursor)=
 ## `$arrow_cursor`
 
+:Description: Use an arrow `->` instead of highlighting in the index
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -24,6 +25,7 @@ On slow network or modem links this will make response faster because there is l
 (cfg-arrow-string)=
 ## `$arrow_string`
 
+:Description: Use a custom string for [`$arrow_cursor`](cfg-arrow-cursor)
 :Type: [String](type-string)
 :Notes: [Not Empty](type-general)
 :Default:
@@ -38,6 +40,7 @@ Specifies the string of [`$arrow_cursor`](cfg-arrow-cursor) when it's enabled.
 (cfg-menu-context)=
 ## `$menu_context`
 
+:Description: Number of lines of overlap when changing pages in the index
 :Type: [Number](type-number)
 :Notes: [Not Negative](type-general)
 :Default:
@@ -53,6 +56,7 @@ This variable controls the number of lines of context that are given when scroll
 (cfg-menu-move-off)=
 ## `$menu_move_off`
 
+:Description: Allow the last menu item to move off the bottom of the screen
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -67,6 +71,7 @@ When _set_, the bottom entry may move off the bottom.
 (cfg-menu-scroll)=
 ## `$menu_scroll`
 
+:Description: Scroll the menu/index by one line, rather than a page
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc

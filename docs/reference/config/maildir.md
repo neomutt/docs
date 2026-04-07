@@ -10,6 +10,7 @@ keywords: neomutt, maildir, maildir_check_cur, maildir_field_delimiter, maildir_
 (cfg-check-new)=
 ## `$check_new`
 
+:Description: Check for new mail while the mailbox is open
 :Type: [Boolean](type-bool)
 :Scope: Only maildir and mh mailboxes
 :Default:
@@ -26,6 +27,7 @@ If this variable is _unset_, no check for new mail is performed while the mailbo
 (cfg-maildir-check-cur)=
 ## `$maildir_check_cur`
 
+:Description: Check both `new` and `cur` directories for new mail
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -41,6 +43,7 @@ Note that setting this option may slow down polling for new messages in large fo
 (cfg-maildir-field-delimiter)=
 ## `$maildir_field_delimiter`
 
+:Description: Field delimiter to be used for maildir email files (default is colon, recommended alternative is semi-colon)
 :Type: [String](type-string)
 :Notes: [Case Sensitive](type-general), [Not Empty](type-general), [On Startup](type-general)
 :Scope: Only maildir mailboxes
@@ -59,6 +62,7 @@ NeoMutt supports all non-alphanumeric values except for `-`, `.`, `\`, `/`.
 (cfg-maildir-header-cache-verify)=
 ## `$maildir_header_cache_verify`
 
+:Description: Check for maildir changes when opening mailbox
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -73,6 +77,7 @@ This incurs one `stat(2)` per message every time the folder is opened (which can
 (cfg-maildir-trash)=
 ## `$maildir_trash`
 
+:Description: Use the maildir `trashed` flag, rather than deleting
 :Type: [Boolean](type-bool)
 :Scope: Only maildir mailboxes
 :Default:

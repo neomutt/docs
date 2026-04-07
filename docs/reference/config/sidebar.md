@@ -10,6 +10,7 @@ keywords: sidebar, sidebar_visible, sidebar_width, sidebar_format, sidebar_sort,
 (cfg-sidebar-component-depth)=
 ## `$sidebar_component_depth`
 
+:Description: Strip leading path components from sidebar folders
 :Type: [Number](type-number)
 :Default:
     ```neomuttrc
@@ -29,6 +30,7 @@ For example: If a maildir is normally displayed in the sidebar as dir1/dir2/dir3
 (cfg-sidebar-delim-chars)=
 ## `$sidebar_delim_chars`
 
+:Description: Characters that separate nested folders
 :Type: [String](type-string)
 :Notes: [Case Sensitive](type-general)
 :Default:
@@ -59,6 +61,7 @@ set sidebar_delim_chars = '.'
 (cfg-sidebar-divider-char)=
 ## `$sidebar_divider_char`
 
+:Description: Character to draw between the sidebar and index
 :Type: [String](type-string)
 :Default:
     ```neomuttrc
@@ -76,6 +79,7 @@ If empty, setting the `sidebar_background` color may help distinguish the sideba
 (cfg-sidebar-folder-indent)=
 ## `$sidebar_folder_indent`
 
+:Description: Indent nested folders
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -93,6 +97,7 @@ Set this to indent mailboxes in the sidebar.
 (cfg-sidebar-format)=
 ## `$sidebar_format`
 
+:Description: Format string for the [Sidebar](tour-sidebar)
 :Type: [Expando](type-expando)
 :Notes: [Not Empty](type-general), [Pipe Support](type-pipe)
 :Default:
@@ -145,6 +150,7 @@ When thus set, a suggested value for this option is `%B%<F? [%F]>%* %<N?%N/>%S`.
 (cfg-sidebar-indent-string)=
 ## `$sidebar_indent_string`
 
+:Description: Indent nested folders using this string
 :Type: [String](type-string)
 :Default:
     ```neomuttrc
@@ -163,6 +169,7 @@ It defaults to two spaces.
 (cfg-sidebar-new-mail-only)=
 ## `$sidebar_new_mail_only`
 
+:Description: Only show folders with new/flagged email
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -180,6 +187,7 @@ When set, the sidebar will only display mailboxes containing new, or flagged, ma
 (cfg-sidebar-next-new-wrap)=
 ## `$sidebar_next_new_wrap`
 
+:Description: Wrap around when searching for the next mailbox with new email
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -194,6 +202,7 @@ The [`<sidebar-prev-new>`](ref-fn-sidebar) command is similarly affected, wrappi
 (cfg-sidebar-non-empty-mailbox-only)=
 ## `$sidebar_non_empty_mailbox_only`
 
+:Description: Only show folders with a non-zero number of emails
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -211,6 +220,7 @@ When set, the sidebar will only display mailboxes that contain one or more mails
 (cfg-sidebar-on-right)=
 ## `$sidebar_on_right`
 
+:Description: Display the sidebar on the right
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -224,6 +234,7 @@ When set, the sidebar will appear on the right-hand side of the screen.
 (cfg-sidebar-short-path)=
 ## `$sidebar_short_path`
 
+:Description: Abbreviate the paths using the [`$folder`](cfg-folder) variable
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -250,6 +261,7 @@ Here's an example:
 (cfg-sidebar-sort)=
 ## `$sidebar_sort`
 
+:Description: Sort method for the [Sidebar](tour-sidebar)
 :Type: [Sort Order](type-sort-order)
 :Default:
     ```neomuttrc
@@ -279,6 +291,7 @@ Specifies how to sort mailbox entries in the sidebar.
 (cfg-sidebar-visible)=
 ## `$sidebar_visible`
 
+:Description: Show the [Sidebar](tour-sidebar)
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
@@ -297,6 +310,7 @@ The sidebar shows a list of all your mailboxes.
 (cfg-sidebar-width)=
 ## `$sidebar_width`
 
+:Description: Width of the sidebar
 :Type: [Number](type-number)
 :Notes: [Not Negative](type-general)
 :Default:
