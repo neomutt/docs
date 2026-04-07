@@ -151,25 +151,25 @@ You can edit recipients, subject, and headers, attach files, configure encryptio
 | `<copy-file>`           | Save message/attachment to a mailbox/file            |
 | `<detach-file>`         | Delete the current entry                             |
 | `<display-toggle-weed>` | Display message and toggle header weeding            |
-| `<edit-bcc>`            | Edit the BCC list                                    |
-| `<edit-cc>`             | Edit the CC list                                     |
-| `<edit-content-id>`     | Edit the 'Content-ID' of the attachment              |
+| `<edit-bcc>`            | Edit the `Bcc:` list                                 |
+| `<edit-cc>`             | Edit the `Cc:` list                                  |
+| `<edit-content-id>`     | Edit the `Content-ID` of the attachment              |
 | `<edit-description>`    | Edit attachment description                          |
 | `<edit-encoding>`       | Edit attachment transfer-encoding                    |
 | `<edit-fcc>`            | Enter a file to save a copy of this message in       |
 | `<edit-file>`           | Edit the file to be attached                         |
-| `<edit-followup-to>`    | Edit the Followup-To field                           |
+| `<edit-followup-to>`    | Edit the `Followup-to:` field                        |
 | `<edit-from>`           | Edit the from field                                  |
 | `<edit-headers>`        | Edit the message with headers                        |
-| `<edit-language>`       | Edit the 'Content-Language' of the attachment        |
+| `<edit-language>`       | Edit the `Content-Language` of the attachment        |
 | `<edit-message>`        | Edit the message                                     |
 | `<edit-mime>`           | Edit attachment using mailcap entry                  |
 | `<edit-newsgroups>`     | Edit the newsgroups list                             |
-| `<edit-reply-to>`       | Edit the Reply-To field                              |
-| `<edit-subject>`        | Edit the subject of this message                     |
-| `<edit-to>`             | Edit the TO list                                     |
+| `<edit-reply-to>`       | Edit the `Reply-to:` field                           |
+| `<edit-subject>`        | Edit the `Subject:` of this message                  |
+| `<edit-to>`             | Edit the `To:` list                                  |
 | `<edit-type>`           | Edit attachment content type                         |
-| `<edit-x-comment-to>`   | Edit the X-Comment-To field                          |
+| `<edit-x-comment-to>`   | Edit the `X-comment-to:` field                       |
 | `<exit>`                | Exit this menu                                       |
 | `<filter-entry>`        | Filter attachment through a shell command            |
 | `<forget-passphrase>`   | Wipe passphrases from memory                         |
@@ -177,7 +177,7 @@ You can edit recipients, subject, and headers, attach files, configure encryptio
 | `<group-alternatives>`  | Group tagged attachments as 'multipart/alternative'  |
 | `<group-multilingual>`  | Group tagged attachments as 'multipart/multilingual' |
 | `<group-related>`       | Group tagged attachments as 'multipart/related'      |
-| `<ispell>`              | Run ispell on the message                            |
+| `<ispell>`              | Run `ispell` on the message                          |
 | `<move-down>`           | Move an attachment down in the attachment list       |
 | `<move-up>`             | Move an attachment up in the attachment list         |
 | `<new-mime>`            | Compose new attachment using mailcap entry           |
@@ -233,7 +233,7 @@ It supports cursor movement, word editing, tab-completion, and command history.
 | `<eol>`             | Jump to the end of the line                         |
 | `<forward-char>`    | Move the cursor one character to the right          |
 | `<forward-word>`    | Move the cursor to the end of the word              |
-| `<help>`            | This screen                                         |
+| `<help>`            | Show the help screen                                |
 | `<history-down>`    | Scroll down through the history list                |
 | `<history-search>`  | Search through the history list                     |
 | `<history-up>`      | Scroll up through the history list                  |
@@ -266,7 +266,7 @@ Not a menu itself, but provides common functions — such as scrolling, searchin
 | `<first-entry>`       | Move to the first entry                             |
 | `<half-down>`         | Scroll down 1/2 page                                |
 | `<half-up>`           | Scroll up 1/2 page                                  |
-| `<help>`              | This screen                                         |
+| `<help>`              | Show the help screen                                |
 | `<jump>`              | Jump to an index number                             |
 | `<last-entry>`        | Move to the last entry                              |
 | `<middle-page>`       | Move to the middle of the page                      |
@@ -472,7 +472,7 @@ You can scroll, search within the text, and perform many of the same actions as 
 | `<group-reply>`                 | Reply to all recipients                                                 |
 | `<half-down>`                   | Scroll down 1/2 page                                                    |
 | `<half-up>`                     | Scroll up 1/2 page                                                      |
-| `<help>`                        | This screen                                                             |
+| `<help>`                        | Show the help screen                                                    |
 | `<imap-fetch-mail>`             | Force retrieval of mail from IMAP server                                |
 | `<imap-logout-all>`             | Logout from all IMAP servers                                            |
 | `<jump>`                        | Jump to an index number                                                 |

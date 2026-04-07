@@ -21,7 +21,7 @@ noted).
 | `<check-stats>`       |              | Calculate message statistics for all mailboxes |
 | `<enter-command>`     | `:`          | Enter a neomuttrc command                      |
 | `<exit>`              |              | Exit this menu                                 |
-| `<help>`              | `?`          | This screen                                    |
+| `<help>`              | `?`          | Show the help screen                           |
 | `<redraw-screen>`     | `^L`         | Clear and redraw the screen                    |
 | `<shell-escape>`      | `!`          | Invoke a command in a subshell                 |
 | `<show-log-messages>` |              | Show log (and debug) messages                  |

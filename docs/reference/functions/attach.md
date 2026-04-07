@@ -25,7 +25,7 @@ You can save, print, pipe, delete, or open attachments, and reply or forward fro
 | `<forget-passphrase>`     | `^F`                                   | Wipe passphrases from memory                         |
 | `<forward-message>`       | `f`                                    | Forward a message with comments                      |
 | `<forward-to-group>`      |                                        | Forward to newsgroup                                 |
-| `<group-chat-reply>`      |                                        | Reply to all recipients preserving To/Cc             |
+| `<group-chat-reply>`      |                                        | Reply to all recipients preserving `To:`/`Cc:`       |
 | `<group-reply>`           | `g`                                    | Reply to all recipients                              |
 | `<list-reply>`            | `L`                                    | Reply to specified mailing list                      |
 | `<list-subscribe>`        |                                        | Subscribe to a mailing list                          |
