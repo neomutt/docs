@@ -32,13 +32,16 @@ This guide covers the wrap width, format=flowed reflowing, word-boundary wrappin
 Text is hard-wrapped at column 40:
 
 ```
-Lorem ipsum dolor sit amet, consectetur
-adipiscing elit. Sed do eiusmod tempor
-incididunt ut labore et dolore magna
-aliqua. Ut enim ad minim veniam, quis
-nostrud exercitation ullamco laboris
-nisi ut aliquip ex ea commodo
-consequat.
+It is a truth universally acknowledged,
+that a single man in possession of a
+good fortune, must be in want of a
+wife. However little known the feelings
+or views of such a man may be on his
+first entering a neighbourhood, this
+truth is so well fixed in the minds of
+the surrounding families, that he is
+considered as the rightful property of
+some one or other of their daughters.
 ```
 
 ### Example: `set wrap = -10`
@@ -46,10 +49,12 @@ consequat.
 On an 80-column terminal, text wraps at column 70, leaving 10 columns empty on the right:
 
 ```
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-aliquip ex ea commodo consequat.
+It is a truth universally acknowledged, that a single man in
+possession of a good fortune, must be in want of a wife. However
+little known the feelings or views of such a man may be on his first
+entering a neighbourhood, this truth is so well fixed in the minds of
+the surrounding families, that he is considered as the rightful
+property of some one or other of their daughters.
 ```
 
 ### Example: `set wrap = 0`
@@ -57,9 +62,11 @@ aliquip ex ea commodo consequat.
 Text wraps at the full terminal width (80 columns shown):
 
 ```
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
-incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+It is a truth universally acknowledged, that a single man in possession of a
+good fortune, must be in want of a wife. However little known the feelings or
+views of such a man may be on his first entering a neighbourhood, this truth is
+so well fixed in the minds of the surrounding families, that he is considered
+as the rightful property of some one or other of their daughters.
 ```
 
 ## Reflow Wrap (`$reflow_wrap`)
@@ -81,10 +88,9 @@ For example, `set reflow_wrap = 40` with `set wrap = 30` produces alternating li
 A format=flowed paragraph is reflowed to 40-character lines:
 
 ```
-Lorem ipsum dolor sit amet, consectetur
-adipiscing elit. Sed do eiusmod tempor
-incididunt ut labore et dolore magna
-aliqua.
+It is a truth universally acknowledged,
+that a single man in possession of a
+good fortune, must be in want of a wife.
 ```
 
 ### Example: `set reflow_wrap = 72`
@@ -92,10 +98,12 @@ aliqua.
 The same paragraph reflowed at 72 characters:
 
 ```
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-aliquip ex ea commodo consequat.
+It is a truth universally acknowledged, that a single man in possession
+of a good fortune, must be in want of a wife. However little known the
+feelings or views of such a man may be on his first entering a
+neighbourhood, this truth is so well fixed in the minds of the
+surrounding families, that he is considered as the rightful property of
+some one or other of their daughters.
 ```
 
 ## Smart Wrap (`$smart_wrap`)
@@ -108,8 +116,11 @@ It is enabled by default.
 The line breaks at a space between words:
 
 ```
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
-incididunt ut labore et dolore magna aliqua.
+It is a truth universally acknowledged, that a single man in possession of a
+good fortune, must be in want of a wife. However little known the feelings or
+views of such a man may be on his first entering a neighbourhood, this truth
+is so well fixed in the minds of the surrounding families, that he is
+considered as the rightful property of some one or other of their daughters.
 ```
 
 ### Example: `set smart_wrap = no`
@@ -117,8 +128,11 @@ incididunt ut labore et dolore magna aliqua.
 The line breaks exactly at the screen edge, splitting words mid-character:
 
 ```
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempo
-r incididunt ut labore et dolore magna aliqua.
+It is a truth universally acknowledged, that a single man in possession of a g
+ood fortune, must be in want of a wife. However little known the feelings or v
+iews of such a man may be on his first entering a neighbourhood, this truth is
+ so well fixed in the minds of the surrounding families, that he is considered
+ as the rightful property of some one or other of their daughters.
 ```
 
 ## Markers (`$markers`)
@@ -131,9 +145,11 @@ It is enabled by default.
 Wrapped lines are prefixed with `+`:
 
 ```
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
-+incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-+nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+It is a truth universally acknowledged, that a single man in possession of a
++good fortune, must be in want of a wife. However little known the feelings or
++views of such a man may be on his first entering a neighbourhood, this truth
++is so well fixed in the minds of the surrounding families, that he is
++considered as the rightful property of some one or other of their daughters.
 ```
 
 ### Example: `set markers = no`
@@ -141,9 +157,11 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
 No prefix on continuation lines:
 
 ```
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
-incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+It is a truth universally acknowledged, that a single man in possession of a
+good fortune, must be in want of a wife. However little known the feelings or
+views of such a man may be on his first entering a neighbourhood, this truth
+is so well fixed in the minds of the surrounding families, that he is
+considered as the rightful property of some one or other of their daughters.
 ```
 
 :::{tip}
@@ -161,8 +179,8 @@ It is disabled by default.
 After the message ends, remaining screen lines are blank:
 
 ```
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
-incididunt ut labore et dolore magna aliqua.
+It is a truth universally acknowledged, that a single man in possession of a
+good fortune, must be in want of a wife.
 
 
 
@@ -173,8 +191,8 @@ incididunt ut labore et dolore magna aliqua.
 Blank lines below the message are filled with `~`:
 
 ```
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
-incididunt ut labore et dolore magna aliqua.
+It is a truth universally acknowledged, that a single man in possession of a
+good fortune, must be in want of a wife.
 ~
 ~
 ~
