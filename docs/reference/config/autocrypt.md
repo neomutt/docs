@@ -53,7 +53,7 @@ Specify the format of the data displayed in the [`Autocrypt Dialog`](tour-autocr
 | `%n`   | `%{number}`         | Current entry number                                            |
 | `%p`   | `%{prefer-encrypt}` | Prefer-encrypt flag                                             |
 | `%s`   | `%{enabled}`        | Status flag (active/inactive)                                   |
-| `%*X`  | `%{padding-soft:X}` | Soft-fill with character `X` as pad                             |
+| `%*X`  | `%{padding-soft:X}` | Soft-fill with character `X` as padding                         |
 | `%>X`  | `%{padding-hard:X}` | Right justify the rest of the string and pad with character `X` |
 | `%\|X` | `%{padding-eol:X}`  | Pad to the end of the line with character `X`                   |
 

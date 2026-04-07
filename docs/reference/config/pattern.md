@@ -58,7 +58,7 @@ Specify the format of the data displayed in the [`Pattern Dialog`](tour-pattern)
 | `%d`   | `%{description}`    | Pattern description                                             |
 | `%e`   | `%{expression}`     | Pattern expression                                              |
 | `%n`   | `%{number}`         | Index number                                                    |
-| `%*X`  | `%{padding-soft:X}` | Soft-fill with character `X` as pad                             |
+| `%*X`  | `%{padding-soft:X}` | Soft-fill with character `X` as padding                         |
 | `%>X`  | `%{padding-hard:X}` | Right justify the rest of the string and pad with character `X` |
 | `%\|X` | `%{padding-eol:X}`  | Pad to the end of the line with character `X`                   |
 

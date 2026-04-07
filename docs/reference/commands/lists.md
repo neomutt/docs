@@ -39,8 +39,8 @@ unlists neomutt-devel@neomutt.org
 (cmd-subscribe)=
 ## `:subscribe`
 
-Mark a mailing list as one the user is subscribed to.  The address must also
-be known via `lists`.
+Mark a mailing list as one the user is subscribed to.
+The address must also be known via [`:lists`](cmd-lists).
 
 - `subscribe <regex>` — subscribe to a list
 - `subscribe -group <name> <regex>` — subscribe and add to a group

@@ -110,7 +110,7 @@ This contains the list of characters that NeoMutt will use as folder separators 
     ```
 
 When set to a value greater than 0, new headers will be downloaded in groups of this many headers per request.
-If you have a very large mailbox, this might prevent a timeout and disconnect when opening the mailbox, by sending a FETCH per set of this many headers, instead of a single `FETCH` for all new headers.
+If you have a very large mailbox, this might prevent a timeout and disconnect when opening the mailbox, by sending a `FETCH` per set of this many headers, instead of a single `FETCH` for all new headers.
 
 --------------------------------------------------------------------------------
 
@@ -154,14 +154,14 @@ This is a space separated list, items should be uppercase and not contain the co
 (cfg-imap-idle)=
 ## `$imap_idle`
 
-:Description: Use the IMAP IDLE extension to check for new mail
+:Description: Use the IMAP `IDLE` extension to check for new mail
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
     set imap_idle = no
     ```
 
-When _set_, NeoMutt will attempt to use the IMAP IDLE extension to check for new mail in the current mailbox.
+When _set_, NeoMutt will attempt to use the IMAP `IDLE` extension to check for new mail in the current mailbox.
 Some servers (dovecot was the inspiration for this option) react badly to NeoMutt's implementation.
 If your connection seems to freeze up periodically, try unsetting this.
 
@@ -228,7 +228,7 @@ Defaults to the value of [`$imap_user`](cfg-imap-user).
     ```
 
 The command to run to generate an OAUTH refresh token for authorizing your connection to your IMAP server.
-This command will be run on every connection attempt that uses the OAUTHBEARER or XOAUTH2 authentication mechanisms.
+This command will be run on every connection attempt that uses the `OAUTHBEARER` or `XOAUTH2` authentication mechanisms.
 
 :::{seealso}
 {ref}`how-oauth`
@@ -329,14 +329,14 @@ Set to 0 to disable timing out.
 (cfg-imap-qresync)=
 ## `$imap_qresync`
 
-:Description: Enable the QRESYNC extension
+:Description: Enable the `QRESYNC` extension
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
     set imap_qresync = no
     ```
 
-When _set_, NeoMutt will use the QRESYNC extension ([RFC7162](https://www.rfc-editor.org/rfc/rfc7162.html))
+When _set_, NeoMutt will use the `QRESYNC` extension ([RFC7162](https://www.rfc-editor.org/rfc/rfc7162.html))
 if advertised by the server.
 NeoMutt's current implementation is basic, used only for initial message fetching and flag updates.
 
@@ -350,14 +350,14 @@ If you experience strange behavior, such as duplicate or missing messages please
 (cfg-imap-rfc5161)=
 ## `$imap_rfc5161`
 
-:Description: Use the IMAP ENABLE extension to select capabilities
+:Description: Use the IMAP `ENABLE` extension to select capabilities
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
     set imap_rfc5161 = yes
     ```
 
-When _set_, NeoMutt will use the IMAP ENABLE extension ([RFC5161](https://www.rfc-editor.org/rfc/rfc5161.html)) to select `CAPABILITIES`.
+When _set_, NeoMutt will use the IMAP `ENABLE` extension ([RFC5161](https://www.rfc-editor.org/rfc/rfc5161.html)) to select `CAPABILITIES`.
 Some servers (notably Coremail System IMap Server) do not properly respond to `ENABLE` commands, which might cause NeoMutt to hang.
 If your connection seems to freeze at login, try unsetting this.
 

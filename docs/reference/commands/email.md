@@ -12,7 +12,8 @@ Commands that control how message headers and subjects are displayed.
 (cmd-ignore)=
 ## `:ignore`
 
-Hide headers when displaying messages.  By default, all headers are hidden.
+Hide headers when displaying messages.
+By default, all headers are hidden.
 
 - `ignore *` — hide all headers
 - `ignore <header>` — hide a specific header

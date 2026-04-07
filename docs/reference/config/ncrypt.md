@@ -557,7 +557,7 @@ If [`$crypt_use_gpgme`](cfg-crypt-use-gpgme) is _set_, then it applies to S/MIME
 | `%K`     | `%{pkey-id}`           | Primary Key id                                                             |
 | `%L`     | `%{pkey-length}`       | Primary Key length                                                         |
 | `%[fmt]` | `%{date}`              | Date of the key where `fmt` is an [`strftime(3)`](exp-strftime) expression |
-| `%*X`    | `%{padding-soft:X}`    | Soft-fill with character `X` as pad                                        |
+| `%*X`    | `%{padding-soft:X}`    | Soft-fill with character `X` as padding                                    |
 | `%>X`    | `%{padding-hard:X}`    | Right justify the rest of the string and pad with character `X`            |
 | `%\|X`   | `%{padding-eol:X}`     | Pad to the end of the line with character `X`                              |
 

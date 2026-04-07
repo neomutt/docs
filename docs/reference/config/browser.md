@@ -107,7 +107,7 @@ Specify the format of local files/dirs displayed in the [`Browser Dialog`](tour-
 | `%t`     | `%{tagged}`         | `*` if the file is tagged, blank otherwise                                                                |
 | `%u`     | `%{file-owner}`     | Owner name (or numeric uid, if missing)                                                                   |
 | `%[fmt]` |                     | Date/time folder was last modified using an [`strftime(3)`](exp-strftime) expression                      |
-| `%*X`    | `%{padding-soft:X}` | Soft-fill with character `X` as pad                                                                       |
+| `%*X`    | `%{padding-soft:X}` | Soft-fill with character `X` as padding                                                                   |
 | `%>X`    | `%{padding-hard:X}` | Right justify the rest of the string and pad with character `X`                                           |
 | `%\|X`   | `%{padding-eol:X}`  | Pad to the end of the line with character `X`                                                             |
 
@@ -151,7 +151,7 @@ Specify the format of newsgroups displayed in the [`Browser Dialog`](tour-browse
 | `%n`   | `%{new-count}`      | Number of new articles in newsgroup                                  |
 | `%p`   | `%{poll}`           | Poll: 1 if Mailbox is checked for new mail                           |
 | `%s`   | `%{unread-count}`   | Number of unread articles in newsgroup                               |
-| `%*X`  | `%{padding-soft:X}` | Soft-fill with character `X` as pad                                  |
+| `%*X`  | `%{padding-soft:X}` | Soft-fill with character `X` as padding                              |
 | `%>X`  | `%{padding-hard:X}` | Right justify the rest of the string and pad with character `X`      |
 | `%\|X` | `%{padding-eol:X}`  | Pad to the end of the line with character `X`                        |
 

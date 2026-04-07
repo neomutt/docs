@@ -134,7 +134,7 @@ Specify the format of the data displayed in the [`Attach Dialog`](tour-attach).
 | `%u`   | `%{unlink}`           | Unlink (=to delete) flag                                                                          |
 | `%X`   | `%{attach-count}`     | Number of qualifying MIME parts in this part and its children                                     |
 |        |                       | (see the [`$attachments`](#attachment-searching-and-counting) section for possible speed effects) |
-| `%*X`  | `%{padding-soft:X}`   | Soft-fill with character `X` as pad                                                               |
+| `%*X`  | `%{padding-soft:X}`   | Soft-fill with character `X` as padding                                                           |
 | `%>X`  | `%{padding-hard:X}`   | Right justify the rest of the string and pad with character `X`                                   |
 | `%\|X` | `%{padding-eol:X}`    | Pad to the end of the line with character `X`                                                     |
 

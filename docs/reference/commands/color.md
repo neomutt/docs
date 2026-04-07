@@ -21,17 +21,17 @@ Define colors for a UI element.
 - `color header <fg> <bg> <regex>` — colorize message headers matching a pattern
 
 ```neomuttrc
-color normal     default  default
-color status     black    cyan
-color indicator  brightwhite default bold
-color tree       red      default
-color attachment  white    default
-color signature   brightred default reverse
-color body       brightblue  default "(https?|ftp)://[^ ]+"
+color normal     default      default
+color status     black        cyan
+color indicator  brightwhite  default bold
+color tree       red          default
+color attachment white        default
+color signature  brightred    default reverse
+color body       brightblue   default "(https?|ftp)://[^ ]+"
 color body       brightyellow default "[a-z0-9._-]+@[a-z0-9._-]+"
-color index      brightgreen default "~N"
-color index      red         default "~F"
-color header     cyan        default "^(From|Subject):"
+color index      brightgreen  default "~N"
+color index      red          default "~F"
+color header     cyan         default "^(From|Subject):"
 ```
 
 (cmd-uncolor)=

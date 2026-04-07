@@ -209,7 +209,7 @@ Specify the format of the data displayed in the [`Index Dialog`](tour-index).
 |           |                          | if the first character inside the brackets is a bang (`!`), the date is formatted ignoring any locale settings.                                |
 | `%(fmt)`  |                          | Local date and time when the message was received, and `fmt` is expanded by the library function [`strftime(3)`](exp-strftime);                |
 |           |                          | if the first character inside the parentheses is a bang (`!`), the date is formatted ignoring any locale settings.                             |
-| `%*X`     | `%{padding-soft:X}`      | Soft-fill with character `X` as pad                                                                                                            |
+| `%*X`     | `%{padding-soft:X}`      | Soft-fill with character `X` as padding                                                                                                        |
 | `%>X`     | `%{padding-hard:X}`      | Right justify the rest of the string and pad with character `X`                                                                                |
 | `%\|X`    | `%{padding-eol:X}`       | Pad to the end of the line with character `X`                                                                                                  |
 
@@ -359,7 +359,7 @@ Specify the format of the data displayed in the [`Index Dialog`](tour-index)'s s
 | `%u`   | `%{unread-count}`     | Number of unread messages in the mailbox (seen or unseen)                                                 |
 | `%v`   | `%{limit-pattern}`    | Currently active limit pattern, if any                                                                    |
 | `%V`   | `%{version}`          | NeoMutt version string                                                                                    |
-| `%*X`  | `%{padding-soft:X}`   | Soft-fill with character `X` as pad                                                                       |
+| `%*X`  | `%{padding-soft:X}`   | Soft-fill with character `X` as padding                                                                   |
 | `%>X`  | `%{padding-hard:X}`   | Right justify the rest of the string and pad with character `X`                                           |
 | `%\|X` | `%{padding-eol:X}`    | Pad to the end of the line with character `X`                                                             |
 

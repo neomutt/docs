@@ -78,6 +78,10 @@ attachments -I message/external-body
 attachments ?
 ```
 
+:::{seealso}
+[`$index_format`](cfg-index-format)
+:::
+
 (cmd-unattachments)=
 ## `:unattachments`
 

@@ -59,7 +59,7 @@ Specify the format of the data displayed in the [`Alias Dialog`](tour-alias).
 | `%N`   | `%{name}`           | Real name                                                       |
 | `%t`   | `%{tagged}`         | Alias is tagged (selected)                                      |
 | `%Y`   | `%{tags}`           | User-defined tags (labels)                                      |
-| `%*X`  | `%{padding-soft:X}` | Soft-fill with character `X` as pad                             |
+| `%*X`  | `%{padding-soft:X}` | Soft-fill with character `X` as padding                         |
 | `%>X`  | `%{padding-hard:X}` | Right justify the rest of the string and pad with character `X` |
 | `%\|X` | `%{padding-eol:X}`  | Pad to the end of the line with character `X`                   |
 
@@ -156,7 +156,7 @@ Specify the format of the data displayed in the [`Query Dialog`](tour-query).
 | `%N`   | `%{name}`           | Real name                                                       |
 | `%t`   | `%{tagged}`         | Alias is tagged (selected)                                      |
 | `%Y`   | `%{tags}`           | User-defined tags (labels)                                      |
-| `%*X`  | `%{padding-soft:X}` | Soft-fill with character `X` as pad                             |
+| `%*X`  | `%{padding-soft:X}` | Soft-fill with character `X` as padding                         |
 | `%>X`  | `%{padding-hard:X}` | Right justify the rest of the string and pad with character `X` |
 | `%\|X` | `%{padding-eol:X}`  | Pad to the end of the line with character `X`                   |
 

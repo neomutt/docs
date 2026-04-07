@@ -75,7 +75,7 @@ Specify the format of the data displayed in the [`History Dialog`](tour-history)
 |--------|---------------------|-----------------------------------------------------------------|
 | `%C`   | `%{number}`         | Line number                                                     |
 | `%s`   | `%{match}`          | History match                                                   |
-| `%*X`  | `%{padding-soft:X}` | Soft-fill with character `X` as pad                             |
+| `%*X`  | `%{padding-soft:X}` | Soft-fill with character `X` as padding                         |
 | `%>X`  | `%{padding-hard:X}` | Right justify the rest of the string and pad with character `X` |
 | `%\|X` | `%{padding-eol:X}`  | Pad to the end of the line with character `X`                   |
 

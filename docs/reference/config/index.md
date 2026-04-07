@@ -287,24 +287,24 @@ These pages explain how these settings work and how to apply them.
 | [`$ignore_list_reply_to`](cfg-ignore-list-reply-to)             | Ignore the `Reply-To` header when using `<reply>` on a mailing list             |
 | [`$imap_authenticators`](cfg-imap-authenticators)               | List of allowed IMAP authentication methods (colon-separated)                   |
 | [`$imap_check_subscribed`](cfg-imap-check-subscribed)           | When opening a mailbox, ask the server for a list of subscribed folders         |
-| [`$imap_condstore`](cfg-imap-condstore)                         | Enable the CONDSTORE extension                                                  |
+| [`$imap_condstore`](cfg-imap-condstore)                         | Enable the `CONDSTORE` extension                                                |
 | [`$imap_deflate`](cfg-imap-deflate)                             | Compress network traffic                                                        |
 | [`$imap_delim_chars`](cfg-imap-delim-chars)                     | Characters that denote separators in IMAP folders                               |
 | [`$imap_fetch_chunk_size`](cfg-imap-fetch-chunk-size)           | Download headers in blocks of this size                                         |
 | [`$imap_headers`](cfg-imap-headers)                             | Additional email headers to download when getting index                         |
-| [`$imap_idle`](cfg-imap-idle)                                   | Use the IMAP IDLE extension to check for new mail                               |
+| [`$imap_idle`](cfg-imap-idle)                                   | Use the IMAP `IDLE` extension to check for new mail                             |
 | `$imap_keepalive`                                               | {bdg-warning-line}`Renamed to:` [`$imap_keep_alive`](cfg-imap-keep-alive)       |
 | [`$imap_keep_alive`](cfg-imap-keep-alive)                       | Time to wait before polling an open IMAP connection                             |
 | [`$imap_list_subscribed`](cfg-imap-list-subscribed)             | When browsing a mailbox, only display subscribed folders                        |
 | [`$imap_login`](cfg-imap-login)                                 | Login name for the IMAP server (defaults to [`$imap_user`](cfg-imap-user))      |
-| [`$imap_oauth_refresh_command`](cfg-imap-oauth-refresh-command) | External command to generate OAUTH refresh token                                |
+| [`$imap_oauth_refresh_command`](cfg-imap-oauth-refresh-command) | External command to generate `OAUTH` refresh token                              |
 | [`$imap_pass`](cfg-imap-pass)                                   | Password for the IMAP server                                                    |
 | [`$imap_passive`](cfg-imap-passive)                             | Reuse an existing IMAP connection to check for new mail                         |
 | [`$imap_peek`](cfg-imap-peek)                                   | Don't mark messages as read when fetching them from the server                  |
 | [`$imap_pipeline_depth`](cfg-imap-pipeline-depth)               | Number of IMAP commands that may be queued up                                   |
 | [`$imap_poll_timeout`](cfg-imap-poll-timeout)                   | Maximum time to wait for a server response                                      |
-| [`$imap_qresync`](cfg-imap-qresync)                             | Enable the QRESYNC extension                                                    |
-| [`$imap_rfc5161`](cfg-imap-rfc5161)                             | Use the IMAP ENABLE extension to select capabilities                            |
+| [`$imap_qresync`](cfg-imap-qresync)                             | Enable the `QRESYNC` extension                                                  |
+| [`$imap_rfc5161`](cfg-imap-rfc5161)                             | Use the IMAP `ENABLE` extension to select capabilities                          |
 | [`$imap_send_id`](cfg-imap-send-id)                             | Send ID command when logging in                                                 |
 | `$imap_servernoise`                                             | {bdg-warning-line}`Renamed to:` [`$imap_server_noise`](cfg-imap-server-noise)   |
 | [`$imap_server_noise`](cfg-imap-server-noise)                   | Display server warnings as error messages                                       |

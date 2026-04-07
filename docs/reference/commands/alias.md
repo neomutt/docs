@@ -41,8 +41,8 @@ unalias jd
 (cmd-alternates)=
 ## `:alternates`
 
-Define alternate email addresses that belong to the user.  NeoMutt uses
-these to tell "sent" mail from "received".
+Define alternate email addresses that belong to the user.
+NeoMutt uses these to tell "sent" mail from "received".
 
 - `alternates <regex>` — add an alternate address pattern
 

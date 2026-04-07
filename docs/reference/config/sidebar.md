@@ -130,7 +130,7 @@ Specify the format of the data displayed in the [`Sidebar Panel`](tour-sidebar).
 | `%t`   | `%{tagged-count}`   | Cur | Number of tagged messages in the mailbox                                                   |
 | `%Z`   | `%{unseen-count}`   |     | Number of new messages in the mailbox (unread, unseen)                                     |
 | `%!`   | `%{flagged}`        |     | `!`: one flagged message; `!!`: two flagged messages; `n!`: n flagged messages (for n > 2) |
-| `%*X`  | `%{padding-soft:X}` |     | Soft-fill with character `X` as pad                                                        |
+| `%*X`  | `%{padding-soft:X}` |     | Soft-fill with character `X` as padding                                                    |
 | `%>X`  | `%{padding-hard:X}` |     | Right justify the rest of the string and pad with character `X`                            |
 | `%\|X` | `%{padding-eol:X}`  |     | Pad to the end of the line with character `X`                                              |
 

@@ -30,9 +30,9 @@ Run a command when entering a mailbox whose path matches a regex.
 - `folder-hook -noregex <string> <command>` — match as a literal string
 
 ```neomuttrc
-folder-hook .          'set sort = date'
-folder-hook INBOX     'set sort = reverse-date'
-folder-hook neomutt-devel 'set strict_threads; set sort = threads'
+folder-hook .                    'set sort = date'
+folder-hook INBOX                'set sort = reverse-date'
+folder-hook neomutt-devel        'set strict_threads; set sort = threads'
 folder-hook -noregex ~/Mail/work 'set from = "jane@work.example.com"'
 ```
 
@@ -113,8 +113,7 @@ fcc-hook .                    =Sent
 (cmd-fcc-save-hook)=
 ## `:fcc-save-hook`
 
-Shorthand — equivalent to setting both `fcc-hook` and `save-hook` with the
-same pattern and mailbox.
+Shorthand — equivalent to setting both `fcc-hook` and `save-hook` with the same pattern and mailbox.
 
 - `fcc-save-hook <pattern> <mailbox>`
 
@@ -126,8 +125,7 @@ fcc-save-hook .                 =saved
 (cmd-mbox-hook)=
 ## `:mbox-hook`
 
-When leaving a mailbox that matches a regex, move read messages to another
-mailbox.
+When leaving a mailbox that matches a regex, move read messages to another mailbox.
 
 - `mbox-hook <regex> <mailbox>`
 
@@ -174,8 +172,7 @@ crypt-hook .                 0x12345678
 (cmd-index-format-hook)=
 ## `:index-format-hook`
 
-Create a named format string that can be used in `$index_format` and varies
-based on message patterns.
+Create a named format string that can be used in [`$index_format`](cfg-index-format) and varies based on message patterns.
 
 - `index-format-hook <name> <pattern> <format-string>` — define a rule
 - `index-format-hook <name> !<pattern> <format-string>` — negate the pattern (else clause)
@@ -212,7 +209,7 @@ shutdown-hook 'echo "Goodbye!"'
 (cmd-timeout-hook)=
 ## `:timeout-hook`
 
-Run a command when NeoMutt is idle and the `$timeout` timer expires.
+Run a command when NeoMutt is idle and the [`$timeout`](cfg-timeout) timer expires.
 
 - `timeout-hook <command>`
 
