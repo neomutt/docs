@@ -1,6 +1,6 @@
 ---
 title: Autocrypt Options
-description: Configuration variables for the Autocrypt automatic key exchange and encryption feature.
+description: Config options for the Autocrypt automatic key exchange and encryption feature.
 keywords: autocrypt, encryption, automatic encryption, key exchange, autocrypt_dir, autocrypt_reply, autocrypt_acct_format, gpg, passive encryption, e2e
 ---
 
@@ -75,7 +75,7 @@ Specify the format of the data displayed in the [`Autocrypt Dialog`](tour-autocr
     set autocrypt_dir = "~/.neomutt/autocrypt"
     ```
 
-This variable sets where autocrypt files are stored, including the GPG keyring and SQLite database.
+This option sets where autocrypt files are stored, including the GPG keyring and SQLite database.
 
 --------------------------------------------------------------------------------
 

@@ -1,6 +1,6 @@
 ---
 title: Pager Options
-description: Configuration variables for the built-in pager display, wrapping, filtering, search context, and quoting.
+description: Config options for the built-in pager display, wrapping, filtering, search context, and quoting.
 keywords: pager, display_filter, pager_context, pager_index_lines, pager_stop, smart_wrap, markers, allow_ansi, smileys, tilde, message viewer, reading
 ---
 
@@ -108,8 +108,8 @@ If set, a `+` marker is displayed at the beginning of wrapped lines.
     set pager = ""
     ```
 
-This variable specifies which pager you would like to use to view messages.
-When empty, NeoMutt will use the built-in pager, otherwise this variable should specify the pathname of the external pager you would like to use.
+This option specifies which pager you would like to use to view messages.
+When empty, NeoMutt will use the built-in pager, otherwise this option should specify the pathname of the external pager you would like to use.
 
 Using an external pager may have some disadvantages: Additional keystrokes are necessary because you can't call NeoMutt functions directly from the pager, and screen resizes cause lines longer than the screen width to be badly formatted in the help menu.
 
@@ -126,10 +126,10 @@ Using an external pager may have some disadvantages: Additional keystrokes are n
     set pager_context = 0
     ```
 
-This variable controls the number of lines of context that are given when displaying the next or previous page in the internal pager.
+This option controls the number of lines of context that are given when displaying the next or previous page in the internal pager.
 By default, NeoMutt will display the line after the last one on the screen at the top of the next page (0 lines of context).
 
-This variable also specifies the amount of context given for search results.
+This option also specifies the amount of context given for search results.
 If positive, this many lines will be given before a match, if 0, the match will be top-aligned.
 
 --------------------------------------------------------------------------------
@@ -234,7 +234,7 @@ When _set_, the internal-pager will **not** move to the next message when you ar
     set prompt_after = yes
     ```
 
-If you use an _external_ [`$pager`](cfg-pager), setting this variable will cause NeoMutt to prompt you for a command when the pager exits rather than returning to the index menu.
+If you use an _external_ [`$pager`](cfg-pager), setting this option will cause NeoMutt to prompt you for a command when the pager exits rather than returning to the index menu.
 If _unset_, NeoMutt will return to the index menu when the external pager exits.
 
 --------------------------------------------------------------------------------
@@ -250,7 +250,7 @@ If _unset_, NeoMutt will return to the index menu when the external pager exits.
     set search_context = 0
     ```
 
-For the pager, this variable specifies the number of lines shown before search results.
+For the pager, this option specifies the number of lines shown before search results.
 By default, search results will be top-aligned.
 
 --------------------------------------------------------------------------------
@@ -286,7 +286,7 @@ If _unset_, lines are simply wrapped at the screen edge.
     set smileys = "(>From )|(:[-^]?[][)(><}{|/DP])"
     ```
 
-The _pager_ uses this variable to catch some common false positives of [`$quote_regex`](cfg-quote-regex), most notably smileys and not consider a line quoted text if it also matches [`$smileys`](cfg-smileys).
+The _pager_ uses this option to catch some common false positives of [`$quote_regex`](cfg-quote-regex), most notably smileys and not consider a line quoted text if it also matches [`$smileys`](cfg-smileys).
 This mostly happens at the beginning of a line.
 
 --------------------------------------------------------------------------------

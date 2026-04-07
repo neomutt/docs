@@ -1,6 +1,6 @@
 ---
 title: Email Options
-description: Configuration variables for email display, MIME handling, mailcap, scoring, text reflow, and reply threading.
+description: Configuration option for email display, MIME handling, mailcap, scoring, text reflow, and reply threading.
 keywords: email, mime, mailcap, scoring, reflow_text, reply_regex, reverse_alias, rfc2047, spam, auto_subscribe, multipart, format flowed
 ---
 
@@ -55,7 +55,7 @@ NeoMutt will render all MIME parts it can properly transform to plain text.
     set hidden_tags = "unread,draft,flagged,passed,replied,attachment,signed,encrypted"
     ```
 
-This variable specifies a list of comma-separated private notmuch/imap tags which should not be printed on screen.
+This option specifies a list of comma-separated private notmuch/imap tags which should not be printed on screen.
 
 --------------------------------------------------------------------------------
 
@@ -86,7 +86,7 @@ If such an entry is found, NeoMutt will use the viewer defined in that entry to 
 
 Controls whether or not NeoMutt includes separately encrypted attachment contents when replying.
 
-This variable was added to prevent accidental exposure of encrypted contents when replying to an attacker.
+This option was added to prevent accidental exposure of encrypted contents when replying to an attacker.
 If a previously encrypted message were attached by the attacker, they could trick an unwary recipient into decrypting and including the message in their reply.
 
 --------------------------------------------------------------------------------
@@ -116,7 +116,7 @@ Controls whether or not NeoMutt includes only the first attachment of the messag
     set mailcap_path = "~/.mailcap:/usr/share/neomutt/mailcap:/etc/mailcap:/usr/etc/mailcap:/usr/local/etc/mailcap"
     ```
 
-This variable specifies a list files to consult when attempting to display MIME bodies not directly supported by NeoMutt.
+This option specifies a list files to consult when attempting to display MIME bodies not directly supported by NeoMutt.
 The default value is generated during startup: see the "$mailcap" section of the manual.
 
 It is overridden by the environment variable [`$MAILCAPS`](ref-env).
@@ -155,7 +155,7 @@ Don't change this setting unless you are really sure what you are doing!
     set preferred_languages = ""
     ```
 
-This variable specifies a list of comma-separated languages.
+This option specifies a list of comma-separated languages.
 [RFC8255](https://www.rfc-editor.org/rfc/rfc8255.html) : user preferred languages to be searched in parts and display.
 
 Example:
@@ -215,7 +215,7 @@ See [RFC3676](https://www.rfc-editor.org/rfc/rfc3676.html) for details on the _f
     set reflow_wrap = 78
     ```
 
-This variable controls the maximum paragraph width when reformatting text/plain parts when [`$reflow_text`](cfg-reflow-text) is _set_.
+This option controls the maximum paragraph width when reformatting text/plain parts when [`$reflow_text`](cfg-reflow-text) is _set_.
 When the value is 0, paragraphs will be wrapped at the terminal's right margin.
 A positive value sets the paragraph width relative to the left margin.
 A negative value set the paragraph width relative to the right margin.
@@ -260,7 +260,7 @@ If you use a single quoted string, you would have to type an actual tab characte
 :::{note}
 the result of this regex match against the subject is stored in the header cache.
 NeoMutt isn't smart enough to invalidate a header cache entry based on changing [`$reply_regex`](cfg-reply-regex), so if you aren't seeing correct values in the index, try temporarily turning off the header cache.
-If that fixes the problem, then once the variable is set to your liking, remove your stale header cache files and turn the header cache back on.
+If that fixes the problem, then once the option is set to your liking, remove your stale header cache files and turn the header cache back on.
 :::
 
 --------------------------------------------------------------------------------
@@ -275,7 +275,7 @@ If that fixes the problem, then once the variable is set to your liking, remove 
     set reverse_alias = no
     ```
 
-This variable controls whether or not NeoMutt will display the "personal" name from your aliases in the index menu if it finds an alias that matches the message's sender.
+This option controls whether or not NeoMutt will display the "personal" name from your aliases in the index menu if it finds an alias that matches the message's sender.
 For example, if you have the following alias:
 
 ```neomuttrc
@@ -302,15 +302,15 @@ It would be displayed in the index menu as "Joe User" instead of "abd30425@somew
     set rfc2047_parameters = yes
     ```
 
-When this variable is _set_, NeoMutt will decode [RFC2047](https://www.rfc-editor.org/rfc/rfc2047.html)-encoded MIME parameters.
-You want to set this variable when NeoMutt suggests you to save attachments to files named like:
+When this option is _set_, NeoMutt will decode [RFC2047](https://www.rfc-editor.org/rfc/rfc2047.html)-encoded MIME parameters.
+You want to set this option when NeoMutt suggests you to save attachments to files named like:
 
 ```
 =?iso-8859-1?Q?file=5F=E4=5F991116=2Ezip?=
 =?utf-8?Q?z=C4=99ta.png?=
 ```
 
-When this variable is _set_ interactively, the change won't be active until you change folders.
+When this option is _set_ interactively, the change won't be active until you change folders.
 
 :::{note}
 This use of [RFC2047](https://www.rfc-editor.org/rfc/rfc2047.html)'s encoding is explicitly prohibited by the standard,
@@ -334,8 +334,8 @@ Instead, NeoMutt will unconditionally use the encoding specified in [RFC2231](ht
     set score = yes
     ```
 
-When this variable is _unset_, scoring is turned off.
-This can be useful to selectively disable scoring for certain folders when the [`$score_threshold_delete`](cfg-score-threshold-delete) variable and related are used.
+When this option is _unset_, scoring is turned off.
+This can be useful to selectively disable scoring for certain folders when [`$score_threshold_delete`](cfg-score-threshold-delete) and related are used.
 
 --------------------------------------------------------------------------------
 
@@ -349,8 +349,8 @@ This can be useful to selectively disable scoring for certain folders when the [
     set score_threshold_delete = -1
     ```
 
-Messages which have been assigned a score equal to or lower than the value of this variable are automatically marked for deletion by NeoMutt.
-Since NeoMutt scores are always greater than or equal to zero, the default setting of this variable will never mark a message for deletion.
+Messages which have been assigned a score equal to or lower than the value of this option are automatically marked for deletion by NeoMutt.
+Since NeoMutt scores are always greater than or equal to zero, the default setting of this option will never mark a message for deletion.
 
 --------------------------------------------------------------------------------
 
@@ -364,7 +364,7 @@ Since NeoMutt scores are always greater than or equal to zero, the default setti
     set score_threshold_flag = 9999
     ```
 
-Messages which have been assigned a score greater than or equal to this variable's value are automatically marked "flagged".
+Messages which have been assigned a score greater than or equal to this option's value are automatically marked "flagged".
 
 --------------------------------------------------------------------------------
 
@@ -378,8 +378,8 @@ Messages which have been assigned a score greater than or equal to this variable
     set score_threshold_read = -1
     ```
 
-Messages which have been assigned a score equal to or lower than the value of this variable are automatically marked as read by NeoMutt.
-Since NeoMutt scores are always greater than or equal to zero, the default setting of this variable will never mark a message read.
+Messages which have been assigned a score equal to or lower than the value of this option are automatically marked as read by NeoMutt.
+Since NeoMutt scores are always greater than or equal to zero, the default setting of this option will never mark a message read.
 
 --------------------------------------------------------------------------------
 
@@ -412,6 +412,6 @@ Since NeoMutt scores are always greater than or equal to zero, the default setti
     set spam_separator = ","
     ```
 
-This variable controls what happens when multiple spam headers are matched: if _unset_, each successive header will overwrite any previous matches value for the spam label.
-If _set_, each successive match will append to the previous, using this variable's value as a separator.
+This option controls what happens when multiple spam headers are matched: if _unset_, each successive header will overwrite any previous matches value for the spam label.
+If _set_, each successive match will append to the previous, using this option's value as a separator.
 

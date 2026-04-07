@@ -1,6 +1,6 @@
 ---
 title: Send Options
-description: Configuration variables for composing and sending email, SMTP settings, signatures, encoding, and reply attribution.
+description: Config options for composing and sending email, SMTP settings, signatures, encoding, and reply attribution.
 keywords: neomutt, send, smtp, sendmail, smtp_url, signature, attribution_intro, forward_format, abort_noattach, allow_8bit, encoding, outgoing mail, reply, compose
 ---
 
@@ -155,7 +155,7 @@ If set, NeoMutt will prompt you for `X-Comment-To:` field before editing the bod
     set attach_charset = ""
     ```
 
-This variable is a colon-separated list of character encoding schemes for text file attachments.
+This option is a colon-separated list of character encoding schemes for text file attachments.
 NeoMutt uses this setting to guess which encoding files being attached are encoded in to convert them to a proper character set given in [`$send_charset`](cfg-send-charset).
 
 If _unset_, the value of [`$charset`](cfg-charset) will be used instead.
@@ -210,13 +210,13 @@ This string will precede a replied-to message which is quoted in the main body o
 The locale used by [`strftime(3)`](exp-strftime) to format dates in the attribution strings.
 Valid values are the strings your system accepts for the locale environment variable [`$LC_TIME`](ref-env).
 
-This variable is to allow the attribution date format to be customized by recipient or folder using hooks.
+This option is to allow the attribution date format to be customized by recipient or folder using hooks.
 By default, NeoMutt will use your locale environment, so there is no need to set this except to override that default.
 
 
 :::{seealso}
 - {doc}`/howto/email-template`
-- Affected variables: [`$attribution_intro`](cfg-attribution-intro), [`$attribution_trailer`](cfg-attribution-trailer), [`$forward_attribution_intro`](cfg-forward-attribution-intro), [`$forward_attribution_trailer`](cfg-forward-attribution-trailer), [`$indent_string`](cfg-indent-string).
+- Affected options: [`$attribution_intro`](cfg-attribution-intro), [`$attribution_trailer`](cfg-attribution-trailer), [`$forward_attribution_intro`](cfg-forward-attribution-intro), [`$forward_attribution_trailer`](cfg-forward-attribution-trailer), [`$indent_string`](cfg-indent-string).
 :::
 
 --------------------------------------------------------------------------------
@@ -232,7 +232,7 @@ By default, NeoMutt will use your locale environment, so there is no need to set
     set attribution_trailer = ""
     ```
 
-Similar to the [`$attribution_intro`](cfg-attribution-intro) variable, this is the string that will come after a replied-to message which is quoted in the main body of the reply (this is the case when [`$include`](cfg-include) is set).
+Similar to the [`$attribution_intro`](cfg-attribution-intro) option, this is the string that will come after a replied-to message which is quoted in the main body of the reply (this is the case when [`$include`](cfg-include) is set).
 
 :::{seealso}
 - {doc}`/howto/email-template`
@@ -253,8 +253,8 @@ Similar to the [`$attribution_intro`](cfg-attribution-intro) variable, this is t
     set bounce_delivered = yes
     ```
 
-When this variable is _set_, NeoMutt will include `Delivered-To:` headers when bouncing messages.
-Postfix users may wish to _unset_ this variable.
+When this option is _set_, NeoMutt will include `Delivered-To:` headers when bouncing messages.
+Postfix users may wish to _unset_ this option.
 
 --------------------------------------------------------------------------------
 
@@ -297,7 +297,7 @@ Sets the default `Content-Type:` for the body of newly composed messages.
     set crypt_auto_encrypt = no
     ```
 
-Setting this variable will cause NeoMutt to always attempt to PGP encrypt outgoing messages.
+Setting this option will cause NeoMutt to always attempt to PGP encrypt outgoing messages.
 This is probably only useful in connection to the [`:send-hook`](cmd-send-hook) command.
 It can be overridden by use of the pgp menu, when encryption is not required or signing is requested as well.
 If [`$smime_is_default`](cfg-smime-is-default) is _set_, then OpenSSL is used instead to create S/MIME messages and settings can be overridden by use of the smime menu instead.
@@ -314,7 +314,7 @@ If [`$smime_is_default`](cfg-smime-is-default) is _set_, then OpenSSL is used in
     set crypt_auto_pgp = yes
     ```
 
-This variable controls whether or not NeoMutt may automatically enable PGP encryption/signing for messages.
+This option controls whether or not NeoMutt may automatically enable PGP encryption/signing for messages.
 
 :::{seealso}
 [`$crypt_auto_encrypt`](cfg-crypt-auto-encrypt), [`$crypt_reply_encrypt`](cfg-crypt-reply-encrypt), [`$crypt_auto_sign`](cfg-crypt-auto-sign), [`$crypt_reply_sign`](cfg-crypt-reply-sign), attribution_locale [`$smime_is_default`](cfg-smime-is-default)
@@ -333,7 +333,7 @@ This variable controls whether or not NeoMutt may automatically enable PGP encry
     set crypt_auto_sign = no
     ```
 
-Setting this variable will cause NeoMutt to always attempt to cryptographically sign outgoing messages.
+Setting this option will cause NeoMutt to always attempt to cryptographically sign outgoing messages.
 This can be overridden by use of the pgp menu, when signing is not required or encryption is requested as well.
 If [`$smime_is_default`](cfg-smime-is-default) is _set_, then OpenSSL is used instead to create S/MIME messages and settings can be overridden by use of the smime menu instead of the pgp menu.
 
@@ -349,7 +349,7 @@ If [`$smime_is_default`](cfg-smime-is-default) is _set_, then OpenSSL is used in
     set crypt_auto_smime = yes
     ```
 
-This variable controls whether or not NeoMutt may automatically enable S/MIME encryption/signing for messages.
+This option controls whether or not NeoMutt may automatically enable S/MIME encryption/signing for messages.
 
 :::{seealso}
 [`$crypt_auto_encrypt`](cfg-crypt-auto-encrypt), [`$crypt_reply_encrypt`](cfg-crypt-reply-encrypt), [`$crypt_auto_sign`](cfg-crypt-auto-sign), [`$crypt_reply_sign`](cfg-crypt-reply-sign), [`$smime_is_default`](cfg-smime-is-default)
@@ -418,7 +418,7 @@ This works around the problem noted in [`$crypt_reply_sign`](cfg-crypt-reply-sig
     set dsn_notify = ""
     ```
 
-This variable sets the request for when notification is returned.
+This option sets the request for when notification is returned.
 The string consists of a comma separated list (no spaces!) of one or more of the following: _never_, to never request notification, _failure_, to request notification on transmission failure, _delay_, to be notified of message delays, _success_, to be notified of successful transmission.
 
 Example:
@@ -443,7 +443,7 @@ For SMTP delivery, DSN support is auto-detected so that it depends on the server
     set dsn_return = ""
     ```
 
-This variable controls how much of your message is returned in DSN messages.
+This option controls how much of your message is returned in DSN messages.
 It may be set to either _hdrs_ to return just the message header, or _full_ to return the full message.
 
 Example:
@@ -468,7 +468,7 @@ For SMTP delivery, DSN support is auto-detected so that it depends on the server
     set empty_subject = "Re: your mail"
     ```
 
-This variable specifies the subject to be used when replying to an email with an empty `Subject:`.
+This option specifies the subject to be used when replying to an email with an empty `Subject:`.
 It defaults to "Re: your mail".
 
 --------------------------------------------------------------------------------
@@ -503,7 +503,7 @@ These cases include replying to messages and passing the relevant command line a
 The initial prompt for recipients is also skipped when composing a new message to the current message sender, while the initial prompt for subject is also skipped when forwarding messages.
 
 :::{note}
-this variable has no effect when the [`$auto_edit`](cfg-auto-edit) variable is _set_.
+this option has no effect when the [`$auto_edit`](cfg-auto-edit) option is _set_.
 :::
 
 :::{seealso}
@@ -522,7 +522,7 @@ this variable has no effect when the [`$auto_edit`](cfg-auto-edit) variable is _
     set fcc_attach = yes
     ```
 
-This variable controls whether or not attachments on outgoing messages are saved along with the main body of your message.
+This option controls whether or not attachments on outgoing messages are saved along with the main body of your message.
 
 :::{note}
 [`$fcc_before_send`](cfg-fcc-before-send) forces the default (set) behavior of this option.
@@ -540,12 +540,12 @@ This variable controls whether or not attachments on outgoing messages are saved
     set fcc_before_send = no
     ```
 
-When this variable is _set_, FCCs will occur before sending the message.
+When this option is _set_, FCCs will occur before sending the message.
 Before sending, the message cannot be manipulated, so it will be stored the exact same as sent:
 [`$fcc_attach`](cfg-fcc-attach) and [`$fcc_clear`](cfg-fcc-clear) will be ignored (using their default values).
 
 When _unset_, the default, FCCs will occur after sending.
-Variables [`$fcc_attach`](cfg-fcc-attach) and [`$fcc_clear`](cfg-fcc-clear) will be respected, allowing it to be stored without attachments or encryption/signing if desired.
+options [`$fcc_attach`](cfg-fcc-attach) and [`$fcc_clear`](cfg-fcc-clear) will be respected, allowing it to be stored without attachments or encryption/signing if desired.
 
 --------------------------------------------------------------------------------
 
@@ -560,7 +560,7 @@ Variables [`$fcc_attach`](cfg-fcc-attach) and [`$fcc_clear`](cfg-fcc-clear) will
     set fcc_clear = no
     ```
 
-When this variable is _set_, FCCs will be stored unencrypted and unsigned, even when the actual message is encrypted and/or signed.
+When this option is _set_, FCCs will be stored unencrypted and unsigned, even when the actual message is encrypted and/or signed.
 
 :::{note}
 [`$fcc_before_send`](cfg-fcc-before-send) forces the default (unset) behavior of this option.
@@ -668,7 +668,7 @@ This is the string that will follow a message which has been forwarded in the ma
 
 Controls the handling of encrypted messages when forwarding a message.
 When _set_, the outer layer of encryption is stripped off.
-This variable is only used if [`$mime_forward`](cfg-mime-forward) is _set_ and [`$mime_forward_decode`](cfg-mime-forward-decode) is _unset_.
+This option is only used if [`$mime_forward`](cfg-mime-forward) is _set_ and [`$mime_forward_decode`](cfg-mime-forward-decode) is _unset_.
 
 --------------------------------------------------------------------------------
 
@@ -702,7 +702,7 @@ For those who always want to forward with no modification, use a setting of "no"
     set forward_format = "[%{from}: %{subject}]"
     ```
 
-This variable controls the default subject when forwarding a message.
+This option controls the default subject when forwarding a message.
 
 :::{seealso}
 - {doc}`/howto/email-template`
@@ -767,7 +767,7 @@ This string is added to the top of every outgoing message.
     ```
 
 When _unset_, the header fields normally added by the [`:my-header`](cmd-my-header) command are not created.
-This variable _must_ be unset before composing a new message or replying in order to take effect.
+This option _must_ be unset before composing a new message or replying in order to take effect.
 If _set_, the user defined header fields are added to every new message.
 
 --------------------------------------------------------------------------------
@@ -782,7 +782,7 @@ If _set_, the user defined header fields are added to every new message.
     set hidden_host = no
     ```
 
-When _set_, NeoMutt will skip the host name part of [`$hostname`](cfg-hostname) variable when adding the domain part to addresses.
+When _set_, NeoMutt will skip the host name part of [`$hostname`](cfg-hostname) option when adding the domain part to addresses.
 
 --------------------------------------------------------------------------------
 
@@ -796,7 +796,7 @@ When _set_, NeoMutt will skip the host name part of [`$hostname`](cfg-hostname) 
     set honor_followup_to = yes
     ```
 
-This variable controls whether or not a `Mail-Followup-To:` header is honored when group-replying to a message.
+This option controls whether or not a `Mail-Followup-To:` header is honored when group-replying to a message.
 
 --------------------------------------------------------------------------------
 
@@ -998,7 +998,7 @@ When _set_, the [`$mime_type_query_command`](cfg-mime-type-query-command) will b
     set nm_record = no
     ```
 
-This variable specifies whether, when writing a just-sent message to the [`$record`](cfg-record), the message should also be added to the notmuch DB.
+This option specifies whether, when writing a just-sent message to the [`$record`](cfg-record), the message should also be added to the notmuch DB.
 Replies inherit the notmuch tags from the original message.
 
 :::{seealso}
@@ -1018,7 +1018,7 @@ Replies inherit the notmuch tags from the original message.
     set pgp_reply_inline = no
     ```
 
-Setting this variable will cause NeoMutt to always attempt to create an inline (traditional) message when replying to a message which is PGP encrypted/signed inline.
+Setting this option will cause NeoMutt to always attempt to create an inline (traditional) message when replying to a message which is PGP encrypted/signed inline.
 This can be overridden by use of the pgp menu, when inline is not required.
 This option does not automatically detect if the (replied-to) message is inline; instead it relies on NeoMutt internals for previously checked/flagged messages.
 
@@ -1079,7 +1079,7 @@ When _set_, NeoMutt will use this as a fallback encryption key for postponed mes
 
 Controls whether or not NeoMutt recalls postponed messages when composing a new message.
 
-Setting this variable to _yes_ is not generally useful, and thus not recommended.
+Setting this option to _yes_ is not generally useful, and thus not recommended.
 
 :::{note}
 [`<recall-message>`](ref-fn-index) can be used to manually recall postponed messages
@@ -1136,7 +1136,7 @@ header field to the list address and you want to send a private message to the a
     set reply_with_xorig = no
     ```
 
-This variable provides a toggle.
+This option provides a toggle.
 When active, the From: header will be extracted from the current mail's 'X-Original-To:' header.
 This setting does not have precedence over [`$reverse_real_name`](cfg-reverse-real-name).
 
@@ -1170,8 +1170,8 @@ Recipients are not prompted for; send-hooks are not evaluated; no alias expansio
     ```
 
 It may sometimes arrive that you receive mail to a certain machine, move the messages to another machine, and reply to some the messages from there.
-If this variable is _set_, the default `From:` line of the reply messages is built using the address where you received the messages you are replying to **if** that address matches your [`:alternates`](cmd-alternates).  
-If the variable is _unset_, or the address that would be used doesn't match your [`:alternates`](cmd-alternates), the `From:` line will use your address on the current machine.
+If this option is _set_, the default `From:` line of the reply messages is built using the address where you received the messages you are replying to **if** that address matches your [`:alternates`](cmd-alternates).  
+If the option is _unset_, or the address that would be used doesn't match your [`:alternates`](cmd-alternates), the `From:` line will use your address on the current machine.
 
 :::{seealso}
 [`:alternates`](cmd-alternates), [`$reverse_real_name`](cfg-reverse-real-name)
@@ -1189,7 +1189,7 @@ If the variable is _unset_, or the address that would be used doesn't match your
     set reverse_real_name = yes
     ```
 
-This variable fine-tunes the behavior of the [`$reverse_name`](cfg-reverse-name) feature.
+This option fine-tunes the behavior of the [`$reverse_name`](cfg-reverse-name) feature.
 
 When it is _unset_, NeoMutt will remove the real name part of a matching address.
 This allows the use of the email address without having to also use what the sender put in the real name field.
@@ -1239,7 +1239,7 @@ The shell is not used to run the command, so shell quoting is also not supported
 
 Specifies the number of seconds to wait for the [`$sendmail`](cfg-sendmail) process to finish before giving up and putting delivery in the background.
 
-NeoMutt interprets the value of this variable as follows:
+NeoMutt interprets the value of this option as follows:
 
 | Value | Description                                                        |
 |-------|--------------------------------------------------------------------|
@@ -1282,7 +1282,7 @@ Specifies the filename of your signature, which is appended to all outgoing mess
     ```
 
 If _set_, a line containing `-- ` (note the trailing space) will be inserted before your [`$signature`](cfg-signature).
-It is **strongly** recommended that you not _unset_ this variable unless your signature contains just your name.
+It is **strongly** recommended that you not _unset_ this option unless your signature contains just your name.
 The reason for this is because many software packages use `-- \n` to detect your signature.
 For example, NeoMutt has the ability to highlight the signature in a different color in the built-in pager.
 
@@ -1305,7 +1305,7 @@ For example, NeoMutt has the ability to highlight the signature in a different c
 If _set_, the signature will be included before any quoted or forwarded text.
 
 :::{warning}
-Do not set this variable unless you really know what you are doing, and are prepared to take some heat from netiquette guardians.
+Do not set this option unless you really know what you are doing, and are prepared to take some heat from netiquette guardians.
 :::
 
 :::{seealso}
@@ -1401,7 +1401,7 @@ smtp[s]://[user[:pass]@]host[:port]
 ```
 
 where "[...]" denotes an optional part.
-Setting this variable overrides the value of the [`$sendmail`](cfg-sendmail) variable.
+Setting this option overrides the value of the [`$sendmail`](cfg-sendmail) option.
 
 :::{seealso}
 [`$write_bcc`](cfg-write-bcc)
@@ -1422,8 +1422,7 @@ Setting this variable overrides the value of the [`$sendmail`](cfg-sendmail) var
 
 The username for the SMTP server.
 
-This variable defaults to your user name on the local machine.
-
+This option defaults to your user name on the local machine.
 --------------------------------------------------------------------------------
 
 (cfg-user-agent)=
@@ -1451,7 +1450,7 @@ When _set_, NeoMutt will add a `User-Agent:` header to outgoing messages, indica
     ```
 
 :::{warning}
-Do not set this variable unless you are using a version of sendmail which supports the `-B8BITMIME` flag (such as sendmail 8.8.x) or you may not be able to send mail.
+Do not set this option unless you are using a version of sendmail which supports the `-B8BITMIME` flag (such as sendmail 8.8.x) or you may not be able to send mail.
 :::
 
 When _set_, NeoMutt will invoke [`$sendmail`](cfg-sendmail) with the `-B8BITMIME`
@@ -1474,7 +1473,7 @@ If [`$envelope_from_address`](cfg-envelope-from-address) is _set_, it will be us
 If _unset_, NeoMutt will attempt to derive the sender from the `From:` header.
 
 Note that this information is passed to sendmail command using the `-f` command line switch.
-Therefore setting this option is not useful if the [`$sendmail`](cfg-sendmail) variable already contains `-f` or if the executable pointed to by [`$sendmail`](cfg-sendmail) doesn't support the `-f` switch.
+Therefore setting this option is not useful if the [`$sendmail`](cfg-sendmail) option already contains `-f` or if the executable pointed to by [`$sendmail`](cfg-sendmail) doesn't support the `-f` switch.
 
 --------------------------------------------------------------------------------
 

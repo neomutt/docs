@@ -79,13 +79,13 @@ set imap_pass="`gpg --batch -q --decrypt ~/.neomutt/account.gpg`"
 
 ## Variable Expansion
 
-Both environment variables and NeoMutt variables can be accessed by prepending `$` to the name of the variable.
+Both environment variables and NeoMutt config options can be accessed by prepending `$` to the name of the variable.
 
 ```neomuttrc
 set record = "+sent_on_$HOSTNAME"
 ```
 
-This will cause NeoMutt to save outgoing messages to a folder named "sent_on_kremvax" if the environment variable `$HOSTNAME` is set to "kremvax."
+This will cause NeoMutt to save outgoing messages to a folder named "sent_on_aurora" if the environment variable `$HOSTNAME` is set to "aurora"
 
 If NeoMutt can't find a matching *config* variable, it will try to find a matching *environment* variable.
 

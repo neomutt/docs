@@ -1,6 +1,6 @@
 ---
 title: GUI Options
-description: Configuration variables for thread display, collapsing, duplicate detection, and thread tree appearance.
+description: Config options for thread display, collapsing, duplicate detection, and thread tree appearance.
 keywords: neomutt, gui, threads, collapse_flagged, collapse_unread, duplicate_threads, hide_limited, hide_missing, narrow_tree, strict_threads, sort_re, thread tree
 ---
 
@@ -17,7 +17,7 @@ keywords: neomutt, gui, threads, collapse_flagged, collapse_unread, duplicate_th
     set beep = yes
     ```
 
-When this variable is _set_, NeoMutt will beep when an error occurs.
+When this option is _set_, NeoMutt will beep when an error occurs.
 
 --------------------------------------------------------------------------------
 
@@ -59,7 +59,7 @@ When _unset_, NeoMutt will not collapse a thread if it contains any unread messa
     set duplicate_threads = yes
     ```
 
-This variable controls whether NeoMutt, when [`$sort`](cfg-sort) is set to `threads`, threads messages with the same `Message-ID:` together.
+This option controls whether NeoMutt, when [`$sort`](cfg-sort) is set to `threads`, threads messages with the same `Message-ID:` together.
 If it is _set_, it will indicate that it thinks they are duplicates of each other with an equals sign in the thread tree.
 
 --------------------------------------------------------------------------------
@@ -152,7 +152,7 @@ When [`$hide_missing`](cfg-hide-missing) is _set_, this option will have no effe
     set narrow_tree = no
     ```
 
-This variable, when _set_, makes the thread tree narrower, allowing deeper threads to fit on the screen.
+This option, when _set_, makes the thread tree narrower, allowing deeper threads to fit on the screen.
 
 --------------------------------------------------------------------------------
 
@@ -166,7 +166,7 @@ This variable, when _set_, makes the thread tree narrower, allowing deeper threa
     set sort_re = yes
     ```
 
-This variable is only useful when sorting by threads with [`$strict_threads`](cfg-strict-threads) _unset_.
+This option is only useful when sorting by threads with [`$strict_threads`](cfg-strict-threads) _unset_.
 In that case, it changes the heuristic NeoMutt uses to thread messages by subject.
 With [`$sort_re`](cfg-sort-re) _set_, NeoMutt will only attach a message as the child of another message by subject if the subject of the child message starts with a substring matching the setting of [`$reply_regex`](cfg-reply-regex).
 With [`$sort_re`](cfg-sort-re) _unset_, NeoMutt will attach the message whether or not this is the case, as long as the non-[`$reply_regex`](cfg-reply-regex) parts of both messages are identical.

@@ -1,6 +1,6 @@
 ---
 title: Maildir Options
-description: Configuration variables for Maildir mailbox format, including new mail checks, field delimiters, caching, and trash handling.
+description: Config options for Maildir mailbox format, including new mail checks, field delimiters, caching, and trash handling.
 keywords: neomutt, maildir, maildir_check_cur, maildir_field_delimiter, maildir_header_cache_verify, maildir_trash, check_new, mail storage, mailbox format
 ---
 
@@ -20,7 +20,7 @@ keywords: neomutt, maildir, maildir_check_cur, maildir_field_delimiter, maildir_
 
 When _set_, NeoMutt will check for new mail delivered while the mailbox is open.
 Especially with MH mailboxes, this operation can take quite some time since it involves scanning the directory and checking each file to see if it has already been looked at.
-If this variable is _unset_, no check for new mail is performed while the mailbox is open.
+If this option is _unset_, no check for new mail is performed while the mailbox is open.
 
 --------------------------------------------------------------------------------
 

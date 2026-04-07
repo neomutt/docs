@@ -1,6 +1,6 @@
 ---
 title: NNTP Options
-description: Configuration variables for NNTP (Usenet) news server connections, newsgroup browsing, and article handling.
+description: Config options for NNTP (Usenet) news server connections, newsgroup browsing, and article handling.
 keywords: neomutt, nntp, usenet, newsgroups, news_server, newsrc, nntp_authenticators, nntp_poll, catchup_newsgroup, followup_to_poster, news reader, articles
 ---
 
@@ -17,7 +17,7 @@ keywords: neomutt, nntp, usenet, newsgroups, news_server, newsrc, nntp_authentic
     set catchup_newsgroup = ask-yes
     ```
 
-If this variable is _set_, NeoMutt will mark all articles in newsgroup as read when you quit the newsgroup (catchup newsgroup).
+If this option is _set_, NeoMutt will mark all articles in newsgroup as read when you quit the newsgroup (catchup newsgroup).
 
 --------------------------------------------------------------------------------
 
@@ -31,7 +31,7 @@ If this variable is _set_, NeoMutt will mark all articles in newsgroup as read w
     set followup_to_poster = ask-yes
     ```
 
-If this variable is _set_ and the keyword "poster" is present in `Followup-To:` header, follow-up to newsgroup function is not permitted.
+If this option is _set_ and the keyword "poster" is present in `Followup-To:` header, follow-up to newsgroup function is not permitted.
 The message will be mailed to the submitter of the message via mail.
 
 --------------------------------------------------------------------------------
@@ -91,7 +91,7 @@ Specify the format of the filename containing info about subscribed newsgroups -
     set news_cache_dir = "~/.neomutt"
     ```
 
-This variable pointing to directory where NeoMutt will save cached news articles and headers in.
+This option pointing to directory where NeoMutt will save cached news articles and headers in.
 If _unset_, articles and headers will not be saved at all and will be reloaded from the server each time.
 
 --------------------------------------------------------------------------------
@@ -106,7 +106,7 @@ If _unset_, articles and headers will not be saved at all and will be reloaded f
     set news_server = ""
     ```
 
-This variable specifies domain name or address of NNTP server.
+This option specifies domain name or address of NNTP server.
 
 You can also specify username and an alternative port for each news server, e.g. `[[s]news://][username[:password]@]server[:port]`
 
@@ -153,7 +153,7 @@ If a method is available but authentication fails, NeoMutt will not connect to t
     set nntp_context = 1000
     ```
 
-This variable defines number of articles which will be in index when newsgroup entered.
+This option defines number of articles which will be in index when newsgroup entered.
 If active newsgroup have more articles than this number, oldest articles will be ignored.
 Also controls how many articles headers will be saved in cache when you quit newsgroup.
 
@@ -169,7 +169,7 @@ Also controls how many articles headers will be saved in cache when you quit new
     set nntp_listgroup = yes
     ```
 
-This variable controls whether or not existence of each article is checked when newsgroup is entered.
+This option controls whether or not existence of each article is checked when newsgroup is entered.
 
 --------------------------------------------------------------------------------
 
@@ -183,7 +183,7 @@ This variable controls whether or not existence of each article is checked when 
     set nntp_load_description = yes
     ```
 
-This variable controls whether or not descriptions for each newsgroup must be loaded when newsgroup is added to list (first time list loading or new newsgroup adding).
+This option controls whether or not descriptions for each newsgroup must be loaded when newsgroup is added to list (first time list loading or new newsgroup adding).
 
 --------------------------------------------------------------------------------
 

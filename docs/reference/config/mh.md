@@ -1,6 +1,6 @@
 ---
 title: MH Options
-description: Configuration variables for MH mailbox format, including message deletion, and sequence names for flags.
+description: Config options for MH mailbox format, including message deletion, and sequence names for flags.
 keywords: neomutt, mh, mh_purge, mh_seq_flagged, mh_seq_replied, mh_seq_unseen, mailbox format, mail storage, message sequences
 ---
 
@@ -19,7 +19,7 @@ keywords: neomutt, mh, mh_purge, mh_seq_flagged, mh_seq_replied, mh_seq_unseen, 
 
 When _unset_, NeoMutt will mimic mh's behavior and rename deleted messages to _,<old file name>_ in mh folders instead of really deleting them.
 This leaves the message on disk but makes programs reading the folder ignore it.
-If the variable is _set_, the message files will simply be deleted.
+If the option is _set_, the message files will simply be deleted.
 
 This option is similar to [`$maildir_trash`](cfg-maildir-trash) for Maildir folders.
 

@@ -1,6 +1,6 @@
 ---
 title: Progress Options
-description: Configuration variables for progress indicators during network transfers, mailbox reading, and writing.
+description: Config options for progress indicators during network transfers, mailbox reading, and writing.
 keywords: neomutt, progress, net_inc, read_inc, write_inc, time_inc, progress bar, performance, tuning, status updates, transfer speed
 ---
 
@@ -40,7 +40,7 @@ If set to 0, no progress messages will be displayed.
 
 If set to a value greater than 0, NeoMutt will display which message it is currently on when reading a mailbox or when performing search actions such as search and limit.
 The message is printed after this many messages have been read or searched (e.g., if set to 25, NeoMutt will print a message when it is at message 25, and then again when it gets to message 50).
-This variable is meant to indicate progress when reading or searching large mailboxes which may take some time.
+This option is meant to indicate progress when reading or searching large mailboxes which may take some time.
 When set to 0, only a single message will appear before the reading the mailbox.
 
 :::{seealso}
@@ -61,7 +61,7 @@ When set to 0, only a single message will appear before the reading the mailbox.
     set time_inc = 0
     ```
 
-Along with [`$read_inc`](cfg-read-inc), [`$write_inc`](cfg-write-inc), and [`$net_inc`](cfg-net-inc), this variable controls the frequency with which progress updates are displayed.
+Along with [`$read_inc`](cfg-read-inc), [`$write_inc`](cfg-write-inc), and [`$net_inc`](cfg-net-inc), this option controls the frequency with which progress updates are displayed.
 It suppresses updates less than [`$time_inc`](cfg-time-inc) milliseconds apart.
 This can improve throughput on systems with slow terminals, or when running NeoMutt on a remote system.
 

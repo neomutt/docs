@@ -1,6 +1,6 @@
 ---
 title: Index Options
-description: Configuration variables for the index menu display, status bar formatting, flags, and terminal title.
+description: Config options for the index menu display, status bar formatting, flags, and terminal title.
 keywords: neomutt, index, index_format, status_format, flag_chars, crypt_chars, from_chars, to_chars, ts_enabled, new_mail_command, status bar, message list
 ---
 
@@ -16,8 +16,8 @@ keywords: neomutt, index, index_format, status_format, flag_chars, crypt_chars, 
     set beep_new = no
     ```
 
-When this variable is _set_, NeoMutt will beep whenever it prints a message notifying you of new mail.
-This is independent of the setting of the [`$beep`](cfg-beep) variable.
+When this option is _set_, NeoMutt will beep whenever it prints a message notifying you of new mail.
+This is independent of the setting of the [`$beep`](cfg-beep) option.
 
 --------------------------------------------------------------------------------
 
@@ -30,7 +30,7 @@ This is independent of the setting of the [`$beep`](cfg-beep) variable.
     set change_folder_next = no
     ```
 
-When this variable is _set_, the [`<change-folder>`](ref-fn-index) function mailbox suggestion will start at the next folder in your [`:mailboxes`](cmd-mailboxes) list, instead of starting at the first folder in the list.
+When this option is _set_, the [`<change-folder>`](ref-fn-index) function mailbox suggestion will start at the next folder in your [`:mailboxes`](cmd-mailboxes) list, instead of starting at the first folder in the list.
 
 --------------------------------------------------------------------------------
 
@@ -273,10 +273,10 @@ If _set_, NeoMutt will call this command after a new message is received.
     set quit = yes
     ```
 
-This variable controls whether "quit" and "exit" actually quit from NeoMutt.
+This option controls whether "quit" and "exit" actually quit from NeoMutt.
 If this option is _set_, they do quit, if it is _unset_, they have no effect, and if it is set to `ask-yes` or `ask-no`, you are prompted for confirmation when you try to quit.
 
-In order to quit from NeoMutt if this variable is _unset_, you must send the signal `SIGINT` to NeoMutt.
+In order to quit from NeoMutt if this option is _unset_, you must send the signal `SIGINT` to NeoMutt.
 This can usually be achieved by pressing {kbd}`Ctrl-C` in the terminal.
 
 --------------------------------------------------------------------------------

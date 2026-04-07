@@ -1,6 +1,6 @@
 ---
 title: IMAP Options
-description: Configuration variables for IMAP server connections, authentication, extensions, and mailbox polling.
+description: Config options for IMAP server connections, authentication, extensions, and mailbox polling.
 keywords: neomutt, imap, imap_authenticators, imap_idle, imap_condstore, imap_qresync, imap_deflate, imap_user, imap_pass, imap_keep_alive, oauth, remote mail, imap_pipeline_depth
 ---
 
@@ -178,7 +178,7 @@ If your connection seems to freeze up periodically, try unsetting this.
     set imap_keep_alive = 300
     ```
 
-This variable specifies the maximum amount of time in seconds that NeoMutt will wait before polling open IMAP connections, to prevent the server from closing them before NeoMutt has finished with them.
+This option specifies the maximum amount of time in seconds that NeoMutt will wait before polling open IMAP connections, to prevent the server from closing them before NeoMutt has finished with them.
 The default is well within the RFC-specified minimum amount of time (30 minutes) before a server is allowed to do this, but in practice the RFC does get violated every now and then.
 Reduce this number if you find yourself getting disconnected from your IMAP server due to inactivity.
 
@@ -194,7 +194,7 @@ Reduce this number if you find yourself getting disconnected from your IMAP serv
     set imap_list_subscribed = no
     ```
 
-This variable configures whether IMAP folder browsing will look for only subscribed folders or all folders.
+This option configures whether IMAP folder browsing will look for only subscribed folders or all folders.
 This can be toggled in the IMAP browser with the [`<toggle-subscribed>`](ref-fn-browser) function.
 
 --------------------------------------------------------------------------------
@@ -212,7 +212,7 @@ This can be toggled in the IMAP browser with the [`<toggle-subscribed>`](ref-fn-
 
 Your login name on the IMAP server.
 
-This variable defaults to the value of [`$imap_user`](cfg-imap-user).
+This option defaults to the value of [`$imap_user`](cfg-imap-user).
 
 --------------------------------------------------------------------------------
 
@@ -302,10 +302,10 @@ This option exists to appease speed freaks.
 
 Controls the number of IMAP commands that may be queued up before they are sent to the server.
 A deeper pipeline reduces the amount of time NeoMutt must wait for the server, and can make IMAP servers feel much more responsive.
-But not all servers correctly handle pipelined commands, so if you have problems you might want to try setting this variable to 0.
+But not all servers correctly handle pipelined commands, so if you have problems you might want to try setting this option to 0.
 
 :::{note}
-Changes to this variable have no effect on open connections.
+Changes to this option have no effect on open connections.
 :::
 
 --------------------------------------------------------------------------------
@@ -321,7 +321,7 @@ Changes to this variable have no effect on open connections.
     set imap_poll_timeout = 15
     ```
 
-This variable specifies the maximum amount of time in seconds that NeoMutt will wait for a response when polling IMAP connections for new mail, before timing out and closing the connection.
+This option specifies the maximum amount of time in seconds that NeoMutt will wait for a response when polling IMAP connections for new mail, before timing out and closing the connection.
 Set to 0 to disable timing out.
 
 --------------------------------------------------------------------------------
@@ -410,5 +410,5 @@ Since these messages are often harmless, or generated due to configuration probl
 
 The name of the user whose mail you intend to access on the IMAP server.
 
-This variable defaults to your user name on the local machine.
+This option defaults to your user name on the local machine.
 

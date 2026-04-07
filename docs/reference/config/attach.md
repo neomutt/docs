@@ -1,6 +1,6 @@
 ---
 title: Attach Options
-description: Configuration variables for attachment handling, saving, forwarding, bouncing, and MIME multipart options.
+description: Config options for attachment handling, saving, forwarding, bouncing, and MIME multipart options.
 keywords: attachment, mime, attach_save_dir, attach_split, bounce, mime_forward, count_alternatives, digest_collapse, message_format, save attachments, forwarding
 ---
 
@@ -31,7 +31,7 @@ The directory where attachments are saved.
     set attach_save_without_prompting = no
     ```
 
-This variable, when set to true, will cause attachments to be saved to the [`$attach_save_dir`](cfg-attach-save-dir) location without prompting the user for the filename.
+This option, when set to true, will cause attachments to be saved to the [`$attach_save_dir`](cfg-attach-save-dir) location without prompting the user for the filename.
 
 --------------------------------------------------------------------------------
 
@@ -59,7 +59,7 @@ The separator to add between attachments when operating (saving, printing, pipin
     set attach_split = yes
     ```
 
-If this variable is _unset_, when operating (saving, printing, piping, etc) on a list of tagged attachments, NeoMutt will concatenate the attachments and will operate on them as a single attachment.
+If this option is _unset_, when operating (saving, printing, piping, etc) on a list of tagged attachments, NeoMutt will concatenate the attachments and will operate on them as a single attachment.
 The [`$attach_sep`](cfg-attach-sep) separator is added after each attachment.
 When _set_, NeoMutt will operate on the attachments one by one.
 
@@ -77,7 +77,7 @@ When _set_, NeoMutt will operate on the attachments one by one.
 
 Controls whether you will be asked to confirm bouncing messages.
 If set to _yes_ you don't get asked if you want to bounce a message.
-Setting this variable to _no_ is not generally useful, and thus not recommended, because you are unable to bounce messages.
+Setting this option to _no_ is not generally useful, and thus not recommended, because you are unable to bounce messages.
 
 --------------------------------------------------------------------------------
 
@@ -154,7 +154,7 @@ Specify the format of attached messages displayed in the [`Attach Dialog`](tour-
 
 When _set_, the message you are forwarding will be attached as a separate `message/rfc822` MIME part instead of included in the main body of the message.
 This is useful for forwarding MIME messages so the receiver can properly view the message as it was delivered to you.
-If you like to switch between MIME and not MIME from mail to mail, set this variable to "ask-no" or "ask-yes".
+If you like to switch between MIME and not MIME from mail to mail, set this option to `ask-no` or `ask-yes`.
 
 :::{seealso}
 [`$forward_decode`](cfg-forward-decode), [`$mime_forward_decode`](cfg-mime-forward-decode)

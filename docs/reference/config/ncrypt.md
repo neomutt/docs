@@ -1,6 +1,6 @@
 ---
 title: Ncrypt Options
-description: Configuration variables for PGP and S/MIME cryptography, signing, encryption, GPGME, and protected headers.
+description: Config options for PGP and S/MIME cryptography, signing, encryption, GPGME, and protected headers.
 keywords: neomutt, ncrypt, pgp, smime, gpgme, encryption, signing, cryptography, crypt_opportunistic_encrypt, protected headers, certificates, security
 ---
 
@@ -49,7 +49,7 @@ If _set_, NeoMutt will include an informative block before an encrypted part, wi
     set crypt_opportunistic_encrypt = no
     ```
 
-Setting this variable will cause NeoMutt to automatically enable and disable encryption, based on whether all message recipient keys can be located by NeoMutt.
+Setting this option will cause NeoMutt to automatically enable and disable encryption, based on whether all message recipient keys can be located by NeoMutt.
 
 When this option is enabled, NeoMutt will enable/disable encryption each time the `To:`, `Cc:`, and `Bcc:` lists are edited.
 If [`$edit_headers`](cfg-edit-headers) is set, NeoMutt will also do so each time the message is edited.
@@ -118,11 +118,11 @@ When [`$crypt_protected_headers_read`](cfg-crypt-protected-headers-read) is set,
 This allows searching/limiting based on the protected Subject header if the mailbox is re-opened, without having to re-open the message each time.
 However, for mbox/mh mailbox types, or if header caching is not set up, you would need to re-open the message each time the mailbox was reopened before you could see or search/limit on the protected subject again.
 
-When this variable is set, NeoMutt additionally saves the protected Subject back **in the clear-text message headers**.
+When this option is set, NeoMutt additionally saves the protected Subject back **in the clear-text message headers**.
 This provides better usability, but with the tradeoff of reduced security.
 The protected Subject header, which may have previously been encrypted, is now stored in clear-text in the message headers.
 Copying the message elsewhere, via NeoMutt or external tools, could expose this previously encrypted data.
-Please make sure you understand the consequences of this before you enable this variable.
+Please make sure you understand the consequences of this before you enable this option.
 
 --------------------------------------------------------------------------------
 
@@ -139,7 +139,7 @@ Please make sure you understand the consequences of this before you enable this 
 
 When [`$crypt_protected_headers_write`](cfg-crypt-protected-headers-write) is set, and the message is marked for encryption, this will be substituted into the Subject field in the message headers.
 
-To prevent a subject from being substituted, unset this variable, or set it to the empty string.
+To prevent a subject from being substituted, unset this option, or set it to the empty string.
 
 --------------------------------------------------------------------------------
 
@@ -205,7 +205,7 @@ If you are using colors to mark these lines, and rely on these, you may _unset_ 
     set crypt_use_gpgme = yes
     ```
 
-This variable controls the use of the GPGME-enabled crypto backends.
+This option controls the use of the GPGME-enabled crypto backends.
 If it is _set_ and NeoMutt was built with GPGME support, the gpgme code for S/MIME and PGP will be used instead of the classic code.
 
 :::{note}
@@ -416,12 +416,12 @@ Specify the format of a command used to decode application/pgp attachments.
     set pgp_decryption_okay = ""
     ```
 
-If you assign text to this variable, then an encrypted PGP message is only considered successfully decrypted if the output from [`$pgp_decrypt_command`](cfg-pgp-decrypt-command) contains the text.
+If you assign text to this option, then an encrypted PGP message is only considered successfully decrypted if the output from [`$pgp_decrypt_command`](cfg-pgp-decrypt-command) contains the text.
 This is used to protect against a spoofed encrypted message, with multipart/encrypted headers but containing a block that is not actually encrypted.
 (e.g. simply signed and ascii armored text).
 
 :::{note}
-If [`$pgp_check_gpg_decrypt_status_fd`](cfg-pgp-check-gpg-decrypt-status-fd) is set, this variable is ignored.
+If [`$pgp_check_gpg_decrypt_status_fd`](cfg-pgp-check-gpg-decrypt-status-fd) is set, this option is ignored.
 :::
 
 --------------------------------------------------------------------------------
@@ -626,8 +626,8 @@ In this case, %r expands to the email address, not the public key ID (the key ID
     set pgp_good_sign = ""
     ```
 
-If you assign a text to this variable, then a PGP signature is only considered verified if the output from [`$pgp_verify_command`](cfg-pgp-verify-command) contains the text.
-Use this variable if the exit code from the command is 0 even for bad signatures.
+If you assign a text to this option, then a PGP signature is only considered verified if the output from [`$pgp_verify_command`](cfg-pgp-verify-command) contains the text.
+Use this option if the exit code from the command is 0 even for bad signatures.
 
 --------------------------------------------------------------------------------
 
@@ -642,7 +642,7 @@ Use this variable if the exit code from the command is 0 even for bad signatures
     set pgp_ignore_subkeys = yes
     ```
 
-Setting this variable will cause NeoMutt to ignore OpenPGP subkeys.
+Setting this option will cause NeoMutt to ignore OpenPGP subkeys.
 Instead, the principal key will inherit the subkeys' capabilities.
 _Unset_ this if you want to play interesting key selection games.
 
@@ -889,7 +889,7 @@ This command is used to create the detached PGP signature for a `multipart/signe
 If _set_, NeoMutt will automatically encode PGP/MIME signed messages as quoted-printable.
 
 :::{warning}
-Unsetting this variable may lead to problems with non-verifyable PGP signatures, so only change this if you know what you are doing
+Unsetting this option may lead to problems with non-verifyable PGP signatures, so only change this if you know what you are doing
 :::
 
 --------------------------------------------------------------------------------
@@ -926,13 +926,13 @@ If _unset_, NeoMutt will prompt for the passphrase and pass it via stdin to the 
 
 :::{note}
 As of version 2.1, GnuPG automatically spawns an agent and requires the agent be used for passphrase management.
-Since that version is increasingly prevalent, this variable now defaults _set_.
+Since that version is increasingly prevalent, this option now defaults _set_.
 :::
 
 NeoMutt works with a GUI or curses pinentry program.
 A TTY pinentry should not be used.
 
-If you are using an older version of GnuPG without an agent running, or another encryption program without an agent, you will need to _unset_ this variable.
+If you are using an older version of GnuPG without an agent running, or another encryption program without an agent, you will need to _unset_ this option.
 
 --------------------------------------------------------------------------------
 
@@ -1004,7 +1004,7 @@ It is _set_ by default.
     set smime_ca_location = ""
     ```
 
-This variable contains the name of either a directory, or a file which contains trusted certificates for use with OpenSSL.
+This option contains the name of either a directory, or a file which contains trusted certificates for use with OpenSSL.
 
 --------------------------------------------------------------------------------
 
@@ -1250,7 +1250,7 @@ To override and to use OpenSSL instead this must be _set_.
 However, this has no effect while replying, since NeoMutt will automatically select the same application that was used to sign/encrypt the original message.
 
 :::{note}
-This variable can be overridden by unsetting [`$crypt_auto_smime`](cfg-crypt-auto-smime)
+This option can be overridden by unsetting [`$crypt_auto_smime`](cfg-crypt-auto-smime)
 :::
 
 --------------------------------------------------------------------------------

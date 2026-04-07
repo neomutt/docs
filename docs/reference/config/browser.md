@@ -1,6 +1,6 @@
 ---
 title: Browser Options
-description: Configuration variables for the file and mailbox browser display, sorting, formatting, and newsgroup listing.
+description: Config options for the file and mailbox browser display, sorting, formatting, and newsgroup listing.
 keywords: neomutt, browser, file browser, folder_format, browser_sort, browser_sort_dirs_first, mask, group_index_format, mailbox_folder_format, directory listing, newsgroup browser
 ---
 
@@ -17,11 +17,11 @@ keywords: neomutt, browser, file browser, folder_format, browser_sort, browser_s
     set browser_abbreviate_mailboxes = yes
     ```
 
-When this variable is _set_, NeoMutt will abbreviate mailbox names in the browser mailbox list, using `~` and `=` shortcuts.
+When this option is _set_, NeoMutt will abbreviate mailbox names in the browser mailbox list, using `~` and `=` shortcuts.
 
 The default `alpha` setting of [`$browser_sort`](cfg-browser-sort) uses locale-based sorting (using [`strcoll(3)`](https://man7.org/linux/man-pages/man3/strcoll.3.html)), which ignores some punctuation.
 This can lead to some situations where the order doesn't make intuitive sense.
-In those cases, it may be desirable to _unset_ this variable.
+In those cases, it may be desirable to _unset_ this option.
 
 --------------------------------------------------------------------------------
 
@@ -64,7 +64,7 @@ Specifies how to sort entries in the file browser.
     set browser_sort_dirs_first = no
     ```
 
-If this variable is _set_, the browser will group directories before files.
+If this option is _set_, the browser will group directories before files.
 
 --------------------------------------------------------------------------------
 

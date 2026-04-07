@@ -1,6 +1,6 @@
 ---
 title: Notmuch Options
-description: Configuration variables for Notmuch integration, including database settings, tags, query windows, and virtual mailboxes.
+description: Config options for Notmuch integration, including database settings, tags, query windows, and virtual mailboxes.
 keywords: notmuch, search, indexing, tagging, virtual mailbox, nm_default_url, nm_query_type, nm_exclude_tags, nm_unread_tag, vfolder, full-text search, email tags
 ---
 
@@ -48,7 +48,7 @@ Configuration profile for notmuch.
     set nm_db_limit = 0
     ```
 
-This variable specifies the default limit used in notmuch queries.
+This option specifies the default limit used in notmuch queries.
 
 --------------------------------------------------------------------------------
 
@@ -62,7 +62,7 @@ This variable specifies the default limit used in notmuch queries.
     set nm_default_url = ""
     ```
 
-This variable specifies the default Notmuch database in format `notmuch://<absolute path>`
+This option specifies the default Notmuch database in format `notmuch://<absolute path>`
 
 --------------------------------------------------------------------------------
 
@@ -91,8 +91,8 @@ The messages tagged with these tags are excluded and not loaded from notmuch DB 
     set nm_flagged_tag = "flagged"
     ```
 
-This variable specifies notmuch tag which is used for flagged messages.
-The variable is used to count flagged messages in DB and set the flagged flag when modifying tags.
+This option specifies notmuch tag which is used for flagged messages.
+The option is used to count flagged messages in DB and set the flagged flag when modifying tags.
 All other NeoMutt commands use standard (e.g. maildir) flags.
 
 --------------------------------------------------------------------------------
@@ -108,7 +108,7 @@ All other NeoMutt commands use standard (e.g. maildir) flags.
     set nm_open_timeout = 5
     ```
 
-This variable specifies the timeout for database open in seconds.
+This option specifies the timeout for database open in seconds.
 
 --------------------------------------------------------------------------------
 
@@ -142,7 +142,7 @@ Default query type used in notmuch queries.
     set nm_query_window_current_position = 0
     ```
 
-This variable contains the position of the current search for window based vfolder.
+This option contains the position of the current search for window based vfolder.
 
 --------------------------------------------------------------------------------
 
@@ -156,7 +156,7 @@ This variable contains the position of the current search for window based vfold
     set nm_query_window_current_search = ""
     ```
 
-This variable contains the currently setup notmuch search for window based vfolder.
+This option contains the currently setup notmuch search for window based vfolder.
 
 --------------------------------------------------------------------------------
 
@@ -171,7 +171,7 @@ This variable contains the currently setup notmuch search for window based vfold
     set nm_query_window_duration = 0
     ```
 
-This variable sets the time duration of a windowed notmuch query.
+This option sets the time duration of a windowed notmuch query.
 Accepted values all non negative integers.
 A value of 0 disables the feature.
 
@@ -187,7 +187,7 @@ A value of 0 disables the feature.
     set nm_query_window_enable = no
     ```
 
-This variable enables windowed notmuch queries even if window duration is 0.
+This option enables windowed notmuch queries even if window duration is 0.
 
 --------------------------------------------------------------------------------
 
@@ -201,7 +201,7 @@ This variable enables windowed notmuch queries even if window duration is 0.
     set nm_query_window_or_terms = ""
     ```
 
-This variable contains additional notmuch search terms for messages to be shown regardless of date.
+This option contains additional notmuch search terms for messages to be shown regardless of date.
 
 Example:
 
@@ -221,7 +221,7 @@ NeoMutt will produce a query window such as: `notmuch://?query=tag:inbox and (da
     set nm_query_window_timebase = week
     ```
 
-This variable sets the time base of a windowed notmuch query.
+This option sets the time base of a windowed notmuch query.
 
 | Accepted Values |
 |-----------------|
@@ -243,7 +243,7 @@ This variable sets the time base of a windowed notmuch query.
     set nm_record_tags = ""
     ```
 
-This variable specifies the notmuch tag modifications (addition, removal, toggling) applied to messages added to the NeoMutt record when [`$nm_record`](cfg-nm-record) is true.
+This option specifies the notmuch tag modifications (addition, removal, toggling) applied to messages added to the NeoMutt record when [`$nm_record`](cfg-nm-record) is true.
 
 :::{seealso}
 [`<modify-labels>`](ref-fn-index) function for the syntax
@@ -262,8 +262,8 @@ This variable specifies the notmuch tag modifications (addition, removal, toggli
     set nm_replied_tag = "replied"
     ```
 
-This variable specifies notmuch tag which is used for replied messages.
-The variable is used to set the replied flag when modifying tags.
+This option specifies notmuch tag which is used for replied messages.
+The option is used to set the replied flag when modifying tags.
 All other NeoMutt commands use standard (e.g. maildir) flags.
 
 --------------------------------------------------------------------------------
@@ -279,8 +279,8 @@ All other NeoMutt commands use standard (e.g. maildir) flags.
     set nm_unread_tag = "unread"
     ```
 
-This variable specifies notmuch tag which is used for unread messages.
-The variable is used to count unread messages in DB and set the unread flag when modifying tags.
+This option specifies notmuch tag which is used for unread messages.
+The option is used to count unread messages in DB and set the unread flag when modifying tags.
 All other NeoMutt commands use standard (e.g. maildir) flags.
 
 --------------------------------------------------------------------------------

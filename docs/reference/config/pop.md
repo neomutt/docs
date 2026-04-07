@@ -1,6 +1,6 @@
 ---
 title: POP3 Options
-description: Configuration variables for POP3 server connections, authentication, polling, and message retrieval.
+description: Config options for POP3 server connections, authentication, polling, and message retrieval.
 keywords: neomutt, pop3, pop, pop_host, pop_user, pop_pass, pop_authenticators, pop_check_interval, pop_delete, oauth, remote mail, fetch mail
 ---
 
@@ -57,7 +57,7 @@ If a method is available but authentication fails, NeoMutt will not connect to t
     set pop_check_interval = 60
     ```
 
-This variable configures how often (in seconds) NeoMutt should look for new mail in the currently selected mailbox if it is a POP mailbox.
+This option configures how often (in seconds) NeoMutt should look for new mail in the currently selected mailbox if it is a POP mailbox.
 
 --------------------------------------------------------------------------------
 
@@ -107,7 +107,7 @@ where "[...]" denotes an optional part.
     set pop_last = no
     ```
 
-If this variable is _set_, NeoMutt will try to use the "`LAST`" POP command for retrieving only unread messages from the POP server when using the [`<fetch-mail>`](ref-fn-index) function.
+If this option is _set_, NeoMutt will try to use the "`LAST`" POP command for retrieving only unread messages from the POP server when using the [`<fetch-mail>`](ref-fn-index) function.
 
 --------------------------------------------------------------------------------
 
@@ -178,5 +178,5 @@ Controls whether or not NeoMutt will try to reconnect to the POP server if the c
 
 Your login name on the POP server.
 
-This variable defaults to your user name on the local machine.
+This option defaults to your user name on the local machine.
 

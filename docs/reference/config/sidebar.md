@@ -1,6 +1,6 @@
 ---
 title: Sidebar Options
-description: Configuration variables for the sidebar panel, including visibility, width, formatting, sorting, and indentation.
+description: Config options for the sidebar panel, including visibility, width, formatting, sorting, and indentation.
 keywords: sidebar, sidebar_visible, sidebar_width, sidebar_format, sidebar_sort, sidebar_short_path, sidebar_folder_indent, folder list, navigation panel, mailbox list
 ---
 
@@ -17,7 +17,7 @@ keywords: sidebar, sidebar_visible, sidebar_width, sidebar_format, sidebar_sort,
     set sidebar_component_depth = 0
     ```
 
-By default the sidebar will show the mailbox's path, relative to the [`$folder`](cfg-folder) variable.
+By default the sidebar will show the mailbox's path, relative to the [`$folder`](cfg-folder) option.
 This specifies the number of parent directories to hide from display in the sidebar.
 For example: If a maildir is normally displayed in the sidebar as dir1/dir2/dir3/maildir, setting `set sidebar_component_depth = 2` will display it as dir3/maildir, having truncated the 2 highest directories.
 
@@ -234,14 +234,14 @@ When set, the sidebar will appear on the right-hand side of the screen.
 (cfg-sidebar-short-path)=
 ## `$sidebar_short_path`
 
-:Description: Abbreviate the paths using the [`$folder`](cfg-folder) variable
+:Description: Abbreviate the paths using the [`$folder`](cfg-folder) option
 :Type: [Boolean](type-bool)
 :Default:
     ```neomuttrc
     set sidebar_short_path = no
     ```
 
-By default the sidebar will show the mailbox's path, relative to the [`$folder`](cfg-folder) variable.
+By default the sidebar will show the mailbox's path, relative to the [`$folder`](cfg-folder) option.
 Setting `set sidebar_shortpath = yes` will shorten the names relative to the previous name.
 Here's an example:
 

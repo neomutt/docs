@@ -1,6 +1,6 @@
 ---
 title: Alias Options
-description: Configuration variables for managing email aliases, address queries, and alias display formatting.
+description: Config options for managing email aliases, address queries, and alias display formatting.
 keywords: alias, address book, contacts, alias_file, alias_format, alias_sort, query_command, query_format, nicknames, address lookup
 ---
 

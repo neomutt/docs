@@ -1,6 +1,6 @@
 ---
 title: Menu Options
-description: Configuration variables for menu navigation, cursor style, scrolling behavior, and context lines.
+description: Config options for menu navigation, cursor style, scrolling behavior, and context lines.
 keywords: neomutt, menu, arrow_cursor, arrow_string, menu_context, menu_move_off, menu_scroll, navigation, scrolling, cursor style, ui
 ---
 
@@ -48,7 +48,7 @@ Specifies the string of [`$arrow_cursor`](cfg-arrow-cursor) when it's enabled.
     set menu_context = 0
     ```
 
-This variable controls the number of lines of context that are given when scrolling through menus.
+This option controls the number of lines of context that are given when scrolling through menus.
 (Similar to [`$pager_context`](cfg-pager-context).)
 
 --------------------------------------------------------------------------------

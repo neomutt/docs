@@ -1,6 +1,6 @@
 ---
 title: Config Options
-description: Complete alphabetical index of all NeoMutt configuration variables with brief descriptions and cross-references.
+description: Complete alphabetical index of all NeoMutt config options with brief descriptions and cross-references.
 keywords: neomutt, configuration, options, settings, reference, alphabetical index, variable list, config overview, all options
 ---
 
@@ -579,7 +579,7 @@ These pages explain how these settings work and how to apply them.
 | [`$sidebar_next_new_wrap`](cfg-sidebar-next-new-wrap)                   | Wrap around when searching for the next mailbox with new email                                             |
 | [`$sidebar_non_empty_mailbox_only`](cfg-sidebar-non-empty-mailbox-only) | Only show folders with a non-zero number of emails                                                         |
 | [`$sidebar_on_right`](cfg-sidebar-on-right)                             | Display the sidebar on the right                                                                           |
-| [`$sidebar_short_path`](cfg-sidebar-short-path)                         | Abbreviate the paths using the [`$folder`](cfg-folder) variable                                            |
+| [`$sidebar_short_path`](cfg-sidebar-short-path)                         | Abbreviate the paths using the [`$folder`](cfg-folder) option                                              |
 | [`$sidebar_sort`](cfg-sidebar-sort)                                     | Sort method for the [Sidebar](tour-sidebar)                                                                |
 | `$sidebar_sort_method`                                                  | {bdg-warning-line}`Renamed to:` [`$sidebar_sort`](cfg-sidebar-sort)                                        |
 | [`$sidebar_visible`](cfg-sidebar-visible)                               | Show the [Sidebar](tour-sidebar)                                                                           |

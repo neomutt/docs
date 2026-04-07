@@ -1,6 +1,6 @@
 ---
 title: Conn Options
-description: Configuration variables for network connections, SSL/TLS certificates, tunnels, and socket settings.
+description: Config options for network connections, SSL/TLS certificates, tunnels, and socket settings.
 keywords: connection, network, ssl, tls, starttls, certificate, tunnel, socket_timeout, ssl_force_tls, ssl_starttls, preconnect, ipv6, account_command, encryption
 ---
 
@@ -37,7 +37,7 @@ Currently supported output lines are `login`, `username`, and `password`.
     set certificate_file = "~/.mutt_certificates"
     ```
 
-This variable specifies the file where the certificates you trust are saved.
+This option specifies the file where the certificates you trust are saved.
 When an unknown certificate is encountered, you are asked if you accept it or not.
 If you accept it, the certificate can also be saved in this file and further connections are automatically accepted.
 
@@ -116,7 +116,7 @@ A negative value causes NeoMutt to wait indefinitely.
     set ssl_ca_certificates_file = ""
     ```
 
-This variable specifies a file containing trusted CA certificates.
+This option specifies a file containing trusted CA certificates.
 Any server certificate that is signed with one of these CA certificates is also automatically accepted.
 
 Example:
@@ -170,7 +170,7 @@ The file containing a client certificate and its associated private key.
     set ssl_force_tls = yes
     ```
 
-If this variable is _set_, NeoMutt will require that all connections to remote servers be encrypted.
+If this option is _set_, NeoMutt will require that all connections to remote servers be encrypted.
 Furthermore it will attempt to negotiate TLS even if the server does not advertise the capability, since it would otherwise have to abort the connection anyway.
 This option supersedes [`$ssl_starttls`](cfg-ssl-starttls).
 
@@ -188,7 +188,7 @@ This option supersedes [`$ssl_starttls`](cfg-ssl-starttls).
     set ssl_min_dh_prime_bits = 0
     ```
 
-This variable specifies the minimum acceptable prime size (in bits)
+This option specifies the minimum acceptable prime size (in bits)
 for use in any Diffie-Hellman key exchange.
 A value of 0 will use the default from the GNUTLS library.
 
@@ -300,7 +300,7 @@ You should only unset this for particular known hosts, using the [`:account-hook
 
 This option should not be changed from the default unless you understand what you are doing.
 
-Setting this variable to _yes_ will permit verifying partial certification chains, i.e. a certificate chain where not the root, but an intermediate certificate CA, or the host certificate, are marked trusted (in [`$certificate_file`](cfg-certificate-file)), without marking the root signing CA as trusted.
+Setting this option to _yes_ will permit verifying partial certification chains, i.e. a certificate chain where not the root, but an intermediate certificate CA, or the host certificate, are marked trusted (in [`$certificate_file`](cfg-certificate-file)), without marking the root signing CA as trusted.
 
 --------------------------------------------------------------------------------
 
@@ -314,7 +314,7 @@ Setting this variable to _yes_ will permit verifying partial certification chain
     set tunnel = ""
     ```
 
-Setting this variable will cause NeoMutt to open a pipe to a command instead of a raw socket.
+Setting this option will cause NeoMutt to open a pipe to a command instead of a raw socket.
 You may be able to use this to set up preauthenticated connections to your IMAP/POP3/SMTP server.
 
 Example:
@@ -349,7 +349,7 @@ When _set_, NeoMutt will assume the [`$tunnel`](cfg-tunnel) connection does not 
 It will also allow IMAP PREAUTH server responses inside a [`$tunnel`](cfg-tunnel) to proceed.
 This is appropriate if [`$tunnel`](cfg-tunnel) uses ssh or directly invokes the server locally.
 
-When _unset_, NeoMutt will negotiate STARTTLS according to the [`$ssl_starttls`](cfg-ssl-starttls) and [`$ssl_force_tls`](cfg-ssl-force-tls) variables.
+When _unset_, NeoMutt will negotiate STARTTLS according to the [`$ssl_starttls`](cfg-ssl-starttls) and [`$ssl_force_tls`](cfg-ssl-force-tls) option.
 If [`$ssl_force_tls`](cfg-ssl-force-tls) is set, NeoMutt will abort connecting if an IMAP server responds with PREAUTH.
 This setting is appropriate if [`$tunnel`](cfg-tunnel) does not provide security and could be tampered with by attackers.
 

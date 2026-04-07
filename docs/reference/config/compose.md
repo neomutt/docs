@@ -1,6 +1,6 @@
 ---
 title: Compose Options
-description: Configuration variables for the compose menu, message preview, header editing, spell checking, and draft handling.
+description: Config options for the compose menu, message preview, header editing, spell checking, and draft handling.
 keywords: compose, compose_format, edit_headers, compose_show_preview, copy, postpone, ispell, spell check, draft, outgoing messages, compose menu
 ---
 
@@ -88,7 +88,7 @@ By default it is shown below it.
     set compose_preview_min_rows = 5
     ```
 
-This variable specifies the minimum number of rows that have to be available for the message preview window to shown.
+This option specifies the minimum number of rows that have to be available for the message preview window to shown.
 
 --------------------------------------------------------------------------------
 
@@ -130,7 +130,7 @@ When _set_, NeoMutt will display user-defined headers (set via [`:my-header`](cm
     set copy = yes
     ```
 
-This variable controls whether or not copies of your outgoing messages will be saved for later references.
+This option controls whether or not copies of your outgoing messages will be saved for later references.
 
 :::{seealso}
 [`$record`](cfg-record), [`$save_name`](cfg-save-name), [`$force_name`](cfg-force-name) and [`:fcc-hook`](cmd-fcc-hook)
