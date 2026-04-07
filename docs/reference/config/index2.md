@@ -185,7 +185,7 @@ Specify the format of the data displayed in the [`Index Dialog`](tour-index).
 | `%u`      | `%{username}`            | User (login) name of the author                                                                                                                |
 | `%v`      | `%{first-name}`          | First name of the author, or the recipient if the message is from you                                                                          |
 | `%W`      | `%{organization}`        | Name of organization of author (`Organization:` field)                                                                                         |
-| `%X`      | `%{attachment-count}`    | Number of MIME attachments (see the `$attachments` section for possible speed effects)                                                         |
+| `%X`      | `%{attachment-count}`    | Number of MIME attachments (see {ref}`how-mime` for possible speed effects)                                                                    |
 | `%x`      | `%{x-comment-to}`        | `X-Comment-To:` field (if present)                                                                                                             |
 | `%Y`      | `%{thread-x-label}`      | `X-Label:` field, if present, and                                                                                                              |
 |           |                          | 1. not at part of a thread tree                                                                                                                |
@@ -215,12 +215,15 @@ Specify the format of the data displayed in the [`Index Dialog`](tour-index).
 
 Date format expressions can be constructed based on relative dates.
 Using the date formatting operators along with nested conditionals, the date format can be modified based on how old a message is.
-See the section on "Conditional Dates" for an explanation and examples.
 
-Note that for mbox/mmdf, `%l` applies to the unprocessed message, and for maildir/mh, the value comes from the `Lines:` header field when present (the meaning is normally the same).
+:::{note}
+For mbox/mmdf, `%l` applies to the unprocessed message, and for maildir/mh, the value comes from the `Lines:` header field when present (the meaning is normally the same).
 Thus the value depends on the encodings used in the different parts of the message and has little meaning in practice.
+:::
 
-Note that these expandos are supported in [`:save-hook`](cmd-save-hook), [`:fcc-hook`](cmd-fcc-hook) and [`:fcc-save-hook`](cmd-fcc-save-hook), too.
+:::{note}
+These expandos are supported in [`:save-hook`](cmd-save-hook), [`:fcc-hook`](cmd-fcc-hook) and [`:fcc-save-hook`](cmd-fcc-save-hook), too.
+:::
 
 :::{seealso}
 **Expandos:** [Tutorial Conditional](tut-cond-expando), [Howto Conditional](how-cond-expando), [Formatting](how-format-expando), [Reference](ref-expandos)

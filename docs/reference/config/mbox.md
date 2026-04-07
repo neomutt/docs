@@ -21,6 +21,8 @@ When this variable is _set_, NeoMutt will use file size attribute instead of acc
 
 This variable is _unset_ by default and should only be enabled when new mail detection for these folder types is unreliable or doesn't work.
 
-Note that enabling this variable should happen before any [`:mailboxes`](cmd-mailboxes) directives occur in configuration files regarding mbox or mmdf folders because NeoMutt needs to determine the initial new mail status of such a mailbox by performing a fast mailbox scan when it is defined.
+:::{note}
+Enabling this variable should happen before any [`:mailboxes`](cmd-mailboxes) directives occur in configuration files regarding mbox or mmdf folders because NeoMutt needs to determine the initial new mail status of such a mailbox by performing a fast mailbox scan when it is defined.
 Afterwards the new mail status is tracked by file size changes.
+:::
 

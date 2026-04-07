@@ -229,7 +229,10 @@ This variable defaults to the value of [`$imap_user`](cfg-imap-user).
 
 The command to run to generate an OAUTH refresh token for authorizing your connection to your IMAP server.
 This command will be run on every connection attempt that uses the OAUTHBEARER or XOAUTH2 authentication mechanisms.
-See "$oauth" for details.
+
+:::{seealso}
+{ref}`how-oauth`
+:::
 
 --------------------------------------------------------------------------------
 

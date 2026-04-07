@@ -80,7 +80,8 @@ Specify the format of the data displayed in the [`Pattern Dialog`](tour-pattern)
 
 Specifies how NeoMutt should expand a simple search into a real search pattern.
 A simple search is one that does not contain any of the `~` pattern operators.
-See "$patterns" for more information on search patterns.
+
+See {ref}`ref-patterns` for more information on search patterns.
 
 simple_search applies to several functions, e.g. [`<delete-pattern>`](ref-fn-index), [`<limit>`](ref-fn-alias), searching in the index, and all of the index colors.
 

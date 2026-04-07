@@ -5,6 +5,7 @@ keywords: threads, threading, use_threads, sort, sort_aux, sort-mailbox, sort-re
 since: 2021-08-01
 ---
 
+(how-use-threads)=
 # Use Threads 🔥
 
 **Since:** NeoMutt 2021-08-01

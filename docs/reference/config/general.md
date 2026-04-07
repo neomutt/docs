@@ -40,15 +40,20 @@ If _set_, hitting backspace against an empty prompt aborts the prompt.
 Specifies the key that can be used to abort prompts.
 The format is the same as used in "bind" commands.
 The default is equivalent to {kbd}`Ctrl-G`.
-Note that the specified key should not be used in other bindings, as the abort operation has higher precedence and the binding will not have the desired effect.
+
+:::{note}
+The specified key should not be used in other bindings, as the abort operation has higher precedence and the binding will not have the desired effect.
+:::
 
 Example:
 ```neomuttrc
 set abort_key = "<Esc>"
 ```
 
-Please note that when using {kbd}`<Esc>` as the abort key, you may also want to set the environment variable ESCDELAY to a low value or even 0 which will reduce the time that ncurses waits to distinguish singular {kbd}`<Esc>` key presses from the start of a terminal escape sequence.
+:::{note}
+When using {kbd}`<Esc>` as the abort key, you may also want to set the environment variable [`ESCDELAY`](ref-env) to a low value or even 0 which will reduce the time that ncurses waits to distinguish singular {kbd}`<Esc>` key presses from the start of a terminal escape sequence.
 The default time is 1000 milliseconds and thus quite noticeable.
+:::
 
 --------------------------------------------------------------------------------
 
@@ -156,7 +161,9 @@ The send-menu may still be accessed once you have finished editing the body of y
 When this option is _set_, you can't use send-hooks that depend on the recipients when composing a new (non-reply) message, as the initial list of recipients is empty.
 :::
 
-Also see [`$fast_reply`](cfg-fast-reply).
+:::{seealso}
+[`$fast_reply`](cfg-fast-reply)
+:::
 
 --------------------------------------------------------------------------------
 
@@ -253,7 +260,9 @@ This variable must be set before using any `color` commands.
 
 When defined, NeoMutt will recode commands in rc files from this encoding to the current character set as specified by [`$charset`](cfg-charset) and aliases written to [`$alias_file`](cfg-alias-file) from the current character set.
 
-Please note that if setting [`$charset`](cfg-charset) it must be done before setting [`$config_charset`](cfg-config-charset).
+:::{note}
+If setting [`$charset`](cfg-charset) it must be done before setting [`$config_charset`](cfg-config-charset).
+:::
 
 Recoding should be avoided as it may render unconvertible characters as question marks which can lead to undesired side effects (for example in regular expressions).
 
@@ -316,7 +325,7 @@ Instead of using [`$date_format`](cfg-date-format) it is encouraged to use "%[fm
 This allows for a more fine grained control of the different menu needs.
 
 This variable controls the format of the date printed by the `%d` sequence in [`$index_format`](cfg-index-format).
-This is passed to the [`strftime(3)`](exp-strftime) function to process the date, see the man page for the proper syntax.
+This is passed to the [`strftime(3)`](exp-strftime) function to process the date.
 
 Unless the first character in the string is a bang (`!`), the month and week day names are expanded according to the locale.
 If the first character in the string is a bang, the bang is discarded, and the month and week day names in the rest of the string are expanded in the _C_ locale (that is in US English).
@@ -491,8 +500,10 @@ If set, flagged messages can't be deleted.
 
 Specifies the default location of your mailboxes.
 A `+` or `=` at the beginning of a pathname will be expanded to the value of this variable.
-Note that if you change this variable (from the default)
-value you need to make sure that the assignment occurs _before_ you use `+` or `=` for any other variables since expansion takes place when handling the [`:mailboxes`](cmd-mailboxes) command.
+
+:::{note}
+If you change this variable value you need to make sure that the assignment occurs _before_ you use `+` or `=` for any other variables since expansion takes place when handling the [`:mailboxes`](cmd-mailboxes) command.
+:::
 
 --------------------------------------------------------------------------------
 
@@ -620,7 +631,9 @@ If not specified in a config file, then NeoMutt will try to determine the hostna
 
 Optionally, NeoMutt can be compiled with a fixed domain name.
 
-Also see [`$use_domain`](cfg-use-domain) and [`$hidden_host`](cfg-hidden-host).
+:::{seealso}
+[`$use_domain`](cfg-use-domain), [`$hidden_host`](cfg-hidden-host)
+:::
 
 --------------------------------------------------------------------------------
 
@@ -659,7 +672,9 @@ The value of this option is ignored if [`$text_flowed`](cfg-text-flowed) is set,
 
 If _set_, read messages marked as flagged will not be moved from your spool mailbox to your [`$mbox`](cfg-mbox) mailbox or to the "mbox" specified by a [`:mbox-hook`](cmd-mbox-hook) command.
 
-Note that [`$keep_flagged`](cfg-keep-flagged) only has an effect if [`$move`](cfg-move) is set.
+:::{note}
+[`$keep_flagged`](cfg-keep-flagged) only has an effect if [`$move`](cfg-move) is set
+:::
 
 --------------------------------------------------------------------------------
 
@@ -690,7 +705,10 @@ If unset a UTC date will be used instead to avoid leaking information about your
     ```
 
 This variable configures how often (in seconds) NeoMutt should look for new mail.
-Also see the [`$timeout`](cfg-timeout) variable.
+
+:::{seealso}
+[`$timeout`](cfg-timeout)
+:::
 
 --------------------------------------------------------------------------------
 
@@ -721,7 +739,10 @@ When _unset_, NeoMutt will notify you if any new mail exists in the mailbox, reg
 
 When _set_, NeoMutt will periodically calculate message statistics of a mailbox while polling for new mail.
 It will check for unread, flagged, and total message counts.
-(Note: IMAP mailboxes only support unread and total counts).
+
+:::{note}
+IMAP mailboxes only support unread and total counts
+:::
 
 Because this operation is more performance intensive, it defaults to _unset_, and has a separate option, [`$mail_check_stats_interval`](cfg-mail-check-stats-interval), to control how often to update these counts.
 
@@ -771,7 +792,9 @@ With this option _set_, the next time you start NeoMutt, the messages will show 
 
 This specifies the folder into which read mail in your [`$spool_file`](cfg-spool-file) folder will be appended.
 
-Also see the [`$move`](cfg-move) variable.
+:::{seealso}
+[`$move`](cfg-move)
+:::
 
 --------------------------------------------------------------------------------
 
@@ -829,7 +852,9 @@ You are free to remove entries at any time.
 
 When setting this variable to a directory, NeoMutt needs to fetch every remote message only once and can perform regular expression searches as fast as for local folders.
 
-Also see the [`$message_cache_clean`](cfg-message-cache-clean) variable.
+:::{seealso}
+[`$message_cache_clean`](cfg-message-cache-clean)
+:::
 
 --------------------------------------------------------------------------------
 
@@ -881,7 +906,9 @@ Used in connection with the [`<pipe-message>`](ref-fn-attach) function.
 When _unset_, NeoMutt will pipe the messages without any preprocessing.
 When _set_, NeoMutt will attempt to decode the messages first.
 
-Also see [`$pipe_decode_weed`](cfg-pipe-decode-weed), which controls whether headers will be weeded when this is _set_.
+:::{seealso}
+[`$pipe_decode_weed`](cfg-pipe-decode-weed), which controls whether headers will be weeded when this is _set_
+:::
 
 --------------------------------------------------------------------------------
 
@@ -944,7 +971,9 @@ In both cases the messages are piped in the current sorted order, and the [`$pip
 NeoMutt allows you to indefinitely "$postpone sending a message" which you are editing.
 When you choose to postpone a message, NeoMutt saves it in the mailbox specified by this variable.
 
-Also see the [`$postpone`](cfg-postpone) variable.
+:::{seealso}
+[`$postpone`](cfg-postpone)
+:::
 
 --------------------------------------------------------------------------------
 
@@ -992,7 +1021,9 @@ If this option is _set_, the message is decoded before it is passed to the exter
 If this option is _unset_, no processing will be applied to the message when printing it.
 The latter setting may be useful if you are using some advanced printer filter which is able to properly format e-mail messages for printing.
 
-Also see [`$print_decode_weed`](cfg-print-decode-weed), which controls whether headers will be weeded when this is _set_.
+:::{seealso}
+[`$print_decode_weed`](cfg-print-decode-weed), which controls whether headers will be weeded when this is _set_
+:::
 
 --------------------------------------------------------------------------------
 
@@ -1080,7 +1111,10 @@ This specifies the file into which your outgoing messages should be appended.
 (This is meant as the primary method for saving a copy of your messages, but another way to do this is using the [`:my-header`](cmd-my-header) command to create a `Bcc:` field with your email address in it.)
 
 The value of [`$record`](cfg-record) is overridden by the [`$force_name`](cfg-force-name) and [`$save_name`](cfg-save-name) variables, and the [`:fcc-hook`](cmd-fcc-hook) command.
-Also see [`$copy`](cfg-copy) and [`$write_bcc`](cfg-write-bcc).
+
+:::{seealso}
+[`$copy`](cfg-copy), [`$write_bcc`](cfg-write-bcc).
+:::
 
 --------------------------------------------------------------------------------
 
@@ -1323,7 +1357,9 @@ When [`$use_threads`](cfg-use-threads) is "threads", the last thread sorts to th
 The use of "reverse-" in [`$sort`](cfg-sort) swaps which end the last thread will sort to.
 :::
 
-See the "Use Threads Feature" section for further explanation and examples, <https://neomutt.org/feature/use-threads>
+:::{seealso}
+{ref}`how-use-threads`
+:::
 
 --------------------------------------------------------------------------------
 
@@ -1350,7 +1386,9 @@ set sort_aux = last-date-received
 
 would mean that if a new message is received in a thread, that subthread becomes the last one displayed (or the first, if you have `set use_threads = reverse`)  When using [`$use_threads`](cfg-use-threads), it is more common to use "last-" with [`$sort`](cfg-sort) and not with [`$sort_aux`](cfg-sort-aux).
 
-See the "Use Threads Feature" section for further explanation and examples, <https://neomutt.org/feature/use-threads>
+:::{seealso}
+{ref}`how-use-threads`
+:::
 
 --------------------------------------------------------------------------------
 
@@ -1422,7 +1460,9 @@ To actually make use of this format's features, you'll need support in your edit
 The option only controls newly composed messages.
 Postponed messages, resent messages, and draft messages (via `-H` on the command line) will use the content-type of the source message.
 
-Note that [`$indent_string`](cfg-indent-string) is ignored when this option is _set_.
+:::{note}
+[`$indent_string`](cfg-indent-string) is ignored when this option is _set_
+:::
 
 --------------------------------------------------------------------------------
 
@@ -1543,7 +1583,9 @@ Example:
 set use_threads = yes
 ```
 
-See the "Use Threads Feature" section for further explanation and examples.
+:::{seealso}
+{ref}`how-use-threads`
+:::
 
 --------------------------------------------------------------------------------
 
@@ -1578,7 +1620,9 @@ When _unset_, NeoMutt will wait for a key only if the external command returned 
 
 When _set_, NeoMutt will weed headers when displaying, forwarding, or replying to messages.
 
-Also see [`$copy_decode_weed`](cfg-copy-decode-weed), [`$pipe_decode_weed`](cfg-pipe-decode-weed), [`$print_decode_weed`](cfg-print-decode-weed).
+:::{seealso}
+[`$copy_decode_weed`](cfg-copy-decode-weed), [`$pipe_decode_weed`](cfg-pipe-decode-weed), [`$print_decode_weed`](cfg-print-decode-weed)
+:::
 
 --------------------------------------------------------------------------------
 
@@ -1596,7 +1640,9 @@ When set to a positive value, NeoMutt will wrap text at [`$wrap`](cfg-wrap) char
 When set to a negative value, NeoMutt will wrap text so that there are [`$wrap`](cfg-wrap) characters of empty space on the right side of the terminal.
 Setting it to zero makes NeoMutt wrap at the terminal width.
 
-Also see [`$reflow_wrap`](cfg-reflow-wrap).
+:::{seealso}
+[`$reflow_wrap`](cfg-reflow-wrap)
+:::
 
 --------------------------------------------------------------------------------
 

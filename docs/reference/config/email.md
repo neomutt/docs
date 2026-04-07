@@ -113,13 +113,13 @@ Controls whether or not NeoMutt includes only the first attachment of the messag
 :Notes: [Colon-separated](type-slist)
 :Default:
     ```neomuttrc
-    set mailcap_path = "~/.mailcap:" PKGDATADIR "/mailcap:" SYSCONFDIR "/mailcap:/etc/mailcap:/usr/etc/mailcap:/usr/local/etc/mailcap"
+    set mailcap_path = "~/.mailcap:/usr/share/neomutt/mailcap:/etc/mailcap:/usr/etc/mailcap:/usr/local/etc/mailcap"
     ```
 
-This variable specifies a list of colon-separated files to consult when attempting to display MIME bodies not directly supported by NeoMutt.
+This variable specifies a list files to consult when attempting to display MIME bodies not directly supported by NeoMutt.
 The default value is generated during startup: see the "$mailcap" section of the manual.
 
-[`$mailcap_path`](cfg-mailcap-path) is overridden by the environment variable `$MAILCAPS`.
+It is overridden by the environment variable [`$MAILCAPS`](ref-env).
 
 The default search path is from [RFC1524](https://www.rfc-editor.org/rfc/rfc1524.html).
 
@@ -179,10 +179,9 @@ This option controls how quotes from format=flowed messages are displayed in the
 When set, this option adds spaces after each level of quote marks, turning ">>>foo" into "> > > foo".
 
 :::{note}
-If [`$reflow_text`](cfg-reflow-text) is _unset_, this option has no effect.
+- If [`$reflow_text`](cfg-reflow-text) is _unset_, this option has no effect.
+- This option does not affect replies when [`$text_flowed`](cfg-text-flowed) is _set_.
 :::
-
-Also, this option does not affect replies when [`$text_flowed`](cfg-text-flowed) is _set_.
 
 --------------------------------------------------------------------------------
 
@@ -200,7 +199,9 @@ When _set_, NeoMutt will reformat paragraphs in text/plain parts marked format=f
 If _unset_, NeoMutt will display paragraphs unaltered from how they appear in the message body.
 See [RFC3676](https://www.rfc-editor.org/rfc/rfc3676.html) for details on the _format=flowed_ format.
 
-Also see [`$reflow_wrap`](cfg-reflow-wrap), and [`$wrap`](cfg-wrap).
+:::{seealso}
+[`$reflow_wrap`](cfg-reflow-wrap), [`$wrap`](cfg-wrap).
+:::
 
 --------------------------------------------------------------------------------
 
@@ -222,7 +223,9 @@ A negative value set the paragraph width relative to the right margin.
 Be aware that the reformatted lines of a paragraph are still subject to [`$wrap`](cfg-wrap).
 This means if [`$reflow_wrap`](cfg-reflow-wrap) is 40 and [`$wrap`](cfg-wrap) is 30, then the paragraph gets reformatted to 40 characters a line (due to [`$reflow_wrap`](cfg-reflow-wrap)) and afterwards each 40-character-line is split at 30 characters (due to [`$wrap`](cfg-wrap)), resulting in alternating line lengths of 30 and 10 characters.
 
-Also see [`$wrap`](cfg-wrap).
+:::{seealso}
+[`$wrap`](cfg-wrap)
+:::
 
 --------------------------------------------------------------------------------
 
@@ -309,10 +312,15 @@ You want to set this variable when NeoMutt suggests you to save attachments to f
 
 When this variable is _set_ interactively, the change won't be active until you change folders.
 
-Note that this use of [RFC2047](https://www.rfc-editor.org/rfc/rfc2047.html)'s encoding is explicitly prohibited by the standard, but nevertheless encountered in the wild and produced by, e.g., Outlook.
+:::{note}
+This use of [RFC2047](https://www.rfc-editor.org/rfc/rfc2047.html)'s encoding is explicitly prohibited by the standard,
+but nevertheless encountered in the wild and produced by, e.g., Outlook.
+:::
 
-Also note that setting this parameter will _not_ have the effect that NeoMutt _generates_ this kind of encoding.
+:::{note}
+Setting this parameter will _not_ have the effect that NeoMutt _generates_ this kind of encoding.
 Instead, NeoMutt will unconditionally use the encoding specified in [RFC2231](https://www.rfc-editor.org/rfc/rfc2231.html).
+:::
 
 --------------------------------------------------------------------------------
 

@@ -124,7 +124,10 @@ If this variable is _set_, NeoMutt will try to use the "`LAST`" POP command for 
 
 The command to run to generate an OAUTH refresh token for authorizing your connection to your POP server.
 This command will be run on every connection attempt that uses the OAUTHBEARER authentication mechanism.
-See "$oauth" for details.
+
+:::{seealso}
+{ref}`how-oauth`
+:::
 
 --------------------------------------------------------------------------------
 

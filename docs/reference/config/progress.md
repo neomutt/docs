@@ -43,7 +43,10 @@ The message is printed after this many messages have been read or searched (e.g.
 This variable is meant to indicate progress when reading or searching large mailboxes which may take some time.
 When set to 0, only a single message will appear before the reading the mailbox.
 
-Also see the [`$write_inc`](cfg-write-inc), [`$net_inc`](cfg-net-inc) and [`$time_inc`](cfg-time-inc) variables and the "$tuning" section of the manual for performance considerations.
+:::{seealso}
+- [`$write_inc`](cfg-write-inc), [`$net_inc`](cfg-net-inc) and [`$time_inc`](cfg-time-inc)
+- {ref}`exp-performance`
+:::
 
 --------------------------------------------------------------------------------
 
@@ -62,7 +65,9 @@ Along with [`$read_inc`](cfg-read-inc), [`$write_inc`](cfg-write-inc), and [`$ne
 It suppresses updates less than [`$time_inc`](cfg-time-inc) milliseconds apart.
 This can improve throughput on systems with slow terminals, or when running NeoMutt on a remote system.
 
-Also see the "$tuning" section of the manual for performance considerations.
+:::{seealso}
+- {ref}`exp-performance`
+:::
 
 --------------------------------------------------------------------------------
 
@@ -80,5 +85,8 @@ Also see the "$tuning" section of the manual for performance considerations.
 When writing a mailbox, a message will be printed every [`$write_inc`](cfg-write-inc) messages to indicate progress.
 If set to 0, only a single message will be displayed before writing a mailbox.
 
-Also see the [`$read_inc`](cfg-read-inc), [`$net_inc`](cfg-net-inc) and [`$time_inc`](cfg-time-inc) variables and the "$tuning" section of the manual for performance considerations.
+:::{seealso}
+ -[`$read_inc`](cfg-read-inc), [`$net_inc`](cfg-net-inc) and [`$time_inc`](cfg-time-inc)
+- {ref}`exp-performance`
+:::
 

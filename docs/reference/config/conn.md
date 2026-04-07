@@ -327,7 +327,11 @@ For this example to work you must be able to log in to the remote machine withou
 :::
 
 When set, NeoMutt uses the tunnel for all remote connections.
-Please see [`:account-hook`](cmd-account-hook) in the manual for how to use different tunnel commands per connection.
+
+:::{seealso}
+[`:account-hook`](cmd-account-hook) for how to use different tunnel commands per connection
+:::
+
 
 --------------------------------------------------------------------------------
 

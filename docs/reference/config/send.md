@@ -883,7 +883,10 @@ set inews_command = "/usr/local/bin/inews -hS"
 
 Specify the format of the `Message-ID:` email header.
 
-Please note that the Message-ID value follows a strict syntax, and you are responsible for ensuring correctness if you change this from the default.
+:::{warning}
+The `Message-ID:` value follows a strict syntax, and you are responsible for ensuring correctness if you change this from the default.
+:::
+
 In particular, the value must follow the syntax in RFC 5322: `"<" id-left "@" id-right ">"`.
 No spaces are allowed, and `id-left` should follow the dot-atom-text syntax in the RFC.
 The `id-right` should generally be left as `%f`.
@@ -997,7 +1000,10 @@ When _set_, the [`$mime_type_query_command`](cfg-mime-type-query-command) will b
 
 This variable specifies whether, when writing a just-sent message to the [`$record`](cfg-record), the message should also be added to the notmuch DB.
 Replies inherit the notmuch tags from the original message.
-See [`$nm_record_tags`](cfg-nm-record-tags) for how to modify the set of notmuch tags assigned to sent messages written to the record.
+
+:::{seealso}
+[`$nm_record_tags`](cfg-nm-record-tags) for how to modify the set of notmuch tags assigned to sent messages written to the record
+:::
 
 --------------------------------------------------------------------------------
 
@@ -1016,12 +1022,18 @@ Setting this variable will cause NeoMutt to always attempt to create an inline (
 This can be overridden by use of the pgp menu, when inline is not required.
 This option does not automatically detect if the (replied-to) message is inline; instead it relies on NeoMutt internals for previously checked/flagged messages.
 
-Note that NeoMutt might automatically use PGP/MIME for messages which consist of more than a single MIME part.
+:::{note}
+NeoMutt might automatically use PGP/MIME for messages which consist of more than a single MIME part.
 NeoMutt can be configured to ask before sending PGP/MIME messages when inline (traditional) would not work.
+:::
 
-Also see the [`$pgp_mime_auto`](cfg-pgp-mime-auto) variable.
+:::{seealso}
+[`$pgp_mime_auto`](cfg-pgp-mime-auto)
+:::
 
-Also note that using the old-style PGP message format is **strongly** **deprecated**.
+:::{warning}
+Using the old-style PGP message format is **strongly** **deprecated**
+:::
 
 --------------------------------------------------------------------------------
 
@@ -1068,9 +1080,14 @@ When _set_, NeoMutt will use this as a fallback encryption key for postponed mes
 Controls whether or not NeoMutt recalls postponed messages when composing a new message.
 
 Setting this variable to _yes_ is not generally useful, and thus not recommended.
-Note that the [`<recall-message>`](ref-fn-index) function can be used to manually recall postponed messages.
 
-Also see [`$postponed`](cfg-postponed) variable.
+:::{note}
+[`<recall-message>`](ref-fn-index) can be used to manually recall postponed messages
+:::
+
+:::{seealso}
+[`$postponed`](cfg-postponed)
+:::
 
 --------------------------------------------------------------------------------
 
@@ -1086,7 +1103,9 @@ Also see [`$postponed`](cfg-postponed) variable.
 
 If _unset_ and you are replying to a message sent by you, NeoMutt will assume that you want to reply to the recipients of that message rather than to yourself.
 
-Also see the [`:alternates`](cmd-alternates) command.
+:::{seealso}
+[`:alternates`](cmd-alternates)
+:::
 
 --------------------------------------------------------------------------------
 
@@ -1154,7 +1173,9 @@ It may sometimes arrive that you receive mail to a certain machine, move the mes
 If this variable is _set_, the default `From:` line of the reply messages is built using the address where you received the messages you are replying to **if** that address matches your [`:alternates`](cmd-alternates).  
 If the variable is _unset_, or the address that would be used doesn't match your [`:alternates`](cmd-alternates), the `From:` line will use your address on the current machine.
 
-Also see the [`:alternates`](cmd-alternates) command and [`$reverse_real_name`](cfg-reverse-real-name).
+:::{seealso}
+[`:alternates`](cmd-alternates), [`$reverse_real_name`](cfg-reverse-real-name)
+:::
 
 --------------------------------------------------------------------------------
 
@@ -1330,7 +1351,10 @@ set smtp_authenticators = "digest-md5:cram-md5"
 
 The command to run to generate an OAUTH refresh token for authorizing your connection to your SMTP server.
 This command will be run on every connection attempt that uses the OAUTHBEARER or XOAUTH2 authentication mechanisms.
-See "$oauth" for details.
+
+:::{seealso}
+{ref}`how-oauth`
+:::
 
 --------------------------------------------------------------------------------
 
@@ -1347,7 +1371,10 @@ See "$oauth" for details.
 
 Specifies the password for your SMTP account.
 If _unset_, NeoMutt will prompt you for your password when you first send mail via SMTP.
-See [`$smtp_url`](cfg-smtp-url) to configure NeoMutt to send mail via SMTP.
+
+:::{seealso}
+[`$smtp_url`](cfg-smtp-url) to configure NeoMutt to send mail via SMTP
+:::
 
 :::{warning}
 Only use this option when you are on a fairly secure machine, because the superuser can read your neomuttrc even if you are the only one who can read the file.
@@ -1376,7 +1403,9 @@ smtp[s]://[user[:pass]@]host[:port]
 where "[...]" denotes an optional part.
 Setting this variable overrides the value of the [`$sendmail`](cfg-sendmail) variable.
 
-Also see [`$write_bcc`](cfg-write-bcc).
+:::{seealso}
+[`$write_bcc`](cfg-write-bcc)
+:::
 
 --------------------------------------------------------------------------------
 
@@ -1500,6 +1529,8 @@ Some MTAs, such as Exim and Courier, do not strip the `Bcc:` header; so it is ad
 
 If NeoMutt is set to deliver directly via SMTP(see [`$smtp_url`](cfg-smtp-url)), this option does nothing: NeoMutt will never write out the `Bcc:` header in this case.
 
-Note this option only affects the sending of messages.
+:::{note}
+This option only affects the sending of messages.
 Fcc'ed copies of a message will always contain the `Bcc:` header if one exists.
+:::
 

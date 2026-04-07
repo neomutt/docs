@@ -25,7 +25,11 @@ Note that this may override your color choices, and even present a security prob
 [-- PGP output follows ...
 ```
 
-and give it the same color as your attachment color (see also [`$crypt_timestamp`](cfg-crypt-timestamp)).
+and give it the same color as your attachment color
+
+:::{seealso}
+[`$crypt_timestamp`](cfg-crypt-timestamp)
+:::
 
 --------------------------------------------------------------------------------
 
@@ -69,7 +73,9 @@ When _unset_, color is applied to the entire header.
 
 One use of this option might be to apply color to just the header labels.
 
-See [`:color`](cmd-color) for more details.
+:::{seealso}
+[`:color`](cmd-color)
+:::
 
 --------------------------------------------------------------------------------
 
@@ -86,7 +92,9 @@ See [`:color`](cmd-color) for more details.
 Controls the display of wrapped lines in the internal pager.
 If set, a `+` marker is displayed at the beginning of wrapped lines.
 
-Also see the [`$smart_wrap`](cfg-smart-wrap) variable.
+:::{seealso}
+[`$smart_wrap`](cfg-smart-wrap)
+:::
 
 --------------------------------------------------------------------------------
 
@@ -260,7 +268,10 @@ By default, search results will be top-aligned.
 Controls the display of lines longer than the screen width in the internal pager.
 If _set_, long lines are wrapped at a word boundary.
 If _unset_, lines are simply wrapped at the screen edge.
-Also see the [`$markers`](cfg-markers) variable.
+
+:::{seealso}
+[`$markers`](cfg-markers)
+:::
 
 --------------------------------------------------------------------------------
 

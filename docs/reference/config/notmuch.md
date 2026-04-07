@@ -244,7 +244,10 @@ This variable sets the time base of a windowed notmuch query.
     ```
 
 This variable specifies the notmuch tag modifications (addition, removal, toggling) applied to messages added to the NeoMutt record when [`$nm_record`](cfg-nm-record) is true.
-See the description of the [`<modify-labels>`](ref-fn-index) function for the syntax.
+
+:::{seealso}
+[`<modify-labels>`](ref-fn-index) function for the syntax
+:::
 
 --------------------------------------------------------------------------------
 

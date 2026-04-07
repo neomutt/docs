@@ -4,6 +4,7 @@ description: Configure MIME type mappings, mailcap viewers, auto-view, multipart
 keywords: mime, mailcap, auto-view, alternative-order, attachments, mime.types, content-type, multipart, copiousoutput, needsterminal, nametemplate, view-mailcap, view-attach, compose menu, attachment menu, encoding, pager, rfc1524
 ---
 
+(how-mime)=
 # Configure MIME Handling
 
 ## MIME Overview

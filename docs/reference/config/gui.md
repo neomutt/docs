@@ -117,7 +117,10 @@ When _set_, NeoMutt will not show the subject of messages in the thread tree tha
     ```
 
 When _set_, NeoMutt will not show the presence of messages that are hidden by limiting, at the top of threads in the thread tree.
-Note that when [`$hide_limited`](cfg-hide-limited) is _set_, this option will have no effect.
+
+:::{note}
+When [`$hide_limited`](cfg-hide-limited) is _set_, this option will have no effect
+:::
 
 --------------------------------------------------------------------------------
 
@@ -132,7 +135,10 @@ Note that when [`$hide_limited`](cfg-hide-limited) is _set_, this option will ha
     ```
 
 When _set_, NeoMutt will not show the presence of missing messages at the top of threads in the thread tree.
-Note that when [`$hide_missing`](cfg-hide-missing) is _set_, this option will have no effect.
+
+:::{note}
+When [`$hide_missing`](cfg-hide-missing) is _set_, this option will have no effect
+:::
 
 --------------------------------------------------------------------------------
 

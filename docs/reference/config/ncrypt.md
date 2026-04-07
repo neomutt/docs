@@ -207,9 +207,14 @@ If you are using colors to mark these lines, and rely on these, you may _unset_ 
 
 This variable controls the use of the GPGME-enabled crypto backends.
 If it is _set_ and NeoMutt was built with GPGME support, the gpgme code for S/MIME and PGP will be used instead of the classic code.
-Note that you need to set this option in .neomuttrc; it won't have any effect when used interactively.
 
-Note that the GPGME backend does not support creating old-style inline (traditional) PGP encrypted or signed messages (see [`$pgp_auto_inline`](cfg-pgp-auto-inline)).
+:::{note}
+You need to set this option in `.neomuttrc`; it won't have any effect when used interactively.
+:::
+
+:::{note}
+The GPGME backend does not support creating old-style inline (traditional) PGP encrypted or signed messages (see [`$pgp_auto_inline`](cfg-pgp-auto-inline)).
+:::
 
 --------------------------------------------------------------------------------
 
@@ -295,12 +300,18 @@ This option controls whether NeoMutt generates old-style inline (traditional) PG
 This can be overridden by use of the pgp menu, when inline is not required.
 The GPGME backend does not support this option.
 
-Note that NeoMutt might automatically use PGP/MIME for messages which consist of more than a single MIME part.
+:::{note}
+NeoMutt might automatically use PGP/MIME for messages which consist of more than a single MIME part.
 NeoMutt can be configured to ask before sending PGP/MIME messages when inline (traditional) would not work.
+:::
 
-Also see the [`$pgp_mime_auto`](cfg-pgp-mime-auto) variable.
+:::{seealso}
+[`$pgp_mime_auto`](cfg-pgp-mime-auto)
+:::
 
-Also note that using the old-style PGP message format is **strongly** **deprecated**.
+:::{warning}
+Using the old-style PGP message format is **strongly** **deprecated**
+:::
 
 --------------------------------------------------------------------------------
 
@@ -349,10 +360,14 @@ If _unset_, NeoMutt will instead match the status fd output against [`$pgp_decry
     set pgp_clear_sign_command = ""
     ```
 
+:::{warning}
 This format is used to create an old-style "clearsigned" PGP message.
-Note that the use of this format is **strongly** **deprecated**.
+Using the old-style PGP message format is **strongly** **deprecated**
+:::
 
-Note that in this case, `%r` expands to the search string, which is a list of one or more quoted values such as email address, name, or keyid.
+:::{note}
+In this case, `%r` expands to the search string, which is a list of one or more quoted values such as email address, name, or keyid.
+:::
 
 :::{seealso}
 - [`$pgp_decode_command`](cfg-pgp-decode-command) for a full list of expandos
@@ -381,7 +396,6 @@ Specify the format of a command used to decode application/pgp attachments.
 | `%a`  | `%{sign-as}`      | Value of [`$pgp_sign_as`](cfg-pgp-sign-as) if set, otherwise the value of [`$pgp_default_key`](cfg-pgp-default-key) |
 | `%f`  | `%{file-message}` | Expands to the name of a file containing a message                                                                  |
 | `%p`  | `%{need-pass}`    | Expands to `PGPPASSFD=0` when a pass phrase is needed, to an empty string otherwise.                                |
-|       |                   | Note: This may be used with a `%<...>` construct.                                                                   |
 | `%r`  | `%{key-ids}`      | One or more key IDs (or fingerprints if available) of a `multipart/signed` attachment when verifying it             |
 
 :::{seealso}
@@ -406,7 +420,9 @@ If you assign text to this variable, then an encrypted PGP message is only consi
 This is used to protect against a spoofed encrypted message, with multipart/encrypted headers but containing a block that is not actually encrypted.
 (e.g. simply signed and ascii armored text).
 
-Note that if [`$pgp_check_gpg_decrypt_status_fd`](cfg-pgp-check-gpg-decrypt-status-fd) is set, this variable is ignored.
+:::{note}
+If [`$pgp_check_gpg_decrypt_status_fd`](cfg-pgp-check-gpg-decrypt-status-fd) is set, this variable is ignored.
+:::
 
 --------------------------------------------------------------------------------
 
@@ -469,7 +485,9 @@ It will also be used for signing unless [`$pgp_sign_as`](cfg-pgp-sign-as) is set
 
 This command is used to encrypt a body part without signing it.
 
-Note that in this case, %r expands to the search string, which is a list of one or more quoted values such as email address, name, or keyid.
+:::{note}
+In this case, %r expands to the search string, which is a list of one or more quoted values such as email address, name, or keyid.
+:::
 
 :::{seealso}
 - [`$pgp_decode_command`](cfg-pgp-decode-command) for a full list of expandos
@@ -584,8 +602,10 @@ This command is used to export a public key from the user's key ring.
 
 This command is invoked whenever NeoMutt needs to fetch the public key associated with an email address.
 
+:::{note}
 Only The `%r` expando is used with this format.
-Note that in this case, %r expands to the email address, not the public key ID (the key ID is unknown, which is why NeoMutt is invoking this command).
+In this case, %r expands to the email address, not the public key ID (the key ID is unknown, which is why NeoMutt is invoking this command).
+:::
 
 :::{seealso}
 - [`$pgp_decode_command`](cfg-pgp-decode-command) for a full list of expandos
@@ -764,7 +784,9 @@ This option now only controls the display of key IDs in the key selection menu a
 
 This option controls whether NeoMutt will prompt you for automatically sending a (signed/encrypted) message using PGP/MIME when inline (traditional) fails (for any reason).
 
-Also note that using the old-style PGP message format is **strongly** **deprecated**.
+:::{warning}
+Using the old-style PGP message format is **strongly** **deprecated**
+:::
 
 --------------------------------------------------------------------------------
 
@@ -865,7 +887,10 @@ This command is used to create the detached PGP signature for a `multipart/signe
     ```
 
 If _set_, NeoMutt will automatically encode PGP/MIME signed messages as quoted-printable.
-Please note that unsetting this variable may lead to problems with non-verifyable PGP signatures, so only change this if you know what you are doing.
+
+:::{warning}
+Unsetting this variable may lead to problems with non-verifyable PGP signatures, so only change this if you know what you are doing
+:::
 
 --------------------------------------------------------------------------------
 
@@ -899,8 +924,10 @@ The number of seconds after which a cached passphrase will expire if not used.
 If _set_, NeoMutt expects a `gpg-agent(1)` process will handle private key passphrase prompts.
 If _unset_, NeoMutt will prompt for the passphrase and pass it via stdin to the pgp command.
 
-Note that as of version 2.1, GnuPG automatically spawns an agent and requires the agent be used for passphrase management.
+:::{note}
+As of version 2.1, GnuPG automatically spawns an agent and requires the agent be used for passphrase management.
 Since that version is increasingly prevalent, this variable now defaults _set_.
+:::
 
 NeoMutt works with a GUI or curses pinentry program.
 A TTY pinentry should not be used.
@@ -1221,7 +1248,10 @@ This command is used to import a certificate via smime_keys.
 The default behavior of NeoMutt is to use PGP on all auto-sign/encryption operations.
 To override and to use OpenSSL instead this must be _set_.
 However, this has no effect while replying, since NeoMutt will automatically select the same application that was used to sign/encrypt the original message.
-(Note that this variable can be overridden by unsetting [`$crypt_auto_smime`](cfg-crypt-auto-smime).)
+
+:::{note}
+This variable can be overridden by unsetting [`$crypt_auto_smime`](cfg-crypt-auto-smime)
+:::
 
 --------------------------------------------------------------------------------
 

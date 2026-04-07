@@ -4,6 +4,7 @@ description: Configure header and body caching to speed up IMAP, POP, Maildir, a
 keywords: header cache, body cache, caching, hcache, message cache, lz4, zlib, zstd, compression, performance, header_cache, message_cache_dir, header_cache_backend, imap, pop, maildir, mh, maintenance
 ---
 
+(how-caching)=
 # Set Up Header/Body Caching
 
 NeoMutt contains two types of local caching: *(1)* the so-called "header caching" and *(2)* the so-called "body caching" which are both described in this section.

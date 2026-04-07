@@ -22,7 +22,7 @@ If the path points to an existing directory, NeoMutt will create a dedicated hea
 Otherwise, the path points to a regular file, which will be created as needed and used as a shared global header cache for all folders.
 By default it is _unset_ so no header caching will be used.
 
-Header caching can greatly improve speed when opening POP, IMAP MH or Maildir folders, see "$caching" in the NeoMutt Guide for details.
+Header caching can greatly improve speed when opening POP, IMAP MH or Maildir folders, see {ref}`how-caching` for details.
 
 --------------------------------------------------------------------------------
 
