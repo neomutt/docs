@@ -119,6 +119,7 @@ This option can also be set using the command line option `-g`, the environment 
 
 :Description: Allowed authentication methods
 :Type: [String](type-string)
+:Notes: [Case Insensitive](type-general)
 :Default: (empty)
     ```neomuttrc
     set nntp_authenticators = ""
@@ -126,7 +127,6 @@ This option can also be set using the command line option `-g`, the environment 
 
 This is a colon-delimited list of authentication methods NeoMutt may attempt to use to log in to a news server, in the order NeoMutt should try them.
 Authentication methods are either `user` or any SASL mechanism, e.g. `digest-md5`, `gssapi` or `cram-md5`.
-This option is case-insensitive.
 If it's _unset_ (the default)
 NeoMutt will try all available methods, in order from most-secure to least-secure.
 

@@ -12,7 +12,7 @@ keywords: neomutt, imap, imap_authenticators, imap_idle, imap_condstore, imap_qr
 
 :Description: List of allowed IMAP authentication methods (colon-separated)
 :Type: [String List](type-slist)
-:Notes: [Colon-separated](type-slist)
+:Notes: [Case Insensitive](type-general), [Colon-separated](type-slist)
 :Default: (empty)
     ```neomuttrc
     set imap_authenticators = ""
@@ -20,7 +20,6 @@ keywords: neomutt, imap, imap_authenticators, imap_idle, imap_condstore, imap_qr
 
 This is a colon-separated list of authentication methods NeoMutt may attempt to use to log in to an IMAP server, in the order NeoMutt should try them.
 Authentication methods are either `login` or the right side of an IMAP `AUTH=xxx` capability string, e.g. `digest-md5`, `gssapi` or `cram-md5`.
-This option is case-insensitive.
 If it's _unset_ (the default) NeoMutt will try all available methods, in order from most-secure to least-secure.
 
 Example:

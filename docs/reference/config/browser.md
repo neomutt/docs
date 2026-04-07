@@ -198,7 +198,6 @@ Specify the format of network mailboxes, e.g. IMAP, displayed in the [`Browser D
 
 A regular expression used in the file browser, optionally preceded by the _not_ operator `!`.
 Only files whose names match this mask will be shown.
-The match is always case-sensitive.
 
 --------------------------------------------------------------------------------
 

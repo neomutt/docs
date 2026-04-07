@@ -1298,7 +1298,7 @@ Do not set this variable unless you really know what you are doing, and are prep
 
 :Description: List of allowed authentication methods (colon-separated)
 :Type: [String List](type-slist)
-:Notes: [Colon-separated](type-slist)
+:Notes: [Case Insensitive](type-general), [Colon-separated](type-slist)
 :Default: (empty)
     ```neomuttrc
     set smtp_authenticators = ""
@@ -1306,7 +1306,6 @@ Do not set this variable unless you really know what you are doing, and are prep
 
 This is a colon-separated list of authentication methods NeoMutt may attempt to use to log in to an SMTP server, in the order NeoMutt should try them.
 Authentication methods are any SASL mechanism, e.g. `plain`, `digest-md5`, `gssapi` or `cram-md5`.
-This option is case-insensitive.
 If it is unset (the default) NeoMutt will try all available methods, in order from most-secure to least-secure.
 Support for the `plain` mechanism is bundled; other mechanisms are provided by an external SASL library (look for '+sasl' in the output of `neomutt -v`).
 
