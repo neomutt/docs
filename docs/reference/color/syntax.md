@@ -19,8 +19,8 @@ three kinds of color object, each with different syntax:
 | **Pattern** | `color <object> [<attr> ...] <fg> <bg> <pattern>` | pattern  | multiple |
 
 - **Simple** objects have a single color.  Setting a new color replaces the old one.
-- **Regex** and **Pattern** objects are cumulative.  Each `color` command adds
-  a rule to a list.  All matching rules are applied in order.
+- **Regex** and **Pattern** objects are cumulative.
+  Each `color` command adds a rule to a list.  All matching rules are applied in order.
 
 ---
 
@@ -44,8 +44,7 @@ NeoMutt supports several ways to specify a color:
 | Palette     | `color123`  | 256-color palette (color0 .. color255)           |
 | RGB hex     | `#FF5F00`   | 24-bit true color (requires `color_directcolor`) |
 
-The eight named colors are: `black`, `red`, `green`, `yellow`, `blue`,
-`magenta`, `cyan`, `white`.
+The eight named colors are: `black`, `red`, `green`, `yellow`, `blue`, `magenta`, `cyan`, `white`.
 
 ### Attributes
 
@@ -70,8 +69,8 @@ color indicator bold underline white blue
 
 ## Simple Color Objects
 
-Simple objects have **a single color**.  Each `color` command replaces any
-previous color for that object.
+Simple objects have **a single color**.
+Each `color` command replaces any previous color for that object.
 
 ### General UI
 
@@ -92,19 +91,19 @@ previous color for that object.
 | `underline` | Underlined text in the pager                   |
 
 ```neomuttrc
-color normal      default   default
-color error       red       default
-color warning     yellow    default
-color message     cyan      default
-color indicator   reverse   white     black
-color prompt      yellow    default
-color options     brightcyan default
-color search      black     yellow
-color markers     brightblue default
-color progress    white     blue
-color bold        brightwhite default
-color italic      brightyellow default
-color underline   brightgreen default
+color normal            default      default
+color error             red          default
+color warning           yellow       default
+color message           cyan         default
+color indicator reverse white        black
+color prompt            yellow       default
+color options           brightcyan   default
+color search            black        yellow
+color markers           brightblue   default
+color progress          white        blue
+color bold              brightwhite  default
+color italic            brightyellow default
+color underline         brightgreen  default
 ```
 
 ### Pager & Message Display
@@ -118,18 +117,18 @@ color underline   brightgreen default
 | `tree`       | Thread-tree drawing characters          |
 
 ```neomuttrc
-color hdrdefault  cyan      default
-color signature   brightblack default
-color tilde       brightblack default
-color attachment  magenta   default
-color tree        red       default
+color attachment magenta     default
+color hdrdefault cyan        default
+color signature  brightblack default
+color tilde      brightblack default
+color tree       red         default
 ```
 
 ### Compose Screen
 
 | Object                     | Description                                   |
 |----------------------------|-----------------------------------------------|
-| `compose_header`           | Header labels (From:, To:, etc.)              |
+| `compose_header`           | Header labels (`From:`, `To:`, etc.)          |
 | `compose_security_none`    | Security indicator: no encryption/signing     |
 | `compose_security_sign`    | Security indicator: message will be signed    |
 | `compose_security_encrypt` | Security indicator: message will be encrypted |
@@ -145,17 +144,17 @@ color compose_security_both     brightgreen default
 
 ### Sidebar
 
-| Object               | Description                                  |
-|----------------------|----------------------------------------------|
-| `sidebar_background` | Background color for the entire sidebar      |
-| `sidebar_divider`    | Divider line between sidebar and index/pager |
-| `sidebar_highlight`  | The currently highlighted mailbox            |
-| `sidebar_indicator`  | The currently open mailbox                   |
-| `sidebar_new`        | Mailboxes with new mail                      |
-| `sidebar_unread`     | Mailboxes with unread mail                   |
-| `sidebar_flagged`    | Mailboxes with flagged messages              |
-| `sidebar_ordinary`   | Mailboxes with no new/flagged messages       |
-| `sidebar_spool_file` | The primary incoming mailbox (`$spoolfile`)  |
+| Object               | Description                                                  |
+|----------------------|--------------------------------------------------------------|
+| `sidebar_background` | Background color for the entire sidebar                      |
+| `sidebar_divider`    | Divider line between sidebar and index/pager                 |
+| `sidebar_highlight`  | The currently highlighted mailbox                            |
+| `sidebar_indicator`  | The currently open mailbox                                   |
+| `sidebar_new`        | Mailboxes with new mail                                      |
+| `sidebar_unread`     | Mailboxes with unread mail                                   |
+| `sidebar_flagged`    | Mailboxes with flagged messages                              |
+| `sidebar_ordinary`   | Mailboxes with no new/flagged messages                       |
+| `sidebar_spool_file` | The primary incoming mailbox [`$spool_file`](cfg-spool_file) |
 
 ```neomuttrc
 color sidebar_background  default       default
@@ -171,8 +170,8 @@ color sidebar_spool_file  brightmagenta default
 
 ### Quoted Text
 
-Quoted text levels 0-9, for nested email replies.  `quoted0` (or the
-deprecated alias `quoted`) is the outermost level.
+Quoted text levels 0-9, for nested email replies.
+`quoted0` (or the deprecated alias `quoted`) is the outermost level.
 
 | Object    | Description                      |
 |-----------|----------------------------------|
@@ -207,16 +206,14 @@ color stripe_odd   default    default
 ## Regex Color Objects
 
 Regex objects are **cumulative** — each `color` command adds a rule to a list.
-Multiple rules can match the same text; all matching rules apply in order, with
-later rules overriding earlier ones for overlapping regions.
+Multiple rules can match the same text; all matching rules apply in order, with later rules overriding earlier ones for overlapping regions.
 
-The regex is a POSIX Extended Regular Expression and is matched against the
-text being displayed.  Case-sensitive matching is used when the regex contains
-uppercase letters; otherwise matching is case-insensitive.
+The regex is a POSIX Extended Regular Expression and is matched against the text being displayed.
+Case-sensitive matching is used when the regex contains uppercase letters; otherwise matching is case-insensitive.
 
 ### `body`
 
-Colorize text in the message body matching a regex.
+Colorise text in the message body matching a regex.
 
 ```neomuttrc
 color body [<attr> ...] <fg> <bg> <regex>
@@ -243,8 +240,8 @@ color body  cyan         default  "[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{
 
 ### `header`
 
-Colorize message headers matching a regex.  The regex is matched against
-the entire header line (name and value).
+Colorise message headers matching a regex.
+The regex is matched against the entire header line (name and value).
 
 ```neomuttrc
 color header [<attr> ...] <fg> <bg> <regex>
@@ -261,7 +258,7 @@ color header  yellow       default  "^X-Mailer:"
 
 ### `attach_headers`
 
-Colorize MIME attachment header lines in the pager, matching a regex.
+Colorise MIME attachment header lines in the pager, matching a regex.
 
 ```neomuttrc
 color attach_headers [<attr> ...] <fg> <bg> <regex>
@@ -276,12 +273,11 @@ color attach_headers  green          default  "application/pgp-signature"
 
 ## Pattern Color Objects
 
-Pattern objects are **cumulative** — each `color` command adds a rule to a
-list.  Multiple rules can match the same message; all matching rules apply in
-order.
+Pattern objects are **cumulative** — each `color` command adds a rule to a list.
+Multiple rules can match the same message; all matching rules apply in order.
 
-The pattern uses NeoMutt's search pattern language (the same syntax used by `limit`,
-`tag-pattern`, `score`, hooks, etc.).  Common pattern operators:
+The pattern uses NeoMutt's search pattern language (the same syntax used by `limit`, `tag-pattern`, `score`, hooks, etc.).
+Common pattern operators:
 
 | Pattern     | Matches                                 |
 |-------------|-----------------------------------------|
@@ -300,7 +296,7 @@ The pattern uses NeoMutt's search pattern language (the same syntax used by `lim
 
 ### `index`
 
-Colorize the entire index line for messages matching a pattern.
+Colorise the entire index line for messages matching a pattern.
 
 ```neomuttrc
 color index [<attr> ...] <fg> <bg> <pattern>
@@ -318,8 +314,8 @@ color index  brightred    default  "~s urgent"
 
 ### `index_*` Sub-fields
 
-Colorize individual fields within the index line.  These all use the same
-pattern syntax as `index`.
+Colorise individual fields within the index line.
+These all use the same pattern syntax as `index`.
 
 | Object            | Field colored                            |
 |-------------------|------------------------------------------|
@@ -355,9 +351,9 @@ color index_flags   red          default  "~D"
 
 ## Status Bar Colors
 
-The `status` object is a special case.  Used without a regex, it is a
-**simple** (single) color.  Used with a regex, it is **cumulative** and
-supports submatch highlighting.
+The `status` object is a special case.
+Used without a regex, it is a **simple** (single) color.
+Used with a regex, it is **cumulative** and supports submatch highlighting.
 
 ### Simple status color
 
@@ -372,7 +368,7 @@ color status  bold white blue
 
 ### Status bar with regex
 
-Colorize parts of the status bar matching a regex.
+Colorise parts of the status bar matching a regex.
 
 ```neomuttrc
 color status [<attr> ...] <fg> <bg> <regex>
@@ -388,14 +384,14 @@ color status  brightyellow blue  "Msgs:[0-9]+"
 
 ### Status bar with submatch
 
-Colorize only the Nth parenthesized submatch of a regex.
+Colorise only the Nth parenthesized submatch of a regex.
 
 ```neomuttrc
 color status [<attr> ...] <fg> <bg> <regex> <num>
 ```
 
 ```neomuttrc
-# Colorize just the number inside "Msgs:NNN"
+# Colorise just the number inside "Msgs:NNN"
 color status  brightred  blue  "Msgs:([0-9]+)" 1
 ```
 
@@ -435,18 +431,18 @@ uncolor header "^X-Mailer:"
 ### Simple (single color, last-one-wins)
 
 ```
-attachment             compose_header         hdrdefault
-bold                   compose_security_both  indicator
+attachment             compose_header            hdrdefault
+bold                   compose_security_both     indicator
 error                  compose_security_encrypt  markers
-italic                 compose_security_none  message
-normal                 compose_security_sign  options
-progress               search                 signature
-prompt                 stripe_even            tilde
-tree                   stripe_odd             underline
-warning                                       quoted0..quoted9
-sidebar_background     sidebar_highlight      sidebar_ordinary
-sidebar_divider        sidebar_indicator      sidebar_spool_file
-sidebar_flagged        sidebar_new            sidebar_unread
+italic                 compose_security_none     message
+normal                 compose_security_sign     options
+progress               search                    signature
+prompt                 stripe_even               tilde
+tree                   stripe_odd                underline
+warning                                          quoted0..quoted9
+sidebar_background     sidebar_highlight         sidebar_ordinary
+sidebar_divider        sidebar_indicator         sidebar_spool_file
+sidebar_flagged        sidebar_new               sidebar_unread
 ```
 
 ### Regex (cumulative, POSIX regex)

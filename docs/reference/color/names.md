@@ -21,7 +21,8 @@ Colours can be specified in three ways:
 
 ## Regex-Matched and Pattern-Matched Objects
 
-Some colour objects require a regex or NeoMutt pattern as an additional argument (see [Command Syntax](#command-syntax) below). These objects colour only the parts of the display that match the given expression.
+Some colour objects require a regex or NeoMutt pattern as an additional argument (see [Command Syntax](#command-syntax) below).
+These objects colour only the parts of the display that match the given expression.
 
 | Object            | Match type | Applies to                       |
 |-------------------|------------|----------------------------------|
@@ -65,11 +66,13 @@ Named colours may be prefixed by a modifier:
 | `bright` or `light` | Make the colour boldfaced or light | `brightred` |
 | `alert`             | Make a blinking/alert colour       | `alertred`  |
 
-The precise behavior depends on the terminal and its configuration. The boldfaced/light difference and such background colours may be available only for terminals configured with at least 16 colours.
+The precise behavior depends on the terminal and its configuration.
+The boldfaced/light difference and such background colours may be available only for terminals configured with at least 16 colours.
 
 ## The `default` Colour
 
-If your terminal supports it, the special keyword `default` can be used as a transparent colour. In this case `default` can be used to only set the foreground or background colour individually:
+If your terminal supports it, the special keyword `default` can be used as a transparent colour.
+In this case `default` can be used to only set the foreground or background colour individually:
 
 ```neomuttrc
 # Make error messages white text on a red background
@@ -101,7 +104,7 @@ These are general NeoMutt objects that can be coloured:
 | `error`      | Error messages printed by NeoMutt                              |
 | `hdrdefault` | Default colour of the message header in the pager              |
 | `indicator`  | Arrow or bar used to indicate the current item in a menu       |
-| `markers`    | The "+" markers at the beginning of wrapped lines in the pager |
+| `markers`    | The `+` markers at the beginning of wrapped lines in the pager |
 | `message`    | Informational messages                                         |
 | `normal`     | Default colour for all text                                    |
 | `options`    | The key letters in multi-choice questions                      |
@@ -109,7 +112,7 @@ These are general NeoMutt objects that can be coloured:
 | `prompt`     | A question                                                     |
 | `search`     | Highlighting of words in the pager                             |
 | `signature`  | Email's signature lines (.sig)                                 |
-| `tilde`      | The "\~" used to pad blank lines in the pager                  |
+| `tilde`      | The `~` used to pad blank lines in the pager                   |
 | `tree`       | Thread tree drawn in the message index and attachment menu     |
 | `underline`  | Highlighting underlined patterns in the body of messages       |
 | `warning`    | Warning messages                                               |
@@ -132,7 +135,7 @@ These are general NeoMutt objects that can be coloured:
 
 | Object                     | Description                          |
 |----------------------------|--------------------------------------|
-| `compose_header`           | Header labels, e.g. From:            |
+| `compose_header`           | Header labels, e.g. `From:`          |
 | `compose_security_encrypt` | Mail will be encrypted               |
 | `compose_security_sign`    | Mail will be signed                  |
 | `compose_security_both`    | Mail will be encrypted and signed    |
@@ -140,7 +143,8 @@ These are general NeoMutt objects that can be coloured:
 
 ## Quoted Email Colours
 
-The quoted email colours don't use a pattern. The first colour, `quoted`, provides a default colour for all quoted text. Each different level of quoting can be given a different colour using `quoted1` through `quoted9`.
+The quoted email colours don't use a pattern. The first colour, `quoted`, provides a default colour for all quoted text.
+Each different level of quoting can be given a different colour using `quoted1` through `quoted9`.
 
 | Object    | Description                                           |
 |-----------|-------------------------------------------------------|
@@ -166,9 +170,8 @@ uncolor status {* | regex [...]}
 
 ## ANSI Escape Sequences
 
-NeoMutt's pager recognises ANSI escape sequences embedded in message text and
-renders them as colour and attribute changes. Sequences use the format
-`ESC[Ps;Ps;...m` (e.g., `\e[1;32m` for bold green, `\e[0m` to reset).
+NeoMutt's pager recognises ANSI escape sequences embedded in message text and renders them as colour and attribute changes.
+Sequences use the format `ESC[Ps;Ps;...m` (e.g., `\e[1;32m` for bold green, `\e[0m` to reset).
 
 ### Set Attributes
 

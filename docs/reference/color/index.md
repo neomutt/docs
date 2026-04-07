@@ -43,8 +43,8 @@ syntax.md
 | `index_number`                     | Index: index number                                                     |
 | `index_size`                       | Index: size field                                                       |
 | `index_subject`                    | Index: subject field                                                    |
-| `index_tags`                       | Index: tags field (%g, %J)                                              |
-| `index_tag`                        | Index: tag field (%G)                                                   |
+| `index_tags`                       | Index: tags field (`%g`, `%J`)                                          |
+| `index_tag`                        | Index: tag field (`%G`)                                                 |
 | `index`                            | Index: default colour                                                   |
 | `indicator`                        | Selected item in list                                                   |
 | `italic`                           | Italic text                                                             |
