@@ -10,7 +10,7 @@ keywords: lua, lua-source, scripting, lua scripting, mutt.set, mutt.get, mutt.me
 Commands for executing Lua code and scripts.
 
 (cmd-lua)=
-## `lua`
+## `:lua`
 
 Run a Lua expression or call a Lua function.
 
@@ -22,7 +22,7 @@ lua mutt.set("sort", "date")
 ```
 
 (cmd-lua-source)=
-## `lua-source`
+## `:lua-source`
 
 Execute a Lua script file.
 

@@ -10,7 +10,7 @@ keywords: alias, unalias, alternates, unalternates, group, ungroup, address book
 Commands for defining email address aliases, alternate addresses, and address groups.
 
 (cmd-alias)=
-## `alias`
+## `:alias`
 
 Create a short name for one or more email addresses.
 
@@ -26,7 +26,7 @@ alias -group work boss Boss Person <boss@company.com>
 ```
 
 (cmd-unalias)=
-## `unalias`
+## `:unalias`
 
 Remove an alias.
 
@@ -39,7 +39,7 @@ unalias jd
 ```
 
 (cmd-alternates)=
-## `alternates`
+## `:alternates`
 
 Define alternate email addresses that belong to the user.  NeoMutt uses
 these to tell "sent" mail from "received".
@@ -53,7 +53,7 @@ alternates -group work "jane\\.doe@company\\.com"
 ```
 
 (cmd-unalternates)=
-## `unalternates`
+## `:unalternates`
 
 Remove patterns from the alternates list.
 
@@ -66,7 +66,7 @@ unalternates jane@example.com
 ```
 
 (cmd-group)=
-## `group`
+## `:group`
 
 Add addresses to a named address group.  Groups can be used in hook patterns.
 
@@ -80,7 +80,7 @@ group -group coworkers -rx "@company\\.com$"
 ```
 
 (cmd-ungroup)=
-## `ungroup`
+## `:ungroup`
 
 Remove addresses from a group.
 

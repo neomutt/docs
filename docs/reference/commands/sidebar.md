@@ -10,7 +10,7 @@ keywords: sidebar-pin, sidebar-unpin, sidebar, pinned mailboxes, sidebar visibil
 Commands for pinning/unpinning mailboxes in the sidebar.
 
 (cmd-sidebar-pin)=
-## `sidebar-pin`
+## `:sidebar-pin`
 
 Pin a mailbox so it is always visible in the sidebar, even if it has no new
 mail.
@@ -23,7 +23,7 @@ sidebar-pin =INBOX =Sent =Drafts
 ```
 
 (cmd-sidebar-unpin)=
-## `sidebar-unpin`
+## `:sidebar-unpin`
 
 Unpin a mailbox from the sidebar.
 

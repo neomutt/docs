@@ -10,7 +10,7 @@ keywords: ignore, unignore, header-order, unheader-order, subject-regex, unsubje
 Commands that control how message headers and subjects are displayed.
 
 (cmd-ignore)=
-## `ignore`
+## `:ignore`
 
 Hide headers when displaying messages.  By default, all headers are hidden.
 
@@ -23,7 +23,7 @@ ignore X-Mailer X-Priority
 ```
 
 (cmd-unignore)=
-## `unignore`
+## `:unignore`
 
 Show headers that were previously hidden by `ignore`.
 
@@ -37,7 +37,7 @@ unignore message-id reply-to
 ```
 
 (cmd-header-order)=
-## `header-order`
+## `:header-order`
 
 Set the order in which visible headers are displayed.
 
@@ -48,7 +48,7 @@ header-order from date subject to cc
 ```
 
 (cmd-unheader-order)=
-## `unheader-order`
+## `:unheader-order`
 
 Remove headers from the custom display order.
 
@@ -60,7 +60,7 @@ unheader-order *
 ```
 
 (cmd-subject-regex)=
-## `subject-regex`
+## `:subject-regex`
 
 Rewrite message subjects for display using a regex substitution.
 
@@ -73,7 +73,7 @@ subject-regex "^(Re: )?Bug#([0-9]+): "                "\\1Bug:\\2 "
 ```
 
 (cmd-unsubject-regex)=
-## `unsubject-regex`
+## `:unsubject-regex`
 
 Remove subject-rewriting rules.
 

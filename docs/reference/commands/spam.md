@@ -10,7 +10,7 @@ keywords: spam, nospam, score, unscore, spam detection, spam filtering, message 
 Commands for spam detection rules and message scoring.
 
 (cmd-spam)=
-## `spam`
+## `:spam`
 
 Define a rule to detect and label spam based on a header regex.
 
@@ -23,7 +23,7 @@ spam "X-Bogosity: Spam"            "Bogus"
 ```
 
 (cmd-nospam)=
-## `nospam`
+## `:nospam`
 
 Remove a spam detection rule.
 
@@ -36,7 +36,7 @@ nospam "X-Bogosity: Spam"
 ```
 
 (cmd-score)=
-## `score`
+## `:score`
 
 Assign a score to messages matching a pattern.  Scores are cumulative.
 
@@ -50,7 +50,7 @@ score "~f spammer@"          -50
 ```
 
 (cmd-unscore)=
-## `unscore`
+## `:unscore`
 
 Remove scoring rules.
 

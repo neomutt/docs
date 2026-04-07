@@ -10,7 +10,7 @@ keywords: cd, echo, finish, ifdef, ifndef, source, version, scripting, condition
 Commands for configuration, scripting, and general NeoMutt control.
 
 (cmd-cd)=
-## `cd`
+## `:cd`
 
 Change NeoMutt's current working directory.
 
@@ -24,7 +24,7 @@ cd
 ```
 
 (cmd-echo)=
-## `echo`
+## `:echo`
 
 Print a message to the status line.  Useful for debugging config files.
 
@@ -36,7 +36,7 @@ echo "Current editor: $editor"
 ```
 
 (cmd-finish)=
-## `finish`
+## `:finish`
 
 Stop reading the current config file.  Useful inside `ifdef`/`ifndef` blocks
 to skip the rest of a conditionally-sourced file.
@@ -46,7 +46,7 @@ ifndef imap 'finish'
 ```
 
 (cmd-ifdef)=
-## `ifdef`
+## `:ifdef`
 
 Conditionally run a config command if a symbol (variable, feature, command) is defined.
 
@@ -59,7 +59,7 @@ ifdef notmuch 'source ~/.config/neomutt/notmuch.rc'
 ```
 
 (cmd-ifndef)=
-## `ifndef`
+## `:ifndef`
 
 Conditionally run a command if a symbol is **not** defined.
 
@@ -71,7 +71,7 @@ ifndef imap    'set spoolfile = ~/Mail/INBOX'
 ```
 
 (cmd-source)=
-## `source`
+## `:source`
 
 Read and execute commands from an external config file.
 
@@ -85,7 +85,7 @@ source "gpg --quiet --decrypt ~/.config/neomutt/passwords.gpg|"
 ```
 
 (cmd-version)=
-## `version`
+## `:version`
 
 Show NeoMutt version and build information in the pager.
 

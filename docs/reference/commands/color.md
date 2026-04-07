@@ -10,7 +10,7 @@ keywords: color, uncolor, mono, unmono, theme, appearance, foreground, backgroun
 Commands for defining and removing colors and mono-mode attributes.
 
 (cmd-color)=
-## `color`
+## `:color`
 
 Define colors for a UI element.
 
@@ -35,7 +35,7 @@ color header     cyan        default "^(From|Subject):"
 ```
 
 (cmd-uncolor)=
-## `uncolor`
+## `:uncolor`
 
 Remove a color definition.
 
@@ -48,12 +48,12 @@ uncolor body "(https?|ftp)://[^ ]+"
 ```
 
 (cmd-mono)=
-## `mono`
+## `:mono`
 
 **Deprecated** — use `color` instead.
 
 (cmd-unmono)=
-## `unmono`
+## `:unmono`
 
 **Deprecated** — use `uncolor` instead.
 

@@ -10,7 +10,7 @@ keywords: my-header, unmy-header, custom headers, outgoing mail, send headers, x
 Commands for adding custom headers to outgoing messages.
 
 (cmd-my-header)=
-## `my-header`
+## `:my-header`
 
 Add a custom header to all outgoing messages.
 
@@ -23,7 +23,7 @@ my-header Organization: NeoMutt Foundation
 ```
 
 (cmd-unmy-header)=
-## `unmy-header`
+## `:unmy-header`
 
 Remove a previously added custom header.
 

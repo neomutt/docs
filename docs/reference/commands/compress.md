@@ -10,7 +10,7 @@ keywords: open-hook, close-hook, append-hook, compressed mailbox, gzip, bzip2, x
 Commands for defining how to open, close, and append to compressed mailboxes.
 
 (cmd-open-hook)=
-## `open-hook`
+## `:open-hook`
 
 Define the command used to decompress a mailbox for reading.
 
@@ -23,7 +23,7 @@ open-hook  '\\.xz$'  "xz --stdout --decompress '%f' > '%t'"
 ```
 
 (cmd-close-hook)=
-## `close-hook`
+## `:close-hook`
 
 Define the command used to compress a mailbox after changes.
 
@@ -36,7 +36,7 @@ close-hook '\\.xz$'  "xz --stdout '%t' > '%f'"
 ```
 
 (cmd-append-hook)=
-## `append-hook`
+## `:append-hook`
 
 Define the command used to append messages to a compressed mailbox without
 a full decompress/recompress cycle.

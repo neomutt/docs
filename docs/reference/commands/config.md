@@ -10,7 +10,7 @@ keywords: set, unset, reset, toggle, setenv, unsetenv, config variables, configu
 Commands for setting, unsetting, and resetting config options and environment variables.
 
 (cmd-set)=
-## `set`
+## `:set`
 
 Set the value of a config variable.
 
@@ -35,7 +35,7 @@ set sort?
 ```
 
 (cmd-unset)=
-## `unset`
+## `:unset`
 
 Reset a config option to false (booleans) or empty (strings).
 
@@ -48,7 +48,7 @@ unset imap_authenticators smtp_authenticators
 ```
 
 (cmd-reset)=
-## `reset`
+## `:reset`
 
 Reset a config option to its initial (default) value.
 
@@ -61,7 +61,7 @@ reset index_format status_format
 ```
 
 (cmd-toggle)=
-## `toggle`
+## `:toggle`
 
 Toggle the value of a boolean or quad-option variable.
 
@@ -73,7 +73,7 @@ toggle help
 ```
 
 (cmd-setenv)=
-## `setenv`
+## `:setenv`
 
 Set or query an environment variable.
 
@@ -87,7 +87,7 @@ setenv EDITOR?
 ```
 
 (cmd-unsetenv)=
-## `unsetenv`
+## `:unsetenv`
 
 Remove an environment variable.
 

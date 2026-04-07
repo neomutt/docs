@@ -10,7 +10,7 @@ keywords: lists, unlists, subscribe, unsubscribe, mailing lists, subscriptions, 
 Commands for managing mailing list addresses and subscriptions.
 
 (cmd-lists)=
-## `lists`
+## `:lists`
 
 Mark email addresses as belonging to mailing lists.
 
@@ -24,7 +24,7 @@ lists -group work-lists dev-team@company.com
 ```
 
 (cmd-unlists)=
-## `unlists`
+## `:unlists`
 
 Remove addresses from the mailing lists list.
 
@@ -37,7 +37,7 @@ unlists neomutt-devel@neomutt.org
 ```
 
 (cmd-subscribe)=
-## `subscribe`
+## `:subscribe`
 
 Mark a mailing list as one the user is subscribed to.  The address must also
 be known via `lists`.
@@ -51,7 +51,7 @@ subscribe -group oss neomutt-users@neomutt.org
 ```
 
 (cmd-unsubscribe)=
-## `unsubscribe`
+## `:unsubscribe`
 
 Remove an address from the subscribed list.
 
