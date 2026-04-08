@@ -7,30 +7,29 @@ keywords: neomutt, commands, configuration, neomuttrc, reference, index, directi
 (ref-commands)=
 # Commands
 
-```{toctree}
----
-maxdepth: 1
----
-alias
-color
-compress
-config
-core
-email
-hooks
-imap
-keys
-lists
-lua
-mailbox
-mime
-send
-sidebar
-spam
-tags
-```
-
 The following are the commands understood by NeoMutt.
+
+---
+
+[Alias](ref-cmd-alias)
+[Color](ref-cmd-color)
+[Compress](ref-cmd-compress)
+[Config](ref-cmd-config)
+[Core](ref-cmd-core)
+[Email](ref-cmd-email)
+[Hooks](ref-cmd-hooks)
+[Imap](ref-cmd-imap)
+[Keys](ref-cmd-keys)
+[Lists](ref-cmd-lists)
+[Lua](ref-cmd-lua)
+[Mailbox](ref-cmd-mailbox)
+[Mime](ref-cmd-mime)
+[Send](ref-cmd-send)
+[Sidebar](ref-cmd-sidebar)
+[Spam](ref-cmd-spam)
+[Tags](ref-cmd-tags)
+
+---
 
 | Command                                                                                            | Description                                                                      |
 |----------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------|
@@ -143,3 +142,28 @@ The following are the commands understood by NeoMutt.
 | [`unsubscribe {* \| regex ...}`](cmd-unsubscribe)                                                  | Unsubscribe from mailing lists                                                   |
 | [`unsubscribe-from imap-folder-uri`](cmd-unsubscribe-from)                                         | Unsubscribe from an IMAP folder                                                  |
 | [`version`](cmd-version)                                                                           | Display NeoMutt version information                                              |
+
+```{toctree}
+---
+maxdepth: 1
+hidden:
+---
+alias
+color
+compress
+config
+core
+email
+hooks
+imap
+keys
+lists
+lua
+mailbox
+mime
+send
+sidebar
+spam
+tags
+```
+
