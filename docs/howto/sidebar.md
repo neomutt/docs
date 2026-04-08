@@ -91,7 +91,7 @@ Before 2026-01-13, these commands were called `sidebar_pin` and `sidebar_unpin`.
 
 This command specifies mailboxes that will always be displayed in the sidebar, even if [`$sidebar_new_mail_only`](cfg-sidebar-new-mail-only) is set and the mailbox does not contain new mail.
 
-The `sidebar-unpin` command is used to remove a mailbox from the list of always displayed mailboxes.
+The [`:sidebar-unpin`](cmd-sidebar-unpin) command is used to remove a mailbox from the list of always displayed mailboxes.
 Use `sidebar-unpin *` to remove all mailboxes.
 
 ## Colors
@@ -132,7 +132,7 @@ If the `sidebar_indicator` color isn't set, then the default NeoMutt indicator c
 | `new`      | Number of unread messages              |
 | `path`     | Alphabetically by path (ignores label) |
 | `unread`   | Number of unread messages              |
-| `unsorted` | Order of the `mailboxes` command       |
+| `unsorted` | Order of the [`:mailboxes`](cmd-mailboxes) command       |
 
 (sidebar-neomuttrc)=
 ## neomuttrc

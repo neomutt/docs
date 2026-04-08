@@ -71,7 +71,7 @@ Examples include:
 - {kbd}`Backspace>`/[`<delete-char>`](fn-delete-char) — delete a character
 - [`<kill-word>`](fn-kill-word)/[`<kill-eol>`](fn-kill-eol) — delete to end of word or line
 
-Any binding defined in the `editor` map can be used; use `:bind editor` to customise them.
+Any binding defined in the `editor` map can be used; use [`:bind`](cmd-bind) editor` to customise them.
 
 ## Case Sensitivity
 

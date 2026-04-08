@@ -21,7 +21,7 @@ If you read mail directly from an IMAP server, NeoMutt can ask the server for it
 set imap_check_subscribed
 ```
 
-Expected result: NeoMutt adds all server-subscribed folders to its mailbox list, as if you had run `mailboxes` for each one.
+Expected result: NeoMutt adds all server-subscribed folders to its mailbox list, as if you had run [`:mailboxes`](cmd-mailboxes) for each one.
 
 ## Browse and Subscribe on the Server
 
@@ -33,7 +33,7 @@ Expected result: the subscription list on the server is updated and NeoMutt refl
 
 ## Discover Local Folders from mbsync
 
-If you use mbsync to sync to a local Maildir, you can generate the `mailboxes` command from the directory tree.
+If you use mbsync to sync to a local Maildir, you can generate the [`:mailboxes`](cmd-mailboxes) command from the directory tree.
 
 1. Add a command that lists your synced folders:
 
@@ -53,7 +53,7 @@ Expected result: all synced folders appear in the mailbox list and sidebar.
 mbsync -l you@example.com
 ```
 
-2. Use the output in a helper script that generates `mailboxes` commands, then source it:
+2. Use the output in a helper script that generates [`:mailboxes`](cmd-mailboxes) commands, then source it:
 
 ```neomuttrc
 source "~/.config/neomutt/gen-mailboxes.sh|"
@@ -76,7 +76,7 @@ Expected result: the sidebar and browser show readable names instead of folder p
 
 ## Combine Labels with Scripted Discovery
 
-1. Write a script that outputs `named-mailboxes` commands:
+1. Write a script that outputs [`:named-mailboxes`](cmd-named-mailboxes) commands:
 
 ```sh
 #!/bin/sh
@@ -106,4 +106,4 @@ macro index o "<shell-escape>mbsync -a && notmuch new<Enter><enter-command>sourc
 
 Expected result: pressing {kbd}`o` syncs mail and updates the mailbox list in one step.
 
-See [Configure Mailboxes](mailboxes) for the full `mailboxes` command reference and [Sidebar](sidebar) for display options.
+See [Configure Mailboxes](mailboxes) for the full [`:mailboxes`](cmd-mailboxes) command reference and [Sidebar](sidebar) for display options.

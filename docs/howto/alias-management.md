@@ -8,13 +8,13 @@ keywords: alias, add contact, update contact, alias_file, source, reload, create
 
 ## Prerequisites
 
-1. An alias file configured via [`$alias_file`](cfg-alias-file) and loaded with `source`.
+1. An alias file configured via [`$alias_file`](cfg-alias-file) and loaded with [`:source`](cmd-source).
 2. If you haven't set this up, complete [Using the Address Book](../tutorials/address-book) first.
 
 ## Add a New Contact Manually
 
 1. Open your alias file ([`$alias_file`](cfg-alias-file)) in your editor.
-2. Add an `alias` line:
+2. Add an [`:alias`](cmd-alias) line:
 
 ```neomuttrc
 alias carol Carol Davis <carol@example.com>    # tags:work

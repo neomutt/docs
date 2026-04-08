@@ -25,7 +25,7 @@ uncolor status { <regex> | * }
 If your terminal supports color, you can spice up NeoMutt by creating your own color scheme.
 
 :::{note}
-The config option [`$color_directcolor`](cfg-color-directcolor) must be set to its final value *before* using any `color` command.
+The config option [`$color_directcolor`](cfg-color-directcolor) must be set to its final value *before* using any [`:color`](cmd-color) command.
 :::
 
 The types of objects that can be colored fall into two categories: [Simple Colors](#simple-colors) such as the highlight in the index, and [Color Lists](#color-lists) such as the status bar.
@@ -81,7 +81,7 @@ color error white   default
 
 On startup NeoMutt tries to detect whether the terminal it is running in supports directcolor (aka TrueColor aka 24-bit color).
 If the terminal does, NeoMutt enables the config option [`$color_directcolor`](cfg-color-directcolor) otherwise it disables it.
-Furthermore, NeoMutt allows to use the RGB colors syntax with the `color` command to colour elements with 24-bit colors.
+Furthermore, NeoMutt allows to use the RGB colors syntax with the [`:color`](cmd-color) command to colour elements with 24-bit colors.
 
 For the detection to work the *TERM* environment variable must be set up properly to advertise the terminals directcolor capability.
 *TERM*-values which do that usually end in `-direct`, e.g. `xterm-direct`.
@@ -101,7 +101,7 @@ Setting this variable manually is strongly discouraged since it usually leads to
 Most of NeoMutt's colorable objects follow simple rules.
 They don't use a pattern and any new configuration will overwrite the old colours.
 
-Simple colors can be undone by setting the foreground and background to `default`, or by using the `uncolor` command.
+Simple colors can be undone by setting the foreground and background to `default`, or by using the [`:uncolor`](cmd-uncolor) command.
 
 These are general NeoMutt objects:
 
@@ -241,7 +241,7 @@ Without one, the command will set the default style for the status bar.
 With a regex (and an optional number), it's possible to style parts of the status bar.
 See: [Status-Color feature](#status-color-feature) for more detail.
 
-Color lists can be undone by using the `uncolor` command and the pattern or `*` to match.
+Color lists can be undone by using the [`:uncolor`](cmd-uncolor) command and the pattern or `*` to match.
 
 | Colour Name     | Match   | Description                                          |
 |-----------------|---------|------------------------------------------------------|
@@ -315,7 +315,7 @@ mono <index-object> <attribute> <pattern>
 unmono { <index-object> | header | body } { * | <pattern> ... }
 ```
 
-For *object* and *attribute*, see the `color` command.
+For *object* and *attribute*, see the [`:color`](cmd-color) command.
 
 (index-color-feature)=
 ## Index Color Feature
@@ -337,7 +337,7 @@ The author appears red when the subject (\~s) contains "neomutt".
 
 All the colors default to `default`, i.e. unset.
 
-The index objects can be themed using the `color` command and an optional pattern.
+The index objects can be themed using the [`:color`](cmd-color) command and an optional pattern.
 A missing pattern is equivalent to a match-all `.*` pattern.
 
 ```neomuttrc

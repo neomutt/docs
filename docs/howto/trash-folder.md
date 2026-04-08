@@ -18,7 +18,7 @@ The [`$trash`](cfg-trash) variable defines a folder in which to keep old emails.
 As before, first you mark emails for deletion.
 When [`<sync-mailbox>`](fn-sync-mailbox) is called the emails are moved to the trash folder.
 
-The [`$trash`](cfg-trash) path can be either a full directory, or be relative to the [`$folder`](cfg-folder) variable, like the `mailboxes` command.
+The [`$trash`](cfg-trash) path can be either a full directory, or be relative to the [`$folder`](cfg-folder) variable, like the [`:mailboxes`](cmd-mailboxes) command.
 
 :::{note}
 Emails deleted from the trash folder are gone forever.

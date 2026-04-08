@@ -9,7 +9,7 @@ keywords: sidebar, mailboxes, named-mailboxes, sidebar_format, sidebar-pin, side
 ## Prerequisites
 
 1. Sidebar enabled (`set sidebar_visible`).
-2. Mailboxes defined with the `mailboxes` command.
+2. Mailboxes defined with the [`:mailboxes`](cmd-mailboxes) command.
 
 ## Give Mailboxes Friendly Names
 

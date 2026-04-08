@@ -92,7 +92,7 @@ Entries starting with a space are silently ignored — useful in macros to avoid
 
 ## Remapping Editor Keys
 
-Use the `bind` command with the `editor` map to remap any function.
+Use the [`:bind`](cmd-bind) command with the `editor` map to remap any function.
 For example, to make {kbd}`<Delete>` behave like {kbd}`<Backspace>` (deleting the character *before* the cursor instead of *under* it):
 
 ```neomuttrc

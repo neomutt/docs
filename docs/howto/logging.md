@@ -28,7 +28,7 @@ color error ...
 color message ...
 ```
 
-See the description of `color` for the precise syntax.
+See the description of [`:color`](cmd-color) for the precise syntax.
 
 The command bar shows only the last message.
 To show the last 100 messages (this includes all types of messages from debug to error), use the [`<show-log-messages>`](fn-show-log-messages) function.

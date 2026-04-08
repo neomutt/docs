@@ -22,16 +22,16 @@ unsubject-regex { * | regex }
 Before 2026-01-13, these commands were called `subjectrx` and `unsubjectrx`.
 :::
 
-`subject-regex` specifies a regular expression which, if detected in a message subject, causes the subject to be replaced with the "replacement" value.
+[`:subject-regex`](cmd-subject-regex) specifies a regular expression which, if detected in a message subject, causes the subject to be replaced with the "replacement" value.
 The replacement is subject to substitutions in the same way as for the **spam** command: `%L` for the text to the left of the match, `%R` for text to the right of the match, and `%1` for the first subgroup in the match (etc).
 If you simply want to erase the match, set it to `%L%R`.
-Any number of `subject-regex` commands may coexist.
+Any number of [`:subject-regex`](cmd-subject-regex) commands may coexist.
 
 :::{important}
 The "replacement" value replaces the **entire** subject, not just the match!
 :::
 
-`unsubject-regex` removes a given subject-regex from the substitution list.
+[`:unsubject-regex`](cmd-unsubject-regex) removes a given subject-regex from the substitution list.
 If `*` is used as the argument, all substitutions will be removed.
 
 :::{admonition} Example: Subject Munging
@@ -53,7 +53,7 @@ subject-regex '\[[^]]*\]:? *' '%L%R'
 
 **Subject:** Index with transformed subject lines
 
-**Description:** NeoMutt index view showing messages from a mailing list where `subject-regex` rules have been applied — the `[listname]` prefixes and `[rt #12345]` tags are stripped from subject lines, leaving clean, readable subjects.
+**Description:** NeoMutt index view showing messages from a mailing list where [`:subject-regex`](cmd-subject-regex) rules have been applied — the `[listname]` prefixes and `[rt #12345]` tags are stripped from subject lines, leaving clean, readable subjects.
 Ideally a before/after comparison.
 
 **Highlights:** The cleaner subject column after munging — list prefixes and ticket-system tags are gone, making subjects easier to scan in the index.

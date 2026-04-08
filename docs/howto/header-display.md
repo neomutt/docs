@@ -16,7 +16,7 @@ The sending side is not affected by this — NeoMutt tries to implement standard
 :::
 
 Despite not being a real header, NeoMutt will also display an mbox "From\_" line in the pager along with other headers.
-This line can be manipulated with `ignore`/`unignore` and `header-order`/`unheader-order` commands.
+This line can be manipulated with `ignore`/`unignore` and [`:header-order`](cmd-header-order)/[`:unheader-order`](cmd-unheader-order) commands.
 
 ## Selecting Headers
 
@@ -78,7 +78,7 @@ unheader-order { * | header ... }
 Before 2026-01-13, these commands were called `hdr_order` and `unhdr_order`.
 :::
 
-With the `header-order` command you can specify an order in which NeoMutt will attempt to present these headers to you when viewing messages.
+With the [`:header-order`](cmd-header-order) command you can specify an order in which NeoMutt will attempt to present these headers to you when viewing messages.
 
 `unheader-order *` will clear all previous headers from the order list, thus removing the header order effects set by the system-wide startup file.
 
@@ -95,9 +95,9 @@ header-order From Date: From: To: Cc: Subject:
 
 **Subject:** Custom header display order
 
-**Description:** Pager view of a message where `header-order` has been applied — headers appear in the configured sequence (From\_, Date:, From:, To:, Cc:, Subject:) rather than the order they appear in the raw message.
+**Description:** Pager view of a message where [`:header-order`](cmd-header-order) has been applied — headers appear in the configured sequence (From\_, Date:, From:, To:, Cc:, Subject:) rather than the order they appear in the raw message.
 
-**Highlights:** The logical reading order of headers — the most important fields (sender, date, subject) appear first, matching the configured `header-order`.
+**Highlights:** The logical reading order of headers — the most important fields (sender, date, subject) appear first, matching the configured [`:header-order`](cmd-header-order).
 :::
 
 ## User-Defined Headers
@@ -110,10 +110,10 @@ unmy-header { * | field ... }
 ```
 
 :::{note}
-Before 2026-01-13, these commands were called `my_hdr` and `unmy_hdr`.
+Before 2026-01-13, these commands were called [`:my-header`](cmd-my-header) and [`:unmy-header`](cmd-unmy-header).
 :::
 
-The `my-header` command allows you to create your own header fields which will be added to every message you send and appear in the editor if {ref}`$edit_headers <cfg-edit-headers>` is set.
+The [`:my-header`](cmd-my-header) command allows you to create your own header fields which will be added to every message you send and appear in the editor if {ref}`$edit_headers <cfg-edit-headers>` is set.
 
 For example, if you would like to add an `Organization:` header field to all of your outgoing messages, you can put something like the following in your `.neomuttrc`:
 
@@ -128,7 +128,7 @@ The standard for electronic mail ([RFC2822](https://www.rfc-editor.org/rfc/rfc28
 
 If you would like to add a header field to a single message, you should either set the {ref}`$edit_headers <cfg-edit-headers>` variable, or use the [`<edit-headers>`](fn-edit-headers) function (default: "E") in the compose menu so that you can edit the header of your message along with the body.
 
-To remove user defined header fields, use the `unmy-header` command.
+To remove user defined header fields, use the [`:unmy-header`](cmd-unmy-header) command.
 You may specify an asterisk ("*") to remove all header fields, or the fields to remove.
 For example, to remove all "To" and "Cc" header fields, you could use:
 

@@ -94,7 +94,7 @@ If a header field matches something in a `spam` command, but you nonetheless do 
 If the *regex* given to `nospam` is exactly the same as the *regex* on an existing `spam` rule entry, the effect will be to remove the entry from the spam rules list, instead of adding an exception.
 Likewise, if the *regex* for a `spam` command matches an entry on the `nospam` rule list, that nospam entry will be removed.
 If the *regex* for `nospam` is `*`, *all entries on both lists* will be removed.
-This might be the default action if you use `spam` and `nospam` in conjunction with a `folder-hook`.
+This might be the default action if you use `spam` and `nospam` in conjunction with a [`:folder-hook`](cmd-folder-hook).
 
 You can have as many `spam` or `nospam` commands as you like.
 You can even do your own primitive `spam` detection within NeoMutt — for example, if you consider all mail from `MAILER-DAEMON` to be spam, you can use a `spam` command like this:

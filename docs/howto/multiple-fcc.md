@@ -15,7 +15,7 @@ Folders should be listed separated by commas, **but no spaces**.
 The "fcc" field of an email can be set in two ways:
 
 - The [`<edit-fcc>`](fn-edit-fcc) command in the compose menu (default key: "f")
-- Creating a `fcc-hook` in your `.neomuttrc`
+- Creating a [`:fcc-hook`](cmd-fcc-hook) in your `.neomuttrc`
 
 ## See Also
 

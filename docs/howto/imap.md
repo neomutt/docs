@@ -46,7 +46,7 @@ Several folders are listed with the `s`/`u` subscribe/unsubscribe key bindings a
 :::
 
 Because the list of subscribed folders is managed by the IMAP server, NeoMutt can also ask the server for that list.
-If [`$imap_check_subscribed`](cfg-imap-check-subscribed) is set, NeoMutt will do that and add those folders to its mailboxes list just as if you had used the `mailboxes` command on each of them, so that these folders get checked periodically for new mail.
+If [`$imap_check_subscribed`](cfg-imap-check-subscribed) is set, NeoMutt will do that and add those folders to its mailboxes list just as if you had used the [`:mailboxes`](cmd-mailboxes) command on each of them, so that these folders get checked periodically for new mail.
 
 ## Tuning Mail Polling
 

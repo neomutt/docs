@@ -17,7 +17,7 @@ Macros are a convenient way to automate various actions.
 
 ## Creating a Key Macro
 
-This command allows you to create a macro:
+The [`:macro`](cmd-macro) command allows you to create a macro:
 
 ```neomuttrc
 macro map [,map ...] key sequence [description]
@@ -68,7 +68,7 @@ unmacro map [,map ...] key sequence
 *map* specifies from which menus the macro should be removed.
 Multiple menus may be specified by separating them with commas (no additional whitespace is allowed).
 If `*` is given, then the macro is removed from all menus.
-Valid menu names and their description are listed in the `bind` section.
+Valid menu names and their description are listed in the [`:bind`](cmd-bind) section.
 
 *key* is the key or key sequence to be unbound.
 It may be omitted in which case all macros in the given menus are removed.

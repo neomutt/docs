@@ -539,7 +539,7 @@ In addition to explicitly telling NeoMutt to view an attachment with the MIME vi
 For this to work, you must define a viewer in the mailcap file which uses the `copiousoutput` option to denote that it is non-interactive.
 Usually, you also use the entry to convert the attachment to a text representation which you can view in the pager.
 
-You then use the `auto-view` configuration command to list the content-types that you wish to view automatically.
+You then use the [`:auto-view`](cmd-auto-view) configuration command to list the content-types that you wish to view automatically.
 For instance, if you set it to:
 
 ```neomuttrc
@@ -559,7 +559,7 @@ application/x-tar-gz;   gunzip -c %s | tar -tf - ; copiousoutput
 application/postscript; ps2ascii %s; copiousoutput
 ```
 
-`unauto-view` can be used to remove previous entries from the `auto-view` list.
+[`:unauto-view`](cmd-unauto-view) can be used to remove previous entries from the [`:auto-view`](cmd-auto-view) list.
 This can be used with **message-hook** to autoview messages based on size, etc. `unauto-view *` will remove all previous entries.
 
 ## MIME Multipart/Alternative
@@ -583,7 +583,7 @@ You can read and write `multipart/alternative` emails in NeoMutt.
 
 NeoMutt has some heuristics for determining which attachment of a `multipart/alternative` type to display:
 
-1. First, NeoMutt will check the `alternative-order` list to determine if one of the available types is preferred.
+1. First, NeoMutt will check the [`:alternative-order`](cmd-alternative-order) list to determine if one of the available types is preferred.
    It consists of a number of MIME types in order, including support for implicit and explicit wildcards.
    For example:
 
@@ -597,7 +597,7 @@ NeoMutt has some heuristics for determining which attachment of a `multipart/alt
 
 4. As a last attempt, NeoMutt will look for any type it knows how to handle.
 
-   To remove a MIME type from the `alternative-order` list, use the `unalternative-order` command.
+   To remove a MIME type from the [`:alternative-order`](cmd-alternative-order) list, use the [`:unalternative-order`](cmd-unalternative-order) command.
 
 ### Composing Multipart/Alternative Emails
 

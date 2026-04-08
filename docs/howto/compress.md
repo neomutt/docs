@@ -11,7 +11,7 @@ But it isn't limited to compressed files.
 It works well with encrypted files, too.
 In fact, if you can create a program/script to convert to and from your format, then NeoMutt can read it.
 
-The feature adds three hooks to NeoMutt: `open-hook`, `close-hook` and `append-hook`.
+The feature adds three hooks to NeoMutt: [`:open-hook`](cmd-open-hook), [`:close-hook`](cmd-close-hook) and [`:append-hook`](cmd-append-hook).
 They define commands to: uncompress a file; compress a file; append messages to an already compressed file.
 
 There are some examples of both compressed and encrypted files, later.
@@ -52,18 +52,18 @@ The command:
 open-hook regex "shell-command"
 ```
 
-If NeoMutt is unable to open a file, it then looks for `open-hook` that matches the filename.
+If NeoMutt is unable to open a file, it then looks for [`:open-hook`](cmd-open-hook) that matches the filename.
 
 If your compression program doesn't have a well-defined extension, then you can use `.` as the regex.
 
-**Example of `open-hook`:**
+**Example of [`:open-hook`](cmd-open-hook):**
 
 ```neomuttrc
 open-hook '\.gz$' "gzip --stdout --decompress '%f' > '%t'"
 ```
 
 - NeoMutt finds a file, "example.gz", that it can't read
-- NeoMutt has an `open-hook` whose regex matches the filename: `\.gz$`
+- NeoMutt has an [`:open-hook`](cmd-open-hook) whose regex matches the filename: `\.gz$`
 - NeoMutt uses the command `gzip -cd` to create a temporary file that it *can* read
 
 ### Write to a compressed mailbox
@@ -72,26 +72,26 @@ open-hook '\.gz$' "gzip --stdout --decompress '%f' > '%t'"
 close-hook regex "shell-command"
 ```
 
-When NeoMutt has finished with a compressed mail folder, it will look for a matching `close-hook` to recompress the file.
+When NeoMutt has finished with a compressed mail folder, it will look for a matching [`:close-hook`](cmd-close-hook) to recompress the file.
 This hook is optional.
 
 :::{note}
-If the folder has not been modified, the `close-hook` will not be called.
+If the folder has not been modified, the [`:close-hook`](cmd-close-hook) will not be called.
 :::
 
-**Example of `close-hook`:**
+**Example of [`:close-hook`](cmd-close-hook):**
 
 ```neomuttrc
 close-hook '\.gz$' "gzip --stdout '%t' > '%f'"
 ```
 
-- NeoMutt has finished with a folder, "example.gz", that it opened with `open-hook`
+- NeoMutt has finished with a folder, "example.gz", that it opened with [`:open-hook`](cmd-open-hook)
 - The folder has been modified
-- NeoMutt has a `close-hook` whose regex matches the filename: `\.gz$`
+- NeoMutt has a [`:close-hook`](cmd-close-hook) whose regex matches the filename: `\.gz$`
 - NeoMutt uses the command `gzip -c` to create a new compressed file
 
 :::{note}
-The `close-hook` can also include extra options, e.g. compression level: `--best`
+The [`:close-hook`](cmd-close-hook) can also include extra options, e.g. compression level: `--best`
 :::
 
 ### Append to a compressed mailbox
@@ -100,35 +100,35 @@ The `close-hook` can also include extra options, e.g. compression level: `--best
 append-hook regex "shell-command"
 ```
 
-When NeoMutt wants to append an email to a compressed mail folder, it will look for a matching `append-hook`.
+When NeoMutt wants to append an email to a compressed mail folder, it will look for a matching [`:append-hook`](cmd-append-hook).
 This hook is optional.
 
-Using the `append-hook` will save time, but NeoMutt won't be able to determine the type of the mail folder inside the compressed file.
+Using the [`:append-hook`](cmd-append-hook) will save time, but NeoMutt won't be able to determine the type of the mail folder inside the compressed file.
 
 NeoMutt will *assume* the type to be that of the [`$mbox_type`](cfg-mbox-type) variable.
 NeoMutt also uses this type for temporary files.
 
-NeoMutt will only use the `append-hook` for existing files.
-The `close-hook` will be used for empty, or missing files.
+NeoMutt will only use the [`:append-hook`](cmd-append-hook) for existing files.
+The [`:close-hook`](cmd-close-hook) will be used for empty, or missing files.
 
 :::{note}
 If your command writes to stdout, it is vital that you use `>>` in the "append-hook".
 If not, data will be lost.
 :::
 
-**Example of `append-hook`:**
+**Example of [`:append-hook`](cmd-append-hook):**
 
 ```neomuttrc
 append-hook '\.gz$' "gzip --stdout '%t' >> '%f'"
 ```
 
-- NeoMutt wants to append an email to a folder, "example.gz", that it opened with `open-hook`
-- NeoMutt has an `append-hook` whose regex matches the filename: `\.gz$`
+- NeoMutt wants to append an email to a folder, "example.gz", that it opened with [`:open-hook`](cmd-open-hook)
+- NeoMutt has an [`:append-hook`](cmd-append-hook) whose regex matches the filename: `\.gz$`
 - NeoMutt knows the mailbox type from the [`$mbox`](cfg-mbox) variable
 - NeoMutt uses the command `gzip -c` to append to an existing compressed file
 
 :::{note}
-The `append-hook` can also include extra options, e.g. compression level: `--best`
+The [`:append-hook`](cmd-append-hook) can also include extra options, e.g. compression level: `--best`
 :::
 
 ### Empty Files

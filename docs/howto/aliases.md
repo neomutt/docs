@@ -22,7 +22,7 @@ NeoMutt allows you to create "aliases" which map a short string to a full addres
 If you want to create an alias for more than one address, you **must** separate the addresses with a comma (`,`).
 :::
 
-The optional `-group` argument to `alias` causes the aliased address(es) to be added to the named *group*.
+The optional `-group` argument to [`:alias`](cmd-alias) causes the aliased address(es) to be added to the named *group*.
 
 To add aliases:
 
@@ -56,11 +56,11 @@ The alias *key* is matched case insensitively when creating (checking for duplic
 ## Alias File Configuration
 
 Unlike other mailers, NeoMutt doesn't require aliases to be defined in a special file.
-The `alias` command can appear anywhere in a configuration file, as long as this file is `source`d.
+The [`:alias`](cmd-alias) command can appear anywhere in a configuration file, as long as this file is loaded with [`:source`](cmd-source).
 Consequently, you can have multiple alias files, or you can have all aliases defined in your `.neomuttrc`.
 
 On the other hand, the [`<create-alias>`](fn-create-alias) function can use only one file, the one pointed to by the [`$alias_file`](cfg-alias-file) variable (which is `~/.neomuttrc` by default).
-This file is not special either, in the sense that NeoMutt will happily append aliases to any file, but in order for the new aliases to take effect you need to explicitly `source` this file too.
+This file is not special either, in the sense that NeoMutt will happily append aliases to any file, but in order for the new aliases to take effect you need to explicitly [`:source`](cmd-source) this file too.
 
 ### Configuring external alias files
 

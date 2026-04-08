@@ -23,7 +23,7 @@ finish                                    # Finish reading the current file
 | `sidebar_format`                      | Config variable      |
 | `status-color`, `imap`                | Compiled-in feature  |
 | `pgp-menu`, `group-related`           | Function             |
-| `index-format-hook`, `tag-transforms` | Command              |
+| [`:index-format-hook`](cmd-index-format-hook), [`:tag-transforms`](cmd-tag-transforms) | Command              |
 | `indicator`, `sidebar_new`            | Colour               |
 | `my_var`                              | My variable          |
 | `lmdb`, `tokyocabinet`                | Store (database)     |

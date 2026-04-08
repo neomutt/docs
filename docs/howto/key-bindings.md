@@ -13,11 +13,11 @@ bind map [,map ...] key function
 unbind {* | map [,map ...]} [key]
 ```
 
-This command allows you to change the default key bindings (operation invoked when pressing a key).
+The [`:bind`](cmd-bind) command allows you to change the default key bindings (operation invoked when pressing a key).
 
 ## Binding a Key Sequence to a Function
 
-The `bind` command allows you to assign a new effect to a key (e.g. {kbd}`a`) or a key sequence (e.g. {kbd}`gh` — that is pressing {kbd}`g` followed by a press of {kbd}`h`).
+The [`:bind`](cmd-bind) command allows you to assign a new effect to a key (e.g. {kbd}`a`) or a key sequence (e.g. {kbd}`gh` — that is pressing {kbd}`g` followed by a press of {kbd}`h`).
 
 ```neomuttrc
 bind map [,map ...] key function
@@ -96,14 +96,14 @@ Executing this function will display information about each key pressed, until t
 
 *function* specifies which action to take when *key* is pressed.
 For a complete list of functions, see the reference.
-Note that the `bind` command expects *function* to be specified without angle brackets.
+Note that the [`:bind`](cmd-bind) command expects *function* to be specified without angle brackets.
 
 The special function `<noop>` unbinds the specified key sequence.
-It is recommended to use `unbind` instead.
+It is recommended to use [`:unbind`](cmd-unbind) instead.
 
 ## Unbinding a Key Sequence
 
-To remove a binding of a key or key sequence, `unbind` can be used:
+To remove a binding of a key or key sequence, [`:unbind`](cmd-unbind) can be used:
 
 ```neomuttrc
 unbind {* | map [,map ...]} [key]
@@ -135,7 +135,7 @@ To prevent NeoMutt from becoming unusable some fallback key bindings are added a
 | pager   | {kbd}`:`         | [`<enter-command>`](fn-enter-command)    |
 
 A key binding can also be unbound by mapping it to the special function `<noop>`.
-It is, however, recommended to use `unbind` instead.
+It is, however, recommended to use [`:unbind`](cmd-unbind) instead.
 
 ## Enter versus Return
 
@@ -166,7 +166,7 @@ bind index g  noop
 bind index gg first-entry
 ```
 
-The same is also possible using `unbind`:
+The same is also possible using [`:unbind`](cmd-unbind):
 
 ```neomuttrc
 unbind index g

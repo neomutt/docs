@@ -12,20 +12,20 @@ In the NeoMutt world, a *hook* consists of a regular expression or pattern along
 
 NeoMutt supports the following hooks:
 
-- `account-hook`
-- `charset-hook` / `iconv-hook`
-- `index-format-hook`
-- `crypt-hook`
-- `fcc-save-hook` / `fcc-hook` / `save-hook`
-- `folder-hook`
-- `mbox-hook`
-- `message-hook`
-- `open-hook` / `close-hook` / `append-hook`
-- `reply-hook` / `send-hook` / `send2-hook`
-- `timeout-hook` / `startup-hook` / `shutdown-hook`
-- `unhook`
+- [`:account-hook`](cmd-account-hook)
+- [`:charset-hook`](cmd-charset-hook) / [`:iconv-hook`](cmd-iconv-hook)
+- [`:index-format-hook`](cmd-index-format-hook)
+- [`:crypt-hook`](cmd-crypt-hook)
+- [`:fcc-save-hook`](cmd-fcc-save-hook) / [`:fcc-hook`](cmd-fcc-hook) / [`:save-hook`](cmd-save-hook)
+- [`:folder-hook`](cmd-folder-hook)
+- [`:mbox-hook`](cmd-mbox-hook)
+- [`:message-hook`](cmd-message-hook)
+- [`:open-hook`](cmd-open-hook) / [`:close-hook`](cmd-close-hook) / [`:append-hook`](cmd-append-hook)
+- [`:reply-hook`](cmd-reply-hook) / [`:send-hook`](cmd-send-hook) / [`:send2-hook`](cmd-send2-hook)
+- [`:timeout-hook`](cmd-timeout-hook) / [`:startup-hook`](cmd-startup-hook) / [`:shutdown-hook`](cmd-shutdown-hook)
+- [`:unhook`](cmd-unhook)
 
-To show a list of all the current hooks, run the `hooks` command.
+To show a list of all the current hooks, run the [`:hooks`](cmd-hooks) command.
 
 :::{note}
 If a hook changes configuration settings, these changes remain effective until the end of the current NeoMutt session.
@@ -44,7 +44,7 @@ When sending messages either To: or Cc: to `<b@b.b>`, the From: header is change
 
 ## Message Matching in Hooks
 
-Hooks that act upon messages (`message-hook`, `reply-hook`, `send-hook`, `send2-hook`, `save-hook`, `fcc-hook`, `index-format-hook`) are evaluated in a slightly different manner.
+Hooks that act upon messages ([`:message-hook`](cmd-message-hook), [`:reply-hook`](cmd-reply-hook), [`:send-hook`](cmd-send-hook), [`:send2-hook`](cmd-send2-hook), [`:save-hook`](cmd-save-hook), [`:fcc-hook`](cmd-fcc-hook), [`:index-format-hook`](cmd-index-format-hook)) are evaluated in a slightly different manner.
 For the other types of hooks, a regular expression is sufficient.
 But in dealing with messages a finer grain of control is needed for matching since for different purposes you want to match different criteria.
 
@@ -65,7 +65,7 @@ You can change [`$default_hook`](cfg-default-hook) to alter this implicit expans
 
 ## Mailbox Matching in Hooks
 
-Hooks that match against mailboxes (`folder-hook`, `mbox-hook`) apply both regular expression syntax as well as mailbox shortcut expansion on the regex parameter.
+Hooks that match against mailboxes ([`:folder-hook`](cmd-folder-hook), [`:mbox-hook`](cmd-mbox-hook)) apply both regular expression syntax as well as mailbox shortcut expansion on the regex parameter.
 There is some overlap between these, so special attention should be paid to the first character of the regex.
 
 ```neomuttrc
@@ -96,10 +96,10 @@ folder-hook [-noregex] regex command
 ```
 
 It is often desirable to change settings based on which mailbox you are reading.
-The `folder-hook` command provides a method by which you can execute any configuration command.
+The [`:folder-hook`](cmd-folder-hook) command provides a method by which you can execute any configuration command.
 The *command* is executed before loading any mailboxes matching *regex*.
 The `-noregex` switch controls whether *regex* is matched using a simple string comparison or a full regex match.
-If a mailbox matches multiple `folder-hook`s, they are executed in the order given in the `.neomuttrc`.
+If a mailbox matches multiple [`:folder-hook`](cmd-folder-hook)s, they are executed in the order given in the `.neomuttrc`.
 
 The regex parameter has mailbox shortcut expansion performed on the first character.
 
@@ -116,11 +116,11 @@ folder-hook work "set sort=threads"
 ```
 
 However, the sorting method is not restored to its previous value when reading a different mailbox.
-To specify a *default* command, use the regex `.` before other `folder-hook`s adjusting a value on a per-folder basis because `folder-hook`s are evaluated in the order given in the configuration file.
+To specify a *default* command, use the regex `.` before other [`:folder-hook`](cmd-folder-hook)s adjusting a value on a per-folder basis because [`:folder-hook`](cmd-folder-hook)s are evaluated in the order given in the configuration file.
 :::
 
 :::{note}
-The keyboard buffer will not be processed until after all hooks are run; multiple `push` or `exec` commands will end up being processed in reverse order.
+The keyboard buffer will not be processed until after all hooks are run; multiple [`:push`](cmd-push) or [`:exec`](cmd-exec) commands will end up being processed in reverse order.
 :::
 
 ### Example: Setting Sort Method Based on Mailbox Name
@@ -150,28 +150,28 @@ These commands can be used to execute arbitrary configuration commands based upo
 
 If the pattern is a plain string, or a regex, it will be expanded to a pattern using [`$default_hook`](cfg-default-hook).
 
-`reply-hook` is matched against the message you are *replying to*, instead of the message you are *sending*.
-`send-hook` is matched against all messages, both *new* and *replies*.
+[`:reply-hook`](cmd-reply-hook) is matched against the message you are *replying to*, instead of the message you are *sending*.
+[`:send-hook`](cmd-send-hook) is matched against all messages, both *new* and *replies*.
 
 :::{note}
-`reply-hook`s are matched *before* the `send-hook`, *regardless* of the order specified in the user's configuration file.
-However, you can inhibit `send-hook` in the reply case by using the pattern `'! ~Q'` (*not replied*) in the `send-hook` to tell when `reply-hook` have been executed.
+[`:reply-hook`](cmd-reply-hook)s are matched *before* the [`:send-hook`](cmd-send-hook), *regardless* of the order specified in the user's configuration file.
+However, you can inhibit [`:send-hook`](cmd-send-hook) in the reply case by using the pattern `'! ~Q'` (*not replied*) in the [`:send-hook`](cmd-send-hook) to tell when [`:reply-hook`](cmd-reply-hook) have been executed.
 :::
 
-`send2-hook` is matched every time a message is changed, either by editing it, or by using the compose menu to change its recipients or subject.
-`send2-hook` is executed after `send-hook`, and can, e.g., be used to set parameters such as the [`$sendmail`](cfg-sendmail) variable depending on the message's sender address.
+[`:send2-hook`](cmd-send2-hook) is matched every time a message is changed, either by editing it, or by using the compose menu to change its recipients or subject.
+[`:send2-hook`](cmd-send2-hook) is executed after [`:send-hook`](cmd-send-hook), and can, e.g., be used to set parameters such as the [`$sendmail`](cfg-sendmail) variable depending on the message's sender address.
 
-For each type of `send-hook` or `reply-hook`, when multiple matches occur, commands are executed in the order they are specified in the `.neomuttrc` (for that type of hook).
+For each type of [`:send-hook`](cmd-send-hook) or [`:reply-hook`](cmd-reply-hook), when multiple matches occur, commands are executed in the order they are specified in the `.neomuttrc` (for that type of hook).
 
 Example: `send-hook work "set mime_forward signature=''"`
 
 Another typical use for this command is to change the values of the [`$attribution_intro`](cfg-attribution-intro), [`$attribution_locale`](cfg-attribution-locale), and [`$signature`](cfg-signature) variables in order to change the language of the attributions and signatures based upon the recipients.
 
 :::{note}
-`send-hook`'s are only executed once after getting the initial list of recipients.
+[`:send-hook`](cmd-send-hook)'s are only executed once after getting the initial list of recipients.
 They are not executed when resuming a postponed draft.
-Adding a recipient after replying or editing the message will not cause any `send-hook` to be executed, similarly if [`$auto_edit`](cfg-auto-edit) is set (as then the initial list of recipients is empty).
-Also note that `my-header` commands which modify recipient headers, or the message's subject, don't have any effect on the current message when executed from a `send-hook`.
+Adding a recipient after replying or editing the message will not cause any [`:send-hook`](cmd-send-hook) to be executed, similarly if [`$auto_edit`](cfg-auto-edit) is set (as then the initial list of recipients is empty).
+Also note that [`:my-header`](cmd-my-header) commands which modify recipient headers, or the message's subject, don't have any effect on the current message when executed from a [`:send-hook`](cmd-send-hook).
 :::
 
 ---
@@ -208,7 +208,7 @@ crypt-hook regex keyid
 ```
 
 When encrypting messages with PGP/GnuPG or OpenSSL, you may want to associate a certain key with a given e-mail address automatically, either because the recipient's public key can't be deduced from the destination address, or because, for some reasons, you need to override the key NeoMutt would normally use.
-The `crypt-hook` command provides a method by which you can specify the ID of the public key to be used when encrypting messages to a certain recipient.
+The [`:crypt-hook`](cmd-crypt-hook) command provides a method by which you can specify the ID of the public key to be used when encrypting messages to a certain recipient.
 You may use multiple crypt-hooks with the same regex; multiple matching crypt-hooks result in the use of multiple keyids for a recipient.
 
 During key selection, NeoMutt will confirm whether each crypt-hook is to be used (unless the [`$crypt_confirm_hook`](cfg-crypt-confirm-hook) option is unset).
@@ -227,10 +227,10 @@ account-hook regex command
 ```
 
 If you happen to have accounts on multiple IMAP, POP and/or SMTP servers, you may find managing all the authentication settings inconvenient and error-prone.
-The `account-hook` command may help.
-This hook works like `folder-hook` but is invoked whenever NeoMutt needs to access a remote mailbox (including inside the folder browser), not just when you open the mailbox.
+The [`:account-hook`](cmd-account-hook) command may help.
+This hook works like [`:folder-hook`](cmd-folder-hook) but is invoked whenever NeoMutt needs to access a remote mailbox (including inside the folder browser), not just when you open the mailbox.
 This includes (for example) polling for new mail, storing Fcc messages and saving messages to a folder.
-As a consequence, `account-hook` should only be used to set connection-related settings such as passwords or tunnel commands but not settings such as sender address or name (because in general it should be considered unpredictable which `account-hook` was last used).
+As a consequence, [`:account-hook`](cmd-account-hook) should only be used to set connection-related settings such as passwords or tunnel commands but not settings such as sender address or name (because in general it should be considered unpredictable which [`:account-hook`](cmd-account-hook) was last used).
 
 ### Examples
 
@@ -241,7 +241,7 @@ account-hook imap://host2/ 'set tunnel="ssh host2 /usr/libexec/imapd"'
 account-hook smtp://user@host3/ 'set tunnel="ssh host3 /usr/libexec/smtpd"'
 ```
 
-To manage multiple accounts with, for example, different values of [`$record`](cfg-record) or sender addresses, `folder-hook` has to be used together with the `mailboxes` command.
+To manage multiple accounts with, for example, different values of [`$record`](cfg-record) or sender addresses, [`:folder-hook`](cmd-folder-hook) has to be used together with the [`:mailboxes`](cmd-mailboxes) command.
 
 ### Managing Multiple Accounts (Full Example)
 
@@ -252,8 +252,8 @@ mailboxes imap://user@host2/INBOX
 folder-hook imap://user@host2/ 'set folder=imap://host2/ ; set record=+INBOX/Sent'
 ```
 
-In this example the folders are defined using `mailboxes` so NeoMutt polls them for new mail.
-Each `folder-hook` triggers when one mailbox below each IMAP account is opened and sets [`$folder`](cfg-folder) to the account's root folder.
+In this example the folders are defined using [`:mailboxes`](cmd-mailboxes) so NeoMutt polls them for new mail.
+Each [`:folder-hook`](cmd-folder-hook) triggers when one mailbox below each IMAP account is opened and sets [`$folder`](cfg-folder) to the account's root folder.
 Next, it sets [`$record`](cfg-record) to the *INBOX/Sent* folder below the newly set [`$folder`](cfg-folder).
 Please notice that the value the `+` mailbox shortcut refers to depends on the *current* value of [`$folder`](cfg-folder) and therefore has to be set separately per account.
 Setting other values like [`$from`](cfg-from) or [`$signature`](cfg-signature) is analogous to setting [`$record`](cfg-record).
@@ -348,7 +348,7 @@ set new_mail_command="terminal-notifier -title '%v' -subtitle 'New Mail' \
 index-format-hook name [!]pattern format-string
 ```
 
-`index-format-hook` injects format strings dynamically into [`$index_format`](cfg-index-format) based on pattern matching against the current message.
+[`:index-format-hook`](cmd-index-format-hook) injects format strings dynamically into [`$index_format`](cfg-index-format) based on pattern matching against the current message.
 The `name` argument is referenced inside [`$index_format`](cfg-index-format) as the expando `%@name@`.
 
 Multiple hooks sharing the same `name` are tested in the order they are defined; the first matching *pattern* wins.

@@ -29,7 +29,7 @@ Some groups should be marked as subscribed.
 
 This list is stored in the [`$newsrc`](cfg-newsrc) file, so NeoMutt remembers it across invocations (see also [`$save_unsubscribed`](cfg-save-unsubscribed)).
 With the [`<unsubscribe>`](fn-unsubscribe) function a group can be deleted from that list.
-You can also specify the list of interesting groups with the [`mailboxes`](mailboxes) command in your config file.
+You can also specify the list of interesting groups with the [`:mailboxes`](cmd-mailboxes) command in your config file.
 
 When checking for new messages, NeoMutt only polls the subscribed newsgroups.
 

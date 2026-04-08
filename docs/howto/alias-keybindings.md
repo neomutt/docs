@@ -37,7 +37,7 @@ macro index,pager A "<create-alias><enter-command>source $alias_file<Enter>" "Sa
 
 2. Open a message and press {kbd}`A`.
 
-Expected result: the alias is saved and immediately available without a manual `:source`.
+Expected result: the alias is saved and immediately available without a manual [`:source`](cmd-source).
 
 ## Bind a Key for External Queries
 
@@ -63,4 +63,4 @@ macro index,pager \ea "<shell-escape>$EDITOR ~/.config/neomutt/aliases-work<Ente
 
 Expected result: pressing {kbd}`Esc a` opens your editor on the work alias file, and reloads it when you return.
 
-See [Customise Key Bindings](key-bindings) for the full `bind` and `macro` syntax and [Macros](macros) for more macro examples.
+See [Customise Key Bindings](key-bindings) for the full [`:bind`](cmd-bind) and [`:macro`](cmd-macro) syntax and [Macros](macros) for more macro examples.
