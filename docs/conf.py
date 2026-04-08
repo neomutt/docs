@@ -15,6 +15,7 @@ extensions = [
     'myst_parser',
     'sphinx_design',
     'sphinx_copybutton',
+    'notfound.extension',
 ]
 
 myst_enable_extensions = [
