@@ -42,10 +42,10 @@ NeoMutt applies some logic on top of remote messages but cannot change them so t
 
 ## Fetching Mail from a POP3 Server
 
-Another way to access your POP3 mail is the `<fetch-mail>` function (default: G).
+Another way to access your POP3 mail is the [`<fetch-mail>`](fn-fetch-mail) function (default: G).
 It allows you to connect to [`$pop_host`](cfg-pop-host), fetch all your new mail and place it in the local [`$spool_file`](cfg-spool-file).
 After this point, NeoMutt runs exactly as if the mail had always been local.
-The `<fetch-mail>` function will ask whether you want to delete the messages on the remote server, leaving only your local copies.
+The [`<fetch-mail>`](fn-fetch-mail) function will ask whether you want to delete the messages on the remote server, leaving only your local copies.
 
 :::{admonition} 📷 Screenshot Needed
 :class: tip

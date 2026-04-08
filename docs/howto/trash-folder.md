@@ -9,14 +9,14 @@ keywords: trash, delete, purge, purge-message, trash folder, undelete, sync-mail
 ## Introduction
 
 In NeoMutt, when you "delete" an email it is first marked deleted.
-The email isn't really gone until `<sync-mailbox>` is called.
+The email isn't really gone until [`<sync-mailbox>`](fn-sync-mailbox) is called.
 This happens when the user leaves the folder, or the function is called manually.
 
-After `<sync-mailbox>` has been called the email is gone forever.
+After [`<sync-mailbox>`](fn-sync-mailbox) has been called the email is gone forever.
 
 The [`$trash`](cfg-trash) variable defines a folder in which to keep old emails.
 As before, first you mark emails for deletion.
-When `<sync-mailbox>` is called the emails are moved to the trash folder.
+When [`<sync-mailbox>`](fn-sync-mailbox) is called the emails are moved to the trash folder.
 
 The [`$trash`](cfg-trash) path can be either a full directory, or be relative to the [`$folder`](cfg-folder) variable, like the `mailboxes` command.
 
@@ -45,7 +45,7 @@ The Trash folder should contain some messages to show it is in use.
 
 | Menus       | Default Key | Function          | Description                                                 |
 |-------------|-------------|-------------------|-------------------------------------------------------------|
-| index,pager | (none)      | `<purge-message>` | really delete the current entry, bypassing the trash folder |
+| index,pager | (none)      | [`<purge-message>`](fn-purge-message) | really delete the current entry, bypassing the trash folder |
 
 ## neomuttrc
 

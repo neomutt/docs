@@ -7,7 +7,7 @@ keywords: postpone, draft, resume, recall, compose, postpone-message, postponed,
 # Postpone Mail
 
 At times it is desirable to delay sending a message that you have already begun to compose.
-When the `<postpone-message>` function is used in the *compose* menu, the body of your message and attachments are stored in the mailbox specified by the {ref}`$postponed <cfg-postponed>` variable.
+When the [`<postpone-message>`](fn-postpone-message) function is used in the *compose* menu, the body of your message and attachments are stored in the mailbox specified by the {ref}`$postponed <cfg-postponed>` variable.
 This means that you can recall the message even if you exit NeoMutt and then restart it at a later time.
 
 ## Resuming a Postponed Message

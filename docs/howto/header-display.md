@@ -126,7 +126,7 @@ Space characters are *not* allowed between the keyword and the colon (":").
 The standard for electronic mail ([RFC2822](https://www.rfc-editor.org/rfc/rfc2822.html)) says that space is illegal there, so NeoMutt enforces the rule.
 :::
 
-If you would like to add a header field to a single message, you should either set the {ref}`$edit_headers <cfg-edit-headers>` variable, or use the `<edit-headers>` function (default: "E") in the compose menu so that you can edit the header of your message along with the body.
+If you would like to add a header field to a single message, you should either set the {ref}`$edit_headers <cfg-edit-headers>` variable, or use the [`<edit-headers>`](fn-edit-headers) function (default: "E") in the compose menu so that you can edit the header of your message along with the body.
 
 To remove user defined header fields, use the `unmy-header` command.
 You may specify an asterisk ("*") to remove all header fields, or the fields to remove.
@@ -142,12 +142,12 @@ NeoMutt provides four related functions for accessing the raw [RFC2822](https://
 
 | Function                     | Description                                                                                        |
 |------------------------------|----------------------------------------------------------------------------------------------------|
-| `<view-raw-message>`         | Open the raw message source in the pager (read-only).                                              |
-| `<edit-raw-message>`         | Open the raw message in [`$editor`](cfg-editor); the edited result replaces the original in the mailbox.         |
-| `<edit>`                     | Alias for `<edit-raw-message>` (retained for backwards compatibility).                             |
-| `<edit-or-view-raw-message>` | Uses `<edit-raw-message>` if the folder is writable, otherwise falls back to `<view-raw-message>`. |
+| [`<view-raw-message>`](fn-view-raw-message)         | Open the raw message source in the pager (read-only).                                              |
+| [`<edit-raw-message>`](fn-edit-raw-message)         | Open the raw message in [`$editor`](cfg-editor); the edited result replaces the original in the mailbox.         |
+| [`<edit>`](fn-edit)                     | Alias for [`<edit-raw-message>`](fn-edit-raw-message) (retained for backwards compatibility).                             |
+| [`<edit-or-view-raw-message>`](fn-edit-or-view-raw-message) | Uses [`<edit-raw-message>`](fn-edit-raw-message) if the folder is writable, otherwise falls back to [`<view-raw-message>`](fn-view-raw-message). |
 
 :::{note}
-`<edit-raw-message>` modifies the message in place in the mailbox.
-Use `<view-raw-message>` if you only want to inspect the source without making changes.
+[`<edit-raw-message>`](fn-edit-raw-message) modifies the message in place in the mailbox.
+Use [`<view-raw-message>`](fn-view-raw-message) if you only want to inspect the source without making changes.
 :::

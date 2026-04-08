@@ -12,7 +12,7 @@ keywords: alias, key bindings, bind, macro, create-alias, query, address book, s
 
 ## Bind the Alias Menu to a Key
 
-The `<alias>` function opens the full alias list.
+The [`<alias-dialog>`](fn-alias-dialog) function opens the full alias list.
 By default it may not have a binding in the index.
 
 1. Bind it to a convenient key:
@@ -27,7 +27,7 @@ Expected result: the alias menu opens and you can select a contact to compose a 
 
 ## Create a Macro to Save and Reload Aliases
 
-The default `<create-alias>` (`a`) appends to [`$alias_file`](cfg-alias-file) but doesn't reload it.
+The default [`<create-alias>`](fn-create-alias) (`a`) appends to [`$alias_file`](cfg-alias-file) but doesn't reload it.
 
 1. Create a macro that saves and reloads in one step:
 

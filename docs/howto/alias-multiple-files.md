@@ -49,7 +49,7 @@ Expected result: all aliases from both files are available at address prompts.
 ## Set alias_file for Interactive Saves
 
 [`$alias_file`](cfg-alias-file) can point to only one file.
-New aliases created with `<create-alias>` (pressing {kbd}`a` on a message) are saved there.
+New aliases created with [`<create-alias>`](fn-create-alias) (pressing {kbd}`a` on a message) are saved there.
 
 1. Choose the file you want new aliases saved to:
 

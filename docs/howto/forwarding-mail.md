@@ -9,7 +9,7 @@ keywords: forward, bounce, resend, mime_forward, inline forward, forward_decode,
 Bouncing and forwarding let you send an existing message to recipients that you specify.
 Bouncing a message sends a verbatim copy of a message to alternative addresses as if they were the message's original recipients specified in the Bcc header.
 Forwarding a message, on the other hand, allows you to modify the message before it is resent (for example, by adding your own comments).
-Bouncing is done using the `<bounce-message>` function and forwarding using the `<forward-message>` function bound to {kbd}`b` and {kbd}`f` respectively.
+Bouncing is done using the [`<bounce-message>`](fn-bounce-message) function and forwarding using the [`<forward-message>`](fn-forward-message) function bound to {kbd}`b` and {kbd}`f` respectively.
 
 ## Forwarding Methods
 

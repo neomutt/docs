@@ -32,17 +32,17 @@ You have to prepare every part manually or using some scripts, and then tag and 
 
 1. Prepare parts of the multilingual emails.
 2. Attach them as attachments.
-3. Tag them with `<tag-entry>`.
-4. Edit the `Content-Language` header of every attachment with command `<edit-language>` (default to `Ctrl-L`).
+3. Tag them with [`<tag-entry>`](fn-tag-entry).
+4. Edit the `Content-Language` header of every attachment with command [`<edit-language>`](fn-edit-language) (default to `Ctrl-L`).
    This is important, otherwise the recipient of this email will not know the corresponding languages.
    You can set arbitrary string as `Content-Language`, but it is recommended to set it as some common prefixes such as "en", "zh" and "fr".
-5. Group all the tagged messages together by `<group-multilingual>` (default to `^`).
+5. Group all the tagged messages together by [`<group-multilingual>`](fn-group-multilingual) (default to `^`).
 6. Send the email as usual.
 
 As in composing multipart/alternative, you can also use NeoMutt's macro and some external scripts to combine this procedure into one.
 
 After grouping, the separate parts will be displayed in a tree structure.
-Attachments can still be edited separately and reordered within the group, but must be ungrouped using the `<ungroup-attachment>` (`#`) binding for more advanced editing before tagging and grouping together again as described above.
+Attachments can still be edited separately and reordered within the group, but must be ungrouped using the [`<ungroup-attachment>`](fn-ungroup-attachment) (`#`) binding for more advanced editing before tagging and grouping together again as described above.
 
 :::{admonition} 📷 Screenshot Needed
 :class: tip
@@ -50,7 +50,7 @@ Attachments can still be edited separately and reordered within the group, but m
 **Subject:** Compose menu with multilingual attachment group
 
 **Description:** NeoMutt compose menu showing a `multipart/multilingual` group
-after `<group-multilingual>` has been applied — the grouped language parts (e.g.
+after [`<group-multilingual>`](fn-group-multilingual) has been applied — the grouped language parts (e.g.
 English, French, German) are displayed in a tree structure under a single
 multipart/multilingual container, each with its Content-Language visible.
 
@@ -70,18 +70,18 @@ You have to prepare every part manually or using some scripts, and then tag and 
 
 1. Prepare parts of the related email.
 2. Attach them as attachments.
-3. Tag them with `<tag-entry>`.
+3. Tag them with [`<tag-entry>`](fn-tag-entry).
 4. One part can reference another using its `Content-ID` header.
    For example, an HTML part that includes an embedded image needs to contain: `<img src="cid:content-id">` where an attached image has a `Content-ID` header of `content-id`.
-   The `Content-ID` of an attachment can be set using `<edit-content-id>` (default key `Alt-i`).
-   `<edit-content-id>` sets a random ID which can then be changed if desired.
+   The `Content-ID` of an attachment can be set using [`<edit-content-id>`](fn-edit-content-id) (default key `Alt-i`).
+   [`<edit-content-id>`](fn-edit-content-id) sets a random ID which can then be changed if desired.
    Permitted characters for `Content-ID` are: `-.0-9@A-Z_a-z`.
 
-   If the `multipart/related` group is intended to be inline, members of the group should also have their `Content-Disposition` header set to `inline` which can be toggled using `<toggle-disposition>` (default key `Ctrl-D`).
+   If the `multipart/related` group is intended to be inline, members of the group should also have their `Content-Disposition` header set to `inline` which can be toggled using [`<toggle-disposition>`](fn-toggle-disposition) (default key `Ctrl-D`).
 
    It can also be desirable to give referenced files in the group a `filename` even when the `Content-Disposition` is set to be `inline`.
-   To do this use `<rename-attachment>` (default key `Ctrl-O`).
-5. Group all the tagged messages together with `<group-related>` (default key `%`).
+   To do this use [`<rename-attachment>`](fn-rename-attachment) (default key `Ctrl-O`).
+5. Group all the tagged messages together with [`<group-related>`](fn-group-related) (default key `%`).
    Top level attachments (excluding `multipart` ones) in the group are automatically given a random `Content-ID` if they do not already have one.
 6. Send the email as usual.
 
@@ -97,4 +97,4 @@ A typical email with a `multipart/alternative` part containing a `text/plain` pa
   A     6 attachment.pdf                                         [application/pdf, quoted, 7.1K]
 ```
 
-In the above email `/tmp/neomutt-alternative.html` would reference `image.png` using `<img src="cid:content-id">` and `image.png` has been given an explicit name of `image.png` using `<rename-attachment>` (regardless of its initial filename). `<group-related>` has set its `Content-ID` header to a random value.
+In the above email `/tmp/neomutt-alternative.html` would reference `image.png` using `<img src="cid:content-id">` and `image.png` has been given an explicit name of `image.png` using [`<rename-attachment>`](fn-rename-attachment) (regardless of its initial filename). [`<group-related>`](fn-group-related) has set its `Content-ID` header to a random value.

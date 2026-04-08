@@ -12,9 +12,9 @@ NeoMutt can read from a news server using NNTP.
 
 The default news server can be obtained from the `$NNTPSERVER` environment variable or from the `/etc/nntpserver` file.
 Like in other news readers, information about the subscribed newsgroups is saved in the file specified by the [`$newsrc`](cfg-newsrc) variable.
-You can open a newsgroup with the function `<change-newsgroup>`.
+You can open a newsgroup with the function [`<change-newsgroup>`](fn-change-newsgroup).
 
-When browsing the list of newsgroups on the server the function `<subscribe>` can be used to tell NeoMutt the groups of interest to you.
+When browsing the list of newsgroups on the server the function [`<subscribe>`](fn-subscribe) can be used to tell NeoMutt the groups of interest to you.
 
 :::{admonition} 📷 Screenshot Needed
 :class: tip
@@ -28,7 +28,7 @@ Some groups should be marked as subscribed.
 :::
 
 This list is stored in the [`$newsrc`](cfg-newsrc) file, so NeoMutt remembers it across invocations (see also [`$save_unsubscribed`](cfg-save-unsubscribed)).
-With the `<unsubscribe>` function a group can be deleted from that list.
+With the [`<unsubscribe>`](fn-unsubscribe) function a group can be deleted from that list.
 You can also specify the list of interesting groups with the [`mailboxes`](mailboxes) command in your config file.
 
 When checking for new messages, NeoMutt only polls the subscribed newsgroups.
@@ -81,25 +81,25 @@ By default, none of them are bound to keys.
 
 | Menus              | Function                      | Description                                    |
 |--------------------|-------------------------------|------------------------------------------------|
-| browser,index      | `<catchup>`                   | Mark all articles in newsgroup as read         |
-| index,pager        | `<change-newsgroup>`          | Open a different newsgroup                     |
-| compose            | `<edit-followup-to>`          | Edit the Followup-To field                     |
-| compose            | `<edit-newsgroups>`           | Edit the newsgroups list                       |
-| compose            | `<edit-x-comment-to>`         | Edit the X-Comment-To field                    |
-| attach,index,pager | `<followup-message>`          | Followup to newsgroup                          |
-| index,pager        | `<post-message>`              | Post message to newsgroup                      |
-| browser            | `<reload-active>`             | Load list of all newsgroups from NNTP server   |
-| browser            | `<subscribe>`                 | Subscribe to current mbox (IMAP/NNTP only)     |
-| browser            | `<subscribe-pattern>`         | Subscribe to newsgroups matching a pattern     |
-| browser            | `<uncatchup>`                 | Mark all articles in newsgroup as unread       |
-| browser            | `<unsubscribe>`               | Unsubscribe from current mbox (IMAP/NNTP only) |
-| browser            | `<unsubscribe-pattern>`       | Unsubscribe from newsgroups matching a pattern |
-| index,pager        | `<change-newsgroup-readonly>` | Open a different newsgroup in read only mode   |
-| attach,index,pager | `<forward-to-group>`          | Forward to newsgroup                           |
-| index              | `<get-children>`              | Get all children of the current message        |
-| index              | `<get-parent>`                | Get parent of the current message              |
-| index              | `<reconstruct-thread>`        | Reconstruct thread containing current message  |
-| index              | `<get-message>`               | Get message with Message-ID                    |
+| browser,index      | [`<catchup>`](fn-catchup)                   | Mark all articles in newsgroup as read         |
+| index,pager        | [`<change-newsgroup>`](fn-change-newsgroup)          | Open a different newsgroup                     |
+| compose            | [`<edit-followup-to>`](fn-edit-followup-to)          | Edit the Followup-To field                     |
+| compose            | [`<edit-newsgroups>`](fn-edit-newsgroups)           | Edit the newsgroups list                       |
+| compose            | [`<edit-x-comment-to>`](fn-edit-x-comment-to)         | Edit the X-Comment-To field                    |
+| attach,index,pager | [`<followup-message>`](fn-followup-message)          | Followup to newsgroup                          |
+| index,pager        | [`<post-message>`](fn-post-message)              | Post message to newsgroup                      |
+| browser            | [`<reload-active>`](fn-reload-active)             | Load list of all newsgroups from NNTP server   |
+| browser            | [`<subscribe>`](fn-subscribe)                 | Subscribe to current mbox (IMAP/NNTP only)     |
+| browser            | [`<subscribe-pattern>`](fn-subscribe-pattern)         | Subscribe to newsgroups matching a pattern     |
+| browser            | [`<uncatchup>`](fn-uncatchup)                 | Mark all articles in newsgroup as unread       |
+| browser            | [`<unsubscribe>`](fn-unsubscribe)               | Unsubscribe from current mbox (IMAP/NNTP only) |
+| browser            | [`<unsubscribe-pattern>`](fn-unsubscribe-pattern)       | Unsubscribe from newsgroups matching a pattern |
+| index,pager        | [`<change-newsgroup-readonly>`](fn-change-newsgroup-readonly) | Open a different newsgroup in read only mode   |
+| attach,index,pager | [`<forward-to-group>`](fn-forward-to-group)          | Forward to newsgroup                           |
+| index              | [`<get-children>`](fn-get-children)              | Get all children of the current message        |
+| index              | [`<get-parent>`](fn-get-parent)                | Get parent of the current message              |
+| index              | [`<reconstruct-thread>`](fn-reconstruct-thread)        | Reconstruct thread containing current message  |
+| index              | [`<get-message>`](fn-get-message)               | Get message with Message-ID                    |
 
 ## neomuttrc
 

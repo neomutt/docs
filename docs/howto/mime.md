@@ -52,14 +52,14 @@ If NeoMutt cannot deal with a MIME type, it will display a message like:
 
 ## The Attachment Menu
 
-The default binding for `<view-attachments>` is {kbd}`v`, which displays the attachment menu for a message.
+The default binding for [`<view-attachments>`](fn-view-attachments) is {kbd}`v`, which displays the attachment menu for a message.
 The attachment menu displays a list of the attachments in a message.
 From the attachment menu, you can save, print, pipe, delete, and view attachments.
-You can apply these operations to a group of attachments at once, by tagging the attachments and by using the `<tag-prefix>` operator.
+You can apply these operations to a group of attachments at once, by tagging the attachments and by using the [`<tag-prefix>`](fn-tag-prefix) operator.
 You can also reply to the current message from this menu, and only the current attachment (or the attachments tagged) will be quoted in your reply.
 You can view attachments as text, or view them using the mailcap viewer definition (the mailcap mechanism is explained later in detail).
 
-Finally, you can apply the usual message-related functions (like **\<resend-message\>**, and the `<reply>` and `<forward-message>` functions) to attachments of type `message/rfc822`.
+Finally, you can apply the usual message-related functions (like [`<resend-message\>`](fn-resend-message), and the [`<reply>`](fn-reply) and [`<forward-message>`](fn-forward-message) functions) to attachments of type `message/rfc822`.
 
 :::{admonition} 📷 Screenshot Needed
 :class: tip
@@ -76,22 +76,22 @@ Each line shows the MIME type, encoding, size, and filename.
 
 There are four ways of viewing attachments:
 
-- **`<view-mailcap>` (default keybinding: {kbd}`m`)** — This will use the first matching mailcap entry.
+- **[`<view-mailcap>`](fn-view-mailcap) (default keybinding: {kbd}`m`)** — This will use the first matching mailcap entry.
    If no matching mailcap entries are found, it will abort with an error message.
 
-- **`<view-attach>` (default keybinding: {kbd}`Enter`)** — NeoMutt will display internally supported MIME types in the pager.
+- **[`<view-attach>`](fn-view-attach) (default keybinding: {kbd}`Enter`)** — NeoMutt will display internally supported MIME types in the pager.
    This will respect **auto-view** settings, to determine whether to use a `copiousoutput` mailcap entry or just directly display the attachment.
    Other MIME types will use the first matching mailcap entry.
    If no matching mailcap entries are found, the attachment will be displayed in the pager as raw text.
 
-- **`<view-pager>`** — NeoMutt will use the first matching `copiousoutput` mailcap entry to display the attachment in the pager (regardless of **auto-view** settings).
+- **[`<view-pager>`](fn-view-pager)** — NeoMutt will use the first matching `copiousoutput` mailcap entry to display the attachment in the pager (regardless of **auto-view** settings).
    If no matching mailcap entries are found, the attachment will be displayed in the pager as raw text.
 
-- **`<view-text>` (default keybinding: {kbd}`T`)** — The attachment will always be displayed in the pager as raw text.
+- **[`<view-text>`](fn-view-text) (default keybinding: {kbd}`T`)** — The attachment will always be displayed in the pager as raw text.
 
 ### Saving Attachments
 
-- **`<save-entry>` (default keybinding: {kbd}`s`)** — This will save the attachment to disk.
+- **[`<save-entry>`](fn-save-entry) (default keybinding: {kbd}`s`)** — This will save the attachment to disk.
    The permissions of the saved file will depend on the user's `umask`. e.g. `umask 022` will create a file with permissions `rw-r--r--`.
 
 See also: [`$attach_save_dir`](cfg-attach-save-dir), [`$attach_save_without_prompting`](cfg-attach-save-without-prompting), [`$attach_sep`](cfg-attach-sep), [`$attach_split`](cfg-attach-split)
@@ -112,13 +112,13 @@ Attachments appear as follows by default:
 ```
 
 The "-" denotes that NeoMutt will delete the file after sending (or postponing, or canceling) the message.
-It can be toggled with the `<toggle-unlink>` command (default: {kbd}`u`).
-The next field is the MIME content-type, and can be changed with the `<edit-type>` command (default: {kbd}`^T`).
+It can be toggled with the [`<toggle-unlink>`](fn-toggle-unlink) command (default: {kbd}`u`).
+The next field is the MIME content-type, and can be changed with the [`<edit-type>`](fn-edit-type) command (default: {kbd}`^T`).
 The next field is the encoding for the attachment, which allows a binary message to be encoded for transmission on 7bit links.
-It can be changed with the `<edit-encoding>` command (default: {kbd}`^E`).
+It can be changed with the [`<edit-encoding>`](fn-edit-encoding) command (default: {kbd}`^E`).
 The next field is the size of the attachment, rounded to kilobytes or megabytes.
-The next field is the filename, which can be changed with the `<rename-file>` command (default: {kbd}`R`).
-The final field is the description of the attachment, and can be changed with the `<edit-description>` command (default: {kbd}`d`).
+The next field is the filename, which can be changed with the [`<rename-file>`](fn-rename-file) command (default: {kbd}`R`).
+The final field is the description of the attachment, and can be changed with the [`<edit-description>`](fn-edit-description) command (default: {kbd}`d`).
 See [`$attach_format`](cfg-attach-format) for a full list of available expandos to format this display to your needs.
 
 :::{admonition} 📷 Screenshot Needed
@@ -132,7 +132,7 @@ See [`$attach_format`](cfg-attach-format) for a full list of available expandos 
 :::
 
 :::{note}
-The `<edit-type>` function (default: {kbd}`^T`) is available in the index, pager, compose, and attachment menus.
+The [`<edit-type>`](fn-edit-type) function (default: {kbd}`^T`) is available in the index, pager, compose, and attachment menus.
 It temporarily changes the MIME content-type of an attachment — for example, to correct a bogus charset parameter set by the sender's mailer (e.g., changing `text/plain; charset=us-ascii` to `text/plain; charset=utf-8`).
 These changes are **not persistent**: they apply only for the current session or send operation and do not modify the stored message.
 :::
@@ -164,7 +164,7 @@ If NeoMutt can not determine the MIME type by the extension of the file you atta
 If that command is not specified, NeoMutt will look at the file.
 If the file is free of binary information, NeoMutt will assume that the file is plain text, and mark it as `text/plain`.
 If the file contains binary information, then NeoMutt will mark it as `application/octet-stream`.
-You can change the MIME type that NeoMutt assigns to an attachment by using the `<edit-type>` command from the compose menu (default: {kbd}`^T`).
+You can change the MIME type that NeoMutt assigns to an attachment by using the [`<edit-type>`](fn-edit-type) command from the compose menu (default: {kbd}`^T`).
 NeoMutt recognizes all of these if the appropriate entry is found in the `mime.types` file.
 Non-recognized MIME types should only be used if the recipient of the message is likely to be expecting such attachments.
 
@@ -396,7 +396,7 @@ image/gif;      ; print=anytopnm %s | pnmtops | lpr; \
 
 NeoMutt will skip the `image/*` entry and use the `image/gif` entry with the print command.
 
-In addition, you can use this with **auto-view** to denote two commands for viewing an attachment, one to be viewed automatically, the other to be viewed interactively from the attachment menu using the `<view-mailcap>` function (bound to {kbd}`m` by default).
+In addition, you can use this with **auto-view** to denote two commands for viewing an attachment, one to be viewed automatically, the other to be viewed interactively from the attachment menu using the [`<view-mailcap>`](fn-view-mailcap) function (bound to {kbd}`m` by default).
 In addition, you can then use the test feature to determine which viewer to use interactively depending on your environment.
 
 ```
@@ -408,13 +408,13 @@ text/html;      lynx -dump %s; nametemplate=%s.html; copiousoutput
 For **auto-view**, NeoMutt will choose the third entry because of the `copiousoutput` tag.
 For interactive viewing, NeoMutt will run the program `RunningX` to determine if it should use the first entry.
 If the program returns non-zero, NeoMutt will use the second entry for interactive viewing.
-The last entry is for inline display in the pager and the `<view-attach>` function in the attachment menu.
+The last entry is for inline display in the pager and the [`<view-attach>`](fn-view-attach) function in the attachment menu.
 
 Entries with the `copiousoutput` tag should always be specified as the last one per type.
 For non-interactive use, the last entry will then actually be the first matching one with the tag set.
 For non-interactive use, only `copiousoutput`-tagged entries are considered.
 For interactive use, NeoMutt ignores this tag and treats all entries equally.
-Therefore, if not specified last, all following entries without this tag would never be considered for `<view-attach>` because the `copiousoutput` before them matched already.
+Therefore, if not specified last, all following entries without this tag would never be considered for [`<view-attach>`](fn-view-attach) because the `copiousoutput` before them matched already.
 
 #### Command Expansion
 
@@ -605,11 +605,11 @@ NeoMutt includes some primitive ability to compose multipart/alternative emails:
 
 1. In the Compose menu, attach the two (or more) alternatives as usual.
    For example, attach "invitation.html" and then "invitation.txt".
-   (You can reorder them using the `<move-up>` (-) and `<move-down>` (+) bindings, and edit the descriptions).
+   (You can reorder them using the [`<move-up>`](fn-move-up) (-) and [`<move-down>`](fn-move-down) (+) bindings, and edit the descriptions).
 
-2. Tag the attachments that are alternatives, and press the `<group-alternatives>` (&) binding to group them together.
+2. Tag the attachments that are alternatives, and press the [`<group-alternatives>`](fn-group-alternatives) (&) binding to group them together.
    After this, the separate parts will be displayed in a tree structure.
-   Attachments can still be edited separately and reordered within the group, but must be ungrouped using the `<ungroup-attachment>` (#) binding for more advanced editing before tagging and grouping together again as described above.
+   Attachments can still be edited separately and reordered within the group, but must be ungrouped using the [`<ungroup-attachment>`](fn-ungroup-attachment) (#) binding for more advanced editing before tagging and grouping together again as described above.
 
 3. Send the email as usual.
 

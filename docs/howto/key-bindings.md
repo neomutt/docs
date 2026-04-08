@@ -79,7 +79,7 @@ You can also use the form {kbd}`<177>`, which allows octal numbers with an arbit
 | {kbd}`F1>`          | function key 1              |
 | {kbd}`F10>`         | function key 10             |
 
-The `<what-key>` function can be used to explore keycode and symbolic names for other keys on your keyboard.
+The [`<what-key>`](fn-what-key) function can be used to explore keycode and symbolic names for other keys on your keyboard.
 Executing this function will display information about each key pressed, until terminated by {kbd}`^G`.
 
 :::{admonition} 📷 Screenshot Needed
@@ -121,18 +121,18 @@ To prevent NeoMutt from becoming unusable some fallback key bindings are added a
 
 | Menu    | Key               | Bound Function      |
 |---------|-------------------|---------------------|
-| generic | {kbd}`Enter`     | `<select-entry>`    |
-| generic | {kbd}`Return`    | `<select-entry>`    |
-| generic | {kbd}`:`         | `<enter-command>`   |
-| generic | {kbd}`?`         | `<help>`            |
-| generic | {kbd}`q`         | `<exit>`            |
-| editor  | {kbd}`Backspace` | `<backspace>`       |
-| editor  | \177              | `<backspace>`       |
-| index   | {kbd}`Enter`     | `<display-message>` |
-| index   | {kbd}`Return`    | `<display-message>` |
-| pager   | {kbd}`?`         | `<help>`            |
-| pager   | {kbd}`q`         | `<exit>`            |
-| pager   | {kbd}`:`         | `<enter-command>`   |
+| generic | {kbd}`Enter`     | [`<select-entry>`](fn-select-entry)      |
+| generic | {kbd}`Return`    | [`<select-entry>`](fn-select-entry)      |
+| generic | {kbd}`:`         | [`<enter-command>`](fn-enter-command)    |
+| generic | {kbd}`?`         | [`<help>`](fn-help)                      |
+| generic | {kbd}`q`         | [`<exit>`](fn-exit)                      |
+| editor  | {kbd}`Backspace` | [`<backspace>`](fn-backspace)            |
+| editor  | \177              | [`<backspace>`](fn-backspace)            |
+| index   | {kbd}`Enter`     | [`<display-message>`](fn-display-message) |
+| index   | {kbd}`Return`    | [`<display-message>`](fn-display-message) |
+| pager   | {kbd}`?`         | [`<help>`](fn-help)                      |
+| pager   | {kbd}`q`         | [`<exit>`](fn-exit)                      |
+| pager   | {kbd}`:`         | [`<enter-command>`](fn-enter-command)    |
 
 A key binding can also be unbound by mapping it to the special function `<noop>`.
 It is, however, recommended to use `unbind` instead.

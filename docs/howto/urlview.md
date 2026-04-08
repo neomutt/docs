@@ -105,7 +105,7 @@ Expected result: selected URLs open in the configured browser.
 
 ## Pipe Only the Message Body
 
-By default, `<pipe-message>` sends the full message including headers.
+By default, [`<pipe-message>`](fn-pipe-message) sends the full message including headers.
 To send only the decoded body:
 
 ```neomuttrc

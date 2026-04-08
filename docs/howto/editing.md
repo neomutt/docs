@@ -17,37 +17,37 @@ The key bindings follow Emacs conventions.
 
 | Key               | Function          | Description                   |
 |-------------------|-------------------|-------------------------------|
-| {kbd}`^A` or {kbd}`<Home>`  | `<bol>`           | Move to the start of the line |
-| {kbd}`^E` or {kbd}`<End>`   | `<eol>`           | Move to the end of the line   |
-| {kbd}`^B` or {kbd}`<Left>`  | `<backward-char>` | Move back one character       |
-| {kbd}`^F` or {kbd}`<Right>` | `<forward-char>`  | Move forward one character    |
-| {kbd}`Esc B`           | `<backward-word>` | Move back one word            |
-| {kbd}`Esc F`           | `<forward-word>`  | Move forward one word         |
+| {kbd}`^A` or {kbd}`<Home>`  | [`<bol>`](fn-bol)           | Move to the start of the line |
+| {kbd}`^E` or {kbd}`<End>`   | [`<eol>`](fn-eol)           | Move to the end of the line   |
+| {kbd}`^B` or {kbd}`<Left>`  | [`<backward-char>`](fn-backward-char) | Move back one character       |
+| {kbd}`^F` or {kbd}`<Right>` | [`<forward-char>`](fn-forward-char)  | Move forward one character    |
+| {kbd}`Esc B`           | [`<backward-word>`](fn-backward-word) | Move back one word            |
+| {kbd}`Esc F`           | [`<forward-word>`](fn-forward-word)  | Move forward one word         |
 
 ### Deletion
 
 | Key                | Function        | Description                            |
 |--------------------|-----------------|----------------------------------------|
-| {kbd}`^D` or {kbd}`<Delete>` | `<delete-char>` | Delete the character under the cursor  |
-| {kbd}`<Backspace>`      | `<backspace>`   | Delete the character before the cursor |
-| {kbd}`^K`               | `<kill-eol>`    | Delete to the end of the line          |
-| {kbd}`^U`               | `<kill-line>`   | Delete the entire line                 |
-| {kbd}`^W`               | `<kill-word>`   | Delete the word before the cursor      |
-| {kbd}`Esc d`            | `<kill-eow>`    | Delete to the end of the word          |
+| {kbd}`^D` or {kbd}`<Delete>` | [`<delete-char>`](fn-delete-char) | Delete the character under the cursor  |
+| {kbd}`<Backspace>`      | [`<backspace>`](fn-backspace) | Delete the character before the cursor |
+| {kbd}`^K`               | [`<kill-eol>`](fn-kill-eol)    | Delete to the end of the line          |
+| {kbd}`^U`               | [`<kill-line>`](fn-kill-line)   | Delete the entire line                 |
+| {kbd}`^W`               | [`<kill-word>`](fn-kill-word)   | Delete the word before the cursor      |
+| {kbd}`Esc d`            | [`<kill-eow>`](fn-kill-eow)    | Delete to the end of the word          |
 
 ### Word Case
 
 | Key     | Function            | Description                |
 |---------|---------------------|----------------------------|
-| {kbd}`Esc u` | `<upcase-word>`     | Convert word to upper case |
-| {kbd}`Esc l` | `<downcase-word>`   | Convert word to lower case |
-| {kbd}`Esc c` | `<capitalize-word>` | Capitalize the word        |
+| {kbd}`Esc u` | [`<upcase-word>`](fn-upcase-word)     | Convert word to upper case |
+| {kbd}`Esc l` | [`<downcase-word>`](fn-downcase-word)   | Convert word to lower case |
+| {kbd}`Esc c` | [`<capitalize-word>`](fn-capitalize-word) | Capitalize the word        |
 
 ### Miscellaneous
 
 | Key        | Function       | Description                        |
 |------------|----------------|------------------------------------|
-| {kbd}`^V`       | `<quote-char>` | Quote (escape) the next typed key  |
+| {kbd}`^V`       | [`<quote-char>`](fn-quote-char) | Quote (escape) the next typed key  |
 | {kbd}`^G`       | n/a            | Abort the current prompt or action |
 | {kbd}`<Return>` | n/a            | Confirm / finish editing           |
 
@@ -69,9 +69,9 @@ The number of history entries is controlled by [`$history`](cfg-history).
 
 | Key      | Function           | Description                             |
 |----------|--------------------|-----------------------------------------|
-| {kbd}`<Up>`   | `<history-up>`     | Recall the previous string from history |
-| {kbd}`<Down>` | `<history-down>`   | Recall the next string from history     |
-| {kbd}`^R`     | `<history-search>` | Search history using the current input  |
+| {kbd}`<Up>`   | [`<history-up>`](fn-history-up)     | Recall the previous string from history |
+| {kbd}`<Down>` | [`<history-down>`](fn-history-down)   | Recall the next string from history     |
+| {kbd}`^R`     | [`<history-search>`](fn-history-search) | Search history using the current input  |
 
 NeoMutt remembers what you were typing as you cycle through history, and wraps back to your original entry.
 

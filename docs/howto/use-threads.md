@@ -19,7 +19,7 @@ is now orthogonal from how messages are sorted.
 ## Functions
 
 The "Use Threads" feature adds no new functions to NeoMutt. The existing
-functions `<sort-mailbox>` and `<sort-reverse>` are updated to toggle the
+functions [`<sort-mailbox>`](fn-sort-mailbox) and [`<sort-reverse>`](fn-sort-reverse) are updated to toggle the
 state of [`$use_threads`](cfg-use-threads) once it has been set, while preserving
 backwards-compatible behavior on [`$sort`](cfg-sort) if this feature is not used.
 

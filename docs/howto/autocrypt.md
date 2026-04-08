@@ -53,7 +53,7 @@ More information can be found at [https://autocrypt.org/](https://autocrypt.org/
 5. Once the directory, keyring, and database are created, NeoMutt will ask whether you would like to create an account.
    In order to use Autocrypt, each sending address needs an account.
    As a convenience you can create an account during the first run.
-   If you would like to add additional accounts later, this can be done via the `<autocrypt-acct-menu>` function in the index, by default bound to {kbd}`A`.
+   If you would like to add additional accounts later, this can be done via the [`<autocrypt-acct-menu>`](fn-autocrypt-acct-menu) function in the index, by default bound to {kbd}`A`.
 
 6. Account creation will first ask you for an email address.
    Next, it will ask whether you want to create a new key or select an existing key.
@@ -92,7 +92,7 @@ The `Autocrypt:` field displays "Off" and the `Recommendation:` field shows a va
 
 The `Autocrypt:` field shows whether the message will be encrypted by Autocrypt when sent.
 It has two values: `Encrypt` and `Off`.
-`Encrypt` can be enabled using the `<autocrypt-menu>` function, by default bound to {kbd}`o`.
+`Encrypt` can be enabled using the [`<autocrypt-menu>`](fn-autocrypt-menu) function, by default bound to {kbd}`o`.
 
 ### The Recommendation Field
 
@@ -111,11 +111,11 @@ This can have one of five values:
 - **`Available`** — A key was found for every recipient, and the engine believes all keys are recent and seen from the recipient first hand.
    However, either you or one of the recipients chose not to specify "prefer encryption".
 - **`Yes`** — The same as `Available`, with the addition that you and all recipients have specified "prefer encryption".
-   This value will automatically enable encryption, unless you have manually switched it off or enabled regular encryption or signing via the `<pgp-menu>`.
+   This value will automatically enable encryption, unless you have manually switched it off or enabled regular encryption or signing via the [`<pgp-menu>`](fn-pgp-menu).
 
 ### Changing the Autocrypt Encryption Setting
 
-The `<autocrypt-menu>` function, by default bound to {kbd}`o`, can be used to change the `Encrypt:` field value:
+The [`<autocrypt-menu>`](fn-autocrypt-menu) function, by default bound to {kbd}`o`, can be used to change the `Encrypt:` field value:
 
 - **(e)ncrypt** — toggle encryption on
 - **(c)lear** — toggle encryption off
@@ -149,7 +149,7 @@ Be sure to set [`$postpone_encrypt`](cfg-postpone-encrypt) to ensure postponed m
 
 ## Account Management
 
-The Autocrypt Account Menu is available from the index via `<autocrypt-acct-menu>`, by default bound to {kbd}`A`.
+The Autocrypt Account Menu is available from the index via [`<autocrypt-acct-menu>`](fn-autocrypt-acct-menu), by default bound to {kbd}`A`.
 See the Autocrypt Account Menu for the list of functions and their default keybindings.
 
 In this menu, you can:

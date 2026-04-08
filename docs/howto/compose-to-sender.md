@@ -20,7 +20,7 @@ By default, it is not bound to a key.
 
 | Menus       | Function              | Description                                            |
 |-------------|-----------------------|--------------------------------------------------------|
-| index,pager | `<compose-to-sender>` | compose a new email to the sender of the current email |
+| index,pager | [`<compose-to-sender>`](fn-compose-to-sender) | compose a new email to the sender of the current email |
 
 ## neomuttrc
 

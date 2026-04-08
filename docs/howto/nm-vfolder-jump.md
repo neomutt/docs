@@ -26,7 +26,7 @@ Expected result: NeoMutt opens the matching virtual mailbox immediately.
 
 ## Use change-vfolder to Cycle
 
-1. Bind the `<change-vfolder>` function:
+1. Bind the [`<change-vfolder>`](fn-change-vfolder) function:
 
 ```neomuttrc
 bind index,pager X change-vfolder
@@ -38,7 +38,7 @@ Expected result: NeoMutt switches to the named virtual mailbox.
 
 ## Run an Ad-Hoc Query
 
-1. Bind `<vfolder-from-query>`:
+1. Bind [`<vfolder-from-query>`](fn-vfolder-from-query):
 
 ```neomuttrc
 bind index,pager \eX vfolder-from-query

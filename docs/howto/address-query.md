@@ -40,7 +40,7 @@ There are two mechanisms for accessing the query function of NeoMutt.
 
 ### From the Index Menu
 
-1. Use the `<query>` function (default: {kbd}`Q`) from the index menu.
+1. Use the [`<query>`](fn-query) function (default: {kbd}`Q`) from the index menu.
 2. This will prompt for a query, then bring up the query menu which will list the matching responses.
 3. From the query menu, you can select addresses to create aliases, or to mail.
 4. You can tag multiple addresses to mail, start a new query, or have a new query appended to the current responses.
@@ -60,7 +60,7 @@ One or more entries should be tagged with `*` to illustrate multi-selection.
 
 ### Address Completion at Prompts
 
-1. In any prompt for address entry, use the `<complete-query>` function (default: ^T) to run a query based on the current address you have typed.
+1. In any prompt for address entry, use the [`<complete-query>`](fn-complete-query) function (default: ^T) to run a query based on the current address you have typed.
 2. Like aliases, NeoMutt will look for what you have typed back to the last space or comma.
 3. If there is a single response for that query, NeoMutt will expand the address in place.
 4. If there are multiple responses, NeoMutt will activate the query menu.

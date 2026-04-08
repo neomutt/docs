@@ -10,20 +10,20 @@ keywords: tags, tagging, tag-pattern, tag-prefix, custom tags, notmuch, imap, hi
 
 Sometimes it is desirable to perform an operation on a group of messages all at once rather than one at a time.
 An example might be to save messages to a mailing list to a separate folder, or to delete all messages with a given subject.
-To tag all messages matching a pattern, use the `<tag-pattern>` function, which is bound to {kbd}`Shift-T` by default.
+To tag all messages matching a pattern, use the [`<tag-pattern>`](fn-tag-pattern) function, which is bound to {kbd}`Shift-T` by default.
 Patterns are completable in the editor menu.
-Invoke the `<complete>` function (by default bound to {kbd}`<Tab>`) after typing {kbd}`~` to get a selectable list.
-Or you can select individual messages by hand using the `<tag-message>` function, which is bound to {kbd}`t` by default.
+Invoke the [`<complete>`](fn-complete) function (by default bound to {kbd}`<Tab>`) after typing {kbd}`~` to get a selectable list.
+Or you can select individual messages by hand using the [`<tag-message>`](fn-tag-message) function, which is bound to {kbd}`t` by default.
 See [patterns](ref-patterns) for NeoMutt's pattern matching syntax.
 
-Once you have tagged the desired messages, you can use the "tag-prefix" operator, which is the {kbd}`;` by default.
+Once you have tagged the desired messages, you can use the [`<tag-prefix>`](fn-tag-prefix) operator, which is the {kbd}`;` by default.
 
 :::{admonition} 📷 Screenshot Needed
 :class: tip
 
 **Subject:** Tagged messages in the index
 
-**Description:** The NeoMutt index view showing several messages that have been tagged (marked with `*` in the tag indicator column) using `<tag-message>` or `<tag-pattern>`, with untagged messages shown without the marker for contrast.
+**Description:** The NeoMutt index view showing several messages that have been tagged (marked with `*` in the tag indicator column) using [`<tag-message>`](fn-tag-message) or [`<tag-pattern>`](fn-tag-pattern), with untagged messages shown without the marker for contrast.
 
 **Highlights:** The `*` tag indicator in the flags column, how tagged messages are visually distinguished from untagged ones, and the status bar showing the count of tagged messages.
 :::
@@ -31,9 +31,9 @@ Once you have tagged the desired messages, you can use the "tag-prefix" operator
 When the "tag-prefix" operator is used, the *next* operation will be applied to all tagged messages if that operation can be used in that manner.
 If the [`$auto_tag`](cfg-auto-tag) variable is set, the next operation applies to the tagged messages automatically, without requiring the "tag-prefix".
 
-In `macro` or `push` commands, you can use the `<tag-prefix-cond>` operator.
+In `macro` or `push` commands, you can use the [`<tag-prefix-cond>`](fn-tag-prefix-cond) operator.
 If there are no tagged messages, NeoMutt will "eat" the rest of the macro to abort its execution.
-NeoMutt will stop "eating" the macro when it encounters the `<end-cond>` operator; after this operator the rest of the macro will be executed as normal.
+NeoMutt will stop "eating" the macro when it encounters the [`<end-cond>`](fn-end-cond) operator; after this operator the rest of the macro will be executed as normal.
 
 ## Custom Backend-Based Tags
 
@@ -54,11 +54,11 @@ By default, none of them are bound to keys.
 
 | Menus       | Function                    | Description                                                                                                                                                                                  |
 |-------------|-----------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| index,pager | `<modify-labels>`           | add, remove, or toggle tags:                                                                                                                                                                 |
+| index,pager | [`<modify-labels>`](fn-modify-labels)           | add, remove, or toggle tags:                                                                                                                                                                 |
 |             |                             | IMAP: edit the tags list                                                                                                                                                                     |
 |             |                             | Notmuch: [+]\<tag\> to add, -\<tag\> to remove, !\<tag\> to toggle(notmuch) tags.                                                                                                            |
 |             |                             | Note: Tab completion of tag names is available                                                                                                                                               |
-| index,pager | `<modify-labels-then-hide>` | add, remove, or toggle tags:                                                                                                                                                                 |
+| index,pager | [`<modify-labels-then-hide>`](fn-modify-labels-then-hide) | add, remove, or toggle tags:                                                                                                                                                                 |
 |             |                             | IMAP: edit the tags list                                                                                                                                                                     |
 |             |                             | Notmuch: [+]\<tag\> to add, -\<tag\> to remove, !\<tag\> to toggle labels and then hide or unhide the message by changing the "quasi-deleted" to match if it would be shown when requerying. |
 |             |                             | Normal redisplay rules apply here, so the user must call \<sync-mailbox\> for the changes to be displayed.                                                                                   |
@@ -149,7 +149,7 @@ color index_tags green default
 ## Marking Messages
 
 There are times when it is useful to ask NeoMutt to "remember" which message you are currently looking at while you move elsewhere in your mailbox.
-You can do this with the `<mark-message>` function, which is bound to {kbd}`~` key by default.
+You can do this with the [`<mark-message>`](fn-mark-message) function, which is bound to {kbd}`~` key by default.
 
 ### Workflow
 

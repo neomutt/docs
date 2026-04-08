@@ -12,7 +12,7 @@ keywords: alias, search, find contact, alias menu, tab completion, filter, limit
 
 ## Search the Alias Menu
 
-1. Open the alias menu by pressing {kbd}`<Tab>` at an address prompt (with an empty field) or by using the `<alias>` function if bound.
+1. Open the alias menu by pressing {kbd}`<Tab>` at an address prompt (with an empty field) or by using the [`<alias-dialog>`](fn-alias-dialog) function if bound.
 2. Press {kbd}`/` to search.
 3. Type part of a name or email address.
 
@@ -50,7 +50,7 @@ Expected result: you reach the right contact without browsing the full list.
 
 If you have [`$query_command`](cfg-query-command) configured (abook, khard, LDAP):
 
-1. At an address prompt, press {kbd}`^T` (`<complete-query>`).
+1. At an address prompt, press {kbd}`^T` ([`<complete-query>`](fn-complete-query)).
 2. Type part of a name or address.
 
 Expected result: results from the external source appear and you can select one.

@@ -27,7 +27,7 @@ Expected result: NeoMutt adds all server-subscribed folders to its mailbox list,
 
 1. Open the folder browser with {kbd}`c` then {kbd}`?` (or press {kbd}`y`).
 2. Press {kbd}`s` on a folder to subscribe, or {kbd}`u` to unsubscribe.
-3. Toggle the view to show only subscribed folders with `<toggle-subscribed>`.
+3. Toggle the view to show only subscribed folders with [`<toggle-subscribed>`](fn-toggle-subscribed).
 
 Expected result: the subscription list on the server is updated and NeoMutt reflects the change.
 

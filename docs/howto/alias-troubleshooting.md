@@ -53,7 +53,7 @@ Expected result: NeoMutt reports the file and line number of any syntax error.
 
 ## Alias Saved but Not Available
 
-When `<create-alias>` appends to [`$alias_file`](cfg-alias-file), NeoMutt does not re-source the file automatically.
+When [`<create-alias>`](fn-create-alias) appends to [`$alias_file`](cfg-alias-file), NeoMutt does not re-source the file automatically.
 
 1. Reload after saving:
 

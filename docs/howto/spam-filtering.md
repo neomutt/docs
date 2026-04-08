@@ -74,7 +74,7 @@ inline.
 :::
 
 The spam tag is what will be displayed in the index when you use `%H` in the [`$index_format`](cfg-index-format) variable.
-It's also the string that the `~H` pattern-matching expression matches against for `<search>` and `<limit>` functions.
+It's also the string that the `~H` pattern-matching expression matches against for [`<search>`](fn-search) and [`<limit>`](fn-limit) functions.
 And it's what sorting by spam attribute will use as a sort key.
 
 ## Sorting by Spam Tag

@@ -27,7 +27,7 @@ NeoMutt shows query results at the time the mailbox was opened.
 To pick up new messages:
 
 1. Leave and re-enter the virtual mailbox (press {kbd}`c` then select it again), or
-2. Use `<sync-mailbox>` (`$` by default) to force a refresh.
+2. Use [`<sync-mailbox>`](fn-sync-mailbox) (`$` by default) to force a refresh.
 
 Expected result: newly indexed messages appear in the virtual mailbox.
 

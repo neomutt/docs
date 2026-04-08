@@ -18,7 +18,7 @@ This results in broken discussions because NeoMutt has not enough information to
 
 1. Tag a number of replies that belong to the same thread.
 2. Move to the parent message.
-3. Use the `<link-threads>` function (bound to `&` by default).
+3. Use the [`<link-threads>`](fn-link-threads) function (bound to `&` by default).
 
 The replies will then be connected to this parent message.
 
@@ -27,7 +27,7 @@ The replies will then be connected to this parent message.
 On mailing lists, some people are in the bad habit of starting a new discussion by hitting "reply" to any message from the list and changing the subject to a totally unrelated one.
 
 1. Navigate to the message where the off-topic subthread begins.
-2. Use the `<break-thread>` function (bound to `#` by default).
+2. Use the [`<break-thread>`](fn-break-thread) function (bound to `#` by default).
 
 This will turn the subthread starting from the current message into a whole different thread.
 
@@ -36,7 +36,7 @@ This will turn the subthread starting from the current message into a whole diff
 
 **Subject:** Linked and broken threads in the index
 
-**Description:** NeoMutt index view showing a thread that has been repaired with `<link-threads>` — several replies are now correctly nested under a parent message with tree-drawing characters (`|->`, `` `-> ``) connecting them.
+**Description:** NeoMutt index view showing a thread that has been repaired with [`<link-threads>`](fn-link-threads) — several replies are now correctly nested under a parent message with tree-drawing characters (`|->`, `` `-> ``) connecting them.
 
 **Highlights:** The tree structure showing parent-child relationships between messages, with the thread connector characters visible in the index.
 :::
@@ -53,7 +53,7 @@ Whether threads are in use is now orthogonal from how messages are sorted.
 ### Functions
 
 The "Use Threads" feature adds no new functions to NeoMutt.
-The existing functions `<sort-mailbox>` and `<sort-reverse>` are updated to toggle the state of [`$use_threads`](cfg-use-threads) once it has been set, while preserving backwards-compatible behavior on [`$sort`](cfg-sort) if this feature is not used.
+The existing functions [`<sort-mailbox>`](fn-sort-mailbox) and [`<sort-reverse>`](fn-sort-reverse) are updated to toggle the state of [`$use_threads`](cfg-use-threads) once it has been set, while preserving backwards-compatible behavior on [`$sort`](cfg-sort) if this feature is not used.
 
 ### Variables
 

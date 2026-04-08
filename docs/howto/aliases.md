@@ -59,7 +59,7 @@ Unlike other mailers, NeoMutt doesn't require aliases to be defined in a special
 The `alias` command can appear anywhere in a configuration file, as long as this file is `source`d.
 Consequently, you can have multiple alias files, or you can have all aliases defined in your `.neomuttrc`.
 
-On the other hand, the `<create-alias>` function can use only one file, the one pointed to by the [`$alias_file`](cfg-alias-file) variable (which is `~/.neomuttrc` by default).
+On the other hand, the [`<create-alias>`](fn-create-alias) function can use only one file, the one pointed to by the [`$alias_file`](cfg-alias-file) variable (which is `~/.neomuttrc` by default).
 This file is not special either, in the sense that NeoMutt will happily append aliases to any file, but in order for the new aliases to take effect you need to explicitly `source` this file too.
 
 ### Configuring external alias files

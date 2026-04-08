@@ -30,8 +30,8 @@ unsubscribe-from <imap-folder-uri>
 subscribe-to imaps://mail.example.org/inbox
 ```
 
-Instead of the above commands you can also use the `<subscribe>` and `<unsubscribe>` functions of the browser (default keys `s` and `u`) to subscribe to or unsubscribe from a folder while browsing the folders on the IMAP server.
-The browser can be instructed to only display the folders you are subscribed to with the `<toggle-subscribed>` function.
+Instead of the above commands you can also use the [`<subscribe>`](fn-subscribe) and [`<unsubscribe>`](fn-unsubscribe) functions of the browser (default keys `s` and `u`) to subscribe to or unsubscribe from a folder while browsing the folders on the IMAP server.
+The browser can be instructed to only display the folders you are subscribed to with the [`<toggle-subscribed>`](fn-toggle-subscribed) function.
 See also the [`$imap_list_subscribed`](cfg-imap-list-subscribed) variable.
 
 :::{admonition} 📷 Screenshot Needed
@@ -39,7 +39,7 @@ See also the [`$imap_list_subscribed`](cfg-imap-list-subscribed) variable.
 
 **Subject:** IMAP folder browser with subscription toggle
 
-**Description:** The NeoMutt folder browser connected to an IMAP server, with `<toggle-subscribed>` active so only subscribed folders are shown.
+**Description:** The NeoMutt folder browser connected to an IMAP server, with [`<toggle-subscribed>`](fn-toggle-subscribed) active so only subscribed folders are shown.
 Several folders are listed with the `s`/`u` subscribe/unsubscribe key bindings available in the help bar.
 
 **Highlights:** The subscribed-only filter in effect, and the `s`/`u` key bindings for managing folder subscriptions directly from the browser.
@@ -77,8 +77,8 @@ This is mostly the same as the local file browser, with the following difference
 - For the case where an entry can contain both messages and subfolders, the selection key (bound to `enter` by default) will choose to descend into the subfolder view. 
    If you wish to view the messages in that folder, you must use `view-file` instead (bound to `space` by default).
 
-- You can create, delete and rename mailboxes with the `<create-mailbox>`, `<delete-mailbox>`, and `<rename-mailbox>` commands (default bindings: `C`, `d` and `r`, respectively). 
-   You may also `<subscribe>` and `<unsubscribe>` to mailboxes (normally these are bound to {kbd}`s` and {kbd}`u`, respectively).
+- You can create, delete and rename mailboxes with the [`<create-mailbox>`](fn-create-mailbox), [`<delete-mailbox>`](fn-delete-mailbox), and [`<rename-mailbox>`](fn-rename-mailbox) commands (default bindings: `C`, `d` and `r`, respectively). 
+   You may also [`<subscribe>`](fn-subscribe) and [`<unsubscribe>`](fn-unsubscribe) to mailboxes (normally these are bound to {kbd}`s` and {kbd}`u`, respectively).
 
 :::{admonition} 📷 Screenshot Needed
 :class: tip
@@ -89,7 +89,7 @@ This is mostly the same as the local file browser, with the following difference
 Entries display "IMAP" in the permissions column, some with a "+" indicator showing they contain both messages and subfolders.
 At least one folder name has a trailing hierarchy separator (e.g., `/` or `.`).
 
-**Highlights:** The "IMAP+" indicator for folders containing both messages and subfolders, the hierarchy separator on folder names, and the key bindings for `<create-mailbox>` (C), `<delete-mailbox>` (d), and `<rename-mailbox>` (r) shown in the help bar.
+**Highlights:** The "IMAP+" indicator for folders containing both messages and subfolders, the hierarchy separator on folder names, and the key bindings for [`<create-mailbox>`](fn-create-mailbox) (C), [`<delete-mailbox>`](fn-delete-mailbox) (d), and [`<rename-mailbox>`](fn-rename-mailbox) (r) shown in the help bar.
 :::
 
 ## Authentication

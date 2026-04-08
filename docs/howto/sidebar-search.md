@@ -32,10 +32,10 @@ For example, typing "mlnd" is enough to reach "mailinglists/neomutt-dev".
 
 | Menus   | Default Key | Function                 | Description              |
 |---------|-------------|--------------------------|--------------------------|
-| sidebar |             | `<sidebar-start-search>` | Fuzzy search the sidebar |
-| sidebar |             | `<sidebar-abort-search>` | Close the sidebar search |
+| sidebar |             | [`<sidebar-start-search>`](fn-sidebar-start-search) | Fuzzy search the sidebar |
+| sidebar |             | [`<sidebar-abort-search>`](fn-sidebar-abort-search) | Close the sidebar search |
 
-The search is started with the `sidebar-start-search` function.
+The search is started with the [`<sidebar-start-search>`](fn-sidebar-start-search) function.
 It has no default keybinding, so you must add one yourself.
 A natural choice is {kbd}`Ctrl-S`.
 
@@ -57,7 +57,7 @@ available simultaneously:
 highlight through the filtered Sidebar so you can pick a
 different match without leaving the prompt.
 
-`<sidebar-abort-search>` (bound to {kbd}`Escape` by default)
+[`<sidebar-abort-search>`](fn-sidebar-abort-search) (bound to {kbd}`Escape` by default)
 closes the search prompt without making a selection.
 
 **Editor functions**
@@ -65,11 +65,11 @@ closes the search prompt without making a selection.
 The full set of line-editor keybindings is available for editing the search pattern.
 Examples include:
 
-- `<backward-char>`/`<forward-char>` — move the cursor left or right
-- `<bol>`/`<eol>` — jump to the start or end of the pattern
-- `<backward-word>`/`<forward-word>` — skip a word at a time
-- {kbd}`Backspace>`/`<delete-char>` — delete a character
-- `<kill-word>`/`<kill-eol>` — delete to end of word or line
+- [`<backward-char>`](fn-backward-char)/[`<forward-char>`](fn-forward-char) — move the cursor left or right
+- [`<bol>`](fn-bol)/[`<eol>`](fn-eol) — jump to the start or end of the pattern
+- [`<backward-word>`](fn-backward-word)/[`<forward-word>`](fn-forward-word) — skip a word at a time
+- {kbd}`Backspace>`/[`<delete-char>`](fn-delete-char) — delete a character
+- [`<kill-word>`](fn-kill-word)/[`<kill-eol>`](fn-kill-eol) — delete to end of word or line
 
 Any binding defined in the `editor` map can be used; use `:bind editor` to customise them.
 

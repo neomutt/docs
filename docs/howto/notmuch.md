@@ -109,13 +109,13 @@ By default, none of them are bound to keys.
 
 | Menus       | Function                        | Description                                                                                                                                                             |
 |-------------|---------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| index,pager | `<change-vfolder>`              | Switch to another virtual folder, a new folder maybe be specified by vfolder description (see named-mailboxes) or URL. the default is next vfolder with unread messages |
-| index,pager | `<entire-thread>`               | Read entire thread of the current message                                                                                                                               |
-| index,pager | `<vfolder-from-query>`          | Generate virtual folder from notmuch search query. Note: TAB completion of 'tag:' names is available.                                                                   |
-| index,pager | `<vfolder-from-query-readonly>` | The same as `<vfolder-from-query>`; however, the mailbox will be read-only.                                                                                             |
-| index       | `<vfolder-window-forward>`      | Generate virtual folder by moving the query's time window forward                                                                                                       |
-| index       | `<vfolder-window-backward>`     | Generate virtual folder by moving the query's time window backward                                                                                                      |
-| index       | `<vfolder-window-reset>`        | Generate virtual folder by moving the query's time window to the present                                                                                                |
+| index,pager | [`<change-vfolder>`](fn-change-vfolder)              | Switch to another virtual folder, a new folder maybe be specified by vfolder description (see named-mailboxes) or URL. the default is next vfolder with unread messages |
+| index,pager | [`<entire-thread>`](fn-entire-thread)               | Read entire thread of the current message                                                                                                                               |
+| index,pager | [`<vfolder-from-query>`](fn-vfolder-from-query)          | Generate virtual folder from notmuch search query. Note: TAB completion of 'tag:' names is available.                                                                   |
+| index,pager | [`<vfolder-from-query-readonly>`](fn-vfolder-from-query-readonly) | The same as [`<vfolder-from-query>`](fn-vfolder-from-query); however, the mailbox will be read-only.                                                                                             |
+| index       | [`<vfolder-window-forward>`](fn-vfolder-window-forward)      | Generate virtual folder by moving the query's time window forward                                                                                                       |
+| index       | [`<vfolder-window-backward>`](fn-vfolder-window-backward)     | Generate virtual folder by moving the query's time window backward                                                                                                      |
+| index       | [`<vfolder-window-reset>`](fn-vfolder-window-reset)        | Generate virtual folder by moving the query's time window to the present                                                                                                |
 
 More functions about tags can be found in **Custom backend Tags Feature**.
 

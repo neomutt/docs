@@ -67,14 +67,14 @@ By default, none of them are bound to keys.
 
 | Menus       | Function                   | Description                                          |
 |-------------|----------------------------|------------------------------------------------------|
-| index,pager | `<sidebar-next>`           | Move the highlight to next mailbox                   |
-| index,pager | `<sidebar-next-new>`       | Move the highlight to next mailbox with new mail     |
-| index,pager | `<sidebar-open>`           | Open highlighted mailbox                             |
-| index,pager | `<sidebar-page-down>`      | Scroll the Sidebar down 1 page                       |
-| index,pager | `<sidebar-page-up>`        | Scroll the Sidebar up 1 page                         |
-| index,pager | `<sidebar-prev>`           | Move the highlight to previous mailbox               |
-| index,pager | `<sidebar-prev-new>`       | Move the highlight to previous mailbox with new mail |
-| index,pager | `<sidebar-toggle-visible>` | Make the Sidebar (in)visible                         |
+| index,pager | [`<sidebar-next>`](fn-sidebar-next)           | Move the highlight to next mailbox                   |
+| index,pager | [`<sidebar-next-new>`](fn-sidebar-next-new)       | Move the highlight to next mailbox with new mail     |
+| index,pager | [`<sidebar-open>`](fn-sidebar-open)           | Open highlighted mailbox                             |
+| index,pager | [`<sidebar-page-down>`](fn-sidebar-page-down)      | Scroll the Sidebar down 1 page                       |
+| index,pager | [`<sidebar-page-up>`](fn-sidebar-page-up)        | Scroll the Sidebar up 1 page                         |
+| index,pager | [`<sidebar-prev>`](fn-sidebar-prev)           | Move the highlight to previous mailbox               |
+| index,pager | [`<sidebar-prev-new>`](fn-sidebar-prev-new)       | Move the highlight to previous mailbox with new mail |
+| index,pager | [`<sidebar-toggle-visible>`](fn-sidebar-toggle-visible) | Make the Sidebar (in)visible                         |
 
 ## Commands
 
