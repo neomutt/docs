@@ -14,12 +14,12 @@ document.addEventListener("keydown", (e) => {
   }
 
   // Previous page
-  if (key === "ArrowLeft" || key === "h" || key === "[") {
+  if (key === "ArrowLeft") {
     const link = document.querySelector('a[rel="prev"], a.prev-page') || document.querySelector('link[rel="prev"]');
     if (link) window.location.href = link.href;
 
   // Next page
-  } else if (key === "ArrowRight" || key === "l" || key === "]") {
+  } else if (key === "ArrowRight") {
     const link = document.querySelector('a[rel="next"], a.next-page') || document.querySelector('link[rel="next"]');
     if (link) window.location.href = link.href;
 
@@ -39,8 +39,8 @@ document.addEventListener("keydown", (e) => {
 
   // Diátaxis section keys
   } else if (docRoot) {
-    const sections = { T: "tutorials", H: "howto", E: "explanation", R: "reference" };
-    const section = sections[key.toUpperCase()];
+    const sections = { t: "tutorials", h: "howto", e: "explanation", r: "reference" };
+    const section = sections[key];
     if (section) go(docRoot + section + "/index.html");
   }
 });
