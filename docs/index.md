@@ -80,12 +80,12 @@ You'll get precise, authoritative information you can rely on when you need exac
 :columns: 12
 ⌨️ **Keyboard Navigation**
 ^^^
-| Key      | Action        |  | Key                        | Action               |
-|----------|---------------|--|----------------------------|----------------------|
-| {kbd}`T` | Tutorials     |  | {kbd}`←` {kbd}`h` {kbd}`[` | Previous page        |
-| {kbd}`H` | How-To Guides |  | {kbd}`→` {kbd}`l` {kbd}`]` | Next page            |
-| {kbd}`E` | Explanation   |  | {kbd}`u`                   | Go up to parent page |
-| {kbd}`R` | Reference     |  | {kbd}`U`                   | Section root         |
+| Key      | Action        |  | Key                              | Action               |
+|----------|---------------|--|----------------------------------|----------------------|
+| {kbd}`T` | Tutorials     |  | {kbd}`<Left>` {kbd}`h` {kbd}`[`  | Previous page        |
+| {kbd}`H` | How-To Guides |  | {kbd}`<Right>` {kbd}`l` {kbd}`]` | Next page            |
+| {kbd}`E` | Explanation   |  | {kbd}`u`                         | Go up to parent page |
+| {kbd}`R` | Reference     |  | {kbd}`U`                         | Section root         |
 :::
 
 ::::

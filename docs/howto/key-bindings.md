@@ -52,32 +52,32 @@ You can also use the form {kbd}`<177>`, which allows octal numbers with an arbit
 
 #### Symbolic Key Names
 
-| Symbolic name   | Meaning                     |
-|-----------------|-----------------------------|
-| `\t`            | tab                         |
-| {kbd}`<Tab>`         | tab                         |
-| {kbd}`<Shift-Tab>`     | backtab / shift-tab         |
-| `\r`            | carriage return             |
-| `\n`            | newline                     |
-| `\e`            | escape/alt                  |
-| {kbd}`<Escape>`         | escape/alt                  |
-| {kbd}`<Up>`          | up arrow                    |
-| {kbd}`<Down>`        | down arrow                  |
-| {kbd}`<Left>`        | left arrow                  |
-| {kbd}`<Right>`       | right arrow                 |
+| Symbolic name       | Meaning                     |
+|---------------------|-----------------------------|
+| {kbd}`\t`           | tab                         |
+| {kbd}`<Tab>`        | tab                         |
+| {kbd}`<Shift-Tab>`  | backtab / shift-tab         |
+| {kbd}`\r`           | carriage return             |
+| {kbd}`\n`           | newline                     |
+| {kbd}`\e`           | escape/alt                  |
+| {kbd}`<Escape>`     | escape/alt                  |
+| {kbd}`<Up>`         | up arrow                    |
+| {kbd}`<Down>`       | down arrow                  |
+| {kbd}`<Left>`       | left arrow                  |
+| {kbd}`<Right>`      | right arrow                 |
 | {kbd}`Page Up`      | Page Up                     |
 | {kbd}`Page Down`    | Page Down                   |
-| {kbd}`<Backspace>`   | Backspace                   |
-| {kbd}`<Delete>`      | Delete                      |
-| {kbd}`<Insert>`      | Insert                      |
-| {kbd}`<Enter>`       | Enter                       |
-| {kbd}`<Return>`      | Return                      |
+| {kbd}`<Backspace>`  | Backspace                   |
+| {kbd}`<Delete>`     | Delete                      |
+| {kbd}`<Insert>`     | Insert                      |
+| {kbd}`<Enter>`      | Enter                       |
+| {kbd}`<Return>`     | Return                      |
 | {kbd}`Keypad Enter` | Enter key on numeric keypad |
-| {kbd}`<Home>`        | Home                        |
-| {kbd}`<End>`         | End                         |
-| {kbd}`<Space>`       | Space bar                   |
-| {kbd}`F1`          | function key 1              |
-| {kbd}`F10`         | function key 10             |
+| {kbd}`<Home>`       | Home                        |
+| {kbd}`<End>`        | End                         |
+| {kbd}`<Space>`      | Space bar                   |
+| {kbd}`<F1>`         | function key 1              |
+| {kbd}`<F10>`        | function key 10             |
 
 The [`<what-key>`](fn-what-key) function can be used to explore keycode and symbolic names for other keys on your keyboard.
 Executing this function will display information about each key pressed, until terminated by {kbd}`Ctrl-G`.

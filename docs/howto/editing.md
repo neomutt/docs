@@ -21,8 +21,8 @@ The key bindings follow Emacs conventions.
 | {kbd}`Ctrl-E` or {kbd}`<End>`   | [`<eol>`](fn-eol)           | Move to the end of the line   |
 | {kbd}`Ctrl-B` or {kbd}`<Left>`  | [`<backward-char>`](fn-backward-char) | Move back one character       |
 | {kbd}`Ctrl-F` or {kbd}`<Right>` | [`<forward-char>`](fn-forward-char)  | Move forward one character    |
-| {kbd}`Esc B`      | [`<backward-word>`](fn-backward-word) | Move back one word            |
-| {kbd}`Esc F`      | [`<forward-word>`](fn-forward-word)  | Move forward one word         |
+| {kbd}`Alt-B`      | [`<backward-word>`](fn-backward-word) | Move back one word            |
+| {kbd}`Alt-F`      | [`<forward-word>`](fn-forward-word)  | Move forward one word         |
 
 ### Deletion
 
@@ -33,15 +33,15 @@ The key bindings follow Emacs conventions.
 | {kbd}`Ctrl-K`               | [`<kill-eol>`](fn-kill-eol)    | Delete to the end of the line          |
 | {kbd}`Ctrl-U`               | [`<kill-line>`](fn-kill-line)   | Delete the entire line                 |
 | {kbd}`Ctrl-W`               | [`<kill-word>`](fn-kill-word)   | Delete the word before the cursor      |
-| {kbd}`Esc d`       | [`<kill-eow>`](fn-kill-eow)    | Delete to the end of the word          |
+| {kbd}`Alt-d`       | [`<kill-eow>`](fn-kill-eow)    | Delete to the end of the word          |
 
 ### Word Case
 
 | Key     | Function            | Description                |
 |---------|---------------------|----------------------------|
-| {kbd}`Esc u` | [`<upcase-word>`](fn-upcase-word)     | Convert word to upper case |
-| {kbd}`Esc l` | [`<downcase-word>`](fn-downcase-word)   | Convert word to lower case |
-| {kbd}`Esc c` | [`<capitalize-word>`](fn-capitalize-word) | Capitalize the word        |
+| {kbd}`Alt-u` | [`<upcase-word>`](fn-upcase-word)     | Convert word to upper case |
+| {kbd}`Alt-l` | [`<downcase-word>`](fn-downcase-word)   | Convert word to lower case |
+| {kbd}`Alt-c` | [`<capitalize-word>`](fn-capitalize-word) | Capitalize the word        |
 
 ### Miscellaneous
 

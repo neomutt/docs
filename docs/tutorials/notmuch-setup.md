@@ -140,7 +140,7 @@ Opening "Inbox" displays all messages tagged `inbox`, regardless of which folder
 bind index,pager \eX vfolder-from-query
 ```
 
-2. In NeoMutt, press {kbd}`Esc X` and type a Notmuch query:
+2. In NeoMutt, press {kbd}`Alt-X` and type a Notmuch query:
 
 ```
 from:alice@example.com subject:report date:2w..

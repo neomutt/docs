@@ -275,7 +275,7 @@ Once editing is complete, an [`alias`](cmd-alias) command is added to the file s
 NeoMutt does not read the [`$alias_file`](cfg-alias-file) upon startup so you must explicitly [`source`](cmd-source) the file.
   :::
 
-`<check-traditional-pgp>` (default: {kbd}`Esc P`) : This function will search the current message for content signed or encrypted with PGP the "traditional" way, that is, without proper MIME tagging.
+`<check-traditional-pgp>` (default: {kbd}`Alt-P`) : This function will search the current message for content signed or encrypted with PGP the "traditional" way, that is, without proper MIME tagging.
 Technically, this function will temporarily change the MIME content types of the body parts containing PGP data; this is similar to the `<edit-type>` function's effect.
 
 `<edit-raw-message>` : This command (available in the index and pager) allows you to edit the raw current message as it's present in the mail folder.
@@ -317,7 +317,7 @@ Using this when replying to messages posted to mailing lists helps avoid duplica
 : Asks for an external Unix command and pipes the current or tagged message(s) to it.
 The variables [`$pipe_decode`](cfg-pipe-decode), [`$pipe_decode_weed`](cfg-pipe-decode-weed), [`$pipe_split`](cfg-pipe-split), [`$pipe_sep`](cfg-pipe-sep) and [`$wait_key`](cfg-wait-key) control the exact behavior of this function.
 
-`<resend-message>` (default: {kbd}`Esc e`) : NeoMutt takes the current message as a template for a new message.
+`<resend-message>` (default: {kbd}`Alt-e`) : NeoMutt takes the current message as a template for a new message.
 This function is best described as "recall from arbitrary folders".
 It can conveniently be used to forward MIME messages while preserving the original mail structure.
 Note that the amount of headers included here depends on the value of the [`$weed`](cfg-weed) variable.

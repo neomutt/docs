@@ -30,7 +30,7 @@ bind index,pager \eT modify-tags
 ## Triage Messages
 
 1. Open the **Inbox** mailbox.
-2. Select a message and press {kbd}`Esc T`.
+2. Select a message and press {kbd}`Alt-T`.
 3. Add a workflow tag and remove the inbox tag:
 
 ```
@@ -42,7 +42,7 @@ Expected result: the message disappears from Inbox and appears in Action.
 ## Mark Messages as Done
 
 1. Open the **Action** mailbox.
-2. Select a completed item and press {kbd}`Esc T`:
+2. Select a completed item and press {kbd}`Alt-T`:
 
 ```
 +done -todo

@@ -61,6 +61,6 @@ If you split aliases into multiple files, you can create a macro to edit one qui
 macro index,pager \ea "<shell-escape>$EDITOR ~/.config/neomutt/aliases-work<Enter><enter-command>source ~/.config/neomutt/aliases-work<Enter>" "Edit and reload work aliases"
 ```
 
-Expected result: pressing {kbd}`Esc a` opens your editor on the work alias file, and reloads it when you return.
+Expected result: pressing {kbd}`Alt-a` opens your editor on the work alias file, and reloads it when you return.
 
 See [Customise Key Bindings](key-bindings) for the full [`:bind`](cmd-bind) and [`:macro`](cmd-macro) syntax and [Macros](macros) for more macro examples.

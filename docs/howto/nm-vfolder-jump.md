@@ -44,7 +44,7 @@ Expected result: NeoMutt switches to the named virtual mailbox.
 bind index,pager \eX vfolder-from-query
 ```
 
-2. Press {kbd}`Esc X`, type a Notmuch query, and press {kbd}`<Enter>`.
+2. Press {kbd}`Alt-X`, type a Notmuch query, and press {kbd}`<Enter>`.
 
 Expected result: NeoMutt opens a temporary virtual mailbox for that query.
 

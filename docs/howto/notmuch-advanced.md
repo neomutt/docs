@@ -31,7 +31,7 @@ Expected result: only messages matching the combined query are shown.
 bind index,pager \eX vfolder-from-query
 ```
 
-2. Press {kbd}`Esc X` and enter a query such as:
+2. Press {kbd}`Alt-X` and enter a query such as:
 
 ```
 tag:inbox and from:boss@example.com
