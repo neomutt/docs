@@ -16,7 +16,7 @@ It is sometimes called the attachment menu or attachment tree.
 <div class="term-window">
 <div class="term-title">Attach Dialog</div>
 <pre class="terminal">
-<span >  I     1 &lt;no description&gt;                                               [multipa/mixed, 7bit, 14K] </span>
+<span>  I     1 &lt;no description&gt;                                               [multipa/mixed, 7bit, 14K] </span>
 <span>  I     2 </span><span class="tree">├─&gt;</span><span>&lt;no description&gt;                                    [text/plain, 7bit, us-ascii, 0.7K] </span>
 <span>  A     3 </span><span class="tree">├─&gt;</span><span>misc.md                                          [text/markdown, 7bit, us-ascii, 0.3K] </span>
 <span>  A     4 </span><span class="tree">├─&gt;</span><span>welcome.md                                       [text/markdown, 7bit, us-ascii, 1.0K] </span>
@@ -45,7 +45,7 @@ It is sometimes called the attachment menu or attachment tree.
 - Reply, forward, group-reply, or bounce while staying focused on the current message's attachments.
 - Extract supported public keys from a message and inspect encrypted or signed content.
 - Collapse multipart branches to simplify very large attachment trees.
-- Full reference: [Attach Functions](ref-fn-attach), [Generic Functions](ref-fn-generic).
+- Full reference: [Attach Functions](fn-attach), [Generic Functions](fn-generic).
 
 ## Where can I go next?
 

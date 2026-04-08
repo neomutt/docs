@@ -16,7 +16,7 @@ Unlike the [PGP Dialog](pgp.md), the entries here are X.509-style certificates r
 <div class="term-window">
 <div class="term-title">S/MIME Dialog</div>
 <pre class="terminal">
-<span >0x1A2B3C4D5E6F es Verified   langstroth@langstroth.com           Personal 2025                      </span>
+<span>0x1A2B3C4D5E6F es Verified   langstroth@langstroth.com           Personal 2025                      </span>
 <span>0x2B3C4D5E6F7A es Trusted    l.langstroth@hivemail.org           Work Certificate                   </span>
 <span>0x3C4D5E6F7A8B e- Unverified langstroth.bee@apiary.net           Apiary Systems                     </span>
 <span>0x4D5E6F7A8B9C -s Expired    rev.langstroth@phila.edu            Old University Key                 </span>
@@ -42,7 +42,7 @@ Unlike the [PGP Dialog](pgp.md), the entries here are X.509-style certificates r
 - Verify the selected certificate before using it.
 - View the certificate's user name or label in more detail.
 - Cancel and return to the send workflow.
-- Full reference: [Smime Functions](ref-fn-smime).
+- Full reference: [Smime Functions](fn-smime).
 
 ## Where can I go next?
 

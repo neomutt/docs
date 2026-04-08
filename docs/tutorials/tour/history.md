@@ -16,7 +16,7 @@ Its purpose is to save typing and help you reuse complicated strings accurately.
 <div class="term-window">
 <div class="term-title">History Dialog</div>
 <pre class="terminal">
-<span >set alias_format                                                                                    </span>
+<span>set alias_format                                                                                    </span>
 <span>reset alias_format                                                                                  </span>
 <span>set real_name="John Smith"                                                                          </span>
 <span>set quit=ask-no                                                                                     </span>
@@ -46,7 +46,7 @@ Its purpose is to save typing and help you reuse complicated strings accurately.
 - Reuse a previous entry without retyping it.
 - Narrow the list by typing part of the text first, then opening history.
 - Exit without changing the current prompt.
-- Full reference: [Dialog Functions](ref-fn-dialog), [Editor Functions](ref-fn-editor).
+- Full reference: [Dialog Functions](fn-dialog), [Editor Functions](fn-editor).
 
 ## Where can I go next?
 

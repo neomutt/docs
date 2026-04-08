@@ -246,7 +246,7 @@ Set the time base of a windowed notmuch query.
 Specify the notmuch tag modifications (addition, removal, toggling) applied to messages added to the NeoMutt record when [`$nm_record`](cfg-nm-record) is true.
 
 :::{seealso}
-[`<modify-labels>`](ref-fn-index) function for the syntax
+[`<modify-labels>`](fn-index) function for the syntax
 :::
 
 --------------------------------------------------------------------------------

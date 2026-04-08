@@ -4,7 +4,7 @@ description: Key bindings and functions for the NeoMutt command-line editor incl
 keywords: neomutt, functions, editor, menu, bindings, keys, text input, command line, cursor movement, tab completion, history, kill-word, backward-char, forward-char, line editing
 ---
 
-(ref-fn-editor)=
+(fn-editor)=
 # Editor Functions
 
 The text input line where you type responses to prompts.

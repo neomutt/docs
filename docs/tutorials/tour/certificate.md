@@ -51,7 +51,7 @@ You might see it while opening a mailbox, checking mail, or sending through SMTP
 - Reject the certificate and stop the connection.
 - Accept it for the current session only.
 - Accept it permanently so NeoMutt records the certificate for future connections.
-- Full reference: [Dialog Functions](ref-fn-dialog).
+- Full reference: [Dialog Functions](fn-dialog).
 
 ## Where can I go next?
 

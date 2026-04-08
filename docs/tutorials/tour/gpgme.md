@@ -20,7 +20,7 @@ In other words, it is the modern, unified version of the backend-specific [PGP D
 <span>   2 u  4096/0x7224725C RSA  es Jim Smith (backup) &lt;jim@example.com&gt;                                </span>
 <span>   3 f  4096/0x810582F5 RSA  es James Smith (flatcap) &lt;jim@example.com&gt;                             </span>
 <span>   4 f  4096/0x810582F5 RSA  es James Smith (flatcap) &lt;jim@example.com&gt;                             </span>
-<span >   5 f  4096/0x810582F5 RSA  es James Smith (flatcap) &lt;jim@example.com&gt;                             </span>
+<span>   5 f  4096/0x810582F5 RSA  es James Smith (flatcap) &lt;jim@example.com&gt;                             </span>
 <span>                                                                                                    </span>
 <span class="status">PGP keys matching &lt;jim@example.com&gt;                                                                 </span>
 <span>                                                                                                    </span>
@@ -39,7 +39,7 @@ In other words, it is the modern, unified version of the backend-specific [PGP D
 - Verify key details before accepting them.
 - Inspect the selected identity's displayed user name.
 - Cancel and return to the send workflow.
-- Full reference: [Pgp Functions](ref-fn-pgp), [Smime Functions](ref-fn-smime).
+- Full reference: [Pgp Functions](fn-pgp), [Smime Functions](fn-smime).
 
 ## Where can I go next?
 

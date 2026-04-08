@@ -194,8 +194,8 @@ When set, the sidebar will only display mailboxes containing new, or flagged, ma
     set sidebar_next_new_wrap = no
     ```
 
-When set, the [`<sidebar-next-new>`](ref-fn-sidebar) command will not stop at the end of the list of mailboxes, but wrap around to the beginning.
-The [`<sidebar-prev-new>`](ref-fn-sidebar) command is similarly affected, wrapping around to the end of the list.
+When set, the [`<sidebar-next-new>`](fn-sidebar) command will not stop at the end of the list of mailboxes, but wrap around to the beginning.
+The [`<sidebar-prev-new>`](fn-sidebar) command is similarly affected, wrapping around to the end of the list.
 
 --------------------------------------------------------------------------------
 

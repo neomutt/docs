@@ -16,7 +16,7 @@ Its job is to help you find recipients who are not already stored in your alias 
 <div class="term-window">
 <div class="term-title">Query Dialog</div>
 <pre class="terminal">
-<span >  1   Alan Jay Lerner           &lt;ajl@guava.com&gt;           |                        grammy,oscar,tony</span>
+<span>  1   Alan Jay Lerner           &lt;ajl@guava.com&gt;           |                        grammy,oscar,tony</span>
 <span>  2   Alan Menken               &lt;am@mango.com&gt;            |                        grammy,oscar,tony</span>
 <span>  3   Alex Lacamoire            &lt;al@tangerine.com&gt;        |                         emmy,grammy,tony</span>
 <span>  4   Al Pacino                 &lt;ap@mango.com&gt;            |                          emmy,oscar,tony</span>
@@ -57,7 +57,7 @@ Its job is to help you find recipients who are not already stored in your alias 
 - Sort, limit, and tag results to narrow large address-book searches.
 - Create a local alias from a selected query result.
 - Compose a new message directly to the selected address.
-- Full reference: [Query Functions](ref-fn-query), [Generic Functions](ref-fn-generic).
+- Full reference: [Query Functions](fn-query), [Generic Functions](fn-generic).
 
 ## Where can I go next?
 

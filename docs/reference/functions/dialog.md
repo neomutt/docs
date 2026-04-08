@@ -4,7 +4,7 @@ description: Key bindings for the NeoMutt dialog pop-up used for help screens an
 keywords: neomutt, functions, dialog, menu, bindings, keys, pop-up, help screen, log messages, exit, quit, informational
 ---
 
-(ref-fn-dialog)=
+(fn-dialog)=
 # Dialog Functions
 
 A simple informational pop-up, such as the help screen or log messages.

@@ -37,7 +37,7 @@ If NeoMutt needs a short answer from you, it usually appears here.
 - Answer yes/no and multi-choice prompts that control quitting, crypto, flags, and other decisions.
 - Watch transfer and background progress without leaving the current screen.
 - Use `:exec what-key` to inspect how NeoMutt sees a key press.
-- Full reference: [Editor Functions](ref-fn-editor), [Generic Functions](ref-fn-generic).
+- Full reference: [Editor Functions](fn-editor), [Generic Functions](fn-generic).
 
 ## Where can I go next?
 
@@ -54,7 +54,7 @@ If NeoMutt needs a short answer from you, it usually appears here.
 
 ## How do I configure this?
 
-- Start with [Editor Functions](ref-fn-editor), [History Config](ref-cfg-history), [Pattern Options](ref-cfg-pattern), and [General Config](ref-cfg-general).
+- Start with [Editor Functions](fn-editor), [History Config](ref-cfg-history), [Pattern Options](ref-cfg-pattern), and [General Config](ref-cfg-general).
 - Common options include [`$help`](cfg-help), [`$wait_key`](cfg-wait-key), [`$history`](cfg-history), [`$history_file`](cfg-history-file), [`$simple_search`](cfg-simple-search), and [`$external_search_command`](cfg-external-search-command).
 - Useful commands include [`:set`](cmd-set), [`:unset`](cmd-unset), [`:toggle`](cmd-toggle), [`:exec`](cmd-exec), [`:echo`](cmd-echo), [`:bind`](cmd-bind), and [`:macro`](cmd-macro).
 - Colours come from [Colour Objects](ref-colors), especially `prompt`, `options`, `message`, `warning`, `error`, `progress`, and `status`.

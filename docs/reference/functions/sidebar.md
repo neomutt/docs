@@ -4,7 +4,7 @@ description: Key bindings and functions for navigating, opening, and searching m
 keywords: neomutt, functions, sidebar, menu, bindings, keys, folder list, navigation panel, sidebar-open, sidebar-next, sidebar-prev, sidebar-toggle-visible, sidebar-start-search, mailbox list
 ---
 
-(ref-fn-sidebar)=
+(fn-sidebar)=
 # Sidebar Functions
 
 Navigate the sidebar panel that lists your mailboxes.

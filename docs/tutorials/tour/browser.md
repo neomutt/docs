@@ -22,7 +22,7 @@ Depending on the context, it behaves like a local file browser, an IMAP folder b
 <span> 4     drwxr-xr-x  1 mutt     mutt           0K Mar 28 13:46 attach/                                </span>
 <span> 5     -rw-r--r--  1 mutt     mutt          16K Mar 11 15:00 AUTHORS.md                             </span>
 <span> 6     drwxr-xr-x  1 mutt     mutt           0K Mar 28 13:45 autocrypt/                             </span>
-<span > 7     -rw-r--r--  1 mutt     mutt          40K Mar 28 10:33 auto.def                               </span>
+<span> 7     -rw-r--r--  1 mutt     mutt          40K Mar 28 10:33 auto.def                               </span>
 <span> 8     drwxr-xr-x  1 mutt     mutt           0K Mar 11 15:00 autosetup/                             </span>
 <span> 9     drwxr-xr-x  1 mutt     mutt           0K Mar 28 13:46 bcache/                                </span>
 <span>10     drwxr-xr-x  1 mutt     mutt           0K Mar 28 13:45 browser/                               </span>
@@ -58,7 +58,7 @@ Depending on the context, it behaves like a local file browser, an IMAP folder b
 - Open the selected mailbox or choose the selected file for the calling action.
 - Subscribe, unsubscribe, create, rename, or delete remote mailboxes where the backend supports it.
 - Inspect the currently selected path before choosing it.
-- Full reference: [Browser Functions](ref-fn-browser), [Generic Functions](ref-fn-generic).
+- Full reference: [Browser Functions](fn-browser), [Generic Functions](fn-generic).
 
 ## Where can I go next?
 

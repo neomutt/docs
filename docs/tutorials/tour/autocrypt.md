@@ -16,7 +16,7 @@ This dialog is where you review which addresses participate and how strongly the
 <div class="term-window">
 <div class="term-title">Autocrypt Dialog</div>
 <pre class="terminal">
-<span >   1 john@example.com                     prefer encrypt     active                                 </span>
+<span>   1 john@example.com                     prefer encrypt     active                                 </span>
 <span>   2 rich@flatcap.org                     prefer encrypt     active                                 </span>
 <span>                                                                                                    </span>
 <span>                                                                                                    </span>
@@ -37,7 +37,7 @@ This dialog is where you review which addresses participate and how strongly the
 - Toggle whether the current account is active.
 - Toggle the account's prefer-encrypt setting.
 - Delete accounts that are no longer needed.
-- Full reference: [Autocrypt Functions](ref-fn-autocrypt).
+- Full reference: [Autocrypt Functions](fn-autocrypt).
 
 ## Where can I go next?
 

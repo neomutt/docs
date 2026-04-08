@@ -178,7 +178,7 @@ When this option is _set_, you can't use send-hooks that depend on the recipient
     ```
 
 When _set_, functions in the _index_ menu which affect a message will be applied to all tagged messages (if there are any).
-When unset, you must first use the [`<tag-prefix>`](ref-fn-generic) function (bound to {kbd}`;` by default) to make the next function apply to all tagged messages.
+When unset, you must first use the [`<tag-prefix>`](fn-generic) function (bound to {kbd}`;` by default) to make the next function apply to all tagged messages.
 
 --------------------------------------------------------------------------------
 
@@ -306,7 +306,7 @@ When _set_, NeoMutt will prompt for confirmation when saving messages to a mailb
     set copy_decode_weed = no
     ```
 
-Controls whether NeoMutt will weed headers when invoking the [`<decode-copy>`](ref-fn-index) or [`<decode-save>`](ref-fn-index) functions.
+Controls whether NeoMutt will weed headers when invoking the [`<decode-copy>`](fn-index) or [`<decode-save>`](fn-index) functions.
 
 --------------------------------------------------------------------------------
 
@@ -746,7 +746,7 @@ IMAP mailboxes only support unread and total counts
 
 Because this operation is more performance intensive, it defaults to _unset_, and has a separate option, [`$mail_check_stats_interval`](cfg-mail-check-stats-interval), to control how often to update these counts.
 
-Message statistics can also be explicitly calculated by invoking the [`<check-stats>`](ref-fn-generic) function.
+Message statistics can also be explicitly calculated by invoking the [`<check-stats>`](fn-generic) function.
 
 --------------------------------------------------------------------------------
 
@@ -902,7 +902,7 @@ If this option is _set_, then NeoMutt will move read messages from your spool ma
     set pipe_decode = no
     ```
 
-Used in connection with the [`<pipe-message>`](ref-fn-attach) function.
+Used in connection with the [`<pipe-message>`](fn-attach) function.
 When _unset_, NeoMutt will pipe the messages without any preprocessing.
 When _set_, NeoMutt will attempt to decode the messages first.
 
@@ -922,7 +922,7 @@ When _set_, NeoMutt will attempt to decode the messages first.
     set pipe_decode_weed = yes
     ```
 
-For [`<pipe-message>`](ref-fn-attach), when [`$pipe_decode`](cfg-pipe-decode) is set, this further controls whether NeoMutt will weed headers.
+For [`<pipe-message>`](fn-attach), when [`$pipe_decode`](cfg-pipe-decode) is set, this further controls whether NeoMutt will weed headers.
 
 --------------------------------------------------------------------------------
 
@@ -950,7 +950,7 @@ The separator to add between messages when piping a list of tagged messages to a
     set pipe_split = no
     ```
 
-Used in connection with the [`<pipe-message>`](ref-fn-attach) function following [`<tag-prefix>`](ref-fn-generic).
+Used in connection with the [`<pipe-message>`](fn-attach) function following [`<tag-prefix>`](fn-generic).
 
 If this option is _unset_, when piping a list of tagged messages NeoMutt will concatenate the messages and will pipe them all concatenated.
 When _set_, NeoMutt will pipe the messages one by one.
@@ -1016,7 +1016,7 @@ This specifies the command pipe that should be used to print messages.
     set print_decode = yes
     ```
 
-Used in connection with the [`<print-message>`](ref-fn-index) function.
+Used in connection with the [`<print-message>`](fn-index) function.
 If this option is _set_, the message is decoded before it is passed to the external command specified by [`$print_command`](cfg-print-command).
 If this option is _unset_, no processing will be applied to the message when printing it.
 The latter setting may be useful if you are using some advanced printer filter which is able to properly format e-mail messages for printing.
@@ -1037,7 +1037,7 @@ The latter setting may be useful if you are using some advanced printer filter w
     set print_decode_weed = yes
     ```
 
-For [`<print-message>`](ref-fn-index), when [`$print_decode`](cfg-print-decode) is set, this further controls whether NeoMutt will weed headers.
+For [`<print-message>`](fn-index), when [`$print_decode`](cfg-print-decode) is set, this further controls whether NeoMutt will weed headers.
 
 --------------------------------------------------------------------------------
 
@@ -1051,7 +1051,7 @@ For [`<print-message>`](ref-fn-index), when [`$print_decode`](cfg-print-decode) 
     set print_split = no
     ```
 
-Used in connection with the [`<print-message>`](ref-fn-index) function.
+Used in connection with the [`<print-message>`](fn-index) function.
 If this option is _set_, the command specified by [`$print_command`](cfg-print-command) is executed once for each message which is to be printed.
 If this option is _unset_, the command specified by [`$print_command`](cfg-print-command) is executed only once, and all the messages are concatenated, with a form feed as the message separator.
 
@@ -1071,7 +1071,7 @@ Those who use the `enscript(1)` program's mail-printing mode will most likely wa
     ```
 
 A regular expression used in the internal pager to determine quoted sections of text in the body of a message.
-Quoted text may be filtered out using the [`<toggle-quoted>`](ref-fn-pager) command, or colored according to the `color quotedN` family of directives.
+Quoted text may be filtered out using the [`<toggle-quoted>`](fn-pager) command, or colored according to the `color quotedN` family of directives.
 
 Higher levels of quoting may be colored differently (`color quoted1`, `color quoted2`, etc.).
 The quoting level is determined by removing the last character from the matched text and recursively reapplying the regular expression until it fails to produce a match.
@@ -1350,7 +1350,7 @@ When [`$use_threads`](cfg-use-threads) is "threads" or "reverse", [`$sort`](cfg-
 
 The values of "threads" and "reverse-threads" are legacy options, which cause the value of [`$sort_aux`](cfg-sort-aux) to also control sorting between threads, and they may not be used with the "last-" prefix.
 The preferred way to enable a threaded view is via [`$use_threads`](cfg-use-threads).  
-Can also be set via the [`<sort-mailbox>`](ref-fn-index) and [`<sort-reverse>`](ref-fn-browser) functions.
+Can also be set via the [`<sort-mailbox>`](fn-index) and [`<sort-reverse>`](fn-browser) functions.
 
 :::{note}
 When [`$use_threads`](cfg-use-threads) is "threads", the last thread sorts to the bottom; when it is "reversed", the last thread sorts to the top.
@@ -1575,8 +1575,8 @@ The style of threading used in the index.
 | `yes`     | Synonym for `threads`                        |
 | `no`      | Synonym for `flat`                           |
 
-If this option is never set, then [`$sort`](cfg-sort) controls whether threading is used, [`$sort_aux`](cfg-sort-aux) controls both the sorting of threads and subthreads, and using [`<sort-mailbox>`](ref-fn-index) to select threads affects only [`$sort`](cfg-sort).
-Once this option is set, attempting to set [`$sort`](cfg-sort) to a value using "threads" will warn, the value of [`$sort`](cfg-sort) controls the sorting between threads while [`$sort_aux`](cfg-sort-aux) controls sorting within a thread, and [`<sort-mailbox>`](ref-fn-index) toggles [`$use_threads`](cfg-use-threads).
+If this option is never set, then [`$sort`](cfg-sort) controls whether threading is used, [`$sort_aux`](cfg-sort-aux) controls both the sorting of threads and subthreads, and using [`<sort-mailbox>`](fn-index) to select threads affects only [`$sort`](cfg-sort).
+Once this option is set, attempting to set [`$sort`](cfg-sort) to a value using "threads" will warn, the value of [`$sort`](cfg-sort) controls the sorting between threads while [`$sort_aux`](cfg-sort-aux) controls sorting within a thread, and [`<sort-mailbox>`](fn-index) toggles [`$use_threads`](cfg-use-threads).
 
 Example:
 ```neomuttrc
@@ -1599,7 +1599,7 @@ set use_threads = yes
     set wait_key = yes
     ```
 
-Controls whether NeoMutt will ask you to press a key after an external command has been invoked by these functions: [`<shell-escape>`](ref-fn-generic), [`<pipe-message>`](ref-fn-attach), [`<pipe-entry>`](ref-fn-attach), [`<print-message>`](ref-fn-index), and [`<print-entry>`](ref-fn-attach) commands.
+Controls whether NeoMutt will ask you to press a key after an external command has been invoked by these functions: [`<shell-escape>`](fn-generic), [`<pipe-message>`](fn-attach), [`<pipe-entry>`](fn-attach), [`<print-message>`](fn-index), and [`<print-entry>`](fn-attach) commands.
 
 It is also used when viewing attachments with [`:auto-view`](cmd-auto-view), provided that the corresponding mailcap entry has a `needsterminal` flag, and the external program is interactive.
 

@@ -16,7 +16,7 @@ You can think of it as NeoMutt's draft picker.
 <div class="term-window">
 <div class="term-title">Postpone Dialog</div>
 <pre class="terminal">
-<span class="index_date">00:58 </span><span > </span><span class="index_flags">  F</span><span > </span><span class="index_author">Jessica Lange            </span><span >  </span><span class="index_subject">Zoolander</span><span >                                               (</span><span class="index_size">0.5K</span><span >)</span>
+<span class="index_date">00:58 </span><span> </span><span class="index_flags">  F</span><span> </span><span class="index_author">Jessica Lange            </span><span>  </span><span class="index_subject">Zoolander</span><span>                                               (</span><span class="index_size">0.5K</span><span>)</span>
 <span class="index_date">00:58 </span><span> </span><span class="index_flags">  F</span><span> </span><span class="index_author">George Clooney           </span><span>  </span><span class="index_subject">Les Miserables</span><span>                                          (</span><span class="index_size">0.5K</span><span>)</span>
 <span class="index_date">00:59 </span><span> </span><span class="index_flags">  F</span><span> </span><span class="index_author">Neil Patrick Harris      </span><span>  </span><span class="index_subject">The Shining</span><span>                                             (</span><span class="index_size">0.5K</span><span>)</span>
 <span class="index_date">00:59 </span><span> </span><span class="index_flags">  F</span><span> </span><span class="index_author">Kristen Bell             </span><span>  </span><span class="index_subject">Re: NeoMutt</span><span>                                             (</span><span class="index_size">0.7K</span><span>)</span>
@@ -42,7 +42,7 @@ You can think of it as NeoMutt's draft picker.
 - Select a postponed draft and reopen it for editing.
 - Delete or undelete drafts you no longer want.
 - Use the list as a quick overview of which drafts are waiting to be finished.
-- Full reference: [Postpone Functions](ref-fn-postpone), [Generic Functions](ref-fn-generic).
+- Full reference: [Postpone Functions](fn-postpone), [Generic Functions](fn-generic).
 
 ## Where can I go next?
 

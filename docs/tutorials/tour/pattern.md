@@ -24,7 +24,7 @@ Instead of memorising every `~x` code, you can browse and insert the right one f
 <span>37 ~Q               messages which have been replied to                                             </span>
 <span>38 ~r DATERANGE     messages received in DATERANGE                                                  </span>
 <span>39 ~R               read messages                                                                   </span>
-<span >40 ~s REGEX         messages whose Subject: header matches REGEX                                    </span>
+<span>40 ~s REGEX         messages whose Subject: header matches REGEX                                    </span>
 <span>41 ~S               superseded messages                                                             </span>
 <span>42 ~t REGEX         messages whose To: header matches REGEX                                         </span>
 <span>43 ~T               tagged messages                                                                 </span>
@@ -56,7 +56,7 @@ Instead of memorising every `~x` code, you can browse and insert the right one f
 - Insert a pattern fragment into the active prompt.
 - Search through the list if you remember part of a description but not the exact code.
 - Use it as a learning aid while you build more complex searches and limits.
-- Full reference: [Pattern Syntax](ref-patterns), [Dialog Functions](ref-fn-dialog), [Generic Functions](ref-fn-generic).
+- Full reference: [Pattern Syntax](ref-patterns), [Dialog Functions](fn-dialog), [Generic Functions](fn-generic).
 
 ## Where can I go next?
 
