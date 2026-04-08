@@ -52,7 +52,7 @@ If NeoMutt cannot deal with a MIME type, it will display a message like:
 
 ## The Attachment Menu
 
-The default binding for `<view-attachments>` is "v", which displays the attachment menu for a message.
+The default binding for `<view-attachments>` is {kbd}`v`, which displays the attachment menu for a message.
 The attachment menu displays a list of the attachments in a message.
 From the attachment menu, you can save, print, pipe, delete, and view attachments.
 You can apply these operations to a group of attachments at once, by tagging the attachments and by using the `<tag-prefix>` operator.
@@ -66,7 +66,7 @@ Finally, you can apply the usual message-related functions (like **\<resend-mess
 
 **Subject:** The attachment menu
 
-**Description:** NeoMutt attachment menu (`v` key) showing a multipart message with several attachments listed — a text/plain body, an HTML alternative, an inline image, and a PDF attachment.
+**Description:** NeoMutt attachment menu ({kbd}`v` key) showing a multipart message with several attachments listed — a text/plain body, an HTML alternative, an inline image, and a PDF attachment.
 Each line shows the MIME type, encoding, size, and filename.
 
 **Highlights:** The tree structure for nested multipart containers, the MIME type and size columns, and the attachment numbering that lets users navigate and act on individual parts.
@@ -76,10 +76,10 @@ Each line shows the MIME type, encoding, size, and filename.
 
 There are four ways of viewing attachments:
 
-- **`<view-mailcap>` (default keybinding: m)** — This will use the first matching mailcap entry.
+- **`<view-mailcap>` (default keybinding: {kbd}`m`)** — This will use the first matching mailcap entry.
    If no matching mailcap entries are found, it will abort with an error message.
 
-- **`<view-attach>` (default keybinding: Enter)** — NeoMutt will display internally supported MIME types in the pager.
+- **`<view-attach>` (default keybinding: {kbd}`Enter`)** — NeoMutt will display internally supported MIME types in the pager.
    This will respect **auto-view** settings, to determine whether to use a `copiousoutput` mailcap entry or just directly display the attachment.
    Other MIME types will use the first matching mailcap entry.
    If no matching mailcap entries are found, the attachment will be displayed in the pager as raw text.
@@ -87,11 +87,11 @@ There are four ways of viewing attachments:
 - **`<view-pager>`** — NeoMutt will use the first matching `copiousoutput` mailcap entry to display the attachment in the pager (regardless of **auto-view** settings).
    If no matching mailcap entries are found, the attachment will be displayed in the pager as raw text.
 
-- **`<view-text>` (default keybinding: T)** — The attachment will always be displayed in the pager as raw text.
+- **`<view-text>` (default keybinding: {kbd}`T`)** — The attachment will always be displayed in the pager as raw text.
 
 ### Saving Attachments
 
-- **`<save-entry>` (default keybinding: s)** — This will save the attachment to disk.
+- **`<save-entry>` (default keybinding: {kbd}`s`)** — This will save the attachment to disk.
    The permissions of the saved file will depend on the user's `umask`. e.g. `umask 022` will create a file with permissions `rw-r--r--`.
 
 See also: `$attach_save_dir`, `$attach_save_without_prompting`, `$attach_sep`, `$attach_split`
@@ -112,13 +112,13 @@ Attachments appear as follows by default:
 ```
 
 The "-" denotes that NeoMutt will delete the file after sending (or postponing, or canceling) the message.
-It can be toggled with the `<toggle-unlink>` command (default: u).
-The next field is the MIME content-type, and can be changed with the `<edit-type>` command (default: ^T).
+It can be toggled with the `<toggle-unlink>` command (default: {kbd}`u`).
+The next field is the MIME content-type, and can be changed with the `<edit-type>` command (default: {kbd}`^T`).
 The next field is the encoding for the attachment, which allows a binary message to be encoded for transmission on 7bit links.
-It can be changed with the `<edit-encoding>` command (default: ^E).
+It can be changed with the `<edit-encoding>` command (default: {kbd}`^E`).
 The next field is the size of the attachment, rounded to kilobytes or megabytes.
-The next field is the filename, which can be changed with the `<rename-file>` command (default: R).
-The final field is the description of the attachment, and can be changed with the `<edit-description>` command (default: d).
+The next field is the filename, which can be changed with the `<rename-file>` command (default: {kbd}`R`).
+The final field is the description of the attachment, and can be changed with the `<edit-description>` command (default: {kbd}`d`).
 See `$attach_format` for a full list of available expandos to format this display to your needs.
 
 :::{admonition} 📷 Screenshot Needed
@@ -132,7 +132,7 @@ See `$attach_format` for a full list of available expandos to format this displa
 :::
 
 :::{note}
-The `<edit-type>` function (default: `^T`) is available in the index, pager, compose, and attachment menus.
+The `<edit-type>` function (default: {kbd}`^T`) is available in the index, pager, compose, and attachment menus.
 It temporarily changes the MIME content-type of an attachment — for example, to correct a bogus charset parameter set by the sender's mailer (e.g., changing `text/plain; charset=us-ascii` to `text/plain; charset=utf-8`).
 These changes are **not persistent**: they apply only for the current session or send operation and do not modify the stored message.
 :::
@@ -164,7 +164,7 @@ If NeoMutt can not determine the MIME type by the extension of the file you atta
 If that command is not specified, NeoMutt will look at the file.
 If the file is free of binary information, NeoMutt will assume that the file is plain text, and mark it as `text/plain`.
 If the file contains binary information, then NeoMutt will mark it as `application/octet-stream`.
-You can change the MIME type that NeoMutt assigns to an attachment by using the `<edit-type>` command from the compose menu (default: ^T).
+You can change the MIME type that NeoMutt assigns to an attachment by using the `<edit-type>` command from the compose menu (default: {kbd}`^T`).
 NeoMutt recognizes all of these if the appropriate entry is found in the `mime.types` file.
 Non-recognized MIME types should only be used if the recipient of the message is likely to be expecting such attachments.
 
@@ -396,7 +396,7 @@ image/gif;      ; print=anytopnm %s | pnmtops | lpr; \
 
 NeoMutt will skip the `image/*` entry and use the `image/gif` entry with the print command.
 
-In addition, you can use this with **auto-view** to denote two commands for viewing an attachment, one to be viewed automatically, the other to be viewed interactively from the attachment menu using the `<view-mailcap>` function (bound to "m" by default).
+In addition, you can use this with **auto-view** to denote two commands for viewing an attachment, one to be viewed automatically, the other to be viewed interactively from the attachment menu using the `<view-mailcap>` function (bound to {kbd}`m` by default).
 In addition, you can then use the test feature to determine which viewer to use interactively depending on your environment.
 
 ```

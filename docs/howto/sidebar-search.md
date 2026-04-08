@@ -68,7 +68,7 @@ Examples include:
 - `<backward-char>`/`<forward-char>` — move the cursor left or right
 - `<bol>`/`<eol>` — jump to the start or end of the pattern
 - `<backward-word>`/`<forward-word>` — skip a word at a time
-- `<backspace>`/`<delete-char>` — delete a character
+- {kbd}`Backspace>`/`<delete-char>` — delete a character
 - `<kill-word>`/`<kill-eol>` — delete to end of word or line
 
 Any binding defined in the `editor` map can be used; use `:bind editor` to customise them.

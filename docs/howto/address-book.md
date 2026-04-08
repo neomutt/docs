@@ -40,7 +40,7 @@ Expected result: aliases expand at `To:` and `Cc:` prompts, and the alias menu a
 set query_command = "abook --mutt-query %s"
 ```
 
-3. In the index menu, press `Q` to query addresses.
+3. In the index menu, press {kbd}`Q` to query addresses.
 
 Expected result: the query menu lists contacts returned by abook.
 
@@ -55,7 +55,7 @@ References: abook man page and project docs.
 set query_command = "khard email --parsable %s"
 ```
 
-3. Press `Q` in the index menu or `^T` at an address prompt to query.
+3. Press {kbd}`Q` in the index menu or {kbd}`^T` at an address prompt to query.
 
 Expected result: the query menu lists khard results and address completion works.
 
@@ -93,7 +93,7 @@ Expected result: LDAP results appear in the query menu and can be inserted into 
 macro index,pager A "<pipe-message>abook --add-email-quiet<Enter>" "Save sender to abook"
 ```
 
-3. Open a message and press `A`.
+3. Open a message and press {kbd}`A`.
 
 Expected result: the sender is added to your address book.
 
@@ -103,6 +103,6 @@ Adjust the command to match your tool (abook, khard, or a custom script).
 
 1. Use aliases or an external query source.
 2. At any address prompt, press Tab to expand or list matches.
-3. Use `^T` to query external address sources if configured.
+3. Use {kbd}`^T` to query external address sources if configured.
 
 Expected result: you can complete addresses quickly without leaving the prompt.

@@ -20,7 +20,7 @@ macro index gu "<change-folder>notmuch://?query=tag:inbox and tag:unread<Enter>"
 macro index gf "<change-folder>notmuch://?query=tag:flagged<Enter>"          "Jump to Flagged"
 ```
 
-2. Press `gi`, `gu`, or `gf` in the index.
+2. Press {kbd}`gi`, {kbd}`gu`, or {kbd}`gf` in the index.
 
 Expected result: NeoMutt opens the matching virtual mailbox immediately.
 
@@ -32,7 +32,7 @@ Expected result: NeoMutt opens the matching virtual mailbox immediately.
 bind index,pager X change-vfolder
 ```
 
-2. Press `X` and type the label of a virtual mailbox (e.g. `Inbox`), or press `Enter` to jump to the next virtual folder with unread messages.
+2. Press {kbd}`X` and type the label of a virtual mailbox (e.g. `Inbox`), or press {kbd}`Enter` to jump to the next virtual folder with unread messages.
 
 Expected result: NeoMutt switches to the named virtual mailbox.
 
@@ -44,7 +44,7 @@ Expected result: NeoMutt switches to the named virtual mailbox.
 bind index,pager \eX vfolder-from-query
 ```
 
-2. Press `Esc X`, type a Notmuch query, and press `Enter`.
+2. Press {kbd}`Esc X`, type a Notmuch query, and press {kbd}`Enter`.
 
 Expected result: NeoMutt opens a temporary virtual mailbox for that query.
 
@@ -60,7 +60,7 @@ bind index,pager \CN sidebar-next
 bind index,pager \CO sidebar-open
 ```
 
-2. Press `Ctrl-N` / `Ctrl-P` to highlight, then `Ctrl-O` to open.
+2. Press {kbd}`Ctrl-N` / {kbd}`Ctrl-P` to highlight, then {kbd}`Ctrl-O` to open.
 
 Expected result: you can switch between virtual mailboxes without typing queries.
 

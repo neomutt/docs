@@ -139,7 +139,7 @@ set sendmail = "msmtp -a you@example.com"
 
 The `-a` flag selects the msmtp account by name.
 
-2. Compose and send a message in NeoMutt (press `m`).
+2. Compose and send a message in NeoMutt (press {kbd}`m`).
 
 Expected result: NeoMutt hands the message to msmtp for delivery.
 

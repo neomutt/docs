@@ -25,8 +25,8 @@ Expected result: NeoMutt adds all server-subscribed folders to its mailbox list,
 
 ## Browse and Subscribe on the Server
 
-1. Open the folder browser with `c` then `?` (or press `y`).
-2. Press `s` on a folder to subscribe, or `u` to unsubscribe.
+1. Open the folder browser with {kbd}`c` then {kbd}`?` (or press {kbd}`y`).
+2. Press {kbd}`s` on a folder to subscribe, or {kbd}`u` to unsubscribe.
 3. Toggle the view to show only subscribed folders with `<toggle-subscribed>`.
 
 Expected result: the subscription list on the server is updated and NeoMutt reflects the change.
@@ -104,6 +104,6 @@ If new folders appear after running mbsync, re-source the mailbox list without r
 macro index o "<shell-escape>mbsync -a && notmuch new<Enter><enter-command>source ~/.config/neomutt/gen-mailboxes.sh|<Enter>" "Sync and refresh mailboxes"
 ```
 
-Expected result: pressing `o` syncs mail and updates the mailbox list in one step.
+Expected result: pressing {kbd}`o` syncs mail and updates the mailbox list in one step.
 
 See [Configure Mailboxes](mailboxes) for the full `mailboxes` command reference and [Sidebar](sidebar) for display options.

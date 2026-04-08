@@ -30,7 +30,7 @@ bind index,pager \eT modify-tags
 ## Triage Messages
 
 1. Open the **Inbox** mailbox.
-2. Select a message and press `Esc T`.
+2. Select a message and press {kbd}`Esc T`.
 3. Add a workflow tag and remove the inbox tag:
 
 ```
@@ -42,7 +42,7 @@ Expected result: the message disappears from Inbox and appears in Action.
 ## Mark Messages as Done
 
 1. Open the **Action** mailbox.
-2. Select a completed item and press `Esc T`:
+2. Select a completed item and press {kbd}`Esc T`:
 
 ```
 +done -todo
@@ -70,6 +70,6 @@ macro index ,d "<modify-tags>+done -todo<Enter>"    "Mark as Done"
 macro index ,i "<modify-tags>+inbox -todo -done<Enter>" "Return to Inbox"
 ```
 
-Expected result: pressing `,t`, `,d`, or `,i` applies the tag change in one step.
+Expected result: pressing {kbd}`,t`, {kbd}`,d`, or {kbd}`,i` applies the tag change in one step.
 
 See [Organising Email with Tags](../tutorials/tags-workflow) for the full tagging tutorial and [Organise Multiple Virtual Mailboxes](nm-vfolder-organise) for keeping the mailbox list tidy.

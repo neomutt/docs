@@ -53,7 +53,7 @@ More information can be found at [https://autocrypt.org/](https://autocrypt.org/
 5. Once the directory, keyring, and database are created, NeoMutt will ask whether you would like to create an account.
    In order to use Autocrypt, each sending address needs an account.
    As a convenience you can create an account during the first run.
-   If you would like to add additional accounts later, this can be done via the `<autocrypt-acct-menu>` function in the index, by default bound to `A`.
+   If you would like to add additional accounts later, this can be done via the `<autocrypt-acct-menu>` function in the index, by default bound to {kbd}`A`.
 
 6. Account creation will first ask you for an email address.
    Next, it will ask whether you want to create a new key or select an existing key.
@@ -92,7 +92,7 @@ The `Autocrypt:` field displays "Off" and the `Recommendation:` field shows a va
 
 The `Autocrypt:` field shows whether the message will be encrypted by Autocrypt when sent.
 It has two values: `Encrypt` and `Off`.
-`Encrypt` can be enabled using the `<autocrypt-menu>` function, by default bound to `o`.
+`Encrypt` can be enabled using the `<autocrypt-menu>` function, by default bound to {kbd}`o`.
 
 ### The Recommendation Field
 
@@ -115,7 +115,7 @@ This can have one of five values:
 
 ### Changing the Autocrypt Encryption Setting
 
-The `<autocrypt-menu>` function, by default bound to `o`, can be used to change the `Encrypt:` field value:
+The `<autocrypt-menu>` function, by default bound to {kbd}`o`, can be used to change the `Encrypt:` field value:
 
 - **(e)ncrypt** — toggle encryption on
 - **(c)lear** — toggle encryption off
@@ -128,7 +128,7 @@ If either `(e)ncrypt` or `(c)lear` are chosen, the field will remain in that sta
 
 **Subject:** Autocrypt encryption toggle menu
 
-**Description:** The NeoMutt Autocrypt menu popup in the compose screen, triggered by pressing `o`.
+**Description:** The NeoMutt Autocrypt menu popup in the compose screen, triggered by pressing {kbd}`o`.
 The menu shows the three options: (e)ncrypt, (c)lear, and (a)utomatic.
 The compose screen is visible in the background with the Autocrypt fields.
 
@@ -149,7 +149,7 @@ Be sure to set `$postpone_encrypt` to ensure postponed messages marked for autoc
 
 ## Account Management
 
-The Autocrypt Account Menu is available from the index via `<autocrypt-acct-menu>`, by default bound to `A`.
+The Autocrypt Account Menu is available from the index via `<autocrypt-acct-menu>`, by default bound to {kbd}`A`.
 See the Autocrypt Account Menu for the list of functions and their default keybindings.
 
 In this menu, you can:

@@ -21,7 +21,7 @@ By default it may not have a binding in the index.
 bind index,pager a <alias>
 ```
 
-2. Press `a` in the index to open the alias menu directly.
+2. Press {kbd}`a` in the index to open the alias menu directly.
 
 Expected result: the alias menu opens and you can select a contact to compose a message to.
 
@@ -35,7 +35,7 @@ The default `<create-alias>` (`a`) appends to `$alias_file` but doesn't reload i
 macro index,pager A "<create-alias><enter-command>source $alias_file<Enter>" "Save alias and reload"
 ```
 
-2. Open a message and press `A`.
+2. Open a message and press {kbd}`A`.
 
 Expected result: the alias is saved and immediately available without a manual `:source`.
 
@@ -49,7 +49,7 @@ If you use `$query_command` (abook, khard, LDAP):
 bind index,pager Q <query>
 ```
 
-2. Press `Q`, enter a search term, and select a result.
+2. Press {kbd}`Q`, enter a search term, and select a result.
 
 Expected result: the query menu opens and you can compose a message to the selected address.
 
@@ -61,6 +61,6 @@ If you split aliases into multiple files, you can create a macro to edit one qui
 macro index,pager \ea "<shell-escape>$EDITOR ~/.config/neomutt/aliases-work<Enter><enter-command>source ~/.config/neomutt/aliases-work<Enter>" "Edit and reload work aliases"
 ```
 
-Expected result: pressing `Esc a` opens your editor on the work alias file, and reloads it when you return.
+Expected result: pressing {kbd}`Esc a` opens your editor on the work alias file, and reloads it when you return.
 
 See [Customise Key Bindings](key-bindings) for the full `bind` and `macro` syntax and [Macros](macros) for more macro examples.

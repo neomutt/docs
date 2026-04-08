@@ -40,7 +40,7 @@ There are two mechanisms for accessing the query function of NeoMutt.
 
 ### From the Index Menu
 
-1. Use the `<query>` function (default: Q) from the index menu.
+1. Use the `<query>` function (default: {kbd}`Q`) from the index menu.
 2. This will prompt for a query, then bring up the query menu which will list the matching responses.
 3. From the query menu, you can select addresses to create aliases, or to mail.
 4. You can tag multiple addresses to mail, start a new query, or have a new query appended to the current responses.

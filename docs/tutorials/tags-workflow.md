@@ -39,7 +39,7 @@ Expected result: you can open the Inbox virtual mailbox from NeoMutt.
 bind index,pager \eT modify-tags
 ```
 
-2. Open a message and press `Esc T`.
+2. Open a message and press {kbd}`Esc T`.
 3. Add or remove tags as prompted.
 
 Expected result: the message tags change in the notmuch database.

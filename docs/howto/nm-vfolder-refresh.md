@@ -26,7 +26,7 @@ Expected result: Notmuch indexes any new messages and reports the count.
 NeoMutt shows query results at the time the mailbox was opened.
 To pick up new messages:
 
-1. Leave and re-enter the virtual mailbox (press `c` then select it again), or
+1. Leave and re-enter the virtual mailbox (press {kbd}`c` then select it again), or
 2. Use `<sync-mailbox>` (`$` by default) to force a refresh.
 
 Expected result: newly indexed messages appear in the virtual mailbox.
@@ -39,7 +39,7 @@ Expected result: newly indexed messages appear in the virtual mailbox.
 macro index o "<shell-escape>mbsync -a && notmuch new<Enter>" "Sync mail and update Notmuch"
 ```
 
-2. Press `o` in the index.
+2. Press {kbd}`o` in the index.
 
 Expected result: new mail is downloaded, indexed, and the current mailbox is refreshed.
 

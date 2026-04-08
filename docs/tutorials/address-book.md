@@ -50,18 +50,18 @@ Expected result: NeoMutt loads without errors.
 
 ## Open the Address Book
 
-1. At any address prompt (e.g. after pressing `m` to compose), press `Tab` with an empty field.
+1. At any address prompt (e.g. after pressing {kbd}`m` to compose), press {kbd}`<Tab>` with an empty field.
 
 Expected result: the alias menu appears showing your `alice` entry.
 
-2. Select the alias and press `Enter`.
+2. Select the alias and press {kbd}`Enter`.
 
 Expected result: NeoMutt inserts `Alice Example <alice@example.com>` into the address field.
 
 ## Send a Message Using an Alias
 
-1. Press `m` to compose a new message.
-2. At the `To:` prompt, type `alice` and press `Tab`.
+1. Press {kbd}`m` to compose a new message.
+2. At the `To:` prompt, type `alice` and press {kbd}`<Tab>`.
 
 Expected result: NeoMutt expands the alias to the full address.
 
@@ -72,7 +72,7 @@ Expected result: the message is addressed to `alice@example.com`.
 ## Save a Contact from a Received Message
 
 1. Open a message in the index or pager.
-2. Press `a` (the default binding for `<create-alias>`).
+2. Press {kbd}`a` (the default binding for `<create-alias>`).
 3. NeoMutt prompts you to confirm or edit the alias name.
 
 Expected result: a new `alias` line is appended to `$alias_file`.

@@ -152,6 +152,6 @@ You can still sync manually from NeoMutt alongside the timer:
 macro index o "<shell-escape>~/.local/bin/mailsync<Enter>" "Sync mail now"
 ```
 
-Expected result: pressing `o` runs the same sync script on demand.
+Expected result: pressing {kbd}`o` runs the same sync script on demand.
 
 See [Setting Up Offline Email with mbsync](../tutorials/mbsync-setup) for the mbsync configuration and [Setting Up Notmuch for Email Search](../tutorials/notmuch-setup) for the Notmuch setup.

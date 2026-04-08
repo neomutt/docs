@@ -64,7 +64,7 @@ virtual-mailboxes "Unread" "notmuch://?query=tag:inbox and tag:unread"
 ## Open the Virtual Mailbox
 
 1. Start NeoMutt.
-2. Navigate to the mailbox list — use the sidebar, or press `c` then `?` to open the browser.
+2. Navigate to the mailbox list — use the sidebar, or press {kbd}`c` then {kbd}`?` to open the browser.
 3. Select **Unread**.
 
 Expected result: the index shows only messages that match `tag:inbox and tag:unread`.

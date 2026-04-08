@@ -32,7 +32,7 @@ Multiple maps may be specified by separating multiple menu arguments by commas.
 Whitespace may not be used in between the menu arguments and the commas separating them.
 
 *key* and *sequence* are expanded by the same rules as the key bindings with some additions.
-The first is that control characters in *sequence* can also be specified as `^x`.
+The first is that control characters in *sequence* can also be specified as {kbd}`^x`.
 In order to get a caret ("^") you need to use `^^`.
 Secondly, to specify a certain key such as *up* or to invoke a function directly, you can use the format `<key name>` and `<function name>`.
 For a listing of key names see the section on key bindings.
@@ -52,7 +52,7 @@ Macro definitions (if any) listed in the help screen(s), are silently truncated 
 
 **Subject:** Macros displayed in the help screen
 
-**Description:** The NeoMutt help screen (opened with `?`) showing a section of macro definitions, with the key sequence, the expanded macro body (possibly truncated), and the optional description text.
+**Description:** The NeoMutt help screen (opened with {kbd}`?`) showing a section of macro definitions, with the key sequence, the expanded macro body (possibly truncated), and the optional description text.
 
 **Highlights:** How macro descriptions appear alongside key bindings, and how long macro sequences are truncated at the screen edge.
 :::

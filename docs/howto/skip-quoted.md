@@ -63,7 +63,7 @@ set toggle_quoted_show_levels = 1
 **Subject:** Pager with quoted text and skip-quoted context
 
 **Description:** NeoMutt pager showing a reply message with multiple levels of quoted text (>, >>, >>>) in different colours.
-The `pager_skip_quoted_context` is set to 3, so after pressing `S`, the pager shows the last 3 lines of quoted text above the new reply content.
+The `pager_skip_quoted_context` is set to 3, so after pressing {kbd}`S`, the pager shows the last 3 lines of quoted text above the new reply content.
 
 **Highlights:** The coloured quote levels providing visual depth, and the context lines that remain visible after skip-quoted — showing how the reader retains just enough quoted context to follow the conversation.
 :::

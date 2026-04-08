@@ -10,13 +10,13 @@ keywords: tags, tagging, tag-pattern, tag-prefix, custom tags, notmuch, imap, hi
 
 Sometimes it is desirable to perform an operation on a group of messages all at once rather than one at a time.
 An example might be to save messages to a mailing list to a separate folder, or to delete all messages with a given subject.
-To tag all messages matching a pattern, use the `<tag-pattern>` function, which is bound to "shift-T" by default.
+To tag all messages matching a pattern, use the `<tag-pattern>` function, which is bound to {kbd}`Shift-T` by default.
 Patterns are completable in the editor menu.
-Invoke the `<complete>` function (by default bound to "Tab") after typing `~` to get a selectable list.
-Or you can select individual messages by hand using the `<tag-message>` function, which is bound to "t" by default.
+Invoke the `<complete>` function (by default bound to {kbd}`<Tab>`) after typing {kbd}`~` to get a selectable list.
+Or you can select individual messages by hand using the `<tag-message>` function, which is bound to {kbd}`t` by default.
 See [patterns](ref-patterns) for NeoMutt's pattern matching syntax.
 
-Once you have tagged the desired messages, you can use the "tag-prefix" operator, which is the ";" (semicolon) key by default.
+Once you have tagged the desired messages, you can use the "tag-prefix" operator, which is the {kbd}`;` by default.
 
 :::{admonition} 📷 Screenshot Needed
 :class: tip
@@ -149,13 +149,13 @@ color index_tags green default
 ## Marking Messages
 
 There are times when it is useful to ask NeoMutt to "remember" which message you are currently looking at while you move elsewhere in your mailbox.
-You can do this with the `<mark-message>` function, which is bound to the `~` key by default.
+You can do this with the `<mark-message>` function, which is bound to {kbd}`~` key by default.
 
 ### Workflow
 
-1. Press `~` to mark the current message and enter an identifier (e.g. `a`).
+1. Press {kbd}`~` to mark the current message and enter an identifier (e.g. {kbd}`a`).
 2. Navigate freely within your mailbox.
-3. Press `'a` to jump back to the marked message.
+3. Press {kbd}`'a` to jump back to the marked message.
 
 Message marking is implemented as a shortcut for defining a macro that returns you to the current message by searching for its Message-ID.
 You can choose a different prefix key by setting the `$mark_macro_prefix` variable.

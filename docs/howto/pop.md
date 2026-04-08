@@ -52,7 +52,7 @@ The `<fetch-mail>` function will ask whether you want to delete the messages on 
 
 **Subject:** POP3 fetch-mail prompt
 
-**Description:** The NeoMutt index after pressing `G` to fetch mail from a POP3 server.
+**Description:** The NeoMutt index after pressing {kbd}`G` to fetch mail from a POP3 server.
 The prompt at the bottom of the screen asks the user whether to delete messages from the remote server, with newly fetched messages visible in the index.
 
 **Highlights:** The delete confirmation prompt at the bottom of the screen and the newly fetched messages appearing in the message index.
@@ -74,4 +74,4 @@ If you only need to fetch all messages to a local mailbox, you should consider u
    set pop_host="pops://user@example.com"
    ```
 
-3. Press `G` in the index to fetch mail.
+3. Press {kbd}`G` in the index to fetch mail.

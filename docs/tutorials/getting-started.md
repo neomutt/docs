@@ -14,18 +14,18 @@ If you haven't configured an account yet, start with [Writing Your First Configu
 
 The keybindings shown here are the defaults.
 Your system may differ.
-In any menu, press `?` to see the current bindings for your setup.
+In any menu, press {kbd}`?` to see the current bindings for your setup.
 
 Start NeoMutt by running `neomutt` in your terminal.
 
 ## Quick Tour
 
 1. Start NeoMutt and wait for the message list (the Index).
-2. Press `?` to open the help screen and note the keys for moving up and down and for quitting.
+2. Press {kbd}`?` to open the help screen and note the keys for moving up and down and for quitting.
 3. Use `j` and `k` to move the selection.
    Use the help screen to find the key that opens a message.
-4. In the message view (the Pager), press `?` again to see its keys, then press `q` to return.
-5. Press `q` to quit when you're done.
+4. In the message view (the Pager), press {kbd}`?` again to see its keys, then press {kbd}`q` to return.
+5. Press {kbd}`q` to quit when you're done.
 
 If you want more depth on the screens and menus, keep reading.
 

@@ -70,7 +70,7 @@ However, there may be situations in which there are several keys, weakly certifi
 
 In these cases, you are dropped into a menu with a list of keys from which you can select one.
 When you quit this menu, or NeoMutt can't find any matching keys, you are prompted for a user ID.
-You can, as usual, abort this prompt using `^G`.
+You can, as usual, abort this prompt using {kbd}`^G`.
 When you do so, NeoMutt will return to the compose screen.
 
 Once you have successfully finished the key selection, the message will be encrypted using the selected public keys when sent out.

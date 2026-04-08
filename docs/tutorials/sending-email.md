@@ -13,10 +13,10 @@ If you haven't configured SMTP yet, start with [Writing Your First Configuration
 
 Quick send:
 
-1. Press `m` to compose a new message.
+1. Press {kbd}`m` to compose a new message.
 2. Enter the recipient and subject when prompted.
 3. Write the message in your editor, save, and exit.
-4. In the Compose Menu, press `y` to send.
+4. In the Compose Menu, press {kbd}`y` to send.
 
 ## Introduction
 
@@ -41,7 +41,7 @@ The following bindings are available in the *index* and *pager* to start a new m
 *Forwarding* a message allows you to add comments or modify the message you are forwarding.
 These items are discussed in greater detail in the section "Forwarding and Bouncing Mail".
 
-NeoMutt will then enter the *compose* menu and prompt you for the recipients to place on the `To:` header field when you hit `m` to start a new message.
+NeoMutt will then enter the *compose* menu and prompt you for the recipients to place on the `To:` header field when you hit {kbd}`m` to start a new message.
 Next, it will ask you for the `Subject:` field for the message, providing a default if you are replying to or forwarding a message.
 You again have the chance to adjust recipients, subject, and security settings right before actually sending the message.
 See also `$ask_cc`, `$ask_bcc`, `$auto_edit`, `$bounce`, `$fast_reply`, and `$include` for changing how and if NeoMutt asks these questions.

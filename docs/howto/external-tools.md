@@ -21,7 +21,7 @@ macro index \cb "<pipe-message>urlview<Enter>" "Open URLs with urlview"
 macro pager \cb "<pipe-message>urlview<Enter>" "Open URLs with urlview"
 ```
 
-3. Open a message with URLs and press `Ctrl-b`.
+3. Open a message with URLs and press {kbd}`Ctrl-b`.
 
 Expected result: a list of URLs appears and you can open one in your browser.
 
@@ -36,7 +36,7 @@ References: urlview man page and urlscan documentation.
 set query_command = "abook --mutt-query %s"
 ```
 
-3. Use `Q` in the index menu or `^T` at an address prompt to query.
+3. Use `Q` in the index menu or {kbd}`^T` at an address prompt to query.
 
 Expected result: the query menu shows matches from your address book.
 
@@ -114,6 +114,6 @@ Expected result: the invite appears in your calendar tool.
 macro index,pager ,p "<pipe-message>~/bin/mail-filter<Enter>" "Pipe message to filter"
 ```
 
-3. Press `,p` while viewing a message.
+3. Press {kbd}`,p` while viewing a message.
 
 Expected result: the message is passed to your command for processing.

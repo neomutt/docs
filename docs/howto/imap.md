@@ -78,7 +78,7 @@ This is mostly the same as the local file browser, with the following difference
    If you wish to view the messages in that folder, you must use `view-file` instead (bound to `space` by default).
 
 - You can create, delete and rename mailboxes with the `<create-mailbox>`, `<delete-mailbox>`, and `<rename-mailbox>` commands (default bindings: `C`, `d` and `r`, respectively). 
-   You may also `<subscribe>` and `<unsubscribe>` to mailboxes (normally these are bound to `s` and `u`, respectively).
+   You may also `<subscribe>` and `<unsubscribe>` to mailboxes (normally these are bound to {kbd}`s` and {kbd}`u`, respectively).
 
 :::{admonition} 📷 Screenshot Needed
 :class: tip

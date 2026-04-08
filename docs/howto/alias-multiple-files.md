@@ -49,7 +49,7 @@ Expected result: all aliases from both files are available at address prompts.
 ## Set alias_file for Interactive Saves
 
 `$alias_file` can point to only one file.
-New aliases created with `<create-alias>` (pressing `a` on a message) are saved there.
+New aliases created with `<create-alias>` (pressing {kbd}`a` on a message) are saved there.
 
 1. Choose the file you want new aliases saved to:
 
@@ -57,7 +57,7 @@ New aliases created with `<create-alias>` (pressing `a` on a message) are saved 
 set alias_file = "~/.config/neomutt/aliases-personal"
 ```
 
-Expected result: pressing `a` on a message appends the alias to the personal file.
+Expected result: pressing {kbd}`a` on a message appends the alias to the personal file.
 
 ## Reload After Changes
 

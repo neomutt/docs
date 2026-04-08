@@ -32,7 +32,7 @@ Expected result: the new alias is available at address prompts.
 ## Add a Contact from a Received Message
 
 1. Open a message in the index or pager.
-2. Press `a` (`<create-alias>`).
+2. Press {kbd}`a` (`<create-alias>`).
 3. Confirm or edit the alias name when prompted.
 
 Expected result: NeoMutt appends the alias to `$alias_file`.

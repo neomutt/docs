@@ -268,14 +268,14 @@ In addition, the *index* and *pager* menus have these interesting functions:
 `<check-stats>` : Calculate statistics for all monitored mailboxes declared using the `mailboxes` command.
 It will calculate statistics despite `$mail_check_stats` being unset.
 
-`<create-alias>` (default: a) : Creates a new alias based upon the current message (or prompts for a new one).
+`<create-alias>` (default: {kbd}`a`) : Creates a new alias based upon the current message (or prompts for a new one).
 Once editing is complete, an `alias` command is added to the file specified by the `$alias_file` variable for future use.
 
   :::{note}
 NeoMutt does not read the `$alias_file` upon startup so you must explicitly `source` the file.
   :::
 
-`<check-traditional-pgp>` (default: Esc P) : This function will search the current message for content signed or encrypted with PGP the "traditional" way, that is, without proper MIME tagging.
+`<check-traditional-pgp>` (default: {kbd}`Esc P`) : This function will search the current message for content signed or encrypted with PGP the "traditional" way, that is, without proper MIME tagging.
 Technically, this function will temporarily change the MIME content types of the body parts containing PGP data; this is similar to the `<edit-type>` function's effect.
 
 `<edit-raw-message>` : This command (available in the index and pager) allows you to edit the raw current message as it's present in the mail folder.
@@ -287,9 +287,9 @@ See also `<edit-or-view-raw-message>`, `<view-raw-message>`.
 
 `<edit>` : Alias of `<edit-raw-message>` for backwards compatibility.
 
-`<edit-or-view-raw-message>` (default: e) : This command (available in the index and pager) is the same as `<edit-raw-message>` if the mailbox is writable, otherwise it is the same as `<view-raw-message>`.
+`<edit-or-view-raw-message>` (default: {kbd}`e`) : This command (available in the index and pager) is the same as `<edit-raw-message>` if the mailbox is writable, otherwise it is the same as `<view-raw-message>`.
 
-`<edit-type>` (default: ^E on the attachment menu, and in the pager and index menus; ^T on the compose menu) : This command is used to temporarily edit an attachment's content type to fix, for instance, bogus character set parameters.
+`<edit-type>` (default: {kbd}`^E` on the attachment menu, and in the pager and index menus; {kbd}`^T` on the compose menu) : This command is used to temporarily edit an attachment's content type to fix, for instance, bogus character set parameters.
 When invoked from the index or from the pager, you'll have the opportunity to edit the top-level attachment's content type.
 On the attachment menu, you can change any attachment's content type.
 These changes are not persistent, and get lost upon changing folders.
@@ -297,15 +297,15 @@ These changes are not persistent, and get lost upon changing folders.
 Note that this command is also available on the compose menu.
 There, it's used to fine-tune the properties of attachments you are going to send.
 
-`<enter-command>` (default: ":") : This command is used to execute any command you would normally put in a configuration file.
+`<enter-command>` (default: {kbd}`:`) : This command is used to execute any command you would normally put in a configuration file.
 A common use is to check the settings of variables, or in conjunction with macros to change settings on the fly.
 
-`<extract-keys>` (default: ^K) : This command extracts PGP public keys from the current or tagged message(s) and adds them to your PGP public key ring.
+`<extract-keys>` (default: {kbd}`^K`) : This command extracts PGP public keys from the current or tagged message(s) and adds them to your PGP public key ring.
 
-`<forget-passphrase>` (default: ^F) : This command wipes the passphrase(s) from memory.
+`<forget-passphrase>` (default: {kbd}`^F`) : This command wipes the passphrase(s) from memory.
 It is useful, if you misspelled the passphrase.
 
-`<list-reply>` (default: L) : Reply to the current or tagged message(s) by extracting any addresses which match the regular expressions given by the `lists` or `subscribe` commands, but also honor any `Mail-Followup-To` header(s) if the `$honor_followup_to` configuration variable is set.
+`<list-reply>` (default: {kbd}`L`) : Reply to the current or tagged message(s) by extracting any addresses which match the regular expressions given by the `lists` or `subscribe` commands, but also honor any `Mail-Followup-To` header(s) if the `$honor_followup_to` configuration variable is set.
 In addition, the `List-Post` header field is examined for `mailto:` URLs specifying a mailing list address.
 Using this when replying to messages posted to mailing lists helps avoid duplicate copies being sent to the author of the message you are replying to.
 
@@ -313,11 +313,11 @@ Using this when replying to messages posted to mailing lists helps avoid duplica
 
 `<list-unsubscribe>` : Send an email to the address specified in the List-Unsubscribe header as specified in [RFC2369](https://www.rfc-editor.org/rfc/rfc2369.html).
 
-`<pipe-message>` (default: |)
+`<pipe-message>` (default: {kbd}`|`)
 : Asks for an external Unix command and pipes the current or tagged message(s) to it.
 The variables `$pipe_decode`, `$pipe_decode_weed`, `$pipe_split`, `$pipe_sep` and `$wait_key` control the exact behavior of this function.
 
-`<resend-message>` (default: Esc e) : NeoMutt takes the current message as a template for a new message.
+`<resend-message>` (default: {kbd}`Esc e`) : NeoMutt takes the current message as a template for a new message.
 This function is best described as "recall from arbitrary folders".
 It can conveniently be used to forward MIME messages while preserving the original mail structure.
 Note that the amount of headers included here depends on the value of the `$weed` variable.
@@ -325,22 +325,22 @@ Note that the amount of headers included here depends on the value of the `$weed
 This function is also available from the attachment menu.
 You can use this to easily resend a message which was included with a bounce message as a `message/rfc822` body part.
 
-`<shell-escape>` (default: !) : Asks for an external Unix command and executes it.
+`<shell-escape>` (default: {kbd}`!`) : Asks for an external Unix command and executes it.
 The `$wait_key` can be used to control whether NeoMutt will wait for a key to be pressed when the command returns (presumably to let the user read the output of the command), based on the return status of the named command.
 If no command is given, an interactive shell is executed.
 
-`<skip-headers>` (default: H) : This function will skip to the first line of the body, past the headers of the current message, regardless of current position.
+`<skip-headers>` (default: {kbd}`H`) : This function will skip to the first line of the body, past the headers of the current message, regardless of current position.
 
 `<view-raw-message>` : This command (available in the index and pager) opens the raw message read-only in an editor.
 This command does not allow editing the message, use `<edit-raw-message>` for this.
 
 See also `<edit-raw-message>`, `<edit-or-view-raw-message>`.
 
-`<skip-quoted>` (default: S) : This function will make the internal pager go forward to the next segment of non-quoted body text (whether the first line of the body after headers, or following a line of quoted text), or print a message if no further unquoted text can be found.
+`<skip-quoted>` (default: {kbd}`S`) : This function will make the internal pager go forward to the next segment of non-quoted body text (whether the first line of the body after headers, or following a line of quoted text), or print a message if no further unquoted text can be found.
 
 The variable `$pager_skip_quoted_context` can be used to show some quoted context prior to the selected line.
 
-`<toggle-quoted>` (default: T) : The pager uses the `$quote_regex` variable to detect quoted text when displaying the body of the message.
+`<toggle-quoted>` (default: {kbd}`T`) : The pager uses the `$quote_regex` variable to detect quoted text when displaying the body of the message.
 This function toggles the display of the quoted material in the message.
 It is particularly useful when being interested in just the response and there is a large amount of quoted text in the way.
 

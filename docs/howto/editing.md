@@ -17,50 +17,50 @@ The key bindings follow Emacs conventions.
 
 | Key               | Function          | Description                   |
 |-------------------|-------------------|-------------------------------|
-| `^A` or `<Home>`  | `<bol>`           | Move to the start of the line |
-| `^E` or `<End>`   | `<eol>`           | Move to the end of the line   |
-| `^B` or `<Left>`  | `<backward-char>` | Move back one character       |
-| `^F` or `<Right>` | `<forward-char>`  | Move forward one character    |
-| `Esc B`           | `<backward-word>` | Move back one word            |
-| `Esc F`           | `<forward-word>`  | Move forward one word         |
+| {kbd}`^A` or {kbd}`<Home>`  | `<bol>`           | Move to the start of the line |
+| {kbd}`^E` or {kbd}`<End>`   | `<eol>`           | Move to the end of the line   |
+| {kbd}`^B` or {kbd}`<Left>`  | `<backward-char>` | Move back one character       |
+| {kbd}`^F` or {kbd}`<Right>` | `<forward-char>`  | Move forward one character    |
+| {kbd}`Esc B`           | `<backward-word>` | Move back one word            |
+| {kbd}`Esc F`           | `<forward-word>`  | Move forward one word         |
 
 ### Deletion
 
 | Key                | Function        | Description                            |
 |--------------------|-----------------|----------------------------------------|
-| `^D` or `<Delete>` | `<delete-char>` | Delete the character under the cursor  |
-| `<BackSpace>`      | `<backspace>`   | Delete the character before the cursor |
-| `^K`               | `<kill-eol>`    | Delete to the end of the line          |
-| `^U`               | `<kill-line>`   | Delete the entire line                 |
-| `^W`               | `<kill-word>`   | Delete the word before the cursor      |
-| `Esc d`            | `<kill-eow>`    | Delete to the end of the word          |
+| {kbd}`^D` or {kbd}`<Delete>` | `<delete-char>` | Delete the character under the cursor  |
+| {kbd}`<Backspace>`      | `<backspace>`   | Delete the character before the cursor |
+| {kbd}`^K`               | `<kill-eol>`    | Delete to the end of the line          |
+| {kbd}`^U`               | `<kill-line>`   | Delete the entire line                 |
+| {kbd}`^W`               | `<kill-word>`   | Delete the word before the cursor      |
+| {kbd}`Esc d`            | `<kill-eow>`    | Delete to the end of the word          |
 
 ### Word Case
 
 | Key     | Function            | Description                |
 |---------|---------------------|----------------------------|
-| `Esc u` | `<upcase-word>`     | Convert word to upper case |
-| `Esc l` | `<downcase-word>`   | Convert word to lower case |
-| `Esc c` | `<capitalize-word>` | Capitalize the word        |
+| {kbd}`Esc u` | `<upcase-word>`     | Convert word to upper case |
+| {kbd}`Esc l` | `<downcase-word>`   | Convert word to lower case |
+| {kbd}`Esc c` | `<capitalize-word>` | Capitalize the word        |
 
 ### Miscellaneous
 
 | Key        | Function       | Description                        |
 |------------|----------------|------------------------------------|
-| `^V`       | `<quote-char>` | Quote (escape) the next typed key  |
-| `^G`       | n/a            | Abort the current prompt or action |
-| `<Return>` | n/a            | Confirm / finish editing           |
+| {kbd}`^V`       | `<quote-char>` | Quote (escape) the next typed key  |
+| {kbd}`^G`       | n/a            | Abort the current prompt or action |
+| {kbd}`<Return>` | n/a            | Confirm / finish editing           |
 
 ## Tab Completion
 
-Press `<Tab>` to trigger completion.
+Press {kbd}`<Tab>` to trigger completion.
 What gets completed depends on context:
 
 - **Filenames** — completes paths in the filesystem
 - **Aliases** — completes known address aliases
 - **Labels** — completes mailbox labels
 
-Press `^T` to run an address query (using `$query_command`) and complete from the results.
+Press {kbd}`^T` to run an address query (using `$query_command`) and complete from the results.
 
 ## History Navigation
 
@@ -69,9 +69,9 @@ The number of history entries is controlled by `$history`.
 
 | Key      | Function           | Description                             |
 |----------|--------------------|-----------------------------------------|
-| `<Up>`   | `<history-up>`     | Recall the previous string from history |
-| `<Down>` | `<history-down>`   | Recall the next string from history     |
-| `^R`     | `<history-search>` | Search history using the current input  |
+| {kbd}`<Up>`   | `<history-up>`     | Recall the previous string from history |
+| {kbd}`<Down>` | `<history-down>`   | Recall the next string from history     |
+| {kbd}`^R`     | `<history-search>` | Search history using the current input  |
 
 NeoMutt remembers what you were typing as you cycle through history, and wraps back to your original entry.
 
@@ -93,7 +93,7 @@ Entries starting with a space are silently ignored — useful in macros to avoid
 ## Remapping Editor Keys
 
 Use the `bind` command with the `editor` map to remap any function.
-For example, to make `<Delete>` behave like `<BackSpace>` (deleting the character *before* the cursor instead of *under* it):
+For example, to make {kbd}`<Delete>` behave like {kbd}`<Backspace>` (deleting the character *before* the cursor instead of *under* it):
 
 ```neomuttrc
 bind editor <delete> backspace
