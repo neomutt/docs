@@ -8,10 +8,415 @@ keywords: neomutt, functions, overview, menus, bindings, keys, bind command, ref
 # Functions
 
 Functions are named actions that NeoMutt can perform.
-Each function belongs to one or more menus and may have a default key binding. Bindings can be changed with the `bind` command.
+Each function belongs to one or more menus and may have a default key binding.
+Bindings can be changed with [`:bind`](cmd-bind).
 
-The tables below list every function grouped by menu.
-Where a function has multiple default bindings, each binding appears as a separate row.
+## A
+
+| Function                | Used By                   |
+|-------------------------|---------------------------|
+| `<alias-dialog>`        | [Index](ref-fn-index)     |
+| `<attach-file>`         | [Compose](ref-fn-compose) |
+| `<attach-key>`          | [Compose](ref-fn-compose) |
+| `<attach-message>`      | [Compose](ref-fn-compose) |
+| `<attach-news-message>` | [Compose](ref-fn-compose) |
+| `<autocrypt-acct-menu>` | [Index](ref-fn-index)     |
+| `<autocrypt-menu>`      | [Compose](ref-fn-compose) |
+
+## B
+
+| Function           | Used By                                                               |
+|--------------------|-----------------------------------------------------------------------|
+| `<backspace>`      | [Editor](ref-fn-editor)                                               |
+| `<backward-char>`  | [Editor](ref-fn-editor)                                               |
+| `<backward-word>`  | [Editor](ref-fn-editor)                                               |
+| `<bol>`            | [Editor](ref-fn-editor)                                               |
+| `<bottom-page>`    | [Generic](ref-fn-generic)                                             |
+| `<bottom>`         | [Pager](ref-fn-pager)                                                 |
+| `<bounce-message>` | [Attach](ref-fn-attach), [Index](ref-fn-index), [Pager](ref-fn-pager) |
+| `<break-thread>`   | [Index](ref-fn-index), [Pager](ref-fn-pager)                          |
+| `<buffy-cycle>`    | {bdg-warning-line}`Renamed to:` [`<mailbox-cycle>`](#m)               |
+| `<buffy-list>`     | {bdg-warning-line}`Renamed to:` [`<mailbox-list>`](#m)                |
+
+## C
+
+| Function                      | Used By                                                               |
+|-------------------------------|-----------------------------------------------------------------------|
+| `<capitalize-word>`           | [Editor](ref-fn-editor)                                               |
+| `<catchup>`                   | [Browser](ref-fn-browser), [Index](ref-fn-index)                      |
+| `<change-dir>`                | [Browser](ref-fn-browser)                                             |
+| `<change-folder-readonly>`    | [Index](ref-fn-index), [Pager](ref-fn-pager)                          |
+| `<change-folder>`             | [Index](ref-fn-index), [Pager](ref-fn-pager)                          |
+| `<change-newsgroup-readonly>` | [Index](ref-fn-index), [Pager](ref-fn-pager)                          |
+| `<change-newsgroup>`          | [Index](ref-fn-index), [Pager](ref-fn-pager)                          |
+| `<change-vfolder>`            | [Index](ref-fn-index), [Pager](ref-fn-pager)                          |
+| `<check-new>`                 | [Browser](ref-fn-browser)                                             |
+| `<check-stats>`               | [Generic](ref-fn-generic), [Pager](ref-fn-pager)                      |
+| `<check-traditional-pgp>`     | [Attach](ref-fn-attach), [Index](ref-fn-index), [Pager](ref-fn-pager) |
+| `<clear-flag>`                | [Index](ref-fn-index), [Pager](ref-fn-pager)                          |
+| `<close-all-threads>`         | [Index](ref-fn-index)                                                 |
+| `<close-thread>`              | [Index](ref-fn-index)                                                 |
+| `<collapse-all>`              | [Index](ref-fn-index)                                                 |
+| `<collapse-parts>`            | [Attach](ref-fn-attach)                                               |
+| `<collapse-thread>`           | [Index](ref-fn-index)                                                 |
+| `<complete-query>`            | [Editor](ref-fn-editor)                                               |
+| `<complete>`                  | [Editor](ref-fn-editor)                                               |
+| `<compose-to-sender>`         | [Attach](ref-fn-attach), [Index](ref-fn-index), [Pager](ref-fn-pager) |
+| `<copy-file>`                 | [Compose](ref-fn-compose)                                             |
+| `<copy-message>`              | [Index](ref-fn-index), [Pager](ref-fn-pager)                          |
+| `<create-account>`            | [Autocrypt](ref-fn-autocrypt)                                         |
+| `<create-alias>`              | [Index](ref-fn-index), [Pager](ref-fn-pager), [Query](ref-fn-query)   |
+| `<create-mailbox>`            | [Browser](ref-fn-browser)                                             |
+| `<current-bottom>`            | [Generic](ref-fn-generic)                                             |
+| `<current-middle>`            | [Generic](ref-fn-generic)                                             |
+| `<current-top>`               | [Generic](ref-fn-generic)                                             |
+
+## D
+
+| Function                | Used By                                                                                          |
+|-------------------------|--------------------------------------------------------------------------------------------------|
+| `<decode-copy>`         | [Index](ref-fn-index), [Pager](ref-fn-pager)                                                     |
+| `<decode-save>`         | [Index](ref-fn-index), [Pager](ref-fn-pager)                                                     |
+| `<decrypt-copy>`        | [Index](ref-fn-index), [Pager](ref-fn-pager)                                                     |
+| `<decrypt-save>`        | [Index](ref-fn-index), [Pager](ref-fn-pager)                                                     |
+| `<delete-account>`      | [Autocrypt](ref-fn-autocrypt)                                                                    |
+| `<delete-char>`         | [Editor](ref-fn-editor)                                                                          |
+| `<delete-entry>`        | [Alias](ref-fn-alias), [Attach](ref-fn-attach), [Postpone](ref-fn-postpone)                      |
+| `<delete-mailbox>`      | [Browser](ref-fn-browser)                                                                        |
+| `<delete-message>`      | [Index](ref-fn-index), [Pager](ref-fn-pager)                                                     |
+| `<delete-pattern>`      | [Index](ref-fn-index)                                                                            |
+| `<delete-subthread>`    | [Index](ref-fn-index), [Pager](ref-fn-pager)                                                     |
+| `<delete-thread>`       | [Index](ref-fn-index), [Pager](ref-fn-pager)                                                     |
+| `<descend-directory>`   | [Browser](ref-fn-browser)                                                                        |
+| `<detach-file>`         | [Compose](ref-fn-compose)                                                                        |
+| `<display-address>`     | [Index](ref-fn-index), [Pager](ref-fn-pager)                                                     |
+| `<display-filename>`    | [Browser](ref-fn-browser)                                                                        |
+| `<display-message>`     | [Index](ref-fn-index)                                                                            |
+| `<display-toggle-weed>` | [Attach](ref-fn-attach), [Compose](ref-fn-compose), [Index](ref-fn-index), [Pager](ref-fn-pager) |
+| `<downcase-word>`       | [Editor](ref-fn-editor)                                                                          |
+
+## E
+
+| Function                     | Used By                                                                                                                                                               |
+|------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `<edit-bcc>`                 | [Compose](ref-fn-compose)                                                                                                                                             |
+| `<edit-cc>`                  | [Compose](ref-fn-compose)                                                                                                                                             |
+| `<edit-content-id>`          | [Compose](ref-fn-compose)                                                                                                                                             |
+| `<edit-description>`         | [Compose](ref-fn-compose)                                                                                                                                             |
+| `<edit-encoding>`            | [Compose](ref-fn-compose)                                                                                                                                             |
+| `<edit-fcc>`                 | [Compose](ref-fn-compose)                                                                                                                                             |
+| `<edit-file>`                | [Compose](ref-fn-compose)                                                                                                                                             |
+| `<edit-followup-to>`         | [Compose](ref-fn-compose)                                                                                                                                             |
+| `<edit-from>`                | [Compose](ref-fn-compose)                                                                                                                                             |
+| `<edit-headers>`             | [Compose](ref-fn-compose)                                                                                                                                             |
+| `<edit-label>`               | [Index](ref-fn-index), [Pager](ref-fn-pager)                                                                                                                          |
+| `<edit-language>`            | [Compose](ref-fn-compose)                                                                                                                                             |
+| `<edit-message>`             | [Compose](ref-fn-compose)                                                                                                                                             |
+| `<edit-mime>`                | [Compose](ref-fn-compose)                                                                                                                                             |
+| `<edit-newsgroups>`          | [Compose](ref-fn-compose)                                                                                                                                             |
+| `<edit-or-view-raw-message>` | [Index](ref-fn-index), [Pager](ref-fn-pager)                                                                                                                          |
+| `<edit-raw-message>`         | [Index](ref-fn-index), [Pager](ref-fn-pager)                                                                                                                          |
+| `<edit-reply-to>`            | [Compose](ref-fn-compose)                                                                                                                                             |
+| `<edit-subject>`             | [Compose](ref-fn-compose)                                                                                                                                             |
+| `<edit-to>`                  | [Compose](ref-fn-compose)                                                                                                                                             |
+| `<edit-type>`                | [Attach](ref-fn-attach), [Compose](ref-fn-compose), [Index](ref-fn-index), [Pager](ref-fn-pager)                                                                      |
+| `<edit-x-comment-to>`        | [Compose](ref-fn-compose)                                                                                                                                             |
+| `<edit>`                     | [Index](ref-fn-index), [Pager](ref-fn-pager)                                                                                                                          |
+| `<end-cond>`                 | [Generic](ref-fn-generic)                                                                                                                                             |
+| `<enter-command>`            | [Generic](ref-fn-generic), [Pager](ref-fn-pager)                                                                                                                      |
+| `<enter-mask>`               | [Browser](ref-fn-browser)                                                                                                                                             |
+| `<entire-thread>`            | [Index](ref-fn-index), [Pager](ref-fn-pager)                                                                                                                          |
+| `<eol>`                      | [Editor](ref-fn-editor)                                                                                                                                               |
+| `<error-history>`            | {bdg-warning-line}`Renamed to:` [`<show-log-messages>`](#s)                                                                                                           |
+| `<exit>`                     | [Alias](ref-fn-alias), [Attach](ref-fn-attach), [Autocrypt](ref-fn-autocrypt), [Browser](ref-fn-browser), [Compose](ref-fn-compose), [Dialog](ref-fn-dialog),         |
+|                              | [Generic](ref-fn-generic), [Index](ref-fn-index), [Pager](ref-fn-pager), [Pgp](ref-fn-pgp), [Postpone](ref-fn-postpone), [Query](ref-fn-query), [Smime](ref-fn-smime) |
+| `<extract-keys>`             | [Attach](ref-fn-attach), [Index](ref-fn-index), [Pager](ref-fn-pager)                                                                                                 |
+
+## F
+
+| Function              | Used By                                                                                          |
+|-----------------------|--------------------------------------------------------------------------------------------------|
+| `<fetch-mail>`        | [Index](ref-fn-index)                                                                            |
+| `<filter-entry>`      | [Compose](ref-fn-compose)                                                                        |
+| `<first-entry>`       | [Generic](ref-fn-generic)                                                                        |
+| `<flag-message>`      | [Index](ref-fn-index), [Pager](ref-fn-pager)                                                     |
+| `<followup-message>`  | [Attach](ref-fn-attach), [Index](ref-fn-index), [Pager](ref-fn-pager)                            |
+| `<forget-passphrase>` | [Attach](ref-fn-attach), [Compose](ref-fn-compose), [Index](ref-fn-index), [Pager](ref-fn-pager) |
+| `<forward-char>`      | [Editor](ref-fn-editor)                                                                          |
+| `<forward-message>`   | [Attach](ref-fn-attach), [Index](ref-fn-index), [Pager](ref-fn-pager)                            |
+| `<forward-to-group>`  | [Attach](ref-fn-attach), [Index](ref-fn-index), [Pager](ref-fn-pager)                            |
+| `<forward-word>`      | [Editor](ref-fn-editor)                                                                          |
+
+## G
+
+| Function               | Used By                                                               |
+|------------------------|-----------------------------------------------------------------------|
+| `<get-attachment>`     | [Compose](ref-fn-compose)                                             |
+| `<get-children>`       | [Index](ref-fn-index)                                                 |
+| `<get-message>`        | [Index](ref-fn-index)                                                 |
+| `<get-parent>`         | [Index](ref-fn-index)                                                 |
+| `<goto-folder>`        | [Browser](ref-fn-browser)                                             |
+| `<goto-parent>`        | [Browser](ref-fn-browser)                                             |
+| `<group-alternatives>` | [Compose](ref-fn-compose)                                             |
+| `<group-chat-reply>`   | [Attach](ref-fn-attach), [Index](ref-fn-index), [Pager](ref-fn-pager) |
+| `<group-multilingual>` | [Compose](ref-fn-compose)                                             |
+| `<group-related>`      | [Compose](ref-fn-compose)                                             |
+| `<group-reply>`        | [Attach](ref-fn-attach), [Index](ref-fn-index), [Pager](ref-fn-pager) |
+
+## H
+
+| Function           | Used By                                                                   |
+|--------------------|---------------------------------------------------------------------------|
+| `<half-down>`      | [Generic](ref-fn-generic), [Pager](ref-fn-pager)                          |
+| `<half-up>`        | [Generic](ref-fn-generic), [Pager](ref-fn-pager)                          |
+| `<help>`           | [Editor](ref-fn-editor), [Generic](ref-fn-generic), [Pager](ref-fn-pager) |
+| `<history-down>`   | [Editor](ref-fn-editor)                                                   |
+| `<history-search>` | [Editor](ref-fn-editor)                                                   |
+| `<history-up>`     | [Editor](ref-fn-editor)                                                   |
+
+## I
+
+| Function            | Used By                                      |
+|---------------------|----------------------------------------------|
+| `<imap-fetch-mail>` | [Index](ref-fn-index), [Pager](ref-fn-pager) |
+| `<imap-logout-all>` | [Index](ref-fn-index), [Pager](ref-fn-pager) |
+| `<ispell>`          | [Compose](ref-fn-compose)                    |
+
+## J
+
+| Function | Used By                                          |
+|----------|--------------------------------------------------|
+| `<jump>` | [Generic](ref-fn-generic), [Pager](ref-fn-pager) |
+
+## K
+
+| Function            | Used By                 |
+|---------------------|-------------------------|
+| `<kill-eol>`        | [Editor](ref-fn-editor) |
+| `<kill-eow>`        | [Editor](ref-fn-editor) |
+| `<kill-line>`       | [Editor](ref-fn-editor) |
+| `<kill-whole-line>` | [Editor](ref-fn-editor) |
+| `<kill-word>`       | [Editor](ref-fn-editor) |
+
+## L
+
+| Function                 | Used By                                                               |
+|--------------------------|-----------------------------------------------------------------------|
+| `<last-entry>`           | [Generic](ref-fn-generic)                                             |
+| `<limit-current-thread>` | [Index](ref-fn-index)                                                 |
+| `<limit>`                | [Alias](ref-fn-alias), [Index](ref-fn-index), [Query](ref-fn-query)   |
+| `<link-threads>`         | [Index](ref-fn-index), [Pager](ref-fn-pager)                          |
+| `<list-reply>`           | [Attach](ref-fn-attach), [Index](ref-fn-index), [Pager](ref-fn-pager) |
+| `<list-subscribe>`       | [Attach](ref-fn-attach), [Index](ref-fn-index), [Pager](ref-fn-pager) |
+| `<list-unsubscribe>`     | [Attach](ref-fn-attach), [Index](ref-fn-index), [Pager](ref-fn-pager) |
+
+## M
+
+| Function                    | Used By                                                                                    |
+|-----------------------------|--------------------------------------------------------------------------------------------|
+| `<mail-key>`                | [Index](ref-fn-index), [Pager](ref-fn-pager)                                               |
+| `<mail>`                    | [Alias](ref-fn-alias), [Index](ref-fn-index), [Pager](ref-fn-pager), [Query](ref-fn-query) |
+| `<mailbox-cycle>`           | [Editor](ref-fn-editor)                                                                    |
+| `<mailbox-list>`            | [Browser](ref-fn-browser), [Index](ref-fn-index), [Pager](ref-fn-pager)                    |
+| `<mark-as-new>`             | [Pager](ref-fn-pager)                                                                      |
+| `<mark-message>`            | [Index](ref-fn-index)                                                                      |
+| `<middle-page>`             | [Generic](ref-fn-generic)                                                                  |
+| `<modify-labels-then-hide>` | [Index](ref-fn-index), [Pager](ref-fn-pager)                                               |
+| `<modify-labels>`           | [Index](ref-fn-index), [Pager](ref-fn-pager)                                               |
+| `<modify-tags-then-hide>`   | [Index](ref-fn-index), [Pager](ref-fn-pager)                                               |
+| `<modify-tags>`             | [Index](ref-fn-index), [Pager](ref-fn-pager)                                               |
+| `<move-down>`               | [Compose](ref-fn-compose)                                                                  |
+| `<move-up>`                 | [Compose](ref-fn-compose)                                                                  |
+
+## N
+
+| Function                 | Used By                                          |
+|--------------------------|--------------------------------------------------|
+| `<new-mime>`             | [Compose](ref-fn-compose)                        |
+| `<next-entry>`           | [Generic](ref-fn-generic), [Pager](ref-fn-pager) |
+| `<next-line>`            | [Generic](ref-fn-generic), [Pager](ref-fn-pager) |
+| `<next-new-then-unread>` | [Index](ref-fn-index), [Pager](ref-fn-pager)     |
+| `<next-new>`             | [Index](ref-fn-index), [Pager](ref-fn-pager)     |
+| `<next-page>`            | [Generic](ref-fn-generic), [Pager](ref-fn-pager) |
+| `<next-subthread>`       | [Index](ref-fn-index), [Pager](ref-fn-pager)     |
+| `<next-thread>`          | [Index](ref-fn-index), [Pager](ref-fn-pager)     |
+| `<next-undeleted>`       | [Index](ref-fn-index), [Pager](ref-fn-pager)     |
+| `<next-unread-mailbox>`  | [Index](ref-fn-index), [Pager](ref-fn-pager)     |
+| `<next-unread>`          | [Index](ref-fn-index), [Pager](ref-fn-pager)     |
+
+## O
+
+| Function             | Used By               |
+|----------------------|-----------------------|
+| `<open-all-threads>` | [Index](ref-fn-index) |
+| `<open-thread>`      | [Index](ref-fn-index) |
+
+## P
+
+| Function                     | Used By                                                                                          |
+|------------------------------|--------------------------------------------------------------------------------------------------|
+| `<parent-message>`           | [Index](ref-fn-index), [Pager](ref-fn-pager)                                                     |
+| `<pgp-menu>`                 | [Compose](ref-fn-compose)                                                                        |
+| `<pipe-entry>`               | [Attach](ref-fn-attach), [Compose](ref-fn-compose), [Index](ref-fn-index), [Pager](ref-fn-pager) |
+| `<pipe-message>`             | [Attach](ref-fn-attach), [Compose](ref-fn-compose), [Index](ref-fn-index), [Pager](ref-fn-pager) |
+| `<post-message>`             | [Index](ref-fn-index), [Pager](ref-fn-pager)                                                     |
+| `<postpone-message>`         | [Compose](ref-fn-compose)                                                                        |
+| `<preview-page-down>`        | [Compose](ref-fn-compose)                                                                        |
+| `<preview-page-up>`          | [Compose](ref-fn-compose)                                                                        |
+| `<previous-entry>`           | [Generic](ref-fn-generic), [Pager](ref-fn-pager)                                                 |
+| `<previous-line>`            | [Generic](ref-fn-generic), [Pager](ref-fn-pager)                                                 |
+| `<previous-new-then-unread>` | [Index](ref-fn-index), [Pager](ref-fn-pager)                                                     |
+| `<previous-new>`             | [Index](ref-fn-index), [Pager](ref-fn-pager)                                                     |
+| `<previous-page>`            | [Generic](ref-fn-generic), [Pager](ref-fn-pager)                                                 |
+| `<previous-subthread>`       | [Index](ref-fn-index), [Pager](ref-fn-pager)                                                     |
+| `<previous-thread>`          | [Index](ref-fn-index), [Pager](ref-fn-pager)                                                     |
+| `<previous-undeleted>`       | [Index](ref-fn-index), [Pager](ref-fn-pager)                                                     |
+| `<previous-unread>`          | [Index](ref-fn-index), [Pager](ref-fn-pager)                                                     |
+| `<print-entry>`              | [Attach](ref-fn-attach), [Compose](ref-fn-compose), [Pager](ref-fn-pager)                        |
+| `<print-message>`            | [Index](ref-fn-index), [Pager](ref-fn-pager)                                                     |
+| `<purge-message>`            | [Index](ref-fn-index), [Pager](ref-fn-pager)                                                     |
+| `<purge-thread>`             | [Index](ref-fn-index), [Pager](ref-fn-pager)                                                     |
+
+## Q
+
+| Function         | Used By                                                               |
+|------------------|-----------------------------------------------------------------------|
+| `<quasi-delete>` | [Index](ref-fn-index), [Pager](ref-fn-pager)                          |
+| `<query-append>` | [Query](ref-fn-query)                                                 |
+| `<query>`        | [Index](ref-fn-index), [Query](ref-fn-query)                          |
+| `<quit>`         | [Dialog](ref-fn-dialog), [Index](ref-fn-index), [Pager](ref-fn-pager) |
+| `<quote-char>`   | [Editor](ref-fn-editor)                                               |
+
+## R
+
+| Function               | Used By                                                                   |
+|------------------------|---------------------------------------------------------------------------|
+| `<read-subthread>`     | [Index](ref-fn-index), [Pager](ref-fn-pager)                              |
+| `<read-thread>`        | [Index](ref-fn-index), [Pager](ref-fn-pager)                              |
+| `<recall-message>`     | [Index](ref-fn-index), [Pager](ref-fn-pager)                              |
+| `<reconstruct-thread>` | [Index](ref-fn-index), [Pager](ref-fn-pager)                              |
+| `<redraw-screen>`      | [Editor](ref-fn-editor), [Generic](ref-fn-generic), [Pager](ref-fn-pager) |
+| `<refresh>`            | {bdg-warning-line}`Renamed to:` [`<redraw-screen>`](#r)                   |
+| `<reload-active>`      | [Browser](ref-fn-browser)                                                 |
+| `<rename-attachment>`  | [Compose](ref-fn-compose)                                                 |
+| `<rename-file>`        | [Compose](ref-fn-compose)                                                 |
+| `<rename-mailbox>`     | [Browser](ref-fn-browser)                                                 |
+| `<reply>`              | [Attach](ref-fn-attach), [Index](ref-fn-index), [Pager](ref-fn-pager)     |
+| `<resend-message>`     | [Attach](ref-fn-attach), [Index](ref-fn-index), [Pager](ref-fn-pager)     |
+| `<root-message>`       | [Index](ref-fn-index), [Pager](ref-fn-pager)                              |
+
+## S
+
+| Function                   | Used By                                                                                        |
+|----------------------------|------------------------------------------------------------------------------------------------|
+| `<save-entry>`             | [Attach](ref-fn-attach), [Pager](ref-fn-pager)                                                 |
+| `<save-message>`           | [Index](ref-fn-index), [Pager](ref-fn-pager)                                                   |
+| `<search-next>`            | [Generic](ref-fn-generic), [Pager](ref-fn-pager)                                               |
+| `<search-opposite>`        | [Generic](ref-fn-generic), [Pager](ref-fn-pager)                                               |
+| `<search-reverse>`         | [Generic](ref-fn-generic), [Pager](ref-fn-pager)                                               |
+| `<search-toggle>`          | [Pager](ref-fn-pager)                                                                          |
+| `<search>`                 | [Generic](ref-fn-generic), [Pager](ref-fn-pager)                                               |
+| `<select-entry>`           | [Generic](ref-fn-generic)                                                                      |
+| `<select-new>`             | [Browser](ref-fn-browser)                                                                      |
+| `<send-message>`           | [Compose](ref-fn-compose)                                                                      |
+| `<set-flag>`               | [Index](ref-fn-index), [Pager](ref-fn-pager)                                                   |
+| `<shell-escape>`           | [Generic](ref-fn-generic), [Pager](ref-fn-pager)                                               |
+| `<show-limit>`             | [Index](ref-fn-index)                                                                          |
+| `<show-log-messages>`      | [Generic](ref-fn-generic), [Pager](ref-fn-pager)                                               |
+| `<show-version>`           | [Generic](ref-fn-generic), [Pager](ref-fn-pager)                                               |
+| `<sidebar-abort-search>`   | [Sidebar](ref-fn-sidebar)                                                                      |
+| `<sidebar-first>`          | [Sidebar](ref-fn-sidebar)                                                                      |
+| `<sidebar-last>`           | [Sidebar](ref-fn-sidebar)                                                                      |
+| `<sidebar-next-new>`       | [Sidebar](ref-fn-sidebar)                                                                      |
+| `<sidebar-next>`           | [Sidebar](ref-fn-sidebar)                                                                      |
+| `<sidebar-open>`           | [Sidebar](ref-fn-sidebar)                                                                      |
+| `<sidebar-page-down>`      | [Sidebar](ref-fn-sidebar)                                                                      |
+| `<sidebar-page-up>`        | [Sidebar](ref-fn-sidebar)                                                                      |
+| `<sidebar-prev-new>`       | [Sidebar](ref-fn-sidebar)                                                                      |
+| `<sidebar-prev>`           | [Sidebar](ref-fn-sidebar)                                                                      |
+| `<sidebar-start-search>`   | [Sidebar](ref-fn-sidebar)                                                                      |
+| `<sidebar-toggle-virtual>` | [Sidebar](ref-fn-sidebar)                                                                      |
+| `<sidebar-toggle-visible>` | [Sidebar](ref-fn-sidebar)                                                                      |
+| `<skip-headers>`           | [Pager](ref-fn-pager)                                                                          |
+| `<skip-quoted>`            | [Pager](ref-fn-pager)                                                                          |
+| `<smime-menu>`             | [Compose](ref-fn-compose)                                                                      |
+| `<sort-alias-reverse>`     | [Alias](ref-fn-alias)                                                                          |
+| `<sort-alias>`             | [Alias](ref-fn-alias)                                                                          |
+| `<sort-mailbox>`           | [Index](ref-fn-index), [Pager](ref-fn-pager)                                                   |
+| `<sort-reverse>`           | [Browser](ref-fn-browser), [Index](ref-fn-index), [Pager](ref-fn-pager), [Query](ref-fn-query) |
+| `<sort>`                   | [Browser](ref-fn-browser), [Query](ref-fn-query)                                               |
+| `<subscribe-pattern>`      | [Browser](ref-fn-browser)                                                                      |
+| `<subscribe>`              | [Browser](ref-fn-browser)                                                                      |
+| `<sync-mailbox>`           | [Index](ref-fn-index), [Pager](ref-fn-pager)                                                   |
+
+## T
+
+| Function                  | Used By                                                             |
+|---------------------------|---------------------------------------------------------------------|
+| `<tag-entry>`             | [Generic](ref-fn-generic)                                           |
+| `<tag-message>`           | [Pager](ref-fn-pager)                                               |
+| `<tag-pattern>`           | [Alias](ref-fn-alias), [Index](ref-fn-index), [Query](ref-fn-query) |
+| `<tag-prefix-cond>`       | [Generic](ref-fn-generic)                                           |
+| `<tag-prefix>`            | [Generic](ref-fn-generic)                                           |
+| `<tag-subthread>`         | [Index](ref-fn-index)                                               |
+| `<tag-thread>`            | [Index](ref-fn-index)                                               |
+| `<toggle-active>`         | [Autocrypt](ref-fn-autocrypt)                                       |
+| `<toggle-disposition>`    | [Compose](ref-fn-compose)                                           |
+| `<toggle-mailboxes>`      | [Browser](ref-fn-browser)                                           |
+| `<toggle-new>`            | [Index](ref-fn-index)                                               |
+| `<toggle-prefer-encrypt>` | [Autocrypt](ref-fn-autocrypt)                                       |
+| `<toggle-quoted>`         | [Pager](ref-fn-pager)                                               |
+| `<toggle-read>`           | [Index](ref-fn-index)                                               |
+| `<toggle-recode>`         | [Compose](ref-fn-compose)                                           |
+| `<toggle-subscribed>`     | [Browser](ref-fn-browser)                                           |
+| `<toggle-unlink>`         | [Compose](ref-fn-compose)                                           |
+| `<toggle-write>`          | [Index](ref-fn-index), [Pager](ref-fn-pager)                        |
+| `<top-page>`              | [Generic](ref-fn-generic)                                           |
+| `<top>`                   | [Pager](ref-fn-pager)                                               |
+| `<transpose-chars>`       | [Editor](ref-fn-editor)                                             |
+
+## U
+
+| Function                | Used By                                                                     |
+|-------------------------|-----------------------------------------------------------------------------|
+| `<uncatchup>`           | [Browser](ref-fn-browser)                                                   |
+| `<undelete-entry>`      | [Alias](ref-fn-alias), [Attach](ref-fn-attach), [Postpone](ref-fn-postpone) |
+| `<undelete-message>`    | [Index](ref-fn-index), [Pager](ref-fn-pager)                                |
+| `<undelete-pattern>`    | [Index](ref-fn-index)                                                       |
+| `<undelete-subthread>`  | [Index](ref-fn-index), [Pager](ref-fn-pager)                                |
+| `<undelete-thread>`     | [Index](ref-fn-index), [Pager](ref-fn-pager)                                |
+| `<ungroup-attachment>`  | [Compose](ref-fn-compose)                                                   |
+| `<unsubscribe-pattern>` | [Browser](ref-fn-browser)                                                   |
+| `<unsubscribe>`         | [Browser](ref-fn-browser)                                                   |
+| `<untag-pattern>`       | [Alias](ref-fn-alias), [Index](ref-fn-index), [Query](ref-fn-query)         |
+| `<upcase-word>`         | [Editor](ref-fn-editor)                                                     |
+| `<update-encoding>`     | [Compose](ref-fn-compose)                                                   |
+
+## V
+
+| Function                        | Used By                                            |
+|---------------------------------|----------------------------------------------------|
+| `<verify-key>`                  | [Pgp](ref-fn-pgp), [Smime](ref-fn-smime)           |
+| `<vfolder-from-query-readonly>` | [Index](ref-fn-index), [Pager](ref-fn-pager)       |
+| `<vfolder-from-query>`          | [Index](ref-fn-index), [Pager](ref-fn-pager)       |
+| `<vfolder-window-backward>`     | [Index](ref-fn-index)                              |
+| `<vfolder-window-forward>`      | [Index](ref-fn-index)                              |
+| `<vfolder-window-reset>`        | [Index](ref-fn-index)                              |
+| `<view-attach>`                 | [Attach](ref-fn-attach), [Compose](ref-fn-compose) |
+| `<view-attachments>`            | [Index](ref-fn-index), [Pager](ref-fn-pager)       |
+| `<view-file>`                   | [Browser](ref-fn-browser)                          |
+| `<view-mailcap>`                | [Attach](ref-fn-attach), [Compose](ref-fn-compose) |
+| `<view-name>`                   | [Pgp](ref-fn-pgp), [Smime](ref-fn-smime)           |
+| `<view-pager>`                  | [Attach](ref-fn-attach), [Compose](ref-fn-compose) |
+| `<view-raw-message>`            | [Index](ref-fn-index), [Pager](ref-fn-pager)       |
+| `<view-text>`                   | [Attach](ref-fn-attach), [Compose](ref-fn-compose) |
+
+## W
+
+| Function      | Used By                                          |
+|---------------|--------------------------------------------------|
+| `<what-key>`  | [Generic](ref-fn-generic), [Pager](ref-fn-pager) |
+| `<write-fcc>` | [Compose](ref-fn-compose)                        |
 
 ```{toctree}
 ---
@@ -34,595 +439,4 @@ query
 sidebar
 smime
 ```
-
-## [Alias Functions](ref-fn-alias)
-
-Browse and select from your saved email address aliases.
-You can sort, search, delete, and compose messages to your contacts.
-
-| Function               | Description                                  |
-|------------------------|----------------------------------------------|
-| `<delete-entry>`       | Delete the current entry                     |
-| `<exit>`               | Exit this menu                               |
-| `<limit>`              | Show only messages matching a pattern        |
-| `<mail>`               | Compose a new mail message                   |
-| `<sort-alias-reverse>` | Sort messages in reverse order               |
-| `<sort-alias>`         | Sort messages                                |
-| `<tag-pattern>`        | Tag non-hidden messages matching a pattern   |
-| `<undelete-entry>`     | Undelete the current entry                   |
-| `<untag-pattern>`      | Untag non-hidden messages matching a pattern |
-
-## [Attach Functions](ref-fn-attach)
-
-View and manage the attachments of a received email.
-You can save, print, pipe, delete, or open attachments, and reply or forward from this view.
-
-| Function                  | Description                                          |
-|---------------------------|------------------------------------------------------|
-| `<bounce-message>`        | Remail a message to another user                     |
-| `<check-traditional-pgp>` | Check for classic PGP                                |
-| `<collapse-parts>`        | Toggle display of subparts                           |
-| `<compose-to-sender>`     | Compose new message to the current message sender    |
-| `<delete-entry>`          | Delete the current entry                             |
-| `<display-toggle-weed>`   | Display message and toggle header weeding            |
-| `<edit-type>`             | Edit attachment content type                         |
-| `<exit>`                  | Exit this menu                                       |
-| `<extract-keys>`          | Extract supported public keys                        |
-| `<followup-message>`      | Followup to newsgroup                                |
-| `<forget-passphrase>`     | Wipe passphrases from memory                         |
-| `<forward-message>`       | Forward a message with comments                      |
-| `<forward-to-group>`      | Forward to newsgroup                                 |
-| `<group-chat-reply>`      | Reply to all recipients preserving To/Cc             |
-| `<group-reply>`           | Reply to all recipients                              |
-| `<list-reply>`            | Reply to specified mailing list                      |
-| `<list-subscribe>`        | Subscribe to a mailing list                          |
-| `<list-unsubscribe>`      | Unsubscribe from a mailing list                      |
-| `<pipe-entry>`            | Pipe message/attachment to a shell command           |
-| `<pipe-message>`          | Pipe message/attachment to a shell command           |
-| `<print-entry>`           | Print the current entry                              |
-| `<reply>`                 | Reply to a message                                   |
-| `<resend-message>`        | Use the current message as a template for a new one  |
-| `<save-entry>`            | Save message/attachment to a mailbox/file            |
-| `<undelete-entry>`        | Undelete the current entry                           |
-| `<view-attach>`           | View attachment using mailcap entry if necessary     |
-| `<view-mailcap>`          | Force viewing of attachment using mailcap            |
-| `<view-pager>`            | View attachment in pager using copiousoutput mailcap |
-| `<view-text>`             | View attachment as text                              |
-
-## [Autocrypt Functions](ref-fn-autocrypt)
-
-Manage your Autocrypt encryption accounts.
-You can create, delete, toggle, and set preferences for automatic email encryption keys.
-
-| Function                  | Description                                    |
-|---------------------------|------------------------------------------------|
-| `<create-account>`        | Create a new autocrypt account                 |
-| `<delete-account>`        | Delete the current account                     |
-| `<exit>`                  | Exit this menu                                 |
-| `<toggle-active>`         | Toggle the current account active/inactive     |
-| `<toggle-prefer-encrypt>` | Toggle the current account prefer-encrypt flag |
-
-## [Browser Functions](ref-fn-browser)
-
-Browse files on disk or mailboxes on a server.
-You can navigate directories, sort listings, subscribe to mailboxes, and select a mailbox to open.
-
-| Function                | Description                                                |
-|-------------------------|------------------------------------------------------------|
-| `<buffy-list>`          | {bdg-danger-line}`Deprecated` use `<mailbox-list>`         |
-| `<catchup>`             | Mark all articles in newsgroup as read                     |
-| `<change-dir>`          | Change directories                                         |
-| `<check-new>`           | Check mailboxes for new mail                               |
-| `<create-mailbox>`      | Create a new mailbox (IMAP only)                           |
-| `<delete-mailbox>`      | Delete the current mailbox (IMAP only)                     |
-| `<descend-directory>`   | Descend into a directory                                   |
-| `<display-filename>`    | Display the currently selected file's name                 |
-| `<enter-mask>`          | Enter a file mask                                          |
-| `<exit>`                | Exit this menu                                             |
-| `<goto-folder>`         | Swap the current folder position with $folder if it exists |
-| `<goto-parent>`         | Go to parent directory                                     |
-| `<mailbox-list>`        | List mailboxes with new mail                               |
-| `<reload-active>`       | Load list of all newsgroups from NNTP server               |
-| `<rename-mailbox>`      | Rename the current mailbox (IMAP only)                     |
-| `<select-new>`          | Select a new file in this directory                        |
-| `<sort-reverse>`        | Sort messages in reverse order                             |
-| `<sort>`                | Sort messages                                              |
-| `<subscribe-pattern>`   | Subscribe to newsgroups matching a pattern                 |
-| `<subscribe>`           | Subscribe to current mbox (IMAP/NNTP only)                 |
-| `<toggle-mailboxes>`    | Toggle whether to browse mailboxes or all files            |
-| `<toggle-subscribed>`   | Toggle view all/subscribed mailboxes (IMAP only)           |
-| `<uncatchup>`           | Mark all articles in newsgroup as unread                   |
-| `<unsubscribe-pattern>` | Unsubscribe from newsgroups matching a pattern             |
-| `<unsubscribe>`         | Unsubscribe from current mbox (IMAP/NNTP only)             |
-| `<view-file>`           | View file                                                  |
-
-## [Compose Functions](ref-fn-compose)
-
-Prepare an email before sending it.
-You can edit recipients, subject, and headers, attach files, configure encryption, and send or postpone the message.
-
-| Function                | Description                                          |
-|-------------------------|------------------------------------------------------|
-| `<attach-file>`         | Attach files to this message                         |
-| `<attach-key>`          | Attach a PGP public key                              |
-| `<attach-message>`      | Attach messages to this message                      |
-| `<attach-news-message>` | Attach news articles to this message                 |
-| `<autocrypt-menu>`      | Show autocrypt compose menu options                  |
-| `<copy-file>`           | Save message/attachment to a mailbox/file            |
-| `<detach-file>`         | Delete the current entry                             |
-| `<display-toggle-weed>` | Display message and toggle header weeding            |
-| `<edit-bcc>`            | Edit the `Bcc:` list                                 |
-| `<edit-cc>`             | Edit the `Cc:` list                                  |
-| `<edit-content-id>`     | Edit the `Content-ID` of the attachment              |
-| `<edit-description>`    | Edit attachment description                          |
-| `<edit-encoding>`       | Edit attachment transfer-encoding                    |
-| `<edit-fcc>`            | Enter a file to save a copy of this message in       |
-| `<edit-file>`           | Edit the file to be attached                         |
-| `<edit-followup-to>`    | Edit the `Followup-to:` field                        |
-| `<edit-from>`           | Edit the from field                                  |
-| `<edit-headers>`        | Edit the message with headers                        |
-| `<edit-language>`       | Edit the `Content-Language` of the attachment        |
-| `<edit-message>`        | Edit the message                                     |
-| `<edit-mime>`           | Edit attachment using mailcap entry                  |
-| `<edit-newsgroups>`     | Edit the newsgroups list                             |
-| `<edit-reply-to>`       | Edit the `Reply-to:` field                           |
-| `<edit-subject>`        | Edit the `Subject:` of this message                  |
-| `<edit-to>`             | Edit the `To:` list                                  |
-| `<edit-type>`           | Edit attachment content type                         |
-| `<edit-x-comment-to>`   | Edit the `X-comment-to:` field                       |
-| `<exit>`                | Exit this menu                                       |
-| `<filter-entry>`        | Filter attachment through a shell command            |
-| `<forget-passphrase>`   | Wipe passphrases from memory                         |
-| `<get-attachment>`      | Get a temporary copy of an attachment                |
-| `<group-alternatives>`  | Group tagged attachments as 'multipart/alternative'  |
-| `<group-multilingual>`  | Group tagged attachments as 'multipart/multilingual' |
-| `<group-related>`       | Group tagged attachments as 'multipart/related'      |
-| `<ispell>`              | Run `ispell` on the message                          |
-| `<move-down>`           | Move an attachment down in the attachment list       |
-| `<move-up>`             | Move an attachment up in the attachment list         |
-| `<new-mime>`            | Compose new attachment using mailcap entry           |
-| `<pgp-menu>`            | Show PGP options                                     |
-| `<pipe-entry>`          | Pipe message/attachment to a shell command           |
-| `<pipe-message>`        | Pipe message/attachment to a shell command           |
-| `<postpone-message>`    | Save this message to send later                      |
-| `<preview-page-down>`   | Show the next page of the message                    |
-| `<preview-page-up>`     | Show the previous page of the message                |
-| `<print-entry>`         | Print the current entry                              |
-| `<rename-attachment>`   | Send attachment with a different name                |
-| `<rename-file>`         | Rename/move an attached file                         |
-| `<send-message>`        | Send the message                                     |
-| `<smime-menu>`          | Show S/MIME options                                  |
-| `<toggle-disposition>`  | Toggle disposition between inline/attachment         |
-| `<toggle-recode>`       | Toggle recoding of this attachment                   |
-| `<toggle-unlink>`       | Toggle whether to delete file after sending it       |
-| `<ungroup-attachment>`  | Ungroup 'multipart' attachment                       |
-| `<update-encoding>`     | Update an attachment's encoding info                 |
-| `<view-attach>`         | View attachment using mailcap entry if necessary     |
-| `<view-mailcap>`        | Force viewing of attachment using mailcap            |
-| `<view-pager>`          | View attachment in pager using copiousoutput mailcap |
-| `<view-text>`           | View attachment as text                              |
-| `<write-fcc>`           | Write the message to a folder                        |
-
-## [Dialog Functions](ref-fn-dialog)
-
-A simple informational pop-up, such as the help screen or log messages.
-It only supports quitting.
-
-| Function | Description                      |
-|----------|----------------------------------|
-| `<exit>` | Exit this menu                   |
-| `<quit>` | Save changes to mailbox and quit |
-
-## [Editor Functions](ref-fn-editor)
-
-The text input line where you type responses to prompts.
-It supports cursor movement, word editing, tab-completion, and command history.
-
-| Function            | Description                                         |
-|---------------------|-----------------------------------------------------|
-| `<backspace>`       | Delete the char in front of the cursor              |
-| `<backward-char>`   | Move the cursor one character to the left           |
-| `<backward-word>`   | Move the cursor to the beginning of the word        |
-| `<bol>`             | Jump to the beginning of the line                   |
-| `<buffy-cycle>`     | {bdg-danger-line}`Deprecated` use `<mailbox-cycle>` |
-| `<capitalize-word>` | Capitalize the word                                 |
-| `<complete-query>`  | Complete address with query                         |
-| `<complete>`        | Complete filename or alias                          |
-| `<delete-char>`     | Delete the char under the cursor                    |
-| `<downcase-word>`   | Convert the word to lower case                      |
-| `<eol>`             | Jump to the end of the line                         |
-| `<forward-char>`    | Move the cursor one character to the right          |
-| `<forward-word>`    | Move the cursor to the end of the word              |
-| `<help>`            | Show the help screen                                |
-| `<history-down>`    | Scroll down through the history list                |
-| `<history-search>`  | Search through the history list                     |
-| `<history-up>`      | Scroll up through the history list                  |
-| `<kill-eol>`        | Delete chars from cursor to end of line             |
-| `<kill-eow>`        | Delete chars from the cursor to the end of the word |
-| `<kill-line>`       | Delete chars from cursor to beginning of the line   |
-| `<kill-whole-line>` | Delete all chars on the line                        |
-| `<kill-word>`       | Delete the word in front of the cursor              |
-| `<mailbox-cycle>`   | Cycle among incoming mailboxes                      |
-| `<quote-char>`      | Quote the next typed key                            |
-| `<redraw-screen>`   | Clear and redraw the screen                         |
-| `<transpose-chars>` | Transpose character under cursor with previous      |
-| `<upcase-word>`     | Convert the word to upper case                      |
-
-## [Generic Functions](ref-fn-generic)
-
-Not a menu itself, but provides common functions — such as scrolling, searching, and tagging — that are inherited by all other menus (except pager and editor).
-
-| Function              | Description                                         |
-|-----------------------|-----------------------------------------------------|
-| `<bottom-page>`       | Move to the bottom of the page                      |
-| `<check-stats>`       | Calculate message statistics for all mailboxes      |
-| `<current-bottom>`    | Move entry to bottom of screen                      |
-| `<current-middle>`    | Move entry to middle of screen                      |
-| `<current-top>`       | Move entry to top of screen                         |
-| `<end-cond>`          | End of conditional execution (noop)                 |
-| `<enter-command>`     | Enter a neomuttrc command                           |
-| `<error-history>`     | {bdg-danger}`Deprecated` use `<show-log-messages>`  |
-| `<exit>`              | Exit this menu                                      |
-| `<first-entry>`       | Move to the first entry                             |
-| `<half-down>`         | Scroll down 1/2 page                                |
-| `<half-up>`           | Scroll up 1/2 page                                  |
-| `<help>`              | Show the help screen                                |
-| `<jump>`              | Jump to an index number                             |
-| `<last-entry>`        | Move to the last entry                              |
-| `<middle-page>`       | Move to the middle of the page                      |
-| `<next-entry>`        | Move to the next entry                              |
-| `<next-line>`         | Scroll down one line                                |
-| `<next-page>`         | Move to the next page                               |
-| `<previous-entry>`    | Move to the previous entry                          |
-| `<previous-line>`     | Scroll up one line                                  |
-| `<previous-page>`     | Move to the previous page                           |
-| `<redraw-screen>`     | Clear and redraw the screen                         |
-| `<refresh>`           | {bdg-danger-line}`Deprecated` use `<redraw-screen>` |
-| `<search-next>`       | Search for next match                               |
-| `<search-opposite>`   | Search for next match in opposite direction         |
-| `<search-reverse>`    | Search backwards for a regular expression           |
-| `<search>`            | Search for a regular expression                     |
-| `<select-entry>`      | Select the current entry                            |
-| `<shell-escape>`      | Invoke a command in a subshell                      |
-| `<show-log-messages>` | Show log (and debug) messages                       |
-| `<show-version>`      | Show the NeoMutt version number and date            |
-| `<tag-entry>`         | Tag the current entry                               |
-| `<tag-prefix-cond>`   | Apply next function ONLY to tagged messages         |
-| `<tag-prefix>`        | Apply next function to tagged messages              |
-| `<top-page>`          | Move to the top of the page                         |
-| `<what-key>`          | Display the keycode for a key press                 |
-
-## [Index Functions](ref-fn-index)
-
-The main screen showing the list of emails in a mailbox.
-You can read, reply, forward, delete, tag, sort, search, and manage messages.
-
-| Function                        | Description                                                             |
-|---------------------------------|-------------------------------------------------------------------------|
-| `<alias-dialog>`                | Open the aliases dialog                                                 |
-| `<autocrypt-acct-menu>`         | Manage autocrypt accounts                                               |
-| `<bounce-message>`              | Remail a message to another user                                        |
-| `<break-thread>`                | Break the thread in two                                                 |
-| `<buffy-list>`                  | {bdg-danger-line}`Deprecated` use `<mailbox-list>`                      |
-| `<catchup>`                     | Mark all articles in newsgroup as read                                  |
-| `<change-folder-readonly>`      | Open a different folder in read only mode                               |
-| `<change-folder>`               | Open a different folder                                                 |
-| `<change-newsgroup-readonly>`   | Open a different newsgroup in read only mode                            |
-| `<change-newsgroup>`            | Open a different newsgroup                                              |
-| `<change-vfolder>`              | Open a different virtual folder                                         |
-| `<check-traditional-pgp>`       | Check for classic PGP                                                   |
-| `<clear-flag>`                  | Clear a status flag from a message                                      |
-| `<close-all-threads>`           | Collapse all threads                                                    |
-| `<close-thread>`                | Collapse current thread                                                 |
-| `<collapse-all>`                | Collapse/Uncollapse all threads                                         |
-| `<collapse-thread>`             | Collapse/Uncollapse current thread                                      |
-| `<compose-to-sender>`           | Compose new message to the current message sender                       |
-| `<copy-message>`                | Copy a message to a file/mailbox                                        |
-| `<create-alias>`                | Create an alias from a message sender                                   |
-| `<decode-copy>`                 | Make decoded (text/plain) copy                                          |
-| `<decode-save>`                 | Make decoded copy (text/plain) and delete                               |
-| `<decrypt-copy>`                | Make decrypted copy                                                     |
-| `<decrypt-save>`                | Make decrypted copy and delete                                          |
-| `<delete-message>`              | Delete the current entry                                                |
-| `<delete-pattern>`              | Delete non-hidden messages matching a pattern                           |
-| `<delete-subthread>`            | Delete all messages in subthread                                        |
-| `<delete-thread>`               | Delete all messages in thread                                           |
-| `<display-address>`             | Display full address of sender                                          |
-| `<display-message>`             | Display a message                                                       |
-| `<display-toggle-weed>`         | Display message and toggle header weeding                               |
-| `<edit-label>`                  | Add, change, or delete a message's label                                |
-| `<edit-or-view-raw-message>`    | Edit the raw message if the mailbox is not read-only, otherwise view it |
-| `<edit-raw-message>`            | Edit the raw message (edit and edit-raw-message are synonyms)           |
-| `<edit-type>`                   | Edit attachment content type                                            |
-| `<edit>`                        | Edit the raw message (edit and edit-raw-message are synonyms)           |
-| `<entire-thread>`               | Read entire thread of the current message                               |
-| `<exit>`                        | Exit this menu                                                          |
-| `<extract-keys>`                | Extract supported public keys                                           |
-| `<fetch-mail>`                  | Retrieve mail from POP server                                           |
-| `<flag-message>`                | Toggle a message's 'important' flag                                     |
-| `<followup-message>`            | Followup to newsgroup                                                   |
-| `<forget-passphrase>`           | Wipe passphrases from memory                                            |
-| `<forward-message>`             | Forward a message with comments                                         |
-| `<forward-to-group>`            | Forward to newsgroup                                                    |
-| `<get-children>`                | Get all children of the current message                                 |
-| `<get-message>`                 | Get message with Message-ID                                             |
-| `<get-parent>`                  | Get parent of the current message                                       |
-| `<group-chat-reply>`            | Reply to all recipients preserving To/Cc                                |
-| `<group-reply>`                 | Reply to all recipients                                                 |
-| `<imap-fetch-mail>`             | Force retrieval of mail from IMAP server                                |
-| `<imap-logout-all>`             | Logout from all IMAP servers                                            |
-| `<limit-current-thread>`        | Limit view to current thread                                            |
-| `<limit>`                       | Show only messages matching a pattern                                   |
-| `<link-threads>`                | Link tagged message to the current one                                  |
-| `<list-reply>`                  | Reply to specified mailing list                                         |
-| `<list-subscribe>`              | Subscribe to a mailing list                                             |
-| `<list-unsubscribe>`            | Unsubscribe from a mailing list                                         |
-| `<mail-key>`                    | Mail a PGP public key                                                   |
-| `<mail>`                        | Compose a new mail message                                              |
-| `<mailbox-list>`                | List mailboxes with new mail                                            |
-| `<mark-message>`                | Create a hotkey macro for the current message                           |
-| `<modify-labels-then-hide>`     | Modify (notmuch/imap) tags and then hide message                        |
-| `<modify-labels>`               | Modify (notmuch/imap) tags                                              |
-| `<modify-tags-then-hide>`       | Modify (notmuch/imap) tags and then hide message                        |
-| `<modify-tags>`                 | Modify (notmuch/imap) tags                                              |
-| `<next-new-then-unread>`        | Jump to the next new or unread message                                  |
-| `<next-new>`                    | Jump to the next new message                                            |
-| `<next-subthread>`              | Jump to the next subthread                                              |
-| `<next-thread>`                 | Jump to the next thread                                                 |
-| `<next-undeleted>`              | Move to the next undeleted message                                      |
-| `<next-unread-mailbox>`         | Open next mailbox with new mail                                         |
-| `<next-unread>`                 | Jump to the next unread message                                         |
-| `<open-all-threads>`            | Uncollapse all threads                                                  |
-| `<open-thread>`                 | Uncollapse current thread                                               |
-| `<parent-message>`              | Jump to parent message in thread                                        |
-| `<pipe-entry>`                  | Pipe message/attachment to a shell command                              |
-| `<pipe-message>`                | Pipe message/attachment to a shell command                              |
-| `<post-message>`                | Post message to newsgroup                                               |
-| `<previous-new-then-unread>`    | Jump to the previous new or unread message                              |
-| `<previous-new>`                | Jump to the previous new message                                        |
-| `<previous-subthread>`          | Jump to previous subthread                                              |
-| `<previous-thread>`             | Jump to previous thread                                                 |
-| `<previous-undeleted>`          | Move to the previous undeleted message                                  |
-| `<previous-unread>`             | Jump to the previous unread message                                     |
-| `<print-message>`               | Print the current entry                                                 |
-| `<purge-message>`               | Delete the current entry, bypassing the trash folder                    |
-| `<purge-thread>`                | Delete the current thread, bypassing the trash folder                   |
-| `<quasi-delete>`                | Delete from NeoMutt, don't touch on disk                                |
-| `<query>`                       | Query external program for addresses                                    |
-| `<quit>`                        | Save changes to mailbox and quit                                        |
-| `<read-subthread>`              | Mark the current subthread as read                                      |
-| `<read-thread>`                 | Mark the current thread as read                                         |
-| `<recall-message>`              | Recall a postponed message                                              |
-| `<reconstruct-thread>`          | Reconstruct thread containing current message                           |
-| `<reply>`                       | Reply to a message                                                      |
-| `<resend-message>`              | Use the current message as a template for a new one                     |
-| `<root-message>`                | Jump to root message in thread                                          |
-| `<save-message>`                | Save message/attachment to a mailbox/file                               |
-| `<set-flag>`                    | Set a status flag on a message                                          |
-| `<show-limit>`                  | Show currently active limit pattern                                     |
-| `<sort-mailbox>`                | Sort messages                                                           |
-| `<sort-reverse>`                | Sort messages in reverse order                                          |
-| `<sync-mailbox>`                | Save changes to mailbox                                                 |
-| `<tag-pattern>`                 | Tag non-hidden messages matching a pattern                              |
-| `<tag-subthread>`               | Tag the current subthread                                               |
-| `<tag-thread>`                  | Tag the current thread                                                  |
-| `<toggle-new>`                  | Toggle a message's 'new' flag                                           |
-| `<toggle-read>`                 | Toggle view of read messages                                            |
-| `<toggle-write>`                | Toggle whether the mailbox will be rewritten                            |
-| `<undelete-message>`            | Undelete the current entry                                              |
-| `<undelete-pattern>`            | Undelete non-hidden messages matching a pattern                         |
-| `<undelete-subthread>`          | Undelete all messages in subthread                                      |
-| `<undelete-thread>`             | Undelete all messages in thread                                         |
-| `<untag-pattern>`               | Untag non-hidden messages matching a pattern                            |
-| `<vfolder-from-query-readonly>` | Generate a read-only virtual folder from query                          |
-| `<vfolder-from-query>`          | Generate virtual folder from query                                      |
-| `<vfolder-window-backward>`     | Shifts virtual folder time window backwards                             |
-| `<vfolder-window-forward>`      | Shifts virtual folder time window forwards                              |
-| `<vfolder-window-reset>`        | Resets virtual folder time window to the present                        |
-| `<view-attachments>`            | Show MIME attachments                                                   |
-| `<view-raw-message>`            | Show the raw message                                                    |
-
-## [Pager Functions](ref-fn-pager)
-
-The email reading view that displays a message's contents.
-You can scroll, search within the text, and perform many of the same actions as the index.
-
-| Function                        | Description                                                             |
-|---------------------------------|-------------------------------------------------------------------------|
-| `<bottom>`                      | Jump to the bottom of the message                                       |
-| `<bounce-message>`              | Remail a message to another user                                        |
-| `<break-thread>`                | Break the thread in two                                                 |
-| `<buffy-list>`                  | {bdg-danger-line}`Deprecated` use `<mailbox-list>`                      |
-| `<change-folder-readonly>`      | Open a different folder in read only mode                               |
-| `<change-folder>`               | Open a different folder                                                 |
-| `<change-newsgroup-readonly>`   | Open a different newsgroup in read only mode                            |
-| `<change-newsgroup>`            | Open a different newsgroup                                              |
-| `<change-vfolder>`              | Open a different virtual folder                                         |
-| `<check-stats>`                 | Calculate message statistics for all mailboxes                          |
-| `<check-traditional-pgp>`       | Check for classic PGP                                                   |
-| `<clear-flag>`                  | Clear a status flag from a message                                      |
-| `<compose-to-sender>`           | Compose new message to the current message sender                       |
-| `<copy-message>`                | Copy a message to a file/mailbox                                        |
-| `<create-alias>`                | Create an alias from a message sender                                   |
-| `<decode-copy>`                 | Make decoded (text/plain) copy                                          |
-| `<decode-save>`                 | Make decoded copy (text/plain) and delete                               |
-| `<decrypt-copy>`                | Make decrypted copy                                                     |
-| `<decrypt-save>`                | Make decrypted copy and delete                                          |
-| `<delete-message>`              | Delete the current entry                                                |
-| `<delete-subthread>`            | Delete all messages in subthread                                        |
-| `<delete-thread>`               | Delete all messages in thread                                           |
-| `<display-address>`             | Display full address of sender                                          |
-| `<display-toggle-weed>`         | Display message and toggle header weeding                               |
-| `<edit-label>`                  | Add, change, or delete a message's label                                |
-| `<edit-or-view-raw-message>`    | Edit the raw message if the mailbox is not read-only, otherwise view it |
-| `<edit-raw-message>`            | Edit the raw message (edit and edit-raw-message are synonyms)           |
-| `<edit-type>`                   | Edit attachment content type                                            |
-| `<edit>`                        | Edit the raw message (edit and edit-raw-message are synonyms)           |
-| `<enter-command>`               | Enter a neomuttrc command                                               |
-| `<entire-thread>`               | Read entire thread of the current message                               |
-| `<error-history>`               | {bdg-danger-line}`Deprecated` use `<show-log-messages>`                 |
-| `<exit>`                        | Exit this menu                                                          |
-| `<extract-keys>`                | Extract supported public keys                                           |
-| `<flag-message>`                | Toggle a message's 'important' flag                                     |
-| `<followup-message>`            | Followup to newsgroup                                                   |
-| `<forget-passphrase>`           | Wipe passphrases from memory                                            |
-| `<forward-message>`             | Forward a message with comments                                         |
-| `<forward-to-group>`            | Forward to newsgroup                                                    |
-| `<group-chat-reply>`            | Reply to all recipients preserving To/Cc                                |
-| `<group-reply>`                 | Reply to all recipients                                                 |
-| `<half-down>`                   | Scroll down 1/2 page                                                    |
-| `<half-up>`                     | Scroll up 1/2 page                                                      |
-| `<help>`                        | Show the help screen                                                    |
-| `<imap-fetch-mail>`             | Force retrieval of mail from IMAP server                                |
-| `<imap-logout-all>`             | Logout from all IMAP servers                                            |
-| `<jump>`                        | Jump to an index number                                                 |
-| `<link-threads>`                | Link tagged message to the current one                                  |
-| `<list-reply>`                  | Reply to specified mailing list                                         |
-| `<list-subscribe>`              | Subscribe to a mailing list                                             |
-| `<list-unsubscribe>`            | Unsubscribe from a mailing list                                         |
-| `<mail-key>`                    | Mail a PGP public key                                                   |
-| `<mail>`                        | Compose a new mail message                                              |
-| `<mailbox-list>`                | List mailboxes with new mail                                            |
-| `<mark-as-new>`                 | Toggle a message's 'new' flag                                           |
-| `<modify-labels-then-hide>`     | Modify (notmuch/imap) tags and then hide message                        |
-| `<modify-labels>`               | Modify (notmuch/imap) tags                                              |
-| `<modify-tags-then-hide>`       | Modify (notmuch/imap) tags and then hide message                        |
-| `<modify-tags>`                 | Modify (notmuch/imap) tags                                              |
-| `<next-entry>`                  | Move to the next entry                                                  |
-| `<next-line>`                   | Scroll down one line                                                    |
-| `<next-new-then-unread>`        | Jump to the next new or unread message                                  |
-| `<next-new>`                    | Jump to the next new message                                            |
-| `<next-page>`                   | Move to the next page                                                   |
-| `<next-subthread>`              | Jump to the next subthread                                              |
-| `<next-thread>`                 | Jump to the next thread                                                 |
-| `<next-undeleted>`              | Move to the next undeleted message                                      |
-| `<next-unread-mailbox>`         | Open next mailbox with new mail                                         |
-| `<next-unread>`                 | Jump to the next unread message                                         |
-| `<parent-message>`              | Jump to parent message in thread                                        |
-| `<pipe-entry>`                  | Pipe message/attachment to a shell command                              |
-| `<pipe-message>`                | Pipe message/attachment to a shell command                              |
-| `<post-message>`                | Post message to newsgroup                                               |
-| `<previous-entry>`              | Move to the previous entry                                              |
-| `<previous-line>`               | Scroll up one line                                                      |
-| `<previous-new-then-unread>`    | Jump to the previous new or unread message                              |
-| `<previous-new>`                | Jump to the previous new message                                        |
-| `<previous-page>`               | Move to the previous page                                               |
-| `<previous-subthread>`          | Jump to previous subthread                                              |
-| `<previous-thread>`             | Jump to previous thread                                                 |
-| `<previous-undeleted>`          | Move to the previous undeleted message                                  |
-| `<previous-unread>`             | Jump to the previous unread message                                     |
-| `<print-entry>`                 | Print the current entry                                                 |
-| `<print-message>`               | Print the current entry                                                 |
-| `<purge-message>`               | Delete the current entry, bypassing the trash folder                    |
-| `<purge-thread>`                | Delete the current thread, bypassing the trash folder                   |
-| `<quasi-delete>`                | Delete from NeoMutt, don't touch on disk                                |
-| `<quit>`                        | Save changes to mailbox and quit                                        |
-| `<read-subthread>`              | Mark the current subthread as read                                      |
-| `<read-thread>`                 | Mark the current thread as read                                         |
-| `<recall-message>`              | Recall a postponed message                                              |
-| `<reconstruct-thread>`          | Reconstruct thread containing current message                           |
-| `<redraw-screen>`               | Clear and redraw the screen                                             |
-| `<reply>`                       | Reply to a message                                                      |
-| `<resend-message>`              | Use the current message as a template for a new one                     |
-| `<root-message>`                | Jump to root message in thread                                          |
-| `<save-entry>`                  | Save message/attachment to a mailbox/file                               |
-| `<save-message>`                | Save message/attachment to a mailbox/file                               |
-| `<search-next>`                 | Search for next match                                                   |
-| `<search-opposite>`             | Search for next match in opposite direction                             |
-| `<search-reverse>`              | Search backwards for a regular expression                               |
-| `<search-toggle>`               | Toggle search pattern coloring                                          |
-| `<search>`                      | Search for a regular expression                                         |
-| `<set-flag>`                    | Set a status flag on a message                                          |
-| `<shell-escape>`                | Invoke a command in a subshell                                          |
-| `<show-log-messages>`           | Show log (and debug) messages                                           |
-| `<show-version>`                | Show the NeoMutt version number and date                                |
-| `<skip-headers>`                | Jump to first line after headers                                        |
-| `<skip-quoted>`                 | Skip beyond quoted text                                                 |
-| `<sort-mailbox>`                | Sort messages                                                           |
-| `<sort-reverse>`                | Sort messages in reverse order                                          |
-| `<sync-mailbox>`                | Save changes to mailbox                                                 |
-| `<tag-message>`                 | Tag the current entry                                                   |
-| `<toggle-quoted>`               | Toggle display of quoted text                                           |
-| `<toggle-write>`                | Toggle whether the mailbox will be rewritten                            |
-| `<top>`                         | Jump to the top of the message                                          |
-| `<undelete-message>`            | Undelete the current entry                                              |
-| `<undelete-subthread>`          | Undelete all messages in subthread                                      |
-| `<undelete-thread>`             | Undelete all messages in thread                                         |
-| `<vfolder-from-query-readonly>` | Generate a read-only virtual folder from query                          |
-| `<vfolder-from-query>`          | Generate virtual folder from query                                      |
-| `<view-attachments>`            | Show MIME attachments                                                   |
-| `<view-raw-message>`            | Show the raw message                                                    |
-| `<what-key>`                    | Display the keycode for a key press                                     |
-
-## [PGP Functions](ref-fn-pgp)
-
-Select a PGP key when encrypting or signing an email.
-You can verify key details before choosing which key to use.
-
-| Function       | Description            |
-|----------------|------------------------|
-| `<exit>`       | Exit this menu         |
-| `<verify-key>` | Verify a public key    |
-| `<view-name>`  | View the key's user id |
-
-## [Postpone Functions](ref-fn-postpone)
-
-Select from your saved draft emails to resume editing.
-You can pick a previously postponed message to continue composing it.
-
-| Function           | Description                |
-|--------------------|----------------------------|
-| `<delete-entry>`   | Delete the current entry   |
-| `<exit>`           | Exit this menu             |
-| `<undelete-entry>` | Undelete the current entry |
-
-## [Query Functions](ref-fn-query)
-
-Display results from an external address-book query.
-You can search for contacts, create aliases from the results, and compose messages to selected addresses.
-
-| Function          | Description                                  |
-|-------------------|----------------------------------------------|
-| `<create-alias>`  | Create an alias from a message sender        |
-| `<exit>`          | Exit this menu                               |
-| `<limit>`         | Show only messages matching a pattern        |
-| `<mail>`          | Compose a new mail message                   |
-| `<query-append>`  | Append new query results to current results  |
-| `<query>`         | Query external program for addresses         |
-| `<sort-reverse>`  | Sort messages in reverse order               |
-| `<sort>`          | Sort messages                                |
-| `<tag-pattern>`   | Tag non-hidden messages matching a pattern   |
-| `<untag-pattern>` | Untag non-hidden messages matching a pattern |
-
-## [Sidebar Functions](ref-fn-sidebar)
-
-Navigate the sidebar panel that lists your mailboxes.
-You can move between mailboxes, open them, and toggle the sidebar's visibility.
-
-| Function                   | Description                                          |
-|----------------------------|------------------------------------------------------|
-| `<sidebar-abort-search>`   | Close the sidebar search                             |
-| `<sidebar-first>`          | Move the highlight to the first mailbox              |
-| `<sidebar-last>`           | Move the highlight to the last mailbox               |
-| `<sidebar-next-new>`       | Move the highlight to next mailbox with new mail     |
-| `<sidebar-next>`           | Move the highlight to next mailbox                   |
-| `<sidebar-open>`           | Open highlighted mailbox                             |
-| `<sidebar-page-down>`      | Scroll the sidebar down 1 page                       |
-| `<sidebar-page-up>`        | Scroll the sidebar up 1 page                         |
-| `<sidebar-prev-new>`       | Move the highlight to previous mailbox with new mail |
-| `<sidebar-prev>`           | Move the highlight to previous mailbox               |
-| `<sidebar-start-search>`   | Fuzzy search the sidebar                             |
-| `<sidebar-toggle-virtual>` | Toggle between mailboxes and virtual mailboxes       |
-| `<sidebar-toggle-visible>` | Make the sidebar (in)visible                         |
-
-## [S/MIME Functions](ref-fn-smime)
-
-Select an S/MIME certificate when encrypting or signing an email.
-You can verify certificate details before choosing which one to use.
-
-| Function       | Description            |
-|----------------|------------------------|
-| `<exit>`       | Exit this menu         |
-| `<verify-key>` | Verify a public key    |
-| `<view-name>`  | View the key's user id |
 

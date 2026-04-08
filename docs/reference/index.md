@@ -55,7 +55,7 @@ config/index.md
 
 ```{toctree}
 ---
-maxdepth: 2
+maxdepth: 1
 ---
 functions/index.md
 ```
