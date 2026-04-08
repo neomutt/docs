@@ -81,7 +81,7 @@ color error white   default
 
 On startup NeoMutt tries to detect whether the terminal it is running in supports directcolor (aka TrueColor aka 24-bit color).
 If the terminal does, NeoMutt enables the config option [`$color_directcolor`](cfg-color-directcolor) otherwise it disables it.
-Furthermore, NeoMutt allows to use the RGB colors syntax with the [`:color`](cmd-color) command to colour elements with 24-bit colors.
+Furthermore, NeoMutt allows you to use the RGB colors syntax with the [`:color`](cmd-color) command to colour elements with 24-bit colors.
 
 For the detection to work the *TERM* environment variable must be set up properly to advertise the terminals directcolor capability.
 *TERM*-values which do that usually end in `-direct`, e.g. `xterm-direct`.
@@ -565,4 +565,3 @@ bright green (or "Bad signature" in bright red).
 
 - [Color command](#using-color-and-mono-video-attributes)
 - Regular Expressions
-

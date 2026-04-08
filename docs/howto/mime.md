@@ -59,14 +59,14 @@ You can apply these operations to a group of attachments at once, by tagging the
 You can also reply to the current message from this menu, and only the current attachment (or the attachments tagged) will be quoted in your reply.
 You can view attachments as text, or view them using the mailcap viewer definition (the mailcap mechanism is explained later in detail).
 
-Finally, you can apply the usual message-related functions (like [`<resend-message\>`](fn-resend-message), and the [`<reply>`](fn-reply) and [`<forward-message>`](fn-forward-message) functions) to attachments of type `message/rfc822`.
+Finally, you can apply the usual message-related functions (like [`<resend-message>`](fn-resend-message), and the [`<reply>`](fn-reply) and [`<forward-message>`](fn-forward-message) functions) to attachments of type `message/rfc822`.
 
 :::{admonition} 📷 Screenshot Needed
 :class: tip
 
 **Subject:** The attachment menu
 
-**Description:** NeoMutt attachment menu ({kbd}`v` key) showing a multipart message with several attachments listed — a text/plain body, an HTML alternative, an inline image, and a PDF attachment.
+**Description:** NeoMutt attachment menu ({kbd}`v`) showing a multipart message with several attachments listed — a `text/plain` body, an HTML alternative, an inline image, and a PDF attachment.
 Each line shows the MIME type, encoding, size, and filename.
 
 **Highlights:** The tree structure for nested multipart containers, the MIME type and size columns, and the attachment numbering that lets users navigate and act on individual parts.
@@ -144,7 +144,7 @@ However, there's no reliable way for NeoMutt to know how to detect every possibl
 Instead, it uses a simple plain text mapping file that specifies what file extension corresponds to what MIME type.
 This file is called `mime.types`.
 
-When you add an attachment to your mail message, NeoMutt searches the system `mime.types` file at `/etc/mime.types`, `$SYSCONFDIR/mime.types` or `$PKGDATADIR/mime.types` and then your personal `mime.types` file at `$HOME/.mime.types`.
+When you add an attachment to your mail message, NeoMutt searches the system `mime.types` file at `/etc/mime.types`, `$SYSCONFDIR/mime.types` or `$PKGDATADIR/mime.types`, and then your personal `mime.types` file at `$HOME/.mime.types`.
 
 Where `$HOME` is your home directory.
 The `$PKGDATADIR` and the `$SYSCONFDIR` directories depend on where NeoMutt is installed: the former is the default for shared data, the latter for system configuration files.

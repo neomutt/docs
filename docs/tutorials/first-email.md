@@ -152,7 +152,7 @@ For one, you can set [`$pager_read_delay`](cfg-pager-read-delay) to operate in a
 Additionally, it will accept and translate the "standard" nroff sequences for bold and underline.
 These sequences are a series of either the letter, backspace ("^H"), the letter again for bold or the letter, backspace, "\_" for denoting underline.
 NeoMutt will attempt to display these in bold and underline respectively if your terminal supports them.
-If not, you can use the bold and underline color objects to specify a `color` or mono attribute for them.
+If not, you can use the bold and underline color objects to specify a [`color`](cmd-color) or mono attribute for them.
 
 Additionally, the internal pager supports the ANSI escape sequences for character attributes.
 NeoMutt translates them into the correct color and character settings.
@@ -265,14 +265,14 @@ In these cases, NeoMutt groups them by subject which can be controlled using the
 
 In addition, the *index* and *pager* menus have these interesting functions:
 
-`<check-stats>` : Calculate statistics for all monitored mailboxes declared using the `mailboxes` command.
+`<check-stats>` : Calculate statistics for all monitored mailboxes declared using the [`mailboxes`](cmd-mailboxes) command.
 It will calculate statistics despite [`$mail_check_stats`](cfg-mail-check-stats) being unset.
 
 `<create-alias>` (default: {kbd}`a`) : Creates a new alias based upon the current message (or prompts for a new one).
-Once editing is complete, an `alias` command is added to the file specified by the [`$alias_file`](cfg-alias-file) variable for future use.
+Once editing is complete, an [`alias`](cmd-alias) command is added to the file specified by the [`$alias_file`](cfg-alias-file) variable for future use.
 
   :::{note}
-NeoMutt does not read the [`$alias_file`](cfg-alias-file) upon startup so you must explicitly `source` the file.
+NeoMutt does not read the [`$alias_file`](cfg-alias-file) upon startup so you must explicitly [`source`](cmd-source) the file.
   :::
 
 `<check-traditional-pgp>` (default: {kbd}`Esc P`) : This function will search the current message for content signed or encrypted with PGP the "traditional" way, that is, without proper MIME tagging.
@@ -305,7 +305,7 @@ A common use is to check the settings of variables, or in conjunction with macro
 `<forget-passphrase>` (default: {kbd}`^F`) : This command wipes the passphrase(s) from memory.
 It is useful, if you misspelled the passphrase.
 
-`<list-reply>` (default: {kbd}`L`) : Reply to the current or tagged message(s) by extracting any addresses which match the regular expressions given by the `lists` or `subscribe` commands, but also honor any `Mail-Followup-To` header(s) if the [`$honor_followup_to`](cfg-honor-followup-to) configuration variable is set.
+`<list-reply>` (default: {kbd}`L`) : Reply to the current or tagged message(s) by extracting any addresses which match the regular expressions given by the [`lists`](cmd-lists) or [`subscribe`](cmd-subscribe) commands, but also honor any `Mail-Followup-To` header(s) if the [`$honor_followup_to`](cfg-honor-followup-to) configuration variable is set.
 In addition, the `List-Post` header field is examined for `mailto:` URLs specifying a mailing list address.
 Using this when replying to messages posted to mailing lists helps avoid duplicate copies being sent to the author of the message you are replying to.
 

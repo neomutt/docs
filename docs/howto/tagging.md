@@ -16,7 +16,7 @@ Invoke the [`<complete>`](fn-complete) function (by default bound to {kbd}`<Tab>
 Or you can select individual messages by hand using the [`<tag-message>`](fn-tag-message) function, which is bound to {kbd}`t` by default.
 See [patterns](ref-patterns) for NeoMutt's pattern matching syntax.
 
-Once you have tagged the desired messages, you can use the [`<tag-prefix>`](fn-tag-prefix) operator, which is the {kbd}`;` by default.
+Once you have tagged the desired messages, you can use the [`<tag-prefix>`](fn-tag-prefix) operator, which is bound to {kbd}`;` by default.
 
 :::{admonition} 📷 Screenshot Needed
 :class: tip
@@ -149,7 +149,7 @@ color index_tags green default
 ## Marking Messages
 
 There are times when it is useful to ask NeoMutt to "remember" which message you are currently looking at while you move elsewhere in your mailbox.
-You can do this with the [`<mark-message>`](fn-mark-message) function, which is bound to {kbd}`~` key by default.
+You can do this with the [`<mark-message>`](fn-mark-message) function, which is bound to {kbd}`~` by default.
 
 ### Workflow
 

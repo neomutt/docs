@@ -69,7 +69,7 @@ More information can be found at [https://autocrypt.org/](https://autocrypt.org/
 
 :::{note}
 The first run process takes place between reading the neomuttrc and opening the initial mailbox.
-Some neomuttrc files will [`:push`](cmd-push) macros to be run after opening the mailbox.
+Some `neomuttrc` files will [`:push`](cmd-push) macros to be run after opening the mailbox.
 To prevent this from interfering with the first run prompts, NeoMutt disables all macros during the first run.
 :::
 

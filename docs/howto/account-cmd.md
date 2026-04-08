@@ -15,7 +15,7 @@ NeoMutt provides dedicated config options to specify credentials for network ser
 These include [`$imap_user`](cfg-imap-user), [`$imap_pass`](cfg-imap-pass), [`$smtp_user`](cfg-smtp-user), [`$smtp_pass`](cfg-smtp-pass), etc.
 There are a few downsides to this approach.
 For one thing, their use encourages storing usernames and passwords in plain text inside a NeoMutt config file.
-People have come up with solutions to this, including using gpg-encrypted files and populating `my_` variables via external scripts through [`:source`](cmd-source) "/path/to/script|"`.
+People have come up with solutions to this, including using GPG-encrypted files and populating `my_` variables via external scripts through `source "/path/to/script|"`.
 However, once the variables are set, the secrets can be inspected with the [`:set`](cmd-set) command.
 Also, because these config options are not account-specific, they have been the cause of a proliferation of ways to mimic per-account setups using a combination of convoluted hooks and macros to modify them on folder change or on a keypress.
 

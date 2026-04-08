@@ -176,4 +176,3 @@ bind index \CG get-message
 
 # vim: filetype=neomuttrc
 ```
-

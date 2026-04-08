@@ -29,8 +29,8 @@ The message preview is controlled by the following functions.
 
 | Menus   | Function              | Description                           | Default      |
 |---------|-----------------------|---------------------------------------|--------------|
-| compose | [`<preview-page-down>`](fn-preview-page-down) | Show the next page of the message     | {kbd}`<Page Down>` |
-| compose | [`<preview-page-up>`](fn-preview-page-up)   | Show the previous page of the message | {kbd}`<Page Up>`   |
+| compose | [`<preview-page-down>`](fn-preview-page-down) | Show the next page of the message     | {kbd}`Page Down` |
+| compose | [`<preview-page-up>`](fn-preview-page-up)   | Show the previous page of the message | {kbd}`Page Up`   |
 
 :::{admonition} 📷 Screenshot Needed
 :class: tip

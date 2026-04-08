@@ -135,7 +135,7 @@ The list can be turned on and off, it can be themed and the list style can be co
 
 This part of the manual is suitable for beginners.
 If you already know NeoMutt you could skip ahead to the main Sidebar guide.
-If you just want to get started, you could use the sample Sidebar neomuttrc.
+If you just want to get started, you could use the sample Sidebar `neomuttrc`.
 
 **Let's turn on the Sidebar:**
 
@@ -280,7 +280,7 @@ For a quick reference:
 ##### Sidebar Basics
 
 The most important variable is [`$sidebar_visible`](cfg-sidebar-visible).
-You can set this in your "neomuttrc", or bind a key to the function `<sidebar-toggle-visible>`.
+You can set this in your `neomuttrc`, or bind a key to the function `<sidebar-toggle-visible>`.
 
 ```neomuttrc
 set sidebar_visible                         # Make the Sidebar visible by default

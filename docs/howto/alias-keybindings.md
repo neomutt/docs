@@ -18,7 +18,7 @@ By default it may not have a binding in the index.
 1. Bind it to a convenient key:
 
 ```neomuttrc
-bind index,pager a <alias>
+bind index,pager a alias-dialog
 ```
 
 2. Press {kbd}`a` in the index to open the alias menu directly.

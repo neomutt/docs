@@ -68,10 +68,10 @@ Examples include:
 - [`<backward-char>`](fn-backward-char)/[`<forward-char>`](fn-forward-char) — move the cursor left or right
 - [`<bol>`](fn-bol)/[`<eol>`](fn-eol) — jump to the start or end of the pattern
 - [`<backward-word>`](fn-backward-word)/[`<forward-word>`](fn-forward-word) — skip a word at a time
-- {kbd}`Backspace>`/[`<delete-char>`](fn-delete-char) — delete a character
+- {kbd}`Backspace`/[`<delete-char>`](fn-delete-char) — delete a character
 - [`<kill-word>`](fn-kill-word)/[`<kill-eol>`](fn-kill-eol) — delete to end of word or line
 
-Any binding defined in the `editor` map can be used; use [`:bind`](cmd-bind) editor` to customise them.
+Any binding defined in the `editor` map can be used; use [`:bind`](cmd-bind) with the `editor` map to customise them.
 
 ## Case Sensitivity
 

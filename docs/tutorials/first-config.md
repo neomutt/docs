@@ -16,7 +16,7 @@ If you use Gmail or Office 365, start with those tutorials because they include 
 - [Office 365 Setup](office365-setup)
 
 NeoMutt is highly configurable, but you only need a handful of settings to get started.
-A few sample neomuttrc files are also available in the [Contrib Repo](https://github.com/neomutt/neomutt-contrib).
+A few sample `neomuttrc` files are also available in the [Contrib Repo](https://github.com/neomutt/neomutt-contrib).
 
 :::{admonition} 📷 Screenshot Needed
 :class: tip
@@ -184,7 +184,7 @@ Finally, it's possible to set some variables directly on the command-line using 
 
 **Subject:** Before and after applying user config
 
-**Description:** A side-by-side or sequential pair of NeoMutt screenshots: (1) NeoMutt with default settings showing the Index, and (2) NeoMutt after applying a simple user neomuttrc that enables the sidebar, changes colors, and customizes `index_format` — demonstrating how configuration transforms the interface.
+**Description:** A side-by-side or sequential pair of NeoMutt screenshots: (1) NeoMutt with default settings showing the Index, and (2) NeoMutt after applying a simple user `neomuttrc` that enables the sidebar, changes colors, and customizes `index_format` — demonstrating how configuration transforms the interface.
 
 **Highlights:** The visible differences between default and customized NeoMutt — sidebar appearing, new color scheme, changed index columns — showing the immediate impact of writing a config file.
 :::
@@ -256,7 +256,7 @@ my-header X-Operating-System: `uname -a`
 ```
 
 To avoid the output of backticks being parsed, place them inside double quotes.
-For example, the output of the gpg decryption is assigned directly to [`$imap_pass`](cfg-imap-pass), so that special characters in the password (e.g. "'", "#", "$") are not parsed and interpreted specially by neomutt.
+For example, the output of the gpg decryption is assigned directly to [`$imap_pass`](cfg-imap-pass), so that special characters in the password (e.g. "'", "#", "$") are not parsed and interpreted specially by NeoMutt.
 
 **Example: Preventing the output of backticks from being parsed**
 

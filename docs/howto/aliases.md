@@ -56,7 +56,7 @@ The alias *key* is matched case insensitively when creating (checking for duplic
 ## Alias File Configuration
 
 Unlike other mailers, NeoMutt doesn't require aliases to be defined in a special file.
-The [`:alias`](cmd-alias) command can appear anywhere in a configuration file, as long as this file is loaded with [`:source`](cmd-source).
+The [`:alias`](cmd-alias) command can appear anywhere in a configuration file, as long as the file is loaded with [`:source`](cmd-source).
 Consequently, you can have multiple alias files, or you can have all aliases defined in your `.neomuttrc`.
 
 On the other hand, the [`<create-alias>`](fn-create-alias) function can use only one file, the one pointed to by the [`$alias_file`](cfg-alias-file) variable (which is `~/.neomuttrc` by default).

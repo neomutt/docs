@@ -132,7 +132,7 @@ If the `sidebar_indicator` color isn't set, then the default NeoMutt indicator c
 | `new`      | Number of unread messages              |
 | `path`     | Alphabetically by path (ignores label) |
 | `unread`   | Number of unread messages              |
-| `unsorted` | Order of the [`:mailboxes`](cmd-mailboxes) command       |
+| `unsorted` | Order of the [`:mailboxes`](cmd-mailboxes) command |
 
 (sidebar-neomuttrc)=
 ## neomuttrc
@@ -259,4 +259,3 @@ color sidebar_unread color136 default
 - Patterns
 - [Color command](colours.md)
 - notmuch feature
-

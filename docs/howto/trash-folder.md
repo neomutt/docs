@@ -70,4 +70,3 @@ bind index D purge-message
 ## See Also
 
 - **folder-hook**
-
