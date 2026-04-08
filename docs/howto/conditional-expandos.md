@@ -453,15 +453,13 @@ alignment:
  3      1      5 drafts
 ```
 
-The `%<n?%6n&      >` conditional ensures the column is always 6 characters
-wide — either a right-justified number or 6 spaces.
+The `%<n?%6n&      >` conditional ensures the column is always 6 characters wide — either a right-justified number or 6 spaces.
 
 ---
 
 ## Old-Style Syntax
 
-NeoMutt also accepts an older syntax using `?` as both the opening and
-closing delimiter:
+NeoMutt also accepts an older syntax using `?` as both the opening and closing delimiter:
 
 ```
 %?X?true-text&false-text?

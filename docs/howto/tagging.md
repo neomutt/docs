@@ -162,6 +162,6 @@ You can choose a different prefix key by setting the [`$mark_macro_prefix`](cfg-
 
 ### Variables
 
-| Name                | Type   | Default |
-|---------------------|--------|---------|
-| `mark_macro_prefix` | string | `'`     |
+| Name                | Type   | Default  |
+|---------------------|--------|----------|
+| `mark_macro_prefix` | string | {kbd}`'` |

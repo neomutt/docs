@@ -12,7 +12,7 @@ You can verify key details before choosing which key to use.
 
 | Function       | Default Keys | Description            |
 |----------------|--------------|------------------------|
-| `<exit>`       | `q`          | Exit this menu         |
-| `<verify-key>` | `c`          | Verify a public key    |
-| `<view-name>`  | `%`          | View the key's user id |
+| `<exit>`       | {kbd}`q`     | Exit this menu         |
+| `<verify-key>` | {kbd}`c`     | Verify a public key    |
+| `<view-name>`  | {kbd}`%`     | View the key's user id |
 

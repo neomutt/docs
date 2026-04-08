@@ -36,7 +36,7 @@ References: urlview man page and urlscan documentation.
 set query_command = "abook --mutt-query %s"
 ```
 
-3. Use `Q` in the index menu or {kbd}`Ctrl-T` at an address prompt to query.
+3. Use {kbd}`Q` in the index menu or {kbd}`Ctrl-T` at an address prompt to query.
 
 Expected result: the query menu shows matches from your address book.
 

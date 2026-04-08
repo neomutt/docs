@@ -70,7 +70,7 @@ References: khard scripting docs.
 set query_command = "mutt_ldap_query.pl %s"
 ```
 
-3. Use `Q` in the index menu to run a query.
+3. Use {kbd}`Q` in the index menu to run a query.
 
 Expected result: a query menu with matching results and selectable addresses.
 
@@ -80,7 +80,7 @@ See [How to Use External Address Queries](address-query).
 
 1. Install or configure an LDAP query wrapper script (for example `mutt_ldap_query.pl`).
 2. Set `query_command` to that script.
-3. Use `Q` to search and select results.
+3. Use {kbd}`Q` to search and select results.
 
 Expected result: LDAP results appear in the query menu and can be inserted into address fields.
 

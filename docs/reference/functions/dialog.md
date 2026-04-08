@@ -13,5 +13,5 @@ It only supports quitting.
 | Function | Default Keys | Description                      |
 |----------|--------------|----------------------------------|
 | `<exit>` |              | Exit this menu                   |
-| `<quit>` | `q`          | Save changes to mailbox and quit |
+| `<quit>` | {kbd}`q`     | Save changes to mailbox and quit |
 

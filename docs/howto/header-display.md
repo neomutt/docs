@@ -16,7 +16,7 @@ The sending side is not affected by this — NeoMutt tries to implement standard
 :::
 
 Despite not being a real header, NeoMutt will also display an mbox "From\_" line in the pager along with other headers.
-This line can be manipulated with `ignore`/`unignore` and [`:header-order`](cmd-header-order)/[`:unheader-order`](cmd-unheader-order) commands.
+This line can be manipulated with [`:ignore`](cmd-ignore)/[`:unignore`](cmd-unignore) and [`:header-order`](cmd-header-order)/[`:unheader-order`](cmd-unheader-order) commands.
 
 ## Selecting Headers
 

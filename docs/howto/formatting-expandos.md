@@ -324,8 +324,14 @@ name is:
 %[justification][zero][min_width][.max_width][lowercase]EXPANDO
 ```
 
-| Component     | Values                   | Default   | |---------------|--------------------------|-----------| | Justification | `-` (left), `=` (centre) | Right     | | Zero-padding  | `0`                      | Spaces    | | Minimum width | A number (e.g.
-`20`)     | 0 (none)  | | Maximum width | `.` then a number        | Unlimited | | Lowercase     | `_`                      | Off       | | Expando       | Letter or `{long-name}`  | —         |
+| Component     | Values                   | Default   |
+|---------------|--------------------------|-----------|
+| Justification | `-` (left), `=` (centre) | Right     |
+| Zero-padding  | `0`                      | Spaces    |
+| Minimum width | A number (e.g. `20`)     | 0 (none)  |
+| Maximum width | `.` then a number        | Unlimited |
+| Lowercase     | `_`                      | Off       |
+| Expando       | Letter or `{long-name}`  | —         |
 
 ### More Combined Examples
 

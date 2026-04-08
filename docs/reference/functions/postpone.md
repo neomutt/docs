@@ -12,7 +12,7 @@ You can pick a previously postponed message to continue composing it.
 
 | Function           | Default Keys | Description                |
 |--------------------|--------------|----------------------------|
-| `<delete-entry>`   | `d`          | Delete the current entry   |
-| `<exit>`           | `q`          | Exit this menu             |
-| `<undelete-entry>` | `u`          | Undelete the current entry |
+| `<delete-entry>`   | {kbd}`d`     | Delete the current entry   |
+| `<exit>`           | {kbd}`q`     | Exit this menu             |
+| `<undelete-entry>` | {kbd}`u`     | Undelete the current entry |
 

@@ -167,7 +167,7 @@ The GPG key is kept, to ensure you still have the ability to read past encrypted
 
 **Subject:** Autocrypt Account Menu
 
-**Description:** The NeoMutt Autocrypt Account Menu accessed via `A` from the index.
+**Description:** The NeoMutt Autocrypt Account Menu accessed via {kbd}`A` from the index.
 The menu lists configured Autocrypt accounts with their email addresses, active/inactive status, and prefer-encryption flag.
 
 **Highlights:** The account list with status indicators, and the available key bindings for creating, deleting, toggling active/inactive, and toggling the prefer-encryption flag.

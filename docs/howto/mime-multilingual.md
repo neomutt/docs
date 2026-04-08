@@ -36,13 +36,13 @@ You have to prepare every part manually or using some scripts, and then tag and 
 4. Edit the `Content-Language` header of every attachment with command [`<edit-language>`](fn-edit-language) (default to `Ctrl-L`).
    This is important, otherwise the recipient of this email will not know the corresponding languages.
    You can set arbitrary string as `Content-Language`, but it is recommended to set it as some common prefixes such as "en", "zh" and "fr".
-5. Group all the tagged messages together by [`<group-multilingual>`](fn-group-multilingual) (default to `^`).
+5. Group all the tagged messages together by [`<group-multilingual>`](fn-group-multilingual) (default to {kbd}`^`).
 6. Send the email as usual.
 
 As in composing multipart/alternative, you can also use NeoMutt's macro and some external scripts to combine this procedure into one.
 
 After grouping, the separate parts will be displayed in a tree structure.
-Attachments can still be edited separately and reordered within the group, but must be ungrouped using the [`<ungroup-attachment>`](fn-ungroup-attachment) (`#`) binding for more advanced editing before tagging and grouping together again as described above.
+Attachments can still be edited separately and reordered within the group, but must be ungrouped using the [`<ungroup-attachment>`](fn-ungroup-attachment) ({kbd}`#`) binding for more advanced editing before tagging and grouping together again as described above.
 
 :::{admonition} 📷 Screenshot Needed
 :class: tip
@@ -81,7 +81,7 @@ You have to prepare every part manually or using some scripts, and then tag and 
 
    It can also be desirable to give referenced files in the group a `filename` even when the `Content-Disposition` is set to be `inline`.
    To do this use [`<rename-attachment>`](fn-rename-attachment) (default key `Ctrl-O`).
-5. Group all the tagged messages together with [`<group-related>`](fn-group-related) (default key `%`).
+5. Group all the tagged messages together with [`<group-related>`](fn-group-related) (default key {kbd}`%`).
    Top level attachments (excluding `multipart` ones) in the group are automatically given a random `Content-ID` if they do not already have one.
 6. Send the email as usual.
 

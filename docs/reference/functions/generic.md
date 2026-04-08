@@ -16,56 +16,56 @@ noted).
 
 ## Global
 
-| Function              | Default Keys | Description                                    |
-|-----------------------|--------------|------------------------------------------------|
-| `<check-stats>`       |              | Calculate message statistics for all mailboxes |
-| `<enter-command>`     | `:`          | Enter a neomuttrc command                      |
-| `<exit>`              |              | Exit this menu                                 |
-| `<help>`              | `?`          | Show the help screen                           |
-| `<redraw-screen>`     | `^L`         | Clear and redraw the screen                    |
-| `<shell-escape>`      | `!`          | Invoke a command in a subshell                 |
-| `<show-log-messages>` |              | Show log (and debug) messages                  |
-| `<show-version>`      | `V`          | Show the NeoMutt version number and date       |
-| `<what-key>`          |              | Display the keycode for a key press            |
+| Function              | Default Keys  | Description                                    |
+|-----------------------|---------------|------------------------------------------------|
+| `<check-stats>`       |               | Calculate message statistics for all mailboxes |
+| `<enter-command>`     | {kbd}`:`      | Enter a neomuttrc command                      |
+| `<exit>`              |               | Exit this menu                                 |
+| `<help>`              | {kbd}`?`      | Show the help screen                           |
+| `<redraw-screen>`     | {kbd}`Ctrl-L` | Clear and redraw the screen                    |
+| `<shell-escape>`      | {kbd}`!`      | Invoke a command in a subshell                 |
+| `<show-log-messages>` |               | Show log (and debug) messages                  |
+| `<show-version>`      | {kbd}`V`      | Show the NeoMutt version number and date       |
+| `<what-key>`          |               | Display the keycode for a key press            |
 
 ## Menu Movement
 
-| Function           | Default Keys                           | Description                    |
-|--------------------|----------------------------------------|--------------------------------|
-| `<bottom-page>`    | `L`                                    | Move to the bottom of the page |
-| `<current-bottom>` |                                        | Move entry to bottom of screen |
-| `<current-middle>` |                                        | Move entry to middle of screen |
-| `<current-top>`    |                                        | Move entry to top of screen    |
-| `<first-entry>`    | `<Home>`, `=`                          | Move to the first entry        |
-| `<half-down>`      | `]`                                    | Scroll down 1/2 page           |
-| `<half-up>`        | `[`                                    | Scroll up 1/2 page             |
-| `<jump>`           | `1`,`2`,`3`,`4`,`5`,`6`,`7`,`8`,`9`    | Jump to an index number        |
-| `<last-entry>`     | `<End>`, `*`                           | Move to the last entry         |
-| `<middle-page>`    | `M`                                    | Move to the middle of the page |
-| `<next-entry>`     | `<Down>`, `j`                          | Move to the next entry         |
-| `<next-line>`      | `>`                                    | Scroll down one line           |
-| `<next-page>`      | `<PageDown>`, `<Right>`, `z`           | Move to the next page          |
-| `<previous-entry>` | `<Up>`, `k`                            | Move to the previous entry     |
-| `<previous-line>`  | `<`                                    | Scroll up one line             |
-| `<previous-page>`  | `<PageUp>`, `<Left>`, `Z`              | Move to the previous page      |
-| `<select-entry>`   | `<Enter>`, `<Return>`, `<KeypadEnter>` | Select the current entry       |
-| `<top-page>`       | `H`                                    | Move to the top of the page    |
+| Function           | Default Keys                                          | Description                    |
+|--------------------|-------------------------------------------------------|--------------------------------|
+| `<bottom-page>`    | {kbd}`L`                                              | Move to the bottom of the page |
+| `<current-bottom>` |                                                       | Move entry to bottom of screen |
+| `<current-middle>` |                                                       | Move entry to middle of screen |
+| `<current-top>`    |                                                       | Move entry to top of screen    |
+| `<first-entry>`    | {kbd}`<Home>`, {kbd}`=`                               | Move to the first entry        |
+| `<half-down>`      | {kbd}`]`                                              | Scroll down 1/2 page           |
+| `<half-up>`        | {kbd}`[`                                              | Scroll up 1/2 page             |
+| `<jump>`           | {kbd}`1` ... {kbd}`9`                                 | Jump to an index number        |
+| `<last-entry>`     | {kbd}`<End>`, {kbd}`*`                                | Move to the last entry         |
+| `<middle-page>`    | {kbd}`M`                                              | Move to the middle of the page |
+| `<next-entry>`     | {kbd}`<Down>`, {kbd}`j`                               | Move to the next entry         |
+| `<next-line>`      | {kbd}`>`                                              | Scroll down one line           |
+| `<next-page>`      | {kbd}`<PageDown>`, {kbd}`<Right>`, {kbd}`z`           | Move to the next page          |
+| `<previous-entry>` | {kbd}`<Up>`, {kbd}`k`                                 | Move to the previous entry     |
+| `<previous-line>`  | {kbd}`<`                                              | Scroll up one line             |
+| `<previous-page>`  | {kbd}`<PageUp>`, {kbd}`<Left>`, {kbd}`Z`              | Move to the previous page      |
+| `<select-entry>`   | {kbd}`<Enter>`, {kbd}`<Return>`, {kbd}`<KeypadEnter>` | Select the current entry       |
+| `<top-page>`       | {kbd}`H`                                              | Move to the top of the page    |
 
 ## Searching
 
 | Function            | Default Keys | Description                                 |
 |---------------------|--------------|---------------------------------------------|
-| `<search>`          | `/`          | Search for a regular expression             |
-| `<search-next>`     | `n`          | Search for next match                       |
+| `<search>`          | {kbd}`/`     | Search for a regular expression             |
+| `<search-next>`     | {kbd}`n`     | Search for next match                       |
 | `<search-opposite>` |              | Search for next match in opposite direction |
-| `<search-reverse>`  | `Esc /`      | Search backwards for a regular expression   |
+| `<search-reverse>`  | {kbd}`Alt-/` | Search backwards for a regular expression   |
 
 ## Tagging
 
 | Function            | Default Keys | Description                                 |
 |---------------------|--------------|---------------------------------------------|
 | `<end-cond>`        |              | End of conditional execution (noop)         |
-| `<tag-entry>`       | `t`          | Tag the current entry                       |
-| `<tag-prefix>`      | `;`          | Apply next function to tagged messages      |
+| `<tag-entry>`       | {kbd}`t`     | Tag the current entry                       |
+| `<tag-prefix>`      | {kbd}`;`     | Apply next function to tagged messages      |
 | `<tag-prefix-cond>` |              | Apply next function ONLY to tagged messages |
 

@@ -52,32 +52,32 @@ You can also use the form {kbd}`<177>`, which allows octal numbers with an arbit
 
 #### Symbolic Key Names
 
-| Symbolic name       | Meaning                     |
-|---------------------|-----------------------------|
-| {kbd}`\t`           | tab                         |
-| {kbd}`<Tab>`        | tab                         |
-| {kbd}`<Shift-Tab>`  | backtab / shift-tab         |
-| {kbd}`\r`           | carriage return             |
-| {kbd}`\n`           | newline                     |
-| {kbd}`\e`           | escape/alt                  |
-| {kbd}`<Escape>`     | escape/alt                  |
-| {kbd}`<Up>`         | up arrow                    |
-| {kbd}`<Down>`       | down arrow                  |
-| {kbd}`<Left>`       | left arrow                  |
-| {kbd}`<Right>`      | right arrow                 |
-| {kbd}`Page Up`      | Page Up                     |
-| {kbd}`Page Down`    | Page Down                   |
-| {kbd}`<Backspace>`  | Backspace                   |
-| {kbd}`<Delete>`     | Delete                      |
-| {kbd}`<Insert>`     | Insert                      |
-| {kbd}`<Enter>`      | Enter                       |
-| {kbd}`<Return>`     | Return                      |
-| {kbd}`Keypad Enter` | Enter key on numeric keypad |
-| {kbd}`<Home>`       | Home                        |
-| {kbd}`<End>`        | End                         |
-| {kbd}`<Space>`      | Space bar                   |
-| {kbd}`<F1>`         | function key 1              |
-| {kbd}`<F10>`        | function key 10             |
+| Symbolic name        | Meaning                     |
+|----------------------|-----------------------------|
+| {kbd}`\t`            | tab                         |
+| {kbd}`<Tab>`         | tab                         |
+| {kbd}`<Shift-Tab>`   | backtab / shift-tab         |
+| {kbd}`\r`            | carriage return             |
+| {kbd}`\n`            | newline                     |
+| {kbd}`\e`            | escape/alt                  |
+| {kbd}`<Escape>`      | escape/alt                  |
+| {kbd}`<Up>`          | up arrow                    |
+| {kbd}`<Down>`        | down arrow                  |
+| {kbd}`<Left>`        | left arrow                  |
+| {kbd}`<Right>`       | right arrow                 |
+| {kbd}`<PageUp>`      | Page Up                     |
+| {kbd}`<PageDown>`    | Page Down                   |
+| {kbd}`<Backspace>`   | Backspace                   |
+| {kbd}`<Delete>`      | Delete                      |
+| {kbd}`<Insert>`      | Insert                      |
+| {kbd}`<Enter>`       | Enter                       |
+| {kbd}`<Return>`      | Return                      |
+| {kbd}`<KeypadEnter>` | Enter key on numeric keypad |
+| {kbd}`<Home>`        | Home                        |
+| {kbd}`<End>`         | End                         |
+| {kbd}`<Space>`       | Space bar                   |
+| {kbd}`<F1>`          | function key 1              |
+| {kbd}`<F10>`         | function key 10             |
 
 The [`<what-key>`](fn-what-key) function can be used to explore keycode and symbolic names for other keys on your keyboard.
 Executing this function will display information about each key pressed, until terminated by {kbd}`Ctrl-G`.
@@ -182,8 +182,8 @@ These terminal settings can be viewed and changed using the `stty` program.
 `stty -a` will list the bound characters (not all of them affect NeoMutt), and what actions they take when pressed.
 For example, you may see `intr = ^C` in its output.
 This means typing {kbd}`Ctrl-C` will send an interrupt signal.
-`quit = ^\` means typing {kbd}`^\` (commonly also {kbd}`^4`) will send a quit signal.
+`quit = ^\` means typing {kbd}`^\` (commonly also {kbd}`Ctrl-4`) will send a quit signal.
 
 To unbind a key from an action, you invoke `stty action undef`.
-For example, `stty quit undef` will unbind {kbd}`^\` (and {kbd}`^4`) from sending the quit signal.
+For example, `stty quit undef` will unbind {kbd}`^\` (and {kbd}`Ctrl-4`) from sending the quit signal.
 Once unbound (e.g. by placing that line in your `.profile`, or in a NeoMutt wrapper script/function) you can use the key sequence in your NeoMutt bindings.

@@ -13,20 +13,20 @@ since: 2021-02-05
 
 ## Introduction
 
-When viewing an email, the [`<skip-quoted>`](fn-skip-quoted) function (by default the `S` key) will scroll past any email headers or quoted text.
+When viewing an email, the [`<skip-quoted>`](fn-skip-quoted) function (by default the {kbd}`S` key) will scroll past any email headers or quoted text.
 Sometimes, a little context is useful.
 By setting the `$skip_quoted_offset` variable, you can select how much of the quoted text is left visible.
 
-When using the [`<toggle-quoted>`](fn-toggle-quoted) function (by default the `T` key), it can be convenient to hide text that has been quoted multiple times while still leaving quoted text that is relevant to the unquoted reply intact.
+When using the [`<toggle-quoted>`](fn-toggle-quoted) function (by default the {kbd}`T` key), it can be convenient to hide text that has been quoted multiple times while still leaving quoted text that is relevant to the unquoted reply intact.
 This can be done by setting the [`$toggle_quoted_show_levels`](cfg-toggle-quoted-show-levels) variable.
 
-Also, it can be handy to jump directly to the start of the email body with the [`<skip-headers>`](fn-skip-headers) function (by default the `H` key).
+Also, it can be handy to jump directly to the start of the email body with the [`<skip-headers>`](fn-skip-headers) function (by default the {kbd}`H` key).
 
 ## Functions
 
-| Menus | Default Key | Function         | Description                      |
-|-------|-------------|------------------|----------------------------------|
-| pager | `H`         | [`<skip-headers>`](fn-skip-headers) | Jump to first line after headers |
+| Menus | Default Key | Function                            | Description                      |
+|-------|-------------|-------------------------------------|----------------------------------|
+| pager | {kbd}`H`    | [`<skip-headers>`](fn-skip-headers) | Jump to first line after headers |
 
 ## Variables
 

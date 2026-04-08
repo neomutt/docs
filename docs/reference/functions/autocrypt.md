@@ -12,9 +12,9 @@ You can create, delete, toggle, and set preferences for automatic email encrypti
 
 | Function                  | Default Keys | Description                                    |
 |---------------------------|--------------|------------------------------------------------|
-| `<create-account>`        | `c`          | Create a new autocrypt account                 |
-| `<delete-account>`        | `D`          | Delete the current account                     |
-| `<exit>`                  | `q`          | Exit this menu                                 |
-| `<toggle-active>`         | `a`          | Toggle the current account active/inactive     |
-| `<toggle-prefer-encrypt>` | `p`          | Toggle the current account prefer-encrypt flag |
+| `<create-account>`        | {kbd}`c`     | Create a new autocrypt account                 |
+| `<delete-account>`        | {kbd}`D`     | Delete the current account                     |
+| `<exit>`                  | {kbd}`q`     | Exit this menu                                 |
+| `<toggle-active>`         | {kbd}`a`     | Toggle the current account active/inactive     |
+| `<toggle-prefer-encrypt>` | {kbd}`p`     | Toggle the current account prefer-encrypt flag |
 
