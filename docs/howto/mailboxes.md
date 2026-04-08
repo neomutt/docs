@@ -19,7 +19,7 @@ The *-noregex* switch controls whether *regex* is matched using a simple string 
 The regex parameter has **mailbox shortcut** expansion performed on the first character.
 See **mailbox-hook** for more details.
 
-Note that execution of mbox-hooks is dependent on the `$move` configuration variable.
+Note that execution of mbox-hooks is dependent on the [`$move`](cfg-move) configuration variable.
 If set to "no" (the default), mbox-hooks will not be executed.
 
 Unlike some of the other *hook* commands, only the *first* matching regex is used (it is not possible to save read mail in more than a single mailbox).
@@ -51,10 +51,10 @@ If NeoMutt was built with POP and/or IMAP support, *folder* can also be a POP/IM
 The URL syntax is described in **URL syntax**, POP and IMAP are described in [POP](pop.md) and [IMAP](imap.md) respectively.
 
 NeoMutt provides a number of advanced features for handling (possibly many) folders and new mail within them, please refer to **new mail** for details (including in what situations and how often NeoMutt checks for new mail).
-Additionally, `$new_mail_command` can be used to run a command when new mail is detected.
+Additionally, [`$new_mail_command`](cfg-new-mail-command) can be used to run a command when new mail is detected.
 
 The `unmailboxes` command is used to remove a token from the list of folders which receive mail.
-`unmailboxes` can be used on the mailbox path, `$folder`-abbreviated path, or description.
+`unmailboxes` can be used on the mailbox path, [`$folder`](cfg-folder)-abbreviated path, or description.
 Use `unmailboxes *` to remove all tokens.
 
 :::{admonition} 📷 Screenshot Needed
@@ -72,7 +72,7 @@ indicators.
 :::
 
 :::{note}
-The folders in the `mailboxes` command are resolved when the command is executed, so if these names contain **shortcut characters** (such as `=` and `!`), any variable definition that affects these characters (like `$folder` and `$spool_file`) should be set before the `mailboxes` command.
+The folders in the `mailboxes` command are resolved when the command is executed, so if these names contain **shortcut characters** (such as `=` and `!`), any variable definition that affects these characters (like [`$folder`](cfg-folder) and [`$spool_file`](cfg-spool-file)) should be set before the `mailboxes` command.
 If none of these shortcuts are used, a local path should be absolute as otherwise NeoMutt tries to find it relative to the directory from where NeoMutt was started which may not always be desired.
 :::
 
@@ -95,7 +95,7 @@ The folder NeoMutt opens at startup is determined in the following order of prec
 2. The `$MAIL` environment variable, if set.
 3. The `$MAILDIR` environment variable, if set.
 4. The compile-time mail spool (`/var/spool/mail/$USER` or similar; last fallback).
-5. The `$spool_file` config option overrides the compile-time default spool location.
+5. The [`$spool_file`](cfg-spool-file) config option overrides the compile-time default spool location.
 
 ## New Mail Detection
 
@@ -118,18 +118,18 @@ set check_mbox_size
 
 Note that `check_mbox_size` won't detect changes that leave the file size unchanged.
 
-**Maildir** New mail is assumed if the `new/` subdirectory contains at least one message that is not marked deleted (see `$maildir_trash`).
+**Maildir** New mail is assumed if the `new/` subdirectory contains at least one message that is not marked deleted (see [`$maildir_trash`](cfg-maildir-trash)).
 
-**MH** A mailbox has new mail if there is at least one message in the unseen sequence defined by `$mh_seq_unseen`.
+**MH** A mailbox has new mail if there is at least one message in the unseen sequence defined by [`$mh_seq_unseen`](cfg-mh-seq-unseen).
 
 **IMAP** NeoMutt uses recent message counts reported by the server.
-If `$imap_idle` is set, NeoMutt uses the IMAP IDLE extension when the server advertises it, for lower-latency notification.
+If [`$imap_idle`](cfg-imap-idle) is set, NeoMutt uses the IMAP IDLE extension when the server advertises it, for lower-latency notification.
 
 **POP3** NeoMutt does not poll POP3 folders for new mail — it only checks the currently open folder.
 
 ### Controlling Notification Scope
 
-Set `$mail_check_recent` (on by default) to be notified only about mail that arrived since you last opened the mailbox.
+Set [`$mail_check_recent`](cfg-mail-check-recent) (on by default) to be notified only about mail that arrived since you last opened the mailbox.
 Unset it to be notified of all new mail regardless:
 
 ```neomuttrc
@@ -147,8 +147,8 @@ set new_mail_command = "notify-send 'New mail in NeoMutt'"
 NeoMutt polls monitored mailboxes while idle in the index.
 The check interval is:
 
-- **Local and IMAP folders** — `$mail_check` (seconds, default 5)
-- **POP folders** — `$pop_check_interval`
+- **Local and IMAP folders** — [`$mail_check`](cfg-mail-check) (seconds, default 5)
+- **POP folders** — [`$pop_check_interval`](cfg-pop-check-interval)
 
 Mailboxes added with `-nopoll` are excluded from polling.
 
@@ -175,5 +175,5 @@ set mail_check_stats_interval = 60   # seconds between recalculations
 ```
 
 These counts are used by the sidebar.
-Control their display via `$sidebar_format`.
+Control their display via [`$sidebar_format`](cfg-sidebar-format).
 IMAP mailboxes support unread and total counts only.

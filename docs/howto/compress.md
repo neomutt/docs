@@ -105,7 +105,7 @@ This hook is optional.
 
 Using the `append-hook` will save time, but NeoMutt won't be able to determine the type of the mail folder inside the compressed file.
 
-NeoMutt will *assume* the type to be that of the `$mbox_type` variable.
+NeoMutt will *assume* the type to be that of the [`$mbox_type`](cfg-mbox-type) variable.
 NeoMutt also uses this type for temporary files.
 
 NeoMutt will only use the `append-hook` for existing files.
@@ -124,7 +124,7 @@ append-hook '\.gz$' "gzip --stdout '%t' >> '%f'"
 
 - NeoMutt wants to append an email to a folder, "example.gz", that it opened with `open-hook`
 - NeoMutt has an `append-hook` whose regex matches the filename: `\.gz$`
-- NeoMutt knows the mailbox type from the `$mbox` variable
+- NeoMutt knows the mailbox type from the [`$mbox`](cfg-mbox) variable
 - NeoMutt uses the command `gzip -c` to append to an existing compressed file
 
 :::{note}
@@ -134,11 +134,11 @@ The `append-hook` can also include extra options, e.g. compression level: `--bes
 ### Empty Files
 
 NeoMutt assumes that an empty file is not compressed.
-In this situation, unset `$save_empty`, so that the compressed file will be removed if you delete all of the messages.
+In this situation, unset [`$save_empty`](cfg-save-empty), so that the compressed file will be removed if you delete all of the messages.
 
 ### Security
 
-Encrypted files are decrypted into temporary files which are stored in the `$tmp_dir` directory.
+Encrypted files are decrypted into temporary files which are stored in the [`$tmp_dir`](cfg-tmp-dir) directory.
 This could be a security risk.
 
 ## neomuttrc
@@ -182,8 +182,8 @@ close-hook  '\.gpg$' "gpg --encrypt --recipient YourGpgUserIdOrKeyId < '%t' > '%
 ## See Also
 
 - [Regular Expressions](../reference/regex.md)
-- `$tmp_dir`
-- `$mbox_type`
-- `$save_empty`
+- [`$tmp_dir`](cfg-tmp-dir)
+- [`$mbox_type`](cfg-mbox-type)
+- [`$save_empty`](cfg-save-empty)
 - **folder-hook**
 

@@ -14,7 +14,7 @@ See **URL syntax** for details.
 ## Remote POP3 Mailboxes
 
 Polling for new mail is more expensive over POP3 than locally.
-For this reason the frequency at which NeoMutt will check for mail remotely can be controlled by the `$pop_check_interval` variable, which defaults to every 60 seconds.
+For this reason the frequency at which NeoMutt will check for mail remotely can be controlled by the [`$pop_check_interval`](cfg-pop-check-interval) variable, which defaults to every 60 seconds.
 
 Due to limitations in POP3, this method doesn't allow for some features such as editing messages, changing their flags or even deleting them.
 However, using **header caching** and **body caching**, NeoMutt simulates the new/old/read flags as well as flagged and replied.
@@ -43,7 +43,7 @@ NeoMutt applies some logic on top of remote messages but cannot change them so t
 ## Fetching Mail from a POP3 Server
 
 Another way to access your POP3 mail is the `<fetch-mail>` function (default: G).
-It allows you to connect to `$pop_host`, fetch all your new mail and place it in the local `$spool_file`.
+It allows you to connect to [`$pop_host`](cfg-pop-host), fetch all your new mail and place it in the local [`$spool_file`](cfg-spool-file).
 After this point, NeoMutt runs exactly as if the mail had always been local.
 The `<fetch-mail>` function will ask whether you want to delete the messages on the remote server, leaving only your local copies.
 

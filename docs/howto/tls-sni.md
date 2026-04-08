@@ -17,12 +17,12 @@ When non-secure URL protocols `imap://`, `pop://`, and `smtp://` are used, the i
 
 Two configuration variables control NeoMutt's behavior with `STARTTLS`:
 
-- `$ssl_starttls` will initiate `STARTTLS` if the server advertises support for it.
-- `$ssl_force_tls` will always try to initiate it, whether the server advertises support or not.
+- [`$ssl_starttls`](cfg-ssl-starttls) will initiate `STARTTLS` if the server advertises support for it.
+- [`$ssl_force_tls`](cfg-ssl-force-tls) will always try to initiate it, whether the server advertises support or not.
 
-NeoMutt *highly recommends* setting `$ssl_force_tls` unless you need to connect to an unencrypted server.
+NeoMutt *highly recommends* setting [`$ssl_force_tls`](cfg-ssl-force-tls) unless you need to connect to an unencrypted server.
 It's possible for an attacker to spoof interactions during the initial connection and hide support for `STARTTLS`.
-The only way to prevent these attacks is by forcing `STARTTLS` with the `$ssl_force_tls` configuration variable.
+The only way to prevent these attacks is by forcing `STARTTLS` with the [`$ssl_force_tls`](cfg-ssl-force-tls) configuration variable.
 
 ```neomuttrc
 set ssl_force_tls = yes
@@ -30,11 +30,11 @@ set ssl_force_tls = yes
 
 ## Tunnel
 
-When connecting through a `$tunnel` and `$tunnel_is_secure` is set (the default), NeoMutt will assume the connection to the server through the pipe is already secured.
-NeoMutt will ignore `$ssl_starttls` and `$ssl_force_tls`, behaving as if TLS has already been negotiated.
+When connecting through a [`$tunnel`](cfg-tunnel) and [`$tunnel_is_secure`](cfg-tunnel-is-secure) is set (the default), NeoMutt will assume the connection to the server through the pipe is already secured.
+NeoMutt will ignore [`$ssl_starttls`](cfg-ssl-starttls) and [`$ssl_force_tls`](cfg-ssl-force-tls), behaving as if TLS has already been negotiated.
 
-When `$tunnel_is_secure` is unset, NeoMutt will respect the values of `$ssl_starttls` and `$ssl_force_tls`.
-It is *highly recommended* to set `$ssl_force_tls` in this case, to force `STARTTLS` negotiation.
+When [`$tunnel_is_secure`](cfg-tunnel-is-secure) is unset, NeoMutt will respect the values of [`$ssl_starttls`](cfg-ssl-starttls) and [`$ssl_force_tls`](cfg-ssl-force-tls).
+It is *highly recommended* to set [`$ssl_force_tls`](cfg-ssl-force-tls) in this case, to force `STARTTLS` negotiation.
 Note that doing so will prevent connection to an IMAP server configured for preauthentication (`PREAUTH`).
 If you use this configuration, it is recommended to use a secure tunnel.
 

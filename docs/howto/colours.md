@@ -25,7 +25,7 @@ uncolor status { <regex> | * }
 If your terminal supports color, you can spice up NeoMutt by creating your own color scheme.
 
 :::{note}
-The config option `$color_directcolor` must be set to its final value *before* using any `color` command.
+The config option [`$color_directcolor`](cfg-color-directcolor) must be set to its final value *before* using any `color` command.
 :::
 
 The types of objects that can be colored fall into two categories: [Simple Colors](#simple-colors) such as the highlight in the index, and [Color Lists](#color-lists) such as the status bar.
@@ -41,7 +41,7 @@ Note that `default` can be used as transparent color (see below).
 :::
 
 Colors can be specified in up to three ways, using their name such as `green`, `blue`; by their number in the palette, such as `color12`, `color207` (the palette consists of the [256 Xterm colors](https://web.archive.org/web/20190712111427/https://jonasjacek.github.io/colors/)); or by using hexadecimal RGB codes `#RRGGBB`, where `RR`, `GG`, `BB` are the red, green, and blue components given as a hexadecimal number between 00 and FF (=255), e.g. `#00FFFF` (bright cyan) or `#12af84` (greenish).
-The last syntax is only accepted if `$color_directcolor` is set.
+The last syntax is only accepted if [`$color_directcolor`](cfg-color-directcolor) is set.
 
 Named colours may also be prefixed by a *modifier*. `bright` or `light` will make the color boldfaced or light (e.g., `brightred`). `alert` to make a blinking/alert color (e.g., `alertred`).
 
@@ -80,7 +80,7 @@ color error white   default
 ```
 
 On startup NeoMutt tries to detect whether the terminal it is running in supports directcolor (aka TrueColor aka 24-bit color).
-If the terminal does, NeoMutt enables the config option `$color_directcolor` otherwise it disables it.
+If the terminal does, NeoMutt enables the config option [`$color_directcolor`](cfg-color-directcolor) otherwise it disables it.
 Furthermore, NeoMutt allows to use the RGB colors syntax with the `color` command to colour elements with 24-bit colors.
 
 For the detection to work the *TERM* environment variable must be set up properly to advertise the terminals directcolor capability.
@@ -92,7 +92,7 @@ If NeoMutt does not detect directcolor color support, but you are sure your term
 TERM=xterm-direct neomutt
 ```
 
-If that still does not help, you can additionally force NeoMutt to use directcolors by setting `$color_directcolor`.
+If that still does not help, you can additionally force NeoMutt to use directcolors by setting [`$color_directcolor`](cfg-color-directcolor).
 Setting this variable manually is strongly discouraged since it usually leads to wrong colors.
 
 (simple-colors)=
@@ -179,7 +179,7 @@ uncolor compose_header
 ```
 
 The quoted objects refer to quoted lines in an email reply.
-They are defined using the `$reply_regex` config option.
+They are defined using the [`$reply_regex`](cfg-reply-regex) config option.
 
 The quoted email colours don't use a pattern.
 The first colour, `quoted` provides a default colour for all quoted text.
@@ -187,7 +187,7 @@ Also, each different level of quoting can be given a different colour using, `qu
 
 | Colour Name | Description                                           |
 |-------------|-------------------------------------------------------|
-| quoted      | Text matching `$quote_regex` in the body of a message |
+| quoted      | Text matching [`$quote_regex`](cfg-quote-regex) in the body of a message |
 | quoted1     | 1 level deeper quoted text, e.g. `> > text`           |
 | quoted2     | 2 level deeper quoted text, e.g. `> > > text`         |
 | ...         | ...                                                   |
@@ -233,7 +233,7 @@ The color lists work in slightly different ways to each other.
 `index` objects match a *pattern* in the email index (see Patterns).
 Note that IMAP server-side searches (=b, =B, =h) are not supported for color index patterns.
 
-When `$header_color_partial` is unset (the default), a `header` matched by *regex* will have color applied to the entire header.
+When [`$header_color_partial`](cfg-header-color-partial) is unset (the default), a `header` matched by *regex* will have color applied to the entire header.
 When set, color is applied only to the exact text matched by *regex*.
 
 For the `status` list, the *regular expression* is optional.
@@ -404,7 +404,7 @@ color index_size cyan default
 
 - Regular Expressions
 - Patterns
-- `$index_format`
+- [`$index_format`](cfg-index-format)
 - [Color command](#using-color-and-mono-video-attributes)
 - [Status-Color feature](#status-color-feature)
 

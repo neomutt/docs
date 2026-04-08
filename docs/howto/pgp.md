@@ -43,10 +43,10 @@ set pgp_clear_sign_command = "..."
 
 ## Configuring Your PGP Key
 
-The two most important settings are `$pgp_default_key` and `$pgp_sign_as`.
+The two most important settings are [`$pgp_default_key`](cfg-pgp-default-key) and [`$pgp_sign_as`](cfg-pgp-sign-as).
 To perform encryption, you must set the first variable.
 If you have a separate signing key, or only have a signing key, then set the second.
-Most people will only need to set `$pgp_default_key`.
+Most people will only need to set [`$pgp_default_key`](cfg-pgp-default-key).
 
 ```neomuttrc
 set pgp_default_key = "A4AF18C5582473BD35A1E9CE78BB3D480042198E"
@@ -55,7 +55,7 @@ set pgp_default_key = "A4AF18C5582473BD35A1E9CE78BB3D480042198E"
 ## Configuring GnuPG Agent and Pinentry
 
 Starting with version 2.1.0, GnuPG automatically uses an `agent` to prompt for your passphrase.
-If you are using a version older than that, you'll need to ensure an agent is running (alternatively, you can unset `$pgp_use_gpg_agent` and NeoMutt will prompt you for your passphrase).
+If you are using a version older than that, you'll need to ensure an agent is running (alternatively, you can unset [`$pgp_use_gpg_agent`](cfg-pgp-use-gpg-agent) and NeoMutt will prompt you for your passphrase).
 The agent in turn uses a `pinentry` program to display the prompt.
 
 There are many different kinds of pinentry programs that can be used: qt, gtk2, gnome3, fltk, and curses.
@@ -86,11 +86,11 @@ The menu lists PGP keys with columns for key ID, capabilities, flags, validity, 
 **Highlights:** The key list layout showing how to identify the correct key by its capability and validity indicators, and the prompt at the bottom for selecting a key or entering a user ID manually.
 :::
 
-To ensure you can view encrypted messages you have sent, you may wish to set `$pgp_self_encrypt` and `$pgp_default_key` for PGP, or `$smime_self_encrypt` and `$smime_default_key` for S/MIME.
+To ensure you can view encrypted messages you have sent, you may wish to set [`$pgp_self_encrypt`](cfg-pgp-self-encrypt) and [`$pgp_default_key`](cfg-pgp-default-key) for PGP, or [`$smime_self_encrypt`](cfg-smime-self-encrypt) and [`$smime_default_key`](cfg-smime-default-key) for S/MIME.
 
 ## Key Selection Menu
 
-Most fields of the entries in the key selection menu (see also `$pgp_entry_format`) have obvious meanings.
+Most fields of the entries in the key selection menu (see also [`$pgp_entry_format`](cfg-pgp-entry-format)) have obvious meanings.
 The following sections explain the capabilities, flags, and validity fields.
 
 :::{admonition} 📷 Screenshot Needed
@@ -99,7 +99,7 @@ The following sections explain the capabilities, flags, and validity fields.
 **Subject:** PGP key menu entry layout
 
 **Description:** The NeoMutt PGP key selection menu showing several key entries.
-Each entry displays the flags field (`%f`), capabilities field (`%c`), validity field (`%t`), key length, creation date, key ID, and user ID as formatted by `$pgp_entry_format`.
+Each entry displays the flags field (`%f`), capabilities field (`%c`), validity field (`%t`), key length, creation date, key ID, and user ID as formatted by [`$pgp_entry_format`](cfg-pgp-entry-format).
 
 **Highlights:** The flags, capabilities, and validity columns — the tables below explain what each indicator (R/X/d/c flags, e/s capabilities, trust levels) means in practice.
 :::

@@ -17,7 +17,7 @@ nospam {* | regex}
 
 NeoMutt has generalized support for external spam-scoring filters.
 By defining your spam regular expressions with the `spam` and `nospam` commands, you can *limit*, *search*, and *sort* your mail based on its spam attributes, as determined by the external filter.
-You also can display the spam attributes in your index display using the `%H` selector in the `$index_format` variable. (Tip: try `%<H?[%H] >` to display spam tags only when they are defined for a given message.)
+You also can display the spam attributes in your index display using the `%H` selector in the [`$index_format`](cfg-index-format) variable. (Tip: try `%<H?[%H] >` to display spam tags only when they are defined for a given message.)
 
 :::{note}
 The value displayed by `%H` and searched by `~H` is stored in the header cache.
@@ -36,13 +36,13 @@ If that fixes the problem, then once your spam rules are set to your liking, rem
    (A regular expression "back-reference" refers to a sub-expression contained within parentheses.) `%1` is replaced with the first back-reference in the regex, `%2` with the second, etc.
 
 3. To match spam tags, NeoMutt needs the corresponding header information which is always the case for local and POP folders but not for IMAP in the default configuration.
-   Depending on the spam header to be analysed, `$imap_headers` may need to be adjusted.
+   Depending on the spam header to be analysed, [`$imap_headers`](cfg-imap-headers) may need to be adjusted.
 
 ## Using Multiple Spam Filters
 
 If you're using multiple spam filters, a message can have more than one spam-related header.
 You can define `spam` rules for each filter you use.
-If a message matches two or more of these regular expressions, and the `$spam_separator` variable is set to a string, then the message's spam tag will consist of all the *format* strings joined together, with the value of `$spam_separator` separating them.
+If a message matches two or more of these regular expressions, and the [`$spam_separator`](cfg-spam-separator) variable is set to a string, then the message's spam tag will consist of all the *format* strings joined together, with the value of [`$spam_separator`](cfg-spam-separator) separating them.
 
 ### Example Configuration
 
@@ -55,7 +55,7 @@ set spam_separator=", "
 
 If then a message is received that DCC registered with "many" hits under the "Fuz2" checksum, and that PureMessage registered with a 97% probability of being spam, that message's spam tag would read `90+/DCC-Fuz2, 97/PM`. (The four characters before "=many" in a DCC report indicate the checksum used — in this case, "Fuz2".)
 
-If the `$spam_separator` variable is unset, then each spam rule match supersedes the previous one.
+If the [`$spam_separator`](cfg-spam-separator) variable is unset, then each spam rule match supersedes the previous one.
 Instead of getting joined *format* strings, you'll get only the last one to match.
 
 ## Spam Tag Usage
@@ -65,7 +65,7 @@ Instead of getting joined *format* strings, you'll get only the last one to matc
 
 **Subject:** Spam-tagged messages in the index
 
-**Description:** The NeoMutt index view with `%H` included in `$index_format`,
+**Description:** The NeoMutt index view with `%H` included in [`$index_format`](cfg-index-format),
 showing messages with visible spam tags (e.g. `90+/DCC-Fuz2`, `97/PM`) next to
 messages with no spam tag, demonstrating how external spam filter scores appear
 inline.
@@ -73,7 +73,7 @@ inline.
 **Highlights:** The spam tag column rendered by `%H`, how different spam filters produce different tag formats, and how untagged (non-spam) messages show a blank in that column.
 :::
 
-The spam tag is what will be displayed in the index when you use `%H` in the `$index_format` variable.
+The spam tag is what will be displayed in the index when you use `%H` in the [`$index_format`](cfg-index-format) variable.
 It's also the string that the `~H` pattern-matching expression matches against for `<search>` and `<limit>` functions.
 And it's what sorting by spam attribute will use as a sort key.
 

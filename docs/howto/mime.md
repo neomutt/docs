@@ -94,7 +94,7 @@ There are four ways of viewing attachments:
 - **`<save-entry>` (default keybinding: {kbd}`s`)** — This will save the attachment to disk.
    The permissions of the saved file will depend on the user's `umask`. e.g. `umask 022` will create a file with permissions `rw-r--r--`.
 
-See also: `$attach_save_dir`, `$attach_save_without_prompting`, `$attach_sep`, `$attach_split`
+See also: [`$attach_save_dir`](cfg-attach-save-dir), [`$attach_save_without_prompting`](cfg-attach-save-without-prompting), [`$attach_sep`](cfg-attach-sep), [`$attach_split`](cfg-attach-split)
 
 ## The Compose Menu
 
@@ -119,7 +119,7 @@ It can be changed with the `<edit-encoding>` command (default: {kbd}`^E`).
 The next field is the size of the attachment, rounded to kilobytes or megabytes.
 The next field is the filename, which can be changed with the `<rename-file>` command (default: {kbd}`R`).
 The final field is the description of the attachment, and can be changed with the `<edit-description>` command (default: {kbd}`d`).
-See `$attach_format` for a full list of available expandos to format this display to your needs.
+See [`$attach_format`](cfg-attach-format) for a full list of available expandos to format this display to your needs.
 
 :::{admonition} 📷 Screenshot Needed
 :class: tip
@@ -160,7 +160,7 @@ audio/x-aiff                    aif aifc aiff
 
 A sample `mime.types` file comes with the NeoMutt distribution, and should contain most of the MIME types you are likely to use.
 
-If NeoMutt can not determine the MIME type by the extension of the file you attach, it will run the command specified in `$mime_type_query_command`.
+If NeoMutt can not determine the MIME type by the extension of the file you attach, it will run the command specified in [`$mime_type_query_command`](cfg-mime-type-query-command).
 If that command is not specified, NeoMutt will look at the file.
 If the file is free of binary information, NeoMutt will assume that the file is plain text, and mark it as `text/plain`.
 If the file contains binary information, then NeoMutt will mark it as `application/octet-stream`.
@@ -290,7 +290,7 @@ Don't put them into backtick expansions.
 Be highly careful with eval statements, and avoid them if possible at all.
 Trying to fix broken behavior with quotes introduces new leaks — there is no alternative to correct quoting in the first place.
 
-If you have to use the %-expandos' values in context where you need quoting or backtick expansions, put that value into a shell variable and reference the shell variable where necessary, as in the following example (using `$charset` inside the backtick expansion is safe, since it is not itself subject to any further expansion):
+If you have to use the %-expandos' values in context where you need quoting or backtick expansions, put that value into a shell variable and reference the shell variable where necessary, as in the following example (using [`$charset`](cfg-charset) inside the backtick expansion is safe, since it is not itself subject to any further expansion):
 
 ```
 text/test-mailcap-bug; cat %s; copiousoutput; test=charset=%{charset} \

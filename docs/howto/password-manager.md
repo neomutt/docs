@@ -92,5 +92,5 @@ set smtp_pass = "`your-command-here`"
 ## Security Considerations
 
 1. Avoid storing plaintext passwords in config files.
-2. Use password managers or `account_command` to keep credentials out of `set` output.
+2. Use password managers or [`$account_command`](cfg-account-command) to keep credentials out of `set` output.
 3. Restrict permissions on token files and keyrings.

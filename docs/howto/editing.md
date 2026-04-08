@@ -60,12 +60,12 @@ What gets completed depends on context:
 - **Aliases** — completes known address aliases
 - **Labels** — completes mailbox labels
 
-Press {kbd}`^T` to run an address query (using `$query_command`) and complete from the results.
+Press {kbd}`^T` to run an address query (using [`$query_command`](cfg-query-command)) and complete from the results.
 
 ## History Navigation
 
 NeoMutt keeps a separate history list for each input category (addresses, filenames, patterns, shell commands, mailboxes, config commands, and everything else).
-The number of history entries is controlled by `$history`.
+The number of history entries is controlled by [`$history`](cfg-history).
 
 | Key      | Function           | Description                             |
 |----------|--------------------|-----------------------------------------|
@@ -101,7 +101,7 @@ bind editor <delete> backspace
 
 ## Using an External Editor
 
-Set `$editor` to launch an external editor for composing message bodies:
+Set [`$editor`](cfg-editor) to launch an external editor for composing message bodies:
 
 ```neomuttrc
 set editor = "vim"

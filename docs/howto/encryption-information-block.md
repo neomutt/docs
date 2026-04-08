@@ -39,7 +39,7 @@ key details (e.g., "Recipient: RSA key, ID 00C14A7DBBDD521C") between them.
 
 **Highlights:** The encryption information block integrated into the message
 display, showing how recipient key IDs appear when viewing an encrypted message
-with `$crypt_encryption_info` enabled.
+with [`$crypt_encryption_info`](cfg-crypt-encryption-info) enabled.
 :::
 
 ## Usage

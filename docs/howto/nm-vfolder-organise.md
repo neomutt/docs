@@ -37,7 +37,7 @@ virtual-mailboxes "Personal/Unread" "notmuch://?query=tag:personal and tag:unrea
 
 Expected result: the sidebar shows mailboxes grouped under `Work/` and `Personal/`.
 
-If the sidebar is configured with `$sidebar_short_path` and `$sidebar_delim_chars`, it can shorten these paths into an indented tree.
+If the sidebar is configured with [`$sidebar_short_path`](cfg-sidebar-short-path) and [`$sidebar_delim_chars`](cfg-sidebar-delim-chars), it can shorten these paths into an indented tree.
 
 ## Control the Order
 
@@ -56,7 +56,7 @@ Expected result: the mailboxes you check most often are at the top.
 
 ## Hide Low-Traffic Mailboxes
 
-1. Use `$sidebar_new_mail_only` to show only mailboxes with new or flagged mail:
+1. Use [`$sidebar_new_mail_only`](cfg-sidebar-new-mail-only) to show only mailboxes with new or flagged mail:
 
 ```neomuttrc
 set sidebar_new_mail_only

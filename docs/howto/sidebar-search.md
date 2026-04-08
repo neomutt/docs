@@ -130,7 +130,7 @@ This expando is a *temporary development aid* and will be removed in a future re
 
 During development it can be useful to see the raw fuzzy score
 assigned to each sidebar entry. Add the `%f` (or `%{fuzzy-score}`)
-expando to your `$sidebar_format` string:
+expando to your [`$sidebar_format`](cfg-sidebar-format) string:
 
 ```neomuttrc
 set sidebar_format = "%D%*  %n  [%f]"

@@ -40,7 +40,7 @@ The currently defined maps are:
 | `pgp`      | Used to select the OpenPGP keys used to encrypt outgoing messages.                                                                                  |
 | `smime`    | Used to select the OpenSSL certificates used to encrypt outgoing messages.                                                                          |
 | `postpone` | Similar to the index menu, except used when recalling a postponed message.                                                                          |
-| `query`    | The browser for results returned by `$query_command`.                                                                                               |
+| `query`    | The browser for results returned by [`$query_command`](cfg-query-command).                                                                                               |
 
 ### Specifying Keys
 

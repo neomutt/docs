@@ -19,7 +19,7 @@ The sidebar shows mailbox names with unread/total message counts.
 One mailbox is highlighted (the cursor), another is indicated (the currently open mailbox).
 The divider character separates the sidebar from the index panel on the right.
 
-**Highlights:** The overall layout — sidebar panel on the left with the divider character, the highlight bar on one mailbox, the indicator on the open mailbox, and message counts displayed via `$sidebar_format`.
+**Highlights:** The overall layout — sidebar panel on the left with the divider character, the highlight bar on one mailbox, the indicator on the open mailbox, and message counts displayed via [`$sidebar_format`](cfg-sidebar-format).
 :::
 
 If you want a simple introduction with examples see the Sidebar Howto.
@@ -44,7 +44,7 @@ If you just want to get started, you could use the sample [neomuttrc](#sidebar-n
 | `sidebar_visible`                | boolean | `no`              |
 | `sidebar_width`                  | number  | `20`              |
 
-For more details, and examples, about the `$sidebar_format`, see the Sidebar Intro.
+For more details, and examples, about the [`$sidebar_format`](cfg-sidebar-format), see the Sidebar Intro.
 
 :::{admonition} 📷 Screenshot Needed
 :class: tip
@@ -89,7 +89,7 @@ sidebar-unpin { * | <mailbox> [<mailbox> ...] }
 Before 2026-01-13, these commands were called `sidebar_pin` and `sidebar_unpin`.
 :::
 
-This command specifies mailboxes that will always be displayed in the sidebar, even if `$sidebar_new_mail_only` is set and the mailbox does not contain new mail.
+This command specifies mailboxes that will always be displayed in the sidebar, even if [`$sidebar_new_mail_only`](cfg-sidebar-new-mail-only) is set and the mailbox does not contain new mail.
 
 The `sidebar-unpin` command is used to remove a mailbox from the list of always displayed mailboxes.
 Use `sidebar-unpin *` to remove all mailboxes.

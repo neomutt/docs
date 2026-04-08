@@ -10,7 +10,7 @@ keywords: neomutt, encrypt-to-self, pgp, smime, fcc, self-encrypt, encryption-in
 
 Once you encrypt an email to someone you cannot read it.
 This is good for security, but bad for record-keeping.
-If you wanted to keep a copy of an encrypted email you could set `$fcc_clear`.
+If you wanted to keep a copy of an encrypted email you could set [`$fcc_clear`](cfg-fcc-clear).
 
 A better option is to encrypt the saved copy to yourself.
 
@@ -108,7 +108,7 @@ Recipient: RSA key, ID 0000000000000000
 **Description:** The NeoMutt pager displaying a decrypted email with the encryption information block visible.
 The block shows "[-- Begin encryption information --]" and "[-- End encryption information --]" markers with recipient key details (e.g., "Recipient: RSA key, ID 00C14A7DBBDD521C") between them.
 
-**Highlights:** The encryption information block integrated into the message display, showing how recipient key IDs appear when viewing an encrypted message with `$crypt_encryption_info` enabled.
+**Highlights:** The encryption information block integrated into the message display, showing how recipient key IDs appear when viewing an encrypted message with [`$crypt_encryption_info`](cfg-crypt-encryption-info) enabled.
 :::
 
 ### Usage

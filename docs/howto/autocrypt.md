@@ -23,30 +23,30 @@ More information can be found at [https://autocrypt.org/](https://autocrypt.org/
 - **SQLite3** — Account and peer information is stored in a sqlite3 database.
    NeoMutt must be configured with `--with-sqlite` when autocrypt is enabled.
 - **IDN2 support** (recommended) — Configure NeoMutt with `--idn2` (enabled by default) so that Autocrypt can properly deal with international domain names.
-- While NeoMutt uses GPGME for Autocrypt, normal keyring operations can still be performed via classic mode (i.e. with `$crypt_use_gpgme` unset).
-   However, to avoid unnecessary prompts, it is recommended gpg not be configured in `loopback pinentry` mode, and that `$pgp_use_gpg_agent` remain set (the default).
+- While NeoMutt uses GPGME for Autocrypt, normal keyring operations can still be performed via classic mode (i.e. with [`$crypt_use_gpgme`](cfg-crypt-use-gpgme) unset).
+   However, to avoid unnecessary prompts, it is recommended gpg not be configured in `loopback pinentry` mode, and that [`$pgp_use_gpg_agent`](cfg-pgp-use-gpg-agent) remain set (the default).
 
 ## First Run
 
-1. Set `$autocrypt` in your `neomuttrc`, and optionally change the value of
-   `$autocrypt_dir`:
+1. Set [`$autocrypt`](cfg-autocrypt) in your `neomuttrc`, and optionally change the value of
+   [`$autocrypt_dir`](cfg-autocrypt-dir):
 
    ```neomuttrc
    set autocrypt
    # set autocrypt_dir = "~/.local/share/autocrypt"
    ```
 
-2. The first time NeoMutt is run after that, you will be prompted to create `$autocrypt_dir`.
+2. The first time NeoMutt is run after that, you will be prompted to create [`$autocrypt_dir`](cfg-autocrypt-dir).
    NeoMutt will then automatically create an sqlite3 database and GPG keyring in that directory.
    Since these files should be considered private, NeoMutt will create this directory with mode `700`.
    If you create the directory manually, you should do the same.
 
-3. NeoMutt recommends keeping the `$autocrypt_dir` directory set differently from your GnuPG keyring directory (e.g. `~/.gnupg`).
+3. NeoMutt recommends keeping the [`$autocrypt_dir`](cfg-autocrypt-dir) directory set differently from your GnuPG keyring directory (e.g. `~/.gnupg`).
    Keys are automatically imported into the keyring from `Autocrypt:` headers.
    Compared to standard "web of trust" keys, Autocrypt keys are somewhat ephemeral, and the autocrypt database is used to track when keys change or fall out of use.
-   Having these keys mixed in with your normal keyring will make it more difficult to use features such as `$crypt_opportunistic_encrypt` and Autocrypt at the same time.
+   Having these keys mixed in with your normal keyring will make it more difficult to use features such as [`$crypt_opportunistic_encrypt`](cfg-crypt-opportunistic-encrypt) and Autocrypt at the same time.
 
-4. The `$autocrypt_dir` variable is not designed to be changed while NeoMutt is running.
+4. The [`$autocrypt_dir`](cfg-autocrypt-dir) variable is not designed to be changed while NeoMutt is running.
    The database is created (if necessary) and connected to during startup.
    Changing the variable can result in a situation where NeoMutt is looking in one place for the database and a different place for the GPG keyring, resulting in strange behavior.
 
@@ -57,7 +57,7 @@ More information can be found at [https://autocrypt.org/](https://autocrypt.org/
 
 6. Account creation will first ask you for an email address.
    Next, it will ask whether you want to create a new key or select an existing key.
-   (Note key selection takes place from the `$autocrypt_dir` keyring, which will normally be empty during first run).
+   (Note key selection takes place from the [`$autocrypt_dir`](cfg-autocrypt-dir) keyring, which will normally be empty during first run).
    Finally, it will ask whether this address should prefer encryption or not.
    Autocrypt 1.1 allows automatically enabling encryption if *both* sender and receiver have set "prefer encryption".
    Otherwise, you will need to manually enable autocrypt encryption in the compose menu.
@@ -65,7 +65,7 @@ More information can be found at [https://autocrypt.org/](https://autocrypt.org/
 7. After optionally creating an account, NeoMutt will prompt you to scan mailboxes for Autocrypt headers.
    This step occurs because header cached messages are not re-scanned for Autocrypt headers.
    Scanning during this step will temporarily disable the header cache while opening each mailbox.
-   If you wish to do this manually later, you can simulate the same thing by unsetting `$header_cache` and opening a mailbox.
+   If you wish to do this manually later, you can simulate the same thing by unsetting [`$header_cache`](cfg-header-cache) and opening a mailbox.
 
 :::{note}
 The first run process takes place between reading the neomuttrc and opening the initial mailbox.
@@ -139,13 +139,13 @@ The compose screen is visible in the background with the Autocrypt fields.
 
 Autocrypt encryption defers to normal encryption or signing.
 *Anything* that enables normal encryption or signing will cause autocrypt encryption to turn off.
-The only exception is when replying to an autocrypt-encrypted email (i.e. an email decrypted from the `$autocrypt_dir` keyring).
-Then, if `$autocrypt_reply` is *set*, autocrypt mode will be forced on, overriding the settings `$crypt_auto_sign`, `$crypt_auto_encrypt`, `$crypt_reply_encrypt`, `$crypt_reply_sign`, `$crypt_reply_sign_encrypted`, and `$crypt_opportunistic_encrypt`.
+The only exception is when replying to an autocrypt-encrypted email (i.e. an email decrypted from the [`$autocrypt_dir`](cfg-autocrypt-dir) keyring).
+Then, if [`$autocrypt_reply`](cfg-autocrypt-reply) is *set*, autocrypt mode will be forced on, overriding the settings [`$crypt_auto_sign`](cfg-crypt-auto-sign), [`$crypt_auto_encrypt`](cfg-crypt-auto-encrypt), [`$crypt_reply_encrypt`](cfg-crypt-reply-encrypt), [`$crypt_reply_sign`](cfg-crypt-reply-sign), [`$crypt_reply_sign_encrypted`](cfg-crypt-reply-sign-encrypted), and [`$crypt_opportunistic_encrypt`](cfg-crypt-opportunistic-encrypt).
 
 ### Postponing Messages
 
-When postponing a message, autocrypt will respect `$postpone_encrypt`, but will use the autocrypt account key to encrypt the message.
-Be sure to set `$postpone_encrypt` to ensure postponed messages marked for autocrypt encryption are encrypted.
+When postponing a message, autocrypt will respect [`$postpone_encrypt`](cfg-postpone-encrypt), but will use the autocrypt account key to encrypt the message.
+Be sure to set [`$postpone_encrypt`](cfg-postpone-encrypt) to ensure postponed messages marked for autocrypt encryption are encrypted.
 
 ## Account Management
 
@@ -180,7 +180,7 @@ The Autocrypt 1.1 "Setup Message" feature is not available yet, but will be adde
 ## Alternative Key and Keyring Strategies
 
 NeoMutt by default partitions Autocrypt from normal keyring encryption/signing.
-It does this by using a separate GPG keyring (in `$autocrypt_dir`) and creating a new ECC key in that keyring for accounts.
+It does this by using a separate GPG keyring (in [`$autocrypt_dir`](cfg-autocrypt-dir)) and creating a new ECC key in that keyring for accounts.
 There are good reasons for doing this by default:
 
 - It keeps random keys found inside email headers out of your normal keyring.
@@ -193,7 +193,7 @@ There are good reasons for doing this by default:
 Some users may want to use an existing key from their normal keyring for Autocrypt too.
 There are two ways this can be accomplished.
 
-**Recommended method:** Set `$autocrypt_dir` to your normal keyring directory (e.g. `~/.gnupg`).
+**Recommended method:** Set [`$autocrypt_dir`](cfg-autocrypt-dir) to your normal keyring directory (e.g. `~/.gnupg`).
 During account creation, choosing "(s)elect existing GPG key" will then list and allow selecting your existing key for the new account.
 
 **Alternative method:** Copy your key over to the Autocrypt keyring.
@@ -202,7 +202,7 @@ NeoMutt *first* tries to decrypt messages using the Autocrypt keyring, and if th
 This means all encrypted emails to that key will be decrypted, and have signatures verified from, the Autocrypt keyring.
 Key signatures and web of trust from your normal keyring will no longer show up in signatures when decrypting.
 
-For that reason, if you want to use an existing key from your normal keyring, it is recommended to just set `$autocrypt_dir` to `~/.gnupg`.
+For that reason, if you want to use an existing key from your normal keyring, it is recommended to just set [`$autocrypt_dir`](cfg-autocrypt-dir) to `~/.gnupg`.
 This allows "web of trust" to show an appropriate signature message for verified messages.
 Autocrypt header keys will be imported into your keyring, but if you don't want them mixed you should strongly consider using a separate autocrypt key and keyring instead.
 
@@ -210,7 +210,7 @@ Autocrypt header keys will be imported into your keyring, but if you don't want 
 
 - Replying to an Autocrypt decrypted message by default forces Autocrypt mode on.
    By sharing the same key, all replies will then start in Autocrypt mode, even if a message wasn't sent by one of your Autocrypt peers.
-   `$autocrypt_reply` can be *unset* to allow manual control of the mode when replying.
+   [`$autocrypt_reply`](cfg-autocrypt-reply) can be *unset* to allow manual control of the mode when replying.
 
 - When NeoMutt creates an account from a GPG key, it exports the public key, base64 encodes it, and stores that value in the sqlite3 database.
    The value is then used in the Autocrypt header added to outgoing emails.

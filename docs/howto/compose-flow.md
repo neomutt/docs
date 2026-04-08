@@ -10,12 +10,12 @@ This is a brief overview of the steps NeoMutt takes during message composition.
 It also shows the order and timing of hook execution.
 
 1. **Reply envelope settings.**
-   `$reverse_name` processing. To, Cc, Subject, References header defaults.
+   [`$reverse_name`](cfg-reverse-name) processing. To, Cc, Subject, References header defaults.
 
 2. **my-header processing** for To, Cc, Bcc, Subject headers.
 
 3. **Prompts for To, Cc, Bcc, Subject headers.**
-   See `$ask_cc`, `$ask_bcc`, `$fast_reply`.
+   See [`$ask_cc`](cfg-ask-cc), [`$ask_bcc`](cfg-ask-bcc), [`$fast_reply`](cfg-fast-reply).
 
 4. **From header setting.**
    Note: this is so **send-hook**s below can match `~P`, but From is re-set
@@ -34,9 +34,9 @@ It also shows the order and timing of hook execution.
 
 10. **send2-hook**
 
-11. **`$real_name` part of From header setting.**
+11. **[`$real_name`](cfg-real-name) part of From header setting.**
 
-12. **`$editor` invocation** for the message.
+12. **[`$editor`](cfg-editor) invocation** for the message.
 
 13. **send2-hook**
 
@@ -60,11 +60,11 @@ This is the stage where `send2-hook` fires on each header change.
 
 17. **Message encryption and signing.** Key selection.
 
-18. **Fcc saving** if `$fcc_before_send` is set.
+18. **Fcc saving** if [`$fcc_before_send`](cfg-fcc-before-send) is set.
   (Note the variable documentation for caveats of Fcc'ing before sending.)
 
 19. **Message sending.**
 
-20. **Fcc saving** if `$fcc_before_send` is unset (the default).
+20. **Fcc saving** if [`$fcc_before_send`](cfg-fcc-before-send) is unset (the default).
    The Fcc used to be saved before sending the message.
    It is now by default saved afterwards, but if the saving fails, the user is prompted.

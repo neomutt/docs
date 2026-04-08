@@ -60,7 +60,7 @@ Common mistakes:
 
 ## Check nm_default_url
 
-1. Confirm `$nm_default_url` points to the correct database path:
+1. Confirm [`$nm_default_url`](cfg-nm-default-url) points to the correct database path:
 
 ```neomuttrc
 set nm_default_url = "notmuch:///home/you/.local/share/mail"
@@ -72,7 +72,7 @@ Expected result: NeoMutt and Notmuch use the same database.
 
 ## Check nm_exclude_tags
 
-1. If you have `$nm_exclude_tags` set, confirm it isn't hiding the messages you expect:
+1. If you have [`$nm_exclude_tags`](cfg-nm-exclude-tags) set, confirm it isn't hiding the messages you expect:
 
 ```
 :set nm_exclude_tags?

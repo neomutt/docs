@@ -26,7 +26,7 @@ Notmuch is an email fulltext indexing and tagging engine.
 The \<path\> is an absolute path to the directory where the notmuch database is found as returned by `notmuch config get database.path` command.
 Note that the \<path\> should NOT include `.notmuch` directory name.
 
-If the "\<path\>" is not defined then `$nm_default_url` or `$folder` is used, for example:
+If the "\<path\>" is not defined then [`$nm_default_url`](cfg-nm-default-url) or [`$folder`](cfg-folder) is used, for example:
 
 ```neomuttrc
 set nm_default_url = "notmuch:///home/foo/maildir"

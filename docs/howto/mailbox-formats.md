@@ -8,7 +8,7 @@ keywords: mailbox, mbox, mmdf, mh, maildir, format, mbox_type, local storage, ma
 
 NeoMutt supports reading and writing of four different local mailbox formats: mbox, MMDF, MH and Maildir.
 The mailbox type is auto detected, so there is no need to use a flag for different mailbox types.
-When creating new mailboxes, NeoMutt uses the default specified with the `$mbox_type` variable.
+When creating new mailboxes, NeoMutt uses the default specified with the [`$mbox_type`](cfg-mbox-type) variable.
 A short description of the formats follows.
 
 ## mbox

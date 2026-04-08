@@ -12,7 +12,7 @@ since: 2022-05-16
 ## Introduction
 
 NeoMutt provides dedicated config options to specify credentials for network servers.
-These include `imap_user`, `imap_pass`, `smtp_user`, `smtp_pass`, etc.
+These include [`$imap_user`](cfg-imap-user), [`$imap_pass`](cfg-imap-pass), [`$smtp_user`](cfg-smtp-user), [`$smtp_pass`](cfg-smtp-pass), etc.
 There are a few downsides to this approach.
 For one thing, their use encourages storing usernames and passwords in plain text inside a NeoMutt config file.
 People have come up with solutions to this, including using gpg-encrypted files and populating `my_` variables via external scripts through `source "/path/to/script|"`.
@@ -25,7 +25,7 @@ The external command is called with a number of arguments indicating the known p
 
 ## Usage
 
-1. Set the `account_command` variable to point to your external script:
+1. Set [`$account_command`](cfg-account-command) to point to your external script:
 
    ```neomuttrc
    set account_command = "/path/to/my/script.sh"

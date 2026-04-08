@@ -236,7 +236,7 @@ set index_format = "%C %<F?%<N?F+N&F>&%<N?N& >> %s"
 
 ## Step 8 — Practical Configurations
 
-### A Complete `$index_format`
+### A Complete [`$index_format`](cfg-index-format)
 
 ```neomuttrc
 set index_format = "%4C %Z %<[1d?%[%H:%M]&%<[1y?%[%b %d]&%[%Y-%m]>> %-20.20n %<M?(%M)&   > %s %> %<X?[%X]>"

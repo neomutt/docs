@@ -21,7 +21,7 @@ This guide covers the wrap width, `format=flowed` reflowing, word-boundary wrapp
 | [`$tilde`](cfg-tilde)             | boolean | `no`    |
 | [`$wrap`](cfg-wrap)               | number  | `0`     |
 
-## Wrap Width (`$wrap`)
+## Wrap Width ([`$wrap`](cfg-wrap))
 
 [`$wrap`](cfg-wrap) controls the column at which NeoMutt wraps lines in the pager.
 
@@ -86,7 +86,7 @@ Text wraps at the full terminal width (80 columns shown):
 </pre>
 </div>
 
-## Reflow Wrap (`$reflow_wrap`)
+## Reflow Wrap ([`$reflow_wrap`](cfg-reflow-wrap))
 
 [`$reflow_wrap`](cfg-reflow-wrap) sets the paragraph width when reformatting `format=flowed` messages (requires [`$reflow_text`](cfg-reflow-text) to be set).
 
@@ -95,8 +95,8 @@ Text wraps at the full terminal width (80 columns shown):
 - **Zero** — wrap at the terminal's right margin
 
 :::{important}
-Reflowed paragraphs are still subject to `$wrap`.
-If `$reflow_wrap` is wider than `$wrap`, each reflowed line will be split again by `$wrap`, producing uneven line lengths.
+Reflowed paragraphs are still subject to [`$wrap`](cfg-wrap).
+If [`$reflow_wrap`](cfg-reflow-wrap) is wider than [`$wrap`](cfg-wrap), each reflowed line will be split again by [`$wrap`](cfg-wrap), producing uneven line lengths.
 For example, `set reflow_wrap = 40` with `set wrap = 30` produces alternating lines of 30 and 10 characters.
 :::
 
@@ -133,7 +133,7 @@ The same paragraph reflowed at 72 characters:
 </pre>
 </div>
 
-## Smart Wrap (`$smart_wrap`)
+## Smart Wrap ([`$smart_wrap`](cfg-smart-wrap))
 
 [`$smart_wrap`](cfg-smart-wrap) controls whether long lines wrap at a word boundary or at the screen edge.
 It is enabled by default.
@@ -168,7 +168,7 @@ The line breaks exactly at the screen edge, splitting words mid-character:
 </pre>
 </div>
 
-## Markers (`$markers`)
+## Markers ([`$markers`](cfg-markers))
 
 [`$markers`](cfg-markers) controls whether a `+` character is shown at the start of continuation lines when a line wraps in the pager.
 It is enabled by default.
@@ -205,11 +205,11 @@ No prefix on continuation lines:
 
 
 :::{tip}
-`$markers` and `$smart_wrap` work together.
+[`$markers`](cfg-markers) and [`$smart_wrap`](cfg-smart-wrap) work together.
 A common combination is `set smart_wrap = yes` with `set markers = no` for clean word-wrapped output without visual clutter.
 :::
 
-## Tilde (`$tilde`)
+## Tilde ([`$tilde`](cfg-tilde))
 
 [`$tilde`](cfg-tilde) pads blank lines at the bottom of the pager with `~` characters, similar to Vim's display of lines past the end of a file.
 It is disabled by default.

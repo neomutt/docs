@@ -16,7 +16,7 @@ This tutorial walks through the most common use case: generating your email sign
 
 ## Step 1 — A Static Signature
 
-The simplest signature setup points `$signature` at a plain text file:
+The simplest signature setup points [`$signature`](cfg-signature) at a plain text file:
 
 ```neomuttrc
 set signature = "~/.signature"
@@ -36,7 +36,7 @@ Every outgoing email gets the same signature.
 ## Step 2 — Make It Dynamic with a Pipe
 
 Suppose you want your signature to include today's date, a quote of the day, or different content depending on the recipient.
-Instead of a static file, you can point `$signature` at a script — just add `|` at the end:
+Instead of a static file, you can point [`$signature`](cfg-signature) at a script — just add `|` at the end:
 
 ```neomuttrc
 set signature = "~/.mutt/gen-sig.sh|"
@@ -99,11 +99,11 @@ Then compose a test message in NeoMutt and check that the signature appears corr
 
 NeoMutt supports the trailing pipe in two categories of config options:
 
-**Path options** (like `$signature`)
+**Path options** (like [`$signature`](cfg-signature))
 : The value is treated as a command.
   NeoMutt runs it and reads the full output as if it were a file.
 
-**Expando options** (like `$index_format`, `$status_format`, and others)
+**Expando options** (like [`$index_format`](cfg-index-format), [`$status_format`](cfg-status-format), and others)
 : After NeoMutt expands the format string, if the result ends with `|`, the expanded string is executed as a command and the first line of output replaces it.
 
 :::{seealso}

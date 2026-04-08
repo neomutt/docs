@@ -18,7 +18,7 @@ Sometimes, a little context is useful.
 By setting the `$skip_quoted_offset` variable, you can select how much of the quoted text is left visible.
 
 When using the `<toggle-quoted>` function (by default the `T` key), it can be convenient to hide text that has been quoted multiple times while still leaving quoted text that is relevant to the unquoted reply intact.
-This can be done by setting the `$toggle_quoted_show_levels` variable.
+This can be done by setting the [`$toggle_quoted_show_levels`](cfg-toggle-quoted-show-levels) variable.
 
 Also, it can be handy to jump directly to the start of the email body with the `<skip-headers>` function (by default the `H` key).
 

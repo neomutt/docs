@@ -12,7 +12,7 @@ keywords: alias, alias_format, alias_sort, display, layout, columns, format stri
 
 ## Change the Alias Menu Layout
 
-1. Set `$alias_format` in your `neomuttrc`:
+1. Set [`$alias_format`](cfg-alias-format) in your `neomuttrc`:
 
 ```neomuttrc
 set alias_format = "%3i %f%t %-15a %-56A | %C%> %Y"
@@ -48,7 +48,7 @@ Expected result: a compact view with just the real name and email address.
 
 ## Change the Sort Order
 
-1. Set `$alias_sort`:
+1. Set [`$alias_sort`](cfg-alias-sort):
 
 ```neomuttrc
 set alias_sort = "name"

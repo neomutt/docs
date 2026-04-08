@@ -20,10 +20,10 @@ For Maildir and MH, reading the headers from a single file is much faster than l
 Header caching can be enabled by configuring one of the database backends.
 One of bdb, gdbm, kyotocabinet, lmdb, qdbm, rocksdb, tdb, tokyocabinet.
 
-If enabled, `$header_cache` can be used to either point to a file or a directory.
+If enabled, [`$header_cache`](cfg-header-cache) can be used to either point to a file or a directory.
 If set to point to a file, one database file for all folders will be used (which may result in lower performance), but one file per folder if it points to a directory.
 
-Additionally, `$header_cache_backend` can be set to specify which backend to use.
+Additionally, [`$header_cache_backend`](cfg-header-cache-backend) can be set to specify which backend to use.
 The list of available backends can be specified at configure time with a set of `--with-<backend>` options.
 Currently, the following backends are supported: bdb, gdbm, kyotocabinet, lmdb, qdbm, rocksdb, tdb, tokyocabinet.
 
@@ -37,12 +37,12 @@ Both cache methods can be combined using the same directory for storage (and for
 In addition to caching message headers only, NeoMutt can also cache whole message bodies.
 This results in faster display of messages for POP and IMAP folders because messages usually have to be downloaded only once.
 
-For configuration, the variable `$message_cache_dir` must point to a directory.
+For configuration, the variable [`$message_cache_dir`](cfg-message-cache-dir) must point to a directory.
 There, NeoMutt will create a hierarchy of subdirectories named like the account and mailbox path the cache is for.
 
 ## Cache Directories
 
-For using both, header and body caching, `$header_cache` and `$message_cache_dir` can be safely set to the same value.
+For using both, header and body caching, [`$header_cache`](cfg-header-cache) and [`$message_cache_dir`](cfg-message-cache-dir) can be safely set to the same value.
 
 In a header or body cache directory, NeoMutt creates a directory hierarchy named like: `proto:user@hostname` where `proto` is either "pop" or "imap." Within there, for each folder, NeoMutt stores messages in single files and header caches in files with the ".hcache" extension.
 All files can be removed as needed if the consumed disk space becomes an issue as NeoMutt will silently fetch missing items again.
@@ -55,7 +55,7 @@ For Maildir and MH, the header cache files are named after the MD5 checksum of t
 NeoMutt does not (yet) support maintenance features for header cache database files so that files have to be removed in case they grow too big.
 It depends on the database library used for header caching whether disk space freed by removing messages is reused.
 
-For body caches, NeoMutt can keep the local cache in sync with the remote mailbox if the `$message_cache_clean` variable is set.
+For body caches, NeoMutt can keep the local cache in sync with the remote mailbox if the [`$message_cache_clean`](cfg-message-cache-clean) variable is set.
 Cleaning means to remove messages from the cache which are no longer present in the mailbox which only happens when other mail clients or instances of NeoMutt using a different body cache location delete messages (NeoMutt itself removes deleted messages from the cache when syncing a mailbox).
 As cleaning can take a noticeable amount of time, it should not be set in general but only occasionally.
 

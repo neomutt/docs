@@ -33,10 +33,10 @@ set smime_decrypt_command = "..."
 
 ## Configuring Your S/MIME Key
 
-As with OpenPGP, the two most important settings are `$smime_default_key` and `$smime_sign_as`.
+As with OpenPGP, the two most important settings are [`$smime_default_key`](cfg-smime-default-key) and [`$smime_sign_as`](cfg-smime-sign-as).
 To perform encryption and decryption, you must set the first variable.
 If you have a separate signing key, or only have a signing key, then set the second.
-Most people will only need to set `$smime_default_key`.
+Most people will only need to set [`$smime_default_key`](cfg-smime-default-key).
 
 ```neomuttrc
 set smime_default_key = "bb345e23.0"
@@ -57,7 +57,7 @@ Consult your documentation of GnuPG for details, in particular `gpgsm`.
 ## Managing Keys in Classic Mode
 
 In "classic mode", keys and certificates are managed by the `smime_keys` program that comes with NeoMutt.
-By default they are stored under `~/.smime/`. (This is set by the `smime.rc` file with `$smime_certificates` and `$smime_keys`.)
+By default they are stored under `~/.smime/`. (This is set by the `smime.rc` file with [`$smime_certificates`](cfg-smime-certificates) and [`$smime_keys`](cfg-smime-keys).)
 
 1. Initialize the key directory from a shell prompt:
 
@@ -97,4 +97,4 @@ The menu lists S/MIME certificates with key IDs, trust information, and associat
 Press {kbd}`^G` to abort and return to the compose screen.
 :::
 
-To ensure you can view encrypted messages you have sent, you may wish to set `$smime_self_encrypt` and `$smime_default_key`.
+To ensure you can view encrypted messages you have sent, you may wish to set [`$smime_self_encrypt`](cfg-smime-self-encrypt) and [`$smime_default_key`](cfg-smime-default-key).

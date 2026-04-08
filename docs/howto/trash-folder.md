@@ -14,11 +14,11 @@ This happens when the user leaves the folder, or the function is called manually
 
 After `<sync-mailbox>` has been called the email is gone forever.
 
-The `$trash` variable defines a folder in which to keep old emails.
+The [`$trash`](cfg-trash) variable defines a folder in which to keep old emails.
 As before, first you mark emails for deletion.
 When `<sync-mailbox>` is called the emails are moved to the trash folder.
 
-The `$trash` path can be either a full directory, or be relative to the `$folder` variable, like the `mailboxes` command.
+The [`$trash`](cfg-trash) path can be either a full directory, or be relative to the [`$folder`](cfg-folder) variable, like the `mailboxes` command.
 
 :::{note}
 Emails deleted from the trash folder are gone forever.

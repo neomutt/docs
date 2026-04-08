@@ -20,7 +20,7 @@ The "fmemopen" feature speeds up some searches.
 
 This feature changes a few places where NeoMutt creates temporary files.
 It replaces them with in-memory buffers.
-This should improve the performance when searching the header or body using the `$thorough_search` option.
+This should improve the performance when searching the header or body using the [`$thorough_search`](cfg-thorough-search) option.
 
 There are no user-configurable parts.
 

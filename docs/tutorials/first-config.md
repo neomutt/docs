@@ -167,7 +167,7 @@ The last file that gets read will overwrite any settings from previous config fi
 This means that an administrator can set some defaults which the user can override.
 
 Additionally, there are a handful of config items which can be set using an environment variable.
-They have a lower priority than the NeoMutt config files: `$editor`, `$from`, `$mailcap_path`, `$news_server`, `$shell`, `$spool_file`, `$tmp_dir`.
+They have a lower priority than the NeoMutt config files: [`$editor`](cfg-editor), [`$from`](cfg-from), [`$mailcap_path`](cfg-mailcap-path), [`$news_server`](cfg-news-server), [`$shell`](cfg-shell), [`$spool_file`](cfg-spool-file), [`$tmp_dir`](cfg-tmp-dir).
 
 Finally, it's possible to set some variables directly on the command-line using the `-e` option.
 
@@ -256,7 +256,7 @@ my-header X-Operating-System: `uname -a`
 ```
 
 To avoid the output of backticks being parsed, place them inside double quotes.
-For example, the output of the gpg decryption is assigned directly to $imap_pass, so that special characters in the password (e.g. "'", "#", "$") are not parsed and interpreted specially by neomutt.
+For example, the output of the gpg decryption is assigned directly to [`$imap_pass`](cfg-imap-pass), so that special characters in the password (e.g. "'", "#", "$") are not parsed and interpreted specially by neomutt.
 
 **Example: Preventing the output of backticks from being parsed**
 
@@ -273,7 +273,7 @@ For example,
 set record = "+sent_on_$HOSTNAME"
 ```
 
-will cause NeoMutt to save outgoing messages to a folder named "sent\_on\_kremvax" if the environment variable `$HOSTNAME` is set to "kremvax." (See `$record` for details.)
+will cause NeoMutt to save outgoing messages to a folder named "sent\_on\_kremvax" if the environment variable `$HOSTNAME` is set to "kremvax." (See [`$record`](cfg-record) for details.)
 
 If NeoMutt can't find a matching *config* variable, it will try to find a matching *environment* variable.
 
@@ -283,13 +283,13 @@ If the value of a variable on the right-hand side of an assignment changes after
 The commands understood by NeoMutt are explained in the next paragraphs.
 For a complete list, see the command reference.
 
-All configuration files are expected to be in the current locale as specified by the `$charset` variable which doesn't have a default value since it's determined by NeoMutt at startup.
-If a configuration file is not encoded in the same character set the `$config_charset` variable should be used: all lines starting with the next are recoded from `$config_charset` to `$charset`.
+All configuration files are expected to be in the current locale as specified by the [`$charset`](cfg-charset) variable which doesn't have a default value since it's determined by NeoMutt at startup.
+If a configuration file is not encoded in the same character set the [`$config_charset`](cfg-config-charset) variable should be used: all lines starting with the next are recoded from [`$config_charset`](cfg-config-charset) to [`$charset`](cfg-charset).
 
 This mechanism should be avoided if possible as it has the following implications:
 
-- These variables should be set early in a configuration file with `$charset` preceding `$config_charset` so NeoMutt knows what character set to convert to.
-- If `$config_charset` is set, it should be set in each configuration file because the value is global and *not* per configuration file.
+- These variables should be set early in a configuration file with [`$charset`](cfg-charset) preceding [`$config_charset`](cfg-config-charset) so NeoMutt knows what character set to convert to.
+- If [`$config_charset`](cfg-config-charset) is set, it should be set in each configuration file because the value is global and *not* per configuration file.
 - Because NeoMutt first recodes a line before it attempts to parse it, a conversion introducing question marks or other characters as part of errors (unconvertible characters, transliteration) may introduce syntax errors or silently change the meaning of certain tokens (e.g. inserting question marks into regular expressions).
 
 ## Next Steps

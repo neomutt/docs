@@ -66,7 +66,7 @@ Expected result: you can pinpoint which settings cause problems.
 
 1. Missing optional features because your build lacks certain libraries (IMAP, Notmuch, crypto).
 2. External tool integrations not installed on the new system.
-3. Different config file location or `$folder` paths.
+3. Different config file location or [`$folder`](cfg-folder) paths.
 
 Expected result: you can resolve issues by installing missing dependencies or fixing paths.
 

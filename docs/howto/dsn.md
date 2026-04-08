@@ -13,14 +13,14 @@ These can be thought of as "return receipts."
 
 To support DSN, there are two variables:
 
-- `$dsn_notify` is used to request receipts for different results (such as failed message, message delivered, etc.).
-- `$dsn_return` requests how much of your message should be returned with the receipt (headers or full message).
+- [`$dsn_notify`](cfg-dsn-notify) is used to request receipts for different results (such as failed message, message delivered, etc.).
+- [`$dsn_return`](cfg-dsn-return) requests how much of your message should be returned with the receipt (headers or full message).
 
 ## Using Sendmail for Delivery
 
-When using `$sendmail` for mail delivery, you need to use either Berkeley sendmail 8.8.x (or greater) or a MTA supporting DSN command line options compatible to Sendmail: The `-N` and `-R` options can be used by the mail client to make requests as to what type of status messages should be returned.
+When using [`$sendmail`](cfg-sendmail) for mail delivery, you need to use either Berkeley sendmail 8.8.x (or greater) or a MTA supporting DSN command line options compatible to Sendmail: The `-N` and `-R` options can be used by the mail client to make requests as to what type of status messages should be returned.
 Please consider your MTA documentation whether DSN is supported.
 
 ## Using SMTP for Delivery
 
-For SMTP delivery using `$smtp_url`, it depends on the capabilities announced by the server whether NeoMutt will attempt to request DSN or not.
+For SMTP delivery using [`$smtp_url`](cfg-smtp-url), it depends on the capabilities announced by the server whether NeoMutt will attempt to request DSN or not.

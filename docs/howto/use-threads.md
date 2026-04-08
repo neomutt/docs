@@ -20,8 +20,8 @@ is now orthogonal from how messages are sorted.
 
 The "Use Threads" feature adds no new functions to NeoMutt. The existing
 functions `<sort-mailbox>` and `<sort-reverse>` are updated to toggle the
-state of `$use_threads` once it has been set, while preserving
-backwards-compatible behavior on `$sort` if this feature is not used.
+state of [`$use_threads`](cfg-use-threads) once it has been set, while preserving
+backwards-compatible behavior on [`$sort`](cfg-sort) if this feature is not used.
 
 ## Variables
 
@@ -29,25 +29,25 @@ The "Use Threads" feature adds one new config option,
 {ref}`$use_threads <cfg-use-threads>`, which is an enumeration of possible thread
 views. The variable defaults to unset for the original behavior of overloading
 {ref}`$sort=threads <cfg-sort>` to enable sorting. It can be set to `flat` (or
-`no`) for an unthreaded view based on `$sort`, to `threads` (or `yes`) for a
+`no`) for an unthreaded view based on [`$sort`](cfg-sort), to `threads` (or `yes`) for a
 threaded view where roots appear above children, or to `reverse` for a threaded
 view where children appear above roots.
 
 When sorting by threads, the value of {ref}`$sort <cfg-sort>` determines which
-thread floats to the top. If `$sort` does not contain `reverse-`, the latest
+thread floats to the top. If [`$sort`](cfg-sort) does not contain `reverse-`, the latest
 thread goes to the bottom for `use_threads=threads` and to the top for
-`use_threads=reverse`; the direction of float is swapped if `$sort` also uses
-`reverse-`. If `$sort` includes `last-`, the overall thread is sorted by its
+`use_threads=reverse`; the direction of float is swapped if [`$sort`](cfg-sort) also uses
+`reverse-`. If [`$sort`](cfg-sort) includes `last-`, the overall thread is sorted by its
 descendant at any depth which would sort last in a flat view; otherwise, the
 overall thread is sorted solely by the thread root. The `last-` prefix is
 ignored when `use_threads=flat`.
 
-Within a single thread, the value of `$sort_aux` determines
-how siblings are sorted. The same prefixes apply as for `$sort`, although it is
+Within a single thread, the value of [`$sort_aux`](cfg-sort-aux) determines
+how siblings are sorted. The same prefixes apply as for [`$sort`](cfg-sort), although it is
 less common to use the `last-` prefix.
 
 The "Use Threads" feature also modifies the existing config option
-`$status_format`, adding the `%T` expando which shows the
+[`$status_format`](cfg-status-format), adding the `%T` expando which shows the
 current threading method.
 
 ## Use Threads Variable

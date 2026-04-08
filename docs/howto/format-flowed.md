@@ -52,8 +52,8 @@ In order to take advantage of these, {ref}`$reflow_text <cfg-reflow-text>` must 
 
 **Subject:** Flowed vs fixed text in the pager
 
-**Description:** The NeoMutt pager showing a format=flowed message with `$reflow_text` enabled, demonstrating how paragraphs are reflowed and wrapped cleanly to the terminal width.
-Ideally show a quoted reply with `$reflow_space_quotes` set, displaying the added spaces between quote level markers.
+**Description:** The NeoMutt pager showing a format=flowed message with [`$reflow_text`](cfg-reflow-text) enabled, demonstrating how paragraphs are reflowed and wrapped cleanly to the terminal width.
+Ideally show a quoted reply with [`$reflow_space_quotes`](cfg-reflow-space-quotes) set, displaying the added spaces between quote level markers.
 
-**Highlights:** How reflowed paragraphs wrap cleanly compared to fixed-width text with hard line breaks, and how `$reflow_space_quotes` improves readability by adding spaces after `>` quote markers.
+**Highlights:** How reflowed paragraphs wrap cleanly compared to fixed-width text with hard line breaks, and how [`$reflow_space_quotes`](cfg-reflow-space-quotes) improves readability by adding spaces after `>` quote markers.
 :::

@@ -14,7 +14,7 @@ Its format is described by [RFC8255](https://www.rfc-editor.org/rfc/rfc8255.html
 
 ### Reading Multipart/Multilingual Emails
 
-NeoMutt uses the `$preferred_languages` variable to determine which languages to display when displaying a `multipart/multilingual` email.
+NeoMutt uses the [`$preferred_languages`](cfg-preferred-languages) variable to determine which languages to display when displaying a `multipart/multilingual` email.
 You can have several preferred languages, separated by `,`:
 
 ```neomuttrc
@@ -23,7 +23,7 @@ set preferred_languages="fr,en,de"
 
 NeoMutt will try to match these strings against the multilingual header in the received emails "by prefix", e.g., `en` will match both `en` and `en_US`.
 
-If `$preferred_languages` is not set, it defaults to None, and the first part of the received `multipart/multilingual` email will be displayed.
+If [`$preferred_languages`](cfg-preferred-languages) is not set, it defaults to None, and the first part of the received `multipart/multilingual` email will be displayed.
 
 ### Composing Multipart/Multilingual Emails
 

@@ -39,7 +39,7 @@ send-hook . 'unmy-header From:'
 send-hook ~C'^b@b\.b$' my-header from: c@c.c
 ```
 
-In this example, by default the value of `$from` and `$real_name` is not overridden.
+In this example, by default the value of [`$from`](cfg-from) and [`$real_name`](cfg-real-name) is not overridden.
 When sending messages either To: or Cc: to `<b@b.b>`, the From: header is changed to `<c@c.c>`.
 
 ## Message Matching in Hooks
@@ -58,10 +58,10 @@ send-hook '~t ^user@work\.com$' 'my-header From: John Smith <user@host>'
 ```
 
 However, it is not required that you write the pattern to match using the full searching language.
-You can still specify a simple *regular expression* like the other hooks, in which case NeoMutt will translate your pattern into the full language, using the translation specified by the `$default_hook` variable.
+You can still specify a simple *regular expression* like the other hooks, in which case NeoMutt will translate your pattern into the full language, using the translation specified by the [`$default_hook`](cfg-default-hook) variable.
 
-The default value of `$default_hook` is `~f %s | (~b %s & ~A) | (~B %s)`, which means the regex is matched against: the **From** address, OR (**body** AND all messages), OR the **Subject**. 
-You can change `$default_hook` to alter this implicit expansion behaviour.
+The default value of [`$default_hook`](cfg-default-hook) is `~f %s | (~b %s & ~A) | (~B %s)`, which means the regex is matched against: the **From** address, OR (**body** AND all messages), OR the **Subject**. 
+You can change [`$default_hook`](cfg-default-hook) to alter this implicit expansion behaviour.
 
 ## Mailbox Matching in Hooks
 
@@ -104,7 +104,7 @@ If a mailbox matches multiple `folder-hook`s, they are executed in the order giv
 The regex parameter has mailbox shortcut expansion performed on the first character.
 
 :::{note}
-If you use the `!` shortcut for `$spool_file` at the beginning of *regex*, you must place it inside of double or single quotes in order to distinguish it from the logical *not* operator for the expression.
+If you use the `!` shortcut for [`$spool_file`](cfg-spool-file) at the beginning of *regex*, you must place it inside of double or single quotes in order to distinguish it from the logical *not* operator for the expression.
 :::
 
 :::{note}
@@ -148,7 +148,7 @@ These commands can be used to execute arbitrary configuration commands based upo
 *pattern* is used to match the message.
 *command* is executed when *pattern* matches.
 
-If the pattern is a plain string, or a regex, it will be expanded to a pattern using `$default_hook`.
+If the pattern is a plain string, or a regex, it will be expanded to a pattern using [`$default_hook`](cfg-default-hook).
 
 `reply-hook` is matched against the message you are *replying to*, instead of the message you are *sending*.
 `send-hook` is matched against all messages, both *new* and *replies*.
@@ -159,18 +159,18 @@ However, you can inhibit `send-hook` in the reply case by using the pattern `'! 
 :::
 
 `send2-hook` is matched every time a message is changed, either by editing it, or by using the compose menu to change its recipients or subject.
-`send2-hook` is executed after `send-hook`, and can, e.g., be used to set parameters such as the `$sendmail` variable depending on the message's sender address.
+`send2-hook` is executed after `send-hook`, and can, e.g., be used to set parameters such as the [`$sendmail`](cfg-sendmail) variable depending on the message's sender address.
 
 For each type of `send-hook` or `reply-hook`, when multiple matches occur, commands are executed in the order they are specified in the `.neomuttrc` (for that type of hook).
 
 Example: `send-hook work "set mime_forward signature=''"`
 
-Another typical use for this command is to change the values of the `$attribution_intro`, `$attribution_locale`, and `$signature` variables in order to change the language of the attributions and signatures based upon the recipients.
+Another typical use for this command is to change the values of the [`$attribution_intro`](cfg-attribution-intro), [`$attribution_locale`](cfg-attribution-locale), and [`$signature`](cfg-signature) variables in order to change the language of the attributions and signatures based upon the recipients.
 
 :::{note}
 `send-hook`'s are only executed once after getting the initial list of recipients.
 They are not executed when resuming a postponed draft.
-Adding a recipient after replying or editing the message will not cause any `send-hook` to be executed, similarly if `$auto_edit` is set (as then the initial list of recipients is empty).
+Adding a recipient after replying or editing the message will not cause any `send-hook` to be executed, similarly if [`$auto_edit`](cfg-auto-edit) is set (as then the initial list of recipients is empty).
 Also note that `my-header` commands which modify recipient headers, or the message's subject, don't have any effect on the current message when executed from a `send-hook`.
 :::
 
@@ -188,7 +188,7 @@ This command can be used to execute arbitrary configuration commands before view
 *command* is executed if the *pattern* matches the message to be displayed.
 When multiple matches occur, commands are executed in the order they are specified in the `.neomuttrc`.
 
-If the pattern is a plain string, or a regex, it will be expanded to a pattern using `$default_hook`.
+If the pattern is a plain string, or a regex, it will be expanded to a pattern using [`$default_hook`](cfg-default-hook).
 
 Example:
 
@@ -211,7 +211,7 @@ When encrypting messages with PGP/GnuPG or OpenSSL, you may want to associate a 
 The `crypt-hook` command provides a method by which you can specify the ID of the public key to be used when encrypting messages to a certain recipient.
 You may use multiple crypt-hooks with the same regex; multiple matching crypt-hooks result in the use of multiple keyids for a recipient.
 
-During key selection, NeoMutt will confirm whether each crypt-hook is to be used (unless the `$crypt_confirm_hook` option is unset).
+During key selection, NeoMutt will confirm whether each crypt-hook is to be used (unless the [`$crypt_confirm_hook`](cfg-crypt-confirm-hook) option is unset).
 If all crypt-hooks for a recipient are declined, NeoMutt will use the original recipient address for key selection instead.
 
 The meaning of *keyid* is to be taken broadly in this context: You can either put a numerical key ID or fingerprint here, an e-mail address, or even just a real name.
@@ -241,7 +241,7 @@ account-hook imap://host2/ 'set tunnel="ssh host2 /usr/libexec/imapd"'
 account-hook smtp://user@host3/ 'set tunnel="ssh host3 /usr/libexec/smtpd"'
 ```
 
-To manage multiple accounts with, for example, different values of `$record` or sender addresses, `folder-hook` has to be used together with the `mailboxes` command.
+To manage multiple accounts with, for example, different values of [`$record`](cfg-record) or sender addresses, `folder-hook` has to be used together with the `mailboxes` command.
 
 ### Managing Multiple Accounts (Full Example)
 
@@ -253,10 +253,10 @@ folder-hook imap://user@host2/ 'set folder=imap://host2/ ; set record=+INBOX/Sen
 ```
 
 In this example the folders are defined using `mailboxes` so NeoMutt polls them for new mail.
-Each `folder-hook` triggers when one mailbox below each IMAP account is opened and sets `$folder` to the account's root folder.
-Next, it sets `$record` to the *INBOX/Sent* folder below the newly set `$folder`.
-Please notice that the value the `+` mailbox shortcut refers to depends on the *current* value of `$folder` and therefore has to be set separately per account.
-Setting other values like `$from` or `$signature` is analogous to setting `$record`.
+Each `folder-hook` triggers when one mailbox below each IMAP account is opened and sets [`$folder`](cfg-folder) to the account's root folder.
+Next, it sets [`$record`](cfg-record) to the *INBOX/Sent* folder below the newly set [`$folder`](cfg-folder).
+Please notice that the value the `+` mailbox shortcut refers to depends on the *current* value of [`$folder`](cfg-folder) and therefore has to be set separately per account.
+Setting other values like [`$from`](cfg-from) or [`$signature`](cfg-signature) is analogous to setting [`$record`](cfg-record).
 
 ---
 
@@ -264,7 +264,7 @@ Setting other values like `$from` or `$signature` is analogous to setting `$reco
 
 These hooks are called when global events take place in NeoMutt.
 
-- **timeout-hook** — run a command periodically (every `$timeout` seconds)
+- **timeout-hook** — run a command periodically (every [`$timeout`](cfg-timeout) seconds)
 - **startup-hook** — run a command when NeoMutt starts up, before opening the first mailbox
 - **shutdown-hook** — run a command when NeoMutt shuts down, before closing the last mailbox
 
@@ -306,14 +306,14 @@ shutdown-hook 'exec sync-mailbox'
 This feature enables the `new_mail_command` setting, which can be used to execute a custom script (e.g. a notification handler) upon receiving a new mail.
 
 The command string can contain expandos, such as `%n` for the number of new messages.
-For a complete list, see: `$status_format`.
+For a complete list, see: [`$status_format`](cfg-status-format).
 
 :::{note}
 When the notification is sent, the folder of the new mail is no longer known.
 This is a limitation of NeoMutt.
 The `%f` expando will show the open folder.
 
-When using Maildir local mailboxes, you must set `$check_new` config option for this feature to work.
+When using Maildir local mailboxes, you must set [`$check_new`](cfg-check-new) config option for this feature to work.
 :::
 
 ### Linux Example
@@ -348,11 +348,11 @@ set new_mail_command="terminal-notifier -title '%v' -subtitle 'New Mail' \
 index-format-hook name [!]pattern format-string
 ```
 
-`index-format-hook` injects format strings dynamically into `$index_format` based on pattern matching against the current message.
-The `name` argument is referenced inside `$index_format` as the expando `%@name@`.
+`index-format-hook` injects format strings dynamically into [`$index_format`](cfg-index-format) based on pattern matching against the current message.
+The `name` argument is referenced inside [`$index_format`](cfg-index-format) as the expando `%@name@`.
 
 Multiple hooks sharing the same `name` are tested in the order they are defined; the first matching *pattern* wins.
-If the pattern is a plain string or regex it is expanded via `$default_hook`.
+If the pattern is a plain string or regex it is expanded via [`$default_hook`](cfg-default-hook).
 Best practice is to end the list with a catch-all `~A` pattern so the expando always resolves to something.
 
 ### Example: Dynamic date formatting

@@ -8,12 +8,12 @@ keywords: alias, add contact, update contact, alias_file, source, reload, create
 
 ## Prerequisites
 
-1. An alias file configured via `$alias_file` and loaded with `source`.
+1. An alias file configured via [`$alias_file`](cfg-alias-file) and loaded with `source`.
 2. If you haven't set this up, complete [Using the Address Book](../tutorials/address-book) first.
 
 ## Add a New Contact Manually
 
-1. Open your alias file (`$alias_file`) in your editor.
+1. Open your alias file ([`$alias_file`](cfg-alias-file)) in your editor.
 2. Add an `alias` line:
 
 ```neomuttrc
@@ -35,7 +35,7 @@ Expected result: the new alias is available at address prompts.
 2. Press {kbd}`a` (`<create-alias>`).
 3. Confirm or edit the alias name when prompted.
 
-Expected result: NeoMutt appends the alias to `$alias_file`.
+Expected result: NeoMutt appends the alias to [`$alias_file`](cfg-alias-file).
 
 4. Reload the file so the alias takes effect immediately:
 

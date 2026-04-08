@@ -24,7 +24,7 @@ The rest of the page is optional detail.
 ## The Message Index
 
 Common keys used to navigate through and manage messages in the index are shown below.
-How messages are presented in the index menu can be customized using the `$index_format` variable.
+How messages are presented in the index menu can be customized using the [`$index_format`](cfg-index-format) variable.
 
 :::{admonition} 📷 Screenshot Needed
 :class: tip
@@ -72,7 +72,7 @@ In addition to who sent the message and the subject, a short summary of the disp
 Zero or more of the "flags" shown below may appear, some of which can be turned on or off using these functions: `<set-flag>` and `<clear-flag>` bound by default to "w" and "W" respectively.
 
 Furthermore, the recipient flags reflect who the message is addressed to.
-They can be customized with the `$to_chars` variable.
+They can be customized with the [`$to_chars`](cfg-to-chars) variable.
 
 ### Message Status Flags
 
@@ -115,7 +115,7 @@ They can be customized with the `$to_chars` variable.
 
 ## The Pager
 
-By default, NeoMutt uses its built-in pager to display the contents of messages (an external pager such as [`less(1)`](https://man7.org/linux/man-pages/man1/less.1.html) can be configured, see `$pager` variable).
+By default, NeoMutt uses its built-in pager to display the contents of messages (an external pager such as [`less(1)`](https://man7.org/linux/man-pages/man1/less.1.html) can be configured, see [`$pager`](cfg-pager) variable).
 The pager is very similar to the Unix program [`less(1)`](https://man7.org/linux/man-pages/man1/less.1.html) though not nearly as featureful.
 
 :::{admonition} 📷 Screenshot Needed
@@ -148,7 +148,7 @@ Show quoted text (lines starting with >) in a different color and a URL highligh
 In addition to the key bindings above, many of the functions from the index menu are also available in the pager, such as `<delete-message>` or `<copy-message>` (this is one advantage over using an external pager to view messages).
 
 Also, the internal pager supports a couple other advanced features.
-For one, you can set `$pager_read_delay` to operate in a preview mode, where new messages are not marked read unless you remain on the message for a certain length of time.
+For one, you can set [`$pager_read_delay`](cfg-pager-read-delay) to operate in a preview mode, where new messages are not marked read unless you remain on the message for a certain length of time.
 Additionally, it will accept and translate the "standard" nroff sequences for bold and underline.
 These sequences are a series of either the letter, backspace ("^H"), the letter again for bold or the letter, backspace, "\_" for denoting underline.
 NeoMutt will attempt to display these in bold and underline respectively if your terminal supports them.
@@ -240,39 +240,39 @@ In NeoMutt, when a mailbox is sorted by *threads*, there are a few additional fu
 | P     | `<parent-message>`     | Jump to parent message in thread               |
 
 In the *index*, the subject of threaded children messages will be prepended with thread tree characters.
-By default, the subject itself will not be duplicated unless `$hide_thread_subject` is unset.
+By default, the subject itself will not be duplicated unless [`$hide_thread_subject`](cfg-hide-thread-subject) is unset.
 Special characters will be added to the thread tree as detailed below.
 
 ### Special Thread Characters
 
 | Character | Description      | Notes                                                              |
 |-----------|------------------|--------------------------------------------------------------------|
-| &         | hidden message   | see `$hide_limited` and `$hide_top_limited`                        |
-| ?         | missing message  | see `$hide_missing` and `$hide_top_missing`                        |
-| \*        | pseudo thread    | see `$strict_threads`; not displayed when `$narrow_tree` is set    |
-| =         | duplicate thread | see `$duplicate_threads`; not displayed when `$narrow_tree` is set |
+| &         | hidden message   | see [`$hide_limited`](cfg-hide-limited) and [`$hide_top_limited`](cfg-hide-top-limited)                        |
+| ?         | missing message  | see [`$hide_missing`](cfg-hide-missing) and [`$hide_top_missing`](cfg-hide-top-missing)                        |
+| \*        | pseudo thread    | see [`$strict_threads`](cfg-strict-threads); not displayed when [`$narrow_tree`](cfg-narrow-tree) is set    |
+| =         | duplicate thread | see [`$duplicate_threads`](cfg-duplicate-threads); not displayed when [`$narrow_tree`](cfg-narrow-tree) is set |
 
 Collapsing a thread displays only the first message in the thread and hides the others.
 This is useful when threads contain so many messages that you can only see a handful of threads on the screen.
-See %M in `$index_format`.
-For example, you could use `%<M?(#%03M)&(%4l)>` in `$index_format` to optionally display the number of hidden messages if the thread is collapsed.
+See %M in [`$index_format`](cfg-index-format).
+For example, you could use `%<M?(#%03M)&(%4l)>` in [`$index_format`](cfg-index-format) to optionally display the number of hidden messages if the thread is collapsed.
 The `%<char?if-part&else-part>` syntax is explained in detail in format string conditionals.
 
 Technically, every reply should contain a list of its parent messages in the thread tree, but not all do.
-In these cases, NeoMutt groups them by subject which can be controlled using the `$strict_threads` variable.
+In these cases, NeoMutt groups them by subject which can be controlled using the [`$strict_threads`](cfg-strict-threads) variable.
 
 ## Miscellaneous Functions
 
 In addition, the *index* and *pager* menus have these interesting functions:
 
 `<check-stats>` : Calculate statistics for all monitored mailboxes declared using the `mailboxes` command.
-It will calculate statistics despite `$mail_check_stats` being unset.
+It will calculate statistics despite [`$mail_check_stats`](cfg-mail-check-stats) being unset.
 
 `<create-alias>` (default: {kbd}`a`) : Creates a new alias based upon the current message (or prompts for a new one).
-Once editing is complete, an `alias` command is added to the file specified by the `$alias_file` variable for future use.
+Once editing is complete, an `alias` command is added to the file specified by the [`$alias_file`](cfg-alias-file) variable for future use.
 
   :::{note}
-NeoMutt does not read the `$alias_file` upon startup so you must explicitly `source` the file.
+NeoMutt does not read the [`$alias_file`](cfg-alias-file) upon startup so you must explicitly `source` the file.
   :::
 
 `<check-traditional-pgp>` (default: {kbd}`Esc P`) : This function will search the current message for content signed or encrypted with PGP the "traditional" way, that is, without proper MIME tagging.
@@ -305,7 +305,7 @@ A common use is to check the settings of variables, or in conjunction with macro
 `<forget-passphrase>` (default: {kbd}`^F`) : This command wipes the passphrase(s) from memory.
 It is useful, if you misspelled the passphrase.
 
-`<list-reply>` (default: {kbd}`L`) : Reply to the current or tagged message(s) by extracting any addresses which match the regular expressions given by the `lists` or `subscribe` commands, but also honor any `Mail-Followup-To` header(s) if the `$honor_followup_to` configuration variable is set.
+`<list-reply>` (default: {kbd}`L`) : Reply to the current or tagged message(s) by extracting any addresses which match the regular expressions given by the `lists` or `subscribe` commands, but also honor any `Mail-Followup-To` header(s) if the [`$honor_followup_to`](cfg-honor-followup-to) configuration variable is set.
 In addition, the `List-Post` header field is examined for `mailto:` URLs specifying a mailing list address.
 Using this when replying to messages posted to mailing lists helps avoid duplicate copies being sent to the author of the message you are replying to.
 
@@ -315,18 +315,18 @@ Using this when replying to messages posted to mailing lists helps avoid duplica
 
 `<pipe-message>` (default: {kbd}`|`)
 : Asks for an external Unix command and pipes the current or tagged message(s) to it.
-The variables `$pipe_decode`, `$pipe_decode_weed`, `$pipe_split`, `$pipe_sep` and `$wait_key` control the exact behavior of this function.
+The variables [`$pipe_decode`](cfg-pipe-decode), [`$pipe_decode_weed`](cfg-pipe-decode-weed), [`$pipe_split`](cfg-pipe-split), [`$pipe_sep`](cfg-pipe-sep) and [`$wait_key`](cfg-wait-key) control the exact behavior of this function.
 
 `<resend-message>` (default: {kbd}`Esc e`) : NeoMutt takes the current message as a template for a new message.
 This function is best described as "recall from arbitrary folders".
 It can conveniently be used to forward MIME messages while preserving the original mail structure.
-Note that the amount of headers included here depends on the value of the `$weed` variable.
+Note that the amount of headers included here depends on the value of the [`$weed`](cfg-weed) variable.
 
 This function is also available from the attachment menu.
 You can use this to easily resend a message which was included with a bounce message as a `message/rfc822` body part.
 
 `<shell-escape>` (default: {kbd}`!`) : Asks for an external Unix command and executes it.
-The `$wait_key` can be used to control whether NeoMutt will wait for a key to be pressed when the command returns (presumably to let the user read the output of the command), based on the return status of the named command.
+The [`$wait_key`](cfg-wait-key) can be used to control whether NeoMutt will wait for a key to be pressed when the command returns (presumably to let the user read the output of the command), based on the return status of the named command.
 If no command is given, an interactive shell is executed.
 
 `<skip-headers>` (default: {kbd}`H`) : This function will skip to the first line of the body, past the headers of the current message, regardless of current position.
@@ -338,13 +338,13 @@ See also `<edit-raw-message>`, `<edit-or-view-raw-message>`.
 
 `<skip-quoted>` (default: {kbd}`S`) : This function will make the internal pager go forward to the next segment of non-quoted body text (whether the first line of the body after headers, or following a line of quoted text), or print a message if no further unquoted text can be found.
 
-The variable `$pager_skip_quoted_context` can be used to show some quoted context prior to the selected line.
+The variable [`$pager_skip_quoted_context`](cfg-pager-skip-quoted-context) can be used to show some quoted context prior to the selected line.
 
-`<toggle-quoted>` (default: {kbd}`T`) : The pager uses the `$quote_regex` variable to detect quoted text when displaying the body of the message.
+`<toggle-quoted>` (default: {kbd}`T`) : The pager uses the [`$quote_regex`](cfg-quote-regex) variable to detect quoted text when displaying the body of the message.
 This function toggles the display of the quoted material in the message.
 It is particularly useful when being interested in just the response and there is a large amount of quoted text in the way.
 
-The variable `$toggle_quoted_show_levels` can be used to show some context by continuing to show that number of levels rather than hiding all quoted levels.
+The variable [`$toggle_quoted_show_levels`](cfg-toggle-quoted-show-levels) can be used to show some context by continuing to show that number of levels rather than hiding all quoted levels.
 
 ## Next Steps
 

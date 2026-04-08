@@ -75,7 +75,7 @@ Expected result: the message is addressed to `alice@example.com`.
 2. Press {kbd}`a` (the default binding for `<create-alias>`).
 3. NeoMutt prompts you to confirm or edit the alias name.
 
-Expected result: a new `alias` line is appended to `$alias_file`.
+Expected result: a new `alias` line is appended to [`$alias_file`](cfg-alias-file).
 
 4. Reload the file so the new alias is available immediately:
 

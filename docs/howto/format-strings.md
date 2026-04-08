@@ -8,10 +8,10 @@ keywords: format strings, index_format, status_format, expandos, conditionals, n
 
 ## Basic Usage
 
-Format strings are a general concept you'll find in several locations through the NeoMutt configuration, especially in the `$index_format`, `$pager_format`, `$status_format`, and other related variables.
+Format strings are a general concept you'll find in several locations through the NeoMutt configuration, especially in the [`$index_format`](cfg-index-format), [`$pager_format`](cfg-pager-format), [`$status_format`](cfg-status-format), and other related variables.
 
 The most basic format string element is a percent symbol followed by another character.
-For example, `%s` represents a message's Subject: header in the `$index_format` variable.
+For example, `%s` represents a message's Subject: header in the [`$index_format`](cfg-index-format) variable.
 The "expandos" available are documented with each format variable, but there are general modifiers available with all formatting expandos, too.
 
 ### Width and Justification Modifiers
@@ -48,7 +48,7 @@ To optionally print a string based upon one of the above sequences, the followin
 
 where *sequence_char* is an expando, and *optional_string* is the string you would like printed if *sequence_char* is nonzero. *optional_string* may contain other sequences as well as normal text, but you may not nest optional strings.
 
-Here is an example illustrating how to optionally print the number of new messages (`%n`) in a mailbox in `$status_format`:
+Here is an example illustrating how to optionally print the number of new messages (`%n`) in a mailbox in [`$status_format`](cfg-status-format):
 
 ```
 %<n?%n new messages>
@@ -87,7 +87,7 @@ set status_format="script.sh '%r %f (%L)'|"
 will make NeoMutt expand `%r`, `%f` and `%L` before calling the script.
 The example also shows that arguments can be quoted: the script will receive the expanded string between the single quotes as the only argument.
 
-A practical example is the `mutt_xtitle` script installed in the `samples` subdirectory of the NeoMutt documentation: it can be used as filter for `$status_format` to set the current terminal's title, if supported.
+A practical example is the `mutt_xtitle` script installed in the `samples` subdirectory of the NeoMutt documentation: it can be used as filter for [`$status_format`](cfg-status-format) to set the current terminal's title, if supported.
 
 ## Padding
 
@@ -126,13 +126,13 @@ set index_format="%4C %Z %{%b %d} %-15.15L (%<l?%4l&%4c>)%*  %s"
 ## Bytes Size Display
 
 Various format strings contain expandos that display the size of messages in bytes.
-This includes `%s` in `$attach_format`, `%l` in `$compose_format`, `%s` in `$folder_format`, `%c` and `%cr` in `$index_format`, and `%l` and `%L` in `$status_format`.
+This includes `%s` in [`$attach_format`](cfg-attach-format), `%l` in [`$compose_format`](cfg-compose-format), `%s` in [`$folder_format`](cfg-folder-format), `%c` and `%cr` in [`$index_format`](cfg-index-format), and `%l` and `%L` in [`$status_format`](cfg-status-format).
 There are four configuration variables that can be used to customise how the numbers are displayed:
 
-- `$size_show_bytes` — display the number of bytes when the size is < 1 kilobyte. When unset, kilobytes will be displayed instead.
-- `$size_show_mb` — display the number of megabytes when the size is >= 1 megabyte. When unset, kilobytes will be displayed instead.
-- `$size_show_fractions` — display numbers with a single decimal place for values from 0 to 10 kilobytes, and 1 to 10 megabytes.
-- `$size_units_on_left` — display the unit ("K" or "M") to the left of the number, instead of the right if unset.
+- [`$size_show_bytes`](cfg-size-show-bytes) — display the number of bytes when the size is < 1 kilobyte. When unset, kilobytes will be displayed instead.
+- [`$size_show_mb`](cfg-size-show-mb) — display the number of megabytes when the size is >= 1 megabyte. When unset, kilobytes will be displayed instead.
+- [`$size_show_fractions`](cfg-size-show-fractions) — display numbers with a single decimal place for values from 0 to 10 kilobytes, and 1 to 10 megabytes.
+- [`$size_units_on_left`](cfg-size-units-on-left) — display the unit ("K" or "M") to the left of the number, instead of the right if unset.
 
 These variables also affect size display in a few other places, such as progress indicators and attachment delimiters in the pager.
 
@@ -143,7 +143,7 @@ These variables also affect size display in a few other places, such as progress
 This feature allows the format of dates in the index to vary based on how recent the message is.
 This is especially useful in combination with the nested-if feature.
 
-For example, using `%<[y?%<[d?%[%H:%M]&%[%m/%d]>&%[%y.%m]>` for the date in the `$index_format` will produce a display like:
+For example, using `%<[y?%<[d?%[%H:%M]&%[%m/%d]>&%[%y.%m]>` for the date in the [`$index_format`](cfg-index-format) will produce a display like:
 
 ```
    1   + 14.12 Grace Hall      (   13) Gulliver's Travels
@@ -219,7 +219,7 @@ The date tests are of the form:
 | `%[1m` | This month | `%[%b %d]`    | Dec 10     |
 |        | Older      | `%[%Y-%m-%d]` | 2015-04-23 |
 
-The `$index_format` string would contain:
+The [`$index_format`](cfg-index-format) string would contain:
 
 ```
 %<[1m?%[%b %d]&%[%Y-%m-%d]>
@@ -242,7 +242,7 @@ Reparsed for clarity:
 | `%[y` | This year  | `%[%b %d]`    | Dec 10  |
 |       | Older      | `%[%m/%y ]`   | 06/15   |
 
-The `$index_format` string would contain:
+The [`$index_format`](cfg-index-format) string would contain:
 
 ```
 %<[y?%<[m?%<[d?%[%H:%M ]&%[%a %d]>&%[%b %d]>&%[%m/%y ]>
@@ -406,12 +406,12 @@ set index_format='%4C %Z %{%b %d} %-25.25n %<M?[%M] %s&%s%* %<l?%l&%c>>'
 The "initials" feature adds an expando (`%I`) for an author's initials.
 
 The index panel displays a list of emails.
-Its layout is controlled by the `$index_format` variable.
+Its layout is controlled by the [`$index_format`](cfg-index-format) variable.
 Using this expando saves space in the index panel.
 This can be useful if you are regularly working with a small set of people.
 
 This feature has no config of its own.
-It adds an expando which can be used in the `$index_format` variable.
+It adds an expando which can be used in the [`$index_format`](cfg-index-format) variable.
 
 ### Example neomuttrc for Initials
 
@@ -445,7 +445,7 @@ set index_format='%4C %Z %{%b %d} %I (%<l?%4l&%4c>) %s'
 
 ---
 
-## index-format-hook — Dynamically Changing $index_format Using Patterns
+## index-format-hook — Dynamically Changing [`$index_format`](cfg-index-format) Using Patterns
 
 ### Syntax
 
@@ -453,11 +453,11 @@ set index_format='%4C %Z %{%b %d} %I (%<l?%4l&%4c>) %s'
 index-format-hook name [!]pattern format-string
 ```
 
-This command is used to inject format strings dynamically into `$index_format` based on pattern matching against the current message.
+This command is used to inject format strings dynamically into [`$index_format`](cfg-index-format) based on pattern matching against the current message.
 
-If the pattern is a plain string, or a regex, it will be expanded to a pattern using `$default_hook`.
+If the pattern is a plain string, or a regex, it will be expanded to a pattern using [`$default_hook`](cfg-default-hook).
 
-The `$index_format` expando `%@name@` specifies a placeholder for the injection.
+The [`$index_format`](cfg-index-format) expando `%@name@` specifies a placeholder for the injection.
 Index-format-hooks with the same *name* are matched using *pattern* against the current message.
 Matching is done in the order specified in the .muttrc, with the first match being used.
 The hook's *format-string* is then substituted and evaluated.

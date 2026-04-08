@@ -32,7 +32,7 @@ subscribe-to imaps://mail.example.org/inbox
 
 Instead of the above commands you can also use the `<subscribe>` and `<unsubscribe>` functions of the browser (default keys `s` and `u`) to subscribe to or unsubscribe from a folder while browsing the folders on the IMAP server.
 The browser can be instructed to only display the folders you are subscribed to with the `<toggle-subscribed>` function.
-See also the `$imap_list_subscribed` variable.
+See also the [`$imap_list_subscribed`](cfg-imap-list-subscribed) variable.
 
 :::{admonition} 📷 Screenshot Needed
 :class: tip
@@ -46,12 +46,12 @@ Several folders are listed with the `s`/`u` subscribe/unsubscribe key bindings a
 :::
 
 Because the list of subscribed folders is managed by the IMAP server, NeoMutt can also ask the server for that list.
-If `$imap_check_subscribed` is set, NeoMutt will do that and add those folders to its mailboxes list just as if you had used the `mailboxes` command on each of them, so that these folders get checked periodically for new mail.
+If [`$imap_check_subscribed`](cfg-imap-check-subscribed) is set, NeoMutt will do that and add those folders to its mailboxes list just as if you had used the `mailboxes` command on each of them, so that these folders get checked periodically for new mail.
 
 ## Tuning Mail Polling
 
 Polling for new mail on an IMAP server can cause noticeable delays.
-So, you'll want to carefully tune the `$mail_check` and `$timeout` variables.
+So, you'll want to carefully tune the [`$mail_check`](cfg-mail-check) and [`$timeout`](cfg-timeout) variables.
 Reasonable values are:
 
 ```neomuttrc
@@ -107,11 +107,11 @@ NeoMutt will try whichever methods are compiled in and available on the server, 
 
 There are a few variables which control authentication:
 
-- `$imap_user` – controls the username under which you request authentication on the IMAP server, for all authenticators.
+- [`$imap_user`](cfg-imap-user) – controls the username under which you request authentication on the IMAP server, for all authenticators.
    This is overridden by an explicit username in the mailbox path (i.e.
    by using a mailbox name of the form `{user@host}`).
 
-- `$imap_pass` – a password which you may preset, used by all authentication methods where a password is needed.
+- [`$imap_pass`](cfg-imap-pass) – a password which you may preset, used by all authentication methods where a password is needed.
 
-- `$imap_authenticators` – a colon-delimited list of IMAP authentication methods to try, in the order you wish to try them.
+- [`$imap_authenticators`](cfg-imap-authenticators) – a colon-delimited list of IMAP authentication methods to try, in the order you wish to try them.
    If specified, this overrides NeoMutt's default (attempt everything, in the order listed above).

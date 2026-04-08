@@ -11,7 +11,7 @@ keywords: nntp, usenet, newsgroups, newsrc, news server, subscribe, catchup, pos
 NeoMutt can read from a news server using NNTP.
 
 The default news server can be obtained from the `$NNTPSERVER` environment variable or from the `/etc/nntpserver` file.
-Like in other news readers, information about the subscribed newsgroups is saved in the file specified by the `$newsrc` variable.
+Like in other news readers, information about the subscribed newsgroups is saved in the file specified by the [`$newsrc`](cfg-newsrc) variable.
 You can open a newsgroup with the function `<change-newsgroup>`.
 
 When browsing the list of newsgroups on the server the function `<subscribe>` can be used to tell NeoMutt the groups of interest to you.
@@ -24,16 +24,16 @@ When browsing the list of newsgroups on the server the function `<subscribe>` ca
 **Description:** The NeoMutt newsgroup browser showing a list of available NNTP newsgroups from the server, with columns for newsgroup name, number of articles, and description.
 Some groups should be marked as subscribed.
 
-**Highlights:** The group list layout with subscription status indicators, article counts per group, and the newsgroup description column loaded via `$nntp_load_description`.
+**Highlights:** The group list layout with subscription status indicators, article counts per group, and the newsgroup description column loaded via [`$nntp_load_description`](cfg-nntp-load-description).
 :::
 
-This list is stored in the `$newsrc` file, so NeoMutt remembers it across invocations (see also `$save_unsubscribed`).
+This list is stored in the [`$newsrc`](cfg-newsrc) file, so NeoMutt remembers it across invocations (see also [`$save_unsubscribed`](cfg-save-unsubscribed)).
 With the `<unsubscribe>` function a group can be deleted from that list.
 You can also specify the list of interesting groups with the [`mailboxes`](mailboxes) command in your config file.
 
 When checking for new messages, NeoMutt only polls the subscribed newsgroups.
 
-The variable `$news_cache_dir` can be used to point to a directory.
+The variable [`$news_cache_dir`](cfg-news-cache-dir) can be used to point to a directory.
 NeoMutt will create a hierarchy of subdirectories named like the account and newsgroup the cache is for.
 The hierarchy is also used to store header cache if NeoMutt was compiled with [header cache](caching.md) support.
 

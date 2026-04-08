@@ -29,7 +29,7 @@ Once you have tagged the desired messages, you can use the "tag-prefix" operator
 :::
 
 When the "tag-prefix" operator is used, the *next* operation will be applied to all tagged messages if that operation can be used in that manner.
-If the `$auto_tag` variable is set, the next operation applies to the tagged messages automatically, without requiring the "tag-prefix".
+If the [`$auto_tag`](cfg-auto-tag) variable is set, the next operation applies to the tagged messages automatically, without requiring the "tag-prefix".
 
 In `macro` or `push` commands, you can use the `<tag-prefix-cond>` operator.
 If there are no tagged messages, NeoMutt will "eat" the rest of the macro to abort its execution.
@@ -158,7 +158,7 @@ You can do this with the `<mark-message>` function, which is bound to {kbd}`~` k
 3. Press {kbd}`'a` to jump back to the marked message.
 
 Message marking is implemented as a shortcut for defining a macro that returns you to the current message by searching for its Message-ID.
-You can choose a different prefix key by setting the `$mark_macro_prefix` variable.
+You can choose a different prefix key by setting the [`$mark_macro_prefix`](cfg-mark-macro-prefix) variable.
 
 ### Variables
 

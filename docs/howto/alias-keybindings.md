@@ -27,7 +27,7 @@ Expected result: the alias menu opens and you can select a contact to compose a 
 
 ## Create a Macro to Save and Reload Aliases
 
-The default `<create-alias>` (`a`) appends to `$alias_file` but doesn't reload it.
+The default `<create-alias>` (`a`) appends to [`$alias_file`](cfg-alias-file) but doesn't reload it.
 
 1. Create a macro that saves and reloads in one step:
 
@@ -41,7 +41,7 @@ Expected result: the alias is saved and immediately available without a manual `
 
 ## Bind a Key for External Queries
 
-If you use `$query_command` (abook, khard, LDAP):
+If you use [`$query_command`](cfg-query-command) (abook, khard, LDAP):
 
 1. Bind a key for quick queries from the index:
 

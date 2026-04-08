@@ -48,7 +48,7 @@ Expected result: you reach the right contact without browsing the full list.
 
 ## Query an External Address Book
 
-If you have `$query_command` configured (abook, khard, LDAP):
+If you have [`$query_command`](cfg-query-command) configured (abook, khard, LDAP):
 
 1. At an address prompt, press {kbd}`^T` (`<complete-query>`).
 2. Type part of a name or address.
@@ -57,4 +57,4 @@ Expected result: results from the external source appear and you can select one.
 
 See [External Address Queries](how-address-query) for setup details.
 
-See [Manage Aliases](aliases) for the full alias syntax and [Alias Options](../reference/config/alias) for `$alias_format` and `$alias_sort`.
+See [Manage Aliases](aliases) for the full alias syntax and [Alias Options](../reference/config/alias) for [`$alias_format`](cfg-alias-format) and [`$alias_sort`](cfg-alias-sort).

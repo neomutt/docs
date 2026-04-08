@@ -279,7 +279,7 @@ For a quick reference:
 
 ##### Sidebar Basics
 
-The most important variable is `$sidebar_visible`.
+The most important variable is [`$sidebar_visible`](cfg-sidebar-visible).
 You can set this in your "neomuttrc", or bind a key to the function `<sidebar-toggle-visible>`.
 
 ```neomuttrc
@@ -302,7 +302,7 @@ set sidebar_divider_char = '│'          # Pretty line-drawing character
 
 ##### Sidebar Format String
 
-`$sidebar_format` allows you to customize the Sidebar display.
+[`$sidebar_format`](cfg-sidebar-format) allows you to customize the Sidebar display.
 For an introduction, read about format strings including the section about conditionals.
 
 The default value is: `%D%* %n`
@@ -357,7 +357,7 @@ They show the number of (F)lagged, (N)ew and (S)ize.
 
 ##### Abbreviating Mailbox Names
 
-`$sidebar_delim_chars` tells Sidebar how to split up mailbox paths.
+[`$sidebar_delim_chars`](cfg-sidebar-delim-chars) tells Sidebar how to split up mailbox paths.
 For local directories use `/`; for IMAP folders use `.`
 
 **Example 1**
@@ -459,10 +459,10 @@ This will trade vertical space for horizontal space (but it looks good).
 ##### Limiting the Number of Mailboxes
 
 If you have a lot of mailboxes, sometimes it can be useful to hide the ones you aren't using.
-`$sidebar_new_mail_only` tells Sidebar to only show mailboxes that contain new, or flagged, email.
+[`$sidebar_new_mail_only`](cfg-sidebar-new-mail-only) tells Sidebar to only show mailboxes that contain new, or flagged, email.
 
 Sometimes it is useful to only show mailboxes that have mails in them, while hiding the rest.
-`$sidebar_non_empty_mailbox_only` tells the Sidebar to only show mailboxes with a non-zero number of mails.
+[`$sidebar_non_empty_mailbox_only`](cfg-sidebar-non-empty-mailbox-only) tells the Sidebar to only show mailboxes with a non-zero number of mails.
 
 If you want some mailboxes to be always visible, then use the `sidebar-pin` command.
 It takes a list of mailboxes as parameters.

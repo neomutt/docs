@@ -64,7 +64,7 @@ Expected result: both messages are delivered successfully.
 
 ## Switch Accounts in NeoMutt with folder-hook
 
-1. Add folder-hooks that set `$sendmail` when you enter each account's mailbox:
+1. Add folder-hooks that set [`$sendmail`](cfg-sendmail) when you enter each account's mailbox:
 
 ```neomuttrc
 folder-hook "you@example.com"  "set sendmail='msmtp -a personal'"

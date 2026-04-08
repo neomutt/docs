@@ -8,7 +8,7 @@ keywords: alias, troubleshooting, missing, syntax error, source, alias_file, rel
 
 ## Prerequisites
 
-1. An alias file configured via `$alias_file` (see [Using the Address Book](../tutorials/address-book)).
+1. An alias file configured via [`$alias_file`](cfg-alias-file) (see [Using the Address Book](../tutorials/address-book)).
 
 ## Alias Does Not Expand
 
@@ -18,7 +18,7 @@ keywords: alias, troubleshooting, missing, syntax error, source, alias_file, rel
 source ~/.config/neomutt/aliases
 ```
 
-2. Confirm the file path matches `$alias_file`:
+2. Confirm the file path matches [`$alias_file`](cfg-alias-file):
 
 ```
 :set alias_file?
@@ -53,7 +53,7 @@ Expected result: NeoMutt reports the file and line number of any syntax error.
 
 ## Alias Saved but Not Available
 
-When `<create-alias>` appends to `$alias_file`, NeoMutt does not re-source the file automatically.
+When `<create-alias>` appends to [`$alias_file`](cfg-alias-file), NeoMutt does not re-source the file automatically.
 
 1. Reload after saving:
 

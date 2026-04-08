@@ -56,5 +56,5 @@ The ".." entry always stays at the top regardless of sort.
 
 ## See Also
 
-- `$folder_format`
+- [`$folder_format`](cfg-folder-format)
 

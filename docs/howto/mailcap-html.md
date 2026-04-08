@@ -9,7 +9,7 @@ keywords: mailcap, html, text/html, w3m, lynx, elinks, auto-view, copiousoutput,
 ## Prerequisites
 
 1. Install a text-mode browser such as `w3m`, `lynx`, or `elinks`.
-2. Locate your mailcap file (`$mailcap_path`) or decide where to create one.
+2. Locate your mailcap file ([`$mailcap_path`](cfg-mailcap-path)) or decide where to create one.
 
 ## Add a Mailcap Entry for HTML
 

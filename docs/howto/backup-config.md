@@ -17,10 +17,10 @@ keywords: backup, configuration, restore, config files, version control, git, al
 2. Back up any files referenced with `source`, such as separate alias or account files.
 3. Back up user-defined files pointed to by variables such as:
 
-- `$alias_file`
-- `$mailcap_path`
-- `$signature`
-- `$pgp_default_key` or S/MIME files if you use crypto
+- [`$alias_file`](cfg-alias-file)
+- [`$mailcap_path`](cfg-mailcap-path)
+- [`$signature`](cfg-signature)
+- [`$pgp_default_key`](cfg-pgp-default-key) or S/MIME files if you use crypto
 
 Expected result: all files you actively use in your configuration are captured.
 
@@ -29,9 +29,9 @@ Expected result: all files you actively use in your configuration are captured.
 Some data lives outside the main config file.
 Check the variables that define where it is stored:
 
-- `$header_cache` and `$message_cachedir` (cache)
-- `$history_file` (command and prompt history)
-- `$certificate_file` (TLS certificates)
+- [`$header_cache`](cfg-header-cache) and `$message_cachedir` (cache)
+- [`$history_file`](cfg-history-file) (command and prompt history)
+- [`$certificate_file`](cfg-certificate-file) (TLS certificates)
 
 Expected result: cache and metadata files are included if you want a full restore, or excluded if you only want configuration.
 

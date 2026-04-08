@@ -143,7 +143,7 @@ NeoMutt provides four related functions for accessing the raw [RFC2822](https://
 | Function                     | Description                                                                                        |
 |------------------------------|----------------------------------------------------------------------------------------------------|
 | `<view-raw-message>`         | Open the raw message source in the pager (read-only).                                              |
-| `<edit-raw-message>`         | Open the raw message in `$editor`; the edited result replaces the original in the mailbox.         |
+| `<edit-raw-message>`         | Open the raw message in [`$editor`](cfg-editor); the edited result replaces the original in the mailbox.         |
 | `<edit>`                     | Alias for `<edit-raw-message>` (retained for backwards compatibility).                             |
 | `<edit-or-view-raw-message>` | Uses `<edit-raw-message>` if the folder is writable, otherwise falls back to `<view-raw-message>`. |
 

@@ -44,7 +44,7 @@ These items are discussed in greater detail in the section "Forwarding and Bounc
 NeoMutt will then enter the *compose* menu and prompt you for the recipients to place on the `To:` header field when you hit {kbd}`m` to start a new message.
 Next, it will ask you for the `Subject:` field for the message, providing a default if you are replying to or forwarding a message.
 You again have the chance to adjust recipients, subject, and security settings right before actually sending the message.
-See also `$ask_cc`, `$ask_bcc`, `$auto_edit`, `$bounce`, `$fast_reply`, and `$include` for changing how and if NeoMutt asks these questions.
+See also [`$ask_cc`](cfg-ask-cc), [`$ask_bcc`](cfg-ask-bcc), [`$auto_edit`](cfg-auto-edit), [`$bounce`](cfg-bounce), [`$fast_reply`](cfg-fast-reply), and [`$include`](cfg-include) for changing how and if NeoMutt asks these questions.
 
 When replying, NeoMutt fills these fields with proper values depending on the reply type.
 The types of replying supported are:
@@ -57,11 +57,11 @@ Group Chat reply : Reply to the author and other recipients in the To list; cc o
 
 List reply : Reply to all mailing list addresses found, either specified via configuration or auto-detected.
 
-After getting recipients for new messages, forwards or replies, NeoMutt will then automatically start your `$editor` on the message body.
-If the `$edit_headers` variable is set, the headers will be at the top of the message in your editor; the message body should start on a new line after the existing blank line at the end of headers.
-Any messages you are replying to will be added in sort order to the message, with appropriate `$attribution_intro`, `$indent_string` and `$attribution_trailer`.
-When forwarding a message, if the `$mime_forward` variable is unset, a copy of the forwarded message will be included.
-If you have specified a `$signature`, it will be appended to the message.
+After getting recipients for new messages, forwards or replies, NeoMutt will then automatically start your [`$editor`](cfg-editor) on the message body.
+If the [`$edit_headers`](cfg-edit-headers) variable is set, the headers will be at the top of the message in your editor; the message body should start on a new line after the existing blank line at the end of headers.
+Any messages you are replying to will be added in sort order to the message, with appropriate [`$attribution_intro`](cfg-attribution-intro), [`$indent_string`](cfg-indent-string) and [`$attribution_trailer`](cfg-attribution-trailer).
+When forwarding a message, if the [`$mime_forward`](cfg-mime-forward) variable is unset, a copy of the forwarded message will be included.
+If you have specified a [`$signature`](cfg-signature), it will be appended to the message.
 
 Once you have finished editing the body of your mail message, you are returned to the *compose* menu providing the functions shown below to modify, send or postpone the message.
 
@@ -70,7 +70,7 @@ Once you have finished editing the body of your mail message, you are returned t
 
 **Subject:** Compose flow — editor with headers
 
-**Description:** A terminal showing NeoMutt's editor view when composing a new message with `$edit_headers` enabled, displaying editable headers (From, To, Cc, Subject) at the top of the editor, followed by a blank line and the message body area with the signature appended.
+**Description:** A terminal showing NeoMutt's editor view when composing a new message with [`$edit_headers`](cfg-edit-headers) enabled, displaying editable headers (From, To, Cc, Subject) at the top of the editor, followed by a blank line and the message body area with the signature appended.
 
 **Highlights:** How headers appear as editable text at the top of the editor, the blank separator line between headers and body, and the signature placement at the end.
 :::
@@ -118,18 +118,18 @@ You can now tag messages in that folder and they will be attached to the message
 
 :::{note}
 Note that certain operations like composing a new mail, replying, forwarding, etc. are not permitted when you are in that folder.
-The %r in `$status_format` will change to a "A" to indicate that you are in attach-message mode.
+The %r in [`$status_format`](cfg-status-format) will change to a "A" to indicate that you are in attach-message mode.
 :::
 
 After exiting the compose menu via `<send-message>`, the message will be sent.
-This happens via `$smtp_url`.
-Otherwise `$sendmail` will be invoked.
-Prior to version 2019-11-29, NeoMutt enabled `$write_bcc` by default, assuming the MTA would automatically remove a `Bcc:` header as part of delivery.
+This happens via [`$smtp_url`](cfg-smtp-url).
+Otherwise [`$sendmail`](cfg-sendmail) will be invoked.
+Prior to version 2019-11-29, NeoMutt enabled [`$write_bcc`](cfg-write-bcc) by default, assuming the MTA would automatically remove a `Bcc:` header as part of delivery.
 Starting with 2019-11-29, the option is unset by default, but no longer affects the fcc copy of the message.
 
 ## Editing the Message Header
 
-When editing the header because of `$edit_headers` being set, there are several pseudo headers available which will not be included in sent messages but trigger special NeoMutt behavior.
+When editing the header because of [`$edit_headers`](cfg-edit-headers) being set, there are several pseudo headers available which will not be included in sent messages but trigger special NeoMutt behavior.
 
 ### Fcc: Pseudo Header
 
@@ -162,7 +162,7 @@ If you want to use PGP, you can specify either of
 
 `Pgp:` [ `E` | `S` | `S` *\<id\>* ]
 
-"E" selects encryption, "S" selects signing and "S\<id\>" selects signing with the given key, setting `$pgp_sign_as` for the duration of the message composition session.
+"E" selects encryption, "S" selects signing and "S\<id\>" selects signing with the given key, setting [`$pgp_sign_as`](cfg-pgp-sign-as) for the duration of the message composition session.
 The selection can later be changed in the compose menu.
 
 ### Smime: Pseudo Header
@@ -173,7 +173,7 @@ If you want to use S/MIME, you can specify either of
 
 `Smime:` [ `E` | `S` | `S` *\<id\>* ]
 
-"E" selects encryption, "S" selects signing and "S\<id\>" selects signing with the given key, setting `$smime_sign_as` for the duration of the message composition session.
+"E" selects encryption, "S" selects signing and "S\<id\>" selects signing with the given key, setting [`$smime_sign_as`](cfg-smime-sign-as) for the duration of the message composition session.
 The selection can later be changed in the compose menu.
 
 ### In-Reply-To: Header
@@ -207,9 +207,9 @@ When you do so, NeoMutt will return to the compose screen.
 
 Once you have successfully finished the key selection, the message will be encrypted using the selected public keys when sent out.
 
-To ensure you can view encrypted messages you have sent, you may wish to set `$pgp_self_encrypt` and `$pgp_default_key` for PGP, or `$smime_self_encrypt` and `$smime_default_key` for S/MIME.
+To ensure you can view encrypted messages you have sent, you may wish to set [`$pgp_self_encrypt`](cfg-pgp-self-encrypt) and [`$pgp_default_key`](cfg-pgp-default-key) for PGP, or [`$smime_self_encrypt`](cfg-smime-self-encrypt) and [`$smime_default_key`](cfg-smime-default-key) for S/MIME.
 
-Most fields of the entries in the key selection menu (see also `$pgp_entry_format`) have obvious meanings.
+Most fields of the entries in the key selection menu (see also [`$pgp_entry_format`](cfg-pgp-entry-format)) have obvious meanings.
 But some explanations on the capabilities, flags, and validity fields are in order.
 
 The flags sequence (`%f`) will expand to one of the following flags:
@@ -258,7 +258,7 @@ While for text-mode clients like NeoMutt it's best to assume only a standard 80x
 
 ### NeoMutt Support
 
-NeoMutt only supports setting the required `format=flowed` MIME parameter on outgoing messages if the `$text_flowed` variable is set, specifically it does not add the trailing spaces.
+NeoMutt only supports setting the required `format=flowed` MIME parameter on outgoing messages if the [`$text_flowed`](cfg-text-flowed) variable is set, specifically it does not add the trailing spaces.
 
 After editing, NeoMutt properly space-stuffs the message.
 *Space-stuffing* is required by [RFC3676](https://www.rfc-editor.org/rfc/rfc3676.html), defining `format=flowed`, and means to prepend a space to:
@@ -283,13 +283,13 @@ For example, *vim* provides the `w` flag for its `formatoptions` setting to assi
 ### Reformatting
 
 NeoMutt has some support for reformatting when viewing and replying to `format=flowed` messages.
-In order to take advantage of these, `$reflow_text` must be set.
+In order to take advantage of these, [`$reflow_text`](cfg-reflow-text) must be set.
 
-- Paragraphs are automatically reflowed and wrapped at a width specified by `$reflow_wrap`.
+- Paragraphs are automatically reflowed and wrapped at a width specified by [`$reflow_wrap`](cfg-reflow-wrap).
 - In its original format, the quoting style of `format=flowed` messages can be difficult to
 read, and doesn't intermix well with non-flowed replies.
-Setting `$reflow_space_quotes` adds spaces after each level of quoting when in the pager and replying in a non-flowed format (i.e. with `$text_flowed` unset).
-- If `$reflow_space_quotes` is unset, NeoMutt will still add one trailing space after all the
+Setting [`$reflow_space_quotes`](cfg-reflow-space-quotes) adds spaces after each level of quoting when in the pager and replying in a non-flowed format (i.e. with [`$text_flowed`](cfg-text-flowed) unset).
+- If [`$reflow_space_quotes`](cfg-reflow-space-quotes) is unset, NeoMutt will still add one trailing space after all the
 quotes in the pager (but not when replying).
 
 ## Next Steps
