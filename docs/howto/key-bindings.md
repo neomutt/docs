@@ -80,7 +80,7 @@ You can also use the form {kbd}`<177>`, which allows octal numbers with an arbit
 | {kbd}`F10`         | function key 10             |
 
 The [`<what-key>`](fn-what-key) function can be used to explore keycode and symbolic names for other keys on your keyboard.
-Executing this function will display information about each key pressed, until terminated by {kbd}`^G`.
+Executing this function will display information about each key pressed, until terminated by {kbd}`Ctrl-G`.
 
 :::{admonition} 📷 Screenshot Needed
 :class: tip
@@ -145,7 +145,7 @@ This mode maps keyboard input of either {kbd}`Enter` or {kbd}`Return` to the sam
 However, starting in version 2.2, this mode is turned off, allowing {kbd}`Return` and {kbd}`Enter` to be mapped separately, if desired.
 The default keyboard mappings set both, but you can override this or create new bindings with one or the other (or both).
 
-Note that in terminal applications, such as NeoMutt, {kbd}`Enter` is the same as `\n` and {kbd}`^J`; while {kbd}`Return` is the same as `\r` and {kbd}`^M`.
+Note that in terminal applications, such as NeoMutt, {kbd}`Enter` is the same as `\n` and {kbd}`Ctrl-J`; while {kbd}`Return` is the same as `\r` and {kbd}`Ctrl-M`.
 
 ## Warnings about Duplicated Bindings
 
@@ -176,12 +176,12 @@ bind index gg first-entry
 ## Terminal Keybindings
 
 Some key bindings are controlled by the terminal, and so by default can't be bound inside NeoMutt.
-These may include {kbd}`^C`, {kbd}`^\`, {kbd}`^Q`, {kbd}`^S`, {kbd}`^Z`, and on BSD/Mac {kbd}`^Y`.
+These may include {kbd}`Ctrl-C`, {kbd}`^\`, {kbd}`Ctrl-Q`, {kbd}`Ctrl-S`, {kbd}`Ctrl-Z`, and on BSD/Mac {kbd}`Ctrl-Y`.
 These terminal settings can be viewed and changed using the `stty` program.
 
 `stty -a` will list the bound characters (not all of them affect NeoMutt), and what actions they take when pressed.
 For example, you may see `intr = ^C` in its output.
-This means typing {kbd}`^C` will send an interrupt signal.
+This means typing {kbd}`Ctrl-C` will send an interrupt signal.
 `quit = ^\` means typing {kbd}`^\` (commonly also {kbd}`^4`) will send a quit signal.
 
 To unbind a key from an action, you invoke `stty action undef`.

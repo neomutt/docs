@@ -55,7 +55,7 @@ References: abook man page and project docs.
 set query_command = "khard email --parsable %s"
 ```
 
-3. Press {kbd}`Q` in the index menu or {kbd}`^T` at an address prompt to query.
+3. Press {kbd}`Q` in the index menu or {kbd}`Ctrl-T` at an address prompt to query.
 
 Expected result: the query menu lists khard results and address completion works.
 
@@ -103,6 +103,6 @@ Adjust the command to match your tool (abook, khard, or a custom script).
 
 1. Use aliases or an external query source.
 2. At any address prompt, press Tab to expand or list matches.
-3. Use {kbd}`^T` to query external address sources if configured.
+3. Use {kbd}`Ctrl-T` to query external address sources if configured.
 
 Expected result: you can complete addresses quickly without leaving the prompt.

@@ -50,7 +50,7 @@ Expected result: you reach the right contact without browsing the full list.
 
 If you have [`$query_command`](cfg-query-command) configured (abook, khard, LDAP):
 
-1. At an address prompt, press {kbd}`^T` ([`<complete-query>`](fn-complete-query)).
+1. At an address prompt, press {kbd}`Ctrl-T` ([`<complete-query>`](fn-complete-query)).
 2. Type part of a name or address.
 
 Expected result: results from the external source appear and you can select one.

@@ -56,7 +56,7 @@ COMMAND $BROWSER
 macro index,pager \cb "<pipe-message>urlview<Enter>" "Extract and open URLs"
 ```
 
-3. Open a message containing links and press {kbd}`Ctrl-b`.
+3. Open a message containing links and press {kbd}`Ctrl-B`.
 
 Expected result: urlview displays a numbered list of URLs found in the message. Select one and press {kbd}`Enter` to open it in your browser.
 
@@ -76,7 +76,7 @@ pip install urlscan
 macro index,pager \cb "<pipe-message>urlscan<Enter>" "Extract and open URLs"
 ```
 
-3. Press {kbd}`Ctrl-b` on a message with links.
+3. Press {kbd}`Ctrl-B` on a message with links.
 
 Expected result: urlscan shows URLs with surrounding context and lets you select one to open.
 

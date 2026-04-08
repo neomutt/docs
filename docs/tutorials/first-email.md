@@ -289,7 +289,7 @@ See also `<edit-or-view-raw-message>`, `<view-raw-message>`.
 
 `<edit-or-view-raw-message>` (default: {kbd}`e`) : This command (available in the index and pager) is the same as `<edit-raw-message>` if the mailbox is writable, otherwise it is the same as `<view-raw-message>`.
 
-`<edit-type>` (default: {kbd}`^E` on the attachment menu, and in the pager and index menus; {kbd}`^T` on the compose menu) : This command is used to temporarily edit an attachment's content type to fix, for instance, bogus character set parameters.
+`<edit-type>` (default: {kbd}`Ctrl-E` on the attachment menu, and in the pager and index menus; {kbd}`Ctrl-T` on the compose menu) : This command is used to temporarily edit an attachment's content type to fix, for instance, bogus character set parameters.
 When invoked from the index or from the pager, you'll have the opportunity to edit the top-level attachment's content type.
 On the attachment menu, you can change any attachment's content type.
 These changes are not persistent, and get lost upon changing folders.
@@ -300,9 +300,9 @@ There, it's used to fine-tune the properties of attachments you are going to sen
 `<enter-command>` (default: {kbd}`:`) : This command is used to execute any command you would normally put in a configuration file.
 A common use is to check the settings of variables, or in conjunction with macros to change settings on the fly.
 
-`<extract-keys>` (default: {kbd}`^K`) : This command extracts PGP public keys from the current or tagged message(s) and adds them to your PGP public key ring.
+`<extract-keys>` (default: {kbd}`Ctrl-K`) : This command extracts PGP public keys from the current or tagged message(s) and adds them to your PGP public key ring.
 
-`<forget-passphrase>` (default: {kbd}`^F`) : This command wipes the passphrase(s) from memory.
+`<forget-passphrase>` (default: {kbd}`Ctrl-F`) : This command wipes the passphrase(s) from memory.
 It is useful, if you misspelled the passphrase.
 
 `<list-reply>` (default: {kbd}`L`) : Reply to the current or tagged message(s) by extracting any addresses which match the regular expressions given by the [`lists`](cmd-lists) or [`subscribe`](cmd-subscribe) commands, but also honor any `Mail-Followup-To` header(s) if the [`$honor_followup_to`](cfg-honor-followup-to) configuration variable is set.

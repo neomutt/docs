@@ -17,10 +17,10 @@ The key bindings follow Emacs conventions.
 
 | Key               | Function          | Description                   |
 |-------------------|-------------------|-------------------------------|
-| {kbd}`^A` or {kbd}`Home`  | [`<bol>`](fn-bol)           | Move to the start of the line |
-| {kbd}`^E` or {kbd}`End`   | [`<eol>`](fn-eol)           | Move to the end of the line   |
-| {kbd}`^B` or {kbd}`Left`  | [`<backward-char>`](fn-backward-char) | Move back one character       |
-| {kbd}`^F` or {kbd}`Right` | [`<forward-char>`](fn-forward-char)  | Move forward one character    |
+| {kbd}`Ctrl-A` or {kbd}`Home`  | [`<bol>`](fn-bol)           | Move to the start of the line |
+| {kbd}`Ctrl-E` or {kbd}`End`   | [`<eol>`](fn-eol)           | Move to the end of the line   |
+| {kbd}`Ctrl-B` or {kbd}`Left`  | [`<backward-char>`](fn-backward-char) | Move back one character       |
+| {kbd}`Ctrl-F` or {kbd}`Right` | [`<forward-char>`](fn-forward-char)  | Move forward one character    |
 | {kbd}`Esc B`      | [`<backward-word>`](fn-backward-word) | Move back one word            |
 | {kbd}`Esc F`      | [`<forward-word>`](fn-forward-word)  | Move forward one word         |
 
@@ -28,11 +28,11 @@ The key bindings follow Emacs conventions.
 
 | Key                | Function        | Description                            |
 |--------------------|-----------------|----------------------------------------|
-| {kbd}`^D` or {kbd}`Delete` | [`<delete-char>`](fn-delete-char) | Delete the character under the cursor  |
+| {kbd}`Ctrl-D` or {kbd}`Delete` | [`<delete-char>`](fn-delete-char) | Delete the character under the cursor  |
 | {kbd}`Backspace`      | [`<backspace>`](fn-backspace) | Delete the character before the cursor |
-| {kbd}`^K`               | [`<kill-eol>`](fn-kill-eol)    | Delete to the end of the line          |
-| {kbd}`^U`               | [`<kill-line>`](fn-kill-line)   | Delete the entire line                 |
-| {kbd}`^W`               | [`<kill-word>`](fn-kill-word)   | Delete the word before the cursor      |
+| {kbd}`Ctrl-K`               | [`<kill-eol>`](fn-kill-eol)    | Delete to the end of the line          |
+| {kbd}`Ctrl-U`               | [`<kill-line>`](fn-kill-line)   | Delete the entire line                 |
+| {kbd}`Ctrl-W`               | [`<kill-word>`](fn-kill-word)   | Delete the word before the cursor      |
 | {kbd}`Esc d`       | [`<kill-eow>`](fn-kill-eow)    | Delete to the end of the word          |
 
 ### Word Case
@@ -47,8 +47,8 @@ The key bindings follow Emacs conventions.
 
 | Key        | Function       | Description                        |
 |------------|----------------|------------------------------------|
-| {kbd}`^V`       | [`<quote-char>`](fn-quote-char) | Quote (escape) the next typed key  |
-| {kbd}`^G`       | n/a            | Abort the current prompt or action |
+| {kbd}`Ctrl-V`       | [`<quote-char>`](fn-quote-char) | Quote (escape) the next typed key  |
+| {kbd}`Ctrl-G`       | n/a            | Abort the current prompt or action |
 | {kbd}`Return` | n/a            | Confirm / finish editing           |
 
 ## Tab Completion
@@ -60,7 +60,7 @@ What gets completed depends on context:
 - **Aliases** — completes known address aliases
 - **Labels** — completes mailbox labels
 
-Press {kbd}`^T` to run an address query (using [`$query_command`](cfg-query-command)) and complete from the results.
+Press {kbd}`Ctrl-T` to run an address query (using [`$query_command`](cfg-query-command)) and complete from the results.
 
 ## History Navigation
 
@@ -71,7 +71,7 @@ The number of history entries is controlled by [`$history`](cfg-history).
 |----------|--------------------|-----------------------------------------|
 | {kbd}`Up`   | [`<history-up>`](fn-history-up)     | Recall the previous string from history |
 | {kbd}`Down` | [`<history-down>`](fn-history-down)   | Recall the next string from history     |
-| {kbd}`^R`     | [`<history-search>`](fn-history-search) | Search history using the current input  |
+| {kbd}`Ctrl-R`     | [`<history-search>`](fn-history-search) | Search history using the current input  |
 
 NeoMutt remembers what you were typing as you cycle through history, and wraps back to your original entry.
 

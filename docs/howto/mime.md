@@ -113,9 +113,9 @@ Attachments appear as follows by default:
 
 The "-" denotes that NeoMutt will delete the file after sending (or postponing, or canceling) the message.
 It can be toggled with the [`<toggle-unlink>`](fn-toggle-unlink) command (default: {kbd}`u`).
-The next field is the MIME content-type, and can be changed with the [`<edit-type>`](fn-edit-type) command (default: {kbd}`^T`).
+The next field is the MIME content-type, and can be changed with the [`<edit-type>`](fn-edit-type) command (default: {kbd}`Ctrl-T`).
 The next field is the encoding for the attachment, which allows a binary message to be encoded for transmission on 7bit links.
-It can be changed with the [`<edit-encoding>`](fn-edit-encoding) command (default: {kbd}`^E`).
+It can be changed with the [`<edit-encoding>`](fn-edit-encoding) command (default: {kbd}`Ctrl-E`).
 The next field is the size of the attachment, rounded to kilobytes or megabytes.
 The next field is the filename, which can be changed with the [`<rename-file>`](fn-rename-file) command (default: {kbd}`R`).
 The final field is the description of the attachment, and can be changed with the [`<edit-description>`](fn-edit-description) command (default: {kbd}`d`).
@@ -132,7 +132,7 @@ See [`$attach_format`](cfg-attach-format) for a full list of available expandos 
 :::
 
 :::{note}
-The [`<edit-type>`](fn-edit-type) function (default: {kbd}`^T`) is available in the index, pager, compose, and attachment menus.
+The [`<edit-type>`](fn-edit-type) function (default: {kbd}`Ctrl-T`) is available in the index, pager, compose, and attachment menus.
 It temporarily changes the MIME content-type of an attachment — for example, to correct a bogus charset parameter set by the sender's mailer (e.g., changing `text/plain; charset=us-ascii` to `text/plain; charset=utf-8`).
 These changes are **not persistent**: they apply only for the current session or send operation and do not modify the stored message.
 :::
@@ -164,7 +164,7 @@ If NeoMutt can not determine the MIME type by the extension of the file you atta
 If that command is not specified, NeoMutt will look at the file.
 If the file is free of binary information, NeoMutt will assume that the file is plain text, and mark it as `text/plain`.
 If the file contains binary information, then NeoMutt will mark it as `application/octet-stream`.
-You can change the MIME type that NeoMutt assigns to an attachment by using the [`<edit-type>`](fn-edit-type) command from the compose menu (default: {kbd}`^T`).
+You can change the MIME type that NeoMutt assigns to an attachment by using the [`<edit-type>`](fn-edit-type) command from the compose menu (default: {kbd}`Ctrl-T`).
 NeoMutt recognizes all of these if the appropriate entry is found in the `mime.types` file.
 Non-recognized MIME types should only be used if the recipient of the message is likely to be expecting such attachments.
 

@@ -32,7 +32,7 @@ Multiple maps may be specified by separating multiple menu arguments by commas.
 Whitespace may not be used in between the menu arguments and the commas separating them.
 
 *key* and *sequence* are expanded by the same rules as the key bindings with some additions.
-The first is that control characters in *sequence* can also be specified as {kbd}`^x`.
+The first is that control characters in *sequence* can also be specified as {kbd}`Ctrl-X`.
 In order to get a caret ("^") you need to use `^^`.
 Secondly, to specify a certain key such as *up* or to invoke a function directly, you can use the format `<key name>` and `<function name>`.
 For a listing of key names see the section on key bindings.

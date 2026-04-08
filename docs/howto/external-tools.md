@@ -21,7 +21,7 @@ macro index \cb "<pipe-message>urlview<Enter>" "Open URLs with urlview"
 macro pager \cb "<pipe-message>urlview<Enter>" "Open URLs with urlview"
 ```
 
-3. Open a message with URLs and press {kbd}`Ctrl-b`.
+3. Open a message with URLs and press {kbd}`Ctrl-B`.
 
 Expected result: a list of URLs appears and you can open one in your browser.
 
@@ -36,7 +36,7 @@ References: urlview man page and urlscan documentation.
 set query_command = "abook --mutt-query %s"
 ```
 
-3. Use `Q` in the index menu or {kbd}`^T` at an address prompt to query.
+3. Use `Q` in the index menu or {kbd}`Ctrl-T` at an address prompt to query.
 
 Expected result: the query menu shows matches from your address book.
 

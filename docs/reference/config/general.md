@@ -1434,7 +1434,7 @@ If [`$help`](cfg-help) is _set_ too, it'll be placed at the bottom.
     set suspend = yes
     ```
 
-When _unset_, NeoMutt won't stop when the user presses the terminal's _susp_ key, usually {kbd}`^Z`.
+When _unset_, NeoMutt won't stop when the user presses the terminal's _susp_ key, usually {kbd}`Ctrl-Z`.
 This is useful if you run NeoMutt inside an xterm using a command like `xterm -e neomutt`
 
 On startup NeoMutt tries to detect if it is the process session leader.
