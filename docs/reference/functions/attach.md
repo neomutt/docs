@@ -4,7 +4,7 @@ description: Key bindings and functions for viewing, saving, printing, and reply
 keywords: neomutt, functions, attach, menu, bindings, keys, attachments, save-entry, view-attach, view-mailcap, pipe-message, forward-message, reply, mime
 ---
 
-(fn-attach)=
+(menu-attach)=
 # Attach Functions
 
 View and manage the attachments of a received email.

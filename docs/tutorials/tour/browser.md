@@ -58,7 +58,7 @@ Depending on the context, it behaves like a local file browser, an IMAP folder b
 - Open the selected mailbox or choose the selected file for the calling action.
 - Subscribe, unsubscribe, create, rename, or delete remote mailboxes where the backend supports it.
 - Inspect the currently selected path before choosing it.
-- Full reference: [Browser Functions](fn-browser), [Generic Functions](fn-generic).
+- Full reference: [Browser Functions](menu-browser), [Generic Functions](menu-generic).
 
 ## Where can I go next?
 

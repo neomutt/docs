@@ -20,15 +20,15 @@ Bindings can be changed with [`:bind`](cmd-bind).
 (fn-autocrypt-menu)=
 ## A
 
-| Function                | Used By               |
-|-------------------------|-----------------------|
-| `<alias-dialog>`        | [Index](fn-index)     |
-| `<attach-file>`         | [Compose](fn-compose) |
-| `<attach-key>`          | [Compose](fn-compose) |
-| `<attach-message>`      | [Compose](fn-compose) |
-| `<attach-news-message>` | [Compose](fn-compose) |
-| `<autocrypt-acct-menu>` | [Index](fn-index)     |
-| `<autocrypt-menu>`      | [Compose](fn-compose) |
+| Function                | Used By                 |
+|-------------------------|-------------------------|
+| `<alias-dialog>`        | [Index](menu-index)     |
+| `<attach-file>`         | [Compose](menu-compose) |
+| `<attach-key>`          | [Compose](menu-compose) |
+| `<attach-message>`      | [Compose](menu-compose) |
+| `<attach-news-message>` | [Compose](menu-compose) |
+| `<autocrypt-acct-menu>` | [Index](menu-index)     |
+| `<autocrypt-menu>`      | [Compose](menu-compose) |
 
 (fn-backspace)=
 (fn-backward-char)=
@@ -42,14 +42,14 @@ Bindings can be changed with [`:bind`](cmd-bind).
 
 | Function           | Used By                                                               |
 |--------------------|-----------------------------------------------------------------------|
-| `<backspace>`      | [Editor](fn-editor)                                                   |
-| `<backward-char>`  | [Editor](fn-editor)                                                   |
-| `<backward-word>`  | [Editor](fn-editor)                                                   |
-| `<bol>`            | [Editor](fn-editor)                                                   |
-| `<bottom-page>`    | [Generic](fn-generic)                                                 |
-| `<bottom>`         | [Pager](fn-pager)                                                     |
-| `<bounce-message>` | [Attach](fn-attach), [Index](fn-index), [Pager](fn-pager)             |
-| `<break-thread>`   | [Index](fn-index), [Pager](fn-pager)                                  |
+| `<backspace>`      | [Editor](menu-editor)                                                 |
+| `<backward-char>`  | [Editor](menu-editor)                                                 |
+| `<backward-word>`  | [Editor](menu-editor)                                                 |
+| `<bol>`            | [Editor](menu-editor)                                                 |
+| `<bottom>`         | [Pager](menu-pager)                                                   |
+| `<bottom-page>`    | [Generic](menu-generic)                                               |
+| `<bounce-message>` | [Attach](menu-attach), [Index](menu-index), [Pager](menu-pager)       |
+| `<break-thread>`   | [Index](menu-index), [Pager](menu-pager)                              |
 | `<buffy-cycle>`    | {bdg-warning-line}`Renamed to:` [`<mailbox-cycle>`](fn-mailbox-cycle) |
 | `<buffy-list>`     | {bdg-warning-line}`Renamed to:` [`<mailbox-list>`](fn-mailbox-list)   |
 
@@ -83,36 +83,36 @@ Bindings can be changed with [`:bind`](cmd-bind).
 (fn-current-top)=
 ## C
 
-| Function                      | Used By                                                   |
-|-------------------------------|-----------------------------------------------------------|
-| `<capitalize-word>`           | [Editor](fn-editor)                                       |
-| `<catchup>`                   | [Browser](fn-browser), [Index](fn-index)                  |
-| `<change-dir>`                | [Browser](fn-browser)                                     |
-| `<change-folder-readonly>`    | [Index](fn-index), [Pager](fn-pager)                      |
-| `<change-folder>`             | [Index](fn-index), [Pager](fn-pager)                      |
-| `<change-newsgroup-readonly>` | [Index](fn-index), [Pager](fn-pager)                      |
-| `<change-newsgroup>`          | [Index](fn-index), [Pager](fn-pager)                      |
-| `<change-vfolder>`            | [Index](fn-index), [Pager](fn-pager)                      |
-| `<check-new>`                 | [Browser](fn-browser)                                     |
-| `<check-stats>`               | [Generic](fn-generic), [Pager](fn-pager)                  |
-| `<check-traditional-pgp>`     | [Attach](fn-attach), [Index](fn-index), [Pager](fn-pager) |
-| `<clear-flag>`                | [Index](fn-index), [Pager](fn-pager)                      |
-| `<close-all-threads>`         | [Index](fn-index)                                         |
-| `<close-thread>`              | [Index](fn-index)                                         |
-| `<collapse-all>`              | [Index](fn-index)                                         |
-| `<collapse-parts>`            | [Attach](fn-attach)                                       |
-| `<collapse-thread>`           | [Index](fn-index)                                         |
-| `<complete-query>`            | [Editor](fn-editor)                                       |
-| `<complete>`                  | [Editor](fn-editor)                                       |
-| `<compose-to-sender>`         | [Attach](fn-attach), [Index](fn-index), [Pager](fn-pager) |
-| `<copy-file>`                 | [Compose](fn-compose)                                     |
-| `<copy-message>`              | [Index](fn-index), [Pager](fn-pager)                      |
-| `<create-account>`            | [Autocrypt](fn-autocrypt)                                 |
-| `<create-alias>`              | [Index](fn-index), [Pager](fn-pager), [Query](fn-query)   |
-| `<create-mailbox>`            | [Browser](fn-browser)                                     |
-| `<current-bottom>`            | [Generic](fn-generic)                                     |
-| `<current-middle>`            | [Generic](fn-generic)                                     |
-| `<current-top>`               | [Generic](fn-generic)                                     |
+| Function                      | Used By                                                         |
+|-------------------------------|-----------------------------------------------------------------|
+| `<capitalize-word>`           | [Editor](menu-editor)                                           |
+| `<catchup>`                   | [Browser](menu-browser), [Index](menu-index)                    |
+| `<change-dir>`                | [Browser](menu-browser)                                         |
+| `<change-folder>`             | [Index](menu-index), [Pager](menu-pager)                        |
+| `<change-folder-readonly>`    | [Index](menu-index), [Pager](menu-pager)                        |
+| `<change-newsgroup>`          | [Index](menu-index), [Pager](menu-pager)                        |
+| `<change-newsgroup-readonly>` | [Index](menu-index), [Pager](menu-pager)                        |
+| `<change-vfolder>`            | [Index](menu-index), [Pager](menu-pager)                        |
+| `<check-new>`                 | [Browser](menu-browser)                                         |
+| `<check-stats>`               | [Generic](menu-generic), [Pager](menu-pager)                    |
+| `<check-traditional-pgp>`     | [Attach](menu-attach), [Index](menu-index), [Pager](menu-pager) |
+| `<clear-flag>`                | [Index](menu-index), [Pager](menu-pager)                        |
+| `<close-all-threads>`         | [Index](menu-index)                                             |
+| `<close-thread>`              | [Index](menu-index)                                             |
+| `<collapse-all>`              | [Index](menu-index)                                             |
+| `<collapse-parts>`            | [Attach](menu-attach)                                           |
+| `<collapse-thread>`           | [Index](menu-index)                                             |
+| `<complete>`                  | [Editor](menu-editor)                                           |
+| `<complete-query>`            | [Editor](menu-editor)                                           |
+| `<compose-to-sender>`         | [Attach](menu-attach), [Index](menu-index), [Pager](menu-pager) |
+| `<copy-file>`                 | [Compose](menu-compose)                                         |
+| `<copy-message>`              | [Index](menu-index), [Pager](menu-pager)                        |
+| `<create-account>`            | [Autocrypt](menu-autocrypt)                                     |
+| `<create-alias>`              | [Index](menu-index), [Pager](menu-pager), [Query](menu-query)   |
+| `<create-mailbox>`            | [Browser](menu-browser)                                         |
+| `<current-bottom>`            | [Generic](menu-generic)                                         |
+| `<current-middle>`            | [Generic](menu-generic)                                         |
+| `<current-top>`               | [Generic](menu-generic)                                         |
 
 (fn-decode-copy)=
 (fn-decode-save)=
@@ -135,27 +135,27 @@ Bindings can be changed with [`:bind`](cmd-bind).
 (fn-downcase-word)=
 ## D
 
-| Function                | Used By                                                                          |
-|-------------------------|----------------------------------------------------------------------------------|
-| `<decode-copy>`         | [Index](fn-index), [Pager](fn-pager)                                             |
-| `<decode-save>`         | [Index](fn-index), [Pager](fn-pager)                                             |
-| `<decrypt-copy>`        | [Index](fn-index), [Pager](fn-pager)                                             |
-| `<decrypt-save>`        | [Index](fn-index), [Pager](fn-pager)                                             |
-| `<delete-account>`      | [Autocrypt](fn-autocrypt)                                                        |
-| `<delete-char>`         | [Editor](fn-editor)                                                              |
-| `<delete-entry>`        | [Alias](fn-alias), [Attach](fn-attach), [Postpone](fn-postpone)                  |
-| `<delete-mailbox>`      | [Browser](fn-browser)                                                            |
-| `<delete-message>`      | [Index](fn-index), [Pager](fn-pager)                                             |
-| `<delete-pattern>`      | [Index](fn-index)                                                                |
-| `<delete-subthread>`    | [Index](fn-index), [Pager](fn-pager)                                             |
-| `<delete-thread>`       | [Index](fn-index), [Pager](fn-pager)                                             |
-| `<descend-directory>`   | [Browser](fn-browser)                                                            |
-| `<detach-file>`         | [Compose](fn-compose)                                                            |
-| `<display-address>`     | [Index](fn-index), [Pager](fn-pager)                                             |
-| `<display-filename>`    | [Browser](fn-browser)                                                            |
-| `<display-message>`     | [Index](fn-index)                                                                |
-| `<display-toggle-weed>` | [Attach](fn-attach), [Compose](fn-compose), [Index](fn-index), [Pager](fn-pager) |
-| `<downcase-word>`       | [Editor](fn-editor)                                                              |
+| Function                | Used By                                                                                  |
+|-------------------------|------------------------------------------------------------------------------------------|
+| `<decode-copy>`         | [Index](menu-index), [Pager](menu-pager)                                                 |
+| `<decode-save>`         | [Index](menu-index), [Pager](menu-pager)                                                 |
+| `<decrypt-copy>`        | [Index](menu-index), [Pager](menu-pager)                                                 |
+| `<decrypt-save>`        | [Index](menu-index), [Pager](menu-pager)                                                 |
+| `<delete-account>`      | [Autocrypt](menu-autocrypt)                                                              |
+| `<delete-char>`         | [Editor](menu-editor)                                                                    |
+| `<delete-entry>`        | [Alias](menu-alias), [Attach](menu-attach), [Postpone](menu-postpone)                    |
+| `<delete-mailbox>`      | [Browser](menu-browser)                                                                  |
+| `<delete-message>`      | [Index](menu-index), [Pager](menu-pager)                                                 |
+| `<delete-pattern>`      | [Index](menu-index)                                                                      |
+| `<delete-subthread>`    | [Index](menu-index), [Pager](menu-pager)                                                 |
+| `<delete-thread>`       | [Index](menu-index), [Pager](menu-pager)                                                 |
+| `<descend-directory>`   | [Browser](menu-browser)                                                                  |
+| `<detach-file>`         | [Compose](menu-compose)                                                                  |
+| `<display-address>`     | [Index](menu-index), [Pager](menu-pager)                                                 |
+| `<display-filename>`    | [Browser](menu-browser)                                                                  |
+| `<display-message>`     | [Index](menu-index)                                                                      |
+| `<display-toggle-weed>` | [Attach](menu-attach), [Compose](menu-compose), [Index](menu-index), [Pager](menu-pager) |
+| `<downcase-word>`       | [Editor](menu-editor)                                                                    |
 
 (fn-edit-bcc)=
 (fn-edit-cc)=
@@ -189,40 +189,40 @@ Bindings can be changed with [`:bind`](cmd-bind).
 (fn-extract-keys)=
 ## E
 
-| Function                     | Used By                                                                                                                                   |
-|------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|
-| `<edit-bcc>`                 | [Compose](fn-compose)                                                                                                                     |
-| `<edit-cc>`                  | [Compose](fn-compose)                                                                                                                     |
-| `<edit-content-id>`          | [Compose](fn-compose)                                                                                                                     |
-| `<edit-description>`         | [Compose](fn-compose)                                                                                                                     |
-| `<edit-encoding>`            | [Compose](fn-compose)                                                                                                                     |
-| `<edit-fcc>`                 | [Compose](fn-compose)                                                                                                                     |
-| `<edit-file>`                | [Compose](fn-compose)                                                                                                                     |
-| `<edit-followup-to>`         | [Compose](fn-compose)                                                                                                                     |
-| `<edit-from>`                | [Compose](fn-compose)                                                                                                                     |
-| `<edit-headers>`             | [Compose](fn-compose)                                                                                                                     |
-| `<edit-label>`               | [Index](fn-index), [Pager](fn-pager)                                                                                                      |
-| `<edit-language>`            | [Compose](fn-compose)                                                                                                                     |
-| `<edit-message>`             | [Compose](fn-compose)                                                                                                                     |
-| `<edit-mime>`                | [Compose](fn-compose)                                                                                                                     |
-| `<edit-newsgroups>`          | [Compose](fn-compose)                                                                                                                     |
-| `<edit-or-view-raw-message>` | [Index](fn-index), [Pager](fn-pager)                                                                                                      |
-| `<edit-raw-message>`         | [Index](fn-index), [Pager](fn-pager)                                                                                                      |
-| `<edit-reply-to>`            | [Compose](fn-compose)                                                                                                                     |
-| `<edit-subject>`             | [Compose](fn-compose)                                                                                                                     |
-| `<edit-to>`                  | [Compose](fn-compose)                                                                                                                     |
-| `<edit-type>`                | [Attach](fn-attach), [Compose](fn-compose), [Index](fn-index), [Pager](fn-pager)                                                          |
-| `<edit-x-comment-to>`        | [Compose](fn-compose)                                                                                                                     |
-| `<edit>`                     | [Index](fn-index), [Pager](fn-pager)                                                                                                      |
-| `<end-cond>`                 | [Generic](fn-generic)                                                                                                                     |
-| `<enter-command>`            | [Generic](fn-generic), [Pager](fn-pager)                                                                                                  |
-| `<enter-mask>`               | [Browser](fn-browser)                                                                                                                     |
-| `<entire-thread>`            | [Index](fn-index), [Pager](fn-pager)                                                                                                      |
-| `<eol>`                      | [Editor](fn-editor)                                                                                                                       |
-| `<error-history>`            | {bdg-warning-line}`Renamed to:` [`<show-log-messages>`](fn-show-log-messages)                                                             |
-| `<exit>`                     | [Alias](fn-alias), [Attach](fn-attach), [Autocrypt](fn-autocrypt), [Browser](fn-browser), [Compose](fn-compose), [Dialog](fn-dialog),     |
-|                              | [Generic](fn-generic), [Index](fn-index), [Pager](fn-pager), [Pgp](fn-pgp), [Postpone](fn-postpone), [Query](fn-query), [Smime](fn-smime) |
-| `<extract-keys>`             | [Attach](fn-attach), [Index](fn-index), [Pager](fn-pager)                                                                                 |
+| Function                     | Used By                                                                                                                                                 |
+|------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `<edit>`                     | [Index](menu-index), [Pager](menu-pager)                                                                                                                |
+| `<edit-bcc>`                 | [Compose](menu-compose)                                                                                                                                 |
+| `<edit-cc>`                  | [Compose](menu-compose)                                                                                                                                 |
+| `<edit-content-id>`          | [Compose](menu-compose)                                                                                                                                 |
+| `<edit-description>`         | [Compose](menu-compose)                                                                                                                                 |
+| `<edit-encoding>`            | [Compose](menu-compose)                                                                                                                                 |
+| `<edit-fcc>`                 | [Compose](menu-compose)                                                                                                                                 |
+| `<edit-file>`                | [Compose](menu-compose)                                                                                                                                 |
+| `<edit-followup-to>`         | [Compose](menu-compose)                                                                                                                                 |
+| `<edit-from>`                | [Compose](menu-compose)                                                                                                                                 |
+| `<edit-headers>`             | [Compose](menu-compose)                                                                                                                                 |
+| `<edit-label>`               | [Index](menu-index), [Pager](menu-pager)                                                                                                                |
+| `<edit-language>`            | [Compose](menu-compose)                                                                                                                                 |
+| `<edit-message>`             | [Compose](menu-compose)                                                                                                                                 |
+| `<edit-mime>`                | [Compose](menu-compose)                                                                                                                                 |
+| `<edit-newsgroups>`          | [Compose](menu-compose)                                                                                                                                 |
+| `<edit-or-view-raw-message>` | [Index](menu-index), [Pager](menu-pager)                                                                                                                |
+| `<edit-raw-message>`         | [Index](menu-index), [Pager](menu-pager)                                                                                                                |
+| `<edit-reply-to>`            | [Compose](menu-compose)                                                                                                                                 |
+| `<edit-subject>`             | [Compose](menu-compose)                                                                                                                                 |
+| `<edit-to>`                  | [Compose](menu-compose)                                                                                                                                 |
+| `<edit-type>`                | [Attach](menu-attach), [Compose](menu-compose), [Index](menu-index), [Pager](menu-pager)                                                                |
+| `<edit-x-comment-to>`        | [Compose](menu-compose)                                                                                                                                 |
+| `<end-cond>`                 | [Generic](menu-generic)                                                                                                                                 |
+| `<enter-command>`            | [Generic](menu-generic), [Pager](menu-pager)                                                                                                            |
+| `<enter-mask>`               | [Browser](menu-browser)                                                                                                                                 |
+| `<entire-thread>`            | [Index](menu-index), [Pager](menu-pager)                                                                                                                |
+| `<eol>`                      | [Editor](menu-editor)                                                                                                                                   |
+| `<error-history>`            | {bdg-warning-line}`Renamed to:` [`<show-log-messages>`](fn-show-log-messages)                                                                           |
+| `<exit>`                     | [Alias](menu-alias), [Attach](menu-attach), [Autocrypt](menu-autocrypt), [Browser](menu-browser), [Compose](menu-compose), [Dialog](menu-dialog),       |
+|                              | [Generic](menu-generic), [Index](menu-index), [Pager](menu-pager), [Pgp](menu-pgp), [Postpone](menu-postpone), [Query](menu-query), [Smime](menu-smime) |
+| `<extract-keys>`             | [Attach](menu-attach), [Index](menu-index), [Pager](menu-pager)                                                                                         |
 
 (fn-fetch-mail)=
 (fn-filter-entry)=
@@ -236,18 +236,18 @@ Bindings can be changed with [`:bind`](cmd-bind).
 (fn-forward-word)=
 ## F
 
-| Function              | Used By                                                                          |
-|-----------------------|----------------------------------------------------------------------------------|
-| `<fetch-mail>`        | [Index](fn-index)                                                                |
-| `<filter-entry>`      | [Compose](fn-compose)                                                            |
-| `<first-entry>`       | [Generic](fn-generic)                                                            |
-| `<flag-message>`      | [Index](fn-index), [Pager](fn-pager)                                             |
-| `<followup-message>`  | [Attach](fn-attach), [Index](fn-index), [Pager](fn-pager)                        |
-| `<forget-passphrase>` | [Attach](fn-attach), [Compose](fn-compose), [Index](fn-index), [Pager](fn-pager) |
-| `<forward-char>`      | [Editor](fn-editor)                                                              |
-| `<forward-message>`   | [Attach](fn-attach), [Index](fn-index), [Pager](fn-pager)                        |
-| `<forward-to-group>`  | [Attach](fn-attach), [Index](fn-index), [Pager](fn-pager)                        |
-| `<forward-word>`      | [Editor](fn-editor)                                                              |
+| Function              | Used By                                                                                  |
+|-----------------------|------------------------------------------------------------------------------------------|
+| `<fetch-mail>`        | [Index](menu-index)                                                                      |
+| `<filter-entry>`      | [Compose](menu-compose)                                                                  |
+| `<first-entry>`       | [Generic](menu-generic)                                                                  |
+| `<flag-message>`      | [Index](menu-index), [Pager](menu-pager)                                                 |
+| `<followup-message>`  | [Attach](menu-attach), [Index](menu-index), [Pager](menu-pager)                          |
+| `<forget-passphrase>` | [Attach](menu-attach), [Compose](menu-compose), [Index](menu-index), [Pager](menu-pager) |
+| `<forward-char>`      | [Editor](menu-editor)                                                                    |
+| `<forward-message>`   | [Attach](menu-attach), [Index](menu-index), [Pager](menu-pager)                          |
+| `<forward-to-group>`  | [Attach](menu-attach), [Index](menu-index), [Pager](menu-pager)                          |
+| `<forward-word>`      | [Editor](menu-editor)                                                                    |
 
 (fn-get-attachment)=
 (fn-get-children)=
@@ -262,19 +262,19 @@ Bindings can be changed with [`:bind`](cmd-bind).
 (fn-group-reply)=
 ## G
 
-| Function               | Used By                                                   |
-|------------------------|-----------------------------------------------------------|
-| `<get-attachment>`     | [Compose](fn-compose)                                     |
-| `<get-children>`       | [Index](fn-index)                                         |
-| `<get-message>`        | [Index](fn-index)                                         |
-| `<get-parent>`         | [Index](fn-index)                                         |
-| `<goto-folder>`        | [Browser](fn-browser)                                     |
-| `<goto-parent>`        | [Browser](fn-browser)                                     |
-| `<group-alternatives>` | [Compose](fn-compose)                                     |
-| `<group-chat-reply>`   | [Attach](fn-attach), [Index](fn-index), [Pager](fn-pager) |
-| `<group-multilingual>` | [Compose](fn-compose)                                     |
-| `<group-related>`      | [Compose](fn-compose)                                     |
-| `<group-reply>`        | [Attach](fn-attach), [Index](fn-index), [Pager](fn-pager) |
+| Function               | Used By                                                         |
+|------------------------|-----------------------------------------------------------------|
+| `<get-attachment>`     | [Compose](menu-compose)                                         |
+| `<get-children>`       | [Index](menu-index)                                             |
+| `<get-message>`        | [Index](menu-index)                                             |
+| `<get-parent>`         | [Index](menu-index)                                             |
+| `<goto-folder>`        | [Browser](menu-browser)                                         |
+| `<goto-parent>`        | [Browser](menu-browser)                                         |
+| `<group-alternatives>` | [Compose](menu-compose)                                         |
+| `<group-chat-reply>`   | [Attach](menu-attach), [Index](menu-index), [Pager](menu-pager) |
+| `<group-multilingual>` | [Compose](menu-compose)                                         |
+| `<group-related>`      | [Compose](menu-compose)                                         |
+| `<group-reply>`        | [Attach](menu-attach), [Index](menu-index), [Pager](menu-pager) |
 
 (fn-half-down)=
 (fn-half-up)=
@@ -284,32 +284,32 @@ Bindings can be changed with [`:bind`](cmd-bind).
 (fn-history-up)=
 ## H
 
-| Function           | Used By                                                       |
-|--------------------|---------------------------------------------------------------|
-| `<half-down>`      | [Generic](fn-generic), [Pager](fn-pager)                      |
-| `<half-up>`        | [Generic](fn-generic), [Pager](fn-pager)                      |
-| `<help>`           | [Editor](fn-editor), [Generic](fn-generic), [Pager](fn-pager) |
-| `<history-down>`   | [Editor](fn-editor)                                           |
-| `<history-search>` | [Editor](fn-editor)                                           |
-| `<history-up>`     | [Editor](fn-editor)                                           |
+| Function           | Used By                                                             |
+|--------------------|---------------------------------------------------------------------|
+| `<half-down>`      | [Generic](menu-generic), [Pager](menu-pager)                        |
+| `<half-up>`        | [Generic](menu-generic), [Pager](menu-pager)                        |
+| `<help>`           | [Editor](menu-editor), [Generic](menu-generic), [Pager](menu-pager) |
+| `<history-down>`   | [Editor](menu-editor)                                               |
+| `<history-search>` | [Editor](menu-editor)                                               |
+| `<history-up>`     | [Editor](menu-editor)                                               |
 
 (fn-imap-fetch-mail)=
 (fn-imap-logout-all)=
 (fn-ispell)=
 ## I
 
-| Function            | Used By                              |
-|---------------------|--------------------------------------|
-| `<imap-fetch-mail>` | [Index](fn-index), [Pager](fn-pager) |
-| `<imap-logout-all>` | [Index](fn-index), [Pager](fn-pager) |
-| `<ispell>`          | [Compose](fn-compose)                |
+| Function            | Used By                                  |
+|---------------------|------------------------------------------|
+| `<imap-fetch-mail>` | [Index](menu-index), [Pager](menu-pager) |
+| `<imap-logout-all>` | [Index](menu-index), [Pager](menu-pager) |
+| `<ispell>`          | [Compose](menu-compose)                  |
 
 (fn-jump)=
 ## J
 
-| Function | Used By                                  |
-|----------|------------------------------------------|
-| `<jump>` | [Generic](fn-generic), [Pager](fn-pager) |
+| Function | Used By                                      |
+|----------|----------------------------------------------|
+| `<jump>` | [Generic](menu-generic), [Pager](menu-pager) |
 
 (fn-kill-eol)=
 (fn-kill-eow)=
@@ -318,13 +318,13 @@ Bindings can be changed with [`:bind`](cmd-bind).
 (fn-kill-word)=
 ## K
 
-| Function            | Used By             |
-|---------------------|---------------------|
-| `<kill-eol>`        | [Editor](fn-editor) |
-| `<kill-eow>`        | [Editor](fn-editor) |
-| `<kill-line>`       | [Editor](fn-editor) |
-| `<kill-whole-line>` | [Editor](fn-editor) |
-| `<kill-word>`       | [Editor](fn-editor) |
+| Function            | Used By               |
+|---------------------|-----------------------|
+| `<kill-eol>`        | [Editor](menu-editor) |
+| `<kill-eow>`        | [Editor](menu-editor) |
+| `<kill-line>`       | [Editor](menu-editor) |
+| `<kill-whole-line>` | [Editor](menu-editor) |
+| `<kill-word>`       | [Editor](menu-editor) |
 
 (fn-last-entry)=
 (fn-limit-current-thread)=
@@ -335,15 +335,15 @@ Bindings can be changed with [`:bind`](cmd-bind).
 (fn-list-unsubscribe)=
 ## L
 
-| Function                 | Used By                                                   |
-|--------------------------|-----------------------------------------------------------|
-| `<last-entry>`           | [Generic](fn-generic)                                     |
-| `<limit-current-thread>` | [Index](fn-index)                                         |
-| `<limit>`                | [Alias](fn-alias), [Index](fn-index), [Query](fn-query)   |
-| `<link-threads>`         | [Index](fn-index), [Pager](fn-pager)                      |
-| `<list-reply>`           | [Attach](fn-attach), [Index](fn-index), [Pager](fn-pager) |
-| `<list-subscribe>`       | [Attach](fn-attach), [Index](fn-index), [Pager](fn-pager) |
-| `<list-unsubscribe>`     | [Attach](fn-attach), [Index](fn-index), [Pager](fn-pager) |
+| Function                 | Used By                                                         |
+|--------------------------|-----------------------------------------------------------------|
+| `<last-entry>`           | [Generic](menu-generic)                                         |
+| `<limit>`                | [Alias](menu-alias), [Index](menu-index), [Query](menu-query)   |
+| `<limit-current-thread>` | [Index](menu-index)                                             |
+| `<link-threads>`         | [Index](menu-index), [Pager](menu-pager)                        |
+| `<list-reply>`           | [Attach](menu-attach), [Index](menu-index), [Pager](menu-pager) |
+| `<list-subscribe>`       | [Attach](menu-attach), [Index](menu-index), [Pager](menu-pager) |
+| `<list-unsubscribe>`     | [Attach](menu-attach), [Index](menu-index), [Pager](menu-pager) |
 
 (fn-mail-key)=
 (fn-mail)=
@@ -360,21 +360,21 @@ Bindings can be changed with [`:bind`](cmd-bind).
 (fn-move-up)=
 ## M
 
-| Function                    | Used By                                                                    |
-|-----------------------------|----------------------------------------------------------------------------|
-| `<mail-key>`                | [Index](fn-index), [Pager](fn-pager)                                       |
-| `<mail>`                    | [Alias](fn-alias), [Index](fn-index), [Pager](fn-pager), [Query](fn-query) |
-| `<mailbox-cycle>`           | [Editor](fn-editor)                                                        |
-| `<mailbox-list>`            | [Browser](fn-browser), [Index](fn-index), [Pager](fn-pager)                |
-| `<mark-as-new>`             | [Pager](fn-pager)                                                          |
-| `<mark-message>`            | [Index](fn-index)                                                          |
-| `<middle-page>`             | [Generic](fn-generic)                                                      |
-| `<modify-labels-then-hide>` | [Index](fn-index), [Pager](fn-pager)                                       |
-| `<modify-labels>`           | [Index](fn-index), [Pager](fn-pager)                                       |
-| `<modify-tags-then-hide>`   | [Index](fn-index), [Pager](fn-pager)                                       |
-| `<modify-tags>`             | [Index](fn-index), [Pager](fn-pager)                                       |
-| `<move-down>`               | [Compose](fn-compose)                                                      |
-| `<move-up>`                 | [Compose](fn-compose)                                                      |
+| Function                    | Used By                                                                            |
+|-----------------------------|------------------------------------------------------------------------------------|
+| `<mail>`                    | [Alias](menu-alias), [Index](menu-index), [Pager](menu-pager), [Query](menu-query) |
+| `<mail-key>`                | [Index](menu-index), [Pager](menu-pager)                                           |
+| `<mailbox-cycle>`           | [Editor](menu-editor)                                                              |
+| `<mailbox-list>`            | [Browser](menu-browser), [Index](menu-index), [Pager](menu-pager)                  |
+| `<mark-as-new>`             | [Pager](menu-pager)                                                                |
+| `<mark-message>`            | [Index](menu-index)                                                                |
+| `<middle-page>`             | [Generic](menu-generic)                                                            |
+| `<modify-labels>`           | [Index](menu-index), [Pager](menu-pager)                                           |
+| `<modify-labels-then-hide>` | [Index](menu-index), [Pager](menu-pager)                                           |
+| `<modify-tags>`             | [Index](menu-index), [Pager](menu-pager)                                           |
+| `<modify-tags-then-hide>`   | [Index](menu-index), [Pager](menu-pager)                                           |
+| `<move-down>`               | [Compose](menu-compose)                                                            |
+| `<move-up>`                 | [Compose](menu-compose)                                                            |
 
 (fn-new-mime)=
 (fn-next-entry)=
@@ -389,28 +389,28 @@ Bindings can be changed with [`:bind`](cmd-bind).
 (fn-next-unread)=
 ## N
 
-| Function                 | Used By                                  |
-|--------------------------|------------------------------------------|
-| `<new-mime>`             | [Compose](fn-compose)                    |
-| `<next-entry>`           | [Generic](fn-generic), [Pager](fn-pager) |
-| `<next-line>`            | [Generic](fn-generic), [Pager](fn-pager) |
-| `<next-new-then-unread>` | [Index](fn-index), [Pager](fn-pager)     |
-| `<next-new>`             | [Index](fn-index), [Pager](fn-pager)     |
-| `<next-page>`            | [Generic](fn-generic), [Pager](fn-pager) |
-| `<next-subthread>`       | [Index](fn-index), [Pager](fn-pager)     |
-| `<next-thread>`          | [Index](fn-index), [Pager](fn-pager)     |
-| `<next-undeleted>`       | [Index](fn-index), [Pager](fn-pager)     |
-| `<next-unread-mailbox>`  | [Index](fn-index), [Pager](fn-pager)     |
-| `<next-unread>`          | [Index](fn-index), [Pager](fn-pager)     |
+| Function                 | Used By                                      |
+|--------------------------|----------------------------------------------|
+| `<new-mime>`             | [Compose](menu-compose)                      |
+| `<next-entry>`           | [Generic](menu-generic), [Pager](menu-pager) |
+| `<next-line>`            | [Generic](menu-generic), [Pager](menu-pager) |
+| `<next-new>`             | [Index](menu-index), [Pager](menu-pager)     |
+| `<next-new-then-unread>` | [Index](menu-index), [Pager](menu-pager)     |
+| `<next-page>`            | [Generic](menu-generic), [Pager](menu-pager) |
+| `<next-subthread>`       | [Index](menu-index), [Pager](menu-pager)     |
+| `<next-thread>`          | [Index](menu-index), [Pager](menu-pager)     |
+| `<next-undeleted>`       | [Index](menu-index), [Pager](menu-pager)     |
+| `<next-unread>`          | [Index](menu-index), [Pager](menu-pager)     |
+| `<next-unread-mailbox>`  | [Index](menu-index), [Pager](menu-pager)     |
 
 (fn-open-all-threads)=
 (fn-open-thread)=
 ## O
 
-| Function             | Used By           |
-|----------------------|-------------------|
-| `<open-all-threads>` | [Index](fn-index) |
-| `<open-thread>`      | [Index](fn-index) |
+| Function             | Used By             |
+|----------------------|---------------------|
+| `<open-all-threads>` | [Index](menu-index) |
+| `<open-thread>`      | [Index](menu-index) |
 
 (fn-parent-message)=
 (fn-pgp-menu)=
@@ -435,29 +435,29 @@ Bindings can be changed with [`:bind`](cmd-bind).
 (fn-purge-thread)=
 ## P
 
-| Function                     | Used By                                                                          |
-|------------------------------|----------------------------------------------------------------------------------|
-| `<parent-message>`           | [Index](fn-index), [Pager](fn-pager)                                             |
-| `<pgp-menu>`                 | [Compose](fn-compose)                                                            |
-| `<pipe-entry>`               | [Attach](fn-attach), [Compose](fn-compose), [Index](fn-index), [Pager](fn-pager) |
-| `<pipe-message>`             | [Attach](fn-attach), [Compose](fn-compose), [Index](fn-index), [Pager](fn-pager) |
-| `<post-message>`             | [Index](fn-index), [Pager](fn-pager)                                             |
-| `<postpone-message>`         | [Compose](fn-compose)                                                            |
-| `<preview-page-down>`        | [Compose](fn-compose)                                                            |
-| `<preview-page-up>`          | [Compose](fn-compose)                                                            |
-| `<previous-entry>`           | [Generic](fn-generic), [Pager](fn-pager)                                         |
-| `<previous-line>`            | [Generic](fn-generic), [Pager](fn-pager)                                         |
-| `<previous-new-then-unread>` | [Index](fn-index), [Pager](fn-pager)                                             |
-| `<previous-new>`             | [Index](fn-index), [Pager](fn-pager)                                             |
-| `<previous-page>`            | [Generic](fn-generic), [Pager](fn-pager)                                         |
-| `<previous-subthread>`       | [Index](fn-index), [Pager](fn-pager)                                             |
-| `<previous-thread>`          | [Index](fn-index), [Pager](fn-pager)                                             |
-| `<previous-undeleted>`       | [Index](fn-index), [Pager](fn-pager)                                             |
-| `<previous-unread>`          | [Index](fn-index), [Pager](fn-pager)                                             |
-| `<print-entry>`              | [Attach](fn-attach), [Compose](fn-compose), [Pager](fn-pager)                    |
-| `<print-message>`            | [Index](fn-index), [Pager](fn-pager)                                             |
-| `<purge-message>`            | [Index](fn-index), [Pager](fn-pager)                                             |
-| `<purge-thread>`             | [Index](fn-index), [Pager](fn-pager)                                             |
+| Function                     | Used By                                                                                  |
+|------------------------------|------------------------------------------------------------------------------------------|
+| `<parent-message>`           | [Index](menu-index), [Pager](menu-pager)                                                 |
+| `<pgp-menu>`                 | [Compose](menu-compose)                                                                  |
+| `<pipe-entry>`               | [Attach](menu-attach), [Compose](menu-compose), [Index](menu-index), [Pager](menu-pager) |
+| `<pipe-message>`             | [Attach](menu-attach), [Compose](menu-compose), [Index](menu-index), [Pager](menu-pager) |
+| `<post-message>`             | [Index](menu-index), [Pager](menu-pager)                                                 |
+| `<postpone-message>`         | [Compose](menu-compose)                                                                  |
+| `<preview-page-down>`        | [Compose](menu-compose)                                                                  |
+| `<preview-page-up>`          | [Compose](menu-compose)                                                                  |
+| `<previous-entry>`           | [Generic](menu-generic), [Pager](menu-pager)                                             |
+| `<previous-line>`            | [Generic](menu-generic), [Pager](menu-pager)                                             |
+| `<previous-new>`             | [Index](menu-index), [Pager](menu-pager)                                                 |
+| `<previous-new-then-unread>` | [Index](menu-index), [Pager](menu-pager)                                                 |
+| `<previous-page>`            | [Generic](menu-generic), [Pager](menu-pager)                                             |
+| `<previous-subthread>`       | [Index](menu-index), [Pager](menu-pager)                                                 |
+| `<previous-thread>`          | [Index](menu-index), [Pager](menu-pager)                                                 |
+| `<previous-undeleted>`       | [Index](menu-index), [Pager](menu-pager)                                                 |
+| `<previous-unread>`          | [Index](menu-index), [Pager](menu-pager)                                                 |
+| `<print-entry>`              | [Attach](menu-attach), [Compose](menu-compose), [Pager](menu-pager)                      |
+| `<print-message>`            | [Index](menu-index), [Pager](menu-pager)                                                 |
+| `<purge-message>`            | [Index](menu-index), [Pager](menu-pager)                                                 |
+| `<purge-thread>`             | [Index](menu-index), [Pager](menu-pager)                                                 |
 
 (fn-quasi-delete)=
 (fn-query-append)=
@@ -466,13 +466,13 @@ Bindings can be changed with [`:bind`](cmd-bind).
 (fn-quote-char)=
 ## Q
 
-| Function         | Used By                                                   |
-|------------------|-----------------------------------------------------------|
-| `<quasi-delete>` | [Index](fn-index), [Pager](fn-pager)                      |
-| `<query-append>` | [Query](fn-query)                                         |
-| `<query>`        | [Index](fn-index), [Query](fn-query)                      |
-| `<quit>`         | [Dialog](fn-dialog), [Index](fn-index), [Pager](fn-pager) |
-| `<quote-char>`   | [Editor](fn-editor)                                       |
+| Function         | Used By                                                         |
+|------------------|-----------------------------------------------------------------|
+| `<quasi-delete>` | [Index](menu-index), [Pager](menu-pager)                        |
+| `<query>`        | [Index](menu-index), [Query](menu-query)                        |
+| `<query-append>` | [Query](menu-query)                                             |
+| `<quit>`         | [Dialog](menu-dialog), [Index](menu-index), [Pager](menu-pager) |
+| `<quote-char>`   | [Editor](menu-editor)                                           |
 
 (fn-read-subthread)=
 (fn-read-thread)=
@@ -490,19 +490,19 @@ Bindings can be changed with [`:bind`](cmd-bind).
 
 | Function               | Used By                                                               |
 |------------------------|-----------------------------------------------------------------------|
-| `<read-subthread>`     | [Index](fn-index), [Pager](fn-pager)                                  |
-| `<read-thread>`        | [Index](fn-index), [Pager](fn-pager)                                  |
-| `<recall-message>`     | [Index](fn-index), [Pager](fn-pager)                                  |
-| `<reconstruct-thread>` | [Index](fn-index), [Pager](fn-pager)                                  |
-| `<redraw-screen>`      | [Editor](fn-editor), [Generic](fn-generic), [Pager](fn-pager)         |
+| `<read-subthread>`     | [Index](menu-index), [Pager](menu-pager)                              |
+| `<read-thread>`        | [Index](menu-index), [Pager](menu-pager)                              |
+| `<recall-message>`     | [Index](menu-index), [Pager](menu-pager)                              |
+| `<reconstruct-thread>` | [Index](menu-index), [Pager](menu-pager)                              |
+| `<redraw-screen>`      | [Editor](menu-editor), [Generic](menu-generic), [Pager](menu-pager)   |
 | `<refresh>`            | {bdg-warning-line}`Renamed to:` [`<redraw-screen>`](fn-redraw-screen) |
-| `<reload-active>`      | [Browser](fn-browser)                                                 |
-| `<rename-attachment>`  | [Compose](fn-compose)                                                 |
-| `<rename-file>`        | [Compose](fn-compose)                                                 |
-| `<rename-mailbox>`     | [Browser](fn-browser)                                                 |
-| `<reply>`              | [Attach](fn-attach), [Index](fn-index), [Pager](fn-pager)             |
-| `<resend-message>`     | [Attach](fn-attach), [Index](fn-index), [Pager](fn-pager)             |
-| `<root-message>`       | [Index](fn-index), [Pager](fn-pager)                                  |
+| `<reload-active>`      | [Browser](menu-browser)                                               |
+| `<rename-attachment>`  | [Compose](menu-compose)                                               |
+| `<rename-file>`        | [Compose](menu-compose)                                               |
+| `<rename-mailbox>`     | [Browser](menu-browser)                                               |
+| `<reply>`              | [Attach](menu-attach), [Index](menu-index), [Pager](menu-pager)       |
+| `<resend-message>`     | [Attach](menu-attach), [Index](menu-index), [Pager](menu-pager)       |
+| `<root-message>`       | [Index](menu-index), [Pager](menu-pager)                              |
 
 (fn-save-entry)=
 (fn-save-message)=
@@ -545,47 +545,47 @@ Bindings can be changed with [`:bind`](cmd-bind).
 (fn-sync-mailbox)=
 ## S
 
-| Function                   | Used By                                                                        |
-|----------------------------|--------------------------------------------------------------------------------|
-| `<save-entry>`             | [Attach](fn-attach), [Pager](fn-pager)                                         |
-| `<save-message>`           | [Index](fn-index), [Pager](fn-pager)                                           |
-| `<search-next>`            | [Generic](fn-generic), [Pager](fn-pager)                                       |
-| `<search-opposite>`        | [Generic](fn-generic), [Pager](fn-pager)                                       |
-| `<search-reverse>`         | [Generic](fn-generic), [Pager](fn-pager)                                       |
-| `<search-toggle>`          | [Pager](fn-pager)                                                              |
-| `<search>`                 | [Generic](fn-generic), [Pager](fn-pager)                                       |
-| `<select-entry>`           | [Generic](fn-generic)                                                          |
-| `<select-new>`             | [Browser](fn-browser)                                                          |
-| `<send-message>`           | [Compose](fn-compose)                                                          |
-| `<set-flag>`               | [Index](fn-index), [Pager](fn-pager)                                           |
-| `<shell-escape>`           | [Generic](fn-generic), [Pager](fn-pager)                                       |
-| `<show-limit>`             | [Index](fn-index)                                                              |
-| `<show-log-messages>`      | [Generic](fn-generic), [Pager](fn-pager)                                       |
-| `<show-version>`           | [Generic](fn-generic), [Pager](fn-pager)                                       |
-| `<sidebar-abort-search>`   | [Sidebar](fn-sidebar)                                                          |
-| `<sidebar-first>`          | [Sidebar](fn-sidebar)                                                          |
-| `<sidebar-last>`           | [Sidebar](fn-sidebar)                                                          |
-| `<sidebar-next-new>`       | [Sidebar](fn-sidebar)                                                          |
-| `<sidebar-next>`           | [Sidebar](fn-sidebar)                                                          |
-| `<sidebar-open>`           | [Sidebar](fn-sidebar)                                                          |
-| `<sidebar-page-down>`      | [Sidebar](fn-sidebar)                                                          |
-| `<sidebar-page-up>`        | [Sidebar](fn-sidebar)                                                          |
-| `<sidebar-prev-new>`       | [Sidebar](fn-sidebar)                                                          |
-| `<sidebar-prev>`           | [Sidebar](fn-sidebar)                                                          |
-| `<sidebar-start-search>`   | [Sidebar](fn-sidebar)                                                          |
-| `<sidebar-toggle-virtual>` | [Sidebar](fn-sidebar)                                                          |
-| `<sidebar-toggle-visible>` | [Sidebar](fn-sidebar)                                                          |
-| `<skip-headers>`           | [Pager](fn-pager)                                                              |
-| `<skip-quoted>`            | [Pager](fn-pager)                                                              |
-| `<smime-menu>`             | [Compose](fn-compose)                                                          |
-| `<sort-alias-reverse>`     | [Alias](fn-alias)                                                              |
-| `<sort-alias>`             | [Alias](fn-alias)                                                              |
-| `<sort-mailbox>`           | [Index](fn-index), [Pager](fn-pager)                                           |
-| `<sort-reverse>`           | [Browser](fn-browser), [Index](fn-index), [Pager](fn-pager), [Query](fn-query) |
-| `<sort>`                   | [Browser](fn-browser), [Query](fn-query)                                       |
-| `<subscribe-pattern>`      | [Browser](fn-browser)                                                          |
-| `<subscribe>`              | [Browser](fn-browser)                                                          |
-| `<sync-mailbox>`           | [Index](fn-index), [Pager](fn-pager)                                           |
+| Function                   | Used By                                                                                |
+|----------------------------|----------------------------------------------------------------------------------------|
+| `<save-entry>`             | [Attach](menu-attach), [Pager](menu-pager)                                             |
+| `<save-message>`           | [Index](menu-index), [Pager](menu-pager)                                               |
+| `<search>`                 | [Generic](menu-generic), [Pager](menu-pager)                                           |
+| `<search-next>`            | [Generic](menu-generic), [Pager](menu-pager)                                           |
+| `<search-opposite>`        | [Generic](menu-generic), [Pager](menu-pager)                                           |
+| `<search-reverse>`         | [Generic](menu-generic), [Pager](menu-pager)                                           |
+| `<search-toggle>`          | [Pager](menu-pager)                                                                    |
+| `<select-entry>`           | [Generic](menu-generic)                                                                |
+| `<select-new>`             | [Browser](menu-browser)                                                                |
+| `<send-message>`           | [Compose](menu-compose)                                                                |
+| `<set-flag>`               | [Index](menu-index), [Pager](menu-pager)                                               |
+| `<shell-escape>`           | [Generic](menu-generic), [Pager](menu-pager)                                           |
+| `<show-limit>`             | [Index](menu-index)                                                                    |
+| `<show-log-messages>`      | [Generic](menu-generic), [Pager](menu-pager)                                           |
+| `<show-version>`           | [Generic](menu-generic), [Pager](menu-pager)                                           |
+| `<sidebar-abort-search>`   | [Sidebar](menu-sidebar)                                                                |
+| `<sidebar-first>`          | [Sidebar](menu-sidebar)                                                                |
+| `<sidebar-last>`           | [Sidebar](menu-sidebar)                                                                |
+| `<sidebar-next>`           | [Sidebar](menu-sidebar)                                                                |
+| `<sidebar-next-new>`       | [Sidebar](menu-sidebar)                                                                |
+| `<sidebar-open>`           | [Sidebar](menu-sidebar)                                                                |
+| `<sidebar-page-down>`      | [Sidebar](menu-sidebar)                                                                |
+| `<sidebar-page-up>`        | [Sidebar](menu-sidebar)                                                                |
+| `<sidebar-prev>`           | [Sidebar](menu-sidebar)                                                                |
+| `<sidebar-prev-new>`       | [Sidebar](menu-sidebar)                                                                |
+| `<sidebar-start-search>`   | [Sidebar](menu-sidebar)                                                                |
+| `<sidebar-toggle-virtual>` | [Sidebar](menu-sidebar)                                                                |
+| `<sidebar-toggle-visible>` | [Sidebar](menu-sidebar)                                                                |
+| `<skip-headers>`           | [Pager](menu-pager)                                                                    |
+| `<skip-quoted>`            | [Pager](menu-pager)                                                                    |
+| `<smime-menu>`             | [Compose](menu-compose)                                                                |
+| `<sort>`                   | [Browser](menu-browser), [Query](menu-query)                                           |
+| `<sort-alias>`             | [Alias](menu-alias)                                                                    |
+| `<sort-alias-reverse>`     | [Alias](menu-alias)                                                                    |
+| `<sort-mailbox>`           | [Index](menu-index), [Pager](menu-pager)                                               |
+| `<sort-reverse>`           | [Browser](menu-browser), [Index](menu-index), [Pager](menu-pager), [Query](menu-query) |
+| `<subscribe>`              | [Browser](menu-browser)                                                                |
+| `<subscribe-pattern>`      | [Browser](menu-browser)                                                                |
+| `<sync-mailbox>`           | [Index](menu-index), [Pager](menu-pager)                                               |
 
 (fn-tag-entry)=
 (fn-tag-message)=
@@ -610,29 +610,29 @@ Bindings can be changed with [`:bind`](cmd-bind).
 (fn-transpose-chars)=
 ## T
 
-| Function                  | Used By                                                 |
-|---------------------------|---------------------------------------------------------|
-| `<tag-entry>`             | [Generic](fn-generic)                                   |
-| `<tag-message>`           | [Pager](fn-pager)                                       |
-| `<tag-pattern>`           | [Alias](fn-alias), [Index](fn-index), [Query](fn-query) |
-| `<tag-prefix-cond>`       | [Generic](fn-generic)                                   |
-| `<tag-prefix>`            | [Generic](fn-generic)                                   |
-| `<tag-subthread>`         | [Index](fn-index)                                       |
-| `<tag-thread>`            | [Index](fn-index)                                       |
-| `<toggle-active>`         | [Autocrypt](fn-autocrypt)                               |
-| `<toggle-disposition>`    | [Compose](fn-compose)                                   |
-| `<toggle-mailboxes>`      | [Browser](fn-browser)                                   |
-| `<toggle-new>`            | [Index](fn-index)                                       |
-| `<toggle-prefer-encrypt>` | [Autocrypt](fn-autocrypt)                               |
-| `<toggle-quoted>`         | [Pager](fn-pager)                                       |
-| `<toggle-read>`           | [Index](fn-index)                                       |
-| `<toggle-recode>`         | [Compose](fn-compose)                                   |
-| `<toggle-subscribed>`     | [Browser](fn-browser)                                   |
-| `<toggle-unlink>`         | [Compose](fn-compose)                                   |
-| `<toggle-write>`          | [Index](fn-index), [Pager](fn-pager)                    |
-| `<top-page>`              | [Generic](fn-generic)                                   |
-| `<top>`                   | [Pager](fn-pager)                                       |
-| `<transpose-chars>`       | [Editor](fn-editor)                                     |
+| Function                  | Used By                                                       |
+|---------------------------|---------------------------------------------------------------|
+| `<tag-entry>`             | [Generic](menu-generic)                                       |
+| `<tag-message>`           | [Pager](menu-pager)                                           |
+| `<tag-pattern>`           | [Alias](menu-alias), [Index](menu-index), [Query](menu-query) |
+| `<tag-prefix>`            | [Generic](menu-generic)                                       |
+| `<tag-prefix-cond>`       | [Generic](menu-generic)                                       |
+| `<tag-subthread>`         | [Index](menu-index)                                           |
+| `<tag-thread>`            | [Index](menu-index)                                           |
+| `<toggle-active>`         | [Autocrypt](menu-autocrypt)                                   |
+| `<toggle-disposition>`    | [Compose](menu-compose)                                       |
+| `<toggle-mailboxes>`      | [Browser](menu-browser)                                       |
+| `<toggle-new>`            | [Index](menu-index)                                           |
+| `<toggle-prefer-encrypt>` | [Autocrypt](menu-autocrypt)                                   |
+| `<toggle-quoted>`         | [Pager](menu-pager)                                           |
+| `<toggle-read>`           | [Index](menu-index)                                           |
+| `<toggle-recode>`         | [Compose](menu-compose)                                       |
+| `<toggle-subscribed>`     | [Browser](menu-browser)                                       |
+| `<toggle-unlink>`         | [Compose](menu-compose)                                       |
+| `<toggle-write>`          | [Index](menu-index), [Pager](menu-pager)                      |
+| `<top>`                   | [Pager](menu-pager)                                           |
+| `<top-page>`              | [Generic](menu-generic)                                       |
+| `<transpose-chars>`       | [Editor](menu-editor)                                         |
 
 (fn-uncatchup)=
 (fn-undelete-entry)=
@@ -648,20 +648,20 @@ Bindings can be changed with [`:bind`](cmd-bind).
 (fn-update-encoding)=
 ## U
 
-| Function                | Used By                                                         |
-|-------------------------|-----------------------------------------------------------------|
-| `<uncatchup>`           | [Browser](fn-browser)                                           |
-| `<undelete-entry>`      | [Alias](fn-alias), [Attach](fn-attach), [Postpone](fn-postpone) |
-| `<undelete-message>`    | [Index](fn-index), [Pager](fn-pager)                            |
-| `<undelete-pattern>`    | [Index](fn-index)                                               |
-| `<undelete-subthread>`  | [Index](fn-index), [Pager](fn-pager)                            |
-| `<undelete-thread>`     | [Index](fn-index), [Pager](fn-pager)                            |
-| `<ungroup-attachment>`  | [Compose](fn-compose)                                           |
-| `<unsubscribe-pattern>` | [Browser](fn-browser)                                           |
-| `<unsubscribe>`         | [Browser](fn-browser)                                           |
-| `<untag-pattern>`       | [Alias](fn-alias), [Index](fn-index), [Query](fn-query)         |
-| `<upcase-word>`         | [Editor](fn-editor)                                             |
-| `<update-encoding>`     | [Compose](fn-compose)                                           |
+| Function                | Used By                                                               |
+|-------------------------|-----------------------------------------------------------------------|
+| `<uncatchup>`           | [Browser](menu-browser)                                               |
+| `<undelete-entry>`      | [Alias](menu-alias), [Attach](menu-attach), [Postpone](menu-postpone) |
+| `<undelete-message>`    | [Index](menu-index), [Pager](menu-pager)                              |
+| `<undelete-pattern>`    | [Index](menu-index)                                                   |
+| `<undelete-subthread>`  | [Index](menu-index), [Pager](menu-pager)                              |
+| `<undelete-thread>`     | [Index](menu-index), [Pager](menu-pager)                              |
+| `<ungroup-attachment>`  | [Compose](menu-compose)                                               |
+| `<unsubscribe>`         | [Browser](menu-browser)                                               |
+| `<unsubscribe-pattern>` | [Browser](menu-browser)                                               |
+| `<untag-pattern>`       | [Alias](menu-alias), [Index](menu-index), [Query](menu-query)         |
+| `<upcase-word>`         | [Editor](menu-editor)                                                 |
+| `<update-encoding>`     | [Compose](menu-compose)                                               |
 
 (fn-verify-key)=
 (fn-vfolder-from-query-readonly)=
@@ -679,31 +679,31 @@ Bindings can be changed with [`:bind`](cmd-bind).
 (fn-view-text)=
 ## V
 
-| Function                        | Used By                                    |
-|---------------------------------|--------------------------------------------|
-| `<verify-key>`                  | [Pgp](fn-pgp), [Smime](fn-smime)           |
-| `<vfolder-from-query-readonly>` | [Index](fn-index), [Pager](fn-pager)       |
-| `<vfolder-from-query>`          | [Index](fn-index), [Pager](fn-pager)       |
-| `<vfolder-window-backward>`     | [Index](fn-index)                          |
-| `<vfolder-window-forward>`      | [Index](fn-index)                          |
-| `<vfolder-window-reset>`        | [Index](fn-index)                          |
-| `<view-attach>`                 | [Attach](fn-attach), [Compose](fn-compose) |
-| `<view-attachments>`            | [Index](fn-index), [Pager](fn-pager)       |
-| `<view-file>`                   | [Browser](fn-browser)                      |
-| `<view-mailcap>`                | [Attach](fn-attach), [Compose](fn-compose) |
-| `<view-name>`                   | [Pgp](fn-pgp), [Smime](fn-smime)           |
-| `<view-pager>`                  | [Attach](fn-attach), [Compose](fn-compose) |
-| `<view-raw-message>`            | [Index](fn-index), [Pager](fn-pager)       |
-| `<view-text>`                   | [Attach](fn-attach), [Compose](fn-compose) |
+| Function                        | Used By                                        |
+|---------------------------------|------------------------------------------------|
+| `<verify-key>`                  | [Pgp](menu-pgp), [Smime](menu-smime)           |
+| `<vfolder-from-query>`          | [Index](menu-index), [Pager](menu-pager)       |
+| `<vfolder-from-query-readonly>` | [Index](menu-index), [Pager](menu-pager)       |
+| `<vfolder-window-backward>`     | [Index](menu-index)                            |
+| `<vfolder-window-forward>`      | [Index](menu-index)                            |
+| `<vfolder-window-reset>`        | [Index](menu-index)                            |
+| `<view-attach>`                 | [Attach](menu-attach), [Compose](menu-compose) |
+| `<view-attachments>`            | [Index](menu-index), [Pager](menu-pager)       |
+| `<view-file>`                   | [Browser](menu-browser)                        |
+| `<view-mailcap>`                | [Attach](menu-attach), [Compose](menu-compose) |
+| `<view-name>`                   | [Pgp](menu-pgp), [Smime](menu-smime)           |
+| `<view-pager>`                  | [Attach](menu-attach), [Compose](menu-compose) |
+| `<view-raw-message>`            | [Index](menu-index), [Pager](menu-pager)       |
+| `<view-text>`                   | [Attach](menu-attach), [Compose](menu-compose) |
 
 (fn-what-key)=
 (fn-write-fcc)=
 ## W
 
-| Function      | Used By                                  |
-|---------------|------------------------------------------|
-| `<what-key>`  | [Generic](fn-generic), [Pager](fn-pager) |
-| `<write-fcc>` | [Compose](fn-compose)                    |
+| Function      | Used By                                      |
+|---------------|----------------------------------------------|
+| `<what-key>`  | [Generic](menu-generic), [Pager](menu-pager) |
+| `<write-fcc>` | [Compose](menu-compose)                      |
 
 ```{toctree}
 ---

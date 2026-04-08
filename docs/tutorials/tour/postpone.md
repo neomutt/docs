@@ -42,7 +42,7 @@ You can think of it as NeoMutt's draft picker.
 - Select a postponed draft and reopen it for editing.
 - Delete or undelete drafts you no longer want.
 - Use the list as a quick overview of which drafts are waiting to be finished.
-- Full reference: [Postpone Functions](fn-postpone), [Generic Functions](fn-generic).
+- Full reference: [Postpone Functions](menu-postpone), [Generic Functions](menu-generic).
 
 ## Where can I go next?
 

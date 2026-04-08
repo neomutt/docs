@@ -98,7 +98,7 @@ Protected headers are stored inside the encrypted or signed part of an email, to
 For more information see <https://github.com/autocrypt/protected-headers> Currently NeoMutt only supports the Subject header.
 
 Encrypted messages using protected headers often substitute the exposed Subject header with a dummy value (see [`$crypt_protected_headers_subject`](cfg-crypt-protected-headers-subject)).
-NeoMutt will update its concept of the correct subject **after** the message is opened, i.e. via the [`<display-message>`](fn-index) function.
+NeoMutt will update its concept of the correct subject **after** the message is opened, i.e. via the [`<display-message>`](menu-index) function.
 If you reply to a message before opening it, NeoMutt will end up using the dummy Subject header, so be sure to open such a message first.
 
 --------------------------------------------------------------------------------
@@ -281,7 +281,7 @@ This value is ignored if [`$use_envelope_from`](cfg-use-envelope-from) is _unset
     ```
 
 If _set_, NeoMutt will automatically attempt to decrypt traditional PGP messages whenever the user performs an operation which ordinarily would result in the contents of the message being operated on.
-For example, if the user displays a pgp-traditional message which has not been manually checked with the [`<check-traditional-pgp>`](fn-attach) function, NeoMutt will automatically check the message for traditional pgp.
+For example, if the user displays a pgp-traditional message which has not been manually checked with the [`<check-traditional-pgp>`](menu-attach) function, NeoMutt will automatically check the message for traditional pgp.
 
 --------------------------------------------------------------------------------
 

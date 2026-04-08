@@ -56,7 +56,7 @@ You may also hear it described as the alias menu or contact list.
 - Compose a new message directly to the currently selected alias with `<mail>`.
 - Limit, sort, tag, delete, and undelete alias entries while you browse.
 - Use the dialog as a quick way to inspect how an alias expands before sending mail.
-- Full reference: [Alias Functions](fn-alias), [Generic Functions](fn-generic).
+- Full reference: [Alias Functions](menu-alias), [Generic Functions](menu-generic).
 
 ## Where can I go next?
 

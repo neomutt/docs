@@ -42,7 +42,7 @@ Unlike the [PGP Dialog](pgp.md), the entries here are X.509-style certificates r
 - Verify the selected certificate before using it.
 - View the certificate's user name or label in more detail.
 - Cancel and return to the send workflow.
-- Full reference: [Smime Functions](fn-smime).
+- Full reference: [Smime Functions](menu-smime).
 
 ## Where can I go next?
 

@@ -195,7 +195,7 @@ Reduce this number if you find yourself getting disconnected from your IMAP serv
     ```
 
 Configure whether IMAP folder browsing shows only subscribed folders or all folders.
-This can be toggled in the IMAP browser with the [`<toggle-subscribed>`](fn-browser) function.
+This can be toggled in the IMAP browser with the [`<toggle-subscribed>`](menu-browser) function.
 
 --------------------------------------------------------------------------------
 
@@ -248,7 +248,7 @@ This command will be run on every connection attempt that uses the `OAUTHBEARER`
     ```
 
 Specifies the password for your IMAP account.
-If _unset_, NeoMutt will prompt you for your password when you invoke the [`<imap-fetch-mail>`](fn-index)
+If _unset_, NeoMutt will prompt you for your password when you invoke the [`<imap-fetch-mail>`](menu-index)
 function or try to open an IMAP folder.
 
 :::{warning}

@@ -175,7 +175,7 @@ It is written for people who are new to NeoMutt or to email technology in genera
    Unlike *bouncing*, forwarding lets you add your own comments or modify the message.
 
 **Function**
-:  A named action that NeoMutt can perform — for example [`<next-entry>`](fn-index), [`<delete-message>`](fn-index), or [`<sync-mailbox>`](fn-index).
+:  A named action that NeoMutt can perform — for example [`<next-entry>`](menu-index), [`<delete-message>`](menu-index), or [`<sync-mailbox>`](menu-index).
    Functions can be bound to keys or used inside macros.
 
 ---
@@ -349,7 +349,7 @@ It is written for people who are new to NeoMutt or to email technology in genera
    - `~s vacation` — subject contains "vacation"
    - `~f alice` — from someone named "alice"
 
-   Patterns are used with the search command, the [`<limit>`](fn-index) function,
+   Patterns are used with the search command, the [`<limit>`](menu-index) function,
    hooks, colour rules, and more.
 
 **POP3 (Post Office Protocol)**

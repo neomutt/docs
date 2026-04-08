@@ -4,7 +4,7 @@ description: Key bindings and functions for creating, deleting, and managing Aut
 keywords: neomutt, functions, autocrypt, menu, bindings, keys, encryption, automatic encryption, create-account, delete-account, toggle-active, toggle-prefer-encrypt, key management
 ---
 
-(fn-autocrypt)=
+(menu-autocrypt)=
 # Autocrypt Functions
 
 Manage your Autocrypt encryption accounts.

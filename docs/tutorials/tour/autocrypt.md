@@ -37,7 +37,7 @@ This dialog is where you review which addresses participate and how strongly the
 - Toggle whether the current account is active.
 - Toggle the account's prefer-encrypt setting.
 - Delete accounts that are no longer needed.
-- Full reference: [Autocrypt Functions](fn-autocrypt).
+- Full reference: [Autocrypt Functions](menu-autocrypt).
 
 ## Where can I go next?
 

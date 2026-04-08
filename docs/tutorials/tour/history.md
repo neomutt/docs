@@ -46,7 +46,7 @@ Its purpose is to save typing and help you reuse complicated strings accurately.
 - Reuse a previous entry without retyping it.
 - Narrow the list by typing part of the text first, then opening history.
 - Exit without changing the current prompt.
-- Full reference: [Dialog Functions](fn-dialog), [Editor Functions](fn-editor).
+- Full reference: [Dialog Functions](menu-dialog), [Editor Functions](menu-editor).
 
 ## Where can I go next?
 

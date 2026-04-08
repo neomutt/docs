@@ -58,7 +58,7 @@ Most workflows start here, and most of the other dialogs eventually return here.
 - Organize mail by deleting, undeleting, saving, copying, piping, printing, labeling, tagging, and syncing messages.
 - Change the view by limiting, searching, sorting, threading, collapsing threads, and jumping between unread or tagged mail.
 - Open related tools such as the [Attach Dialog](attach.md), [Query Dialog](query.md), [Autocrypt Dialog](autocrypt.md), help pages, and the command line.
-- Full reference: [Index Functions](fn-index), [Generic Functions](fn-generic), [Sidebar Functions](fn-sidebar).
+- Full reference: [Index Functions](menu-index), [Generic Functions](menu-generic), [Sidebar Functions](menu-sidebar).
 
 ## Where can I go next?
 

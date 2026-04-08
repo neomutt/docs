@@ -24,7 +24,7 @@ Help screens, command dumps, log output, attachment text, and key verification a
 - Read long-form output without losing it off the terminal.
 - Scroll, search, and quit back to the caller.
 - Use it as a reference screen while learning commands, key bindings, colours, or current configuration state.
-- Full reference: [Dialog Functions](fn-dialog), [Generic Functions](fn-generic), [Pager Functions](fn-pager).
+- Full reference: [Dialog Functions](menu-dialog), [Generic Functions](menu-generic), [Pager Functions](menu-pager).
 
 ## Where can I go next?
 

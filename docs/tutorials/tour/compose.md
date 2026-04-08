@@ -57,7 +57,7 @@ You reach it for new mail, replies, forwards, bounces, and recalled drafts.
 - Attach files, messages, and keys; reorder attachments; rename or re-encode them; and group them into multipart structures.
 - Choose PGP, S/MIME, or Autocrypt options before sending.
 - Send now, postpone for later, write a copy to a folder, or quit without sending.
-- Full reference: [Compose Functions](fn-compose), [Generic Functions](fn-generic), [Editor Functions](fn-editor).
+- Full reference: [Compose Functions](menu-compose), [Generic Functions](menu-generic), [Editor Functions](menu-editor).
 
 ## Where can I go next?
 

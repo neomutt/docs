@@ -57,7 +57,7 @@ Its job is to keep your folder tree visible so you can change mailboxes quickly.
 - Open the highlighted mailbox in the [Index Dialog](index2.md).
 - Search the sidebar mailbox list and toggle between regular and virtual mailboxes.
 - Hide or show the panel without changing the rest of the screen layout.
-- Full reference: [Sidebar Functions](fn-sidebar).
+- Full reference: [Sidebar Functions](menu-sidebar).
 
 ## Where can I go next?
 

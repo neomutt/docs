@@ -45,7 +45,7 @@ It is sometimes called the attachment menu or attachment tree.
 - Reply, forward, group-reply, or bounce while staying focused on the current message's attachments.
 - Extract supported public keys from a message and inspect encrypted or signed content.
 - Collapse multipart branches to simplify very large attachment trees.
-- Full reference: [Attach Functions](fn-attach), [Generic Functions](fn-generic).
+- Full reference: [Attach Functions](menu-attach), [Generic Functions](menu-generic).
 
 ## Where can I go next?
 

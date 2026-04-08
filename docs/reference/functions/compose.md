@@ -4,7 +4,7 @@ description: Key bindings and functions for editing recipients, attachments, enc
 keywords: neomutt, functions, compose, menu, bindings, keys, writing email, message editor, send-message, attach-file, edit-to, edit-subject, pgp-menu, smime-menu, postpone-message, attachments
 ---
 
-(fn-compose)=
+(menu-compose)=
 # Compose Functions
 
 Prepare an email before sending it.
@@ -37,7 +37,7 @@ You can edit recipients, subject, and headers, attach files, configure encryptio
 | `<pipe-message>`        | `\|`                                   | Pipe message/attachment to a shell command           |                                   |
 | `<print-entry>`         | `l`                                    | Print the current entry                              |                                   |
 | `<rename-attachment>`   | `^O`                                   | Send attachment with a different name                |                                   |
-| `<tag-entry>`           | `T`                                    | Tag the current entry                                | [{bdg-info}`generic`](fn-generic) |
+| `<tag-entry>`           | `T`                                    | Tag the current entry                                | [{bdg-info}`generic`](menu-generic) |
 | `<toggle-disposition>`  | `^D`                                   | Toggle disposition between inline/attachment         |                                   |
 | `<toggle-recode>`       |                                        | Toggle recoding of this attachment                   |                                   |
 | `<toggle-unlink>`       | `u`                                    | Toggle whether to delete file after sending it       |                                   |

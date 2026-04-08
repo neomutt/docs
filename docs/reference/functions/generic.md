@@ -4,7 +4,7 @@ description: Common key bindings for scrolling, searching, tagging, and navigati
 keywords: neomutt, functions, generic, menu, bindings, keys, scrolling, searching, tagging, navigation, inherited, select-entry, next-page, previous-page, enter-command, tag-entry
 ---
 
-(fn-generic)=
+(menu-generic)=
 # Generic Functions
 
 Not a menu itself, but provides common functions — such as scrolling, searching, and tagging — that are inherited by all other menus (except pager and editor).

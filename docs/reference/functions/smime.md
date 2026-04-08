@@ -4,7 +4,7 @@ description: Key bindings and functions for selecting and verifying S/MIME certi
 keywords: neomutt, functions, smime, s/mime, menu, bindings, keys, encryption, certificates, signing, verify-key, view-name, certificate selection, digital signature
 ---
 
-(fn-smime)=
+(menu-smime)=
 # S/MIME Functions
 
 Select an S/MIME certificate when encrypting or signing an email.

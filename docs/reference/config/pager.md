@@ -204,7 +204,7 @@ This setting is ignored if [`$pager`](cfg-pager) is set.
     set pager_skip_quoted_context = 0
     ```
 
-Determines the number of lines of context to show before the unquoted text when using [`<skip-quoted>`](fn-pager).
+Determines the number of lines of context to show before the unquoted text when using [`<skip-quoted>`](menu-pager).
 When set to a positive number at most that many lines of the previous quote are displayed.
 If the previous quote is shorter the whole quote is displayed.
 
@@ -220,7 +220,7 @@ If the previous quote is shorter the whole quote is displayed.
     set pager_stop = no
     ```
 
-When _set_, the internal-pager will **not** move to the next message when you are at the end of a message and invoke [`<next-page>`](fn-generic).
+When _set_, the internal-pager will **not** move to the next message when you are at the end of a message and invoke [`<next-page>`](menu-generic).
 
 --------------------------------------------------------------------------------
 
@@ -319,6 +319,6 @@ When _set_, the internal-pager will pad blank lines to the bottom of the screen 
     set toggle_quoted_show_levels = 0
     ```
 
-Quoted text may be filtered out using the [`<toggle-quoted>`](fn-pager) command.
-If set to a number greater than 0, then the [`<toggle-quoted>`](fn-pager) command will only filter out quote levels above this number.
+Quoted text may be filtered out using the [`<toggle-quoted>`](menu-pager) command.
+If set to a number greater than 0, then the [`<toggle-quoted>`](menu-pager) command will only filter out quote levels above this number.
 

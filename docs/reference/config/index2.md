@@ -30,7 +30,7 @@ This is independent of the setting of the [`$beep`](cfg-beep) option.
     set change_folder_next = no
     ```
 
-When this option is _set_, the [`<change-folder>`](fn-index) function mailbox suggestion will start at the next folder in your [`:mailboxes`](cmd-mailboxes) list, instead of starting at the first folder in the list.
+When this option is _set_, the [`<change-folder>`](menu-index) function mailbox suggestion will start at the next folder in your [`:mailboxes`](cmd-mailboxes) list, instead of starting at the first folder in the list.
 
 --------------------------------------------------------------------------------
 
@@ -310,7 +310,7 @@ Controls the characters used by the `%r` indicator in [`$status_format`](cfg-sta
 | 1         | `-`     | Mailbox is unchanged                                                                                                               |
 | 2         | `*`     | Mailbox has been changed and needs to be resynchronized                                                                            |
 | 3         | `%`     | Mailbox is read-only, or will not be written when exiting.                                                                         |
-|           |         | You can toggle whether to write changes to a mailbox with the [`<toggle-write>`](fn-index) operation, bound by default to {kbd}`%` |
+|           |         | You can toggle whether to write changes to a mailbox with the [`<toggle-write>`](menu-index) operation, bound by default to {kbd}`%` |
 | 4         | `A`     | Folder opened in attach-message mode.                                                                                              |
 |           |         | Certain operations like composing a new mail, replying, forwarding, etc. are not permitted in this mode                            |
 

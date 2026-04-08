@@ -4,7 +4,7 @@ description: Key bindings and functions for selecting, deleting, and resuming po
 keywords: neomutt, functions, postpone, menu, bindings, keys, drafts, saved drafts, resume editing, delete-entry, undelete-entry, recall message
 ---
 
-(fn-postpone)=
+(menu-postpone)=
 # Postpone Functions
 
 Select from your saved draft emails to resume editing.

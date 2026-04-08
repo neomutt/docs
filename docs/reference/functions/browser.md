@@ -4,7 +4,7 @@ description: Key bindings and functions for browsing files, directories, and IMA
 keywords: neomutt, functions, browser, menu, bindings, keys, files, directories, imap, nntp, mailbox, subscribe, change-dir, create-mailbox, toggle-mailboxes, file browser
 ---
 
-(fn-browser)=
+(menu-browser)=
 # Browser Functions
 
 Browse files on disk or mailboxes on a server.

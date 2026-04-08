@@ -39,7 +39,7 @@ In other words, it is the modern, unified version of the backend-specific [PGP D
 - Verify key details before accepting them.
 - Inspect the selected identity's displayed user name.
 - Cancel and return to the send workflow.
-- Full reference: [Pgp Functions](fn-pgp), [Smime Functions](fn-smime).
+- Full reference: [Pgp Functions](menu-pgp), [Smime Functions](menu-smime).
 
 ## Where can I go next?
 

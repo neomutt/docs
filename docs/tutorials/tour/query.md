@@ -57,7 +57,7 @@ Its job is to help you find recipients who are not already stored in your alias 
 - Sort, limit, and tag results to narrow large address-book searches.
 - Create a local alias from a selected query result.
 - Compose a new message directly to the selected address.
-- Full reference: [Query Functions](fn-query), [Generic Functions](fn-generic).
+- Full reference: [Query Functions](menu-query), [Generic Functions](menu-generic).
 
 ## Where can I go next?
 

@@ -56,7 +56,7 @@ Instead of memorising every `~x` code, you can browse and insert the right one f
 - Insert a pattern fragment into the active prompt.
 - Search through the list if you remember part of a description but not the exact code.
 - Use it as a learning aid while you build more complex searches and limits.
-- Full reference: [Pattern Syntax](ref-patterns), [Dialog Functions](fn-dialog), [Generic Functions](fn-generic).
+- Full reference: [Pattern Syntax](ref-patterns), [Dialog Functions](menu-dialog), [Generic Functions](menu-generic).
 
 ## Where can I go next?
 

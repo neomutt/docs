@@ -58,7 +58,7 @@ Depending on your layout, it may appear as a split view underneath the index or 
 - Reply, group-reply, list-reply, forward, bounce, save, print, pipe, label, or delete the message without going back to the index first.
 - Move directly to the next or previous message, thread, subthread, or unread message while staying in reading mode.
 - Open the [Attach Dialog](attach.md), create an alias from the sender, or inspect the raw message.
-- Full reference: [Pager Functions](fn-pager), [Index Functions](fn-index), [Sidebar Functions](fn-sidebar), [Generic Functions](fn-generic).
+- Full reference: [Pager Functions](menu-pager), [Index Functions](menu-index), [Sidebar Functions](menu-sidebar), [Generic Functions](menu-generic).
 
 ## Where can I go next?
 

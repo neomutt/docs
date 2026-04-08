@@ -45,7 +45,7 @@ If you are using GPGME instead, you will usually see the [GPGME Dialog](gpgme.md
 - Verify the selected key before using it.
 - View the key's user ID in more detail.
 - Cancel key selection and return to the sending workflow.
-- Full reference: [Pgp Functions](fn-pgp).
+- Full reference: [Pgp Functions](menu-pgp).
 
 ## Where can I go next?
 
