@@ -59,10 +59,10 @@ If neither `VISUAL` nor `EDITOR` is set, NeoMutt falls back to `vi`.
 
 **Source:** ncurses
 
-Specifies the time (in milliseconds) that ncurses waits after receiving an {kbd}`Escape` character to determine whether it is the beginning of a terminal escape sequence.
+Specifies the time (in milliseconds) that ncurses waits after receiving an {kbd}`<Escape>` character to determine whether it is the beginning of a terminal escape sequence.
 The default is **1000 ms**.
 
-Setting this to a low value (e.g. `25`) or `0` is recommended when [`$abort_key`](cfg-abort-key) is set to `<Esc>`, so that single {kbd}`Escape` presses are recognised immediately.
+Setting this to a low value (e.g. `25`) or `0` is recommended when [`$abort_key`](cfg-abort-key) is set to `<Esc>`, so that single {kbd}`<Escape>` presses are recognised immediately.
 
 ```sh
 export ESCDELAY=25

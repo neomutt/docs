@@ -116,7 +116,7 @@ macro index,pager \cb "<pipe-message>urlview<Enter>" "Extract and open URLs"
 3. Open a message with links and press {kbd}`Ctrl-B`.
 
 Expected result: a list of URLs appears.
-Select one and press {kbd}`Enter` to open it in your browser.
+Select one and press {kbd}`<Enter>` to open it in your browser.
 
 ### Alternative: Use urlscan
 

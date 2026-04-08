@@ -79,7 +79,7 @@ There are four ways of viewing attachments:
 - **[`<view-mailcap>`](fn-view-mailcap) (default keybinding: {kbd}`m`)** — This will use the first matching mailcap entry.
    If no matching mailcap entries are found, it will abort with an error message.
 
-- **[`<view-attach>`](fn-view-attach) (default keybinding: {kbd}`Enter`)** — NeoMutt will display internally supported MIME types in the pager.
+- **[`<view-attach>`](fn-view-attach) (default keybinding: {kbd}`<Enter>`)** — NeoMutt will display internally supported MIME types in the pager.
    This will respect **auto-view** settings, to determine whether to use a `copiousoutput` mailcap entry or just directly display the attachment.
    Other MIME types will use the first matching mailcap entry.
    If no matching mailcap entries are found, the attachment will be displayed in the pager as raw text.

@@ -54,7 +54,7 @@ Expected result: NeoMutt loads without errors.
 
 Expected result: the alias menu appears showing your `alice` entry.
 
-2. Select the alias and press {kbd}`Enter`.
+2. Select the alias and press {kbd}`<Enter>`.
 
 Expected result: NeoMutt inserts `Alice Example <alice@example.com>` into the address field.
 

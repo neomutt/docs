@@ -75,7 +75,7 @@ For safer storage of secrets, see [Password Manager](../howto/password-manager).
 ## Read Your First Email
 
 1. Start NeoMutt.
-2. Open the inbox and press {kbd}`Enter` on a message.
+2. Open the inbox and press {kbd}`<Enter>` on a message.
 
 Expected result: the pager shows the message content.
 

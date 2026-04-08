@@ -56,26 +56,26 @@ You can also use the form {kbd}`<177>`, which allows octal numbers with an arbit
 |-----------------|-----------------------------|
 | `\t`            | tab                         |
 | {kbd}`<Tab>`         | tab                         |
-| {kbd}`Shift-Tab`     | backtab / shift-tab         |
+| {kbd}`<Shift-Tab>`     | backtab / shift-tab         |
 | `\r`            | carriage return             |
 | `\n`            | newline                     |
 | `\e`            | escape/alt                  |
-| {kbd}`Escape`         | escape/alt                  |
-| {kbd}`Up`          | up arrow                    |
-| {kbd}`Down`        | down arrow                  |
-| {kbd}`Left`        | left arrow                  |
-| {kbd}`Right`       | right arrow                 |
+| {kbd}`<Escape>`         | escape/alt                  |
+| {kbd}`<Up>`          | up arrow                    |
+| {kbd}`<Down>`        | down arrow                  |
+| {kbd}`<Left>`        | left arrow                  |
+| {kbd}`<Right>`       | right arrow                 |
 | {kbd}`Page Up`      | Page Up                     |
 | {kbd}`Page Down`    | Page Down                   |
-| {kbd}`Backspace`   | Backspace                   |
-| {kbd}`Delete`      | Delete                      |
-| {kbd}`Insert`      | Insert                      |
-| {kbd}`Enter`       | Enter                       |
-| {kbd}`Return`      | Return                      |
+| {kbd}`<Backspace>`   | Backspace                   |
+| {kbd}`<Delete>`      | Delete                      |
+| {kbd}`<Insert>`      | Insert                      |
+| {kbd}`<Enter>`       | Enter                       |
+| {kbd}`<Return>`      | Return                      |
 | {kbd}`Keypad Enter` | Enter key on numeric keypad |
-| {kbd}`Home`        | Home                        |
-| {kbd}`End`         | End                         |
-| {kbd}`Space`       | Space bar                   |
+| {kbd}`<Home>`        | Home                        |
+| {kbd}`<End>`         | End                         |
+| {kbd}`<Space>`       | Space bar                   |
 | {kbd}`F1`          | function key 1              |
 | {kbd}`F10`         | function key 10             |
 
@@ -121,15 +121,15 @@ To prevent NeoMutt from becoming unusable some fallback key bindings are added a
 
 | Menu    | Key               | Bound Function      |
 |---------|-------------------|---------------------|
-| generic | {kbd}`Enter`     | [`<select-entry>`](fn-select-entry)      |
-| generic | {kbd}`Return`    | [`<select-entry>`](fn-select-entry)      |
+| generic | {kbd}`<Enter>`     | [`<select-entry>`](fn-select-entry)      |
+| generic | {kbd}`<Return>`    | [`<select-entry>`](fn-select-entry)      |
 | generic | {kbd}`:`         | [`<enter-command>`](fn-enter-command)    |
 | generic | {kbd}`?`         | [`<help>`](fn-help)                      |
 | generic | {kbd}`q`         | [`<exit>`](fn-exit)                      |
-| editor  | {kbd}`Backspace` | [`<backspace>`](fn-backspace)            |
+| editor  | {kbd}`<Backspace>` | [`<backspace>`](fn-backspace)            |
 | editor  | `\177`           | [`<backspace>`](fn-backspace)            |
-| index   | {kbd}`Enter`     | [`<display-message>`](fn-display-message) |
-| index   | {kbd}`Return`    | [`<display-message>`](fn-display-message) |
+| index   | {kbd}`<Enter>`     | [`<display-message>`](fn-display-message) |
+| index   | {kbd}`<Return>`    | [`<display-message>`](fn-display-message) |
 | pager   | {kbd}`?`         | [`<help>`](fn-help)                      |
 | pager   | {kbd}`q`         | [`<exit>`](fn-exit)                      |
 | pager   | {kbd}`:`         | [`<enter-command>`](fn-enter-command)    |
@@ -140,12 +140,12 @@ It is, however, recommended to use [`:unbind`](cmd-unbind) instead.
 ## Enter versus Return
 
 Prior to 2022, NeoMutt used a default ncurses mode (`nl()`).
-This mode maps keyboard input of either {kbd}`Enter` or {kbd}`Return` to the same value, which NeoMutt interpreted as {kbd}`Return` internally.
+This mode maps keyboard input of either {kbd}`<Enter>` or {kbd}`<Return>` to the same value, which NeoMutt interpreted as {kbd}`<Return>` internally.
 
-However, starting in version 2.2, this mode is turned off, allowing {kbd}`Return` and {kbd}`Enter` to be mapped separately, if desired.
+However, starting in version 2.2, this mode is turned off, allowing {kbd}`<Return>` and {kbd}`<Enter>` to be mapped separately, if desired.
 The default keyboard mappings set both, but you can override this or create new bindings with one or the other (or both).
 
-Note that in terminal applications, such as NeoMutt, {kbd}`Enter` is the same as `\n` and {kbd}`Ctrl-J`; while {kbd}`Return` is the same as `\r` and {kbd}`Ctrl-M`.
+Note that in terminal applications, such as NeoMutt, {kbd}`<Enter>` is the same as `\n` and {kbd}`Ctrl-J`; while {kbd}`<Return>` is the same as `\r` and {kbd}`Ctrl-M`.
 
 ## Warnings about Duplicated Bindings
 

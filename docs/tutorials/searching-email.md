@@ -12,7 +12,7 @@ If you're new to reading mail in NeoMutt, start with [Reading Your First Email](
 ## Basic Search
 
 1. Open a mailbox in the index.
-2. Press {kbd}`/` and type a word from a message subject, then press {kbd}`Enter`.
+2. Press {kbd}`/` and type a word from a message subject, then press {kbd}`<Enter>`.
 3. Press {kbd}`n` to jump to the next match.
 
 Expected result: the cursor moves to messages that match the search string.
@@ -21,7 +21,7 @@ Expected result: the cursor moves to messages that match the search string.
 
 1. Press {kbd}`l` in the index to limit the view.
 2. Enter a pattern like `~f alice@example.com`.
-3. Press {kbd}`Enter` to apply the limit.
+3. Press {kbd}`<Enter>` to apply the limit.
 4. Press {kbd}`l` again and enter `*` to clear the limit.
 
 Expected result: the index shows only matching messages while the limit is active.

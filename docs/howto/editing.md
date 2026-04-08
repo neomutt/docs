@@ -17,10 +17,10 @@ The key bindings follow Emacs conventions.
 
 | Key               | Function          | Description                   |
 |-------------------|-------------------|-------------------------------|
-| {kbd}`Ctrl-A` or {kbd}`Home`  | [`<bol>`](fn-bol)           | Move to the start of the line |
-| {kbd}`Ctrl-E` or {kbd}`End`   | [`<eol>`](fn-eol)           | Move to the end of the line   |
-| {kbd}`Ctrl-B` or {kbd}`Left`  | [`<backward-char>`](fn-backward-char) | Move back one character       |
-| {kbd}`Ctrl-F` or {kbd}`Right` | [`<forward-char>`](fn-forward-char)  | Move forward one character    |
+| {kbd}`Ctrl-A` or {kbd}`<Home>`  | [`<bol>`](fn-bol)           | Move to the start of the line |
+| {kbd}`Ctrl-E` or {kbd}`<End>`   | [`<eol>`](fn-eol)           | Move to the end of the line   |
+| {kbd}`Ctrl-B` or {kbd}`<Left>`  | [`<backward-char>`](fn-backward-char) | Move back one character       |
+| {kbd}`Ctrl-F` or {kbd}`<Right>` | [`<forward-char>`](fn-forward-char)  | Move forward one character    |
 | {kbd}`Esc B`      | [`<backward-word>`](fn-backward-word) | Move back one word            |
 | {kbd}`Esc F`      | [`<forward-word>`](fn-forward-word)  | Move forward one word         |
 
@@ -28,8 +28,8 @@ The key bindings follow Emacs conventions.
 
 | Key                | Function        | Description                            |
 |--------------------|-----------------|----------------------------------------|
-| {kbd}`Ctrl-D` or {kbd}`Delete` | [`<delete-char>`](fn-delete-char) | Delete the character under the cursor  |
-| {kbd}`Backspace`      | [`<backspace>`](fn-backspace) | Delete the character before the cursor |
+| {kbd}`Ctrl-D` or {kbd}`<Delete>` | [`<delete-char>`](fn-delete-char) | Delete the character under the cursor  |
+| {kbd}`<Backspace>`      | [`<backspace>`](fn-backspace) | Delete the character before the cursor |
 | {kbd}`Ctrl-K`               | [`<kill-eol>`](fn-kill-eol)    | Delete to the end of the line          |
 | {kbd}`Ctrl-U`               | [`<kill-line>`](fn-kill-line)   | Delete the entire line                 |
 | {kbd}`Ctrl-W`               | [`<kill-word>`](fn-kill-word)   | Delete the word before the cursor      |
@@ -49,7 +49,7 @@ The key bindings follow Emacs conventions.
 |------------|----------------|------------------------------------|
 | {kbd}`Ctrl-V`       | [`<quote-char>`](fn-quote-char) | Quote (escape) the next typed key  |
 | {kbd}`Ctrl-G`       | n/a            | Abort the current prompt or action |
-| {kbd}`Return` | n/a            | Confirm / finish editing           |
+| {kbd}`<Return>` | n/a            | Confirm / finish editing           |
 
 ## Tab Completion
 
@@ -69,8 +69,8 @@ The number of history entries is controlled by [`$history`](cfg-history).
 
 | Key      | Function           | Description                             |
 |----------|--------------------|-----------------------------------------|
-| {kbd}`Up`   | [`<history-up>`](fn-history-up)     | Recall the previous string from history |
-| {kbd}`Down` | [`<history-down>`](fn-history-down)   | Recall the next string from history     |
+| {kbd}`<Up>`   | [`<history-up>`](fn-history-up)     | Recall the previous string from history |
+| {kbd}`<Down>` | [`<history-down>`](fn-history-down)   | Recall the next string from history     |
 | {kbd}`Ctrl-R`     | [`<history-search>`](fn-history-search) | Search history using the current input  |
 
 NeoMutt remembers what you were typing as you cycle through history, and wraps back to your original entry.
@@ -93,7 +93,7 @@ Entries starting with a space are silently ignored — useful in macros to avoid
 ## Remapping Editor Keys
 
 Use the [`:bind`](cmd-bind) command with the `editor` map to remap any function.
-For example, to make {kbd}`Delete` behave like {kbd}`Backspace` (deleting the character *before* the cursor instead of *under* it):
+For example, to make {kbd}`<Delete>` behave like {kbd}`<Backspace>` (deleting the character *before* the cursor instead of *under* it):
 
 ```neomuttrc
 bind editor <delete> backspace

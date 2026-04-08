@@ -20,7 +20,7 @@ Its behaviour and keybindings may change in future releases.
 
 Sidebar Search lets you jump to any mailbox in the Sidebar by typing a few characters of its name.
 As you type, the Sidebar filters itself in real time, hiding entries that don't match and highlighting the best match.
-Pressing {kbd}`Enter` opens the highlighted mailbox; pressing {kbd}`Ctrl-G` cancels and restores the original view.
+Pressing {kbd}`<Enter>` opens the highlighted mailbox; pressing {kbd}`Ctrl-G` cancels and restores the original view.
 
 If the Sidebar is currently hidden, it will be shown temporarily
 during the search and hidden again afterwards.
@@ -53,11 +53,11 @@ available simultaneously:
 
 **Navigation**
 
-{kbd}`Up` and {kbd}`Down` move the
+{kbd}`<Up>` and {kbd}`<Down>` move the
 highlight through the filtered Sidebar so you can pick a
 different match without leaving the prompt.
 
-[`<sidebar-abort-search>`](fn-sidebar-abort-search) (bound to {kbd}`Escape` by default)
+[`<sidebar-abort-search>`](fn-sidebar-abort-search) (bound to {kbd}`<Escape>` by default)
 closes the search prompt without making a selection.
 
 **Editor functions**
@@ -68,7 +68,7 @@ Examples include:
 - [`<backward-char>`](fn-backward-char)/[`<forward-char>`](fn-forward-char) — move the cursor left or right
 - [`<bol>`](fn-bol)/[`<eol>`](fn-eol) — jump to the start or end of the pattern
 - [`<backward-word>`](fn-backward-word)/[`<forward-word>`](fn-forward-word) — skip a word at a time
-- {kbd}`Backspace`/[`<delete-char>`](fn-delete-char) — delete a character
+- {kbd}`<Backspace>`/[`<delete-char>`](fn-delete-char) — delete a character
 - [`<kill-word>`](fn-kill-word)/[`<kill-eol>`](fn-kill-eol) — delete to end of word or line
 
 Any binding defined in the `editor` map can be used; use [`:bind`](cmd-bind) with the `editor` map to customise them.

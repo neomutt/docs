@@ -32,7 +32,7 @@ Expected result: NeoMutt opens the matching virtual mailbox immediately.
 bind index,pager X change-vfolder
 ```
 
-2. Press {kbd}`X` and type the label of a virtual mailbox (e.g. `Inbox`), or press {kbd}`Enter` to jump to the next virtual folder with unread messages.
+2. Press {kbd}`X` and type the label of a virtual mailbox (e.g. `Inbox`), or press {kbd}`<Enter>` to jump to the next virtual folder with unread messages.
 
 Expected result: NeoMutt switches to the named virtual mailbox.
 
@@ -44,7 +44,7 @@ Expected result: NeoMutt switches to the named virtual mailbox.
 bind index,pager \eX vfolder-from-query
 ```
 
-2. Press {kbd}`Esc X`, type a Notmuch query, and press {kbd}`Enter`.
+2. Press {kbd}`Esc X`, type a Notmuch query, and press {kbd}`<Enter>`.
 
 Expected result: NeoMutt opens a temporary virtual mailbox for that query.
 
