@@ -40,8 +40,8 @@ Many of NeoMutt's commands allow you to specify a pattern to match (`limit`, `ta
 | `~k`              |        | messages which contain a PGP key                                                                                   |
 | `~K` *REGEX*      |        | messages whose `Bcc:` header matches *REGEX*                                                                       |
 | `~l`              |        | messages addressed to known mailing lists                                                                          |
-| `~L` *REGEX*      |        | messages whose `From:`, `Sender:`, `To:` or `Cc:` header matches *REGEX*                                           |
-| `%L` *GROUP*      |        | messages whose `From:`, `Sender:`, `To:` or `Cc:` is a member of *GROUP*                                           |
+| `~L` *REGEX*      |        | messages whose `From:`, `Sender:`, `To:`, `Cc:` or `Bcc:` header matches *REGEX*                                   |
+| `%L` *GROUP*      |        | messages whose `From:`, `Sender:`, `To:`, `Cc:` or `Bcc:` is a member of *GROUP*                                   |
 | `~m` *RANGE*      | c)     | messages whose number is in *RANGE*                                                                                |
 | `~M` *REGEX*      | d)     | messages with a Content-Type matching *REGEX*                                                                      |
 | `~n` *RANGE*      | a)     | messages whose score is in *RANGE*                                                                                 |

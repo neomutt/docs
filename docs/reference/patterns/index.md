@@ -155,26 +155,26 @@ limit "~="
 These patterns take a regular expression argument for `~` prefix, a plain
 string for `=` prefix, or an address group name for `%` prefix.
 
-| Pattern    | `=` variant | `%` variant | Matches against                                   |
-|------------|-------------|-------------|---------------------------------------------------|
-| `~b REGEX` | `=b STRING` |             | Message body                                      |
-| `~B REGEX` | `=B STRING` |             | Entire message (headers + body)                   |
-| `~c REGEX` |             | `%c GROUP`  | `Cc:` header                                      |
-| `~C REGEX` |             | `%C GROUP`  | `To:`, `Cc:`, or `Bcc:` (any recipient)           |
-| `~e REGEX` |             | `%e GROUP`  | `Sender:` header                                  |
-| `~f REGEX` |             | `%f GROUP`  | `From:` header                                    |
-| `~h REGEX` | `=h STRING` |             | All headers (raw)                                 |
-| `~H REGEX` |             |             | Spam header (`X-Spam-Status:`, etc.)              |
-| `~i REGEX` |             |             | `Message-ID:` header                              |
-| `~K REGEX` |             |             | `Bcc:` header                                     |
-| `~L REGEX` |             | `%L GROUP`  | `From:`, `Sender:`, `To:`, or `Cc:` (any address) |
-| `~M REGEX` |             |             | `Content-Type` header (MIME type)                 |
-| `~s REGEX` |             |             | `Subject:` header                                 |
-| `~t REGEX` |             |             | `To:` header                                      |
-| `~w REGEX` |             |             | `Newsgroups:` header (NNTP only)                  |
-| `~x REGEX` |             |             | `References:` or In-Reply-To: header              |
-| `~y REGEX` |             |             | `X-Label:` header                                 |
-| `~Y REGEX` |             |             | Message tags                                      |
+| Pattern    | `=` variant | `%` variant | Matches against                                          |
+|------------|-------------|-------------|----------------------------------------------------------|
+| `~b REGEX` | `=b STRING` |             | Message body                                             |
+| `~B REGEX` | `=B STRING` |             | Entire message (headers + body)                          |
+| `~c REGEX` |             | `%c GROUP`  | `Cc:` header                                             |
+| `~C REGEX` |             | `%C GROUP`  | `To:`, `Cc:`, or `Bcc:` (any recipient)                  |
+| `~e REGEX` |             | `%e GROUP`  | `Sender:` header                                         |
+| `~f REGEX` |             | `%f GROUP`  | `From:` header                                           |
+| `~h REGEX` | `=h STRING` |             | All headers (raw)                                        |
+| `~H REGEX` |             |             | Spam header (`X-Spam-Status:`, etc.)                     |
+| `~i REGEX` |             |             | `Message-ID:` header                                     |
+| `~K REGEX` |             |             | `Bcc:` header                                            |
+| `~L REGEX` |             | `%L GROUP`  | `From:`, `Sender:`, `To:`, `Cc:` or `Bcc:` (any address) |
+| `~M REGEX` |             |             | `Content-Type` header (MIME type)                        |
+| `~s REGEX` |             |             | `Subject:` header                                        |
+| `~t REGEX` |             |             | `To:` header                                             |
+| `~w REGEX` |             |             | `Newsgroups:` header (NNTP only)                         |
+| `~x REGEX` |             |             | `References:` or In-Reply-To: header                     |
+| `~y REGEX` |             |             | `X-Label:` header                                        |
+| `~Y REGEX` |             |             | Message tags                                             |
 
 Examples:
 
