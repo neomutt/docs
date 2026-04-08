@@ -53,6 +53,8 @@ These pages explain how these settings work and how to apply them.
 [Send](ref-cfg-send)
 [Sidebar](ref-cfg-sidebar)
 
+---
+
 ## A
 
 | Config Option                                                         | Description                                                                         |

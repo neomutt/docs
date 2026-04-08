@@ -11,6 +11,26 @@ Functions are named actions that NeoMutt can perform.
 Each function belongs to one or more menus and may have a default key binding.
 Bindings can be changed with [`:bind`](cmd-bind).
 
+---
+
+[Alias](menu-alias)
+[Attach](menu-attach)
+[Autocrypt](menu-autocrypt)
+[Browser](menu-browser)
+[Compose](menu-compose)
+[Dialog](menu-dialog)
+[Editor](menu-editor)
+[Generic](menu-generic)
+[Index](menu-index)
+[Pager](menu-pager)
+[Pgp](menu-pgp)
+[Postpone](menu-postpone)
+[Query](menu-query)
+[Sidebar](menu-sidebar)
+[Smime](menu-smime)
+
+---
+
 (fn-alias-dialog)=
 (fn-attach-file)=
 (fn-attach-key)=
