@@ -8,7 +8,7 @@ keywords: notmuch, virtual mailbox, organise, sidebar, named-mailboxes, virtual-
 
 ## Prerequisites
 
-1. Two or more Notmuch virtual mailboxes already configured (see [Getting Started with Notmuch Virtual Mailboxes](../tutorials/notmuch-virtual-mailboxes)).
+1. Two or more Notmuch virtual mailboxes already configured (see [Getting Started with Notmuch Virtual Mailboxes](../../tutorials/notmuch-virtual-mailboxes)).
 
 ## Use Clear, Consistent Names
 
@@ -88,4 +88,4 @@ source ~/.config/neomutt/virtual-mailboxes
 
 Expected result: your main config stays short and mailbox definitions are easy to edit separately.
 
-See [Sidebar](sidebar) for display options and [Sidebar Workflows](sidebar-workflows) for navigation tips.
+See [Sidebar](../sidebar/sidebar) for display options and [Sidebar Workflows](../sidebar/sidebar-workflows) for navigation tips.

@@ -257,5 +257,5 @@ color sidebar_unread color136 default
 
 - Regular Expressions
 - Patterns
-- [Color command](colours.md)
+- [Color command](../colours.md)
 - notmuch feature

@@ -31,15 +31,15 @@ Each guide addresses a real-world problem and provides practical steps to solve 
 maxdepth: 1
 ---
 account-cmd
-command-line-crypto
-compose-preview
+crypto/command-line-crypto
+compose/compose-preview
 custom-tagging
-encryption-information-block
+crypto/encryption-information-block
 fuzzy-search
-header-cache-compression
+header-cache/header-cache-compression
 lua-scripting
 pager-read-delay
-sidebar-search
+sidebar/sidebar-search
 skip-quoted
 use-threads
 ```
@@ -76,33 +76,32 @@ tls-sni
 
 ## Encryption & Security
 
+Configure PGP, S/MIME, Autocrypt, and other cryptographic features for signing and encrypting messages.
+
 ```{toctree}
 ---
 maxdepth: 1
 ---
 
-pgp
-smime
-autocrypt
-encrypt-to-self
-crypto-pitfalls
+crypto/index
 password-manager
 ```
 
 ## Composing & Sending
 
+Step-by-step guides for writing, previewing, and sending messages — from composition flow to templates and forwarding.
+
 ```{toctree}
 ---
 maxdepth: 1
 ---
 
-compose-flow
+compose/index
 email-template
 forwarding-mail
 postponing-mail
 format-flowed
 multiple-fcc
-compose-to-sender
 forgotten-attachment
 ```
 
@@ -134,13 +133,14 @@ mailcap-html
 
 ## Sidebar & UI
 
+Set up, customise, and navigate NeoMutt's sidebar panel, including search, workflows, and colour themes.
+
 ```{toctree}
 ---
 maxdepth: 1
 ---
 
-sidebar
-sidebar-workflows
+sidebar/index
 colours
 progress-bar
 sensible-browser
@@ -156,7 +156,6 @@ maxdepth: 1
 key-bindings
 macros
 editing
-aliases
 hooks
 format-strings
 formatting-expandos
@@ -181,10 +180,20 @@ maxdepth: 1
 mailbox-formats
 compress
 caching
-header-cache-tuning
 trash-folder
 mailboxes
-header-cache-backends
+```
+
+## Header Cache
+
+Tune, compress, and choose storage backends for NeoMutt's header cache.
+
+```{toctree}
+---
+maxdepth: 1
+---
+
+header-cache/index
 ```
 
 ## Search & Tagging
@@ -202,20 +211,14 @@ limit-thread
 
 ## Notmuch Virtual Mailboxes
 
+Create, organise, and navigate Notmuch virtual mailboxes — from simple unread-mail queries to complex boolean filters and tag-based workflows.
+
 ```{toctree}
 ---
 maxdepth: 1
 ---
 
-nm-vfolder-unread
-nm-vfolder-sender
-nm-vfolder-recent
-nm-vfolder-combine
-nm-vfolder-organise
-nm-vfolder-refresh
-nm-vfolder-empty
-nm-vfolder-tag-workflow
-nm-vfolder-jump
+nm-vfolder/index
 ```
 
 ## Newsgroups
@@ -230,18 +233,15 @@ nntp
 
 ## Address Book
 
+Manage contacts and aliases — define, search, display, and organise alias files and key bindings for quick addressing.
+
 ```{toctree}
 ---
 maxdepth: 1
 ---
 
 address-book
-alias-management
-alias-search
-alias-display
-alias-multiple-files
-alias-keybindings
-alias-troubleshooting
+alias/index
 ```
 
 ## Miscellaneous

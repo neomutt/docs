@@ -25,7 +25,7 @@ Pressing {kbd}`<Enter>` opens the highlighted mailbox; pressing {kbd}`Ctrl-G` ca
 If the Sidebar is currently hidden, it will be shown temporarily
 during the search and hidden again afterwards.
 
-The search uses the [Fuzzy Search](fuzzy-search) engine, so you don't need to type the exact name.
+The search uses the [Fuzzy Search](../fuzzy-search) engine, so you don't need to type the exact name.
 For example, typing "mlnd" is enough to reach "mailinglists/neomutt-dev".
 
 ## Functions

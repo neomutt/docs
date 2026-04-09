@@ -296,4 +296,4 @@ quotes in the pager (but not when replying).
 
 - "I want to read and search mail faster." See [Reading Your First Email](first-email) and [Searching and Filtering Email](searching-email).
 - "I want better address completion." See [Address Book](../howto/address-book).
-- "I want encryption and signing." See [Encryption](../explanation/encryption) and [PGP](../howto/pgp).
+- "I want encryption and signing." See [Encryption](../explanation/encryption) and [PGP](../howto/crypto/pgp).

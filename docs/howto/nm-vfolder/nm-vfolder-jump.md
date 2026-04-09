@@ -8,7 +8,7 @@ keywords: notmuch, virtual mailbox, jump, navigate, macro, change-vfolder, chang
 
 ## Prerequisites
 
-1. Notmuch virtual mailboxes configured in NeoMutt (see [Getting Started with Notmuch Virtual Mailboxes](../tutorials/notmuch-virtual-mailboxes)).
+1. Notmuch virtual mailboxes configured in NeoMutt (see [Getting Started with Notmuch Virtual Mailboxes](../../tutorials/notmuch-virtual-mailboxes)).
 
 ## Jump with a Macro
 
@@ -64,4 +64,4 @@ bind index,pager \CO sidebar-open
 
 Expected result: you can switch between virtual mailboxes without typing queries.
 
-See [Sidebar Workflows](sidebar-workflows) for more navigation tips.
+See [Sidebar Workflows](../sidebar/sidebar-workflows) for more navigation tips.

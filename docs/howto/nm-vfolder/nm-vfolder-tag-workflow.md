@@ -8,7 +8,7 @@ keywords: notmuch, tags, workflow, triage, virtual mailbox, modify-tags, todo, d
 
 ## Prerequisites
 
-1. Notmuch virtual mailboxes configured in NeoMutt (see [Getting Started with Notmuch Virtual Mailboxes](../tutorials/notmuch-virtual-mailboxes)).
+1. Notmuch virtual mailboxes configured in NeoMutt (see [Getting Started with Notmuch Virtual Mailboxes](../../tutorials/notmuch-virtual-mailboxes)).
 2. A key bound for tagging (see below).
 
 ## Set Up Workflow Mailboxes
@@ -72,4 +72,4 @@ macro index ,i "<modify-tags>+inbox -todo -done<Enter>" "Return to Inbox"
 
 Expected result: pressing {kbd}`,t`, {kbd}`,d`, or {kbd}`,i` applies the tag change in one step.
 
-See [Organising Email with Tags](../tutorials/tags-workflow) for the full tagging tutorial and [Organise Multiple Virtual Mailboxes](nm-vfolder-organise) for keeping the mailbox list tidy.
+See [Organising Email with Tags](../../tutorials/tags-workflow) for the full tagging tutorial and [Organise Multiple Virtual Mailboxes](nm-vfolder-organise) for keeping the mailbox list tidy.

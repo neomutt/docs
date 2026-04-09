@@ -48,7 +48,7 @@ You'll build confidence by doing—learning NeoMutt in a practical, hands-on way
 Focused instructions for solving specific problems or achieving particular goals.
 You'll find direct, task-oriented answers—helping you get things done quickly without unnecessary background detail.
 +++
-[Colours](howto/colours) · [Key Bindings](howto/key-bindings) · [Hooks](howto/hooks) · [Sidebar](howto/sidebar) · [IMAP](howto/imap) · [SMTP](howto/smtp)
+[Colours](howto/colours) · [Key Bindings](howto/key-bindings) · [Hooks](howto/hooks) · [Sidebar](howto/sidebar/sidebar) · [IMAP](howto/imap) · [SMTP](howto/smtp)
 :::
 
 :::{grid-item-card}

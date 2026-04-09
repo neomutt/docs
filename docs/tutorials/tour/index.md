@@ -116,6 +116,7 @@ Use it when you want either a quick orientation or a map into the full manual.
 <span>                                                                                                    </span>
 <span>RR                                                                                                  </span>
 <span>                                                                                                    </span>
+<span>                                                                                                    </span>
 <span class="status">-- NeoMutt: Compose  [Approx. msg size: 4.1K   Atts: 2]---------------------------------------------</span>
 <span>                                                                                                    </span>
 </pre>
@@ -124,7 +125,6 @@ Use it when you want either a quick orientation or a map into the full manual.
 :::
 
 ::::
-
 
 ## Complex Dialogs
 

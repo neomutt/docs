@@ -8,7 +8,7 @@ keywords: alias, search, find contact, alias menu, tab completion, filter, limit
 
 ## Prerequisites
 
-1. One or more aliases defined and loaded (see [Using the Address Book](../tutorials/address-book)).
+1. One or more aliases defined and loaded (see [Using the Address Book](../../tutorials/address-book)).
 
 ## Search the Alias Menu
 
@@ -57,4 +57,4 @@ Expected result: results from the external source appear and you can select one.
 
 See [External Address Queries](how-address-query) for setup details.
 
-See [Manage Aliases](aliases) for the full alias syntax and [Alias Options](../reference/config/alias) for [`$alias_format`](cfg-alias-format) and [`$alias_sort`](cfg-alias-sort).
+See [Manage Aliases](aliases) for the full alias syntax and [Alias Options](../../reference/config/alias) for [`$alias_format`](cfg-alias-format) and [`$alias_sort`](cfg-alias-sort).

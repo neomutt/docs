@@ -8,7 +8,7 @@ keywords: notmuch, refresh, notmuch new, sync, virtual mailbox, update, new mail
 
 ## Prerequisites
 
-1. Notmuch virtual mailboxes configured in NeoMutt (see [Getting Started with Notmuch Virtual Mailboxes](../tutorials/notmuch-virtual-mailboxes)).
+1. Notmuch virtual mailboxes configured in NeoMutt (see [Getting Started with Notmuch Virtual Mailboxes](../../tutorials/notmuch-virtual-mailboxes)).
 2. A mail sync tool like mbsync delivering new messages to your Maildir.
 
 ## Update the Notmuch Database
@@ -51,4 +51,4 @@ NeoMutt queries the Notmuch database when a virtual mailbox is opened.
 It does not re-query continuously in the background.
 Running `notmuch new` updates the database, and re-entering the mailbox (or syncing) picks up the changes.
 
-See [Set Up Periodic Mail Sync](periodic-sync) to automate the sync and index step.
+See [Set Up Periodic Mail Sync](../periodic-sync) to automate the sync and index step.

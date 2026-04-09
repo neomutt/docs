@@ -100,7 +100,7 @@ Expected result: typing `team` at an address prompt expands to both Alice and Bo
 
 ## Next Steps
 
-- "I want to customise the alias display." See [Customise Alias Display](../howto/alias-display).
-- "I want to split contacts into multiple files." See [Use Multiple Alias Files](../howto/alias-multiple-files).
-- "I want to search my contacts faster." See [Find a Contact Quickly](../howto/alias-search).
+- "I want to customise the alias display." See [Customise Alias Display](../howto/alias/alias-display).
+- "I want to split contacts into multiple files." See [Use Multiple Alias Files](../howto/alias/alias-multiple-files).
+- "I want to search my contacts faster." See [Find a Contact Quickly](../howto/alias/alias-search).
 - "I want to use an external address book." See [Set Up Address Book Integration](../howto/address-book) and [External Address Queries](../howto/address-query).

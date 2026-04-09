@@ -8,7 +8,7 @@ keywords: notmuch, virtual mailbox, recent, date, time, date range, virtual-mail
 
 ## Prerequisites
 
-1. Notmuch integration working in NeoMutt (see [Setting Up Notmuch](../tutorials/notmuch-setup)).
+1. Notmuch integration working in NeoMutt (see [Setting Up Notmuch](../../tutorials/notmuch-setup)).
 
 ## Show the Last 7 Days
 
@@ -44,4 +44,4 @@ virtual-mailboxes "Recent Unread" "notmuch://?query=date:7d..now and tag:unread"
 
 Expected result: the mailbox shows unread messages from the last week.
 
-For rolling time windows managed by NeoMutt, see [Notmuch Advanced Queries](notmuch-advanced) and the `nm_query_window_*` variables.
+For rolling time windows managed by NeoMutt, see [Notmuch Advanced Queries](../notmuch-advanced) and the `nm_query_window_*` variables.

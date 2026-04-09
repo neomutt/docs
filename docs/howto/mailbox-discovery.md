@@ -106,4 +106,4 @@ macro index o "<shell-escape>mbsync -a && notmuch new<Enter><enter-command>sourc
 
 Expected result: pressing {kbd}`o` syncs mail and updates the mailbox list in one step.
 
-See [Configure Mailboxes](mailboxes) for the full [`:mailboxes`](cmd-mailboxes) command reference and [Sidebar](sidebar) for display options.
+See [Configure Mailboxes](mailboxes) for the full [`:mailboxes`](cmd-mailboxes) command reference and [Sidebar](sidebar/sidebar) for display options.

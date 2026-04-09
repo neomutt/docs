@@ -27,7 +27,7 @@ It is enabled at configure time with the *--with-kyotocabinet=\<path\>* switch.
 
 ### See Also
 
-- [Local Caching](caching.md)
+- [Local Caching](../caching.md)
 - [Kyoto Cabinet](https://dbmx.net/kyotocabinet/)
 
 ### Credits
@@ -49,5 +49,5 @@ It is not recommended to store the lmdb database on a shared drive.
 
 ### See Also
 
-- [Local Caching](caching.md)
+- [Local Caching](../caching.md)
 

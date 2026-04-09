@@ -8,7 +8,7 @@ keywords: alias, key bindings, bind, macro, create-alias, query, address book, s
 
 ## Prerequisites
 
-1. A working alias setup (see [Using the Address Book](../tutorials/address-book)).
+1. A working alias setup (see [Using the Address Book](../../tutorials/address-book)).
 
 ## Bind the Alias Menu to a Key
 
@@ -63,4 +63,4 @@ macro index,pager \ea "<shell-escape>$EDITOR ~/.config/neomutt/aliases-work<Ente
 
 Expected result: pressing {kbd}`Alt-a` opens your editor on the work alias file, and reloads it when you return.
 
-See [Customise Key Bindings](key-bindings) for the full [`:bind`](cmd-bind) and [`:macro`](cmd-macro) syntax and [Macros](macros) for more macro examples.
+See [Customise Key Bindings](../key-bindings) for the full [`:bind`](cmd-bind) and [`:macro`](cmd-macro) syntax and [Macros](../macros) for more macro examples.

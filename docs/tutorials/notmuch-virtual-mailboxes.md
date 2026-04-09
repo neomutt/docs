@@ -92,7 +92,7 @@ The key difference is that virtual mailboxes are dynamic: their contents change 
 
 ## Next Steps
 
-- "I want to build more queries." See [Create a Virtual Mailbox for Unread Mail](../howto/nm-vfolder-unread) and [Combine Multiple Conditions](../howto/nm-vfolder-combine).
-- "I want to organise my mailbox list." See [Organise Multiple Virtual Mailboxes](../howto/nm-vfolder-organise).
-- "I want to tag messages as a workflow." See [Organising Email with Tags](tags-workflow) and [Use Tags as a Workflow](../howto/nm-vfolder-tag-workflow).
+- "I want to build more queries." See [Create a Virtual Mailbox for Unread Mail](../howto/nm-vfolder/nm-vfolder-unread) and [Combine Multiple Conditions](../howto/nm-vfolder/nm-vfolder-combine).
+- "I want to organise my mailbox list." See [Organise Multiple Virtual Mailboxes](../howto/nm-vfolder/nm-vfolder-organise).
+- "I want to tag messages as a workflow." See [Organising Email with Tags](tags-workflow) and [Use Tags as a Workflow](../howto/nm-vfolder/nm-vfolder-tag-workflow).
 - "I want to understand Notmuch query syntax." See [Notmuch](../howto/notmuch).

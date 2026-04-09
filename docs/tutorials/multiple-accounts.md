@@ -94,4 +94,4 @@ Expected result: you can switch accounts without typing mailbox URLs.
 ## Next Steps
 
 - "I want to send from the right identity every time." See [Config Paradigms](../explanation/config-paradigms) and [Hooks](../howto/hooks).
-- "I want to make mailbox switching easier." See [Sidebar Workflows](../howto/sidebar-workflows).
+- "I want to make mailbox switching easier." See [Sidebar Workflows](../howto/sidebar/sidebar-workflows).

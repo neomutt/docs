@@ -8,7 +8,7 @@ keywords: alias, alias_format, alias_sort, display, layout, columns, format stri
 
 ## Prerequisites
 
-1. One or more aliases defined and loaded (see [Using the Address Book](../tutorials/address-book)).
+1. One or more aliases defined and loaded (see [Using the Address Book](../../tutorials/address-book)).
 
 ## Change the Alias Menu Layout
 
@@ -36,7 +36,7 @@ Expected result: aliases are displayed with the number, flags, alias name, full 
 | `%f`     | Flags (`d` if marked for deletion)     |
 | `%t`     | Tagged indicator                       |
 
-See [Alias Options](../reference/config/alias) for the complete list and long-name alternatives.
+See [Alias Options](../../reference/config/alias) for the complete list and long-name alternatives.
 
 ## Show Only Name and Email
 
@@ -65,4 +65,4 @@ Prefix with `reverse-` to invert the order.
 
 Expected result: the alias menu is sorted by real name.
 
-See [Alias Options](../reference/config/alias) for full reference and [Format Strings](format-strings) for general formatting guidance.
+See [Alias Options](../../reference/config/alias) for full reference and [Format Strings](../format-strings) for general formatting guidance.

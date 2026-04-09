@@ -307,7 +307,7 @@ relative to the quoted block.
 
 ## See Also
 
-- {doc}`/howto/compose-flow` — the full step-by-step composition sequence
+- {doc}`/howto/compose/compose-flow` — the full step-by-step composition sequence
 - {doc}`/howto/forwarding-mail` — forwarding methods and MIME vs inline
 - {doc}`/howto/format-strings` — how expandos like `%n` and `%d` work
 

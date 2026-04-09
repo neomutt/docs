@@ -8,7 +8,7 @@ keywords: notmuch, virtual mailbox, query, boolean, and, or, not, combine, filte
 
 ## Prerequisites
 
-1. Notmuch integration working in NeoMutt (see [Setting Up Notmuch](../tutorials/notmuch-setup)).
+1. Notmuch integration working in NeoMutt (see [Setting Up Notmuch](../../tutorials/notmuch-setup)).
 
 ## AND — Match All Conditions
 
@@ -61,4 +61,4 @@ notmuch search 'tag:inbox and (tag:flagged or tag:unread)'
 
 Expected result: you see the matching messages, confirming the query is correct before using it in NeoMutt.
 
-See [Notmuch](notmuch) for the full URL syntax and [Notmuch Advanced Queries](notmuch-advanced) for windowed queries.
+See [Notmuch](../notmuch) for the full URL syntax and [Notmuch Advanced Queries](../notmuch-advanced) for windowed queries.

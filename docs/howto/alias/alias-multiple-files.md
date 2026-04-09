@@ -8,7 +8,7 @@ keywords: alias, multiple files, source, alias_file, split, work, personal, grou
 
 ## Prerequisites
 
-1. A working alias setup (see [Using the Address Book](../tutorials/address-book)).
+1. A working alias setup (see [Using the Address Book](../../tutorials/address-book)).
 
 ## Split Contacts into Separate Files
 
@@ -75,4 +75,4 @@ Or reload all files at once by re-sourcing your main config:
 
 Expected result: changes take effect without restarting NeoMutt.
 
-See [Manage Aliases](aliases) for the full alias syntax and [Using the Address Book](../tutorials/address-book) for the setup tutorial.
+See [Manage Aliases](aliases) for the full alias syntax and [Using the Address Book](../../tutorials/address-book) for the setup tutorial.

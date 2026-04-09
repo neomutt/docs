@@ -11,11 +11,11 @@ keywords: neomutt, features, feature list, extensions, enhancements, patches, ca
 
 Configure an external script to securely provide account credentials for IMAP, POP, and SMTP servers
 
-## [Command-line Crypto](../../howto/command-line-crypto.md)
+## [Command-line Crypto](../../howto/crypto/command-line-crypto.md)
 
 Enable PGP signing and encryption when sending email from the command line, batch mode, or git-send-email
 
-## [Compose Preview](../../howto/compose-preview.md)
+## [Compose Preview](../../howto/compose/compose-preview.md)
 
 Display a live preview of the email body inside the compose dialog before sending in NeoMutt
 
@@ -23,7 +23,7 @@ Display a live preview of the email body inside the compose dialog before sendin
 
 Add, remove, and display custom message tags using Notmuch or IMAP keywords in NeoMutt
 
-## [Encryption Information Block](../../howto/encryption-information-block.md)
+## [Encryption Information Block](../../howto/crypto/encryption-information-block.md)
 
 Display a block showing encryption recipient key details when viewing an encrypted message in NeoMutt
 
@@ -31,7 +31,7 @@ Display a block showing encryption recipient key details when viewing an encrypt
 
 Find mailboxes, aliases, or commands by typing a few characters using FZF-style subsequence matching and scoring
 
-## [Header Cache Compression](../../howto/header-cache-compression.md)
+## [Header Cache Compression](../../howto/header-cache/header-cache-compression.md)
 
 Compress the NeoMutt header cache with lz4, zlib, or zstd to reduce disk usage and speed up large mailboxes
 
@@ -43,7 +43,7 @@ Use embedded Lua scripts to get and set NeoMutt config variables, run commands, 
 
 Configure the pager to preview messages without immediately marking them as read using a time-based delay.
 
-## [Sidebar Search](../../howto/sidebar-search.md)
+## [Sidebar Search](../../howto/sidebar/sidebar-search.md)
 
 Filter and jump to any sidebar mailbox by typing a few characters using real-time fuzzy matching
 

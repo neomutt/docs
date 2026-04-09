@@ -8,7 +8,7 @@ keywords: alias, troubleshooting, missing, syntax error, source, alias_file, rel
 
 ## Prerequisites
 
-1. An alias file configured via [`$alias_file`](cfg-alias-file) (see [Using the Address Book](../tutorials/address-book)).
+1. An alias file configured via [`$alias_file`](cfg-alias-file) (see [Using the Address Book](../../tutorials/address-book)).
 
 ## Alias Does Not Expand
 

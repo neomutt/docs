@@ -37,7 +37,7 @@ This usually favors short, compact, boundary-aligned matches.
 
 The following NeoMutt features use Fuzzy Search internally:
 
-- [Sidebar Search](sidebar-search) — dynamically filter the Sidebar mailbox list as you type
+- [Sidebar Search](sidebar/sidebar-search) — dynamically filter the Sidebar mailbox list as you type
 
 Developers can benchmark the matcher using `fuzzy/fuzzy-benchmark`.
 See `fuzzy/BENCHMARK.md` for usage details.

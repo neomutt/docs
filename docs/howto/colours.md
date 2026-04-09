@@ -138,7 +138,7 @@ uncolor prompt
 ```
 
 These are sidebar objects.
-See [Sidebar](sidebar.md) for more details.
+See [Sidebar](sidebar/sidebar.md) for more details.
 
 | Colour Name        | Description                                                      |
 |--------------------|------------------------------------------------------------------|

@@ -80,4 +80,4 @@ Expected result: NeoMutt and Notmuch use the same database.
 
 Expected result: the tags listed here do not overlap with the tags your query targets.
 
-See [Notmuch](notmuch) for full variable reference.
+See [Notmuch](../notmuch) for full variable reference.

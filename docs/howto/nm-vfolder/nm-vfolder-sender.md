@@ -8,7 +8,7 @@ keywords: notmuch, virtual mailbox, sender, from, filter, domain, virtual-mailbo
 
 ## Prerequisites
 
-1. Notmuch integration working in NeoMutt (see [Setting Up Notmuch](../tutorials/notmuch-setup)).
+1. Notmuch integration working in NeoMutt (see [Setting Up Notmuch](../../tutorials/notmuch-setup)).
 
 ## Filter by Sender Address
 

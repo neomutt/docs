@@ -9,7 +9,7 @@ keywords: alias, add contact, update contact, alias_file, source, reload, create
 ## Prerequisites
 
 1. An alias file configured via [`$alias_file`](cfg-alias-file) and loaded with [`:source`](cmd-source).
-2. If you haven't set this up, complete [Using the Address Book](../tutorials/address-book) first.
+2. If you haven't set this up, complete [Using the Address Book](../../tutorials/address-book) first.
 
 ## Add a New Contact Manually
 
@@ -64,4 +64,4 @@ unalias carol
 
 Expected result: the alias is no longer available.
 
-See [Manage Aliases](aliases) for the full alias syntax and [Using the Address Book](../tutorials/address-book) for the setup tutorial.
+See [Manage Aliases](aliases) for the full alias syntax and [Using the Address Book](../../tutorials/address-book) for the setup tutorial.

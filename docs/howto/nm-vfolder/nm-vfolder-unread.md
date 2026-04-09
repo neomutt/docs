@@ -8,7 +8,7 @@ keywords: notmuch, virtual mailbox, unread, tag:inbox, tag:unread, virtual-mailb
 
 ## Prerequisites
 
-1. Notmuch integration working in NeoMutt (see [Setting Up Notmuch](../tutorials/notmuch-setup)).
+1. Notmuch integration working in NeoMutt (see [Setting Up Notmuch](../../tutorials/notmuch-setup)).
 
 ## Add the Virtual Mailbox
 
@@ -29,4 +29,4 @@ Messages you have already read do not appear.
 
 When you read a message and Notmuch removes the `unread` tag, the message disappears from this view the next time the mailbox is refreshed.
 
-See [Getting Started with Notmuch Virtual Mailboxes](../tutorials/notmuch-virtual-mailboxes) for the full tutorial.
+See [Getting Started with Notmuch Virtual Mailboxes](../../tutorials/notmuch-virtual-mailboxes) for the full tutorial.
