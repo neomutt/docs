@@ -15,7 +15,7 @@ You might see it while opening a mailbox, checking mail, or sending through SMTP
 
 <div class="term-window">
 <div class="term-title">Certificate Dialog</div>
-<pre class="terminal">
+<pre class="terminal" role="img" aria-label="Screenshot of NeoMutt's Certificate Dialog showing a TLS certificate for example.com issued by Let's Encrypt, with validity dates, SHA1 and SHA256 fingerprints, and a prompt to reject, accept once, or accept always.">
 <span>This certificate belongs to:                                                                        </span>
 <span>   example.com                                                                                      </span>
 <span>                                                                                                    </span>

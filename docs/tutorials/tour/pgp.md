@@ -15,7 +15,7 @@ If you are using GPGME instead, you will usually see the [GPGME Dialog](gpgme.md
 
 <div class="term-window">
 <div class="term-title">PGP Dialog</div>
-<pre class="terminal">
+<pre class="terminal" role="img" aria-label="Screenshot of NeoMutt's PGP Dialog listing candidate keys with trust markers, key sizes, key IDs, algorithms, capabilities, and user IDs for jim@example.com.">
 <span>   1 +  4096/0x810582F5 RSA  es                                                                     </span>
 <span>   2 +  4096/0x810582F5 RSA  es                                                                     </span>
 <span>   3 +  4096/0x810582F5 RSA  es                                                                     </span>

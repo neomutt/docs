@@ -15,7 +15,7 @@ Instead of memorising every `~x` code, you can browse and insert the right one f
 
 <div class="term-window">
 <div class="term-title">Pattern Dialog</div>
-<pre class="terminal">
+<pre class="terminal" role="img" aria-label="Screenshot of NeoMutt's Pattern Dialog listing search pattern codes such as ~n, ~N, ~p, ~s, and ~t with their descriptions, plus a limit prompt at the bottom.">
 <span>32 ~n RANGE         messages whose score is in RANGE                                                </span>
 <span>33 ~N               new messages                                                                    </span>
 <span>34 ~O               old messages                                                                    </span>

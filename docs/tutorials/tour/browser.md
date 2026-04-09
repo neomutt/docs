@@ -15,7 +15,7 @@ Depending on the context, it behaves like a local file browser, an IMAP folder b
 
 <div class="term-window">
 <div class="term-title">Browser Dialog</div>
-<pre class="terminal">
+<pre class="terminal" role="img" aria-label="Screenshot of NeoMutt's Browser Dialog showing a directory listing with file permissions, sizes, dates, and names, plus a status line with the current directory path and file mask.">
 <span> 1     drwxr-xr-x  1 mutt     mutt           0K Mar 27 11:50 ../                                    </span>
 <span> 2     drwxr-xr-x  1 mutt     mutt           0K Mar 28 13:46 address/                               </span>
 <span> 3     drwxr-xr-x  1 mutt     mutt           0K Mar 28 13:45 alias/                                 </span>

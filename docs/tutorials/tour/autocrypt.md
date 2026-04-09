@@ -15,7 +15,7 @@ This dialog is where you review which addresses participate and how strongly the
 
 <div class="term-window">
 <div class="term-title">Autocrypt Dialog</div>
-<pre class="terminal">
+<pre class="terminal" role="img" aria-label="Screenshot of NeoMutt's Autocrypt Dialog listing two accounts with their email addresses, prefer-encrypt preference, and active status.">
 <span>   1 john@example.com                     prefer encrypt     active                                 </span>
 <span>   2 rich@flatcap.org                     prefer encrypt     active                                 </span>
 <span>                                                                                                    </span>

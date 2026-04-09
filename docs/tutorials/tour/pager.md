@@ -15,7 +15,7 @@ Depending on your layout, it may appear as a split view underneath the index or 
 
 <div class="term-window">
 <div class="term-title">Index / Pager Dialog</div>
-<pre class="terminal">
+<pre class="terminal" role="img" aria-label="Screenshot of NeoMutt's Pager Dialog in split view with the index above and the message body below, showing an email from Jodie Foster to Anthony Hopkins about The Silence of the Lambs.">
 <span class="index index_date">25-Feb</span><span class="index"> </span><span class="index index_flags">   </span><span class="index"> </span><span class="index index_author">Ben Stiller              </span><span class="index">  </span><span class="index tree">    └─&gt;</span><span class="index index_subject">Re: The Princess Bride</span><span class="index">                           (</span><span class="index index_size">0.5K</span><span class="index">)</span>
 <span class="index index_date">02-Mar</span><span class="index"> </span><span class="index index_flags">   </span><span class="index"> </span><span class="index index_author">Paul Rudd                </span><span class="index">  </span><span class="index tree">      └─&gt;</span><span class="index">                                               (</span><span class="index index_size">0.6K</span><span class="index">)</span>
 <span class="index index_date">04-Mar</span><span class="index"> </span><span class="index index_flags">   </span><span class="index"> </span><span class="index index_author">Billy Crystal            </span><span class="index">  </span><span class="index tree">        └─&gt;</span><span class="index">                                             (</span><span class="index index_size">0.6K</span><span class="index">)</span>

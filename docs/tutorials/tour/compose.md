@@ -15,7 +15,7 @@ You reach it for new mail, replies, forwards, bounces, and recalled drafts.
 
 <div class="term-window">
 <div class="term-title">Compose Dialog</div>
-<pre class="terminal">
+<pre class="terminal" role="img" aria-label="Screenshot of NeoMutt's Compose Dialog showing From, To, Cc, Bcc, Subject, and Reply-To headers, a PGP/MIME signature line, two attachments, and a message body preview.">
 <span class="status">q:Quit  d:Del  u:Undel  m:Mail  r:Reply  ?:Help                                                     </span>
 <span class="header">        From: </span><span>Ryan Reynolds &lt;ryanr@yew.com&gt;                                                         </span>
 <span class="header">          To: </span><span>Diane Wiest &lt;dianew@apple.com&gt;, Glenn Close &lt;glennc@kumquat.com&gt;                      </span>

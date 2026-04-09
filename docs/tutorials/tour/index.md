@@ -22,7 +22,7 @@ Use it when you want either a quick orientation or a map into the full manual.
 <div class="thumbnail">
 <div class="term-window">
 <div class="term-title">Index Dialog</div>
-<pre class="terminal">
+<pre class="terminal" role="img" aria-label="Screenshot of NeoMutt's Index Dialog showing a threaded message list with dates, authors such as Meryl Streep and Al Pacino, subjects like The Devil Wears Prada and Les Miserables, and message sizes.">
 <span class="index index_date">12-Jan</span><span class="index"> </span><span class="index index_flags">   </span><span class="index"> </span><span class="index index_author">Meryl Streep             </span><span class="index">  </span><span class="index index_subject">The Devil Wears Prada</span><span class="index">                                   (</span><span class="index index_size">0.3K</span><span class="index">)</span>
 <span class="index index_date">14-Jan</span><span class="index"> </span><span class="index index_flags">   </span><span class="index"> </span><span class="index index_author">Al Pacino                </span><span class="index">  </span><span class="index tree">└─&gt;</span><span class="index">                                                     (</span><span class="index index_size">0.3K</span><span class="index">)</span>
 <span class="index index_date">14-Jan</span><span class="index"> </span><span class="index index_flags">   </span><span class="index"> </span><span class="index index_author">Glenn Close              </span><span class="index">  </span><span class="index tree">  └─&gt;</span><span class="index">                                                   (</span><span class="index index_size">0.5K</span><span class="index">)</span>
@@ -58,7 +58,7 @@ Use it when you want either a quick orientation or a map into the full manual.
 <div class="thumbnail">
 <div class="term-window">
 <div class="term-title">Index / Pager Dialog</div>
-<pre class="terminal">
+<pre class="terminal" role="img" aria-label="Screenshot of NeoMutt's Pager Dialog in split view with the index above and the message body below, showing an email from Jodie Foster about The Silence of the Lambs.">
 <span class="index index_date">25-Feb</span><span class="index"> </span><span class="index index_flags">   </span><span class="index"> </span><span class="index index_author">Ben Stiller              </span><span class="index">  </span><span class="index tree">    └─&gt;</span><span class="index index_subject">Re: The Princess Bride</span><span class="index">                           (</span><span class="index index_size">0.5K</span><span class="index">)</span>
 <span class="index index_date">02-Mar</span><span class="index"> </span><span class="index index_flags">   </span><span class="index"> </span><span class="index index_author">Paul Rudd                </span><span class="index">  </span><span class="index tree">      └─&gt;</span><span class="index">                                               (</span><span class="index index_size">0.6K</span><span class="index">)</span>
 <span class="index index_date">04-Mar</span><span class="index"> </span><span class="index index_flags">   </span><span class="index"> </span><span class="index index_author">Billy Crystal            </span><span class="index">  </span><span class="index tree">        └─&gt;</span><span class="index">                                             (</span><span class="index index_size">0.6K</span><span class="index">)</span>
@@ -94,7 +94,7 @@ Use it when you want either a quick orientation or a map into the full manual.
 <div class="thumbnail">
 <div class="term-window">
 <div class="term-title">Compose Dialog</div>
-<pre class="terminal">
+<pre class="terminal" role="img" aria-label="Screenshot of NeoMutt's Compose Dialog showing envelope headers, a PGP-signed security line, two attachments, and a message preview.">
 <span class="status">q:Quit  d:Del  u:Undel  m:Mail  r:Reply  ?:Help                                                     </span>
 <span class="header">        From: </span><span>Ryan Reynolds &lt;ryanr@yew.com&gt;                                                         </span>
 <span class="header">          To: </span><span>Diane Wiest &lt;dianew@apple.com&gt;, Glenn Close &lt;glennc@kumquat.com&gt;                      </span>

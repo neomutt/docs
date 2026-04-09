@@ -15,7 +15,7 @@ Its job is to help you find recipients who are not already stored in your alias 
 
 <div class="term-window">
 <div class="term-title">Query Dialog</div>
-<pre class="terminal">
+<pre class="terminal" role="img" aria-label="Screenshot of NeoMutt's Query Dialog showing external address-book results with names, email addresses, and award tags, filtered by the search term tony.">
 <span>  1   Alan Jay Lerner           &lt;ajl@guava.com&gt;           |                        grammy,oscar,tony</span>
 <span>  2   Alan Menken               &lt;am@mango.com&gt;            |                        grammy,oscar,tony</span>
 <span>  3   Alex Lacamoire            &lt;al@tangerine.com&gt;        |                         emmy,grammy,tony</span>

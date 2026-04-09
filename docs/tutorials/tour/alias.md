@@ -15,7 +15,7 @@ You may also hear it described as the alias menu or contact list.
 
 <div class="term-window">
 <div class="term-title">Alias Dialog</div>
-<pre class="terminal">
+<pre class="terminal" role="img" aria-label="Screenshot of NeoMutt's Alias Dialog showing a numbered list of aliases with short names, full names, email addresses, and group tags such as oscar, emmy, and tony.">
 <span>  1    alp             Al Pacino &lt;alp@apple.com&gt;                                | oscar             </span>
 <span>  2    amya            Amy Adams &lt;amya@hawthorn.com&gt;                            | oscar             </span>
 <span>  3    angelab         Angela Bassett &lt;angelab@elderberry.com&gt;                  | emmy,oscar,tony   </span>

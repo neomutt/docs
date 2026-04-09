@@ -15,7 +15,7 @@ If NeoMutt needs a short answer from you, it usually appears here.
 
 <div class="term-window">
 <div class="term-title">Message Window</div>
-<pre class="terminal">
+<pre class="terminal" role="img" aria-label="Screenshot of NeoMutt's Message Window area at the bottom of the screen, showing the status bar above and the message/prompt line below.">
 <span class="index">                                                                                                    </span>
 <span class="index">                                                                                                    </span>
 <span class="status">Status Bar                                                                                          </span>
@@ -66,7 +66,7 @@ If NeoMutt needs a short answer from you, it usually appears here.
 Function `<enter-command>` (Key: {kbd}`:`)
 
 <div class="term-window">
-<pre class="terminal">
+<pre class="terminal" role="img" aria-label="Screenshot of NeoMutt's Enter Command prompt showing a colon followed by the typed command echo hello.">
 <span class="index">                                                                                                    </span>
 <span class="index">                                                                                                    </span>
 <span class="status">                                                                                                    </span>
@@ -79,7 +79,7 @@ Type any NeoMutt command here, from quick experiments like `set` and `echo` to f
 ## Yes / No / Help
 
 <div class="term-window">
-<pre class="terminal">
+<pre class="terminal" role="img" aria-label="Screenshot of a yes/no confirmation prompt asking Exit NeoMutt without saving, with yes as the default.">
 <span class="index">                                                                                                    </span>
 <span class="index">                                                                                                    </span>
 <span class="status">                                                                                                    </span>
@@ -90,7 +90,7 @@ Type any NeoMutt command here, from quick experiments like `set` and `echo` to f
 Simple confirmation prompts usually accept one keypress, and some of them support {kbd}`?` for inline help about the option being asked.
 
 <div class="term-window">
-<pre class="terminal">
+<pre class="terminal" role="img" aria-label="Screenshot of a quit confirmation prompt asking Quit NeoMutt with no as the default, and a question-mark option for inline help.">
 <span class="index">                                                                                                    </span>
 <span class="index">                                                                                                    </span>
 <span class="status">                                                                                                    </span>
@@ -99,7 +99,7 @@ Simple confirmation prompts usually accept one keypress, and some of them suppor
 </div>
 
 <div class="term-window">
-<pre class="terminal">
+<pre class="terminal" role="img" aria-label="Screenshot of the same quit prompt after pressing question mark, showing inline help text explaining the quit config variable and a link to its documentation.">
 <span class="index">                                                                                                    </span>
 <span class="index">                                                                                                    </span>
 <span class="status">                                                                                                    </span>
@@ -116,7 +116,7 @@ The inline help version is especially useful when a confirmation is driven by a 
 
 
 <div class="term-window">
-<pre class="terminal">
+<pre class="terminal" role="img" aria-label="Screenshot of a PGP multi-choice prompt offering encrypt, sign, sign-as, both, S/MIME, or clear options, each activated by a single keypress.">
 <span class="index">                                                                                                    </span>
 <span class="index">                                                                                                    </span>
 <span class="status">                                                                                                    </span>
@@ -127,7 +127,7 @@ The inline help version is especially useful when a confirmation is driven by a 
 Multi-choice prompts are common for crypto decisions, where a single keypress changes signing or encryption state.
 
 <div class="term-window">
-<pre class="terminal">
+<pre class="terminal" role="img" aria-label="Screenshot of the same PGP multi-choice prompt with the shortcut letters e, s, a, b, m, and c highlighted in a different colour to indicate the valid single-key responses.">
 <span class="index">                                                                                                    </span>
 <span class="index">                                                                                                    </span>
 <span class="status">                                                                                                    </span>
@@ -138,7 +138,7 @@ Multi-choice prompts are common for crypto decisions, where a single keypress ch
 ## Custom Flags
 
 <div class="term-window">
-<pre class="terminal">
+<pre class="terminal" role="img" aria-label="Screenshot of a custom flags prompt asking Set flag with single-character choices D, N, O, r, asterisk, and exclamation mark.">
 <span class="index">                                                                                                    </span>
 <span class="index">                                                                                                    </span>
 <span class="status">                                                                                                    </span>
@@ -151,7 +151,7 @@ Some prompts expect one short symbolic choice rather than free-form text.
 ## Free Form Question
 
 <div class="term-window">
-<pre class="terminal">
+<pre class="terminal" role="img" aria-label="Screenshot of a free-form search prompt showing Search for followed by a text-entry cursor.">
 <span class="index">                                                                                                    </span>
 <span class="index">                                                                                                    </span>
 <span class="status">                                                                                                    </span>
@@ -164,7 +164,7 @@ Searches, limits, addresses, filenames, and many configuration prompts use free-
 ## Progress Bar
 
 <div class="term-window">
-<pre class="terminal">
+<pre class="terminal" role="img" aria-label="Screenshot of a progress bar showing Fetching message headers, 8806 of 37928 at 23 percent.">
 <span class="index">                                                                                                    </span>
 <span class="index">                                                                                                    </span>
 <span class="status">                                                                                                    </span>
@@ -181,7 +181,7 @@ Long-running operations such as fetching headers or sending large messages repor
 ```
 
 <div class="term-window">
-<pre class="terminal">
+<pre class="terminal" role="img" aria-label="Screenshot of the what-key diagnostic showing the character f with its octal value 146 and decimal value 102, plus a prompt to enter more keys or press Ctrl-G to abort.">
 <span class="index">                                                                                                    </span>
 <span class="index">                                                                                                    </span>
 <span class="status">                                                                                                    </span>

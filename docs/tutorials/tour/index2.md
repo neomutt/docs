@@ -15,7 +15,7 @@ Most workflows start here, and most of the other dialogs eventually return here.
 
 <div class="term-window">
 <div class="term-title">Index Dialog</div>
-<pre class="terminal">
+<pre class="terminal" role="img" aria-label="Screenshot of NeoMutt's Index Dialog showing a threaded message list with dates, authors, subjects such as The Devil Wears Prada, Les Miserables, Fences, Breaking Bad, and Knives Out, and a status bar.">
 <span class="index index_date">12-Jan</span><span class="index"> </span><span class="index index_flags">   </span><span class="index"> </span><span class="index index_author">Meryl Streep             </span><span class="index">  </span><span class="index index_subject">The Devil Wears Prada</span><span class="index">                                   (</span><span class="index index_size">0.3K</span><span class="index">)</span>
 <span class="index index_date">14-Jan</span><span class="index"> </span><span class="index index_flags">   </span><span class="index"> </span><span class="index index_author">Al Pacino                </span><span class="index">  </span><span class="index tree">└─&gt;</span><span class="index">                                                     (</span><span class="index index_size">0.3K</span><span class="index">)</span>
 <span class="index index_date">14-Jan</span><span class="index"> </span><span class="index index_flags">   </span><span class="index"> </span><span class="index index_author">Glenn Close              </span><span class="index">  </span><span class="index tree">  └─&gt;</span><span class="index">                                                   (</span><span class="index index_size">0.5K</span><span class="index">)</span>

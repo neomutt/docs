@@ -53,7 +53,7 @@ This simple pager lists the currently active colour rules so you can inspect the
 
 <div class="term-window">
 <div class="term-title">Color Dump</div>
-<pre class="terminal">
+<pre class="terminal" role="img" aria-label="Screenshot of NeoMutt's color dump simple pager showing active colour rules for objects such as attachment, bold, error, indicator, markers, normal, signature, tree, and quoted levels, with colour swatches.">
 <span># Simple Colors                                                                                     </span>
 <span>color attachment                              color174         color237         # <span class="attachment">XXXXXX</span>            </span>
 <span>color bold               bold                 default          default          # <span class="bold">XXXXXX</span>            </span>

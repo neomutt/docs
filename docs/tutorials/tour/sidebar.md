@@ -15,7 +15,7 @@ Its job is to keep your folder tree visible so you can change mailboxes quickly.
 
 <div class="term-window">
 <div class="term-title">Sidebar Panel</div>
-<pre class="terminal">
+<pre class="terminal" role="img" aria-label="Screenshot of NeoMutt's Sidebar Panel showing a vertical mailbox tree with folders Inbox, Work, Projects, Lists, Personal, Family, Friends, Travel, Spam, and Drafts, with a divider on the right.">
 <span class="sidebar_background">Inbox              </span><span class="sidebar_background sidebar_divider"> </span>
 <span class="sidebar_background">Work               </span><span class="sidebar_background sidebar_divider"> </span>
 <span class="sidebar_background">  Projects         </span><span class="sidebar_background sidebar_divider"> </span>

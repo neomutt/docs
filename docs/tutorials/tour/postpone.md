@@ -15,7 +15,7 @@ You can think of it as NeoMutt's draft picker.
 
 <div class="term-window">
 <div class="term-title">Postpone Dialog</div>
-<pre class="terminal">
+<pre class="terminal" role="img" aria-label="Screenshot of NeoMutt's Postpone Dialog listing four saved drafts with timestamps, flags, recipient names, and subjects such as Zoolander and The Shining.">
 <span class="index_date">00:58 </span><span> </span><span class="index_flags">  F</span><span> </span><span class="index_author">Jessica Lange            </span><span>  </span><span class="index_subject">Zoolander</span><span>                                               (</span><span class="index_size">0.5K</span><span>)</span>
 <span class="index_date">00:58 </span><span> </span><span class="index_flags">  F</span><span> </span><span class="index_author">George Clooney           </span><span>  </span><span class="index_subject">Les Miserables</span><span>                                          (</span><span class="index_size">0.5K</span><span>)</span>
 <span class="index_date">00:59 </span><span> </span><span class="index_flags">  F</span><span> </span><span class="index_author">Neil Patrick Harris      </span><span>  </span><span class="index_subject">The Shining</span><span>                                             (</span><span class="index_size">0.5K</span><span>)</span>

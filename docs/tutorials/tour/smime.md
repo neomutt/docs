@@ -15,7 +15,7 @@ Unlike the [PGP Dialog](pgp.md), the entries here are X.509-style certificates r
 
 <div class="term-window">
 <div class="term-title">S/MIME Dialog</div>
-<pre class="terminal">
+<pre class="terminal" role="img" aria-label="Screenshot of NeoMutt's S/MIME Dialog listing candidate certificates with key IDs, capabilities, validity states such as Verified, Trusted, and Expired, email addresses, and labels.">
 <span>0x1A2B3C4D5E6F es Verified   langstroth@langstroth.com           Personal 2025                      </span>
 <span>0x2B3C4D5E6F7A es Trusted    l.langstroth@hivemail.org           Work Certificate                   </span>
 <span>0x3C4D5E6F7A8B e- Unverified langstroth.bee@apiary.net           Apiary Systems                     </span>

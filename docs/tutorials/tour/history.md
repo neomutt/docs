@@ -15,7 +15,7 @@ Its purpose is to save typing and help you reuse complicated strings accurately.
 
 <div class="term-window">
 <div class="term-title">History Dialog</div>
-<pre class="terminal">
+<pre class="terminal" role="img" aria-label="Screenshot of NeoMutt's History Dialog showing a list of previous set and reset commands, with a status line and command prompt at the bottom.">
 <span>set alias_format                                                                                    </span>
 <span>reset alias_format                                                                                  </span>
 <span>set real_name="John Smith"                                                                          </span>

@@ -15,7 +15,7 @@ It is sometimes called the attachment menu or attachment tree.
 
 <div class="term-window">
 <div class="term-title">Attach Dialog</div>
-<pre class="terminal">
+<pre class="terminal" role="img" aria-label="Screenshot of NeoMutt's Attach Dialog showing a multipart MIME tree with one text/plain body and six markdown and text attachments, with flags, filenames, content types, and sizes.">
 <span>  I     1 &lt;no description&gt;                                               [multipa/mixed, 7bit, 14K] </span>
 <span>  I     2 </span><span class="tree">├─&gt;</span><span>&lt;no description&gt;                                    [text/plain, 7bit, us-ascii, 0.7K] </span>
 <span>  A     3 </span><span class="tree">├─&gt;</span><span>misc.md                                          [text/markdown, 7bit, us-ascii, 0.3K] </span>
