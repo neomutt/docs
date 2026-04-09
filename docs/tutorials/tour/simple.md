@@ -46,52 +46,82 @@ Help screens, command dumps, log output, attachment text, and key verification a
 
 ## Which Simple Pager Is This?
 
-## color_dump
+### color_dump
 
 Opened by `:color`.
 This simple pager lists the currently active colour rules so you can inspect the effective theme and pattern-based colour matches.
 
-## dump_bind_macro
+<div class="term-window">
+<div class="term-title">Color Dump</div>
+<pre class="terminal">
+<span># Simple Colors                                                                                     </span>
+<span>color attachment                              color174         color237         # <span class="attachment">XXXXXX</span>            </span>
+<span>color bold               bold                 default          default          # <span class="bold">XXXXXX</span>            </span>
+<span>color error                                   color115         color236         # <span class="error">XXXXXX</span>            </span>
+<span>color hdrdefault                              color223         color237         # <span class="hdrdefault">XXXXXX</span>            </span>
+<span>color indicator                               color108         color236         # <span class="indicator">XXXXXX</span>            </span>
+<span>color italic             italic               default          default          # <span class="italic">XXXXXX</span>            </span>
+<span>color markers                                 color142         color238         # <span class="markers">XXXXXX</span>            </span>
+<span>color normal                                  color188         color237         # <span class="normal">XXXXXX</span>            </span>
+<span>color search             reverse              default          default          # <span class="search">XXXXXX</span>            </span>
+<span>color sidebar_highlight  underline            default          default          # <span class="sidebar_highlight">XXXXXX</span>            </span>
+<span>color signature                               color223         color237         # <span class="signature">XXXXXX</span>            </span>
+<span>color stripe_even        bold                 default          default          # <span class="stripe_even">XXXXXX</span>            </span>
+<span>color tilde                                   color108         color237         # <span class="tilde">XXXXXX</span>            </span>
+<span>color tree                                    color109         color237         # <span class="tree">XXXXXX</span>            </span>
+<span>color underline          underline            default          default          # <span class="underline">XXXXXX</span>            </span>
+<span>                                                                                                    </span>
+<span># Quoted Colors                                                                                     </span>
+<span>color quoted0                      color108         color237         # <span class="quoted0">XXXXXX</span>                       </span>
+<span>color quoted1                      color116         color237         # <span class="quoted1">XXXXXX</span>                       </span>
+<span>color quoted2                      color247         color237         # <span class="quoted2">XXXXXX</span>                       </span>
+<span>color quoted3                      color108         color237         # <span class="quoted3">XXXXXX</span>                       </span>
+<span class="status">color (35%)                                                                                         </span>
+<span>                                                                                                    </span>
+</pre>
+</div>
+
+### dump_bind_macro
 
 Opened by `:bind` and `:macro`.
 It shows key bindings and macros for the current menu, making it a quick reference when learning or debugging custom keymaps.
 
-## mutt_help
+### mutt_help
 
 Opened by `?` from most menus.
 It is the menu-specific help page showing available functions and their default keys.
 
-## mutt_invoke_sendmail
+### mutt_invoke_sendmail
 
 Opened when NeoMutt needs to show the output of an external sendmail-compatible command.
 It is mainly useful for diagnosing send failures and reviewing what the mail transport reported.
 
-## mutt_view_attachment
+### mutt_view_attachment
 
 Opened when an attachment is viewed as text or through a mailcap entry that produces copious text output.
 It lets you read attachment contents without leaving NeoMutt entirely.
 
-## op_show_log_messages
+### op_show_log_messages
 
 Opened by `<show-log-messages>`.
 It shows recent log and debug output so you can understand what NeoMutt has been doing internally.
 
-## parse_setenv
+### parse_setenv
 
 Opened by `:setenv` when you ask to inspect environment variables.
 It shows environment-related output in a scrollable view rather than truncating it in the message line.
 
-## parse_version
+### parse_version
 
 Opened by `:version` or `V`.
 It shows build information, compile-time features, and version details for your NeoMutt binary.
 
-## set_dump
+### set_dump
 
 Opened by `:set` when you inspect configuration state.
 It provides a scrollable dump of variables and their effective values.
 
-## verify_key
+### verify_key
 
 Opened when you verify a PGP key or S/MIME certificate from one of the crypto dialogs.
 It shows detailed verification output that would be too large for the message line.

@@ -38,7 +38,7 @@ Depending on the context, it behaves like a local file browser, an IMAP folder b
 <span>20     drwxr-xr-x  1 mutt     mutt           0K Mar 28 13:46 config/                                </span>
 <span>21     -rw-r--r--  1 mutt     mutt         4.6K Mar 28 13:45 config.h                               </span>
 <span>22     -rw-r--r--  1 mutt     mutt          16K Mar 28 13:45 config.log                             </span>
-<span class=" status">Directory [~/work/screenshot], File mask: !^\.[^.]                                                  </span>
+<span class="status">Directory [~/work/screenshot], File mask: !^\.[^.]                                                  </span>
 <span>                                                                                                    </span>
 </pre>
 </div>
