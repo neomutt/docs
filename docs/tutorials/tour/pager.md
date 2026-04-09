@@ -62,11 +62,11 @@ Depending on your layout, it may appear as a split view underneath the index or 
 
 ## Where can I go next?
 
-- `q` or `x` returns to the [Index Dialog](index2.md).
+- {kbd}`q` or {kbd}`x` returns to the [Index Dialog](index2.md).
 - `<reply>`, `<group-reply>`, `<list-reply>`, `<forward-message>`, `<mail>`, and `<bounce-message>` open the [Compose Dialog](compose.md).
 - `<view-attachments>` opens the [Attach Dialog](attach.md).
-- `?`, `<show-log-messages>`, and `V` open one of the [Simple Pagers](simple.md).
-- `:` and `/` use the [Message Window](message.md) for commands and searches.
+- {kbd}`?`, `<show-log-messages>`, and {kbd}`V` open one of the [Simple Pagers](simple.md).
+- {kbd}`:` and {kbd}`/` use the [Message Window](message.md) for commands and searches.
 - Many mailbox-changing functions forwarded from the index can take you to the [Browser Dialog](browser.md) or another mailbox.
 
 ## Where did I come from?

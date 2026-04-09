@@ -75,7 +75,7 @@ Expected result: the correct sender appears in outgoing mail.
 ## Switch Between Accounts
 
 1. Open the Work INBOX, then switch to Personal INBOX.
-2. Press `?` to verify the active settings if needed.
+2. Press {kbd}`?` to verify the active settings if needed.
 
 Expected result: each mailbox uses its own identity and settings.
 

@@ -62,7 +62,7 @@ You may also hear it described as the alias menu or contact list.
 
 - Selecting entries usually returns you to the [Compose Dialog](compose.md) or the [Message Window](message.md) prompt that asked for recipients.
 - `<mail>` opens the [Compose Dialog](compose.md) directly.
-- `q` cancels and returns to the caller without inserting anything.
+- {kbd}`q` cancels and returns to the caller without inserting anything.
 
 ## Where did I come from?
 

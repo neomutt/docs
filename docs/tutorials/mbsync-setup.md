@@ -172,7 +172,7 @@ You can trigger this from inside NeoMutt with a macro:
 macro index o "<shell-escape>mbsync -a<Enter>" "Sync all mail with mbsync"
 ```
 
-Press `o` in the index to sync without leaving NeoMutt.
+Press {kbd}`o` in the index to sync without leaving NeoMutt.
 
 ## Exclude Specific Folders
 

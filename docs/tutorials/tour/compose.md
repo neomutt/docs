@@ -62,7 +62,7 @@ You reach it for new mail, replies, forwards, bounces, and recalled drafts.
 ## Where can I go next?
 
 - `<send-message>`, `<postpone-message>`, and quitting the menu return you to the [Index Dialog](index2.md) after the draft is handled.
-- `<attach-file>` and `<edit-fcc>` can open the [Browser Dialog](browser.md) when you ask for browsing with `?`.
+- `<attach-file>` and `<edit-fcc>` can open the [Browser Dialog](browser.md) when you ask for browsing with {kbd}`?`.
 - `<attach-message>` opens a nested [Index Dialog](index2.md) so you can choose messages to attach.
 - Sending encrypted mail may open the [PGP Dialog](pgp.md), [GPGME Dialog](gpgme.md), or [S/MIME Dialog](smime.md).
 - Field editing and crypto choice prompts use the [Message Window](message.md).

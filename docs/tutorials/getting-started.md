@@ -22,7 +22,7 @@ Start NeoMutt by running `neomutt` in your terminal.
 
 1. Start NeoMutt and wait for the message list (the Index).
 2. Press {kbd}`?` to open the help screen and note the keys for moving up and down and for quitting.
-3. Use `j` and `k` to move the selection.
+3. Use {kbd}`j` and {kbd}`k` to move the selection.
    Use the help screen to find the key that opens a message.
 4. In the message view (the Pager), press {kbd}`?` again to see its keys, then press {kbd}`q` to return.
 5. Press {kbd}`q` to quit when you're done.
@@ -520,7 +520,7 @@ It lists the current configuration of key bindings and their associated commands
 
 **Subject:** The Help screen
 
-**Description:** The NeoMutt Help screen showing a list of key bindings and their associated functions with short descriptions, as displayed when pressing `?` from the Index.
+**Description:** The NeoMutt Help screen showing a list of key bindings and their associated functions with short descriptions, as displayed when pressing {kbd}`?` from the Index.
 
 **Highlights:** The two-column layout of key bindings paired with function names and descriptions, and the section showing unbound functions at the bottom.
 :::

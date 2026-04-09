@@ -13,7 +13,7 @@ If you don't have local mail yet, complete [Setting Up Offline Email with mbsync
 
 ## Why Use Notmuch?
 
-NeoMutt's built-in search (`/` and `l`) works well inside a single mailbox, but it can't search across all folders at once and doesn't index message bodies in advance.
+NeoMutt's built-in search ({kbd}`/` and {kbd}`l`) works well inside a single mailbox, but it can't search across all folders at once and doesn't index message bodies in advance.
 Notmuch builds a full-text index of every message in your Maildir tree, so searches return results instantly — even across thousands of messages in many folders.
 
 ## Prerequisites

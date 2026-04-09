@@ -64,7 +64,7 @@ Its job is to help you find recipients who are not already stored in your alias 
 - Selecting entries usually returns you to the [Compose Dialog](compose.md) or the [Message Window](message.md) prompt that asked for recipients.
 - `<mail>` opens the [Compose Dialog](compose.md) directly.
 - Creating an alias affects what you will later see in the [Alias Dialog](alias.md).
-- `q` cancels and returns to the caller.
+- {kbd}`q` cancels and returns to the caller.
 
 ## Where did I come from?
 

@@ -64,7 +64,7 @@ Depending on the context, it behaves like a local file browser, an IMAP folder b
 
 - Selecting a mailbox opens the [Index Dialog](index2.md).
 - Selecting a file returns to the caller, such as the [Compose Dialog](compose.md) for attachments or the [Attach Dialog](attach.md) for saving.
-- `q` cancels and returns to the dialog or prompt that opened the browser.
+- {kbd}`q` cancels and returns to the dialog or prompt that opened the browser.
 - Prompts that feed the browser continue in the [Message Window](message.md).
 
 ## Where did I come from?
@@ -72,7 +72,7 @@ Depending on the context, it behaves like a local file browser, an IMAP folder b
 - Startup with `-y` or `-G` can bring you here first.
 - The [Index Dialog](index2.md) opens the browser when you change folders and ask for browsing.
 - The [Compose Dialog](compose.md) opens it when choosing files to attach or an Fcc folder.
-- Any filename or mailbox prompt can drop into the browser when you press `?` or trigger completion.
+- Any filename or mailbox prompt can drop into the browser when you press {kbd}`?` or trigger completion.
 
 ## How do I configure this?
 

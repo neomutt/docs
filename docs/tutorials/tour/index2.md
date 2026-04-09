@@ -65,12 +65,12 @@ Most workflows start here, and most of the other dialogs eventually return here.
 - `<display-message>` opens the [Pager Dialog](pager.md).
 - `<mail>`, `<reply>`, `<group-reply>`, `<list-reply>`, `<forward-message>`, `<bounce-message>`, and `<compose-to-sender>` open the [Compose Dialog](compose.md).
 - `<recall-message>` resumes a draft; if there is more than one postponed draft, NeoMutt shows the [Postpone Dialog](postpone.md) first.
-- `<change-folder>` can open the [Browser Dialog](browser.md) when you ask for mailbox browsing with `?`.
+- `<change-folder>` can open the [Browser Dialog](browser.md) when you ask for mailbox browsing with {kbd}`?`.
 - `<view-attachments>` opens the [Attach Dialog](attach.md).
 - `<query>` opens the [Query Dialog](query.md).
 - `<autocrypt-acct-menu>` opens the [Autocrypt Dialog](autocrypt.md).
-- `?`, `<show-log-messages>`, `:set`, `:bind`, `:macro`, `:version`, and `:color` open the [Simple Pagers](simple.md).
-- `:`, `/`, and `l` use the [Message Window](message.md).
+- {kbd}`?`, `<show-log-messages>`, `:set`, `:bind`, `:macro`, `:version`, and `:color` open the [Simple Pagers](simple.md).
+- {kbd}`:`, {kbd}`/`, and {kbd}`l` use the [Message Window](message.md).
 - TLS or certificate problems may interrupt the flow with the [Certificate Dialog](certificate.md).
 
 ## Where did I come from?

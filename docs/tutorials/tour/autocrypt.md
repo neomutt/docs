@@ -41,7 +41,7 @@ This dialog is where you review which addresses participate and how strongly the
 
 ## Where can I go next?
 
-- `q` returns to the [Index Dialog](index2.md).
+- {kbd}`q` returns to the [Index Dialog](index2.md).
 - The effect of your changes is usually seen later in the [Compose Dialog](compose.md) when sending mail.
 
 ## Where did I come from?

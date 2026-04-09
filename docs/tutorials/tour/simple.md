@@ -33,7 +33,7 @@ Help screens, command dumps, log output, attachment text, and key verification a
 
 ## Where did I come from?
 
-- `?` help and many `:` commands create simple pagers from wherever you currently are.
+- {kbd}`?` help and many {kbd}`:` commands create simple pagers from wherever you currently are.
 - The [Attach Dialog](attach.md) and [Compose Dialog](compose.md) can open them when viewing attachments as text.
 - Crypto dialogs can open them when verifying keys or certificates.
 
@@ -88,7 +88,7 @@ It shows key bindings and macros for the current menu, making it a quick referen
 
 ### mutt_help
 
-Opened by `?` from most menus.
+Opened by {kbd}`?` from most menus.
 It is the menu-specific help page showing available functions and their default keys.
 
 ### mutt_invoke_sendmail
@@ -113,7 +113,7 @@ It shows environment-related output in a scrollable view rather than truncating 
 
 ### parse_version
 
-Opened by `:version` or `V`.
+Opened by `:version` or {kbd}`V`.
 It shows build information, compile-time features, and version details for your NeoMutt binary.
 
 ### set_dump

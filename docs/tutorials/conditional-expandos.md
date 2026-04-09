@@ -44,10 +44,10 @@ Show "Flagged" only if the message is flagged (`%F` is non-zero):
 set index_format = "%C %<F?Flagged> %s"
 ```
 
-| Message state | Result |
-|---------------|--------|
-| Flagged | `42 Flagged Meeting notes` |
-| Not flagged | `42  Meeting notes` |
+| Message state | Result                     |
+|---------------|----------------------------|
+| Flagged       | `42 Flagged Meeting notes` |
+| Not flagged   | `42  Meeting notes`        |
 
 ---
 
@@ -69,10 +69,10 @@ Show "Flagged" or "Normal":
 set index_format = "%C %<F?Flagged&Normal> %s"
 ```
 
-| Message state | Result |
-|---------------|--------|
-| Flagged | `42 Flagged Meeting notes` |
-| Not flagged | `42 Normal Meeting notes` |
+| Message state | Result                     |
+|---------------|----------------------------|
+| Flagged       | `42 Flagged Meeting notes` |
+| Not flagged   | `42 Normal Meeting notes`  |
 
 ---
 
@@ -88,10 +88,10 @@ If there are attachments, show the count; otherwise show nothing:
 set index_format = "%C %s %<X?[%X att]>"
 ```
 
-| Attachments | Result |
-|-------------|--------|
-| 3 | `42 Meeting notes [3 att]` |
-| 0 | `42 Meeting notes ` |
+| Attachments | Result                     |
+|-------------|----------------------------|
+| 3           | `42 Meeting notes [3 att]` |
+| 0           | `42 Meeting notes `        |
 
 Show the count or a dash:
 
@@ -99,10 +99,10 @@ Show the count or a dash:
 set index_format = "%C %s %<X?%X&->"
 ```
 
-| Attachments | Result |
-|-------------|--------|
-| 3 | `42 Meeting notes 3` |
-| 0 | `42 Meeting notes -` |
+| Attachments | Result               |
+|-------------|----------------------|
+| 3           | `42 Meeting notes 3` |
+| 0           | `42 Meeting notes -` |
 
 ---
 
@@ -125,10 +125,10 @@ Left-justify the result in 10 columns:
 set index_format = "%C %-10<F?Flagged&Normal> %s"
 ```
 
-| Message state | Result (padded to 10) |
-|---------------|-----------------------|
-| Flagged | `42 Flagged    Meeting notes` |
-| Not flagged | `42 Normal     Meeting notes` |
+| Message state | Result (padded to 10)         |
+|---------------|-------------------------------|
+| Flagged       | `42 Flagged    Meeting notes` |
+| Not flagged   | `42 Normal     Meeting notes` |
 
 ---
 
@@ -144,11 +144,11 @@ This is equivalent to the new style `%<X?true-text&false-text>`.
 
 ### Comparison
 
-| New style | Old style |
-|-----------|-----------|
-| `%<F?Flagged>` | `%?F?Flagged?` |
+| New style             | Old style             |
+|-----------------------|-----------------------|
+| `%<F?Flagged>`        | `%?F?Flagged?`        |
 | `%<F?Flagged&Normal>` | `%?F?Flagged&Normal?` |
-| `%<X?%X att&no att>` | `%?X?%X att&no att?` |
+| `%<X?%X att&no att>`  | `%?X?%X att&no att?`  |
 
 Both styles work identically.  The new style (`< >`) is recommended for
 readability.
@@ -171,12 +171,12 @@ value exists, they test whether a date falls within a time period.
 
 | Period | Meaning |
 |--------|---------|
-| `y` | Year |
-| `m` | Month |
-| `w` | Week |
-| `d` | Day |
-| `H` | Hour |
-| `M` | Minute |
+| `y`    | Year    |
+| `m`    | Month   |
+| `w`    | Week    |
+| `d`    | Day     |
+| `H`    | Hour    |
+| `M`    | Minute  |
 
 ### How It Works
 
@@ -194,10 +194,10 @@ Show time for today's messages, date for older ones:
 set index_format = "%C %<[1d?%[%H:%M]&%[%b %d]> %-20.20n %s"
 ```
 
-| Message date | Result |
-|--------------|--------|
-| Today, 14:30 | `42 14:30 Alice Jones Meeting notes` |
-| March 15 | `42 Mar 15 Alice Jones Meeting notes` |
+| Message date | Result                                |
+|--------------|---------------------------------------|
+| Today, 14:30 | `42 14:30 Alice Jones Meeting notes`  |
+| March 15     | `42 Mar 15 Alice Jones Meeting notes` |
 
 A three-level date display:
 
@@ -205,11 +205,11 @@ A three-level date display:
 set index_format = "%C %<[1d?%[%H:%M]&%<[1y?%[%b %d]&%[%Y-%m]>> %-20.20n %s"
 ```
 
-| Message date | Result |
-|--------------|--------|
-| Today | `42 14:30 ...` |
-| This year | `42 Mar 15 ...` |
-| Older | `42 2023-06 ...` |
+| Message date | Result           |
+|--------------|------------------|
+| Today        | `42 14:30 ...`   |
+| This year    | `42 Mar 15 ...`  |
+| Older        | `42 2023-06 ...` |
 
 ---
 
@@ -225,12 +225,12 @@ Two-level nesting: if flagged, show the flag; then if new, add a marker:
 set index_format = "%C %<F?%<N?F+N&F>&%<N?N& >> %s"
 ```
 
-| State | Result |
-|-------|--------|
+| State         | Result                 |
+|---------------|------------------------|
 | Flagged + New | `42 F+N Meeting notes` |
-| Flagged only | `42 F Meeting notes` |
-| New only | `42 N Meeting notes` |
-| Neither | `42   Meeting notes` |
+| Flagged only  | `42 F Meeting notes`   |
+| New only      | `42 N Meeting notes`   |
+| Neither       | `42   Meeting notes`   |
 
 ---
 
@@ -258,10 +258,10 @@ set status_format = "%f [Msgs:%m%<n? New:%n>%<d? Del:%d>%<F? Flag:%F>] %> (%P)"
 
 This shows New/Del/Flag counts only when non-zero:
 
-| State | Result |
-|-------|--------|
+| State            | Result                               |
+|------------------|--------------------------------------|
 | 5 new, 2 flagged | `INBOX [Msgs:42 New:5 Flag:2] (50%)` |
-| No new, no flags | `INBOX [Msgs:42] (50%)` |
+| No new, no flags | `INBOX [Msgs:42] (50%)`              |
 
 ---
 
@@ -269,29 +269,29 @@ This shows New/Del/Flag counts only when non-zero:
 
 ### Syntax
 
-| Style | True only | True + False |
-|-------|-----------|--------------|
-| New | `%<X?true>` | `%<X?true&false>` |
-| Old | `%?X?true?` | `%?X?true&false?` |
-| Date | `%<[Np?true>` | `%<[Np?true&false>` |
-| Formatted | `%-10<X?true&false>` | |
+| Style     | True only            | True + False        |
+|-----------|----------------------|---------------------|
+| New       | `%<X?true>`          | `%<X?true&false>`   |
+| Old       | `%?X?true?`          | `%?X?true&false?`   |
+| Date      | `%<[Np?true>`        | `%<[Np?true&false>` |
+| Formatted | `%-10<X?true&false>` |                     |
 
 ### Truthiness
 
-| Type | True | False |
-|------|------|-------|
-| Number | Non-zero | Zero |
-| String | Non-empty | Empty |
+| Type           | True          | False          |
+|----------------|---------------|----------------|
+| Number         | Non-zero      | Zero           |
+| String         | Non-empty     | Empty          |
 | Date condition | Within period | Outside period |
 
 ### Date Period Characters
 
 | Char | Period |
 |------|--------|
-| `y` | Year |
-| `m` | Month |
-| `w` | Week |
-| `d` | Day |
-| `H` | Hour |
-| `M` | Minute |
+| `y`  | Year   |
+| `m`  | Month  |
+| `w`  | Week   |
+| `d`  | Day    |
+| `H`  | Hour   |
+| `M`  | Minute |
 

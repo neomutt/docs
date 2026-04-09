@@ -49,7 +49,7 @@ It is sometimes called the attachment menu or attachment tree.
 
 ## Where can I go next?
 
-- `q` returns to the [Index Dialog](index2.md) or [Pager Dialog](pager.md) that opened the attachment tree.
+- {kbd}`q` returns to the [Index Dialog](index2.md) or [Pager Dialog](pager.md) that opened the attachment tree.
 - Viewing text or copious-output attachments can open one of the [Simple Pagers](simple.md).
 - Replying or forwarding opens the [Compose Dialog](compose.md).
 - Saving or piping an attachment may briefly use the [Browser Dialog](browser.md) or the [Message Window](message.md) for filenames and commands.

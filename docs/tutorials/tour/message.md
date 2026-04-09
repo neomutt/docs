@@ -32,7 +32,7 @@ If NeoMutt needs a short answer from you, it usually appears here.
 
 ## What can I do?
 
-- Enter NeoMutt commands with `:` and answer free-form prompts such as searches, limits, addresses, and filenames.
+- Enter NeoMutt commands with {kbd}`:` and answer free-form prompts such as searches, limits, addresses, and filenames.
 - Use editor keys for cursor movement, deletion, history, completion, and query completion.
 - Answer yes/no and multi-choice prompts that control quitting, crypto, flags, and other decisions.
 - Watch transfer and background progress without leaving the current screen.
@@ -87,7 +87,7 @@ Type any NeoMutt command here, from quick experiments like `set` and `echo` to f
 </pre>
 </div>
 
-Simple confirmation prompts usually accept one keypress, and some of them support `?` for inline help about the option being asked.
+Simple confirmation prompts usually accept one keypress, and some of them support {kbd}`?` for inline help about the option being asked.
 
 <div class="term-window">
 <pre class="terminal">
