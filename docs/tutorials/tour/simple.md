@@ -46,7 +46,22 @@ Help screens, command dumps, log output, attachment text, and key verification a
 
 ## Which Simple Pager Is This?
 
-### color_dump
+% color_dump() PAGER_MODE_OTHER - Display all the colours in the Pager
+% dump_bind_macro() PAGER_MODE_OTHER - Parse 'bind' and 'macro' commands
+% mutt_help() PAGER_MODE_HELP - Display the Help Page
+% mutt_invoke_sendmail() PAGER_MODE_OTHER - Run sendmail
+% mutt_view_attachment() PAGER_MODE_ATTACH - View an attachment
+% op_show_log_messages() PAGER_MODE_OTHER - Show log (and debug) messages
+% parse_setenv() PAGER_MODE_OTHER - Parse the 'setenv' and 'unsetenv' commands
+% parse_version() PAGER_MODE_OTHER - Parse the 'version' command
+% set_dump() PAGER_MODE_OTHER - Dump list of config variables into a file/pager
+% verify_key() PAGER_MODE_OTHER - Show detailed information about the selected key
+
+% MENU_PAGER - OpPager
+% pager/functions.c:1129:19: pager_function_dispatcher - PagerFunctions[]
+% gui/global.c:178:20: global_function_dispatcher - GlobalFunctions[]
+
+### Colors
 
 Opened by `:color`.
 This simple pager lists the currently active colour rules so you can inspect the effective theme and pattern-based colour matches.
@@ -81,47 +96,304 @@ This simple pager lists the currently active colour rules so you can inspect the
 </pre>
 </div>
 
-### dump_bind_macro
-
-Opened by `:bind` and `:macro`.
-It shows key bindings and macros for the current menu, making it a quick reference when learning or debugging custom keymaps.
-
-### mutt_help
-
-Opened by {kbd}`?` from most menus.
-It is the menu-specific help page showing available functions and their default keys.
-
-### mutt_invoke_sendmail
-
-Opened when NeoMutt needs to show the output of an external sendmail-compatible command.
-It is mainly useful for diagnosing send failures and reviewing what the mail transport reported.
-
-### mutt_view_attachment
-
-Opened when an attachment is viewed as text or through a mailcap entry that produces copious text output.
-It lets you read attachment contents without leaving NeoMutt entirely.
-
-### op_show_log_messages
-
-Opened by `<show-log-messages>`.
-It shows recent log and debug output so you can understand what NeoMutt has been doing internally.
-
-### parse_setenv
-
-Opened by `:setenv` when you ask to inspect environment variables.
-It shows environment-related output in a scrollable view rather than truncating it in the message line.
-
-### parse_version
-
-Opened by `:version` or {kbd}`V`.
-It shows build information, compile-time features, and version details for your NeoMutt binary.
-
-### set_dump
+### Config Options
 
 Opened by `:set` when you inspect configuration state.
 It provides a scrollable dump of variables and their effective values.
 
-### verify_key
+<div class="term-window">
+<div class="term-title">Set</div>
+<pre class="terminal" role="img" aria-label="Screenshot of NeoMutt's config dump simple pager showing set commands for options such as abort_nosubject, alias_file, alias_format, allow_ansi, folder, and from, with their effective values.">
+<span>set abort_nosubject = yes                                                                           </span>
+<span>set abort_unmodified = no                                                                           </span>
+<span>set alias_file = "~/.config/neomutt/neomuttrc"                                                      </span>
+<span>set alias_format = "%3i %f%t %-15a %-56A │ %C"                                                      </span>
+<span>set allow_ansi = yes                                                                                </span>
+<span>set assumed_charset = "iso-8859-1"                                                                  </span>
+<span>set autocrypt_dir = "~/.config/neomutt/autocrypt"                                                   </span>
+<span>set certificate_file = "~/.cache/mutt/certificates"                                                 </span>
+<span>set check_new = no                                                                                  </span>
+<span>set collapse_unread = no                                                                            </span>
+<span>set confirm_append = no                                                                             </span>
+<span>set confirm_create = no                                                                             </span>
+<span>set crypt_reply_sign = yes                                                                          </span>
+<span>set crypt_reply_sign_encrypted = yes                                                                </span>
+<span>set debug_file = "~/.cache/mutt/neomuttdebug"                                                       </span>
+<span>set delete = yes                                                                                    </span>
+<span>set edit_headers = yes                                                                              </span>
+<span>set fast_reply = yes                                                                                </span>
+<span>set fcc_clear = yes                                                                                 </span>
+<span>set folder = "~/mail"                                                                               </span>
+<span>set folder_format = "%2C %t %?N?%3N&amp;   ? %f"                                                        </span>
+<span>set from = "Richard Russon &lt;rich@example.com&gt;"                                                      </span>
+<span class="status">set (24%)                                                                                           </span>
+<span>                                                                                                    </span>
+</pre>
+</div>
+
+### Environment
+
+Opened by `:setenv` when you ask to inspect environment variables.
+It shows environment-related output in a scrollable view rather than truncating it in the message line.
+
+<div class="term-window">
+<div class="term-title">Environment</div>
+<pre class="terminal" role="img" aria-label="Screenshot of NeoMutt's environment dump simple pager showing bind commands for alias and attach menus, listing keys such as Space, O, T, d, l, m, o, q, Enter, and their bound functions.">
+<span>bind alias &lt;Space&gt;  tag-entry           # Tag the current entry                                     </span>
+<span>bind alias O        sort-alias-reverse  # Sort messages in reverse order                            </span>
+<span>bind alias T        tag-pattern         # Tag non-hidden messages matching a pattern                </span>
+<span>bind alias ^T       untag-pattern       # Untag non-hidden messages matching a pattern              </span>
+<span>bind alias d        delete-entry        # Delete the current entry                                  </span>
+<span>bind alias l        limit               # Show only messages matching a pattern                     </span>
+<span>bind alias m        mail                # Compose a new mail message                                </span>
+<span>bind alias o        sort-alias          # Sort messages                                             </span>
+<span>bind alias q        exit                # Exit this menu                                            </span>
+<span>bind alias u        undelete-entry      # Undelete the current entry                                </span>
+<span>                                                                                                    </span>
+<span>bind attach &lt;Enter&gt;        view-attach            # View attachment using mailcap entry if necessary</span>
+<span>bind attach &lt;Esc&gt;P         check-traditional-pgp  # Check for classic PGP                           </span>
+<span>bind attach &lt;Esc&gt;e         resend-message         # Use the current message as a template for a new </span>
+<span>one                                                                                                 </span>
+<span>bind attach &lt;KeypadEnter&gt;  view-attach            # View attachment using mailcap entry if necessary</span>
+<span>bind attach &lt;Return&gt;       view-attach            # View attachment using mailcap entry if necessary</span>
+<span>bind attach L              list-reply             # Reply to specified mailing list                 </span>
+<span>bind attach T              view-text              # View attachment as text                         </span>
+<span>bind attach ^E             edit-type              # Edit attachment content type                    </span>
+<span>bind attach ^F             forget-passphrase      # Wipe passphrases from memory                    </span>
+<span>bind attach ^K             extract-keys           # Extract supported public keys                   </span>
+<span class="status">bind (5%)                                                                                           </span>
+<span>                                                                                                    </span>
+</pre>
+</div>
+
+### Help Page
+
+Opened by {kbd}`?` from most menus.
+Or {kbd}`Alt-?` from the editor menu.
+
+It is the menu-specific help page showing available functions and their default keys.
+
+<div class="term-window">
+<div class="term-title">Pager Help</div>
+<pre class="terminal" role="img" aria-label="Screenshot of NeoMutt's pager help simple pager showing available key bindings with alternating striped rows, listing keys such as Esc-r, Home, PageDown, Space, Tab, and single-letter commands with their function names and descriptions.">
+<span class="stripe_odd">&lt;Esc&gt;r         read-subthread            Mark the current subthread as read</span><span>                         </span>
+<span class="stripe_even">&lt;Esc&gt;s         decode-save               Make decoded copy (text/plain) and delete</span><span>                  </span>
+<span class="stripe_odd">&lt;Esc&gt;u         undelete-subthread        Undelete all messages in subthread</span><span>                         </span>
+<span class="stripe_even">&lt;Home&gt;         top                       Jump to the top of the message</span><span>                             </span>
+<span class="stripe_odd">&lt;KeypadEnter&gt;  next-line                 Scroll down one line</span><span>                                       </span>
+<span class="stripe_even">&lt;Left&gt;         previous-undeleted        Move to the previous undeleted message</span><span>                     </span>
+<span class="stripe_odd">&lt;PageDown&gt;     next-page                 Move to the next page</span><span>                                      </span>
+<span class="stripe_even">&lt;PageUp&gt;       previous-page             Move to the previous page</span><span>                                  </span>
+<span class="stripe_odd">&lt;Return&gt;       next-line                 Scroll down one line</span><span>                                       </span>
+<span class="stripe_even">&lt;Right&gt;        next-undeleted            Move to the next undeleted message</span><span>                         </span>
+<span class="stripe_odd">&lt;Space&gt;        next-page                 Move to the next page</span><span>                                      </span>
+<span class="stripe_even">&lt;Tab&gt;          next-new-then-unread      Jump to the next new or unread message</span><span>                     </span>
+<span class="stripe_odd">&lt;Up&gt;           previous-undeleted        Move to the previous undeleted message</span><span>                     </span>
+<span class="stripe_even">?              help                      This screen</span><span>                                                </span>
+<span class="stripe_odd">@              display-address           Display full address of sender</span><span>                             </span>
+<span class="stripe_even">C              copy-message              Copy a message to a file/mailbox</span><span>                           </span>
+<span class="stripe_odd">F              flag-message              Toggle a message's 'important' flag</span><span>                        </span>
+<span class="stripe_even">G              bottom                    Jump to the bottom of the message</span><span>                          </span>
+<span class="stripe_odd">H              skip-headers              Jump to first line after headers</span><span>                           </span>
+<span class="stripe_even">J              next-entry                Move to the next entry</span><span>                                     </span>
+<span class="stripe_odd">K              previous-entry            Move to the previous entry</span><span>                                 </span>
+<span class="stripe_even">L              list-reply                Reply to specified mailing list</span><span>                            </span>
+<span class="status">Help for pager (32%)                                                                                </span>
+<span>                                                                                                    </span>
+</pre>
+</div>
+
+### Key Verification
 
 Opened when you verify a PGP key or S/MIME certificate from one of the crypto dialogs.
 It shows detailed verification output that would be too large for the message line.
+
+<div class="term-window">
+<div class="term-title">XXX</div>
+<pre class="terminal" role="img" aria-label="Screenshot of NeoMutt's key verification simple pager showing PGP key details for Alice Developer including key type, usage, fingerprint, validity dates, and subkeys for encryption and signing.">
+<span>       Name: Alice Developer &lt;alice@example.com&gt;                                                    </span>
+<span>        aka: Alice D &lt;alice@dev.org&gt;                                                                </span>
+<span> Valid From: Wed Jan 15 10:30:00 2020                                                               </span>
+<span>   Valid To: Sat Jan 15 10:30:00 2028                                                               </span>
+<span>   Key Type: PGP, 4096 bit RSA                                                                      </span>
+<span>  Key Usage: encryption, signing, certification                                                     </span>
+<span>Fingerprint: 85BE FB67 0DE1 A982 4C5D  5C12 3456 7890 ABCD EF01                                     </span>
+<span>                                                                                                    </span>
+<span>   Subkey: 0xABCDEF01                                                                               </span>
+<span> Valid From: Wed Jan 15 10:30:00 2020                                                               </span>
+<span>   Valid To: Sat Jan 15 10:30:00 2028                                                               </span>
+<span>   Key Type: PGP, 4096 bit RSA                                                                      </span>
+<span>  Key Usage: encryption                                                                             </span>
+<span>                                                                                                    </span>
+<span>   Subkey: 0x12345678                                                                               </span>
+<span> Valid From: Wed Jan 15 10:30:00 2020                                                               </span>
+<span>   Valid To: Sat Jan 15 10:30:00 2028                                                               </span>
+<span>   Key Type: PGP, 2048 bit RSA                                                                      </span>
+<span>  Key Usage: signing                                                                                </span>
+<span class="tilde">~</span><span>                                                                                                   </span>
+<span class="tilde">~</span><span>                                                                                                   </span>
+<span class="tilde">~</span><span>                                                                                                   </span>
+<span class="tilde">~</span><span>                                                                                                   </span>
+<span class="status">Key ID: 0xABCDEF01 (all)                                                                            </span>
+</pre>
+</div>
+
+### Keybindings
+
+Opened by `:bind` and `:macro`.
+It shows key bindings and macros for the current menu, making it a quick reference when learning or debugging custom keymaps.
+
+<div class="term-window">
+<div class="term-title">XXX</div>
+<pre class="terminal" role="img" aria-label="Screenshot of NeoMutt's keybindings dump simple pager showing pager key bindings in alternating striped rows, listing keys such as Esc-r, Home, PageDown, Space, Tab, and single-letter commands with their function names and descriptions.">
+<span class="stripe_odd">&lt;Esc&gt;r         read-subthread            Mark the current subthread as read</span><span>                         </span>
+<span class="stripe_even">&lt;Esc&gt;s         decode-save               Make decoded copy (text/plain) and delete</span><span>                  </span>
+<span class="stripe_odd">&lt;Esc&gt;u         undelete-subthread        Undelete all messages in subthread</span><span>                         </span>
+<span class="stripe_even">&lt;Home&gt;         top                       Jump to the top of the message</span><span>                             </span>
+<span class="stripe_odd">&lt;KeypadEnter&gt;  next-line                 Scroll down one line</span><span>                                       </span>
+<span class="stripe_even">&lt;Left&gt;         previous-undeleted        Move to the previous undeleted message</span><span>                     </span>
+<span class="stripe_odd">&lt;PageDown&gt;     next-page                 Move to the next page</span><span>                                      </span>
+<span class="stripe_even">&lt;PageUp&gt;       previous-page             Move to the previous page</span><span>                                  </span>
+<span class="stripe_odd">&lt;Return&gt;       next-line                 Scroll down one line</span><span>                                       </span>
+<span class="stripe_even">&lt;Right&gt;        next-undeleted            Move to the next undeleted message</span><span>                         </span>
+<span class="stripe_odd">&lt;Space&gt;        next-page                 Move to the next page</span><span>                                      </span>
+<span class="stripe_even">&lt;Tab&gt;          next-new-then-unread      Jump to the next new or unread message</span><span>                     </span>
+<span class="stripe_odd">&lt;Up&gt;           previous-undeleted        Move to the previous undeleted message</span><span>                     </span>
+<span class="stripe_even">?              help                      This screen</span><span>                                                </span>
+<span class="stripe_odd">@              display-address           Display full address of sender</span><span>                             </span>
+<span class="stripe_even">C              copy-message              Copy a message to a file/mailbox</span><span>                           </span>
+<span class="stripe_odd">F              flag-message              Toggle a message's 'important' flag</span><span>                        </span>
+<span class="stripe_even">G              bottom                    Jump to the bottom of the message</span><span>                          </span>
+<span class="stripe_odd">H              skip-headers              Jump to first line after headers</span><span>                           </span>
+<span class="stripe_even">J              next-entry                Move to the next entry</span><span>                                     </span>
+<span class="stripe_odd">K              previous-entry            Move to the previous entry</span><span>                                 </span>
+<span class="stripe_even">L              list-reply                Reply to specified mailing list</span><span>                            </span>
+<span class="status">Help for pager (32%)                                                                                </span>
+<span>                                                                                                    </span>
+</pre>
+</div>
+
+### Log Messages
+
+Opened by `<show-log-messages>`.
+It shows recent log and debug output so you can understand what NeoMutt has been doing internally.
+
+<div class="term-window">
+<div class="term-title">Log Messages</div>
+<pre class="terminal" role="img" aria-label="Screenshot of NeoMutt's log messages simple pager showing timestamped debug and error entries including key press processing, OP_TIMEOUT, OP_EXIT, and OP_SHOW_LOG_MESSAGES events, with an error for an unbound key.">
+<span class="debug1">[13:32:01]&lt;1&gt; WEED is set</span><span>                                                                           </span>
+<span class="debug1">[13:32:02]&lt;1&gt; KEY:</span><span>                                                                                  </span>
+<span class="debug1">[13:32:02]&lt;1&gt; KEY: getch() OP_TIMEOUT</span><span>                                                               </span>
+<span class="debug1">[13:32:02]&lt;1&gt; Got op OP_TIMEOUT (-2)</span><span>                                                                </span>
+<span class="debug1">[13:32:03]&lt;1&gt; KEY:</span><span>                                                                                  </span>
+<span class="debug1">[13:32:03]&lt;1&gt; KEY: getch() 'M'</span><span>                                                                      </span>
+<span class="debug1">[13:32:03]&lt;1&gt; KEY: flags = 0</span><span>                                                                        </span>
+<span class="debug1">[13:32:03]&lt;1&gt; KEY: FAIL1: ('M', OP_NULL)</span><span>                                                            </span>
+<span class="debug1">[13:32:03]&lt;1&gt; Got op OP_NULL (0)</span><span>                                                                    </span>
+<span class="error">[13:32:03]&lt;E&gt; Key is not bound.</span>  Press '?' for help.<span>                                                </span>
+<span class="debug1">[13:32:03]&lt;1&gt; KEY:</span><span>                                                                                  </span>
+<span class="debug1">[13:32:03]&lt;1&gt; KEY: getch() 'q'</span><span>                                                                      </span>
+<span class="debug1">[13:32:03]&lt;1&gt; KEY: flags = 1</span><span>                                                                        </span>
+<span class="debug1">[13:32:03]&lt;1&gt; KEY: SUCCESS: ('q', OP_EXIT)</span><span>                                                          </span>
+<span class="debug1">[13:32:03]&lt;1&gt; Got op OP_EXIT (111)</span><span>                                                                  </span>
+<span class="debug1">[13:32:03]&lt;1&gt; Handled OP_EXIT (111) -&gt; done</span><span>                                                         </span>
+<span class="message">[13:32:03]&lt;M&gt; Sorting mailbox...</span><span>                                                                    </span>
+<span class="debug1">[13:32:03]&lt;1&gt; Handled OP_DISPLAY_MESSAGE (80) -&gt;</span><span>                                                    </span>
+<span class="debug1">[13:32:03]&lt;1&gt; KEY:</span><span>                                                                                  </span>
+<span class="debug1">[13:32:03]&lt;1&gt; KEY: getch() 'M'</span><span>                                                                      </span>
+<span class="debug1">[13:32:03]&lt;1&gt; KEY: flags = 1</span><span>                                                                        </span>
+<span class="debug1">[13:32:03]&lt;1&gt; KEY: SUCCESS: ('M', OP_SHOW_LOG_MESSAGES)</span><span>                                             </span>
+<span class="status">messages (96%)                                                                                      </span>
+<span>                                                                                                    </span>
+</pre>
+</div>
+
+### Sendmail Error
+
+Opened when NeoMutt needs to show the output of an external sendmail-compatible command.
+It is mainly useful for diagnosing send failures and reviewing what the mail transport reported.
+
+<div class="term-window">
+<div class="term-title">Sendmail Error</div>
+<pre class="terminal" role="img" aria-label="Screenshot of NeoMutt's sendmail error simple pager showing a delivery failure message with child exit code 68 (Host unknown) and the status line 'Output of the delivery process'.">
+<span>Error sending message, child exited 68 (Host unknown.)                                              </span>
+<span class="tilde">~</span><span>                                                                                                   </span>
+<span class="tilde">~</span><span>                                                                                                   </span>
+<span class="tilde">~</span><span>                                                                                                   </span>
+<span class="tilde">~</span><span>                                                                                                   </span>
+<span class="status">Output of the delivery process                                                                      </span>
+<span>                                                                                                    </span>
+</pre>
+</div>
+
+### View Attachment
+
+Opened when an attachment is viewed as text or through a mailcap entry that produces copious text output.
+It lets you read attachment contents without leaving NeoMutt entirely.
+
+<div class="term-window">
+<div class="term-title">View Attachment</div>
+<pre class="terminal" role="img" aria-label="Screenshot of NeoMutt's view attachment simple pager showing identify command output for a PNG image, including filename, dimensions 460x460, sRGB colorspace, 8-bit depth, and channel statistics.">
+<span>Image:                                                                                             </span>
+<span>  Filename: /home/flatcap/.cache/mutt/flatcap.png                                                  </span>
+<span>  Permissions: rw-r--r--                                                                           </span>
+<span>  Format: PNG (Portable Network Graphics)                                                          </span>
+<span>  Mime type: image/png                                                                             </span>
+<span>  Class: DirectClass                                                                               </span>
+<span>  Geometry: 460x460+0+0                                                                            </span>
+<span>  Resolution: 37.8x37.8                                                                            </span>
+<span>  Print size: 12.1693x12.1693                                                                      </span>
+<span>  Units: PixelsPerCentimeter                                                                       </span>
+<span>  Colorspace: sRGB                                                                                 </span>
+<span>  Type: GrayscaleAlpha                                                                             </span>
+<span>  Base type: TrueColorAlpha                                                                        </span>
+<span>  Endianness: Undefined                                                                            </span>
+<span>  Depth: 8-bit                                                                                     </span>
+<span>  Channels: 4.0                                                                                    </span>
+<span>  Channel depth:                                                                                   </span>
+<span>    Red: 8-bit                                                                                     </span>
+<span>    Green: 8-bit                                                                                   </span>
+<span>    Blue: 8-bit                                                                                    </span>
+<span>    Alpha: 8-bit                                                                                   </span>
+<span>  Channel statistics:                                                                              </span>
+<span>    Pixels: 211600                                                                                 </span>
+<span class="status">---Command: identify -verbose '/home/flatc Attachment: image/png (0%)                               </span>
+<span>                                                                                                    </span>
+</pre>
+</div>
+
+### Version
+
+Opened by `:version` or {kbd}`V`.
+It shows build information, compile-time features, and version details for your NeoMutt binary.
+
+<div class="term-window">
+<div class="term-title">Version</div>
+<pre class="terminal" role="img" aria-label="Screenshot of NeoMutt's version simple pager showing build information including NeoMutt version 20251211, system details, library versions for ncurses, libidn2, GPGME, GnuTLS, and libnotmuch, configure options, and compilation flags.">
+<span>NeoMutt 20251211-703-6e95c8                                                                         </span>
+<span>Copyright (C) 2015-2026 Richard Russon and friends                                                  </span>
+<span>NeoMutt is free software, provided without warranty: `neomutt -vv` for details                      </span>
+<span>                                                                                                    </span>
+<span>System: Linux 6.19.10-200.fc43.x86_64 (x86_64)                                                      </span>
+<span>ncurses: ncurses 6.5.20250614 (compiled with 6.5.20250614)                                          </span>
+<span>libidn2: 2.3.8 (compiled with 2.3.8)                                                                </span>
+<span>GPGME: 1.24.3                                                                                       </span>
+<span>GnuTLS: 3.8.12                                                                                      </span>
+<span>libnotmuch: 5.7.0                                                                                   </span>
+<span>PCRE2: 10.47 2025-10-21                                                                             </span>
+<span>storage: lmdb, gdbm, rocksdb, tdb                                                                   </span>
+<span>compression: lz4, zlib, zstd                                                                        </span>
+<span>                                                                                                    </span>
+<span>Configure options: --quiet --autocrypt --disable-include-path-in-cflags --disable-paths-in-cflags   </span>
+<span class="markers">+</span><span>--lz4 --zlib --zstd --prefix=/usr --with-lock=fcntl --with-domain=flatcap.org --gnutls --gpgme     </span>
+<span class="markers">+</span><span>--gss --gsasl --lua --notmuch --disable-doc --disable-nls --lmdb --gdbm --tdb --rocksdb --pcre2    </span>
+<span>                                                                                                    </span>
+<span>Compilation CFLAGS: -std=c11 -fno-delete-null-pointer-checks -D_ALL_SOURCE=1 -D_GNU_SOURCE=1        </span>
+<span class="markers">+</span><span>-D__EXTENSIONS__ -D_XOPEN_SOURCE_EXTENDED -DNCURSES_WIDECHAR -O2                                   </span>
+<span>                                                                                                    </span>
+<span>Compile options:                                                                                    </span>
+<span class="status">version (62%)                                                                                       </span>
+<span>                                                                                                    </span>
+</pre>
+</div>
+
