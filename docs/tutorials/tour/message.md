@@ -13,15 +13,8 @@ The Message Window is the prompt-and-status area at the bottom of NeoMutt.
 It is not a full dialog like the index or pager; instead, it is the place where NeoMutt asks questions, accepts typed input, reports status, and shows progress.
 If NeoMutt needs a short answer from you, it usually appears here.
 
-<div class="term-window">
-<div class="term-title">Message Window</div>
-<pre class="terminal" role="img" aria-label="Screenshot of NeoMutt's Message Window area at the bottom of the screen, showing the status bar above and the message/prompt line below.">
-<span class="index">                                                                                                    </span>
-<span class="index">                                                                                                    </span>
-<span class="status">Status Bar                                                                                          </span>
-<span>Message Window                                                                                      </span>
-</pre>
-</div>
+```{include} ../../_screenshots/message-window.html
+```
 
 ## What am I looking at?
 
@@ -65,49 +58,23 @@ If NeoMutt needs a short answer from you, it usually appears here.
 
 Function `<enter-command>` (Key: {kbd}`:`)
 
-<div class="term-window">
-<pre class="terminal" role="img" aria-label="Screenshot of NeoMutt's Enter Command prompt showing a colon followed by the typed command echo hello.">
-<span class="index">                                                                                                    </span>
-<span class="index">                                                                                                    </span>
-<span class="status">                                                                                                    </span>
-<span class="prompt">:</span><span>echo "hello"                                                                                       </span>
-</pre>
-</div>
+```{include} ../../_screenshots/message-enter-command.html
+```
 
 Type any NeoMutt command here, from quick experiments like `set` and `echo` to full configuration commands.
 
 ## Yes / No / Help
 
-<div class="term-window">
-<pre class="terminal" role="img" aria-label="Screenshot of a yes/no confirmation prompt asking Exit NeoMutt without saving, with yes as the default.">
-<span class="index">                                                                                                    </span>
-<span class="index">                                                                                                    </span>
-<span class="status">                                                                                                    </span>
-<span class="prompt">Exit NeoMutt without saving? ([yes]/no):</span><span>                                                            </span>
-</pre>
-</div>
+```{include} ../../_screenshots/message-yes-no-help.html
+```
 
 Simple confirmation prompts usually accept one keypress, and some of them support {kbd}`?` for inline help about the option being asked.
 
-<div class="term-window">
-<pre class="terminal" role="img" aria-label="Screenshot of a quit confirmation prompt asking Quit NeoMutt with no as the default, and a question-mark option for inline help.">
-<span class="index">                                                                                                    </span>
-<span class="index">                                                                                                    </span>
-<span class="status">                                                                                                    </span>
-<span class="prompt">Quit NeoMutt? ([no]/yes/?): </span><span>                                                                        </span>
-</pre>
-</div>
+```{include} ../../_screenshots/message-yes-no-help-2.html
+```
 
-<div class="term-window">
-<pre class="terminal" role="img" aria-label="Screenshot of the same quit prompt after pressing question mark, showing inline help text explaining the quit config variable and a link to its documentation.">
-<span class="index">                                                                                                    </span>
-<span class="index">                                                                                                    </span>
-<span class="status">                                                                                                    </span>
-<span>$quit - Prompt before exiting NeoMutt                                                               </span>
-<span>https://neomutt.org/guide/reference#quit                                                            </span>
-<span class="prompt">Quit NeoMutt? ([no]/yes/?): </span><span>                                                                        </span>
-</pre>
-</div>
+```{include} ../../_screenshots/message-yes-no-help-3.html
+```
 
 The inline help version is especially useful when a confirmation is driven by a configuration option you do not recognise.
 
@@ -115,62 +82,32 @@ The inline help version is especially useful when a confirmation is driven by a 
 
 
 
-<div class="term-window">
-<pre class="terminal" role="img" aria-label="Screenshot of a PGP multi-choice prompt offering encrypt, sign, sign-as, both, S/MIME, or clear options, each activated by a single keypress.">
-<span class="index">                                                                                                    </span>
-<span class="index">                                                                                                    </span>
-<span class="status">                                                                                                    </span>
-<span class="prompt">PGP (e)ncrypt, (s)ign, sign (a)s, (b)oth, s/(m)ime or (c)lear? </span><span>                                     </span>
-</pre>
-</div>
+```{include} ../../_screenshots/message-multi-choice.html
+```
 
 Multi-choice prompts are common for crypto decisions, where a single keypress changes signing or encryption state.
 
-<div class="term-window">
-<pre class="terminal" role="img" aria-label="Screenshot of the same PGP multi-choice prompt with the shortcut letters e, s, a, b, m, and c highlighted in a different colour to indicate the valid single-key responses.">
-<span class="index">                                                                                                    </span>
-<span class="index">                                                                                                    </span>
-<span class="status">                                                                                                    </span>
-<span class="prompt">PGP </span><span class="prompt options">e</span><span class="prompt">ncrypt, </span><span class="prompt options">s</span><span class="prompt">ign, sign </span><span class="prompt options">a</span><span class="prompt">s, </span><span class="prompt options">b</span><span class="prompt">oth, s/</span><span class="prompt options">m</span><span class="prompt">ime or </span><span class="prompt options">c</span><span class="prompt">lear?</span><span>                                                  </span>
-</pre>
-</div>
+```{include} ../../_screenshots/message-multi-choice-2.html
+```
 
 ## Custom Flags
 
-<div class="term-window">
-<pre class="terminal" role="img" aria-label="Screenshot of a custom flags prompt asking Set flag with single-character choices D, N, O, r, asterisk, and exclamation mark.">
-<span class="index">                                                                                                    </span>
-<span class="index">                                                                                                    </span>
-<span class="status">                                                                                                    </span>
-<span class="prompt">Set flag? (D/N/O/r/*/!):</span><span>                                                                            </span>
-</pre>
-</div>
+```{include} ../../_screenshots/message-custom-flags.html
+```
 
 Some prompts expect one short symbolic choice rather than free-form text.
 
 ## Free Form Question
 
-<div class="term-window">
-<pre class="terminal" role="img" aria-label="Screenshot of a free-form search prompt showing Search for followed by a text-entry cursor.">
-<span class="index">                                                                                                    </span>
-<span class="index">                                                                                                    </span>
-<span class="status">                                                                                                    </span>
-<span class="prompt">Search for: </span><span>                                                                                        </span>
-</pre>
-</div>
+```{include} ../../_screenshots/message-free-form-question.html
+```
 
 Searches, limits, addresses, filenames, and many configuration prompts use free-form entry with the full line editor.
 
 ## Progress Bar
 
-<div class="term-window">
-<pre class="terminal" role="img" aria-label="Screenshot of a progress bar showing Fetching message headers, 8806 of 37928 at 23 percent.">
-<span class="index">                                                                                                    </span>
-<span class="index">                                                                                                    </span>
-<span class="status">                                                                                                    </span>
-<span class="progress2">Fetching message headers... 8806</span><span>/37928 (23%)                                                        </span>
-</pre>
-</div>
+```{include} ../../_screenshots/message-progress-bar.html
+```
 
 Long-running operations such as fetching headers or sending large messages report progress here instead of interrupting the whole screen.
 
@@ -180,14 +117,7 @@ Long-running operations such as fetching headers or sending large messages repor
 :exec what-key
 ```
 
-<div class="term-window">
-<pre class="terminal" role="img" aria-label="Screenshot of the what-key diagnostic showing the character f with its octal value 146 and decimal value 102, plus a prompt to enter more keys or press Ctrl-G to abort.">
-<span class="index">                                                                                                    </span>
-<span class="index">                                                                                                    </span>
-<span class="status">                                                                                                    </span>
-<span>Char = f, Octal = 146, Decimal = 102                                                                </span>
-<span>Enter keys (^G to abort):                                                                           </span>
-</pre>
-</div>
+```{include} ../../_screenshots/message-what-key.html
+```
 
 This is the quickest way to discover how NeoMutt names a key before rebinding it.

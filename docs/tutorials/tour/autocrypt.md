@@ -13,17 +13,8 @@ The Autocrypt Dialog manages the local accounts NeoMutt uses for Autocrypt.
 Autocrypt is an opportunistic email-encryption standard that exchanges public keys automatically in message headers.
 This dialog is where you review which addresses participate and how strongly they prefer encryption.
 
-<div class="term-window">
-<div class="term-title">Autocrypt Dialog</div>
-<pre class="terminal" role="img" aria-label="Screenshot of NeoMutt's Autocrypt Dialog listing two accounts with their email addresses, prefer-encrypt preference, and active status.">
-<span>   1 john@example.com                     prefer encrypt     active                                 </span>
-<span>   2 rich@flatcap.org                     prefer encrypt     active                                 </span>
-<span>                                                                                                    </span>
-<span>                                                                                                    </span>
-<span class="status">Autocrypt Accounts                                                                                  </span>
-<span>                                                                                                    </span>
-</pre>
-</div>
+```{include} ../../_screenshots/autocrypt-dialog.html
+```
 
 ## What am I looking at?
 

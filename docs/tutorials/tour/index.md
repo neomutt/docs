@@ -21,7 +21,7 @@ Use it when you want either a quick orientation or a map into the full manual.
 :link-type: doc
 <div class="thumbnail">
 
-```{include} ../../_screenshots/index.html
+```{include} ../../_screenshots/index-dialog.html
 ```
 
 </div>
@@ -32,7 +32,7 @@ Use it when you want either a quick orientation or a map into the full manual.
 :link-type: doc
 <div class="thumbnail">
 
-```{include} ../../_screenshots/pager.html
+```{include} ../../_screenshots/pager-dialog.html
 ```
 
 </div>
@@ -43,7 +43,7 @@ Use it when you want either a quick orientation or a map into the full manual.
 :link-type: doc
 <div class="thumbnail">
 
-```{include} ../../_screenshots/compose.html
+```{include} ../../_screenshots/compose-dialog.html
 ```
 
 </div>

@@ -13,19 +13,8 @@ The GPGME Dialog is the key chooser used when NeoMutt relies on the GPGME librar
 It can represent either OpenPGP or S/MIME keys, depending on what the current send operation needs.
 In other words, it is the modern, unified version of the backend-specific [PGP Dialog](pgp.md) and [S/MIME Dialog](smime.md).
 
-<div class="term-window">
-<div class="term-title">GPGME Dialog</div>
-<pre class="terminal" role="img" aria-label="Screenshot of NeoMutt's GPGME Dialog listing candidate PGP keys with trust level, key size, key ID, algorithm, capabilities, and user ID.">
-<span>   1 u  4096/0x7224725C RSA  es Jim Smith (backup) &lt;jim@example.com&gt;                                </span>
-<span>   2 u  4096/0x7224725C RSA  es Jim Smith (backup) &lt;jim@example.com&gt;                                </span>
-<span>   3 f  4096/0x810582F5 RSA  es James Smith (flatcap) &lt;jim@example.com&gt;                             </span>
-<span>   4 f  4096/0x810582F5 RSA  es James Smith (flatcap) &lt;jim@example.com&gt;                             </span>
-<span>   5 f  4096/0x810582F5 RSA  es James Smith (flatcap) &lt;jim@example.com&gt;                             </span>
-<span>                                                                                                    </span>
-<span class="status">PGP keys matching &lt;jim@example.com&gt;                                                                 </span>
-<span>                                                                                                    </span>
-</pre>
-</div>
+```{include} ../../_screenshots/gpgme-dialog.html
+```
 
 ## What am I looking at?
 

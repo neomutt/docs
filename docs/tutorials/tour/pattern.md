@@ -13,35 +13,8 @@ The Pattern Dialog is NeoMutt's built-in pattern cheat sheet and inserter.
 It appears while you are building a search, limit, tag, delete-pattern, or other pattern-based command and want help with the available pattern operators.
 Instead of memorising every `~x` code, you can browse and insert the right one from here.
 
-<div class="term-window">
-<div class="term-title">Pattern Dialog</div>
-<pre class="terminal" role="img" aria-label="Screenshot of NeoMutt's Pattern Dialog listing search pattern codes such as ~n, ~N, ~p, ~s, and ~t with their descriptions, plus a limit prompt at the bottom.">
-<span>32 ~n RANGE         messages whose score is in RANGE                                                </span>
-<span>33 ~N               new messages                                                                    </span>
-<span>34 ~O               old messages                                                                    </span>
-<span>35 ~p               messages addressed to you                                                       </span>
-<span>36 ~P               messages from you                                                               </span>
-<span>37 ~Q               messages which have been replied to                                             </span>
-<span>38 ~r DATERANGE     messages received in DATERANGE                                                  </span>
-<span>39 ~R               read messages                                                                   </span>
-<span>40 ~s REGEX         messages whose Subject: header matches REGEX                                    </span>
-<span>41 ~S               superseded messages                                                             </span>
-<span>42 ~t REGEX         messages whose To: header matches REGEX                                         </span>
-<span>43 ~T               tagged messages                                                                 </span>
-<span>44 ~u               messages addressed to subscribed mailing lists                                  </span>
-<span>45 ~U               unread messages                                                                 </span>
-<span>46 ~v               messages in collapsed threads                                                   </span>
-<span>47 ~V               cryptographically verified messages                                             </span>
-<span>48 ~w REGEX         newsgroups matching REGEX                                                       </span>
-<span>49 ~x REGEX         messages whose References: or In-Reply-To: header matches REGEX                 </span>
-<span>50 ~X RANGE         messages with RANGE attachments                                                 </span>
-<span>51 ~y REGEX         messages whose X-Label: header matches REGEX                                    </span>
-<span>52 ~Y REGEX         messages whose tags match REGEX                                                 </span>
-<span>53 ~z RANGE         messages whose size is in RANGE                                                 </span>
-<span class="status">Patterns                                                                                            </span>
-<span class="prompt">Limit to messages matching: </span><span>~                                                                       </span>
-</pre>
-</div>
+```{include} ../../_screenshots/pattern-dialog.html
+```
 
 ## What am I looking at?
 

@@ -13,25 +13,8 @@ The PGP Dialog is the classic OpenPGP key chooser.
 It appears when NeoMutt's built-in PGP backend needs you to choose a key for signing or encryption.
 If you are using GPGME instead, you will usually see the [GPGME Dialog](gpgme.md) instead of this one.
 
-<div class="term-window">
-<div class="term-title">PGP Dialog</div>
-<pre class="terminal" role="img" aria-label="Screenshot of NeoMutt's PGP Dialog listing candidate keys with trust markers, key sizes, key IDs, algorithms, capabilities, and user IDs for jim@example.com.">
-<span>   1 +  4096/0x810582F5 RSA  es                                                                     </span>
-<span>   2 +  4096/0x810582F5 RSA  es                                                                     </span>
-<span>   3 +  4096/0x810582F5 RSA  es                                                                     </span>
-<span>   4 +  4096/0x7224725C RSA  es                                                                     </span>
-<span>   5 +  4096/0x7224725C RSA  es                                                                     </span>
-<span>   6 +  4096/0x7224725C RSA  es Jim Smith (backup) &lt;jim@example.com&gt;                                </span>
-<span>   7 +  4096/0x7224725C RSA  es Jim Smith (backup) &lt;jim@example.com&gt;                                </span>
-<span>   8 +  4096/0x810582F5 RSA  es James Smith (flatcap) &lt;jim@example.com&gt;                             </span>
-<span>   9 +  4096/0x810582F5 RSA  es James Smith (flatcap) &lt;jim@example.com&gt;                             </span>
-<span>  10 +  4096/0x810582F5 RSA  es James Smith (flatcap) &lt;jim@example.com&gt;                             </span>
-<span>                                                                                                    </span>
-<span>                                                                                                    </span>
-<span class="status">PGP keys matching &lt;jim@example.com&gt;                                                                 </span>
-<span>                                                                                                    </span>
-</pre>
-</div>
+```{include} ../../_screenshots/pgp-dialog.html
+```
 
 ## What am I looking at?
 

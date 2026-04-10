@@ -13,35 +13,8 @@ The Alias Dialog is NeoMutt's built-in address book.
 It lists the aliases you have defined in your configuration and lets you choose one or more recipients when addressing a message.
 You may also hear it described as the alias menu or contact list.
 
-<div class="term-window">
-<div class="term-title">Alias Dialog</div>
-<pre class="terminal" role="img" aria-label="Screenshot of NeoMutt's Alias Dialog showing a numbered list of aliases with short names, full names, email addresses, and group tags such as oscar, emmy, and tony.">
-<span>  1    alp             Al Pacino &lt;alp@apple.com&gt;                                | oscar             </span>
-<span>  2    amya            Amy Adams &lt;amya@hawthorn.com&gt;                            | oscar             </span>
-<span>  3    angelab         Angela Bassett &lt;angelab@elderberry.com&gt;                  | emmy,oscar,tony   </span>
-<span>  4    anneh           Anne Hathaway &lt;anneh@xigua.com&gt;                          | oscar,tony        </span>
-<span>  5    anthonyh        Anthony Hopkins &lt;anthonyh@cherry.com&gt;                    | oscar             </span>
-<span>  6    beniciot        Benicio del Toro &lt;beniciot@banana.com&gt;                   | oscar             </span>
-<span>  7    billyt          Billy Bob Thornton &lt;billyt@apple.com&gt;                    | emmy,oscar        </span>
-<span>  8    denzelw         Denzel Washington &lt;denzelw@ziziphus.com&gt;                 | oscar,tony        </span>
-<span>  9    dianew          Diane Wiest &lt;dianew@apple.com&gt;                           | emmy,oscar        </span>
-<span> 10    eddier          Eddie Redmayne &lt;eddier@wolfberry.com&gt;                    | oscar,tony        </span>
-<span> 11    edh             Ed Harris &lt;edh@fig.com&gt;                                  | emmy,oscar        </span>
-<span> 12    ellenb          Ellen Burstyn &lt;ellenb@kumquat.com&gt;                       | emmy,oscar        </span>
-<span> 13    forestw         Forest Whitaker &lt;forestw@elderberry.com&gt;                 | oscar,tony        </span>
-<span> 14    francism        Francis McDormand &lt;francism@guava.com&gt;                   | emmy,oscar        </span>
-<span> 15    georgec         George Clooney &lt;georgec@yew.com&gt;                         | oscar,tony        </span>
-<span> 16    glennc          Glenn Close &lt;glennc@kumquat.com&gt;                         | emmy,oscar,tony   </span>
-<span> 17    hughg           Hugh Grant &lt;hughg@damson.com&gt;                            | oscar             </span>
-<span> 18    hughj           Hugh Jackman &lt;hughj@lemon.com&gt;                           | grammy,oscar,tony </span>
-<span> 19    jamesf          James Franco &lt;jamesf@xigua.com&gt;                          | oscar             </span>
-<span> 20    jamiec          Jamie Lee Curtis &lt;jamiec@raspberry.com&gt;                  | emmy,oscar,tony   </span>
-<span> 21    jamief          Jamie Foxx &lt;jamief@olive.com&gt;                            | emmy,grammy,oscar </span>
-<span> 22    jessicac        Jessica Chastain &lt;jessicac@raspberry.com&gt;                | oscar             </span>
-<span class="status">Aliases - Limit: ~Y oscar                                                                           </span>
-<span class="prompt">To: </span><span>                                                                                                </span>
-</pre>
-</div>
+```{include} ../../_screenshots/alias-dialog.html
+```
 
 ## What am I looking at?
 
