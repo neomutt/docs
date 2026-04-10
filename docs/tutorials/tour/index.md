@@ -31,35 +31,10 @@ Use it when you want either a quick orientation or a map into the full manual.
 :link: pager
 :link-type: doc
 <div class="thumbnail">
-<div class="term-window">
-<div class="term-title">Index / Pager Dialog</div>
-<pre class="terminal" role="img" aria-label="Screenshot of NeoMutt's Pager Dialog in split view with the index above and the message body below, showing an email from Jodie Foster about The Silence of the Lambs.">
-<span class="index index_date">25-Feb</span><span class="index"> </span><span class="index index_flags">   </span><span class="index"> </span><span class="index index_author">Ben Stiller              </span><span class="index">  </span><span class="index tree">    └─&gt;</span><span class="index index_subject">Re: The Princess Bride</span><span class="index">                           (</span><span class="index index_size">0.5K</span><span class="index">)</span>
-<span class="index index_date">02-Mar</span><span class="index"> </span><span class="index index_flags">   </span><span class="index"> </span><span class="index index_author">Paul Rudd                </span><span class="index">  </span><span class="index tree">      └─&gt;</span><span class="index">                                               (</span><span class="index index_size">0.6K</span><span class="index">)</span>
-<span class="index index_date">04-Mar</span><span class="index"> </span><span class="index index_flags">   </span><span class="index"> </span><span class="index index_author">Billy Crystal            </span><span class="index">  </span><span class="index tree">        └─&gt;</span><span class="index">                                             (</span><span class="index index_size">0.6K</span><span class="index">)</span>
-<span class="index index_date">02-Mar</span><span class="index"> </span><span class="index index_flags">   </span><span class="index"> </span><span class="index index_author">Jodie Foster             </span><span class="index">  </span><span class="index index_subject">The Silence of the Lambs</span><span class="index">                                (</span><span class="index index_size">0.5K</span><span class="index">)</span>
-<span class="index index_date">04-Mar</span><span class="index"> </span><span class="index index_flags">   </span><span class="index"> </span><span class="index index_author">Anthony Hopkins          </span><span class="index">  </span><span class="index tree">└─&gt;</span><span class="index">                                                     (</span><span class="index index_size">0.9K</span><span class="index">)</span>
-<span class="index index_date">06-Mar</span><span class="index"> </span><span class="index index_flags">   </span><span class="index"> </span><span class="index index_author">Jodie Foster             </span><span class="index">  </span><span class="index tree">  └─&gt;</span><span class="index">                                                   (</span><span class="index index_size">0.7K</span><span class="index">)</span>
-<span class="index index_date">07-Mar</span><span class="index"> </span><span class="index index_flags">   </span><span class="index"> </span><span class="index index_author">Anthony Hopkins          </span><span class="index">  </span><span class="index tree">    └─&gt;</span><span class="index">                                                 (</span><span class="index index_size">0.6K</span><span class="index">)</span>
-<span class="index index_date">09-Mar</span><span class="index"> </span><span class="index index_flags">   </span><span class="index"> </span><span class="index index_author">Rami Malek               </span><span class="index">  </span><span class="index index_subject">Mr. Robot</span><span class="index">                                               (</span><span class="index index_size">0.6K</span><span class="index">)</span>
-<span class="index index_date">10-Mar</span><span class="index"> </span><span class="index index_flags">   </span><span class="index"> </span><span class="index index_author">Natasha Lyonne           </span><span class="index">  </span><span class="index tree">└─&gt;</span><span class="index">                                                     (</span><span class="index index_size">0.6K</span><span class="index">)</span>
-<span class="index index_date">12-Mar</span><span class="index"> </span><span class="index index_flags">   </span><span class="index"> </span><span class="index index_author">Elisabeth Moss           </span><span class="index">  </span><span class="index tree">  └─&gt;</span><span class="index">                                                   (</span><span class="index index_size">0.9K</span><span class="index">)</span>
-<span class="status">-- ~/mail/conversation [Msgs:48/48 50K]   (last-date/date)                                   (87%)  </span>
-<span class="hdrdefault">Date: Mon, 02 Mar 2026 13:00:00 GMT</span><span>                                                                 </span>
-<span class="header">From: Jodie Foster &lt;jf@tangerine.com&gt;</span><span>                                                               </span>
-<span class="hdrdefault">To: Anthony Hopkins &lt;ah@cherry.com&gt;</span><span>                                                                 </span>
-<span class="header">Subject: The Silence of the Lambs</span><span>                                                                   </span>
-<span>                                                                                                    </span>
-<span>Anthony,                                                                                            </span>
-<span>                                                                                                    </span>
-<span>It's been over thirty years since The Silence of the Lambs and I still                              </span>
-<span>get asked about it every single week. The film refuses to age.                                      </span>
-<span>                                                                                                    </span>
-<span>I was thinking about our first scene together — Clarice walking down                                </span>
-<span class="status">-   - 36/48: Jodie Foster           The Silence of the Lambs                                -- (65%)</span>
-<span>                                                                                                    </span>
-</pre>
-</div>
+
+```{include} _screenshot-pager.html
+```
+
 </div>
 :::
 
@@ -67,35 +42,10 @@ Use it when you want either a quick orientation or a map into the full manual.
 :link: compose
 :link-type: doc
 <div class="thumbnail">
-<div class="term-window">
-<div class="term-title">Compose Dialog</div>
-<pre class="terminal" role="img" aria-label="Screenshot of NeoMutt's Compose Dialog showing envelope headers, a PGP-signed security line, two attachments, and a message preview.">
-<span class="status">q:Quit  d:Del  u:Undel  m:Mail  r:Reply  ?:Help                                                     </span>
-<span class="header">        From: </span><span>Ryan Reynolds &lt;ryanr@yew.com&gt;                                                         </span>
-<span class="header">          To: </span><span>Diane Wiest &lt;dianew@apple.com&gt;, Glenn Close &lt;glennc@kumquat.com&gt;                      </span>
-<span class="header">          Cc: </span><span>Jamie Foxx &lt;jamief@olive.com&gt;                                                         </span>
-<span class="header">         Bcc: </span><span>                                                                                      </span>
-<span class="header">     Subject: </span><span>Party in London                                                                       </span>
-<span class="header">    Reply-To: </span><span>                                                                                      </span>
-<span class="header">         Fcc: </span><span>                                                                                      </span>
-<span class="header">    Security: </span><span class="sign">Sign</span><span> (PGP/MIME)                                                                       </span>
-<span class="header">     Sign as: </span><span>0x54BE8DECB4041D988854E3F2EA0E60D133D46E38                                            </span>
-<span class="status">-- Attachments                                                                                      </span>
-<span>- I     1 /tmp/mutt/neomutt-user-12345678                         [text/plain, 7bit, us-ascii, 0.5K]</span>
-<span>  A     2 ~/dress-code.md                                         [text/markdown, 8bit, utf-8, 3.6K]</span>
-<span class="status">-- Preview                                                                                          </span>
-<span>Hey guys!                                                                                           </span>
-<span>                                                                                                    </span>
-<span>I've having a small party and you're all invited.                                                   </span>
-<span>Don't forget to bring your Oscars!                                                                  </span>
-<span>                                                                                                    </span>
-<span>RR                                                                                                  </span>
-<span>                                                                                                    </span>
-<span>                                                                                                    </span>
-<span class="status">-- NeoMutt: Compose  [Approx. msg size: 4.1K   Atts: 2]---------------------------------------------</span>
-<span>                                                                                                    </span>
-</pre>
-</div>
+
+```{include} _screenshot-compose.html
+```
+
 </div>
 :::
 

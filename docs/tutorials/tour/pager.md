@@ -13,35 +13,8 @@ The Pager Dialog is NeoMutt's message-reading view.
 It shows one email in detail and lets you read the headers and body without losing access to message-level actions.
 Depending on your layout, it may appear as a split view underneath the index or as the main focus of the screen.
 
-<div class="term-window">
-<div class="term-title">Index / Pager Dialog</div>
-<pre class="terminal" role="img" aria-label="Screenshot of NeoMutt's Pager Dialog in split view with the index above and the message body below, showing an email from Jodie Foster to Anthony Hopkins about The Silence of the Lambs.">
-<span class="index index_date">25-Feb</span><span class="index"> </span><span class="index index_flags">   </span><span class="index"> </span><span class="index index_author">Ben Stiller              </span><span class="index">  </span><span class="index tree">    └─&gt;</span><span class="index index_subject">Re: The Princess Bride</span><span class="index">                           (</span><span class="index index_size">0.5K</span><span class="index">)</span>
-<span class="index index_date">02-Mar</span><span class="index"> </span><span class="index index_flags">   </span><span class="index"> </span><span class="index index_author">Paul Rudd                </span><span class="index">  </span><span class="index tree">      └─&gt;</span><span class="index">                                               (</span><span class="index index_size">0.6K</span><span class="index">)</span>
-<span class="index index_date">04-Mar</span><span class="index"> </span><span class="index index_flags">   </span><span class="index"> </span><span class="index index_author">Billy Crystal            </span><span class="index">  </span><span class="index tree">        └─&gt;</span><span class="index">                                             (</span><span class="index index_size">0.6K</span><span class="index">)</span>
-<span class="index index_date">02-Mar</span><span class="index"> </span><span class="index index_flags">   </span><span class="index"> </span><span class="index index_author">Jodie Foster             </span><span class="index">  </span><span class="index index_subject">The Silence of the Lambs</span><span class="index">                                (</span><span class="index index_size">0.5K</span><span class="index">)</span>
-<span class="index index_date">04-Mar</span><span class="index"> </span><span class="index index_flags">   </span><span class="index"> </span><span class="index index_author">Anthony Hopkins          </span><span class="index">  </span><span class="index tree">└─&gt;</span><span class="index">                                                     (</span><span class="index index_size">0.9K</span><span class="index">)</span>
-<span class="index index_date">06-Mar</span><span class="index"> </span><span class="index index_flags">   </span><span class="index"> </span><span class="index index_author">Jodie Foster             </span><span class="index">  </span><span class="index tree">  └─&gt;</span><span class="index">                                                   (</span><span class="index index_size">0.7K</span><span class="index">)</span>
-<span class="index index_date">07-Mar</span><span class="index"> </span><span class="index index_flags">   </span><span class="index"> </span><span class="index index_author">Anthony Hopkins          </span><span class="index">  </span><span class="index tree">    └─&gt;</span><span class="index">                                                 (</span><span class="index index_size">0.6K</span><span class="index">)</span>
-<span class="index index_date">09-Mar</span><span class="index"> </span><span class="index index_flags">   </span><span class="index"> </span><span class="index index_author">Rami Malek               </span><span class="index">  </span><span class="index index_subject">Mr. Robot</span><span class="index">                                               (</span><span class="index index_size">0.6K</span><span class="index">)</span>
-<span class="index index_date">10-Mar</span><span class="index"> </span><span class="index index_flags">   </span><span class="index"> </span><span class="index index_author">Natasha Lyonne           </span><span class="index">  </span><span class="index tree">└─&gt;</span><span class="index">                                                     (</span><span class="index index_size">0.6K</span><span class="index">)</span>
-<span class="index index_date">12-Mar</span><span class="index"> </span><span class="index index_flags">   </span><span class="index"> </span><span class="index index_author">Elisabeth Moss           </span><span class="index">  </span><span class="index tree">  └─&gt;</span><span class="index">                                                   (</span><span class="index index_size">0.9K</span><span class="index">)</span>
-<span class="status">-- ~/mail/conversation [Msgs:48/48 50K]   (last-date/date)                                   (87%)  </span>
-<span class="hdrdefault">Date: Mon, 02 Mar 2026 13:00:00 GMT</span><span>                                                                 </span>
-<span class="header">From: Jodie Foster &lt;jf@tangerine.com&gt;</span><span>                                                               </span>
-<span class="hdrdefault">To: Anthony Hopkins &lt;ah@cherry.com&gt;</span><span>                                                                 </span>
-<span class="header">Subject: The Silence of the Lambs</span><span>                                                                   </span>
-<span>                                                                                                    </span>
-<span>Anthony,                                                                                            </span>
-<span>                                                                                                    </span>
-<span>It's been over thirty years since The Silence of the Lambs and I still                              </span>
-<span>get asked about it every single week. The film refuses to age.                                      </span>
-<span>                                                                                                    </span>
-<span>I was thinking about our first scene together — Clarice walking down                                </span>
-<span class="status">-   - 36/48: Jodie Foster           The Silence of the Lambs                                -- (65%)</span>
-<span>                                                                                                    </span>
-</pre>
-</div>
+```{include} _screenshot-pager.html
+```
 
 ## What am I looking at?
 
