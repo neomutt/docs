@@ -13,7 +13,7 @@ The Index Dialog is NeoMutt's home screen: the mailbox view where you browse mes
 It is also called the message index, the mailbox index, or simply "the index".
 Most workflows start here, and most of the other dialogs eventually return here.
 
-```{include} _screenshot-index.html
+```{include} ../../_includes/_screenshot-index.html
 ```
 
 ## What am I looking at?

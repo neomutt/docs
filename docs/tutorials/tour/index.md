@@ -21,7 +21,7 @@ Use it when you want either a quick orientation or a map into the full manual.
 :link-type: doc
 <div class="thumbnail">
 
-```{include} _screenshot-index.html
+```{include} ../../_includes/_screenshot-index.html
 ```
 
 </div>
@@ -32,7 +32,7 @@ Use it when you want either a quick orientation or a map into the full manual.
 :link-type: doc
 <div class="thumbnail">
 
-```{include} _screenshot-pager.html
+```{include} ../../_includes/_screenshot-pager.html
 ```
 
 </div>
@@ -43,7 +43,7 @@ Use it when you want either a quick orientation or a map into the full manual.
 :link-type: doc
 <div class="thumbnail">
 
-```{include} _screenshot-compose.html
+```{include} ../../_includes/_screenshot-compose.html
 ```
 
 </div>

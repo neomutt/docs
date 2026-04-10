@@ -13,7 +13,7 @@ The Compose Dialog is NeoMutt's send menu: the final review and editing screen b
 It is where you adjust the envelope, manage attachments, check security settings, and decide whether to send, postpone, or abandon the draft.
 You reach it for new mail, replies, forwards, bounces, and recalled drafts.
 
-```{include} _screenshot-compose.html
+```{include} ../../_includes/_screenshot-compose.html
 ```
 
 ## What am I looking at?
