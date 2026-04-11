@@ -24,6 +24,11 @@ Depending on your layout, it may appear as a split view underneath the index or 
 ```{include} ../../_screenshots/index-pager-dialog.html
 ```
 :::
+:::{tab-item} Pager + Index + Sidebar
+
+```{include} ../../_screenshots/index-pager-sidebar-dialog.html
+```
+:::
 ::::
 
 ## What am I looking at?
