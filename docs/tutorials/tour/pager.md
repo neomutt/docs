@@ -13,8 +13,18 @@ The Pager Dialog is NeoMutt's message-reading view.
 It shows one email in detail and lets you read the headers and body without losing access to message-level actions.
 Depending on your layout, it may appear as a split view underneath the index or as the main focus of the screen.
 
+::::{tab-set}
+:::{tab-item} Pager Dialog
+
 ```{include} ../../_screenshots/pager-dialog.html
 ```
+:::
+:::{tab-item} Pager + Index
+
+```{include} ../../_screenshots/index-pager-dialog.html
+```
+:::
+::::
 
 ## What am I looking at?
 
