@@ -4,6 +4,13 @@ description: Understanding-oriented discussion of NeoMutt's design, concepts, hi
 keywords: neomutt, explanation, concepts, background, design, understanding, architecture, mime, encryption, security, threading, performance, configuration
 ---
 
+(exp)=
+# Explanation
+
+:::{tip}
+Keyboard: {kbd}`E` jumps here from anywhere · {kbd}`U` returns here from any explanation page
+:::
+
 :::{admonition} Diátaxis: Explanation
 :class: note
 
@@ -15,13 +22,6 @@ Use "about" framing.
 It's OK to include opinion and perspective.
 Don't include step-by-step instructions — link to tutorials and how-to guides instead.
 The reader should come away with deeper understanding.
-:::
-
-(exp)=
-# Explanation
-
-:::{tip}
-Keyboard: {kbd}`E` jumps here from anywhere · {kbd}`U` returns here from any explanation page
 :::
 
 Explanation pages provide **understanding-oriented** discussion of NeoMutt's concepts, design, and background.

@@ -3,7 +3,12 @@ title: How-To Guides
 description: Goal-oriented guides covering mail protocols, encryption, composing, display, MIME, sidebar, configuration, and storage in NeoMutt
 ---
 
+(how)=
 # How-To Guides
+
+:::{tip}
+Keyboard: {kbd}`H` jumps here from anywhere · {kbd}`U` returns here from any how-to page
+:::
 
 :::{admonition} Diátaxis: How-To Guide
 :class: note
@@ -15,10 +20,6 @@ Use numbered steps for procedures.
 Don't explain why — link to explanation pages instead.
 Keep it focused on the specific task.
 Start with prerequisites, give the steps, show the expected result.
-:::
-
-:::{tip}
-Keyboard: {kbd}`H` jumps here from anywhere · {kbd}`U` returns here from any how-to page
 :::
 
 How-to guides are **goal-oriented** directions that help you accomplish specific tasks with NeoMutt.

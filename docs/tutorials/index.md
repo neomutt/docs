@@ -3,7 +3,12 @@ title: Tutorials
 description: Learning-oriented tutorials that guide you step by step through configuring and using NeoMutt
 ---
 
+(tut)=
 # Tutorials
+
+:::{tip}
+Keyboard: {kbd}`T` jumps here from anywhere · {kbd}`U` returns here from any tutorial page
+:::
 
 :::{admonition} Diátaxis: Tutorial
 :class: note
@@ -17,10 +22,6 @@ Focus on the learner's experience: what they will do, see, and achieve at each s
 Keep the scope narrow and self-contained, with minimal prerequisites.
 Avoid deep dives into theory or exhaustive detail — link to explanation and reference material for that.
 By the end, the reader should have completed something real and gained confidence to continue.
-:::
-
-:::{tip}
-Keyboard: {kbd}`T` jumps here from anywhere · {kbd}`U` returns here from any tutorial page
 :::
 
 Tutorials are **learning-oriented** lessons that guide you step by step through using NeoMutt.

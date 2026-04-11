@@ -4,6 +4,13 @@ description: Index of NeoMutt reference material covering commands, config optio
 keywords: neomutt, reference, commands, config, functions, features, syntax, options, releases
 ---
 
+(ref)=
+# Reference
+
+:::{tip}
+Keyboard: {kbd}`R` jumps here from anywhere · {kbd}`U` returns here from any reference page
+:::
+
 :::{admonition} Diátaxis: Reference
 :class: note
 
@@ -11,13 +18,6 @@ Write as **austere description**. Be factual, precise, and complete. Use consist
 throughout. Describe what things ARE, not how to use them. Use tables for structured data.
 Mirror the structure of the software itself. Avoid instruction or explanation — link out to
 how-to guides and explanation pages instead.
-:::
-
-(ref)=
-# Reference
-
-:::{tip}
-Keyboard: {kbd}`R` jumps here from anywhere · {kbd}`U` returns here from any reference page
 :::
 
 Reference material provides **information-oriented** technical descriptions of
