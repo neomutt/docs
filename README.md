@@ -13,10 +13,10 @@ framework and is organised into four sections:
 
 | Section | Description |
 |---------|-------------|
-| **Tutorials** | Step-by-step lessons for newcomers (10 pages) |
-| **How-to guides** | Task-oriented recipes for specific goals (62 pages) |
-| **Reference** | Technical descriptions of configuration, commands, and functions (55 pages) |
-| **Explanation** | Background discussion of concepts and design (14 pages) |
+| **Tutorials** | Step-by-step lessons for newcomers (38 pages) |
+| **How-to guides** | Task-oriented recipes for specific goals (109 pages) |
+| **Reference** | Technical descriptions of configuration, commands, and functions (96 pages) |
+| **Explanation** | Background discussion of concepts and design (16 pages) |
 
 Source material was converted from the DocBook XML manual
 (`manual.xml`) that ships with the NeoMutt source code.
@@ -51,7 +51,7 @@ Please keep the Diátaxis style conventions noted at the top of each page.
 
 - **NeoMutt website:** <https://neomutt.org>
 - **NeoMutt source:** <https://github.com/neomutt/neomutt>
-- **This documentation:** <https://github.com/neomutt/neomutt> (`guide` branch)
+- **This documentation:** <https://github.com/neomutt/docs>
 
 ## License
 
