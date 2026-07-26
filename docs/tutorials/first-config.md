@@ -92,7 +92,17 @@ Store passwords in an encrypted file and load them with backticks rather than st
 set imap_pass = "`gpg --batch -q --decrypt ~/.neomutt/account.gpg`"
 ```
 
+Some providers require an app-specific password rather than your normal account password, particularly if 2-step verification is enabled. Check your provider's account security settings if a plain password is rejected, and use the app-specific password in `imap_pass`/`smtp_pass` instead.
+
 For safer options and OAuth-based setups, see [Password Manager](../howto/password-manager) and [OAuth](../howto/oauth).
+
+## Troubleshooting
+
+If NeoMutt can't connect or authenticate:
+
+1. **Connection refused or hangs on send** — check the port and scheme in `smtp_url` match what your provider expects. Port 465 expects an implicit-TLS connection (`smtps://`); port 587 expects `STARTTLS` on a plain connection (`smtp://`). Using the wrong scheme for the port is a common cause of silent hangs or connection errors.
+2. **Authentication fails** — confirm whether your provider requires an app-specific password (see above) rather than your normal account password, and that IMAP access itself is enabled in the provider's account settings, not just the account existing.
+3. **Folder names don't match** — IMAP folder naming varies by provider (for example `Sent` vs `Sent Items`, or a different `INBOX` hierarchy separator). Use NeoMutt's folder browser ({kbd}`c` then {kbd}`?` from the index) to see the actual folder names on the server before setting `postponed`/`record`/`trash`.
 
 Once NeoMutt starts without errors, continue reading to understand the full configuration syntax and all available file locations.
 
