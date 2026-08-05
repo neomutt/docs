@@ -14,7 +14,7 @@ Pick the option that matches your account:
 
 - Gmail: go to [Setting Up NeoMutt with Gmail](tutorials/gmail-setup)
 - Microsoft 365 / Outlook: go to [Setting Up NeoMutt with Office 365](tutorials/office365-setup)
-- Other provider or self-hosted IMAP: go to [How to Set Up IMAP](howto/imap)
+- Other provider or self-hosted IMAP: go to [Writing Your First Configuration](tutorials/first-config)
 
 If you are not sure, open your current mail client and check the server name. It will usually include `imap.` or `mail.`.
 
