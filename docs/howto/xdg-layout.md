@@ -73,7 +73,17 @@ mkdir -p ~/.local/share/mail
 set folder = "~/.local/share/mail/you@example.com"
 ```
 
-3. If you use mbsync, update `~/.mbsyncrc` to match:
+Expected result: mail data lives in `~/.local/share/mail/`, separate from config and cache.
+
+## Store mbsync Config in XDG_CONFIG_HOME
+
+1. Isync 1.5 and higher support XDG_CONFIG_HOME:
+
+```sh
+mv ~/.mbsyncrc ~/.config/isyncrc
+```
+
+2. Update `~/.config/isyncrc`:
 
 ```
 MaildirStore you@example.com-local
@@ -81,14 +91,26 @@ Path ~/.local/share/mail/you@example.com/
 Inbox ~/.local/share/mail/you@example.com/INBOX
 ```
 
-4. If you use Notmuch, update `~/.notmuch-config`:
+## Store notmuch Config in XDG_CONFIG_HOME
+
+1. Notmuch 0.32 and higher support XDG_CONFIG_HOME:
+
+```sh
+mkdir -p ~/.config/notmuch/default
+mv ~/.notmuch-config ~/.config/notmuch/default/config
+```
+
+2. Update `~/.config/notmuch/default/config`:
+
 
 ```ini
 [database]
 path=/home/you/.local/share/mail
 ```
 
-Expected result: mail data lives in `~/.local/share/mail/`, separate from config and cache.
+The default profile is called "default". If you use another profile in NeoMutt
+via the `nm_config_profile` variable, you should use that value instead of
+"default" as the directory name.
 
 ## Store msmtp Config in XDG_CONFIG_HOME
 
@@ -99,7 +121,7 @@ mkdir -p ~/.config/msmtp
 ```
 
 2. Place your msmtp config at `~/.config/msmtp/config`.
-   msmtp checks this path by default on most systems.
+   msmtp checks this path by default in msmtp 1.6.7 and higher.
 
 Expected result: SMTP configuration follows the same layout as NeoMutt's.
 
@@ -128,12 +150,16 @@ Expected result: account-specific settings are isolated in their own files.
 
 ```
 ~/.config/
+├── isyncrc
 ├── neomutt/
 │   ├── neomuttrc
 │   ├── accounts/
 │   │   └── you@example.com.muttrc
 │   ├── aliases
 │   └── mailcap
+├── notmuch/
+│   ├── default/
+│   │   └── config
 ├── msmtp/
 │   └── config
 ~/.cache/
@@ -154,8 +180,8 @@ Expected result: account-specific settings are isolated in their own files.
 |------------------------|----------|--------------------------------|
 | `~/.config/neomutt/`   | Yes      | All configuration              |
 | `~/.config/msmtp/`     | Yes      | SMTP configuration             |
-| `~/.mbsyncrc`          | Yes      | Sync configuration             |
-| `~/.notmuch-config`    | Yes      | Search configuration           |
+| `~/.config/isyncrc`    | Yes      | Sync configuration             |
+| `~/.config/notmuch/`   | Yes      | Search configuration           |
 | `~/.cache/neomutt/`    | No       | Regenerated automatically      |
 | `~/.local/share/mail/` | Optional | Can be re-synced from server   |
 
